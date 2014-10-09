@@ -3,25 +3,30 @@ module.exports = {
   type: 'object',
   prefixes: {
     "": "http://schema.org/",
-    "xsd": "http://www.w3.org/2001/XMLSchema#",
-    "org": "  http://www.w3.org/ns/org#",
+    "ovn": "http://vocab.ovn.is/",
   },
   description: "A relationship between multiple agents.",
   context: "org:Membership",
   properties: {
+    additionalType: {
+      description: "The type of agent relationship.",
+      context: "additionalType",
+      $ref: "RelationshipType",
+    },
     description: {
       description: "A description of the agents' relations.",
       context: "description",
       type: "string",
     },
-    roles: {
-      // TODO: how to associate a role with a specific agent
-      description: "The roles those in the relationship play.",
-      context: "org:role",
-      type: "array",
-      items: {
-        $ref: "Role",
-      },
+    isRelated: {
+      description: "The agent that is <relationship name>",
+      context: "ovn:isRelated",
+      $ref: "Agent",
+    },
+    hasRelated: {
+      description: "The agent that has <relationship name>",
+      context: "ovn:hasRelated",
+      $ref: "Agent",
     },
     state: {
       description: "The state of the relationship.",
@@ -29,6 +34,7 @@ module.exports = {
     },
   },
   dependencies: {
-    'role-vocab': "git://github.com/openvocab/role",
+    RelationshipType: require('./Type'),
+    Agent: require('../Agent'),
   },
 };
