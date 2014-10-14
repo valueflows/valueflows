@@ -34,5 +34,5 @@ module.exports = {
   },
 };
 module.exports.dependencies = {
-  Relationship: require('../Relationship'),
+  Relationship: require('./Relationship'),
 };

@@ -74,6 +74,6 @@ module.exports = {
   }],
 };
 module.exports.dependencies = {
-  Group: require('../Group'),
-  Location: require('../Location'),
+  Group: require('./Group'),
+  Location: require('./Location'),
 };

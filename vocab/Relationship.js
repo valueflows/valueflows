@@ -34,7 +34,7 @@ module.exports = {
     },
   },
   dependencies: {
-    RelationshipType: require('./Type'),
-    Agent: require('../Agent'),
+    RelationshipType: require('./RelationshipType'),
+    Agent: require('./Agent'),
   },
 };

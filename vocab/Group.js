@@ -50,5 +50,5 @@ module.exports = {
   }],
 };
 module.exports.dependencies = {
-  Agent: require('../Agent'),
+  Agent: require('./Agent'),
 };
