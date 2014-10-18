@@ -1,5 +1,5 @@
 module.exports = {
-  id: "Place",
+  id: "Location",
   type: 'object',
   prefixes: {
     "": "http://schema.org/",

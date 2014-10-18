@@ -6,8 +6,11 @@ should be applicable in describing resource accounting for networks of people an
 
 ### WORK IN PROGRESS
 
-- [Person](./Person/index.js)
-- [Group](./Group/index.js)
-- [Membership](./Membership/index.js)
-- [Role](./Role/index.js)
-- [Location](./Location/index.js)
+- [Agent](./vocab/Agent.js)
+- [Group](./vocab/Group.js)
+- [Location](./vocab/Location.js)
+- [Person](./vocab/Person.js)
+- [Relationship](./vocab/Relationship.js)
+- [RelationshipType](./vocab/Relationship.js)
+- [Role](./vocab/Role.js)
+
