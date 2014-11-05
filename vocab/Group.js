@@ -13,14 +13,10 @@ module.exports = {
     description: "A collection of people and groups.",
     properties: {
       name: {
-        context: "name",
         description: "The primary name of the group.",
-        type: "string",
       },
       description: {
-        context: "description",
         description: "A short description of the group.",
-        type: "string",
       },
       relationships: {
         description: "The relationships the group has or is with other agents.",
