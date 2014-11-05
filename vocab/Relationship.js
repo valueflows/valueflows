@@ -18,12 +18,12 @@ module.exports = {
       context: "description",
       type: "string",
     },
-    isRelated: {
+    is: {
       description: "The agent that is <relationship name>",
       context: "ovn:isRelated",
       $ref: "Agent",
     },
-    hasRelated: {
+    has: {
       description: "The agent that has <relationship name>",
       context: "ovn:hasRelated",
       $ref: "Agent",

@@ -24,9 +24,9 @@ module.exports = {
       type: "array",
       items: {
         anyOf: [{
-          reverse: "hasRelationship",
+          reverse: "has",
         }, {
-          reverse: "isRelated",
+          reverse: "is",
         }]
         $ref: "Relationship",
       },
