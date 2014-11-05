@@ -5,22 +5,31 @@ module.exports = {
     "": "http://schema.org/",
     "ovn": "http://vocab.ovn.is/",
   },
-  description: "A relationship between multiple agents.",
-  context: "org:Membership",
+  description: "A type of relationship between multiple agents.",
+  context: "ovn:RelationshipType",
   properties: {
-    "@id": {
-      description: "The identifier for the relationship type",
-      type: "string",
-    },
     name: {
       description: "The name of the type of agent relationship.",
       context: "name",
-      $ref: "RelationshipType",
+      enum: [
+        "member",
+        "child",
+        "supplier",
+        "customer",
+      ],
     },
     description: {
       description: "A description of the type of agent relationship.",
       context: "description",
       type: "string",
+    },
+    label: {
+      description: "A label of the type of agent relationship.",
+      context: "skos:prefLabel",
+    },
+    pluralLabel: {
+      description: "A plural label of the type of agent relationship.",
+      context: "skos:altLabel",
     },
   },
 };
