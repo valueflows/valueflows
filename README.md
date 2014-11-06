@@ -2,7 +2,9 @@
 
 vocabs for [Open Value Network data](https://github.com/valnet/valuenetwork).
 
-should be applicable in describing resource accounting for networks of people and groups.
+should describe resource planning and accounting for fractal networks of people and groups.
+
+![value network flows](https://i.imgur.com/74gIY5C.png)
 
 ### WORK IN PROGRESS
 
