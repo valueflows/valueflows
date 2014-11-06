@@ -1,6 +1,6 @@
 # Open Value Network vocabs
 
-vocabs for [Open Value Network data](https://github.com/valnet/valuenetwork).
+vocabs for [Open Value Network data](https://github.com/valnet/valuenetwork/wiki).
 
 should describe resource planning and accounting for fractal networks of people and groups.
 
