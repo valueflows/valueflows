@@ -29,12 +29,12 @@ module.exports = {
       $ref: "Kind",
     },
     conversionMultiplier: {
-      description: "A multiplier for this unit in relation to the given kind",
+      description: "A multiplier for this unit in relation to the given kind.",
       context: "qudt:conversionMultiplier",
       type: "number",
     },
     conversionOffset: {
-      description: "An offset for this unit in relation to the given kind",
+      description: "An offset for this unit in relation to the given kind.",
       context: "qudt:conversionOffset",
       type: "number",
     },
