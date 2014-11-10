@@ -19,12 +19,12 @@ module.exports = {
       type: "string",
     },
     is: {
-      description: "The agent that is <relationship name>",
+      description: "The agent that is <relationship name>.",
       context: "ovn:isRelated",
       $ref: "Agent",
     },
     has: {
-      description: "The agent that has <relationship name>",
+      description: "The agent that has <relationship name>.",
       context: "ovn:hasRelated",
       $ref: "Agent",
     },
