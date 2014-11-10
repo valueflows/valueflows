@@ -37,6 +37,11 @@ module.exports = {
         "potential",
       ],
     },
+    symmetric: {
+      description: "The symmetric relationship that corresponds to this relationship.",
+      context: "ovn:symmetric",
+      $ref: "Relationship",
+    },
   },
   dependencies: {
     RelationshipType: require('./RelationshipType'),
