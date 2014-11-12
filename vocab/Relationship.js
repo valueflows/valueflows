@@ -8,9 +8,9 @@ module.exports = {
   description: "A relationship between multiple agents.",
   context: "org:Membership",
   properties: {
-    additionalType: {
+    relationshipType: {
       description: "The type of agent relationship.",
-      context: "additionalType",
+      context: "ovn:relationshipType",
       $ref: "RelationshipType",
     },
     description: {
@@ -19,18 +19,28 @@ module.exports = {
       type: "string",
     },
     is: {
-      description: "The agent that is <relationship name>",
+      description: "The agent that is <relationship name>.",
       context: "ovn:isRelated",
       $ref: "Agent",
     },
     has: {
-      description: "The agent that has <relationship name>",
+      description: "The agent that has <relationship name>.",
       context: "ovn:hasRelated",
       $ref: "Agent",
     },
-    state: {
-      description: "The state of the relationship.",
-      enum: ["active", "inactive", "potential"],
+    status: {
+      description: "The status of the relationship.",
+      context: "ovn:status",
+      enum: [
+        "active",
+        "inactive",
+        "potential",
+      ],
+    },
+    symmetric: {
+      description: "The symmetric relationship that corresponds to this relationship.",
+      context: "ovn:symmetric",
+      $ref: "Relationship",
     },
   },
   dependencies: {
