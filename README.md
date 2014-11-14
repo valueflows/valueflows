@@ -1,6 +1,6 @@
 # Open Value Network vocabs
 
-vocabs for [Open Value Network data](https://github.com/valnet/valuenetwork/wiki).
+vocabs for [Open Value Networks](https://github.com/valnet/valuenetwork/wiki) pulled from [valnet](https://github.com/valnet/valuenetwork)'s existing [core model](https://github.com/valnet/valuenetwork/blob/master/docs/core_model.txt).
 
 should describe resource planning and accounting for fractal networks of people and groups.
 
