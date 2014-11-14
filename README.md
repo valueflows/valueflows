@@ -2,7 +2,7 @@
 
 vocabs for [Open Value Networks](http://valuenetwork.referata.com/wiki/Main_Page) pulled from [valnet](https://github.com/valnet/valuenetwork/wiki)'s existing [core model](https://github.com/valnet/valuenetwork/blob/master/docs/core_model.txt).
 
-should describe resource planning and accounting for fractal networks of people and groups.
+should describe any type of resource planning and accounting within fractal networks of people and groups.
 
 ![value network flows](https://i.imgur.com/74gIY5C.png)
 
