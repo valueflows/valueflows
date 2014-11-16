@@ -19,8 +19,8 @@ should describe any type of resource planning and accounting within fractal netw
   - [x] [Unit](./vocab/Unit.js)
   - [x] [Kind](./vocab/Kind.js)
 - [ ] Economic Resources
+  - [ ] [ResourceType](./vocab/ResourceType.js)
   - [ ] [Resource](./vocab/Resource.js)
-  - [ ] [ResourceType]
 - [ ] Economic Interactions
   - [ ] [Interaction](./vocab/Interaction.js)
   - [ ] [InteractionType](./vocab/InteractionType.js)
