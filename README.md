@@ -22,12 +22,12 @@ should describe any type of resource planning and accounting within fractal netw
   - [ ] [ResourceType](./vocab/ResourceType.js)
   - [ ] [Resource](./vocab/Resource.js)
 - [ ] Economic Interactions
-  - [ ] [Interaction](./vocab/Interaction.js)
   - [ ] [InteractionType](./vocab/InteractionType.js)
-  - [ ] [Exchange](./vocab/Exchange.js)
+  - [ ] [Interaction](./vocab/Interaction.js)
   - [ ] [ExchangeType](./vocab/ExchangeType.js)
-  - [ ] [Process](./vocab/Process.js)
+  - [ ] [Exchange](./vocab/Exchange.js)
   - [ ] [ProcessType](./vocab/ProcessType.js)
+  - [ ] [Process](./vocab/Process.js)
 - [ ] Economic Events
   - [ ] [EventType](./vocab/EventType.js)
   - [ ] [Event](./vocab/Event.js)
