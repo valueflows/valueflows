@@ -8,30 +8,30 @@ should describe any type of resource planning and accounting within fractal netw
 
 ### WORK IN PROGRESS
 
-- Economic Agents
+- [x] Economic Agents
   - [x] [Agent](./vocab/Agent.js)
   - [x] [Person](./vocab/Person.js)
   - [x] [Group](./vocab/Group.js)
   - [x] [RelationshipType](./vocab/RelationshipType.js)
   - [x] [Relationship](./vocab/Relationship.js)
-- Measurements
+- [x] Measurements
   - [x] [Quantity](./vocab/Quantity.js)
   - [x] [Unit](./vocab/Unit.js)
   - [x] [Kind](./vocab/Kind.js)
-- Economic Resources
+- [ ] Economic Resources
   - [ ] [Resource](./vocab/Resource.js)
   - [ ] [ResourceType]
-- Economic Interactions
+- [ ] Economic Interactions
   - [ ] [Interaction](./vocab/Interaction.js)
   - [ ] [InteractionType](./vocab/InteractionType.js)
   - [ ] [Exchange](./vocab/Exchange.js)
   - [ ] [ExchangeType](./vocab/ExchangeType.js)
   - [ ] [Process](./vocab/Process.js)
   - [ ] [ProcessType](./vocab/ProcessType.js)
-- Economic Events
+- [ ] Economic Events
   - [ ] [EventType](./vocab/EventType.js)
   - [ ] [Event](./vocab/Event.js)
-- Economic Plans
+- [ ] Economic Plans
   - [ ] [CommitmentType](./vocab/CommitmentType.js)
   - [ ] [Commitment](./vocab/Commitment.js)
 - [ ] Facets
