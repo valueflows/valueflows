@@ -6,7 +6,7 @@ should describe any type of resource planning and accounting within fractal netw
 
 ![value network flows](https://i.imgur.com/74gIY5C.png)
 
-![model](https://drive.google.com/file/d/0B6Rd5fQ-CZheUmU2S3pXSWN5WjA/view?usp=sharing)
+![model](https://docs.google.com/drawings/d/1ZmlgstkpoOeUrdeCkWn7PziXC8iqS3eh9281bjTyxX4/pub?w=960&h=720)
 
 ### WORK IN PROGRESS
 
