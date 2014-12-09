@@ -13,18 +13,14 @@ module.exports = {
     type: 'object',
     properties: {
       name: {
-        context: "name",
         description: "The person's name.",
-        type: "string",
+      },
+      description: {
+        description: "A short bio of the person.",
       },
       handle: {
         context: "foaf:nick",
         description: "The person's online alias.",
-        type: "string",
-      },
-      bio: {
-        context: "description",
-        description: "A short bio of the person.",
         type: "string",
       },
       location: {
@@ -35,15 +31,15 @@ module.exports = {
           $ref: "Location",
         },
       },
-      avatar: {
+      image: {
         context: "image",
         description: "An avatar of the person.",
         type: "string",
         format: "uri",
       },
-      homepage: {
+      url: {
         context: "url",
-        description: "The person's homepage.",
+        description: "The person's website.",
         type: "string",
         format: "uri",
       },
