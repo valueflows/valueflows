@@ -6,6 +6,8 @@ should describe any type of resource planning and accounting within fractal netw
 
 ![value network flows](https://i.imgur.com/74gIY5C.png)
 
+![model](https://drive.google.com/file/d/0B6Rd5fQ-CZheUmU2S3pXSWN5WjA/view?usp=sharing)
+
 ### WORK IN PROGRESS
 
 - [x] Economic Agents
