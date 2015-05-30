@@ -14,6 +14,8 @@ And the Open Apps gang (which includes the NRP gang) wants to create "a suite of
 
 Which potentially means many different apps that want to talk to each other. Thus the desire for a common vocabulary.
 
+If you would like to be part of this conversation, please [raise an issue here](https://github.com/openvocab/ovn/issues), or contact [Mikorizal](http://mikorizal.org/contact.html).
+
 ## Format
 
 Our goal is [Linked Open Data](http://lod-cloud.net/) using [JSON-LD](http://json-ld.org/) to communicate between apps.
