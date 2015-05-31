@@ -6,7 +6,7 @@ Purpose: to describe any type of resource planning and accounting within fractal
 
 ## Why?
 
-This effort began in a conversation between the [Network Requirements Planning, or NRP)](https://github.com/valnet/valuenetwork) and [Open Apps](https://github.com/open-app/core) projects. 
+This effort began in a conversation between the [Network Requirements Planning, or NRP](https://github.com/valnet/valuenetwork) and [Open Apps](https://github.com/open-app/core) projects. 
 
 The NRP gang kept running into other apps that did a lot of the same things, or at least parts of the same things, that were used by different groups who wanted to collaborate with each other. So, let's have the different apps be able to collaborate with each other!
 
@@ -23,6 +23,8 @@ Our goal is [Linked Open Data](http://lod-cloud.net/) using [JSON-LD](http://jso
 ## Who uses this?
 
 NRP is the source of much of the vocabulary, and continues to refine the model, collaborating with user networks like [Sensorica](http://nrp.sensorica.co). [Holodex](https://github.com/open-app/holodex) is using the [organization aspects of the vocab](https://github.com/openvocab/holodex).
+
+But most of the vocabulary comes from the [Resource-Event-Agent (REA) ontology](http://en.wikipedia.org/wiki/Resources,_events,_agents_(accounting_model)) originated by [Professor William McCarthy of Michigan State University](https://www.msu.edu/~mccarth4/), used in many places around the world.
 
 ## Pictures!
 
