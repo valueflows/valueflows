@@ -28,9 +28,26 @@ But most of the vocabulary comes from the [Resource-Event-Agent (REA) ontology](
 
 ## Pictures!
 
-![value network flows](https://i.imgur.com/74gIY5C.png)
-
 ![model](https://docs.google.com/drawings/d/1ZmlgstkpoOeUrdeCkWn7PziXC8iqS3eh9281bjTyxX4/pub?w=960&h=720)
+
+### Resource flows
+
+One of the purposes of this vocab is to support resource flows connecting many websites. These flows may be oriented around Processes, Exchanges, or combinations of both. We are breaking out the Processes and Exchanges into their own vocab repositories, but here some overview diagrams.
+
+In general, processes and exchanges alternate in a flow. But in some situations, either the processes or the exchanges are more important, and the other is not worth tracking and can be elided.
+
+#### Process-oriented flow
+
+![process-oriented flow](https://i.imgur.com/74gIY5C.png)
+
+#### Exchange-oriented flow
+
+![process-oriented flow](https://docs.google.com/drawings/d/1og6iUscoFmzHm2zkfhwSU3lp6zHPX2j3BfvTmyfGmww/pub?w=720&h=330)
+
+#### Process-Exchange combination flow
+
+![combo flow](https://docs.google.com/drawings/d/1Sm389PH04BS_gvrvPD7_idGf-EdZmD2mhRiNl3V26a8/pub?w=746&h=674)
+
 
 ### WORK IN PROGRESS
 
