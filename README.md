@@ -51,24 +51,25 @@ In general, processes and exchanges alternate in a flow. But in some situations,
 
 ### WORK IN PROGRESS
 
-- [x] Economic Agents
-  - [x] [Agent](./vocab/Agent.js)
-  - [x] [Person](./vocab/Person.js)
-  - [x] [Group](./vocab/Group.js)
-  - [x] [RelationshipType](./vocab/RelationshipType.js)
-  - [x] [Relationship](./vocab/Relationship.js)
-- [x] Measurements
-  - [x] [Quantity](./vocab/Quantity.js)
-  - [x] [Unit](./vocab/Unit.js)
-  - [x] [Kind](./vocab/Kind.js)
+- [ ] [Agent Vocab](https://github.com/openvocab/agent)
+  - [ ] [Agent](./vocab/Agent.js)
+  - [ ] AgentType
+  - [ ] [RelationshipType](./vocab/RelationshipType.js)
+  - [ ] [Relationship](./vocab/Relationship.js)
+- [ ] Measurements
+  - [ ] [Quantity](./vocab/Quantity.js)
+  - [ ] [Unit](./vocab/Unit.js)
+  - [ ] [Kind](./vocab/Kind.js)
 - [ ] Economic Resources
   - [ ] [ResourceType](./vocab/ResourceType.js)
   - [ ] [Resource](./vocab/Resource.js)
 - [ ] Economic Interactions
   - [ ] [InteractionType](./vocab/InteractionType.js)
   - [ ] [Interaction](./vocab/Interaction.js)
+- [ ] [Exchange Vocab](https://github.com/valueflows/exchange)
   - [ ] [ExchangeType](./vocab/ExchangeType.js)
   - [ ] [Exchange](./vocab/Exchange.js)
+- [ ] [Process Vocab](https://github.com/valueflows/process)
   - [ ] [ProcessType](./vocab/ProcessType.js)
   - [ ] [Process](./vocab/Process.js)
 - [ ] Economic Events
@@ -79,5 +80,5 @@ In general, processes and exchanges alternate in a flow. But in some situations,
   - [ ] [Commitment](./vocab/Commitment.js)
 - [ ] Facets
 - Misc
-  - [x] [Role](./vocab/Role.js)
-  - [x] [Location](./vocab/Location.js)
+  - [ ] [Role](./vocab/Role.js)
+  - [ ] [Location](./vocab/Location.js)
