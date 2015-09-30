@@ -8,7 +8,7 @@ Or, if that is too many buzzwords, "let's help a lot of alternative economic sof
 
 We wrote up a set of [principles](https://github.com/valueflows/valueflows/wiki/Principles-for-this-vocabulary) for what we are trying to do here.
 
-Some of the "children" have been separated out into their own repositories:
+Some of the "children" have been separated out into their own repositories to give them more attention:
 
 * [Agent Vocab](https://github.com/openvocab/agent)
 * [Exchange Vocab](https://github.com/valueflows/exchange)
@@ -19,7 +19,7 @@ Might be more to come. But this repository has the whole family.
 
 ## Why?
 
-This effort began in a conversation between the [Network Requirements Planning, or NRP](https://github.com/valnet/valuenetwork) and [Open Apps](https://github.com/open-app/core) software projects. 
+This effort began in a conversation between the [Network Requirements Planning](https://github.com/valnet/valuenetwork) (NRP), and the [Open Apps](https://github.com/open-app/core) software projects. 
 
 The NRP gang kept running into other apps that did a lot of the same things, or at least parts of the same things, that were used by different groups who wanted to collaborate with each other. So, let's have the different apps be able to collaborate with each other!
 
@@ -27,7 +27,7 @@ And the Open Apps gang (which includes the NRP gang) wants to create "a suite of
 
 Which potentially means many different apps that want to talk to each other. Thus the desire for a common vocabulary.
 
-If you would like to be part of this conversation, please [raise an issue here](https://github.com/openvocab/ovn/issues), or fork this or any of the related repositories and issue pull requests.
+If you would like to be part of this conversation, please [raise an issue here](https://github.com/valueflows/valueflows/issues), or fork this or any of the related repositories and issue pull requests.
 
 ## Who uses this?
 
