@@ -1,12 +1,25 @@
-# Open Value Network vocabs
+# Value Flows vocab
 
-Vocabs for [Open Value Networks](http://valuenetwork.referata.com/wiki/Main_Page) pulled from [NRP](https://github.com/valnet/valuenetwork/wiki)'s existing [core model](https://github.com/valnet/valuenetwork/blob/master/docs/core_model.txt).
+This is the "parent" repository for a set of interconnected vocabularies to describe flows of economic resources of all kinds within distributed economic ecosystems. 
 
-Purpose: to describe any type of resource planning and accounting within fractal networks of people and groups.
+Purpose: to enable internetworking among many different software projects for resource planning and accounting within fractal networks of people and groups.
+
+Or, if that is too many buzzwords, "let's help a lot of alternative economic software projects that are solving different pieces of the same puzzle be able to work together".
+
+We wrote up a set of [principles](https://github.com/valueflows/valueflows/wiki/Principles-for-this-vocabulary) for what we are trying to do here.
+
+Some of the "children" have been separated out into their own repositories to give them more attention:
+
+* [Agent Vocab](https://github.com/openvocab/agent)
+* [Exchange Vocab](https://github.com/valueflows/exchange)
+* [Process Vocab](https://github.com/valueflows/process)
+* [Resource Vocab](https://github.com/valueflows/resource)
+
+Might be more to come. But this repository has the whole family.
 
 ## Why?
 
-This effort began in a conversation between the [Network Requirements Planning, or NRP](https://github.com/valnet/valuenetwork) and [Open Apps](https://github.com/open-app/core) projects. 
+This effort began in a conversation between the [Network Requirements Planning](https://github.com/valnet/valuenetwork) (NRP), and the [Open Apps](https://github.com/open-app/core) software projects. 
 
 The NRP gang kept running into other apps that did a lot of the same things, or at least parts of the same things, that were used by different groups who wanted to collaborate with each other. So, let's have the different apps be able to collaborate with each other!
 
@@ -14,11 +27,7 @@ And the Open Apps gang (which includes the NRP gang) wants to create "a suite of
 
 Which potentially means many different apps that want to talk to each other. Thus the desire for a common vocabulary.
 
-If you would like to be part of this conversation, please [raise an issue here](https://github.com/openvocab/ovn/issues), or contact [Mikorizal](http://mikorizal.org/contact.html).
-
-## Format
-
-Our goal is [Linked Open Data](http://lod-cloud.net/) using [JSON-LD](http://json-ld.org/) to communicate between apps.
+If you would like to be part of this conversation, please [raise an issue here](https://github.com/valueflows/valueflows/issues), or fork this or any of the related repositories and issue pull requests.
 
 ## Who uses this?
 
@@ -51,24 +60,25 @@ In general, processes and exchanges alternate in a flow. But in some situations,
 
 ### WORK IN PROGRESS
 
-- [x] Economic Agents
-  - [x] [Agent](./vocab/Agent.js)
-  - [x] [Person](./vocab/Person.js)
-  - [x] [Group](./vocab/Group.js)
-  - [x] [RelationshipType](./vocab/RelationshipType.js)
-  - [x] [Relationship](./vocab/Relationship.js)
-- [x] Measurements
-  - [x] [Quantity](./vocab/Quantity.js)
-  - [x] [Unit](./vocab/Unit.js)
-  - [x] [Kind](./vocab/Kind.js)
+- [ ] [Agent Vocab](https://github.com/openvocab/agent)
+  - [ ] [Agent](./vocab/Agent.js)
+  - [ ] AgentType
+  - [ ] [RelationshipType](./vocab/RelationshipType.js)
+  - [ ] [Relationship](./vocab/Relationship.js)
+- [ ] Measurements
+  - [ ] [Quantity](./vocab/Quantity.js)
+  - [ ] [Unit](./vocab/Unit.js)
+  - [ ] [Kind](./vocab/Kind.js)
 - [ ] Economic Resources
   - [ ] [ResourceType](./vocab/ResourceType.js)
   - [ ] [Resource](./vocab/Resource.js)
 - [ ] Economic Interactions
   - [ ] [InteractionType](./vocab/InteractionType.js)
   - [ ] [Interaction](./vocab/Interaction.js)
+- [ ] [Exchange Vocab](https://github.com/valueflows/exchange)
   - [ ] [ExchangeType](./vocab/ExchangeType.js)
   - [ ] [Exchange](./vocab/Exchange.js)
+- [ ] [Process Vocab](https://github.com/valueflows/process)
   - [ ] [ProcessType](./vocab/ProcessType.js)
   - [ ] [Process](./vocab/Process.js)
 - [ ] Economic Events
@@ -79,5 +89,4 @@ In general, processes and exchanges alternate in a flow. But in some situations,
   - [ ] [Commitment](./vocab/Commitment.js)
 - [ ] Facets
 - Misc
-  - [x] [Role](./vocab/Role.js)
-  - [x] [Location](./vocab/Location.js)
+  - [ ] [Location](./vocab/Location.js)
