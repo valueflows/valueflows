@@ -8,6 +8,14 @@ Or, if that is too many buzzwords, "let's help a lot of alternative economic sof
 
 We wrote up a set of [principles](https://github.com/valueflows/valueflows/wiki/Principles-for-this-vocabulary) for what we are trying to do here.
 
+Some of the "children" have been separated out into their own repositories:
+
+* [Agent Vocab](https://github.com/openvocab/agent)
+* [Exchange Vocab](https://github.com/valueflows/exchange)
+* [Process Vocab](https://github.com/valueflows/process)
+
+Might be more to come. But this one has the whole family.
+
 ## Why?
 
 This effort began in a conversation between the [Network Requirements Planning, or NRP](https://github.com/valnet/valuenetwork) and [Open Apps](https://github.com/open-app/core) software projects. 
@@ -80,5 +88,4 @@ In general, processes and exchanges alternate in a flow. But in some situations,
   - [ ] [Commitment](./vocab/Commitment.js)
 - [ ] Facets
 - Misc
-  - [ ] [Role](./vocab/Role.js)
   - [ ] [Location](./vocab/Location.js)
