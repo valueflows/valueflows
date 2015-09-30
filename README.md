@@ -13,6 +13,7 @@ Some of the "children" have been separated out into their own repositories:
 * [Agent Vocab](https://github.com/openvocab/agent)
 * [Exchange Vocab](https://github.com/valueflows/exchange)
 * [Process Vocab](https://github.com/valueflows/process)
+* [Resource Vocab](https://github.com/valueflows/resource)
 
 Might be more to come. But this one has the whole family.
 
