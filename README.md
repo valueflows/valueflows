@@ -15,7 +15,7 @@ Some of the "children" have been separated out into their own repositories:
 * [Process Vocab](https://github.com/valueflows/process)
 * [Resource Vocab](https://github.com/valueflows/resource)
 
-Might be more to come. But this one has the whole family.
+Might be more to come. But this repository has the whole family.
 
 ## Why?
 
