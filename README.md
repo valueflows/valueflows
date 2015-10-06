@@ -12,6 +12,8 @@ Some of the "children" have been separated out into their own repositories to gi
 
 * [Agent Vocab](https://github.com/openvocab/agent)
 * [Exchange Vocab](https://github.com/valueflows/exchange)
+* Flow Vocab
+* Plan Vocab
 * [Process Vocab](https://github.com/valueflows/process)
 * [Resource Vocab](https://github.com/valueflows/resource)
 
@@ -56,37 +58,3 @@ In general, processes and exchanges alternate in a flow. But in some situations,
 #### Process-Exchange combination flow
 
 ![combo flow](https://docs.google.com/drawings/d/1Sm389PH04BS_gvrvPD7_idGf-EdZmD2mhRiNl3V26a8/pub?w=746&h=674)
-
-
-### WORK IN PROGRESS
-
-- [ ] [Agent Vocab](https://github.com/openvocab/agent)
-  - [ ] [Agent](./vocab/Agent.js)
-  - [ ] AgentType
-  - [ ] [RelationshipType](./vocab/RelationshipType.js)
-  - [ ] [Relationship](./vocab/Relationship.js)
-- [ ] Measurements
-  - [ ] [Quantity](./vocab/Quantity.js)
-  - [ ] [Unit](./vocab/Unit.js)
-  - [ ] [Kind](./vocab/Kind.js)
-- [ ] Economic Resources
-  - [ ] [ResourceType](./vocab/ResourceType.js)
-  - [ ] [Resource](./vocab/Resource.js)
-- [ ] Economic Interactions
-  - [ ] [InteractionType](./vocab/InteractionType.js)
-  - [ ] [Interaction](./vocab/Interaction.js)
-- [ ] [Exchange Vocab](https://github.com/valueflows/exchange)
-  - [ ] [ExchangeType](./vocab/ExchangeType.js)
-  - [ ] [Exchange](./vocab/Exchange.js)
-- [ ] [Process Vocab](https://github.com/valueflows/process)
-  - [ ] [ProcessType](./vocab/ProcessType.js)
-  - [ ] [Process](./vocab/Process.js)
-- [ ] Economic Events
-  - [ ] [EventType](./vocab/EventType.js)
-  - [ ] [Event](./vocab/Event.js)
-- [ ] Economic Plans
-  - [ ] [CommitmentType](./vocab/CommitmentType.js)
-  - [ ] [Commitment](./vocab/Commitment.js)
-- [ ] Facets
-- Misc
-  - [ ] [Location](./vocab/Location.js)
