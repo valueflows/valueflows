@@ -3,7 +3,7 @@
     "build": "mkdir -p .build && npm run build-index",
     "build-index": "mdast -u mdast-slug -u mdast-autolink-headings -u mdast-html README.md -o .build/index.html",
     "deploy-remote": "git remote add deploy git@github.com:valueflows/valueflo.ws; true",
-    "deploy-push": "git-directory-deploy --directory .build --branch index-test --repo deploy --verbose --ignore-removal",
+    "deploy-push": "git-directory-deploy --directory .build --repo deploy --branch master --verbose --ignore-removal",
     "deploy": "npm run build && npm run deploy-remote && npm run deploy-push"
   },
   "dependencies": {
