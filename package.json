@@ -1,0 +1,15 @@
+{
+  "scripts": {
+    "build": "mkdir -p .build && npm run build-index",
+    "build-index": "mdast -u mdast-slug -u mdast-autolink-headings -u mdast-html README.md -o .build/index.html",
+    "push": "./bin/push",
+    "deploy": "npm run build && npm run push"
+  },
+  "dependencies": {
+    "gh-pages": "^0.4.0",
+    "mdast": "^2.1.0",
+    "mdast-autolink-headings": "^1.0.0",
+    "mdast-html": "^1.2.1",
+    "mdast-slug": "^2.0.0"
+  }
+}
