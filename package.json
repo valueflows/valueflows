@@ -2,11 +2,12 @@
   "scripts": {
     "build": "mkdir -p .build && npm run build-index",
     "build-index": "mdast -u mdast-slug -u mdast-autolink-headings -u mdast-html README.md -o .build/index.html",
-    "push": "./bin/push",
-    "deploy": "npm run build && npm run push"
+    "deploy-remote": "git remote add deploy git@github.com:valueflows/valueflo.ws; true",
+    "deploy-push": "git-directory-deploy --directory .build --branch index-test --repo deploy --verbose",
+    "deploy": "npm run build && npm run deploy-remote && npm run deploy-push"
   },
   "dependencies": {
-    "gh-pages": "^0.4.0",
+    "git-directory-deploy": "^1.2.1",
     "mdast": "^2.1.0",
     "mdast-autolink-headings": "^1.0.0",
     "mdast-html": "^1.2.1",
