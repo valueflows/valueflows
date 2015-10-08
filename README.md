@@ -1,4 +1,4 @@
-# Value Flows vocab
+# [Value Flows vocab](https://github.com/valueflows/valueflows)
 
 This is the "parent" repository for a set of interconnected vocabularies to describe flows of economic resources of all kinds within distributed economic ecosystems. 
 
