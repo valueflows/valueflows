@@ -1,14 +1,23 @@
-# [Value Flows vocab](https://github.com/valueflows/valueflows)
+# [Value Flows `vf` vocabs](https://github.com/valueflows/valueflows)
 
-This is the "parent" repository for a set of interconnected vocabularies to describe flows of economic resources of all kinds within distributed economic ecosystems. 
+Value Flows is a set of common vocabularies to describe flows of economic resources of all kinds within distributed economic ecosystems.
 
 Purpose: to enable internetworking among many different software projects for resource planning and accounting within fractal networks of people and groups.
 
 Or, if that is too many buzzwords, "let's help a lot of alternative economic software projects that are solving different pieces of the same puzzle be able to work together".
 
-We wrote up a set of [principles](https://github.com/valueflows/valueflows/wiki/Principles-for-this-vocabulary) for what we are trying to do here.
+If you would like to be part of this conversation, please [raise an issue here](https://github.com/valueflows/valueflows/issues), or fork this or any of the related repositories and issue pull requests.
 
-Some of the "children" have been separated out into their own repositories to give them more attention:
+## Principles ([long form](https://github.com/valueflows/valueflows/wiki/Principles-for-this-vocabulary))
+
+- the vocabulary must support coordinating work between different people in different organizations using different software on different platforms using different human and programming languages.
+- the vocabulary must track the flows of resources (value) forwards and backwards.
+- the vocabulary must distribute income (rewards) according to peoples' contributions, regardless of where and when in the network those contributions occurred.
+- the vocabulary must be fractal: it must support high-level views of networks as well zooming in to lower and lower levels of detail.
+- the vocabulary must work at the recipe, planning, and accounting levels.
+- the vocabulary must work for alternative and traditional organizing shapes and economic relationships.
+
+## Vocabularies
 
 * [Agent Vocab](https://github.com/openvocab/agent)
 * Commitment Vocab
@@ -17,7 +26,13 @@ Some of the "children" have been separated out into their own repositories to gi
 * [Process Vocab](https://github.com/valueflows/process)
 * [Resource Vocab](https://github.com/valueflows/resource)
 
-Might be more to come. But this repository has the whole family.
+Might be more to come.
+
+## Roadmap
+
+Our next deliverable is to have separate API and UI apps playing with each others' people, groups, and relationships in-between by communicating through a common vocabulary.
+
+Our long-term plan is to refine our common vocabularies, design a set of interoperable protocols for decentralized economic infrastructure, and deploy an ecosystem of interconnected apps to form the backbone of an alternative economic system that supports recipes, planning, and accounting for fractal networks.
 
 ## Why?
 
@@ -28,8 +43,6 @@ The NRP gang kept running into other apps that did a lot of the same things, or 
 And the Open Apps gang (which includes the NRP gang) wants to create "a suite of integrated and open sourced apps which support transparent, democratic and decentralised organising".
 
 Which potentially means many different apps that want to talk to each other. Thus the desire for a common vocabulary.
-
-If you would like to be part of this conversation, please [raise an issue here](https://github.com/valueflows/valueflows/issues), or fork this or any of the related repositories and issue pull requests.
 
 ## Who uses this?
 
