@@ -1,12 +1,12 @@
 The following is sample data for the minimal core for simple accounting based on an Enspiral scenario.  It is based on the following stories:
 
-Two developers (M and S) working on a project for a client (XYZ) through a network consulting company (ES).
+Two developers, Alice and Bob,  working on a "Delivery App" project  for a client, "Acme Corporation" through a network consulting company, Enspiral Services with the aid of Charles, an account manager.
 
-- In a month, M docked 30 hours working on the LG project for XYZ, and S docked 40 hours on the same project.
-- During the month, C worked 5 hours as part of ES, managing the client XYZ relationship, billing, etc. (not billable to XYZ).
-- At the end of the month, ES invoiced the client LG $7000 ($3000 for M's work, and $4000 for S’s work).
-- The client XYZ paid the invoice a few days later, sending the money to ES.
-- ES distributes the money according to the value equations agreed upon. Their value equation for this project is $100 / hour, with 20% of that going back to ES.  The 20% is distributed for the non-billable client management, to a sister project they want to support (CB), and to the ES general overhead fund.
+- In a month, Alice docked 30 hours working on the Delivery App project for Acme, and Bob docked 40 hours on the same project.
+- During the month, Charles worked 5 hours as part of Enspiral Services, managing the client relationship with Acme, billing, etc. (not billable to Acme).
+- At the end of the month, Enspiral Services invoiced the client for the Delivery App project $7000 ($3000 for Alice's work, and $4000 for Bob’s work).
+- The client Acme paid the invoice a few days later, sending the money to Enspiral Services.
+- Enspiral Servics distributes the money according to the value equations agreed upon. Their value equation for this project is $100 / hour, with 20% of that going back to Enspiral Services.  The 20% is distributed for the non-billable client management, to an internal sister project they want to support (Cobudget), and to the Enspiral Services general overhead fund.
 - Upon distribution, all the individual accounts have access to the amount.
 
 Diagram of some of the Economic Events listed in detail below:
@@ -15,25 +15,25 @@ Diagram of some of the Economic Events listed in detail below:
 **Treatment as software objects**, temporarily using the vocabulary from the [valnet model](https://github.com/valnet/valuenetwork/blob/master/docs/core_model.txt). Will be changed to OVN vocab when ready. [Also, this treatment is work-in-process, subject to revision.]
 
 Agents:
-* M (agent type: person)
-* S (agent type: person)
-* C (agent type: person)
-* XYZ (agent type: organization)
-* ES (agent type: organization, is context agent)
-* CB (agent type: organization, is context agent)
-* E (agent type: organization, is context agent)
-* LG project? 
-        (We are still thinking about what Project means in this case. 
-        Project team? 
+* Alice (agent type: person)
+* Bob (agent type: person)
+* Charles (agent type: person)
+* Acme Corp (agent type: organization)
+* Enspiral Services (agent type: organization, is context agent)
+* Cobudget (agent type: organization, is context agent)
+* Enspiral (agent type: organization, is context agent)
+* "Delivery App" project?
+        (We are still thinking about what Project means in this case.
+        Project team?
         Long-duration customer order? Consulting contract?)
 
 Agent Relationships:
-* XYZ is client of ES
-* M is member of ES
-* C is member of ES
-* S is member of ES
-* CB is child of E
-* ES is child of E
+* Acme is client of Enspiral Services
+* Alice is member of Enspiral Services
+* Charles is member of Enspiral Services
+* Bob is member of Enspiral Services
+* Cobudget is child of Enspiral
+* Enspiral Services is child of Enspiral
 
 Resource Types:
 * Software development (could also be different grades or skills with different rates):
@@ -41,7 +41,7 @@ Resource Types:
     * value_per_unit: 90
     * unit_of_value: $
 * or AgentResourceType (where different people have different rates for the same skills):
-    * agent: M
+    * agent: Alice
     * resource_type: Software development
     * value_per_unit: 100
 * Money
@@ -51,105 +51,105 @@ Resource Types:
 
 Economic Events:
 
-* M works 30 hours
+* Alice works 30 hours
     * Event Type: Billable Work
     * Resource Type: Software development
-    * from_agent: M
-    * to_agent: ES 
-    * context: LG project
+    * from_agent: Alice
+    * to_agent:  Enspiral Services
+    * context:  Delievery App project
     * quantity: 30
     * unit_of_quantity: hours
     * exchange: Contribution 1
-* S works 20 hours
+* Bob works 20 hours
     * Event Type: Billable Work
     * Resource Type: Software development
-    * from_agent: S
-    * to_agent: ES 
-    * context: LG project
+    * from_agent: Bob
+    * to_agent:  Enspiral Services
+    * context:  Delievery App project
     * quantity: 20
     * unit_of_quantity: hours
     * exchange: Contribution 2
-* S works 20 hours
+* Bob works 20 hours
     * Event Type: Billable Work
     * Resource Type: Software development
-    * from_agent: S
-    * to_agent: ES 
-    * context: LG project (or ES)
+    * from_agent: Bob
+    * to_agent:  Enspiral Services
+    * context:  Delievery App project (or  Enspiral Services)
     * quantity: 20
     * unit_of_quantity: hours
     * exchange: Contribution 2
-* C works 5 hours
+* Charles works 5 hours
     * Event Type: Work
     * Resource Type: Brokerage Service
-    * from_agent: C
-    * to_agent: ES 
-    * context: LG project
+    * from_agent: Charles
+    * to_agent:  Enspiral Services
+    * context:  Delievery App project
     * quantity: 5
     * unit_of_quantity: hours
     * exchange: Contribution 3
-* ES delivers 70 hours work to XYZ ( basically invoices this)
+*  Enspiral Services delivers 70 hours work to XYZ ( basically invoices this)
     * Event Type: Delivery
     * Resource Type: Software development
-    * from_agent: ES
-    * to_agent: XYZ
-    * context: LG project
+    * from_agent:  Enspiral Services
+    * to_agent: Acme
+    * context:  Delivery App project
     * quantity: 70
     * unit_of_quantity: hours
     * exchange: Sale 1
-* XYZ pays ES $7000
+* Acme pays  Enspiral Services $7000
     * Event Type: Cash Receipt
     * Resource Type: Money
-    * from_agent: XYZ
-    * to_agent: ES 
-    * context: ES
+    * from_agent: Acme
+    * to_agent:  Enspiral Services
+    * context:  Enspiral Services
     * quantity: 7000
     * unit_of_quantity: $
     * exchange: Sale 1
-* ES distributes $2400 to M
+*  Enspiral Services distributes $2400 to Alice
     * Event Type: Distribution
     * Resource Type: Money
-    * from_agent: ES
-    * to_agent: M
-    * resource: M’s virtual account (which is increased)
-    * context: ES
+    * from_agent:  Enspiral Services
+    * to_agent: Alice
+    * resource: Alice’s virtual account (which is increased)
+    * context:  Enspiral Services
     * quantity: 2400
     * unit_of_quantity: $
     * exchange: Contribution 1
-* ES distributes $3200 to S
+*  Enspiral Services distributes $3200 to Bob
     * Event Type: Distribution
     * Resource Type: Money
-    * from_agent: ES
-    * to_agent: S
-    * resource: S’s virtual account (which is increased)
-    * context: ES
+    * from_agent:  Enspiral Services
+    * to_agent: Bob
+    * resource: Bob’s virtual account (which is increased)
+    * context:  Enspiral Services
     * quantity: 3200
     * unit_of_quantity: $
     * exchange: Contribution 2
-* ES distributes $400 to C
+*  Enspiral Services distributes $400 to Charles
     * Event Type: Distribution
     * Resource Type: Money
-    * from_agent: ES
-    * to_agent: C 
-    * resource: C’s virtual account (which is increased)
-    * context: ES
+    * from_agent:  Enspiral Services
+    * to_agent: Charles
+    * resource: Charles’s virtual account (which is increased)
+    * context:  Enspiral Services
     * quantity: 500
     * unit_of_quantity: $
     * exchange: Contribution 3
-* ES distributes $500 to CB
+*  Enspiral Services distributes $500 to CB
     * Event Type: Distribution
-    * Resource Type: Money
-    * from_agent: ES
-    * to_agent: CB 
-    * resource: CB’s virtual account (which is increased)
-    * context: ES
+    * Resource Type:Money
+    * from_agent:  Enspiral Services
+    * to_agent: Cobudget
+    * resource: Cobudget’s virtual account (which is increased)
+    * context:  Enspiral Services
     * quantity: 500
     * unit_of_quantity: $
-* ES disburses $6500 from its account
+*  Enspiral Services disburses $6500 from its account
     * Event Type: Cash Disbursement
     * Resource Type: Money
-    * from_agent: ES
-    * to_agent: ES
-    * resource: ES’s virtual account (which is decreased)
-    * context: ES
+    * from_agent:  Enspiral Services
+    * to_agent:  Enspiral Services
+    * resource:  Enspiral Services’s virtual account (which is decreased)
+    * context:  Enspiral Services
     * quantity: 6500
     * unit_of_quantity: $
