@@ -1,5 +1,7 @@
 # [Value Flows `vf` vocabs](https://github.com/valueflows/valueflows)
 
+![Value Flows icon](https://rawgit.com/valueflows/valueflows/master/assets/icon-0.svg)
+
 Value Flows is a set of common vocabularies to describe flows of economic resources of all kinds within distributed economic ecosystems.
 
 Purpose: to enable internetworking among many different software projects for resource planning and accounting within fractal networks of people and groups.
