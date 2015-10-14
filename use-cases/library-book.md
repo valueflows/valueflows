@@ -34,7 +34,7 @@ ResourceType: The power of Babel : a natural history of language
 Resource: the library book
 * resourceType: The power of Babel : a natural history of language
 * copy: 1
-* location: <shelf number>
+* location: shelf number
 * checked out: state
 
 Exchange: 
