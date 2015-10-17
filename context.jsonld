@@ -3,66 +3,61 @@
     "owl": "http://www.w3.org/2002/07/owl#",
     "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-    "rdfs:label": { "@container": "@language" },
+    "skos": "http://www.w3.org/2004/02/skos/core#",
     "vf": "https://w3id.org/valueflows/",
     "Relationship": "vf:Relationship",
     "url":  { "@id": "vf:url", "@type": "@id" },
     "image": { "@id": "vf:image", "@type": "@id" },
-    "displayName": "vf:displayName",
-    "displayNameMap": { "@id": "displayName", "@container": "@language" },
+    "label": "skos:prefLabel",
+    "labelMap": { "@id": "skos:prefLabel", "@container": "@language" },
+    "note": "skos:note",
+    "noteMap": { "@id": "skos:note", "@container": "@language" },
     "subject": { "@id": "vf:subject", "@type": "@id" },
     "relationship": { "@id": "vf:relationship", "@type": "@id" },
     "object": { "@id": "vf:object", "@type": "@id" }
   },
   "@graph": [
     {
-        "@id": "Relationship",
-        "@type": "owl:Class",
-        "rdfs:label": {
-            "en": "Relationship"
-        }
+      "@id": "Relationship",
+      "@type": ["owl:Class", "skos:Concept"],
+      "labelMap": {
+        "en": "Relationship"
+      }
     },
     {
-        "@id": "url",
-        "@type": "owl:DataProperty",
-        "rdfs:label": {
-            "en": "url"
-        }
+      "@id": "url",
+      "@type": "owl:DataProperty",
+      "labelMap": {
+        "en": "url"
+      }
     },
     {
-        "@id": "image",
-        "@type": "owl:ObjectProperty",
-        "rdfs:label": {
-            "en": "url"
-        }
+      "@id": "image",
+      "@type": "owl:ObjectProperty",
+      "labelMap": {
+        "en": "image"
+      }
     },
     {
-        "@id": "displayName",
-        "@type": "owl:DataProperty",
-        "rdfs:label": {
-            "en": "displayName"
-        }
+      "@id": "subject",
+      "@type": "owl:ObjectProperty",
+      "labelMap": {
+        "en": "subject"
+      }
     },
     {
-        "@id": "subject",
-        "@type": "owl:ObjectProperty",
-        "rdfs:label": {
-            "en": "subject"
-        }
+      "@id": "relationship",
+      "@type": "owl:ObjectProperty",
+      "labelMap": {
+        "en": "relationship"
+      }
     },
     {
-        "@id": "relationship",
-        "@type": "owl:ObjectProperty",
-        "rdfs:label": {
-            "en": "relationship"
-        }
-    },
-    {
-        "@id": "object",
-        "@type": "owl:ObjectProperty",
-        "rdfs:label": {
-            "en": "object"
-        }
+      "@id": "object",
+      "@type": "owl:ObjectProperty",
+      "labelMap": {
+        "en": "object"
+      }
     }
   ]
 }
