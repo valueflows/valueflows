@@ -12,6 +12,7 @@
     "labelMap": { "@id": "skos:prefLabel", "@container": "@language" },
     "note": "skos:note",
     "noteMap": { "@id": "skos:note", "@container": "@language" },
+    "inverseOf": "owl:inverseOf",
     "subject": { "@id": "vf:subject", "@type": "@id" },
     "relationship": { "@id": "vf:relationship", "@type": "@id" },
     "object": { "@id": "vf:object", "@type": "@id" }
