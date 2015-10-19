@@ -1,13 +1,13 @@
 {
   "scripts": {
-    "build": "mkdir -p .build && npm run build-index",
-    "build-index": "mdast -u mdast-slug -u mdast-autolink-headings -u mdast-html README.md -o .build/index.html",
+    "build": "mkdir -p .build && npm run build-docs",
+    "build-docs": "mkdir -p .build/docs && cp README.md .build/docs/index.md",
     "deploy-remote": "git remote add deploy git@github.com:valueflows/valueflo.ws; true",
     "deploy-push": "git-directory-deploy --directory .build --repo deploy --branch master --verbose --ignore-removal --username valueflows --email bot@valueflo.ws",
     "deploy": "npm run build && npm run deploy-remote && npm run deploy-push"
   },
   "dependencies": {
-    "git-directory-deploy": "git://github.com/ahdinosaur/git-directory-deploy#4d7ba873bdf77f73db40635364576d89239c7e97",
+    "git-directory-deploy": "^1.3.0",
     "mdast": "^2.1.0",
     "mdast-autolink-headings": "^1.0.0",
     "mdast-html": "^1.2.1",
