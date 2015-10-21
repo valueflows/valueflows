@@ -1,6 +1,6 @@
 #DHen value flow
 
-An example of a value flow combining Exchanges and Processes.
+An example of an incoming value flow combining Exchanges and Processes.
 
 ```
   0 Catnip: 60915
