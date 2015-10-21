@@ -29,5 +29,28 @@ What's going on here, from end of flow to beginnings:
     * Lot 60915 was created in a Process that combined two previous lots of Catnip from farm 
         * those lots of Catnip from farm had been transferred from the harvester to Namaste Lane Gardens
         
-I can sequence and present all of this information on [this page](http://dhen.webfactional.com/accounting/incoming-value-flows/502/), 
-but my algorithm is not yet reliable for all conditions.  When I get a reliable algorithm, I will add it to this use case.
+###Sequencing the flows (pseudocode):
+
+```
+resource = Catnip: 60915:
+resource.depth_first_search():
+    events = resource.all_economic_events()
+    data = {} #a dictionary
+    for event in events:
+        event.previous_events = events.filter(to_agent=event.from_agent).exclude(id=event.id)
+        data[event] = event.previous_events
+    # Sequence events via topological sort, 
+    # starting from events with no previous_events,
+    # following the chain from previous to next event.
+    event_sequence = toposort(data) 
+    event_sequence.reverse()
+    for event in event_sequence:
+        if event.is_transfer():
+            follow from transfer to exchange to reciprocal_transfer
+        elif event.is_production():
+            for input in event.process.inputs():
+                input.resource.depth_first_search()
+                
+        
+```
+Will follow with link to actual code when it's better tested...
