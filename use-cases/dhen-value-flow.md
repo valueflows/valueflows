@@ -53,4 +53,6 @@ resource.depth_first_search():
                 
         
 ```
-Will follow with link to actual code when it's better tested...
+ [topological sort](https://bitbucket.org/ericvsmith/toposort/src/25b5894c4229cb888f77cf0c077c05e2464446ac/toposort.py?at=default&fileviewer=file-view-default)
+
+Will follow with link to NRP code when it's better tested...
