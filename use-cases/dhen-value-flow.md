@@ -3,18 +3,23 @@
 An example of a value flow combining Exchanges and Processes.
 
 ```
-1 Resource: Catnip: 60915
-    2 Transfer: 2015-06-20 from Namaste Lane Gardens to Tea for the People 0.89 Lbs Catnip: 60915
-        3 Exchange: Transfer Catnip, Transfer starting 2015-06-20
-    2 Process: Combined harvested: new lot starting 2015-06-09 ending 2015-06-09 Production qty: 12.41
-    2 Resource Consumption: 2015-06-09 from Namaste Lane Gardens to Namaste Lane Gardens 8.19 Lbs Catnip: Catnip from farm
-        3 Resource: Catnip: Catnip from farm 2
-            4 Transfer: 2015-06-09 from Megan Pierce to Namaste Lane Gardens 8.19 Lbs Catnip: Catnip from farm
-                5 Exchange: Transfer Catnip, Transfer starting 2015-06-09
-    2 Resource Consumption: 2015-06-09 from Namaste Lane Gardens to Namaste Lane Gardens 4.22 Lbs Catnip: Catnip from farm
-        3 Resource: Catnip: Catnip from farm 1
-            4 Transfer: 2015-06-09 from Lauren McElroy to Namaste Lane Gardens 4.22 Lbs Catnip: Catnip from farm
-                5 Exchange: Transfer Catnip, Transfer starting 2015-06-09
+  0 Catnip: 60915
+ . 1 Transfer 2015-06-20 from Namaste Lane Gardens to Tea for the People 0.89 Lbs Catnip: 60915
+ .. 2 Transfer Catnip, Transfer starting 2015-06-20
+ .. 2 Resource Production 2015-06-09 from Namaste Lane Gardens to Namaste Lane Gardens 12.41 Lbs Catnip: 60915
+ ... 3 Combined harvested: new lot  starting 2015-06-09 ending 2015-06-09
+ .... 4 Resource Consumption 2015-06-09 from Namaste Lane Gardens to Namaste Lane Gardens 8.19 Lbs Catnip: Catnip from farm
+ .... 4 Resource Consumption 2015-06-09 from Namaste Lane Gardens to Namaste Lane Gardens 4.22 Lbs Catnip: Catnip from farm
+ ..... 5 Catnip: Catnip from farm
+ ...... 6 Transfer 2015-06-09 from Megan Pierce to Namaste Lane Gardens 8.19 Lbs Catnip: Catnip from farm
+ ....... 7 Transfer Catnip, Transfer starting 2015-06-09
+ ....... 7 Receipt 2015-06-09 from Dancing Waters Permaculture Coop to Megan Pierce 8.19 Lbs Catnip: Catnip from farm
+ ........ 8 Purchase Catnip, Purchase Contribution starting 2015-06-09
+ ..... 5 Catnip: Catnip from farm
+ ...... 6 Transfer 2015-06-09 from Lauren McElroy to Namaste Lane Gardens 4.22 Lbs Catnip: Catnip from farm
+ ....... 7 Transfer Catnip, Transfer starting 2015-06-09
+ ....... 7 Receipt 2015-06-09 from Dancing Waters Permaculture Coop to Lauren McElroy 4.22 Lbs Catnip: Catnip from farm
+ ........ 8 Purchase Catnip, Purchase Contribution starting 2015-06-09
 ```
 
 What's going on here, from end of flow to beginnings:
