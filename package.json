@@ -1,7 +1,8 @@
 {
   "scripts": {
-    "build": "mkdir -p .build && npm run build-docs",
+    "build": "mkdir -p .build && npm run build-docs && npm run build-ns",
     "build-docs": "mkdir -p .build/docs && cp README.md .build/docs/index.md",
+    "build-ns": "mkdir -p .build/ns && cp context.jsonld .build/ns/base.jsonld",
     "deploy-remote": "git remote add deploy git@github.com:valueflows/valueflo.ws; true",
     "deploy-push": "git-directory-deploy --directory .build --repo deploy --branch master --verbose --ignore-removal --username valueflows --email bot@valueflo.ws",
     "deploy": "npm run build && npm run deploy-remote && npm run deploy-push"
