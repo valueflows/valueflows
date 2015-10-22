@@ -1,6 +1,6 @@
 #DHen value flow
 
-An example of an incoming value flow combining Exchanges and Processes. The numbers on the left are depth in a depth-first search (pseudocode below).
+An example of an incoming value flow combining Exchanges and Processes. The numbers on the left are depth in a depth-first search starting from the end resource (pseudocode below).
 
 ```
   0 EconomicResource: Catnip: 60915
