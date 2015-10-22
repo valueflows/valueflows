@@ -21,6 +21,15 @@ An example of an incoming value flow combining Exchanges and Processes. The numb
  ....... 7 EconomicEvent: Receipt 2015-06-09 from Dancing Waters Permaculture Coop to Lauren McElroy 4.22 Lbs Catnip: Catnip from farm1
  ........ 8 Exchange: Purchase Catnip
 ```
+### Agents involved
+
+* Dancing Waters Permaculture Coop (group running the harvesting site, aka farm)
+* Megan Pierce (person harvesting)
+* Lauren McElroy (person harvesting)
+* Namaste Lane Gardens (group running the drying site)
+* Tea for the People (group selling the product)
+
+### Detailed explaination
 
 What's going on here, from beginning of flow to end (note only the catnip flow is displayed, nothing of reverse flows):
 * Megan and Lauren both harvested catnip at Dancing Waters farm. (Process not recorded, no need.)
