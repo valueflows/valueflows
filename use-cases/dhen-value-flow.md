@@ -3,32 +3,33 @@
 An example of an incoming value flow combining Exchanges and Processes.
 
 ```
-  0 Catnip: 60915
- . 1 Transfer 2015-06-20 from Namaste Lane Gardens to Tea for the People 0.89 Lbs Catnip: 60915
- .. 2 Transfer Catnip, Transfer starting 2015-06-20
- .. 2 Resource Production 2015-06-09 from Namaste Lane Gardens to Namaste Lane Gardens 12.41 Lbs Catnip: 60915
- ... 3 Combined harvested: new lot  starting 2015-06-09 ending 2015-06-09
- .... 4 Resource Consumption 2015-06-09 from Namaste Lane Gardens to Namaste Lane Gardens 8.19 Lbs Catnip: Catnip from farm
- .... 4 Resource Consumption 2015-06-09 from Namaste Lane Gardens to Namaste Lane Gardens 4.22 Lbs Catnip: Catnip from farm
- ..... 5 Catnip: Catnip from farm
- ...... 6 Transfer 2015-06-09 from Megan Pierce to Namaste Lane Gardens 8.19 Lbs Catnip: Catnip from farm
- ....... 7 Transfer Catnip, Transfer starting 2015-06-09
- ....... 7 Receipt 2015-06-09 from Dancing Waters Permaculture Coop to Megan Pierce 8.19 Lbs Catnip: Catnip from farm
- ........ 8 Purchase Catnip, Purchase Contribution starting 2015-06-09
- ..... 5 Catnip: Catnip from farm
- ...... 6 Transfer 2015-06-09 from Lauren McElroy to Namaste Lane Gardens 4.22 Lbs Catnip: Catnip from farm
- ....... 7 Transfer Catnip, Transfer starting 2015-06-09
- ....... 7 Receipt 2015-06-09 from Dancing Waters Permaculture Coop to Lauren McElroy 4.22 Lbs Catnip: Catnip from farm
- ........ 8 Purchase Catnip, Purchase Contribution starting 2015-06-09
+  0 Catnip: 60915 [resource]
+ . 1 Transfer 2015-06-20 from Namaste Lane Gardens to Tea for the People 0.89 Lbs Catnip: 60915 [event]
+ .. 2 Transfer Catnip, Transfer starting 2015-06-20 [exchange]
+ .. 2 Resource Production 2015-06-09 from Namaste Lane Gardens to Namaste Lane Gardens 12.41 Lbs Catnip: 60915 [event]
+ ... 3 Combined harvested: new lot  starting 2015-06-09 ending 2015-06-09 [process]
+ .... 4 Resource Consumption 2015-06-09 from Namaste Lane Gardens to Namaste Lane Gardens 8.19 Lbs Catnip: Catnip from farm [event]
+ .... 4 Resource Consumption 2015-06-09 from Namaste Lane Gardens to Namaste Lane Gardens 4.22 Lbs Catnip: Catnip from farm [event]
+ ..... 5 Catnip: Catnip from farm [resource]
+ ...... 6 Transfer 2015-06-09 from Megan Pierce to Namaste Lane Gardens 8.19 Lbs Catnip: Catnip from farm [event]
+ ....... 7 Transfer Catnip, Transfer starting 2015-06-09 [exchange]
+ ....... 7 Receipt 2015-06-09 from Dancing Waters Permaculture Coop to Megan Pierce 8.19 Lbs Catnip: Catnip from farm [event]
+ ........ 8 Purchase Catnip, Purchase starting 2015-06-09 [exchange]
+ ..... 5 Catnip: Catnip from farm [resource]
+ ...... 6 Transfer 2015-06-09 from Lauren McElroy to Namaste Lane Gardens 4.22 Lbs Catnip: Catnip from farm [event]
+ ....... 7 Transfer Catnip, Transfer starting 2015-06-09 [exchange]
+ ....... 7 Receipt 2015-06-09 from Dancing Waters Permaculture Coop to Lauren McElroy 4.22 Lbs Catnip: Catnip from farm [event]
+ ........ 8 Purchase Catnip, Purchase starting 2015-06-09 [exchange]
 ```
 
-What's going on here, from end of flow to beginnings:
-* Lot 60915 of Catnip
-    * was transferred from Namaste Lane Gardens to Tea for the People
-        * in an Exchange
-    * Lot 60915 was created in a Process that combined two previous lots of Catnip from farm 
-        * those lots of Catnip from farm had been transferred from the harvester to Namaste Lane Gardens
-        
+What's going on here, from beginning of flow to end (note only the catnip flow is displayed, nothing of reverse flows):
+* Megan and Lauren both harvested catnip at Dancing Waters farm. (Process not recorded, no need.)
+* There is a transfer from DW to each of them so they now own the catnip. (This is the 7 receipt, 8 exchange. They could pay the farm as part of this exchange, but in this case, they don't bother because they both live there.  And often the farms donate the herbs anyhow.)
+* They each sold the catnip to Namaste Lane. (7 transfer, 6, 5. Two exchanges - only the transfer (receipt by NL) of the herbs shows in this directional sequence, the harvesters are either paid or owed money.)
+* Namaste Lane combined the catnip into one lot and put it into the drying room (a process 3, with inputs 4 and 4, and output 2 resource production - this is where the lot number is created)
+* When it got dry, it was removed from the drying room.  (Process not recorded.)
+* When it comes out though, it also changes ownership - transfered from NL to Tea for People.  Still has the same lot number, but much less weight because it is dry. (Exchange 2 Transfer, and 1. Now it is just sitting in a storage room waiting to be sold.  Again reverse side of the exchange not shown.)
+
 ###Sequencing the flows (pseudocode):
 
 ```
