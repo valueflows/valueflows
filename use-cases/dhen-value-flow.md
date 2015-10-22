@@ -3,23 +3,23 @@
 An example of an incoming value flow combining Exchanges and Processes.
 
 ```
-  EconomicResource: Catnip: 60915
- . EconomicEvent: Transfer 2015-06-20 from Namaste Lane Gardens to Tea for the People 0.89 Lbs Catnip: 60915
- .. Exchange: Transfer Catnip
- .. EconomicEvent: Resource Production 2015-06-09 12.41 Lbs Catnip: 60915
- ... Process: Combined harvested: new lot  starting 2015-06-09 ending 2015-06-09
- .... EconomicEvent: Resource Consumption 2015-06-09 8.19 Lbs Catnip: Catnip from farm
- .... EconomicEvent: Resource Consumption 2015-06-09 4.22 Lbs Catnip: Catnip from farm
- ..... EconomicResource: Catnip: Catnip from farm2
- ...... EconomicEvent: Transfer 2015-06-09 from Megan Pierce to Namaste Lane Gardens 8.19 Lbs Catnip: Catnip from farm
- ....... Exchange: Transfer Catnip
- ....... EconomicEvent: Receipt 2015-06-09 from Dancing Waters Permaculture Coop to Megan Pierce 8.19 Lbs Catnip: Catnip from farm
- ........ Exchange: Purchase Catnip
- ..... EconomicResource: Catnip: Catnip from farm1
- ...... EconomicEvent: Transfer 2015-06-09 from Lauren McElroy to Namaste Lane Gardens 4.22 Lbs Catnip: Catnip from farm
- ....... Exchange: Transfer Catnip
- ....... EconomicEvent: Receipt 2015-06-09 from Dancing Waters Permaculture Coop to Lauren McElroy 4.22 Lbs Catnip: Catnip from farm
- ........ Exchange: Purchase Catnip
+  0 EconomicResource: Catnip: 60915
+ . 1 EconomicEvent: Transfer 2015-06-20 from Namaste Lane Gardens to Tea for the People 0.89 Lbs Catnip: 60915
+ .. 2 Exchange: Transfer Catnip
+ .. 2 EconomicEvent: Resource Production 2015-06-09 12.41 Lbs Catnip: 60915
+ ... 3 Process: Combined harvested: new lot  starting 2015-06-09 ending 2015-06-09
+ .... 4 EconomicEvent: Resource Consumption 2015-06-09 8.19 Lbs Catnip: Catnip from farm
+ .... 4 EconomicEvent: Resource Consumption 2015-06-09 4.22 Lbs Catnip: Catnip from farm
+ ..... 5 EconomicResource: Catnip: Catnip from farm2
+ ...... 6 EconomicEvent: Transfer 2015-06-09 from Megan Pierce to Namaste Lane Gardens 8.19 Lbs Catnip: Catnip from farm
+ ....... 7 Exchange: Transfer Catnip
+ ....... 7 EconomicEvent: Receipt 2015-06-09 from Dancing Waters Permaculture Coop to Megan Pierce 8.19 Lbs Catnip: Catnip from farm
+ ........ 8 Exchange: Purchase Catnip
+ ..... 5 EconomicResource: Catnip: Catnip from farm1
+ ...... 6 EconomicEvent: Transfer 2015-06-09 from Lauren McElroy to Namaste Lane Gardens 4.22 Lbs Catnip: Catnip from farm
+ ....... 7 Exchange: Transfer Catnip
+ ....... 7 EconomicEvent: Receipt 2015-06-09 from Dancing Waters Permaculture Coop to Lauren McElroy 4.22 Lbs Catnip: Catnip from farm
+ ........ 8 Exchange: Purchase Catnip
 ```
 
 What's going on here, from beginning of flow to end (note only the catnip flow is displayed, nothing of reverse flows):
