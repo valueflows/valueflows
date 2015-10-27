@@ -2,6 +2,10 @@
 
 An example of an incoming value flow combining Exchanges and Processes. The numbers on the left are depth in a depth-first search starting from the end resource (pseudocode below).
 
+[value flow report](http://dhen.webfactional.com/accounting/resource-flow-report/14/)
+
+(That's a table, we want a set of mini Sankey diagrams...)
+
 ```
   0 EconomicResource: Catnip: 60915
  . 1 EconomicEvent: Transfer 2015-06-20 from Namaste Lane Gardens to Tea for the People 0.89 Lbs Catnip: 60915
@@ -63,6 +67,10 @@ resource.depth_first_search():
                 
         
 ```
- [topological sort](https://bitbucket.org/ericvsmith/toposort/src/25b5894c4229cb888f77cf0c077c05e2464446ac/toposort.py?at=default&fileviewer=file-view-default)
 
-Will follow with link to NRP code when it's better tested...
+## Actual code
+
+* [incoming_value_flows](https://github.com/valnet/valuenetwork/blob/master/valuenetwork/valueaccounting/models.py#L4708)
+* [calls a recursive depth-first-search](https://github.com/valnet/valuenetwork/blob/master/valuenetwork/valueaccounting/models.py#L4729)
+    * [calls event_sequence](https://github.com/valnet/valuenetwork/blob/master/valuenetwork/valueaccounting/models.py#L3842)
+        * [calls a topological sort](https://bitbucket.org/ericvsmith/toposort/src/25b5894c4229cb888f77cf0c077c05e2464446ac/toposort.py?at=default&fileviewer=file-view-default)
