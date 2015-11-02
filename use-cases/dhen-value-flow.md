@@ -51,8 +51,8 @@ resource.depth_first_search():
     events = resource.all_economic_events()
     data = {} #a dictionary
     for event in events:
-        event.previous_events = events.filter(to_agent=event.from_agent).exclude(id=event.id)
-        data[event] = event.previous_events
+        prevs = event.previous_events() (which is not generally correct yet - more below)
+        data[event] = prevs
     # Sequence events via topological sort, 
     # starting from events with no previous_events,
     # following the chain from previous to next event.
@@ -75,4 +75,5 @@ resource.depth_first_search():
 * [incoming_value_flows](https://github.com/valnet/valuenetwork/blob/master/valuenetwork/valueaccounting/models.py#L4708)
 * [calls a recursive depth-first-search](https://github.com/valnet/valuenetwork/blob/master/valuenetwork/valueaccounting/models.py#L4729)
     * [calls event_sequence](https://github.com/valnet/valuenetwork/blob/master/valuenetwork/valueaccounting/models.py#L3842)
+        * [calls event.previous_events](https://github.com/valnet/valuenetwork/blob/master/valuenetwork/valueaccounting/models.py#L8543) which is a temporary hack awaiting ExchangeType recipes
         * [calls a topological sort](https://bitbucket.org/ericvsmith/toposort/src/25b5894c4229cb888f77cf0c077c05e2464446ac/toposort.py?at=default&fileviewer=file-view-default)
