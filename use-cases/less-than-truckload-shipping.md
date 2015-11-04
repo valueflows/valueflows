@@ -18,4 +18,6 @@ and heading out to make deliveries first. Then when the trailer is empty they be
 return to the terminal for sorting and delivery next day. Because of the efficiency of this order of operations 
 most deliveries are performed in the morning and pickups are made in the afternoon.
 
-This is another example where the transportation process is very different from the transfer of ownership.
+This is another example where the transportation process is very different from the transfer of ownership. 
+And where the agents involved in the transfer of ownership (e.g. the buyer and the seller) usually know nothing 
+about the actual logistics involved.
