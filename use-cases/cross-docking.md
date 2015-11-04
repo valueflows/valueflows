@@ -18,3 +18,5 @@ Wal-Mart began using cross-docking in the retail sector in the late 1980s.
 directly onto another, with minimal or no warehousing. In retail practice, cross-docking operations 
 may utilize staging areas where inbound materials are sorted, consolidated, 
 and stored until the outbound shipment is complete and ready to ship.
+
+See also [LTL](https://github.com/valueflows/valueflows/blob/master/use-cases/less-than-truckload-shipping.md)
