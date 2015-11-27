@@ -8,7 +8,7 @@ Purpose: to enable internetworking among many different software projects for re
 
 Or, if that is too many buzzwords, "let's help a lot of alternative economic software projects that are solving different pieces of the same puzzle be able to work together".
 
-If you would like to be part of this conversation, please [raise an issue here](https://github.com/valueflows/valueflows/issues), or fork this or any of the related repositories and issue pull requests.
+If you would like to be part of this conversation, please [raise an issue here](https://github.com/valueflows/valueflows/issues), or fork this or any of the related repositories and issue pull requests.  You can also pop into our [welcome gitter chat](https://gitter.im/valueflows/welcome) to make comments, ask questions, or introduce yourself!
 
 ## Principles ([long form](https://github.com/valueflows/valueflows/wiki/Principles-for-this-vocabulary))
 
