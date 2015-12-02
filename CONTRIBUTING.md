@@ -12,7 +12,7 @@ We welcome all contributions, such as but not limited to:
 - discussions
 - tests
 
-If you contribute enough, you'll be invited to join the project members.
+If you contribute, you'll be invited to join the project members.
 
 Value Flows aims for autonomous solving of collaborative problems with a common vision.
 
