@@ -11,12 +11,25 @@ We welcome all contributions, such as but not limited to:
 - code
 - discussions
 - tests
+- models
 
 If you contribute, you'll be invited to join the project members.
 
 Value Flows aims for autonomous solving of collaborative problems with a common vision.
 
-## Workflow
+## A suggested workflow
+
+Our workflow is evolving as we continue to work together and to bring in new people.  So all of this is open to suggestion and discussion.
+
+We think that a use case driven flow works well for us.  Anyone can create use cases or user stories as a starting point for discussion.  These are best if based on the person's experience, either in software or just in life.  Any textual format is fine, whatever you think communicates.
+
+An issue can be created for each use case, and people can discuss.  People can propose models (RDF or other) to reflect the use case.  
+
+Based on the models, we can start to refine the vocabulary.  When it is getting solid, we can write up the .md doc for that repo (subject area) so it will get pulled into the main website.  Then continue to refine as needed.
+
+For new people, reading the [existing use cases](https://github.com/valueflows/valueflows/tree/master/use-cases) could be a good way to see how they might plug in to this workflow.
+
+## Github process
 
 Value Flows follows the ["GitHub Flow"](http://scottchacon.com/2011/08/31/github-flow.html) workflow for using [our GitHub repos](https://github.com/valueflows):
 
