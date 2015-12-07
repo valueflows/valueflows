@@ -11,17 +11,17 @@ John has a broken bike and is not sure what to do with it. He lives in Haringey,
 
 * John
 * Alice who is looking for a cheap bike and can repair it herself
-* Exchange network
+* Haringey Freecycle exchange network
 
 **ResourceTypes**
 
 * Bicycle
-* Exchange network ??
+* Exchange network email list
 
 **Resources**
 
 * John’s bike with a dodgy brake
-* Local online Freecycle group
+* Local online Freecycle group email list
 
 ### Resource flows
 
