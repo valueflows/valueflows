@@ -11,6 +11,7 @@ We welcome all contributions, such as but not limited to:
 - code
 - discussions
 - tests
+- models
 
 If you contribute, you'll be invited to join the project members.
 
