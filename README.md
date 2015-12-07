@@ -30,6 +30,8 @@ If you would like to be part of this conversation, please [raise an issue here](
 
 Might be more to come.
 
+## [Running code and round trips](https://github.com/valueflows/valueflows/wiki/Running-code-and-round-trips)
+
 ## Roadmap
 
 Our next deliverable is to have separate API and UI apps playing with each others' people, groups, and relationships in-between by communicating through a common vocabulary.
