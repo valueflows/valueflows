@@ -32,6 +32,8 @@ Might be more to come.
 
 ## [Running code and round trips](https://github.com/valueflows/valueflows/wiki/Running-code-and-round-trips)
 
+## [What we think Value Flows might be used for](https://github.com/valueflows/valueflows/wiki/What-we-think-Value-Flows-might-be-used-for)
+
 ## Roadmap
 
 Our next deliverable is to have separate API and UI apps playing with each others' people, groups, and relationships in-between by communicating through a common vocabulary.
