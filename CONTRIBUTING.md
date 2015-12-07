@@ -27,7 +27,7 @@ An issue can be created for each use case, and people can discuss.  People can p
 
 Based on the models, we can start to refine the vocabulary.  When it is getting solid, we can write up the .md doc for that repo (subject area) so it will get pulled into the main website.  Then continue to refine as needed.
 
-For new people, reading the use cases could be a good way to see how they might plug in to this workflow.
+For new people, reading the [existing use cases](https://github.com/valueflows/valueflows/tree/master/use-cases) could be a good way to see how they might plug in to this workflow.
 
 ## Github process
 
