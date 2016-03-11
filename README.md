@@ -2,11 +2,9 @@
 
 ![Value Flows icon](https://rawgit.com/valueflows/valueflows/master/assets/icon-0.svg)
 
-Value Flows is a set of common vocabularies to describe flows of economic resources of all kinds within distributed economic ecosystems.
+Value Flows is a minimum set of core concepts (domain models) to describe flows of economic resources across decentralized networks.
 
-Purpose: to enable internetworking among many different software projects for resource planning and accounting within fractal networks of people and groups.
-
-Or, if that is too many buzzwords, "let's help a lot of alternative economic software projects that are solving different pieces of the same puzzle be able to work together".
+We want to help anyone building software for networked socio-economic systems.
 
 If you would like to be part of this conversation, please [raise an issue here](https://github.com/valueflows/valueflows/issues), or fork this or any of the related repositories and issue pull requests.  You can also pop into our [welcome gitter chat](https://gitter.im/valueflows/welcome) to make comments, ask questions, or introduce yourself!
 
@@ -21,26 +19,76 @@ If you would like to be part of this conversation, please [raise an issue here](
 
 ## Vocabularies
 
-* [Agent Vocab](https://github.com/openvocab/agent)
-* Commitment Vocab
-* Economic Event Vocab
-* [Exchange Vocab](https://github.com/valueflows/exchange)
-* [Process Vocab](https://github.com/valueflows/process)
-* [Resource Vocab](https://github.com/valueflows/resource)
+Value Flows is an **abstract vocabulary**: it only describes the simplest and most general set of verbs and nouns that are necessary in order for disparate projects and communities to define *concrete vocabularies* based on their specific use cases and local culture.
 
-Might be more to come.
+In practice, this means we use [the Type Object pattern](http://www.cs.ox.ac.uk/jeremy.gibbons/dpa/typeobject.pdf), whre each 'type object' describes the specific semantics of policies, procedures, rules and patterns for those using it.
+
+![model](https://docs.google.com/drawings/d/1ZmlgstkpoOeUrdeCkWn7PziXC8iqS3eh9281bjTyxX4/pub?w=960&h=720)
+
+### [Agent](https://github.com/valueflows/agent)
+
+An `Agent` is the participants in the socio-economic system: they are people, groups, or bots who can decide and act.
+
+> Example: "an example of an agent is me, Mikey (@ahdinosaur)! i have a name, an email, etc. each agent, like everything in Value Flows, has an associated type object. for agents, these can correspond to the [different type of agents in Open OS](https://enspiral.gitbooks.io/open-os/content/en/levels_of_organising.html), namely Person, Pod, Community, and Network. on the type we can specify properties of that level of organizing structure."
+
+### [Resource](https://github.com/valueflows/resource)
+
+A `Resource` is something that can be 
+
+> Example: "a resource is a physical thing, a resource type is the abstract ideal of that thing. when you go on Amazon you browse through resource types you can buy, the physical thing that you receive in the mail is a resource. when you go to the library catalog you browse through types of books, which correspond to physical books you can check out. these resource types can relate to each other as a taxonomy, as we see with categories on Amazon and genres in the library."
+
+### Transaction
+
+A `Transaction` is an economic interaction ("what you can do"), with the following (known) categories:
+
+- **Transfer**: [a change in 'rights' relating to the resource(s)](https://github.com/valueflows/exchange/issues/12#issuecomment-160162115)
+- **Transport**: [a change in location of the resource(s)](https://github.com/valueflows/exchange/issues/12#issuecomment-160174390)
+- **Transform**: [a change in the composition of the resource(s)](https://github.com/valueflows/process)
+- ... possibly more?
+
+> Examples:
+>
+> - "a transfer is when a resource changes hands. for example, i give you three dollars in exchange for a coffee. the coffee and money resources are still the same, but they've changed owners."
+> - "a transform is when a resource changes composition. for example, i input the resources of coffee grounds and hot water into a coffee machine resource in order to output hot coffee. the hot water is consumed during use, the coffee grounds are turned into waste, and the coffee machine is used but still available for more coffee."
+
+#### Transform-oriented flow
+
+![transform-oriented flow](https://i.imgur.com/74gIY5C.png)
+
+#### Transfer-oriented flow
+
+![transfer-oriented flow](https://docs.google.com/drawings/d/1og6iUscoFmzHm2zkfhwSU3lp6zHPX2j3BfvTmyfGmww/pub?w=720&h=330)
+
+#### Transform-Transfer combination flow
+
+![combo flow](https://docs.google.com/drawings/d/1Sm389PH04BS_gvrvPD7_idGf-EdZmD2mhRiNl3V26a8/pub?w=746&h=674)
+
+### Activity
+
+An `Activity` is a message within a ['conversation for action']() ("what you can say about what you can do"), with the following (known) categories:
+
+from https://github.com/valueflows/valueflows/issues/62#issuecomment-152401068, i propose we formalize the concept of communication within a conversation for action as a `Conversation`, then rename and split out the sub-types of conversations:
+
+- **Intent**: [express wish for transaction](https://github.com/valueflows/intent)
+- **Plan**: express commitment (promise, schedule) to do transaction
+- **Flow**: account for transaction being done
+- ... possibly more?
+
+> Example: "in order to reach a transfer or a transform, we must have a conversation. it starts with an intent: a want like 'i'd love some coffee' or an offer like 'i have heaps of coffee'. once an offer and a want match, then two parties make a commitment to each other, almost like a contract: 'i'll give you a coffee in exchange for receiving 3 dollars' and 'i'll receive a coffee in exchange for giving 3 dollars'. now that we've committed to what we want to do, we only need to do the flow! one side gives the coffee and receives 3 dollars; the other side receives the coffee and gives 3 dollars."
+
+## Roadmap
+
+Our current work is gathering use cases from contributors, see our [CONTRIBUTING.md document](./CONTRIBUTING.md) for more information on how to participate.
+
+Our long-term plan is to refine our common vocabularies, design a set of interoperable protocols for decentralized economic infrastructure, and deploy an ecosystem of interconnected apps to form the backbone of an alternative economic system that supports recipes, planning, and accounting for fractal networks.
 
 ## [Running code and round trips](https://github.com/valueflows/valueflows/wiki/Running-code-and-round-trips)
 
 ## [What we think Value Flows might be used for](https://github.com/valueflows/valueflows/wiki/What-we-think-Value-Flows-might-be-used-for)
 
-## Roadmap
+## History
 
-Our next deliverable is to have separate API and UI apps playing with each others' people, groups, and relationships in-between by communicating through a common vocabulary.
-
-Our long-term plan is to refine our common vocabularies, design a set of interoperable protocols for decentralized economic infrastructure, and deploy an ecosystem of interconnected apps to form the backbone of an alternative economic system that supports recipes, planning, and accounting for fractal networks.
-
-## Why?
+### Why?
 
 This effort began in a conversation between the [Network Requirements Planning](https://github.com/valnet/valuenetwork) (NRP), and the [Open Apps](https://github.com/open-app/core) software projects. 
 
@@ -50,30 +98,10 @@ And the Open Apps gang (which includes the NRP gang) wants to create "a suite of
 
 Which potentially means many different apps that want to talk to each other. Thus the desire for a common vocabulary.
 
-## Who uses this?
+### Who uses this?
 
 NRP is the [source of much of the vocabulary](https://github.com/valnet/valuenetwork/wiki/Core), and [continues to refine the model](https://github.com/valnet/valuenetwork/blob/master/docs/core_model.txt), collaborating with user networks like [Sensorica](http://nrp.sensorica.co). [Holodex](https://github.com/open-app/holodex) is using the [organization aspects of the vocab](https://github.com/valueflows/agent).
 
-But most of the vocabulary comes from the [Resource-Event-Agent (REA) ontology](http://en.wikipedia.org/wiki/Resources,_events,_agents_(accounting_model)) originated by [Professor William McCarthy of Michigan State University](https://www.msu.edu/~mccarth4/) in 1982, used in many places around the world.
+But most of the vocabulary comes from the [Resource-Event-Agent (REA) ontology](http://en.wikipedia.org/wiki/Resources,_events,_agents_(accounting_model)) originated by [Professor William McCarthy of Michigan State University](https://www.msu.edu/~mccarth4/) in 1982, used in many places around the world, as pictured in [this document](http://www.msu.edu/user/mccarth4/Alabama.doc).
 
-## Pictures!
-
-![model](https://docs.google.com/drawings/d/1ZmlgstkpoOeUrdeCkWn7PziXC8iqS3eh9281bjTyxX4/pub?w=960&h=720)
-
-### Resource flows
-
-One of the purposes of this vocab is to support resource flows connecting many websites. These flows may be oriented around Processes, Exchanges, or combinations of both. We are breaking out the Processes and Exchanges into their own vocab repositories, but here some overview diagrams.
-
-In general, processes and exchanges alternate in a flow. But in some situations, either the processes or the exchanges are more important, and the other is not worth tracking and can be elided.
-
-#### Process-oriented flow
-
-![process-oriented flow](https://i.imgur.com/74gIY5C.png)
-
-#### Exchange-oriented flow
-
-![process-oriented flow](https://docs.google.com/drawings/d/1og6iUscoFmzHm2zkfhwSU3lp6zHPX2j3BfvTmyfGmww/pub?w=720&h=330)
-
-#### Process-Exchange combination flow
-
-![combo flow](https://docs.google.com/drawings/d/1Sm389PH04BS_gvrvPD7_idGf-EdZmD2mhRiNl3V26a8/pub?w=746&h=674)
+![Resource-Event-Agent (REA) ontology image](https://raw.github.com/valnet/valuenetwork/master/valuenetwork/site_media/media/photos/REA_event.png)
