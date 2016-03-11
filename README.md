@@ -2,9 +2,11 @@
 
 ![Value Flows icon](https://rawgit.com/valueflows/valueflows/master/assets/icon-0.svg)
 
-Value Flows is a minimum set of core concepts (domain models) to describe flows of economic resources across decentralized networks.
+Value Flows is a minimum set of core concepts (protocols, domain models) to describe [flows of economic resources across decentralized networks](https://github.com/valnet/valuenetwork/wiki/Everything-is-connected).
 
 We want to help anyone building software for networked socio-economic systems.
+
+![Socio-economic networks](https://cloud.githubusercontent.com/assets/5436686/10516016/81681ef6-7356-11e5-82a3-aa3937d282e8.jpg)
 
 If you would like to be part of this conversation, please [raise an issue here](https://github.com/valueflows/valueflows/issues), or fork this or any of the related repositories and issue pull requests.  You can also pop into our [welcome gitter chat](https://gitter.im/valueflows/welcome) to make comments, ask questions, or introduce yourself!
 
@@ -65,7 +67,7 @@ A `Transaction` is an economic interaction ("what you can do"), with the followi
 
 ### Activity
 
-An `Activity` is a message within a ['conversation for action']() ("what you can say about what you can do"), with the following (known) categories:
+An `Activity` is a message within a ['conversation for action'](http://conversationsforaction.com/cfa-playground) ("what you can say about what you can do"), with the following (known) categories:
 
 from https://github.com/valueflows/valueflows/issues/62#issuecomment-152401068, i propose we formalize the concept of communication within a conversation for action as a `Conversation`, then rename and split out the sub-types of conversations:
 
@@ -76,11 +78,15 @@ from https://github.com/valueflows/valueflows/issues/62#issuecomment-152401068, 
 
 > Example: "in order to reach a transfer or a transform, we must have a conversation. it starts with an intent: a want like 'i'd love some coffee' or an offer like 'i have heaps of coffee'. once an offer and a want match, then two parties make a commitment to each other, almost like a contract: 'i'll give you a coffee in exchange for receiving 3 dollars' and 'i'll receive a coffee in exchange for giving 3 dollars'. now that we've committed to what we want to do, we only need to do the flow! one side gives the coffee and receives 3 dollars; the other side receives the coffee and gives 3 dollars."
 
+![Conversation funnel](https://cloud.githubusercontent.com/assets/117439/11401215/144641f6-9357-11e5-8ddd-f01f5bcf4012.png)
+
 ## Roadmap
 
 Our current work is gathering use cases from contributors, see our [CONTRIBUTING.md document](./CONTRIBUTING.md) for more information on how to participate.
 
 Our long-term plan is to refine our common vocabularies, design a set of interoperable protocols for decentralized economic infrastructure, and deploy an ecosystem of interconnected apps to form the backbone of an alternative economic system that supports recipes, planning, and accounting for fractal networks.
+
+[![Hypergraphic user interface](https://cloud.githubusercontent.com/assets/719605/10327163/b9f1c74c-6d00-11e5-943c-179e4025b1e9.png)](https://docs.google.com/drawings/d/14Ochj955jSTm2Upoa5VK6YfWkSlFGVWIEBdJ1WSJuxE/edit)
 
 ## [Running code and round trips](https://github.com/valueflows/valueflows/wiki/Running-code-and-round-trips)
 
