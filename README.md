@@ -39,9 +39,9 @@ A `Resource` is something that can be
 
 > Example: "a resource is a physical thing, a resource type is the abstract ideal of that thing. when you go on Amazon you browse through resource types you can buy, the physical thing that you receive in the mail is a resource. when you go to the library catalog you browse through types of books, which correspond to physical books you can check out. these resource types can relate to each other as a taxonomy, as we see with categories on Amazon and genres in the library."
 
-### Transaction
+### Action
 
-A `Transaction` is an economic interaction ("what you can do"), with the following (known) categories:
+An `Action` is an economic interaction ("what you can do"), with the following (known) categories:
 
 - **Transfer**: [a change in 'rights' relating to the resource(s)](https://github.com/valueflows/exchange/issues/12#issuecomment-160162115)
 - **Transport**: [a change in location of the resource(s)](https://github.com/valueflows/exchange/issues/12#issuecomment-160174390)
@@ -65,11 +65,9 @@ A `Transaction` is an economic interaction ("what you can do"), with the followi
 
 ![combo flow](https://docs.google.com/drawings/d/1Sm389PH04BS_gvrvPD7_idGf-EdZmD2mhRiNl3V26a8/pub?w=746&h=674)
 
-### Activity
+### Communication
 
-An `Activity` is a message within a ['conversation for action'](http://conversationsforaction.com/cfa-playground) ("what you can say about what you can do"), with the following (known) categories:
-
-from https://github.com/valueflows/valueflows/issues/62#issuecomment-152401068, i propose we formalize the concept of communication within a conversation for action as a `Conversation`, then rename and split out the sub-types of conversations:
+A `Communication` is a message within a ['conversation for action'](http://conversationsforaction.com/cfa-playground) ("what you can say about what you can do"), with the following (known) categories:
 
 - **Intent**: [express wish for transaction](https://github.com/valueflows/intent)
 - **Plan**: express commitment (promise, schedule) to do transaction
