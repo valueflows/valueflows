@@ -4,26 +4,17 @@
 
 Value Flows is a minimum set of core concepts (protocols, domain models) to describe [flows of economic resources across decentralized networks](https://github.com/valnet/valuenetwork/wiki/Everything-is-connected).
 
-We want to help anyone building software for networked socio-economic systems.
-
 ![Socio-economic networks](https://cloud.githubusercontent.com/assets/5436686/10516016/81681ef6-7356-11e5-82a3-aa3937d282e8.jpg)
 
+We want to help anyone building software for networked socio-economic systems.
+
 If you would like to be part of this conversation, please [raise an issue here](https://github.com/valueflows/valueflows/issues), or fork this or any of the related repositories and issue pull requests.  You can also pop into our [welcome gitter chat](https://gitter.im/valueflows/welcome) to make comments, ask questions, or introduce yourself!
-
-## Principles ([long form](https://github.com/valueflows/valueflows/wiki/Principles-for-this-vocabulary))
-
-- the vocabulary must support coordinating work between different people in different organizations using different software on different platforms using different human and programming languages.
-- the vocabulary must track the flows of resources (value) forwards and backwards.
-- the vocabulary must distribute income (rewards) according to peoples' contributions, regardless of where and when in the network those contributions occurred.
-- the vocabulary must be fractal: it must support high-level views of networks as well zooming in to lower and lower levels of detail.
-- the vocabulary must work at the recipe, planning, and accounting levels.
-- the vocabulary must work for alternative and traditional organizing shapes and economic relationships.
 
 ## Vocabularies
 
 Value Flows is an **abstract vocabulary**: it only describes the simplest and most general set of verbs and nouns that are necessary in order for disparate projects and communities to define *concrete vocabularies* based on their specific use cases and local culture.
 
-In practice, this means we use [the Type Object pattern](http://www.cs.ox.ac.uk/jeremy.gibbons/dpa/typeobject.pdf), whre each 'type object' describes the specific semantics of policies, procedures, rules and patterns for those using it.
+In practice, this means we use [the Type Object pattern](http://www.cs.ox.ac.uk/jeremy.gibbons/dpa/typeobject.pdf), where each 'type object' describes the specific semantics of policies, procedures, rules and patterns for those using it.
 
 ![model](https://docs.google.com/drawings/d/1ZmlgstkpoOeUrdeCkWn7PziXC8iqS3eh9281bjTyxX4/pub?w=960&h=720)
 
@@ -87,6 +78,15 @@ A `Communication` is a message within a ['conversation for action'](http://conve
 Further, we describe re-usable plans as a **Recipe**.
 
 ![Conversation funnel](https://cloud.githubusercontent.com/assets/117439/11401215/144641f6-9357-11e5-8ddd-f01f5bcf4012.png)
+
+## Principles ([long form](https://github.com/valueflows/valueflows/wiki/Principles-for-this-vocabulary))
+
+- the vocabulary must support coordinating work between different people in different organizations using different software on different platforms using different human and programming languages.
+- the vocabulary must track the flows of resources (value) forwards and backwards.
+- the vocabulary must distribute income (rewards) according to peoples' contributions, regardless of where and when in the network those contributions occurred.
+- the vocabulary must be fractal: it must support high-level views of networks as well zooming in to lower and lower levels of detail.
+- the vocabulary must work at the recipe, planning, and accounting levels.
+- the vocabulary must work for alternative and traditional organizing shapes and economic relationships.
 
 ## Roadmap
 
