@@ -70,11 +70,21 @@ An `Action` is an economic interaction ("what you can do"), with the following (
 A `Communication` is a message within a ['conversation for action'](http://conversationsforaction.com/cfa-playground) ("what you can say about what you can do"), with the following (known) categories:
 
 - **Intent**: [express wish for transaction](https://github.com/valueflows/intent)
-- **Plan**: express commitment (promise, schedule) to do transaction
-- **Flow**: account for transaction being done
+- **Plan**: express commitment (promise, schedule) to follow plan
+- **Reality**: account for transaction being done
 - ... possibly more?
 
-> Example: "in order to reach a transfer or a transform, we must have a conversation. it starts with an intent: a want like 'i'd love some coffee' or an offer like 'i have heaps of coffee'. once an offer and a want match, then two parties make a commitment to each other, almost like a contract: 'i'll give you a coffee in exchange for receiving 3 dollars' and 'i'll receive a coffee in exchange for giving 3 dollars'. now that we've committed to what we want to do, we only need to do the flow! one side gives the coffee and receives 3 dollars; the other side receives the coffee and gives 3 dollars."
+> Example: As part of a food purchasing co-op
+>
+> - the co-op receives the intended inventory from the supplier (20 kg of wheat flour)
+> - the co-op members send the co-op admin their intended purchases (27 kg of wheat flour across 14 members)
+> - the co-op admin creates a plan based on the known inventory (20 kg of wheat flour, 7 kg of other flour)
+> - the co-op admin sends the plan to the supplier as an order
+> - the supplier agrees to the order
+> - the supplier sends the ordered food to the co-op through a local transporter
+> - the co-op receives the order and accounts for reality (25 kg of wheat flour, 7 kg of other flour)
+
+Further, we describe re-usable plans as a **Recipe**.
 
 ![Conversation funnel](https://cloud.githubusercontent.com/assets/117439/11401215/144641f6-9357-11e5-8ddd-f01f5bcf4012.png)
 
