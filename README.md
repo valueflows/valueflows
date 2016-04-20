@@ -4,11 +4,11 @@
 
 Value Flows is a minimum set of core concepts (protocols, domain models) to describe [flows of economic resources across decentralized networks](https://github.com/valnet/valuenetwork/wiki/Everything-is-connected).
 
-![Socio-economic networks](https://cloud.githubusercontent.com/assets/5436686/10516016/81681ef6-7356-11e5-82a3-aa3937d282e8.jpg)
+![resource agent action message](https://static.dinosaur.is/raam.png)
 
 We want to help anyone building software for networked socio-economic systems.
 
-If you would like to be part of this conversation, please [raise an issue here](https://github.com/valueflows/valueflows/issues), or fork this or any of the related repositories and issue pull requests.  You can also pop into our [welcome gitter chat](https://gitter.im/valueflows/welcome) to make comments, ask questions, or introduce yourself!
+If you would like to be part of this conversation, please [raise an issue here](https://github.com/valueflows/valueflows/issues), or fork this or any of the related repositories and issue pull requests. You can also pop into our [welcome gitter chat](https://gitter.im/valueflows/welcome) to make comments, ask questions, or introduce yourself!
 
 ## Vocabularies
 
@@ -20,19 +20,19 @@ In practice, this means we use [the Type Object pattern](http://www.cs.ox.ac.uk/
 
 ### [Agent](https://github.com/valueflows/agent)
 
-An `Agent` is the participants in the socio-economic system: they are people, groups, or bots who can decide and act.
+An `Agent` is a thing who can act: as in a person, group, or bot.
 
 > Example: "an example of an agent is me, Mikey (@ahdinosaur)! i have a name, an email, etc. each agent, like everything in Value Flows, has an associated type object. for agents, these can correspond to the [different type of agents in Open OS](https://enspiral.gitbooks.io/open-os/content/en/levels_of_organising.html), namely Person, Pod, Community, and Network. on the type we can specify properties of that level of organizing structure."
 
 ### [Resource](https://github.com/valueflows/resource)
 
-A `Resource` is something that can be 
+A `Resource` is a thing that can be acted on.
 
 > Example: "a resource is a physical thing, a resource type is the abstract ideal of that thing. when you go on Amazon you browse through resource types you can buy, the physical thing that you receive in the mail is a resource. when you go to the library catalog you browse through types of books, which correspond to physical books you can check out. these resource types can relate to each other as a taxonomy, as we see with categories on Amazon and genres in the library."
 
-### Action
+### Transaction
 
-An `Action` is an economic interaction ("what you can do"), with the following (known) categories:
+An `Transaction` is how an agent can act with resource(s).
 
 - **Transfer**: [a change in 'rights' relating to the resource(s)](https://github.com/valueflows/exchange/issues/12#issuecomment-160162115)
 - **Transport**: [a change in location of the resource(s)](https://github.com/valueflows/exchange/issues/12#issuecomment-160174390)
@@ -42,27 +42,18 @@ An `Action` is an economic interaction ("what you can do"), with the following (
 > Examples:
 >
 > - "a transfer is when a resource changes hands. for example, i give you three dollars in exchange for a coffee. the coffee and money resources are still the same, but they've changed owners."
-> - "a transform is when a resource changes composition. for example, i input the resources of coffee grounds and hot water into a coffee machine resource in order to output hot coffee. the hot water is consumed during use, the coffee grounds are turned into waste, and the coffee machine is used but still available for more coffee."
+> - "a transform is when a resource changes composition. for example, i input the resources of coffee grounds and hot water into a coffee machine resource in order to output hot coffee. the hot water and electricity are consumed during use, the coffee grounds are turned into compostable waste, and the coffee machine is used but still available for more coffee."
 
-#### Transform-oriented flow
-
-![transform-oriented flow](https://i.imgur.com/74gIY5C.png)
-
-#### Transfer-oriented flow
-
-![transfer-oriented flow](https://docs.google.com/drawings/d/1og6iUscoFmzHm2zkfhwSU3lp6zHPX2j3BfvTmyfGmww/pub?w=720&h=330)
-
-#### Transform-Transfer combination flow
-
-![combo flow](https://docs.google.com/drawings/d/1Sm389PH04BS_gvrvPD7_idGf-EdZmD2mhRiNl3V26a8/pub?w=746&h=674)
+A re-usable transaction type is also known as a **Recipe**.
 
 ### Communication
 
-A `Communication` is a message within a ['conversation for action'](http://conversationsforaction.com/cfa-playground) ("what you can say about what you can do"), with the following (known) categories:
+A `Communication` is what an agent can say about an action, often in a ['conversation'](http://conversationsforaction.com/cfa-playground).
 
-- **Intent**: [express wish for transaction](https://github.com/valueflows/intent)
+- **Intend**: [express inputs for transaction](https://github.com/valueflows/intent)
 - **Plan**: express commitment (promise, schedule) to follow plan
-- **Reality**: account for transaction being done
+- **Account**: account for reality of transaction
+- **Report**: retrospect on outcome of transaction
 - ... possibly more?
 
 > Example: As part of a food purchasing co-op
@@ -73,9 +64,10 @@ A `Communication` is a message within a ['conversation for action'](http://conve
 > - the co-op admin sends the plan to the supplier as an order
 > - the supplier agrees to the order
 > - the supplier sends the ordered food to the co-op through a local transporter
-> - the co-op receives the order and accounts for reality (25 kg of wheat flour, 7 kg of other flour)
+> - the co-op receives food and accounts for reality (25 kg of wheat flour, 7 kg of other flour)
+> - the co-op reports that the food is delicious
 
-Further, we describe re-usable plans as a **Recipe**.
+A re-usable communication type is also known as a **Process**.
 
 ![Conversation funnel](https://cloud.githubusercontent.com/assets/117439/11401215/144641f6-9357-11e5-8ddd-f01f5bcf4012.png)
 
