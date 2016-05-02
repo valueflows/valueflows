@@ -6,6 +6,8 @@
 
 2. Jim makes a printed part using Daniel's design.
 
-* He also uses a 3d printer in the lab.
-* He also consumes some 3d printing filament.
+* He also uses a 3d printer that lives in the lab.
+* He also consumes some 3d printing filament already in the lab.
 * After some effort, he creates a 3d printed part.
+
+
