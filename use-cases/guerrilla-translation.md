@@ -8,7 +8,7 @@ Input  | Process | Output
 ------------- | ------------- | -----------
 Source document  | Translate | Translation
 Translation  | Edit | Translation
-Translation | Format | Translation
+Translation | Proofread | Translation
 Translation | Publish | Translation
 
 In this use case, we need to determine at what stage in the process flow the Translation is in. 
