@@ -25,6 +25,7 @@ In practice, this means we use [the Type Object pattern](http://www.cs.ox.ac.uk/
 An `Agent` is a thing who can act: as in a person, group, or bot.
 
 > Example: "an example of an agent is me, Mikey (@ahdinosaur)! i have a name, an email, etc. each agent, like everything in Value Flows, has an associated type object. for agents, these can correspond to the [different type of agents in Open OS](https://enspiral.gitbooks.io/open-os/content/en/levels_of_organising.html), namely Person, Pod, Community, and Network. on the type we can specify properties of that level of organizing structure."
+Agents are **fractal identities**
 
 ### [Resource](https://github.com/valueflows/resource)
 
@@ -70,8 +71,6 @@ A `Signal` is what an agent can say about an action, often in a ['conversation']
 > - the supplier sends the ordered food to the co-op through a local transporter
 > - the co-op receives food and accounts for reality (25 kg of wheat flour, 7 kg of other flour)
 > - the co-op reports that the food is delicious
-
-A re-usable communication type is also known as a **Process**.
 
 ![Conversation funnel](https://cloud.githubusercontent.com/assets/117439/11401215/144641f6-9357-11e5-8ddd-f01f5bcf4012.png)
 
