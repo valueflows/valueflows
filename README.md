@@ -6,6 +6,8 @@ Value Flows is a minimum set of core concepts (protocols, domain models) to desc
 
 ![resource agent action message](https://static.dinosaur.is/raam.png)
 
+TODO re-do above diagram with "signal" instead of "message".
+
 We want to help anyone building software for networked socio-economic systems.
 
 If you would like to be part of this conversation, please [raise an issue here](https://github.com/valueflows/valueflows/issues), or fork this or any of the related repositories and issue pull requests. You can also pop into our [welcome gitter chat](https://gitter.im/valueflows/welcome) to make comments, ask questions, or introduce yourself!
@@ -30,12 +32,12 @@ A `Resource` is a thing that can be acted on.
 
 > Example: "a resource is a physical thing, a resource type is the abstract ideal of that thing. when you go on Amazon you browse through resource types you can buy, the physical thing that you receive in the mail is a resource. when you go to the library catalog you browse through types of books, which correspond to physical books you can check out. these resource types can relate to each other as a taxonomy, as we see with categories on Amazon and genres in the library."
 
-### Transaction
+### Action
 
-An `Transaction` is how an agent can act with resource(s).
+An `Action` is how an agent can act with resource(s).
 
-- **Transfer**: [a change in 'rights' relating to the resource(s)](https://github.com/valueflows/exchange/issues/12#issuecomment-160162115)
-- **Transport**: [a change in location of the resource(s)](https://github.com/valueflows/exchange/issues/12#issuecomment-160174390)
+- **Transfer**: [a change in 'rights' relating to the resource(s)](https://github.com/valueflows/exchange/blob/master/Transfer.md)
+- **Transport**: [a change in location of the resource(s)](https://github.com/valueflows/process/blob/master/Transportation.md)
 - **Transform**: [a change in the composition of the resource(s)](https://github.com/valueflows/process)
 - ... possibly more?
 
@@ -44,16 +46,18 @@ An `Transaction` is how an agent can act with resource(s).
 > - "a transfer is when a resource changes hands. for example, i give you three dollars in exchange for a coffee. the coffee and money resources are still the same, but they've changed owners."
 > - "a transform is when a resource changes composition. for example, i input the resources of coffee grounds and hot water into a coffee machine resource in order to output hot coffee. the hot water and electricity are consumed during use, the coffee grounds are turned into compostable waste, and the coffee machine is used but still available for more coffee."
 
-A re-usable transaction type is also known as a **Recipe**.
+A re-usable action type is also known as a **Recipe**.
 
-### Communication
+Actions describe _flows of resources_, as opposed to the more common double-entry accounting. It's possible to derive double-entry accounting from a resource flow, but not the other way around.
 
-A `Communication` is what an agent can say about an action, often in a ['conversation'](http://conversationsforaction.com/cfa-playground).
+### Signal
 
-- **Intend**: [express inputs for transaction](https://github.com/valueflows/intent)
+A `Signal` is what an agent can say about an action, often in a ['conversation'](http://conversationsforaction.com/cfa-playground).
+
+- **Intend**: [express inputs for action](https://github.com/valueflows/intent)
 - **Plan**: express commitment (promise, schedule) to follow plan
-- **Account**: account for reality of transaction
-- **Report**: retrospect on outcome of transaction
+- **Observation**: account for observed reality of action
+- **Report**: retrospect on outcome of action
 - ... possibly more?
 
 > Example: As part of a food purchasing co-op
