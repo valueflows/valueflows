@@ -24,9 +24,12 @@ Steps:
  
 ## Process: Add options:
 
-Feature: Interesting varieties of whole wheat bread
+###Feature: Interesting varieties of whole wheat bread
+
 #### Option: Raisin
+
 #### Option: Sunflower seed
+
 #### Option: Plain
 
 ## Process: Form loaves and bake:
