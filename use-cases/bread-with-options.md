@@ -67,7 +67,7 @@ Steps:
 
 From: http://www.smithsonianmag.com/arts-culture/what-makes-whole-grain-bread-so-hard-to-bake-63878
 
-=======================================
+************************************
 
 ## Planning
 
@@ -75,7 +75,7 @@ Yummy Coop Bakery will be making bread tomorrow morning.
 
 They choose the option for Sunflower Bread and generate a plan for 10 loaves weighing 2 pounds each.
 
-=======================================
+**********************************
 
 ## Making the bread
 
@@ -83,6 +83,6 @@ Alice comes in in the morning to make the day's bread.
 
 She starts with Sunflower Bread and follows the plan.  She drops some dough on the floor by mistake, but only ends up 1 loaf short.
 
-As she works, she records the time she spent actually working.
+As she works, she records the time she spent actually working. (The coop is interested in knowing how much work goes into the different products they create.)
 
 When she is done, she puts the loaves of bread into the back room, where they will sit until opening time.
