@@ -6,7 +6,7 @@ Using [Baker's Percentage](https://en.wikipedia.org/wiki/Baker_percentage), in w
 
 * Bowl
 * whole wheat flour 100%
-* water (102% of flour weight, though extra dry flour may call for 105%). Use 90% of the water for the Autolease process, save 10% for the next step.
+* water (102% of flour weight, though extra dry flour may call for 105%). 
 * sourdough starter 2%
 * salt .025%
 
@@ -21,6 +21,11 @@ Steps:
  * Final dough
  
 ## Process: Add options:
+
+Feature: Interesting varieties of whole wheat bread
+#### Option: Raisin
+#### Option: Sunflower seed
+#### Option: Plain
 
 ## Process: Form loaves and bake:
 
