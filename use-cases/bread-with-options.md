@@ -23,9 +23,9 @@ Steps:
 
 * Plain whole wheat dough
 
-###Feature: Interesting varieties of whole wheat bread
+###  *Feature: Interesting varieties of whole wheat bread*
 
-#### Option: Raisin
+#### *Option: Raisin*
 
 ### Input (besides the Plain whole wheat dough above)
 
@@ -36,7 +36,7 @@ Steps:
 
 1. Mix in the raisins.
 
-#### Option: Sunflower seed
+#### *Option: Sunflower seed*
 
 ### Input (besides the Plain whole wheat dough above)
 
@@ -46,7 +46,7 @@ Steps:
 
 1. Mix in the sunflower seeds
 
-#### Option: Plain
+#### *Option: Plain*
 
 ## Process: (not needed)
 
