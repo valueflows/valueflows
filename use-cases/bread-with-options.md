@@ -14,29 +14,53 @@ Using [Baker's Percentage](https://en.wikipedia.org/wiki/Baker_percentage), in w
 
 Steps:
 
-1. Autolease: Mix the flour with 90% of the water in a bowl. Let sit for 30 minutes–a lapse of time called the”autolease,” during which enzymes activate and convert starches into sugar.
-
-2. Mix final dough: Next, mix the dough in an automatic mixer or by hand for several minutes. Add the remaining water, sourdough starter and salt. The dough will be very gooey–almost like batter. Allow it to sit for three hours in a bowl at room temperature.
+1. Mix the flour with 90% of the water in a bowl. 
+2. Let sit for 30 minutes–a lapse of time called the”autolease,” during which enzymes activate and convert starches into sugar.
+3. Next, mix the dough in an automatic mixer or by hand for several minutes. Add the remaining water, sourdough starter and salt. The dough will be very gooey–almost like batter. 
+4. Allow it to sit for three hours in a bowl at room temperature.
 
 ### Output/Input:
 
- * Final dough
- 
-## Process: Add options:
+* Plain whole wheat dough
 
 ###Feature: Interesting varieties of whole wheat bread
 
 #### Option: Raisin
 
+### Input (besides the Plain whole wheat dough above)
+
+* Raisins 3%
+* Cinnamon .2%
+
+## Process: Add raisins:
+
+1. Mix in the raisins.
+
 #### Option: Sunflower seed
+
+### Input (besides the Plain whole wheat dough above)
+
+* Sunflower seeds 2%
+
+## Process: Add sunflower seeds:
+
+1. Mix in the sunflower seeds
 
 #### Option: Plain
 
+## Process: (not needed)
+
+### Output/Input:
+
+* Final whole wheat dough
+
 ## Process: Form loaves and bake:
 
-1. Next break apart the dough and shape into loaves. Allow 20 minutes of rising. Punch down the dough loaves and allow one more rise. 
-
-2. After three hours, place in an oven preheated to 520 degrees F (yes–this is very hot). After 15 minutes, reduce the temperature to 470 for 20 minutes. For 15 more minutes, open the oven door a crack, which allows moisture to escape and facilitates crust formation. Remove the finished bread.
+1. Next break apart the dough and shape into loaves. 
+2. Allow 20 minutes of rising. 
+3. Punch down the dough loaves and allow one more rise. 
+4. After three hours, place in an oven preheated to 520 degrees F (yes–this is very hot). After 15 minutes, reduce the temperature to 470 for 20 minutes. For 15 more minutes, open the oven door a crack, which allows moisture to escape and facilitates crust formation. 
+5. Remove the finished bread.
 
 ### Output: 
 
