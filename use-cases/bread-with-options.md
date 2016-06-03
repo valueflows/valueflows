@@ -1,3 +1,5 @@
+NOTE 2016/6/3: After some discussion, I think this is probably not a good use case of features and options, because in this case, you end up with 3 different resource types as the output.  A better use case would be something where the model does not change, and the options are more minor, like a nicer stereo in a car.  This is useful however, to see recipes that use the same "component" recipe as part of what is needed.
+
 Fork of Dave Miller’s Basic Whole Wheat Bread.  Adding a feature with options.  Consolidating the processes.
 
 Using [Baker's Percentage](https://en.wikipedia.org/wiki/Baker_percentage), in which each of the ingredients is specified as a percentage of the flour ingredient by weight.
