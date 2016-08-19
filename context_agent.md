@@ -11,5 +11,10 @@ within and between contexts.
 A context agent can range from the tightest of traditional organizations to the loosest of networks.
 We want to support value creation and accounting for all transitional and next economy experiments, 
 from existing businesses to cooperatives to various P2P networks, and anything else people can imagine
-where they want to associate with each other to create value.  
+where they want to associate with each other to create value. 
 
+A context agent usually implies some level of self-governance within the group.
+
+DRAFT picture (would like to get to some level of detail on this):
+
+![Context agent relationships](https://github.com/valueflows/valueflows/blob/context-agent/context-agent.png)
