@@ -138,205 +138,249 @@ Yet to come:
 
 ##### vf:Agent
 
-rdf:type |  owl:Class 
-rdfs:label | Agent
-rdfs:comment | An Agent is an entity that has agency in the social or economic realm.  This could be a person, organization, group, network, etc.
-rdfs:domain (properties) | vf:name, vf:url, vf:image, vf:note
-owl:equivalentClass | foaf:Agent
+<table>
+<tr><td>rdf:type</td><td>owl:Class</td></tr>
+<tr><td>rdfs:label</td><td>Agent
+<tr><td>rdfs:comment</td><td>An Agent is an entity that has agency in the social or economic realm.  This could be a person, organization, group, network, etc.</td></tr>
+<tr><td>rdfs:domain (properties)</td><td>vf:name, vf:url, vf:image, vf:note</td></tr>
+<tr><td>owl:equivalentClass</td><td>foaf:Agent</td></tr>
+</table>
 
 ##### vf:Person
 
-rdf:type |  owl:Class 
-rdfs:label | Person
-rdfs:comment | 
-rdfs:domain (properties) | 
-rdfs:subClassOf | vf:Agent
-owl:equivalentClass | foaf:Person, schema:Person
+<table>
+<tr><td>rdf:type</td><td> owl:Class </td></tr>
+<tr><td>rdfs:label</td><td>Person</td></tr>
+<tr><td>rdfs:comment</td><td></td></tr>
+<tr><td>rdfs:domain (properties) </td></tr>
+<tr><td>rdfs:subClassOf</td><td>vf:Agent</td></tr>
+<tr><td>owl:equivalentClass</td><td>foaf:Person, schema:Person</td></tr>
+</table>
 
 ##### vf:Group
 
-rdf:type |  owl:Class 
-rdfs:label | Group
-rdfs:comment | 
-rdfs:domain (properties) | 
-rdfs:subClassOf | vf:Agent
-owl:equivalentClass | foaf:Group
+<table>
+<tr><td>rdf:type</td><td> owl:Class </td></tr>
+<tr><td>rdfs:label</td><td>Group</td></tr>
+<tr><td>rdfs:comment</td><td></td></tr>
+<tr><td>rdfs:domain (properties)</td><td></td></tr>
+<tr><td>rdfs:subClassOf</td><td>vf:Agent</td></tr>
+<tr><td>owl:equivalentClass</td><td>foaf:Group</td></tr>
+</table>
 
 ##### vf:Relationship
 
-rdf:type |  owl:Class 
-rdfs:label | Relationship
-rdfs:comment | A Relationship in this vocabulary denotes a relationship between 2 Agents of any type.
+<table>
+<tr><td>rdf:type</td><td> owl:Class </td></tr>
+<tr><td>rdfs:label</td><td>Relationship</td></tr>
+<tr><td>rdfs:comment</td><td>A Relationship in this vocabulary denotes a relationship between 2 Agents of any type.
 The relationship can be in the context of an Agent that would not be a Person.
-For example, Jane is a mentor of John in the context of the group Enspiral.
-rdfs:domain (properties) | vf:subject, vf:relationship, vf:object, vf:context
+For example, Jane is a mentor of John in the context of the group Enspiral.</td></tr>
+<tr><td>rdfs:domain (properties)</td><td>vf:subject, vf:relationship, vf:object, vf:context</td></tr>
+</table>
 
 ##### vf:Process
 
-rdf:type |  owl:Class 
-rdfs:label | Process
-rdfs:comment | 
-rdfs:domain (properties) | 
+<table>
+<tr><td>rdf:type</td><td> owl:Class </td></tr>
+<tr><td>rdfs:label</td><td>Process</td></tr>
+<tr><td>rdfs:comment</td><td></td></tr>
+<tr><td>rdfs:domain (properties)</td><td></td></tr>
+</table>
 
 ##### vf:Transformation
 
-rdf:type |  owl:Class 
-rdfs:label | Transformation
-rdfs:comment | a change in the composition of the resource(s)
-rdfs:domain (properties) | 
+<table>
+<tr><td>rdf:type</td><td> owl:Class </td></tr>
+<tr><td>rdfs:label</td><td>Transformation</td></tr>
+<tr><td>rdfs:comment</td><td>a change in the composition of the resource(s)</td></tr>
+<tr><td>rdfs:domain (properties)</td><td></td></tr>
+</table>
 
 ##### vf:Transportation
 
-rdf:type |  owl:Class 
-rdfs:label | Transportation
-rdfs:comment | a change in location of the resource(s)
-rdfs:domain (properties) | 
+<table>
+<tr><td>rdf:type</td><td> owl:Class </td></tr>
+<tr><td>rdfs:label</td><td>Transportation</td></tr>
+<tr><td>rdfs:comment</td><td>a change in location of the resource(s)</td></tr>
+<tr><td>rdfs:domain (properties)</td><td></td></tr>
+</table>
 
 ##### vf:IPOEvent
 
-rdf:type |  owl:Class 
-rdfs:label | IPOEvent
-rdfs:comment | 
-rdfs:domain (properties) | 
+<table>
+<tr><td>rdf:type</td><td> owl:Class </td></tr>
+<tr><td>rdfs:label</td><td>IPOEvent</td></tr>
+<tr><td>rdfs:comment</td><td></td></tr>
+<tr><td>rdfs:domain (properties)</td><td></td></tr>
+</table>
 
 ##### vf:Resource
 
-rdf:type |  owl:Class 
-rdfs:label | Resource
-rdfs:comment | An economic resource, which is useful to people or the ecosystem.
-rdfs:domain (properties) | 
+<table>
+<tr><td>rdf:type</td><td> owl:Class </td></tr>
+<tr><td>rdfs:label</td><td>Resource</td></tr>
+<tr><td>rdfs:comment</td><td>An economic resource, which is useful to people or the ecosystem.</td></tr>
+<tr><td>rdfs:domain (properties)</td><td></td></tr>
+</table>
 
 ##### vf:ResourceModel
 
-rdf:type |  owl:Class 
-rdfs:label | ResourceModel
-rdfs:comment | 
-rdfs:domain (properties) | 
+<table>
+<tr><td>rdf:type</td><td> owl:Class </td></tr>
+<tr><td>rdfs:label</td><td>ResourceModel</td></tr>
+<tr><td>rdfs:comment</td><td>A resource type defines the kind of resource, often organized in a taxonomy of general to specific definitions.  The resource type is not concrete.......</td></tr>
+<tr><td>rdfs:domain (properties)</td><td></td></tr>
+</table>
 
 ##### vf:MaterialResource
 
-rdf:type |  owl:Class 
-rdfs:label | MaterialResource
-rdfs:comment | 
-rdfs:domain (properties) | 
+<table>
+<tr><td>rdf:type</td><td> owl:Class </td></tr>
+<tr><td>rdfs:label</td><td>MaterialResource</td></tr>
+<tr><td>rdfs:comment</td><td></td></tr>
+<tr><td>rdfs:domain (properties)</td><td></td></tr>
+</table>
 
 ##### vf:WorkResource
 
-rdf:type |  owl:Class 
-rdfs:label | WorkResource
-rdfs:comment | 
-rdfs:domain (properties) | 
+<table>
+<tr><td>rdf:type</td><td> owl:Class </td></tr>
+<tr><td>rdfs:label</td><td>WorkResource</td></tr>
+<tr><td>rdfs:comment</td><td></td></tr>
+<tr><td>rdfs:domain (properties)</td><td></td></tr>
+</table>
 
 ##### vf:UsageResource
 
-rdf:type |  owl:Class 
-rdfs:label | UsageResource
-rdfs:comment | 
-rdfs:domain (properties) | 
+<table>
+<tr><td>rdf:type</td><td> owl:Class </td></tr>
+<tr><td>rdfs:label</td><td>UsageResource</td></tr>
+<tr><td>rdfs:comment</td><td></td></tr>
+<tr><td>rdfs:domain (properties)</td><td></td></tr>
+</table>
 
 ##### vf:ServiceResource
 
-rdf:type |  owl:Class 
-rdfs:label | ServiceResource
-rdfs:comment | 
-rdfs:domain (properties) | 
+<table>
+<tr><td>rdf:type</td><td> owl:Class </td></tr>
+<tr><td>rdfs:label</td><td>ServiceResource</td></tr>
+<tr><td>rdfs:comment</td><td></td></tr>
+<tr><td>rdfs:domain (properties)</td><td></td></tr>
+</table>
 
 ##### vf:Location
 
-rdf:type |  owl:Class 
-rdfs:label | Location
-rdfs:comment | 
-rdfs:domain (properties) | 
+<table>
+<tr><td>rdf:type</td><td> owl:Class </td></tr>
+<tr><td>rdfs:label</td><td>Location</td></tr>
+<tr><td>rdfs:comment</td><td></td></tr>
+<tr><td>rdfs:domain (properties)</td><td></td></tr>
+</table>
 
 
 ### Properties
 
 ##### vf:name
 
-rdf:type | skos:prefLabel
-rdfs:label | name
-rdfs:comment | 
-rdfs:domain (property of) | 
-rdfs:range (allowed values) | 
+<table>
+<tr><td>rdf:type</td><td>skos:prefLabel</td></tr>
+<tr><td>rdfs:label</td><td>name</td></tr>
+<tr><td>rdfs:comment</td><td></td></tr>
+<tr><td>rdfs:domain (property of)</td><td></td></tr>
+<tr><td>rdfs:range (allowed values)</td><td></td></tr>
+</table> 
 
 ##### vf:url
 
-rdf:type | ?
-rdfs:label | url
-rdfs:comment | 
-rdfs:domain (property of) | 
-rdfs:range (allowed values) | 
+<table>
+<tr><td>rdf:type</td><td>?</td></tr>
+<tr><td>rdfs:label</td><td>url</td></tr>
+<tr><td>rdfs:comment</td><td></td></tr>
+<tr><td>rdfs:domain (property of)</td><td></td></tr>
+<tr><td>rdfs:range (allowed values) |</td></tr>
+</table> 
 
 ##### vf:image
 
-rdf:type | ?
-rdfs:label | image
-rdfs:comment | 
-rdfs:domain (property of) | vf:Agent, vf:Resource
-rdfs:range (allowed values) | 
+<table>
+<tr><td>rdf:type</td><td>?</td></tr>
+<tr><td>rdfs:label</td><td>image</td></tr>
+<tr><td>rdfs:comment</td><td></td></tr>
+<tr><td>rdfs:domain (property of)</td><td>vf:Agent, vf:Resource</td></tr>
+<tr><td>rdfs:range (allowed values)</td><td></td></tr>
+</table>
 
 ##### vf:note
 
-rdf:type | skos:note
-rdfs:label | note
-rdfs:comment | A freeform note or description of an object or item.
-rdfs:domain (property of) | (anything)
-rdfs:range (allowed values) | 
+<table>
+<tr><td>rdf:type</td><td>skos:note</td></tr>
+<tr><td>rdfs:label</td><td>note</td></tr>
+<tr><td>rdfs:comment</td><td>A freeform note or description of an object or item.</td></tr>
+<tr><td>rdfs:domain (property of)</td><td>(anything)</td></tr>
+<tr><td>rdfs:range (allowed values)</td><td></td></tr>
+</table>
 
 ##### vf:subject
 
-rdf:type | vf:Agent
-rdfs:label | subject
-rdfs:comment | 
-rdfs:domain (property of) | 
-rdfs:range (allowed values) | 
+<table>
+<tr><td>rdf:type</td><td>vf:Agent</td></tr>
+<tr><td>rdfs:label</td><td>subject</td></tr>
+<tr><td>rdfs:comment</td><td></td></tr>
+<tr><td>rdfs:domain (property of)</td><td></td></tr>
+<tr><td>rdfs:range (allowed values)</td><td></td></tr>
+</table>
 
 ##### vf:object
 
-rdf:type | vf:Agent
-rdfs:label | note
-rdfs:comment | 
-rdfs:domain (property of) | 
-rdfs:range (allowed values) | 
+<table>
+<tr><td>rdf:type</td><td>vf:Agent</td></tr>
+<tr><td>rdfs:label</td><td>note</td></tr>
+<tr><td>rdfs:comment</td><td></td></tr>
+<tr><td>rdfs:domain (property of)</td><td></td></tr>
+<tr><td>rdfs:range (allowed values)</td><td></td></tr>
+</table>
 
 ##### vf:relationship
 
-rdf:type | rdf:Property
-rdfs:label | relationship
-rdfs:comment | This is a verb that describes a generic defined relationship that can be had between 2 Agents (or subclasses of).
+<table>
+<tr><td>rdf:type</td><td>rdf:Property</td></tr>
+<tr><td>rdfs:label</td><td>relationship</td></tr>
+<tr><td>rdfs:comment</td><td>This is a verb that describes a generic defined relationship that can be had between 2 Agents (or subclasses of).
 Although it usually is, the relationship of a particular type does not have to be agreed to from both sides, for example "follow".
 A relationship type can be a direct relationship, like "steward" or "like", or more like a role.
 Role types of relationships are often used for a person's role in an organization or group,
 for example "grower" or "harvester" for a food network.
 
 There are a number of useful Properties in existing vocabularies that can be used.
-Or people can create their own as needed.
-rdfs:domain (property of) | vf:Relationship
-rdfs:range (allowed values) | 
+Or people can create their own as needed.</td></tr>
+<tr><td>rdfs:domain (property of)</td><td>vf:Relationship</td></tr>
+<tr><td>rdfs:range (allowed values)</td><td></td></tr>
+</table>
 
+##### vf:resource
 
-......................................
+<table>
+<tr><td>rdf:type</td><td></td></tr>
+<tr><td>rdfs:label</td><td>resource</td></tr>
+<tr><td>rdfs:comment</td><td>relates input/output to a resource</td></tr>
+<tr><td>rdfs:domain (property of)</td>vf:IPOEvent<td></td></tr>
+<tr><td>rdfs:range (allowed values)</td><td>vf:Resource or any of its subclasses</td></tr>
+</table>
 
-to be integrated.....
+##### vf:action
 
-## Object Properties
-(relationships)
+<table>
+<tr><td>rdf:type</td><td></td></tr>
+<tr><td>rdfs:label</td><td>resource</td></tr>
+<tr><td>rdfs:comment</td><td>relates input/output to a verb</td></tr>
+<tr><td>rdfs:domain (property of)</td>vf:IPOEvent<td></td></tr>
+<tr><td>rdfs:range (allowed values)</td><td></td></tr>
+</table>
 
-### vf:resource
-relates input/output to a resource
+##### Verbs
 
-### vf:action
-relates input/output to a verb (explained below)
-
-(reverse)
-### vf:io
-relates process to a input/output
-
-## Data Properties
-
-## Verbs
-
-### Input
+###### Input
 * use - for example a tool used in process, after the process, the tool still exists
 * consume - for example an ingredient composed into the output, after the process the ingredient is gone
 * cite - for example a design file, neither used nor consumed, the file remains available at all times
@@ -344,55 +388,68 @@ relates process to a input/output
 * accept - in processes like repair or maintentance, same resource will appear in [vf:Output](https://github.com/valueflows/process/blob/master/Output.md) with *improve* verb
 * load - specific for [vf:Transportation](https://github.com/valueflows/process/blob/master/Transportation.md), transported resource enters the process
 
-### Output
+###### Output
 
 * create - new resource created in that process
 * improve - in processes like repair or maintentance, same resource will appear in [vf:Input](https://github.com/valueflows/process/blob/master/Input.md) with *accept* verb
 * unload - specific for [vf:Transportation](https://github.com/valueflows/process/blob/master/Transportation.md), transported resource leaves the process
 
+##### vf:io
+
+<table>
+<tr><td>rdf:type</td><td></td></tr>
+<tr><td>rdfs:label</td><td>io</td></tr>
+<tr><td>rdfs:comment</td><td>relates process to a input/output</td></tr>
+<tr><td>rdfs:domain (property of)</td>vf:Process<td></td></tr>
+<tr><td>rdfs:range (allowed values)</td><td>vf:IPOEvent</td></tr>
+</table>
+
+##### vf:parent
+
+<table>
+<tr><td>rdf:type</td><td></td></tr>
+<tr><td>rdfs:label</td><td>parent</td></tr>
+<tr><td>rdfs:comment</td><td>A more general type of resource.  For example, Herb is the parent resource type of Anise Hyssop, Goldenrod, Nettles, Red Clover, etc.  Besides its usefulness in understanding taxonomies of resource types, this can be useful when one can define a general recipe that will work for many more specific types of resources.</td></tr>
+<tr><td>rdfs:domain (property of)</td>vf:ResourceModel, vf:Resource?<td></td></tr>
+<tr><td>rdfs:range (allowed values)</td><td>vf:ResourceModel,vf:Resource?</td></tr>
+</table>
+
+##### vf:isSubstitutable
+
+<table>
+<tr><td>rdf:type</td><td></td></tr>
+<tr><td>rdfs:label</td><td>isSubstitutable</td></tr>
+<tr><td>rdfs:comment</td><td>For a resource type, defines if any resources of that type can be freely substituted for any other resource of that type when used, consumed, traded, etc. For example, "B9R-1-red DLP resin photopolymer" is probably a substitutable resource type.  While each resource for a resource type called "English-Spanish translation" is probably not substitutable because each will be a different document.</td></tr>
+<tr><td>rdfs:domain (property of)</td>vf:ResourceModel, vf:Resource<td></td></tr>
+<tr><td>rdfs:range (allowed values)</td><td>vf:ResourceModel, vf:Resource</td></tr>
+</table>
+
+##### vf:category
 
 
 
+##### vf:model
 
 
 
+##### vf:underlyingResource
 
-### vf:ResourceType
-
-A resource type defines the kind of resource, often organized in a taxonomy of general to specific definitions.  The resource type is not concrete.
-
-### Object Properties
-(relationships with other entities)
-
-**vf:parent**: A more general type of resource.  For example, Herb is the parent resource type of Anise Hyssop, Goldenrod, Nettles, Red Clover, etc.  Besides its usefulness in understanding taxonomies of resource types, this can be useful when one can define a general recipe that will work for many more specific types of resources.
-
-
-### Data Properties
-(attributes)
-
-**vf:isSubstitutable**: For a resource type, defines if any resources of that type can be freely substituted for any other resource of that type when used, consumed, traded, etc. For example, "B9R-1-red DLP resin photopolymer" is probably a substitutable resource type.  While each resource for a resource type called "English-Spanish translation" is probably not substitutable because each will be a different document. [Issue#25](https://github.com/valueflows/resource/issues/28)
+A more concrete resource which a resource is based upon.  For example, a resource which defines the rental of an apartment has the apartment itself as its underlying resource.
 
 
 
+##### vf:quantity
 
-### Object Properties
-(relationships with other entities)
-
-**vf:resourceType**
-
-**vf:underlyingResource**: A more concrete resource which a resource is based upon.  For example, a resource which defines the rental of an apartment has the apartment itself as its underlying resource.
-
-(data nodes)
-
-**vf:quantity**: The quantity and unit of the resource.
+The quantity and unit of the resource.
 
 *NOTE: resource can have 0 quantity, one can use it for historical resources which some process consumed as well as for planned resources which a planned process will create [Issue#24](https://github.com/valueflows/resource/issues/24)*
 
-**vf:quantityAvailable**:  The quantity and unit of the resource that is available for transfers or processes.  This could be a calculated amount based on the *vf:quantity* less the quantity committed or otherwise unable to be promised for a transfer or process.
+
+##### vf:serialIdentifier 
 
 
-### Data Properties
-(attributes)
+##### vf:lotIdentifier
 
-**vf:trackingIdentifier**: For a resource, this can be a serial number for serialized resources (like a computer), or a lot number for batched resources (like a lot of asparagus that will be distributed in smaller quantities but may need to be tracked to its source in case of an e-coli outbreak).  Or it can just be another useful identifier.
+
+For a resource, this can be a serial number for serialized resources (like a computer), or a lot number for batched resources (like a lot of asparagus that will be distributed in smaller quantities but may need to be tracked to its source in case of an e-coli outbreak).  Or it can just be another useful identifier.
 
