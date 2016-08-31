@@ -128,11 +128,11 @@ Yet to come:
 
 ### UML
 
-
+![VF uml picture](https://rawgit.com/valueflows/valueflows/master/release-doc-in-process/core-rel.png)
 
 ### RDF
 
-
+![VF vowl picture](https://rawgit.com/valueflows/valueflows/master/release-doc-in-process/release-vowl.png)
 
 ### Classes
 
@@ -152,7 +152,7 @@ Yet to come:
 <tr><td>rdf:type</td><td> owl:Class </td></tr>
 <tr><td>rdfs:label</td><td>Person</td></tr>
 <tr><td>rdfs:comment</td><td></td></tr>
-<tr><td>rdfs:domain (properties) </td></tr>
+<tr><td>rdfs:domain (properties) </td><td></td></tr>
 <tr><td>rdfs:subClassOf</td><td>vf:Agent</td></tr>
 <tr><td>owl:equivalentClass</td><td>foaf:Person, schema:Person</td></tr>
 </table>
@@ -298,7 +298,7 @@ For example, Jane is a mentor of John in the context of the group Enspiral.</td>
 <tr><td>rdfs:label</td><td>url</td></tr>
 <tr><td>rdfs:comment</td><td></td></tr>
 <tr><td>rdfs:domain (property of)</td><td></td></tr>
-<tr><td>rdfs:range (allowed values) |</td></tr>
+<tr><td>rdfs:range (allowed values)</td><td></td></tr>
 </table> 
 
 ##### vf:image
@@ -385,14 +385,14 @@ Or people can create their own as needed.</td></tr>
 * consume - for example an ingredient composed into the output, after the process the ingredient is gone
 * cite - for example a design file, neither used nor consumed, the file remains available at all times
 * work - labor power towards a process
-* accept - in processes like repair or maintentance, same resource will appear in [vf:Output](https://github.com/valueflows/process/blob/master/Output.md) with *improve* verb
-* load - specific for [vf:Transportation](https://github.com/valueflows/process/blob/master/Transportation.md), transported resource enters the process
+* accept - in processes like repair or maintentance, same resource will appear in output with *improve* verb
+* load -  transported resource enters the process
 
 ###### Output
 
 * create - new resource created in that process
-* improve - in processes like repair or maintentance, same resource will appear in [vf:Input](https://github.com/valueflows/process/blob/master/Input.md) with *accept* verb
-* unload - specific for [vf:Transportation](https://github.com/valueflows/process/blob/master/Transportation.md), transported resource leaves the process
+* improve - in processes like repair or maintentance, same resource will appear in input with *accept* verb
+* unload -  transported resource leaves the process
 
 ##### vf:io
 
@@ -400,7 +400,7 @@ Or people can create their own as needed.</td></tr>
 <tr><td>rdf:type</td><td></td></tr>
 <tr><td>rdfs:label</td><td>io</td></tr>
 <tr><td>rdfs:comment</td><td>relates process to a input/output</td></tr>
-<tr><td>rdfs:domain (property of)</td>vf:Process<td></td></tr>
+<tr><td>rdfs:domain (property of)</td><td>vf:Process</td></tr>
 <tr><td>rdfs:range (allowed values)</td><td>vf:IPOEvent</td></tr>
 </table>
 
@@ -410,7 +410,7 @@ Or people can create their own as needed.</td></tr>
 <tr><td>rdf:type</td><td></td></tr>
 <tr><td>rdfs:label</td><td>parent</td></tr>
 <tr><td>rdfs:comment</td><td>A more general type of resource.  For example, Herb is the parent resource type of Anise Hyssop, Goldenrod, Nettles, Red Clover, etc.  Besides its usefulness in understanding taxonomies of resource types, this can be useful when one can define a general recipe that will work for many more specific types of resources.</td></tr>
-<tr><td>rdfs:domain (property of)</td>vf:ResourceModel, vf:Resource?<td></td></tr>
+<tr><td>rdfs:domain (property of)</td><td>vf:ResourceModel, vf:Resource?</td></tr>
 <tr><td>rdfs:range (allowed values)</td><td>vf:ResourceModel,vf:Resource?</td></tr>
 </table>
 
@@ -420,36 +420,95 @@ Or people can create their own as needed.</td></tr>
 <tr><td>rdf:type</td><td></td></tr>
 <tr><td>rdfs:label</td><td>isSubstitutable</td></tr>
 <tr><td>rdfs:comment</td><td>For a resource type, defines if any resources of that type can be freely substituted for any other resource of that type when used, consumed, traded, etc. For example, "B9R-1-red DLP resin photopolymer" is probably a substitutable resource type.  While each resource for a resource type called "English-Spanish translation" is probably not substitutable because each will be a different document.</td></tr>
-<tr><td>rdfs:domain (property of)</td>vf:ResourceModel, vf:Resource<td></td></tr>
+<tr><td>rdfs:domain (property of)</td><td>vf:ResourceModel, vf:Resource</td></tr>
 <tr><td>rdfs:range (allowed values)</td><td>vf:ResourceModel, vf:Resource</td></tr>
 </table>
 
 ##### vf:category
 
-
+<table>
+<tr><td>rdf:type</td><td></td></tr>
+<tr><td>rdfs:label</td><td>category</td></tr>
+<tr><td>rdfs:comment</td><td></td></tr>
+<tr><td>rdfs:domain (property of)</td><td>vf:ResourceModel, vf:Resource</td></tr>
+<tr><td>rdfs:range (allowed values)</td><td></td></tr>
+</table>
 
 ##### vf:model
 
-
+<table>
+<tr><td>rdf:type</td><td></td></tr>
+<tr><td>rdfs:label</td><td>model</td></tr>
+<tr><td>rdfs:comment</td><td></td></tr>
+<tr><td>rdfs:domain (property of)</td><td>vf:Resource</td></tr>
+<tr><td>rdfs:range (allowed values)</td><td>vf:ResourceModel</td></tr>
+</table>
 
 ##### vf:underlyingResource
 
-A more concrete resource which a resource is based upon.  For example, a resource which defines the rental of an apartment has the apartment itself as its underlying resource.
-
+<table>
+<tr><td>rdf:type</td><td></td></tr>
+<tr><td>rdfs:label</td><td>underlyingResource</td></tr>
+<tr><td>rdfs:comment</td><td>A more concrete resource which a resource is based upon.  For example, a resource which defines the rental of an apartment has the apartment itself as its underlying resource.</td></tr>
+<tr><td>rdfs:domain (property of)</td><td>vf:Resource</td></tr>
+<tr><td>rdfs:range (allowed values)</td><td>vf:Resource</td></tr>
+</table>
 
 
 ##### vf:quantity
 
-The quantity and unit of the resource.
+*NOTE: resource can have 0 quantity, one can use it for historical resources which some process consumed as well as for planned resources which a planned process will create.*
 
-*NOTE: resource can have 0 quantity, one can use it for historical resources which some process consumed as well as for planned resources which a planned process will create [Issue#24](https://github.com/valueflows/resource/issues/24)*
+<table>
+<tr><td>rdf:type</td><td></td></tr>
+<tr><td>rdfs:label</td><td>quantity</td></tr>
+<tr><td>rdfs:comment</td><td>The quantity and unit of the resource.</td></tr>
+<tr><td>rdfs:domain (property of)</td><td>vf:Resource</td></tr>
+<tr><td>rdfs:range (allowed values)</td><td>qudt:QuantityValue</td></tr>
+</table>
 
+
+##### vf:eventQuantity
+
+<table>
+<tr><td>rdf:type</td><td></td></tr>
+<tr><td>rdfs:label</td><td>eventQuantity</td></tr>
+<tr><td>rdfs:comment</td><td>The quantity and unit of the event.  This is the quantity that will be used to increment or decrement a resource, depending on the type of resource.</td></tr>
+<tr><td>rdfs:domain (property of)</td><td>vf:IPOEvent</td></tr>
+<tr><td>rdfs:range (allowed values)</td><td>qudt:QuantityValue</td></tr>
+</table>
+
+##### vf:eventStart
+
+<table>
+<tr><td>rdf:type</td><td></td></tr>
+<tr><td>rdfs:label</td><td>eventStart</td></tr>
+<tr><td>rdfs:comment</td><td></td></tr>
+<tr><td>rdfs:domain (property of)</td><td>vf:IPOEvent</td></tr>
+<tr><td>rdfs:range (allowed values)</td><td></td></tr>
+</table>
 
 ##### vf:serialIdentifier 
 
+<table>
+<tr><td>rdf:type</td><td></td></tr>
+<tr><td>rdfs:label</td><td>serialIdentifier</td></tr>
+<tr><td>rdfs:comment</td><td>Often called "serial number", used when each item must have a trackable identifier (like a computer).</td></tr>
+<tr><td>rdfs:domain (property of)</td><td>vf:Resource</td></tr>
+<tr><td>rdfs:range (allowed values)</td><td></td></tr>
+</table>
 
 ##### vf:lotIdentifier
 
+<table>
+<tr><td>rdf:type</td><td></td></tr>
+<tr><td>rdfs:label</td><td>lotIdentifier</td></tr>
+<tr><td>rdfs:comment</td><td>Often called "lot number", used for trackable batched resources (like a lot of asparagus that will be distributed in smaller quantities but may need to be tracked to its source in case of an e-coli outbreak).</td></tr>
+<tr><td>rdfs:domain (property of)</td><td>vf:Resource</td></tr>
+<tr><td>rdfs:range (allowed values)</td><td></td></tr>
+</table>
 
-For a resource, this can be a serial number for serialized resources (like a computer), or a lot number for batched resources (like a lot of asparagus that will be distributed in smaller quantities but may need to be tracked to its source in case of an e-coli outbreak).  Or it can just be another useful identifier.
+
+## Examples
+
 
