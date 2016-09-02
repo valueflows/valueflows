@@ -274,7 +274,7 @@ Note in the last case, a transfer of rights means a different resource. This is 
 <tr><td>rdf:type</td><td></td></tr>
 <tr><td>rdfs:label</td><td>resource</td></tr>
 <tr><td>rdfs:comment</td><td>relates input/output to a verb</td></tr>
-<tr><td>rdfs:domain (property of)</td>vf:IPOEvent<td></td></tr>
+<tr><td>rdfs:domain (property of)</td><td>vf:IPOEvent</td></tr>
 <tr><td>rdfs:range (allowed values)</td><td></td></tr>
 </table>
 
