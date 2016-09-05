@@ -69,8 +69,6 @@ Yet to come:
 
 ![VF uml picture](https://rawgit.com/valueflows/valueflows/master/release-doc-in-process/core-rel.png)
 
-(need to take out vf:Location)
-
 ### RDF
 
 ![VF vowl picture](https://rawgit.com/valueflows/valueflows/master/release-doc-in-process/release-vowl.png)
@@ -87,7 +85,7 @@ Yet to come:
 <tr><td>Properties</td><td>vf:name, vf:url, vf:image, vf:note, vf:primaryLocation</td></tr>
 </table>
 
-(Question: can/should this also have properties for it's relationships (where it is an object or subject)?)
+(Question: can/should this also have properties for its relationships (where it is an object or subject)?)
 
 A vf:Agent is empowered to control or affect the flow of economic resources (including his or her own labor) by engaging in economic events. vf:Agents are also empowered to make commitments or promises to affect resource flows in the future. Or putting it another way, a vf:Agent can participate in economic events.
 
@@ -301,7 +299,7 @@ A vf:UsageResource will have a vf:underlyingResource of a vf:MaterialResource.  
 
 <table>
 <tr><td>rdf:type</td><td>owl:ObjectProperty</td></tr>
-<tr><td>rdfs:label</td><td>resource</td></tr>
+<tr><td>rdfs:label</td><td>action</td></tr>
 <tr><td>rdfs:comment</td><td>A vf:action relates a process input or output (or other vf:IPOEVent) to a verb.</td></tr>
 <tr><td>rdfs:domain (property of)</td><td>vf:IPOEvent</td></tr>
 <tr><td>rdfs:range (allowed values)</td><td></td></tr>
@@ -489,8 +487,8 @@ For example, in "Michael is a member of Enspiral", Enspiral is the object.
 <tr><td>rdf:type</td><td>owl:ObjectProperty</td></tr>
 <tr><td>rdfs:label</td><td>parent</td></tr>
 <tr><td>rdfs:comment</td><td>A more general type of resource.</td></tr>
-<tr><td>rdfs:domain (property of)</td><td>vf:ResourceModel, vf:Resource?</td></tr>
-<tr><td>rdfs:range (allowed values)</td><td>vf:ResourceModel,vf:Resource?</td></tr>
+<tr><td>rdfs:domain (property of)</td><td>vf:ResourceModel</td></tr>
+<tr><td>rdfs:range (allowed values)</td><td>vf:ResourceModel</td></tr>
 </table>
 
 For example, Herb is the parent resource type of Anise Hyssop, Goldenrod, Nettles, Red Clover, etc.  Besides its usefulness in understanding taxonomies of resource types, this can be useful when one can define a general recipe that will work for many more specific types of resources.
@@ -598,6 +596,188 @@ One example: a resource which defines the rental of an apartment has the apartme
 
 
 ## Examples
+
+### Transformation Process
+
+#### Beginning resources:
+
+```yaml
+'@context': https://w3id.org/valueflows/v1
+'@id': https://fablab.example/f03962211#stock
+'@type': vf:Resource
+'vf:category':  prodont:3D-Filament-Red
+'vf:quantity':
+  '@type': qudt:QuantityValue
+  'qudt:unit': unit:Grams
+  'qudt:numericValue': 1000
+```
+```yaml
+'@context': https://w3id.org/valueflows/v1
+'@id': https://fablab.example/d8f97d89#stock
+'@type': vf:Resource
+'vf:model': ord:ORD-FDM-3D-printer
+'vf:serialNumber': d8f97d89
+'vf:quantity':
+  '@type': qudt:QuantityValue
+  'qudt:unit': unit:Each
+  'qudt:numericValue': 1
+```
+```yaml
+'@context': https://w3id.org/valueflows/v1
+'@id': https://fablab.example/d8f97d89#usage
+'@type': vf:Resource
+'vf:underlyingResource': https://fablab.example/d8f97d89#stock
+'vf:category': 
+'vf:quantity':
+  '@type': qudt:QuantityValue
+  'qudt:unit': unit:Hour
+  'qudt:numericValue': 1
+```
+```yaml
+'@context': https://w3id.org/valueflows/v1
+'@id': https://fablab.example/df89asf89asd#stock
+'@type': vf:Resource
+'vf:model': fablab:3D-Design-Cool-Item-44
+'vf:quantity':
+  '@type': qudt:QuantityValue
+  'qudt:unit': unit:Each
+  'qudt:numericValue': 1
+```
+```yaml
+'@context': https://w3id.org/valueflows/v1
+'@id': https://fablab.example/d89adsf89ads#stock
+'@type': vf:Resource
+'vf:model': fablab:Cool-Item-44
+'vf:quantity':
+  '@type': qudt:QuantityValue
+  'qudt:unit': unit:Each
+  'qudt:numericValue': 15
+'vf:currentLocation': https://fablab.example/fablab-side-room#location
+```
+
+#### Process:
+
+```yaml
+'@context': https://w3id.org/valueflows/v1
+'@id': https://fablab.example/818f30f4-c119#process
+'@type': vf:Transformation
+'skos:note': making a 3d printed part
+'vf:contextAgent': https://fablab.example/OhioFabLab#agent
+'vf:io':
+  - '@id': '#input-1'
+    '@type': vf:ResourceEvent
+    'vf:action': vf:consume
+    'vf:eventDate': 2016-08-10
+    'vf:resource': https://fablab.example/f03962211#stock
+    'vf:eventQuantity':
+        '@type': qudt:QuantityValue
+        'qudt:unit': unit:Grams
+        'qudt:numericValue': 530
+  - '@id': '#input-2'
+    '@type': vf:ResourceEvent
+    'vf:action': vf:use
+    'vf:eventDate': 2016-08-10
+    'vf:resource': https://fablab.example/d8f97d89#stock
+    'vf:eventQuantity':
+        '@type': qudt:QuantityValue
+        'qudt:unit': unit:Hours
+        'qudt:numericValue': 2.5
+  - '@id': '#input-3'
+    '@type': vf:ResourceEvent
+    'vf:action': vf:cite
+    'vf:eventDate': 2016-08-10
+    'vf:resource': '@id': https://fablab.example/df89asf89asd#stock
+    'vf:eventQuantity':
+        '@type': qudt:QuantityValue
+        'qudt:unit': unit:Percent
+        'qudt:numericValue': 20
+  - '@id': '#input-4'
+    '@type': vf:ResourceEvent
+    'vf:action': vf:work
+    'vf:eventDate': 2016-08-10
+    'vf:resource':  '@id': https://fablab.example/3d-printing#typeOfWork
+    'vf:fromAgent': '@id': https://fablab.example/FredFlintstone#agent
+    'vf:eventQuantity':
+        '@type': qudt:QuantityValue
+        'qudt:unit': unit:Hours
+        'qudt:numericValue': 2.5
+    'skos:note': This went smoothly except for one suggestion to make for the design....
+  - '@id': '#output-1'
+    '@type': vf:ResourceEvent
+    'vf:action': vf:create
+    'vf:eventDate': 2016-08-10
+    'vf:resource': https://fablab.example/d89adsf89ads#stock
+    'vf:quantity':
+        '@type': qudt:QuantityValue
+        'qudt:unit': unit:Each
+        'qudt:numericValue': 5
+  - '@id': '#output-2'
+    '@type': vf:ResourceEvent
+    'vf:action': vf:create
+    'vf:date': 2016-08-10
+    'vf:resource': https://fablab.example/ejreqw8j8#stock
+    'vf:quantity':
+        '@type': qudt:QuantityValue
+        'qudt:unit': unit:Grams
+        'qudt:numericValue': 78
+```
+
+Resources after process:
+
+```yaml
+'@context': https://w3id.org/valueflows/v1
+'@id': https://fablab.example/f03962211#stock
+'@type': vf:Resource
+'vf:category': prodont:3D-Filament-Red
+'vf:quantity':
+  '@type': qudt:QuantityValue
+  'qudt:unit': unit:Grams
+  'qudt:numericValue': 470
+```
+```yaml
+'@context': https://w3id.org/valueflows/v1
+'@id': https://fablab.example/d8f97d89#stock
+'@type': vf:Resource
+'vf:model': ord:ORD-FDM-3D-printer
+'vf:serialNumber': d8f97d89
+'vf:quantity':
+  '@type': qudt:QuantityValue
+  'qudt:unit': unit:Each
+  'qudt:numericValue': 1
+```
+```yaml
+'@context': https://w3id.org/valueflows/v1
+'@id': https://fablab.example/df89asf89asd#stock
+'@type': vf:Resource
+'vf:model': fablab:3D-Design-Cool-Item-44
+'vf:quantity':
+  '@type': qudt:QuantityValue
+  'qudt:unit': unit:Each
+  'qudt:numericValue': 1
+```
+```yaml
+'@context': https://w3id.org/valueflows/v1
+'@id': https://fablab.example/d89adsf89ads#stock
+'@type': vf:Resource
+'vf:model': fablab:Cool-Item-44
+'vf:quantity':
+  '@type': qudt:QuantityValue
+  'qudt:unit': unit:Each
+  'qudt:numericValue': 20
+'vf:currentLocation': https://fablab.example/fablab-side-room#location
+```
+```yaml
+'@context': https://w3id.org/valueflows/v1
+'@id': https://fablab.example/ejreqw8j8#stock
+'@type': vf:Resource
+'vf:category': prodont:3D-Filament
+'vf:quantity':
+  '@type': qudt:QuantityValue
+  'qudt:unit': unit:Grams
+  'qudt:numericValue': 78
+'vf:currentLocation': https://fablab.example/fablab-back-room#location
+'skos:note': Scrap filament of different colors for use in training.
+```
 
 
 ## Citations (maybe and bibliography?)
