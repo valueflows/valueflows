@@ -108,7 +108,7 @@ A vf:Agent is empowered to control or affect the flow of economic resources (inc
 <tr><td>rdf:type</td><td> owl:Class </td></tr>
 <tr><td>rdfs:label</td><td>IPOEvent</td></tr>
 <tr><td>rdfs:comment</td><td>A vf:IOPEvent is an inflow or outflow of an economic resource in relation to a process. This could reflect a change in the quantity of a vf:Resource. It is also defined by its behavior in relation to the vf:Resource and a vf:Process (consume, use, create, etc.)</td></tr>
-<tr><td>Properties</td><td>vf:resource, vf:eventQuantity, vf:eventStart, vf:note</td></tr>
+<tr><td>Properties</td><td>vf:action, vf:resource, vf:eventQuantity, vf:eventStart, vf:note</td></tr>
 </table>
 
 *How resources relate to events*
@@ -232,7 +232,7 @@ Note in the last case, a transfer of rights means a different resource. This is 
 <tr><td>Properties</td><td>vf:name, vf:category, vf:unit, vf:isSubstitutable?, vf:image, vf:note</td></tr>
 </table>
 
-(We need to develop this some more, and give some examples, maybe.  Also a question on the gr equivalentClass, ours is probably more broad.)
+(We need to develop this some more, and give some examples.  Also a question on the gr equivalentClass, ours is more broad.)
 
 ##### vf:ServiceResource
 
@@ -597,187 +597,7 @@ One example: a resource which defines the rental of an apartment has the apartme
 
 ## Examples
 
-### Transformation Process
 
-#### Beginning resources:
-
-```yaml
-'@context': https://w3id.org/valueflows/v1
-'@id': https://fablab.example/f03962211#stock
-'@type': vf:Resource
-'vf:category':  prodont:3D-Filament-Red
-'vf:quantity':
-  '@type': qudt:QuantityValue
-  'qudt:unit': unit:Grams
-  'qudt:numericValue': 1000
-```
-```yaml
-'@context': https://w3id.org/valueflows/v1
-'@id': https://fablab.example/d8f97d89#stock
-'@type': vf:Resource
-'vf:model': ord:ORD-FDM-3D-printer
-'vf:serialNumber': d8f97d89
-'vf:quantity':
-  '@type': qudt:QuantityValue
-  'qudt:unit': unit:Each
-  'qudt:numericValue': 1
-```
-```yaml
-'@context': https://w3id.org/valueflows/v1
-'@id': https://fablab.example/d8f97d89#usage
-'@type': vf:Resource
-'vf:underlyingResource': https://fablab.example/d8f97d89#stock
-'vf:category': 
-'vf:quantity':
-  '@type': qudt:QuantityValue
-  'qudt:unit': unit:Hour
-  'qudt:numericValue': 1
-```
-```yaml
-'@context': https://w3id.org/valueflows/v1
-'@id': https://fablab.example/df89asf89asd#stock
-'@type': vf:Resource
-'vf:model': fablab:3D-Design-Cool-Item-44
-'vf:quantity':
-  '@type': qudt:QuantityValue
-  'qudt:unit': unit:Each
-  'qudt:numericValue': 1
-```
-```yaml
-'@context': https://w3id.org/valueflows/v1
-'@id': https://fablab.example/d89adsf89ads#stock
-'@type': vf:Resource
-'vf:model': fablab:Cool-Item-44
-'vf:quantity':
-  '@type': qudt:QuantityValue
-  'qudt:unit': unit:Each
-  'qudt:numericValue': 15
-'vf:currentLocation': https://fablab.example/fablab-side-room#location
-```
-
-#### Process:
-
-```yaml
-'@context': https://w3id.org/valueflows/v1
-'@id': https://fablab.example/818f30f4-c119#process
-'@type': vf:Transformation
-'skos:note': making a 3d printed part
-'vf:contextAgent': https://fablab.example/OhioFabLab#agent
-'vf:io':
-  - '@id': '#input-1'
-    '@type': vf:ResourceEvent
-    'vf:action': vf:consume
-    'vf:eventDate': 2016-08-10
-    'vf:resource': https://fablab.example/f03962211#stock
-    'vf:eventQuantity':
-        '@type': qudt:QuantityValue
-        'qudt:unit': unit:Grams
-        'qudt:numericValue': 530
-  - '@id': '#input-2'
-    '@type': vf:ResourceEvent
-    'vf:action': vf:use
-    'vf:eventDate': 2016-08-10
-    'vf:resource': https://fablab.example/d8f97d89#stock
-    'vf:eventQuantity':
-        '@type': qudt:QuantityValue
-        'qudt:unit': unit:Hours
-        'qudt:numericValue': 2.5
-  - '@id': '#input-3'
-    '@type': vf:ResourceEvent
-    'vf:action': vf:cite
-    'vf:eventDate': 2016-08-10
-    'vf:resource': '@id': https://fablab.example/df89asf89asd#stock
-    'vf:eventQuantity':
-        '@type': qudt:QuantityValue
-        'qudt:unit': unit:Percent
-        'qudt:numericValue': 20
-  - '@id': '#input-4'
-    '@type': vf:ResourceEvent
-    'vf:action': vf:work
-    'vf:eventDate': 2016-08-10
-    'vf:resource':  '@id': https://fablab.example/3d-printing#typeOfWork
-    'vf:fromAgent': '@id': https://fablab.example/FredFlintstone#agent
-    'vf:eventQuantity':
-        '@type': qudt:QuantityValue
-        'qudt:unit': unit:Hours
-        'qudt:numericValue': 2.5
-    'skos:note': This went smoothly except for one suggestion to make for the design....
-  - '@id': '#output-1'
-    '@type': vf:ResourceEvent
-    'vf:action': vf:create
-    'vf:eventDate': 2016-08-10
-    'vf:resource': https://fablab.example/d89adsf89ads#stock
-    'vf:quantity':
-        '@type': qudt:QuantityValue
-        'qudt:unit': unit:Each
-        'qudt:numericValue': 5
-  - '@id': '#output-2'
-    '@type': vf:ResourceEvent
-    'vf:action': vf:create
-    'vf:date': 2016-08-10
-    'vf:resource': https://fablab.example/ejreqw8j8#stock
-    'vf:quantity':
-        '@type': qudt:QuantityValue
-        'qudt:unit': unit:Grams
-        'qudt:numericValue': 78
-```
-
-Resources after process:
-
-```yaml
-'@context': https://w3id.org/valueflows/v1
-'@id': https://fablab.example/f03962211#stock
-'@type': vf:Resource
-'vf:category': prodont:3D-Filament-Red
-'vf:quantity':
-  '@type': qudt:QuantityValue
-  'qudt:unit': unit:Grams
-  'qudt:numericValue': 470
-```
-```yaml
-'@context': https://w3id.org/valueflows/v1
-'@id': https://fablab.example/d8f97d89#stock
-'@type': vf:Resource
-'vf:model': ord:ORD-FDM-3D-printer
-'vf:serialNumber': d8f97d89
-'vf:quantity':
-  '@type': qudt:QuantityValue
-  'qudt:unit': unit:Each
-  'qudt:numericValue': 1
-```
-```yaml
-'@context': https://w3id.org/valueflows/v1
-'@id': https://fablab.example/df89asf89asd#stock
-'@type': vf:Resource
-'vf:model': fablab:3D-Design-Cool-Item-44
-'vf:quantity':
-  '@type': qudt:QuantityValue
-  'qudt:unit': unit:Each
-  'qudt:numericValue': 1
-```
-```yaml
-'@context': https://w3id.org/valueflows/v1
-'@id': https://fablab.example/d89adsf89ads#stock
-'@type': vf:Resource
-'vf:model': fablab:Cool-Item-44
-'vf:quantity':
-  '@type': qudt:QuantityValue
-  'qudt:unit': unit:Each
-  'qudt:numericValue': 20
-'vf:currentLocation': https://fablab.example/fablab-side-room#location
-```
-```yaml
-'@context': https://w3id.org/valueflows/v1
-'@id': https://fablab.example/ejreqw8j8#stock
-'@type': vf:Resource
-'vf:category': prodont:3D-Filament
-'vf:quantity':
-  '@type': qudt:QuantityValue
-  'qudt:unit': unit:Grams
-  'qudt:numericValue': 78
-'vf:currentLocation': https://fablab.example/fablab-back-room#location
-'skos:note': Scrap filament of different colors for use in training.
-```
 
 
 ## Citations (maybe and bibliography?)
