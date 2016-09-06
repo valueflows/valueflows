@@ -1,0 +1,41 @@
+'@context':
+  - https://w3id.org/valueflows/v1
+  - fablab: https://fablab.example/
+
+'@graph':
+  - '@id': fablab:b5ab3fc5-4d6d-4716-93eb-40b793c2913f#process
+    '@type': vf:Transformation
+    'skos:note': making a 3d printed part
+
+  - '@id': fablab:5c586fdf-c3b8-4779-8140-1a23e581e623#event
+    '@type': vf:IPOEvent
+    'vf:action': vf:consume
+    'vf:startTime': 2016-08-12
+    'vf:executedIn': fablab:b5ab3fc5-4d6d-4716-93eb-40b793c2913f#process
+    'vf:affects': fablab:d576a899-3130-4ab4-94e3-d88818c4994e#resource
+    'vf:affectedQuantity':
+        '@type': qudt:QuantityValue
+        'qudt:unit': unit:Grams
+        'qudt:numericValue': 315
+
+  - '@id': fablab:e88bae12-615a-4f81-84d5-c5aeffd81242#event
+    '@type': vf:IPOEvent
+    'vf:action': vf:create
+    'vf:startTime': 2016-08-12
+    'vf:executedIn': fablab:b5ab3fc5-4d6d-4716-93eb-40b793c2913f#process
+    'vf:affects': fablab:1d14a369-317b-4404-abbd-25fb9d18a408#resource
+    'vf:affectedQuantity':
+        '@type': qudt:QuantityValue
+        'qudt:unit': unit:Each
+        'qudt:numericValue': 3
+
+  - '@id': fablab:1f762881-c3b1-43e2-b7db-892b5beba74c#event
+    '@type': vf:IPOEvent
+    'vf:action': vf:create
+    'vf:startTime': 2016-08-12
+    'vf:executedIn': fablab:b5ab3fc5-4d6d-4716-93eb-40b793c2913f#process
+    'vf:affects': fablab:24fb1c17-04ca-4f92-9b70-b863b59ddda4#resource
+    'vf:affectedQuantity':
+        '@type': qudt:QuantityValue
+        'qudt:unit': unit:Grams
+        'qudt:numericValue': 24

@@ -1,0 +1,14 @@
+'@context':
+  - https://w3id.org/valueflows/v1
+  - fablab: https://fablab.example/
+
+'@id': fablab:1d14a369-317b-4404-abbd-25fb9d18a408#resource
+'@type': vf:Resource
+'vf:uuid': 1d14a369-317b-4404-abbd-25fb9d18a408
+'vf:model': fablab:Cool-Item-44
+'vf:currentLocation': fablab:64a0625c-caad-4f2e-a8de-157796c7d203#place
+'vf:mostRecentEvent': fablab:e88bae12-615a-4f81-84d5-c5aeffd81242#event
+'vf:quantity':
+  '@type': qudt:QuantityValue
+  'qudt:unit': unit:Each
+  'qudt:numericValue': 8

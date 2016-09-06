@@ -1,0 +1,15 @@
+
+'@context':
+  - https://w3id.org/valueflows/v1
+  - fablab: https://fablab.example/
+    acme: https://acme.example/
+
+'@id': fablab:d576a899-3130-4ab4-94e3-d88818c4994e#resource
+'@type': vf:Resource
+'vf:uuid': b5ab3fc5-4d6d-4716-93eb-40b793c2913f
+'vf:model': acme:3D-Filament-Red
+'vf:lastEvent': fablab:8fe5092e-0ce9-4759-9b11-17f6644aaa47#event
+'vf:quantity':
+  '@type': qudt:QuantityValue
+  'qudt:unit': unit:Grams
+  'qudt:numericValue': 470
