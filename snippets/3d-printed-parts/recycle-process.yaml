@@ -1,0 +1,19 @@
+'@context':
+  - https://w3id.org/valueflows/v1
+  - fablab: https://fablab.example/
+
+'@graph':
+  - '@id': fablab:e1dcbfc3-6288-44d9-9f38-290c7f40507d#process
+    '@type': vf:Transformation
+    'skos:note': recycling 3d printed parts
+
+  - '@id': fablab:8cc2f423-154c-4c7d-b0bf-0a27bec94950#event
+    '@type': vf:IPOEvent
+    'vf:action': vf:consume
+    'vf:startTime': 2016-08-16
+    'vf:executedIn': fablab:e1dcbfc3-6288-44d9-9f38-290c7f40507d#process
+    'vf:affects': fablab:1d14a369-317b-4404-abbd-25fb9d18a408#resource
+    'vf:affectedQuantity':
+        '@type': qudt:QuantityValue
+        'qudt:unit': unit:Each
+        'qudt:numericValue': 2
