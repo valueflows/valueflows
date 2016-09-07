@@ -1,0 +1,20 @@
+
+'@context':
+  - https://w3id.org/valueflows/v1
+  - bkitchen: https://bike-kitchen.example/
+
+'@graph':
+  - '@id': bkitchen:82964ab0-b4de-43e6-9625-4579c31cfa5c#process
+    '@type': vf:Transformation
+    'skos:note': disassembling a bike
+
+  - '@id': bkitchen:2652ad73-e518-41bc-bb79-0c9c1d3cb29b#event
+    '@type': vf:IPOEvent
+    'vf:action': vf:consume
+    'vf:startTime': 2016-09-05
+    'vf:executedIn': bkitchen:82964ab0-b4de-43e6-9625-4579c31cfa5c#process
+    'vf:affects': bkitchen:3965e58b-787c-4728-a802-63aeec53993b#resource
+    'vf:affectedQuantity':
+        '@type': qudt:QuantityValue
+        'qudt:unit': unit:Each
+        'qudt:numericValue': 1
