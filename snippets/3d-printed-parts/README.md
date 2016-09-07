@@ -1,0 +1,7 @@
+1. [filament-before-create.yaml](https://github.com/valueflows/valueflows/blob/master/snippets/3d-printed-parts/filament-before-create.yaml)
+2. [create-process.yaml](https://github.com/valueflows/valueflows/blob/master/snippets/3d-printed-parts/create-process.yaml)
+3. [filament-after-create.yaml](https://github.com/valueflows/valueflows/blob/master/snippets/3d-printed-parts/filament-after-create.yaml)
+4. [parts-after-create.yaml](https://github.com/valueflows/valueflows/blob/master/snippets/3d-printed-parts/parts-after-create.yaml)
+5. [increment-process.yaml](https://github.com/valueflows/valueflows/blob/master/snippets/3d-printed-parts/increment-process.yaml)
+6. [filament-after-increment.yaml](https://github.com/valueflows/valueflows/blob/master/snippets/3d-printed-parts/filament-after-increment.yaml)
+7. [parts-after-increment.yaml](https://github.com/valueflows/valueflows/blob/master/snippets/3d-printed-parts/parts-after-increment.yaml)
