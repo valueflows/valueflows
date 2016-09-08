@@ -1,0 +1,14 @@
+'@context':
+  - https://w3id.org/valueflows/v1
+  - boxcoop: https://boxcoop.example/
+    acme: https://acme.example/
+
+'@id': boxcoop:583c4636-50ea-45f8-b96d-ab6f34388f49#resource
+'@type': vf:MaterialResource
+'vf:model': acme:wooden-produce-box#model
+'vf:currentLocation': boxcoop:98c38881-696d-4339-a823-3f6960bc9141#place
+'vf:mostRecentEvent': boxcoop:2efc07a1-3d5f-4fca-9d25-49be7ec9e311#event
+'vf:quantity':
+  '@type': qudt:QuantityValue
+  'qudt:unit': unit:Each
+  'qudt:numericValue': 83

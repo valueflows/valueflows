@@ -1,0 +1,132 @@
+'@context':
+  - https://w3id.org/valueflows/v1
+  - boxcoop: https://boxcoop.example/
+
+'@graph':
+  - '@id': boxcoop:8b7c3d7c-720b-4599-b4b4-1ec4fe9f1b3d#process
+    '@type': vf:Transformation
+    'skos:note': assemble simple produce box
+
+  # combined box
+  - '@id': boxcoop:83147f39-37ef-42e8-bd91-91b5e094cddd#event
+    '@type': vf:IPOEvent
+    'vf:action': vf:create
+    'vf:startTime': 2016-09-08
+    'vf:executedIn': boxcoop:8b7c3d7c-720b-4599-b4b4-1ec4fe9f1b3d#process
+    'vf:affects': boxcoop:2b83f582-de8e-4c65-ab46-c8cf65e2075b#resource
+    'vf:affectedQuantity':
+        '@type': qudt:QuantityValue
+        'qudt:unit': unit:Each
+        'qudt:numericValue': 1
+
+  # packaging
+  - '@id': boxcoop:2efc07a1-3d5f-4fca-9d25-49be7ec9e311#event
+    '@type': vf:IPOEvent
+    'vf:action': vf:consume
+    'vf:startTime': 2016-09-08
+    'vf:executedIn': boxcoop:8b7c3d7c-720b-4599-b4b4-1ec4fe9f1b3d#process
+    'vf:affects': boxcoop:583c4636-50ea-45f8-b96d-ab6f34388f49#resource
+    'vf:affectedQuantity':
+        '@type': qudt:QuantityValue
+        'qudt:unit': unit:Each
+        'qudt:numericValue': 1
+
+  - '@id': boxcoop:f27f9b63-ce7a-429f-82fa-88238f2967b7#event
+    '@type': vf:IPOEvent
+    'vf:action': vf:create
+    'vf:startTime': 2016-09-08
+    'vf:executedIn': boxcoop:8b7c3d7c-720b-4599-b4b4-1ec4fe9f1b3d#process
+    'vf:affects': boxcoop:67d034a0-7fd0-4d61-801c-6cdb952fc18b#resource
+    'vf:affectedQuantity':
+        '@type': qudt:QuantityValue
+        'qudt:unit': unit:Each
+        'qudt:numericValue': 1
+
+  # produce
+  - '@id': boxcoop:ddc8a3b5-1825-486a-8f6e-1df6726434ff#event
+    '@type': vf:IPOEvent
+    'vf:action': vf:consume
+    'vf:startTime': 2016-09-08
+    'vf:executedIn': boxcoop:8b7c3d7c-720b-4599-b4b4-1ec4fe9f1b3d#process
+    'vf:affects': boxcoop:07d4cc02-3b1d-4736-9438-9e8dd89022c6#resource
+    'vf:affectedQuantity':
+        '@type': qudt:QuantityValue
+        'qudt:unit': unit:Kilogram
+        'qudt:numericValue': 1
+
+  - '@id': boxcoop:1a574bb7-1058-4cbc-a560-70272c3a20c3#event
+    '@type': vf:IPOEvent
+    'vf:action': vf:create
+    'vf:startTime': 2016-09-08
+    'vf:executedIn': boxcoop:8b7c3d7c-720b-4599-b4b4-1ec4fe9f1b3d#process
+    'vf:affects': boxcoop:c273020d-82ce-4b28-a573-491c7a62b833#resource
+    'vf:affectedQuantity':
+        '@type': qudt:QuantityValue
+        'qudt:unit': unit:Kilogram
+        'qudt:numericValue': 1
+
+  - '@id': boxcoop:689cd00f-7740-4b8b-ac81-40dcfe312b44#event
+    '@type': vf:IPOEvent
+    'vf:action': vf:consume
+    'vf:startTime': 2016-09-08
+    'vf:executedIn': boxcoop:8b7c3d7c-720b-4599-b4b4-1ec4fe9f1b3d#process
+    'vf:affects': boxcoop:f9cf3dd3-b498-429e-aa9d-dfcbf488603e#resource
+    'vf:affectedQuantity':
+        '@type': qudt:QuantityValue
+        'qudt:unit': unit:Kilogram
+        'qudt:numericValue': 1
+
+  - '@id': boxcoop:2cad9c45-6588-44d6-86c1-17b91d2efef7#event
+    '@type': vf:IPOEvent
+    'vf:action': vf:create
+    'vf:startTime': 2016-09-08
+    'vf:executedIn': boxcoop:8b7c3d7c-720b-4599-b4b4-1ec4fe9f1b3d#process
+    'vf:affects': boxcoop:51397872-0d32-437c-95a1-52ad3e2525c5#resource
+    'vf:affectedQuantity':
+        '@type': qudt:QuantityValue
+        'qudt:unit': unit:Kilogram
+        'qudt:numericValue': 1
+
+  - '@id': boxcoop:d2842c60-917f-4336-a908-7f5bffb44862#event
+    '@type': vf:IPOEvent
+    'vf:action': vf:consume
+    'vf:startTime': 2016-09-08
+    'vf:executedIn': boxcoop:8b7c3d7c-720b-4599-b4b4-1ec4fe9f1b3d#process
+    'vf:affects': boxcoop:a53e347d-2675-4a84-8882-ad8f30a16f06#resource
+    'vf:affectedQuantity':
+        '@type': qudt:QuantityValue
+        'qudt:unit': unit:Kilogram
+        'qudt:numericValue': 1
+
+  - '@id': boxcoop:2830456e-b682-4438-accb-7f6f0e1f27f2#event
+    '@type': vf:IPOEvent
+    'vf:action': vf:create
+    'vf:startTime': 2016-09-08
+    'vf:executedIn': boxcoop:8b7c3d7c-720b-4599-b4b4-1ec4fe9f1b3d#process
+    'vf:affects': boxcoop:71a4e8b5-ca2f-4aba-90f6-b6313f4da024#resource
+    'vf:affectedQuantity':
+        '@type': qudt:QuantityValue
+        'qudt:unit': unit:Kilogram
+        'qudt:numericValue': 1
+
+  - '@id': boxcoop:3bf3989d-9ed1-4be7-a0ac-2d02951eb850#event
+    '@type': vf:IPOEvent
+    'vf:action': vf:consume
+    'vf:startTime': 2016-09-08
+    'vf:executedIn': boxcoop:8b7c3d7c-720b-4599-b4b4-1ec4fe9f1b3d#process
+    'vf:affects': boxcoop:6cb861ba-993d-4293-a9aa-9fd31f1411be#resource
+    'vf:affectedQuantity':
+        '@type': qudt:QuantityValue
+        'qudt:unit': unit:Kilogram
+        'qudt:numericValue': 1
+
+  - '@id': boxcoop:eb61aaa4-b63b-4868-bdd5-88cbeb50a743#event
+    '@type': vf:IPOEvent
+    'vf:action': vf:create
+    'vf:startTime': 2016-09-08
+    'vf:executedIn': boxcoop:8b7c3d7c-720b-4599-b4b4-1ec4fe9f1b3d#process
+    'vf:affects': boxcoop:1461dec0-20b7-4b73-a26f-5ea94a5f6055#resource
+    'vf:affectedQuantity':
+        '@type': qudt:QuantityValue
+        'qudt:unit': unit:Kilogram
+        'qudt:numericValue': 1

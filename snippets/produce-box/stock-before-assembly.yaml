@@ -1,0 +1,45 @@
+'@context':
+  - https://w3id.org/valueflows/v1
+  - boxcoop: https://boxcoop.example/
+    prodont: http://www.productontology.org/id/
+
+'@graph':
+  - '@id': boxcoop:07d4cc02-3b1d-4736-9438-9e8dd89022c6#resource
+    '@type': vf:MaterialResource
+    'vf:category': prodont:Apple
+    'vf:lotIdentifier': 615c9abe
+    'vf:currentLocation': boxcoop:98c38881-696d-4339-a823-3f6960bc9141#place
+    'vf:quantity':
+      '@type': qudt:QuantityValue
+      'qudt:unit': unit:Kilogram
+      'qudt:numericValue': 180
+
+  - '@id': boxcoop:f9cf3dd3-b498-429e-aa9d-dfcbf488603e#resource
+    '@type': vf:MaterialResource
+    'vf:category': prodont:Onion
+    'vf:lotIdentifier': 37591c70
+    'vf:currentLocation': boxcoop:98c38881-696d-4339-a823-3f6960bc9141#place
+    'vf:quantity':
+      '@type': qudt:QuantityValue
+      'qudt:unit': unit:Kilogram
+      'qudt:numericValue': 65
+
+  - '@id': boxcoop:a53e347d-2675-4a84-8882-ad8f30a16f06#resource
+    '@type': vf:MaterialResource
+    'vf:category': prodont:Carrot
+    'vf:lotIdentifier': 93eb3164
+    'vf:currentLocation': boxcoop:98c38881-696d-4339-a823-3f6960bc9141#place
+    'vf:quantity':
+      '@type': qudt:QuantityValue
+      'qudt:unit': unit:Kilogram
+      'qudt:numericValue': 87
+
+  - '@id': boxcoop:6cb861ba-993d-4293-a9aa-9fd31f1411be#resource
+    '@type': vf:MaterialResource
+    'vf:category': prodont:Tomato
+    'vf:lotIdentifier': 58054c8d
+    'vf:currentLocation': boxcoop:98c38881-696d-4339-a823-3f6960bc9141#place
+    'vf:quantity':
+      '@type': qudt:QuantityValue
+      'qudt:unit': unit:Kilogram
+      'qudt:numericValue': 48
