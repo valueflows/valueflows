@@ -5,3 +5,7 @@
 4. [box.yaml](https://github.com/valueflows/valueflows/blob/master/snippets/produce-box/box.yaml)
 5. [boxes-after-assembly.yaml](https://github.com/valueflows/valueflows/blob/master/snippets/produce-box/boxes-after-assembly.yaml)
 6. [stock-after-assembly.yaml](https://github.com/valueflows/valueflows/blob/master/snippets/produce-box/stock-after-assembly.yaml)
+7. [transport-process.yaml](https://github.com/valueflows/valueflows/blob/master/snippets/produce-box/transport-process.yaml)
+8. [box-after-transport.yaml](https://github.com/valueflows/valueflows/blob/master/snippets/produce-box/box-after-transport.yaml)
+9. [disassemble-process.yaml](https://github.com/valueflows/valueflows/blob/master/snippets/produce-box/disassemble-process.yaml)
+10. [mini-stock-from-disassemble.yaml](https://github.com/valueflows/valueflows/blob/master/snippets/produce-box/mini-stock-from-disassemble.yaml)

@@ -1,0 +1,61 @@
+'@context':
+  - https://w3id.org/valueflows/v1
+  - boxcoop: https://boxcoop.example/
+
+'@graph':
+  - '@id': boxcoop:6dd6f189-2dcb-47ee-a2d4-3c684246c53d#process
+    '@type': vf:Transformation
+    'skos:note': disassemble simple produce box
+
+  # destroy combined box resource
+  - '@id': boxcoop:83147f39-37ef-42e8-bd91-91b5e094cddd#event
+    '@type': vf:IPOEvent
+    'vf:action': vf:consume
+    'vf:startTime': 2016-09-09
+    'vf:executedIn': boxcoop:6dd6f189-2dcb-47ee-a2d4-3c684246c53d#process
+    'vf:affects': boxcoop:2b83f582-de8e-4c65-ab46-c8cf65e2075b#resource
+    'vf:affectedQuantity':
+        '@type': qudt:QuantityValue
+        'qudt:unit': unit:Each
+        'qudt:numericValue': 1
+
+  # disassemble package
+  - '@id': boxcoop:5356dd0a-199e-40e5-b5e0-198383a2ab5b#event
+    '@type': vf:IPOEvent
+    'vf:action': vf:disassemble
+    'vf:startTime': 2016-09-09
+    'vf:executedIn': boxcoop:6dd6f189-2dcb-47ee-a2d4-3c684246c53d#process
+    'vf:affects': boxcoop:67d034a0-7fd0-4d61-801c-6cdb952fc18b#resource
+    'vf:container': boxcoop:2b83f582-de8e-4c65-ab46-c8cf65e2075b#resource
+
+  - '@id': boxcoop:6b59a069-fc86-454c-b7ad-bc3230a96596#event
+    '@type': vf:IPOEvent
+    'vf:action': vf:disassemble
+    'vf:startTime': 2016-09-09
+    'vf:executedIn': boxcoop:6dd6f189-2dcb-47ee-a2d4-3c684246c53d#process
+    'vf:affects': boxcoop:c273020d-82ce-4b28-a573-491c7a62b833#resource
+    'vf:container': boxcoop:2b83f582-de8e-4c65-ab46-c8cf65e2075b#resource
+
+  - '@id': boxcoop:f1e8608f-41a6-436e-b450-22fca2bbca64#event
+    '@type': vf:IPOEvent
+    'vf:action': vf:disassemble
+    'vf:startTime': 2016-09-09
+    'vf:executedIn': boxcoop:6dd6f189-2dcb-47ee-a2d4-3c684246c53d#process
+    'vf:affects': boxcoop:51397872-0d32-437c-95a1-52ad3e2525c5#resource
+    'vf:container': boxcoop:2b83f582-de8e-4c65-ab46-c8cf65e2075b#resource
+
+  - '@id': boxcoop:482851a2-adf7-439e-b7a1-ef4f0f84b1bc#event
+    '@type': vf:IPOEvent
+    'vf:action': vf:disassemble
+    'vf:startTime': 2016-09-09
+    'vf:executedIn': boxcoop:6dd6f189-2dcb-47ee-a2d4-3c684246c53d#process
+    'vf:affects': boxcoop:71a4e8b5-ca2f-4aba-90f6-b6313f4da024#resource
+    'vf:container': boxcoop:2b83f582-de8e-4c65-ab46-c8cf65e2075b#resource
+
+  - '@id': boxcoop:440147e0-0df4-401d-9ef3-ad70e337a400#event
+    '@type': vf:IPOEvent
+    'vf:action': vf:disassemble
+    'vf:startTime': 2016-09-09
+    'vf:executedIn': boxcoop:6dd6f189-2dcb-47ee-a2d4-3c684246c53d#process
+    'vf:affects': boxcoop:1461dec0-20b7-4b73-a26f-5ea94a5f6055#resource
+    'vf:container': boxcoop:2b83f582-de8e-4c65-ab46-c8cf65e2075b#resource

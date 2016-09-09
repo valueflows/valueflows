@@ -1,0 +1,24 @@
+'@context':
+  - https://w3id.org/valueflows/v1
+  - boxcoop: https://boxcoop.example/
+
+'@graph':
+  - '@id': boxcoop:16e0a6c6-eefe-4c2b-8258-63b7f7d61a82#process
+    '@type': vf:Transportation
+    'skos:note': transporting produce box
+
+  - '@id': boxcoop:6fe65969-08a6-4487-ac21-50203fa91d33#event
+    '@type': vf:IPOEvent
+    'vf:action': vf:load
+    'vf:startTime': 2016-09-09
+    'vf:atLocation': boxcoop:98c38881-696d-4339-a823-3f6960bc9141#place
+    'vf:executedIn': boxcoop:16e0a6c6-eefe-4c2b-8258-63b7f7d61a82#process
+    'vf:affects': boxcoop:2b83f582-de8e-4c65-ab46-c8cf65e2075b#resource
+
+  - '@id': boxcoop:a66b8eb6-5ba6-40d9-b0a9-1c7fbe72295a#event
+    '@type': vf:IPOEvent
+    'vf:action': vf:unload
+    'vf:startTime': 2016-09-09
+    'vf:atLocation': boxcoop:73ba4b68-d94f-4c31-b17a-fc08d01ba955#place
+    'vf:executedIn': boxcoop:16e0a6c6-eefe-4c2b-8258-63b7f7d61a82#process
+    'vf:affects': boxcoop:2b83f582-de8e-4c65-ab46-c8cf65e2075b#resource
