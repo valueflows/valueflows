@@ -41,12 +41,24 @@
     'vf:potentialAction':
       - '@type': vf:Affordance
         'vf:action': vf:consume
+        'vf:prerequisite':
+          - '@type': Affordance
+            'vf:action': vf:unload
       - '@type': vf:Affordance
         'vf:action': vf:issue
+        'vf:prerequisite':
+          - '@type': Affordance
+            'vf:action': vf:unload
       - '@type': vf:Affordance
         'vf:action': vf:produce
+        'vf:prerequisite':
+          - '@type': Affordance
+            'vf:action': vf:unload
       - '@type': vf:Affordance
         'vf:action': vf:receive
+        'vf:prerequisite':
+          - '@type': Affordance
+            'vf:action': vf:unload
       - '@type': vf:Affordance
         'vf:action': vf:load
         'vf:prerequisite':
