@@ -20,7 +20,7 @@
 
   - '@id': fablab:641e7e23-adcf-4adf-87e0-94579c4dbc6a#event
     '@type': vf:IPOEvent
-    'vf:action': vf:create
+    'vf:action': vf:produce
     'vf:startTime': 2016-08-10
     'vf:executedIn': fablab:d8f86f84-afb2-4302-9847-e0a6b53d2af7#process
     'vf:affects': fablab:1d14a369-317b-4404-abbd-25fb9d18a408#resource
@@ -31,7 +31,7 @@
 
   - '@id': fablab:9cab2292-9c1f-4875-bbfc-9f6711d46590#event
     '@type': vf:IPOEvent
-    'vf:action': vf:create
+    'vf:action': vf:produce
     'vf:startTime': 2016-08-10
     'vf:executedIn': fablab:d8f86f84-afb2-4302-9847-e0a6b53d2af7#process
     'vf:affects': fablab:24fb1c17-04ca-4f92-9b70-b863b59ddda4#resource

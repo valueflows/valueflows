@@ -10,7 +10,7 @@
 
   - '@id': bkitchen:48eeb731-2dbe-41a0-a8ea-13bd29c0572c#event
     '@type': vf:IPOEvent
-    'vf:action': vf:create
+    'vf:action': vf:produce
     'vf:startTime': 2015-07-25
     'vf:executedIn': bkitchen:66ed2c1b-0a45-478b-8df2-eb9993dc91a3#process
     'vf:affects': bkitchen:3965e58b-787c-4728-a802-63aeec53993b#resource
@@ -21,7 +21,7 @@
 
   - '@id': bkitchen:d9406b1b-9055-44b5-a0ff-0875207ccf3a#event
     '@type': vf:IPOEvent
-    'vf:action': vf:create
+    'vf:action': vf:produce
     'vf:startTime': 2015-07-25
     'vf:executedIn': bkitchen:66ed2c1b-0a45-478b-8df2-eb9993dc91a3#process
     'vf:affects': bkitchen:2ffb24c7-176b-4ae0-bd86-595f731c2800#resource
