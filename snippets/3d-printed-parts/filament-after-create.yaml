@@ -11,3 +11,19 @@
   '@type': qudt:QuantityValue
   'qudt:unit': unit:Grams
   'qudt:numericValue': 470
+'vf:potentialAction':
+  - '@type': vf:Affordance
+    'vf:action': vf:consume
+  - '@type': vf:Affordance
+    'vf:action': vf:issue
+  - '@type': vf:Affordance
+    'vf:action': vf:produce
+  - '@type': vf:Affordance
+    'vf:action': vf:receive
+  - '@type': vf:Affordance
+    'vf:action': vf:load
+  - '@type': vf:Affordance
+    'vf:action': vf:unload
+    'vf:prerequisite':
+      - '@type': Affordance
+        'vf:action': vf:load
