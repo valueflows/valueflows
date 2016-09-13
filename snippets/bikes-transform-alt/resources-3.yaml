@@ -1,0 +1,38 @@
+'@context':
+  - https://w3id.org/valueflows/v1
+  - bkitchen: https://bike-kitchen.example/
+
+'@graph':
+  - '@id': bkitchen:2ffb24c7-176b-4ae0-bd86-595f731c2800#resource
+    '@type': vf:Resource
+    'vf:serialIdentifier': 595f731c2800
+    'vf:model': bkitchen:cargobee#model
+    'vf:quantity':
+      '@type': qudt:QuantityValue
+      'qudt:unit': unit:Each
+      'qudt:numericValue': 1
+
+  - '@id': bkitchen:3965e58b-787c-4728-a802-63aeec53993b#resource
+    '@type': vf:Resource
+    'vf:model': bkitchen:blue-bike-paint#model
+    'vf:quantity':
+      '@type': qudt:QuantityValue
+      'qudt:unit': unit:kg
+      'qudt:numericValue': 7.7
+
+  - '@id': bkitchen:2ffb24c7-176b-4ae0-bd86-3453453450#resource
+    '@type': vf:Resource
+    'vf:serialIdentifier': 595f731c2111
+    'vf:model': bkitchen:cargobee-frame#model
+    'vf:quantity':
+      '@type': qudt:QuantityValue
+      'qudt:unit': unit:Each
+      'qudt:numericValue': 0
+
+  - '@id': bkitchen:90d8f9sf890-v89f789ff#resource
+    '@type': vf:Resource
+    'vf:model': metalmfg:6mm-bolt
+    'vf:quantity':
+      '@type': qudt:QuantityValue
+      'qudt:unit': unit:Each
+      'qudt:numericValue': 280

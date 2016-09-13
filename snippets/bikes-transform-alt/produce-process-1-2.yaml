@@ -1,0 +1,31 @@
+
+'@context':
+  - https://w3id.org/valueflows/v1
+  - fastmfg: https://fastener-manufacturing.example/
+
+'@graph':
+  - '@id': fastmfg:sdf908fds-0a45-478b-8df2-dfs9089s0df#process
+    '@type': vf:Transformation
+    'skos:note': producing 6mm bolts
+
+  - '@id': fastmfg:48eeb731-2dbe-41a0-a8ea-13bd29c0572c#event
+    '@type': vf:IPOEvent
+    'vf:action': vf:consume
+    'vf:startTime': 2015-05-25
+    'vf:executedIn': fastmfg:sdf908fds-0a45-478b-8df2-dfs9089s0df#process
+    'vf:affects': fastmfg:324lk2j4kk-0989dfs89d#resource
+    'vf:affectedQuantity':
+        '@type': qudt:QuantityValue
+        'qudt:unit': unit:kg
+        'qudt:numericValue': 5
+
+  - '@id': fastmfg:d9406b1b-9055-44b5-a0ff-0875207ccf3a#event
+    '@type': vf:IPOEvent
+    'vf:action': vf:produce
+    'vf:startTime': 2015-05-25
+    'vf:executedIn': fastmfg:sdf908fds-0a45-478b-8df2-dfs9089s0df#process
+    'vf:affects': fastmfg:sd09f8ds90-ewr890wer8#resource
+    'vf:affectedQuantity':
+        '@type': qudt:QuantityValue
+        'qudt:unit': unit:Each
+        'qudt:numericValue': 500

@@ -1,0 +1,53 @@
+
+'@context':
+  - https://w3id.org/valueflows/v1
+  - bkitchen: https://bike-kitchen.example/
+
+'@graph':
+  - '@id': bkitchen:66ed2c1b-0a45-478b-8df2-eb9993dc91a3#process
+    '@type': vf:Transformation
+    'skos:note': producing a bike
+
+  - '@id': bkitchen:48eeb731-2dbe-41a0-a8ea-13bd29c0572c#event
+    '@type': vf:IPOEvent
+    'vf:action': vf:assemble
+    'vf:startTime': 2015-07-25
+    'vf:executedIn': bkitchen:66ed2c1b-0a45-478b-8df2-eb9993dc91a3#process
+    'vf:affects': bkitchen:90d8f9sf890-v89f789ff#resource#resource
+    'vf:affectedQuantity':
+        '@type': qudt:QuantityValue
+        'qudt:unit': unit:Each
+        'qudt:numericValue': 20
+
+  - '@id': bkitchen:48eeb731-2dbe-41a0-a8ea-089wre98wec#event
+    '@type': vf:IPOEvent
+    'vf:action': vf:assemble
+    'vf:startTime': 2015-07-25
+    'vf:executedIn': bkitchen:66ed2c1b-0a45-478b-8df2-eb9993dc91a3#process
+    'vf:affects': bkitchen:2ffb24c7-176b-4ae0-bd86-3453453450#resource
+    'vf:affectedQuantity':
+        '@type': qudt:QuantityValue
+        'qudt:unit': unit:Each
+        'qudt:numericValue': 1
+
+  - '@id': bkitchen:48eeb731-2dbe-41a0-a8ea-098sdf90dd#event
+    '@type': vf:IPOEvent
+    'vf:action': vf:consume
+    'vf:startTime': 2015-07-25
+    'vf:executedIn': bkitchen:66ed2c1b-0a45-478b-8df2-eb9993dc91a3#process
+    'vf:affects': bkitchen:3965e58b-787c-4728-a802-63aeec53993b#resource
+    'vf:affectedQuantity':
+        '@type': qudt:QuantityValue
+        'qudt:unit': unit:kg
+        'qudt:numericValue': 2.3
+
+  - '@id': bkitchen:d9406b1b-9055-44b5-a0ff-0875207ccf3a#event
+    '@type': vf:IPOEvent
+    'vf:action': vf:produce
+    'vf:startTime': 2015-07-25
+    'vf:executedIn': bkitchen:66ed2c1b-0a45-478b-8df2-eb9993dc91a3#process
+    'vf:affects': bkitchen:2ffb24c7-176b-4ae0-bd86-595f731c2800#resource
+    'vf:affectedQuantity':
+        '@type': qudt:QuantityValue
+        'qudt:unit': unit:Each
+        'qudt:numericValue': 1

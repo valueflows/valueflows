@@ -1,0 +1,31 @@
+
+'@context':
+  - https://w3id.org/valueflows/v1
+  - metalmfg: https://metal-manufacturing.example/
+
+'@graph':
+  - '@id': metalmfg:44442c1b-0a45-478b-8df2-eb9993dc9144#process
+    '@type': vf:Transformation
+    'skos:note': producing 6mm bolts
+
+  - '@id': metalmfg:48eeb731-2dbe-41a0-a8ea-13bd29c0572c#event
+    '@type': vf:IPOEvent
+    'vf:action': vf:consume
+    'vf:startTime': 2015-06-25
+    'vf:executedIn': metalmfg:44442c1b-0a45-478b-8df2-eb9993dc9144#process
+    'vf:affects': metalmfg:sad079009-0989dfs89d#resource
+    'vf:affectedQuantity':
+        '@type': qudt:QuantityValue
+        'qudt:unit': unit:kg
+        'qudt:numericValue': 5
+
+  - '@id': metalmfg:d9406b1b-9055-44b5-a0ff-0875207ccf3a#event
+    '@type': vf:IPOEvent
+    'vf:action': vf:produce
+    'vf:startTime': 2015-06-25
+    'vf:executedIn': metalmfg:44442c1b-0a45-478b-8df2-eb9993dc9144#process
+    'vf:affects': metalmfg:90dfs098sf-324j23kl4#resource
+    'vf:affectedQuantity':
+        '@type': qudt:QuantityValue
+        'qudt:unit': unit:Each
+        'qudt:numericValue': 500

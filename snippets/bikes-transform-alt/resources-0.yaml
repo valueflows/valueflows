@@ -1,0 +1,39 @@
+'@context':
+  - https://w3id.org/valueflows/v1
+  - bkitchen: https://bike-kitchen.example/
+  - metalmfg: https://metal-manufacturing.example/
+  - fastmfg: https://fastener-manufacturing.example/
+
+'@graph':
+  - '@id': bkitchen:3965e58b-787c-4728-a802-63aeec53993b#resource
+    '@type': vf:Resource
+    'vf:model': bkitchen:blue-bike-paint#model
+    'vf:quantity':
+      '@type': qudt:QuantityValue
+      'qudt:unit': unit:kg
+      'qudt:numericValue': 10
+
+  - '@id': bkitchen:2ffb24c7-176b-4ae0-bd86-3453453450#resource
+    '@type': vf:Resource
+    'vf:serialIdentifier': 595f731c2111
+    'vf:model': bkitchen:cargobee-frame#model
+    'vf:quantity':
+      '@type': qudt:QuantityValue
+      'qudt:unit': unit:Each
+      'qudt:numericValue': 1
+
+  - '@id': metalmfg:sad079009-0989dfs89d#resource
+    '@type': vf:Resource
+    'vf:model': metalmfg:g-steel
+    'vf:quantity':
+      '@type': qudt:QuantityValue
+      'qudt:unit': unit:kg
+      'qudt:numericValue': 10
+      
+  - '@id': fastmfg:324lk2j4kk-0989dfs89d#resource
+    '@type': vf:Resource
+    'vf:model': metalmfg:g-steel
+    'vf:quantity':
+      '@type': qudt:QuantityValue
+      'qudt:unit': unit:kg
+      'qudt:numericValue': 15

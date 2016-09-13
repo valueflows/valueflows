@@ -1,0 +1,37 @@
+'@context':
+  - https://w3id.org/valueflows/v1
+  - metalmfg: https://metal-manufacturing.example/
+  - fastmfg: https://fastener-manufacturing.example/
+
+'@graph':
+  - '@id': metalmfg:sad079009-0989dfs89d#resource
+    '@type': vf:Resource
+    'vf:model': metalmfg:g-steel
+    'vf:quantity':
+      '@type': qudt:QuantityValue
+      'qudt:unit': unit:kg
+      'qudt:numericValue': 5
+      
+  - '@id': fastmfg:324lk2j4kk-0989dfs89d#resource
+    '@type': vf:Resource
+    'vf:model': metalmfg:g-steel
+    'vf:quantity':
+      '@type': qudt:QuantityValue
+      'qudt:unit': unit:kg
+      'qudt:numericValue': 10
+      
+  - '@id': metalmfg:d89789sss-sdf890sdf8#resource
+    '@type': vf:Resource
+    'vf:model': metalmfg:6mm-bolt
+    'vf:quantity':
+      '@type': qudt:QuantityValue
+      'qudt:unit': unit:Each
+      'qudt:numericValue': 500
+            
+  - '@id': fastmfg:j90jh809h90-90dsf89dff#resource
+    '@type': vf:Resource
+    'vf:model': metalmfg:6mm-bolt
+    'vf:quantity':
+      '@type': qudt:QuantityValue
+      'qudt:unit': unit:Each
+      'qudt:numericValue': 500

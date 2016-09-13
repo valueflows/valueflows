@@ -1,0 +1,30 @@
+'@context':
+  - https://w3id.org/valueflows/v1
+  - bkitchen: https://bike-kitchen.example/
+  - metalmfg: https://metal-manufacturing.example/
+  - fastmfg: https://fastener-manufacturing.example/
+
+'@graph':
+  - '@id': metalmfg:d89789sss-sdf890sdf8#resource
+    '@type': vf:Resource
+    'vf:model': metalmfg:6mm-bolt
+    'vf:quantity':
+      '@type': qudt:QuantityValue
+      'qudt:unit': unit:Each
+      'qudt:numericValue': 300
+            
+  - '@id': fastmfg:j90jh809h90-90dsf89dff#resource
+    '@type': vf:Resource
+    'vf:model': metalmfg:6mm-bolt
+    'vf:quantity':
+      '@type': qudt:QuantityValue
+      'qudt:unit': unit:Each
+      'qudt:numericValue': 400
+
+  - '@id': bkitchen:90d8f9sf890-v89f789ff#resource
+    '@type': vf:Resource
+    'vf:model': metalmfg:6mm-bolt
+    'vf:quantity':
+      '@type': qudt:QuantityValue
+      'qudt:unit': unit:Each
+      'qudt:numericValue': 300

@@ -1,0 +1,38 @@
+'@context':
+  - https://w3id.org/valueflows/v1
+  - bkitchen: https://bike-kitchen.example/
+
+'@graph':
+  - '@id': bkitchen:2ffb24c7-176b-4ae0-bd86-595f731c2800#resource
+    '@type': vf:Resource
+    'vf:serialIdentifier': 595f731c2800
+    'vf:model': bkitchen:cargobee#model
+    'vf:quantity':
+      '@type': qudt:QuantityValue
+      'qudt:unit': unit:Each
+      'qudt:numericValue': 0
+
+  - '@id': bkitchen:43458403-176b-4ae0-bd86-8907re87wew#resource
+    '@type': vf:Resource
+    'vf:serialIdentifier': 595f731c2111
+    'vf:model': bkitchen:cargobee-frame-used#model
+    'vf:quantity':
+      '@type': qudt:QuantityValue
+      'qudt:unit': unit:Each
+      'qudt:numericValue': 1
+
+  - '@id': bkitchen:res89s89d-dfs8ds87d8#resource
+    '@type': vf:Resource
+    'vf:model': metalmfg:g-steel
+    'vf:quantity':
+      '@type': qudt:QuantityValue
+      'qudt:unit': unit:kg
+      'qudt:numericValue': 1.5
+
+  - '@id': bkitchen:res89s89d-ewr89ew8ee#resource
+    '@type': vf:Resource
+    'vf:model': bkitchen:waste
+    'vf:quantity':
+      '@type': qudt:QuantityValue
+      'qudt:unit': unit:kg
+      'qudt:numericValue': 3.8
