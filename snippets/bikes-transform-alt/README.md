@@ -1,6 +1,6 @@
 1. [resources-0.yaml](https://github.com/valueflows/valueflows/blob/master/snippets/bikes-transform-alt/resources-0.yaml)
-1. [produce-process-1.1.yaml](https://github.com/valueflows/valueflows/blob/master/snippets/bikes-transform-alt/produce-process-1.1.yaml)
-1. [produce-process-1.2.yaml](https://github.com/valueflows/valueflows/blob/master/snippets/bikes-transform-alt/produce-process-1.2.yaml)
+1. [produce-process-1-1.yaml](https://github.com/valueflows/valueflows/blob/master/snippets/bikes-transform-alt/produce-process-1-1.yaml)
+1. [produce-process-1-2.yaml](https://github.com/valueflows/valueflows/blob/master/snippets/bikes-transform-alt/produce-process-1-2.yaml)
 1. [resources-1.yaml](https://github.com/valueflows/valueflows/blob/master/snippets/bikes-transform-alt/resources-1.yaml)
 1. [issue-process-2-1.yaml](https://github.com/valueflows/valueflows/blob/master/snippets/bikes-transform-alt/issue-process-2-1.yaml)
 1. [issue-process-2-2.yaml](https://github.com/valueflows/valueflows/blob/master/snippets/bikes-transform-alt/issue-process-2-2.yaml)
