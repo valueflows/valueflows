@@ -15,7 +15,8 @@
   - '@id': bkitchen:43458403-176b-4ae0-bd86-8907re87wew#resource
     '@type': vf:Resource
     'vf:serialIdentifier': 595f731c2111
-    'vf:model': bkitchen:cargobee-frame-used#model
+    'vf:model': bkitchen:cargobee-frame#model
+    'vf:category': bkitchen:used
     'vf:quantity':
       '@type': qudt:QuantityValue
       'qudt:unit': unit:Each
@@ -31,7 +32,7 @@
 
   - '@id': bkitchen:res89s89d-ewr89ew8ee#resource
     '@type': vf:Resource
-    'vf:model': bkitchen:waste
+    'vf:model': bkitchen:landfill-waste
     'vf:quantity':
       '@type': qudt:QuantityValue
       'qudt:unit': unit:kg
