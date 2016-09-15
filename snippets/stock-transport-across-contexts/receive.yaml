@@ -1,0 +1,33 @@
+
+'@context':
+  - https://w3id.org/valueflows/v1
+  - bkitchen: https://bike-kitchen.example/
+  - shipper: https://will-haul-for-you.example/
+
+'@graph':
+  - '@id': bkitchen:ewr7890w7e89-8df2-dfad4444#process
+    '@type': vf:Process
+    'skos:note': receiving 1 batch of 10 bike chains
+
+  - '@id': shipper:7897897898#event
+    '@type': vf:IPOEvent
+    'vf:action': vf:issue
+    'vf:startTime': 2015-07-24
+    'vf:executedIn': bkitchen:ewr7890w7e89-8df2-dfad4444#process
+    'vf:affects': shipper:4535435-bikechains-for-transport#resource
+    'vf:affectedQuantity':
+        '@type': qudt:QuantityValue
+        'qudt:unit': unit:Each
+        'qudt:numericValue': 1
+    'vf:trackingIdentifier': shipper:3434209834290-2342347983#trackingId
+
+  - '@id': bkitchen:dfaoiud-84343#event
+    '@type': vf:IPOEvent
+    'vf:action': vf:receive
+    'vf:startTime': 2015-07-24
+    'vf:executedIn': bkitchen:ewr7890w7e89-8df2-dfad4444#process
+    'vf:affects': bkitchen:2ffb24c7-176b-4ae0-bd86-bikechains#resource
+    'vf:affectedQuantity':
+        '@type': qudt:QuantityValue
+        'qudt:unit': unit:Each
+        'qudt:numericValue': 10

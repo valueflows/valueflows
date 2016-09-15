@@ -1,0 +1,33 @@
+
+'@context':
+  - https://w3id.org/valueflows/v1
+  - bikeparts: https://bike-parts.example/
+  - shipper: https://will-haul-for-you.example/
+
+'@graph':
+  - '@id': bikeparts:66ed2c1b-0a45-478b-8df2-dfuodsufoid#process
+    '@type': vf:Process
+    'skos:note': issuing bike chains for transport
+
+  - '@id': bikeparts:546456546-2dbe-41a0-a8ea-13bd29c0572c#event
+    '@type': vf:IPOEvent
+    'vf:action': vf:issue
+    'vf:startTime': 2015-07-22
+    'vf:executedIn': bikeparts:66ed2c1b-0a45-478b-8df2-dfuodsufoid#process
+    'vf:affects': bikeparts:3965e58b-787c-4728-bikechains#resource
+    'vf:affectedQuantity':
+        '@type': qudt:QuantityValue
+        'qudt:unit': unit:Each
+        'qudt:numericValue': 10
+
+  - '@id': shipper:5464uio3ii#event
+    '@type': vf:IPOEvent
+    'vf:action': vf:receive
+    'vf:startTime': 2015-07-22
+    'vf:executedIn': bikeparts:66ed2c1b-0a45-478b-8df2-dfuodsufoid#process
+    'vf:affects': shipper:4535435-bikechains-for-transport#resource
+    'vf:affectedQuantity':
+        '@type': qudt:QuantityValue
+        'qudt:unit': unit:Each
+        'qudt:numericValue': 1
+    'vf:trackingIdentifier': shipper:3434209834290-2342347983#trackingId

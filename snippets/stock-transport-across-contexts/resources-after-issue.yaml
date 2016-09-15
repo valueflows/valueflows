@@ -1,0 +1,23 @@
+'@context':
+  - https://w3id.org/valueflows/v1
+  - bikeparts: https://bike-parts.example/
+  - bkitchen: https://bike-kitchen.example/
+  - shipper: https://will-haul-for-you.example/
+
+'@graph':
+  - '@id': bikeparts:3965e58b-787c-4728-bikechains#resource
+    '@type': vf:Resource
+    'vf:model': bikeparts:bike-chains-1234#model
+    'vf:quantity':
+      '@type': qudt:QuantityValue
+      'qudt:unit': unit:Each
+      'qudt:numericValue': 40
+
+  - '@id': shipper:4535435-bikechains-for-transport#resource
+    '@type': vf:Resource
+    'vf:model': shipper:transported-goods#model
+    'vf:quantity':
+      '@type': qudt:QuantityValue
+      'qudt:unit': unit:Each
+      'qudt:numericValue': 1
+    'vf:trackingIdentifier': shipper:3434209834290-2342347983#trackingId
