@@ -1,0 +1,14 @@
+'@context':
+  - https://w3id.org/valueflows/v1
+  - bkitchen: https://bike-kitchen.example/
+
+'@graph':
+  - '@id': bkitchen:3965e58b-787c-4728-a802-63aeec53993b#resource
+    '@type': vf:Resource
+    'vf:serialIdentifier': 63aeec53993b
+    'vf:model': bkitchen:cargobee#model
+    'vf:currentLocation': bkitchen:truck
+    'vf:quantity':
+      '@type': qudt:QuantityValue
+      'qudt:unit': unit:Each
+      'qudt:numericValue': 1

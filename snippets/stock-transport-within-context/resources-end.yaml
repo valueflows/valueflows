@@ -1,7 +1,6 @@
 '@context':
   - https://w3id.org/valueflows/v1
   - bikeparts: https://bike-parts.example/
-  - bkitchen: https://bike-kitchen.example/
 
 '@graph':
   - '@id': bikeparts:3965e58b-787c-4728-bikechains#resource
@@ -10,14 +9,15 @@
     'vf:quantity':
       '@type': qudt:QuantityValue
       'qudt:unit': unit:Each
-      'qudt:numericValue': 50
-    'vf:currentLocation': bikeparts:warehouse
+      'qudt:numericValue': 40
+    'vf:currentLocation': bikeparts:warehouse-1
 
-  - '@id': bkitchen:2ffb24c7-176b-4ae0-bd86-bikechains#resource
+  - '@id': bikeparts:342343223-787c-4728-bikechains#resource
     '@type': vf:Resource
     'vf:model': bikeparts:bike-chains-1234#model
     'vf:quantity':
       '@type': qudt:QuantityValue
       'qudt:unit': unit:Each
-      'qudt:numericValue': 4
-    'vf:currentLocation': bkitchen:shop
+      'qudt:numericValue': 30
+    'vf:currentLocation': bikeparts:warehouse-2
+

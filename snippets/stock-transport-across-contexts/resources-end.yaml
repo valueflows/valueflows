@@ -11,6 +11,7 @@
       '@type': qudt:QuantityValue
       'qudt:unit': unit:Each
       'qudt:numericValue': 40
+    'vf:currentLocation': bikeparts:warehouse
 
   - '@id': bkitchen:2ffb24c7-176b-4ae0-bd86-bikechains#resource
     '@type': vf:Resource
@@ -19,3 +20,4 @@
       '@type': qudt:QuantityValue
       'qudt:unit': unit:Each
       'qudt:numericValue': 14
+    'vf:currentLocation': bkitchen:shop
