@@ -3,7 +3,7 @@
   - bkitchen: https://bike-kitchen.example/
 
 '@graph':
-  - '@id': bkitchen:2ffb24c7-176b-4ae0-bd86-595f731c2800#resource
+  - '@id': bkitchen:2ffb24c7-176b-4ae0-bd86-595f731c2800-bike#resource
     '@type': vf:Resource
     'vf:serialIdentifier': 595f731c2800
     'vf:model': bkitchen:cargobee#model
@@ -12,7 +12,7 @@
       'qudt:unit': unit:Each
       'qudt:numericValue': 0
 
-  - '@id': bkitchen:43458403-176b-4ae0-bd86-8907re87wew#resource
+  - '@id': bkitchen:43458403-176b-4ae0-bd86-8907re87wew-frame#resource
     '@type': vf:Resource
     'vf:serialIdentifier': 595f731c2111
     'vf:model': bkitchen:cargobee-frame#model
@@ -22,7 +22,7 @@
       'qudt:unit': unit:Each
       'qudt:numericValue': 1
 
-  - '@id': bkitchen:res89s89d-dfs8ds87d8#resource
+  - '@id': bkitchen:res89s89d-dfs8ds87d8-steel#resource
     '@type': vf:Resource
     'vf:model': metalmfg:g-steel
     'vf:quantity':
@@ -30,7 +30,7 @@
       'qudt:unit': unit:kg
       'qudt:numericValue': 1.5
 
-  - '@id': bkitchen:res89s89d-ewr89ew8ee#resource
+  - '@id': bkitchen:res89s89d-ewr89ew8ee-waste#resource
     '@type': vf:Resource
     'vf:model': bkitchen:landfill-waste
     'vf:quantity':

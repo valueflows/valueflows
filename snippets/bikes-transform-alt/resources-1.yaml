@@ -4,7 +4,7 @@
   - fastmfg: https://fastener-manufacturing.example/
 
 '@graph':
-  - '@id': metalmfg:sad079009-0989dfs89d#resource
+  - '@id': metalmfg:sad079009-0989dfs89d-steel#resource
     '@type': vf:Resource
     'vf:model': metalmfg:g-steel
     'vf:quantity':
@@ -12,7 +12,7 @@
       'qudt:unit': unit:kg
       'qudt:numericValue': 5
       
-  - '@id': fastmfg:324lk2j4kk-0989dfs89d#resource
+  - '@id': fastmfg:324lk2j4kk-0989dfs89d-steel#resource
     '@type': vf:Resource
     'vf:model': metalmfg:g-steel
     'vf:quantity':
@@ -20,7 +20,7 @@
       'qudt:unit': unit:kg
       'qudt:numericValue': 10
       
-  - '@id': metalmfg:d89789sss-sdf890sdf8#resource
+  - '@id': metalmfg:d89789sss-sdf890sdf8-bolts#resource
     '@type': vf:Resource
     'vf:model': metalmfg:6mm-bolt
     'vf:quantity':
@@ -28,7 +28,7 @@
       'qudt:unit': unit:Each
       'qudt:numericValue': 500
             
-  - '@id': fastmfg:j90jh809h90-90dsf89dff#resource
+  - '@id': fastmfg:j90jh809h90-90dsf89dff-bolts#resource
     '@type': vf:Resource
     'vf:model': metalmfg:6mm-bolt
     'vf:quantity':

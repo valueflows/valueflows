@@ -13,7 +13,7 @@
     'vf:action': vf:assemble
     'vf:startTime': 2015-07-25
     'vf:executedIn': bkitchen:66ed2c1b-0a45-478b-8df2-eb9993dc91a3#process
-    'vf:affects': bkitchen:90d8f9sf890-v89f789ff#resource#resource
+    'vf:affects': bkitchen:90d8f9sf890-v89f789ff-bolts#resource
     'vf:affectedQuantity':
         '@type': qudt:QuantityValue
         'qudt:unit': unit:Each
@@ -24,7 +24,7 @@
     'vf:action': vf:assemble
     'vf:startTime': 2015-07-25
     'vf:executedIn': bkitchen:66ed2c1b-0a45-478b-8df2-eb9993dc91a3#process
-    'vf:affects': bkitchen:2ffb24c7-176b-4ae0-bd86-3453453450#resource
+    'vf:affects': bkitchen:2ffb24c7-176b-4ae0-bd86-345345-frame#resource
     'vf:affectedQuantity':
         '@type': qudt:QuantityValue
         'qudt:unit': unit:Each
@@ -35,7 +35,7 @@
     'vf:action': vf:consume
     'vf:startTime': 2015-07-25
     'vf:executedIn': bkitchen:66ed2c1b-0a45-478b-8df2-eb9993dc91a3#process
-    'vf:affects': bkitchen:3965e58b-787c-4728-a802-63aeec53993b#resource
+    'vf:affects': bkitchen:3965e58b-787c-4728-a802-63aeec-paint#resource
     'vf:affectedQuantity':
         '@type': qudt:QuantityValue
         'qudt:unit': unit:kg
@@ -46,7 +46,7 @@
     'vf:action': vf:produce
     'vf:startTime': 2015-07-25
     'vf:executedIn': bkitchen:66ed2c1b-0a45-478b-8df2-eb9993dc91a3#process
-    'vf:affects': bkitchen:2ffb24c7-176b-4ae0-bd86-595f731c2800#resource
+    'vf:affects': bkitchen:2ffb24c7-176b-4ae0-bd86-595f731c2800-bike#resource
     'vf:affectedQuantity':
         '@type': qudt:QuantityValue
         'qudt:unit': unit:Each

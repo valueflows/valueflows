@@ -13,7 +13,7 @@
     'vf:action': vf:consume
     'vf:startTime': 2015-06-25
     'vf:executedIn': metalmfg:44442c1b-0a45-478b-8df2-eb9993dc9144#process
-    'vf:affects': metalmfg:sad079009-0989dfs89d#resource
+    'vf:affects': metalmfg:sad079009-0989dfs89d-steel#resource
     'vf:affectedQuantity':
         '@type': qudt:QuantityValue
         'qudt:unit': unit:kg
@@ -24,7 +24,7 @@
     'vf:action': vf:produce
     'vf:startTime': 2015-06-25
     'vf:executedIn': metalmfg:44442c1b-0a45-478b-8df2-eb9993dc9144#process
-    'vf:affects': metalmfg:90dfs098sf-324j23kl4#resource
+    'vf:affects': metalmfg:90dfs098sf-324j23kl4-bolts#resource
     'vf:affectedQuantity':
         '@type': qudt:QuantityValue
         'qudt:unit': unit:Each
