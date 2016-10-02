@@ -1,0 +1,13 @@
+'@context':
+  - https://w3id.org/valueflows/v1
+  - casa: https://casa.example/
+
+'@graph':
+  - '@id': casa:94bc2e90-773e-4b4d-abde-d692d9fd0c9d#resource
+    '@type': vf:MaterialResource
+    'vf:category': prodont:Feces
+    'vf:mostRecentEvent': elf:3557de4b-b442-4c30-b133-aea05f34ce0e#event
+    'vf:quantity':
+      '@type': qudt:QuantityValue
+      'qudt:unit': unit:Each
+      'qudt:numericValue': 55

@@ -1,0 +1,15 @@
+'@context':
+  - https://w3id.org/valueflows/v1
+  - cokitchen: https://cokitchen.example/
+
+'@graph':
+  - '@id': cokitchen:48dfecae-8364-4b6a-a374-35f36207ea70#resource
+    '@type': vf:MaterialResource
+    'vf:model': cokitchen:porridge#model
+    'vf:category': prodont:Porridge
+    'vf:lotIdentifier': cokitchen:83d3ab97
+    # add 'vf:mostRecentEvent' after writing cook-process.yaml
+    'vf:quantity':
+      '@type': qudt:QuantityValue
+      'qudt:unit': unit:Each
+      'qudt:numericValue': 2

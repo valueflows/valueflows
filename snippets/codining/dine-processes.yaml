@@ -1,0 +1,34 @@
+'@context':
+  - https://w3id.org/valueflows/v1
+  - cokitchen: https://cokitchen.example/
+    elf: https://elf.example/
+    boonil: https://boonil.example/
+
+'@graph':
+  - '@id': elf:485bf4af-c466-4c8f-8bea-17c2d0c62814#process
+    '@type': vf:Process
+    'skos:note': elf's metabolism
+
+  - '@id': boonil:c6cb7e10-4694-4fa7-a8b0-8483ef33ff08#process
+    '@type': vf:Process
+    'skos:note': boonil's metabolism
+
+  - '@id': elf:5150c40b-5944-4b31-80cf-7d19be05c11c#event
+    '@type': vf:IPOEvent
+    'vf:action': vf:consume
+    'vf:executedIn': elf:485bf4af-c466-4c8f-8bea-17c2d0c62814#process
+    'vf:affects': cokitchen:48dfecae-8364-4b6a-a374-35f36207ea70#resource
+    'vf:affectedQuantity':
+      '@type': qudt:QuantityValue
+      'qudt:unit': unit:Each
+      'qudt:numericValue': 1
+
+  - '@id': boonil:f8c554e2-8a40-45ef-b2b7-d7672aa1c919#event
+    '@type': vf:IPOEvent
+    'vf:action': vf:consume
+    'vf:executedIn': boonil:c6cb7e10-4694-4fa7-a8b0-8483ef33ff08#process
+    'vf:affects': cokitchen:48dfecae-8364-4b6a-a374-35f36207ea70#resource
+    'vf:affectedQuantity':
+      '@type': qudt:QuantityValue
+      'qudt:unit': unit:Each
+      'qudt:numericValue': 1

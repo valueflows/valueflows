@@ -1,0 +1,19 @@
+'@context':
+  - https://w3id.org/valueflows/v1
+  - casa: https://casa.example/
+    elf: https://elf.example/
+
+'@graph':
+  - '@id': elf:485bf4af-c466-4c8f-8bea-17c2d0c62814#process
+    '@type': vf:Process
+    'skos:note': elf's metabolism
+
+  - '@id': elf:3557de4b-b442-4c30-b133-aea05f34ce0e#event
+    '@type': vf:IPOEvent
+    'vf:action': vf:produce
+    'vf:executedIn': elf:485bf4af-c466-4c8f-8bea-17c2d0c62814#process
+    'vf:affects': casa:94bc2e90-773e-4b4d-abde-d692d9fd0c9d#resource
+    'vf:affectedQuantity':
+      '@type': qudt:QuantityValue
+      'qudt:unit': unit:Each
+      'qudt:numericValue': 1
