@@ -80,7 +80,7 @@ Yet to come:
 
 <table>
 <tr><td>rdf:type</td><td>owl:Class</td></tr>
-<tr><td>rdfs:label</td><td>Agent
+<tr><td>rdfs:label</td><td>Agent</td></tr>
 <tr><td>rdfs:comment</td><td>A vf:Agent is an entity that has agency in the social or economic realm.  This could be a person, group, organization, network, ongoing project team, etc.</td></tr>
 <tr><td>owl:equivalentClass</td><td>foaf:Agent</td></tr>
 <tr><td>Properties</td><td>vf:name, vf:url, vf:image, vf:note, vf:primaryLocation</td></tr>
@@ -229,7 +229,7 @@ Note in the last case, a transfer of rights means a different resource. This is 
 <tr><td>rdf:type</td><td> owl:Class </td></tr>
 <tr><td>rdfs:label</td><td>ResourceModel</td></tr>
 <tr><td>rdfs:comment</td><td>A vf:ResourceModel is a template and/or definition of a type of resource.</td></tr>
-<tr><td>owl:equivalentClass<.td><td>gr:ProductOrServiceModel</td></tr>
+<tr><td>owl:equivalentClass</td><td>gr:ProductOrServiceModel</td></tr>
 <tr><td>Properties</td><td>vf:name, vf:category, vf:unit, vf:isSubstitutable?, vf:image, vf:note</td></tr>
 </table>
 
