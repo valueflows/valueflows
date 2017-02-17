@@ -1,0 +1,172 @@
+@prefix vf:    <https://w3id.org/valueflows/> .
+@prefix schema: <http://schema.org/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/#> .
+
+vf:Relationship  a       owl:Class ;
+        rdfs:comment     "" ;
+        rdfs:label       "vf:Relationship" .
+
+vf:Location  a           owl:Class ;
+        rdfs:label       "Location" ;
+        rdfs:subClassOf   vf:Location .
+
+vf:Process  a            owl:Class ;
+        rdfs:label       "Process" .
+
+vf:Transportation  a     owl:Class ;
+        rdfs:label       "Transportation" ;
+        rdfs:subClassOf  vf:Process .
+
+vf:Agent  a                  owl:Class ;
+        rdfs:comment         "" ;
+        rdfs:label           "Agent" , "vf:Agent" ;
+        owl:equivalentClass  foaf:Agent .
+
+vf:InputOrOutput  a      owl:Class ;
+        rdfs:label       "InputOrOutput" .
+
+vf:Resource  a           owl:Class ;
+        rdfs:label       "Resource" .
+
+vf:Transformation  a     owl:Class ;
+        rdfs:label       "Transformation" ;
+        rdfs:subClassOf  vf:Process .
+
+vf:Group  a                  owl:Class ;
+        rdfs:comment         "" ;
+        rdfs:label           "vf:Group" ;
+        rdfs:subClassOf      vf:Agent ;
+        owl:equivalentClass  foaf:Group .
+
+vf:MaterialItem  a       owl:Class ;
+        rdfs:subClassOf  vf:Resource .
+
+vf:Work  a               owl:Class ;
+        rdfs:subClassOf  vf:Resource .
+
+vf:Service  a            owl:Class ;
+        rdfs:subClassOf  vf:Resource .
+
+vf:Currency  a           owl:Class ;
+        rdfs:subClassOf  vf:Resource .
+
+vf:Person  a                 owl:Class ;
+        rdfs:comment         "" ;
+        rdfs:label           "vf:Person" ;
+        rdfs:subClassOf      vf:Agent ;
+        owl:equivalentClass  schema:Person , foaf:Person .
+
+vf:underlyingResource
+        a                   owl:ObjectProperty ;
+        rdfs:domain         vf:Resource ;
+        rdfs:range          vf:Resource .
+
+vf:relationship  a          owl:ObjectProperty ;
+        rdfs:domain         vf:Relationship ;
+        rdfs:label          "vf:relationship" ;
+        rdfs:range          owl:ObjectProperty .
+
+vf:transport  a             owl:ObjectProperty ;
+        rdfs:domain         vf:InputOrOutput ;
+        rdfs:label          "transport" ;
+        rdfs:range          vf:Resource .
+
+vf:location  a       owl:ObjectProperty ;
+        rdfs:domain  vf:InputOrOutput ;
+        rdfs:label   "location" ;
+        rdfs:range   vf:Location .
+
+vf:subject  a        owl:ObjectProperty ;
+        rdfs:domain  vf:Relationship ;
+        rdfs:label   "vf:subject" ;
+        rdfs:range   vf:Agent .
+
+vf:unload  a                owl:ObjectProperty ;
+        rdfs:domain         vf:InputOrOutput ;
+        rdfs:label          "unload" ;
+        rdfs:range          vf:Resource ;
+        rdfs:subPropertyOf  vf:outflow .
+
+vf:outflow  a               owl:ObjectProperty ;
+        rdfs:domain         vf:Process ;
+        rdfs:label          "outflow" ;
+        rdfs:range          vf:Resource .
+
+vf:consume  a               owl:ObjectProperty ;
+        rdfs:label          "consume" ;
+        rdfs:subPropertyOf  vf:inflow .
+
+vf:contains  a       owl:ObjectProperty ;
+        rdfs:domain  vf:Resource ;
+        rdfs:label   "contains" ;
+        rdfs:range   vf:Resource .
+
+vf:load  a                  owl:ObjectProperty ;
+        rdfs:domain         vf:InputOrOutput , vf:Transportation ;
+        rdfs:label          "load" ;
+        rdfs:range          vf:Resource ;
+        rdfs:subPropertyOf  vf:inflow .
+
+vf:use  a                   owl:ObjectProperty ;
+        rdfs:label          "use" ;
+        rdfs:subPropertyOf  vf:inflow .
+
+vf:return  a                owl:ObjectProperty ;
+        rdfs:label          "return" ;
+        rdfs:subPropertyOf  vf:outflow .
+
+vf:context  a        owl:ObjectProperty ;
+        rdfs:domain  vf:Process , vf:Relationship ;
+        rdfs:label   "vf:context" ;
+        rdfs:range   vf:Agent .
+
+vf:carrier  a        owl:ObjectProperty ;
+        rdfs:domain  vf:InputOrOutput ;
+        rdfs:label   "carrier" ;
+        rdfs:range   vf:Agent .
+
+vf:inflow  a                owl:ObjectProperty ;
+        rdfs:domain         vf:Process ;
+        rdfs:label          "inflow" ;
+        rdfs:range          vf:Resource .
+
+vf:dropoff  a               owl:ObjectProperty ;
+        rdfs:domain         vf:Transportation ;
+        rdfs:label          "unload" ;
+        rdfs:range          vf:Resource ;
+        rdfs:subPropertyOf  vf:outflow .
+
+vf:accept  a                owl:ObjectProperty ;
+        rdfs:label          "accept" ;
+        rdfs:subPropertyOf  vf:infow .
+
+vf:provider  a       owl:ObjectProperty ;
+        rdfs:domain  vf:InputOrOutput ;
+        rdfs:label   "provider" ;
+        rdfs:range   vf:Agent .
+
+vf:object  a         owl:ObjectProperty ;
+        rdfs:domain  vf:Relationship ;
+        rdfs:label   "vf:object" ;
+        rdfs:range   vf:Agent .
+
+vf:receiver  a       owl:ObjectProperty ;
+        rdfs:domain  vf:InputOrOutput ;
+        rdfs:label   "receiver" ;
+        rdfs:range   vf:Agent .
+
+vf:io   a            owl:ObjectProperty ;
+        rdfs:domain  vf:Transportation ;
+        rdfs:label   "io" ;
+        rdfs:range   vf:InputOrOutput .
+
+vf:create  a                owl:ObjectProperty ;
+        rdfs:label          "create" ;
+        rdfs:subPropertyOf  vf:outflow .
+
+vf:infow  a                 owl:ObjectProperty .
+
