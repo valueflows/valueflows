@@ -5,60 +5,171 @@
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix foaf:  <http://xmlns.com/foaf/0.1/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 
-vf:Relationship  a       owl:Class ;
-        rdfs:comment     "" ;
-        rdfs:label       "vf:Relationship" .
 
-vf:Location  a           owl:Class ;
-        rdfs:label       "Location" ;
-        rdfs:subClassOf   vf:Location .
+<https://w3id.org/valueflows/> a owl:Ontology;
+    dcterms:title "Value Flows Ontology";
+    dcterms:type <http://purl.org/adms/assettype/Ontology>;
+    dcterms:status <http://purl.org/adms/status/UnderDevelopment>.
 
-vf:Process  a            owl:Class ;
-        rdfs:label       "Process" .
+# TEMPLATE CLASSES
 
-vf:Transportation  a     owl:Class ;
-        rdfs:label       "Transportation" ;
-        rdfs:subClassOf  vf:Process .
+vf:Category  a           owl:Class ;
+        rdfs:label           "vf:Category" .
 
-vf:Agent  a                  owl:Class ;
-        rdfs:comment         "" ;
-        rdfs:label           "Agent" , "vf:Agent" ;
-        owl:equivalentClass  foaf:Agent .
+vf:Model  a           owl:Class ;
+        rdfs:label           "vf:Model" .
 
-vf:InputOrOutput  a      owl:Class ;
-        rdfs:label       "InputOrOutput" .
+vf:ProcessTemplate  a           owl:Class ;
+        rdfs:label           "vf:ProcessTemplate" .
+
+vf:EventTemplate  a           owl:Class ;
+        rdfs:label           "vf:EventTemplate" .
+
+vf:ExchangeTemplate  a           owl:Class ;
+        rdfs:label           "vf:ExchangeTemplate" .
+
+vf:RelationshipTemplate  a           owl:Class ;
+        rdfs:label           "vf:RelationshipTemplate" .
+
+vf:Action  a           owl:Class ;
+        rdfs:label           "vf:Action" .
+
+# PLAN CLASSES
+
+vf:Intent  a       owl:Class ;
+        rdfs:label       "vf:Intent" .
+
+vf:Commitment  a       owl:Class ;
+        rdfs:label       "vf:Commitment" .
+
+vf:Agreement  a       owl:Class ;
+        rdfs:label       "vf:Agreement" .
+
+vf:ExchangeAgreement  a       owl:Class ;
+        rdfs:label       "vf:ExchangeAgreement" ;
+        rdfs:subClassOf      vf:Agreement .
+
+# OBSERVATION CLASSES
+
 
 vf:Resource  a           owl:Class ;
-        rdfs:label       "Resource" .
+        rdfs:label       "vf:Resource" .
 
-vf:Transformation  a     owl:Class ;
-        rdfs:label       "Transformation" ;
-        rdfs:subClassOf  vf:Process .
+vf:Process  a            owl:Class ;
+        rdfs:label       "vf:Process" .
+
+vf:Fulfillment  a            owl:Class ;
+        rdfs:label       "vf:Fulfillment" .
+
+vf:Event  a            owl:Class ;
+        rdfs:label       "vf:Event" .
+
+vf:Appreciation  a            owl:Class ;
+        rdfs:label       "vf:Appreciation" .
+
+vf:Agent  a                  owl:Class ;
+        rdfs:label           "vf:Agent" ;
+        owl:equivalentClass  foaf:Agent .
+
+vf:Person  a                 owl:Class ;
+        rdfs:label           "vf:Person" ;
+        rdfs:subClassOf      vf:Agent ;
+        owl:equivalentClass  schema:Person , foaf:Person .
 
 vf:Group  a                  owl:Class ;
-        rdfs:comment         "" ;
         rdfs:label           "vf:Group" ;
         rdfs:subClassOf      vf:Agent ;
         owl:equivalentClass  foaf:Group .
 
+
+# TODO CLASSES
+
+
+vf:Relationship  a       owl:Class ;
+        rdfs:label       "vf:Relationship" .
+
+vf:Location  a           owl:Class ;
+        rdfs:label       "vf:Location" .
+
+
+
+vf:Transportation  a     owl:Class ;
+        rdfs:label       "vf:Transportation" ;
+        rdfs:subClassOf  vf:Process .
+
+
+vf:InputOrOutput  a      owl:Class ;
+        rdfs:label       "vf:InputOrOutput" .
+
+
+vf:Transformation  a     owl:Class ;
+        rdfs:label       "vf:Transformation" ;
+        rdfs:subClassOf  vf:Process .
+
+
 vf:MaterialItem  a       owl:Class ;
+        rdfs:label       "vf:MaterialItem" ;
         rdfs:subClassOf  vf:Resource .
 
 vf:Work  a               owl:Class ;
+        rdfs:label       "vf:Work" ;
         rdfs:subClassOf  vf:Resource .
 
 vf:Service  a            owl:Class ;
+        rdfs:label       "vf:Service" ;
         rdfs:subClassOf  vf:Resource .
 
 vf:Currency  a           owl:Class ;
+        rdfs:label       "vf:Currency" ;
         rdfs:subClassOf  vf:Resource .
 
-vf:Person  a                 owl:Class ;
-        rdfs:comment         "" ;
-        rdfs:label           "vf:Person" ;
-        rdfs:subClassOf      vf:Agent ;
-        owl:equivalentClass  schema:Person , foaf:Person .
+
+
+
+# ####################################################################
+# properties
+
+vf:action
+        a                   owl:ObjectProperty ;
+        rdfs:domain         vf:EventTemplate , vf:Intent , vf:Commitment , vf:Event ;
+        rdfs:range          vf:Action .
+
+vf:occursIn
+        a                   owl:ObjectProperty ;
+        rdfs:domain         vf:EventTemplate , vf:Event ;
+        rdfs:range          vf:ProcessTemplate , vf:Process .
+
+vf:willOccursIn
+        a                   owl:ObjectProperty ;
+        rdfs:domain         vf:Intent , vf:Commitment ;
+        rdfs:range          vf:Process .
+
+vf:template
+        a                   owl:ObjectProperty ;
+        rdfs:domain         vf:Process , vf:Intent , vf:Commitment , vf:ExchangeAgreement ;
+        rdfs:range          vf:ProcessTemplate , vf:EventTemplate , vf:ExchangeTemplate .
+
+vf:category
+        a                   owl:ObjectProperty ;
+        rdfs:domain         vf:Model , vf:Resource , vf:Intent , vf:Commitment ;
+        rdfs:range          vf:Category .
+
+vf:parent
+        a                   owl:ObjectProperty ;
+        rdfs:domain         vf:Category ;
+        rdfs:range          vf:Category .
+
+vf:model
+        a                   owl:ObjectProperty ;
+        rdfs:domain         vf:Resource , vf:EventTemplate , vf:Intent , vf:Commitment ;
+        rdfs:range          vf:Model .
+
+vf:resource
+        a                   owl:ObjectProperty ;
+        rdfs:domain         vf:Intent , vf:Commitment ;
+        rdfs:range          vf:Resource .
 
 vf:underlyingResource
         a                   owl:ObjectProperty ;
@@ -68,7 +179,70 @@ vf:underlyingResource
 vf:relationship  a          owl:ObjectProperty ;
         rdfs:domain         vf:Relationship ;
         rdfs:label          "vf:relationship" ;
-        rdfs:range          owl:ObjectProperty .
+        rdfs:range         vf:RelationshipTemplate .
+
+vf:commitsTo
+        a                   owl:ObjectProperty ;
+        rdfs:domain         vf:Commitment ;
+        rdfs:range          vf:Intent .
+
+
+vf:fulfills
+        a                   owl:ObjectProperty ;
+        rdfs:domain         vf:Category , vf:Event;
+        rdfs:range          vf:Fulfillment , vf:Intent , vf:Commitment .
+
+vf:affects
+        a                   owl:ObjectProperty ;
+        rdfs:domain         vf:Event ;
+        rdfs:range          vf:Resource .
+
+vf:appreciationOf
+        a                   owl:ObjectProperty ;
+        rdfs:domain         vf:Appreciation ;
+        rdfs:range          vf:Event .
+
+vf:appreciationWith
+        a                   owl:ObjectProperty ;
+        rdfs:domain         vf:Appreciation ;
+        rdfs:range          vf:Event .
+
+vf:provider  a       owl:ObjectProperty ;
+        rdfs:domain  vf:InputOrOutput , vf:Event , vf:Intent, vf:Commitment ;
+        rdfs:label   "provider" ;
+        rdfs:range   vf:Agent .
+
+vf:receiver  a       owl:ObjectProperty ;
+        rdfs:domain  vf:InputOrOutput, vf:Event , vf:Intent, vf:Commitment ;
+        rdfs:label   "receiver" ;
+        rdfs:range   vf:Agent .
+
+vf:subject  a        owl:ObjectProperty ;
+        rdfs:domain  vf:Relationship ;
+        rdfs:label   "vf:subject" ;
+        rdfs:range   vf:Agent .
+
+vf:context  a        owl:ObjectProperty ;
+        rdfs:domain  vf:Relationship ;
+        rdfs:label   "context" ;
+        rdfs:range   vf:Agent .
+
+vf:object  a         owl:ObjectProperty ;
+        rdfs:domain  vf:Relationship ;
+        rdfs:label   "object" ;
+        rdfs:range   vf:Agent .
+
+vf:underAgreement  a       owl:ObjectProperty ;
+        rdfs:domain  vf:Event , vf:Intent, vf:Commitment ;
+        rdfs:label   "underAgreement" ;
+        rdfs:range   vf:Agreement .
+
+vf:inExchangeFor  a         owl:ObjectProperty ;
+        rdfs:label   "inExchangeFor" ;
+        rdfs:domain  vf:Commitment ;
+        rdfs:range   vf:Event .
+
+# ################################3
 
 vf:transport  a             owl:ObjectProperty ;
         rdfs:domain         vf:InputOrOutput ;
@@ -79,11 +253,6 @@ vf:location  a       owl:ObjectProperty ;
         rdfs:domain  vf:InputOrOutput ;
         rdfs:label   "location" ;
         rdfs:range   vf:Location .
-
-vf:subject  a        owl:ObjectProperty ;
-        rdfs:domain  vf:Relationship ;
-        rdfs:label   "vf:subject" ;
-        rdfs:range   vf:Agent .
 
 vf:unload  a                owl:ObjectProperty ;
         rdfs:domain         vf:InputOrOutput ;
@@ -119,10 +288,6 @@ vf:return  a                owl:ObjectProperty ;
         rdfs:label          "return" ;
         rdfs:subPropertyOf  vf:outflow .
 
-vf:context  a        owl:ObjectProperty ;
-        rdfs:domain  vf:Process , vf:Relationship ;
-        rdfs:label   "vf:context" ;
-        rdfs:range   vf:Agent .
 
 vf:carrier  a        owl:ObjectProperty ;
         rdfs:domain  vf:InputOrOutput ;
@@ -143,21 +308,6 @@ vf:dropoff  a               owl:ObjectProperty ;
 vf:accept  a                owl:ObjectProperty ;
         rdfs:label          "accept" ;
         rdfs:subPropertyOf  vf:infow .
-
-vf:provider  a       owl:ObjectProperty ;
-        rdfs:domain  vf:InputOrOutput ;
-        rdfs:label   "provider" ;
-        rdfs:range   vf:Agent .
-
-vf:object  a         owl:ObjectProperty ;
-        rdfs:domain  vf:Relationship ;
-        rdfs:label   "vf:object" ;
-        rdfs:range   vf:Agent .
-
-vf:receiver  a       owl:ObjectProperty ;
-        rdfs:domain  vf:InputOrOutput ;
-        rdfs:label   "receiver" ;
-        rdfs:range   vf:Agent .
 
 vf:io   a            owl:ObjectProperty ;
         rdfs:domain  vf:Transportation ;
