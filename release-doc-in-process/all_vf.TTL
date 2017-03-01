@@ -15,11 +15,9 @@
 
 # TEMPLATE CLASSES
 
-vf:Category  a           owl:Class ;
-        rdfs:label           "vf:Category" .
 
-vf:Model  a           owl:Class ;
-        rdfs:label           "vf:Model" .
+vf:ResourceTemplate  a           owl:Class ;
+        rdfs:label           "vf:ResourceTemplate" .
 
 vf:ProcessTemplate  a           owl:Class ;
         rdfs:label           "vf:ProcessTemplate" .
@@ -141,7 +139,7 @@ vf:occursIn
         rdfs:domain         vf:EventTemplate , vf:Event ;
         rdfs:range          vf:ProcessTemplate , vf:Process .
 
-vf:willOccursIn
+vf:willOccurIn
         a                   owl:ObjectProperty ;
         rdfs:domain         vf:Intent , vf:Commitment ;
         rdfs:range          vf:Process .
@@ -153,20 +151,19 @@ vf:template
 
 vf:category
         a                   owl:ObjectProperty ;
-        rdfs:domain         vf:Model , vf:Resource , vf:Intent , vf:Commitment ;
-        rdfs:range          vf:Category .
+        rdfs:label          "category" ;
+        rdfs:domain         vf:ResourceTemplate , vf:Resource , vf:Intent , vf:Commitment .
 
 vf:parent
-        a                   owl:ObjectProperty ;
-        rdfs:domain         vf:Category ;
-        rdfs:range          vf:Category .
+        rdfs:label          "parent" ;
+        a                   owl:ObjectProperty .
 
-vf:model
+vf:hasResourceTemplate
         a                   owl:ObjectProperty ;
         rdfs:domain         vf:Resource , vf:EventTemplate , vf:Intent , vf:Commitment ;
-        rdfs:range          vf:Model .
+        rdfs:range          vf:ResourceTemplate .
 
-vf:resource
+vf:involveResource
         a                   owl:ObjectProperty ;
         rdfs:domain         vf:Intent , vf:Commitment ;
         rdfs:range          vf:Resource .
@@ -189,7 +186,7 @@ vf:commitsTo
 
 vf:fulfills
         a                   owl:ObjectProperty ;
-        rdfs:domain         vf:Category , vf:Event;
+        rdfs:domain         vf:Event;
         rdfs:range          vf:Fulfillment , vf:Intent , vf:Commitment .
 
 vf:affects
@@ -307,7 +304,7 @@ vf:dropoff  a               owl:ObjectProperty ;
 
 vf:accept  a                owl:ObjectProperty ;
         rdfs:label          "accept" ;
-        rdfs:subPropertyOf  vf:infow .
+        rdfs:subPropertyOf  vf:inflow .
 
 vf:io   a            owl:ObjectProperty ;
         rdfs:domain  vf:Transportation ;
@@ -317,6 +314,4 @@ vf:io   a            owl:ObjectProperty ;
 vf:create  a                owl:ObjectProperty ;
         rdfs:label          "create" ;
         rdfs:subPropertyOf  vf:outflow .
-
-vf:infow  a                 owl:ObjectProperty .
 
