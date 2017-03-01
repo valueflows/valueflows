@@ -1,0 +1,379 @@
+{
+  "@graph" : [ {
+    "@id" : "https://w3id.org/valueflows/",
+    "@type" : "owl:Ontology",
+    "status" : "http://purl.org/adms/status/UnderDevelopment",
+    "title" : "Value Flows Ontology",
+    "type" : "http://purl.org/adms/assettype/Ontology"
+  }, {
+    "@id" : "vf:Action",
+    "@type" : "owl:Class",
+    "label" : "vf:Action"
+  }, {
+    "@id" : "vf:Agent",
+    "@type" : "owl:Class",
+    "label" : "vf:Agent",
+    "equivalentClass" : "foaf:Agent"
+  }, {
+    "@id" : "vf:Agreement",
+    "@type" : "owl:Class",
+    "label" : "vf:Agreement"
+  }, {
+    "@id" : "vf:Appreciation",
+    "@type" : "owl:Class",
+    "label" : "vf:Appreciation"
+  }, {
+    "@id" : "vf:Commitment",
+    "@type" : "owl:Class",
+    "label" : "vf:Commitment"
+  }, {
+    "@id" : "vf:Currency",
+    "@type" : "owl:Class",
+    "label" : "vf:Currency",
+    "subClassOf" : "vf:Resource"
+  }, {
+    "@id" : "vf:Event",
+    "@type" : "owl:Class",
+    "label" : "vf:Event"
+  }, {
+    "@id" : "vf:EventTemplate",
+    "@type" : "owl:Class",
+    "label" : "vf:EventTemplate"
+  }, {
+    "@id" : "vf:ExchangeAgreement",
+    "@type" : "owl:Class",
+    "label" : "vf:ExchangeAgreement",
+    "subClassOf" : "vf:Agreement"
+  }, {
+    "@id" : "vf:ExchangeTemplate",
+    "@type" : "owl:Class",
+    "label" : "vf:ExchangeTemplate"
+  }, {
+    "@id" : "vf:Fulfillment",
+    "@type" : "owl:Class",
+    "label" : "vf:Fulfillment"
+  }, {
+    "@id" : "vf:Group",
+    "@type" : "owl:Class",
+    "label" : "vf:Group",
+    "subClassOf" : "vf:Agent",
+    "equivalentClass" : "foaf:Group"
+  }, {
+    "@id" : "vf:InputOrOutput",
+    "@type" : "owl:Class",
+    "label" : "vf:InputOrOutput"
+  }, {
+    "@id" : "vf:Intent",
+    "@type" : "owl:Class",
+    "label" : "vf:Intent"
+  }, {
+    "@id" : "vf:Location",
+    "@type" : "owl:Class",
+    "label" : "vf:Location"
+  }, {
+    "@id" : "vf:MaterialItem",
+    "@type" : "owl:Class",
+    "label" : "vf:MaterialItem",
+    "subClassOf" : "vf:Resource"
+  }, {
+    "@id" : "vf:Person",
+    "@type" : "owl:Class",
+    "label" : "vf:Person",
+    "subClassOf" : "vf:Agent",
+    "equivalentClass" : [ "foaf:Person", "schema:Person" ]
+  }, {
+    "@id" : "vf:Process",
+    "@type" : "owl:Class",
+    "label" : "vf:Process"
+  }, {
+    "@id" : "vf:ProcessTemplate",
+    "@type" : "owl:Class",
+    "label" : "vf:ProcessTemplate"
+  }, {
+    "@id" : "vf:Relationship",
+    "@type" : "owl:Class",
+    "label" : "vf:Relationship"
+  }, {
+    "@id" : "vf:RelationshipTemplate",
+    "@type" : "owl:Class",
+    "label" : "vf:RelationshipTemplate"
+  }, {
+    "@id" : "vf:Resource",
+    "@type" : "owl:Class",
+    "label" : "vf:Resource"
+  }, {
+    "@id" : "vf:ResourceTemplate",
+    "@type" : "owl:Class",
+    "label" : "vf:ResourceTemplate"
+  }, {
+    "@id" : "vf:Service",
+    "@type" : "owl:Class",
+    "label" : "vf:Service",
+    "subClassOf" : "vf:Resource"
+  }, {
+    "@id" : "vf:Transformation",
+    "@type" : "owl:Class",
+    "label" : "vf:Transformation",
+    "subClassOf" : "vf:Process"
+  }, {
+    "@id" : "vf:Transportation",
+    "@type" : "owl:Class",
+    "label" : "vf:Transportation",
+    "subClassOf" : "vf:Process"
+  }, {
+    "@id" : "vf:Work",
+    "@type" : "owl:Class",
+    "label" : "vf:Work",
+    "subClassOf" : "vf:Resource"
+  }, {
+    "@id" : "vf:accept",
+    "@type" : "owl:ObjectProperty",
+    "label" : "accept",
+    "subPropertyOf" : "vf:inflow"
+  }, {
+    "@id" : "vf:action",
+    "@type" : "owl:ObjectProperty",
+    "domain" : [ "vf:Event", "vf:Commitment", "vf:Intent", "vf:EventTemplate" ],
+    "range" : "vf:Action"
+  }, {
+    "@id" : "vf:affects",
+    "@type" : "owl:ObjectProperty",
+    "domain" : "vf:Event",
+    "range" : "vf:Resource"
+  }, {
+    "@id" : "vf:appreciationOf",
+    "@type" : "owl:ObjectProperty",
+    "domain" : "vf:Appreciation",
+    "range" : "vf:Event"
+  }, {
+    "@id" : "vf:appreciationWith",
+    "@type" : "owl:ObjectProperty",
+    "domain" : "vf:Appreciation",
+    "range" : "vf:Event"
+  }, {
+    "@id" : "vf:carrier",
+    "@type" : "owl:ObjectProperty",
+    "domain" : "vf:InputOrOutput",
+    "label" : "carrier",
+    "range" : "vf:Agent"
+  }, {
+    "@id" : "vf:category",
+    "@type" : "owl:ObjectProperty",
+    "domain" : [ "vf:Commitment", "vf:Intent", "vf:Resource", "vf:ResourceTemplate" ],
+    "label" : "category"
+  }, {
+    "@id" : "vf:commitsTo",
+    "@type" : "owl:ObjectProperty",
+    "domain" : "vf:Commitment",
+    "range" : "vf:Intent"
+  }, {
+    "@id" : "vf:consume",
+    "@type" : "owl:ObjectProperty",
+    "label" : "consume",
+    "subPropertyOf" : "vf:inflow"
+  }, {
+    "@id" : "vf:contains",
+    "@type" : "owl:ObjectProperty",
+    "domain" : "vf:Resource",
+    "label" : "contains",
+    "range" : "vf:Resource"
+  }, {
+    "@id" : "vf:context",
+    "@type" : "owl:ObjectProperty",
+    "domain" : "vf:Relationship",
+    "label" : "context",
+    "range" : "vf:Agent"
+  }, {
+    "@id" : "vf:create",
+    "@type" : "owl:ObjectProperty",
+    "label" : "create",
+    "subPropertyOf" : "vf:outflow"
+  }, {
+    "@id" : "vf:dropoff",
+    "@type" : "owl:ObjectProperty",
+    "domain" : "vf:Transportation",
+    "label" : "unload",
+    "range" : "vf:Resource",
+    "subPropertyOf" : "vf:outflow"
+  }, {
+    "@id" : "vf:fulfills",
+    "@type" : "owl:ObjectProperty",
+    "domain" : "vf:Event",
+    "range" : [ "vf:Commitment", "vf:Intent", "vf:Fulfillment" ]
+  }, {
+    "@id" : "vf:hasResourceTemplate",
+    "@type" : "owl:ObjectProperty",
+    "domain" : [ "vf:Commitment", "vf:Intent", "vf:EventTemplate", "vf:Resource" ],
+    "range" : "vf:ResourceTemplate"
+  }, {
+    "@id" : "vf:inExchangeFor",
+    "@type" : "owl:ObjectProperty",
+    "domain" : "vf:Commitment",
+    "label" : "inExchangeFor",
+    "range" : "vf:Event"
+  }, {
+    "@id" : "vf:inflow",
+    "@type" : "owl:ObjectProperty",
+    "domain" : "vf:Process",
+    "label" : "inflow",
+    "range" : "vf:Resource"
+  }, {
+    "@id" : "vf:involveResource",
+    "@type" : "owl:ObjectProperty",
+    "domain" : [ "vf:Commitment", "vf:Intent" ],
+    "range" : "vf:Resource"
+  }, {
+    "@id" : "vf:io",
+    "@type" : "owl:ObjectProperty",
+    "domain" : "vf:Transportation",
+    "label" : "io",
+    "range" : "vf:InputOrOutput"
+  }, {
+    "@id" : "vf:load",
+    "@type" : "owl:ObjectProperty",
+    "domain" : [ "vf:Transportation", "vf:InputOrOutput" ],
+    "label" : "load",
+    "range" : "vf:Resource",
+    "subPropertyOf" : "vf:inflow"
+  }, {
+    "@id" : "vf:location",
+    "@type" : "owl:ObjectProperty",
+    "domain" : "vf:InputOrOutput",
+    "label" : "location",
+    "range" : "vf:Location"
+  }, {
+    "@id" : "vf:object",
+    "@type" : "owl:ObjectProperty",
+    "domain" : "vf:Relationship",
+    "label" : "object",
+    "range" : "vf:Agent"
+  }, {
+    "@id" : "vf:occursIn",
+    "@type" : "owl:ObjectProperty",
+    "domain" : [ "vf:Event", "vf:EventTemplate" ],
+    "range" : [ "vf:Process", "vf:ProcessTemplate" ]
+  }, {
+    "@id" : "vf:outflow",
+    "@type" : "owl:ObjectProperty",
+    "domain" : "vf:Process",
+    "label" : "outflow",
+    "range" : "vf:Resource"
+  }, {
+    "@id" : "vf:parent",
+    "@type" : "owl:ObjectProperty",
+    "label" : "parent"
+  }, {
+    "@id" : "vf:provider",
+    "@type" : "owl:ObjectProperty",
+    "domain" : [ "vf:Commitment", "vf:Intent", "vf:Event", "vf:InputOrOutput" ],
+    "label" : "provider",
+    "range" : "vf:Agent"
+  }, {
+    "@id" : "vf:receiver",
+    "@type" : "owl:ObjectProperty",
+    "domain" : [ "vf:Commitment", "vf:Intent", "vf:Event", "vf:InputOrOutput" ],
+    "label" : "receiver",
+    "range" : "vf:Agent"
+  }, {
+    "@id" : "vf:relationship",
+    "@type" : "owl:ObjectProperty",
+    "domain" : "vf:Relationship",
+    "label" : "vf:relationship",
+    "range" : "vf:RelationshipTemplate"
+  }, {
+    "@id" : "vf:return",
+    "@type" : "owl:ObjectProperty",
+    "label" : "return",
+    "subPropertyOf" : "vf:outflow"
+  }, {
+    "@id" : "vf:subject",
+    "@type" : "owl:ObjectProperty",
+    "domain" : "vf:Relationship",
+    "label" : "vf:subject",
+    "range" : "vf:Agent"
+  }, {
+    "@id" : "vf:template",
+    "@type" : "owl:ObjectProperty",
+    "domain" : [ "vf:ExchangeAgreement", "vf:Commitment", "vf:Intent", "vf:Process" ],
+    "range" : [ "vf:ExchangeTemplate", "vf:EventTemplate", "vf:ProcessTemplate" ]
+  }, {
+    "@id" : "vf:transport",
+    "@type" : "owl:ObjectProperty",
+    "domain" : "vf:InputOrOutput",
+    "label" : "transport",
+    "range" : "vf:Resource"
+  }, {
+    "@id" : "vf:underAgreement",
+    "@type" : "owl:ObjectProperty",
+    "domain" : [ "vf:Commitment", "vf:Intent", "vf:Event" ],
+    "label" : "underAgreement",
+    "range" : "vf:Agreement"
+  }, {
+    "@id" : "vf:underlyingResource",
+    "@type" : "owl:ObjectProperty",
+    "domain" : "vf:Resource",
+    "range" : "vf:Resource"
+  }, {
+    "@id" : "vf:unload",
+    "@type" : "owl:ObjectProperty",
+    "domain" : "vf:InputOrOutput",
+    "label" : "unload",
+    "range" : "vf:Resource",
+    "subPropertyOf" : "vf:outflow"
+  }, {
+    "@id" : "vf:use",
+    "@type" : "owl:ObjectProperty",
+    "label" : "use",
+    "subPropertyOf" : "vf:inflow"
+  }, {
+    "@id" : "vf:willOccurIn",
+    "@type" : "owl:ObjectProperty",
+    "domain" : [ "vf:Commitment", "vf:Intent" ],
+    "range" : "vf:Process"
+  } ],
+  "@context" : {
+    "equivalentClass" : {
+      "@id" : "http://www.w3.org/2002/07/owl#equivalentClass",
+      "@type" : "@id"
+    },
+    "subClassOf" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+      "@type" : "@id"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "range" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#range",
+      "@type" : "@id"
+    },
+    "domain" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#domain",
+      "@type" : "@id"
+    },
+    "subPropertyOf" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#subPropertyOf",
+      "@type" : "@id"
+    },
+    "status" : {
+      "@id" : "http://purl.org/dc/terms/status",
+      "@type" : "@id"
+    },
+    "type" : {
+      "@id" : "http://purl.org/dc/terms/type",
+      "@type" : "@id"
+    },
+    "title" : {
+      "@id" : "http://purl.org/dc/terms/title"
+    },
+    "vf" : "https://w3id.org/valueflows/",
+    "schema" : "http://schema.org/",
+    "owl" : "http://www.w3.org/2002/07/owl#",
+    "rdf" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "xsd" : "http://www.w3.org/2001/XMLSchema#",
+    "skos" : "http://www.w3.org/2004/02/skos/core#",
+    "dcterms" : "http://purl.org/dc/terms/",
+    "rdfs" : "http://www.w3.org/2000/01/rdf-schema#",
+    "foaf" : "http://xmlns.com/foaf/0.1/#"
+  }
+}
