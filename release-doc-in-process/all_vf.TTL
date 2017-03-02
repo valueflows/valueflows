@@ -239,6 +239,36 @@ vf:decrementQuantity
         rdfs:domain         vf:Event ;
         rdfs:range          qudt:QuantityValue .
 
+vf:commitedIncrementQuantity
+        a                   owl:ObjectProperty ;
+        rdfs:domain         vf:Commitment ;
+        rdfs:range          qudt:QuantityValue .
+
+vf:commitedDecrementQuantity
+        a                   owl:ObjectProperty ;
+        rdfs:domain         vf:Commitment ;
+        rdfs:range          qudt:QuantityValue .
+
+vf:intendedIncrementQuantity
+        a                   owl:ObjectProperty ;
+        rdfs:domain         vf:Intent ;
+        rdfs:range          qudt:QuantityValue .
+
+vf:intendedDecrementQuantity
+        a                   owl:ObjectProperty ;
+        rdfs:domain         vf:Intent ;
+        rdfs:range          qudt:QuantityValue .
+
+vf:templatedIncrementQuantity
+        a                   owl:ObjectProperty ;
+        rdfs:domain         vf:IntentTemplate ;
+        rdfs:range          qudt:QuantityValue .
+
+vf:templatedDecrementQuantity
+        a                   owl:ObjectProperty ;
+        rdfs:domain         vf:IntentTemplate ;
+        rdfs:range          qudt:QuantityValue .
+
 vf:appreciationOf
         a                   owl:ObjectProperty ;
         rdfs:domain         vf:Appreciation ;
