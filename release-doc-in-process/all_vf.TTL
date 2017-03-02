@@ -98,10 +98,6 @@ vf:Transportation  a     owl:Class ;
         rdfs:subClassOf  vf:Process .
 
 
-vf:InputOrOutput  a      owl:Class ;
-        rdfs:label       "vf:InputOrOutput" .
-
-
 vf:Transformation  a     owl:Class ;
         rdfs:label       "vf:Transformation" ;
         rdfs:subClassOf  vf:Process .
@@ -144,10 +140,20 @@ vf:willOccurIn
         rdfs:domain         vf:Intent , vf:Commitment ;
         rdfs:range          vf:Process .
 
-vf:template
+vf:eventTemplate
         a                   owl:ObjectProperty ;
-        rdfs:domain         vf:Process , vf:Intent , vf:Commitment , vf:ExchangeAgreement ;
-        rdfs:range          vf:ProcessTemplate , vf:EventTemplate , vf:ExchangeTemplate .
+        rdfs:domain         vf:Intent , vf:Commitment ;
+        rdfs:range          vf:EventTemplate .
+
+vf:processTemplate
+        a                   owl:ObjectProperty ;
+        rdfs:domain         vf:Process ;
+        rdfs:range          vf:ProcessTemplatee .
+
+vf:exchangeTemplate
+        a                   owl:ObjectProperty ;
+        rdfs:domain         vf:ExchangeAgreement ;
+        rdfs:range          vf:ExchangeTemplate .
 
 vf:category
         a                   owl:ObjectProperty ;
@@ -205,12 +211,12 @@ vf:appreciationWith
         rdfs:range          vf:Event .
 
 vf:provider  a       owl:ObjectProperty ;
-        rdfs:domain  vf:InputOrOutput , vf:Event , vf:Intent, vf:Commitment ;
+        rdfs:domain  vf:Event, vf:Intent, vf:Commitment ;
         rdfs:label   "provider" ;
         rdfs:range   vf:Agent .
 
 vf:receiver  a       owl:ObjectProperty ;
-        rdfs:domain  vf:InputOrOutput, vf:Event , vf:Intent, vf:Commitment ;
+        rdfs:domain  vf:Event , vf:Intent, vf:Commitment ;
         rdfs:label   "receiver" ;
         rdfs:range   vf:Agent .
 
@@ -239,79 +245,54 @@ vf:inExchangeFor  a         owl:ObjectProperty ;
         rdfs:domain  vf:Commitment ;
         rdfs:range   vf:Event .
 
-# ################################3
-
-vf:transport  a             owl:ObjectProperty ;
-        rdfs:domain         vf:InputOrOutput ;
-        rdfs:label          "transport" ;
-        rdfs:range          vf:Resource .
-
-vf:location  a       owl:ObjectProperty ;
-        rdfs:domain  vf:InputOrOutput ;
-        rdfs:label   "location" ;
-        rdfs:range   vf:Location .
-
-vf:unload  a                owl:ObjectProperty ;
-        rdfs:domain         vf:InputOrOutput ;
-        rdfs:label          "unload" ;
-        rdfs:range          vf:Resource ;
-        rdfs:subPropertyOf  vf:outflow .
-
-vf:outflow  a               owl:ObjectProperty ;
-        rdfs:domain         vf:Process ;
-        rdfs:label          "outflow" ;
-        rdfs:range          vf:Resource .
-
-vf:consume  a               owl:ObjectProperty ;
-        rdfs:label          "consume" ;
-        rdfs:subPropertyOf  vf:inflow .
-
 vf:contains  a       owl:ObjectProperty ;
         rdfs:domain  vf:Resource ;
         rdfs:label   "contains" ;
         rdfs:range   vf:Resource .
 
-vf:load  a                  owl:ObjectProperty ;
-        rdfs:domain         vf:InputOrOutput , vf:Transportation ;
-        rdfs:label          "load" ;
-        rdfs:range          vf:Resource ;
-        rdfs:subPropertyOf  vf:inflow .
+# ################################ action verbs
 
-vf:use  a                   owl:ObjectProperty ;
-        rdfs:label          "use" ;
-        rdfs:subPropertyOf  vf:inflow .
+vf:increment  a                vf:Action ;
+        rdfs:label          "increment" .
 
-vf:return  a                owl:ObjectProperty ;
-        rdfs:label          "return" ;
-        rdfs:subPropertyOf  vf:outflow .
+vf:decrement  a                vf:Action ;
+        rdfs:label          "decrement" .
 
+vf:unload  a                vf:Action ;
+        rdfs:label          "unload"  .
 
-vf:carrier  a        owl:ObjectProperty ;
-        rdfs:domain  vf:InputOrOutput ;
-        rdfs:label   "carrier" ;
-        rdfs:range   vf:Agent .
+vf:load  a                vf:Action ;
+        rdfs:label          "load" .
 
-vf:inflow  a                owl:ObjectProperty ;
-        rdfs:domain         vf:Process ;
-        rdfs:label          "inflow" ;
-        rdfs:range          vf:Resource .
+vf:consume  a                vf:Action ;
+        rdfs:label          "consume" ;
+        rdfs:subPropertyOf  vf:decrement .
 
-vf:dropoff  a               owl:ObjectProperty ;
-        rdfs:domain         vf:Transportation ;
-        rdfs:label          "unload" ;
-        rdfs:range          vf:Resource ;
-        rdfs:subPropertyOf  vf:outflow .
+vf:use  a                vf:Action ;
+        rdfs:label          "use" .
 
-vf:accept  a                owl:ObjectProperty ;
+vf:work  a                vf:Action ;
+        rdfs:label          "work" .
+
+vf:cite  a                vf:Action ;
+        rdfs:label          "cite" .
+
+vf:produce  a                vf:Action ;
+        rdfs:label          "produce" ;
+        rdfs:subPropertyOf  vf:increment .
+
+vf:accept  a                vf:Action ;
         rdfs:label          "accept" ;
-        rdfs:subPropertyOf  vf:inflow .
+        rdfs:subPropertyOf  vf:decrement .
 
-vf:io   a            owl:ObjectProperty ;
-        rdfs:domain  vf:Transportation ;
-        rdfs:label   "io" ;
-        rdfs:range   vf:InputOrOutput .
+vf:change  a                vf:Action ;
+        rdfs:label          "change" ;
+        rdfs:subPropertyOf  vf:increment .
 
-vf:create  a                owl:ObjectProperty ;
-        rdfs:label          "create" ;
-        rdfs:subPropertyOf  vf:outflow .
+vf:issue  a                vf:Action ;
+        rdfs:label          "issue" ;
+        rdfs:subPropertyOf  vf:decrement .
 
+vf:receive  a                vf:Action ;
+        rdfs:label          "receive" ;
+        rdfs:subPropertyOf  vf:increment .
