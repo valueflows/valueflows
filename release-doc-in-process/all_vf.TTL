@@ -22,8 +22,8 @@ vf:ResourceTemplate  a           owl:Class ;
 vf:ProcessTemplate  a           owl:Class ;
         rdfs:label           "vf:ProcessTemplate" .
 
-vf:EventTemplate  a           owl:Class ;
-        rdfs:label           "vf:EventTemplate" .
+vf:IntentTemplate  a           owl:Class ;
+        rdfs:label           "vf:IntentTemplate" .
 
 vf:ExchangeTemplate  a           owl:Class ;
         rdfs:label           "vf:ExchangeTemplate" .
@@ -125,32 +125,22 @@ vf:Currency  a           owl:Class ;
 
 vf:action
         a                   owl:ObjectProperty ;
-        rdfs:domain         vf:EventTemplate , vf:Intent , vf:Commitment , vf:Event ;
+        rdfs:domain         vf:IntentTemplate , vf:Intent , vf:Commitment , vf:Event ;
         rdfs:range          vf:Action .
 
 vf:inputOf
         a                   owl:ObjectProperty ;
-        rdfs:domain         vf:EventTemplate , vf:Event ;
-        rdfs:range          vf:ProcessTemplate , vf:Process .
+        rdfs:domain         vf:Event ;
+        rdfs:range          vf:Process .
 
 vf:outputOf
         a                   owl:ObjectProperty ;
-        rdfs:domain         vf:EventTemplate , vf:Event ;
-        rdfs:range          vf:ProcessTemplate , vf:Process .
+        rdfs:domain         vf:Event ;
+        rdfs:range          vf:Process .
 
 vf:commitedInputOf
         a                   owl:ObjectProperty ;
         rdfs:domain         vf:Commitment ;
-        rdfs:range          vf:Process .
-
-vf:intendedOutputOf
-        a                   owl:ObjectProperty ;
-        rdfs:domain         vf:Intent ;
-        rdfs:range          vf:Process .
-
-vf:intendedInputOf
-        a                   owl:ObjectProperty ;
-        rdfs:domain         vf:Intent ;
         rdfs:range          vf:Process .
 
 vf:commitedOutputOf
@@ -158,10 +148,30 @@ vf:commitedOutputOf
         rdfs:domain         vf:Commitment ;
         rdfs:range          vf:Process .
 
-vf:eventTemplate
+vf:intendedInputOf
+        a                   owl:ObjectProperty ;
+        rdfs:domain         vf:Intent ;
+        rdfs:range          vf:Process .
+
+vf:templatedOutputOf
+        a                   owl:ObjectProperty ;
+        rdfs:domain         vf:IntentTemplate ;
+        rdfs:range          vf:ProcessTemplate .
+
+vf:templatedInputOf
+        a                   owl:ObjectProperty ;
+        rdfs:domain         vf:IntentTemplate ;
+        rdfs:range          vf:ProcessTemplate .
+
+vf:intendedOutputOf
+        a                   owl:ObjectProperty ;
+        rdfs:domain         vf:Intent ;
+        rdfs:range          vf:Process .
+
+vf:intentTemplate
         a                   owl:ObjectProperty ;
         rdfs:domain         vf:Intent , vf:Commitment ;
-        rdfs:range          vf:EventTemplate .
+        rdfs:range          vf:IntentTemplate .
 
 vf:processTemplate
         a                   owl:ObjectProperty ;
@@ -184,7 +194,7 @@ vf:parent
 
 vf:hasResourceTemplate
         a                   owl:ObjectProperty ;
-        rdfs:domain         vf:Resource , vf:EventTemplate , vf:Intent , vf:Commitment ;
+        rdfs:domain         vf:Resource , vf:IntentTemplate , vf:Intent , vf:Commitment ;
         rdfs:range          vf:ResourceTemplate .
 
 vf:involveResource
