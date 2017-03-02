@@ -28,11 +28,9 @@ vf:EventTemplate  a           owl:Class ;
 vf:ExchangeTemplate  a           owl:Class ;
         rdfs:label           "vf:ExchangeTemplate" .
 
-vf:RelationshipTemplate  a           owl:Class ;
-        rdfs:label           "vf:RelationshipTemplate" .
-
 vf:Action  a           owl:Class ;
-        rdfs:label           "vf:Action" .
+        rdfs:label           "vf:Action"
+        rdfs:subClassOf   rdf:Property .
 
 # PLAN CLASSES
 
@@ -182,7 +180,7 @@ vf:underlyingResource
 vf:relationship  a          owl:ObjectProperty ;
         rdfs:domain         vf:Relationship ;
         rdfs:label          "vf:relationship" ;
-        rdfs:range         vf:RelationshipTemplate .
+        rdfs:range          rdf:Property .
 
 vf:commitsTo
         a                   owl:ObjectProperty ;
