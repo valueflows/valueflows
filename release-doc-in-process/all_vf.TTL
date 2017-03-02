@@ -128,14 +128,34 @@ vf:action
         rdfs:domain         vf:EventTemplate , vf:Intent , vf:Commitment , vf:Event ;
         rdfs:range          vf:Action .
 
-vf:occursIn
+vf:inputOf
         a                   owl:ObjectProperty ;
         rdfs:domain         vf:EventTemplate , vf:Event ;
         rdfs:range          vf:ProcessTemplate , vf:Process .
 
-vf:willOccurIn
+vf:outputOf
         a                   owl:ObjectProperty ;
-        rdfs:domain         vf:Intent , vf:Commitment ;
+        rdfs:domain         vf:EventTemplate , vf:Event ;
+        rdfs:range          vf:ProcessTemplate , vf:Process .
+
+vf:commitedInputOf
+        a                   owl:ObjectProperty ;
+        rdfs:domain         vf:Commitment ;
+        rdfs:range          vf:Process .
+
+vf:intendedOutputOf
+        a                   owl:ObjectProperty ;
+        rdfs:domain         vf:Intent ;
+        rdfs:range          vf:Process .
+
+vf:intendedInputOf
+        a                   owl:ObjectProperty ;
+        rdfs:domain         vf:Intent ;
+        rdfs:range          vf:Process .
+
+vf:commitedOutputOf
+        a                   owl:ObjectProperty ;
+        rdfs:domain         vf:Commitment ;
         rdfs:range          vf:Process .
 
 vf:eventTemplate
