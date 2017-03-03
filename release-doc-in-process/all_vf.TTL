@@ -30,7 +30,7 @@ vf:ExchangeTemplate  a           owl:Class ;
         rdfs:label           "vf:ExchangeTemplate" .
 
 vf:Action  a           owl:Class ;
-        rdfs:label           "vf:Action"
+        rdfs:label           "vf:Action" ;
         rdfs:subClassOf   rdf:Property .
 
 # PLAN CLASSES
@@ -230,42 +230,42 @@ vf:affects
         rdfs:range          vf:Resource .
 
 vf:incrementQuantity
-        a                   owl:ObjectProperty ;
+        a                   owl:ObjectProperty, owl:FunctionalProperty ;
         rdfs:domain         vf:Event ;
         rdfs:range          qudt:QuantityValue .
 
 vf:decrementQuantity
-        a                   owl:ObjectProperty ;
+        a                   owl:ObjectProperty, owl:FunctionalProperty ;
         rdfs:domain         vf:Event ;
         rdfs:range          qudt:QuantityValue .
 
 vf:commitedIncrementQuantity
-        a                   owl:ObjectProperty ;
+        a                   owl:ObjectProperty, owl:FunctionalProperty ;
         rdfs:domain         vf:Commitment ;
         rdfs:range          qudt:QuantityValue .
 
 vf:commitedDecrementQuantity
-        a                   owl:ObjectProperty ;
+        a                   owl:ObjectProperty, owl:FunctionalProperty ;
         rdfs:domain         vf:Commitment ;
         rdfs:range          qudt:QuantityValue .
 
 vf:intendedIncrementQuantity
-        a                   owl:ObjectProperty ;
+        a                   owl:ObjectProperty, owl:FunctionalProperty ;
         rdfs:domain         vf:Intent ;
         rdfs:range          qudt:QuantityValue .
 
 vf:intendedDecrementQuantity
-        a                   owl:ObjectProperty ;
+        a                   owl:ObjectProperty, owl:FunctionalProperty ;
         rdfs:domain         vf:Intent ;
         rdfs:range          qudt:QuantityValue .
 
 vf:templatedIncrementQuantity
-        a                   owl:ObjectProperty ;
+        a                   owl:ObjectProperty, owl:FunctionalProperty ;
         rdfs:domain         vf:IntentTemplate ;
         rdfs:range          qudt:QuantityValue .
 
 vf:templatedDecrementQuantity
-        a                   owl:ObjectProperty ;
+        a                   owl:ObjectProperty, owl:FunctionalProperty ;
         rdfs:domain         vf:IntentTemplate ;
         rdfs:range          qudt:QuantityValue .
 
