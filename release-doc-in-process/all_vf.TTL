@@ -13,24 +13,26 @@
     dcterms:type <http://purl.org/adms/assettype/Ontology>;
     dcterms:status <http://purl.org/adms/status/UnderDevelopment>.
 
-# TEMPLATE CLASSES
-
-
-vf:ResourceTemplate  a           owl:Class ;
-        rdfs:label           "vf:ResourceTemplate" .
-
-vf:ProcessTemplate  a           owl:Class ;
-        rdfs:label           "vf:ProcessTemplate" .
-
-vf:IntentTemplate  a           owl:Class ;
-        rdfs:label           "vf:IntentTemplate" .
-
-vf:ExchangeTemplate  a           owl:Class ;
-        rdfs:label           "vf:ExchangeTemplate" .
 
 vf:Action  a           owl:Class ;
-        rdfs:label           "vf:Action"
+        rdfs:label           "vf:Action" ;
         rdfs:subClassOf   rdf:Property .
+
+# TAXONOMY CLASSES
+vf:TaxonomyItem  a           owl:Class ;
+        rdfs:label           "vf:TaxonomyItem" .
+
+vf:ResourceTaxonomyItem  a           owl:Class ;
+        rdfs:label           "vf:ResourceTaxonomyItem" ;
+        rdfs:subClassOf      vf:TaxonomyItem .
+
+vf:ProcessTaxonomyItem  a           owl:Class ;
+        rdfs:label           "vf:ProcessTaxonomyItem" ;
+        rdfs:subClassOf      vf:TaxonomyItem .
+
+vf:ExchangeTaxonomyItem  a           owl:Class ;
+        rdfs:label           "vf:ExchangeTaxonomyItem" ;
+        rdfs:subClassOf      vf:TaxonomyItem .
 
 # PLAN CLASSES
 
@@ -82,24 +84,19 @@ vf:Group  a                  owl:Class ;
 
 # TODO CLASSES
 
-
 vf:Relationship  a       owl:Class ;
         rdfs:label       "vf:Relationship" .
 
 vf:Location  a           owl:Class ;
         rdfs:label       "vf:Location" .
 
-
-
 vf:Transportation  a     owl:Class ;
         rdfs:label       "vf:Transportation" ;
         rdfs:subClassOf  vf:Process .
 
-
 vf:Transformation  a     owl:Class ;
         rdfs:label       "vf:Transformation" ;
         rdfs:subClassOf  vf:Process .
-
 
 vf:MaterialItem  a       owl:Class ;
         rdfs:label       "vf:MaterialItem" ;
@@ -125,7 +122,7 @@ vf:Currency  a           owl:Class ;
 
 vf:action
         a                   owl:ObjectProperty ;
-        rdfs:domain         vf:IntentTemplate , vf:Intent , vf:Commitment , vf:Event ;
+        rdfs:domain         vf:Intent , vf:Commitment , vf:Event ;
         rdfs:range          vf:Action .
 
 vf:inputOf
@@ -153,49 +150,30 @@ vf:intendedInputOf
         rdfs:domain         vf:Intent ;
         rdfs:range          vf:Process .
 
-vf:templatedOutputOf
-        a                   owl:ObjectProperty ;
-        rdfs:domain         vf:IntentTemplate ;
-        rdfs:range          vf:ProcessTemplate .
-
-vf:templatedInputOf
-        a                   owl:ObjectProperty ;
-        rdfs:domain         vf:IntentTemplate ;
-        rdfs:range          vf:ProcessTemplate .
-
 vf:intendedOutputOf
         a                   owl:ObjectProperty ;
         rdfs:domain         vf:Intent ;
         rdfs:range          vf:Process .
 
-vf:intentTemplate
-        a                   owl:ObjectProperty ;
-        rdfs:domain         vf:Intent , vf:Commitment ;
-        rdfs:range          vf:IntentTemplate .
-
-vf:processTemplate
-        a                   owl:ObjectProperty ;
-        rdfs:domain         vf:Process ;
-        rdfs:range          vf:ProcessTemplatee .
-
-vf:exchangeTemplate
-        a                   owl:ObjectProperty ;
-        rdfs:domain         vf:ExchangeAgreement ;
-        rdfs:range          vf:ExchangeTemplate .
-
-vf:category
+vf:resourceCategory
         a                   owl:ObjectProperty ;
         rdfs:label          "category" ;
-        rdfs:domain         vf:ResourceTemplate , vf:Resource , vf:Intent , vf:Commitment .
+        rdfs:domain         vf:Resource , vf:Intent , vf:Commitment ;
+        rdfs:range          vf:ResourceTaxonomyItem .
+
+vf:processCategory
+        a                   owl:ObjectProperty ;
+        rdfs:domain         vf:Process ;
+        rdfs:range          vf:ProcessTaxonomyItem .
+
+vf:exchangeCategory
+        a                   owl:ObjectProperty ;
+        rdfs:domain         vf:ExchangeAgreement ;
+        rdfs:range          vf:ExchangeTaxonomyItem .
 
 vf:parent
         rdfs:label          "parent" ;
         a                   owl:ObjectProperty .
-
-vf:hasResourceTemplate
-        a                   owl:ObjectProperty ;
-        rdfs:domain         vf:Resource , vf:IntentTemplate , vf:Intent , vf:Commitment ;
-        rdfs:range          vf:ResourceTemplate .
 
 vf:involveResource
         a                   owl:ObjectProperty ;
