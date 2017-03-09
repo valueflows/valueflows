@@ -1,12 +1,12 @@
 # Classes
 
-* [Agent](agent.md)
-* [Event](event.md)
-* [Group](group.md)
-* [Person](person.md)
-* [Process](process.md)
-* [Relationship](relationship.md)
-* [Resource](resource.md)
-* [Transformation](transformation.md)
-* [Transportation](transportation.md)
+* [Agent](specification/classes/agent.md)
+* [Event](specification/classes/event.md)
+* [Group](specification/classes/group.md)
+* [Person](specification/classes/person.md)
+* [Process](specification/classes/process.md)
+* [Relationship](specification/classes/relationship.md)
+* [Resource](specification/classes/resource.md)
+* [Transformation](specification/classes/transformation.md)
+* [Transportation](specification/classes/transportation.md)
 
