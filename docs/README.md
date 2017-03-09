@@ -1,5 +1,5 @@
 ![Value Flows](https://rawgit.com/valueflows/valueflows/master/release-doc-in-process/VF-logo-heading.jpg)
-
+### A vocabulary for distributed economic systems
 
 Value Flows is a set of common vocabularies to describe flows of economic resources of all kinds within distributed economic ecosystems.
 
