@@ -10,3 +10,5 @@ Or, with less buzzwords, "let's help a lot of alternative economic software proj
 One of the purposes of this vocab is to support resource flows connecting many websites. These flows may be oriented around Processes, Exchanges, or combinations of both.
 
 We want to support RDF based and non-RDF based use of the vocabulary, basically any way that people want to use software and data on the internet to help create economic networks.
+
+![networks of networks picture](https://rawgit.com/valueflows/valueflows/master/release-doc-in-process/network-elio-cropped.jpg)

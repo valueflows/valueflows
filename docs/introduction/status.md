@@ -1,7 +1,9 @@
 
 ### Status of the vocabulary
 
-The consolidated parts of the vocabulary are reflected below.  Those include: 
+This documentation is pre-release.
+
+The relatively consolidated parts of the vocabulary are reflected below.  Those include: 
 * Core Agent model
 * Core Resource model
 * Core Input-Process-Output model
