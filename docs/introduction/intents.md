@@ -1,5 +1,7 @@
 # Intents and Commitments
 
+[This section has not been worked on yet, and is pulled from Intent.  Needs to be though through, as well as adding commitments.]
+
 Vocab about Offer, Request, Want, Need, Desire, and other related predecessors to [exchanges](https://github.com/openvocab/exchange) or [processes](https://github.com/valueflows/process). .
 
 We see many groups posting intents that are different from commercial advertisements or ecommerce offers.

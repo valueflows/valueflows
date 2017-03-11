@@ -1,5 +1,7 @@
 # Exchange
 
+[This section has not been worked on yet.  Just pulled from the repo.]
+
 ## Why?
 
 We are seeing several organizations that do exchanges, but not production processes. They also sometimes use several different software apps that might want to know about those exchanges. Some of them even conduct different exchanges in different instances of the same app, or in different apps altogether! As with all of the other Open Vocab projects, its goal is to help different apps talk to each other by means of a common vocabulary and protocols.
