@@ -1,6 +1,6 @@
 # Flows of Resources
 
-![networks of networks picture](https://rawgit.com/valueflows/valueflows/master/release-doc-in-process/network-of-networks.jpg)
+![networks of networks picture](https://rawgit.com/valueflows/valueflows/master/release-doc-in-process/network-of-networks.png)
 
 Networks of value flows are created when processes are linked together through flows of resources.
 
