@@ -3,12 +3,21 @@
 ## Introduction
 * [Introduction](README.md)
 * [Concepts](introduction/concepts.md)
+* [Core](introduction/core.md)
 * [Principles](introduction/principles.md)
 * [Status](introduction/status.md)
 
 ## Diagrams
 * [RDF Diagram](specification/diagrams/vowl.md)
 * [UML Diagram](specification/diagrams/uml.md)
+
+## Subject Areas
+* [Agent](introduction/agents.md)
+* [Resource](introduction/resources.md)
+* [Process](introduction/processes.md)
+* [Exchange](introduction/exchanges.md)
+* [Intent and Commitment](introduction/intents.md)
+* [Accounting](introduction/accounting.md)
 
 ## Classes
 * [Agent](specification/classes/agent.md)
@@ -42,3 +51,7 @@
 * [trackingIdentifier](specification/properties/trackingidentifier.md)
 * [underlyingResource](specification/properties/underlyingresource.md)
 
+** Appendices
+* [REA References](appendix/rea.md)
+* [Uses of the Vocabulary](introduction/usedfor.md)
+* [Dependent Demand Logic](introduction/planning.md)
