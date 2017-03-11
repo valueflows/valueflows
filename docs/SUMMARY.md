@@ -51,7 +51,7 @@
 * [trackingIdentifier](specification/properties/trackingidentifier.md)
 * [underlyingResource](specification/properties/underlyingresource.md)
 
-** Appendices
+## Appendices
 * [REA References](appendix/rea.md)
 * [Uses of the Vocabulary](introduction/usedfor.md)
 * [Dependent Demand Logic](introduction/planning.md)
