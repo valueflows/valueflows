@@ -1,24 +1,20 @@
 # Intents and Commitments
 
-[This section has not been worked on yet, and is pulled from Intent.  Needs to be though through, as well as adding commitments.]
 
-Vocab about Offer, Request, Want, Need, Desire, and other related predecessors to [exchanges](https://github.com/openvocab/exchange) or [processes](https://github.com/valueflows/process). .
+Intents refer to published wants or offers or plans, sometimes with what is expected in return.  Commitments can evolve from intents, or be entered into without intents.  They are specifically committed to by agents.  On the process side, for example, a work plan could be an Intent, but a work plan that some agent committed to is a Commitment.  On the exchange side, 
 
-We see many groups posting intents that are different from commercial advertisements or ecommerce offers.
+Intents are everywhere in advertising.  But we see many groups posting intents that are different from commercial advertisements or ecommerce offers.
 
-They are more general, often not commercial at all, expressed not in identified products but in categories, tags, and text.  But they want to find each other. The offers want to find the matching wants. The wants want to find the matching offers.
+They are more general, often not commercial at all, expressed not in identified products but in categories, tags, and text.  But they want to find each other. The offers want to find the matching wants. The wants want to find the matching offers. 
 
-When they find their match, those with the matching Offer and Want enter into a conversation for action which might result in an [exchange](https://github.com/valueflows/exchange).
+When they find their match, those with the matching offer and want enter into a conversation for action which might result in a set of commitments for exchange.
 
-A proposal to do something might enter into conversation for action which might result in a [process](https://github.com/valueflows/process).
+A proposal to do something might enter into conversation for action which might result in commitments for a process.
 
-Some of the groups we have seen posting these intents include [Mutual Aid Networks](http://www.mutualaidnetwork.org/), [Mutual Credit Associations](https://www.community-exchange.org/home/), and [Hylo](https://www.hylo.com/c/collaborative-technology-alliance).
-
-See also [intent casting](https://www.google.com/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=intent%20casting)
-
-Or [Netention](http://www.slideshare.net/helenefinidori/introduction-to-netention).
+Commitments are "mirrors" of economic events, and economic events can fulfull commitments.  Some commitments can be considered contractual promises from one agent to another.
 
 Intents may lead to conversations for action, which may lead to more and better cycles of engagement:
 
 ![funnel](https://cloud.githubusercontent.com/assets/117439/11401215/144641f6-9357-11e5-8ddd-f01f5bcf4012.png)
+
 

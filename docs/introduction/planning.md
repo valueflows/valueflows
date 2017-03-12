@@ -1,6 +1,8 @@
-# Planning
+# Dependent Demand Logic
 
-I wrote a much longer version of this called [Dependent Demand](http://hillside.net/plop/plop97/Proceedings/haugen.pdf) for a PLoP conference in 1997. This is the shorter version, but maybe still difficult to read because I am trying to qualify all the vf:Names.
+[Needs to be cleaned up for naming]
+
+I (Bob Haugen) wrote a much longer version of this called [Dependent Demand](http://hillside.net/plop/plop97/Proceedings/haugen.pdf) for a PLoP conference in 1997. 
 
 Basically, you traverse a graph of vf:ProcessTypes backwards from the last vf:OutputType, connecting vf:InputTypes with vf:OutputTypes that have matching vf:ResourceTypes.   See [Graph search algorithms](http://jasonpark.me/AlgorithmVisualizer/).
 
