@@ -1,4 +1,4 @@
-# Resources
+# Economic Resources
 
 Traditionally, an economic resource is defined by its utility, but also by its scarcity and its control by an economic agent. That definition is too limited. Its limitations include:
 * Intellectual creations like designs are not scarce, yet they clearly are economic resources. They only become scarce when legally restricted by patents and copyrights. 
@@ -37,7 +37,7 @@ And then in the "independent view", for larger-scale analysis of resource flows,
 
 #### Inventory
 
-Resources can be inventoried, not inventoried but could be, or it doesn't make sense to think about inventory.
+Economic Resources can be inventoried, not inventoried but could be, or it doesn't make sense to think about inventory.
 * Inventoried: You want to keep track of it, changes in quantity, and how many you have right now.
 * Not inventoried: You could keep track of it, but it isn't worth it.  This usually happens for quantities of small or hard to measure items that are obtained in bulk, like solder or bolts.  In this case, you have to look at the actual resource to see if you need more, the data won't tell you.
 * Not applicable: This is for types of work (unless scheduled), and other resources where it just doesn't make sense.

@@ -4,7 +4,7 @@
 <tr><td>rdf:type</td><td>owl:ObjectProperty</td></tr>
 <tr><td>rdfs:label</td><td>currentLocation</td></tr>
 <tr><td>rdfs:comment</td><td>The current place an item is, so that it can be found.</td></tr>
-<tr><td>rdfs:domain (property of)</td><td>vf:Resource (and subclasses)</td></tr>
+<tr><td>rdfs:domain (property of)</td><td>vf:EconomicResource</td></tr>
 <tr><td>rdfs:range (allowed values)</td><td>IRI?</td></tr>
 </table>
 
