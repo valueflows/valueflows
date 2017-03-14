@@ -8,4 +8,3 @@
 <tr><td>rdfs:range (allowed values)</td><td>vf:Agent</td></tr>
 </table>
 
-For example, in "Michael is a member of Enspiral", Michael is the subject.

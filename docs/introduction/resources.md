@@ -22,6 +22,15 @@ is a model. Your library may have two copies that you can check out. Those are r
 
 *Names TBD.
 
+Resource categories are a Taxonomy. That means they can be defined very broadly and generally and maybe vaguely, or they can be defined very narrowly, but fit into broader categories. 
+
+So, for example, you may want an apple. Or you may want a green apple. Or you may want a Granny Smith apple.
+Or you may want a Granny Smith apple from your neighboring farm.
+
+Or, Herb is the parent category of Anise Hyssop, Goldenrod, Nettles, Red Clover, etc.  Besides its usefulness in understanding taxonomies of resource types, this can be useful when one can define a general recipe that will work for many more specific types of resources.
+
+People can use the multitude of existing taxonomies for resources, or can also create their own as needed.
+
 #### Identification and Behaviors of Resources
 
 Here are three different types of resources from the viewpoint of identification:
@@ -34,6 +43,8 @@ Serialized resources would fit the direct identification pattern. Lots can be sp
 Moreover, identification of resources will depend on context and purpose. We want to allow each context to define resources that they have relationships with, according to the combination of properties that works best for them, which might include which agent has which relationship with a resource.
 
 And then in the "independent view", for larger-scale analysis of resource flows, or for example for lot tracking for public health issues like mad cow disease, different combinations of properties might be needed.
+
+Substitutability: This defines if any resources of that type can be freely substituted for any other resource of that type when used, consumed, traded, etc.  For example, "B9R-1-red DLP resin photopolymer" is probably a substitutable resource type.  While each resource for a resource type called "English-Spanish translation" is probably not substitutable because each will be a different document.
 
 #### Inventory
 
@@ -63,3 +74,18 @@ Some people use the terms "stock" and "stock flow".  A stock is a resource; a st
 An event can trigger incrementing or decrementing a resource.  Sometimes it does neither, as in the case of using a piece of equipment or citing a document.  But in any case, the quantity of a resource related to the event is not a resource itself, it is just a property of the event.  For example a resource could be 100 widgets on a pallet, lot number 1234.  If 10 of those widgets are consumed in a process that makes something out of them, that is an event: consumption of 10 widgets of lot number 1234.  The 10 widgets are not a resource in their own right.  The event triggers the decrement of the original resource of 100 widgets, which now has quantity of 90.
 
 For serialized or uniquely identified resources, if the logical and technical unique identifiers are not changed by an event, such as moving a vehicle to another location without any changes to its custody (and assuming location is not part of the logical identifier), the resource does not behave like a stock and is not decremented or incremented.
+
+#### How resources related to each other
+
+##### Underlying resource
+
+This occurs when a resource is basically certain defined rights to another resource. It is often useful to define the rights as a different resource for purposes of processes or exchanges.
+
+One example: a resource which defines the rental of an apartment has the apartment itself as its underlying resource.  Another example: a virtual account resource can have an actual bank account as its underlying resource.
+
+##### Contains resource
+
+Unlike underlying resource, if one resource contains other resources, the contained resources are part of, or make up the larger resource.
+
+For example, a bank account might contain a number of "virtual accounts" that a group manages itself, outside the bank's knowledge.  Or, a bike shed might contain 10 bikes, which are identified and tracked by their serial numbers as individual resources.
+

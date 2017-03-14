@@ -8,4 +8,3 @@
 <tr><td>rdfs:range (allowed values)</td><td>vf:ResourceModel</td></tr>
 </table>
 
-For example, Herb is the parent resource type of Anise Hyssop, Goldenrod, Nettles, Red Clover, etc.  Besides its usefulness in understanding taxonomies of resource types, this can be useful when one can define a general recipe that will work for many more specific types of resources.

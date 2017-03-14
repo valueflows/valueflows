@@ -8,4 +8,3 @@
 <tr><td>rdfs:range (allowed values)</td><td>vf:Agent</td></tr>
 </table>
 
-This allows grouping of economic relationships and economic activity (future releases) into a context for coordination and accounting purposes.
