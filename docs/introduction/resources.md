@@ -10,7 +10,7 @@ And we want knowledge to be freely available.
 
 Also, we prefer to think of use value, but economic resources also often have exchange value.
 
-#### The difference between a resource and its category or model*
+#### The difference between a resource and its category or model (names TBD)
 
 An economic resource is observable.  Its category or model defines what type of thing the vf:Resource is.
 
@@ -20,12 +20,9 @@ The one in a box delivered to your door is a resource.
 Or the description of the book entitled "The Power of Babel: A Natural History of Language", ISBN ISBN-13: 978-0060520854,
 is a model. Your library may have two copies that you can check out. Those are resources.
 
-*Names TBD.
-
 Resource categories are a Taxonomy. That means they can be defined very broadly and generally and maybe vaguely, or they can be defined very narrowly, but fit into broader categories. 
 
 So, for example, you may want an apple. Or you may want a green apple. Or you may want a Granny Smith apple.
-Or you may want a Granny Smith apple from your neighboring farm.
 
 Or, Herb is the parent category of Anise Hyssop, Goldenrod, Nettles, Red Clover, etc.  Besides its usefulness in understanding taxonomies of resource types, this can be useful when one can define a general recipe that will work for many more specific types of resources.
 
