@@ -609,15 +609,15 @@ vf:committedOutputOf
         rdfs:domain         vf:Commitment ;
         rdfs:range          vf:Process .
 
-vf:intendedInputOf
-        a                   owl:ObjectProperty ;
-        rdfs:domain         vf:Intent ;
-        rdfs:range          vf:Process .
+#vf:intendedInputOf
+#        a                   owl:ObjectProperty ;
+#        rdfs:domain         vf:Intent ;
+#        rdfs:range          vf:Process .
 
-vf:intendedOutputOf
-        a                   owl:ObjectProperty ;
-        rdfs:domain         vf:Intent ;
-        rdfs:range          vf:Process .
+#vf:intendedOutputOf
+#        a                   owl:ObjectProperty ;
+#        rdfs:domain         vf:Intent ;
+#        rdfs:range          vf:Process .
 
 vf:resourceCategory
         a                   owl:ObjectProperty ;
@@ -648,21 +648,19 @@ vf:committedCategory
 #        rdfs:range          vf:ExchangeTaxonomyItem .
 
 vf:parent
+        a                   owl:ObjectProperty ;
         rdfs:label          "parent" ;
-        a                   owl:ObjectProperty ;
+        rdfs:domain         vf:ResourceTaxonomyItem ; 
+        rdfs:range          vf:ResourceTaxonomyItem ;
         rdfs:comment        "A more general or broader category of resource." .
-
-vf:involveResource
-        a                   owl:ObjectProperty ;
-        rdfs:domain         vf:Intent , vf:Commitment ; # split out ??
-        rdfs:range          vf:EconomicResource ;
-        rdfs:comment        "EconomicResource the Intent or Commitment intends or commits to affect. Could be an actual resource or a category or type of resource." .
+        
+# need for INtent too
 
 vf:underlyingResource
         a                   owl:ObjectProperty ;
-        rdfs:domain         vf:Resource ;
-        rdfs:range          vf:Resource ;
-        rdfs:comment        "A more concrete resource upon which a resource is based." .
+        rdfs:domain         vf:EconomicResource ;
+        rdfs:range          vf:EconomicResource ;
+        rdfs:comment        "A more concrete resource upon which a resource is based, usually signifying rights to the underlying resource." .
 
 vf:relationship  a          owl:ObjectProperty ;
         rdfs:domain         vf:Relationship ;
@@ -670,11 +668,11 @@ vf:relationship  a          owl:ObjectProperty ;
         rdfs:range          rdf:Property ; # think about creating a subproperty for these
         rdfs:comment        "A verb that describes a generic defined relationship that exists between 2 agents." .
 
-vf:commitsTo
-        a                   owl:ObjectProperty ;
-        rdfs:domain         vf:Commitment ;
-        rdfs:range          vf:Intent ;
-        rdfs:comment        "The Intent that an economic agent promises to fulfill." .
+#vf:commitsTo
+#        a                   owl:ObjectProperty ;
+#        rdfs:domain         vf:Commitment ;
+#        rdfs:range          vf:Intent ;
+#        rdfs:comment        "The Intent that an economic agent promises to fulfill." .
 
 vf:fulfillsProcess
         a                   owl:ObjectProperty ;
@@ -696,11 +694,17 @@ vf:fulfilledBy
         rdfs:domain         vf:Fulfillment ; 
         rdfs:comment        "The economic event that contributes to fulfilling the commitment." .
         
-vf:affects
+vf:affectedResource
         a                   owl:ObjectProperty ;
         rdfs:domain         vf:EconomicEvent ;
         rdfs:range          vf:EconomicResource ;
         rdfs:comment        "The economic resource that is decremented or incremented by the economic event, or just what the economic event is about." .
+
+vf:committedResource
+        a                   owl:ObjectProperty ;
+        rdfs:domain         vf:Commitment ; 
+        rdfs:range          vf:EconomicResource ;
+        rdfs:comment        "Economic resource the Intent or Commitment intends or commits to affect. Could be an actual resource or a category or type of resource." .
 
 vf:appreciationOf
         a                   owl:ObjectProperty ;
@@ -768,22 +772,22 @@ vf:object  a         owl:ObjectProperty ;
         rdfs:range   vf:Agent ;
         rdfs:comment        "The object of a relationship between 2 agents." .
 
-vf:underAgreement  a       owl:ObjectProperty ;
+vf:under  a       owl:ObjectProperty ;
         rdfs:domain  vf:EconomicEvent ; 
-        rdfs:label   "underAgreement" ;
+        rdfs:label   "under" ;
         rdfs:range   vf:Agreement ;
         rdfs:comment        "Reference to an agreement between agents which specifies the rules or policies which govern this event." .
 
-vf:committedUnderAgreement  a       owl:ObjectProperty ;
+vf:committedUnder  a       owl:ObjectProperty ;
         rdfs:domain  vf:Commitment ; 
-        rdfs:label   "underAgreement" ;
+        rdfs:label   "under" ;
         rdfs:range   vf:Agreement ;
         rdfs:comment        "Reference to an agreement between agents which specifies the rules or policies which govern this commitment." .
 
 # will need one for Intent too
 
 vf:inExchangeFor  a         owl:ObjectProperty ;
-        rdfs:label   "inExchangeFor" ;
+        rdfs:label   "in exchange for" ;
         rdfs:domain  vf:Commitment ;
         rdfs:range   vf:EconomicEvent ;
         rdfs:comment        "References the economic event that generated the commitment, in cases where based on an agreement, an agent commits to some reciprocity if an event occurs." .
@@ -818,12 +822,12 @@ vf:primaryLocation a owl:ObjectProperty ;
         rdfs:range   vf:Location ;
         rdfs:comment        "The main place an agent is located, often an address where activities occur and mail can be sent. This is usually a mappable geographic location.  It also could be a website address, as in the case of agents who have no physical location." .
 
-vf:eventStart a owl:ObjectProperty ;
+vf:start a owl:ObjectProperty ;
         rdfs:label     "start" ;
         rdfs:domain     vf:EconomicEvent ;
         rdfs:comment   "The starting date and optionally time of the economic event." .
 
-vf:eventDuration a owl:ObjectProperty ;
+vf:duration a owl:ObjectProperty ;
         rdfs:label     "duration" ;
         rdfs:domain     vf:EconomicEvent ;
         rdfs:comment   "The observed duration of the economic event." .
