@@ -32,6 +32,6 @@ All the levels of the REA ontology are similarly flexible and configurable:
 
 ###### Output
 
-* vf:create - new resource created in that process
+* vf:produce - new resource created in that process
 * vf:improve - in processes like repair or maintentance, same resource will appear in input with *vf:accept* verb
 * vf:unload -  transported resource leaves the process
