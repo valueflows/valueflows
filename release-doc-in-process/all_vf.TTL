@@ -140,7 +140,7 @@ vf:Location  a           owl:Class ;
 
 vf:action
         a                   owl:ObjectProperty ;
-        rdfs: label         "action" ;
+        rdfs:label         "action" ;
         rdfs:domain         vf:EconomicEvent ;
         rdfs:range          vf:Action ;
         rdfs:comment        "Relates a process input or output (or other vf:EconomicEVent) to a verb, such as consume, produce, work, improve, etc." .
@@ -158,25 +158,25 @@ vf:committedAction
 
 vf:inputOf
         a                   owl:ObjectProperty ;
-        rdfs: label         "input of" ;
+        rdfs:label         "input of" ;
         rdfs:domain         vf:EconomicEvent ;
         rdfs:range          vf:Process .
 
 vf:outputOf
         a                   owl:ObjectProperty ;
-        rdfs: label         "output of" ;
+        rdfs:label         "output of" ;
         rdfs:domain         vf:EconomicEvent ;
         rdfs:range          vf:Process .
 
 vf:committedInputOf
         a                   owl:ObjectProperty ;
-        rdfs: label         "committed input of" ;
+        rdfs:label         "committed input of" ;
         rdfs:domain         vf:Commitment ;
         rdfs:range          vf:Process .
 
 vf:committedOutputOf
         a                   owl:ObjectProperty ;
-        rdfs: label         "committed output of" ;
+        rdfs:label         "committed output of" ;
         rdfs:domain         vf:Commitment ;
         rdfs:range          vf:Process .
 
@@ -227,20 +227,20 @@ vf:parent
 
 vf:involvesResource
         a                   owl:ObjectProperty ;
-        rdfs: label         "involves resource" ;
+        rdfs:label         "involves resource" ;
         rdfs:domain         vf:Commitment ; # create one of these for intents
         rdfs:range          vf:EconomicResource ;
         rdfs:comment        "EconomicResource the Commitment intends or commits to affect. Could be an actual resource or a category or type of resource." .
 
 vf:underlyingResource
         a                   owl:ObjectProperty ;
-        rdfs: label         "underlying resource" ;
+        rdfs:label         "underlying resource" ;
         rdfs:domain         vf:Resource ;
         rdfs:range          vf:Resource ;
         rdfs:comment        "A more concrete resource upon which a resource is based." .
 
 vf:relationship  a          owl:ObjectProperty ;
-        rdfs: label         "relationship" ;
+        rdfs:label         "relationship" ;
         rdfs:domain         vf:Relationship ;
         rdfs:label          "vf:relationship" ;
         rdfs:range          rdf:Property ; # think about creating a subproperty for these
@@ -254,21 +254,21 @@ vf:relationship  a          owl:ObjectProperty ;
 
 vf:affects
         a                   owl:ObjectProperty ;
-        rdfs: label         "affects" ;
+        rdfs:label         "affects" ;
         rdfs:domain         vf:EconomicEvent ;
         rdfs:range          vf:EconomicResource ;
         rdfs:comment        "The economic resource that is decremented or incremented by the economic event, or just what the economic event is about." .
 
 vf:appreciationOf
         a                   owl:ObjectProperty ;
-        rdfs: label         "appreciation of" ;
+        rdfs:label         "appreciation of" ;
         rdfs:domain         vf:Appreciation ;
         rdfs:range          vf:EconomicEvent ;
         rdfs:comment        "The economic event being appreciated (gift economy)." .
 
 vf:appreciationWith
         a                   owl:ObjectProperty ;
-        rdfs: label         "appreciation with" ;
+        rdfs:label         "appreciation with" ;
         rdfs:domain         vf:Appreciation ;
         rdfs:range          vf:EconomicEvent ;
         rdfs:comment        "The economic event implemented in appreciation (gift economy)." .
