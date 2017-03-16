@@ -140,9 +140,17 @@ vf:Location  a           owl:Class ;
 
 vf:action
         a                   owl:ObjectProperty ;
-        #rdfs:domain         vf:Intent , vf:Commitment , vf:Event ;
+        rdfs:domain         vf:EconomicEvent ;
         rdfs:range          vf:Action ;
         rdfs:comment        "Relates a process input or output (or other vf:EconomicEVent) to a verb, such as consume, produce, work, improve, etc." .
+
+vf:committedAction
+        a                   owl:ObjectProperty ;
+        rdfs:domain         vf:Commitment ;
+        rdfs:range          vf:Action ;
+        rdfs:comment        "Relates a process input or output (or other vf:EconomicEVent) to a verb, such as consume, produce, work, improve, etc." .
+
+# need one for Intent too
 
 # Do we want to have the direction this way, to the process?  or containers from the process?  or both?
 
@@ -179,9 +187,18 @@ vf:committedOutputOf
 vf:resourceCategory
         a                   owl:ObjectProperty ;
         rdfs:label          "category" ;
-        #rdfs:domain         vf:EconomicResource , vf:Intent , vf:Commitment ;
+        rdfs:domain         vf:EconomicResource ;
         rdfs:range          vf:ResourceTaxonomyItem ;
         rdfs:comment        "A type or categorization that describes a resource, at any level of granularity." .
+
+vf:committedCategory
+        a                   owl:ObjectProperty ;
+        rdfs:label          "category" ;
+        rdfs:domain         vf:Commitment ;
+        rdfs:range          vf:ResourceTaxonomyItem ;
+        rdfs:comment        "A type or categorization that describes a resource committed, at any level of granularity." .
+
+# will need one for Intent too
 
 # waiting to do the recipe model
         
@@ -196,8 +213,10 @@ vf:resourceCategory
 #        rdfs:range          vf:ExchangeTaxonomyItem .
 
 vf:parent
-        rdfs:label          "parent" ;
         a                   owl:ObjectProperty ;
+        rdfs:label          "parent" ;
+        rdfs:domain         vf:ResourceTaxonomyItem ;
+        rdfs:range          vf:ResourcetaxonomyItem ;
         rdfs:comment        "A more general or broader category of resource." .
 
 vf:involveResource
@@ -224,12 +243,6 @@ vf:relationship  a          owl:ObjectProperty ;
 #        rdfs:range          vf:Intent ;
 #        rdfs:comment        "The Intent that an economic agent promises to fulfill." .
 
-vf:fulfills
-        a                   owl:ObjectProperty ;
-        rdfs:domain         vf:EconomicEvent;
-        #rdfs:range          vf:Fulfillment , vf:Intent , vf:Commitment ; # how do this best? superclass? split out?
-        rdfs:comment        "How the economic event relates to the cycle that led to it." .
-
 vf:affects
         a                   owl:ObjectProperty ;
         rdfs:domain         vf:EconomicEvent ;
@@ -249,13 +262,13 @@ vf:appreciationWith
         rdfs:comment        "The economic event implemented in appreciation (gift economy)." .
 
 vf:provider  a       owl:ObjectProperty ;
-        rdfs:domain  vf:Event ;
+        rdfs:domain  vf:EconomicEvent ;
         rdfs:label   "provider" ;
         rdfs:range   vf:Agent ;
         rdfs:comment        "The economic agent from whom the economic event is initiated." .
 
 vf:receiver  a       owl:ObjectProperty ;
-        rdfs:domain  vf:Event ;
+        rdfs:domain  vf:EconomicEvent ;
         rdfs:label   "receiver" ;
         rdfs:range   vf:Agent ;
         rdfs:comment        "The economic agent whom the economic event is for." .
@@ -302,11 +315,17 @@ vf:object  a         owl:ObjectProperty ;
         rdfs:range   vf:Agent ;
         rdfs:comment        "The object of a relationship between 2 agents." .
 
-vf:underAgreement  a       owl:ObjectProperty ;
-        #rdfs:domain  vf:Event , vf:Intent, vf:Commitment ; 
+vf:under  a       owl:ObjectProperty ;
+        rdfs:domain  vf:EconomicEvent ; 
         rdfs:label   "underAgreement" ;
         rdfs:range   vf:Agreement ;
-        rdfs:comment        "Reference an agreement between agents which specifies the rules or policies which govern this." .
+        rdfs:comment        "Reference an agreement between agents which specifies the rules or policies which govern this event." .
+
+vf:committedUnder  a       owl:ObjectProperty ;
+        rdfs:domain  vf:Commitment ; 
+        rdfs:label   "underAgreement" ;
+        rdfs:range   vf:Agreement ;
+        rdfs:comment        "Reference an agreement between agents which specifies the rules or policies which govern this commitment." .
 
 vf:inExchangeFor  a         owl:ObjectProperty ;
         rdfs:label   "inExchangeFor" ;
@@ -365,7 +384,7 @@ vf:name a owl:DatatypeProperty ;
         rdfs:label      "name" ;
         rdfs:comment    "An informal or formal textual identifier for an object. Does not imply uniqueness." .
 
-vf:note a owl:DatatypeProperty ;
+vf:note a owl:ObjectProperty ;
         rdfs:label      "note" ;
         rdfs:range      skos:note ;
         rdfs:comment    "A textual comment or description." .
@@ -554,9 +573,19 @@ vf:Location  a           owl:Class ;
 
 vf:action
         a                   owl:ObjectProperty ;
-        #rdfs:domain         vf:Intent , vf:Commitment , vf:Event ;
+        rdfs:label          "action" ;
+        rdfs:domain         vf:EconomicEvent ;
         rdfs:range          vf:Action ;
-        rdfs:comment        "Relates a process input or output (or other vf:EconomicEVent) to a verb, such as consume, produce, work, improve, etc." .
+        rdfs:comment        "Relates a process input or output to a verb, such as consume, produce, work, improve, etc." .
+
+vf:committedAction
+        a                   owl:ObjectProperty ;
+        rdfs:label          "action" ;
+        rdfs:domain         vf:Commitment ;
+        rdfs:range          vf:Action ;
+        rdfs:comment        "Relates a process input or output commitment to a verb, such as consume, produce, work, improve, etc." .
+
+# will need one for Intent too
 
 # Do we want to have the direction this way, to the process?  or containers from the process?  or both?
 
@@ -593,9 +622,18 @@ vf:intendedOutputOf
 vf:resourceCategory
         a                   owl:ObjectProperty ;
         rdfs:label          "category" ;
-        #rdfs:domain         vf:EconomicResource , vf:Intent , vf:Commitment ;
+        rdfs:domain         vf:EconomicResource ;
         rdfs:range          vf:ResourceTaxonomyItem ;
         rdfs:comment        "A type or categorization that describes a resource, at any level of granularity." .
+
+vf:committedCategory
+        a                   owl:ObjectProperty ;
+        rdfs:label          "category" ;
+        rdfs:domain         vf:Commitment ;
+        rdfs:range          vf:ResourceTaxonomyItem ;
+        rdfs:comment        "A type or categorization that describes a commitment for a resource, at any level of granularity." .
+
+# will need one for Intent too
 
 # waiting to do the recipe model
 
@@ -638,12 +676,26 @@ vf:commitsTo
         rdfs:range          vf:Intent ;
         rdfs:comment        "The Intent that an economic agent promises to fulfill." .
 
-vf:fulfills
+vf:fulfillsProcess
         a                   owl:ObjectProperty ;
-        rdfs:domain         vf:EconomicEvent;
-        #rdfs:range          vf:Fulfillment , vf:Intent , vf:Commitment ; # how do this best? superclass? split out?
-        rdfs:comment        "How the economic event relates to the cycle that led to it." .
+        rdfs:domain         vf:EconomicEvent ;
+        rdfs:range          vf:Commitment ; 
+        rdfs:comment        "The process commitment this economic event contributes to fulfilling." .
 
+vf:fulfillsExchange
+        a                   owl:ObjectProperty ;
+        rdfs:domain         vf:Fulfillment ;
+        rdfs:range          vf:Commitment ; 
+        rdfs:comment        "The exchange commitment this economic event contributes to fulfilling." .
+
+# will need one for Intent too
+        
+vf:fulfilledBy
+        a                   owl:ObjectProperty ;
+        rdfs:range          vf:EconomicEvent ;
+        rdfs:domain         vf:Fulfillment ; 
+        rdfs:comment        "The economic event that contributes to fulfilling the commitment." .
+        
 vf:affects
         a                   owl:ObjectProperty ;
         rdfs:domain         vf:EconomicEvent ;
@@ -663,13 +715,13 @@ vf:appreciationWith
         rdfs:comment        "The economic event implemented in appreciation (gift economy)." .
 
 vf:provider  a       owl:ObjectProperty ;
-        rdfs:domain  vf:Event ;
+        rdfs:domain  vf:EconomicEvent ;
         rdfs:label   "provider" ;
         rdfs:range   vf:Agent ;
         rdfs:comment        "The economic agent from whom the economic event is initiated." .
 
 vf:receiver  a       owl:ObjectProperty ;
-        rdfs:domain  vf:Event ;
+        rdfs:domain  vf:EconomicEvent ;
         rdfs:label   "receiver" ;
         rdfs:range   vf:Agent ;
         rdfs:comment        "The economic agent whom the economic event is for." .
@@ -717,10 +769,18 @@ vf:object  a         owl:ObjectProperty ;
         rdfs:comment        "The object of a relationship between 2 agents." .
 
 vf:underAgreement  a       owl:ObjectProperty ;
-        #rdfs:domain  vf:Event , vf:Intent, vf:Commitment ; 
+        rdfs:domain  vf:EconomicEvent ; 
         rdfs:label   "underAgreement" ;
         rdfs:range   vf:Agreement ;
-        rdfs:comment        "Reference an agreement between agents which specifies the rules or policies which govern this." .
+        rdfs:comment        "Reference to an agreement between agents which specifies the rules or policies which govern this event." .
+
+vf:committedUnderAgreement  a       owl:ObjectProperty ;
+        rdfs:domain  vf:Commitment ; 
+        rdfs:label   "underAgreement" ;
+        rdfs:range   vf:Agreement ;
+        rdfs:comment        "Reference to an agreement between agents which specifies the rules or policies which govern this commitment." .
+
+# will need one for Intent too
 
 vf:inExchangeFor  a         owl:ObjectProperty ;
         rdfs:label   "inExchangeFor" ;
@@ -769,10 +829,12 @@ vf:eventDuration a owl:ObjectProperty ;
         rdfs:comment   "The observed duration of the economic event." .
 
 vf:image a owl:DatatypeProperty ;
-        rdfs:label      "image" .
+        rdfs:label      "image" ;
+        rdfs:domain     vf:Agent .
 
 vf:url a owl:DatatypeProperty ;
-        rdfs:label      "url" .
+        rdfs:label      "url" ;
+        rdfs:domain     vf:Agent .
 
 vf:name a owl:DatatypeProperty ;
         rdfs:label      "name" ;
