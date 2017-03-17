@@ -24,6 +24,8 @@ This is a (simplified) very specific example taken from the Open Value Network (
 
 ### ... another little value flow....
 
+Producing and exchange olive oil and coffee, even more simplified.
+
 ![coffee olive oil](https://rawgit.com/valueflows/valueflows/master/release-doc-in-process/coffee-olive-oil-flows.png)
 
 ### ... to thinking bigger.

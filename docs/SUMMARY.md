@@ -21,7 +21,7 @@
 * [Accounting](introduction/accounting.md)
 
 ## Specification
-* [Classes and Properties](http://www.essepuntato.it/lode/owlapi/https://raw.githubusercontent.com/valueflows/valueflows/master/release-doc-in-process/all_vf.TTL)
+* [Classes and Properties](specification/generated-spec.html)
 
 ## Appendices
 * [REA References](appendix/rea.md)

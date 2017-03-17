@@ -408,6 +408,8 @@ vf:trackingIdentifier a owl:AnnotationProperty ;
 
 # isSubstitutable "Defines if any resources of that type can be freely substituted for any other resource of that type when used, consumed, traded, etc."
 
+# something for models for GTIN, etc. identifiers
+
 # ################################ action verbs
 
 vf:increment  a                vf:Action ;
