@@ -21,7 +21,7 @@
 * [Accounting](introduction/accounting.md)
 
 ## Specification
-* [Classes and Properties](specification/generated-spec.html)
+* [Classes and Properties](specification/generated-spec.md)
 
 ## Appendices
 * [REA References](appendix/rea.md)
