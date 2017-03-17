@@ -11,7 +11,7 @@
 * [RDF Diagram](specification/diagrams/vowl.md)
 * [UML Diagram](specification/diagrams/uml.md)
 
-## Concept Areas
+## Concepts
 * [Agent](introduction/agents.md)
 * [Resource](introduction/resources.md)
 * [Process](introduction/processes.md)

@@ -22,6 +22,10 @@ This is a (simplified) very specific example taken from the Open Value Network (
 ![sensorica flow 1](https://rawgit.com/valueflows/valueflows/master/release-doc-in-process/sens-flow-1.png)
 ![sensorica flow 2](https://rawgit.com/valueflows/valueflows/master/release-doc-in-process/sens-flow-2.png)
 
+### ... another little value flow....
+
+![coffee olive oil](https://rawgit.com/valueflows/valueflows/master/release-doc-in-process/coffee-olive-oil-flows.png)
+
 ### ... to thinking bigger.
 
 ![river flow](https://rawgit.com/valueflows/valueflows/master/release-doc-in-process/vf-river.png)
