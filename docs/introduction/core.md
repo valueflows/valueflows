@@ -2,7 +2,7 @@
 
 The vocabulary has a core that would fit many different kinds of economic formations  - value networks, supply chains, joint ventures, business collaboration network....
 
-The core is based on the REA (Resource, Event, Agent) ontology. You can find all the details by following the [links here](appendix/rea.md).
+The core is based on the REA (Resource, Event, Agent) ontology. You can find all the details by following the [links here](https://valueflows.gitbooks.io/valueflows/content/appendix/rea.html).
 
 These are the main concepts in the REA ontology, as pictured in this [document](http://www.msu.edu/user/mccarth4/Alabama.doc):
 
@@ -28,10 +28,10 @@ All the levels of the REA ontology are similarly flexible and configurable:
 * vf:cite - for example a design file, neither used nor consumed, the file remains available at all times
 * vf:work - labor power towards a process
 * vf:accept - in processes like repair or maintentance, same resource will appear in output with *vf:improve* verb
-* vf:load -  transported resource enters the process
+* vf:load -  transported resource enters the process, same resource will appear in output with *vf:unload* verb
 
 ###### Output
 
 * vf:produce - new resource created in that process
 * vf:improve - in processes like repair or maintentance, same resource will appear in input with *vf:accept* verb
-* vf:unload -  transported resource leaves the process
+* vf:unload -  transported resource leaves the process, same resource will appear in input with *vf:load* verb

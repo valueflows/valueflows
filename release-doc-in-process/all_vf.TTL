@@ -401,12 +401,14 @@ vf:note a owl:ObjectProperty ;
         rdfs:range      skos:note ;
         rdfs:comment    "A textual comment or description." .
 
-vf:trackingIdentifier a owl:DatatypeProperty ;
+vf:trackingIdentifier a owl:AnnotationProperty ;
         rdfs:label "tracking identifier" ;
         rdfs:domain     vf:EconomicResource ;   
-        rdfs:comment    "Sometimes called lot number, used for trackable batched resources. Sometimes called serial number, used when each item must have a trackable identifier (like a computer). Could also be used for other unique tracking identifiers." .  
+        rdfs:comment    "Sometimes called lot number, used for trackable batched resources. Sometimes called serial number, used when each item must have a trackable identifier (like a computer). Could also be used for other unique tracking identifiers needed for resources." .  
 
 # isSubstitutable "Defines if any resources of that type can be freely substituted for any other resource of that type when used, consumed, traded, etc."
+
+# something for models for GTIN, etc. identifiers
 
 # ################################ action verbs
 

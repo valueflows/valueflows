@@ -7,8 +7,10 @@ The relatively consolidated parts of the vocabulary are reflected below.  Those 
 * Core Agent model
 * Core Resource model
 * Core Input-Process-Output model
+* Transfers, exchanges and reciprocity
+* Commitments
 
 Yet to come: 
-* Recipes or Templates for processes and transfers
-* Planning - intents, plans, commitments, availability
-* Transfers, exchanges and reciprocity
+* Recipes and Templates for processes and transfers
+* Intents (offers and requests)
+* Conversations for Action/Agreement and protocols
