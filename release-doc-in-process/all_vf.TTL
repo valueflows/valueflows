@@ -82,26 +82,28 @@ vf:EconomicEvent  a            owl:Class ;
         rdfs:label       "vf:EconomicEvent" ;
         rdfs:comment   "An inflow or outflow of an economic resource in relation to a process and/or exchange. This could reflect a change in the quantity of a vf:EconomicResource. It is also defined by its behavior in relation to the vf:EconomicResource and a vf:Process (consume, use, produce, etc.)" .
 
-vf:Agent  a                  owl:Class ;
-        rdfs:label           "vf:Agent" ;
-        owl:equivalentClass  foaf:Agent ;
-        rdfs:comment   "A person or group with economic agency." .
+foaf:Agent  a                  owl:Class ;
+        rdfs:label           "foaf:Agent" ;
+        rdfs:comment   "A person or group or organization with economic agency." .
 
-vf:Person  a                 owl:Class ;
-        rdfs:label           "vf:Person" ;
-        rdfs:subClassOf      vf:Agent ;
-        owl:equivalentClass  schema:Person , foaf:Person ;
+foaf:Person  a                 owl:Class ;
+        rdfs:label           "foaf:Person" ;
+        rdfs:subClassOf      foaf:Agent ;
         rdfs:comment     "A natural person." .
-        
-vf:Group  a                  owl:Class ;
-        rdfs:label           "vf:Group" ;
-        rdfs:subClassOf      vf:Agent ;
-        owl:equivalentClass  foaf:Group ;
+
+foaf:Group  a                  owl:Class ;
+        rdfs:label           "foaf:Group" ;
+        rdfs:subClassOf      foaf:Agent ;
         rdfs:comment      "Any kind of association of more than one person, which can be loosely or formally organized, but has economic agency as a group beyond any person." .
 
-vf:Relationship  a       owl:Class ;
-        rdfs:label       "vf:Relationship" ;
-        rdfs:comment    "An ongoing association between 2 Agents of any type." .
+foaf:Organization  a         owl:Class ;
+        rdfs:label           "foaf:Organization" ;
+        rdfs:subClassOf      foaf:Agent ;
+        rdfs:comment      "Usually a more formally defined structure than Group, often legally defined, can be a group or not." .
+
+vf:AgentRelationship  a       owl:Class ;
+        rdfs:label       "vf:AgentRelationship" ;
+        rdfs:comment    "An ongoing voluntary association between 2 Agents of any kind." .
 
 vf:Fulfillment  a            owl:Class ;
         rdfs:label       "vf:Fulfillment" ;
