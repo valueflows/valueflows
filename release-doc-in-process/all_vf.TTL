@@ -22,6 +22,11 @@ vf:Action  a           owl:Class ;
         rdfs:subClassOf   rdf:Property ;
         rdfs:comment   "An action verb defining the kind of event, commitment, or intent." .
 
+vf:AgentRelationshipVerb  a  owl:Class ;
+        rdfs:label           "vf:AgentRelationshipVerb" ;
+        rdfs:subClassOf   rdf:Property ;
+        rdfs:comment   "A relationship verb defining the kind of association one agent can have with another." .
+
 #vf:TaxonomyItem  a           owl:Class ;
 #        rdfs:label           "vf:TaxonomyItem" .
 
@@ -411,6 +416,17 @@ vf:trackingIdentifier a owl:AnnotationProperty ;
 # isSubstitutable "Defines if any resources of that type can be freely substituted for any other resource of that type when used, consumed, traded, etc."
 
 # something for models for GTIN, etc. identifiers
+
+# ################################ agent relationship verbs
+
+vf:memberOf  a              vf:AgentRelationshipVerb ;
+        rdfs:label          "member of" .
+
+vf:partOf  a                vf:AgentRelationshipVerb ;
+        rdfs:label          "part of" .
+
+vf:peerOf  a                vf:AgentRelationshipVerb ;
+        rdfs:label          "peer of" .
 
 # ################################ action verbs
 

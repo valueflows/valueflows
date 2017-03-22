@@ -21,5 +21,13 @@ Relationships have direction: For example, in "Michael is a member of Enspiral",
 
 Relationships can be in a context (or not): For example, "Kathy is mentor of Sam, in the context of Enspiral."
 
+We identified some "vanilla" kinds of agent relationships that will have different behaviors, that we though useful enough to call out for that reason.  These are:
+* member of (free associations of agents to any number of groups or organizations - shaped like a circle)
+* part of (like parent/child relationships for groups or organizations, probably will be just one of these for an agent - shaped like a tree)
+* peer of (linear, with no hierarchy or circle implied)
+
+We realize these may not be the names people prefer to use, and encourage creation of subProperties of these, or creating new ones without sub-propertying.
+
+
 
 
