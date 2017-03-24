@@ -1,6 +1,6 @@
 # Agents
 
-The agent vocabulary describes networks of people, groups, and organizations, constructed using a simple but powerful model of agents and their relationships.
+The agent vocabulary describes networks of people, organizations and networks, constructed using a simple but powerful model of agents and their relationships.
 
 In ValueFlows, we are talking about economic agents, agents who can create or exchange value, and make agreements with each other - who have economic agency.  But we want to re-use existing vocabularies for commonly defined things, so we have elected to use those as much as possible here, even though they tend to be more broadly defined.
 
