@@ -1,10 +1,11 @@
-@prefix vf:    <https://w3id.org/valueflows/> .
+@prefix vf:    <https://w3id.org/valueflows/#> .
 @prefix schema: <http://schema.org/> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix owl:   <http://www.w3.org/2002/07/owl#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix foaf:  <http://xmlns.com/foaf/0.1/#> .
+@prefix org:   <http://www.w3.org/ns/org#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix qudt:   <http://qudt.org/schema/qudt/> .
 
@@ -22,13 +23,18 @@ vf:Action  a           owl:Class ;
         rdfs:subClassOf   rdf:Property ;
         rdfs:comment   "An action verb defining the kind of event, commitment, or intent." .
 
+#vf:AgentRelationshipRole  a  owl:Class ;
+#        rdfs:label           "vf:AgentRelationshipRole" ;
+#        rdfs:subClassOf   rdf:Property ;
+#        rdfs:comment   "A relationship role defining the kind of association one agent can have with another." .
+
 #vf:TaxonomyItem  a           owl:Class ;
 #        rdfs:label           "vf:TaxonomyItem" .
 
 vf:ResourceTaxonomyItem  a    owl:Class ;
         rdfs:label           "vf:ResourceTaxonomyItem" ;
         #rdfs:subClassOf      vf:TaxonomyItem ;
-        rdfs:comment   "A resource category, part of a resource taxonomy." .
+        rdfs:comment   "A resource category, part of a taxonomy." .
 
 #vf:ProcessTaxonomyItem  a           owl:Class ;
 #        rdfs:label           "vf:ProcessTaxonomyItem" ;
@@ -82,26 +88,28 @@ vf:EconomicEvent  a            owl:Class ;
         rdfs:label       "vf:EconomicEvent" ;
         rdfs:comment   "An inflow or outflow of an economic resource in relation to a process and/or exchange. This could reflect a change in the quantity of a vf:EconomicResource. It is also defined by its behavior in relation to the vf:EconomicResource and a vf:Process (consume, use, produce, etc.)" .
 
-vf:Agent  a                  owl:Class ;
-        rdfs:label           "vf:Agent" ;
-        owl:equivalentClass  foaf:Agent ;
-        rdfs:comment   "A person or group with economic agency." .
+foaf:Agent  a                  owl:Class ;
+        rdfs:label           "foaf:Agent" ;
+        rdfs:comment   "A person or group or organization with economic agency." .
 
-vf:Person  a                 owl:Class ;
-        rdfs:label           "vf:Person" ;
-        rdfs:subClassOf      vf:Agent ;
-        owl:equivalentClass  schema:Person , foaf:Person ;
+foaf:Person  a                 owl:Class ;
+        rdfs:label           "foaf:Person" ;
+        rdfs:subClassOf      foaf:Agent ;
         rdfs:comment     "A natural person." .
-        
-vf:Group  a                  owl:Class ;
-        rdfs:label           "vf:Group" ;
-        rdfs:subClassOf      vf:Agent ;
-        owl:equivalentClass  foaf:Group ;
-        rdfs:comment      "Any kind of association of more than one person, which can be loosely or formally organized, but has economic agency as a group beyond any person." .
 
-vf:Relationship  a       owl:Class ;
-        rdfs:label       "vf:Relationship" ;
-        rdfs:comment    "An ongoing association between 2 Agents of any type." .
+#foaf:Group  a                  owl:Class ;
+#        rdfs:label           "foaf:Group" ;
+#        rdfs:subClassOf      foaf:Agent ;
+#        rdfs:comment      "Any kind of association of more than one person, which can be loosely or formally organized, but has economic agency as a group beyond any person." .
+
+org:Organization  a         owl:Class ;
+        rdfs:label           "org:Organization" ;
+        rdfs:subClassOf      foaf:Agent ;
+        rdfs:comment      "Usually a more formally defined structure than Group, often legally defined, can be a group or not." .
+
+vf:AgentRelationship  a       owl:Class ;
+        rdfs:label       "vf:AgentRelationship" ;
+        rdfs:comment    "An ongoing voluntary association between 2 Agents of any kind." .
 
 vf:Fulfillment  a            owl:Class ;
         rdfs:label       "vf:Fulfillment" ;
@@ -218,16 +226,16 @@ vf:committedCategory
 #        rdfs:domain         vf:ExchangeAgreement ;
 #        rdfs:range          vf:ExchangeTaxonomyItem .
 
-vf:parent
-        a                   owl:ObjectProperty ;
-        rdfs:label          "parent" ;
-        rdfs:domain         vf:ResourceTaxonomyItem ;
-        rdfs:range          vf:ResourcetaxonomyItem ;
-        rdfs:comment        "A more general or broader category of resource." .
+#vf:parent
+#        a                   owl:ObjectProperty ;
+#        rdfs:label          "parent" ;
+#       rdfs:domain         vf:ResourceTaxonomyItem ;
+#        rdfs:range          vf:ResourcetaxonomyItem ;
+#        rdfs:comment        "A more general or broader category of resource." .
 
-vf:involvesResource
+vf:involves
         a                   owl:ObjectProperty ;
-        rdfs:label         "involves resource" ;
+        rdfs:label         "involves" ;
         rdfs:domain         vf:Commitment ; # create one of these for intents
         rdfs:range          vf:EconomicResource ;
         rdfs:comment        "EconomicResource the Commitment intends or commits to affect. Could be an actual resource or a category or type of resource." .
@@ -235,14 +243,13 @@ vf:involvesResource
 vf:underlyingResource
         a                   owl:ObjectProperty ;
         rdfs:label         "underlying resource" ;
-        rdfs:domain         vf:Resource ;
-        rdfs:range          vf:Resource ;
+        rdfs:domain         vf:EconomicResource ;
+        rdfs:range          vf:EconomicResource ;
         rdfs:comment        "A more concrete resource upon which a resource is based." .
 
 vf:relationship  a          owl:ObjectProperty ;
         rdfs:label         "relationship" ;
-        rdfs:domain         vf:Relationship ;
-        rdfs:label          "vf:relationship" ;
+        rdfs:domain         vf:AgentRelationship ;
         rdfs:range          rdf:Property ; # think about creating a subproperty for these
         rdfs:comment        "A verb that describes a generic defined relationship that exists between 2 agents." .
 
@@ -276,55 +283,55 @@ vf:appreciationWith
 vf:provider  a       owl:ObjectProperty ;
         rdfs:domain  vf:EconomicEvent ;
         rdfs:label   "provider" ;
-        rdfs:range   vf:Agent ;
+        rdfs:range   foaf:Agent ;
         rdfs:comment        "The economic agent from whom the economic event is initiated." .
 
 vf:receiver  a       owl:ObjectProperty ;
         rdfs:domain  vf:EconomicEvent ;
         rdfs:label   "receiver" ;
-        rdfs:range   vf:Agent ;
+        rdfs:range   foaf:Agent ;
         rdfs:comment        "The economic agent whom the economic event is for." .
 
 vf:committedProvider  a       owl:ObjectProperty ;
         rdfs:domain  vf:Commitment ;
         rdfs:label   "committed provider" ;
-        rdfs:range   vf:Agent ;
+        rdfs:range   foaf:Agent ;
         rdfs:comment        "The economic agent who commits to a future economic event." .
 
 vf:committedReceiver  a       owl:ObjectProperty ;
         rdfs:domain  vf:Commitment ;
         rdfs:label   "committed receiver" ;
-        rdfs:range   vf:Agent ;
+        rdfs:range   foaf:Agent ;
         rdfs:comment        "The economic agent whom a future economic event is committed to." .
         
 #vf:intendedProvider  a       owl:ObjectProperty ;
 #        rdfs:domain  vf:Intent ;
 #        rdfs:label   "provider" ;
-#        rdfs:range   vf:Agent ;
+#        rdfs:range   foaf:Agent ;
 #        rdfs:comment        "The economic agent who would like to provide a future economic event." .
 
 #vf:intendedReceiver  a       owl:ObjectProperty ;
 #        rdfs:domain  vf:Intent ;
 #        rdfs:label   "receiver" ;
-#        rdfs:range   vf:Agent ;
+#        rdfs:range   foaf:Agent ;
 #        rdfs:comment        "The economic agent who would like to receive a future economic event." .
         
 vf:subject  a        owl:ObjectProperty ;
-        rdfs:domain  vf:Relationship ;
-        rdfs:label   "vf:subject" ;
-        rdfs:range   vf:Agent ;
+        rdfs:domain  vf:AgentRelationship ;
+        rdfs:label   "subject" ;
+        rdfs:range   foaf:Agent ;
         rdfs:comment    "The subject of a relationship between 2 agents." .
 
 vf:context  a        owl:ObjectProperty ;
-        rdfs:domain  vf:Relationship ;
+        rdfs:domain  vf:AgentRelationship ;
         rdfs:label   "context" ;
-        rdfs:range   vf:Agent ;
+        rdfs:range   foaf:Agent ;
         rdfs:comment        "The larger context of a relationship between 2 agents, used where the relationship is not relevant outside of that context." .
 
 vf:object  a         owl:ObjectProperty ;
-        rdfs:domain  vf:Relationship ;
+        rdfs:domain  vf:AgentRelationship ;
         rdfs:label   "object" ;
-        rdfs:range   vf:Agent ;
+        rdfs:range   foaf:Agent ;
         rdfs:comment        "The object of a relationship between 2 agents." .
 
 vf:under  a       owl:ObjectProperty ;
@@ -372,7 +379,7 @@ vf:currentLocation a owl:ObjectProperty ;
         
 vf:primaryLocation a owl:ObjectProperty ;
         rdfs:label   "primary location" ;
-        rdfs:domain  vf:Agent ;
+        rdfs:domain  foaf:Agent ;
         rdfs:range   vf:Location ;
         rdfs:comment        "The main place an agent is located, often an address where activities occur and mail can be sent. This is usually a mappable geographic location.  It also could be a website address, as in the case of agents who have no physical location." .
 
@@ -406,9 +413,38 @@ vf:trackingIdentifier a owl:AnnotationProperty ;
         rdfs:domain     vf:EconomicResource ;   
         rdfs:comment    "Sometimes called lot number, used for trackable batched resources. Sometimes called serial number, used when each item must have a trackable identifier (like a computer). Could also be used for other unique tracking identifiers needed for resources." .  
 
+vf:fulfilledBy          a owl:ObjectProperty ;
+        rdfs:label      "fulfilled by" ;
+        rdfs:range      vf:EconomicEvent ;
+        rdfs:domain     vf:Fulfillment ;
+        rdfs:comment    "The economic event which completely or partially fulfills a commitment, used only for exchanges." .
+
+vf:fulfillsExchange     a owl:ObjectProperty ;
+        rdfs:label      "fulfills exchange" ;
+        rdfs:range      vf:Commitment ;
+        rdfs:domain     vf:Fulfillment ;
+        rdfs:comment    "The commitment which is completely or partially fulfilled by an economic event, used only for exchanges." .
+
+vf:fulfillsProcess     a owl:ObjectProperty ;
+        rdfs:label      "fulfills process" ;
+        rdfs:range      vf:Commitment ;
+        rdfs:domain     vf:EconomicEvent ;
+        rdfs:comment    "The economic event which completely or partially fulfills a commitment, used only for processes." .
+
 # isSubstitutable "Defines if any resources of that type can be freely substituted for any other resource of that type when used, consumed, traded, etc."
 
 # something for models for GTIN, etc. identifiers
+
+# ################################ agent relationship verbs
+
+#vf:memberOf  a              vf:AgentRelationshipRole ;
+#        rdfs:label          "member of" .
+
+#vf:partOf  a                vf:AgentRelationshipRole ;
+#        rdfs:label          "part of" .
+
+#vf:peerOf  a                vf:AgentRelationshipRole ;
+#        rdfs:label          "peer of" .
 
 # ################################ action verbs
 
