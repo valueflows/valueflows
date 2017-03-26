@@ -20,3 +20,7 @@ There are a number of useful Properties in existing vocabularies that can be use
 Relationships have direction: For example, in "Michael is a member of Enspiral", Michael is the subject and Enspiral is the object.  In this case the inverse is also valid, "Enspiral has member Michael".
 
 Relationships can be in a context (or not): For example, "Kathy is mentor of Sam, in the context of Enspiral."
+
+#### Agent Diagram
+
+![agent model](https://rawgit.com/valueflows/valueflows/master/release-doc-in-process/agent.svg)
