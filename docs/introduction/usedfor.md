@@ -38,6 +38,5 @@ Email and messaging accounts are probably the personal agents that most people a
 
 **One main difference** between a system composed of apps vs a network of interactions between personal agents and other things on the open Web, is that the composed system would know you by your user account and login credentials, which would most likely be single-signon. Your personal agent would introduce you to the other agents you interact with. No login, no user account. 
 
-**Another interesting use case detailed on another page:**
-## [Provenance](https://github.com/valueflows/valueflows/wiki/Provenance)
+**Another interesting use case detailed on another page:** [Provenance](https://github.com/valueflows/valueflows/wiki/Provenance)
 
