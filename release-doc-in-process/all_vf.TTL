@@ -97,10 +97,10 @@ foaf:Person  a                 owl:Class ;
         rdfs:subClassOf      foaf:Agent ;
         rdfs:comment     "A natural person." .
 
-foaf:Group  a                  owl:Class ;
-        rdfs:label           "foaf:Group" ;
-        rdfs:subClassOf      foaf:Agent ;
-        rdfs:comment      "Any kind of association of more than one person, which can be loosely or formally organized, but has economic agency as a group beyond any person." .
+#foaf:Group  a                  owl:Class ;
+#        rdfs:label           "foaf:Group" ;
+#        rdfs:subClassOf      foaf:Agent ;
+#        rdfs:comment      "Any kind of association of more than one person, which can be loosely or formally organized, but has economic agency as a group beyond any person." .
 
 org:Organization  a         owl:Class ;
         rdfs:label           "org:Organization" ;

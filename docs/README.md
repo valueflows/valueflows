@@ -3,7 +3,7 @@
 
 Value Flows is a set of common vocabularies to describe flows of economic resources of all kinds within distributed economic ecosystems.
 
-Purpose: to enable internetworking among many different software projects for resource planning and accounting within fractal networks of people and groups.  The vocabulary will work for any kind of economic activity, but the focus is to facilitate groups experimenting with solidarity / cooperative / collaborative / small business ecosystem / transitional economies.
+Purpose: to enable internetworking among many different software projects for resource planning and accounting within fractal networks of people and groups.  The vocabulary will work for any kind of economic activity, but the focus is to facilitate groups experimenting with solidarity / cooperative / collaborative / small business ecosystem / commons based peer production / any transitional economies.
 
 Or, with less buzzwords, "let's help a lot of alternative economic software projects that are solving different pieces of the same puzzle be able to work together".
 
