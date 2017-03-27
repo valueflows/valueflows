@@ -1,12 +1,14 @@
 # Dependent Demand Logic
 
-Dependent demand is an algorithm for traversing recipes to create plans for economic processes.
+Dependent demand is one popular planning algorithm for economic networks. It is used in Material Requirements Planning (MRP), for example. The algorithm traverses recipes to create plans for economic processes.
 
-[Here is a longer description](http://hillside.net/plop/plop97/Proceedings/haugen.pdf). Below is a short version.
+You can find other algorithms by searching for "network flows", for example, https://en.wikipedia.org/wiki/Flow_network
+
+Here is a long description of [Dependent Demand](http://hillside.net/plop/plop97/Proceedings/haugen.pdf). Below is a short version.
 
 Basically, you traverse a graph of Recipe Processes backwards from the last Recipe Output, connecting Recipe Inputs with Recipe Outputs that have matching Resource Categories.   See [Graph search algorithms](http://jasonpark.me/AlgorithmVisualizer/).
 
-The description below refers to this diagram:
+This description refers to this diagram:
 ![process resource flow](https://rawgit.com/valueflows/valueflows/master/release-doc-in-process/process-layer.png)
 Take each request for quantities of Resource Category as a demand and start the traversal.
 
