@@ -7,9 +7,7 @@ Dependent demand is an algorithm for traversing recipes to create plans for econ
 Basically, you traverse a graph of Recipe Processes backwards from the last Recipe Output, connecting Recipe Inputs with Recipe Outputs that have matching Resource Categories.   See [Graph search algorithms](http://jasonpark.me/AlgorithmVisualizer/).
 
 The description below refers to this diagram:
-
 ![process resource flow](https://rawgit.com/valueflows/valueflows/master/release-doc-in-process/process-layer.png)
-
 Take each request for quantities of Resource Category as a demand and start the traversal.
 
 **Start:** 
