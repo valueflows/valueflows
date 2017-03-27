@@ -467,10 +467,12 @@ vf:decrement  a                vf:Action ;
         rdfs:label          "decrement" .
 
 vf:unload  a                vf:Action ;
-        rdfs:label          "unload"  .
+        rdfs:label          "unload" ;
+        rdfs:subPropertyOf  vf:increment .
 
 vf:load  a                vf:Action ;
-        rdfs:label          "load" .
+        rdfs:label          "load" ;
+        rdfs:subPropertyOf  vf:decrement .
 
 vf:consume  a                vf:Action ;
         rdfs:label          "consume" ;
@@ -490,12 +492,10 @@ vf:produce  a                vf:Action ;
         rdfs:subPropertyOf  vf:increment .
 
 vf:accept  a                vf:Action ;
-        rdfs:label          "accept" ;
-        rdfs:subPropertyOf  vf:decrement .
+        rdfs:label          "accept" .
 
-vf:change  a                vf:Action ;
-        rdfs:label          "change" ;
-        rdfs:subPropertyOf  vf:increment .
+vf:improve  a                vf:Action ;
+        rdfs:label          "improve" .
 
 vf:issue  a                vf:Action ;
         rdfs:label          "issue" ;
