@@ -1,5 +1,4 @@
-
-### Status of the vocabulary
+# Status of the vocabulary
 
 This documentation is for release 0.1.
 
