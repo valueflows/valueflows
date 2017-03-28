@@ -1,0 +1,595 @@
+{
+  "@graph" : [ {
+    "@id" : "qudt:QuantityValue",
+    "@type" : [ "rdfs:Class", "rdfs:Resource" ],
+    "subClassOf" : [ "rdfs:Resource", "qudt:QuantityValue" ]
+  }, {
+    "@id" : "rdf:Alt",
+    "@type" : [ "rdfs:Class", "rdfs:Resource" ],
+    "subClassOf" : [ "rdf:Alt", "rdfs:Container" ]
+  }, {
+    "@id" : "rdf:Bag",
+    "@type" : [ "rdfs:Class", "rdfs:Resource" ],
+    "subClassOf" : [ "rdf:Bag", "rdfs:Container" ]
+  }, {
+    "@id" : "rdf:List",
+    "@type" : [ "rdfs:Class", "rdfs:Resource" ],
+    "subClassOf" : "rdfs:Resource"
+  }, {
+    "@id" : "rdf:Property",
+    "@type" : [ "rdfs:Class", "rdfs:Resource" ],
+    "subClassOf" : [ "rdfs:Resource", "rdf:Property" ]
+  }, {
+    "@id" : "rdf:Seq",
+    "@type" : [ "rdfs:Class", "rdfs:Resource" ],
+    "subClassOf" : [ "rdf:Seq", "rdfs:Container" ]
+  }, {
+    "@id" : "rdf:Statement",
+    "@type" : [ "rdfs:Class", "rdfs:Resource" ],
+    "subClassOf" : "rdfs:Resource"
+  }, {
+    "@id" : "rdf:XMLLiteral",
+    "@type" : [ "rdfs:Datatype", "rdfs:Class", "rdfs:Resource" ]
+  }, {
+    "@id" : "rdf:first",
+    "@type" : [ "rdf:Property", "rdfs:Resource" ],
+    "domain" : "rdf:List",
+    "subPropertyOf" : "rdf:first"
+  }, {
+    "@id" : "rdf:nil",
+    "@type" : [ "rdf:List", "rdfs:Resource" ]
+  }, {
+    "@id" : "rdf:object",
+    "@type" : [ "rdf:Property", "rdfs:Resource" ],
+    "domain" : "rdf:Statement",
+    "subPropertyOf" : "rdf:object"
+  }, {
+    "@id" : "rdf:predicate",
+    "@type" : [ "rdf:Property", "rdfs:Resource" ],
+    "domain" : "rdf:Statement",
+    "subPropertyOf" : "rdf:predicate"
+  }, {
+    "@id" : "rdf:rest",
+    "@type" : [ "rdf:Property", "rdfs:Resource" ],
+    "domain" : "rdf:List",
+    "range" : "rdf:List",
+    "subPropertyOf" : "rdf:rest"
+  }, {
+    "@id" : "rdf:subject",
+    "@type" : [ "rdf:Property", "rdfs:Resource" ],
+    "domain" : "rdf:Statement",
+    "subPropertyOf" : "rdf:subject"
+  }, {
+    "@id" : "rdf:type",
+    "@type" : [ "rdf:Property", "rdfs:Resource" ],
+    "range" : "rdfs:Class"
+  }, {
+    "@id" : "rdfs:Class",
+    "@type" : [ "rdfs:Class", "rdfs:Resource" ],
+    "subClassOf" : [ "rdfs:Resource", "rdfs:Class" ]
+  }, {
+    "@id" : "rdfs:Container",
+    "@type" : [ "rdfs:Class", "rdfs:Resource" ],
+    "subClassOf" : "rdfs:Container"
+  }, {
+    "@id" : "rdfs:ContainerMembershipProperty",
+    "@type" : [ "rdfs:Class", "rdfs:Resource" ],
+    "subClassOf" : [ "rdfs:ContainerMembershipProperty", "rdf:Property" ]
+  }, {
+    "@id" : "rdfs:Datatype",
+    "@type" : [ "rdfs:Class", "rdfs:Resource" ],
+    "subClassOf" : [ "rdfs:Datatype", "rdfs:Class" ]
+  }, {
+    "@id" : "rdfs:Literal",
+    "@type" : [ "rdfs:Class", "rdfs:Resource" ],
+    "subClassOf" : "rdfs:Resource"
+  }, {
+    "@id" : "rdfs:Resource",
+    "@type" : [ "rdfs:Class", "rdfs:Resource" ],
+    "subClassOf" : "rdfs:Resource"
+  }, {
+    "@id" : "rdfs:comment",
+    "@type" : [ "rdf:Property", "rdfs:Resource" ],
+    "range" : "rdfs:Literal"
+  }, {
+    "@id" : "rdfs:domain",
+    "@type" : [ "rdf:Property", "rdfs:Resource" ],
+    "domain" : "rdf:Property",
+    "range" : "rdfs:Class"
+  }, {
+    "@id" : "rdfs:isDefinedBy",
+    "@type" : [ "rdf:Property", "rdfs:Resource" ],
+    "subPropertyOf" : [ "rdfs:isDefinedBy", "rdfs:seeAlso" ]
+  }, {
+    "@id" : "rdfs:label",
+    "@type" : [ "rdf:Property", "rdfs:Resource" ],
+    "range" : "rdfs:Literal"
+  }, {
+    "@id" : "rdfs:range",
+    "@type" : [ "rdf:Property", "rdfs:Resource" ],
+    "domain" : "rdf:Property",
+    "range" : "rdfs:Class"
+  }, {
+    "@id" : "rdfs:seeAlso",
+    "@type" : [ "rdf:Property", "rdfs:Resource" ],
+    "subPropertyOf" : "rdfs:seeAlso"
+  }, {
+    "@id" : "rdfs:subClassOf",
+    "@type" : [ "rdf:Property", "rdfs:Resource" ],
+    "domain" : "rdfs:Class",
+    "range" : "rdfs:Class"
+  }, {
+    "@id" : "rdfs:subPropertyOf",
+    "@type" : [ "rdf:Property", "rdfs:Resource" ],
+    "domain" : "rdf:Property",
+    "range" : "rdf:Property"
+  }, {
+    "@id" : "owl:AnnotationProperty",
+    "@type" : [ "rdfs:Class", "rdfs:Resource" ]
+  }, {
+    "@id" : "owl:Class",
+    "@type" : [ "rdfs:Class", "rdfs:Resource" ]
+  }, {
+    "@id" : "owl:DatatypeProperty",
+    "@type" : [ "rdfs:Class", "rdfs:Resource" ]
+  }, {
+    "@id" : "owl:ObjectProperty",
+    "@type" : [ "rdfs:Class", "rdfs:Resource" ]
+  }, {
+    "@id" : "owl:Ontology",
+    "@type" : [ "rdfs:Class", "rdfs:Resource" ]
+  }, {
+    "@id" : "skos:note",
+    "@type" : [ "rdfs:Class", "rdfs:Resource" ],
+    "subClassOf" : [ "rdfs:Resource", "skos:note" ]
+  }, {
+    "@id" : "org:Organization",
+    "@type" : [ "owl:Class", "rdfs:Class", "rdfs:Resource" ],
+    "comment" : "Usually a more formally defined structure than Group, often legally defined, can be a group or not.",
+    "label" : "org:Organization",
+    "subClassOf" : [ "foaf:Agent", "org:Organization", "rdfs:Resource" ]
+  }, {
+    "@id" : "foaf:Agent",
+    "@type" : [ "rdfs:Class", "owl:Class", "rdfs:Resource" ],
+    "comment" : "A person or group or organization with economic agency.",
+    "label" : "foaf:Agent",
+    "subClassOf" : [ "rdfs:Resource", "foaf:Agent" ]
+  }, {
+    "@id" : "foaf:Person",
+    "@type" : [ "owl:Class", "rdfs:Class", "rdfs:Resource" ],
+    "comment" : "A natural person.",
+    "label" : "foaf:Person",
+    "subClassOf" : [ "foaf:Agent", "foaf:Person", "rdfs:Resource" ]
+  }, {
+    "@id" : "https://w3id.org/valueflows/",
+    "@type" : "owl:Ontology",
+    "status" : "http://purl.org/adms/status/UnderDevelopment",
+    "title" : "Value Flows Ontology",
+    "type" : "http://purl.org/adms/assettype/Ontology"
+  }, {
+    "@id" : "vf:Action",
+    "@type" : [ "rdfs:Class", "owl:Class", "rdfs:Resource" ],
+    "comment" : "An action verb defining the kind of event, commitment, or intent.",
+    "label" : "vf:Action",
+    "subClassOf" : [ "rdfs:Resource", "rdf:Property", "vf:Action" ]
+  }, {
+    "@id" : "vf:AgentRelationship",
+    "@type" : [ "rdfs:Class", "owl:Class", "rdfs:Resource" ],
+    "comment" : "An ongoing voluntary association between 2 Agents of any kind.",
+    "label" : "vf:AgentRelationship",
+    "subClassOf" : [ "rdfs:Resource", "vf:AgentRelationship" ]
+  }, {
+    "@id" : "vf:Agreement",
+    "@type" : [ "rdfs:Class", "owl:Class", "rdfs:Resource" ],
+    "comment" : "Any type of agreement among economic agents, that can be referenced in VF to clarify the economic activity.  This is a placeholder pending investigating other vocabularies.",
+    "label" : "vf:Agreement",
+    "subClassOf" : [ "rdfs:Resource", "vf:Agreement" ]
+  }, {
+    "@id" : "vf:Appreciation",
+    "@type" : [ "rdfs:Class", "owl:Class", "rdfs:Resource" ],
+    "comment" : "A way to tie an economic event that is given in loose fulfilment for another economic event, without commitments or expectations. Supports the gift economy.",
+    "label" : "vf:Appreciation",
+    "subClassOf" : [ "rdfs:Resource", "vf:Appreciation" ]
+  }, {
+    "@id" : "vf:Commitment",
+    "@type" : [ "rdfs:Class", "owl:Class", "rdfs:Resource" ],
+    "comment" : "A planned economic event or transfer that has been promised by an agent to another agent.",
+    "label" : "vf:Commitment",
+    "subClassOf" : [ "rdfs:Resource", "vf:Commitment" ]
+  }, {
+    "@id" : "vf:EconomicEvent",
+    "@type" : [ "rdfs:Class", "owl:Class", "rdfs:Resource" ],
+    "comment" : "An inflow or outflow of an economic resource in relation to a process and/or exchange. This could reflect a change in the quantity of a vf:EconomicResource. It is also defined by its behavior in relation to the vf:EconomicResource and a vf:Process (consume, use, produce, etc.)",
+    "label" : "vf:EconomicEvent",
+    "subClassOf" : [ "rdfs:Resource", "vf:EconomicEvent" ]
+  }, {
+    "@id" : "vf:EconomicResource",
+    "@type" : [ "rdfs:Class", "owl:Class", "rdfs:Resource" ],
+    "comment" : "A resource which is useful to people or the ecosystem.",
+    "label" : "vf:EconomicResource",
+    "subClassOf" : [ "rdfs:Resource", "vf:EconomicResource" ]
+  }, {
+    "@id" : "vf:ExchangeAgreement",
+    "@type" : [ "owl:Class", "rdfs:Class", "rdfs:Resource" ],
+    "comment" : "An agreement to exchange something with another agent(s), containing vf:Commitments towards that end.",
+    "label" : "vf:ExchangeAgreement",
+    "subClassOf" : [ "vf:Agreement", "vf:ExchangeAgreement", "rdfs:Resource" ]
+  }, {
+    "@id" : "vf:Location",
+    "@type" : [ "rdfs:Class", "owl:Class", "rdfs:Resource" ],
+    "label" : "vf:Location",
+    "subClassOf" : [ "rdfs:Resource", "vf:Location" ]
+  }, {
+    "@id" : "vf:Process",
+    "@type" : [ "rdfs:Class", "owl:Class", "rdfs:Resource" ],
+    "comment" : "An activity that changes inputs into outputs.  It could transform or transport vf:EconomicResource(s), as well as simply issuing a resource so that it is available.",
+    "label" : "vf:Process",
+    "subClassOf" : [ "rdfs:Resource", "vf:Process" ]
+  }, {
+    "@id" : "vf:ResourceTaxonomyItem",
+    "@type" : [ "rdfs:Class", "owl:Class", "rdfs:Resource" ],
+    "comment" : "A resource category, part of a taxonomy.",
+    "label" : "vf:ResourceTaxonomyItem",
+    "subClassOf" : [ "rdfs:Resource", "vf:ResourceTaxonomyItem" ]
+  }, {
+    "@id" : "vf:Transformation",
+    "@type" : [ "owl:Class", "rdfs:Class", "rdfs:Resource" ],
+    "comment" : "A process that produces something new from other resources, or improves an existing resource.",
+    "label" : "vf:Transformation",
+    "subClassOf" : [ "vf:Process", "vf:Transformation", "rdfs:Resource" ]
+  }, {
+    "@id" : "vf:Transportation",
+    "@type" : [ "owl:Class", "rdfs:Class", "rdfs:Resource" ],
+    "comment" : "A process that changes the location of a resource(s) without changing the resource(s) itself.",
+    "label" : "vf:Transportation",
+    "subClassOf" : [ "vf:Process", "vf:Transportation", "rdfs:Resource" ]
+  }, {
+    "@id" : "vf:accept",
+    "@type" : [ "vf:Action", "rdf:Property", "rdfs:Resource" ],
+    "label" : "accept"
+  }, {
+    "@id" : "vf:action",
+    "@type" : [ "owl:ObjectProperty", "rdf:Property", "rdfs:Resource" ],
+    "comment" : "Relates a process input or output (or other vf:EconomicEVent) to a verb, such as consume, produce, work, improve, etc.",
+    "domain" : "vf:EconomicEvent",
+    "label" : "action",
+    "range" : "vf:Action"
+  }, {
+    "@id" : "vf:affectedQuantity",
+    "@type" : [ "owl:ObjectProperty", "rdf:Property", "rdfs:Resource" ],
+    "comment" : "The quantity and unit of the event. This is the quantity that could be used to increment or decrement a resource, depending on the type of resource and type of event.",
+    "domain" : "vf:EconomicEvent",
+    "label" : "affected quantity",
+    "range" : "qudt:QuantityValue"
+  }, {
+    "@id" : "vf:affects",
+    "@type" : [ "owl:ObjectProperty", "rdf:Property", "rdfs:Resource" ],
+    "comment" : "The economic resource that is decremented or incremented by the economic event, or just what the economic event is about.",
+    "domain" : "vf:EconomicEvent",
+    "label" : "affects",
+    "range" : "vf:EconomicResource"
+  }, {
+    "@id" : "vf:appreciationOf",
+    "@type" : [ "owl:ObjectProperty", "rdf:Property", "rdfs:Resource" ],
+    "comment" : "The economic event being appreciated (gift economy).",
+    "domain" : "vf:Appreciation",
+    "label" : "appreciation of",
+    "range" : "vf:EconomicEvent"
+  }, {
+    "@id" : "vf:appreciationWith",
+    "@type" : [ "owl:ObjectProperty", "rdf:Property", "rdfs:Resource" ],
+    "comment" : "The economic event implemented in appreciation (gift economy).",
+    "domain" : "vf:Appreciation",
+    "label" : "appreciation with",
+    "range" : "vf:EconomicEvent"
+  }, {
+    "@id" : "vf:cite",
+    "@type" : [ "vf:Action", "rdf:Property", "rdfs:Resource" ],
+    "label" : "cite"
+  }, {
+    "@id" : "vf:committedAction",
+    "@type" : [ "owl:ObjectProperty", "rdf:Property", "rdfs:Resource" ],
+    "comment" : "Relates a process input or output (or other vf:EconomicEVent) to a verb, such as consume, produce, work, improve, etc.",
+    "domain" : "vf:Commitment",
+    "label" : "committed action",
+    "range" : "vf:Action"
+  }, {
+    "@id" : "vf:committedCategory",
+    "@type" : [ "owl:ObjectProperty", "rdf:Property", "rdfs:Resource" ],
+    "comment" : "A type or categorization that describes a resource committed, at any level of granularity.",
+    "domain" : "vf:Commitment",
+    "label" : "committed category",
+    "range" : "vf:ResourceTaxonomyItem"
+  }, {
+    "@id" : "vf:committedInputOf",
+    "@type" : [ "owl:ObjectProperty", "rdf:Property", "rdfs:Resource" ],
+    "domain" : "vf:Commitment",
+    "label" : "committed input of",
+    "range" : "vf:Process"
+  }, {
+    "@id" : "vf:committedOutputOf",
+    "@type" : [ "owl:ObjectProperty", "rdf:Property", "rdfs:Resource" ],
+    "domain" : "vf:Commitment",
+    "label" : "committed output of",
+    "range" : "vf:Process"
+  }, {
+    "@id" : "vf:committedProvider",
+    "@type" : [ "owl:ObjectProperty", "rdf:Property", "rdfs:Resource" ],
+    "comment" : "The economic agent who commits to a future economic event.",
+    "domain" : "vf:Commitment",
+    "label" : "committed provider",
+    "range" : "foaf:Agent"
+  }, {
+    "@id" : "vf:committedReceiver",
+    "@type" : [ "owl:ObjectProperty", "rdf:Property", "rdfs:Resource" ],
+    "comment" : "The economic agent whom a future economic event is committed to.",
+    "domain" : "vf:Commitment",
+    "label" : "committed receiver",
+    "range" : "foaf:Agent"
+  }, {
+    "@id" : "vf:committedUnder",
+    "@type" : [ "owl:ObjectProperty", "rdf:Property", "rdfs:Resource" ],
+    "comment" : "Reference an agreement between agents which specifies the rules or policies which govern this commitment.",
+    "domain" : "vf:Commitment",
+    "label" : "committed under",
+    "range" : "vf:Agreement"
+  }, {
+    "@id" : "vf:consume",
+    "@type" : [ "vf:Action", "rdf:Property", "rdfs:Resource" ],
+    "label" : "consume",
+    "subPropertyOf" : [ "vf:decrement", "vf:consume" ]
+  }, {
+    "@id" : "vf:contains",
+    "@type" : [ "owl:ObjectProperty", "rdf:Property", "rdfs:Resource" ],
+    "comment" : "Used when a stock economic resource contains units also defined as economic resources.",
+    "domain" : "vf:EconomicResource",
+    "label" : "contains",
+    "range" : "vf:EconomicResource"
+  }, {
+    "@id" : "vf:context",
+    "@type" : [ "owl:ObjectProperty", "rdf:Property", "rdfs:Resource" ],
+    "comment" : "The larger context of a relationship between 2 agents, used where the relationship is not relevant outside of that context.",
+    "domain" : "vf:AgentRelationship",
+    "label" : "context",
+    "range" : "foaf:Agent"
+  }, {
+    "@id" : "vf:currentLocation",
+    "@type" : [ "owl:ObjectProperty", "rdf:Property", "rdfs:Resource" ],
+    "comment" : "The current place an economic resource is located.  Could be at any level of granularity, from a town to an address to a warehouse location.  Should be mappable.",
+    "domain" : "vf:EconomicResource",
+    "label" : "current location",
+    "range" : "vf:Location"
+  }, {
+    "@id" : "vf:decrement",
+    "@type" : [ "vf:Action", "rdf:Property", "rdfs:Resource" ],
+    "label" : "decrement",
+    "subPropertyOf" : "vf:decrement"
+  }, {
+    "@id" : "vf:duration",
+    "@type" : [ "owl:ObjectProperty", "rdf:Property", "rdfs:Resource" ],
+    "comment" : "The observed duration of the economic event.",
+    "domain" : "vf:EconomicEvent",
+    "label" : "duration"
+  }, {
+    "@id" : "vf:fulfills",
+    "@type" : [ "owl:ObjectProperty", "rdf:Property", "rdfs:Resource" ],
+    "comment" : "The economic event which completely or partially fulfills a commitment on a process.",
+    "domain" : "vf:EconomicEvent",
+    "label" : "fulfills",
+    "range" : "vf:Commitment"
+  }, {
+    "@id" : "vf:image",
+    "@type" : "owl:DatatypeProperty",
+    "label" : "image"
+  }, {
+    "@id" : "vf:improve",
+    "@type" : [ "vf:Action", "rdf:Property", "rdfs:Resource" ],
+    "label" : "improve"
+  }, {
+    "@id" : "vf:inExchangeFor",
+    "@type" : [ "owl:ObjectProperty", "rdf:Property", "rdfs:Resource" ],
+    "comment" : "References the economic event that generated the commitment, in cases where based on an agreement, an agent commits to some reciprocity if an event occurs.",
+    "domain" : "vf:Commitment",
+    "label" : "in exchange for",
+    "range" : "vf:EconomicEvent"
+  }, {
+    "@id" : "vf:increment",
+    "@type" : [ "vf:Action", "rdf:Property", "rdfs:Resource" ],
+    "label" : "increment",
+    "subPropertyOf" : "vf:increment"
+  }, {
+    "@id" : "vf:inputOf",
+    "@type" : [ "owl:ObjectProperty", "rdf:Property", "rdfs:Resource" ],
+    "domain" : "vf:EconomicEvent",
+    "label" : "input of",
+    "range" : "vf:Process"
+  }, {
+    "@id" : "vf:involves",
+    "@type" : [ "owl:ObjectProperty", "rdf:Property", "rdfs:Resource" ],
+    "comment" : "EconomicResource the Commitment intends or commits to affect. Could be an actual resource or a category or type of resource.",
+    "domain" : "vf:Commitment",
+    "label" : "involves",
+    "range" : "vf:EconomicResource"
+  }, {
+    "@id" : "vf:issue",
+    "@type" : [ "vf:Action", "rdf:Property", "rdfs:Resource" ],
+    "label" : "issue",
+    "subPropertyOf" : [ "vf:decrement", "vf:issue" ]
+  }, {
+    "@id" : "vf:load",
+    "@type" : [ "vf:Action", "rdf:Property", "rdfs:Resource" ],
+    "label" : "load",
+    "subPropertyOf" : [ "vf:decrement", "vf:load" ]
+  }, {
+    "@id" : "vf:name",
+    "@type" : "owl:DatatypeProperty",
+    "comment" : "An informal or formal textual identifier for an object. Does not imply uniqueness.",
+    "label" : "name"
+  }, {
+    "@id" : "vf:note",
+    "@type" : [ "owl:ObjectProperty", "rdf:Property", "rdfs:Resource" ],
+    "comment" : "A textual comment or description.",
+    "label" : "note",
+    "range" : "skos:note"
+  }, {
+    "@id" : "vf:object",
+    "@type" : [ "owl:ObjectProperty", "rdf:Property", "rdfs:Resource" ],
+    "comment" : "The object of a relationship between 2 agents.",
+    "domain" : "vf:AgentRelationship",
+    "label" : "object",
+    "range" : "foaf:Agent"
+  }, {
+    "@id" : "vf:outputOf",
+    "@type" : [ "owl:ObjectProperty", "rdf:Property", "rdfs:Resource" ],
+    "domain" : "vf:EconomicEvent",
+    "label" : "output of",
+    "range" : "vf:Process"
+  }, {
+    "@id" : "vf:primaryLocation",
+    "@type" : [ "owl:ObjectProperty", "rdf:Property", "rdfs:Resource" ],
+    "comment" : "The main place an agent is located, often an address where activities occur and mail can be sent. This is usually a mappable geographic location.  It also could be a website address, as in the case of agents who have no physical location.",
+    "domain" : "foaf:Agent",
+    "label" : "primary location",
+    "range" : "vf:Location"
+  }, {
+    "@id" : "vf:produce",
+    "@type" : [ "vf:Action", "rdf:Property", "rdfs:Resource" ],
+    "label" : "produce",
+    "subPropertyOf" : [ "vf:increment", "vf:produce" ]
+  }, {
+    "@id" : "vf:provider",
+    "@type" : [ "owl:ObjectProperty", "rdf:Property", "rdfs:Resource" ],
+    "comment" : "The economic agent from whom the economic event is initiated.",
+    "domain" : "vf:EconomicEvent",
+    "label" : "provider",
+    "range" : "foaf:Agent"
+  }, {
+    "@id" : "vf:quantity",
+    "@type" : [ "owl:ObjectProperty", "rdf:Property", "rdfs:Resource" ],
+    "comment" : "The current amount and unit of the economic resource.",
+    "domain" : "vf:EconomicResource",
+    "label" : "quantity",
+    "range" : "qudt:QuantityValue"
+  }, {
+    "@id" : "vf:receive",
+    "@type" : [ "vf:Action", "rdf:Property", "rdfs:Resource" ],
+    "label" : "receive",
+    "subPropertyOf" : [ "vf:increment", "vf:receive" ]
+  }, {
+    "@id" : "vf:receiver",
+    "@type" : [ "owl:ObjectProperty", "rdf:Property", "rdfs:Resource" ],
+    "comment" : "The economic agent whom the economic event is for.",
+    "domain" : "vf:EconomicEvent",
+    "label" : "receiver",
+    "range" : "foaf:Agent"
+  }, {
+    "@id" : "vf:relationship",
+    "@type" : [ "owl:ObjectProperty", "rdf:Property", "rdfs:Resource" ],
+    "comment" : "A verb that describes a generic defined relationship that exists between 2 agents.",
+    "domain" : "vf:AgentRelationship",
+    "label" : "relationship",
+    "range" : "rdf:Property"
+  }, {
+    "@id" : "vf:resourceCategory",
+    "@type" : [ "owl:ObjectProperty", "rdf:Property", "rdfs:Resource" ],
+    "comment" : "A type or categorization that describes a resource, at any level of granularity.",
+    "domain" : "vf:EconomicResource",
+    "label" : "category",
+    "range" : "vf:ResourceTaxonomyItem"
+  }, {
+    "@id" : "vf:start",
+    "@type" : [ "owl:ObjectProperty", "rdf:Property", "rdfs:Resource" ],
+    "comment" : "The starting date and optionally time of the economic event.",
+    "domain" : "vf:EconomicEvent",
+    "label" : "start"
+  }, {
+    "@id" : "vf:subject",
+    "@type" : [ "owl:ObjectProperty", "rdf:Property", "rdfs:Resource" ],
+    "comment" : "The subject of a relationship between 2 agents.",
+    "domain" : "vf:AgentRelationship",
+    "label" : "subject",
+    "range" : "foaf:Agent"
+  }, {
+    "@id" : "vf:trackingIdentifier",
+    "@type" : [ "owl:AnnotationProperty", "rdf:Property", "rdfs:Resource" ],
+    "comment" : "Sometimes called lot number, used for trackable batched resources. Sometimes called serial number, used when each item must have a trackable identifier (like a computer). Could also be used for other unique tracking identifiers needed for resources.",
+    "domain" : "vf:EconomicResource",
+    "label" : "tracking identifier"
+  }, {
+    "@id" : "vf:under",
+    "@type" : [ "owl:ObjectProperty", "rdf:Property", "rdfs:Resource" ],
+    "comment" : "Reference an agreement between agents which specifies the rules or policies which govern this event.",
+    "domain" : "vf:EconomicEvent",
+    "label" : "under",
+    "range" : "vf:Agreement"
+  }, {
+    "@id" : "vf:underlyingResource",
+    "@type" : [ "owl:ObjectProperty", "rdf:Property", "rdfs:Resource" ],
+    "comment" : "A more concrete resource upon which a resource is based.",
+    "domain" : "vf:EconomicResource",
+    "label" : "underlying resource",
+    "range" : "vf:EconomicResource"
+  }, {
+    "@id" : "vf:unload",
+    "@type" : [ "vf:Action", "rdf:Property", "rdfs:Resource" ],
+    "label" : "unload",
+    "subPropertyOf" : [ "vf:increment", "vf:unload" ]
+  }, {
+    "@id" : "vf:url",
+    "@type" : "owl:DatatypeProperty",
+    "label" : "url"
+  }, {
+    "@id" : "vf:use",
+    "@type" : [ "vf:Action", "rdf:Property", "rdfs:Resource" ],
+    "label" : "use"
+  }, {
+    "@id" : "vf:work",
+    "@type" : [ "vf:Action", "rdf:Property", "rdfs:Resource" ],
+    "label" : "work"
+  } ],
+  "@context" : {
+    "domain" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#domain",
+      "@type" : "@id"
+    },
+    "range" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#range",
+      "@type" : "@id"
+    },
+    "subPropertyOf" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#subPropertyOf",
+      "@type" : "@id"
+    },
+    "subClassOf" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+      "@type" : "@id"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "comment" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+    },
+    "status" : {
+      "@id" : "http://purl.org/dc/terms/status",
+      "@type" : "@id"
+    },
+    "type" : {
+      "@id" : "http://purl.org/dc/terms/type",
+      "@type" : "@id"
+    },
+    "title" : {
+      "@id" : "http://purl.org/dc/terms/title"
+    },
+    "vf" : "https://w3id.org/valueflows/#",
+    "schema" : "http://schema.org/",
+    "qudt" : "http://qudt.org/schema/qudt/",
+    "rdf" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "owl" : "http://www.w3.org/2002/07/owl#",
+    "org" : "http://www.w3.org/ns/org#",
+    "skos" : "http://www.w3.org/2004/02/skos/core#",
+    "dcterms" : "http://purl.org/dc/terms/",
+    "rdfs" : "http://www.w3.org/2000/01/rdf-schema#",
+    "foaf" : "http://xmlns.com/foaf/0.1/#"
+  }
+}
