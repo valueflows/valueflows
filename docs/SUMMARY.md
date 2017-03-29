@@ -23,7 +23,17 @@
 ## Specification
 * [Classes and Properties](http://www.essepuntato.it/lode/owlapi/https://raw.githubusercontent.com/valueflows/valueflows/master/release-doc-in-process/all_vf.TTL)
 
+## Algorithms
+* [Overview](introduction/overview.md)
+* [Dependent Demand](introduction/dependent-demand.md)
+* [Critical Path](introduction/critical-path.md)
+* [Value Rollup](introduction/rollup.md)
+* [Value Equations](introduction/equations.md)
+* [Track and Trace](introduction/track.md)
+* [Provenance](introduction/provenance.md)
+* [Cash Flows](introduction/cashflows.md)
+* [Network Flows](introduction/netflows.md)
+
 ## Appendices
 * [REA References](appendix/rea.md)
 * [Uses of the Vocabulary](introduction/usedfor.md)
-* [Dependent Demand Logic](introduction/planning.md)

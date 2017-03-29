@@ -1,12 +1,10 @@
-# Dependent Demand Logic
+# Dependent Demand
 
-Dependent demand is one popular planning algorithm for economic networks. It is used in Material Requirements Planning (MRP), for example. The algorithm traverses recipes to create plans for economic processes.
-
-You can find other algorithms by searching for "network flows", for example, https://en.wikipedia.org/wiki/Flow_network
+Dependent demand is one popular planning and scheduling algorithm for economic networks. It is used in Material Requirements Planning (MRP), for example. The algorithm traverses recipes to create schedules for economic processes.
 
 Here is a long description of [Dependent Demand](http://hillside.net/plop/plop97/Proceedings/haugen.pdf). Below is a short version.
 
-Basically, you traverse a graph of Recipe Processes backwards from the last Recipe Output, connecting Recipe Inputs with Recipe Outputs that have matching Resource Categories.   See [Graph search algorithms](http://jasonpark.me/AlgorithmVisualizer/).
+Basically, you traverse a graph of Recipe Processes backwards from the last Recipe Output, connecting Recipe Inputs with Recipe Outputs that have matching Resource Categories, and backscheduling all the processes and resource requirements based on estimated process durations.   See [Graph search algorithms](http://jasonpark.me/AlgorithmVisualizer/).
 
 This description refers to this diagram:
 ![process resource flow](https://rawgit.com/valueflows/valueflows/master/release-doc-in-process/process-layer.png)
@@ -20,6 +18,6 @@ Take each request for quantities of Resource Category as a demand and start the 
     * _(Note: a Recipe is not really a thing, it's just a graph. A requested Resource Category may have one or more Recipe Processes that can create some Resources of that category. Each of those Recipe Processes may have Recipe Inputs that specify some other Resource Categories, and each of those Resource Categories may have Recipe Processes that can create them, and so on, recursively, until you can't find any more creation Recipe Processes. If you find more than one creation Recipe Processes, you will need some way to select one.)_
 
 * When you find a Recipe Processes, 
-    * then schedule a Process of that type, with a Output Intent of the required quantity of the demanded Resource Category. 
+    * then schedule a Planned Process based on the Recipe Process, with a Output Intent of the required quantity of the demanded Resource Category. Backschedule so that the end of the process meets the timing requirements of the inputs to the processes that will be waiting for them. 
     * Then schedule Input Intents for each of the Recipe Inputs of that Recipe Process, with their quantities scaled to the quantity of the planned output. 
     * Then start over from the **Start** with each of those new Input Intents as the demand.
