@@ -20,4 +20,4 @@ There are similarities and differences among the algorithms:
 * Dependent Demand does an explosion: breaking down the end resource of a recipe into a tree of components and processes.
 * Value Rollups do an implosion: summarizing all the inputs of the exploded tree of components and processes into a total value.
 * All of those algorithms work on flow networks, otherwise known as directed graphs, composed of nodes and links between them.
-![flow network](https://en.wikipedia.org/wiki/Flow_network#/media/File:Network_Flow_SVG.svg)
+![flow network](https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Max_flow.svg/330px-Max_flow.svg.png)
