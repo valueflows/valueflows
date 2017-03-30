@@ -10,7 +10,7 @@ This section is about what computer programs (or humans with pencil and paper an
 * **Value Rollups** summarize the total value of all inputs to the resulting output from a recipe.
 * **Value Equations** determine how income should be distributed according to contributions to a deliverable item.
 * **Track and Trace** follow the path of a resource forwards (to where it went) and backwards (where it came from, and what other resources went into it).
-* **Provenance** is like Trace, focusing on all of the other resources that went into a given resource.
+* **Provenance** is like Trace, focusing on the path of a resource and all of the other resources that went into it.
 * **Cash Flow** is mostly about money, but could also apply to other resources, looking at the inflows and outflows on a timeline, historical in the past, forecasted in the future.
 * **Network Flows** is a general name for all of those algorithms and many many more. See [Flow Networks](https://en.wikipedia.org/wiki/Flow_network) on Wikipedia and elsewhere.
 
