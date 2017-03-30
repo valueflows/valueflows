@@ -27,7 +27,7 @@
 * [REA References](appendix/rea.md)
 * [Uses of the Vocabulary](introduction/usedfor.md)
 
-## Algorithms
+### Algorithms
 * [Overview](appendix/overview.md)
 * [Dependent Demand](appendix/dependent-demand.md)
 * [Critical Path](appendix/critical-path.md)
