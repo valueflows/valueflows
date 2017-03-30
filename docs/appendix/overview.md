@@ -5,7 +5,7 @@ This section is about what computer programs (or humans with pencil and paper an
 * **Dependent Demand** constructs schedules for operational economic networks from recipes
     * Many other scheduling algorithms can be used over the same recipes. 
     * [Gantt charts](https://en.wikipedia.org/wiki/Gantt_chart) are a popular network schedule visualization.
-    ![gantt](https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/GanttChartAnatomy.svg/1200px-GanttChartAnatomy.svg.png)
+    ![gantt](http://www.freeworldacademy.com/newbizzadviser/picts/fw16-2.gif)
     * **Critical Path** is another scheduling algorithm that analyzes a network of processes to figure out the bottlenecks, the processes that need special attention.
 * **Value Rollups** summarize the total value of all inputs to the resulting output from a recipe.
 * **Value Equations** determine how income should be distributed according to contributions to a deliverable item.
