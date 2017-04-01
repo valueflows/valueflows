@@ -40,5 +40,5 @@ There are similarities and differences among the algorithms:
 * [Agent-Based Models](https://en.wikipedia.org/wiki/Agent-based_model)
     * [In biology](https://en.wikipedia.org/wiki/Agent-based_model_in_biology)
     * [In economics](https://en.wikipedia.org/wiki/Agent-based_computational_economics)
-    * [In sociology](https://en.wikipedia.org/wiki/Computational_sociology) and [Social Network Analysis](https://en.wikipedia.org/wiki/Social_network_analysis)
+    * [In sociology](https://en.wikipedia.org/wiki/Computational_sociology), including [Social Network Analysis](https://en.wikipedia.org/wiki/Social_network_analysis)
 * [Complex adaptive systems](https://en.wikipedia.org/wiki/Complex_adaptive_system)
