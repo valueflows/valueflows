@@ -2,6 +2,14 @@
 
 This initial version of the picture does not have any of the proposed differentiation between process-related and exchange-related commitments.  The yaml has some of that.  It is all here to facilitate discussion on the issue, see what it actually might look like.
 
+Use case:
+* The bakery orders 2 bushels of apples from the fruit farm in exchange for 1000 Faircoin.
+* The fruit farm delivers 1.5 bushels of apples (all they had left) to the bakery.
+* The fruit farm does a day of harvesting apples.
+* The bakery order another .5 bushel of apples, since they have a delivery coming anyhow.
+* The fruit farm delivers 1 bushel of apples, so that all orders are fulfilled.
+* The bakery pays for all the apples at once, with 1250 Faircoin.
+
 ![pic](https://github.com/valueflows/valueflows/blob/master/snippets/order-fulfillment.png)
 
 #### Resources before
