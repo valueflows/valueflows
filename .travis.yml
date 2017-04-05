@@ -1,0 +1,11 @@
+language: java
+
+jdk:
+  - oraclejdk8
+
+script: bash .scripts/deploy.sh
+
+env:
+  global:
+  - ENCRYPTION_LABEL: "3c80066119de"
+  - COMMIT_AUTHOR_EMAIL: "djodjo@djodjo.org"
