@@ -7,5 +7,5 @@ script: bash .scripts/deploy.sh
 
 env:
   global:
-  - ENCRYPTION_LABEL: "3c80066119de"
+  - ENCRYPTION_LABEL: "8bce9d1605a0"
   - COMMIT_AUTHOR_EMAIL: "djodjo@djodjo.org"
