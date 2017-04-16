@@ -107,9 +107,44 @@ org:Organization  a         owl:Class ;
         rdfs:subClassOf      foaf:Agent ;
         rdfs:comment      "Usually a more formally defined structure than Group, often legally defined, can be a group or not." .
 
-vf:AgentRelationship  a       owl:Class ;
+vf:AgentRelationship  a  owl:Class ;
         rdfs:label       "vf:AgentRelationship" ;
         rdfs:comment    "An ongoing voluntary association between 2 Agents of any kind." .
+
+vf:subject  a        owl:ObjectProperty ;
+        rdfs:domain  vf:AgentRelationship ;
+        rdfs:label   "subject" ;
+        rdfs:range   foaf:Agent ;
+        rdfs:comment    "The subject of a relationship between 2 agents." .
+
+vf:context  a        owl:ObjectProperty ;
+        rdfs:domain  vf:AgentRelationship ;
+        rdfs:label   "context" ;
+        rdfs:range   foaf:Agent ;
+        rdfs:comment        "The larger context of a relationship between 2 agents, used where the relationship is not relevant outside of that context." .
+
+vf:object  a         owl:ObjectProperty ;
+        rdfs:domain  vf:AgentRelationship ;
+        rdfs:label   "object" ;
+        rdfs:range   foaf:Agent ;
+        rdfs:comment        "The object of a relationship between 2 agents." .
+
+vf:relationType  a    owl:ObjectProperty ;
+		rdfs:comment  "generic defined relationship that exists between 2 agents." ;
+		rdfs:domain   vf:relationType ;
+		rdfs:label    "relationship" ;
+		rdfs:range    owl:Thing .
+
+vf:AgentResourceFlow  a  owl:Class ;
+		rdfs:comment  "AgentResourceFlow relationship" ;
+        rdfs:subClassOf vf:AgentRelationship .
+
+vf:flowingResource  a          owl:ObjectProperty ;
+		rdfs:comment  "the resource that flows from subject to the object" ;
+		rdfs:domain   vf:AgentResourceFlow ;
+		rdfs:range   vf:ResourceTaxonomyItem .
+
+
 
 #vf:Fulfillment  a            owl:Class ;
 #        rdfs:label       "vf:Fulfillment" ;
@@ -247,12 +282,6 @@ vf:underlyingResource
         rdfs:range          vf:EconomicResource ;
         rdfs:comment        "A more concrete resource upon which a resource is based." .
 
-vf:relationship  a          owl:ObjectProperty ;
-        rdfs:label         "relationship" ;
-        rdfs:domain         vf:AgentRelationship ;
-        rdfs:range          rdf:Property ; # think about creating a subproperty for these
-        rdfs:comment        "A verb that describes a generic defined relationship that exists between 2 agents." .
-
 #vf:commitsTo
 #        a                   owl:ObjectProperty ;
 #        rdfs:domain         vf:Commitment ;
@@ -316,23 +345,7 @@ vf:committedReceiver  a       owl:ObjectProperty ;
 #        rdfs:range   foaf:Agent ;
 #        rdfs:comment        "The economic agent who would like to receive a future economic event." .
         
-vf:subject  a        owl:ObjectProperty ;
-        rdfs:domain  vf:AgentRelationship ;
-        rdfs:label   "subject" ;
-        rdfs:range   foaf:Agent ;
-        rdfs:comment    "The subject of a relationship between 2 agents." .
 
-vf:context  a        owl:ObjectProperty ;
-        rdfs:domain  vf:AgentRelationship ;
-        rdfs:label   "context" ;
-        rdfs:range   foaf:Agent ;
-        rdfs:comment        "The larger context of a relationship between 2 agents, used where the relationship is not relevant outside of that context." .
-
-vf:object  a         owl:ObjectProperty ;
-        rdfs:domain  vf:AgentRelationship ;
-        rdfs:label   "object" ;
-        rdfs:range   foaf:Agent ;
-        rdfs:comment        "The object of a relationship between 2 agents." .
 
 vf:under  a       owl:ObjectProperty ;
         rdfs:domain  vf:EconomicEvent ; 
