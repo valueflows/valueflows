@@ -129,10 +129,10 @@ vf:object  a         owl:ObjectProperty ;
         rdfs:range   foaf:Agent ;
         rdfs:comment        "The object of a relationship between 2 agents." .
 
-vf:relationType  a    owl:ObjectProperty ;
+vf:relationshipType  a    owl:ObjectProperty ;
 		rdfs:comment  "generic defined relationship that exists between 2 agents." ;
-		rdfs:domain   vf:relationType ;
-		rdfs:label    "relationship" ;
+		rdfs:domain   vf:AgentRelationship ;
+		rdfs:label    "vf:relationshipType" ;
 		rdfs:range    owl:Thing .
 
 vf:AgentResourceFlow  a  owl:Class ;
