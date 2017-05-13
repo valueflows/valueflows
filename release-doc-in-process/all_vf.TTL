@@ -338,19 +338,19 @@ vf:scope  a        owl:ObjectProperty ;
         rdfs:domain  vf:EconomicEvent ;
         rdfs:label   "scope" ;
         rdfs:range   owl:Thing ;
-        rdfs:comment        "The larger scope or context of an economic event, used for accounting, planning, distributing income." .
+        rdfs:comment        "The larger boundary or context of an economic event, used for accounting, planning, distributing income." .
 
 vf:committedScope  a        owl:ObjectProperty ;
         rdfs:domain  vf:Commitment ;
         rdfs:label   "scope" ;
         rdfs:range   owl:Thing ;
-        rdfs:comment        "The larger scope or context of a commitment, used for accounting, planning." .
+        rdfs:comment        "The larger boundary or context of a commitment, used for accounting, planning." .
 
 #vf:intendedScope  a        owl:ObjectProperty ;
-#        rdfs:domain  vf:EconomicEvent ;
+#        rdfs:domain  vf:Intent ;
 #        rdfs:label   "scope" ;
 #        rdfs:range   owl:Thing ;
-#        rdfs:comment        "The larger scope or context of an economic event, used for accounting, planning, distributing income." .
+#        rdfs:comment        "The larger boundary or context of an economic event, used for planning." .
 
 vf:under  a       owl:ObjectProperty ;
         rdfs:domain  vf:EconomicEvent ; 
