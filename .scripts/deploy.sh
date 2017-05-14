@@ -5,6 +5,7 @@ SOURCE_BRANCH="master"
 TARGET_BRANCH="gh-pages"
 
 function doCheck {
+    mkdir .out
     java -jar .scripts/lod-converter.jar release-doc-in-process/all_vf.TTL TTL vf https://valueflows.github.io/valueflows/vf.ttl
 }
 
