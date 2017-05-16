@@ -1,19 +1,20 @@
-# Scope
+# Scoping
 
 Scope defines a boundary or context for sets of economic events, commitments, and intents.  This can be for purposes of:
 * accounting
 * planning
 * distributing income
 
-Often the "scope" will be an organization (an agent), where work is done, where processes live, where value is created by groups of people. It may be formal or informal organizations, and will include the network(s) themselves.  A "scope" can also be a geographic area (a city, a bioregion, etc.), or a community, or a loose network, or a less formal shorter lived project, or any other bounded concept that is useful for grouping economic events.
+The scope is where work is done, where processes live, where value is created and exchanged. Economic events and commitments can reference an organization (an agent) as an entity that defines their scope. It may be a formal or informal organization, and will include the network(s) themselves.  Or economic events and commitments can reference a geographic area (a city, a bioregion, etc.), or a community, or a loose network, or a less formal shorter lived project, or any other bounded concept that is useful for grouping economic events.
 
-A "scope" is different than an "agreement", although sometimes something that is a scope will have agreements that define some of the economic governance of that scope.
+An economic event or commitment can reference any number of entities to define scopes it belongs to. It is not required that events, commitments, or intents designate a scope.  In fact, sometimes the scope is the same as the provider or recipient agent.  Or sometimes there is no useful scope.
+
+A scope is different than an agreement, although sometimes something that is a scope will have agreements that define some of the economic governance of that scope.
 
 For functions that require traversing value flows, often the value flow will cross from one scope to another.  For example, perhaps another network or organization makes a component that you consume when making your product.  When this happens, there are some options.
 * Standing agreements can govern what happens.
 * A conversation for action might be required to determine what should occur for the specific instance.
 
-It is not required that events, commitments, or intents designate a scope.  In fact, sometimes the scope is the same as the provider or recipient agent.  Or sometimes there is no useful scope.
 
 #### Accounting
 
