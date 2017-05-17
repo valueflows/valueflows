@@ -322,17 +322,35 @@ vf:subject  a        owl:ObjectProperty ;
         rdfs:range   foaf:Agent ;
         rdfs:comment    "The subject of a relationship between 2 agents." .
 
+vf:object  a         owl:ObjectProperty ;
+        rdfs:domain  vf:AgentRelationship ;
+        rdfs:label   "object" ;
+        rdfs:range   foaf:Agent ;
+        rdfs:comment        "The object of a relationship between 2 agents." .
+
 vf:context  a        owl:ObjectProperty ;
         rdfs:domain  vf:AgentRelationship ;
         rdfs:label   "context" ;
         rdfs:range   foaf:Agent ;
         rdfs:comment        "The larger context of a relationship between 2 agents, used where the relationship is not relevant outside of that context." .
 
-vf:object  a         owl:ObjectProperty ;
-        rdfs:domain  vf:AgentRelationship ;
-        rdfs:label   "object" ;
-        rdfs:range   foaf:Agent ;
-        rdfs:comment        "The object of a relationship between 2 agents." .
+vf:scope  a        owl:ObjectProperty ;
+        rdfs:domain  vf:EconomicEvent ;
+        rdfs:label   "scope" ;
+        rdfs:range   owl:Thing ;
+        rdfs:comment        "The larger boundary or context of an economic event, used for accounting, planning, distributing income." .
+
+vf:committedScope  a        owl:ObjectProperty ;
+        rdfs:domain  vf:Commitment ;
+        rdfs:label   "scope" ;
+        rdfs:range   owl:Thing ;
+        rdfs:comment        "The larger boundary or context of a commitment, used for accounting, planning." .
+
+#vf:intendedScope  a        owl:ObjectProperty ;
+#        rdfs:domain  vf:Intent ;
+#        rdfs:label   "scope" ;
+#        rdfs:range   owl:Thing ;
+#        rdfs:comment        "The larger boundary or context of an economic event, used for planning." .
 
 vf:under  a       owl:ObjectProperty ;
         rdfs:domain  vf:EconomicEvent ; 
