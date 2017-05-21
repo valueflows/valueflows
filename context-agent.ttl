@@ -1,0 +1,39 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vf: <https://w3id.org/valueflows/> .
+
+# Classes
+
+vf:Agent
+  a owl:Class ;
+  rdfs:label "Agent" .
+
+vf:Process
+  a owl:Class ;
+  rdfs:label "Process" .
+
+vf:InputOrOutput
+  a owl:Class ;
+  rdfs:label "InputOrOutput" .
+
+# Properties
+
+vf:context
+  a owl:ObjectProperty ;
+  rdfs:label "context" ;
+  rdfs:domain vf:Process ;    # ( vf:Process vf:InputOrOutput ) ;
+  rdfs:range vf:Agent .
+  
+vf:fromContext
+  a owl:ObjectProperty ;
+  rdfs:label "fromContext" ;
+  rdfs:domain vf:InputOrOutput ;
+  rdfs:range vf:Agent .
+  
+vf:toContext
+  a owl:ObjectProperty ;
+  rdfs:label "toContext" ;
+  rdfs:domain vf:InputOrOutput ;
+  rdfs:range vf:Agent .
