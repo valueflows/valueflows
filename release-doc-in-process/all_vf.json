@@ -1,0 +1,1051 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.0), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "undefined" ],
+    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "https://w3id.org/valueflows", "http://schema.org", "http://www.w3.org/2000/01/rdf-schema", "http://www.w3.org/2001/XMLSchema", "http://xmlns.com/foaf/0.1/" ],
+    "title" : {
+      "undefined" : "Value Flows Ontology"
+    },
+    "iri" : "https://w3id.org/valueflows/",
+    "other" : {
+      "type" : [ {
+        "identifier" : "type",
+        "language" : "undefined",
+        "value" : "http://purl.org/adms/assettype/Ontology",
+        "type" : "iri"
+      } ],
+      "title" : [ {
+        "identifier" : "title",
+        "language" : "undefined",
+        "value" : "Value Flows Ontology",
+        "type" : "label"
+      } ],
+      "status" : [ {
+        "identifier" : "status",
+        "language" : "undefined",
+        "value" : "http://purl.org/adms/status/UnderDevelopment",
+        "type" : "iri"
+      } ]
+    }
+  },
+  "namespace" : [ ],
+  "metrics" : {
+    "classCount" : 30,
+    "objectPropertyCount" : 27,
+    "datatypePropertyCount" : 0,
+    "individualCount" : 13
+  },
+  "class" : [ {
+    "id" : "3",
+    "type" : "owl:Class"
+  }, {
+    "id" : "4",
+    "type" : "owl:Class"
+  }, {
+    "id" : "6",
+    "type" : "owl:equivalentClass"
+  }, {
+    "id" : "10",
+    "type" : "owl:Class"
+  }, {
+    "id" : "11",
+    "type" : "owl:Class"
+  }, {
+    "id" : "22",
+    "type" : "owl:equivalentClass"
+  }, {
+    "id" : "5",
+    "type" : "owl:Class"
+  }, {
+    "id" : "24",
+    "type" : "owl:equivalentClass"
+  }, {
+    "id" : "18",
+    "type" : "owl:Class"
+  }, {
+    "id" : "29",
+    "type" : "owl:equivalentClass"
+  }, {
+    "id" : "15",
+    "type" : "owl:Class"
+  }, {
+    "id" : "1",
+    "type" : "owl:Class"
+  }, {
+    "id" : "21",
+    "type" : "owl:Class"
+  }, {
+    "id" : "14",
+    "type" : "owl:equivalentClass"
+  }, {
+    "id" : "38",
+    "type" : "owl:Class"
+  }, {
+    "id" : "35",
+    "type" : "owl:Class"
+  }, {
+    "id" : "37",
+    "type" : "owl:Class"
+  }, {
+    "id" : "20",
+    "type" : "owl:Class"
+  }, {
+    "id" : "59",
+    "type" : "owl:Class"
+  }, {
+    "id" : "60",
+    "type" : "owl:Class"
+  }, {
+    "id" : "33",
+    "type" : "owl:Class"
+  }, {
+    "id" : "23",
+    "type" : "owl:equivalentClass"
+  }, {
+    "id" : "40",
+    "type" : "owl:Class"
+  }, {
+    "id" : "16",
+    "type" : "owl:Class"
+  }, {
+    "id" : "62",
+    "type" : "owl:Class"
+  }, {
+    "id" : "2",
+    "type" : "owl:Class"
+  }, {
+    "id" : "45",
+    "type" : "owl:Class"
+  }, {
+    "id" : "36",
+    "type" : "owl:Class"
+  }, {
+    "id" : "8",
+    "type" : "owl:Class"
+  }, {
+    "id" : "9",
+    "type" : "owl:Class"
+  }, {
+    "id" : "67",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "13",
+    "type" : "owl:Class"
+  }, {
+    "id" : "49",
+    "type" : "owl:Class"
+  }, {
+    "id" : "71",
+    "type" : "owl:Class"
+  }, {
+    "id" : "61",
+    "type" : "owl:Class"
+  }, {
+    "id" : "30",
+    "type" : "owl:equivalentClass"
+  }, {
+    "id" : "26",
+    "type" : "owl:Class"
+  }, {
+    "id" : "27",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "https://w3id.org/valueflows/Transportation",
+    "baseIri" : "https://w3id.org/valueflows",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Transportation",
+      "undefined" : "vf:Transportation"
+    },
+    "id" : "3",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "https://w3id.org/valueflows/ExchangeAgreement",
+    "baseIri" : "https://w3id.org/valueflows",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ExchangeAgreement",
+      "undefined" : "vf:ExchangeAgreement"
+    },
+    "id" : "4",
+    "superClasses" : [ "5" ]
+  }, {
+    "iri" : "http://schema.org/Person",
+    "baseIri" : "http://schema.org",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Person"
+    },
+    "attributes" : [ "external", "equivalent" ],
+    "id" : "6"
+  }, {
+    "iri" : "https://w3id.org/valueflows/ResourceTaxonomyItem",
+    "baseIri" : "https://w3id.org/valueflows",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ResourceTaxonomyItem",
+      "undefined" : "vf:ResourceTaxonomyItem"
+    },
+    "id" : "10",
+    "superClasses" : [ "11" ]
+  }, {
+    "iri" : "https://w3id.org/valueflows/TaxonomyItem",
+    "baseIri" : "https://w3id.org/valueflows",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "TaxonomyItem",
+      "undefined" : "vf:TaxonomyItem"
+    },
+    "subClasses" : [ "15", "16", "10" ],
+    "id" : "11"
+  }, {
+    "iri" : "https://w3id.org/valueflows/Group",
+    "equivalent" : [ "23" ],
+    "baseIri" : "https://w3id.org/valueflows",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Group",
+      "undefined" : "vf:Group"
+    },
+    "attributes" : [ "equivalent" ],
+    "id" : "22",
+    "superClasses" : [ "14" ]
+  }, {
+    "iri" : "https://w3id.org/valueflows/Agreement",
+    "baseIri" : "https://w3id.org/valueflows",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Agreement",
+      "undefined" : "vf:Agreement"
+    },
+    "subClasses" : [ "4" ],
+    "id" : "5"
+  }, {
+    "iri" : "http://xmlns.com/foaf/0.1/#Agent",
+    "baseIri" : "http://xmlns.com/foaf/0.1/",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Agent"
+    },
+    "attributes" : [ "external", "equivalent" ],
+    "id" : "24"
+  }, {
+    "iri" : "https://w3id.org/valueflows/Relationship",
+    "baseIri" : "https://w3id.org/valueflows",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Relationship",
+      "undefined" : "vf:Relationship"
+    },
+    "id" : "18"
+  }, {
+    "iri" : "https://w3id.org/valueflows/Person",
+    "equivalent" : [ "30", "6" ],
+    "baseIri" : "https://w3id.org/valueflows",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Person",
+      "undefined" : "vf:Person"
+    },
+    "attributes" : [ "equivalent" ],
+    "id" : "29",
+    "superClasses" : [ "14" ]
+  }, {
+    "iri" : "https://w3id.org/valueflows/ProcessTaxonomyItem",
+    "baseIri" : "https://w3id.org/valueflows",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ProcessTaxonomyItem",
+      "undefined" : "vf:ProcessTaxonomyItem"
+    },
+    "id" : "15",
+    "superClasses" : [ "11" ]
+  }, {
+    "iri" : "https://w3id.org/valueflows/Intent",
+    "baseIri" : "https://w3id.org/valueflows",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Intent",
+      "undefined" : "vf:Intent"
+    },
+    "id" : "1"
+  }, {
+    "iri" : "https://w3id.org/valueflows/Resource",
+    "baseIri" : "https://w3id.org/valueflows",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Resource",
+      "undefined" : "vf:Resource"
+    },
+    "subClasses" : [ "35", "36", "37", "38" ],
+    "id" : "21"
+  }, {
+    "iri" : "https://w3id.org/valueflows/Agent",
+    "equivalent" : [ "24" ],
+    "baseIri" : "https://w3id.org/valueflows",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Agent",
+      "undefined" : "vf:Agent"
+    },
+    "subClasses" : [ "29", "22" ],
+    "attributes" : [ "equivalent" ],
+    "id" : "14"
+  }, {
+    "iri" : "https://w3id.org/valueflows/MaterialItem",
+    "baseIri" : "https://w3id.org/valueflows",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "MaterialItem",
+      "undefined" : "vf:MaterialItem"
+    },
+    "id" : "38",
+    "superClasses" : [ "21" ]
+  }, {
+    "iri" : "https://w3id.org/valueflows/Currency",
+    "baseIri" : "https://w3id.org/valueflows",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Currency",
+      "undefined" : "vf:Currency"
+    },
+    "id" : "35",
+    "superClasses" : [ "21" ]
+  }, {
+    "iri" : "https://w3id.org/valueflows/Work",
+    "baseIri" : "https://w3id.org/valueflows",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Work",
+      "undefined" : "vf:Work"
+    },
+    "id" : "37",
+    "superClasses" : [ "21" ]
+  }, {
+    "instances" : 0,
+    "union" : [ "49", "1" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "20"
+  }, {
+    "instances" : 0,
+    "union" : [ "49", "1", "21" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "59"
+  }, {
+    "instances" : 0,
+    "union" : [ "61", "49", "1" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "60"
+  }, {
+    "instances" : 0,
+    "union" : [ "9", "49", "1" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "33"
+  }, {
+    "iri" : "http://xmlns.com/foaf/0.1/#Group",
+    "baseIri" : "http://xmlns.com/foaf/0.1/",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Group"
+    },
+    "attributes" : [ "external", "equivalent" ],
+    "id" : "23"
+  }, {
+    "instances" : 0,
+    "union" : [ "9", "49", "1" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "40"
+  }, {
+    "iri" : "https://w3id.org/valueflows/ExchangeTaxonomyItem",
+    "baseIri" : "https://w3id.org/valueflows",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ExchangeTaxonomyItem",
+      "undefined" : "vf:ExchangeTaxonomyItem"
+    },
+    "id" : "16",
+    "superClasses" : [ "11" ]
+  }, {
+    "instances" : 0,
+    "union" : [ "9", "49", "1" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "62"
+  }, {
+    "iri" : "https://w3id.org/valueflows/Process",
+    "baseIri" : "https://w3id.org/valueflows",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Process",
+      "undefined" : "vf:Process"
+    },
+    "subClasses" : [ "3", "45" ],
+    "id" : "2"
+  }, {
+    "iri" : "https://w3id.org/valueflows/Transformation",
+    "baseIri" : "https://w3id.org/valueflows",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Transformation",
+      "undefined" : "vf:Transformation"
+    },
+    "id" : "45",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "https://w3id.org/valueflows/Service",
+    "baseIri" : "https://w3id.org/valueflows",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Service",
+      "undefined" : "vf:Service"
+    },
+    "id" : "36",
+    "superClasses" : [ "21" ]
+  }, {
+    "iri" : "https://w3id.org/valueflows/Appreciation",
+    "baseIri" : "https://w3id.org/valueflows",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Appreciation",
+      "undefined" : "vf:Appreciation"
+    },
+    "id" : "8"
+  }, {
+    "iri" : "https://w3id.org/valueflows/Event",
+    "baseIri" : "https://w3id.org/valueflows",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Event",
+      "undefined" : "vf:Event"
+    },
+    "id" : "9"
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "67",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "instances" : 0,
+    "union" : [ "9", "49", "1" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "13"
+  }, {
+    "iri" : "https://w3id.org/valueflows/Commitment",
+    "baseIri" : "https://w3id.org/valueflows",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Commitment",
+      "undefined" : "vf:Commitment"
+    },
+    "id" : "49"
+  }, {
+    "iri" : "https://w3id.org/valueflows/Location",
+    "baseIri" : "https://w3id.org/valueflows",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Location",
+      "undefined" : "vf:Location"
+    },
+    "id" : "71"
+  }, {
+    "iri" : "https://w3id.org/valueflows/Fulfillment",
+    "baseIri" : "https://w3id.org/valueflows",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Fulfillment",
+      "undefined" : "vf:Fulfillment"
+    },
+    "id" : "61"
+  }, {
+    "iri" : "http://xmlns.com/foaf/0.1/#Person",
+    "baseIri" : "http://xmlns.com/foaf/0.1/",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Person"
+    },
+    "attributes" : [ "external", "equivalent" ],
+    "id" : "30"
+  }, {
+    "iri" : "https://w3id.org/valueflows/Action",
+    "baseIri" : "https://w3id.org/valueflows",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Action",
+      "undefined" : "vf:Action"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/valueflows/decrement",
+      "baseIri" : "https://w3id.org/valueflows",
+      "labels" : {
+        "IRI-based" : "decrement",
+        "undefined" : "decrement"
+      }
+    }, {
+      "iri" : "https://w3id.org/valueflows/produce",
+      "baseIri" : "https://w3id.org/valueflows",
+      "labels" : {
+        "IRI-based" : "produce",
+        "undefined" : "produce"
+      }
+    }, {
+      "iri" : "https://w3id.org/valueflows/accept",
+      "baseIri" : "https://w3id.org/valueflows",
+      "labels" : {
+        "IRI-based" : "accept",
+        "undefined" : "accept"
+      }
+    }, {
+      "iri" : "https://w3id.org/valueflows/load",
+      "baseIri" : "https://w3id.org/valueflows",
+      "labels" : {
+        "IRI-based" : "load",
+        "undefined" : "load"
+      }
+    }, {
+      "iri" : "https://w3id.org/valueflows/consume",
+      "baseIri" : "https://w3id.org/valueflows",
+      "labels" : {
+        "IRI-based" : "consume",
+        "undefined" : "consume"
+      }
+    }, {
+      "iri" : "https://w3id.org/valueflows/increment",
+      "baseIri" : "https://w3id.org/valueflows",
+      "labels" : {
+        "IRI-based" : "increment",
+        "undefined" : "increment"
+      }
+    }, {
+      "iri" : "https://w3id.org/valueflows/issue",
+      "baseIri" : "https://w3id.org/valueflows",
+      "labels" : {
+        "IRI-based" : "issue",
+        "undefined" : "issue"
+      }
+    }, {
+      "iri" : "https://w3id.org/valueflows/change",
+      "baseIri" : "https://w3id.org/valueflows",
+      "labels" : {
+        "IRI-based" : "change",
+        "undefined" : "change"
+      }
+    }, {
+      "iri" : "https://w3id.org/valueflows/work",
+      "baseIri" : "https://w3id.org/valueflows",
+      "labels" : {
+        "IRI-based" : "work",
+        "undefined" : "work"
+      }
+    }, {
+      "iri" : "https://w3id.org/valueflows/use",
+      "baseIri" : "https://w3id.org/valueflows",
+      "labels" : {
+        "IRI-based" : "use",
+        "undefined" : "use"
+      }
+    }, {
+      "iri" : "https://w3id.org/valueflows/unload",
+      "baseIri" : "https://w3id.org/valueflows",
+      "labels" : {
+        "IRI-based" : "unload",
+        "undefined" : "unload"
+      }
+    }, {
+      "iri" : "https://w3id.org/valueflows/cite",
+      "baseIri" : "https://w3id.org/valueflows",
+      "labels" : {
+        "IRI-based" : "cite",
+        "undefined" : "cite"
+      }
+    }, {
+      "iri" : "https://w3id.org/valueflows/receive",
+      "baseIri" : "https://w3id.org/valueflows",
+      "labels" : {
+        "IRI-based" : "receive",
+        "undefined" : "receive"
+      }
+    } ],
+    "id" : "26",
+    "superClasses" : [ "27" ]
+  }, {
+    "iri" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+    "baseIri" : "http://www.w3.org/1999/02/22-rdf-syntax-ns",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Property"
+    },
+    "subClasses" : [ "26" ],
+    "attributes" : [ "external" ],
+    "id" : "27"
+  } ],
+  "property" : [ {
+    "id" : "0",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "7",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "12",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "17",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "19",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "25",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "28",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "31",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "32",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "34",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "39",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "41",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "42",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "43",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "44",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "46",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "47",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "48",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "50",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "51",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "52",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "53",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "54",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "55",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "56",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "57",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "58",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "63",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "64",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "65",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "66",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "68",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "69",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "70",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "72",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "73",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "74",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "75",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "76",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "77",
+    "type" : "owl:objectProperty"
+  } ],
+  "propertyAttribute" : [ {
+    "iri" : "https://w3id.org/valueflows/intendedOutputOf",
+    "baseIri" : "https://w3id.org/valueflows",
+    "range" : "2",
+    "label" : {
+      "IRI-based" : "intendedOutputOf"
+    },
+    "domain" : "1",
+    "attributes" : [ "object" ],
+    "id" : "0"
+  }, {
+    "iri" : "https://w3id.org/valueflows/appreciationWith",
+    "baseIri" : "https://w3id.org/valueflows",
+    "range" : "9",
+    "label" : {
+      "IRI-based" : "appreciationWith"
+    },
+    "domain" : "8",
+    "attributes" : [ "object" ],
+    "id" : "7"
+  }, {
+    "iri" : "https://w3id.org/valueflows/provider",
+    "baseIri" : "https://w3id.org/valueflows",
+    "range" : "14",
+    "label" : {
+      "IRI-based" : "provider",
+      "undefined" : "provider"
+    },
+    "domain" : "13",
+    "attributes" : [ "object" ],
+    "id" : "12"
+  }, {
+    "iri" : "https://w3id.org/valueflows/object",
+    "baseIri" : "https://w3id.org/valueflows",
+    "range" : "14",
+    "label" : {
+      "IRI-based" : "object",
+      "undefined" : "object"
+    },
+    "domain" : "18",
+    "attributes" : [ "object" ],
+    "id" : "17"
+  }, {
+    "iri" : "https://w3id.org/valueflows/involveResource",
+    "baseIri" : "https://w3id.org/valueflows",
+    "range" : "21",
+    "label" : {
+      "IRI-based" : "involveResource"
+    },
+    "domain" : "20",
+    "attributes" : [ "object" ],
+    "id" : "19"
+  }, {
+    "range" : "27",
+    "domain" : "26",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "25"
+  }, {
+    "iri" : "https://w3id.org/valueflows/inputOf",
+    "baseIri" : "https://w3id.org/valueflows",
+    "range" : "2",
+    "label" : {
+      "IRI-based" : "inputOf"
+    },
+    "domain" : "9",
+    "attributes" : [ "object" ],
+    "id" : "28"
+  }, {
+    "iri" : "https://w3id.org/valueflows/underlyingResource",
+    "baseIri" : "https://w3id.org/valueflows",
+    "range" : "21",
+    "label" : {
+      "IRI-based" : "underlyingResource"
+    },
+    "domain" : "21",
+    "attributes" : [ "object" ],
+    "id" : "31"
+  }, {
+    "iri" : "https://w3id.org/valueflows/receiver",
+    "baseIri" : "https://w3id.org/valueflows",
+    "range" : "14",
+    "label" : {
+      "IRI-based" : "receiver",
+      "undefined" : "receiver"
+    },
+    "domain" : "33",
+    "attributes" : [ "object" ],
+    "id" : "32"
+  }, {
+    "iri" : "https://w3id.org/valueflows/affects",
+    "baseIri" : "https://w3id.org/valueflows",
+    "range" : "21",
+    "label" : {
+      "IRI-based" : "affects"
+    },
+    "domain" : "9",
+    "attributes" : [ "object" ],
+    "id" : "34"
+  }, {
+    "iri" : "https://w3id.org/valueflows/underAgreement",
+    "baseIri" : "https://w3id.org/valueflows",
+    "range" : "5",
+    "label" : {
+      "IRI-based" : "underAgreement",
+      "undefined" : "underAgreement"
+    },
+    "domain" : "40",
+    "attributes" : [ "object" ],
+    "id" : "39"
+  }, {
+    "range" : "2",
+    "domain" : "3",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "41"
+  }, {
+    "range" : "14",
+    "domain" : "22",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "42"
+  }, {
+    "iri" : "https://w3id.org/valueflows/relationship",
+    "baseIri" : "https://w3id.org/valueflows",
+    "range" : "27",
+    "label" : {
+      "IRI-based" : "relationship",
+      "undefined" : "vf:relationship"
+    },
+    "domain" : "18",
+    "attributes" : [ "object" ],
+    "id" : "43"
+  }, {
+    "range" : "2",
+    "domain" : "45",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "44"
+  }, {
+    "range" : "21",
+    "domain" : "37",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "46"
+  }, {
+    "range" : "21",
+    "domain" : "36",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "47"
+  }, {
+    "iri" : "https://w3id.org/valueflows/inExchangeFor",
+    "baseIri" : "https://w3id.org/valueflows",
+    "range" : "9",
+    "label" : {
+      "IRI-based" : "inExchangeFor",
+      "undefined" : "inExchangeFor"
+    },
+    "domain" : "49",
+    "attributes" : [ "object" ],
+    "id" : "48"
+  }, {
+    "range" : "14",
+    "domain" : "29",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "50"
+  }, {
+    "range" : "21",
+    "domain" : "38",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "51"
+  }, {
+    "range" : "11",
+    "domain" : "10",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "52"
+  }, {
+    "iri" : "https://w3id.org/valueflows/processCategory",
+    "baseIri" : "https://w3id.org/valueflows",
+    "range" : "15",
+    "label" : {
+      "IRI-based" : "processCategory"
+    },
+    "domain" : "2",
+    "attributes" : [ "object" ],
+    "id" : "53"
+  }, {
+    "range" : "21",
+    "domain" : "35",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "54"
+  }, {
+    "iri" : "https://w3id.org/valueflows/exchangeCategory",
+    "baseIri" : "https://w3id.org/valueflows",
+    "range" : "16",
+    "label" : {
+      "IRI-based" : "exchangeCategory"
+    },
+    "domain" : "4",
+    "attributes" : [ "object" ],
+    "id" : "55"
+  }, {
+    "range" : "5",
+    "domain" : "4",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "56"
+  }, {
+    "iri" : "https://w3id.org/valueflows/outputOf",
+    "baseIri" : "https://w3id.org/valueflows",
+    "range" : "2",
+    "label" : {
+      "IRI-based" : "outputOf"
+    },
+    "domain" : "9",
+    "attributes" : [ "object" ],
+    "id" : "57"
+  }, {
+    "iri" : "https://w3id.org/valueflows/subject",
+    "baseIri" : "https://w3id.org/valueflows",
+    "range" : "14",
+    "label" : {
+      "IRI-based" : "subject",
+      "undefined" : "vf:subject"
+    },
+    "domain" : "18",
+    "attributes" : [ "object" ],
+    "id" : "58"
+  }, {
+    "iri" : "https://w3id.org/valueflows/commitsTo",
+    "baseIri" : "https://w3id.org/valueflows",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "commitsTo"
+    },
+    "domain" : "49",
+    "attributes" : [ "object" ],
+    "id" : "63"
+  }, {
+    "range" : "11",
+    "domain" : "15",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "64"
+  }, {
+    "iri" : "https://w3id.org/valueflows/appreciationOf",
+    "baseIri" : "https://w3id.org/valueflows",
+    "range" : "9",
+    "label" : {
+      "IRI-based" : "appreciationOf"
+    },
+    "domain" : "8",
+    "attributes" : [ "object" ],
+    "id" : "65"
+  }, {
+    "iri" : "https://w3id.org/valueflows/parent",
+    "baseIri" : "https://w3id.org/valueflows",
+    "range" : "67",
+    "label" : {
+      "IRI-based" : "parent",
+      "undefined" : "parent"
+    },
+    "domain" : "67",
+    "attributes" : [ "object" ],
+    "id" : "66"
+  }, {
+    "range" : "11",
+    "domain" : "16",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "68"
+  }, {
+    "iri" : "https://w3id.org/valueflows/commitedInputOf",
+    "baseIri" : "https://w3id.org/valueflows",
+    "range" : "2",
+    "label" : {
+      "IRI-based" : "commitedInputOf"
+    },
+    "domain" : "49",
+    "attributes" : [ "object" ],
+    "id" : "69"
+  }, {
+    "iri" : "https://w3id.org/valueflows/resourceCategory",
+    "baseIri" : "https://w3id.org/valueflows",
+    "range" : "10",
+    "label" : {
+      "IRI-based" : "resourceCategory",
+      "undefined" : "category"
+    },
+    "domain" : "59",
+    "attributes" : [ "object" ],
+    "id" : "70"
+  }, {
+    "iri" : "https://w3id.org/valueflows/intendedInputOf",
+    "baseIri" : "https://w3id.org/valueflows",
+    "range" : "2",
+    "label" : {
+      "IRI-based" : "intendedInputOf"
+    },
+    "domain" : "1",
+    "attributes" : [ "object" ],
+    "id" : "72"
+  }, {
+    "iri" : "https://w3id.org/valueflows/commitedOutputOf",
+    "baseIri" : "https://w3id.org/valueflows",
+    "range" : "2",
+    "label" : {
+      "IRI-based" : "commitedOutputOf"
+    },
+    "domain" : "49",
+    "attributes" : [ "object" ],
+    "id" : "73"
+  }, {
+    "iri" : "https://w3id.org/valueflows/fulfills",
+    "baseIri" : "https://w3id.org/valueflows",
+    "range" : "60",
+    "label" : {
+      "IRI-based" : "fulfills"
+    },
+    "domain" : "9",
+    "attributes" : [ "object" ],
+    "id" : "74"
+  }, {
+    "iri" : "https://w3id.org/valueflows/contains",
+    "baseIri" : "https://w3id.org/valueflows",
+    "range" : "21",
+    "label" : {
+      "IRI-based" : "contains",
+      "undefined" : "contains"
+    },
+    "domain" : "21",
+    "attributes" : [ "object" ],
+    "id" : "75"
+  }, {
+    "iri" : "https://w3id.org/valueflows/action",
+    "baseIri" : "https://w3id.org/valueflows",
+    "range" : "26",
+    "label" : {
+      "IRI-based" : "action"
+    },
+    "domain" : "62",
+    "attributes" : [ "object" ],
+    "id" : "76"
+  }, {
+    "iri" : "https://w3id.org/valueflows/context",
+    "baseIri" : "https://w3id.org/valueflows",
+    "range" : "14",
+    "label" : {
+      "IRI-based" : "context",
+      "undefined" : "context"
+    },
+    "domain" : "18",
+    "attributes" : [ "object" ],
+    "id" : "77"
+  } ]
+}
