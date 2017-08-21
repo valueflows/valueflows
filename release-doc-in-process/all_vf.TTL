@@ -16,15 +16,15 @@
     dcterms:status <http://purl.org/adms/status/UnderDevelopment>.
 
 
-# ABSTRACT CLASSES (KNOWLEDGE LAYER)
+# ABSTRACT / CLASSIFICATION CLASSES (KNOWLEDGE LAYER)
 
 vf:Action  a           owl:Class ;
         rdfs:label           "vf:Action" ;
         rdfs:subClassOf   rdf:Property ;
         rdfs:comment   "An action verb defining the kind of event, commitment, or intent." .
 
-vf:AgentRelationshipClassification  a  owl:Class ;
-        rdfs:label           "vf:AgentRelationshipClassification" ;
+vf:AgentRelationshipRole  a  owl:Class ;
+        rdfs:label           "vf:AgentRelationshipRole" ;
         rdfs:subClassOf   rdf:Property ;
         rdfs:comment   "A relationship role defining the kind of association one agent can have with another." .
 

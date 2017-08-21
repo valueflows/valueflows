@@ -17,6 +17,7 @@
 * [Process](introduction/processes.md)
 * [Exchange](introduction/exchanges.md)
 * [Intent and Commitment](introduction/intents.md)
+* [Scoping](introduction/scope.md)
 * [Conversation for Action](introduction/cfa.md)
 * [Accounting](introduction/accounting.md)
 
