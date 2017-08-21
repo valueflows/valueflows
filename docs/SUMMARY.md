@@ -18,6 +18,7 @@
 * [Exchange](introduction/exchanges.md)
 * [Intent and Commitment](introduction/intents.md)
 * [Scoping](introduction/scope.md)
+* [Classification](introduction/classification.md)
 * [Conversation for Action](introduction/cfa.md)
 * [Accounting](introduction/accounting.md)
 
