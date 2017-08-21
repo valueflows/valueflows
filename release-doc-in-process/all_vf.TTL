@@ -1,4 +1,4 @@
-@prefix vf:    <https://w3id.org/valueflows/#> .
+@prefix vf:    <https://w3id.org/valueflows#> .
 @prefix schema: <http://schema.org/> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix owl:   <http://www.w3.org/2002/07/owl#> .
@@ -15,8 +15,8 @@
     dcterms:type <http://purl.org/adms/assettype/Ontology>;
     dcterms:status <http://purl.org/adms/status/UnderDevelopment>.
 
-        
-# ABSTRACT CLASSES
+
+# ABSTRACT CLASSES (KNOWLEDGE LAYER)
 
 vf:Action  a           owl:Class ;
         rdfs:label           "vf:Action" ;
@@ -111,18 +111,18 @@ vf:AgentRelationship  a       owl:Class ;
         rdfs:label       "vf:AgentRelationship" ;
         rdfs:comment    "An ongoing voluntary association between 2 Agents of any kind." .
 
-#vf:Fulfillment  a            owl:Class ;
-#        rdfs:label       "vf:Fulfillment" ;
-#        rdfs:comment   "The quantity that the vf:EconomicEvent fulfilled towards the vf:Commitment." .
-        
+vf:Fulfillment  a            owl:Class ;
+        rdfs:label       "vf:Fulfillment" ;
+        rdfs:comment   "The quantity that the vf:EconomicEvent fulfilled towards the vf:Commitment." .
+
 vf:Appreciation  a            owl:Class ;
         rdfs:label       "vf:Appreciation" ;
         rdfs:comment     "A way to tie an economic event that is given in loose fulfilment for another economic event, without commitments or expectations. Supports the gift economy." .
 
 vf:Location  a           owl:Class ;
         rdfs:label       "vf:Location" .
-        
-        
+
+
 # not sure about these
 
 
@@ -215,7 +215,7 @@ vf:committedCategory
 # will need one for Intent too
 
 # waiting to do the recipe model
-        
+
 #vf:processCategory
 #        a                   owl:ObjectProperty ;
 #        rdfs:domain         vf:Process ;
@@ -303,7 +303,7 @@ vf:committedReceiver  a       owl:ObjectProperty ;
         rdfs:label   "committed receiver" ;
         rdfs:range   foaf:Agent ;
         rdfs:comment        "The economic agent whom a future economic event is committed to." .
-        
+
 #vf:intendedProvider  a       owl:ObjectProperty ;
 #        rdfs:domain  vf:Intent ;
 #        rdfs:label   "provider" ;
@@ -315,7 +315,7 @@ vf:committedReceiver  a       owl:ObjectProperty ;
 #        rdfs:label   "receiver" ;
 #        rdfs:range   foaf:Agent ;
 #        rdfs:comment        "The economic agent who would like to receive a future economic event." .
-        
+
 vf:subject  a        owl:ObjectProperty ;
         rdfs:domain  vf:AgentRelationship ;
         rdfs:label   "subject" ;
@@ -338,19 +338,19 @@ vf:scope  a        owl:ObjectProperty ;
         rdfs:domain  vf:EconomicEvent ;
         rdfs:label   "scope" ;
         rdfs:range   owl:Thing ;
-        rdfs:comment        "The larger scope or context of an economic event, used for accounting, planning, distributing income." .
+        rdfs:comment        "The larger boundary or context of an economic event, used for accounting, planning, distributing income." .
 
 vf:committedScope  a        owl:ObjectProperty ;
         rdfs:domain  vf:Commitment ;
         rdfs:label   "scope" ;
         rdfs:range   owl:Thing ;
-        rdfs:comment        "The larger scope or context of a commitment, used for accounting, planning." .
+        rdfs:comment        "The larger boundary or context of a commitment, used for accounting, planning." .
 
 #vf:intendedScope  a        owl:ObjectProperty ;
-#        rdfs:domain  vf:EconomicEvent ;
+#        rdfs:domain  vf:Intent ;
 #        rdfs:label   "scope" ;
 #        rdfs:range   owl:Thing ;
-#        rdfs:comment        "The larger scope or context of an economic event, used for accounting, planning, distributing income." .
+#        rdfs:comment        "The larger boundary or context of an economic event, used for planning." .
 
 vf:under  a       owl:ObjectProperty ;
         rdfs:domain  vf:EconomicEvent ; 
@@ -388,19 +388,19 @@ vf:affectedQuantity a owl:ObjectProperty ;
         rdfs:domain     vf:EconomicEvent ;
         rdfs:range      qudt:QuantityValue ;
         rdfs:comment    "The quantity and unit of the event. This is the quantity that could be used to increment or decrement a resource, depending on the type of resource and type of event." .
-        
-#vf:fulfilledQuantity a owl:ObjectProperty ;
-#        rdfs:label      "fulfilled quantity" ;
-#        rdfs:domain     vf:Fulfillment ;
-#        rdfs:range      qudt:QuantityValue ;
-#        rdfs:comment    "The quantity of the fulfillment of an event towards a commitment." .
+
+vf:fulfilledQuantity a owl:ObjectProperty ;
+        rdfs:label      "fulfilled quantity" ;
+        rdfs:domain     vf:Fulfillment ;
+        rdfs:range      qudt:QuantityValue ;
+        rdfs:comment    "The quantity of the fulfillment of an event towards a commitment." .
 
 vf:currentLocation a owl:ObjectProperty ;
         rdfs:label   "current location" ;
         rdfs:domain  vf:EconomicResource ;
         rdfs:range   vf:Location ;
         rdfs:comment        "The current place an economic resource is located.  Could be at any level of granularity, from a town to an address to a warehouse location.  Should be mappable." .
-        
+
 vf:primaryLocation a owl:ObjectProperty ;
         rdfs:label   "primary location" ;
         rdfs:domain  foaf:Agent ;
@@ -437,29 +437,17 @@ vf:trackingIdentifier a owl:AnnotationProperty ;
         rdfs:domain     vf:EconomicResource ;   
         rdfs:comment    "Sometimes called lot number, used for trackable batched resources. Sometimes called serial number, used when each item must have a trackable identifier (like a computer). Could also be used for other unique tracking identifiers needed for resources." .  
 
-#vf:fulfilledBy          a owl:ObjectProperty ;
-#        rdfs:label      "fulfilled by" ;
-#        rdfs:range      vf:EconomicEvent ;
-#        rdfs:domain     vf:Fulfillment ;
-#        rdfs:comment    "The economic event which completely or partially fulfills a commitment, used only for exchanges." .
+vf:fulfilledBy          a owl:ObjectProperty ;
+        rdfs:label      "fulfilled by" ;
+        rdfs:range      vf:EconomicEvent ;
+        rdfs:domain     vf:Fulfillment ;
+        rdfs:comment    "The economic event which completely or partially fulfills a commitment." .
 
-#vf:fulfillsExchange     a owl:ObjectProperty ;
-#        rdfs:label      "fulfills exchange" ;
-#        rdfs:range      vf:Commitment ;
-#        rdfs:domain     vf:Fulfillment ;
-#        rdfs:comment    "The commitment which is completely or partially fulfilled by an economic event, used only for exchanges." .
-
-#vf:fulfillsProcess     a owl:ObjectProperty ;
-#        rdfs:label      "fulfills process" ;
-#        rdfs:range      vf:Commitment ;
-#        rdfs:domain     vf:EconomicEvent ;
-#        rdfs:comment    "The economic event which completely or partially fulfills a commitment, used only for processes." .
-
-vf:fulfills             a owl:ObjectProperty ;
+vf:fulfills     a owl:ObjectProperty ;
         rdfs:label      "fulfills" ;
         rdfs:range      vf:Commitment ;
-        rdfs:domain     vf:EconomicEvent ;
-        rdfs:comment    "The economic event which completely or partially fulfills a commitment on a process." .
+        rdfs:domain     vf:Fulfillment ;
+        rdfs:comment    "The commitment which is completely or partially fulfilled by an economic event." .
 
 # isSubstitutable "Defines if any resources of that type can be freely substituted for any other resource of that type when used, consumed, traded, etc."
 

@@ -26,4 +26,14 @@
 ## Appendices
 * [REA References](appendix/rea.md)
 * [Uses of the Vocabulary](introduction/usedfor.md)
-* [Dependent Demand Logic](introduction/planning.md)
+
+### Algorithms
+* [Overview](appendix/overview.md)
+* [Dependent Demand](appendix/dependent-demand.md)
+* [Critical Path](appendix/critical-path.md)
+* [Value Rollup](appendix/rollup.md)
+* [Value Equations](appendix/equations.md)
+* [Track and Trace](appendix/track.md)
+* [Provenance](appendix/provenance.md)
+* [Cash Flows](appendix/cashflows.md)
+* [Network Flows](appendix/netflows.md)
