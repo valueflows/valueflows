@@ -194,14 +194,14 @@ vf:committedOutputOf
 #        rdfs:domain         vf:Intent ;
 #        rdfs:range          vf:Process .
 
-vf:resourceClassifiedBy
+vf:resourceClassifiedAs
         a                   owl:ObjectProperty ;
         rdfs:label          "resource classified by" ;
         rdfs:domain         vf:EconomicResource ;
         rdfs:range          vf:ResourceClassification ;
         rdfs:comment        "Relates a resource to its primary classification, as part of describing that resource." .
 
-vf:committedResourceClassifiedBy
+vf:committedResourceClassifiedAs
         a                   owl:ObjectProperty ;
         rdfs:label          "committed resource classified by" ;
         rdfs:domain         vf:Commitment ;
@@ -210,14 +210,14 @@ vf:committedResourceClassifiedBy
 
 # will need one for Intent too
 
-vf:processClassifiedBy
+vf:processClassifiedAs
         a                   owl:ObjectProperty ;
         rdfs:label          "process classified by" ;
         rdfs:domain         vf:Process ;
         rdfs:range          vf:ProcessClassification ;
         rdfs:comment        "The primary classification that describes a process, at any level of granularity." .
 
-vf:exchangeClassifiedBy
+vf:exchangeClassifiedAs
         a                   owl:ObjectProperty ;
         rdfs:label          "exchange classified by" ;
         rdfs:domain         vf:ExchangeAgreement ;
