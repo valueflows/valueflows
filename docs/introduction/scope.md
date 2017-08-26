@@ -15,7 +15,6 @@ For functions that require traversing value flows, often the value flow will cro
 * Standing agreements can govern what happens.
 * A conversation for action might be required to determine what should occur for the specific instance.
 
-
 #### Accounting
 
 Accounting is usually done for an agent or other bounded scope. Where a computer system supports one enterprise, this is simple.  When a computer system supports many organizations or there is a distributed network of economic activity, it is useful to be able to segregate the accounting using scope.  It basically enables multi-party accounting in a networked scenario.

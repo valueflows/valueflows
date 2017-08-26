@@ -16,34 +16,30 @@
     dcterms:status <http://purl.org/adms/status/UnderDevelopment>.
 
 
-# ABSTRACT CLASSES (KNOWLEDGE LAYER)
+# ABSTRACT / CLASSIFICATION CLASSES (KNOWLEDGE LAYER)
 
 vf:Action  a           owl:Class ;
         rdfs:label           "vf:Action" ;
         rdfs:subClassOf   rdf:Property ;
         rdfs:comment   "An action verb defining the kind of event, commitment, or intent." .
 
-#vf:AgentRelationshipRole  a  owl:Class ;
-#        rdfs:label           "vf:AgentRelationshipRole" ;
-#        rdfs:subClassOf   rdf:Property ;
-#        rdfs:comment   "A relationship role defining the kind of association one agent can have with another." .
+vf:AgentRelationshipRole  a  owl:Class ;
+        rdfs:label           "vf:AgentRelationshipRole" ;
+        rdfs:subClassOf   rdf:Property ;
+        rdfs:comment   "A relationship role defining the kind of association one agent can have with another." .
 
-#vf:TaxonomyItem  a           owl:Class ;
-#        rdfs:label           "vf:TaxonomyItem" .
+vf:ResourceClassification  a    owl:Class ;
+        rdfs:label           "vf:ResourceClassification" ;
+        rdfs:comment   "A resource category, model, taxonomy item, tag, facet value, or other kind of classification." .
 
-vf:ResourceTaxonomyItem  a    owl:Class ;
-        rdfs:label           "vf:ResourceTaxonomyItem" ;
-        #rdfs:subClassOf      vf:TaxonomyItem ;
-        rdfs:comment   "A resource category, part of a taxonomy." .
+vf:ProcessClassification  a           owl:Class ;
+        rdfs:label           "vf:ProcessClassification" ;
+        rdfs:comment   "A process category, model, taxonomy item, tag, facet value, or other kind of classification." .
 
-#vf:ProcessTaxonomyItem  a           owl:Class ;
-#        rdfs:label           "vf:ProcessTaxonomyItem" ;
-#        rdfs:subClassOf      vf:TaxonomyItem .
-
-#vf:ExchangeTaxonomyItem  a           owl:Class ;
-#        rdfs:label           "vf:ExchangeTaxonomyItem" ;
-#        rdfs:subClassOf      vf:TaxonomyItem .
-
+vf:ExchangeClassification  a           owl:Class ;
+        rdfs:label           "vf:ExchangeClassification" ;
+        rdfs:comment   "An exchange category, model, taxonomy item, tag, facet value, or other kind of classification." .
+        
 # PLAN CLASSES
 
 #vf:Intent  a       owl:Class ;
@@ -74,16 +70,16 @@ vf:Process  a            owl:Class ;
         rdfs:label       "vf:Process" ;
         rdfs:comment   "An activity that changes inputs into outputs.  It could transform or transport vf:EconomicResource(s), as well as simply issuing a resource so that it is available." .
 
-vf:Transportation  a     owl:Class ;
-        rdfs:label       "vf:Transportation" ;
-        rdfs:subClassOf  vf:Process ;
-        rdfs:comment   "A process that changes the location of a resource(s) without changing the resource(s) itself." .
+#vf:Transportation  a     owl:Class ;
+#        rdfs:label       "vf:Transportation" ;
+#        rdfs:subClassOf  vf:Process ;
+#        rdfs:comment   "A process that changes the location of a resource(s) without changing the resource(s) itself." .
 
-vf:Transformation  a     owl:Class ;
-        rdfs:label       "vf:Transformation" ;
-        rdfs:subClassOf  vf:Process ;
-        rdfs:comment   "A process that produces something new from other resources, or improves an existing resource." .
-        
+#vf:Transformation  a     owl:Class ;
+#        rdfs:label       "vf:Transformation" ;
+#        rdfs:subClassOf  vf:Process ;
+#        rdfs:comment   "A process that produces something new from other resources, or improves an existing resource." .
+
 vf:EconomicEvent  a            owl:Class ;
         rdfs:label       "vf:EconomicEvent" ;
         rdfs:comment   "An inflow or outflow of an economic resource in relation to a process and/or exchange. This could reflect a change in the quantity of a vf:EconomicResource. It is also defined by its behavior in relation to the vf:EconomicResource and a vf:Process (consume, use, produce, etc.)" .
@@ -198,40 +194,37 @@ vf:committedOutputOf
 #        rdfs:domain         vf:Intent ;
 #        rdfs:range          vf:Process .
 
-vf:resourceCategory
+vf:resourceClassifiedAs
         a                   owl:ObjectProperty ;
-        rdfs:label          "category" ;
+        rdfs:label          "resource classified by" ;
         rdfs:domain         vf:EconomicResource ;
-        rdfs:range          vf:ResourceTaxonomyItem ;
-        rdfs:comment        "A type or categorization that describes a resource, at any level of granularity." .
+        rdfs:range          vf:ResourceClassification ;
+        rdfs:comment        "Relates a resource to its primary classification, as part of describing that resource." .
 
-vf:committedCategory
+vf:committedResourceClassifiedAs
         a                   owl:ObjectProperty ;
-        rdfs:label          "committed category" ;
+        rdfs:label          "committed resource classified by" ;
         rdfs:domain         vf:Commitment ;
-        rdfs:range          vf:ResourceTaxonomyItem ;
-        rdfs:comment        "A type or categorization that describes a resource committed, at any level of granularity." .
+        rdfs:range          vf:ResourceClassification ;
+        rdfs:comment        "The primary classification that describes a resource committed, at any level of granularity." .
 
 # will need one for Intent too
 
+vf:processClassifiedAs
+        a                   owl:ObjectProperty ;
+        rdfs:label          "process classified by" ;
+        rdfs:domain         vf:Process ;
+        rdfs:range          vf:ProcessClassification ;
+        rdfs:comment        "The primary classification that describes a process, at any level of granularity." .
+
+vf:exchangeClassifiedAs
+        a                   owl:ObjectProperty ;
+        rdfs:label          "exchange classified by" ;
+        rdfs:domain         vf:ExchangeAgreement ;
+        rdfs:range          vf:ExchangeClassification ;
+        rdfs:comment        "The primary classification that describes an exchange agreement, at any level of granularity." .
+
 # waiting to do the recipe model
-
-#vf:processCategory
-#        a                   owl:ObjectProperty ;
-#        rdfs:domain         vf:Process ;
-#        rdfs:range          vf:ProcessTaxonomyItem .
-
-#vf:exchangeCategory
-#        a                   owl:ObjectProperty ;
-#        rdfs:domain         vf:ExchangeAgreement ;
-#        rdfs:range          vf:ExchangeTaxonomyItem .
-
-#vf:parent
-#        a                   owl:ObjectProperty ;
-#        rdfs:label          "parent" ;
-#       rdfs:domain         vf:ResourceTaxonomyItem ;
-#        rdfs:range          vf:ResourcetaxonomyItem ;
-#        rdfs:comment        "A more general or broader category of resource." .
 
 vf:involves
         a                   owl:ObjectProperty ;
@@ -250,8 +243,8 @@ vf:underlyingResource
 vf:relationship  a          owl:ObjectProperty ;
         rdfs:label         "relationship" ;
         rdfs:domain         vf:AgentRelationship ;
-        rdfs:range          rdf:Property ; # think about creating a subproperty for these
-        rdfs:comment        "A verb that describes a generic defined relationship that exists between 2 agents." .
+        rdfs:range          vf:AgentRelationshipClassification ;
+        rdfs:comment        "A kind of relationship that exists between 2 agents." .
 
 #vf:commitsTo
 #        a                   owl:ObjectProperty ;
