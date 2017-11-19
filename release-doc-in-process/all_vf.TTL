@@ -59,6 +59,11 @@ vf:ExchangeAgreement  a       owl:Class ;
         rdfs:subClassOf      vf:Agreement ;
         rdfs:comment   "An agreement to exchange something with another agent(s), containing vf:Commitments towards that end." .
 
+vf:DistributionAgreement  a       owl:Class ;
+        rdfs:label        "vf:DistributionAgreement" ;
+        rdfs:subClassOf   vf:Agreement ;
+        rdfs:comment      "An agreement to distribute some resource in exchange for inputs or outputs created by other agents." .
+
 # OBSERVATION CLASSES
 
 
@@ -111,6 +116,10 @@ vf:Fulfillment  a            owl:Class ;
         rdfs:label       "vf:Fulfillment" ;
         rdfs:comment   "The quantity that the vf:EconomicEvent fulfilled towards the vf:Commitment." .
 
+vf:Reciprocity  a        owl:Class ;
+        rdfs:label       "vf:Reciprocity" ;
+        rdfs:comment     "The quantity that the vf:EconomicEvent implies towards creation of the reciprocal vf:Commitment." .
+
 vf:Appreciation  a            owl:Class ;
         rdfs:label       "vf:Appreciation" ;
         rdfs:comment     "A way to tie an economic event that is given in loose fulfilment for another economic event, without commitments or expectations. Supports the gift economy." .
@@ -149,13 +158,6 @@ vf:action
         rdfs:range          vf:Action ;
         rdfs:comment        "Relates a process input or output to a verb, such as consume, produce, work, improve, etc." .
 
-#vf:committedAction
-#        a                   owl:ObjectProperty ;
-#        rdfs:label          "committed action" ;
-#        rdfs:domain         vf:Commitment ;
-#        rdfs:range          vf:Action ;
-#        rdfs:comment        "Relates a process input or output (or other vf:EconomicEVent) to a verb, such as consume,  produce, work, improve, etc." .
-
 vf:inputOf
         a                   owl:ObjectProperty ;
         rdfs:label         "input of" ;
@@ -192,41 +194,12 @@ vf:committedOutputs
         rdfs:domain         vf:Process ;
         rdfs:range          vf:Commitment .
 
-#vf:committedInputOf
-#        a                   owl:ObjectProperty ;
-#        rdfs:label         "committed input of" ;
-#        rdfs:domain         vf:Commitment ;
-#        rdfs:range          vf:Process .
-
-#vf:committedOutputOf
-#        a                   owl:ObjectProperty ;
-#        rdfs:label         "committed output of" ;
-#        rdfs:domain         vf:Commitment ;
-#        rdfs:range          vf:Process .
-
-#vf:intendedInputOf
-#        a                   owl:ObjectProperty ;
-#        rdfs:domain         vf:Intent ;
-#        rdfs:range          vf:Process .
-
-#vf:intendedOutputOf
-#        a                   owl:ObjectProperty ;
-#        rdfs:domain         vf:Intent ;
-#        rdfs:range          vf:Process .
-
 vf:resourceClassifiedAs
         a                   owl:ObjectProperty ;
         rdfs:label          "resource classified as" ;
         rdfs:domain         [ owl:unionOf (vf:Commitment vf:EconomicResource) ] ;
         rdfs:range          vf:ResourceClassification ;
         rdfs:comment        "A resource's primary classification, as part of describing that resource." .
-
-#vf:committedResourceClassifiedAs
-#        a                   owl:ObjectProperty ;
-#        rdfs:label          "committed resource classified by" ;
-#        rdfs:domain         vf:Commitment ;
-#        rdfs:range          vf:ResourceClassification ;
-#        rdfs:comment        "The primary classification that describes a resource committed, at any level of granularity." .
 
 vf:processClassifiedAs
         a                   owl:ObjectProperty ;
@@ -302,30 +275,7 @@ vf:receiver  a       owl:ObjectProperty ;
         rdfs:label   "receiver" ;
         rdfs:range   foaf:Agent ;
         rdfs:comment        "The economic agent whom the intended, committed, or actual economic event is for." .
-
-#vf:committedProvider  a       owl:ObjectProperty ;
-#        rdfs:domain  vf:Commitment ;
-#        rdfs:label   "committed provider" ;
-#        rdfs:range   foaf:Agent ;
-#        rdfs:comment        "The economic agent who commits to a future economic event." .
-
-#vf:committedReceiver  a       owl:ObjectProperty ;
-#        rdfs:domain  vf:Commitment ;
-#        rdfs:label   "committed receiver" ;
-#        rdfs:range   foaf:Agent ;
-#        rdfs:comment        "The economic agent whom a future economic event is committed to." .
-
-#vf:intendedProvider  a       owl:ObjectProperty ;
-#        rdfs:domain  vf:Intent ;
-#        rdfs:label   "provider" ;
-#        rdfs:range   foaf:Agent ;
-#        rdfs:comment        "The economic agent who would like to provide a future economic event." .
-
-#vf:intendedReceiver  a       owl:ObjectProperty ;
-#        rdfs:domain  vf:Intent ;
-#        rdfs:label   "receiver" ;
-#        rdfs:range   foaf:Agent ;
-#        rdfs:comment        "The economic agent who would like to receive a future economic event." .
+        rdfs:comment        "The economic agent who would like to receive a future economic event." .
 
 vf:subject  a        owl:ObjectProperty ;
         rdfs:domain  vf:AgentRelationship ;
@@ -351,35 +301,29 @@ vf:scope  a          owl:ObjectProperty ;
         rdfs:range   owl:Thing ;
         rdfs:comment        "The larger boundary or context, used for accounting, planning, distributing income." .
 
-#vf:committedScope  a        owl:ObjectProperty ;
-#        rdfs:domain  vf:Commitment ;
-#        rdfs:label   "scope" ;
-#        rdfs:range   owl:Thing ;
-#        rdfs:comment        "The larger boundary or context of a commitment, used for accounting, planning." .
-
-#vf:intendedScope  a        owl:ObjectProperty ;
-#        rdfs:domain  vf:Intent ;
-#        rdfs:label   "scope" ;
-#        rdfs:range   owl:Thing ;
-#        rdfs:comment        "The larger boundary or context of an economic event, used for planning." .
-
 vf:under  a          owl:ObjectProperty ;
-        rdfs:domain  [ owl:unionOf (vf:EconomicEvent vf:Commitment) ] ; 
+        rdfs:domain  [ owl:unionOf (vf:EconomicEvent vf:Commitment vf:Reciprocity vf:Fulfillment) ] ; 
         rdfs:label   "under" ;
         rdfs:range   vf:Agreement ;
         rdfs:comment        "Reference an agreement between agents which specifies the rules or policies which govern this event." .
 
-#vf:committedUnder  a       owl:ObjectProperty ;
-#        rdfs:domain  vf:Commitment ; 
-#        rdfs:label   "committed under" ;
-#        rdfs:range   vf:Agreement ;
-#        rdfs:comment        "Reference an agreement between agents which specifies the rules or policies which govern this commitment." .
+#vf:inExchangeFor  a         owl:ObjectProperty ;
+#        rdfs:label   "in exchange for" ;
+#        rdfs:domain  vf:Commitment ;
+#        rdfs:range   vf:EconomicEvent ;
+#        rdfs:comment        "References the economic event that generated the commitment, in cases where based on an agreement, an agent commits to some reciprocity if an event occurs." .
 
-vf:inExchangeFor  a         owl:ObjectProperty ;
-        rdfs:label   "in exchange for" ;
-        rdfs:domain  vf:Commitment ;
+vf:createdBy  a        owl:ObjectProperty ;
+        rdfs:label   "created by" ;
+        rdfs:domain  vf:Reciprocity ;
         rdfs:range   vf:EconomicEvent ;
-        rdfs:comment        "References the economic event that generated the commitment, in cases where based on an agreement, an agent commits to some reciprocity if an event occurs." .
+        rdfs:comment        "References the economic event that fully or partially created the commitment, often based on a prior agreement." .
+
+vf:creates  a        owl:ObjectProperty ;
+        rdfs:label   "creates" ;
+        rdfs:domain  vf:Reciprocity ;
+        rdfs:range   vf:Commitment ;
+        rdfs:comment        "References the commitment that was fully or partially created because of the economic event, often based on a prior agreement." .
 
 vf:contains  a       owl:ObjectProperty ;
         rdfs:label   "contains" ;
