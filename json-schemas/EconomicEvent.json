@@ -1,0 +1,79 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "title": "EconomicEvent",
+    "description": "An inflow or outflow of an economic resource in relation to a process and/or exchange.",
+    "type": "object",
+    "properties": {
+        "action": {
+            "description": "Relates a process input or output to a verb, such as consume, produce, work, improve, etc.",
+            "type": "string"
+        },
+        "affectedQuantity": {
+            "description": "The quantity and unit of the event. This is the quantity that could be used to increment or decrement a resource, depending on the type of resource and type of event.",
+            "type": "QuantityValue"
+        },
+        "affects": {
+            "description": "The economic resource that is decremented or incremented by the economic event, or just what the economic event is about.",
+            "type": "EconomicResource"
+        },
+        "provider": {
+            "description": "The economic agent from whom the economic event is initiated.",
+            "type": "Agent"
+        },
+        "receiver": {
+            "description": "The economic agent whom the economic event is for.",
+            "type": "Agent"
+        },
+        "start": {
+            "description": "The starting date and optionally time of the economic event.",
+            "type": "??"
+        },
+        "duration": {
+            "description": "The observed duration of the economic event.",
+            "type": "??"
+        },
+        "note": {
+            "description": "A textual comment or description.",
+            "type": "string"
+        },
+        "inputOf": {
+            "description": "The process for which this economic event describes an input.",
+            "type": "Process"
+        },
+        "outputOf": {
+            "description": "The process for which this economic event describes an output.",
+            "type": "Process"
+        },
+        "fulfills": {
+            "description": "References a commitment which is completely or partially fulfilled by an economic event.",
+            "type": "array",
+            "items": {
+                "type": "Fulfillment"
+            },
+            "minItems": 1,
+            "uniqueItems": true
+        },
+        "creates": {
+            "description": "References a commitment that was fully or partially created because of the economic event, often based on a prior agreement.",
+            "type": "array",
+            "items": {
+                "type": "Reciprocity"
+            },
+            "minItems": 1,
+            "uniqueItems": true
+        },
+        "appreciationOf": {
+            "description": "The economic event being appreciated (gift economy).",
+            "type": "Appreciation"
+        },
+        "appreciationWith": {
+            "description": "The economic event implemented in appreciation (gift economy).",
+            "type": "Appreciation"
+        },
+        "under": {
+            "description": "Reference to an agreement between agents which specifies the rules or policies which govern this event.",
+            "type": "Agreement"
+        },
+    },
+    "required": ["action", "affectedQuantity", "start", "affects" ]
+}
