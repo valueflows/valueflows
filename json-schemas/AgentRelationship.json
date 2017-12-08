@@ -1,21 +1,22 @@
 {
     "$schema": "http://json-schema.org/draft-06/schema#",
+    "id": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/AgentRelationship.json",
     "title": "AgentRelationship",
     "description": "An ongoing voluntary association between 2 Agents of any kind.",
     "type": "object",
     "properties": {
         "subject": {
             "description": "The subject of a relationship between 2 agents.",
-            "type": "Agent"
+            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Agent.json"
         },
         "relationship": {
             "description": "A kind of relationship that exists between 2 agents.",
-            "type": "AgentRelationshipRole"
+            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/AgentRelationshipRole.json"
         },
         "object": {
             "description": "The object of a relationship between 2 agents.",
-            "type": "Agent"
-        },
+            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Agent.json"
+        }
     },
     "required": ["subject", "relationship", "object"]
 }

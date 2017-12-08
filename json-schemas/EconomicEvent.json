@@ -1,5 +1,6 @@
 {
     "$schema": "http://json-schema.org/draft-06/schema#",
+    "id": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/EconomicEvent.json",
     "title": "EconomicEvent",
     "description": "An inflow or outflow of an economic resource in relation to a process and/or exchange.",
     "type": "object",
@@ -10,27 +11,28 @@
         },
         "affectedQuantity": {
             "description": "The quantity and unit of the event. This is the quantity that could be used to increment or decrement a resource, depending on the type of resource and type of event.",
-            "type": "QuantityValue"
+            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/QuantityValue.json"
         },
         "affects": {
             "description": "The economic resource that is decremented or incremented by the economic event, or just what the economic event is about.",
-            "type": "EconomicResource"
+            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/EconomicResource.json"
         },
         "provider": {
             "description": "The economic agent from whom the economic event is initiated.",
-            "type": "Agent"
+            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Agent.json"
         },
         "receiver": {
             "description": "The economic agent whom the economic event is for.",
-            "type": "Agent"
+            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Agent.json"
         },
         "start": {
             "description": "The starting date and optionally time of the economic event.",
-            "type": "??"
+            "type": "string",
+            "format": "date-time"
         },
         "duration": {
             "description": "The observed duration of the economic event.",
-            "type": "??"
+            "type": "object"
         },
         "note": {
             "description": "A textual comment or description.",
@@ -38,17 +40,17 @@
         },
         "inputOf": {
             "description": "The process for which this economic event describes an input.",
-            "type": "Process"
+            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Process.json"
         },
         "outputOf": {
             "description": "The process for which this economic event describes an output.",
-            "type": "Process"
+            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Process.json"
         },
         "fulfills": {
             "description": "References a commitment which is completely or partially fulfilled by an economic event.",
             "type": "array",
             "items": {
-                "type": "Fulfillment"
+                "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Fulfillment.json"
             },
             "minItems": 1,
             "uniqueItems": true
@@ -57,23 +59,23 @@
             "description": "References a commitment that was fully or partially created because of the economic event, often based on a prior agreement.",
             "type": "array",
             "items": {
-                "type": "Reciprocity"
+                "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Reciprocity.json"
             },
             "minItems": 1,
             "uniqueItems": true
         },
         "appreciationOf": {
             "description": "The economic event being appreciated (gift economy).",
-            "type": "Appreciation"
+            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Appreciation.json"
         },
         "appreciationWith": {
             "description": "The economic event implemented in appreciation (gift economy).",
-            "type": "Appreciation"
+            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Appreciation.json"
         },
         "under": {
             "description": "Reference to an agreement between agents which specifies the rules or policies which govern this event.",
-            "type": "Agreement"
-        },
+            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Agreement.json"
+        }
     },
     "required": ["action", "affectedQuantity", "start", "affects" ]
 }
