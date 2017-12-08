@@ -1,0 +1,21 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "title": "AgentRelationship",
+    "description": "An ongoing voluntary association between 2 Agents of any kind.",
+    "type": "object",
+    "properties": {
+        "subject": {
+            "description": "The subject of a relationship between 2 agents.",
+            "type": "Agent"
+        },
+        "relationship": {
+            "description": "A kind of relationship that exists between 2 agents.",
+            "type": "AgentRelationshipRole"
+        },
+        "object": {
+            "description": "The object of a relationship between 2 agents.",
+            "type": "Agent"
+        },
+    },
+    "required": ["subject", "relationship", "object"]
+}
