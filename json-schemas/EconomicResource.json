@@ -9,13 +9,14 @@
             "description": "An informal or formal textual identifier for an object. Does not imply uniqueness.",
             "type": "string"
         },
-        "quantity": {
+        "currentQuantity": {
             "description": "The current amount and unit of the economic resource.",
             "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/QuantityValue.json"
         },
         "resourceClassifiedAs": {
             "description": "A resource's primary classification, as part of describing that resource.",
-            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/ResourceClassification.json"
+            "type": "string",
+            "format": "uri"
         },
         "trackingIdentifier": {
             "description": "Sometimes called lot number, used for trackable batched resources. Sometimes called serial number, used when each item must have a trackable identifier (like a computer). Could also be used for other unique tracking identifiers needed for resources.",
@@ -38,5 +39,5 @@
             "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/EconomicResource.json"
         }
     },
-    "required": ["resourceClassifiedAs" ]
+    "required": ["resourceClassifiedAs", "quantity" ]
 }
