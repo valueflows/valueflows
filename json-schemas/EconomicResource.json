@@ -15,8 +15,7 @@
         },
         "resourceClassifiedAs": {
             "description": "A resource's primary classification, as part of describing that resource.",
-            "type": "string",
-            "format": "uri"
+            "type": "string"
         },
         "trackingIdentifier": {
             "description": "Sometimes called lot number, used for trackable batched resources. Sometimes called serial number, used when each item must have a trackable identifier (like a computer). Could also be used for other unique tracking identifiers needed for resources.",
@@ -24,7 +23,7 @@
         },
         "currentLocation": {
             "description": "The current place an economic resource is located.  Could be at any level of granularity, from a town to an address to a warehouse location.  Should be mappable.",
-            "type": "object"
+            "type": "string"
         },
         "note": {
             "description": "A textual comment or description.",

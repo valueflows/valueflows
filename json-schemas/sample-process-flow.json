@@ -1,0 +1,135 @@
+[
+    {
+        "id": "P1",
+        "name": "Create Piezo Buzzer Pump design",
+        "inputs": [
+            {
+                "action": "work",
+                "start": "2017-10-01",
+                "affects": {
+                    "id": "R1",
+                    "resourceClassifiedAs": "CAD design"
+                },
+                "affectedQuantity": {
+                    "numericValue": "4.5",
+                    "unit": "Hours"
+                },
+                "provider": {
+                    "id": "A1",
+                    "name": "Bob"
+                }
+            }
+        ],
+        "outputs": [
+            {
+                "action": "produce",
+                "start": "2017-10-01",
+                "affects": {
+                    "id": "R2",
+                    "resourceClassifiedAs": "Buzzer Pump Design",
+                    "currentLocation": "http://open-hardware-designs.org/buzzer-pump-V1/"
+                },
+                "affectedQuantity": {
+                    "numericValue": "1",
+                    "unit": "Each"
+                }
+            }
+        ]
+    },
+    {
+        "id": "P2",
+        "name": "3D Print Buzzer Pump parts",
+        "inputs": [
+            {
+                "action": "work",
+                "start": "2017-10-15",
+                "affects": {
+                    "id": "R3",
+                    "resourceClassifiedAs": "3d Printing"
+                },
+                "affectedQuantity": {
+                    "numericValue": "2",
+                    "unit": "Hours"
+                },
+                "provider": {
+                    "id": "A2",
+                    "name": "Alice"
+                }
+            },
+            {
+                "action": "cite",
+                "start": "2017-10-15",
+                "affects": {
+                    "id": "R2"
+                },
+                "affectedQuantity": {
+                    "numericValue": "1",
+                    "unit": "Each"
+                }
+            }
+        ],
+        "outputs": [
+            {
+                "action": "produce",
+                "start": "2017-10-16",
+                "affects": {
+                    "id": "R4",
+                    "resourceClassifiedAs": "Buzzer Pump Parts",
+                    "currentLocation": "storage-room-2x3"
+                },
+                "affectedQuantity": {
+                    "numericValue": "5",
+                    "unit": "Each"
+                }
+            }
+        ]
+    },
+    {
+        "@id": "P3",
+        "name": "Assemble Buzzer Pump prototype",
+         "inputs": [
+            {
+                "action": "work",
+                "start": "2017-10-20",
+                "affects": {
+                    "id": "R5",
+                    "resourceClassifiedAs": "Assembly"
+                },
+                "affectedQuantity": {
+                    "numericValue": "3",
+                    "unit": "Hours"
+                },
+                "provider": {
+                    "id": "A3",
+                    "name": "Carol"
+                }
+            },
+            {
+                "action": "consume",
+                "start": "2017-10-20",
+                "affects": {
+                    "id": "R4"
+                },
+                "affectedQuantity": {
+                    "numericValue": "1",
+                    "unit": "Each"
+                }
+            }
+        ],
+        "outputs": [
+            {
+                "action": "produce",
+                "start": "2017-10-20",
+                "affects": {
+                    "id": "R6",
+                    "resourceClassifiedAs": "Buzzer Pump Prototype",
+                    "currentLocation": "storage-room-1x1"
+                },
+                "affectedQuantity": {
+                    "numericValue": "1",
+                    "unit": "Each"
+                }
+            }
+        ]
+    }
+]
