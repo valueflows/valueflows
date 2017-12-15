@@ -8,6 +8,7 @@
 @prefix org:   <http://www.w3.org/ns/org#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix qudt:   <http://qudt.org/schema/qudt/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 
 <https://w3id.org/valueflows/> a owl:Ontology;
@@ -289,17 +290,17 @@ vf:object  a         owl:ObjectProperty ;
         rdfs:range   foaf:Agent ;
         rdfs:comment        "The object of a relationship between 2 agents." .
 
-vf:context  a        owl:ObjectProperty ;
-        rdfs:domain  vf:AgentRelationship ;
-        rdfs:label   "context" ;
-        rdfs:range   foaf:Agent ;
-        rdfs:comment        "The larger context of a relationship between 2 agents, used where the relationship is not relevant outside of that context." .
+#vf:context  a        owl:ObjectProperty ;
+#        rdfs:domain  vf:AgentRelationship ;
+#        rdfs:label   "context" ;
+#        rdfs:range   foaf:Agent ;
+#        rdfs:comment        "The larger context of a relationship between 2 agents, used where the relationship is not relevant outside of that context." .
 
 vf:scope  a          owl:ObjectProperty ;
-        rdfs:domain  [ owl:unionOf (vf:EconomicEvent vf:Commitment) ] ;
+        rdfs:domain  [ owl:unionOf (vf:EconomicEvent vf:Commitment vf:AgentRelationship) ] ;
         rdfs:label   "scope" ;
         rdfs:range   owl:Thing ;
-        rdfs:comment        "The larger boundary or context, used for accounting, planning, distributing income." .
+        rdfs:comment        "The larger boundary or context, used for documenting, accounting, planning, distributing income." .
 
 vf:under  a          owl:ObjectProperty ;
         rdfs:domain  [ owl:unionOf (vf:EconomicEvent vf:Commitment vf:Reciprocity vf:Fulfillment) ] ; 
@@ -331,8 +332,8 @@ vf:contains  a       owl:ObjectProperty ;
         rdfs:range   vf:EconomicResource ;
         rdfs:comment        "Used when a stock economic resource contains units also defined as economic resources." .
 
-vf:quantity a owl:ObjectProperty ;
-        rdfs:label      "quantity" ;
+vf:currentQuantity a owl:ObjectProperty ;
+        rdfs:label      "current quantity" ;
         rdfs:domain     vf:EconomicResource ;
         rdfs:range      qudt:QuantityValue ;
         rdfs:comment    "The current amount and unit of the economic resource." .
@@ -371,6 +372,16 @@ vf:duration a owl:ObjectProperty ;
         rdfs:domain     vf:EconomicEvent ;
         rdfs:comment   "The observed duration of the economic event." .
 
+vf:plannedStart a       owl:ObjectProperty ;
+        rdfs:label     "planned start" ;
+        rdfs:domain     vf:Process ;
+        rdfs:comment   "The planned or estimated date and optionally time of the process." .
+
+vf:plannedDuration a    owl:ObjectProperty ;
+        rdfs:label     "planned duration" ;
+        rdfs:domain     vf:Process ;
+        rdfs:comment   "The planned or estimated duration of the process." .
+
 vf:image a owl:DatatypeProperty ;
         rdfs:label      "image" .
 
@@ -402,6 +413,12 @@ vf:fulfills     a owl:ObjectProperty ;
         rdfs:range      vf:Commitment ;
         rdfs:domain     vf:Fulfillment ;
         rdfs:comment    "The commitment which is completely or partially fulfilled by an economic event." .
+
+vf:isFinished  a        owl:DataTypeProperty ;
+        rdfs:domain     [ owl:unionOf (vf:Commitment vf:Process) ] ; 
+        rdfs:label      "is finished" ;
+        rdfs:range      xsd:boolean ;
+        rdfs:comment    "The commitment or process is complete or not." .
 
 # isSubstitutable "Defines if any resources of that type can be freely substituted for any other resource of that type when used, consumed, traded, etc."
 
