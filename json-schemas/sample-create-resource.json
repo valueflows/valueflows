@@ -1,0 +1,26 @@
+[
+    {
+        "id": "E10-event-to-create-resource",
+        "action": "take",
+        "start": "2017-12-01",
+        "affects": {
+            "resourceClassifiedAs": "https://www.wikidata.org/wiki/Q41777871",
+            "currentLocation": "Mikeys basement NW corner",
+            "note": "Last haralson apples of the season, good storage apples.",
+            "trackingIdentifier": "5nw-haralson"
+        },
+        "affectedQuantity": {
+            "numericValue": "10",
+            "unit": "kg"
+        },
+        "provider": {
+            "id": "A1",
+            "name": "Bob"
+        },
+        "receiver": {
+            "id": "A5",
+            "name": "Mikey"
+        }
+    }
+
+]
