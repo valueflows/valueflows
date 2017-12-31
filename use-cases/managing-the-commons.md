@@ -1,4 +1,4 @@
-##How can we describe managing the commons for community benefit, in terms of VF?##
+**How can we describe managing the commons for community benefit, in terms of VF?**
 
 The classic commons situation, let's say a lake and fish case. 
 A collective agent is in the stewardship relation to the lake and controls (not owns) the stream of benefits (fish volume) under an obligation to:
