@@ -275,7 +275,6 @@ vf:receiver  a       owl:ObjectProperty ;
         rdfs:label   "receiver" ;
         rdfs:range   foaf:Agent ;
         rdfs:comment        "The economic agent whom the intended, committed, or actual economic event is for." .
-        rdfs:comment        "The economic agent who would like to receive a future economic event." .
 
 vf:subject  a        owl:ObjectProperty ;
         rdfs:domain  vf:AgentRelationship ;
