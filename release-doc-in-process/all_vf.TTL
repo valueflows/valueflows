@@ -414,11 +414,11 @@ vf:fulfills     a owl:ObjectProperty ;
         rdfs:domain     vf:Fulfillment ;
         rdfs:comment    "The commitment which is completely or partially fulfilled by an economic event." .
 
-vf:isFinished  a        owl:DataTypeProperty ;
-        rdfs:domain     [ owl:unionOf (vf:Commitment vf:Process) ] ; 
-        rdfs:label      "is finished" ;
-        rdfs:range      xsd:boolean ;
-        rdfs:comment    "The commitment or process is complete or not." .
+#vf:isFinished  a        owl:DataTypeProperty ;
+#        rdfs:domain     [ owl:unionOf (vf:Commitment vf:Process) ] ; 
+#        rdfs:label      "is finished" ;
+#        rdfs:range      xsd:boolean ;
+#        rdfs:comment    "The commitment or process is complete or not." .
 
 # isSubstitutable "Defines if any resources of that type can be freely substituted for any other resource of that type when used, consumed, traded, etc."
 
