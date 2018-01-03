@@ -40,7 +40,11 @@ vf:ProcessClassification  a           owl:Class ;
 vf:ExchangeClassification  a           owl:Class ;
         rdfs:label           "vf:ExchangeClassification" ;
         rdfs:comment   "An exchange category, model, taxonomy item, tag, facet value, or other kind of classification." .
-        
+
+vf:RecipeAction  a          owl:Class ;
+        rdfs:label          "vf:RecipeAction" ;
+        rdfs:comment        "The input/output portion of a recipe, which ties a resource classification, a process classification, and an action together.  It is the recipe equivalent of a commitment or economic event." .
+
 # PLAN CLASSES
 
 #vf:Intent  a       owl:Class ;
@@ -155,7 +159,7 @@ vf:Location  a           owl:Class ;
 vf:action
         a                   owl:ObjectProperty ;
         rdfs:label         "action" ;
-        rdfs:domain         [ owl:unionOf (vf:EconomicEvent vf:Commitment) ] ;
+        rdfs:domain         [ owl:unionOf (vf:EconomicEvent vf:Commitment vf:RecipeAction) ] ;
         rdfs:range          vf:Action ;
         rdfs:comment        "Relates a process input or output to a verb, such as consume, produce, work, improve, etc." .
 
@@ -198,14 +202,14 @@ vf:committedOutputs
 vf:resourceClassifiedAs
         a                   owl:ObjectProperty ;
         rdfs:label          "resource classified as" ;
-        rdfs:domain         [ owl:unionOf (vf:Commitment vf:EconomicResource) ] ;
+        rdfs:domain         [ owl:unionOf (vf:Commitment vf:EconomicResource vf:RecipeAction) ] ;
         rdfs:range          vf:ResourceClassification ;
         rdfs:comment        "A resource's primary classification, as part of describing that resource." .
 
 vf:processClassifiedAs
         a                   owl:ObjectProperty ;
         rdfs:label          "process classified by" ;
-        rdfs:domain         vf:Process ;
+        rdfs:domain         [ owl:unionOf (vf:Process vf:RecipeAction) ] ;
         rdfs:range          vf:ProcessClassification ;
         rdfs:comment        "The primary classification that describes a process, at any level of granularity." .
 
@@ -289,12 +293,6 @@ vf:object  a         owl:ObjectProperty ;
         rdfs:range   foaf:Agent ;
         rdfs:comment        "The object of a relationship between 2 agents." .
 
-#vf:context  a        owl:ObjectProperty ;
-#        rdfs:domain  vf:AgentRelationship ;
-#        rdfs:label   "context" ;
-#        rdfs:range   foaf:Agent ;
-#        rdfs:comment        "The larger context of a relationship between 2 agents, used where the relationship is not relevant outside of that context." .
-
 vf:scope  a          owl:ObjectProperty ;
         rdfs:domain  [ owl:unionOf (vf:EconomicEvent vf:Commitment vf:AgentRelationship) ] ;
         rdfs:label   "scope" ;
@@ -306,12 +304,6 @@ vf:under  a          owl:ObjectProperty ;
         rdfs:label   "under" ;
         rdfs:range   vf:Agreement ;
         rdfs:comment        "Reference an agreement between agents which specifies the rules or policies which govern this event." .
-
-#vf:inExchangeFor  a         owl:ObjectProperty ;
-#        rdfs:label   "in exchange for" ;
-#        rdfs:domain  vf:Commitment ;
-#        rdfs:range   vf:EconomicEvent ;
-#        rdfs:comment        "References the economic event that generated the commitment, in cases where based on an agreement, an agent commits to some reciprocity if an event occurs." .
 
 vf:createdBy  a        owl:ObjectProperty ;
         rdfs:label   "created by" ;
@@ -341,13 +333,19 @@ vf:affectedQuantity a owl:ObjectProperty ;
         rdfs:label      "affected quantity" ;
         rdfs:domain     vf:EconomicEvent ;
         rdfs:range      qudt:QuantityValue ;
-        rdfs:comment    "The quantity and unit of the event. This is the quantity that could be used to increment or decrement a resource, depending on the type of resource and type of event." .
+        rdfs:comment    "The amount and unit of the event. This is the quantity that could be used to increment or decrement a resource, depending on the type of resource and type of event." .
 
 vf:fulfilledQuantity a owl:ObjectProperty ;
         rdfs:label      "fulfilled quantity" ;
         rdfs:domain     vf:Fulfillment ;
         rdfs:range      qudt:QuantityValue ;
-        rdfs:comment    "The quantity of the fulfillment of an event towards a commitment." .
+        rdfs:comment    "The amount and unit of the fulfillment of an event towards a commitment." .
+
+vf:actionQuantity a     owl:ObjectProperty ;
+        rdfs:label      "action quantity" ;
+        rdfs:domain     vf:RecipeAction ;
+        rdfs:range      qudt:QuantityValue ;
+        rdfs:comment    "The amount and unit for this recipe action." .
 
 vf:currentLocation a owl:ObjectProperty ;
         rdfs:label   "current location" ;
