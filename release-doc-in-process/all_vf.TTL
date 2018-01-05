@@ -35,14 +35,19 @@ vf:ResourceClassification  a    owl:Class ;
 
 vf:ProcessClassification  a           owl:Class ;
         rdfs:label           "vf:ProcessClassification" ;
-        rdfs:comment   "A process category, model, taxonomy item, tag, facet value, or other kind of classification." .
+        rdfs:comment   "A process category, taxonomy item, tag, facet value, or other kind of classification." .
 
-vf:ExchangeClassification  a           owl:Class ;
-        rdfs:label           "vf:ExchangeClassification" ;
-        rdfs:comment   "An exchange category, model, taxonomy item, tag, facet value, or other kind of classification." .
+vf:RecipeProcessClassification  a owl:Class ;
+        rdfs:label           "vf:RecipeProcessClassification" ;
+        rdfs:subClassOf      vf:ProcessClassification ;
+        rdfs:comment   "A process classification that is used as part of a recipe." .
 
-vf:RecipeAction  a          owl:Class ;
-        rdfs:label          "vf:RecipeAction" ;
+#vf:ExchangeClassification  a           owl:Class ;
+#        rdfs:label           "vf:ExchangeClassification" ;
+#        rdfs:comment   "An exchange category, model, taxonomy item, tag, facet value, or other kind of classification." .
+
+vf:RecipeFlow  a            owl:Class ;
+        rdfs:label          "vf:RecipeFlow" ;
         rdfs:comment        "The input/output portion of a recipe, which ties a resource classification, a process classification, and an action together.  It is the recipe equivalent of a commitment or economic event." .
 
 # PLAN CLASSES
@@ -59,15 +64,15 @@ vf:Agreement  a       owl:Class ;
         rdfs:label       "vf:Agreement" ;
         rdfs:comment   "Any type of agreement among economic agents, that can be referenced in VF to clarify the economic activity.  This is a placeholder pending investigating other vocabularies." .
 
-vf:ExchangeAgreement  a       owl:Class ;
-        rdfs:label       "vf:ExchangeAgreement" ;
-        rdfs:subClassOf      vf:Agreement ;
-        rdfs:comment   "An agreement to exchange something with another agent(s), containing vf:Commitments towards that end." .
+#vf:ExchangeAgreement  a       owl:Class ;
+#        rdfs:label       "vf:ExchangeAgreement" ;
+#        rdfs:subClassOf      vf:Agreement ;
+#        rdfs:comment   "An agreement to exchange something with another agent(s), containing vf:Commitments towards that end." .
 
-vf:DistributionAgreement  a       owl:Class ;
-        rdfs:label        "vf:DistributionAgreement" ;
-        rdfs:subClassOf   vf:Agreement ;
-        rdfs:comment      "An agreement to distribute some resource in exchange for inputs or outputs created by other agents." .
+#vf:DistributionAgreement  a       owl:Class ;
+#        rdfs:label        "vf:DistributionAgreement" ;
+#        rdfs:subClassOf   vf:Agreement ;
+#        rdfs:comment      "An agreement to distribute some resource in exchange for inputs or outputs created by other agents." .
 
 # OBSERVATION CLASSES
 
@@ -159,7 +164,7 @@ vf:Location  a           owl:Class ;
 vf:action
         a                   owl:ObjectProperty ;
         rdfs:label         "action" ;
-        rdfs:domain         [ owl:unionOf (vf:EconomicEvent vf:Commitment vf:RecipeAction) ] ;
+        rdfs:domain         [ owl:unionOf (vf:EconomicEvent vf:Commitment vf:RecipeFlow) ] ;
         rdfs:range          vf:Action ;
         rdfs:comment        "Relates a process input or output to a verb, such as consume, produce, work, improve, etc." .
 
@@ -199,26 +204,50 @@ vf:committedOutputs
         rdfs:domain         vf:Process ;
         rdfs:range          vf:Commitment .
 
+vf:recipeInputOf
+        a                   owl:ObjectProperty ;
+        rdfs:label         "input of" ;
+        rdfs:domain         vf:RecipeFlow ;
+        rdfs:range          vf:RecipeProcessClassification .
+
+vf:recipeOutputOf
+        a                   owl:ObjectProperty ;
+        rdfs:label         "output of" ;
+        rdfs:domain         vf:RecipeFlow ;
+        rdfs:range          vf:RecipeProcessClassification .
+
+vf:recipeInputs
+        a                   owl:ObjectProperty ;
+        rdfs:label         "inputs" ;
+        rdfs:domain         vf:RecipeProcessClassification ;
+        rdfs:range          vf:RecipeFlow .
+
+vf:recipeOutputs
+        a                   owl:ObjectProperty ;
+        rdfs:label         "outputs" ;
+        rdfs:domain         vf:RecipeProcessClassification ;
+        rdfs:range          vf:RecipeFlow .
+
 vf:resourceClassifiedAs
         a                   owl:ObjectProperty ;
         rdfs:label          "resource classified as" ;
-        rdfs:domain         [ owl:unionOf (vf:Commitment vf:EconomicResource vf:RecipeAction) ] ;
+        rdfs:domain         [ owl:unionOf (vf:Commitment vf:EconomicResource vf:RecipeFlow) ] ;
         rdfs:range          vf:ResourceClassification ;
         rdfs:comment        "A resource's primary classification, as part of describing that resource." .
 
 vf:processClassifiedAs
         a                   owl:ObjectProperty ;
-        rdfs:label          "process classified by" ;
-        rdfs:domain         [ owl:unionOf (vf:Process vf:RecipeAction) ] ;
+        rdfs:label          "process classified as" ;
+        rdfs:domain         vf:Process ;
         rdfs:range          vf:ProcessClassification ;
         rdfs:comment        "The primary classification that describes a process, at any level of granularity." .
 
-vf:exchangeClassifiedAs
-        a                   owl:ObjectProperty ;
-        rdfs:label          "exchange classified by" ;
-        rdfs:domain         vf:ExchangeAgreement ;
-        rdfs:range          vf:ExchangeClassification ;
-        rdfs:comment        "The primary classification that describes an exchange agreement, at any level of granularity." .
+#vf:exchangeClassifiedAs
+#        a                   owl:ObjectProperty ;
+#        rdfs:label          "exchange classified as" ;
+#        rdfs:domain         vf:ExchangeAgreement ;
+#        rdfs:range          vf:ExchangeClassification ;
+#        rdfs:comment        "The primary classification that describes an exchange agreement, at any level of granularity." .
 
 # waiting to do the recipe model
 
@@ -341,11 +370,11 @@ vf:fulfilledQuantity a owl:ObjectProperty ;
         rdfs:range      qudt:QuantityValue ;
         rdfs:comment    "The amount and unit of the fulfillment of an event towards a commitment." .
 
-vf:actionQuantity a     owl:ObjectProperty ;
-        rdfs:label      "action quantity" ;
-        rdfs:domain     vf:RecipeAction ;
+vf:flowQuantity a       owl:ObjectProperty ;
+        rdfs:label      "flow quantity" ;
+        rdfs:domain     vf:RecipeFlow ;
         rdfs:range      qudt:QuantityValue ;
-        rdfs:comment    "The amount and unit for this recipe action." .
+        rdfs:comment    "The amount and unit for this recipe flow, corresponding to the quantity of a commitment or economic event." .
 
 vf:currentLocation a owl:ObjectProperty ;
         rdfs:label   "current location" ;
@@ -379,6 +408,11 @@ vf:plannedDuration a    owl:ObjectProperty ;
         rdfs:domain     vf:Process ;
         rdfs:comment   "The planned or estimated duration of the process." .
 
+vf:estimatedDuration a    owl:ObjectProperty ;
+        rdfs:label     "estimated duration" ;
+        rdfs:domain     vf:RecipeProcessClassification ;
+        rdfs:comment   "The estimated duration of the process as part of a recipe." .
+
 vf:image a owl:DatatypeProperty ;
         rdfs:label      "image" .
 
@@ -410,6 +444,11 @@ vf:fulfills     a owl:ObjectProperty ;
         rdfs:range      vf:Commitment ;
         rdfs:domain     vf:Fulfillment ;
         rdfs:comment    "The commitment which is completely or partially fulfilled by an economic event." .
+
+vf:isFinished  a        owl:DataTypeProperty ;
+        rdfs:domain     vf:Process ; 
+        rdfs:label      "is finished" ;
+        rdfs:comment    "The commitment or process is complete or not." .
 
 #vf:isFinished  a        owl:DataTypeProperty ;
 #        rdfs:domain     [ owl:unionOf (vf:Commitment vf:Process) ] ; 
