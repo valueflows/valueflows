@@ -180,29 +180,29 @@ vf:outputOf
         rdfs:domain         [ owl:unionOf (vf:EconomicEvent vf:Commitment) ] ;
         rdfs:range          vf:Process .
 
-vf:inputs
-        a                   owl:ObjectProperty ;
-        rdfs:label         "inputs" ;
-        rdfs:domain         vf:Process ;
-        rdfs:range          vf:EconomicEvent .
+#vf:inputs
+#        a                   owl:ObjectProperty ;
+#        rdfs:label         "inputs" ;
+#        rdfs:domain         vf:Process ;
+#        rdfs:range          vf:EconomicEvent .
 
-vf:outputs
-        a                   owl:ObjectProperty ;
-        rdfs:label         "outputs" ;
-        rdfs:domain         vf:Process ;
-        rdfs:range          vf:EconomicEvent .
+#vf:outputs
+#        a                   owl:ObjectProperty ;
+#        rdfs:label         "outputs" ;
+#        rdfs:domain         vf:Process ;
+#        rdfs:range          vf:EconomicEvent .
 
-vf:committedInputs
-        a                   owl:ObjectProperty ;
-        rdfs:label         "committed inputs" ;
-        rdfs:domain         vf:Process ;
-        rdfs:range          vf:Commitment .
+#vf:committedInputs
+#        a                   owl:ObjectProperty ;
+#        rdfs:label         "committed inputs" ;
+#        rdfs:domain         vf:Process ;
+#        rdfs:range          vf:Commitment .
 
-vf:committedOutputs
-        a                   owl:ObjectProperty ;
-        rdfs:label         "committed outputs" ;
-        rdfs:domain         vf:Process ;
-        rdfs:range          vf:Commitment .
+#vf:committedOutputs
+#        a                   owl:ObjectProperty ;
+#        rdfs:label         "committed outputs" ;
+#        rdfs:domain         vf:Process ;
+#        rdfs:range          vf:Commitment .
 
 vf:recipeInputOf
         a                   owl:ObjectProperty ;
@@ -216,17 +216,17 @@ vf:recipeOutputOf
         rdfs:domain         vf:RecipeFlow ;
         rdfs:range          vf:RecipeProcessClassification .
 
-vf:recipeInputs
-        a                   owl:ObjectProperty ;
-        rdfs:label         "inputs" ;
-        rdfs:domain         vf:RecipeProcessClassification ;
-        rdfs:range          vf:RecipeFlow .
+#vf:recipeInputs
+#        a                   owl:ObjectProperty ;
+#        rdfs:label         "inputs" ;
+#        rdfs:domain         vf:RecipeProcessClassification ;
+#        rdfs:range          vf:RecipeFlow .
 
-vf:recipeOutputs
-        a                   owl:ObjectProperty ;
-        rdfs:label         "outputs" ;
-        rdfs:domain         vf:RecipeProcessClassification ;
-        rdfs:range          vf:RecipeFlow .
+#vf:recipeOutputs
+#        a                   owl:ObjectProperty ;
+#        rdfs:label         "outputs" ;
+#        rdfs:domain         vf:RecipeProcessClassification ;
+#        rdfs:range          vf:RecipeFlow .
 
 vf:resourceClassifiedAs
         a                   owl:ObjectProperty ;
