@@ -14,7 +14,7 @@ A key concept in REA is Duality, which means that each event wants one or more b
 
 All the levels of the REA ontology are similarly flexible and configurable:
 
-* The Abstract level represents policies, procedures, rules and patterns. This is where each network or community can configure the core concepts to fit their desires.
+* The Abstract level represents classification, policies, procedures, rules and patterns. This is where each network or community can configure the core concepts to fit their desires.
 * The Plan level represents offers, requests, schedules and promises.
 * The Observation level represents what really happened.
 
