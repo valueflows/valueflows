@@ -265,7 +265,7 @@ vf:appreciationWith
         rdfs:range          vf:EconomicEvent ;
         rdfs:comment        "The economic event implemented in appreciation (gift economy)." .
 
-vf:commitedBy  a     owl:ObjectProperty ;
+vf:committedBy  a     owl:ObjectProperty ;
         rdfs:domain  vf:Commitment ;
         rdfs:label   "commitedBy" ;
         rdfs:range   foaf:Agent ;
@@ -277,7 +277,7 @@ vf:performedBy  a    owl:ObjectProperty ;
         rdfs:range   foaf:Agent ;
         rdfs:comment "The economic agent performs the action." .
 
-vf:commitedTo  a     owl:ObjectProperty ;
+vf:committedTo  a     owl:ObjectProperty ;
         rdfs:domain  vf:Commitment ;
         rdfs:label   "commitedTo" ;
         rdfs:range   foaf:Agent ;
