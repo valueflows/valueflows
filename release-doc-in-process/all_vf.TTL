@@ -225,7 +225,7 @@ vf:underlyingResource
 vf:relationship  a          owl:ObjectProperty ;
         rdfs:label         "relationship" ;
         rdfs:domain         vf:AgentRelationship ;
-        rdfs:range          vf:AgentRelationshipClassification ;
+        rdfs:range          vf:AgentRelationshipRole ;
         rdfs:comment        "A kind of relationship that exists between 2 agents." .
 
 #vf:commitsTo
