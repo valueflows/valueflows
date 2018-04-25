@@ -107,11 +107,6 @@ foaf:Person  a                 owl:Class ;
         rdfs:subClassOf      foaf:Agent ;
         rdfs:comment     "A natural person." .
 
-#foaf:Group  a                  owl:Class ;
-#        rdfs:label           "foaf:Group" ;
-#        rdfs:subClassOf      foaf:Agent ;
-#        rdfs:comment      "Any kind of association of more than one person, which can be loosely or formally organized, but has economic agency as a group beyond any person." .
-
 org:Organization  a         owl:Class ;
         rdfs:label           "org:Organization" ;
         rdfs:subClassOf      foaf:Agent ;
@@ -137,26 +132,6 @@ vf:Location  a           owl:Class ;
         rdfs:label       "vf:Location" .
 
 
-# not sure about these
-
-
-#vf:MaterialItem  a       owl:Class ;
-#        rdfs:label       "vf:MaterialItem" ;
-#        rdfs:subClassOf  vf:Resource .
-
-#vf:Work  a               owl:Class ;
-#        rdfs:label       "vf:Work" ;
-#        rdfs:subClassOf  vf:Resource .
-
-#vf:Service  a            owl:Class ;
-#        rdfs:label       "vf:Service" ;
-#        rdfs:subClassOf  vf:Resource .
-
-#vf:Currency  a           owl:Class ;
-#        rdfs:label       "vf:Currency" ;
-#        rdfs:subClassOf  vf:Resource .
-
-
 # ####################################################################
 # properties
 
@@ -171,24 +146,24 @@ vf:inputOf
         a                   owl:ObjectProperty ;
         rdfs:label         "input of" ;
         rdfs:domain         [ owl:unionOf (vf:EconomicEvent vf:Commitment) ] ;
-        rdfs:range          vf:Process .
+        rdfs:range          [ owl:unionOf (vf:Process vf:Transfer) ] .
 
 vf:outputOf
         a                   owl:ObjectProperty ;
         rdfs:label         "output of" ;
         rdfs:domain         [ owl:unionOf (vf:EconomicEvent vf:Commitment) ] ;
-        rdfs:range          vf:Process .
+        rdfs:range          [ owl:unionOf (vf:Process vf:Transfer) ] .
 
 vf:inputs
         a                   owl:ObjectProperty ;
         rdfs:label         "inputs" ;
-        rdfs:domain         vf:Process ;
+        rdfs:domain         [ owl:unionOf (vf:Process vf:Transfer) ] ;
         rdfs:range          vf:EconomicEvent .
 
 vf:outputs
         a                   owl:ObjectProperty ;
         rdfs:label         "outputs" ;
-        rdfs:domain         vf:Process ;
+        rdfs:domain         [ owl:unionOf (vf:Process vf:Transfer) ] ;
         rdfs:range          vf:EconomicEvent .
 
 vf:committedInputs
@@ -202,18 +177,6 @@ vf:committedOutputs
         rdfs:label         "committed outputs" ;
         rdfs:domain         vf:Process ;
         rdfs:range          vf:Commitment .
-
-vf:giveOf
-        a                   owl:ObjectProperty ;
-        rdfs:label         "give of" ;
-        rdfs:domain         [ owl:unionOf (vf:EconomicEvent vf:Commitment) ] ;
-        rdfs:range          vf:Transfer .
-
-vf:receiveOf
-        a                   owl:ObjectProperty ;
-        rdfs:label         "receive of" ;
-        rdfs:domain         [ owl:unionOf (vf:EconomicEvent vf:Commitment) ] ;
-        rdfs:range          vf:Transfer .
 
 vf:resourceClassifiedAs
         a                   owl:ObjectProperty ;
@@ -316,12 +279,6 @@ vf:object  a         owl:ObjectProperty ;
         rdfs:range   foaf:Agent ;
         rdfs:comment        "The object of a relationship between 2 agents." .
 
-#vf:context  a        owl:ObjectProperty ;
-#        rdfs:domain  vf:AgentRelationship ;
-#        rdfs:label   "context" ;
-#        rdfs:range   foaf:Agent ;
-#        rdfs:comment        "The larger context of a relationship between 2 agents, used where the relationship is not relevant outside of that context." .
-
 vf:scope  a          owl:ObjectProperty ;
         rdfs:domain  [ owl:unionOf (vf:EconomicEvent vf:Commitment vf:AgentRelationship) ] ;
         rdfs:label   "scope" ;
@@ -329,16 +286,10 @@ vf:scope  a          owl:ObjectProperty ;
         rdfs:comment        "The larger boundary or context, used for documenting, accounting, planning, distributing income." .
 
 vf:under  a          owl:ObjectProperty ;
-        rdfs:domain  [ owl:unionOf (vf:EconomicEvent vf:Commitment vf:Reciprocity vf:Fulfillment vf:Transfer) ] ; 
+        rdfs:domain  [ owl:unionOf (vf:EconomicEvent vf:Commitment vf:Reciprocity vf:Fulfillment ) ] ; 
         rdfs:label   "under" ;
         rdfs:range   vf:Agreement ;
         rdfs:comment        "Reference an agreement between agents which specifies the rules or policies which govern this event." .
-
-#vf:inExchangeFor  a         owl:ObjectProperty ;
-#        rdfs:label   "in exchange for" ;
-#        rdfs:domain  vf:Commitment ;
-#        rdfs:range   vf:EconomicEvent ;
-#        rdfs:comment        "References the economic event that generated the commitment, in cases where based on an agreement, an agent commits to some reciprocity if an event occurs." .
 
 vf:createdBy  a        owl:ObjectProperty ;
         rdfs:label   "created by" ;
