@@ -8,11 +8,11 @@ The relatively consolidated parts of the vocabulary are reflected below.  Those 
 * Core Input-Process-Output model
 * Partial exchanges and reciprocity
 * Commitments
+* Complete exchanges, transfers, reciprocity
 
 Yet to come: 
 * Recipes and Templates for processes and transfers
 * Intents (offers and requests)
-* Complete exchanges, transfers, reciprocity
 * Conversations for Action/Agreement and protocols
 * Serialized resources
 * Examples
