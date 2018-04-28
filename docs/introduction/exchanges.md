@@ -27,6 +27,7 @@ Transfers and Processes both structure "value flows", but they are conceptually 
 This is an important distinction as we seek to change the world, because transfer and exchange cannot move us beyond the current unsustainable and unjust system.  We the people need to manage our production and creation (and waste) for human and ecological needs rather than profit.
 
 That said, the structure in value flows is similar, allowing transfers and processes to participate seamlessly in value flows:
+
 ![transfer-process](https://rawgit.com/valueflows/valueflows/master/release-doc-in-process/transfer.png)
 
 ### Process events as implied transfers
