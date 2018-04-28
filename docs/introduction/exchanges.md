@@ -41,10 +41,10 @@ Another example is when a service is created as an output of a process, where th
 
 ### Agreements
 
-Various kinds of agreements between agents govern the rights and responsibilities for economic resources that are transferred. Agreements can reflect any economic paradigm, so make it possible for the Exchange and Transfer vocabulary to work equally well for capitalist businesses, transitional economic interactions, and next economy interactions.
+Various kinds of agreements between agents often define the rights and responsibilities for economic resources that are transferred. Agreements can reflect any economic paradigm, so make it possible for the Exchange and Transfer vocabulary to work equally well for capitalist businesses, transitional economic interactions, and next economy interactions.
 
-Agreements can be of any kind and scope, from an order to a value equation to a much larger blanket agreement.
+Agreements can be of any kind and scope, from an order to a value equation to a larger blanket agreement.
 
-ValueFlows does not define the vocabulary for agreements, but defines optional references to an agreement when it could be useful.
+ValueFlows does not define the detailed internal vocabulary for agreements, but defines optional references to an agreement when it could be useful.
 
 
