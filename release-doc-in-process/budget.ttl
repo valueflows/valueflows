@@ -1,0 +1,293 @@
+@prefix vf:    <https://w3id.org/valueflows#> .
+@prefix schema: <http://schema.org/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/#> .
+@prefix org:   <http://www.w3.org/ns/org#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix qudt:   <http://qudt.org/schema/qudt/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+
+qudt:QuantityValue a    owl:Class ;
+        rdfs:label      "QuantityValue" ;
+        rdfs:comment    "A numeric value plus a unit." .
+
+qudt:Unit a             owl:Class ;
+        rdfs:label      "Unit" ;
+        rdfs:comment    "A standard unit of measure." .
+
+vf:Action  a           owl:Class ;
+        rdfs:label           "Action" ;
+        rdfs:subClassOf   rdf:Property ;
+        rdfs:comment   "An action verb defining the kind of event, commitment, or intent." .
+
+vf:AgentRelationshipRole  a  owl:Class ;
+        rdfs:label           "AgentRelationshipRole" ;
+        rdfs:subClassOf   rdf:Property ;
+        rdfs:comment   "A relationship role defining the kind of association one agent can have with another." .
+
+vf:ResourceClassification  a    owl:Class ;
+        rdfs:label           "ResourceClassification" ;
+        rdfs:comment   "A resource category, model, taxonomy item, tag, facet value, or other kind of classification." .
+
+vf:ProcessClassification  a           owl:Class ;
+        rdfs:label           "ProcessClassification" ;
+        rdfs:comment   "A process category, model, taxonomy item, tag, facet value, or other kind of classification." .
+
+vf:Estimate  a       owl:Class ;
+        rdfs:label       "Estimate (was Effort)" ;
+        rdfs:comment   "" .
+
+vf:Budget  a       owl:Class ;
+        rdfs:label       "Budget" ;
+        rdfs:comment   "" .
+
+vf:ForecastDemand  a       owl:Class ;
+        rdfs:label       "ForecastDemand" ;
+        rdfs:comment   "" .
+
+vf:Forecast  a       owl:Class ;
+        rdfs:label       "Forecast" ;
+        rdfs:comment   "" .
+
+foaf:Agent  a                  owl:Class ;
+        rdfs:label           "Agent" ;
+        rdfs:comment   "A person or group or organization with economic agency." .
+
+vf:AgentRelationship  a       owl:Class ;
+        rdfs:label       "AgentRelationship" ;
+        rdfs:comment    "An ongoing voluntary association between 2 Agents of any kind." .
+
+vf:AccountingPeriod  a       owl:Class ;
+        rdfs:label       "AccountingPeriod" ;
+        rdfs:comment   "" .
+
+vf:Function  a       owl:Class ;
+        rdfs:label       "Function (was Activity)" ;
+        rdfs:comment   "" .
+
+#vf:BudgetSplit  a       owl:Class ;
+#        rdfs:label       "BudgetSplit" ;
+#        rdfs:comment   "" .
+
+qudt:numericValue
+        a                   owl:DatatypeProperty ;
+        rdfs:label         "numeric value" ;
+        rdfs:domain         qudt:QuantityValue ;
+        rdfs:comment        "" .
+
+qudt:unit
+        a                   owl:ObjectProperty ;
+        rdfs:label         "unit" ;
+        rdfs:domain         [ owl:unionOf (vf:Budget vf:Forecast) ] ;
+        rdfs:range          qudt:Unit ;
+        rdfs:comment        "" .
+
+vf:action
+        a                   owl:ObjectProperty ;
+        rdfs:label         "action" ;
+        rdfs:domain         vf:Estimate ;
+        rdfs:range          vf:Action ;
+        rdfs:comment        "" .
+
+vf:preparedFor
+        a                   owl:ObjectProperty ;
+        rdfs:label          "prepared for" ;
+        rdfs:domain         [ owl:unionOf (vf:Budget vf:Forecast) ] ;
+        rdfs:range          foaf:Agent .
+
+vf:estimatedSupply
+        a                   owl:ObjectProperty ;
+        rdfs:label         "estimated supply" ;
+        rdfs:domain         vf:Function ;
+        rdfs:range          vf:Estimate .
+
+vf:estimatedDemand
+        a                   owl:ObjectProperty ;
+        rdfs:label         "estimated demand" ;
+        rdfs:domain         vf:Function ;
+        rdfs:range          vf:Estimate .
+
+vf:forecastDemand
+        a                   owl:ObjectProperty ;
+        rdfs:label         "forecast demand" ;
+        rdfs:domain         vf:Forecast ;
+        rdfs:range          vf:ForecastDemand .
+
+vf:demandFor
+        a                   owl:ObjectProperty ;
+        rdfs:label         "demand for" ;
+        rdfs:domain         vf:ForecastDemand ;
+        rdfs:range          vf:ResourceClassification .
+
+
+vf:resourceClassifiedAs
+        a                   owl:ObjectProperty ;
+        rdfs:label          "resource classified as" ;
+        rdfs:domain         vf:Estimate ;
+        rdfs:range          vf:ResourceClassification ;
+        rdfs:comment        "" .
+
+vf:processClassifiedAs
+        a                   owl:ObjectProperty ;
+        rdfs:label          "process classified as" ;
+        rdfs:domain         vf:Function ;
+        rdfs:range          vf:ProcessClassification ;
+        rdfs:comment        "The primary classification that describes a process, at any level of granularity." .
+
+
+vf:relationship  a          owl:ObjectProperty ;
+        rdfs:label         "relationship" ;
+        rdfs:domain         vf:AgentRelationship ;
+        rdfs:range          vf:AgentRelationshipRole ;
+        rdfs:comment        "A kind of relationship that exists between 2 agents." .
+
+vf:subject  a        owl:ObjectProperty ;
+        rdfs:domain  vf:AgentRelationship ;
+        rdfs:label   "subject" ;
+        rdfs:range   foaf:Agent ;
+        rdfs:comment    "The subject of a relationship between 2 agents." .
+
+vf:object  a         owl:ObjectProperty ;
+        rdfs:domain  vf:AgentRelationship ;
+        rdfs:label   "object" ;
+        rdfs:range   foaf:Agent ;
+        rdfs:comment        "The object of a relationship between 2 agents." .
+
+vf:estimatedQuantity a owl:ObjectProperty ;
+        rdfs:label      "estimated quantity" ;
+        rdfs:domain     vf:Estimate ;
+        rdfs:range      qudt:QuantityValue ;
+        rdfs:comment    "The quantity and unit of the estimate." .
+
+vf:budgetUnit
+        a                   owl:ObjectProperty ;
+        rdfs:label         "unit" ;
+        rdfs:domain         vf:Budget ;
+        rdfs:range          qudt:Unit . 
+
+vf:budgetedPeriod
+        a                   owl:ObjectProperty ;
+        rdfs:label         "budgeted period" ;
+        rdfs:domain         vf:Budget ;
+        rdfs:range          vf:AccountingPeriod . 
+
+vf:forecastedPeriod
+        a                   owl:ObjectProperty ;
+        rdfs:label         "forcasted period" ;
+        rdfs:domain         vf:Forecast ;
+        rdfs:range          vf:AccountingPeriod . 
+
+vf:period
+        a                   owl:ObjectProperty ;
+        rdfs:label         "period" ;
+        rdfs:domain         vf:Function ;
+        rdfs:range          vf:AccountingPeriod . 
+
+vf:includes
+        a                   owl:ObjectProperty ;
+        rdfs:label         "includes" ;
+        rdfs:domain         vf:Budget ;
+        rdfs:range          vf:Function . 
+
+vf:parentFunction
+        a                   owl:ObjectProperty ;
+        rdfs:label         "parent function" ;
+        rdfs:domain         vf:Function ;
+        rdfs:range          vf:Function .
+
+vf:parentResourceClassification
+        a                   owl:ObjectProperty ;
+        rdfs:label         "parent resource classification" ;
+        rdfs:domain         vf:ResourceClassification ;
+        rdfs:range          vf:ResourceClassification .
+
+vf:parentProcessClassification
+        a                   owl:ObjectProperty ;
+        rdfs:label         "parent process classification" ;
+        rdfs:domain         vf:ProcessClassification ;
+        rdfs:range          vf:ProcessClassification .
+
+vf:parentAccountingPeriod
+        a                   owl:ObjectProperty ;
+        rdfs:label         "parent accounting period" ;
+        rdfs:domain         vf:AccountingPeriod ;
+        rdfs:range          vf:AccountingPeriod .
+
+vf:start a       owl:ObjectProperty ;
+        rdfs:label     "start" ;
+        rdfs:domain     vf:AccountingPeriod ;
+        rdfs:comment   "Start date of a period." .
+
+vf:end a    owl:ObjectProperty ;
+        rdfs:label     "end" ;
+        rdfs:domain     vf:AccountingPeriod ;
+        rdfs:comment   "End date of a period" .
+
+vf:factor a    owl:ObjectProperty ;
+        rdfs:label     "factor" ;
+        rdfs:domain     vf:Estimate ;
+        rdfs:comment   "This is a holding place for a multiplier or equation to convert to a common unit." .
+
+vf:name a owl:DatatypeProperty ;
+        rdfs:label      "name" ;
+        rdfs:comment    "An informal or formal textual identifier for an object. Does not imply uniqueness." .
+
+rdfs:label a owl:DatatypeProperty ;
+        rdfs:label      "label" ;
+        rdfs:comment    "" .
+
+vf:note a owl:ObjectProperty ;
+        rdfs:label      "note" ;
+        rdfs:range      skos:note ;
+        rdfs:comment    "A textual comment or description." .
+
+
+
+vf:increment  a                vf:Action ;
+        rdfs:label          "increment" .
+
+vf:decrement  a                vf:Action ;
+        rdfs:label          "decrement" .
+
+vf:unload  a                vf:Action ;
+        rdfs:label          "unload" ;
+        rdfs:subPropertyOf  vf:increment .
+
+vf:load  a                vf:Action ;
+        rdfs:label          "load" ;
+        rdfs:subPropertyOf  vf:decrement .
+
+vf:consume  a                vf:Action ;
+        rdfs:label          "consume" ;
+        rdfs:subPropertyOf  vf:decrement .
+
+vf:use  a                vf:Action ;
+        rdfs:label          "use" .
+
+vf:work  a                vf:Action ;
+        rdfs:label          "work" .
+
+vf:cite  a                vf:Action ;
+        rdfs:label          "cite" .
+
+vf:produce  a                vf:Action ;
+        rdfs:label          "produce" ;
+        rdfs:subPropertyOf  vf:increment .
+
+vf:accept  a                vf:Action ;
+        rdfs:label          "accept" .
+
+vf:improve  a                vf:Action ;
+        rdfs:label          "improve" .
+
+vf:give  a                  vf:Action ;
+        rdfs:label          "give" ;
+        rdfs:subPropertyOf  vf:decrement .
+
+vf:receive  a                vf:Action ;
+        rdfs:label          "receive" ;
+        rdfs:subPropertyOf  vf:increment .
