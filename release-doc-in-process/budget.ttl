@@ -37,8 +37,8 @@ vf:ProcessClassification  a           owl:Class ;
         rdfs:label           "ProcessClassification" ;
         rdfs:comment   "A process category, model, taxonomy item, tag, facet value, or other kind of classification." .
 
-vf:Estimate  a       owl:Class ;
-        rdfs:label       "Estimate (was Effort)" ;
+vf:Intent  a       owl:Class ;
+        rdfs:label       "Intent" ;
         rdfs:comment   "" .
 
 vf:Budget  a       owl:Class ;
@@ -65,8 +65,8 @@ vf:AccountingPeriod  a       owl:Class ;
         rdfs:label       "AccountingPeriod" ;
         rdfs:comment   "" .
 
-vf:Function  a       owl:Class ;
-        rdfs:label       "Function (was Activity)" ;
+vf:Process  a       owl:Class ;
+        rdfs:label       "Process" ;
         rdfs:comment   "" .
 
 #vf:BudgetSplit  a       owl:Class ;
@@ -89,7 +89,7 @@ qudt:unit
 vf:action
         a                   owl:ObjectProperty ;
         rdfs:label         "action" ;
-        rdfs:domain         vf:Estimate ;
+        rdfs:domain         vf:Intent ;
         rdfs:range          vf:Action ;
         rdfs:comment        "" .
 
@@ -102,14 +102,14 @@ vf:preparedFor
 vf:estimatedSupply
         a                   owl:ObjectProperty ;
         rdfs:label         "estimated supply" ;
-        rdfs:domain         vf:Function ;
-        rdfs:range          vf:Estimate .
+        rdfs:domain         vf:Process ;
+        rdfs:range          vf:Intent .
 
 vf:estimatedDemand
         a                   owl:ObjectProperty ;
         rdfs:label         "estimated demand" ;
-        rdfs:domain         vf:Function ;
-        rdfs:range          vf:Estimate .
+        rdfs:domain         vf:Process ;
+        rdfs:range          vf:Intent .
 
 vf:forecastDemand
         a                   owl:ObjectProperty ;
@@ -127,14 +127,14 @@ vf:demandFor
 vf:resourceClassifiedAs
         a                   owl:ObjectProperty ;
         rdfs:label          "resource classified as" ;
-        rdfs:domain         vf:Estimate ;
+        rdfs:domain         vf:Intent ;
         rdfs:range          vf:ResourceClassification ;
         rdfs:comment        "" .
 
 vf:processClassifiedAs
         a                   owl:ObjectProperty ;
         rdfs:label          "process classified as" ;
-        rdfs:domain         vf:Function ;
+        rdfs:domain         vf:Process ;
         rdfs:range          vf:ProcessClassification ;
         rdfs:comment        "The primary classification that describes a process, at any level of granularity." .
 
@@ -157,11 +157,11 @@ vf:object  a         owl:ObjectProperty ;
         rdfs:range   foaf:Agent ;
         rdfs:comment        "The object of a relationship between 2 agents." .
 
-vf:estimatedQuantity a owl:ObjectProperty ;
-        rdfs:label      "estimated quantity" ;
-        rdfs:domain     vf:Estimate ;
+vf:intendedQuantity a owl:ObjectProperty ;
+        rdfs:label      "intended quantity" ;
+        rdfs:domain     vf:Intent ;
         rdfs:range      qudt:QuantityValue ;
-        rdfs:comment    "The quantity and unit of the estimate." .
+        rdfs:comment    "The quantity and unit of the intent." .
 
 vf:budgetUnit
         a                   owl:ObjectProperty ;
@@ -184,20 +184,20 @@ vf:forecastedPeriod
 vf:period
         a                   owl:ObjectProperty ;
         rdfs:label         "period" ;
-        rdfs:domain         vf:Function ;
+        rdfs:domain         vf:Process ;
         rdfs:range          vf:AccountingPeriod . 
 
 vf:includes
         a                   owl:ObjectProperty ;
         rdfs:label         "includes" ;
         rdfs:domain         vf:Budget ;
-        rdfs:range          vf:Function . 
+        rdfs:range          vf:Process . 
 
-vf:parentFunction
+vf:nestedProcess
         a                   owl:ObjectProperty ;
-        rdfs:label         "parent function" ;
-        rdfs:domain         vf:Function ;
-        rdfs:range          vf:Function .
+        rdfs:label         "nested process" ;
+        rdfs:domain         vf:Process ;
+        rdfs:range          vf:Process .
 
 vf:parentResourceClassification
         a                   owl:ObjectProperty ;
@@ -229,7 +229,7 @@ vf:end a    owl:ObjectProperty ;
 
 vf:factor a    owl:ObjectProperty ;
         rdfs:label     "factor" ;
-        rdfs:domain     vf:Estimate ;
+        rdfs:domain     vf:Intent ;
         rdfs:comment   "This is a holding place for a multiplier or equation to convert to a common unit." .
 
 vf:name a owl:DatatypeProperty ;
