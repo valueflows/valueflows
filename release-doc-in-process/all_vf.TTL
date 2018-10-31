@@ -47,9 +47,13 @@ vf:TransferClassification  a     owl:Class ;
 
 # PLAN CLASSES
 
+vf:Plan     a           owl:Class ;
+        rdfs:label      "vf:Plan" ;
+        rdfs:comment    "A logical collection of processes and/or transfers that constitute a body of planned work with defined deliverable(s)." .
+
 #vf:Intent  a       owl:Class ;
 #        rdfs:label       "vf:Intent" ;
-#        rdfs:comment   "A published want or offer or plan, sometimes with what is expected or desired in return." .
+#        rdfs:comment   "A request or offer or proposal." .
 
 vf:Commitment  a       owl:Class ;
         rdfs:label       "vf:Commitment" ;
@@ -177,6 +181,18 @@ vf:committedOutputs
         rdfs:label         "committed outputs" ;
         rdfs:domain         vf:Process ;
         rdfs:range          vf:Commitment .
+
+vf:plannedFor
+        a                   owl:ObjectProperty ;
+        rdfs:label         "planned for" ;
+        rdfs:range          vf:Plan ;
+        rdfs:domain         [ owl:unionOf (vf:Process vf:Transfer) ] .
+
+vf:deliverableFor
+        a                   owl:ObjectProperty ;
+        rdfs:label         "deliverable for" ;
+        rdfs:range          vf:Plan ;
+        rdfs:domain         vf:Commitment .
 
 vf:resourceClassifiedAs
         a                   owl:ObjectProperty ;
@@ -348,6 +364,11 @@ vf:duration a owl:ObjectProperty ;
         rdfs:label     "duration" ;
         rdfs:domain     vf:EconomicEvent ;
         rdfs:comment   "The observed duration of the economic event." .
+
+vf:due a owl:ObjectProperty ;
+        rdfs:label     "due" ;
+        rdfs:domain     vf:Plan ;
+        rdfs:comment   "The due date and optionally time of the plan." 
 
 vf:plannedStart a       owl:ObjectProperty ;
         rdfs:label     "planned start" ;

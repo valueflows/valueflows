@@ -1,0 +1,68 @@
+@prefix vf:    <https://w3id.org/valueflows#> .
+@prefix schema: <http://schema.org/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/#> .
+@prefix org:   <http://www.w3.org/ns/org#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix qudt:   <http://qudt.org/schema/qudt/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+
+vf:Plan     a           owl:Class ;
+        rdfs:label      "vf:Plan" ;
+        rdfs:comment    "A logical collection of processes and/or transfers that constitute a body of planned work with defined deliverable(s)." .
+
+vf:Commitment  a       owl:Class ;
+        rdfs:label       "vf:Commitment" ;
+        rdfs:comment   "A planned economic event or transfer that has been promised by an agent to another agent." .
+
+vf:Agreement  a       owl:Class ;
+        rdfs:label       "vf:Agreement" ;
+        rdfs:comment   "Any type of agreement among economic agents, that can be referenced in VF to clarify the economic activity.  This is a placeholder pending investigating other vocabularies." .
+
+vf:Process  a            owl:Class ;
+        rdfs:label       "vf:Process" ;
+        rdfs:comment   "An activity that changes inputs into outputs.  It could transform or transport economic resource(s)." .
+
+vf:Transfer  a            owl:Class ;
+        rdfs:label       "vf:Transfer" ;
+        rdfs:comment     "An activity that assigns the rights and responsibilities for an economic resource from one agent to another." .
+
+
+vf:plannedFor
+        a                   owl:ObjectProperty ;
+        rdfs:label         "planned for" ;
+        rdfs:range          vf:Plan ;
+        rdfs:domain         [ owl:unionOf (vf:Process vf:Transfer) ] .
+
+vf:deliverableFor
+        a                   owl:ObjectProperty ;
+        rdfs:label         "deliverable for" ;
+        rdfs:range          vf:Plan ;
+        rdfs:domain         vf:Commitment .
+
+vf:under  a          owl:ObjectProperty ;
+        rdfs:domain  vf:Plan ; 
+        rdfs:label   "under" ;
+        rdfs:range   vf:Agreement ;
+        rdfs:comment        "Reference an agreement between agents which specifies the rules or policies which govern this event." .
+
+vf:name a owl:DatatypeProperty ;
+        rdfs:label      "name" ;
+        rdfs:domain     vf:Plan ;
+        rdfs:comment    "An informal or formal textual identifier for an object. Does not imply uniqueness." .
+
+vf:note a owl:ObjectProperty ;
+        rdfs:label      "note" ;
+        rdfs:range      skos:note ;
+        rdfs:domain     vf:Plan ;
+        rdfs:comment    "A textual comment or description." .
+
+
+vf:due a owl:ObjectProperty ;
+        rdfs:label     "due" ;
+        rdfs:domain     vf:Plan ;
+        rdfs:comment   "The due date and optionally time of the plan." 
