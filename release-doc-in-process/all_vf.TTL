@@ -51,10 +51,6 @@ vf:Plan     a           owl:Class ;
         rdfs:label      "vf:Plan" ;
         rdfs:comment    "A logical collection of processes and/or transfers that constitute a body of planned work with defined deliverable(s)." .
 
-#vf:Intent  a       owl:Class ;
-#        rdfs:label       "vf:Intent" ;
-#        rdfs:comment   "A request or offer or proposal." .
-
 vf:Commitment  a       owl:Class ;
         rdfs:label       "vf:Commitment" ;
         rdfs:comment   "A planned economic event or transfer that has been promised by an agent to another agent." .
