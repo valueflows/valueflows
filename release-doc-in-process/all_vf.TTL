@@ -47,13 +47,18 @@ vf:TransferClassification  a     owl:Class ;
 
 # PLAN CLASSES
 
+
 vf:Plan     a           owl:Class ;
         rdfs:label      "vf:Plan" ;
         rdfs:comment    "A logical collection of processes and/or transfers that constitute a body of planned work with defined deliverable(s)." .
 
+vf:Intent  a           owl:Class ;
+        rdfs:label     "vf:Intent" ;
+        rdfs:comment   "A planned economic flow, which can lead to economic events (sometimes through commitments)" .
+
 vf:Commitment  a       owl:Class ;
-        rdfs:label       "vf:Commitment" ;
-        rdfs:comment   "A planned economic event or transfer that has been promised by an agent to another agent." .
+        rdfs:label     "vf:Commitment" ;
+        rdfs:comment   "A planned economic flow that has been promised by an agent to another agent." .
 
 vf:Agreement  a       owl:Class ;
         rdfs:label       "vf:Agreement" ;
@@ -94,9 +99,9 @@ vf:Transfer  a            owl:Class ;
 #        rdfs:subClassOf  vf:Process ;
 #        rdfs:comment   "A process that produces something new from other resources, or improves an existing resource." .
 
-vf:EconomicEvent  a            owl:Class ;
+vf:EconomicEvent  a      owl:Class ;
         rdfs:label       "vf:EconomicEvent" ;
-        rdfs:comment   "An inflow or outflow of an economic resource in relation to a process and/or exchange. This could reflect a change in the quantity of a vf:EconomicResource. It is also defined by its behavior in relation to the vf:EconomicResource and a vf:Process (consume, use, produce, etc.)" .
+        rdfs:comment     "Observed economic flow, never flow planned to happen in the future. This could reflect a change in the quantity of a vf:EconomicResource. It is also defined by its behavior in relation to the vf:EconomicResource (see vf:action)" .
 
 foaf:Agent  a                  owl:Class ;
         rdfs:label           "foaf:Agent" ;
