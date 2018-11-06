@@ -14,9 +14,10 @@
 ## Concepts
 * [Agent](introduction/agents.md)
 * [Resource](introduction/resources.md)
+* [Flows](introduction/flows.md)
 * [Process](introduction/processes.md)
 * [Exchange](introduction/exchanges.md)
-* [Intent and Commitment](introduction/intents.md)
+* [Proposals](introduction/proposals.md)
 * [Scoping](introduction/scope.md)
 * [Classification](introduction/classification.md)
 * [Conversation for Action](introduction/cfa.md)
