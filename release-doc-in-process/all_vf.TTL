@@ -279,11 +279,11 @@ vf:object  a         owl:ObjectProperty ;
         rdfs:range   foaf:Agent ;
         rdfs:comment        "The object of a relationship between 2 agents." .
 
-vf:scope  a          owl:ObjectProperty ;
-        rdfs:domain  [ owl:unionOf (vf:EconomicEvent vf:Commitment vf:AgentRelationship) ] ;
-        rdfs:label   "scope" ;
+vf:inScopeOf  a      owl:ObjectProperty ;
+        rdfs:domain  owl:Thing ;
+        rdfs:label   "in scope of" ;
         rdfs:range   owl:Thing ;
-        rdfs:comment        "The larger boundary or context, used for documenting, accounting, planning, distributing income." .
+        rdfs:comment "Grouping around something to create a boundary or context, used for documenting, accounting, planning." .
 
 vf:under  a          owl:ObjectProperty ;
         rdfs:domain  [ owl:unionOf (vf:EconomicEvent vf:Commitment vf:Reciprocity vf:Fulfillment ) ] ; 
