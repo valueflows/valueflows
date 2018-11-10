@@ -2,7 +2,7 @@
 
 `vf:inScopeOf`
 
-Scoping allows to group entities together to define a boundary or context. Mostly used for sets of economic events, commitments, and intents.  This can be for purposes of:
+Scoping allows grouping entities together in a defined boundary or context. Mostly used for sets of economic events, commitments, and intents.  This can be for purposes of:
 
 * accounting
 * planning
