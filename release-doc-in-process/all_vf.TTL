@@ -48,13 +48,13 @@ vf:TransferClassification  a     owl:Class ;
 
 # PLAN CLASSES
 
-#vf:Intent  a       owl:Class ;
-#        rdfs:label       "vf:Intent" ;
-#        rdfs:comment   "A published want or offer or plan, sometimes with what is expected or desired in return." .
+vf:Intent  a           owl:Class ;
+        rdfs:label     "vf:Intent" ;
+        rdfs:comment   "A planned economic flow, which can lead to economic events (sometimes through commitments)" .
 
 vf:Commitment  a       owl:Class ;
-        rdfs:label       "vf:Commitment" ;
-        rdfs:comment   "A planned economic event or transfer that has been promised by an agent to another agent." .
+        rdfs:label     "vf:Commitment" ;
+        rdfs:comment   "A planned economic flow that has been promised by an agent to another agent." .
 
 vf:Agreement  a       owl:Class ;
         rdfs:label       "vf:Agreement" ;
@@ -95,9 +95,9 @@ vf:Transfer  a            owl:Class ;
 #        rdfs:subClassOf  vf:Process ;
 #        rdfs:comment   "A process that produces something new from other resources, or improves an existing resource." .
 
-vf:EconomicEvent  a            owl:Class ;
+vf:EconomicEvent  a      owl:Class ;
         rdfs:label       "vf:EconomicEvent" ;
-        rdfs:comment   "An inflow or outflow of an economic resource in relation to a process and/or exchange. This could reflect a change in the quantity of a vf:EconomicResource. It is also defined by its behavior in relation to the vf:EconomicResource and a vf:Process (consume, use, produce, etc.)" .
+        rdfs:comment     "Observed economic flow, never flow planned to happen in the future. This could reflect a change in the quantity of a vf:EconomicResource. It is also defined by its behavior in relation to the vf:EconomicResource (see vf:action)" .
 
 foaf:Agent  a                  owl:Class ;
         rdfs:label           "foaf:Agent" ;
@@ -280,11 +280,11 @@ vf:object  a         owl:ObjectProperty ;
         rdfs:range   foaf:Agent ;
         rdfs:comment        "The object of a relationship between 2 agents." .
 
-vf:scope  a          owl:ObjectProperty ;
-        rdfs:domain  [ owl:unionOf (vf:EconomicEvent vf:Commitment vf:AgentRelationship) ] ;
-        rdfs:label   "scope" ;
+vf:inScopeOf  a      owl:ObjectProperty ;
+        rdfs:domain  owl:Thing ;
+        rdfs:label   "in scope of" ;
         rdfs:range   owl:Thing ;
-        rdfs:comment        "The larger boundary or context, used for documenting, accounting, planning, distributing income." .
+        rdfs:comment "Grouping around something to create a boundary or context, used for documenting, accounting, planning." .
 
 vf:under  a          owl:ObjectProperty ;
         rdfs:domain  [ owl:unionOf (vf:EconomicEvent vf:Commitment vf:Reciprocity vf:Fulfillment ) ] ; 
