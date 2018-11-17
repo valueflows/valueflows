@@ -18,3 +18,9 @@ Commitments describe potential future event which involved agents already agreed
 ## Economic Events
 
 Economic event describes past event, something already observed, never some potential future event.
+
+## Granularity
+
+Intents, Commitments, and Economic Events can occur at any granularity that is needed or for which data can be obtained.  So they primarily are used for all operational needs, but can also be used at higher levels for analytical and high level planning needs for communities or regions, for example.
+
+![Intent-Commitment-Event](https://rawgit.com/valueflows/valueflows/master/release-doc-in-process/i-c-e.png)

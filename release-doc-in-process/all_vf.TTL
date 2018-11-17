@@ -9,6 +9,7 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix qudt:   <http://qudt.org/schema/qudt/> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
 
 
 <https://w3id.org/valueflows/> a owl:Ontology;
@@ -339,25 +340,20 @@ vf:primaryLocation a owl:ObjectProperty ;
         rdfs:range   vf:Location ;
         rdfs:comment        "The main place an agent is located, often an address where activities occur and mail can be sent. This is usually a mappable geographic location.  It also could be a website address, as in the case of agents who have no physical location." .
 
-vf:start a owl:ObjectProperty ;
-        rdfs:label     "start" ;
+vf:observedTime a       time:TemporalEntity ;
+        rdfs:label     "observed time" ;
         rdfs:domain     vf:EconomicEvent ;
-        rdfs:comment   "The starting date and optionally time of the economic event." .
+        rdfs:comment   "The actual temporal instant or interval." .
 
-vf:duration a owl:ObjectProperty ;
-        rdfs:label     "duration" ;
-        rdfs:domain     vf:EconomicEvent ;
-        rdfs:comment   "The observed duration of the economic event." .
+vf:committedTime a      time:TemporalEntity ;
+        rdfs:label     "committed time" ;
+        rdfs:domain     vf:Commitment ;
+        rdfs:comment   "The promised temporal instant or interval." .
 
-vf:plannedStart a       owl:ObjectProperty ;
-        rdfs:label     "planned start" ;
+vf:plannedTime a        time:TemporalEntity ;
+        rdfs:label     "planned time" ;
         rdfs:domain     vf:Process ;
-        rdfs:comment   "The planned or estimated date and optionally time of the process." .
-
-vf:plannedDuration a    owl:ObjectProperty ;
-        rdfs:label     "planned duration" ;
-        rdfs:domain     vf:Process ;
-        rdfs:comment   "The planned or estimated duration of the process." .
+        rdfs:comment   "The planned or estimated calendar time the process will take (whether being actually worked or not)." .
 
 vf:image a owl:DatatypeProperty ;
         rdfs:label      "image" .
