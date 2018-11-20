@@ -9,6 +9,7 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix qudt:   <http://qudt.org/schema/qudt/> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
 
 
 <https://w3id.org/valueflows/> a owl:Ontology;
@@ -47,13 +48,13 @@ vf:TransferClassification  a     owl:Class ;
 
 # PLAN CLASSES
 
-#vf:Intent  a       owl:Class ;
-#        rdfs:label       "vf:Intent" ;
-#        rdfs:comment   "A published want or offer or plan, sometimes with what is expected or desired in return." .
+vf:Intent  a           owl:Class ;
+        rdfs:label     "vf:Intent" ;
+        rdfs:comment   "A planned economic flow, which can lead to economic events (sometimes through commitments)" .
 
 vf:Commitment  a       owl:Class ;
-        rdfs:label       "vf:Commitment" ;
-        rdfs:comment   "A planned economic event or transfer that has been promised by an agent to another agent." .
+        rdfs:label     "vf:Commitment" ;
+        rdfs:comment   "A planned economic flow that has been promised by an agent to another agent." .
 
 vf:Agreement  a       owl:Class ;
         rdfs:label       "vf:Agreement" ;
@@ -94,9 +95,9 @@ vf:Transfer  a            owl:Class ;
 #        rdfs:subClassOf  vf:Process ;
 #        rdfs:comment   "A process that produces something new from other resources, or improves an existing resource." .
 
-vf:EconomicEvent  a            owl:Class ;
+vf:EconomicEvent  a      owl:Class ;
         rdfs:label       "vf:EconomicEvent" ;
-        rdfs:comment   "An inflow or outflow of an economic resource in relation to a process and/or exchange. This could reflect a change in the quantity of a vf:EconomicResource. It is also defined by its behavior in relation to the vf:EconomicResource and a vf:Process (consume, use, produce, etc.)" .
+        rdfs:comment     "Observed economic flow, never flow planned to happen in the future. This could reflect a change in the quantity of a vf:EconomicResource. It is also defined by its behavior in relation to the vf:EconomicResource (see vf:action)" .
 
 foaf:Agent  a                  owl:Class ;
         rdfs:label           "foaf:Agent" ;
@@ -279,11 +280,11 @@ vf:object  a         owl:ObjectProperty ;
         rdfs:range   foaf:Agent ;
         rdfs:comment        "The object of a relationship between 2 agents." .
 
-vf:scope  a          owl:ObjectProperty ;
-        rdfs:domain  [ owl:unionOf (vf:EconomicEvent vf:Commitment vf:AgentRelationship) ] ;
-        rdfs:label   "scope" ;
+vf:inScopeOf  a      owl:ObjectProperty ;
+        rdfs:domain  owl:Thing ;
+        rdfs:label   "in scope of" ;
         rdfs:range   owl:Thing ;
-        rdfs:comment        "The larger boundary or context, used for documenting, accounting, planning, distributing income." .
+        rdfs:comment "Grouping around something to create a boundary or context, used for documenting, accounting, planning." .
 
 vf:under  a          owl:ObjectProperty ;
         rdfs:domain  [ owl:unionOf (vf:EconomicEvent vf:Commitment vf:Reciprocity vf:Fulfillment ) ] ; 
@@ -339,25 +340,20 @@ vf:primaryLocation a owl:ObjectProperty ;
         rdfs:range   vf:Location ;
         rdfs:comment        "The main place an agent is located, often an address where activities occur and mail can be sent. This is usually a mappable geographic location.  It also could be a website address, as in the case of agents who have no physical location." .
 
-vf:start a owl:ObjectProperty ;
-        rdfs:label     "start" ;
+vf:observedTime a       time:TemporalEntity ;
+        rdfs:label     "observed time" ;
         rdfs:domain     vf:EconomicEvent ;
-        rdfs:comment   "The starting date and optionally time of the economic event." .
+        rdfs:comment   "The actual temporal instant or interval." .
 
-vf:duration a owl:ObjectProperty ;
-        rdfs:label     "duration" ;
-        rdfs:domain     vf:EconomicEvent ;
-        rdfs:comment   "The observed duration of the economic event." .
+vf:committedTime a      time:TemporalEntity ;
+        rdfs:label     "committed time" ;
+        rdfs:domain     vf:Commitment ;
+        rdfs:comment   "The promised temporal instant or interval." .
 
-vf:plannedStart a       owl:ObjectProperty ;
-        rdfs:label     "planned start" ;
+vf:plannedTime a        time:TemporalEntity ;
+        rdfs:label     "planned time" ;
         rdfs:domain     vf:Process ;
-        rdfs:comment   "The planned or estimated date and optionally time of the process." .
-
-vf:plannedDuration a    owl:ObjectProperty ;
-        rdfs:label     "planned duration" ;
-        rdfs:domain     vf:Process ;
-        rdfs:comment   "The planned or estimated duration of the process." .
+        rdfs:comment   "The planned or estimated calendar time the process will take (whether being actually worked or not)." .
 
 vf:image a owl:DatatypeProperty ;
         rdfs:label      "image" .
