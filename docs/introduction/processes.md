@@ -30,7 +30,7 @@ When processes are nested, it is not random. nor based on a taxonomy. It is base
 
 ![process nesting](https://rawgit.com/valueflows/valueflows/master/release-doc-in-process/nesting.png)
 
-Note: this gives the possibility for parts of global process flows that are invisible because the scoping agent has not made these internal flows public to be shown by a higher level process flow without breaking the pattern.  For example in the above diagram, the larger process of Produce Carrots could be part of a community level process analysis of vegetable production for community resilience, even if the internals are not available. 
+Note: this gives the possibility for parts of global process flows that are invisible because the scoping agent has not made these internal flows public to be shown by a higher level process flow without breaking the pattern.  For example in the above diagram, the larger process of Produce Carrots could be part of a community level process analysis of vegetable production for community resilience, even if the internals are not available.  In this way, mixing and matching the levels can also be useful, without breaking the pattern. 
 
 #### Process diagram
 

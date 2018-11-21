@@ -292,23 +292,11 @@ vf:inScopeOf  a      owl:ObjectProperty ;
         rdfs:range   owl:Thing ;
         rdfs:comment "Grouping around something to create a boundary or context, used for documenting, accounting, planning." .
 
-vf:includedInIntent  a     owl:ObjectProperty ;
-        rdfs:domain  vf:Intent ; 
+vf:includedIn  a     owl:ObjectProperty ;
+        rdfs:domain  [ owl:unionOf (vf:EconomicEvent vf:Commitment vf:Intent ) ] ;  
         rdfs:label   "included in" ;
-        rdfs:range   vf:Intent ;
-        rdfs:comment "Composing intents to indicate the quantity of the lower flow is included in the quantity of the higher flow, to avoid double counting." .
-
-vf:includedInCommitment  a     owl:ObjectProperty ;
-        rdfs:domain  vf:Commitment ; 
-        rdfs:label   "included in" ;
-        rdfs:range   vf:Commitment ;
-        rdfs:comment "Composing commitments to indicate the quantity of the lower flow is included in the quantity of the higher flow, to avoid double counting." .
-
-vf:includedInEvent  a     owl:ObjectProperty ;
-        rdfs:domain  vf:EconomicEvent ; 
-        rdfs:label   "included in" ;
-        rdfs:range   vf:EconomicEvent ;
-        rdfs:comment "Composing economic events to indicate the quantity of the lower flow is included in the quantity of the higher flow, to avoid double counting." .
+        rdfs:range   [ owl:unionOf (vf:EconomicEvent vf:Commitment vf:Intent ) ] ;
+        rdfs:comment "Composing same type objects to indicate the quantity of the lower flow is included in the quantity of the higher flow, to avoid double counting." .
 
 vf:purpose  a        owl:ObjectProperty ;
         rdfs:domain  vf:Process ; 
