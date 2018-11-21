@@ -12,13 +12,23 @@ The antibiotics then breed resistant bacteria, which end up in the people, and s
 
 Connected processes enable us to see cause and effect, if we want.
 
-Below is a view of processes, which occur in resource flow networks, and live in three layers: Abstract, which describe how processes work. Plans, which describe processes which are intended to happen. And Observation, which is a record of processes that have already happened.
+Below is a view of processes, which occur in resource flow networks, and live in three layers: Classification, which describe how processes work. Plans, which describe processes which are intended to happen. And Observation, which is a record of processes that have already happened.
 
 ![process resource flow](https://rawgit.com/valueflows/valueflows/master/release-doc-in-process/process-layer.png)
 
 Here is a specific example:
 
 ![salsa flow](https://rawgit.com/valueflows/valueflows/master/release-doc-in-process/salsa-layer.png)
+
+#### Higher level processes
+
+Processes can be composed into or from higher level processes.  Higher level processes often serve a purpose other than operations, for example planning or budgeting or a manufacturing work order.
+
+Like operational processes, these processes can be classified using Process Classification, which itself can be a taxonomy.  The meaning or reason for the process should be identified using Process Purpose, such as "Plan", "Budget", "Budget Item", "Operational". "Operational" is assumed if no purpose is identified.
+
+When processes are nested, it is not random. nor based on a taxonomy. It is based on what processes are actually part of the higher level process. And not all the inputs and outputs are considered part of the higher level process, since some are produced and consumed within the higher level process.  In the following example, the flows between plant/weed and weed/harvest are not flows related to the higher level process.
+
+![process nesting](https://rawgit.com/valueflows/valueflows/master/release-doc-in-process/nesting.png)
 
 #### Process diagram
 

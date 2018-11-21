@@ -46,6 +46,12 @@ vf:TransferClassification  a     owl:Class ;
         rdfs:label               "vf:TransferClassification" ;
         rdfs:comment   "A transfer category, model, taxonomy item, tag, facet value, or other kind of classification." .
 
+vf:ProcessPurpose  a     owl:Class ;
+        rdfs:label       "vf:ProcessPurpose" ;
+        rdfs:subClassOf  rdf:Property ;
+        rdfs:comment     "The reason for a process, such as operational, plan, budget, analytics." .
+
+
 # PLAN CLASSES
 
 vf:Intent  a           owl:Class ;
@@ -286,11 +292,35 @@ vf:inScopeOf  a      owl:ObjectProperty ;
         rdfs:range   owl:Thing ;
         rdfs:comment "Grouping around something to create a boundary or context, used for documenting, accounting, planning." .
 
+vf:includedInIntent  a     owl:ObjectProperty ;
+        rdfs:domain  vf:Intent ; 
+        rdfs:label   "included in" ;
+        rdfs:range   vf:Intent ;
+        rdfs:comment "Composing intents to indicate the quantity of the lower flow is included in the quantity of the higher flow, to avoid double counting." .
+
+vf:includedInCommitment  a     owl:ObjectProperty ;
+        rdfs:domain  vf:Commitment ; 
+        rdfs:label   "included in" ;
+        rdfs:range   vf:Commitment ;
+        rdfs:comment "Composing commitments to indicate the quantity of the lower flow is included in the quantity of the higher flow, to avoid double counting." .
+
+vf:includedInEvent  a     owl:ObjectProperty ;
+        rdfs:domain  vf:EconomicEvent ; 
+        rdfs:label   "included in" ;
+        rdfs:range   vf:EconomicEvent ;
+        rdfs:comment "Composing economic events to indicate the quantity of the lower flow is included in the quantity of the higher flow, to avoid double counting." .
+
+vf:purpose  a        owl:ObjectProperty ;
+        rdfs:domain  vf:Process ; 
+        rdfs:label   "purpose" ;
+        rdfs:range   vf:ProcessPurpose ;
+        rdfs:comment "Defines why this process is defined, for example operational, plan, budget." .
+
 vf:under  a          owl:ObjectProperty ;
         rdfs:domain  [ owl:unionOf (vf:EconomicEvent vf:Commitment vf:Reciprocity vf:Fulfillment ) ] ; 
         rdfs:label   "under" ;
         rdfs:range   vf:Agreement ;
-        rdfs:comment        "Reference an agreement between agents which specifies the rules or policies which govern this event." .
+        rdfs:comment        "Reference to an agreement between agents which specifies the rules or policies which govern this flow." .
 
 vf:createdBy  a        owl:ObjectProperty ;
         rdfs:label   "created by" ;
@@ -340,19 +370,22 @@ vf:primaryLocation a owl:ObjectProperty ;
         rdfs:range   vf:Location ;
         rdfs:comment        "The main place an agent is located, often an address where activities occur and mail can be sent. This is usually a mappable geographic location.  It also could be a website address, as in the case of agents who have no physical location." .
 
-vf:observedTime a       time:TemporalEntity ;
+vf:observedTime a       owl:ObjectProperty ;
         rdfs:label     "observed time" ;
         rdfs:domain     vf:EconomicEvent ;
+        rdfs:range      time:TemporalEntity ;
         rdfs:comment   "The actual temporal instant or interval." .
 
-vf:committedTime a      time:TemporalEntity ;
+vf:committedTime a      owl:ObjectProperty ;
         rdfs:label     "committed time" ;
         rdfs:domain     vf:Commitment ;
+        rdfs:range      time:TemporalEntity ;
         rdfs:comment   "The promised temporal instant or interval." .
 
-vf:plannedTime a        time:TemporalEntity ;
+vf:plannedTime a        owl:ObjectProperty ;
         rdfs:label     "planned time" ;
         rdfs:domain     vf:Process ;
+        rdfs:range      time:TemporalEntity ;
         rdfs:comment   "The planned or estimated calendar time the process will take (whether being actually worked or not)." .
 
 vf:image a owl:DatatypeProperty ;
@@ -454,3 +487,17 @@ vf:give  a                  vf:Action ;
 vf:receive  a                vf:Action ;
         rdfs:label          "receive" ;
         rdfs:subPropertyOf  vf:increment .
+
+# ################################ process purposes
+
+vf:operational  a           vf:ProcessPurpose ;
+        rdfs:label          "operational" .
+
+vf:plan  a                  vf:ProcessPurpose ;
+        rdfs:label          "plan" .
+
+vf:budget  a                vf:ProcessPurpose ;
+        rdfs:label          "budget" .
+
+vf:budgetItem  a            vf:ProcessPurpose ;
+        rdfs:label          "budget item" .
