@@ -30,27 +30,6 @@ vf:AgentRelationshipRole  a  owl:Class ;
         rdfs:subClassOf   rdf:Property ;
         rdfs:comment   "A relationship role defining the kind of association one agent can have with another." .
 
-vf:ResourceClassification  a    owl:Class ;
-        rdfs:label           "vf:ResourceClassification" ;
-        rdfs:comment   "A resource category, model, taxonomy item, tag, facet value, or other kind of classification." .
-
-vf:ProcessClassification  a           owl:Class ;
-        rdfs:label           "vf:ProcessClassification" ;
-        rdfs:comment   "A process category, model, taxonomy item, tag, facet value, or other kind of classification." .
-
-vf:ExchangeClassification  a           owl:Class ;
-        rdfs:label           "vf:ExchangeClassification" ;
-        rdfs:comment   "An exchange category, model, taxonomy item, tag, facet value, or other kind of classification." .
-
-vf:TransferClassification  a     owl:Class ;
-        rdfs:label               "vf:TransferClassification" ;
-        rdfs:comment   "A transfer category, model, taxonomy item, tag, facet value, or other kind of classification." .
-
-vf:ProcessPurpose  a     owl:Class ;
-        rdfs:label       "vf:ProcessPurpose" ;
-        rdfs:subClassOf  rdf:Property ;
-        rdfs:comment     "The reason for a process, such as operational, plan, budget, analytics." .
-
 
 # PLAN CLASSES
 
@@ -90,16 +69,6 @@ vf:Process  a            owl:Class ;
 vf:Transfer  a            owl:Class ;
         rdfs:label       "vf:Transfer" ;
         rdfs:comment     "An activity that assigns the rights and responsibilities for an economic resource from one agent to another." .
-
-#vf:Transportation  a     owl:Class ;
-#        rdfs:label       "vf:Transportation" ;
-#        rdfs:subClassOf  vf:Process ;
-#        rdfs:comment   "A process that changes the location of a resource(s) without changing the resource(s) itself." .
-
-#vf:Transformation  a     owl:Class ;
-#        rdfs:label       "vf:Transformation" ;
-#        rdfs:subClassOf  vf:Process ;
-#        rdfs:comment   "A process that produces something new from other resources, or improves an existing resource." .
 
 vf:EconomicEvent  a      owl:Class ;
         rdfs:label       "vf:EconomicEvent" ;
@@ -185,33 +154,12 @@ vf:committedOutputs
         rdfs:domain         vf:Process ;
         rdfs:range          vf:Commitment .
 
-vf:resourceClassifiedAs
+vf:classifiedAs
         a                   owl:ObjectProperty ;
-        rdfs:label          "resource classified as" ;
-        rdfs:domain         [ owl:unionOf (vf:Commitment vf:EconomicResource) ] ;
-        rdfs:range          vf:ResourceClassification ;
-        rdfs:comment        "A resource's primary classification, as part of describing that resource." .
-
-vf:processClassifiedAs
-        a                   owl:ObjectProperty ;
-        rdfs:label          "process classified as" ;
-        rdfs:domain         vf:Process ;
-        rdfs:range          vf:ProcessClassification ;
-        rdfs:comment        "The primary classification that describes a process, at any level of granularity." .
-
-vf:exchangeClassifiedAs
-        a                   owl:ObjectProperty ;
-        rdfs:label          "exchange classified as" ;
-        rdfs:domain         vf:ExchangeAgreement ;
-        rdfs:range          vf:ExchangeClassification ;
-        rdfs:comment        "The primary classification that describes an exchange agreement, at any level of granularity." .
-
-vf:transferClassifiedAs
-        a                   owl:ObjectProperty ;
-        rdfs:label          "exchange classified as" ;
-        rdfs:domain         vf:Transfer ;
-        rdfs:range          vf:TransferClassification ;
-        rdfs:comment        "The primary classification that describes a transfer, at any level of granularity." .
+        rdfs:label          "classified as" ;
+        rdfs:domain         owl:Thing ;
+        rdfs:range          owl:Thing ;
+        rdfs:comment        "References a concept in a common taxonomy or other classification scheme for purposes of categorization." .
 
 # waiting to do the recipe model
 
