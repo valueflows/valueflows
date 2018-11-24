@@ -20,17 +20,6 @@ Here is a specific example:
 
 ![salsa flow](https://rawgit.com/valueflows/valueflows/master/release-doc-in-process/salsa-layer.png)
 
-#### Higher level processes
-
-Processes can be composed into or from higher level processes.  Higher level processes often serve a purpose other than operations, for example planning or budgeting or a manufacturing work order.
-
-Like operational processes, these processes can be classified using Process Classification, which itself can be a taxonomy.  The meaning or reason for the process should be identified using Process Purpose, such as "Plan", "Budget", "Budget Item", "Operational". "Operational" is assumed if no purpose is identified.
-
-When processes are nested, it is not random. nor based on a taxonomy. It is based on what processes are actually part of the higher level process. And not all the inputs and outputs are considered part of the higher level process, since some are produced and consumed within the higher level process.  In the following example, the flows between plant/weed and weed/harvest are not flows related to the higher level process.
-
-![process nesting](https://rawgit.com/valueflows/valueflows/master/release-doc-in-process/nesting.png)
-
-Note: this gives the possibility for parts of global process flows that are invisible because the scoping agent has not made these internal flows public to be shown by a higher level process flow without breaking the pattern.  For example in the above diagram, the larger process of Produce Carrots could be part of a community level process analysis of vegetable production for community resilience, even if the internals are not available.  In this way, mixing and matching the levels can also be useful, without breaking the pattern. 
 
 #### Process diagram
 

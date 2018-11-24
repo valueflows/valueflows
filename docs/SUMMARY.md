@@ -19,6 +19,7 @@
 * [Resource](introduction/resources.md)
 * [Flows](introduction/flows.md)
 * [Process](introduction/processes.md)
+* [Planning, Budgeting, Analysis](introduction/processes-upper.md)
 * [Exchange](introduction/exchanges.md)
 * [Proposals](introduction/proposals.md)
 * [Scoping](introduction/scoping.md)
