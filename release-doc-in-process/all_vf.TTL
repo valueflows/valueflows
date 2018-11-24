@@ -246,12 +246,6 @@ vf:includedIn  a     owl:ObjectProperty ;
         rdfs:range   [ owl:unionOf (vf:EconomicEvent vf:Commitment vf:Intent ) ] ;
         rdfs:comment "Composing same type objects to indicate the quantity of the lower flow is included in the quantity of the higher flow, to avoid double counting." .
 
-vf:purpose  a        owl:ObjectProperty ;
-        rdfs:domain  vf:Process ; 
-        rdfs:label   "purpose" ;
-        rdfs:range   vf:ProcessPurpose ;
-        rdfs:comment "Defines why this process is defined, for example operational, plan, budget." .
-
 vf:under  a          owl:ObjectProperty ;
         rdfs:domain  [ owl:unionOf (vf:EconomicEvent vf:Commitment vf:Reciprocity vf:Fulfillment ) ] ; 
         rdfs:label   "under" ;
@@ -424,16 +418,3 @@ vf:receive  a                vf:Action ;
         rdfs:label          "receive" ;
         rdfs:subPropertyOf  vf:increment .
 
-# ################################ process purposes
-
-vf:operational  a           vf:ProcessPurpose ;
-        rdfs:label          "operational" .
-
-vf:plan  a                  vf:ProcessPurpose ;
-        rdfs:label          "plan" .
-
-vf:budget  a                vf:ProcessPurpose ;
-        rdfs:label          "budget" .
-
-vf:budgetItem  a            vf:ProcessPurpose ;
-        rdfs:label          "budget item" .
