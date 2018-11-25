@@ -420,6 +420,20 @@ vf:hasDuration a        owl:ObjectProperty ;
         rdfs:range      time:TemporalDuration ;
         rdfs:comment    "The calendar duration defined for this type of process." .
 
+vf:resourceTypedAs
+        a                   owl:ObjectProperty ;
+        rdfs:label          "resource typed as" ;
+        rdfs:domain         [ owl:unionOf (vf:Commitment vf:EconomicResource) ] ;
+        rdfs:range          vf:ResourceType ;
+        rdfs:comment        "A resource's primary classification, part of describing that resource." .
+
+vf:processTypedAs
+        a                   owl:ObjectProperty ;
+        rdfs:label          "process typed as" ;
+        rdfs:domain         vf:Process ;
+        rdfs:range          vf:ProcessClassification ;
+        rdfs:comment        "A process's primary classification, as part of describing that process." .
+
 
 # ################################ agent relationship verbs
 
