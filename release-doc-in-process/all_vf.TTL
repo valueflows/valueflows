@@ -408,32 +408,45 @@ vf:successorOf a        owl:ObjectProperty ;
         rdfs:range      vf:Recipe ;
         rdfs:comment    "This recipe is an updated version of another recipe." .
 
-vf:actsOn a             owl:ObjectProperty ;
-        rdfs:label      "acts on" ;
+vf:affected a           owl:ObjectProperty ;
+        rdfs:label      "affected" ;
         rdfs:domain     vf:RecipeFlow ;
-        rdfs:range      vf:ResourceType ;
-        rdfs:comment    "Defines the type of resource this recipe flow acts on." .
+        rdfs:range      vf:RecipeResource ;
+        rdfs:comment    "Defines the type of resource this recipe flow affects." .
 
 vf:hasDuration a        owl:ObjectProperty ;
         rdfs:label      "duration" ;
-        rdfs:domain     vf:ProcessType ;
+        rdfs:domain     vf:RecipeProcess ;
         rdfs:range      time:TemporalDuration ;
         rdfs:comment    "The calendar duration defined for this type of process." .
 
-vf:resourceTypedAs
+vf:durationMultiplier 
+        a               owl:DataTypeProperty ;
+        rdfs:label      "multiplier" ;
+        rdfs:domain     vf:RecipeProcess ;
+        rdfs:range      ???? ; #TODO
+        rdfs:comment    "The calendar duration defined for this type of process." .
+
+vf:resourceBasedOn
         a                   owl:ObjectProperty ;
         rdfs:label          "resource typed as" ;
         rdfs:domain         [ owl:unionOf (vf:Commitment vf:EconomicResource) ] ;
-        rdfs:range          vf:ResourceType ;
+        rdfs:range          vf:RecipeResource ;
         rdfs:comment        "A resource's primary classification, part of describing that resource." .
 
-vf:processTypedAs
+vf:processBasedOn
         a                   owl:ObjectProperty ;
         rdfs:label          "process typed as" ;
         rdfs:domain         vf:Process ;
-        rdfs:range          vf:ProcessClassification ;
+        rdfs:range          vf:RecipeProcess ;
         rdfs:comment        "A process's primary classification, as part of describing that process." .
 
+vf:deliverable
+        a                   owl:ObjectProperty ;
+        rdfs:label          "deliverable" ;
+        rdfs:domain         vf:RecipeFlow ;
+        rdfs:range          vf:Recipe ;
+        rdfs:comment        "The main deliverable(s) of a recipe." .
 
 # ################################ agent relationship verbs
 

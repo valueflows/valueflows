@@ -5,7 +5,7 @@ Recipes are for:
 * generating plans for people to do it together,
 * providing signals for coordinating their work.
 
-Recipes contain all the info required to create a resource.  In ERP (Enterprise Resource Planning) terms, it’s a combination of bills of material and routings and suppliers.
+Recipes contain all the info required to create a resource or provide a service.  In ERP (Enterprise Resource Planning) terms, it’s a combination of bills of material and routings and suppliers.
 
 ### Recipe patterns
 
