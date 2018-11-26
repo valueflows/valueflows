@@ -390,23 +390,17 @@ vf:definedQuantity a    owl:ObjectProperty ;
 #        rdfs:domain     vf:ResourceSpecification ;
 #        rdfs:comment    "Defines the category of behavior expected for the type of resource." .
 
-vf:variantOf a          owl:ObjectProperty ;
-        rdfs:label      "variant of" ;
-        rdfs:domain     vf:Recipe ;
-        rdfs:range      vf:Recipe ;
-        rdfs:comment    "This recipe is a variation of another recipe." .
+#vf:variantOf a          owl:ObjectProperty ;
+#        rdfs:label      "variant of" ;
+#        rdfs:domain     vf:Recipe ;
+#        rdfs:range      vf:Recipe ;
+#        rdfs:comment    "This recipe is a variation of another recipe." .
 
-vf:successorOf a        owl:ObjectProperty ;
-        rdfs:label      "successor of" ;
-        rdfs:domain     vf:Recipe ;
-        rdfs:range      vf:Recipe ;
-        rdfs:comment    "This recipe is an updated version of another recipe." .
-
-#vf:affected a           owl:ObjectProperty ;
-#        rdfs:label      "affected" ;
-#        rdfs:domain     vf:RecipeFlow ;
-#        rdfs:range      vf:RecipeResource ;
-#        rdfs:comment    "Defines the type of resource this recipe flow affects." .
+#vf:successorOf a        owl:ObjectProperty ;
+#        rdfs:label      "successor of" ;
+#        rdfs:domain     vf:Recipe ;
+#        rdfs:range      vf:Recipe ;
+#        rdfs:comment    "This recipe is an updated version of another recipe." .
 
 vf:duration a           owl:ObjectProperty ;
         rdfs:label      "duration" ;
