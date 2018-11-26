@@ -30,19 +30,19 @@ vf:AgentRelationshipRole  a  owl:Class ;
         rdfs:subClassOf   rdf:Property ;
         rdfs:comment   "A relationship role defining the kind of association one agent can have with another." .
 
-vf:Recipe a               owl:Class ;
+vf:Recipe a                owl:Class ;
         rdfs:label         "vf:Recipe" ;
         rdfs:comment       "Recipes contain all the info required to create or improve or move a resource." .
 
-vf:ResourceType a         owl:Class ;
-        rdfs:label         "vf:ResourceType" ;
+vf:ResourceSpecification a owl:Class ;
+        rdfs:label         "vf:ResourceSpecification" ;
         rdfs:comment       "." .
 
-vf:ProcessType a          owl:Class ;
-        rdfs:label         "vf:ProcessType" ;
+vf:RecipeProcess a          owl:Class ;
+        rdfs:label         "vf:RecipeProcess" ;
         rdfs:comment       "." .
 
-vf:RecipeFlow a           owl:Class ;
+vf:RecipeFlow a            owl:Class ;
         rdfs:label         "vf:RecipeFlow" ;
         rdfs:comment       "The linkage between resource types, process types, and actions that structure a recipe." .
 
@@ -138,13 +138,13 @@ vf:inputOf
         a                   owl:ObjectProperty ;
         rdfs:label         "input of" ;
         rdfs:domain         [ owl:unionOf (vf:EconomicEvent vf:Commitment vf:Intent vf:RecipeFlow) ] ;
-        rdfs:range          [ owl:unionOf (vf:Process vf:Transfer vf:ProcessType) ] .
+        rdfs:range          [ owl:unionOf (vf:Process vf:Transfer vf:RecipeProcess) ] .
 
 vf:outputOf
         a                   owl:ObjectProperty ;
         rdfs:label         "output of" ;
-        rdfs:domain         [ owl:unionOf (vf:EconomicEvent vf:Commitment vf:Intent vf:RecipeFlow) ] ;
-        rdfs:range          [ owl:unionOf (vf:Process vf:Transfer vf:ProcessType) ] .
+        rdfs:domain         [ owl:unionOf (vf:EconomicEvent vf:Commitment vf:Intent vf:RecipeFlow vf:Recipe) ] ;
+        rdfs:range          [ owl:unionOf (vf:Process vf:Transfer vf:RecipeProcess) ] .
 
 vf:inputs
         a                   owl:ObjectProperty ;
@@ -368,13 +368,13 @@ vf:fulfills     a owl:ObjectProperty ;
 
 vf:isSubstitutable a    owl:DatatypeProperty ;
         rdfs:label      "is substitutable" ;
-        rdfs:domain     vf:ResourceType ;
+        rdfs:domain     vf:ResourceSpecification ;
         rdfs:range      xsd:boolean ;
         rdfs:comment    "Defines if any resource of that type can be freely substituted for any other resource of that type when used, consumed, traded, etc." .
 
 #vf:unit a               owl:ObjectProperty ;
 #        rdfs:label      "unit" ;
-#        rdfs:domain     vf:ResourceType ;
+#        rdfs:domain     vf:ResourceSpecification ;
 #        rdfs:range      qudt:unit ;
 #        rdfs:comment    "The unit expected for this resource type as a default." .
 
@@ -384,10 +384,10 @@ vf:definedQuantity a    owl:ObjectProperty ;
         rdfs:range      qudt:QuantityValue ;
         rdfs:comment    "The amount and unit defined for this recipe flow." .
 
-# TODO: need to define this, something like currency, inventory, work, service; may be other aspects too.
+# TODO: need to define this, something like currency, inventory, skill, service; may be other aspects too.
 #vf:resourceCategory a    owl:ObjectProperty ;
 #        rdfs:label      "category" ;
-#        rdfs:domain     vf:ResourceType ;
+#        rdfs:domain     vf:ResourceSpecification ;
 #        rdfs:comment    "Defines the category of behavior expected for the type of resource." .
 
 vf:developedBy a        owl:ObjectProperty ;
@@ -408,13 +408,13 @@ vf:successorOf a        owl:ObjectProperty ;
         rdfs:range      vf:Recipe ;
         rdfs:comment    "This recipe is an updated version of another recipe." .
 
-vf:affected a           owl:ObjectProperty ;
-        rdfs:label      "affected" ;
-        rdfs:domain     vf:RecipeFlow ;
-        rdfs:range      vf:RecipeResource ;
-        rdfs:comment    "Defines the type of resource this recipe flow affects." .
+#vf:affected a           owl:ObjectProperty ;
+#        rdfs:label      "affected" ;
+#        rdfs:domain     vf:RecipeFlow ;
+#        rdfs:range      vf:RecipeResource ;
+#        rdfs:comment    "Defines the type of resource this recipe flow affects." .
 
-vf:hasDuration a        owl:ObjectProperty ;
+vf:duration a           owl:ObjectProperty ;
         rdfs:label      "duration" ;
         rdfs:domain     vf:RecipeProcess ;
         rdfs:range      time:TemporalDuration ;
@@ -422,31 +422,26 @@ vf:hasDuration a        owl:ObjectProperty ;
 
 vf:durationMultiplier 
         a               owl:DataTypeProperty ;
-        rdfs:label      "multiplier" ;
+        rdfs:label      "duration multiplier" ;
         rdfs:domain     vf:RecipeProcess ;
-        rdfs:range      ???? ; #TODO
-        rdfs:comment    "The calendar duration defined for this type of process." .
+        rdfs:range      xsd:float ;
+        rdfs:comment    "The multiplier for duration based on capacities for the recipe." .
 
-vf:resourceBasedOn
-        a                   owl:ObjectProperty ;
-        rdfs:label          "resource typed as" ;
-        rdfs:domain         [ owl:unionOf (vf:Commitment vf:EconomicResource) ] ;
-        rdfs:range          vf:RecipeResource ;
-        rdfs:comment        "A resource's primary classification, part of describing that resource." .
+vf:basedOn
+        a               owl:ObjectProperty ;
+        rdfs:label      "based on" ;
+        rdfs:domain     vf:Process ;
+        rdfs:range      vf:RecipeProcess ;
+        rdfs:comment    "The recipe definition or specification for a process." .
 
-vf:processBasedOn
-        a                   owl:ObjectProperty ;
-        rdfs:label          "process typed as" ;
-        rdfs:domain         vf:Process ;
-        rdfs:range          vf:RecipeProcess ;
-        rdfs:comment        "A process's primary classification, as part of describing that process." .
+vf:resourceConformsTo
+        a               owl:ObjectProperty ;
+        rdfs:label      "conforms to" ;
+        rdfs:domain     [ owl:unionOf (vf:Commitment vf:EconomicResource vf:RecipeFlow ) ] ;
+        rdfs:range      vf:ResourceSpecification ;
+        rdfs:comment    "The primary resource knowledge specification or definition of an existing or potential resource." .
 
-vf:deliverable
-        a                   owl:ObjectProperty ;
-        rdfs:label          "deliverable" ;
-        rdfs:domain         vf:RecipeFlow ;
-        rdfs:range          vf:Recipe ;
-        rdfs:comment        "The main deliverable(s) of a recipe." .
+
 
 # ################################ agent relationship verbs
 
