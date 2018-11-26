@@ -390,12 +390,6 @@ vf:definedQuantity a    owl:ObjectProperty ;
 #        rdfs:domain     vf:ResourceSpecification ;
 #        rdfs:comment    "Defines the category of behavior expected for the type of resource." .
 
-vf:developedBy a        owl:ObjectProperty ;
-        rdfs:label      "developed by" ;
-        rdfs:domain     vf:Recipe ;
-        rdfs:range      foaf:Agent ;
-        rdfs:comment    "The agent who developed this recipe." .
-
 vf:variantOf a          owl:ObjectProperty ;
         rdfs:label      "variant of" ;
         rdfs:domain     vf:Recipe ;
@@ -437,7 +431,7 @@ vf:basedOn
 vf:resourceConformsTo
         a               owl:ObjectProperty ;
         rdfs:label      "conforms to" ;
-        rdfs:domain     [ owl:unionOf (vf:Commitment vf:EconomicResource vf:RecipeFlow ) ] ;
+        rdfs:domain     [ owl:unionOf (vf:Commitment vf:EconomicResource vf:Intent vf:RecipeFlow ) ] ;
         rdfs:range      vf:ResourceSpecification ;
         rdfs:comment    "The primary resource knowledge specification or definition of an existing or potential resource." .
 
