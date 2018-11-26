@@ -372,11 +372,11 @@ vf:isSubstitutable a    owl:DatatypeProperty ;
         rdfs:range      xsd:boolean ;
         rdfs:comment    "Defines if any resource of that type can be freely substituted for any other resource of that type when used, consumed, traded, etc." .
 
-#vf:unit a               owl:ObjectProperty ;
-#        rdfs:label      "unit" ;
-#        rdfs:domain     vf:ResourceSpecification ;
-#        rdfs:range      qudt:unit ;
-#        rdfs:comment    "The unit expected for this resource type as a default." .
+vf:unit a               owl:ObjectProperty ;
+        rdfs:label      "unit" ;
+        rdfs:domain     vf:ResourceSpecification ;
+        rdfs:range      qudt:unit ;
+        rdfs:comment    "The unit expected for this resource specification as a default." .
 
 vf:definedQuantity a    owl:ObjectProperty ;
         rdfs:label      "defined quantity" ;
@@ -396,7 +396,7 @@ vf:developedBy a        owl:ObjectProperty ;
         rdfs:range      foaf:Agent ;
         rdfs:comment    "The agent who developed this recipe." .
 
-vf:variantOf a           owl:ObjectProperty ;
+vf:variantOf a          owl:ObjectProperty ;
         rdfs:label      "variant of" ;
         rdfs:domain     vf:Recipe ;
         rdfs:range      vf:Recipe ;
