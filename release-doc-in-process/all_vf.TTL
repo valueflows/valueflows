@@ -36,15 +36,15 @@ vf:AgentRelationshipRole  a  owl:Class ;
 
 vf:ResourceSpecification a owl:Class ;
         rdfs:label         "vf:ResourceSpecification" ;
-        rdfs:comment       "." .
+        rdfs:comment       "Specification of a kind of resource. Could define a material item, service, digital item, currency account, etc." .
 
 vf:RecipeProcess a          owl:Class ;
         rdfs:label         "vf:RecipeProcess" ;
-        rdfs:comment       "." .
+        rdfs:comment       "Specifies the process part of a recipe for use in planning from recipe." .
 
 vf:RecipeFlow a            owl:Class ;
         rdfs:label         "vf:RecipeFlow" ;
-        rdfs:comment       "The linkage between resource types, process types, and actions that structure a recipe." .
+        rdfs:comment       "The linkage between a resource type, process type, and action that create the structure of a recipe." .
 
 
 # PLAN CLASSES
