@@ -30,9 +30,9 @@ vf:AgentRelationshipRole  a  owl:Class ;
         rdfs:subClassOf   rdf:Property ;
         rdfs:comment   "A relationship role defining the kind of association one agent can have with another." .
 
-vf:Recipe a                owl:Class ;
-        rdfs:label         "vf:Recipe" ;
-        rdfs:comment       "Recipes contain all the info required to create or improve or move a resource." .
+#vf:Recipe a                owl:Class ;
+#        rdfs:label         "vf:Recipe" ;
+#        rdfs:comment       "Recipes contain all the info required to create or improve or move a resource." .
 
 vf:ResourceSpecification a owl:Class ;
         rdfs:label         "vf:ResourceSpecification" ;
@@ -143,7 +143,7 @@ vf:inputOf
 vf:outputOf
         a                   owl:ObjectProperty ;
         rdfs:label         "output of" ;
-        rdfs:domain         [ owl:unionOf (vf:EconomicEvent vf:Commitment vf:Intent vf:RecipeFlow vf:Recipe) ] ;
+        rdfs:domain         [ owl:unionOf (vf:EconomicEvent vf:Commitment vf:Intent vf:RecipeFlow) ] ; # vf:Recipe
         rdfs:range          [ owl:unionOf (vf:Process vf:Transfer vf:RecipeProcess) ] .
 
 vf:inputs
@@ -176,8 +176,6 @@ vf:classifiedAs
         rdfs:domain         owl:Thing ;
         rdfs:range          owl:Thing ;
         rdfs:comment        "References a concept in a common taxonomy or other classification scheme for purposes of categorization." .
-
-# waiting to do the recipe model
 
 vf:involves
         a                   owl:ObjectProperty ;
