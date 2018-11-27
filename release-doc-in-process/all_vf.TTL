@@ -44,7 +44,7 @@ vf:RecipeProcess a          owl:Class ;
 
 vf:RecipeFlow a            owl:Class ;
         rdfs:label         "vf:RecipeFlow" ;
-        rdfs:comment       "The linkage between a resource type, process type, and action that create the structure of a recipe." .
+        rdfs:comment       "The linkage between a process recipe, an action that structures a recipe, and a resource specification." .
 
 
 # PLAN CLASSES
