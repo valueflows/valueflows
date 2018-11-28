@@ -24,6 +24,7 @@
 * [Proposals](introduction/proposals.md)
 * [Scoping](introduction/scoping.md)
 * [Classification](introduction/classification.md)
+* [Recipes](introduction/recipes.md)
 * [Conversation for Action](introduction/cfa.md)
 * [Accounting](introduction/accounting.md)
 
