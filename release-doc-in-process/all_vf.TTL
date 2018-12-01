@@ -71,6 +71,10 @@ vf:DistributionAgreement  a       owl:Class ;
         rdfs:subClassOf   vf:Agreement ;
         rdfs:comment      "An agreement to distribute some resource in exchange for inputs or outputs created by other agents." .
 
+vf:ExchangeRate a owl:Class ;
+        rdfs:label        "vf:ExchangeAgreement" ;
+        rdfs:comment      "Used with exchange agreements to represante an exchange rate between two reciprocal flows" .
+
 # OBSERVATION CLASSES
 
 
@@ -259,6 +263,30 @@ vf:under  a          owl:ObjectProperty ;
         rdfs:label   "under" ;
         rdfs:range   vf:Agreement ;
         rdfs:comment        "Reference an agreement between agents which specifies the rules or policies which govern this event." .
+
+vf:numeratorFlow a   owl:ObjectProperty ;
+        rdfs:label   "vf:numeratorFlow" ;
+        rdfs:domain  vf:ExchangeRate ;
+        rdfs:range   [ owl:unionOf (vf:EconomicEvent vf:Commitment vf:Intent ) ] ;
+        rdfs:comment "References flow related to the numerator value" .
+
+vf:denominatorFlow a   owl:ObjectProperty ;
+        rdfs:label   "vf:denominatorFlow" ;
+        rdfs:domain  vf:ExchangeRate ;
+        rdfs:range   [ owl:unionOf (vf:EconomicEvent vf:Commitment vf:Intent ) ] ;
+        rdfs:comment "References flow related to the denominator value" .
+
+vf:numerator a   owl:DataProperty ;
+        rdfs:label   "vf:numerator" ;
+        rdfs:domain  vf:ExchangeRate ;
+        rdfs:range  xsd:decimal ;
+        rdfs:comment "Numerator value" .
+
+vf:denominator a   owl:DataProperty ;
+        rdfs:label   "vf:denominator" ;
+        rdfs:domain  vf:ExchangeRate ;
+        rdfs:range  xsd:decimal ;
+        rdfs:comment "Denominator value" .
 
 vf:createdBy  a        owl:ObjectProperty ;
         rdfs:label   "created by" ;
