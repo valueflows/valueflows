@@ -34,11 +34,11 @@ vf:AgentRelationshipRole  a  owl:Class ;
 
 vf:Intent  a           owl:Class ;
         rdfs:label     "vf:Intent" ;
-        rdfs:comment   "A planned economic flow, which can lead to economic events (sometimes through commitments)" .
+        rdfs:comment   "A proposed or planned or estimated economic flow, prior to a commitment or agreement, which can lead to commitments and/or economic events." .
 
 vf:Commitment  a       owl:Class ;
         rdfs:label     "vf:Commitment" ;
-        rdfs:comment   "A planned economic flow that has been promised by an agent to another agent." .
+        rdfs:comment   "A planned economic flow that has been promised by an agent to another agent, which can lead to economic events." .
 
 vf:Agreement  a       owl:Class ;
         rdfs:label       "vf:Agreement" ;
