@@ -65,6 +65,10 @@ vf:Agreement  a       owl:Class ;
         rdfs:label       "vf:Agreement" ;
         rdfs:comment   "Any type of agreement among economic agents, that can be referenced in VF to clarify the economic activity.  This is a placeholder pending investigating other vocabularies." .
 
+vf:Satisfaction  a     owl:Class ;
+        rdfs:label     "vf:Satisfaction" ;
+        rdfs:comment   "A commitment or economic event that partially or fully satisfies one or more intents." .
+
 vf:ExchangeAgreement  a       owl:Class ;
         rdfs:label       "vf:ExchangeAgreement" ;
         rdfs:subClassOf      vf:Agreement ;
@@ -464,6 +468,20 @@ vf:reciprocalIntentOf
         rdfs:domain         vf:Intent ;
         rdfs:range          vf:Proposal ;
         rdfs:comment        "The proposal which this reciprocal intent applies to." .
+
+vf:satisfies
+        a                   owl:ObjectProperty ;
+        rdfs:label         "satisfies" ;
+        rdfs:domain         vf:Satisfaction ;
+        rdfs:range          vf:Intent ;
+        rdfs:comment        "An intent satisfied fully or partially by an economic event or commitment." .
+
+vf:satisfiedBy
+        a                   owl:ObjectProperty ;
+        rdfs:label         "satisfied by" ;
+        rdfs:domain         vf:Satisfaction ;
+        rdfs:range          [ owl:unionOf (vf:Commitment vf:EconomicEvent ) ] ;
+        rdfs:comment        "A commitment or economic event fully or partially satisfying an intent" .
 
 
 # ################################ agent relationship verbs
