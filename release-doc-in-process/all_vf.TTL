@@ -451,6 +451,20 @@ vf:reciprocalIntents
         rdfs:range          vf:Intent ;
         rdfs:comment        "The reciprocal offers, requests, estimates, or other intents proposed." .
 
+vf:intentOf
+        a                   owl:ObjectProperty ;
+        rdfs:label         "intent of" ;
+        rdfs:domain         vf:Intent ;
+        rdfs:range          vf:Proposal ;
+        rdfs:comment        "The proposal which this intent applies to." .
+
+vf:reciprocalIntentOf
+        a                   owl:ObjectProperty ;
+        rdfs:label         "reciprocal intent of" ;
+        rdfs:domain         vf:Intent ;
+        rdfs:range          vf:Proposal ;
+        rdfs:comment        "The proposal which this reciprocal intent applies to." .
+
 
 # ################################ agent relationship verbs
 
