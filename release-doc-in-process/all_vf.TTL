@@ -154,29 +154,29 @@ vf:outputOf
         rdfs:domain         [ owl:unionOf (vf:EconomicEvent vf:Commitment vf:Intent vf:RecipeFlow) ] ; # vf:Recipe
         rdfs:range          [ owl:unionOf (vf:Process vf:Transfer vf:RecipeProcess) ] .
 
-vf:inputs
-        a                   owl:ObjectProperty ;
-        rdfs:label         "inputs" ;
-        rdfs:domain         [ owl:unionOf (vf:Process vf:Transfer) ] ;
-        rdfs:range          vf:EconomicEvent .
+#vf:inputs
+#        a                   owl:ObjectProperty ;
+#        rdfs:label         "inputs" ;
+#        rdfs:domain         [ owl:unionOf (vf:Process vf:Transfer) ] ;
+#        rdfs:range          vf:EconomicEvent .
 
-vf:outputs
-        a                   owl:ObjectProperty ;
-        rdfs:label         "outputs" ;
-        rdfs:domain         [ owl:unionOf (vf:Process vf:Transfer) ] ;
-        rdfs:range          vf:EconomicEvent .
+#vf:outputs
+#        a                   owl:ObjectProperty ;
+#        rdfs:label         "outputs" ;
+#        rdfs:domain         [ owl:unionOf (vf:Process vf:Transfer) ] ;
+#        rdfs:range          vf:EconomicEvent .
 
-vf:committedInputs
-        a                   owl:ObjectProperty ;
-        rdfs:label         "committed inputs" ;
-        rdfs:domain         vf:Process ;
-        rdfs:range          vf:Commitment .
+#vf:committedInputs
+#        a                   owl:ObjectProperty ;
+#        rdfs:label         "committed inputs" ;
+#        rdfs:domain         vf:Process ;
+#        rdfs:range          vf:Commitment .
 
-vf:committedOutputs
-        a                   owl:ObjectProperty ;
-        rdfs:label         "committed outputs" ;
-        rdfs:domain         vf:Process ;
-        rdfs:range          vf:Commitment .
+#vf:committedOutputs
+#        a                   owl:ObjectProperty ;
+#        rdfs:label         "committed outputs" ;
+#        rdfs:domain         vf:Process ;
+#        rdfs:range          vf:Commitment .
 
 vf:classifiedAs
         a                   owl:ObjectProperty ;
@@ -441,19 +441,19 @@ vf:resourceConformsTo
         rdfs:range      vf:ResourceSpecification ;
         rdfs:comment    "The primary resource knowledge specification or definition of an existing or potential resource." .
 
-vf:intents
-        a                   owl:ObjectProperty ;
-        rdfs:label         "intents" ;
-        rdfs:domain         vf:Proposal ;
-        rdfs:range          vf:Intent ;
-        rdfs:comment        "The primary offers, requests, estimates, or other intents proposed." .
+#vf:intents
+#        a                   owl:ObjectProperty ;
+#        rdfs:label         "intents" ;
+#        rdfs:domain         vf:Proposal ;
+#        rdfs:range          vf:Intent ;
+#        rdfs:comment        "The primary offers, requests, estimates, or other intents proposed." .
 
-vf:reciprocalIntents
-        a                   owl:ObjectProperty ;
-        rdfs:label         "reciprocal intents" ;
-        rdfs:domain         vf:Proposal ;
-        rdfs:range          vf:Intent ;
-        rdfs:comment        "The reciprocal offers, requests, estimates, or other intents proposed." .
+#vf:reciprocalIntents
+#        a                   owl:ObjectProperty ;
+#        rdfs:label         "reciprocal intents" ;
+#        rdfs:domain         vf:Proposal ;
+#        rdfs:range          vf:Intent ;
+#        rdfs:comment        "The reciprocal offers, requests, estimates, or other intents proposed." .
 
 vf:intentOf
         a                   owl:ObjectProperty ;
