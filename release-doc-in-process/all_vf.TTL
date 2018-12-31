@@ -297,6 +297,18 @@ vf:fulfilledQuantity a owl:ObjectProperty ;
         rdfs:range      qudt:QuantityValue ;
         rdfs:comment    "The quantity of the fulfillment of an event towards a commitment." .
 
+vf:claimedQuantity a    owl:ObjectProperty ;
+        rdfs:label      "claimed quantity" ;
+        rdfs:domain     vf:Claim ;
+        rdfs:range      qudt:QuantityValue ;
+        rdfs:comment    "The quantity of the claim from an event generating a commitment." .
+
+vf:reciprocalQuantity a owl:ObjectProperty ;
+        rdfs:label      "reciprocal quantity" ;
+        rdfs:domain     vf:Reciprocity ;
+        rdfs:range      qudt:QuantityValue ;
+        rdfs:comment    "The quantity of the reciprocity between one event and another." .
+
 vf:currentLocation a owl:ObjectProperty ;
         rdfs:label   "current location" ;
         rdfs:domain  vf:EconomicResource ;
