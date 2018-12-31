@@ -46,7 +46,6 @@ vf:RecipeFlow a            owl:Class ;
         rdfs:label         "vf:RecipeFlow" ;
         rdfs:comment       "The linkage between a process recipe, an action that structures a recipe, and a resource specification." .
 
-
 # PLAN CLASSES
 
 vf:Intent  a           owl:Class ;
@@ -80,7 +79,6 @@ vf:DistributionAgreement  a       owl:Class ;
         rdfs:comment      "An agreement to distribute some resource in exchange for inputs or outputs created by other agents." .
 
 # OBSERVATION CLASSES
-
 
 vf:EconomicResource  a           owl:Class ;
         rdfs:label       "vf:EconomicResource" ;
@@ -266,7 +264,7 @@ vf:under  a          owl:ObjectProperty ;
         rdfs:domain  [ owl:unionOf (vf:EconomicEvent vf:Commitment vf:Reciprocity vf:Fulfillment ) ] ; 
         rdfs:label   "under" ;
         rdfs:range   vf:Agreement ;
-        rdfs:comment        "Reference an agreement between agents which specifies the rules or policies which govern this event." .
+        rdfs:comment        "Reference to an agreement between agents which specifies the rules or policies which govern this flow." .
 
 vf:createdBy  a        owl:ObjectProperty ;
         rdfs:label   "created by" ;
@@ -373,7 +371,7 @@ vf:fulfills     a owl:ObjectProperty ;
         rdfs:comment    "The commitment which is completely or partially fulfilled by an economic event." .
 
 #vf:isFinished  a        owl:DataTypeProperty ;
-#        rdfs:domain     [ owl:unionOf (vf:Commitment vf:Process) ] ; 
+#        rdfs:domain     [ owl:unionOf (vf:Commitment vf:Process vf:Proposal vf:Intent) ] ; 
 #        rdfs:label      "is finished" ;
 #        rdfs:range      xsd:boolean ;
 #        rdfs:comment    "The commitment or process is complete or not." .
