@@ -95,13 +95,17 @@ vf:Fulfillment  a            owl:Class ;
         rdfs:label       "vf:Fulfillment" ;
         rdfs:comment   "The quantity that the vf:EconomicEvent fulfilled towards the vf:Commitment." .
 
+vf:Claim  a              owl:Class ;
+        rdfs:label       "vf:Claim" ;
+        rdfs:comment     "The quantity that the vf:EconomicEvent claims towards creation of the reciprocal vf:Commitment." .
+
 vf:Reciprocity  a        owl:Class ;
         rdfs:label       "vf:Reciprocity" ;
-        rdfs:comment     "The quantity that the vf:EconomicEvent implies towards creation of the reciprocal vf:Commitment." .
+        rdfs:comment     "The quantity that the vf:EconomicEvent implies related to the reciprocal vf:EconomicEvent.  Or, an appreciation for a prior event, without quantity, as in the gift economy." .
 
-vf:Appreciation  a            owl:Class ;
-        rdfs:label       "vf:Appreciation" ;
-        rdfs:comment     "A way to tie an economic event that is given in loose fulfilment for another economic event, without commitments or expectations. Supports the gift economy." .
+#vf:Appreciation  a            owl:Class ;
+#        rdfs:label       "vf:Appreciation" ;
+#        rdfs:comment     "A way to tie an economic event that is given in loose fulfilment for another economic event, without commitments or expectations. Supports the gift economy." .
 
 vf:Location  a           owl:Class ;
         rdfs:label       "vf:Location" .
@@ -240,22 +244,34 @@ vf:inScopeOf  a      owl:ObjectProperty ;
         rdfs:comment "Grouping around something to create a boundary or context, used for documenting, accounting, planning." .
 
 vf:under  a          owl:ObjectProperty ;
-        rdfs:domain  [ owl:unionOf (vf:EconomicEvent vf:Commitment vf:Reciprocity vf:Fulfillment ) ] ; 
+        rdfs:domain  [ owl:unionOf (vf:EconomicEvent vf:Commitment vf:Claim vf:Fulfillment ) ] ; 
         rdfs:label   "under" ;
         rdfs:range   vf:Agreement ;
         rdfs:comment        "Reference an agreement between agents which specifies the rules or policies which govern this event." .
 
-vf:createdBy  a        owl:ObjectProperty ;
-        rdfs:label   "created by" ;
-        rdfs:domain  vf:Reciprocity ;
-        rdfs:range   vf:EconomicEvent ;
+vf:claimedBy  a             owl:ObjectProperty ;
+        rdfs:label          "claimed by" ;
+        rdfs:domain         vf:Claim ;
+        rdfs:range          vf:EconomicEvent ;
         rdfs:comment        "References the economic event that fully or partially created the commitment, often based on a prior agreement." .
 
-vf:creates  a        owl:ObjectProperty ;
-        rdfs:label   "creates" ;
-        rdfs:domain  vf:Reciprocity ;
-        rdfs:range   vf:Commitment ;
+vf:claims  a                owl:ObjectProperty ;
+        rdfs:label          "claims" ;
+        rdfs:domain         vf:Claim ;
+        rdfs:range          vf:Commitment ;
         rdfs:comment        "References the commitment that was fully or partially created because of the economic event, often based on a prior agreement." .
+
+vf:reciprocalFrom  a         owl:ObjectProperty ;
+        rdfs:label          "reciprocal from" ;
+        rdfs:domain         vf:Reciprocity ;
+        rdfs:range          vf:EconomicEvent ;
+        rdfs:comment        "References the economic event that the economic event is reciprocal from." .
+
+vf:reciprocalTo  a            owl:ObjectProperty ;
+        rdfs:label          "reciprocal to" ;
+        rdfs:domain         vf:Reciprocity ;
+        rdfs:range          vf:EconomicEvent ;
+        rdfs:comment        "References the economic event that the economic event is reciprocal to." .
 
 vf:contains  a       owl:ObjectProperty ;
         rdfs:label   "contains" ;
