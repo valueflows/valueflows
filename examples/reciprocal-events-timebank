@@ -1,0 +1,72 @@
+'@context':
+  '@vocab': https://w3id.org/valueflows#
+  xsd: http://www.w3.org/2001/XMLSchema#
+  time: http://www.w3.org/2006/time#
+  time:inXSDDateTimeStamp:
+    '@type': xsd:dateTimeStamp
+  timebank: https://timebank.example
+  alice: https://alice.example
+  bob: https://bob.example
+
+'@graph':
+
+  - '@id': timebank:234234
+    '@type': EconomicResource
+    name: 'Alice credit account'
+
+  - '@id': timebank:657897
+    '@type': EconomicResource
+    name: 'Bob credit account'
+
+  - '@id': timebank:7dd207e3-8f11-4fe3-95f8-d02f6c180be3
+    '@type': EconomicEvent
+    provider: alice
+    recipient: bob
+    action: work
+    observedQuantity:
+      qudt:unit: Hours
+      qudt:numericValue: 5
+    resourceClassifiedAs: https://www.wikidata.org/wiki/Q203605 #carpentry
+    observedTime:
+      '@type': time:ProperInterval
+      time:intervalStarts:
+        '@type': time:Instant
+        time:inXSDDateTimeStamp: 2018-12-29T00:00:00-5:00
+
+  - '@id': timebank:7dd207e3-8f11-4fe3-95f8-d02f6c49084
+    '@type': EconomicEvent
+    provider: bob
+    recipient: alice
+    action: give
+    observedQuantity:
+      qudt:unit: Credits
+      qudt:numericValue: 5
+    affects: timebank:657897
+    observedTime:
+      '@type': time:ProperInterval
+      time:intervalStarts:
+        '@type': time:Instant
+        time:inXSDDateTimeStamp: 2018-12-30T00:00:00-5:00
+
+  - '@id': timebank:7dd207e3-8f11-4fe3-95f8-d02f6c180be3
+    '@type': EconomicEvent
+    provider: bob
+    recipient: alice
+    action: receive
+    observedQuantity:
+      qudt:unit: Credits
+      qudt:numericValue: 5
+    affects: timebank:234234
+    observedTime:
+      '@type': time:ProperInterval
+      time:intervalStarts:
+        '@type': time:Instant
+        time:inXSDDateTimeStamp: 2018-12-30T00:00:00-5:00
+
+  - '@id': timebank:6b5bc786-b9ed-4189-b34f-5ef7d10f1f86
+    '@type': Reciprocity
+    reciprocalFrom: timebank:7dd207e3-8f11-4fe3-95f8-d02f6c180be3 # alice's work
+    reciprocalTo: timebank:7dd207e3-8f11-4fe3-95f8-d02f6c49084 # bob's giving credit
+    reciprocalQuantity:
+      qudt:unit: Credits
+      qudt:numericValue: 5
