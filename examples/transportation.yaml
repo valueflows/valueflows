@@ -1,0 +1,456 @@
+# Transportation
+# https://github.com/valueflows/valueflows/wiki/Use-Cases-and-Requirements#transportation
+
+'@context':
+  '@vocab': https://w3id.org/valueflows#
+  xsd: http://www.w3.org/2001/XMLSchema#
+  time: http://www.w3.org/2006/time#
+  time:inXSDDateTimeStamp:
+    '@type': xsd:dateTimeStamp
+  alice: https://alice.example/
+  bob: https://bob.example/
+  claudia: https://claudia.example/
+
+'@graph':
+
+  # initial common resources for all variants
+
+  - '@id': alice:c7897c39-7f05-4a5d-a487-80e130a2414b
+    '@type': EconomicResource
+    clasifiedAs: http://www.wikidata.org/entity/Q89 # apples
+    currentQuantity:
+      qudt:unit: unit:Kilogram
+      qudt:numericValue: 670
+
+  - '@id': alice:0f563083-8da4-46fe-adc3-68b05ba06320
+    '@type': EconomicResource
+    clasifiedAs: http://www.wikidata.org/entity/Q89 # apples
+    currentQuantity:
+      qudt:unit: unit:Kilogram
+      qudt:numericValue: 210
+
+  - '@id': alice:2970fd8b-b4d4-454e-8845-e5ffd33a422b
+    '@type': EconomicResource
+    clasifiedAs: http://www.wikidata.org/entity/Q6675561 # gunny sack
+    currentQuantity:
+      qudt:unit: unit:Unitless
+      qudt:numericValue: 54
+
+  - '@id': alice:c4cd539d-3684-4e4c-83f3-f04e89f571fd
+    '@type': EconomicResource
+    clasifiedAs: http://www.wikidata.org/entity/Q6675561 # gunny sack
+    currentQuantity:
+      qudt:unit: unit:Unitless
+      qudt:numericValue: 15
+
+  - '@id': alice:b6059363-88fa-484f-af7d-f2ff5d17975a
+    '@type': EconomicResource
+    classifiedAs: http://www.wikidata.org/entity/Q17053958 # fruit press
+    trackingIdentifier: urn:uuid:ba91c53c-3152-424b-a6ca-2c8c5e290d85
+    currentQuantity:
+      qudt:unit: unit:Unitless
+      qudt:numericValue: 1
+
+  - '@id': bob:a3246484-e862-4a12-b729-23986da5c033
+    '@type': EconomicResource
+    clasifiedAs: http://www.wikidata.org/entity/Q89 # apples
+    currentQuantity:
+      qudt:unit: unit:Kilogram
+      qudt:numericValue: 40
+
+  - '@id': bob:84ee590e-d859-434c-b6f2-4d542d06fc7c
+    '@type': EconomicResource
+    clasifiedAs: http://www.wikidata.org/entity/Q6675561 # gunny sack
+    currentQuantity:
+      qudt:unit: unit:Unitless
+      qudt:numericValue: 27
+
+
+# relocation
+# non serial
+
+# Alice transports 100kg of her apples between two different places.
+
+  - '@id': alice:e7482f32-25b5-4f79-934b-5d0db3a5b77d
+    '@type': Process
+
+  - '@id': alice:6fb358a3-2859-4d6a-a4fa-431603ee70f5
+    '@type': EconomicEvent
+    inputOf: alice:e7482f32-25b5-4f79-934b-5d0db3a5b77d 
+    action: load
+    affects: alice:c7897c39-7f05-4a5d-a487-80e130a2414b
+    observedQuantity:
+      qudt:unit: unit:Kilogram
+      qudt:numericValue: 100
+    
+  - '@id': alice:73410782-74da-4165-ad2b-b92fdf55f795
+    '@type': EconomicEvent
+    outputOf: alice:e7482f32-25b5-4f79-934b-5d0db3a5b77d 
+    action: unload
+    affects: alice:0f563083-8da4-46fe-adc3-68b05ba06320
+    observedQuantity:
+      qudt:unit: unit:Kilogram
+      qudt:numericValue: 100
+
+# pick-up
+# non serial
+
+# Bob receives 100kg of apples from Alice and he picks them up himself.
+# similar to FOB Orgin (shipping point)
+
+  - '@id': bob:50203ab5-913f-49e8-a067-508cecf7d160
+    '@type': Process
+
+  - '@id': bob:baafadc0-9a75-414e-aee6-e9d790cab84e
+    '@type': EconomicEvent
+    provider: alice
+    receiver: bob
+    inputOf: bob:50203ab5-913f-49e8-a067-508cecf7d160
+    action: load
+    affects: alice:c7897c39-7f05-4a5d-a487-80e130a2414b
+    observedQuantity:
+      qudt:unit: unit:Kilogram
+      qudt:numericValue: 100
+
+  - '@id': bob:5156fa9d-eea8-4516-bf8e-d4aabf5f05e6
+    '@type': EconomicEvent
+    outputOf: bob:50203ab5-913f-49e8-a067-508cecf7d160
+    action: unload
+    affects: bob:a3246484-e862-4a12-b729-23986da5c033
+    observedQuantity:
+      qudt:unit: unit:Kilogram
+      qudt:numericValue: 100
+
+# delivery
+# non serial
+
+# Alice provides 100kg of apples to Bob and she delivers them herself.
+# similar to FOB Destination
+
+  - '@id': alice:5c9316ad-ad0f-44e3-a6e1-240e7960e6cf
+    '@type': Process
+
+  - '@id': alice:404be322-8aff-468d-87d1-82e58b63d5b8
+    '@type': EconomicEvent
+    inputOf: alice:5c9316ad-ad0f-44e3-a6e1-240e7960e6cf
+    action: load
+    affects: alice:c7897c39-7f05-4a5d-a487-80e130a2414b
+    observedQuantity:
+      qudt:unit: unit:Kilogram
+      qudt:numericValue: 100
+    
+  - '@id': bob:baafadc0-9a75-414e-aee6-e9d790cab84e
+    '@type': EconomicEvent
+    provider: alice
+    receiver: bob
+    outputOf: alice:5c9316ad-ad0f-44e3-a6e1-240e7960e6cf
+    action: unload
+    affects: bob:a3246484-e862-4a12-b729-23986da5c033
+    observedQuantity:
+      qudt:unit: unit:Kilogram
+      qudt:numericValue: 100
+
+# shipping
+# non serial
+
+# Bob receives 100kg of apples from Alice and Claudia transports them.
+
+  - '@id': claudia:633f6e56-6c7d-4a5b-b9c9-1a8adafd8960
+    '@type': Process
+
+  - '@id': claudia:fd399b37-0740-4a68-a184-1e655021ca21
+    '@type': EconomicEvent
+    provider: alice
+    receiver: claudia
+    inputOf: claudia:633f6e56-6c7d-4a5b-b9c9-1a8adafd8960
+    action: load
+    affects: alice:c7897c39-7f05-4a5d-a487-80e130a2414b
+    observedQuantity:
+      qudt:unit: unit:Kilogram
+      qudt:numericValue: 100
+    
+  - '@id': claudia:57f1c1d0-432e-4bfa-9d32-002b8955a708
+    '@type': EconomicEvent
+    provider: claudia
+    receiver: bob
+    outputOf: claudia:633f6e56-6c7d-4a5b-b9c9-1a8adafd8960
+    action: unload
+    affects: bob:a3246484-e862-4a12-b729-23986da5c033
+    observedQuantity:
+      qudt:unit: unit:Kilogram
+      qudt:numericValue: 100
+
+# relocation
+# packaged
+# Alice packages 100kg of apples in a bag (with tracking number she created), moves it to another place and unpacks it
+
+  - '@id': alice:8d7408a2-212b-4309-9f19-79787eec19b9
+    '@type': EconomicResource
+    skos:note: packaged apples
+    trackingIdentifier: urn:uuid:7e572b38-84e6-4c90-aedc-48e8ab26f174
+    currentQuantity:
+      qudt:unit: unit:Unitless
+      qudt:numericValue: 0
+
+  - '@id': alice:c9a6b8a7-f3ac-4272-bf21-53353b08fd7e
+    '@type': Process
+    skos:note: packaging
+
+  - '@id': alice:30dad10d-606e-4188-80a2-4a1cf2454f58
+    '@type': EconomicEvent
+    inputOf: alice:c9a6b8a7-f3ac-4272-bf21-53353b08fd7e
+    action: assemble
+    affects: alice:c7897c39-7f05-4a5d-a487-80e130a2414b # apples
+    observedQuantity:
+      qudt:unit: unit:Kilogram
+      qudt:numericValue: 100
+
+  - '@id': alice:a81675b7-2c8d-4ae6-9af6-ac72ddd0635f
+    '@type': EconomicEvent
+    inputOf: alice:c9a6b8a7-f3ac-4272-bf21-53353b08fd7e
+    action: assemble
+    affects: alice:2970fd8b-b4d4-454e-8845-e5ffd33a422b # gunny sacks
+    observedQuantity:
+      qudt:unit: unit:Unitless
+      qudt:numericValue: 1
+    
+  - '@id': alice:6f67aeaa-89c2-437d-af69-ff69a995ef33
+    '@type': EconomicEvent
+    outputOf: alice:c9a6b8a7-f3ac-4272-bf21-53353b08fd7e
+    action: increment
+    affects: alice:8d7408a2-212b-4309-9f19-79787eec19b9
+    observedQuantity:
+      qudt:unit: unit:Unitless
+      qudt:numericValue: 1
+    
+  - '@id': alice:d10d2396-7f1e-4347-bd03-d6e8a8017145
+    '@type': Process
+    skos:note: transportation
+
+  - '@id': alice:cc416f2b-d930-4d08-a443-1d9a6cf24332
+    '@type': EconomicEvent
+    inputOf: alice:d10d2396-7f1e-4347-bd03-d6e8a8017145
+    action: load
+    affects: alice:8d7408a2-212b-4309-9f19-79787eec19b9
+    observedQuantity:
+      qudt:unit: unit:Unitless
+      qudt:numericValue: 1
+
+  - '@id': alice:aca0e71d-054f-4313-b5e9-a37e89a616b1
+    '@type': EconomicEvent
+    outputOf: alice:d10d2396-7f1e-4347-bd03-d6e8a8017145
+    action: unload
+    affects: alice:8d7408a2-212b-4309-9f19-79787eec19b9
+    observedQuantity:
+      qudt:unit: unit:Unitless
+      qudt:numericValue: 1
+    
+  - '@id': alice:c8548405-2b44-4855-a35c-d323bc78b2cb
+    '@type': Process
+    skos:note: unpackaging
+
+  - '@id': alice:30dad10d-606e-4188-80a2-4a1cf2454f58
+    '@type': EconomicEvent
+    inputOf: alice:c8548405-2b44-4855-a35c-d323bc78b2cb
+    action: decrement
+    affects: alice:8d7408a2-212b-4309-9f19-79787eec19b9
+    observedQuantity:
+      qudt:unit: unit:Unitless
+      qudt:numericValue: 1
+
+  - '@id': alice:da23bf7a-63a6-4773-b233-a97b3d5dc3f8
+    '@type': EconomicEvent
+    outputOf: alice:c8548405-2b44-4855-a35c-d323bc78b2cb
+    action: disassemble
+    affects: alice:c4cd539d-3684-4e4c-83f3-f04e89f571fd # gunny sacks
+    observedQuantity:
+      qudt:unit: unit:Unitless
+      qudt:numericValue: 1
+    
+  - '@id': alice:6f67aeaa-89c2-437d-af69-ff69a995ef33
+    '@type': EconomicEvent
+    outputOf: alice:c8548405-2b44-4855-a35c-d323bc78b2cb
+    action: disassemble
+    affects: alice:0f563083-8da4-46fe-adc3-68b05ba06320 # apples
+    observedQuantity:
+      qudt:unit: unit:Kilogram
+      qudt:numericValue: 100
+
+# shipping
+# packaged
+# Alice packages 100kg of apples in a bag (with tracking number Claudia created). Claudia transports that bag to Bob's place. Bob unpacks it there.
+
+  - '@id': claudia:78bbf9c4-2ac4-4ecd-be87-9d12c51d3c1d
+    '@type': EconomicResource
+    skos:note: packaged apples
+    trackingIdentifier: urn:uuid:e29fe1bb-cd8d-466e-9d88-26b02f2a2586
+    currentQuantity:
+      qudt:unit: unit:Unitless
+      qudt:numericValue: 0
+
+  - '@id': alice:efac1f78-a8eb-4281-b862-c15159ac6a4e
+    '@type': Process
+    skos:note: packaging
+
+  - '@id': alice:78c1cefb-4714-4e11-bc1a-f9a3843869ae
+    '@type': EconomicEvent
+    inputOf: alice:efac1f78-a8eb-4281-b862-c15159ac6a4e
+    action: assemble
+    affects: alice:c7897c39-7f05-4a5d-a487-80e130a2414b # apples
+    observedQuantity:
+      qudt:unit: unit:Kilogram
+      qudt:numericValue: 100
+
+  - '@id': alice:9da93d3b-d5cb-4a25-8f65-e7e484903a55
+    '@type': EconomicEvent
+    inputOf: alice:efac1f78-a8eb-4281-b862-c15159ac6a4e
+    action: assemble
+    affects: alice:2970fd8b-b4d4-454e-8845-e5ffd33a422b # gunny sacks
+    observedQuantity:
+      qudt:unit: unit:Unitless
+      qudt:numericValue: 1
+    
+  - '@id': alice:84955680-1b67-4edd-a242-7316f9c9c636
+    '@type': EconomicEvent
+    outputOf: alice:efac1f78-a8eb-4281-b862-c15159ac6a4e
+    action: increment
+    affects: claudia:78bbf9c4-2ac4-4ecd-be87-9d12c51d3c1d
+    observedQuantity:
+      qudt:unit: unit:Unitless
+      qudt:numericValue: 1
+    
+  - '@id': claudia:a4d08509-cba9-4e26-826f-0eef9ed6158b
+    '@type': Process
+    skos:note: transportation
+
+  - '@id': claudia:7737c449-1a6a-4d50-b13e-e0e08fdd6691
+    '@type': EconomicEvent
+    provider: alice
+    receiver: claudia
+    inputOf: claudia:a4d08509-cba9-4e26-826f-0eef9ed6158b
+    action: load
+    affects: claudia:78bbf9c4-2ac4-4ecd-be87-9d12c51d3c1d
+    observedQuantity:
+      qudt:unit: unit:Unitless
+      qudt:numericValue: 1
+
+  - '@id': claudia:39ec489b-4426-43df-9593-796a56c3137b
+    '@type': EconomicEvent
+    provider: claudia
+    receiver: bob
+    outputOf: claudia:a4d08509-cba9-4e26-826f-0eef9ed6158b
+    action: unload
+    affects: claudia:78bbf9c4-2ac4-4ecd-be87-9d12c51d3c1d
+    observedQuantity:
+      qudt:unit: unit:Unitless
+      qudt:numericValue: 1
+    
+  - '@id': bob:8ead2fd6-1b99-4e54-88ac-2b2e60c9a015
+    '@type': Process
+    skos:note: unpackaging
+
+  - '@id': bob:01edc6f7-1e94-46e0-8aef-0f6aafe3e3b3
+    '@type': EconomicEvent
+    inputOf: bob:8ead2fd6-1b99-4e54-88ac-2b2e60c9a015
+    action: decrement
+    affects: claudia:78bbf9c4-2ac4-4ecd-be87-9d12c51d3c1d
+    observedQuantity:
+      qudt:unit: unit:Unitless
+      qudt:numericValue: 1
+
+  - '@id': bob:5e191869-1982-4ae3-95dc-635d511794a7
+    '@type': EconomicEvent
+    outputOf: bob:8ead2fd6-1b99-4e54-88ac-2b2e60c9a015
+    action: disassemble
+    affects: bob:84ee590e-d859-434c-b6f2-4d542d06fc7c # gunny sacks
+    observedQuantity:
+      qudt:unit: unit:Unitless
+      qudt:numericValue: 1
+    
+  - '@id': bob:37a8b453-cdde-4fcb-b597-45ac8d0f3caf
+    '@type': EconomicEvent
+    outputOf: bob:8ead2fd6-1b99-4e54-88ac-2b2e60c9a015
+    action: disassemble
+    affects: bob:a3246484-e862-4a12-b729-23986da5c033 # apples
+    observedQuantity:
+      qudt:unit: unit:Kilogram
+      qudt:numericValue: 100
+
+# pick-up
+# packaged
+# same as shipping except:
+# * bob does the transportation process
+# * on load event: provider: alice & receiver: bob
+
+# delievery
+# packaged
+# same as shipping except:
+# * alice does the transportation process
+# * on unload event: provider: alice & receiver: bob
+
+# relocation
+# serial
+
+# Alice transports a one of cider presses (with serial number) between two different places.
+
+  - '@id': alice:efa89d64-c070-408f-bd7f-b95de1670f7d
+    '@type': Process
+
+  - '@id': alice:0559db0a-e22c-44e8-9f3b-d5fb57a30cb4
+    '@type': EconomicEvent
+    inputOf: alice:efa89d64-c070-408f-bd7f-b95de1670f7d
+    action: load
+    affects: alice:b6059363-88fa-484f-af7d-f2ff5d17975a
+    observedQuantity:
+      qudt:unit: unit:Kilogram
+      qudt:numericValue: 100
+    
+  - '@id': alice:55c22177-05cb-4f8b-afb6-9df67fa4ecc0
+    '@type': EconomicEvent
+    outputOf: alice:efa89d64-c070-408f-bd7f-b95de1670f7d
+    action: unload
+    affects: alice:b6059363-88fa-484f-af7d-f2ff5d17975a
+    observedQuantity:
+      qudt:unit: unit:Kilogram
+      qudt:numericValue: 100
+
+# shipping
+# serial
+# Claudia picks up one of Alice's cider presses (with serial number) and delivers it to Bob's place.
+
+  - '@id': claudia:99550094-c4e2-4b93-9935-a3d5263b0d9b
+    '@type': Process
+
+  - '@id': claudia:ba75db2c-72f6-42bb-981b-689e95063b67
+    '@type': EconomicEvent
+    provider: alice
+    receiver: claudia
+    inputOf: claudia:99550094-c4e2-4b93-9935-a3d5263b0d9b
+    action: load
+    affects: alice:b6059363-88fa-484f-af7d-f2ff5d17975a
+    observedQuantity:
+      qudt:unit: unit:Kilogram
+      qudt:numericValue: 100
+    
+  - '@id': claudia:87ed1e12-585a-4d70-8907-858d70845bd1
+    '@type': EconomicEvent
+    provider: claudia
+    receiver: bob
+    outputOf: claudia:99550094-c4e2-4b93-9935-a3d5263b0d9b
+    action: unload
+    affects: alice:b6059363-88fa-484f-af7d-f2ff5d17975a
+    observedQuantity:
+      qudt:unit: unit:Kilogram
+      qudt:numericValue: 100
+
+# pick-up
+# serial
+# same as shipping except:
+# * bob does the transportation process
+# * on load event: provider: alice & receiver: bob
+
+# delievery
+# serial
+# same as shipping except:
+# * alice does the transportation process
+# * on unload event: provider: alice & receiver: bob
