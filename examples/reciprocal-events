@@ -1,0 +1,79 @@
+'@context':
+  '@vocab': https://w3id.org/valueflows#
+  xsd: http://www.w3.org/2001/XMLSchema#
+  time: http://www.w3.org/2006/time#
+  time:inXSDDateTimeStamp:
+    '@type': xsd:dateTimeStamp
+  coffee: https://coffeeshop.example
+  alice: https://alice.example
+
+'@graph':
+
+  - '@id': coffee:234234
+    '@type': ResourceSpecification
+    name: 'Dark roast cold press Guatamalan 16 oz cup'
+
+  - '@id': coffee:657897
+    '@type': ResourceSpecification
+    name: 'Apple turnover'
+
+  - '@id': coffee:7dd207e3-8f11-4fe3-95f8-d02f6c180be3
+    '@type': EconomicEvent
+    provider: coffee
+    recipient: alice
+    action: give
+    observedQuantity:
+      qudt:unit: Count
+      qudt:numericValue: 1
+    resourceConformsTo: coffee:234234 # cup of coffee
+    observedTime:
+      '@type': time:ProperInterval
+      time:intervalStarts:
+        '@type': time:Instant
+        time:inXSDDateTimeStamp: 2018-12-29T00:00:00-5:00
+
+  - '@id': coffee:7dd207e3-8f11-4fe3-95f8-d02f6c49084
+    '@type': EconomicEvent
+    provider: coffee
+    recipient: alice
+    action: give
+    observedQuantity:
+      qudt:unit: Count
+      qudt:numericValue: 1
+    resourceConformsTo: coffee:657897 # apple turnover
+    observedTime:
+      '@type': time:ProperInterval
+      time:intervalStarts:
+        '@type': time:Instant
+        time:inXSDDateTimeStamp: 2018-12-29T00:00:00-5:00
+
+  - '@id': alice:7dd207e3-8f11-4fe3-95f8-d02f6c180be3
+    '@type': EconomicEvent
+    provider: alice
+    recipient: coffee
+    action: receive
+    observedQuantity:
+      qudt:unit: USD
+      qudt:numericValue: 6
+    observedTime:
+      '@type': time:ProperInterval
+      time:intervalStarts:
+        '@type': time:Instant
+        time:inXSDDateTimeStamp: 2018-12-29T00:00:00-5:00
+
+  - '@id': coffee:6b5bc786-b9ed-4189-b34f-5ef7d10f1f86
+    '@type': Reciprocity
+    reciprocalFrom: coffee:7dd207e3-8f11-4fe3-95f8-d02f6c180be3
+    reciprocalTo: alice:7dd207e3-8f11-4fe3-95f8-d02f6c180be3
+    reciprocalQuantity:
+      qudt:unit: USD
+      qudt:numericValue: 2
+
+  - '@id': coffee:6b5bc786-b9ed-4189-b34f-5efe98ggo089
+    '@type': Reciprocity
+    reciprocalFrom: coffee:7dd207e3-8f11-4fe3-95f8-d02f6c49084
+    reciprocalTo: alice:7dd207e3-8f11-4fe3-95f8-d02f6c180be3
+    reciprocalQuantity:
+      qudt:unit: USD
+      qudt:numericValue: 4
+
