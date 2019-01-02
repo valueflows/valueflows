@@ -25,10 +25,10 @@
     recipient: elf
     action: lend
     involves: tashirat:2402b57c-1c45-423a-acb2-f50961c97d65
-    commitedQuantity:
+    committedQuantity:
       qudt:unit: unit:Unitless
-      qudt:value: 1
-    commitedTime:
+      qudt:numericValue: 1
+    committedTime:
       '@type': time:ProperInterval
       time:intervalStarts:
         '@type': time:Instant
@@ -44,10 +44,10 @@
     recipient: tashirat
     action: issue
     resourceClassifiedAs: http://www.wikidata.org/entity/Q4730 # Mexican peso
-    commitedQuantity:
+    committedQuantity:
       qudt:unit: unit:Unitless
-      qudt:value: 3000
-    commitedTime:
+      qudt:numericValue: 3000
+    committedTime:
       '@type': time:ProperInterval
       'time:intervalEnds':
         '@type': time:Instant
@@ -60,10 +60,10 @@
     recipient: tashirat
     action: issue
     resourceClassifiedAs: http://www.wikidata.org/entity/Q4730 # Mexican peso
-    commitedQuantity:
+    committedQuantity:
       qudt:unit: unit:Unitless
-      qudt:value: 3000
-    commitedTime:
+      qudt:numericValue: 3000
+    committedTime:
       '@type': time:ProperInterval
       'time:intervalEnds':
         '@type': time:Instant
@@ -80,7 +80,7 @@
     involves: tashirat:2402b57c-1c45-423a-acb2-f50961c97d65
     observedQuantity:
       qudt:unit: unit:Unitless
-      qudt:value: 1
+      qudt:numericValue: 1
     observedTime:
       '@type': time:ProperInterval
       time:intervalStarts:
@@ -94,7 +94,7 @@
     fulfills: tashirat:953b40f2-4e47-4486-afb2-402512f5269c
     fulfilledQuantity:
       qudt:unit: unit:Unitless
-      qudt:value: 1
+      qudt:numericValue: 1
     # TODO fulfilled duration
 
   - '@id': elf:27be5cab-d740-4194-9298-1661a69d9d95
@@ -106,7 +106,7 @@
     resourceClassifiedAs: http://www.wikidata.org/entity/Q4730 # Mexican peso
     observedQuantity:
       qudt:unit: unit:Unitless
-      qudt:value: 3000
+      qudt:numericValue: 3000
     observedTime:
       '@type': time:Instant
       time:inXSDDateTimeStamp: 2019-01-04T14:25:00-5:00
@@ -118,7 +118,7 @@
     fulfills: tashirat:99bc3e4e-79a6-4b52-a178-8075a268f0df
     fulfilledQuantity:
       qudt:unit: unit:Unitless
-      qudt:value: 3000
+      qudt:numericValue: 3000
 
 
   ## recording usage of bungalow
@@ -130,7 +130,7 @@
     affects: tashirat:2402b57c-1c45-423a-acb2-f50961c97d65
     observedQuantity:
       qudt:unit: unit:Unitless
-      qudt:value: 1
+      qudt:numericValue: 1
     observedTime:
       '@type': time:ProperInterval
       time:intervalStarts:
@@ -153,7 +153,7 @@
     includedIn: elf:f12fc3b7-1033-4da0-85fd-a378b4cfb36f
     observedQuantity:
       qudt:unit: unit:Unitless
-      qudt:value: 1
+      qudt:numericValue: 1
     observedTime:
       '@type': time:ProperInterval
       time:intervalStarts:
