@@ -58,6 +58,13 @@
       qudt:unit: unit:Kilogram
       qudt:numericValue: 40
 
+  - '@id': bob:a59e121a-89af-43c1-a247-e765137ba84c
+    '@type': EconomicResource
+    clasifiedAs: http://www.wikidata.org/entity/Q89 # apples
+    currentQuantity:
+      qudt:unit: unit:Kilogram
+      qudt:numericValue: 110
+
   - '@id': bob:84ee590e-d859-434c-b6f2-4d542d06fc7c
     '@type': EconomicResource
     clasifiedAs: http://www.wikidata.org/entity/Q6675561 # gunny sack
@@ -454,3 +461,73 @@
 # same as shipping except:
 # * alice does the transportation process
 # * on unload event: provider: alice & receiver: bob
+
+
+# shipping / relocation
+# non serial - concurrent
+
+# Bob receives 100kg of apples from Alice and Claudia transports them.
+
+  - '@id': claudia:633f6e56-6c7d-4a5b-b9c9-1a8adafd8960
+    '@type': Process
+    skos:note: upper transportation process
+
+  - '@id': claudia:a8356625-bf64-4c16-9099-28aa1b718c4b
+    '@type': Process
+    skos:note: lower process for Alice's apples movement
+
+  - '@id': claudia:ac9ec98d-db80-44dc-97be-7aa149b2fe5d
+    '@type': Process
+    skos:note: lower process for Bob's apples movement
+
+  - '@id': claudia:fd399b37-0740-4a68-a184-1e655021ca21
+    '@type': EconomicEvent
+    provider: alice
+    receiver: claudia
+    inputOf:
+      - claudia:633f6e56-6c7d-4a5b-b9c9-1a8adafd8960 # upper transportation
+      - claudia:a8356625-bf64-4c16-9099-28aa1b718c4b # lower Alice's apples
+    action: load
+    affects: alice:c7897c39-7f05-4a5d-a487-80e130a2414b
+    observedQuantity:
+      qudt:unit: unit:Kilogram
+      qudt:numericValue: 70
+
+  - '@id': claudia:2342d456-5d6f-46d5-a7ed-3ac7bfd5a86c
+    '@type': EconomicEvent
+    provider: bob
+    receiver: claudia
+    inputOf:
+     - claudia:633f6e56-6c7d-4a5b-b9c9-1a8adafd8960 # upper transportation
+     - claudia:ac9ec98d-db80-44dc-97be-7aa149b2fe5d # lower Bob's apples
+    action: load
+    affects: bob:a3246484-e862-4a12-b729-23986da5c033
+    observedQuantity:
+      qudt:unit: unit:Kilogram
+      qudt:numericValue: 40
+    
+  - '@id': claudia:57f1c1d0-432e-4bfa-9d32-002b8955a708
+    '@type': EconomicEvent
+    provider: claudia
+    receiver: alice
+    outputOf:
+      - claudia:633f6e56-6c7d-4a5b-b9c9-1a8adafd8960 # upper transportation
+      - claudia:a8356625-bf64-4c16-9099-28aa1b718c4b # lower Alice's apples
+    action: unload
+    affects: alice:0f563083-8da4-46fe-adc3-68b05ba06320
+    observedQuantity:
+      qudt:unit: unit:Kilogram
+      qudt:numericValue: 70
+
+  - '@id': claudia:57f1c1d0-432e-4bfa-9d32-002b8955a708
+    '@type': EconomicEvent
+    provider: claudia
+    receiver: bob
+    outputOf:
+     - claudia:633f6e56-6c7d-4a5b-b9c9-1a8adafd8960 # upper transportation
+     - claudia:ac9ec98d-db80-44dc-97be-7aa149b2fe5d # lower Bob's apples
+    action: unload
+    affects: bob:a59e121a-89af-43c1-a247-e765137ba84c
+    observedQuantity:
+      qudt:unit: unit:Kilogram
+      qudt:numericValue: 40
