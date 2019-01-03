@@ -466,7 +466,8 @@
 # shipping / relocation
 # non serial - concurrent
 
-# Bob receives 100kg of apples from Alice and Claudia transports them.
+# Claudia picks up 70kg of apples from Alice and 40kg of apples from Bob,
+# then she drops off in two different places that 70kg of apples for Alice and that 40kg of apples for Bob.
 
   - '@id': claudia:633f6e56-6c7d-4a5b-b9c9-1a8adafd8960
     '@type': Process
