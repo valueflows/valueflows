@@ -40,8 +40,8 @@ receive | Increment | Transfer | Output | give |
 decrement | Decrement | N/A | N/A | N/A |
 load | Decrement | Process | Input | unload |
 consume | Decrement | Process | Input | N/A |
-use | No effect? | Process | Input | N/A |
-work | No effect? | Process | Input | N/A |
+use | No effect | Process | Input | N/A |
+work | No effect | Process | Input | N/A |
 cite | No effect | Process | Input | N/A |
 accept | No effect | Process | Input | improve |
 give | Decrement | Transfer | Input | receive |
@@ -51,3 +51,5 @@ We have defined a core set of actions, but expect that this will be extended wit
 Note: Increment and decrement are usually not meant to be used directly, rather the actions inherit from them.  An exception is if an adjustment is needed that has no known provenance.  Examples of when this might happen: 
 * Beginning balances in a new system
 * Manual inventory count shows a different amount than what the system shows.
+
+Temporary note: The actions `use` and `work` are time-based actions, either with or without an explicit schedule.  How to handle time-based resources is still under discussion.  It is possible we will want to define the affect of those as `Decrement` in the future.
