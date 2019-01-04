@@ -1,0 +1,68 @@
+# Simple transfer
+
+'@context':
+  '@vocab': https://w3id.org/valueflows#
+  xsd: http://www.w3.org/2001/XMLSchema#
+  time: http://www.w3.org/2006/time#
+  time:inXSDDateTimeStamp:
+    '@type': xsd:dateTimeStamp
+  alice: https://alice.example/
+  bob: https://bob.example/
+
+'@graph':
+
+  # initial resources
+
+  - '@id': alice:c7897c39-7f05-4a5d-a487-80e130a24345
+    '@type': EconomicResource
+    classifiedAs: http://www.wikidata.org/entity/Q89 # apples
+    currentQuantity:
+      qudt:unit: unit:Kilogram
+      qudt:numericValue: 670
+    trackingIdentifier: lot-4399jj93
+
+  # Alice gives Bob 200 kg apples.
+
+  - '@id': alice:e7482f32-25b5-4f79-934b-5d0db3a5b77d
+    '@type': Transfer
+
+  - '@id': alice:6fb358a3-2859-4d6a-a4fa-431603ee70f5
+    '@type': EconomicEvent
+    inputOf: alice:e7482f32-25b5-4f79-934b-5d0db3a5b77d 
+    action: give
+    provider: alice
+    receiver: bob
+    affects: alice:c7897c39-7f05-4a5d-a487-80e130a24345
+    observedQuantity:
+      qudt:unit: unit:Kilogram
+      qudt:numericValue: 200
+
+  - '@id': bob:73410782-74da-4165-ad2b-b92fdf55f795
+    '@type': EconomicEvent
+    outputOf: alice:e7482f32-25b5-4f79-934b-5d0db3a5b77d 
+    action: receive
+    provider: alice
+    receiver: bob
+    affects: bob:0f563083-7f05-4a5d-a487-80e130a24345
+    observedQuantity:
+      qudt:unit: unit:Kilogram
+      qudt:numericValue: 200
+
+  # - resources after transfers
+  
+    - '@id': alice:c7897c39-7f05-4a5d-a487-80e130a24345
+    '@type': EconomicResource
+    classifiedAs: http://www.wikidata.org/entity/Q89 # apples
+    currentQuantity:
+      qudt:unit: unit:Kilogram
+      qudt:numericValue: 470
+    trackingIdentifier: lot-4399jj93
+
+
+  - '@id': bob:0f563083-7f05-4a5d-a487-80e130a24345
+    '@type': EconomicResource
+    classifiedAs: http://www.wikidata.org/entity/Q89 # apples
+    currentQuantity:
+      qudt:unit: unit:Kilogram
+      qudt:numericValue: 200
+    trackingIdentifier: lot-4399jj93
