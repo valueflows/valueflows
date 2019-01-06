@@ -1,0 +1,236 @@
+'@context':
+  '@vocab': https://w3id.org/valueflows#
+  xsd: http://www.w3.org/2001/XMLSchema#
+  qudt: http://qudt.org/schema/qudt/
+  unit: http://qudt.org/vocab/unit/
+  time: http://www.w3.org/2006/time#
+  time:inXSDDateTimeStamp:
+    '@type': xsd:dateTimeStamp
+  al: https://al.example/
+  bea: https://bea.example/
+  cloe: https://cloe.example/
+  faircoop: https://faircoop.example/
+
+'@graph':
+
+# https://github.com/valueflows/valueflows/issues/385
+
+  - '@id': al:e1721a61-cd47-4556-84b9-8b1b81da15bf
+    '@type': EconomicResource
+    clasifiedAs: http://www.wikidata.org/entity/Q89 # apples
+    currentQuantity:
+      qudt:unit: unit:Unitless
+      qudt:numericValue: 100
+
+  - '@id': cloe:3129ca8b-fcda-45be-bbda-294dc924d3b9
+    '@type': EconomicResource
+    clasifiedAs: http://www.wikidata.org/entity/Q89 # apples
+    currentQuantity:
+      qudt:unit: unit:Unitless
+      qudt:numericValue: 0
+
+  - '@id': bea:6b97b1be-8e07-44ac-82e5-214f1b2aaf33
+    '@type': EconomicResource
+    clasifiedAs: http://www.wikidata.org/entity/Q89 # apples
+    currentQuantity:
+      qudt:unit: unit:Unitless
+      qudt:numericValue: 0
+
+  # Al arrives with 3 apples. He gives them to Chloe, Chloe receives them.
+
+
+  - '@id': al:52f0e212-3c4f-4d27-b345-5e964c135824
+    '@type': ProvenanceAnchor
+
+  - '@id': al:b52a5815-fae9-43bf-be95-833b95dc0adb
+    '@type': EconomicEvent
+    anchoredWith: al:52f0e212-3c4f-4d27-b345-5e964c135824
+    action: give
+    affects: al:e1721a61-cd47-4556-84b9-8b1b81da15bf
+    observedQuantity:
+      qudt:unit: unit:Unitless
+      qudt:numericValue: 3
+    
+  - '@id': cloe:b90b0b77-09a2-42e2-8bd4-e9ae2c1c6172
+    '@type': EconomicEvent
+    provider: al
+    receiver: cloe
+    anchoredWith: al:52f0e212-3c4f-4d27-b345-5e964c135824
+    action: receive
+    affects: cloe:3129ca8b-fcda-45be-bbda-294dc924d3b9
+    observedQuantity:
+      qudt:unit: unit:Unitless
+      qudt:numericValue: 3
+
+# https://github.com/valueflows/valueflows/wiki/Use-Cases-and-Requirements#transportation
+
+  # Al provides 100kg of apples to Cloe and she picks them up from him.
+
+  - '@id': al:02b39a30-3e04-4305-9656-7f261aa63c84
+    '@type': Process
+
+  - '@id': al:52f0e212-3c4f-4d27-b345-5e964c135824
+    '@type': ProvenanceAnchor
+
+  - '@id': al:a8236bbb-81e0-422d-9861-56d2417db0fb
+    '@type': EconomicEvent
+    provider: al
+    receiver: cloe
+    inputOf: al:02b39a30-3e04-4305-9656-7f261aa63c84
+    anchoredWith: al:52f0e212-3c4f-4d27-b345-5e964c135824
+    action: load
+    affects: al:e1721a61-cd47-4556-84b9-8b1b81da15bf
+    observedQuantity:
+      qudt:unit: unit:Unitless
+      qudt:numericValue: 3
+    
+  - '@id': al:6f438393-7f87-4914-806c-e23a4fd15e89
+    '@type': EconomicEvent
+    outputOf: al:02b39a30-3e04-4305-9656-7f261aa63c84
+    anchoredWith: al:52f0e212-3c4f-4d27-b345-5e964c135824
+    action: unload
+    affects: cloe:3129ca8b-fcda-45be-bbda-294dc924d3b9
+    observedQuantity:
+      qudt:unit: unit:Unitless
+      qudt:numericValue: 3
+
+# https://github.com/valueflows/valueflows/issues/270#issuecomment-383317953  
+# Transfer a cryptocurrency that requires a fee
+
+  - '@id': faircoin:d4d2fd71-34f2-41c3-b1c5-19ad5ed2da59
+    '@type': EconomicResource
+    classifiedAs: http://www.wikidata.org/entity/Q21002847 # Faircoin
+
+  - '@id': faircoin:583e83d9-a46d-44ff-bd71-88513a1d83c0
+    '@type': EconomicResource
+    classifiedAs: http://www.wikidata.org/entity/Q21002847 # Faircoin
+
+  - '@id': faircoin:e4783bef-9006-490c-9c03-389272c7444d
+    '@type': EconomicResource
+    classifiedAs: http://www.wikidata.org/entity/Q21002847 # Faircoin
+
+  - '@id': al:a25500e0-0106-43cd-8cbb-e74779488835
+    '@type': ProvenanceAnchor
+
+  - '@id': al:4cb1f323-4390-4e4a-ac9e-ff64d42f08bc
+    '@type': EconomicEvent
+    anchoredWith: al:a25500e0-0106-43cd-8cbb-e74779488835
+    action: give
+    affects: faircoin:d4d2fd71-34f2-41c3-b1c5-19ad5ed2da59
+    observedQuantity:
+      qudt:unit: unit:Unitless
+      qudt:numericValue: 200
+    
+  - '@id': cloe:13cf44e5-eaa1-4ad0-88d5-e2910a73f377
+    '@type': EconomicEvent
+    provider: al
+    receiver: cloe
+    anchoredWith: al:a25500e0-0106-43cd-8cbb-e74779488835
+    action: receive
+    affects: faircoin:583e83d9-a46d-44ff-bd71-88513a1d83c0
+    observedQuantity:
+      qudt:unit: unit:Unitless
+      qudt:numericValue: 199
+
+  - '@id': faircoop:9f112621-3f13-4f48-a3e2-fd2ca99493cd
+    '@type': EconomicEvent
+    provider: al
+    receiver: faircoop
+    anchoredWith: al:a25500e0-0106-43cd-8cbb-e74779488835
+    action: receive
+    affects: faircoin:e4783bef-9006-490c-9c03-389272c7444d
+    observedQuantity:
+      qudt:unit: unit:Unitless
+      qudt:numericValue: 1
+
+  # Al splits out two piles of apples from two different resources
+  - '@id': al:c7897c39-7f05-4a5d-a487-80e130a2414b
+    '@type': EconomicResource
+    clasifiedAs: http://www.wikidata.org/entity/Q89 # apples
+    currentQuantity:
+      qudt:unit: unit:Kilogram
+      qudt:numericValue: 670
+
+  - '@id': al:750ef3e1-525c-44d3-8b85-504435285e9f
+    '@type': EconomicResource
+    clasifiedAs: http://www.wikidata.org/entity/Q89 # apples
+    currentQuantity:
+      qudt:unit: unit:Kilogram
+      qudt:numericValue: 210
+
+  - '@id': al:cb2fd867-b034-4be5-82e7-1a99a353136f
+    '@type': EconomicResource
+    clasifiedAs: http://www.wikidata.org/entity/Q89 # apples
+    currentQuantity:
+      qudt:unit: unit:Kilogram
+      qudt:numericValue: 0
+
+  - '@id': al:a96bab2f-a1f0-47f3-827d-b4fb491d376f
+    '@type': EconomicResource
+    clasifiedAs: http://www.wikidata.org/entity/Q89 # apples
+    currentQuantity:
+      qudt:unit: unit:Kilogram
+      qudt:numericValue: 0
+
+  - '@id': al:f99ba192-fb8d-419e-8246-c8ebac531100
+    '@type': Process
+    skos:note: spliting out two piles of apples
+
+  - '@id': al:63acf47d-9911-4591-b140-e6e9a538d6ac
+    '@type': ProvenanceAnchor
+
+  - '@id': al:ff208521-9fec-4bb4-a6d3-197f6735cb26
+    '@type': ProvenanceAnchor
+
+  - '@id': al:a7e94dde-2997-451e-a7e1-8d364d5e6dee
+    '@type': EconomicEvent
+    inputOf: al:f99ba192-fb8d-419e-8246-c8ebac531100
+    action: work
+    observedTime:
+      '@type': time:ProperInterval
+      time:intervalStarts:
+        '@type': time:Instant
+        time:inXSDDateTimeStamp: 2010-10-14T16:00:00-5:00
+      time:intervalEnds:
+        '@type': time:Instant
+        time:inXSDDateTimeStamp: 2018-10-14T18:00:00-5:00
+
+  - '@id': al:2d350055-acba-4e17-92f8-8b126272ee40
+    '@type': EconomicEvent
+    inputOf: al:f99ba192-fb8d-419e-8246-c8ebac531100
+    anchoredWith: al:63acf47d-9911-4591-b140-e6e9a538d6ac
+    action: decrement
+    affects: al:c7897c39-7f05-4a5d-a487-80e130a2414b
+    observedQuantity:
+      qudt:unit: unit:Kilogram
+      qudt:numericValue: 40
+
+  - '@id': al:07819789-dd51-44c3-b35c-9210165bc832
+    '@type': EconomicEvent
+    inputOf: al:f99ba192-fb8d-419e-8246-c8ebac531100
+    anochoredWith: al:ff208521-9fec-4bb4-a6d3-197f6735cb26
+    action: decrement
+    affects: al:750ef3e1-525c-44d3-8b85-504435285e9f
+    observedQuantity:
+      qudt:unit: unit:Kilogram
+      qudt:numericValue: 40
+
+  - '@id': al:822b6baf-d66f-45a0-98f2-57450e2aec23
+    '@type': EconomicEvent
+    outputOf: al:f99ba192-fb8d-419e-8246-c8ebac531100
+    anchoredWith: al:63acf47d-9911-4591-b140-e6e9a538d6ac
+    action: increment
+    affects: al:cb2fd867-b034-4be5-82e7-1a99a353136f
+    observedQuantity:
+      qudt:unit: unit:Kilogram
+      qudt:numericValue: 40
+
+  - '@id': al:7f8c9336-c91c-4096-9e03-543bb85e97f0
+    '@type': EconomicEvent
+    outputOf: al:f99ba192-fb8d-419e-8246-c8ebac531100
+    anochoredWith: al:ff208521-9fec-4bb4-a6d3-197f6735cb26
+    action: increment
+    affects: al:a96bab2f-a1f0-47f3-827d-b4fb491d376f
+    observedQuantity:
+      qudt:unit: unit:Kilogram
+      qudt:numericValue: 40
