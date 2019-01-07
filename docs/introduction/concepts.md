@@ -32,9 +32,9 @@ Producing and exchange olive oil and coffee, even more simplified.
 
 ![river flow](https://rawgit.com/valueflows/valueflows/master/release-doc-in-process/vf-river.png)
 
-### Transversing value flows
+### Traversing value flows
 
-Value flows can be transversed forwards ("tracing") or backwards ("tracking").  Often people use the term "provenance" when looking backwards towards the source of some resource, sometimes when a problem emerges (as in a disease outbreak from food), sometimes to know the quality of the resource (as in wanting local humanely produced food with lower ecological impact).
+Value flows can be traversed forwards ("tracing") or backwards ("tracking").  Often people use the term "provenance" when looking backwards towards the source of some resource, sometimes when a problem emerges (as in a disease outbreak from food), sometimes to know the quality of the resource (as in wanting local humanely produced food with lower ecological impact).
 
 The data structures of ValueFlows provide the ability to trace or track any value flow, no matter how long or complex:
 
@@ -47,8 +47,8 @@ The data structures of ValueFlows provide the ability to trace or track any valu
 * For an EconomicEvent:
     * after: 
         * a Process or Transfer to which it is an input, or
-        * an EconomicResource which it incremented
-    * before: 
+        * an EconomicResource which it affected as the output of a Process or Transfer
+    * before:
         * a Process or Transfer from which is is an output, or
         * if it is an input to a Process or Transfer, the EconomicResource which it affects.
 
