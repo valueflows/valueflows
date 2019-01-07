@@ -1,0 +1,150 @@
+'@context':
+  '@vocab': https://w3id.org/valueflows#
+  xsd: http://www.w3.org/2001/XMLSchema#
+  qudt: http://qudt.org/schema/qudt/
+  unit: http://qudt.org/vocab/unit/
+  time: http://www.w3.org/2006/time#
+  time:inXSDDateTimeStamp:
+    '@type': xsd:dateTimeStamp
+  alice: https://alce.example/
+  bob: https://bob.example/
+  claudia: https://claudia.example/
+  notary: https://notary.example/
+  miner: https://miner.example/
+
+'@graph':
+
+  - '@id': bob:8e5fe80d-a769-4bd5-89e5-2136d33eab9f
+    '@type': Process
+    skos:note: fruit distribution in January
+
+  - '@id': notary:9bd19194-a36d-4a1f-896b-8082887962cb
+    '@type': ExchangeAgreement
+
+  - '@id': claudia:33e8933b-ff73-4a01-964a-ca7a98893083
+    '@type': Process
+    skos:note: transporting Bob's package
+
+  - '@id': bob:60f4204e-b8d2-4026-8577-102c3f82c0af
+    '@type': EconomicResource
+    skos:note: Bob's package
+    currentQuantity:
+      qudt:unit: unit:Unitless
+      qudt:numericValue: 1
+
+  - '@id': claudia:ad56a7ed-be3c-4937-a3fb-0f156bcd2c47
+    '@type': Commitment
+    action: load
+    inputOf: claudia:33e8933b-ff73-4a01-964a-ca7a98893083
+    involves: bob:60f4204e-b8d2-4026-8577-102c3f82c0af
+    committedQuantity:
+      qudt:unit: unit:Unitless
+      qudt:numericValue: 1
+    under: notary:9bd19194-a36d-4a1f-896b-8082887962cb
+    provider: claudia
+    receiver: bob
+
+  - '@id': claudia:6078f30a-b15b-4b1c-8e77-797abae11378
+    '@type': Commitment
+    action: unload
+    outputOf: claudia:33e8933b-ff73-4a01-964a-ca7a98893083
+    involves: bob:60f4204e-b8d2-4026-8577-102c3f82c0af
+    committedQuantity:
+      qudt:unit: unit:Unitless
+      qudt:numericValue: 1
+    under: notary:9bd19194-a36d-4a1f-896b-8082887962cb
+    provider: claudia
+    receiver: bob
+
+  - '@id': bob:e56fd654-7b94-4d96-8e60-de39e08329a7
+    '@type': Commitment
+    action: give
+    resourceClassifiedAs: http://www.wikidata.org/entity/Q89 # apples
+    committedQuantity:
+      qudt:unit: unit:Kilogram
+      qudt:numericValue: 10
+    under: notary:9bd19194-a36d-4a1f-896b-8082887962cb
+    provider: bob
+    receiver: claudia
+
+  - '@id': claudia:86ad6e22-7640-4b93-972a-db7177ab2616
+    '@type': Commitment
+    action: service
+    serviceClassifiedAs: http://www.wikidata.org/entity/Q7590 # transport
+    outputOf: claudia:33e8933b-ff73-4a01-964a-ca7a98893083
+    inputOf: bob:8e5fe80d-a769-4bd5-89e5-2136d33eab9f
+    under: notary:9bd19194-a36d-4a1f-896b-8082887962cb
+    provider: claudia
+    receiver: bob
+
+# https://github.com/valueflows/valueflows/issues/270#issuecomment-383317953  
+# Transfer a cryptocurrency that requires a fee
+
+  - '@id': faircoin:d4d2fd71-34f2-41c3-b1c5-19ad5ed2da59
+    '@type': EconomicResource
+    classifiedAs: http://www.wikidata.org/entity/Q21002847 # Faircoin
+
+  - '@id': faircoin:583e83d9-a46d-44ff-bd71-88513a1d83c0
+    '@type': EconomicResource
+    classifiedAs: http://www.wikidata.org/entity/Q21002847 # Faircoin
+
+  - '@id': faircoin:e4783bef-9006-490c-9c03-389272c7444d
+    '@type': EconomicResource
+    classifiedAs: http://www.wikidata.org/entity/Q21002847 # Faircoin
+
+  - '@id': miner:23799c14-c368-4653-a584-83bf9ae8b82a
+    '@type': Process
+    skos:note: transaction processing
+
+  - '@id': notary:e18c808c-929a-450d-9d0d-3b3f531bc126
+    '@type': ExchangeAgreement
+    skos:note: exchange between Alice and Bob
+
+  - '@id': notary:5d2fe7da-b91b-4dab-91d9-68db80c1feb7
+    '@type': ExchangeAgreement
+    skos:note: exchange between Alice and miner
+
+  - '@id': miner:6405b8ad-0ac2-4d58-abdb-0808903c78ad
+    '@type': EconomicEvent
+    action: give
+    affects: faircoin:d4d2fd71-34f2-41c3-b1c5-19ad5ed2da59
+    inputOf: miner:23799c14-c368-4653-a584-83bf9ae8b82a
+    under: notary:5d2fe7da-b91b-4dab-91d9-68db80c1feb7
+    observedQuantity:
+      qudt:unit: unit:Unitless
+      qudt:numericValue: 200
+    
+  - '@id': miner:e02e3f6b-420a-4ba8-89b0-909d7363ce07
+    '@type': EconomicEvent
+    action: receive
+    affects: faircoin:583e83d9-a46d-44ff-bd71-88513a1d83c0
+    inputOf: miner:23799c14-c368-4653-a584-83bf9ae8b82a
+    under:
+      - notary:5d2fe7da-b91b-4dab-91d9-68db80c1feb7
+      - notary:e18c808c-929a-450d-9d0d-3b3f531bc126
+    observedQuantity:
+      qudt:unit: unit:Unitless
+      qudt:numericValue: 199
+    provider: alice
+    receiver: bob
+
+  - '@id': miner:9f112621-3f13-4f48-a3e2-fd2ca99493cd
+    '@type': EconomicEvent
+    action: receive
+    affects: faircoin:e4783bef-9006-490c-9c03-389272c7444d
+    outputOf: miner:23799c14-c368-4653-a584-83bf9ae8b82a
+    under: notary:5d2fe7da-b91b-4dab-91d9-68db80c1feb7
+    observedQuantity:
+      qudt:unit: unit:Unitless
+      qudt:numericValue: 1
+    provider: alice
+    receiver: miner
+
+  - '@id': miner:e72f7d1d-4f0a-4518-a44c-96658cafda95
+    '@type': EconomicEvent
+    action: service
+    serviceClasifiedAs: http://www.wikidata.org/entity/Q844565 # Transaction processing
+    outputOf: miner:23799c14-c368-4653-a584-83bf9ae8b82a
+    under: notary:5d2fe7da-b91b-4dab-91d9-68db80c1feb7
+    provider: miner
+    receiver: alice
