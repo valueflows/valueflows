@@ -11,6 +11,8 @@
   claudia: https://claudia.example/
   notary: https://notary.example/
   miner: https://miner.example/
+  jesus: https://jesus.example/
+  joe: https://joe.example/
 
 '@graph':
 
@@ -148,3 +150,267 @@
     under: notary:5d2fe7da-b91b-4dab-91d9-68db80c1feb7
     provider: miner
     receiver: alice
+
+
+# https://github.com/valueflows/valueflows/wiki/Use-Cases-and-Requirements#pick-up-truck-distributing-farmers-product
+# Pick-up truck distributing farmers product
+# Small pick-up truck loads boxes of products from different farmers. Then it drives around and distributes them to consumers. Consumers haven't per-ordered food and the driver makes agreements with them on spot based on Proposals each of the farmers provided. Driver offers distribution to farmers as service under independent agreement with each farmer, ownership of products goes directly from producer to consumer.
+
+  - '@id': jesus:f325a950-5737-488d-b122-8f21114d0eb0
+    '@type': EconomicResource
+    skos:note: Jesus' pick-up truck
+    classifiedAs: http://www.wikidata.org/entity/Q215601 # pickup truck
+    conformsTo: http://www.atlismotorvehicles.com/xt-truck
+    currentQuantity:
+      qudt:unit: unit:Unitless
+      qudt:numericValue: 1
+
+  - '@id': jesus:fdf65158-0223-4740-8ace-5323baa9fd07
+    '@type': EconomicResource
+    skos:note: turck battery
+    classifiedAs: http://www.wikidata.org/entity/Q267298 # battery
+    currentQuantity:
+      qudt:unit: unit:Kilowatthour
+      qudt:numericValue: 80
+
+  - '@id': alice:3584c5eb-5b15-4c71-853e-0470fc34bbcb
+    '@type': EconomicResource
+    skos:note: Alice's apples
+    clasifiedAs: http://www.wikidata.org/entity/Q89 # apple
+    currentQuantity:
+      qudt:unit: unit:Kilogram
+      qudt:numericValue: 410
+
+  - '@id': jesus:9396d2d1-ded3-4b1c-8144-1c024e641030
+    '@type': EconomicResource
+    skos:note: apples on the truck
+    clasifiedAs: http://www.wikidata.org/entity/Q89 # apple
+    currentQuantity:
+      qudt:unit: unit:Kilogram
+      qudt:numericValue: 0
+
+  - '@id': bob:c404cff5-19c7-453d-b0d8-d8e96055bd0c
+    '@type': EconomicResource
+    skos:note: Bob's pears
+    classifiedAs: http://www.wikidata.org/entity/Q13099586 # pear
+    currentQuantity:
+      qudt:unit: unit:Kilogram
+      qudt:numericValue: 720
+
+  - '@id': jesus:856c43b1-0a63-445f-a56f-707b257f086e
+    '@type': EconomicResource
+    skos:note: pears on the truck
+    classifiedAs: http://www.wikidata.org/entity/Q13099586 # pear
+    currentQuantity:
+      qudt:unit: unit:Kilogram
+      qudt:numericValue: 0
+
+  - '@id': jesus:9cb4944b-d26d-4774-a530-d18f2747c0d8
+    '@type': Process
+    skos:note: Mon Jan 7th 2019 distribution
+
+  - '@id': jesus:68cabaf3-deb8-4bd5-a439-798263abe35a
+    '@type': EconomicEvent
+    action: work
+    inputOf: jesus:9cb4944b-d26d-4774-a530-d18f2747c0d8
+    observedTime:
+      time:intervalStarts:
+        time:inXSDDateTimeStamp: 2019-01-07T10:00:00-5:00
+      time:intervalEnds:
+        time:inXSDDateTimeStamp: 2019-02-07T17:00:00-5:00
+
+  - '@id': jesus:8baa8ff7-9c1e-4586-ae7b-79d620a3cac9
+    '@type': EconomicEvent
+    action: use
+    affects: jesus:f325a950-5737-488d-b122-8f21114d0eb0 # pickup truck
+    inputOf: jesus:9cb4944b-d26d-4774-a530-d18f2747c0d8
+    observedQuantity:
+      qudt:unit: unit:Unitless
+      qudt:numericValue: 1
+    observedTime:
+      time:intervalStarts:
+        time:inXSDDateTimeStamp: 2019-01-07T10:00:00-5:00
+      time:intervalEnds:
+        time:inXSDDateTimeStamp: 2019-02-07T17:00:00-5:00
+
+  - '@id': jesus:f0b8bfb1-ed29-4ab0-aabd-f5e2a3515626
+    '@type': EconomicEvent
+    action: consume
+    affects: jesus:fdf65158-0223-4740-8ace-5323baa9fd07 # pickup battery
+    inputOf: jesus:9cb4944b-d26d-4774-a530-d18f2747c0d8
+    observedQuantity:
+      qudt:unit: unit:Kilowatthour
+      qudt:numericValue: 42
+
+  - '@id': jesus:daa2ec3b-2c1a-4eb1-839f-8dcec1a1f93a
+    '@type': EconomicEvent
+    skos:note: distribution service for alice
+    action: service
+    serviceClassifiedAs: http://www.wikidata.org/entity/Q867147 # distribution
+    outputOf: jesus:9cb4944b-d26d-4774-a530-d18f2747c0d8
+    under: notary:e5b209f6-d84b-4ef2-8d70-a17197029308
+    provider: jesus
+    receiver: alice
+
+  - '@id': jesus:bd5806d6-4a36-45b9-b3b6-3e7d361a5a14
+    '@type': EconomicEvent
+    skos:note: distribution service for bob
+    action: service
+    serviceClassifiedAs: http://www.wikidata.org/entity/Q867147 # distribution
+    outputOf: jesus:9cb4944b-d26d-4774-a530-d18f2747c0d8
+    under: notary:991a873e-70cb-4e5d-8809-387d7c1af92f
+    provider: jesus
+    receiver: bob
+
+  - '@id': jesus:a3277840-54b9-497e-9cf6-1902eda1584f
+    '@type': Process
+    skos:note: picking up apples from Alice
+
+  - '@id': jesus:c27ba90d-b182-494c-84aa-719004a63f9e
+    '@type': Process
+    skos:note: pickupg up pears from Bob
+
+  - '@id': jesus:a4ceeeff-0cfd-40e8-84e9-be64b3cf8cc6
+    '@type': EconomicEvent
+    action: split
+    affects: alice:3584c5eb-5b15-4c71-853e-0470fc34bbcb # alice's apples
+    inputOf: jesus:a3277840-54b9-497e-9cf6-1902eda1584f # picking up apples from Alice
+    observedQuantity:
+      qudt:unit: unit:Kilogram
+      qudt:numericValue: 80
+    provider: alice
+    receiver: jesus
+
+  - '@id': jesus:a31a3b48-0c7b-481c-a9f8-d3e579267d2a
+    '@type': EconomicEvent
+    action: merge
+    affects: jesus:9396d2d1-ded3-4b1c-8144-1c024e641030 # apples on the truck
+    outputOf: jesus:a3277840-54b9-497e-9cf6-1902eda1584f # picking up apples from Alice
+    observedQuantity:
+      qudt:unit: unit:Kilogram
+      qudt:numericValue: 80
+  
+  - '@id': jesus:80e9ef99-5876-4529-8fcc-6f55060c3b3d
+    '@type': EconomicEvent
+    action: work
+    inputOf: jesus:a3277840-54b9-497e-9cf6-1902eda1584f # picking up apples from Alice
+    includedIn: jesus:68cabaf3-deb8-4bd5-a439-798263abe35a # all the work today
+    provider: jesus
+    receiver: alice
+  
+  - '@id': jesus:80e9ef99-5876-4529-8fcc-6f55060c3b3d
+    '@type': EconomicEvent
+    action: service
+    outputOf: jesus:a3277840-54b9-497e-9cf6-1902eda1584f # picking up apples from Alice
+    inputOf: jesus:9cb4944b-d26d-4774-a530-d18f2747c0d8 # Mon Jan 7th 2019 distribution
+
+  - '@id': jesus:2d117224-9e34-4e86-adae-3a80ff5b8a49
+    '@type': EconomicEvent
+    action: split
+    affects: bob:c404cff5-19c7-453d-b0d8-d8e96055bd0c # Bob's pears
+    inputOf: jesus:c27ba90d-b182-494c-84aa-719004a63f9e # pickupg up pears from Bob
+    observedQuantity:
+      qudt:unit: unit:Kilogram
+      qudt:numericValue: 45
+    provider: bob
+    receiver: jesus
+
+  - '@id': jesus:a31a3b48-0c7b-481c-a9f8-d3e579267d2a
+    '@type': EconomicEvent
+    action: merge
+    affects: jesus:856c43b1-0a63-445f-a56f-707b257f086e # pears on the turck
+    outputOf: jesus:c27ba90d-b182-494c-84aa-719004a63f9e # pickupg up pears from Bob
+    observedQuantity:
+      qudt:unit: unit:Kilogram
+      qudt:numericValue: 45
+
+  - '@id': jesus:80e9ef99-5876-4529-8fcc-6f55060c3b3d
+    '@type': EconomicEvent
+    action: work
+    inputOf: jesus:c27ba90d-b182-494c-84aa-719004a63f9e # pickupg up pears from Bob
+    includedIn: jesus:68cabaf3-deb8-4bd5-a439-798263abe35a # all the work today
+    provider: jesus
+    receiver: bob
+  
+  - '@id': jesus:80e9ef99-5876-4529-8fcc-6f55060c3b3d
+    '@type': EconomicEvent
+    action: service
+    outputOf: jesus:c27ba90d-b182-494c-84aa-719004a63f9e # pickupg up pears from Bob
+    inputOf: jesus:9cb4944b-d26d-4774-a530-d18f2747c0d8 # Mon Jan 7th 2019 distribution
+
+  - '@id': jesus:2c335f13-9896-4362-8d38-b9e409200297
+    '@type': Process
+    skos:note: processing transaction with Joe
+
+  - '@id': notary:9087abc4-6f2b-4f1f-9c56-611b7f7302a3
+    '@type': ExchangeAgreement
+    skos:note: exchanging apples for Ollin
+  
+  - '@id': notary:9087abc4-6f2b-4f1f-9c56-611b7f7302a3
+    '@type': ExchangeAgreement
+    skos:note: exchanging pears for work
+
+  - '@id': notary:2145d38e-848d-4165-9a1e-3e31beba9b66
+    '@type': ExchangeAgreement
+    skos:note: total transaction with Joe
+
+  - '@id': jesus:80e9ef99-5876-4529-8fcc-6f55060c3b3d
+    '@type': EconomicEvent
+    action: service
+    outputOf: jesus:2c335f13-9896-4362-8d38-b9e409200297 # transaction with Joe
+    inputOf: jesus:9cb4944b-d26d-4774-a530-d18f2747c0d8 # Mon Jan 7th 2019 distribution
+
+  - '@id': jesus:a1222849-2963-4c5e-ae63-d71d9d60bcc1
+    '@type': EconomicEvent
+    action: split
+    affects: jesus:9396d2d1-ded3-4b1c-8144-1c024e641030 # apples on the truck
+    inputOf: jesus:2c335f13-9896-4362-8d38-b9e409200297 # transaction with Joe
+    under:
+      - notary:9087abc4-6f2b-4f1f-9c56-611b7f7302a3 # exchanging apples for Ollin
+      - notary:2145d38e-848d-4165-9a1e-3e31beba9b66 # total transaction with Joe
+    observedQuantity:
+      qudt:unit: unit:Kilogram
+      qudt:numericValue: 5
+    provider: alice
+    receiver: joe
+
+  - '@id': jesus:b8cf1198-c984-43d7-9316-657748d84895
+    '@type': EconomicEvent
+    action: split
+    affects: jesus:856c43b1-0a63-445f-a56f-707b257f086e # pears on the turck
+    inputOf: jesus:2c335f13-9896-4362-8d38-b9e409200297 # transaction with Joe
+    under:
+      - notary:9087abc4-6f2b-4f1f-9c56-611b7f7302a3 # exchanging pears for work
+      - notary:2145d38e-848d-4165-9a1e-3e31beba9b66 # total transaction with Joe
+    observedQuantity:
+      qudt:unit: unit:Kilogram
+      qudt:numericValue: 10
+    provider: bob
+    receiver: joe
+
+  - '@id': joe:1bfbd442-44b8-4b14-9615-8ea4fc9c17c5
+    '@type': Commitment
+    action: split
+    resourceClassifiedAs: http://circuloollines.org/ollin
+    committedQuantity:
+      qudt:unit: unit:Unitless
+      qudt:numericValue: 100
+    under: 
+      - notary:9087abc4-6f2b-4f1f-9c56-611b7f7302a3 # exchanging apples for Ollin
+      - notary:2145d38e-848d-4165-9a1e-3e31beba9b66 # total transaction with Joe
+    provider: joe 
+    receiver: alice
+
+  - '@id': joe:6af016ca-d82b-482a-b36b-e2991b2efbe0
+    '@type': Commitment
+    action: work
+    commitedTime:
+      time:intervalStarts:
+        time:inXSDDateTimeStamp: 2019-01-09T10:00:00-5:00
+      time:intervalEnds:
+        time:inXSDDateTimeStamp: 2019-02-09T12:00:00-5:00
+    under:
+      - notary:9087abc4-6f2b-4f1f-9c56-611b7f7302a3 # exchanging pears for work
+      - notary:2145d38e-848d-4165-9a1e-3e31beba9b66 # total transaction with Joe
+    provider: joe 
+    receiver: bob
