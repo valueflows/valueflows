@@ -94,6 +94,13 @@
     '@type': EconomicResource
     classifiedAs: http://www.wikidata.org/entity/Q21002847 # Faircoin
 
+  - '@id': miner:566a2c01-96f8-4b3c-adcf-f197eced3092
+    '@type': EconomicResource
+    skos:note: computing unit
+    currentQuantity:
+      qudt:unit: unit:Unitless
+      qudt:numericValue: 1 
+
   - '@id': miner:23799c14-c368-4653-a584-83bf9ae8b82a
     '@type': Process
     skos:note: transaction processing
@@ -141,6 +148,17 @@
       qudt:numericValue: 1
     provider: alice
     receiver: miner
+
+  - '@id': miner:8791913c-0152-4c32-bb3f-f25d61df736c
+    '@type': EconomicEvent
+    action: use
+    affect: miner:566a2c01-96f8-4b3c-adcf-f197eced3092 # computing unit
+    inputOf: miner:23799c14-c368-4653-a584-83bf9ae8b82a
+    observedTime:
+      time:intervalStarts:
+        time:inXSDDateTimeStamp: 2019-01-02T02:10:43.003-5:00
+      time:intervalEnds:
+        time:inXSDDateTimeStamp: 2019-01-07T02:10:43.007-5:00
 
   - '@id': miner:e72f7d1d-4f0a-4518-a44c-96658cafda95
     '@type': EconomicEvent
