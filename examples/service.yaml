@@ -217,7 +217,7 @@
       time:intervalStarts:
         time:inXSDDateTimeStamp: 2019-01-07T10:00:00-5:00
       time:intervalEnds:
-        time:inXSDDateTimeStamp: 2019-02-07T17:00:00-5:00
+        time:inXSDDateTimeStamp: 2019-01-07T17:00:00-5:00
 
   - '@id': jesus:8baa8ff7-9c1e-4586-ae7b-79d620a3cac9
     '@type': EconomicEvent
@@ -231,7 +231,7 @@
       time:intervalStarts:
         time:inXSDDateTimeStamp: 2019-01-07T10:00:00-5:00
       time:intervalEnds:
-        time:inXSDDateTimeStamp: 2019-02-07T17:00:00-5:00
+        time:inXSDDateTimeStamp: 2019-01-07T17:00:00-5:00
 
   - '@id': jesus:f0b8bfb1-ed29-4ab0-aabd-f5e2a3515626
     '@type': EconomicEvent
@@ -295,6 +295,11 @@
     action: work
     inputOf: jesus:a3277840-54b9-497e-9cf6-1902eda1584f # picking up apples from Alice
     includedIn: jesus:68cabaf3-deb8-4bd5-a439-798263abe35a # all the work today
+    observedTime:
+      time:intervalStarts:
+        time:inXSDDateTimeStamp: 2019-01-07T10:20:00-5:00
+      time:intervalEnds:
+        time:inXSDDateTimeStamp: 2019-01-07T10:40:00-5:00
     provider: jesus
     receiver: alice
   
@@ -329,6 +334,11 @@
     action: work
     inputOf: jesus:c27ba90d-b182-494c-84aa-719004a63f9e # pickupg up pears from Bob
     includedIn: jesus:68cabaf3-deb8-4bd5-a439-798263abe35a # all the work today
+    observedTime:
+      time:intervalStarts:
+        time:inXSDDateTimeStamp: 2019-01-07T10:56:00-5:00
+      time:intervalEnds:
+        time:inXSDDateTimeStamp: 2019-01-07T11:12:00-5:00
     provider: jesus
     receiver: bob
   
@@ -353,6 +363,17 @@
   - '@id': notary:2145d38e-848d-4165-9a1e-3e31beba9b66
     '@type': ExchangeAgreement
     skos:note: total transaction with Joe
+
+  - '@id': jesus:3b8b760d-0390-42f7-baef-112c32da7704
+    '@type': EconomicEvent
+    action: work
+    inputOf: jesus:2c335f13-9896-4362-8d38-b9e409200297 # transaction with Joe
+    observedTime:
+      time:intervalStarts:
+        time:inXSDDateTimeStamp: 2019-01-07T13:00:00-5:00
+      time:intervalEnds:
+        time:inXSDDateTimeStamp: 2019-01-07T13:10:00-5:00
+
 
   - '@id': jesus:80e9ef99-5876-4529-8fcc-6f55060c3b3d
     '@type': EconomicEvent
@@ -408,7 +429,7 @@
       time:intervalStarts:
         time:inXSDDateTimeStamp: 2019-01-09T10:00:00-5:00
       time:intervalEnds:
-        time:inXSDDateTimeStamp: 2019-02-09T12:00:00-5:00
+        time:inXSDDateTimeStamp: 2019-01-09T12:00:00-5:00
     under:
       - notary:9087abc4-6f2b-4f1f-9c56-611b7f7302a3 # exchanging pears for work
       - notary:2145d38e-848d-4165-9a1e-3e31beba9b66 # total transaction with Joe
