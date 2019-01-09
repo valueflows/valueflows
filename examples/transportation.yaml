@@ -532,3 +532,41 @@
     observedQuantity:
       qudt:unit: unit:Kilogram
       qudt:numericValue: 40
+
+# passenger 
+# rideshare
+# Alice picks up Bob in one place and drops off in another
+
+  - '@id': alice:d5c9e077-1630-4113-a6c4-635e081f08a6
+    '@type': Process
+    skos:note: giving ride to Bob
+
+  - '@id': alice:a6804ed0-ad8b-48bf-8c59-37c3838076e1
+    '@type': EconomicEvent
+    action: service
+    outputOf: alice:d5c9e077-1630-4113-a6c4-635e081f08a6
+    provider: alice
+    receiver: bob
+
+  - '@id': alice:9599cac9-29e2-48cf-aafa-4c4a8b808139
+    '@type': EconomicEvent
+    action: load
+    affects: bob
+    inputOf: alice:d5c9e077-1630-4113-a6c4-635e081f08a6
+    atLocation: geo:37.786971,-122.399677
+    observedTime:
+      time:inXSDDateTimeStamp: 2019-01-08T11:00:00-5:00
+    provider: alice
+    receiver: bob
+
+  - '@id': alice:fbff9852-36ca-4364-a943-bc0b49e1cab5
+    '@type': EconomicEvent
+    action: unload
+    affects: bob
+    outputOf: alice:d5c9e077-1630-4113-a6c4-635e081f08a6
+    atLocation: geo:37.776142,-122.398587
+    observedTime:
+      time:inXSDDateTimeStamp: 2019-01-08T11:21:00-5:00
+    provider: alice
+    receiver: bob
+
