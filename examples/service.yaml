@@ -1,12 +1,22 @@
 '@context':
   '@vocab': https://w3id.org/valueflows#
+  vf: https://w3id.org/valueflows#
+  affects:
+    '@id': vf:affects
+    '@type': '@id'
+  inputOf:
+    '@id': vf:inputOf
+    '@type': '@id'
+  outputOf:
+    '@id': vf:outputOf
+    '@type': '@id'
   xsd: http://www.w3.org/2001/XMLSchema#
   qudt: http://qudt.org/schema/qudt/
   unit: http://qudt.org/vocab/unit/
   time: http://www.w3.org/2006/time#
   time:inXSDDateTimeStamp:
     '@type': xsd:dateTimeStamp
-  alice: https://alce.example/
+  alice: https://alice.example/
   bob: https://bob.example/
   claudia: https://claudia.example/
   notary: https://notary.example/
@@ -14,6 +24,7 @@
   jesus: https://jesus.example/
   joe: https://joe.example/
 
+'@id': https://valueflo.ws/2dddde54-1b3e-48b8-bee3-6dce31cbeb2d
 '@graph':
 
   - '@id': bob:8e5fe80d-a769-4bd5-89e5-2136d33eab9f
@@ -338,7 +349,7 @@
     provider: bob
     receiver: jesus
 
-  - '@id': jesus:a31a3b48-0c7b-481c-a9f8-d3e579267d2a
+  - '@id': jesus:70e38077-667d-40da-b198-e3d73ad4482b
     '@type': EconomicEvent
     action: merge
     affects: jesus:856c43b1-0a63-445f-a56f-707b257f086e # pears on the turck
@@ -347,7 +358,7 @@
       qudt:unit: unit:Kilogram
       qudt:numericValue: 45
 
-  - '@id': jesus:80e9ef99-5876-4529-8fcc-6f55060c3b3d
+  - '@id': jesus:541c6767-ef76-4cf4-a690-359f4396142c
     '@type': EconomicEvent
     action: work
     inputOf: jesus:c27ba90d-b182-494c-84aa-719004a63f9e # pickupg up pears from Bob
@@ -360,7 +371,7 @@
     provider: jesus
     receiver: bob
   
-  - '@id': jesus:80e9ef99-5876-4529-8fcc-6f55060c3b3d
+  - '@id': jesus:da7bfa38-a1b2-4f6f-a896-b9bf1ec8807d
     '@type': EconomicEvent
     action: service
     outputOf: jesus:c27ba90d-b182-494c-84aa-719004a63f9e # pickupg up pears from Bob
@@ -393,7 +404,7 @@
         time:inXSDDateTimeStamp: 2019-01-07T13:10:00-5:00
 
 
-  - '@id': jesus:80e9ef99-5876-4529-8fcc-6f55060c3b3d
+  - '@id': jesus:be1dbb7d-ef4b-4e7e-8685-3e218dcd2d0d
     '@type': EconomicEvent
     action: service
     outputOf: jesus:2c335f13-9896-4362-8d38-b9e409200297 # transaction with Joe
