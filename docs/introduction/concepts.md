@@ -36,22 +36,4 @@ Producing and exchange olive oil and coffee, even more simplified.
 
 Value flows can be traversed forwards ("tracking") or backwards ("tracing").  Often people use the term "provenance" when looking backwards towards the source of some resource, sometimes when a problem emerges (as in a disease outbreak from food), sometimes to know the quality of the resource (as in wanting local humanely produced food with lower ecological impact).
 
-The data structures of ValueFlows provide the ability to trace or track any value flow, no matter how long or complex:
-
-* For an EconomicResource:
-    * after: EconomicEvents that are inputs to Processes or Transfers
-    * before: EconomicEvents that are outputs from Processes or Transfers
-* For a Process or Transfer:
-    * after: EconomicEvents that are outputs
-    * before: EconomicEvents that are inputs
-* For an EconomicEvent:
-    * after: 
-        * a Process or Transfer to which it is an input, or
-        * an EconomicResource which it affected as the output of a Process or Transfer
-    * before:
-        * a Process or Transfer from which is is an output, or
-        * if it is an input to a Process or Transfer, the EconomicResource which it affects.
-
-When the same economic resource is both input and output of a process, and more than one resource is involved, the tracking identifier is used.  And example of this would be partial load shipments, where many separate shipments are included in the same shipment process.
-
-When the same economic resource is both input and output of a process, sometimes a series of processes, such as for repair or quality testing or a workflow where a resource is refined through stages like writing/editing/etc, the stage must be identified, based on the kind of process the resource was last output of.
+The data structures of ValueFlows provide the ability to trace or track any value flow, no matter how long or complex, see [Track and Trace](appendix/track.md).
