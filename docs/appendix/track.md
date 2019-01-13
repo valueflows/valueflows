@@ -17,8 +17,8 @@ One of the most-often used traces is to find the origins of health problems like
 Here is the logic for tracking and tracing.
 
 * For an EconomicResource:
-    * after: EconomicEvents that are inputs to Processes or Transfers
-    * before: EconomicEvents that are outputs from Processes or Transfers
+    * after: EconomicEvents affecting it that are inputs to Processes or Transfers
+    * before: EconomicEvents affecting it that are outputs from Processes or Transfers
 * For a Process or Transfer:
     * after: EconomicEvents that are outputs
     * before: EconomicEvents that are inputs
@@ -30,6 +30,6 @@ Here is the logic for tracking and tracing.
         * a Process or Transfer from which is is an output, or
         * if it is an input to a Process or Transfer, the EconomicResource which it affects.
 
-When the same economic resource is both input and output of a process, and more than one resource is involved, the tracking identifier is used.  And example of this would be partial load shipments, where many separate shipments are included in the same shipment process.
+When there is more than one economic resource going from input to output of a process without transformation of that resource (except for location), the tracking identifier is used.  And example of this would be partial load shipments, where many separate shipments are included in the same shipment process.
 
 When the same economic resource is both input and output of a process, sometimes a series of processes, such as for repair or quality testing or a workflow where a resource is refined through stages like writing/editing/etc, the stage must be identified, based on the kind of process the resource was last output of.
