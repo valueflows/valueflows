@@ -31,3 +31,9 @@ Producing and exchange olive oil and coffee, even more simplified.
 ### ... to thinking bigger.
 
 ![river flow](https://rawgit.com/valueflows/valueflows/master/release-doc-in-process/vf-river.png)
+
+### Traversing value flows
+
+Value flows can be traversed forwards ("tracking") or backwards ("tracing").  Often people use the term "provenance" when looking backwards towards the source of some resource, sometimes when a problem emerges (as in a disease outbreak from food), sometimes to know the quality of the resource (as in wanting local humanely produced food with lower ecological impact).
+
+The data structures of ValueFlows provide the ability to trace or track any value flow, no matter how long or complex, see [Track and Trace](appendix/track.md).
