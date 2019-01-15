@@ -358,7 +358,7 @@ vf:fulfills  a              owl:ObjectProperty ;
         rdfs:domain         vf:Fulfillment ;
         rdfs:comment        "The commitment which is completely or partially fulfilled by an economic event." .
 
-#vf:isFinished  a        owl:DataTypeProperty ;
+#vf:isFinished  a        owl:DatatypeProperty ;
 #        rdfs:domain     [ owl:unionOf (vf:Commitment vf:Process) ] ; 
 #        rdfs:label      "is finished" ;
 #        rdfs:range      xsd:boolean ;
@@ -407,7 +407,7 @@ vf:duration a               owl:ObjectProperty ;
         rdfs:comment        "The calendar duration defined for this type of process." .
 
 vf:durationMultiplier 
-        a                   owl:DataTypeProperty ;
+        a                   owl:DatatypeProperty ;
         rdfs:label          "duration multiplier" ;
         rdfs:domain         vf:RecipeProcess ;
         rdfs:range          xsd:float ;
