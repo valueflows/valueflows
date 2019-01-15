@@ -68,7 +68,7 @@ vf:Agreement  a             owl:Class ;
 vf:ExchangeAgreement  a     owl:Class ;
         rdfs:label          "vf:ExchangeAgreement" ;
         rdfs:subClassOf     vf:Agreement ;
-        rdfs:comment        "An agreement to exchange something with another agent(s), containing vf:Commitments towards that end." .
+        rdfs:comment        "An agreement to exchange something with another agent(s), containing commitments towards that end." .
 
 vf:DistributionAgreement  a  owl:Class ;
         rdfs:label           "vf:DistributionAgreement" ;
@@ -92,7 +92,7 @@ vf:Transfer  a              owl:Class ;
 
 vf:EconomicEvent  a         owl:Class ;
         rdfs:label          "vf:EconomicEvent" ;
-        rdfs:comment        "Observed economic flow, never flow planned to happen in the future. This could reflect a change in the quantity of a vf:EconomicResource. It is also defined by its behavior in relation to the vf:EconomicResource (see vf:action)" .
+        rdfs:comment        "An observed economic flow, as opposed to a flow planned to happen in the future. This could reflect a change in the quantity of an economic resource. It is also defined by its behavior in relation to the economic resource (see vf:action)" .
 
 foaf:Agent  a               owl:Class ;
         rdfs:label          "foaf:Agent" ;
@@ -106,19 +106,19 @@ foaf:Person  a              owl:Class ;
 org:Organization  a         owl:Class ;
         rdfs:label          "org:Organization" ;
         rdfs:subClassOf     foaf:Agent ;
-        rdfs:comment        "Usually a more formally defined structure than Group, often legally defined, can be a group or not." .
+        rdfs:comment        "A formal or informal group, or legal organization." .
 
 vf:AgentRelationship  a     owl:Class ;
         rdfs:label          "vf:AgentRelationship" ;
-        rdfs:comment        "An ongoing voluntary association between 2 Agents of any kind." .
+        rdfs:comment        "An ongoing voluntary association between 2 agents of any kind." .
 
 vf:Fulfillment  a           owl:Class ;
         rdfs:label          "vf:Fulfillment" ;
-        rdfs:comment        "The quantity that the vf:EconomicEvent fulfilled towards the vf:Commitment." .
+        rdfs:comment        "The quantity that the economic event fulfilled towards the commitment." .
 
 vf:Reciprocity  a           owl:Class ;
         rdfs:label          "vf:Reciprocity" ;
-        rdfs:comment        "The quantity that the vf:EconomicEvent implies towards creation of the reciprocal vf:Commitment." .
+        rdfs:comment        "The quantity that the economic event implies towards creation of the reciprocal commitment." .
 
 vf:Appreciation  a          owl:Class ;
         rdfs:label          "vf:Appreciation" ;
@@ -142,13 +142,15 @@ vf:inputOf
         a                   owl:ObjectProperty ;
         rdfs:label          "input of" ;
         rdfs:domain         [ owl:unionOf (vf:EconomicEvent vf:Commitment vf:Intent vf:RecipeFlow) ] ;
-        rdfs:range          [ owl:unionOf (vf:Process vf:Transfer vf:RecipeProcess) ] .
+        rdfs:range          [ owl:unionOf (vf:Process vf:Transfer vf:RecipeProcess) ] ;
+        rdfs:comment        "Relates an input flow to it's node." .
 
 vf:outputOf
         a                   owl:ObjectProperty ;
         rdfs:label          "output of" ;
-        rdfs:domain         [ owl:unionOf (vf:EconomicEvent vf:Commitment vf:Intent vf:RecipeFlow) ] ; # vf:Recipe
-        rdfs:range          [ owl:unionOf (vf:Process vf:Transfer vf:RecipeProcess) ] .
+        rdfs:domain         [ owl:unionOf (vf:EconomicEvent vf:Commitment vf:Intent vf:RecipeFlow) ] ;
+        rdfs:range          [ owl:unionOf (vf:Process vf:Transfer vf:RecipeProcess) ] ;
+        rdfs:comment        "Relates an output flow to it's node." .
 
 vf:inputs
         a                   owl:ObjectProperty ;
@@ -174,19 +176,12 @@ vf:committedOutputs
         rdfs:domain         vf:Process ;
         rdfs:range          vf:Commitment .
 
-vf:classifiedAs
-        a                   owl:ObjectProperty ;
-        rdfs:label          "classified as" ;
-        rdfs:domain         owl:Thing ;
-        rdfs:range          owl:Thing ;
-        rdfs:comment        "References a concept in a common taxonomy or other classification scheme for purposes of categorization." .
-
 vf:involves
         a                   owl:ObjectProperty ;
         rdfs:label          "involves" ;
         rdfs:domain         [ owl:unionOf (vf:Commitment vf:Intent) ] ; 
         rdfs:range          vf:EconomicResource ;
-        rdfs:comment        "EconomicResource the Commitment commits or Intent intends to affect. Could be an actual resource or a classification / specification of resource." .
+        rdfs:comment        "Economic resource the commitment commits or the intent intends to affect. Could be an actual resource or a classification / specification of resource." .
 
 vf:underlyingResource
         a                   owl:ObjectProperty ;
@@ -200,12 +195,6 @@ vf:relationship  a          owl:ObjectProperty ;
         rdfs:domain         vf:AgentRelationship ;
         rdfs:range          vf:AgentRelationshipRole ;
         rdfs:comment        "A kind of relationship that exists between 2 agents." .
-
-#vf:commitsTo
-#        a                   owl:ObjectProperty ;
-#        rdfs:domain         vf:Commitment ;
-#        rdfs:range          vf:Intent ;
-#        rdfs:comment        "The Intent that an economic agent promises to fulfill." .
 
 vf:affects
         a                   owl:ObjectProperty ;
@@ -262,7 +251,7 @@ vf:under  a                 owl:ObjectProperty ;
         rdfs:domain         [ owl:unionOf (vf:EconomicEvent vf:Commitment vf:Reciprocity vf:Fulfillment ) ] ; 
         rdfs:label          "under" ;
         rdfs:range          vf:Agreement ;
-        rdfs:comment        "Reference to an agreement between agents which specifies the rules or policies which govern this flow." .
+        rdfs:comment        "Reference to an agreement between agents which specifies the rules or policies or calculations which govern this flow." .
 
 vf:createdBy  a             owl:ObjectProperty ;
         rdfs:label          "created by" ;
@@ -286,7 +275,7 @@ vf:currentQuantity a        owl:ObjectProperty ;
         rdfs:label          "current quantity" ;
         rdfs:domain         vf:EconomicResource ;
         rdfs:range          qudt:QuantityValue ;
-        rdfs:comment        "The current amount and unit of the economic resource." .
+        rdfs:comment        "The current amount and unit of the economic resource. This can be stored or derived from economic events affecting the resource" .
 
 vf:affectedQuantity a       owl:ObjectProperty ;
         rdfs:label          "affected quantity" ;
@@ -450,9 +439,16 @@ vf:basedOn
         rdfs:range          vf:RecipeProcess ;
         rdfs:comment        "The recipe definition or specification for a process." .
 
+vf:classifiedAs
+        a                   owl:ObjectProperty ;
+        rdfs:label          "classified as" ;
+        rdfs:domain         owl:Thing ;
+        rdfs:range          owl:Thing ;
+        rdfs:comment        "References a concept in a common taxonomy or other classification scheme for purposes of categorization." .
+
 vf:resourceConformsTo
         a                   owl:ObjectProperty ;
-        rdfs:label          "conforms to" ;
+        rdfs:label          "resource conforms to" ;
         rdfs:domain         [ owl:unionOf (vf:Commitment vf:EconomicResource vf:Intent vf:RecipeFlow ) ] ;
         rdfs:range          vf:ResourceSpecification ;
         rdfs:comment        "The primary resource knowledge specification or definition of an existing or potential resource." .
