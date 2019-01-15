@@ -61,13 +61,13 @@ vf:Proposal  a              owl:Class ;
         rdfs:label          "vf:Proposal" ;
         rdfs:comment        "Published requests or offers, sometimes with what is expected in return." .
 
-vf:Agreement  a             owl:Class ;
-        rdfs:label          "vf:Agreement" ;
-        rdfs:comment        "Any type of agreement among economic agents, that can be referenced in VF to clarify the economic activity.  This is a placeholder pending investigating other vocabularies." .
-
 vf:Satisfaction  a          owl:Class ;
         rdfs:label          "vf:Satisfaction" ;
         rdfs:comment        "A commitment or economic event that partially or fully satisfies one or more intents." .
+
+vf:Agreement  a             owl:Class ;
+        rdfs:label          "vf:Agreement" ;
+        rdfs:comment        "Any type of agreement among economic agents, that can be referenced in VF to clarify the economic activity.  This is a placeholder pending investigating other vocabularies." .
 
 vf:ExchangeAgreement  a     owl:Class ;
         rdfs:label          "vf:ExchangeAgreement" ;
@@ -81,6 +81,7 @@ vf:DistributionAgreement  a  owl:Class ;
 
 
 # OBSERVATION CLASSES
+
 
 vf:EconomicResource  a      owl:Class ;
         rdfs:label          "vf:EconomicResource" ;
@@ -187,10 +188,10 @@ vf:classifiedAs
 
 vf:involves
         a                   owl:ObjectProperty ;
-        rdfs:label         "involves" ;
-        rdfs:domain         [ owl:unionOf (vf:Commitment vf:Intent) ] ;
+        rdfs:label          "involves" ;
+        rdfs:domain         [ owl:unionOf (vf:Commitment vf:Intent) ] ; 
         rdfs:range          vf:EconomicResource ;
-        rdfs:comment        "EconomicResource the Commitment intends or commits to affect. Could be an actual resource or a category or type of resource." .
+        rdfs:comment        "EconomicResource the Commitment commits or Intent intends to affect. Could be an actual resource or a classification / specification of resource." .
 
 vf:underlyingResource
         a                   owl:ObjectProperty ;
@@ -231,7 +232,6 @@ vf:appreciationWith
         rdfs:domain         vf:Appreciation ;
         rdfs:range          vf:EconomicEvent ;
         rdfs:comment        "The economic event implemented in appreciation (gift economy)." .
-
 
 vf:provider  a              owl:ObjectProperty ;
         rdfs:domain         [ owl:unionOf (vf:EconomicEvent vf:Commitment vf:Intent) ] ;
@@ -303,7 +303,13 @@ vf:fulfilledQuantity a      owl:ObjectProperty ;
         rdfs:label          "fulfilled quantity" ;
         rdfs:domain         vf:Fulfillment ;
         rdfs:range          qudt:QuantityValue ;
-        rdfs:comment        "The quantity of the fulfillment of an event towards a commitment." .
+        rdfs:comment        "The quantity of the fulfillment of an event towards a commitment or an intent." .
+
+vf:satisfiedQuantity a      owl:ObjectProperty ;
+        rdfs:label          "satisfied quantity" ;
+        rdfs:domain         vf:Satisfaction ;
+        rdfs:range          qudt:QuantityValue ;
+        rdfs:comment        "The quantity of the satisfaction of an commitment towards an intent." .
 
 vf:currentLocation a        owl:ObjectProperty ;
         rdfs:label          "current location" ;
@@ -373,8 +379,22 @@ vf:fulfills  a              owl:ObjectProperty ;
         rdfs:domain         vf:Fulfillment ;
         rdfs:comment        "The commitment which is completely or partially fulfilled by an economic event." .
 
-#vf:isFinished  a        owl:DataTypeProperty ;
-#        rdfs:domain     [ owl:unionOf (vf:Commitment vf:Process vf:Proposal vf:Intent) ] ; 
+vf:satisfies
+        a                   owl:ObjectProperty ;
+        rdfs:label         "satisfies" ;
+        rdfs:domain         vf:Satisfaction ;
+        rdfs:range          vf:Intent ;
+        rdfs:comment        "An intent satisfied fully or partially by an economic event or commitment." .
+
+vf:satisfiedBy
+        a                   owl:ObjectProperty ;
+        rdfs:label         "satisfied by" ;
+        rdfs:domain         vf:Satisfaction ;
+        rdfs:range          [ owl:unionOf (vf:Commitment vf:EconomicEvent ) ] ;
+        rdfs:comment        "A commitment or economic event fully or partially satisfying an intent" .
+
+#vf:isFinished  a        owl:DatatypeProperty ;
+#        rdfs:domain     [ owl:unionOf (vf:Commitment vf:Process vf:Intent) ] ; 
 #        rdfs:label      "is finished" ;
 #        rdfs:range      xsd:boolean ;
 #        rdfs:comment    "The commitment or process is complete or not." .
@@ -422,7 +442,7 @@ vf:duration a               owl:ObjectProperty ;
         rdfs:comment        "The calendar duration defined for this type of process." .
 
 vf:durationMultiplier 
-        a                   owl:DataTypeProperty ;
+        a                   owl:DatatypeProperty ;
         rdfs:label          "duration multiplier" ;
         rdfs:domain         vf:RecipeProcess ;
         rdfs:range          xsd:float ;
@@ -469,20 +489,6 @@ vf:reciprocalIntentOf
         rdfs:domain         vf:Intent ;
         rdfs:range          vf:Proposal ;
         rdfs:comment        "The proposal which this reciprocal intent applies to." .
-
-vf:satisfies
-        a                   owl:ObjectProperty ;
-        rdfs:label         "satisfies" ;
-        rdfs:domain         vf:Satisfaction ;
-        rdfs:range          vf:Intent ;
-        rdfs:comment        "An intent satisfied fully or partially by an economic event or commitment." .
-
-vf:satisfiedBy
-        a                   owl:ObjectProperty ;
-        rdfs:label         "satisfied by" ;
-        rdfs:domain         vf:Satisfaction ;
-        rdfs:range          [ owl:unionOf (vf:Commitment vf:EconomicEvent ) ] ;
-        rdfs:comment        "A commitment or economic event fully or partially satisfying an intent" .
 
 
 # ################################ agent relationship verbs
