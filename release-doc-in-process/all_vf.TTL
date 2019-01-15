@@ -155,30 +155,6 @@ vf:outputOf
         rdfs:domain         [ owl:unionOf (vf:EconomicEvent vf:Commitment vf:Intent vf:RecipeFlow) ] ; # vf:Recipe
         rdfs:range          [ owl:unionOf (vf:Process vf:Transfer vf:RecipeProcess) ] .
 
-#vf:inputs
-#        a                   owl:ObjectProperty ;
-#        rdfs:label         "inputs" ;
-#        rdfs:domain         [ owl:unionOf (vf:Process vf:Transfer) ] ;
-#        rdfs:range          vf:EconomicEvent .
-
-#vf:outputs
-#        a                   owl:ObjectProperty ;
-#        rdfs:label         "outputs" ;
-#        rdfs:domain         [ owl:unionOf (vf:Process vf:Transfer) ] ;
-#        rdfs:range          vf:EconomicEvent .
-
-#vf:committedInputs
-#        a                   owl:ObjectProperty ;
-#        rdfs:label         "committed inputs" ;
-#        rdfs:domain         vf:Process ;
-#        rdfs:range          vf:Commitment .
-
-#vf:committedOutputs
-#        a                   owl:ObjectProperty ;
-#        rdfs:label         "committed outputs" ;
-#        rdfs:domain         vf:Process ;
-#        rdfs:range          vf:Commitment .
-
 vf:classifiedAs
         a                   owl:ObjectProperty ;
         rdfs:label          "classified as" ;
