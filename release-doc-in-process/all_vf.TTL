@@ -152,30 +152,6 @@ vf:outputOf
         rdfs:range          [ owl:unionOf (vf:Process vf:Transfer vf:RecipeProcess) ] ;
         rdfs:comment        "Relates an output flow to it's node." .
 
-vf:inputs
-        a                   owl:ObjectProperty ;
-        rdfs:label          "inputs" ;
-        rdfs:domain         [ owl:unionOf (vf:Process vf:Transfer) ] ;
-        rdfs:range          vf:EconomicEvent .
-
-vf:outputs
-        a                   owl:ObjectProperty ;
-        rdfs:label          "outputs" ;
-        rdfs:domain         [ owl:unionOf (vf:Process vf:Transfer) ] ;
-        rdfs:range          vf:EconomicEvent .
-
-vf:committedInputs
-        a                   owl:ObjectProperty ;
-        rdfs:label          "committed inputs" ;
-        rdfs:domain         vf:Process ;
-        rdfs:range          vf:Commitment .
-
-vf:committedOutputs
-        a                   owl:ObjectProperty ;
-        rdfs:label          "committed outputs" ;
-        rdfs:domain         vf:Process ;
-        rdfs:range          vf:Commitment .
-
 vf:involves
         a                   owl:ObjectProperty ;
         rdfs:label          "involves" ;
