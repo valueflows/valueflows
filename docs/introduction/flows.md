@@ -41,8 +41,8 @@ All flows use an action property to designate what the flow is doing and how it 
 * vf:improve - in processes like repair or maintentance, the same resource will appear in input with *vf:accept* verb
 * vf:give - give rights and responsibilities for the resource
 * vf:receive - receive rights and responsibilites for the resource
-* vf:raise - adjusts a quantity up based on beginning balance or inventory account adjustment
-* vf:lower - adjusts a quantity down based on beginning balance or inventory account adjustment
+* vf:raise - adjusts a quantity up based on a beginning balance or inventory count
+* vf:lower - adjusts a quantity down based on a beginning balance or inventory count
 
 Action | Affect | Related to | I/O | Changes existence | Pairs with |
 ------ | ------ | ---------- | --- | ----------------- | ---------- |
