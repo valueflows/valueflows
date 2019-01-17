@@ -7,17 +7,17 @@ Flows come as fundamental construct in ValueFlows ontology. When put in chronolo
 
 ## Intent
 
-On the process side, for example, a work plan could be an Intent, but a work plan that some agent committed to is a Commitment.
-Intent describes some potential future event which might require prior Commitment.
+Intents describe potential future events which have not been agreed to by other agents. Intents are often used for discovering another agent to participate in a desired event. On the process side, for example, planned work  could be an Intent, but planned work that some agent committed to is a Commitment.
+
 
 ## Commitment
 
-Commitments are "mirrors" of economic events, and economic events can fulfull commitments.  Commitments can satisfy intents. Commitments can be considered contractual promises from one agent to another.
-Commitments describe potential future event which involved agents already agreed to pursuit.
+Commitments describe potential future events which the involved agents already agreed to pursuit. Commitments can be considered contractual promises from one agent to another.  Commitments are "mirrors" of economic events, and Economic Events can fulfull Commitments.  Commitments can satisfy Intents. 
+
 
 ## Economic Events
 
-Economic event describes past event, something already observed, never some potential future event.  They can fulfill commitments or intents.
+Economic Events describes past events, something observed, never some potential future event.  They can fulfill Commitments or satisfy Intents (when there is no Commitment).
 
 ## Granularity
 
