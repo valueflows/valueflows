@@ -30,36 +30,36 @@ Intents, Commitments, and Economic Events can occur at any granularity that is n
 
 All flows use an action property to designate what the flow is doing and how it will affect an economic resource (or not).  Actions are defined as follows.
 
+* vf:produce - new resource created in that process or an existing stock resource added to
 * vf:use - for example a tool used in process, after the process, the tool still exists
 * vf:consume - for example an ingredient composed into the output, after the process the ingredient is gone
 * vf:cite - for example a design file, neither used nor consumed, the file remains available at all times
 * vf:work - labor power towards a process
-* vf:accept - in processes like repair or maintentance, same resource will appear in output with *vf:improve* verb
-* vf:load -  transported resource enters the process, same resource will appear in output with *vf:unload* verb
-* vf:produce - new resource created in that process
-* vf:improve - in processes like repair or maintentance, same resource will appear in input with *vf:accept* verb
-* vf:unload -  transported resource leaves the process, same resource will appear in input with *vf:load* verb
+* vf:load -  transported resource enters the process, the same resource will appear in output with *vf:unload* verb
+* vf:unload -  transported resource leaves the process, the same resource will appear in input with *vf:load* verb
+* vf:accept - in processes like repair or maintentance, the same resource will appear in output with *vf:improve* verb
+* vf:improve - in processes like repair or maintentance, the same resource will appear in input with *vf:accept* verb
+* vf:give - give rights and responsibilities for the resource
+* vf:receive - receive rights and responsibilites for the resource
+* vf:raise - adjusts a quantity up based on beginning balance or inventory account adjustment
+* vf:lower - adjusts a quantity down based on beginning balance or inventory account adjustment
 
-Action | Affect | Related to | I/O | Pairs with |
------- | ------ | ---------- | --- | ---------- |
-increment | Increment | N/A | N/A | N/A |
-produce | Increment | Process | Output | N/A |
-improve | No effect | Process | Output | accept |
-unload | Increment | Process | Output | load |
-receive | Increment | Transfer | Output | give |
-decrement | Decrement | N/A | N/A | N/A |
-load | Decrement | Process | Input | unload |
-consume | Decrement | Process | Input | N/A |
-use | No effect | Process | Input | N/A |
-work | No effect | Process | Input | N/A |
-cite | No effect | Process | Input | N/A |
-accept | No effect | Process | Input | improve |
-give | Decrement | Transfer | Input | receive |
+Action | Affect | Related to | I/O | Changes existence | Pairs with |
+------ | ------ | ---------- | --- | ----------------- | ---------- |
+produce | Increment | Process | Output | Yes | N/A |
+consume | Decrement | Process | Input | Yes | N/A |
+use | No effect | Process | Input | No |N/A |
+work | No effect | Process | Input | N/A | N/A |
+cite | No effect | Process | Input | No | N/A |
+load | Decrement | Process | Input | No | unload |
+unload | Increment | Process | Output | No | load |
+accept | No effect | Process | Input | No | improve |
+improve | No effect | Process | Output | No | accept |
+give | Decrement | Transfer | Input | No | receive |
+receive | Increment | Transfer | Output | No | give |
+raise | Increment | N/A | N/A | No | N/A |
+lower | Decrement | N/A | N/A | No | N/A |
 
 We have defined a core set of actions, but expect that this will be extended with others. If extended, they should be defined as part of this or another formal vocabulary so that all can use them and assume the same meaning. 
-
-Note: Increment and decrement are usually not meant to be used directly, rather the actions inherit from them.  An exception is if an adjustment is needed that has no known provenance.  Examples of when this might happen: 
-* Beginning balances in a new system
-* Manual inventory count shows a different amount than what the system shows.
 
 Temporary note: The actions `use` and `work` are time-based actions, either with or without an explicit schedule.  How to handle time-based resources is still under discussion.  It is possible we will want to define the affect of those as `Decrement` in the future.
