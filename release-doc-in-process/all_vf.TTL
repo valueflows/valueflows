@@ -100,11 +100,6 @@ vf:Process  a               owl:Class ;
         vs:term_status      "unstable" ;
         rdfs:comment        "An activity that changes inputs into outputs.  It could transform or transport economic resource(s)." .
 
-vf:Transfer  a              owl:Class ;
-        rdfs:label          "vf:Transfer" ;
-        vs:term_status      "unstable" ;
-        rdfs:comment        "An activity that assigns the rights and responsibilities for an economic resource from one agent to another." .
-
 vf:EconomicEvent  a         owl:Class ;
         rdfs:label          "vf:EconomicEvent" ;
         vs:term_status      "unstable" ;
@@ -167,7 +162,7 @@ vf:inputOf
         a                   owl:ObjectProperty ;
         rdfs:label          "input of" ;
         rdfs:domain         [ owl:unionOf (vf:EconomicEvent vf:Commitment vf:Intent) ] ;
-        rdfs:range          [ owl:unionOf (vf:Process vf:Transfer) ] ;
+        rdfs:range          vf:Process ;
         vs:term_status      "unstable" ;
         rdfs:comment        "Relates an input flow to it's node." .
 
@@ -175,7 +170,7 @@ vf:outputOf
         a                   owl:ObjectProperty ;
         rdfs:label          "output of" ;
         rdfs:domain         [ owl:unionOf (vf:EconomicEvent vf:Commitment vf:Intent) ] ;
-        rdfs:range          [ owl:unionOf (vf:Process vf:Transfer) ] ;
+        rdfs:range          vf:Process ;
         vs:term_status      "unstable" ;
         rdfs:comment        "Relates an output flow to it's node." .
 

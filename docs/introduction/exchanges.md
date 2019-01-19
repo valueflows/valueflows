@@ -8,7 +8,16 @@ In ValueFlows, we want to track not only the offers and promises, but also the a
 
 We also support non-reciprocal one-way transfers, such as in a gift economy.  An exchange implies at least two transfers with reciprocity.
 
-### Transfers
+## Agreements
+
+Various kinds of agreements between agents often define the rights and responsibilities for economic resources that are transferred. Agreements can reflect any economic paradigm, so make it possible for the Exchange and Transfer vocabulary to work equally well for capitalist businesses, transitional economic interactions, and next economy interactions.
+
+Agreements can be of any kind and scope, from an order to a value equation to a larger blanket agreement.
+
+While we can consider any [Commitment](/introduction/flows.html#commitment) as smallest possible agreement between two agents - providing one and receiving one, in many cases we need to group many of such commitments together. In ValueFlows we do it by referencing an Agreement from all the commitments that should get considered together using `vf:under` property.
+Besides that, ValueFlows does not define the detailed internal vocabulary for agreements, but defines optional references to an agreement when it could be useful.
+
+## Transfers
 
 We want to emphasize that although ownership is the primary right transferred in the current economic system (along with renting or leasing), we seek to focus on transfers not necessarily governed by the legal context of property ownership.  This puts the focus on economic coordination rather than ownership, although the vocabulary supports all existing paradigms too. 
 
@@ -18,19 +27,7 @@ Or in a library, a book can be checked out for a period of time.  The agent who 
 
 Or let's say that a community has farmland and equipment held in common.  The community transfers that to some farmers to use and take care of.  The community also transfers seeds every year to the farmers, enough to grow the food the community needs.  During the year, the harvests are distributed (transferred) to the community members for their consumption.  In reciprocity, the community provides for other needs of the farmers.
 
-### Transfer vs Process
-
-Transfers and Processes both structure "value flows", but they are conceptually and functionally different.
-* Processes create or change or transport an economic resource, whether producing goods or services, recycling, even if they create "waste" as a by-product (that can hopefully be used somewhere else).
-* Transfers do not create or change or transport an economic resource, they just put the rights and responsibilities for a resource into a different agent's hands so that the resource can be used or consumed or transfered again.
-
-This is an important distinction as we seek to change the world, because transfer and exchange cannot move us beyond the current unsustainable and unjust system.  We the people need to manage our production and creation (and waste) for human and ecological needs rather than profit.
-
-That said, the structure in value flows is similar, allowing transfers and processes to participate seamlessly in value flows:
-
-![transfer-process](https://rawgit.com/valueflows/valueflows/master/release-doc-in-process/transfer.png)
-
-### Process events as implied transfers
+## Process events with transfers
 
 Process related economic events can also imply a transfer, and can thus be used in an exchange.
 
@@ -38,14 +35,15 @@ For example, most timebanks exchange work for credits.  The work event can be pa
 
 Exchange of work also happens in open value networks, where people record work events as input to many processes, and then when income is received for outputs of that work, people receive part of that income, in exchange for their work.
 
-Another example is when a service is created as an output of a process, where that service delivery event can be considered an implied transfer, and exchanged for some other resource.
+Another example is when a service is created as an output of a process, where that service delivery event can be considered to involve a transfer, and exchanged for some other resource.
 
-### Agreements
+**NOTE**: we still work on details for how to express transfers of 'rights and responsibilities' happening as part of flows currents.
 
-Various kinds of agreements between agents often define the rights and responsibilities for economic resources that are transferred. Agreements can reflect any economic paradigm, so make it possible for the Exchange and Transfer vocabulary to work equally well for capitalist businesses, transitional economic interactions, and next economy interactions.
+## Transfer vs Process
 
-Agreements can be of any kind and scope, from an order to a value equation to a larger blanket agreement.
+Transfers and Processes both structure "value flows", but they are conceptually and functionally different.
 
-ValueFlows does not define the detailed internal vocabulary for agreements, but defines optional references to an agreement when it could be useful.
+* Processes create or change or transport an economic resource, whether producing goods or services, recycling, even if they create "waste" as a by-product (that can hopefully be used somewhere else).
+* Transfers do not create or change or transport an economic resource, they just put the rights and responsibilities for a resource into a different agent's hands so that the resource can be used or consumed or rights to it transferred again.
 
-
+This is an important distinction as we seek to change the world, because transfer and exchange cannot move us beyond the current unsustainable and unjust system.  We the people need to manage our production and creation (and waste) for human and ecological needs rather than profit.
