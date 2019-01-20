@@ -30,7 +30,7 @@ Figure below shows that Economic Events have to be observed and for that reason 
 Often agents will start their plans independently and record their initial intents. Later once they make a Commitment with other agent, it will represent a specific shared part of their plans. For that reason any Commitment can result in Satisfaction of providing agent's Intent as well as Satisfaction of receiving agent Intent.
 
 
-![matching](https://raw.githubusercontent.com/valueflows/valueflows/master/assets/matching.png)
+![matching](https://raw.githubusercontent.com/valueflows/valueflows/master/assets/matched.png)
 
 ## Granularity
 
