@@ -30,6 +30,6 @@ Here is the logic for tracking and tracing.
         * a Process or Transfer from which is is an output, or
         * if it is an input to a Process or Transfer, the EconomicResource which it affects.
 
-When there is more than one economic resource going from input to output of a process without transformation of that resource (except for location), the tracking identifier is used.  And example of this would be partial load shipments, where many separate shipments are included in the same shipment process.
+When more than one resource of the same classification goes from input to output of the same process, use the tracking identifier if you need to track or trace the same resource. And example of this would be less-than-truckload shipments, where many separate resources with different destinations are included in the same shipment process.
 
 When the same economic resource is both input and output of a process, sometimes a series of processes, such as for repair or quality testing or a workflow where a resource is refined through stages like writing/editing/etc, the stage must be identified, based on the kind of process the resource was last output of.
