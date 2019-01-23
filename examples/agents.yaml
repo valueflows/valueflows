@@ -1,3 +1,4 @@
+
 # Example: Agents and Agent Relationships
 
 '@context':
@@ -7,69 +8,70 @@
     fablab: https://fablab.example/
     coop: https://coop.example/
 
+'@id': rgh:valueflows/valueflows/master/examples/agents.yaml
 '@graph':
 
   # Agents
 
-  - '@id': alice:
+  - '@id': https://alice.example/
     '@type': foaf:Person
     name: 'Alice'
-    image: 'https://alice.example/avatar.png'
-    primaryLocation: 'https://somelocation.example'
-    skos:note: 'Alice is a mechanical engineer who likes to work in the fablab.'
+    image: https://alice.example/avatar.png
+    primaryLocation: https://somelocation.example
+    skos:note: Alice is a mechanical engineer who likes to work in the fablab.
 
-  - '@id': bob:
+  - '@id': https://bob.example/
     '@type': foaf:Person
     name: 'Bob'
 
-  - '@id': fablab:
+  - '@id': https://fablab.example/
     '@type': org:Organization
-    name: 'Driftless Fablab'
+    name: Driftless Fablab
 
-  - '@id': coop:
+  - '@id': https://coop.example/
     '@type': org:Organization
-    name: 'Community Tool Lending Coop'
+    name: Community Tool Lending Coop
 
   # Roles
 
   - '@id': fablab:52f0e212-3c4f-4d27-b345-5e964c135824
     '@type': AgentRelationshipRole
-    name: 'member'
-    rdfs:label: 'is member of'
-    inverseLabel: 'has member'
-    skos:note: 'Both persons and organizations can be members of this fablab.'
+    name: member
+    rdfs:label: is member of
+    inverseLabel: has member
+    skos:note: Both persons and organizations can be members of this fablab.
 
   - '@id': fablab:02b39a30-3e04-4305-9656-7f261aa63c84
     '@type': AgentRelationshipRole
-    name: 'trading partner'
-    rdfs:label: 'is supplier of'
-    inverseLabel: 'is customer of'
+    name: trading partner
+    rdfs:label: is supplier of
+    inverseLabel: is customer of
 
   - '@id': fablab:a25500e0-0106-43cd-8cbb-e74779488835
     '@type': AgentRelationshipRole
-    name: 'mentor'
-    rdfs:label: 'mentors'
-    inverseLabel: 'has mentor'
+    name: mentor
+    rdfs:label: mentors
+    inverseLabel: has mentor
 
   # Relationships
 
   - '@id': fablab:6b97b1be-8e07-44ac-82e5-214f1b2aaf33
     '@type': AgentRelationship
-    subject: alice:
+    subject: https://alice.example/
     relationship: fablab:52f0e212-3c4f-4d27-b345-5e964c135824 # member
-    object: fablab:
+    object: https://fablab.example/
 
   - '@id': fablab:a8236bbb-81e0-422d-9861-56d2417db0fb
     '@type': AgentRelationship
-    subject: coop:
+    subject: https://coop.example/
     relationship: fablab:02b39a30-3e04-4305-9656-7f261aa63c84 # trading partner
-    object: fablab:
-    skos:note: 'The coop is a supplier of tools for the fablab.'
+    object: https://fablab.example/
+    skos:note: The coop is a supplier of tools for the fablab.
 
   - '@id': fablab:6f438393-7f87-4914-806c-e23a4fd15e89
     '@type': AgentRelationship
-    subject: alice:
+    subject: https://alice.example/
     relationship: fablab:a25500e0-0106-43cd-8cbb-e74779488835 # mentor
-    object: bob:
-    inScopeOf: fablab:
-    skos:note: 'Alice mentors Bob at the fablab.'
+    object: https://bob.example/
+    inScopeOf: https://fablab.example/
+    skos:note: Alice mentors Bob at the fablab.
