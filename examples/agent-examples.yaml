@@ -15,9 +15,8 @@
     '@type': foaf:Person
     name: 'Alice'
     image: 'https://alice.example/avatar.png'
-    url: 'https://alice.example'
     primaryLocation: 'https://somelocation.example'
-    note: 'Alice is a mechanical engineer who likes to work in the fablab.'
+    skos:note: 'Alice is a mechanical engineer who likes to work in the fablab.'
 
   - '@id': bob:
     '@type': foaf:Person
@@ -38,7 +37,7 @@
     name: 'member'
     rdfs:label: 'is member of'
     inverseLabel: 'has member'
-    note: 'Both persons and organizations can be members of this fablab.'
+    skos:note: 'Both persons and organizations can be members of this fablab.'
 
   - '@id': fablab:02b39a30-3e04-4305-9656-7f261aa63c84
     '@type': AgentRelationshipRole
@@ -65,7 +64,7 @@
     subject: coop:
     relationship: fablab:02b39a30-3e04-4305-9656-7f261aa63c84 # trading partner
     object: fablab:
-    note: 'The coop is a supplier of tools for the fablab.'
+    skos:note: 'The coop is a supplier of tools for the fablab.'
 
   - '@id': fablab:6f438393-7f87-4914-806c-e23a4fd15e89
     '@type': AgentRelationship
@@ -73,4 +72,4 @@
     relationship: fablab:a25500e0-0106-43cd-8cbb-e74779488835 # mentor
     object: bob:
     inScopeOf: fablab:
-    note: 'Alice mentors Bob at the fablab.'
+    skos:note: 'Alice mentors Bob at the fablab.'
