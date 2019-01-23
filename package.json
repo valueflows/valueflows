@@ -1,5 +1,6 @@
 {
   "scripts": {
+    "start": "gitbook serve",
     "build": "mkdir -p .build && npm run build-docs && npm run build-ns",
     "build-docs": "mkdir -p .build/docs && cp README.md .build/docs/index.md",
     "build-ns": "mkdir -p .build/ns && cp context.jsonld .build/ns/base.jsonld",
@@ -14,5 +15,8 @@
     "mdast-html": "^1.2.1",
     "mdast-slug": "^2.0.0",
     "turtle-validator": "^1.0.2"
+  },
+  "devDependencies": {
+    "gitbook-cli": "^2.3.2"
   }
 }
