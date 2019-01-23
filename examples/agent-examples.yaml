@@ -11,7 +11,7 @@
 
   # Agents
 
-  - '@id': alice:e1721a61-cd47-4556-84b9-8b1b81da15bf
+  - '@id': alice:
     '@type': foaf:Person
     name: 'Alice'
     image: 'https://alice.example/avatar.png'
@@ -19,15 +19,15 @@
     primaryLocation: 'https://somelocation.example'
     note: 'Alice is a mechanical engineer who likes to work in the fablab.'
 
-  - '@id': bob:b90b0b77-09a2-42e2-8bd4-e9ae2c1c6172
+  - '@id': bob:
     '@type': foaf:Person
     name: 'Bob'
 
-  - '@id': fablab:3129ca8b-fcda-45be-bbda-294dc924d3b9
+  - '@id': fablab:
     '@type': org:Organization
     name: 'Driftless Fablab'
 
-  - '@id': coop:3129ca8b-fcda-45be-bbda-294dc924d3b9
+  - '@id': coop:
     '@type': org:Organization
     name: 'Community Tool Lending Coop'
 
