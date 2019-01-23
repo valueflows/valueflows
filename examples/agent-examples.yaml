@@ -1,8 +1,7 @@
 # Example: Agents and Agent Relationships
 
 '@context':
-  '@vocab': https://w3id.org/valueflows#
-  rdfs: http://www.w3.org/2000/01/rdf-schema#,
+  https://git.io/vf-examples-jsonld-context
   alice: https://alice.example/
   bob: https://bob.example/
   fablab: https://fablab.example/
@@ -10,8 +9,10 @@
 
 '@graph':
 
+  # Agents
+
   - '@id': alice:e1721a61-cd47-4556-84b9-8b1b81da15bf
-    '@type': Person
+    '@type': foaf:Person
     name: 'Alice'
     image: 'https://alice.example/avatar.png'
     url: 'https://alice.example'
@@ -19,16 +20,18 @@
     note: 'Alice is a mechanical engineer who likes to work in the fablab.'
 
   - '@id': bob:b90b0b77-09a2-42e2-8bd4-e9ae2c1c6172
-    '@type': Person
+    '@type': foaf:Person
     name: 'Bob'
 
   - '@id': fablab:3129ca8b-fcda-45be-bbda-294dc924d3b9
-    '@type': Organization
+    '@type': org:Organization
     name: 'Driftless Fablab'
 
   - '@id': coop:3129ca8b-fcda-45be-bbda-294dc924d3b9
-    '@type': Organization
+    '@type': org:Organization
     name: 'Community Tool Lending Coop'
+
+  # Roles
 
   - '@id': fablab:52f0e212-3c4f-4d27-b345-5e964c135824
     '@type': AgentRelationshipRole
@@ -49,23 +52,25 @@
     rdfs:label: 'mentors'
     inverseLabel: 'has mentor'
 
+  # Relationships
+
   - '@id': fablab:6b97b1be-8e07-44ac-82e5-214f1b2aaf33
     '@type': AgentRelationship
-    subject: alice
+    subject: alice:
     relationship: fablab:52f0e212-3c4f-4d27-b345-5e964c135824 # member
-    object: fablab
+    object: fablab:
 
   - '@id': fablab:a8236bbb-81e0-422d-9861-56d2417db0fb
     '@type': AgentRelationship
-    subject: coop
+    subject: coop:
     relationship: fablab:02b39a30-3e04-4305-9656-7f261aa63c84 # trading partner
-    object: fablab
+    object: fablab:
     note: 'The coop is a supplier of tools for the fablab.'
 
   - '@id': fablab:6f438393-7f87-4914-806c-e23a4fd15e89
     '@type': AgentRelationship
-    subject: alice
+    subject: alice:
     relationship: fablab:a25500e0-0106-43cd-8cbb-e74779488835 # mentor
-    object: bob
-    inScopeOf: fablab
+    object: bob:
+    inScopeOf: fablab:
     note: 'Alice mentors Bob at the fablab.'

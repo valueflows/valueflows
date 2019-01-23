@@ -1,0 +1,132 @@
+# Example: Simple manufacturing process
+
+'@context':
+  https://git.io/vf-examples-jsonld-context
+  alice: https://alice.example/
+  mfg: https://lafarge-furniture-manufacturing.example/
+  make: https://makezine.com/
+
+'@graph':
+
+  # Economic resources before
+
+  - '@id': mfg:e1721a61-cd47-4556-84b9-8b1b81da15bf
+    '@type': EconomicResource
+    resourceConformsTo: https://www.opendesk.cc/lean/desk # desk
+    currentQuantity:
+      qudt:unit: unit:Unitless
+      qudt:numericValue: 8
+
+  - '@id': mfg:3129ca8b-fcda-45be-bbda-294dc924d3b9
+    '@type': EconomicResource
+    classifiedAs: https://www.wikidata.org/wiki/Q219803 # plywood
+    currentQuantity:
+      qudt:unit: unit:Unitless
+      qudt:numericValue: 130
+    note: '4 x 8 sheet of 1/2 inch plywood'
+
+  - '@id': mfg:6b97b1be-8e07-44ac-82e5-214f1b2aaf33
+    '@type': EconomicResource
+    classifiedAs: https://www.wikidata.org/wiki/Q2101564 # desk design specification
+    currentQuantity:
+      qudt:unit: unit:Unitless
+      qudt:numericValue: 1
+
+  - '@id': mfg:52f0e212-3c4f-4d27-b345-5e964c135824
+    '@type': EconomicResource
+    classifiedAs: https://www.wikidata.org/wiki/Q13231055 # CNC machine
+    currentQuantity:
+      qudt:unit: unit:Unitless
+      qudt:numericValue: 1
+
+  # Production
+
+  - '@id': mfg:02b39a30-3e04-4305-9656-7f261aa63c84
+    '@type': Process
+    name: 'Make the lean desk'
+
+  - '@id': mfg:b52a5815-fae9-43bf-be95-833b95dc0adb
+    '@type': EconomicEvent
+    inputOf: mfg:02b39a30-3e04-4305-9656-7f261aa63c84
+    action: consume
+    provider: mfg:
+    receiver: mfg:
+    affects: mfg:3129ca8b-fcda-45be-bbda-294dc924d3b9 # plywood sheets
+    affectedQuantity:
+      qudt:unit: unit:Unitless
+      qudt:numericValue: 3
+
+  - '@id': mfg:b90b0b77-09a2-42e2-8bd4-e9ae2c1c6172
+    '@type': EconomicEvent
+    inputOf: mfg:02b39a30-3e04-4305-9656-7f261aa63c84
+    action: use
+    provider: mfg:
+    receiver: mfg:
+    affects: mfg:52f0e212-3c4f-4d27-b345-5e964c135824 # CNC machine
+    affectedQuantity:
+      qudt:unit: unit:Hour
+      qudt:numericValue: 3.5
+
+  - '@id': mfg:a8236bbb-81e0-422d-9861-56d2417db0fb
+    '@type': EconomicEvent
+    inputOf: mfg:02b39a30-3e04-4305-9656-7f261aa63c84
+    action: cite
+    provider: make:
+    receiver: mfg:
+    affects: mfg:6b97b1be-8e07-44ac-82e5-214f1b2aaf33 # desk design specification
+    affectedQuantity:
+      qudt:unit: unit:Unitless
+      qudt:numericValue: 1
+
+  - '@id': mfg:6f438393-7f87-4914-806c-e23a4fd15e89
+    '@type': EconomicEvent
+    inputOf: mfg:02b39a30-3e04-4305-9656-7f261aa63c84
+    action: work
+    provider: alice:
+    receiver: mfg:
+    resourceClassifiedAs: https://www.wikidata.org/wiki/Q192047 # machining
+    affectedQuantity:
+      qudt:unit: unit:Hour
+      qudt:numericValue: 7
+
+  - '@id': mfg:d4d2fd71-34f2-41c3-b1c5-19ad5ed2da59
+    '@type': EconomicEvent
+    inputOf: mfg:02b39a30-3e04-4305-9656-7f261aa63c84
+    action: produce
+    provider: mfg:
+    receiver: mfg:
+    affects: mfg:e1721a61-cd47-4556-84b9-8b1b81da15bf # desk
+    affectedQuantity:
+      qudt:unit: unit:Unitless
+      qudt:numericValue: 1
+
+  # Economic resources after
+
+    - '@id': mfg:e1721a61-cd47-4556-84b9-8b1b81da15bf
+    '@type': EconomicResource
+    resourceConformsTo: https://www.opendesk.cc/lean/desk # desk
+    currentQuantity:
+      qudt:unit: unit:Unitless
+      qudt:numericValue: 9
+
+  - '@id': mfg:3129ca8b-fcda-45be-bbda-294dc924d3b9
+    '@type': EconomicResource
+    classifiedAs: https://www.wikidata.org/wiki/Q219803 # plywood
+    currentQuantity:
+      qudt:unit: unit:Unitless
+      qudt:numericValue: 127
+    note: '4 x 8 sheet of 1/2 inch plywood'
+
+  - '@id': mfg:6b97b1be-8e07-44ac-82e5-214f1b2aaf33
+    '@type': EconomicResource
+    classifiedAs: https://www.wikidata.org/wiki/Q2101564 # desk design specification
+    currentQuantity:
+      qudt:unit: unit:Unitless
+      qudt:numericValue: 1
+
+  - '@id': mfg:52f0e212-3c4f-4d27-b345-5e964c135824
+    '@type': EconomicResource
+    classifiedAs: https://www.wikidata.org/wiki/Q13231055 # CNC machine
+    currentQuantity:
+      qudt:unit: unit:Unitless
+      qudt:numericValue: 1
