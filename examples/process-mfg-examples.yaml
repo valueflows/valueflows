@@ -1,10 +1,10 @@
 # Example: Simple manufacturing process
 
 '@context':
-  https://git.io/vf-examples-jsonld-context
-  alice: https://alice.example/
-  mfg: https://lafarge-furniture-manufacturing.example/
-  make: https://makezine.com/
+  - https://git.io/vf-examples-jsonld-context
+  - alice: https://alice.example/
+  - mfg: https://lafarge-furniture-manufacturing.example/
+  - make: https://makezine.com/
 
 '@graph':
 
