@@ -402,12 +402,6 @@ vf:name a                   owl:DatatypeProperty ;
         vs:term_status      "unstable" ;
         rdfs:comment        "An informal or formal textual identifier for an object. Does not imply uniqueness." .
 
-vf:note a                   owl:ObjectProperty ;
-        rdfs:label          "note" ;
-        rdfs:range          skos:note ;
-        vs:term_status      "unstable" ;
-        rdfs:comment        "A textual comment or description." .
-
 vf:trackingIdentifier a     owl:AnnotationProperty ;
         rdfs:label          "tracking identifier" ;
         rdfs:domain         vf:EconomicResource ;   
