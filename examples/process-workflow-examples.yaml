@@ -3,8 +3,9 @@
 '@context':
   - https://git.io/vf-examples-jsonld-context
   - alice: https://alice.example/
-  - repair: https://coop-auto-repair.example/
+    repair: https://auto-repair.example/
 
+'@id': rgh:valueflows/valueflows/master/examples/process-workflow-examples.yaml
 '@graph':
 
   # Economic resource before
@@ -14,36 +15,36 @@
     resourceConformsTo: http://opensourceecology.org/wiki/Wikispeed_SGT01 # car
     trackingIdentifier: JHMCD38698S061469
     currentQuantity:
-      qudt:unit: unit:Unitless
+      qudt:unit: unit:Number
       qudt:numericValue: 1
 
   # Repair process
 
   - '@id': repair:02b39a30-3e04-4305-9656-7f261aa63c84
     '@type': Process
-    name: 'Oil change: JHMCD38698S061469'
-    note: 'Check over car, change oil (standard quantity).'
+    name: Oil change: JHMCD38698S061469
+    skos:note: Check over car, change oil (standard quantity).
 
   - '@id': repair:a8236bbb-81e0-422d-9861-56d2417db0fb
     '@type': EconomicEvent
     inputOf: repair:02b39a30-3e04-4305-9656-7f261aa63c84
     action: accept
-    provider: alice:
-    receiver: repair:
+    provider: https://alice.example/
+    receiver: https://auto-repair.example/
     affects: alice:e1721a61-cd47-4556-84b9-8b1b81da15bf
     affectedQuantity:
-      qudt:unit: unit:Unitless
+      qudt:unit: unit:Number
       qudt:numericValue: 1
 
   - '@id': repair:52f0e212-3c4f-4d27-b345-5e964c135824
     '@type': EconomicEvent
     inputOf: repair:02b39a30-3e04-4305-9656-7f261aa63c84
     action: improve
-    provider: repair:
-    receiver: alice:
+    provider: https://auto-repair.example/
+    receiver: https://alice.example/
     affects: alice:e1721a61-cd47-4556-84b9-8b1b81da15bf
     affectedQuantity:
-      qudt:unit: unit:Unitless
+      qudt:unit: unit:Number
       qudt:numericValue: 1
 
   # Economic resource after
@@ -52,5 +53,5 @@
     resourceConformsTo: http://opensourceecology.org/wiki/Wikispeed_SGT01 # car
     trackingIdentifier: JHMCD38698S061469
     currentQuantity:
-      qudt:unit: unit:Unitless
+      qudt:unit: unit:Number
       qudt:numericValue: 1
