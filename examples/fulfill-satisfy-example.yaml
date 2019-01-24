@@ -1,0 +1,98 @@
+# Example: Intent - satisfied by - Commitment - fulfilled by - EconomicEvent
+
+'@context':
+  - https://git.io/vf-examples-jsonld-context
+  - mfg: https://manufacturing.example/
+    maker: https://maker.example/
+    coworking: https://coworking.example/
+
+'@id': rgh:valueflows/valueflows/master/examples/fulfill-satisfy-example.yaml
+'@graph':
+
+  # A coworking space broadcasts intent for someone to produce 10 lean desks
+
+  - '@id': coworking:e1721a61-cd47-4556-84b9-8b1b81da15bf
+    '@type': Intent
+    action: produce
+    resourceClassifiedAs: https://www.opendesk.cc/lean/desk # desk specification
+    intendedQuantity:
+      qudt:unit: unit:Number
+      qudt:numericValue: 10
+    receiver: https://coworking.example/
+    intendedTime:
+      '@type': time:Instant
+      time:inXSDDateTimeStamp: 2019-01-29T00:00:00-5:00
+
+  # A furniture manufacturer commits to make 3 of the desks
+
+  - '@id': mfg:02b39a30-3e04-4305-9656-7f261aa63c84
+    '@type': Commitment
+    name: Make 3 lean desks for Coworking
+    action: produce
+    resourceClassifiedAs: https://www.opendesk.cc/lean/desk # desk specification
+    committedQuantity:
+      qudt:unit: unit:Number
+      qudt:numericValue: 3
+    provider: https://manufacturing.example/
+    receiver: https://manufacturing.example/
+    committedTime:
+      '@type': time:Instant
+      time:inXSDDateTimeStamp: 2019-01-29T00:00:00-5:00
+
+
+  - '@id': mfg:b52a5815-fae9-43bf-be95-833b95dc0adb
+    '@type': Satisfaction
+    satisfies: coworking:e1721a61-cd47-4556-84b9-8b1b81da15bf # the intent
+    satisfiedBy: mfg:02b39a30-3e04-4305-9656-7f261aa63c84 # the commitment
+    satisfiedQuantity:
+      qudt:unit: unit:Number
+      qudt:numericValue: 3
+
+  # Another furniture manufacturer commits 5 desks for the coworking space
+
+  - '@id': maker:b90b0b77-09a2-42e2-8bd4-e9ae2c1c6172
+    '@type': Commitment
+    name: Make 15 lean desks
+    action: produce
+    resourceClassifiedAs: https://www.opendesk.cc/lean/desk # desk specification
+    committedQuantity:
+      qudt:unit: unit:Number
+      qudt:numericValue: 15
+    provider: https://maker.example/
+    receiver: https://maker.example/
+    committedTime:
+      '@type': time:Instant
+      time:inXSDDateTimeStamp: 2019-01-28T00:00:00-1:00
+    skos:note: Plan to make a full batch, 5 promised for Coworking.
+
+  - '@id': maker:a8236bbb-81e0-422d-9861-56d2417db0fb
+    '@type': Satisfaction
+    satisfies: coworking:e1721a61-cd47-4556-84b9-8b1b81da15bf # the intent
+    satisfiedBy: maker:b90b0b77-09a2-42e2-8bd4-e9ae2c1c6172 # the commitment
+    satisfiedQuantity:
+      qudt:unit: unit:Number
+      qudt:numericValue: 5
+
+  # The first manufacturer makes 1 of the 3 desks they have promised
+
+  - '@id': mfg:d4d2fd71-34f2-41c3-b1c5-19ad5ed2da59
+    '@type': EconomicEvent
+    inputOf: mfg:02b39a30-3e04-4305-9656-7f261aa63c84
+    action: produce
+    affects: mfg:e1721a61-cd47-4556-84b9-8b1b81da15bf # desks
+    affectedQuantity:
+      qudt:unit: unit:Number
+      qudt:numericValue: 1
+    provider: https://manufacturing.example/
+    receiver: https://manufacturing.example/
+    committedTime:
+      '@type': time:Instant
+      time:inXSDDateTimeStamp: 2019-01-25T00:00:00-1:00
+
+  - '@id': mfg:6f438393-7f87-4914-806c-e23a4fd15e89
+    '@type': Fulfillment
+    fulfills: mfg:02b39a30-3e04-4305-9656-7f261aa63c84 # the commitment
+    fulfilledBy: mfg:d4d2fd71-34f2-41c3-b1c5-19ad5ed2da59 # the economic event
+    fulfilledQuantity:
+      qudt:unit: unit:Number
+      qudt:numericValue: 1
