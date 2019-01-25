@@ -137,10 +137,10 @@ vf:Fulfillment  a           owl:Class ;
         vs:term_status      "unstable" ;
         rdfs:comment        "The quantity that the economic event fulfilled towards the commitment." .
 
-vf:Reciprocity  a           owl:Class ;
-        rdfs:label          "vf:Reciprocity" ;
+vf:Claim  a                 owl:Class ;
+        rdfs:label          "vf:Claim" ;
         vs:term_status      "unstable" ;
-        rdfs:comment        "The quantity that the economic event implies towards creation of the reciprocal commitment." .
+        rdfs:comment        "A reciprocal claim implied by an economic event, usually based on a prior agreement.  Note that a claim can exist withuot being instantiated, if an agreement indicates it." .
 
 vf:Appreciation  a          owl:Class ;
         rdfs:label          "vf:Appreciation" ;
@@ -284,19 +284,19 @@ vf:under  a                 owl:ObjectProperty ;
         vs:term_status      "unstable" ;
         rdfs:comment        "Reference to an agreement between agents which specifies the rules or policies or calculations which govern this flow." .
 
-vf:createdBy  a             owl:ObjectProperty ;
-        rdfs:label          "created by" ;
-        rdfs:domain         vf:Reciprocity ;
-        rdfs:range          vf:EconomicEvent ;
+vf:initiates  a             owl:ObjectProperty ;
+        rdfs:label          "initiates" ;
+        rdfs:domain         vf:EconomicEvent ;
+        rdfs:range          vf:Claim ;
         vs:term_status      "unstable" ;
-        rdfs:comment        "References the economic event that fully or partially created the commitment, often based on a prior agreement." .
+        rdfs:comment        "A reciprocal claim implied by the economic event, usually based on a prior agreement." .
 
-vf:creates  a               owl:ObjectProperty ;
-        rdfs:label          "creates" ;
-        rdfs:domain         vf:Reciprocity ;
-        rdfs:range          vf:Commitment ;
+vf:acknowledges  a          owl:ObjectProperty ;
+        rdfs:label          "acknowledges" ;
+        rdfs:domain         vf:Commitment ;
+        rdfs:range          vf:Claim ;
         vs:term_status      "unstable" ;
-        rdfs:comment        "References the commitment that was fully or partially created because of the economic event, often based on a prior agreement." .
+        rdfs:comment        "References the claim(s) that this commitment covers." .
 
 vf:contains  a              owl:ObjectProperty ;
         rdfs:label          "contains" ;
