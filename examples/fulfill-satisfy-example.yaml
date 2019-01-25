@@ -2,97 +2,111 @@
 
 '@context':
   - https://git.io/vf-examples-jsonld-context
-  - mfg: https://manufacturing.example/
-    maker: https://maker.example/
-    coworking: https://coworking.example/
+  - bob: https://bob.example/
+    mfg: https://manufacturer.example/
 
 '@id': rgh:valueflows/valueflows/master/examples/fulfill-satisfy-example.yaml
 '@graph':
 
-  # A coworking space broadcasts intent for someone to produce 10 lean desks
+  # A manufacturer makes a plan that includes an intent for some work which 
+  # they want someone in their network to commit to doing on Oct. 14 - 15
 
-  - '@id': coworking:e1721a61-cd47-4556-84b9-8b1b81da15bf
+  - '@id': mfg:e1721a61-cd47-4556-84b9-8b1b81da15bf
     '@type': Intent
-    action: produce
-    resourceClassifiedAs: https://www.opendesk.cc/lean/desk # desk specification
+    action: work
+    receiver: https://manufacturing.example/
+    resourceClassifiedAs: https://www.wikidata.org/wiki/Q192047 # machining
     intendedQuantity:
-      qudt:unit: unit:Number
-      qudt:numericValue: 10
-    receiver: https://coworking.example/
+      qudt:unit: unit:Hour
+      qudt:numericValue: 8
     intendedTime:
-      '@type': time:Instant
-      time:inXSDDateTimeStamp: 2019-01-29T00:00:00-5:00
+      '@type': time:ProperInterval
+      time:intervalStarts:
+        '@type': time:Instant
+        time:inXSDDateTimeStamp: 2018-10-14T8:00:00-0:00
+      time:intervalEnds:
+        '@type': time:Instant
+        time:inXSDDateTimeStamp: 2018-10-15T18:00:00-0:00
 
-  # A furniture manufacturer commits to make 3 of the desks
+  # Bob commits to doing the work on Oct. 14
 
   - '@id': mfg:02b39a30-3e04-4305-9656-7f261aa63c84
     '@type': Commitment
-    name: Make 3 lean desks for Coworking
-    action: produce
-    resourceClassifiedAs: https://www.opendesk.cc/lean/desk # desk specification
-    committedQuantity:
-      qudt:unit: unit:Number
-      qudt:numericValue: 3
-    provider: https://manufacturing.example/
+    action: work
+    provider: https://bob.example/
     receiver: https://manufacturing.example/
+    resourceClassifiedAs: https://www.wikidata.org/wiki/Q192047 # machining
+    committedQuantity:
+      qudt:unit: unit:Hour
+      qudt:numericValue: 8
     committedTime:
-      '@type': time:Instant
-      time:inXSDDateTimeStamp: 2019-01-29T00:00:00-5:00
+      '@type': time:ProperInterval
+      time:intervalStarts:
+        '@type': time:Instant
+        time:inXSDDateTimeStamp: 2018-10-14T8:00:00-0:00
+      time:intervalEnds:
+        '@type': time:Instant
+        time:inXSDDateTimeStamp: 2018-10-14T17:00:00-0:00
 
 
   - '@id': mfg:b52a5815-fae9-43bf-be95-833b95dc0adb
     '@type': Satisfaction
-    satisfies: coworking:e1721a61-cd47-4556-84b9-8b1b81da15bf # the intent
+    satisfies: mfg:e1721a61-cd47-4556-84b9-8b1b81da15bf # the intent
     satisfiedBy: mfg:02b39a30-3e04-4305-9656-7f261aa63c84 # the commitment
     satisfiedQuantity:
-      qudt:unit: unit:Number
-      qudt:numericValue: 3
+      qudt:unit: unit:Hour
+      qudt:numericValue: 8
 
-  # Another furniture manufacturer commits 5 desks for the coworking space
-
-  - '@id': maker:b90b0b77-09a2-42e2-8bd4-e9ae2c1c6172
-    '@type': Commitment
-    name: Make 15 lean desks
-    action: produce
-    resourceClassifiedAs: https://www.opendesk.cc/lean/desk # desk specification
-    committedQuantity:
-      qudt:unit: unit:Number
-      qudt:numericValue: 15
-    provider: https://maker.example/
-    receiver: https://maker.example/
-    committedTime:
-      '@type': time:Instant
-      time:inXSDDateTimeStamp: 2019-01-28T00:00:00-1:00
-    skos:note: Plan to make a full batch, 5 promised for Coworking.
-
-  - '@id': maker:a8236bbb-81e0-422d-9861-56d2417db0fb
-    '@type': Satisfaction
-    satisfies: coworking:e1721a61-cd47-4556-84b9-8b1b81da15bf # the intent
-    satisfiedBy: maker:b90b0b77-09a2-42e2-8bd4-e9ae2c1c6172 # the commitment
-    satisfiedQuantity:
-      qudt:unit: unit:Number
-      qudt:numericValue: 5
-
-  # The first manufacturer makes 1 of the 3 desks they have promised
+  # Bob does the work in two 4-hour shifts on Oct. 14
 
   - '@id': mfg:d4d2fd71-34f2-41c3-b1c5-19ad5ed2da59
     '@type': EconomicEvent
-    inputOf: mfg:02b39a30-3e04-4305-9656-7f261aa63c84
-    action: produce
-    affects: mfg:e1721a61-cd47-4556-84b9-8b1b81da15bf # desks
-    affectedQuantity:
-      qudt:unit: unit:Number
-      qudt:numericValue: 1
-    provider: https://manufacturing.example/
+    action: work
+    provider: https://bob.example/
     receiver: https://manufacturing.example/
-    committedTime:
-      '@type': time:Instant
-      time:inXSDDateTimeStamp: 2019-01-25T00:00:00-1:00
+    resourceClassifiedAs: https://www.wikidata.org/wiki/Q192047 # machining
+    affectedQuantity:
+      qudt:unit: unit:Hour
+      qudt:numericValue: 4
+    observedTime:
+      '@type': time:ProperInterval
+      time:intervalStarts:
+        '@type': time:Instant
+        time:inXSDDateTimeStamp: 2018-10-14T8:00:00-0:00
+      time:intervalEnds:
+        '@type': time:Instant
+        time:inXSDDateTimeStamp: 2018-10-14T12:00:00-0:00
 
   - '@id': mfg:6f438393-7f87-4914-806c-e23a4fd15e89
     '@type': Fulfillment
     fulfills: mfg:02b39a30-3e04-4305-9656-7f261aa63c84 # the commitment
     fulfilledBy: mfg:d4d2fd71-34f2-41c3-b1c5-19ad5ed2da59 # the economic event
     fulfilledQuantity:
-      qudt:unit: unit:Number
-      qudt:numericValue: 1
+      qudt:unit: unit:Hour
+      qudt:numericValue: 4
+
+  - '@id': mfg:c7897c39-7f05-4a5d-a487-80e130a2414b
+    '@type': EconomicEvent
+    action: work
+    provider: https://bob.example/
+    receiver: https://manufacturing.example/
+    resourceClassifiedAs: https://www.wikidata.org/wiki/Q192047 # machining
+    affectedQuantity:
+      qudt:unit: unit:Hour
+      qudt:numericValue: 4
+    observedTime:
+      '@type': time:ProperInterval
+      time:intervalStarts:
+        '@type': time:Instant
+        time:inXSDDateTimeStamp: 2018-10-14T13:00:00-0:00
+      time:intervalEnds:
+        '@type': time:Instant
+        time:inXSDDateTimeStamp: 2018-10-14T17:00:00-0:00
+
+  - '@id': mfg:0f563083-8da4-46fe-adc3-68b05ba06320
+    '@type': Fulfillment
+    fulfills: mfg:02b39a30-3e04-4305-9656-7f261aa63c84 # the commitment
+    fulfilledBy: mfg:c7897c39-7f05-4a5d-a487-80e130a2414b # the second economic event
+    fulfilledQuantity:
+      qudt:unit: unit:Hour
+      qudt:numericValue: 4
