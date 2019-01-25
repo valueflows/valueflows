@@ -416,33 +416,33 @@ vf:trackingIdentifier a     owl:AnnotationProperty ;
 
 vf:fulfilledBy              a owl:ObjectProperty ;
         rdfs:label          "fulfilled by" ;
-        rdfs:range          vf:EconomicEvent ;
-        rdfs:domain         vf:Fulfillment ;
+        rdfs:range          vf:Fulfillment ;
+        rdfs:domain         vf:Commitment ;
         vs:term_status      "unstable" ;
-        rdfs:comment        "The economic event which completely or partially fulfills a commitment." .
+        rdfs:comment        "The portions of economic events which fulfill a commitment." .
 
-vf:fulfills  a              owl:ObjectProperty ;
-        rdfs:label          "fulfills" ;
-        rdfs:range          vf:Commitment ;
-        rdfs:domain         vf:Fulfillment ;
+vf:fulfilledFrom  a         owl:ObjectProperty ;
+        rdfs:label          "fulfilled from" ;
+        rdfs:range          vf:Fulfillment ;
+        rdfs:domain         vf:EconomicEvent ;
         vs:term_status      "unstable" ;
-        rdfs:comment        "The commitment which is completely or partially fulfilled by an economic event." .
-
-vf:satisfies
-        a                   owl:ObjectProperty ;
-        rdfs:label         "satisfies" ;
-        rdfs:domain         vf:Satisfaction ;
-        rdfs:range          vf:Intent ;
-        vs:term_status      "unstable" ;
-        rdfs:comment        "An intent satisfied fully or partially by an economic event or commitment." .
+        rdfs:comment        "The economic event which fully or partially fulfills a commitment." .
 
 vf:satisfiedBy
         a                   owl:ObjectProperty ;
         rdfs:label         "satisfied by" ;
+        rdfs:domain         vf:Intent ;
+        rdfs:range          vf:Satisfaction ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "The portions of commitments or economic events which satisfy an intent." .
+
+vf:satisfiedFrom
+        a                   owl:ObjectProperty ;
+        rdfs:label         "satisfied from" ;
         rdfs:domain         vf:Satisfaction ;
         rdfs:range          [ owl:unionOf (vf:Commitment vf:EconomicEvent ) ] ;
         vs:term_status      "unstable" ;
-        rdfs:comment        "A commitment or economic event fully or partially satisfying an intent" .
+        rdfs:comment        "The commitment or economic event which fully or partially satisfies an intent" .
 
 #vf:finished  a        owl:DatatypeProperty ;
 #        rdfs:domain     [ owl:unionOf (vf:Commitment vf:Process vf:Intent) ] ; 
