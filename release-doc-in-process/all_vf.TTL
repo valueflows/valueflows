@@ -161,39 +161,71 @@ vf:action
         rdfs:domain         [ owl:unionOf (vf:EconomicEvent vf:Commitment vf:Intent vf:RecipeFlow) ] ;
         rdfs:range          vf:Action ;
         vs:term_status      "unstable" ;
-        rdfs:comment        "Relates a process input or output to a verb, such as consume, produce, work, improve, etc." .
+        rdfs:comment        "Relates a flow to a verb, such as consume, produce, work, improve, etc." .
 
-vf:inputOf
+vf:observedInputs
         a                   owl:ObjectProperty ;
-        rdfs:label          "input of" ;
-        rdfs:domain         [ owl:unionOf (vf:EconomicEvent vf:Commitment vf:Intent) ] ;
-        rdfs:range          [ owl:unionOf (vf:Process vf:Transfer) ] ;
+        rdfs:label          "observed inputs" ;
+        rdfs:domain         [ owl:unionOf (vf:Process vf:Transfer) ] ;
+        rdfs:range          vf:EconomicEvent;
         vs:term_status      "unstable" ;
-        rdfs:comment        "Relates an input flow to it's node." .
+        rdfs:comment        "Economic events that are input to the node." .
 
-vf:outputOf
+vf:observedOutputs
         a                   owl:ObjectProperty ;
-        rdfs:label          "output of" ;
-        rdfs:domain         [ owl:unionOf (vf:EconomicEvent vf:Commitment vf:Intent) ] ;
-        rdfs:range          [ owl:unionOf (vf:Process vf:Transfer) ] ;
+        rdfs:label          "observed outputs" ;
+        rdfs:domain         [ owl:unionOf (vf:Process vf:Transfer) ] ;
+        rdfs:range          vf:EconomicEvent;
         vs:term_status      "unstable" ;
-        rdfs:comment        "Relates an output flow to it's node." .
+        rdfs:comment        "Economic events that are output to the node." .
 
-vf:recipeInputOf
+vf:committedInputs
         a                   owl:ObjectProperty ;
-        rdfs:label          "recipe input of" ;
-        rdfs:domain         vf:RecipeFlow ;
-        rdfs:range          vf:RecipeProcess ;
+        rdfs:label          "committed inputs" ;
+        rdfs:domain         [ owl:unionOf (vf:Process vf:Transfer) ] ;
+        rdfs:range          vf:Commitment;
         vs:term_status      "unstable" ;
-        rdfs:comment        "Relates an input flow to it's node in a recipe." .
+        rdfs:comment        "Commitments that are input to the node." .
 
-vf:recipeOutputOf
+vf:committedOutputs
         a                   owl:ObjectProperty ;
-        rdfs:label          "recipe output of" ;
-        rdfs:domain         vf:RecipeFlow ;
-        rdfs:range          vf:RecipeProcess ;
+        rdfs:label          "committed outputs" ;
+        rdfs:domain         [ owl:unionOf (vf:Process vf:Transfer) ] ;
+        rdfs:range          vf:Commitment;
         vs:term_status      "unstable" ;
-        rdfs:comment        "Relates an output flow to it's node in a recipe." .
+        rdfs:comment        "Commmitments that are output to the node." .
+
+vf:intendedInputs
+        a                   owl:ObjectProperty ;
+        rdfs:label          "intended inputs" ;
+        rdfs:domain         [ owl:unionOf (vf:Process vf:Transfer) ] ;
+        rdfs:range          vf:Intent;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "Intents that are input to the node." .
+
+vf:intendedOutputs
+        a                   owl:ObjectProperty ;
+        rdfs:label          "intended outputs" ;
+        rdfs:domain         [ owl:unionOf (vf:Process vf:Transfer) ] ;
+        rdfs:range          vf:Intent;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "Intents that are output to the node." .
+
+vf:recipeInputs
+        a                   owl:ObjectProperty ;
+        rdfs:label          "recipe inputs" ;
+        rdfs:domain         vf:RecipeProcess ;
+        rdfs:range          vf:RecipeFlow ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "Input flows to a node in a recipe." .
+
+vf:recipeOutputs
+        a                   owl:ObjectProperty ;
+        rdfs:label          "recipe outputs" ;
+        rdfs:domain         vf:RecipeProcess ;
+        rdfs:range          vf:RecipeFlow ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "Output flows to a node in a recipe." .
 
 vf:involves
         a                   owl:ObjectProperty ;
