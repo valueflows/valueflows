@@ -79,7 +79,7 @@ vf:ExchangeAgreement  a     owl:Class ;
         rdfs:label          "vf:ExchangeAgreement" ;
         rdfs:subClassOf     vf:Agreement ;
         vs:term_status      "unstable" ;
-        rdfs:comment        "An agreement to exchange something with another agent(s), containing commitments towards that end." .
+        rdfs:comment        "An agreement to exchange something with another agent(s), covering one set of reciprocal commitments and/or economic events." .
 
 vf:DistributionAgreement  a  owl:Class ;
         rdfs:label           "vf:DistributionAgreement" ;
@@ -541,7 +541,19 @@ vf:resourceConformsTo
         vs:term_status      "unstable" ;
         rdfs:comment        "The primary resource knowledge specification or definition of an existing or potential resource." .
 
+vf:includesCommitments a    owl:ObjectProperty ;
+        rdfs:label          "includes commitments" ;
+        rdfs:domain         vf:ExchangeAgreement ;
+        rdfs:range          vf:Commitment ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "The specific commitments that are part of this exchange agreement." .
 
+vf:includesEvents a         owl:ObjectProperty ;
+        rdfs:label          "includes events" ;
+        rdfs:domain         vf:ExchangeAgreement ;
+        rdfs:range          vf:EconomicEvent ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "The actual economic events that occur related to this exchange agreement." .
 
 # ################################ agent relationship verbs
 
