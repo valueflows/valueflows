@@ -29,9 +29,7 @@
     '@type': EconomicResource
     name: Loose organic carrots
     trackingIdentifier: 54988 # the lot number assigned by the farm
-    classifiedAs: 
-      - https://www.wikidata.org/wiki/Q81 # carrot
-      - https://www.wikidata.org/wiki/Q9566427 # organic certification
+    classifiedAs: https://www.wikidata.org/wiki/Q81 # carrot
     currentQuantity:
       qudt:unit: unit:Kilogram
       qudt:numericValue: 650
