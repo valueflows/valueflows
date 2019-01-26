@@ -3,7 +3,7 @@
 '@context':
   - https://git.io/vf-examples-jsonld-context
   - farm: https://farm.example/
-    ose: https://www.opensourceecology.org
+    ose: https://www.opensourceecology.org/
 
 '@id': rgh:valueflows/valueflows/master/examples/resource-examples.yaml
 '@graph':
@@ -27,12 +27,14 @@
 
   - '@id': farm:07819789-dd51-44c3-b35c-9210165bc832
     '@type': EconomicResource
-    name: 12 kg case organic carrots
+    name: Loose organic carrots
     trackingIdentifier: 54988 # the lot number assigned by the farm
-    classifiedAs: https://www.wikidata.org/wiki/Q81 # carrot
+    classifiedAs: 
+      - https://www.wikidata.org/wiki/Q81 # carrot
+      - https://www.wikidata.org/wiki/Q9566427 # organic certification
     currentQuantity:
-      qudt:unit: unit:Number
-      qudt:numericValue: 56
+      qudt:unit: unit:Kilogram
+      qudt:numericValue: 650
     skos:note: Medium size, clean, harvested after the first frost, will store well.
 
   - '@id': farm:a7e94dde-2997-451e-a7e1-8d364d5e6dee
