@@ -18,6 +18,7 @@ All the levels of the REA ontology are similarly flexible and configurable:
 * The Plan level represents offers, requests, schedules and promises.
 * The Observation level represents what really happened.
 
+Core VF only defines terms directly related to generalized economic activities. It doesn't aim at defining all the terms which applications will need, which means it expects that people developing those applications will use VF together with other vocabularies / web ontologies. This documentation will suggest other vocabularies and specific terms from them that will come useful in common scenarios that VF aims to address. Even when some term would fit as part of VF core but equivalent term already exists in other established vocabulary, VF reuses already existing term to integrate better with linked open data ecosystem.
 
 
 ##### Verbs associated with economic events
