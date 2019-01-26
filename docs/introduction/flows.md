@@ -44,21 +44,21 @@ All flows use an action property to designate what the flow is doing and how it 
 * vf:raise - adjusts a quantity up based on a beginning balance or inventory count
 * vf:lower - adjusts a quantity down based on a beginning balance or inventory count
 
-Action | Affect | Related to | I/O | Changes existence | Pairs with |
------- | ------ | ---------- | --- | ----------------- | ---------- |
-produce | Increment | Process | Output | Yes | N/A |
-consume | Decrement | Process | Input | Yes | N/A |
-use | No effect | Process | Input | No |N/A |
-work | No effect | Process | Input | N/A | N/A |
-cite | No effect | Process | Input | No | N/A |
-load | Decrement | Process | Input | No | unload |
-unload | Increment | Process | Output | No | load |
-accept | No effect | Process | Input | No | improve |
-improve | No effect | Process | Output | No | accept |
-give | Decrement | Transfer | Input | No | receive |
-receive | Increment | Transfer | Output | No | give |
-raise | Increment | N/A | N/A | No | N/A |
-lower | Decrement | N/A | N/A | No | N/A |
+Action | Affect | I/O | Changes existence | Pairs with |
+------ | ------ | --- | ----------------- | ---------- |
+produce | Increment  | Output | Yes | N/A |
+consume | Decrement  | Input | Yes | N/A |
+use | No effect  | Input | No |N/A |
+work | No effect  | Input | N/A | N/A |
+cite | No effect  | Input | No | N/A |
+load | Decrement  | Input | No | unload |
+unload | Increment  | Output | No | load |
+accept | No effect  | Input | No | improve |
+improve | No effect  | Output | No | accept |
+give | Decrement | Input | No | receive |
+receive | Increment | Output | No | give |
+raise | Increment | N/A | No | N/A |
+lower | Decrement | N/A | No | N/A |
 
 We have defined a core set of actions, but expect that this will be extended with others. If extended, they should be defined as part of this or another formal vocabulary so that all can use them and assume the same meaning. 
 
