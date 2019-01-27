@@ -6,11 +6,11 @@ TARGET_BRANCH="gh-pages"
 
 function doCheck {
     mkdir .out
-    java -jar .scripts/lod-converter.jar release-doc-in-process/all_vf.TTL TTL vf https://valueflows.github.io/valueflows/vf.ttl
+    node .scripts/convert.js --source=release-doc-in-process/all_vf.TTL --outDir=.out
 }
 
 function doGenerate {
-    java -jar .scripts/lod-converter.jar release-doc-in-process/all_vf.TTL TTL vf https://valueflows.github.io/valueflows/vf.ttl
+    node .scripts/convert.js --source=release-doc-in-process/all_vf.TTL --outDir=.out
 }
 
 # Pull requests and commits to other branches shouldn't try to deploy, just build to verify
@@ -35,12 +35,13 @@ cd ..
 
 # Clean out existing contents
 rm -fr .out/vf.* || exit 0
-rm -fr .out/index.html || exit 0
-rm -fr .out/vowl-vf.json || exit 0
+#rm -fr .out/index.html || exit 0
+#rm -fr .out/vowl-vf.json || exit 0
 
 # Run generate script
 doGenerate
-cp .out/vf.html .out/index.html
+ls .out
+# cp .out/vf.html .out/index.html
 # config the cloned repo
 cd .out
 git config user.name "Travis CI"

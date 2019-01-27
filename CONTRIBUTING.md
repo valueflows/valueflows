@@ -25,9 +25,19 @@ We think that a use case driven flow works well for us.  Anyone can create use c
 
 An issue can be created for each use case, and people can discuss.  People can propose models (RDF or other) to reflect the use case.  
 
-Based on the models, we can start to refine the vocabulary.  When it is getting solid, we can write up the .md doc for that repo (subject area) so it will get pulled into the main website.  Then continue to refine as needed.
+Based on the models, we can start to refine the vocabulary.  When it is getting solid, we can write up the .md doc for that subject area so it will get pulled into the main website.  Then continue to refine as needed.
 
 For new people, reading the [existing use cases](https://github.com/valueflows/valueflows/tree/master/use-cases) could be a good way to see how they might plug in to this workflow.
+
+We use [Term-centric Semantic Web Vocabulary Annotations](https://www.w3.org/2003/06/sw-vocab-status/note) in following way:
+* unstable - included in the vocabulary based on discussions and couple of examples
+* testing - exemplified with data snippets based on diverse use cases with variants
+* stable - implemented in at least 2 open source applications which work with all included data snippets using that term
+
+### Examples
+
+We write example snippets using [JSON-LD](https://json-ld.org/) compatible subset of YAML. Later any implementation of YAML to JSON should be able to convert them and any implementation of JSON-LD parse them.
+Examples should include common JSON-LD `@context` we use in examples: `https://git.io/vf-examples-jsonld-context` which we maintain in https://github.com/valueflows/vf-examples-jsonld-context
 
 ## Github process
 

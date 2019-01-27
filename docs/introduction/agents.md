@@ -8,8 +8,7 @@ We also want to acknowledge that some people prefer to think of themselves as in
 
 So, if people want to form a group that has agency as a group, fine.  If people want to consider that their group does not have agency as a group, also fine.  Not all groups, and especially not all networks, will be vf:Agents. That depends on the agreement of the people in the group.  Note that within the vocabulary, network formations will appear, as agents have economic interactions with each other in the world.  This does not mean that the network is necessarily a vf:Agent.
 
-
-#### Agent Relationships
+## Agent Relationships
 
 Agent relationships have many nuances, thus the ability to define one's own kinds of relationships.  For example people might "participate" with an organization by means of agreeing to terms and conditions.  Or people might have more active "membership" in a group or organization.  Or people might consider themselves members but want a more independently flavored term such as "affiliates".
 
@@ -21,6 +20,10 @@ Relationships have direction: For example, in "Michael is a member of Enspiral",
 
 Relationships can be in a context (or not): For example, "Kathy is mentor of Sam, in the context of Enspiral."
 
-#### Agent Diagram
+## Agent Diagram
 
 ![agent model](https://rawgit.com/valueflows/valueflows/master/release-doc-in-process/agent.svg)
+
+## Examples
+
+[import, lang:"yaml"](../../examples/agents.yaml)
