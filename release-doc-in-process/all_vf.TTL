@@ -444,12 +444,12 @@ vf:satisfiedBy
         vs:term_status      "unstable" ;
         rdfs:comment        "A commitment or economic event fully or partially satisfying an intent" .
 
-#vf:finished  a        owl:DatatypeProperty ;
-#        rdfs:domain     [ owl:unionOf (vf:Commitment vf:Process vf:Intent) ] ; 
-#        rdfs:label      "finished" ;
-#        rdfs:range      xsd:boolean ;
-#        vs:term_status      "unstable" ;
-#        rdfs:comment    "The commitment or process is complete or not." .
+vf:finished  a              owl:DatatypeProperty ;
+        rdfs:domain         [ owl:unionOf (vf:Commitment vf:Process vf:Intent) ] ; 
+        rdfs:label          "finished" ;
+        rdfs:range          xsd:boolean ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "The commitment or intent or process is complete or not." .
 
 vf:substitutable a        owl:DatatypeProperty ;
         rdfs:label          "substitutable" ;
