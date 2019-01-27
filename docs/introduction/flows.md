@@ -57,8 +57,8 @@ accept | No effect  | Input | No | improve |
 improve | No effect  | Output | No | accept |
 give | Decrement | Input | No | receive |
 receive | Increment | Output | No | give |
-raise | Increment | N/A | No | N/A |
-lower | Decrement | N/A | No | N/A |
+raise | Increment | N/A | Yes | N/A |
+lower | Decrement | N/A | Yes | N/A |
 
 We have defined a core set of actions, but expect that this will be extended with others. If extended, they should be defined as part of this or another formal vocabulary so that all can use them and assume the same meaning. 
 
