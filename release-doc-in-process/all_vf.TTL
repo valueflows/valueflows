@@ -1,11 +1,8 @@
 @prefix vf:    <https://w3id.org/valueflows#> .
-@prefix schema: <http://schema.org/> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix owl:   <http://www.w3.org/2002/07/owl#> .
-@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix foaf:  <http://xmlns.com/foaf/0.1/#> .
-@prefix org:   <http://www.w3.org/ns/org#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix qudt:   <http://qudt.org/schema/qudt/> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
@@ -109,23 +106,6 @@ vf:EconomicEvent  a         owl:Class ;
         rdfs:label          "vf:EconomicEvent" ;
         vs:term_status      "unstable" ;
         rdfs:comment        "An observed economic flow, as opposed to a flow planned to happen in the future. This could reflect a change in the quantity of an economic resource. It is also defined by its behavior in relation to the economic resource (see vf:action)" .
-
-foaf:Agent  a               owl:Class ;
-        rdfs:label          "foaf:Agent" ;
-        vs:term_status      "unstable" ;
-        rdfs:comment        "A person or group or organization with economic agency." .
-
-foaf:Person  a              owl:Class ;
-        rdfs:label          "foaf:Person" ;
-        rdfs:subClassOf     foaf:Agent ;
-        vs:term_status      "unstable" ;
-        rdfs:comment        "A natural person." .
-
-org:Organization  a         owl:Class ;
-        rdfs:label          "org:Organization" ;
-        rdfs:subClassOf     foaf:Agent ;
-        vs:term_status      "unstable" ;
-        rdfs:comment        "A formal or informal group, or legal organization." .
 
 vf:AgentRelationship  a     owl:Class ;
         rdfs:label          "vf:AgentRelationship" ;
@@ -401,12 +381,6 @@ vf:name a                   owl:DatatypeProperty ;
         rdfs:label          "name" ;
         vs:term_status      "unstable" ;
         rdfs:comment        "An informal or formal textual identifier for an object. Does not imply uniqueness." .
-
-vf:note a                   owl:ObjectProperty ;
-        rdfs:label          "note" ;
-        rdfs:range          skos:note ;
-        vs:term_status      "unstable" ;
-        rdfs:comment        "A textual comment or description." .
 
 vf:trackingIdentifier a     owl:AnnotationProperty ;
         rdfs:label          "tracking identifier" ;
