@@ -1,6 +1,7 @@
 const meow = require('meow')
 const ParserN3 = require('@rdfjs/parser-n3')
 const SerializerJsonld = require('@rdfjs/serializer-jsonld')
+const SerializerNtriples = require('@rdfjs/serializer-ntriples')
 const Readable = require('stream').Readable
 const fs = require('fs')
 const RdfStore = require('quadstore').RdfStore
@@ -33,16 +34,26 @@ const inputTurtle = new Readable({
 const outputTurtle = parserN3.import(inputTurtle)
 
 const serializerJsonld = new SerializerJsonld()
+const serializerNtriples = new SerializerNtriples()
 
 ;(async () => {
   await done(store.import(outputTurtle))
   console.log('vocab imported to store')
 
-  const vf = store.match(null, null, null, null)
+  // write Turtle
+  fs.writeFileSync(cli.flags.outDir + '/vf.ttl', vfTurtle)
 
+  // write JSON-LD
+  let vf = store.match(null, null, null, null)
   const outputJsonld = serializerJsonld.import(vf)
   let vfJsonld
   await done(outputJsonld.on('data', jsonld => vfJsonld = jsonld))
   fs.writeFileSync(cli.flags.outDir + '/vf.jsonld', JSON.stringify(vfJsonld))
-  fs.writeFileSync(cli.flags.outDir + '/vf.ttl', vfTurtle)
+
+  // write N-Triples
+  vf = store.match(null, null, null, null)
+  const outputNtriples = serializerNtriples.import(vf)
+  let vfNtriples = ''
+  await done(outputNtriples.on('data', ntriples => vfNtriples += ntriples.toString()))
+  fs.writeFileSync(cli.flags.outDir + '/vf.nt', vfNtriples)
 })()
