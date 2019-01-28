@@ -590,3 +590,11 @@ vf:receive  a                vf:Action ;
         rdfs:label          "receive" ;
         vs:term_status      "unstable" ;
         rdfs:subPropertyOf  vf:increment .
+
+vf:raise  a                 vf:Action ;
+        rdfs:label          "raise" ;
+        rdfs:subPropertyOf  vf:increment .
+
+vf:lower  a                 vf:Action ;
+        rdfs:label          "lower" ;
+        rdfs:subPropertyOf  vf:decrement .
