@@ -19,6 +19,19 @@ Commitments describe potential future events which the involved agents already a
 
 Economic Events describes past events, something observed, never some potential future event.  They can fulfill Commitments or satisfy Intents (when there is no Commitment).
 
+## Timeline, plans and observations
+
+Figure below shows that Economic Events have to be observed and for that reason only appear as records of the past. Future plans get represented with Intents and Commitments.
+
+![flows](https://raw.githubusercontent.com/valueflows/valueflows/master/assets/flows.png)
+
+## Matching Intents
+
+Often agents will start their plans independently and record their initial intents. Later once they make a Commitment with other agent, it will represent a specific shared part of their plans. For that reason any Commitment can result in Satisfaction of providing agent's Intent as well as Satisfaction of receiving agent Intent.
+
+
+![matching](https://raw.githubusercontent.com/valueflows/valueflows/master/assets/matched.png)
+
 ## Granularity
 
 Intents, Commitments, and Economic Events can occur at any granularity that is needed or for which data can be obtained.  So they primarily are used for all operational needs, but can also be used at higher levels for analytical and high level planning needs for communities or regions, for example.
