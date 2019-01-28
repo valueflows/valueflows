@@ -117,10 +117,10 @@ vf:Fulfillment  a           owl:Class ;
         vs:term_status      "unstable" ;
         rdfs:comment        "The quantity that the economic event fulfilled towards the commitment." .
 
-vf:Reciprocity  a           owl:Class ;
-        rdfs:label          "vf:Reciprocity" ;
-        vs:term_status      "unstable" ;
-        rdfs:comment        "The quantity that the economic event implies towards creation of the reciprocal commitment." .
+#vf:Reciprocity  a           owl:Class ;
+#        rdfs:label          "vf:Reciprocity" ;
+#        vs:term_status      "unstable" ;
+#        rdfs:comment        "The quantity that the economic event implies towards creation of the reciprocal commitment." .
 
 vf:Appreciation  a          owl:Class ;
         rdfs:label          "vf:Appreciation" ;
@@ -258,25 +258,25 @@ vf:inScopeOf  a             owl:ObjectProperty ;
         rdfs:comment        "Grouping around something to create a boundary or context, used for documenting, accounting, planning." .
 
 vf:under  a                 owl:ObjectProperty ;
-        rdfs:domain         [ owl:unionOf (vf:EconomicEvent vf:Commitment vf:Intent vf:Reciprocity vf:Fulfillment ) ] ; 
+        rdfs:domain         [ owl:unionOf (vf:EconomicEvent vf:Commitment vf:Intent vf:Fulfillment ) ] ; 
         rdfs:label          "under" ;
         rdfs:range          vf:Agreement ;
         vs:term_status      "unstable" ;
         rdfs:comment        "Reference to an agreement between agents which specifies the rules or policies or calculations which govern this flow." .
 
-vf:createdBy  a             owl:ObjectProperty ;
-        rdfs:label          "created by" ;
-        rdfs:domain         vf:Reciprocity ;
-        rdfs:range          vf:EconomicEvent ;
-        vs:term_status      "unstable" ;
-        rdfs:comment        "References the economic event that fully or partially created the commitment, often based on a prior agreement." .
+#vf:createdBy  a             owl:ObjectProperty ;
+#        rdfs:label          "created by" ;
+#        rdfs:domain         vf:Reciprocity ;
+#        rdfs:range          vf:EconomicEvent ;
+#        vs:term_status      "unstable" ;
+#        rdfs:comment        "References the economic event that fully or partially created the commitment, often based on a prior agreement." .
 
-vf:creates  a               owl:ObjectProperty ;
-        rdfs:label          "creates" ;
-        rdfs:domain         vf:Reciprocity ;
-        rdfs:range          vf:Commitment ;
-        vs:term_status      "unstable" ;
-        rdfs:comment        "References the commitment that was fully or partially created because of the economic event, often based on a prior agreement." .
+#vf:creates  a               owl:ObjectProperty ;
+#        rdfs:label          "creates" ;
+#        rdfs:domain         vf:Reciprocity ;
+#        rdfs:range          vf:Commitment ;
+#        vs:term_status      "unstable" ;
+#        rdfs:comment        "References the commitment that was fully or partially created because of the economic event, often based on a prior agreement." .
 
 vf:contains  a              owl:ObjectProperty ;
         rdfs:label          "contains" ;
@@ -313,12 +313,12 @@ vf:satisfiedQuantity a      owl:ObjectProperty ;
         vs:term_status      "unstable" ;
         rdfs:comment        "The quantity of the satisfaction of an commitment towards an intent." .
 
-vf:reciprocalQuantity a     owl:ObjectProperty ;
-        rdfs:label          "reciprocal quantity" ;
-        rdfs:domain         vf:Reciprocity ;
-        rdfs:range          qudt:QuantityValue ;
-        vs:term_status      "unstable" ;
-        rdfs:comment        "The quantity of the reciprocity when an event creates a commitment." .
+#vf:reciprocalQuantity a     owl:ObjectProperty ;
+#        rdfs:label          "reciprocal quantity" ;
+#        rdfs:domain         vf:Reciprocity ;
+#        rdfs:range          qudt:QuantityValue ;
+#        vs:term_status      "unstable" ;
+#        rdfs:comment        "The quantity of the reciprocity when an event creates a commitment." .
 
 vf:definedQuantity a        owl:ObjectProperty ;
         rdfs:label          "defined quantity" ;
