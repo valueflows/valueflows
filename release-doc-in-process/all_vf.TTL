@@ -541,19 +541,19 @@ vf:resourceConformsTo
         vs:term_status      "unstable" ;
         rdfs:comment        "The primary resource knowledge specification or definition of an existing or potential resource." .
 
-vf:includesCommitments a    owl:ObjectProperty ;
-        rdfs:label          "includes commitments" ;
-        rdfs:domain         vf:ExchangeAgreement ;
-        rdfs:range          vf:Commitment ;
+vf:clauseOf a               owl:ObjectProperty ;
+        rdfs:label          "clause of" ;
+        rdfs:domain         vf:Commitment ;
+        rdfs:range          vf:ExchangeAgreement ;
         vs:term_status      "unstable" ;
-        rdfs:comment        "The specific commitments that are part of this exchange agreement." .
+        rdfs:comment        "This commitment is part of the exchange agreement, which could not exist without it." .
 
-vf:includesEvents a         owl:ObjectProperty ;
-        rdfs:label          "includes events" ;
-        rdfs:domain         vf:ExchangeAgreement ;
-        rdfs:range          vf:EconomicEvent ;
+vf:realizationOf a           owl:ObjectProperty ;
+        rdfs:label          "realization of" ;
+        rdfs:domain         vf:EconomicEvent ;
+        rdfs:range          vf:ExchangeAgreement ;
         vs:term_status      "unstable" ;
-        rdfs:comment        "The actual economic events that occur related to this exchange agreement." .
+        rdfs:comment        "This economic event occurs as part of this exchange." .
 
 # ################################ agent relationship verbs
 

@@ -1,0 +1,58 @@
+# Example: Simple exchange agreements
+
+'@context':
+  - https://git.io/vf-examples-jsonld-context
+  - alice: https://alice.example/
+    bob: https://bob.example/
+    carol: https://carol.example/
+    store: https://store.example/
+
+'@id': rgh:valueflows/valueflows/master/examples/exch-agreement.yaml
+'@graph':
+
+  # Exchange agreement with commitments
+
+  - '@id': alice:57f1c1d0-432e-4bfa-9d32-002b8955a708
+    '@type': ExchangeAgreement
+    skos:note: Alice commits to giving Bob 50 kg of apples in exchange for 10 liters of apple cider.
+
+  - '@id': alice:2342d456-5d6f-46d5-a7ed-3ac7bfd5a86c
+    '@type': Commitment
+    clauseOf: alice:57f1c1d0-432e-4bfa-9d32-002b8955a708
+    action: give
+    provider: https://alice.example/
+    receiver: https://bob.example/
+    resourceClassifiedAs: https://www.wikidata.org/wiki/Q89 # apples
+    affectedQuantity:
+      qudt:unit: unit: Kilogram
+      qudt:numericValue: 50
+
+  - '@id': bob:fd399b37-0740-4a68-a184-1e655021ca21
+    '@type': Commitment
+    clauseOf: alice:57f1c1d0-432e-4bfa-9d32-002b8955a708
+    action: give
+    provider: https://bob.example/
+    receiver: https://alice.example/
+    resourceClassifiedAs: https://www.wikidata.org/wiki/Q5977438 # soft apple cider
+    affectedQuantity:
+      qudt:unit: unit: Liter
+      qudt:numericValue: 10
+
+  # Exchange without commitments
+
+  - '@id': store:ac9ec98d-db80-44dc-97be-7aa149b2fe5d
+    '@type': ExchangeAgreement
+    skos:note: Carol purchased a new bucket at the hardware store and paid 5 dollars for it.
+
+  - '@id': store:a8356625-bf64-4c16-9099-28aa1b718c4b
+    '@type': EconomicEvent
+    clauseOf: store:ac9ec98d-db80-44dc-97be-7aa149b2fe5d
+    action: give
+    provider: https://alice.example/
+    receiver: https://bob.example/
+    resourceClassifiedAs: https://www.wikidata.org/wiki/Q89 # apples
+    affectedQuantity:
+      qudt:unit: unit: Kilogram
+      qudt:numericValue: 50
+
+  
