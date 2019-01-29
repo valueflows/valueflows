@@ -16,9 +16,10 @@
 * Greg Cassell
 * Brent Shambaugh
 * Dan Hassan
-* SM
+* Steve M
+* Alexander Praetorius
 * Tiberius Brastaviceanu
-* Elioqoshi
+* Elio Qoshi
 
 #### REA assistance
 
