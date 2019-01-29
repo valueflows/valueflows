@@ -292,8 +292,8 @@ vf:currentQuantity a        owl:ObjectProperty ;
         vs:term_status      "unstable" ;
         rdfs:comment        "The current amount and unit of the economic resource. This can be stored or derived from economic events affecting the resource" .
 
-vf:observedQuantity a       owl:ObjectProperty ;
-        rdfs:label          "observed quantity" ;
+vf:affectedQuantity a       owl:ObjectProperty ;
+        rdfs:label          "affected quantity" ;
         rdfs:domain         vf:EconomicEvent ;
         rdfs:range          qudt:QuantityValue ;
         vs:term_status      "unstable" ;
