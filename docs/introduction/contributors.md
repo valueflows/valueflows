@@ -16,7 +16,7 @@
 * Greg Cassell
 * Brent Shambaugh
 * Dan Hassan
-* Steve M
+* Steve Michel
 * Alexander Praetorius
 * Tiberius Brastaviceanu
 * Elio Qoshi
