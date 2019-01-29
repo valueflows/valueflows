@@ -23,3 +23,9 @@ Here is a specific example:
 #### Process diagram
 
 ![process model](https://rawgit.com/valueflows/valueflows/master/release-doc-in-process/process.svg)
+
+## Examples
+
+[import, lang:"yaml"](../../examples/process-manufacturing.yaml)
+
+[import, lang:"yaml"](../../examples/process-workflow.yaml)

@@ -26,4 +26,4 @@ Relationships can be in a context (or not): For example, "Kathy is mentor of Sam
 
 ## Examples
 
-[import, lang:"yaml"](../../examples/agents.yaml)
+[import, lang:"yaml"](../../examples/agent.yaml)
