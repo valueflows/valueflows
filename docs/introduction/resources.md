@@ -86,7 +86,3 @@ Unlike underlying resource, if one resource contains other resources, the contai
 
 For example, a bank account might contain a number of "virtual accounts" that a group manages itself, outside the bank's knowledge.  Or, a bike shed might contain 10 bikes, which are identified and tracked by their serial numbers as individual resources.
 
-
-#### Resource Diagram
-
-![resource model](https://rawgit.com/valueflows/valueflows/master/release-doc-in-process/resource.svg)
