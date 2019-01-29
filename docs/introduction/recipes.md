@@ -37,4 +37,4 @@ Start with a Resource and generate the plan based on its recipe.  Examples:
 
 ### Recipe diagram
 
-![recipe model](https://rawgit.com/valueflows/valueflows/master/release-doc-in-process/recipes.svg)
+![recipe model](https://rawgit.com/valueflows/valueflows/master/release-doc-in-process/recipe.svg)
