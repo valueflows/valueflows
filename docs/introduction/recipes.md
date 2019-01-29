@@ -35,4 +35,3 @@ Start with a Resource and generate the plan based on its recipe.  Examples:
     Translation: start with a source document
     Auto repair: start with an auto that needs repair.
 
-

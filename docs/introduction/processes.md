@@ -20,10 +20,6 @@ Here is a specific example:
 
 ![salsa flow](https://rawgit.com/valueflows/valueflows/master/release-doc-in-process/salsa-layer.png)
 
-#### Process diagram
-
-![process model](https://rawgit.com/valueflows/valueflows/master/release-doc-in-process/process.svg)
-
 ## Examples
 
 [import, lang:"yaml"](../../examples/process-manufacturing.yaml)

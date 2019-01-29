@@ -20,10 +20,6 @@ Relationships have direction: For example, in "Michael is a member of Enspiral",
 
 Relationships can be in a context (or not): For example, "Kathy is mentor of Sam, in the context of Enspiral."
 
-## Agent Diagram
-
-![agent model](https://rawgit.com/valueflows/valueflows/master/release-doc-in-process/agent.svg)
-
 ## Examples
 
 [import, lang:"yaml"](../../examples/agent.yaml)
