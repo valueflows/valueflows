@@ -59,7 +59,7 @@ vf:Intent  a                owl:Class ;
 
 vf:Commitment  a            owl:Class ;
         rdfs:label          "vf:Commitment" ;
-        vs:term_status      "unstable" ;
+        vs:term_status      "testing" ;
         rdfs:comment        "A planned economic flow that has been promised by an agent to another agent." .
 
 vf:Satisfaction  a          owl:Class ;
@@ -89,12 +89,12 @@ vf:DistributionAgreement  a  owl:Class ;
 
 vf:EconomicResource  a      owl:Class ;
         rdfs:label          "vf:EconomicResource" ;
-        vs:term_status      "unstable" ;
+        vs:term_status      "testing" ;
         rdfs:comment        "A resource which is useful to people or the ecosystem." .
 
 vf:Process  a               owl:Class ;
         rdfs:label          "vf:Process" ;
-        vs:term_status      "unstable" ;
+        vs:term_status      "testing" ;
         rdfs:comment        "An activity that changes inputs into outputs.  It could transform or transport economic resource(s)." .
 
 vf:Transfer  a              owl:Class ;
@@ -104,7 +104,7 @@ vf:Transfer  a              owl:Class ;
 
 vf:EconomicEvent  a         owl:Class ;
         rdfs:label          "vf:EconomicEvent" ;
-        vs:term_status      "unstable" ;
+        vs:term_status      "testing" ;
         rdfs:comment        "An observed economic flow, as opposed to a flow planned to happen in the future. This could reflect a change in the quantity of an economic resource. It is also defined by its behavior in relation to the economic resource (see vf:action)" .
 
 vf:AgentRelationship  a     owl:Class ;
@@ -226,14 +226,14 @@ vf:provider  a              owl:ObjectProperty ;
         rdfs:domain         [ owl:unionOf (vf:EconomicEvent vf:Commitment vf:Intent) ] ;
         rdfs:label          "provider" ;
         rdfs:range          foaf:Agent ;
-        vs:term_status      "unstable" ;
+        vs:term_status      "testing" ;
         rdfs:comment        "The economic agent from whom the intended, committed, or actual economic event is initiated." .
 
 vf:receiver  a              owl:ObjectProperty ;
         rdfs:domain         [ owl:unionOf (vf:EconomicEvent vf:Commitment vf:Intent) ] ;
         rdfs:label          "receiver" ;
         rdfs:range          foaf:Agent ;
-        vs:term_status      "unstable" ;
+        vs:term_status      "testing" ;
         rdfs:comment        "The economic agent whom the intended, committed, or actual economic event is for." .
 
 vf:subject  a               owl:ObjectProperty ;
@@ -436,7 +436,7 @@ vf:finished  a              owl:DatatypeProperty ;
         rdfs:domain         [ owl:unionOf (vf:Commitment vf:Process vf:Intent) ] ; 
         rdfs:label          "finished" ;
         rdfs:range          xsd:boolean ;
-        vs:term_status      "unstable" ;
+        vs:term_status      "testing" ;
         rdfs:comment        "The commitment or intent or process is complete or not." .
 
 vf:substitutable a        owl:DatatypeProperty ;
@@ -567,7 +567,7 @@ vf:load  a                  vf:Action ;
 
 vf:consume  a               vf:Action ;
         rdfs:label          "consume" ;
-        vs:term_status      "unstable" ;
+        vs:term_status      "testing" ;
         rdfs:subPropertyOf  vf:decrement .
 
 vf:use  a                   vf:Action ;
@@ -575,16 +575,16 @@ vf:use  a                   vf:Action ;
         rdfs:label          "use" .
 
 vf:work  a                  vf:Action ;
-        vs:term_status      "unstable" ;
+        vs:term_status      "testing" ;
         rdfs:label          "work" .
 
 vf:cite  a                  vf:Action ;
-        vs:term_status      "unstable" ;
+        vs:term_status      "testing" ;
         rdfs:label          "cite" .
 
 vf:produce  a               vf:Action ;
         rdfs:label          "produce" ;
-        vs:term_status      "unstable" ;
+        vs:term_status      "testing" ;
         rdfs:subPropertyOf  vf:increment .
 
 vf:accept  a                vf:Action ;
