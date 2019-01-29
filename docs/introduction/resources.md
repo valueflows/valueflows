@@ -90,3 +90,7 @@ For example, a bank account might contain a number of "virtual accounts" that a 
 #### Resource Diagram
 
 ![resource model](https://rawgit.com/valueflows/valueflows/master/release-doc-in-process/resource.svg)
+
+## Examples
+
+[import, lang:"yaml"](../../examples/resource.yaml)

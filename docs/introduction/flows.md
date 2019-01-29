@@ -76,3 +76,7 @@ lower | Decrement | N/A | N/A | N/A |
 We have defined a core set of actions, but expect that this will be extended with others. If extended, they should be defined as part of this or another formal vocabulary so that all can use them and assume the same meaning. 
 
 Temporary note: The actions `use` and `work` are time-based actions, either with or without an explicit schedule.  How to handle time-based resources is still under discussion.
+
+## Examples
+
+[import, lang:"yaml"](../../examples/fulfill-satisfy.yaml)
