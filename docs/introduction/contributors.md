@@ -6,19 +6,21 @@
 * elf Pavlik
 * Bob Haugen
 * Michael Williams
+* Paul Mackey
 * Kalin Maldzhanski
 
 #### Use cases, tools, and helpful discussion... and let's not forget the logo!
 
 * Jon Richter
 * Steve Bosserman
-* Paul Mackey
 * Greg Cassell
+* Connor Turland
 * Brent Shambaugh
 * Dan Hassan
-* Steve Michel
 * Alexander Praetorius
+* Steve Michel
 * Tiberius Brastaviceanu
+* Simon Tegg
 * Elio Qoshi
 
 #### REA assistance
