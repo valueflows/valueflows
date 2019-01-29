@@ -20,3 +20,8 @@ Here is a specific example:
 
 ![salsa flow](https://rawgit.com/valueflows/valueflows/master/release-doc-in-process/salsa-layer.png)
 
+## Examples
+
+[import, lang:"yaml"](../../examples/process-manufacturing.yaml)
+
+[import, lang:"yaml"](../../examples/process-workflow.yaml)

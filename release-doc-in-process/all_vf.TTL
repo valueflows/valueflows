@@ -1,11 +1,8 @@
 @prefix vf:    <https://w3id.org/valueflows#> .
-@prefix schema: <http://schema.org/> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix owl:   <http://www.w3.org/2002/07/owl#> .
-@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix foaf:  <http://xmlns.com/foaf/0.1/#> .
-@prefix org:   <http://www.w3.org/ns/org#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix qudt:   <http://qudt.org/schema/qudt/> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
@@ -110,23 +107,6 @@ vf:EconomicEvent  a         owl:Class ;
         vs:term_status      "unstable" ;
         rdfs:comment        "An observed economic flow, as opposed to a flow planned to happen in the future. This could reflect a change in the quantity of an economic resource. It is also defined by its behavior in relation to the economic resource (see vf:action)" .
 
-foaf:Agent  a               owl:Class ;
-        rdfs:label          "foaf:Agent" ;
-        vs:term_status      "unstable" ;
-        rdfs:comment        "A person or group or organization with economic agency." .
-
-foaf:Person  a              owl:Class ;
-        rdfs:label          "foaf:Person" ;
-        rdfs:subClassOf     foaf:Agent ;
-        vs:term_status      "unstable" ;
-        rdfs:comment        "A natural person." .
-
-org:Organization  a         owl:Class ;
-        rdfs:label          "org:Organization" ;
-        rdfs:subClassOf     foaf:Agent ;
-        vs:term_status      "unstable" ;
-        rdfs:comment        "A formal or informal group, or legal organization." .
-
 vf:AgentRelationship  a     owl:Class ;
         rdfs:label          "vf:AgentRelationship" ;
         vs:term_status      "unstable" ;
@@ -137,10 +117,10 @@ vf:Fulfillment  a           owl:Class ;
         vs:term_status      "unstable" ;
         rdfs:comment        "The quantity that the economic event fulfilled towards the commitment." .
 
-vf:Reciprocity  a           owl:Class ;
-        rdfs:label          "vf:Reciprocity" ;
-        vs:term_status      "unstable" ;
-        rdfs:comment        "The quantity that the economic event implies towards creation of the reciprocal commitment." .
+#vf:Reciprocity  a           owl:Class ;
+#        rdfs:label          "vf:Reciprocity" ;
+#        vs:term_status      "unstable" ;
+#        rdfs:comment        "The quantity that the economic event implies towards creation of the reciprocal commitment." .
 
 vf:Appreciation  a          owl:Class ;
         rdfs:label          "vf:Appreciation" ;
@@ -278,25 +258,25 @@ vf:inScopeOf  a             owl:ObjectProperty ;
         rdfs:comment        "Grouping around something to create a boundary or context, used for documenting, accounting, planning." .
 
 vf:under  a                 owl:ObjectProperty ;
-        rdfs:domain         [ owl:unionOf (vf:EconomicEvent vf:Commitment vf:Intent vf:Reciprocity vf:Fulfillment ) ] ; 
+        rdfs:domain         [ owl:unionOf (vf:EconomicEvent vf:Commitment vf:Intent vf:Fulfillment ) ] ; 
         rdfs:label          "under" ;
         rdfs:range          vf:Agreement ;
         vs:term_status      "unstable" ;
         rdfs:comment        "Reference to an agreement between agents which specifies the rules or policies or calculations which govern this flow." .
 
-vf:createdBy  a             owl:ObjectProperty ;
-        rdfs:label          "created by" ;
-        rdfs:domain         vf:Reciprocity ;
-        rdfs:range          vf:EconomicEvent ;
-        vs:term_status      "unstable" ;
-        rdfs:comment        "References the economic event that fully or partially created the commitment, often based on a prior agreement." .
+#vf:createdBy  a             owl:ObjectProperty ;
+#        rdfs:label          "created by" ;
+#        rdfs:domain         vf:Reciprocity ;
+#        rdfs:range          vf:EconomicEvent ;
+#        vs:term_status      "unstable" ;
+#        rdfs:comment        "References the economic event that fully or partially created the commitment, often based on a prior agreement." .
 
-vf:creates  a               owl:ObjectProperty ;
-        rdfs:label          "creates" ;
-        rdfs:domain         vf:Reciprocity ;
-        rdfs:range          vf:Commitment ;
-        vs:term_status      "unstable" ;
-        rdfs:comment        "References the commitment that was fully or partially created because of the economic event, often based on a prior agreement." .
+#vf:creates  a               owl:ObjectProperty ;
+#        rdfs:label          "creates" ;
+#        rdfs:domain         vf:Reciprocity ;
+#        rdfs:range          vf:Commitment ;
+#        vs:term_status      "unstable" ;
+#        rdfs:comment        "References the commitment that was fully or partially created because of the economic event, often based on a prior agreement." .
 
 vf:contains  a              owl:ObjectProperty ;
         rdfs:label          "contains" ;
@@ -317,7 +297,21 @@ vf:affectedQuantity a       owl:ObjectProperty ;
         rdfs:domain         vf:EconomicEvent ;
         rdfs:range          qudt:QuantityValue ;
         vs:term_status      "unstable" ;
-        rdfs:comment        "The quantity and unit of the event. This is the quantity that could be used to increment or decrement a resource, depending on the type of resource and type of event." .
+        rdfs:comment        "The amount and unit of the event. This is the quantity that could be used to increment or decrement a resource, depending on the type of resource and type of event." .
+
+vf:committedQuantity a      owl:ObjectProperty ;
+        rdfs:label          "committed quantity" ;
+        rdfs:domain         vf:Commitment ;
+        rdfs:range          qudt:QuantityValue ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "The amount and unit of the commitment." .
+
+vf:intendedQuantity a       owl:ObjectProperty ;
+        rdfs:label          "intended quantity" ;
+        rdfs:domain         vf:Intent ;
+        rdfs:range          qudt:QuantityValue ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "The amount and unit of the intent." .
 
 vf:fulfilledQuantity a      owl:ObjectProperty ;
         rdfs:label          "fulfilled quantity" ;
@@ -333,12 +327,12 @@ vf:satisfiedQuantity a      owl:ObjectProperty ;
         vs:term_status      "unstable" ;
         rdfs:comment        "The quantity of the satisfaction of an commitment towards an intent." .
 
-vf:reciprocalQuantity a     owl:ObjectProperty ;
-        rdfs:label          "reciprocal quantity" ;
-        rdfs:domain         vf:Reciprocity ;
-        rdfs:range          qudt:QuantityValue ;
-        vs:term_status      "unstable" ;
-        rdfs:comment        "The quantity of the reciprocity when an event creates a commitment." .
+#vf:reciprocalQuantity a     owl:ObjectProperty ;
+#        rdfs:label          "reciprocal quantity" ;
+#        rdfs:domain         vf:Reciprocity ;
+#        rdfs:range          qudt:QuantityValue ;
+#        vs:term_status      "unstable" ;
+#        rdfs:comment        "The quantity of the reciprocity when an event creates a commitment." .
 
 vf:definedQuantity a        owl:ObjectProperty ;
         rdfs:label          "defined quantity" ;
@@ -402,12 +396,6 @@ vf:name a                   owl:DatatypeProperty ;
         vs:term_status      "unstable" ;
         rdfs:comment        "An informal or formal textual identifier for an object. Does not imply uniqueness." .
 
-vf:note a                   owl:ObjectProperty ;
-        rdfs:label          "note" ;
-        rdfs:range          skos:note ;
-        vs:term_status      "unstable" ;
-        rdfs:comment        "A textual comment or description." .
-
 vf:trackingIdentifier a     owl:AnnotationProperty ;
         rdfs:label          "tracking identifier" ;
         rdfs:domain         vf:EconomicResource ;   
@@ -444,12 +432,12 @@ vf:satisfiedBy
         vs:term_status      "unstable" ;
         rdfs:comment        "A commitment or economic event fully or partially satisfying an intent" .
 
-#vf:finished  a        owl:DatatypeProperty ;
-#        rdfs:domain     [ owl:unionOf (vf:Commitment vf:Process vf:Intent) ] ; 
-#        rdfs:label      "finished" ;
-#        rdfs:range      xsd:boolean ;
-#        vs:term_status      "unstable" ;
-#        rdfs:comment    "The commitment or process is complete or not." .
+vf:finished  a              owl:DatatypeProperty ;
+        rdfs:domain         [ owl:unionOf (vf:Commitment vf:Process vf:Intent) ] ; 
+        rdfs:label          "finished" ;
+        rdfs:range          xsd:boolean ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "The commitment or intent or process is complete or not." .
 
 vf:substitutable a        owl:DatatypeProperty ;
         rdfs:label          "substitutable" ;
@@ -616,3 +604,11 @@ vf:receive  a                vf:Action ;
         rdfs:label          "receive" ;
         vs:term_status      "unstable" ;
         rdfs:subPropertyOf  vf:increment .
+
+vf:raise  a                 vf:Action ;
+        rdfs:label          "raise" ;
+        rdfs:subPropertyOf  vf:increment .
+
+vf:lower  a                 vf:Action ;
+        rdfs:label          "lower" ;
+        rdfs:subPropertyOf  vf:decrement .

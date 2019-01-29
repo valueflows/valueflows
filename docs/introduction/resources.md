@@ -86,3 +86,6 @@ Unlike underlying resource, if one resource contains other resources, the contai
 
 For example, a bank account might contain a number of "virtual accounts" that a group manages itself, outside the bank's knowledge.  Or, a bike shed might contain 10 bikes, which are identified and tracked by their serial numbers as individual resources.
 
+## Examples
+
+[import, lang:"yaml"](../../examples/resource.yaml)
