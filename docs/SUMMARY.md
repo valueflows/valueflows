@@ -6,6 +6,7 @@
 * [Flows of Value](introduction/concepts.md)
 * [Core](introduction/core.md)
 * [Principles](introduction/principles.md)
+* [Contributors](introduction/contributors.md)
 * [Status](introduction/status.md)
 
 ## Diagrams
