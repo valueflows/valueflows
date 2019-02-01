@@ -1,20 +1,20 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "id": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/EconomicEvent.json",
-    "title": "EconomicEvent",
-    "description": "An observed economic flow, as opposed to a flow planned to happen in the future. This could reflect a change in the quantity of an economic resource.",
+    "id": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Commitment.json",
+    "title": "Commitment",
+    "description": "A planned economic flow that has been promised by an agent to another agent.",
     "type": "object",
     "properties": {
         "action": {
             "description": "Relates a process input or output to a verb, such as consume, produce, work, improve, etc.",
             "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Action.json"
         },
-        "affectedQuantity": {
-            "description": "The amount and unit of the event. This is the quantity that could be used to increment or decrement a resource, depending on the type of resource and type of event.",
+        "committedQuantity": {
+            "description": "The amount and unit of the commitment.",
             "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/QuantityValue.json"
         },
-        "affects": {
-            "description": "The economic resource that is decremented or incremented by the economic event, or just what the economic event is about.",
+        "involves": {
+            "description": "Actual economic resource the commitment commits to affect.",
             "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/EconomicResource.json"
         },
         "resourceConformsTo": {
@@ -30,14 +30,14 @@
             }
         },
         "provider": {
-            "description": "The economic agent from whom the economic event is initiated.",
+            "description": "The economic agent from whom the commitment is initiated.",
             "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Agent.json"
         },
         "receiver": {
-            "description": "The economic agent whom the economic event is for.",
+            "description": "The economic agent whom the commitment is for.",
             "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Agent.json"
         },
-        "observedTime": {
+        "committedTime": {
             "description": "The actual temporal instant or interval.",
             "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/TemporalEntity.json"
         },
@@ -45,31 +45,18 @@
             "description": "A textual comment or description.",
             "type": "string"
         },
-        "image": {
-            "description": "A visual representation.",
-            "type": "string",
-            "format": "uri"
-        },
         "inputOf": {
-            "description": "Relates an input economic event to it's node.",
+            "description": "Relates an input commitment to it's node.",
             "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Process.json",
             "$comment": "This will become an array, and also possibly reference Transfer.json."
         },
         "outputOf": {
-            "description": "Relates an output economic event to it's node.",
+            "description": "Relates an output commitment to it's node.",
             "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Process.json",
             "$comment": "This will become an array, and also possibly reference Transfer.json."
         },
-        "appreciationOf": {
-            "description": "The economic event being appreciated (gift economy).",
-            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Appreciation.json"
-        },
-        "appreciationWith": {
-            "description": "The economic event implemented in appreciation (gift economy).",
-            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Appreciation.json"
-        },
         "under": {
-            "description": "Reference to an agreement between agents which specifies the rules or policies which govern this event.",
+            "description": "Reference to an agreement between agents which specifies the rules or policies which govern this commitment.",
             "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Agreement.json",
             "$comment": "Under review."
         },
@@ -79,6 +66,6 @@
             "$comment": "The scope can be any appropriate type of object.  This is most often an Agent, but could also be a geographic or other accounting scope."
         }
     },
-    "required": ["action", "affectedQuantity", "observedTime" ],
-    "$comment": "Either affects, resourceClassifiedAs, or resourceConformsTo is also required."
+    "required": ["action", "committedQuantity", "committedTime" ],
+    "$comment": "Either involves, resourceClassifiedAs, or resourceConformsTo is also required.  Also, either provider or receiver is required."
 }

@@ -47,7 +47,7 @@ vf:RecipeProcess a          owl:Class ;
 vf:RecipeFlow a             owl:Class ;
         rdfs:label          "vf:RecipeFlow" ;
         vs:term_status      "unstable" ;
-        rdfs:comment        "The linkage between a process recipe, an action that structures a recipe, and a resource specification." .
+        rdfs:comment        "The linkage between a recipe process, an action that structures a recipe, and a resource specification." .
 
 
 # PLAN CLASSES
@@ -181,7 +181,7 @@ vf:involves
         rdfs:domain         [ owl:unionOf (vf:Commitment vf:Intent) ] ; 
         rdfs:range          vf:EconomicResource ;
         vs:term_status      "unstable" ;
-        rdfs:comment        "Economic resource the commitment commits or the intent intends to affect. Could be an actual resource or a classification / specification of resource." .
+        rdfs:comment        "Actual economic resource the commitment commits or the intent intends to affect." .
 
 vf:underlyingResource
         a                   owl:ObjectProperty ;
@@ -318,14 +318,14 @@ vf:fulfilledQuantity a      owl:ObjectProperty ;
         rdfs:domain         vf:Fulfillment ;
         rdfs:range          qudt:QuantityValue ;
         vs:term_status      "unstable" ;
-        rdfs:comment        "The quantity of the fulfillment of an event towards a commitment or an intent." .
+        rdfs:comment        "The quantity of the fulfillment of an event towards a commitment." .
 
 vf:satisfiedQuantity a      owl:ObjectProperty ;
         rdfs:label          "satisfied quantity" ;
         rdfs:domain         vf:Satisfaction ;
         rdfs:range          qudt:QuantityValue ;
         vs:term_status      "unstable" ;
-        rdfs:comment        "The quantity of the satisfaction of an commitment towards an intent." .
+        rdfs:comment        "The quantity of the satisfaction of a commitment or economic event towards an intent." .
 
 #vf:reciprocalQuantity a     owl:ObjectProperty ;
 #        rdfs:label          "reciprocal quantity" ;
@@ -430,7 +430,7 @@ vf:satisfiedBy
         rdfs:domain         vf:Satisfaction ;
         rdfs:range          [ owl:unionOf (vf:Commitment vf:EconomicEvent ) ] ;
         vs:term_status      "unstable" ;
-        rdfs:comment        "A commitment or economic event fully or partially satisfying an intent" .
+        rdfs:comment        "A commitment or economic event fully or partially satisfying an intent." .
 
 vf:finished  a              owl:DatatypeProperty ;
         rdfs:domain         [ owl:unionOf (vf:Commitment vf:Process vf:Intent) ] ; 

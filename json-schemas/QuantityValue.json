@@ -1,5 +1,5 @@
 {
-    "$schema": "http://json-schema.org/draft-06/schema#",
+    "$schema": "http://json-schema.org/draft-07/schema#",
     "id": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/QuantityValue.json",
     "title": "QuantityValue",
     "description": "A numeric value with a unit of measure.",
@@ -11,7 +11,10 @@
         },
         "unit": {
             "description": "A unit of measure.",
-            "type": "string"
+            "type": "object",
+            "properties": {
+                "type": "string"
+            }
         }
     },
     "required": ["numericValue", "unit"]

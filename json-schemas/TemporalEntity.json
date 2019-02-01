@@ -1,0 +1,14 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "id": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/TemporalEntity.json",
+    "title": "TemporalEntity",
+    "description": "A temporal interval or instant.",
+    "$comment": "This ontology is defined here https://w3c.github.io/sdw/time/#topology.",
+    "type": "object",
+    "properties": {
+    
+** in process **
+
+    },
+    "required": ["numericValue", "unit"]
+}

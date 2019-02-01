@@ -1,0 +1,47 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "id": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/ResourceSpecification.json",
+    "title": "ResourceSpecification",
+    "description": "Specification of a kind of resource. Could define a material item, service, digital item, currency account, etc.",
+    "type": "object",
+    "properties": {
+        "name": {
+            "description": "An informal or formal textual identifier for an object. Does not imply uniqueness.",
+            "type": "string"
+        },
+        "unit": {
+            "description": "The unit of measure expected for this resource specification as a default.",
+            "type": "object",
+            "properties": {
+                "type": "string"
+            }
+        },
+        "substitutable": {
+            "description": "Defines if any resource of that type can be freely substituted for any other resource of that type when used, consumed, traded, etc.",
+            "type": "boolean"
+        },
+        "note": {
+            "description": "A textual comment or description.",
+            "type": "string"
+        },
+        "image": {
+            "description": "A visual representation.",
+            "type": "string",
+            "format": "uri"
+        },
+        "url": {
+            "description": "A web site describing the resource specification.",
+            "type": "string",
+            "format": "url"
+        },
+        "resourceClassifiedAs": {
+            "description": "References a concept in a common taxonomy or other classification scheme for purposes of categorization.",
+            "type": "array",
+            "items": { 
+                "type": "string",
+                "$comment": "If possible, this should be a uri reference to a shared classification on the web."
+            }
+        },
+    },
+    "required": ["name"]
+}

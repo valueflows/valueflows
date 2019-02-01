@@ -1,0 +1,31 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Fulfillment.json",
+    "title": "Fulfillment",
+    "description": "The quantity that the economic event fulfilled towards the commitment.",
+    "type": "object",
+    "properties": {
+        "fulfills": {
+            "description": "The commitment which is completely or partially fulfilled by an economic event.",
+            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Commitment.json"
+        },
+        "fulfilledBy": {
+            "description": "The economic event which completely or partially fulfills a commitment.",
+            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/EconomicEvent.json"
+        },
+        "fulfilledQuantity": {
+            "description": "The quantity of the fulfillment of an event towards a commitment.",
+            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/QuantityValue.json"
+        },
+        "note": {
+            "description": "A textual comment or description.",
+            "type": "string"
+        },
+        "under": {
+            "description": "Reference to an agreement between agents which specifies the rules or policies which govern this fulfillment.",
+            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Agreement.json",
+            "$comment": "Under review."
+        }
+    },
+    "required": ["fulfills", "fulfilledQuantity", "fulfilledBy"]
+}

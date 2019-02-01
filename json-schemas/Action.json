@@ -1,0 +1,20 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "id": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Action.json",
+    "title": "Action",
+    "description": "An action verb defining the kind of event, commitment, or intent.",
+    "type": "object",
+    "properties": {
+        "label": {
+            "description": "A verb.",
+            "type": "string"
+        },
+        "behavior": {
+            "description": "The affect on an economic resource.",
+            "type": "string",
+            "enum": ["+", "-", "0"],
+            "$comment": "This is not yet defined in VF."
+        }
+    },
+    "required": ["label", "behavior"]
+}

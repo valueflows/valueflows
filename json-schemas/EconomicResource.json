@@ -1,5 +1,5 @@
 {
-    "$schema": "http://json-schema.org/draft-06/schema#",
+    "$schema": "http://json-schema.org/draft-07/schema#",
     "id": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/EconomicResource.json",
     "title": "EconomicResource",
     "description": "A resource which is useful to people or the ecosystem.",
@@ -10,12 +10,20 @@
             "type": "string"
         },
         "currentQuantity": {
-            "description": "The current amount and unit of the economic resource.",
+            "description": "The current amount and unit of the economic resource. This can be stored or derived from economic events affecting the resource.",
             "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/QuantityValue.json"
         },
-        "resourceClassifiedAs": {
-            "description": "A resource's primary classification, as part of describing that resource.",
-            "type": "string"
+        "resourceConformsTo": {
+            "description": "The primary resource knowledge specification or definition of an existing or potential resource.",
+            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/ResourceSpecification.json"
+        },
+        "classifiedAs": {
+            "description": "References a concept(s) in a common taxonomy or other classification scheme(s) for purposes of categorization.",
+            "type": "array",
+            "items": { 
+                "type": "string",
+                "$comment": "If possible, this should be a uri reference to a shared classification on the web."
+            }
         },
         "trackingIdentifier": {
             "description": "Sometimes called lot number, used for trackable batched resources. Sometimes called serial number, used when each item must have a trackable identifier (like a computer). Could also be used for other unique tracking identifiers needed for resources.",
@@ -29,14 +37,21 @@
             "description": "A textual comment or description.",
             "type": "string"
         },
+        "image": {
+            "description": "A visual representation.",
+            "type": "string",
+            "format": "uri"
+        },
         "contains": {
             "description": "Used when a stock economic resource contains items also defined as economic resources.",
-            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/EconomicResource.json"
+            "type": "array",
+            "items": { "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/EconomicResource.json" }
         },
         "underlyingResource": {
             "description": "A more concrete resource upon which a resource is based.",
             "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/EconomicResource.json"
         }
     },
-    "required": ["resourceClassifiedAs", "quantity" ]
+    "required": ["currentQuantity" ],
+    "$comment": "Either affects, resourceClassifiedAs, or resourceConformsTo is also required."
 }

@@ -1,6 +1,6 @@
 {
-    "$schema": "http://json-schema.org/draft-06/schema#",
-    "id": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Agent.json",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Agent.json",
     "title": "Agent",
     "description": "A person or group or organization with economic agency.",
     "type": "object",
@@ -10,30 +10,19 @@
             "type": "string"
         },
         "image": {
-            "type": "string", 
-            "format": "uri"
-        },
-        "url": {
+            "description": "A visual representation.",
             "type": "string", 
             "format": "uri"
         },
         "primaryLocation": {
             "description": "The main place an agent is located, often an address where activities occur and mail can be sent. This is usually a mappable geographic location.  It also could be a website address, as in the case of agents who have no physical location.",
-            "type": "object"
+            "type": "string", 
+            "format": "uri"
         },
         "note": {
             "description": "A textual comment or description.",
             "type": "string"
         },
-        "relationships": {
-            "description": "Relationships with other agents.",
-            "type": "array",
-            "items": {
-                "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/AgentRelationship.json"
-            },
-            "minItems": 1,
-            "uniqueItems": true
-        }
     },
     "required": ["name"]
 }

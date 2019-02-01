@@ -1,8 +1,8 @@
 {
-    "$schema": "http://json-schema.org/draft-06/schema#",
-    "id": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/AgentRelationship.json",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/AgentRelationship.json",
     "title": "AgentRelationship",
-    "description": "An ongoing voluntary association between 2 Agents of any kind.",
+    "description": "An ongoing voluntary association between 2 agents of any kind.",
     "type": "object",
     "properties": {
         "subject": {
@@ -10,12 +10,17 @@
             "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Agent.json"
         },
         "relationship": {
-            "description": "A kind of relationship that exists between 2 agents.",
+            "description": "The kind of relationship that exists between 2 agents.",
             "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/AgentRelationshipRole.json"
         },
         "object": {
             "description": "The object of a relationship between 2 agents.",
             "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Agent.json"
+        },
+        "inScopeOf": {
+            "description": "Grouping around something to create a boundary or context, used for documenting, accounting, planning.",
+            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/VFObject.json",
+            "$comment": "The scope can be any appropriate type of object.  This is most often an Agent, but could also be geographic or other accounting scope."
         }
     },
     "required": ["subject", "relationship", "object"]

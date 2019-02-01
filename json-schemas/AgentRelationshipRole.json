@@ -1,0 +1,22 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "id": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/AgentRelationshipRole.json",
+    "title": "AgentRelationshipRole",
+    "description": "A relationship role defining the kind of association one agent can have with another.",
+    "type": "object",
+    "properties": {
+        "label": {
+            "description": "The forward name of the relationship.",
+            "type": "string"
+        },
+        "inverseLabel": {
+            "description": "The reverse name of the relationship.",
+            "type": "string"
+        },
+        "note": {
+            "description": "A textual comment or description.",
+            "type": "string"
+        }
+    },
+    "required": ["label", "inverseLabel"]
+}

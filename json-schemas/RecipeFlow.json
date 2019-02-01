@@ -1,0 +1,35 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "id": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/RecipeFlow.json",
+    "title": "RecipeFlow",
+    "description": "The linkage between a recipe process, an action that structures a recipe, and a resource specification.",
+    "type": "object",
+    "properties": {
+        "action": {
+            "description": "Relates a flow input or output to a verb, such as consume, produce, work, improve, etc.",
+            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Action.json"
+        },
+        "resourceConformsTo": {
+            "description": "The primary resource knowledge specification or definition of an existing or potential resource.",
+            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/ResourceSpecification.json"
+        },
+        "recipeInputOf": {
+            "description": "Relates an input flow to it's node in a recipe.",
+            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Process.json"
+        },
+        "recipeOutputOf": {
+            "description": "Relates an output flow to it's node in a recipe.",
+            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Process.json"
+        },
+        "definedQuantity": {
+            "description": "The amount and unit defined for this recipe flow.",
+            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/QuantityValue.json"
+        },
+        "note": {
+            "description": "A textual comment or description.",
+            "type": "string"
+        }
+    },
+    "required": ["action", "resourceConformsTo", "definedQuantity"],
+    "$comment": "Either the recipeInputOf or recipeOutputOf is also required."
+}

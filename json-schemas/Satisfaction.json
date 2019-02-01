@@ -1,0 +1,36 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Satisfaction.json",
+    "title": "Satisfaction",
+    "description": "A commitment or economic event that partially or fully satisfies one or more intents.",
+    "type": "object",
+    "properties": {
+        "satisfies": {
+            "description": "An intent satisfied fully or partially by an economic event or commitment.",
+            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Intent.json"
+        },
+        "satisfiedBy": {
+            "description": "A commitment fully or partially satisfying an intent.",
+            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Commitment.json"
+        },
+        "satisfiedByEvent": {
+            "description": "An economic event fully or partially satisfying an intent, assumes there was not a commitment satisfying the intent.",
+            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/EconomicEvent.json"
+        },
+        "satisfiedQuantity": {
+            "description": "The quantity of the satisfaction of a commitment or economic event towards an intent.",
+            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/QuantityValue.json"
+        },
+        "note": {
+            "description": "A textual comment or description.",
+            "type": "string"
+        },
+        "under": {
+            "description": "Reference to an agreement between agents which specifies the rules or policies which govern this satisfaction.",
+            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Agreement.json",
+            "$comment": "Under review."
+        }
+    },
+    "required": ["satisfies", "satisfiedQuantity"],
+    "$comment": "Either satisfiedBy or satisfiedByEvent is also required."
+}
