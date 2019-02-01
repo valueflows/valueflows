@@ -2,7 +2,7 @@
 
 These schemas are offered for those who want to use ValueFlows but are not using Linked Open Data / Semantic Web technology.  See https://json-schema.org/ for more information.
 
-* [Action](specification/action.md)
+* [Action](specification/Action.md)
 * [AgentRelationship]
 * [AgentRelationshipRole]
 * [Appreciation]
