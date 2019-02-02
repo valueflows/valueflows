@@ -21,6 +21,7 @@
 * Steve Michel
 * Tiberius Brastaviceanu
 * Simon Tegg
+* Johannes Winter
 * Elio Qoshi
 
 #### REA assistance
