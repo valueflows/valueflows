@@ -2,16 +2,11 @@
 # https://github.com/valueflows/valueflows/wiki/Use-Cases-and-Requirements#independent-shared-therapy-studios
 
 '@context':
-  '@vocab': https://w3id.org/valueflows#
-  xsd: http://www.w3.org/2001/XMLSchema#
-  time: http://www.w3.org/2006/time#
-  time:inXSDDateTimeStamp:
-    '@type': xsd:dateTimeStamp
-  alice: https://alice.example/
-  bob: https://bob.example/
-  claudia: https://claudia.example/
-  daniel: https://daniel.example/
-  erica: https://erica.example/
+  - https://git.io/vf-examples-jsonld-context
+  - alice: https://alice.example/
+    bob: https://bob.example/
+    claudia: https://claudia.example/
+    daniel: https://daniel.example/
 
 '@graph':
 
@@ -39,40 +34,34 @@
 
   - '@id': alice:e5afaa28-1080-4912-835b-46883efb83e6
     '@type': Commitment
-    provider: alice
-    receiver: alice
+    provider: https://alice.example/
+    receiver: https://alice.example/
     action: use
     involves: alice:9120abe7-ebe3-4bfb-8ad4-60aa585a04bd
     commitedQuantity:
-      qudt:unit: unit:Unitless
+      qudt:unit: unit:Number
       qudt:numericValue: 1
     committedTime:
-      '@type': time:ProperInterval
       time:intervalStarts:
-        '@type': time:Instant
         time:inXSDDateTimeStamp: 2010-10-14T12:00:00-5:00
-      'time:intervalEnds':
-        '@type': time:Instant
+      time:intervalEnds:
         time:inXSDDateTimeStamp: 2018-10-14T16:00:00-5:00
     
 # Often Alice agrees that Daniel, Erica (or one of 7 other people) can use the studio she controls on specific times.
 
   - '@id': alice:848618bd-fdd7-43d8-8d05-1a33128372d1
     '@type': Commitment
-    provider: alice
-    receiver: daniel
+    provider: https://alice.example/
+    receiver: https://daniel.example/
     action: use
     involves: alice:9120abe7-ebe3-4bfb-8ad4-60aa585a04bd
     commitedQuantity:
-      qudt:unit: unit:Unitless
+      qudt:unit: unit:Number
       qudt:numericValue: 1
     committedTime:
-      '@type': time:ProperInterval
       time:intervalStarts:
-        '@type': time:Instant
         time:inXSDDateTimeStamp: 2010-10-14T16:00:00-5:00
-      'time:intervalEnds':
-        '@type': time:Instant
+      time:intervalEnds:
         time:inXSDDateTimeStamp: 2018-10-14T20:00:00-5:00
     
 # Sometimes Alice has to agree with Bob or Claudia that she will use one of the studios they control on specific time.
@@ -80,19 +69,16 @@
 
   - '@id': bob:838379a1-8b21-49bf-ba49-6de013c722d0
     '@type': Commitment
-    provider: bob
-    receiver: alice
+    provider: https://bob.example/
+    receiver: https://alice.example/
     action: use
     involves: bob:dbc325de-5446-4789-869d-7b0353b05136
     commitedQuantity:
-      qudt:unit: unit:Unitless
+      qudt:unit: unit:Number
       qudt:numericValue: 1
     committedTime:
-      '@type': time:ProperInterval
       time:intervalStarts:
-        '@type': time:Instant
         time:inXSDDateTimeStamp: 2010-10-14T17:00:00-5:00
-      'time:intervalEnds':
-        '@type': time:Instant
+      time:intervalEnds:
         time:inXSDDateTimeStamp: 2018-10-14T20:00:00-5:00
-    
+ 
