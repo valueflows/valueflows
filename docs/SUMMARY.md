@@ -30,6 +30,7 @@
 
 ## Specification
 
+* [Overview](specification/overview.md)
 * [External terms](specification/external-terms.md)
 * [Classes and Properties](http://www.essepuntato.it/lode/owlapi/https://raw.githubusercontent.com/valueflows/valueflows/master/release-doc-in-process/all_vf.TTL)
 
