@@ -1,12 +1,8 @@
 '@context':
-  '@vocab': https://w3id.org/valueflows#
-  xsd: http://www.w3.org/2001/XMLSchema#
-  time: http://www.w3.org/2006/time#
-  time:inXSDDateTimeStamp:
-    '@type': xsd:dateTimeStamp
-  elf: https://elf-pavlik.hackers4peace.net/
-  tashirat: https://tashirat.com/
-  notary: https://notary.example
+  - https://git.io/vf-examples-jsonld-context
+  - elf: https://elf-pavlik.hackers4peace.net/
+    tashirat: https://tashirat.com/
+    notary: https://notary.example
 
 '@graph':
 
@@ -21,70 +17,64 @@
   - '@id': tashirat:953b40f2-4e47-4486-afb2-402512f5269c
     '@type': Commitment
     under: notary:40bb78fe-28df-41a6-b698-525fa9d411d6
-    provider: tashirat
-    recipient: elf
-    action: lend
+    provider: https://tashirat.example/
+    recipient: https://elf-pavlik.hackers4peace.net/
+    action: use
     involves: tashirat:2402b57c-1c45-423a-acb2-f50961c97d65
     committedQuantity:
-      qudt:unit: unit:Unitless
+      qudt:unit: unit:Number
       qudt:numericValue: 1
     committedTime:
-      '@type': time:ProperInterval
       time:intervalStarts:
-        '@type': time:Instant
         time:inXSDDateTimeStamp: 2018-12-29T00:00:00-5:00
-      'time:intervalEnds':
-        '@type': time:Instant
+      time:intervalEnds:
         time:inXSDDateTimeStamp: 2019-12-28T00:00:00-5:00
 
   - '@id': elf:18520fad-4443-4c55-8f76-67738b839950
     '@type': Commitment
     under: notary:40bb78fe-28df-41a6-b698-525fa9d411d6
-    provider: elf
-    recipient: tashirat
-    action: issue
+    provider: https://elf-pavlik.hackers4peace.net/
+    recipient: https://tashirat.example/
+    action: receive
     resourceClassifiedAs: http://www.wikidata.org/entity/Q4730 # Mexican peso
     committedQuantity:
-      qudt:unit: unit:Unitless
+      qudt:unit: unit:Number
       qudt:numericValue: 3000
     committedTime:
-      '@type': time:ProperInterval
-      'time:intervalEnds':
-        '@type': time:Instant
+      time:intervalEnds:
         time:inXSDDateTimeStamp: 2019-01-05T00:00:00-5:00
 
   - '@id': elf:99bc3e4e-79a6-4b52-a178-8075a268f0df
     '@type': Commitment
     under: notary:40bb78fe-28df-41a6-b698-525fa9d411d6
-    provider: elf
-    recipient: tashirat
-    action: issue
+    provider: https://elf-pavlik.hackers4peace.net/
+    recipient: https://tashirat.example/
+    action: receive
     resourceClassifiedAs: http://www.wikidata.org/entity/Q4730 # Mexican peso
     committedQuantity:
-      qudt:unit: unit:Unitless
+      qudt:unit: unit:Number
       qudt:numericValue: 3000
     committedTime:
-      '@type': time:ProperInterval
-      'time:intervalEnds':
-        '@type': time:Instant
+      time:intervalEnds:
         time:inXSDDateTimeStamp: 2019-02-05T00:00:00-5:00
 
   # 10 more Commitments for MXN payments Mar - Dec
 
+  # recording occupation of bungalow
+
   - '@id': elf:7dd207e3-8f11-4fe3-95f8-d02f6c180be3
     '@type': EconomicEvent
+    skos:note: full year of usage
     under: notary:40bb78fe-28df-41a6-b698-525fa9d411d6
-    provider: tashirat
-    recipient: elf
-    action: lend
+    provider: https://tashirat.example/
+    recipient: https://elf-pavlik.hackers4peace.net/
+    action: use
     involves: tashirat:2402b57c-1c45-423a-acb2-f50961c97d65
-    observedQuantity:
-      qudt:unit: unit:Unitless
+    affectedQuantity:
+      qudt:unit: unit:Number
       qudt:numericValue: 1
     observedTime:
-      '@type': time:ProperInterval
       time:intervalStarts:
-        '@type': time:Instant
         time:inXSDDateTimeStamp: 2018-12-29T00:00:00-5:00
 
   - '@id': elf:6b5bc786-b9ed-4189-b34f-5ef7d10f1f86
@@ -93,22 +83,23 @@
     fulfilledBy: elf:7dd207e3-8f11-4fe3-95f8-d02f6c180be3
     fulfills: tashirat:953b40f2-4e47-4486-afb2-402512f5269c
     fulfilledQuantity:
-      qudt:unit: unit:Unitless
+      qudt:unit: unit:Number
       qudt:numericValue: 1
     # TODO fulfilled duration
+
+  # recording currency operations
 
   - '@id': elf:27be5cab-d740-4194-9298-1661a69d9d95
     '@type': EconomicEvent
     under: notary:40bb78fe-28df-41a6-b698-525fa9d411d6
-    provider: elf
-    recipient: tashirat
-    action: issue
+    provider: https://elf-pavlik.hackers4peace.net/
+    recipient: https://tashirat.example/
+    action: receive
     resourceClassifiedAs: http://www.wikidata.org/entity/Q4730 # Mexican peso
-    observedQuantity:
-      qudt:unit: unit:Unitless
+    affectedQuantity:
+      qudt:unit: unit:Number
       qudt:numericValue: 3000
     observedTime:
-      '@type': time:Instant
       time:inXSDDateTimeStamp: 2019-01-04T14:25:00-5:00
 
   - '@id': elf:40df0092-5455-4507-83fc-7f3d64538163
@@ -117,28 +108,27 @@
     fulfilledBy: elf:27be5cab-d740-4194-9298-1661a69d9d95
     fulfills: tashirat:99bc3e4e-79a6-4b52-a178-8075a268f0df
     fulfilledQuantity:
-      qudt:unit: unit:Unitless
+      qudt:unit: unit:Number
       qudt:numericValue: 3000
 
-
-  ## recording usage of bungalow
+  ## recording stays at bungalow
 
   - '@id': elf:f12fc3b7-1033-4da0-85fd-a378b4cfb36f
     '@type': EconomicEvent
     skos:note: one month stay at the bungalow
     action: use
     affects: tashirat:2402b57c-1c45-423a-acb2-f50961c97d65
-    observedQuantity:
-      qudt:unit: unit:Unitless
+    includedIn: elf:7dd207e3-8f11-4fe3-95f8-d02f6c180be3
+    affectedQuantity:
+      qudt:unit: unit:Number
       qudt:numericValue: 1
     observedTime:
-      '@type': time:ProperInterval
       time:intervalStarts:
-        '@type': time:Instant
         time:inXSDDateTimeStamp: 2018-12-29T00:00:00-5:00
-      'time:intervalEnds':
-        '@type': time:Instant
+      time:intervalEnds:
         time:inXSDDateTimeStamp: 2019-01-20T00:00:00-5:00
+
+  ## recording working sessions at bungalow
 
   - '@id': elf:ee652454-ac08-4f5d-ae84-6b1753887086
     '@type': Process
@@ -150,15 +140,14 @@
     action: use
     affects: tashirat:2402b57c-1c45-423a-acb2-f50961c97d65
     inputOf: elf:ee652454-ac08-4f5d-ae84-6b1753887086
-    includedIn: elf:f12fc3b7-1033-4da0-85fd-a378b4cfb36f
-    observedQuantity:
-      qudt:unit: unit:Unitless
+    includedIn:
+      - elf:d37c5210-97f2-41c4-8741-a46677da3e03
+      - elf:7dd207e3-8f11-4fe3-95f8-d02f6c180be3
+    affectedQuantity:
+      qudt:unit: unit:Number
       qudt:numericValue: 1
     observedTime:
-      '@type': time:ProperInterval
       time:intervalStarts:
-        '@type': time:Instant
         time:inXSDDateTimeStamp: 2019-01-02T10:30:00-5:00
-      'time:intervalEnds':
-        '@type': time:Instant
+      time:intervalEnds:
         time:inXSDDateTimeStamp: 2019-01-02T14:00:00-5:00
