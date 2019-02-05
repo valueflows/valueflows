@@ -1,0 +1,134 @@
+# Example: Scheduling - work as a time-based resource
+
+'@context':
+  - https://git.io/vf-examples-jsonld-context
+  - alice: https://alice.example/
+    mfg: https://manufacturing.example/
+    fablab: https://fablab.example/
+
+'@id': rgh:valueflows/valueflows/master/examples/work.yaml
+'@graph':
+
+
+  # mfg requests someone to do 8 hours of 3D printing sometime on Oct 14 and/or 15th
+
+  - '@id': mfg:8e5fe80d-a769-4bd5-89e5-2136d33eab9s
+    '@type': Intent
+    action: work
+    receiver: https://manufacturing.example/
+    resourceClassifiedAs: https://www.wikidata.org/wiki/Q229367 # 3D printing (as a type of work or skill)
+    intendedQuantity:
+      qudt:unit: unit:Hour
+      qudt:numericValue: 8
+    intendedTime:
+      '@type': time:ProperInterval
+      time:intervalStarts:
+        '@type': time:Instant
+        time:inXSDDateTimeStamp: 2018-10-14T8:00:00-5:00
+      time:intervalEnds:
+        '@type': time:Instant
+        time:inXSDDateTimeStamp: 2018-10-15T18:00:00-5:00
+
+  # alice offers that she can provide 3D printing work per her calendar
+
+  - '@id': alice:9bd19194-a36d-4a1f-896b-8082887962ca
+    '@type': Intent
+    action: work
+    provider: https://alice.example/
+    resourceClassifiedAs: mfg:https://www.wikidata.org/wiki/Q229367 # 3D printing (as a type of work or skill)
+    calendar: https://alice.example/calendar-3D/
+
+  # alice finds the mfg request while she is searching for matches to her general offer
+  # she commits to do 3D printing work for the mfg project on Oct 14 sometime between 8h and 18h
+  # alice's calendar then will show her as unavailable during that time
+
+  - '@id': alice:33e8933b-ff73-4a01-964a-ca7a98893082
+    '@type': Commitment
+    action: work
+    provider: https://alice.example/
+    receiver: https://manufacturing.example/
+    resourceClassifiedAs: https://www.wikidata.org/wiki/Q229367 # 3D printing (as a type of work or skill)
+    committedQuantity:
+      qudt:unit: unit:Hour
+      qudt:numericValue: 8
+    committedTime:
+      '@type': time:ProperInterval
+      time:intervalStarts:
+        '@type': time:Instant
+        time:inXSDDateTimeStamp: 2018-10-14T8:00:00-5:00
+      time:intervalEnds:
+        '@type': time:Instant
+        time:inXSDDateTimeStamp: 2018-10-14T18:00:00-5:00
+
+  - '@id': mfg:6078f30a-b15b-4b1c-8e77-797abae11377
+    '@type': Satisfaction
+    satisfies: mfg:8e5fe80d-a769-4bd5-89e5-2136d33eab9s # mfg's intent (a request)
+    satisfiedBy: alice:33e8933b-ff73-4a01-964a-ca7a98893082 # the commitment
+    satisfiedQuantity:
+      qudt:unit: unit:Hour
+      qudt:numericValue: 8
+
+  - '@id': mfg:583e83d9-a46d-44ff-bd71-88513a1d83c9
+    '@type': Satisfaction
+    satisfies: alice:9bd19194-a36d-4a1f-896b-8082887962ca # alice's intent (an offer)
+    satisfiedBy: alice:33e8933b-ff73-4a01-964a-ca7a98893082 # the commitment
+    satisfiedQuantity:
+      qudt:unit: unit:Hour
+      qudt:numericValue: 8
+
+  # alice does the work on Oct 14 from 8h to 16h, completing the sequence
+
+  - '@id': mfg:60f4204e-b8d2-4026-8577-102c3f82c0ad
+    '@type': EconomicEvent
+    action: work
+    provider: https://alice.example/
+    receiver: https://manufacturing.example/
+    resourceClassifiedAs: https://www.wikidata.org/wiki/Q229367 # 3D printing (as a type of work or skill)
+    observedQuantity:
+      qudt:unit: unit:Hour
+      qudt:numericValue: 8
+    observedTime:
+      '@type': time:ProperInterval
+      time:intervalStarts:
+        '@type': time:Instant
+        time:inXSDDateTimeStamp: 2018-10-14T8:00:00-5:00
+      time:intervalEnds:
+        '@type': time:Instant
+        time:inXSDDateTimeStamp: 2018-10-14T16:00:00-5:00
+
+  - '@id': mfg:e56fd654-7b94-4d96-8e60-de39e08329a6
+    '@type': Fulfillment
+    fulfills: alice:33e8933b-ff73-4a01-964a-ca7a98893082 # the commitment
+    fulfilledBy: mfg:60f4204e-b8d2-4026-8577-102c3f82c0ad # the economic event
+    fulfilledQuantity:
+      qudt:unit: unit:Hour
+      qudt:numericValue: 8
+
+  # later on fablab finds alice's calendar and commits to make use of her skills during an available slot
+  # alice's calendar then shows her as unavailable during that slot
+
+  - '@id': fablab:86ad6e22-7640-4b93-972a-db7177ab2615
+    '@type': Commitment
+    action: work
+    provider: https://alice.example/
+    receiver: https://fablab.example/
+    resourceClassifiedAs: https://www.wikidata.org/wiki/Q229367 # 3D printing (as a type of work or skill)
+    committedQuantity:
+      qudt:unit: unit:Hour
+      qudt:numericValue: 6
+    committedTime:
+      '@type': time:ProperInterval
+      time:intervalStarts:
+        '@type': time:Instant
+        time:inXSDDateTimeStamp: 2018-12-07T9:00:00-5:00
+      time:intervalEnds:
+        '@type': time:Instant
+        time:inXSDDateTimeStamp: 2018-12-07T15:00:00-5:00
+
+  - '@id': mfg:d4d2fd71-34f2-41c3-b1c5-19ad5ed2da59
+    '@type': Satisfaction
+    satisfies: alice:9bd19194-a36d-4a1f-896b-8082887962ca # alice's intent (an offer)
+    satisfiedBy: fablab:86ad6e22-7640-4b93-972a-db7177ab26158 # the commitment
+    satisfiedQuantity:
+      qudt:unit: unit:Hour
+      qudt:numericValue: 6
