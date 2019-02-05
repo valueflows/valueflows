@@ -1,0 +1,85 @@
+# Example: Scheduling - simple use of a time-based resource
+
+'@context':
+  - https://git.io/vf-examples-jsonld-context
+  - alice: https://alice.example/
+    fablab: https://fablab.example/
+
+'@id': rgh:valueflows/valueflows/master/examples/use.yaml
+'@graph':
+
+  # this 3D printer is a resource located at the fablab
+
+  - '@id': fablab:fdf65158-0223-4740-8ace-5323baa9fd06
+    '@type': EconomicResource
+    classifiedAs: https://www.wikidata.org/wiki/Q27000417 # Hephestos model 3D printer
+    trackingIdentifier: HEPH-89944201
+    currentQuantity:
+      qudt:unit: unit:Number
+      qudt:numericValue: 1
+
+  # use of the 3D printer is offered to the community by the fablab
+
+  - '@id': fablab:3584c5eb-5b15-4c71-853e-0470fc34bbca
+    '@type': Intent
+    action: use
+    provider: https://fablab.example/
+    resourceClassifiedAs: https://www.wikidata.org/wiki/Q27000417 # Hephestos model 3D printer
+    calendar: https://fablab.example/HEPH/calendar/
+
+  # alice commits to using the 3D printer using the fablab's calendar
+  # fablab's calendar then shows the 3D printer as unavailable during that time interval
+
+  - '@id': alice:9396d2d1-ded3-4b1c-8144-1c024e641039
+    '@type': Commitment
+    action: use
+    provider: https://fablab.example/
+    receiver: https://alice.example/
+    involves: fablab:fdf65158-0223-4740-8ace-5323baa9fd06 # the specific Hephestos model 3D printer
+    committedQuantity:
+      qudt:unit: unit:Hour
+      qudt:numericValue: 6
+    committedTime:
+      '@type': time:ProperInterval
+      time:intervalStarts:
+        '@type': time:Instant
+        time:inXSDDateTimeStamp: 2018-12-07T9:00:00-5:00
+      time:intervalEnds:
+        '@type': time:Instant
+        time:inXSDDateTimeStamp: 2018-12-07T15:00:00-5:00
+
+  - '@id': fablab:c404cff5-19c7-453d-b0d8-d8e96055bd0c
+    '@type': Satisfaction
+    satisfies: fablab:3584c5eb-5b15-4c71-853e-0470fc34bbca # fablab's intent (an offer)
+    satisfiedBy: alice:9396d2d1-ded3-4b1c-8144-1c024e641039 # the commitment
+    satisfiedQuantity:
+      qudt:unit: unit:Hour
+      qudt:numericValue: 6
+
+  # alice comes to the fablab as scheduled and uses the printer
+
+  - '@id': fablab:856c43b1-0a63-445f-a56f-707b257f086d
+    '@type': EconomicEvent
+    action: use
+    provider: https://fablab.example/
+    receiver: https://alice.example/
+    involves: fablab:fdf65158-0223-4740-8ace-5323baa9fd06 # the specific Hephestos model 3D printer
+    observedQuantity:
+      qudt:unit: unit:Hour
+      qudt:numericValue: 6
+    observedTime:
+      '@type': time:ProperInterval
+      time:intervalStarts:
+        '@type': time:Instant
+        time:inXSDDateTimeStamp: 2018-12-07T9:00:00-5:00
+      time:intervalEnds:
+        '@type': time:Instant
+        time:inXSDDateTimeStamp: 2018-12-07T15:00:00-5:00
+
+  - '@id': fablab:9cb4944b-d26d-4774-a530-d18f2747c0d8
+    '@type': Fulfillment
+    fulfills: alice:9396d2d1-ded3-4b1c-8144-1c024e641039 # the commitment
+    fulfilledBy: fablab:856c43b1-0a63-445f-a56f-707b257f086d # the economic event
+    fulfilledQuantity:
+      qudt:unit: unit:Hour
+      qudt:numericValue: 6
