@@ -5,6 +5,7 @@
   - alice: https://alice.example/
     mfg: https://manufacturing.example/
     fablab: https://fablab.example/
+    org: https://organization.example/
 
 '@id': rgh:valueflows/valueflows/master/examples/work.yaml
 '@graph':
@@ -24,7 +25,7 @@
       '@type': time:ProperInterval
       time:intervalStarts:
         '@type': time:Instant
-        time:inXSDDateTimeStamp: 2018-10-14T8:00:00-5:00
+        time:inXSDDateTimeStamp: 2018-10-14T08:00:00-5:00
       time:intervalEnds:
         '@type': time:Instant
         time:inXSDDateTimeStamp: 2018-10-15T18:00:00-5:00
@@ -55,7 +56,7 @@
       '@type': time:ProperInterval
       time:intervalStarts:
         '@type': time:Instant
-        time:inXSDDateTimeStamp: 2018-10-14T8:00:00-5:00
+        time:inXSDDateTimeStamp: 2018-10-14T08:00:00-5:00
       time:intervalEnds:
         '@type': time:Instant
         time:inXSDDateTimeStamp: 2018-10-14T18:00:00-5:00
@@ -91,7 +92,7 @@
       '@type': time:ProperInterval
       time:intervalStarts:
         '@type': time:Instant
-        time:inXSDDateTimeStamp: 2018-10-14T8:00:00-5:00
+        time:inXSDDateTimeStamp: 2018-10-14T08:00:00-5:00
       time:intervalEnds:
         '@type': time:Instant
         time:inXSDDateTimeStamp: 2018-10-14T16:00:00-5:00
@@ -132,3 +133,24 @@
     satisfiedQuantity:
       qudt:unit: unit:Hour
       qudt:numericValue: 6
+
+  # alice also does facilitation work for an organization during her spare time, as needed
+  # this work is not scheduled, and she reports that work by the month
+
+  - '@id': org:e4783bef-9006-490c-9c03-389272c7444c
+    '@type': EconomicEvent
+    action: work
+    provider: https://alice.example/
+    receiver: https://org.example/
+    resourceClassifiedAs: https://www.wikidata.org/wiki/Q3064143 # facilitation (as a type of work or skill)
+    observedQuantity:
+      qudt:unit: unit:Hour
+      qudt:numericValue: 21.5
+    observedTime:
+      '@type': time:ProperInterval
+      time:intervalStarts:
+        '@type': time:Instant
+        time:inXSDDateTimeStamp: 2018-10-01T00:00:00-5:00
+      time:intervalEnds:
+        '@type': time:Instant
+        time:inXSDDateTimeStamp: 2018-10-31T23:59:59-5:00
