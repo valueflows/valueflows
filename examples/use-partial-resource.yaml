@@ -42,7 +42,7 @@
     observedQuantity: # hours of use of the 3 drills
       qudt:unit: unit:Hour
       qudt:numericValue: 3.5
-    affectedQuantity: # portion of the stock resource that is used
+    usedQuantity: # portion of the stock resource that is used
       qudt:unit: unit:Number
       qudt:numericValue: 3
     observedTime: # the 3 drills are unavailable during this time
