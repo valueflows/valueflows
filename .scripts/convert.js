@@ -43,6 +43,9 @@ const serializerNtriples = new SerializerNtriples()
   // write Turtle
   fs.writeFileSync(cli.flags.outDir + '/vf.ttl', vfTurtle)
 
+  // write Trig
+  fs.writeFileSync(cli.flags.outDir + '/vf.trig', vfTurtle)
+
   // write JSON-LD
   let vf = store.match(null, null, null, null)
   const outputJsonld = serializerJsonld.import(vf)
@@ -56,4 +59,7 @@ const serializerNtriples = new SerializerNtriples()
   let vfNtriples = ''
   await done(outputNtriples.on('data', ntriples => vfNtriples += ntriples.toString()))
   fs.writeFileSync(cli.flags.outDir + '/vf.nt', vfNtriples)
+
+  // write N-Quads
+  fs.writeFileSync(cli.flags.outDir + '/vf.nq', vfNtriples)
 })()
