@@ -23,13 +23,13 @@
     '@type': EconomicResource
     resourceClassifiedAs: https://www.wikidata.org/wiki/Q2554326 # travel distance
     underlyingResource: taxi:6405b8ad-0ac2-4d58-abdb-0808903c78ac # the taxi itself
-    unit:Kilometer
+    specifiedUnit: unit:Kilometer
 
   - '@id': taxi:9f112621-3f13-4f48-a3e2-fd2ca99493cc
     '@type': EconomicResource
     resourceClassifiedAs: https://www.wikidata.org/wiki/Q2878182 # idle time
     underlyingResource: taxi:6405b8ad-0ac2-4d58-abdb-0808903c78ac # the taxi itself
-    unit:Minutes
+    specifiedUnit: unit:Minutes
 
   # the taxi transports a person
 

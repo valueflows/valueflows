@@ -22,7 +22,7 @@
   - '@id': alice:a4ceeeff-0cfd-40e8-84e9-be64b3cf8cc6 # alice can have different resources for her labor power
     '@type': EconomicResource
     resourceClassifiedAs: https://www.wikidata.org/wiki/Q3064143 # facilitation (as a type of work or skill)
-    unit: Month
+    specifiedUnit: unit:Month
     provider: https://alice.example/
 
   # mfg requests someone to do 8 hours of 3D printing sometime on Oct 14 and/or 15th
