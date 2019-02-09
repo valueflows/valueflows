@@ -105,10 +105,10 @@
       qudt:unit: unit:Hour
       qudt:numericValue: 8
 
-  # later on fablab finds alice's calendar and commits to make use of her skills during an available slot
-  # alice's calendar then shows her as unavailable during that slot
+  # later on fablab finds alice's calendar and requests to make use of her skills during an available slot
+  # alice commits, and alice's calendar then shows her as unavailable during that slot
 
-  - '@id': fablab:86ad6e22-7640-4b93-972a-db7177ab2615
+  - '@id': alice:86ad6e22-7640-4b93-972a-db7177ab2615
     '@type': Commitment
     action: work
     provider: https://alice.example/
@@ -126,10 +126,10 @@
         '@type': time:Instant
         time:inXSDDateTimeStamp: 2018-12-07T15:00:00-5:00
 
-  - '@id': mfg:d4d2fd71-34f2-41c3-b1c5-19ad5ed2da59
+  - '@id': alice:d4d2fd71-34f2-41c3-b1c5-19ad5ed2da59
     '@type': Satisfaction
     satisfies: alice:9bd19194-a36d-4a1f-896b-8082887962ca # alice's intent (an offer)
-    satisfiedBy: fablab:86ad6e22-7640-4b93-972a-db7177ab26158 # the commitment
+    satisfiedBy: alice:86ad6e22-7640-4b93-972a-db7177ab26158 # the commitment
     satisfiedQuantity:
       qudt:unit: unit:Hour
       qudt:numericValue: 6

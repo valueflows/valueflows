@@ -17,6 +17,7 @@
     currentQuantity:
       qudt:unit: unit:Number
       qudt:numericValue: 10
+    unitOfUse: unit:Hour
 
   - '@id': carpenters:8791913c-0152-4c32-bb3f-f25d61df736b
     '@type': EconomicResource
@@ -25,6 +26,7 @@
     currentQuantity:
       qudt:unit: unit:Number
       qudt:numericValue: 1
+    unitOfUse: unit:Hour
 
   # the carpenters are working on a process
 
