@@ -46,6 +46,7 @@ vf:RecipeProcess a          owl:Class ;
 
 vf:RecipeFlow a             owl:Class ;
         rdfs:label          "vf:RecipeFlow" ;
+        rdfs:subClassOf     time:TemporalEntity ;
         vs:term_status      "unstable" ;
         rdfs:comment        "The linkage between a process recipe, an action that structures a recipe, and a resource specification." .
 
@@ -54,11 +55,13 @@ vf:RecipeFlow a             owl:Class ;
 
 vf:Intent  a                owl:Class ;
         rdfs:label          "vf:Intent" ;
+        rdfs:subClassOf     time:TemporalEntity ;
         vs:term_status      "unstable" ;
         rdfs:comment        "A planned economic flow, which can lead to economic events (sometimes through commitments)" .
 
 vf:Commitment  a            owl:Class ;
         rdfs:label          "vf:Commitment" ;
+        rdfs:subClassOf     time:TemporalEntity ;
         vs:term_status      "testing" ;
         rdfs:comment        "A planned economic flow that has been promised by an agent to another agent." .
 
@@ -94,6 +97,7 @@ vf:EconomicResource  a      owl:Class ;
 
 vf:Process  a               owl:Class ;
         rdfs:label          "vf:Process" ;
+        rdfs:subClassOf     time:TemporalEntity ;
         vs:term_status      "testing" ;
         rdfs:comment        "An activity that changes inputs into outputs.  It could transform or transport economic resource(s)." .
 
@@ -104,6 +108,7 @@ vf:Transfer  a              owl:Class ;
 
 vf:EconomicEvent  a         owl:Class ;
         rdfs:label          "vf:EconomicEvent" ;
+        rdfs:subClassOf     time:TemporalEntity ;
         vs:term_status      "testing" ;
         rdfs:comment        "An observed economic flow, as opposed to a flow planned to happen in the future. This could reflect a change in the quantity of an economic resource. It is also defined by its behavior in relation to the economic resource (see vf:action)" .
 
@@ -346,34 +351,6 @@ vf:primaryLocation a        owl:ObjectProperty ;
         #rdfs:range          vf:Location ;
         vs:term_status      "unstable" ;
         rdfs:comment        "The main place an agent is located, often an address where activities occur and mail can be sent. This is usually a mappable geographic location.  It also could be a website address, as in the case of agents who have no physical location." .
-
-vf:observedTime a           owl:ObjectProperty ;
-        rdfs:label          "observed time" ;
-        rdfs:domain         vf:EconomicEvent ;
-        rdfs:range          time:TemporalEntity ;
-        vs:term_status      "unstable" ;
-        rdfs:comment        "The actual temporal instant or interval." .
-
-vf:committedTime a          owl:ObjectProperty ;
-        rdfs:label          "committed time" ;
-        rdfs:domain         vf:Commitment ;
-        rdfs:range          time:TemporalEntity ;
-        vs:term_status      "unstable" ;
-        rdfs:comment        "The promised temporal instant or interval." .
-
-vf:intendedTime a           owl:ObjectProperty ;
-        rdfs:label          "intended time" ;
-        rdfs:domain         vf:Intent ;
-        rdfs:range          time:TemporalEntity ;
-        vs:term_status      "unstable" ;
-        rdfs:comment        "The intended temporal instant or interval." .
-
-vf:plannedTime a            owl:ObjectProperty ;
-        rdfs:label          "planned time" ;
-        rdfs:domain         vf:Process ;
-        rdfs:range          time:TemporalEntity ;
-        vs:term_status      "unstable" ;
-        rdfs:comment        "The planned or estimated calendar time the process will take (whether being actually worked or not)." .
 
 vf:image a                  owl:DatatypeProperty ;
         vs:term_status      "unstable" ;
