@@ -44,7 +44,7 @@
         '@type': time:Instant
         time:inXSDDateTimeStamp: 2018-10-15T18:00:00-5:00
 
-  # alice offers that she can provide 3D printing work per her calendar
+  # alice offers that she can provide 3D printing work per availability on her calendar
 
   - '@id': alice:9bd19194-a36d-4a1f-896b-8082887962ca
     '@type': Intent
@@ -54,7 +54,7 @@
 
   # alice finds the mfg request while she is searching for matches to her general offer
   # she commits to do 3D printing work for the mfg project on Oct 14 sometime between 8h and 18h
-  # alice's calendar then will show her as unavailable during that time
+  # alice's calendar then will show her as unavailable during that time, with commute time added in
 
   - '@id': alice:33e8933b-ff73-4a01-964a-ca7a98893082
     '@type': Commitment
@@ -120,7 +120,7 @@
 
   # later on fablab finds alice's calendar and asks for her skills during an available slot
   # alice commits to doing the work
-  # alice's calendar then shows her as unavailable during that slot
+  # alice's calendar then shows her as unavailable during that slot, with commute time added in
 
   - '@id': alice:86ad6e22-7640-4b93-972a-db7177ab2615
     '@type': Commitment
