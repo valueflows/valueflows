@@ -10,27 +10,27 @@ And we want knowledge to be freely available.
 
 Also, we prefer to think of use value, but economic resources also often have exchange value.
 
-#### The difference between a resource and its category or model (names TBD)
+#### The difference between a resource and its specification or classification
 
-An economic resource is observable.  Its category or model defines what type of thing the vf:Resource is.
+An economic resource is observable.  Its specification or classification defines what type of thing the economic resource is.
 
-So, for example, most things offered for sale on an e-commerce site are models, which can be searched using categories.
+So, for example, most things offered for sale on an e-commerce site are specifications, which can be searched using classifications.
 The one in a box delivered to your door is a resource.
 
 Or the description of the book entitled "The Power of Babel: A Natural History of Language", ISBN ISBN-13: 978-0060520854,
-is a model. Your library may have two copies that you can check out. Those are resources.
+is a specification. Your library may have two copies that you can check out. Those are resources.
 
-Resource categories are a Taxonomy. That means they can be defined very broadly and generally and maybe vaguely, or they can be defined very narrowly, but fit into broader categories. 
+Resource classifications are a Taxonomy. That means they can be defined very broadly and generally and maybe vaguely, or they can be defined very narrowly, but fit into broader classifications. 
 
 So, for example, you may want an apple. Or you may want a green apple. Or you may want a Granny Smith apple.
 
-Or, Herb is the parent category of Anise Hyssop, Goldenrod, Nettles, Red Clover, etc.  Besides its usefulness in understanding taxonomies of resource types, this can be useful when one can define a general recipe that will work for many more specific types of resources.
+Or, Herb is the parent classification of Anise Hyssop, Goldenrod, Nettles, Red Clover, etc.  Besides its usefulness in understanding taxonomies of resource types, this can be useful when one can define a general recipe that will work for many more specific kinds of resources.
 
 People can use the multitude of existing taxonomies for resources, or can also create their own as needed.
 
 #### Identification and Behaviors of Resources
 
-Here are three different types of resources from the viewpoint of identification:
+Here are three different kinds of resources from the viewpoint of identification:
 a) serialized resources, where each individual instance has a unique identifier,
 b) lot-controlled resources, where each lot or batch has a unique identifier, but the lot or batch may contain many individual instances, and
 c) count or volume or stock resources, where individual instances are indistinguishable, or in the case of fluids, only exist on a molecular level.
@@ -41,7 +41,7 @@ Moreover, identification of resources will depend on context and purpose. We wan
 
 And then in the "independent view", for larger-scale analysis of resource flows, or for example for lot tracking for public health issues like mad cow disease, different combinations of properties might be needed.
 
-Substitutability: This defines if any resources of that type can be freely substituted for any other resource of that type when used, consumed, traded, etc.  For example, "B9R-1-red DLP resin photopolymer" is probably a substitutable resource type.  While each resource for a resource type called "English-Spanish translation" is probably not substitutable because each will be a different document.
+Substitutability: This defines if any resources of that specification or classification can be freely substituted for any other resource of that same specification or classification when used, consumed, traded, etc.  For example, "B9R-1-red DLP resin photopolymer" is probably substitutable.  While each resource for a resource classification called "English-Spanish translation" is probably not substitutable because each will be a different document.
 
 #### Inventory
 
@@ -64,7 +64,7 @@ Note in the last case, a transfer of rights means a different resource. This is 
 
 #### How resources relate to events
 
-In the REA ontology, an Economic Event is a change in the quantity or in the rights to an Economic Resource performed by Economic Agents. An event is also defined by its behavior in relation to the resource and a process or transfer (consume, use, produce, give, etc.).
+In the original REA ontology, an Economic Event is a change in the quantity or in the rights to an Economic Resource performed by Economic Agents. An event is also defined by its behavior in relation to the resource and a process or transfer (consume, use, produce, give, etc.).
 
 Some people use the terms "stock" and "stock flow".  A stock is a resource; a stock flow is an event. (The term stock is too limiting, since a resource could be digital, like a document or media file.)
 
@@ -78,13 +78,13 @@ For serialized or uniquely identified resources, if the logical and technical un
 
 This occurs when a resource is basically certain defined rights to another resource. It is often useful to define the rights as a different resource for purposes of processes or exchanges.
 
-One example: a resource which defines the rental of an apartment has the apartment itself as its underlying resource.  Another example: a virtual account resource can have an actual bank account as its underlying resource.
+One example: a resource which defines the rental of an apartment has the apartment itself as its underlying resource.
 
 ##### Contains resource
 
 Unlike underlying resource, if one resource contains other resources, the contained resources are part of, or make up the larger resource.
 
-For example, a bank account might contain a number of "virtual accounts" that a group manages itself, outside the bank's knowledge.  Or, a bike shed might contain 10 bikes, which are identified and tracked by their serial numbers as individual resources.
+For example, a bank account might contain a number of "virtual accounts" that a group manages itself, outside the bank's knowledge.  Or, a bike shed resource might contain 10 bikes, which are identified and tracked by their serial numbers as individual resources.
 
 ## Examples
 
