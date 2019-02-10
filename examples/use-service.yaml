@@ -5,7 +5,7 @@
   - alice: https://alice.example/
     taxi: https://taxi-coop.example/
 
-'@id': rgh:valueflows/valueflows/master/examples/taxi.yaml
+'@id': rgh:valueflows/valueflows/master/examples/use-service.yaml
 '@graph':
 
 
@@ -21,15 +21,9 @@
 
   - '@id': taxi:e02e3f6b-420a-4ba8-89b0-909d7363ce06
     '@type': EconomicResource
-    resourceClassifiedAs: https://www.wikidata.org/wiki/Q2554326 # travel distance
+    resourceClassifiedAs: https://www.wikidata.org/wiki/Q1724915 # use of a resource
     underlyingResource: taxi:6405b8ad-0ac2-4d58-abdb-0808903c78ac # the taxi itself
     specifiedUnit: unit:Kilometer
-
-  - '@id': taxi:9f112621-3f13-4f48-a3e2-fd2ca99493cc
-    '@type': EconomicResource
-    resourceClassifiedAs: https://www.wikidata.org/wiki/Q2878182 # idle time
-    underlyingResource: taxi:6405b8ad-0ac2-4d58-abdb-0808903c78ac # the taxi itself
-    specifiedUnit: unit:Minutes
 
   # the taxi transports a person
 
@@ -51,8 +45,47 @@
     action: use
     provider: https://taxi.example/
     receiver: https://taxi.example/
-    affects: taxi:e02e3f6b-420a-4ba8-89b0-909d7363ce06 #taxi mileage resource
-    observedQuantity: # distance of the ride
+    affects: taxi:e02e3f6b-420a-4ba8-89b0-909d7363ce06 #taxi usage resource
+    observedQuantity: # distance the taxi travelled, including on the way to the person
+      qudt:unit: unit:Kilometer
+      qudt:numericValue: 28
+    observedTime: # time of the ride including time looking or waiting before the ride
+      '@type': time:ProperInterval
+      time:intervalStarts:
+        '@type': time:Instant
+        time:inXSDDateTimeStamp: 2018-10-14T08:30:00-5:00
+      time:intervalEnds:
+        '@type': time:Instant
+        time:inXSDDateTimeStamp: 2018-10-14T09:15:00-5:00
+
+  - '@id': taxi:8791913c-0152-4c32-bb3f-f25d61df736c
+    '@type': EconomicEvent
+    outputOf: taxi:e18c808c-929a-450d-9d0d-3b3f531bc125 # the transportation process
+    action: service
+    provider: https://taxi.example/
+    receiver: https://alice.example/
+    resourceClassifiedAs: https://www.wikidata.org/wiki/Q41222493 # taxi service
+    observedQuantity: # the service delivered
+      qudt:unit: unit:Number
+      qudt:numericValue: 1
+    contains: [ taxi: e72f7d1d-4f0a-4518-a44c-96658cafda95, taxi: f325a950-5737-488d-b122-8f21114d0eb0 ]
+    observedTime: # time of the ride
+      '@type': time:ProperInterval
+      time:intervalStarts:
+        '@type': time:Instant
+        time:inXSDDateTimeStamp: 2018-10-14T08:45:00-5:00
+      time:intervalEnds:
+        '@type': time:Instant
+        time:inXSDDateTimeStamp: 2018-10-14T09:10:00-5:00
+
+  - '@id': taxi:e72f7d1d-4f0a-4518-a44c-96658cafda95
+    '@type': EconomicEvent
+    outputOf: taxi:e18c808c-929a-450d-9d0d-3b3f531bc125 # the transportation process
+    action: service
+    provider: https://taxi.example/
+    receiver: https://alice.example/
+    resourceClassifiedAs: https://www.wikidata.org/wiki/Q2554326 # travel distance
+    observedQuantity: # the distance service delivered
       qudt:unit: unit:Kilometer
       qudt:numericValue: 23
     observedTime: # time of the ride
@@ -64,35 +97,16 @@
         '@type': time:Instant
         time:inXSDDateTimeStamp: 2018-10-14T09:10:00-5:00
 
-  - '@id': taxi:6405b8ad-0ac2-4d58-abdb-0808903c78ad
-    '@type': EconomicEvent
-    inputOf: taxi:e18c808c-929a-450d-9d0d-3b3f531bc125 # the transportation process
-    action: use
-    provider: https://taxi.example/
-    receiver: https://taxi.example/
-    affects: taxi:9f112621-3f13-4f48-a3e2-fd2ca99493cc #the taxi idle time resource
-    observedQuantity: # time when idling (not moving)
-      qudt:unit: unit:Minute
-      qudt:numericValue: 4.5
-    observedTime: # time of the ride
-      '@type': time:ProperInterval
-      time:intervalStarts:
-        '@type': time:Instant
-        time:inXSDDateTimeStamp: 2018-10-14T08:45:00-5:00
-      time:intervalEnds:
-        '@type': time:Instant
-        time:inXSDDateTimeStamp: 2018-10-14T09:10:00-5:00
-
-  - '@id': taxi:e02e3f6b-420a-4ba8-89b0-909d7363ce06
+  - '@id': taxi:f325a950-5737-488d-b122-8f21114d0eb0
     '@type': EconomicEvent
     outputOf: taxi:e18c808c-929a-450d-9d0d-3b3f531bc125 # the transportation process
     action: service
     provider: https://taxi.example/
     receiver: https://alice.example/
-    resourceClassifiedAs: https://www.wikidata.org/wiki/Q41222493 # taxi service
-    observedQuantity: # the service delivered
-      qudt:unit: unit:Number
-      qudt:numericValue: 1
+    resourceClassifiedAs: https://www.wikidata.org/wiki/Q2878182 # idle time
+    observedQuantity: # the idling time service delivered
+      qudt:unit: unit:Minute
+      qudt:numericValue: 4.5
     observedTime: # time of the ride
       '@type': time:ProperInterval
       time:intervalStarts:
