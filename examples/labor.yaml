@@ -15,15 +15,15 @@
   - '@id': alice:bd5806d6-4a36-45b9-b3b6-3e7d361a5a13
     '@type': EconomicResource
     resourceClassifiedAs: https://www.wikidata.org/wiki/Q229367 # 3D printing (as a type of work or skill)
-    unit: Hour
+    specifiedUnit: unit:Hour
     calendar: https://alice.example/calendar-3D/
-    provider: https://alice.example/
+    worker: https://alice.example/
 
   - '@id': alice:a4ceeeff-0cfd-40e8-84e9-be64b3cf8cc6 # alice can have different resources for her labor power
     '@type': EconomicResource
     resourceClassifiedAs: https://www.wikidata.org/wiki/Q3064143 # facilitation (as a type of work or skill)
     specifiedUnit: unit:Month
-    provider: https://alice.example/
+    worker: https://alice.example/
 
   # mfg requests someone to do 8 hours of 3D printing sometime on Oct 14 and/or 15th
 
