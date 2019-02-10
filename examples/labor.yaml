@@ -22,7 +22,7 @@
   - '@id': alice:a4ceeeff-0cfd-40e8-84e9-be64b3cf8cc6 # alice can have different resources for her labor power
     '@type': EconomicResource
     resourceClassifiedAs: https://www.wikidata.org/wiki/Q3064143 # facilitation (as a type of work or skill)
-    specifiedUnit: unit:Month
+    specifiedUnit: unit:Hour
     worker: https://alice.example/
 
   # mfg requests someone to do 8 hours of 3D printing sometime on Oct 14 and/or 15th
@@ -58,10 +58,10 @@
 
   - '@id': alice:33e8933b-ff73-4a01-964a-ca7a98893082
     '@type': Commitment
-    action: work ########################## or consume??????
+    action: work
     provider: https://alice.example/
     receiver: https://manufacturing.example/
-    involves: alice:bd5806d6-4a36-45b9-b3b6-3e7d361a5a13 # alice's 3D printing by the hour resource
+    involves: alice:bd5806d6-4a36-45b9-b3b6-3e7d361a5a13 # alice's 3D printing work resource
     committedQuantity:
       qudt:unit: unit:Hour
       qudt:numericValue: 8
@@ -82,7 +82,7 @@
       qudt:unit: unit:Hour
       qudt:numericValue: 8
 
-  - '@id': mfg:583e83d9-a46d-44ff-bd71-88513a1d83c9
+  - '@id': alice:583e83d9-a46d-44ff-bd71-88513a1d83c9
     '@type': Satisfaction
     satisfies: alice:9bd19194-a36d-4a1f-896b-8082887962ca # alice's intent (an offer)
     satisfiedBy: alice:33e8933b-ff73-4a01-964a-ca7a98893082 # the commitment
@@ -92,12 +92,12 @@
 
   # alice does the work on Oct 14 from 8h to 16h, completing the sequence
 
-  - '@id': mfg:60f4204e-b8d2-4026-8577-102c3f82c0ad
+  - '@id': alice:60f4204e-b8d2-4026-8577-102c3f82c0ad
     '@type': EconomicEvent
-    action: work ############################ or consume????
+    action: work
     provider: https://alice.example/
     receiver: https://manufacturing.example/
-    involves: alice:bd5806d6-4a36-45b9-b3b6-3e7d361a5a13 # alice's 3D printing by the hour resource
+    involves: alice:bd5806d6-4a36-45b9-b3b6-3e7d361a5a13 # alice's 3D printing work resource
     observedQuantity:
       qudt:unit: unit:Hour
       qudt:numericValue: 8
@@ -110,23 +110,24 @@
         '@type': time:Instant
         time:inXSDDateTimeStamp: 2018-10-14T16:00:00-5:00
 
-  - '@id': mfg:e56fd654-7b94-4d96-8e60-de39e08329a6
+  - '@id': alice:e56fd654-7b94-4d96-8e60-de39e08329a6
     '@type': Fulfillment
     fulfills: alice:33e8933b-ff73-4a01-964a-ca7a98893082 # the commitment
-    fulfilledBy: mfg:60f4204e-b8d2-4026-8577-102c3f82c0ad # the economic event
+    fulfilledBy: alice:60f4204e-b8d2-4026-8577-102c3f82c0ad # the economic event
     fulfilledQuantity:
       qudt:unit: unit:Hour
       qudt:numericValue: 8
 
-  # later on fablab finds alice's calendar and commits to make use of her skills during an available slot
+  # later on fablab finds alice's calendar and asks for her skills during an available slot
+  # alice commits to doing the work
   # alice's calendar then shows her as unavailable during that slot
 
-  - '@id': fablab:86ad6e22-7640-4b93-972a-db7177ab2615
+  - '@id': alice:86ad6e22-7640-4b93-972a-db7177ab2615
     '@type': Commitment
-    action: work # consume??
+    action: work
     provider: https://alice.example/
     receiver: https://fablab.example/
-    involves: alice:bd5806d6-4a36-45b9-b3b6-3e7d361a5a13 # alice's 3D printing by the hour resource
+    involves: alice:bd5806d6-4a36-45b9-b3b6-3e7d361a5a13 # alice's 3D printing work resource
     committedQuantity:
       qudt:unit: unit:Hour
       qudt:numericValue: 6
@@ -139,10 +140,10 @@
         '@type': time:Instant
         time:inXSDDateTimeStamp: 2018-12-07T15:00:00-5:00
 
-  - '@id': mfg:d4d2fd71-34f2-41c3-b1c5-19ad5ed2da59
+  - '@id': alice:d4d2fd71-34f2-41c3-b1c5-19ad5ed2da59
     '@type': Satisfaction
     satisfies: alice:9bd19194-a36d-4a1f-896b-8082887962ca # alice's intent (an offer)
-    satisfiedBy: fablab:86ad6e22-7640-4b93-972a-db7177ab26158 # the commitment
+    satisfiedBy: alice:86ad6e22-7640-4b93-972a-db7177ab26158 # the commitment
     satisfiedQuantity:
       qudt:unit: unit:Hour
       qudt:numericValue: 6
@@ -152,10 +153,10 @@
 
   - '@id': org:e4783bef-9006-490c-9c03-389272c7444c
     '@type': EconomicEvent
-    action: work # consume ??
+    action: work
     provider: https://alice.example/
     receiver: https://org.example/
-    involves: alice:a4ceeeff-0cfd-40e8-84e9-be64b3cf8cc6 # alice's monthly facilitation resource
+    involves: alice:a4ceeeff-0cfd-40e8-84e9-be64b3cf8cc6 # alice's facilitation work resource
     observedQuantity:
       qudt:unit: unit:Hour
       qudt:numericValue: 21.5
