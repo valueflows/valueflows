@@ -6,7 +6,7 @@ The buying club runs on cycles of (usually) 4 weeks.  Each cycle has a sequentia
 
 There are different ways of working.
 * Regularly scheduled work at specific times in the cycle: like splitting food, gathering orders, cashiering, cleaning up.  People sign up every cycle on pre-planned jobs/shifts.
-* Work at home that has due dates, but otherwise doesn't matter when it is done, where the time is managed by the person doing the work: like updating catalogs, printing invoices and labels, ordering from suppliers, paying suppliers.
+* Work at home that has due dates, but otherwise doesn't matter when it is done, where the time is managed by the person doing the work: like updating catalogs, printing invoices and labels, ordering from suppliers, paying suppliers.  For some of these jobs, the date complete is also recorded, for purposes of coordinating with next tasks.
 
 People who signed up for specific shift work record the specific times worked.
 
