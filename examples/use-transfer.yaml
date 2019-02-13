@@ -1,0 +1,164 @@
+# Example: Transfer and use of non-serialized resources
+
+'@context':
+  - https://git.io/vf-examples-jsonld-context
+  - ouikit: http://www.ouikit.org/
+    org: http://organization.example/
+
+'@id': rgh:valueflows/valueflows/master/examples/use-transfer.yaml
+'@graph':
+
+
+  # a resource
+
+  - '@id': ouikit:9396d2d1-ded3-4b1c-8144-1c024e641039
+    '@type': EconomicResource
+    resourceConformsTo: http://www.ouikit.org/ouikit-data/  # reusable eating kit
+    skos:note: An eating kit containing plate, bowl, cup, utensils.
+    currentQuantity:
+      qudt:unit: unit:Number
+      qudt:numericValue: 100
+
+  # ouishare offers ouikits
+
+  - '@id': ouikit:c404cff5-19c7-453d-b0d8-d8e96055bd0b
+    '@type': Intent
+    action: give
+    provider: http://www.ouikit.org/
+    involves: ouikit:9396d2d1-ded3-4b1c-8144-1c024e641039 # ouikits resource
+    skos:note: We make this eating kit available to solidarity groups who need them occasionally.
+
+  # an organization requests borrowing 30 ouikits for a 2 day event
+  # ouishare confirms that they can borrow the ouikits
+
+  - '@id': ouikit:856c43b1-0a63-445f-a56f-707b257f086d
+    '@type': Commitment
+    action: checkout
+    provider: http://www.ouikit.org/
+    receiver: http://organization.example/
+    involves: ouikit:9396d2d1-ded3-4b1c-8144-1c024e641039 # ouikits resource
+    flowQuantity:
+      qudt:unit: unit:Number
+      qudt:numericValue: 30
+    flowTime:
+      '@type': time:Instant
+      time:inXSDDateTimeStamp: 2018-12-07T13:00:00-5:00
+
+  - '@id': ouikit:9cb4944b-d26d-4774-a530-d18f2747c0d7
+    '@type': Satisfaction
+    satisfies: ouikit:c404cff5-19c7-453d-b0d8-d8e96055bd0b # the offer (intent)
+    satisfiedBy: ouikit:856c43b1-0a63-445f-a56f-707b257f086d9 # the commitment
+    satisfiedQuantity:
+      qudt:unit: unit:Number
+      qudt:numericValue: 30
+
+  # the organization commits to return the kits in 2 days
+  # ouishare can use these commitments to calculate the availability of kits
+
+  - '@id': org:8baa8ff7-9c1e-4586-ae7b-79d620a3cac8
+    '@type': Commitment
+    action: checkin
+    provider: http://organization.example/
+    receiver: http://www.ouikit.org/
+    involves: ouikit:9396d2d1-ded3-4b1c-8144-1c024e641039 # ouikits resource
+    flowQuantity:
+      qudt:unit: unit:Number
+      qudt:numericValue: 30
+    flowTime:
+      '@type': time:Instant
+      time:inXSDDateTimeStamp: 2018-14-07T11:00:00-5:00
+
+  # the organization picks up the kits as planned
+
+  - '@id': ouikit:68cabaf3-deb8-4bd5-a439-798263abe35d
+    '@type': EconomicEvent
+    action: checkout
+    provider: http://www.ouikit.org/
+    receiver: http://organization.example/
+    providerResource: ouikit:9396d2d1-ded3-4b1c-8144-1c024e641039 # ouikits resource
+    receiverResource: org:daa2ec3b-2c1a-4eb1-839f-8dcec1a1f93d # org ouikits resource
+    flowQuantity:
+      qudt:unit: unit:Number
+      qudt:numericValue: 30
+    flowTime:
+      '@type': time:Instant
+      time:inXSDDateTimeStamp: 2018-12-07T13:30:00-5:00
+
+  - '@id': ouikit:f0b8bfb1-ed29-4ab0-aabd-f5e2a3515625
+    '@type': Fulfillment
+    fulfills: ouikit:856c43b1-0a63-445f-a56f-707b257f086d # the commitment
+    fulfilledBy: ouikit:68cabaf3-deb8-4bd5-a439-798263abe35d # the economic event
+    fulfilledQuantity:
+      qudt:unit: unit:Number
+      qudt:numericValue: 30
+
+  # the organization uses the kits for its event
+
+  - '@id': org:a3277840-54b9-497e-9cf6-1902eda1584e
+    '@type': Process
+    name: Workshop dinner 2018-12-07
+
+  - '@id': org:bd5806d6-4a36-45b9-b3b6-3e7d361a5a13
+    '@type': EconomicEvent
+    action: use
+    provider: http://organization.example/
+    receiver: http://organization.example/
+    affects: org:daa2ec3b-2c1a-4eb1-839f-8dcec1a1f93d # org ouikits resource
+    flowQuantity:
+      qudt:unit: unit:Number
+      qudt:numericValue: 27
+    flowTime:
+      '@type': time:ProperInterval
+      time:intervalStarts:
+        '@type': time:Instant
+        time:inXSDDateTimeStamp: 2018-12-07T15:00:00-5:00
+      time:intervalEnds:
+        '@type': time:Instant
+        time:inXSDDateTimeStamp: 2018-12-07T20:00:00-5:00
+
+  - '@id': org:c27ba90d-b182-494c-84aa-719004a63f9d
+    '@type': Process
+    name: Workshop dinner 2018-12-08
+
+  - '@id': org:a4ceeeff-0cfd-40e8-84e9-be64b3cf8cc5
+    '@type': EconomicEvent
+    action: use
+    provider: http://organization.example/
+    receiver: http://organization.example/
+    affects: org:daa2ec3b-2c1a-4eb1-839f-8dcec1a1f93d # org ouikits resource
+    flowQuantity:
+      qudt:unit: unit:Number
+      qudt:numericValue: 28
+    flowTime:
+      '@type': time:ProperInterval
+      time:intervalStarts:
+        '@type': time:Instant
+        time:inXSDDateTimeStamp: 2018-12-08T15:00:00-5:00
+      time:intervalEnds:
+        '@type': time:Instant
+        time:inXSDDateTimeStamp: 2018-12-08T20:00:00-5:00
+
+  # the organization returns the kits as planned
+
+  - '@id': ouikit:59ee2c77-ece6-4c2d-a316-160a89d035ee
+    '@type': EconomicEvent
+    action: checkin
+    provider: http://organization.example/
+    receiver: http://www.ouikit.org/
+    providerResource: org:daa2ec3b-2c1a-4eb1-839f-8dcec1a1f93d # org ouikits resource
+    receiverResource: ouikit:9396d2d1-ded3-4b1c-8144-1c024e641039 # ouikits resource
+    flowQuantity:
+      qudt:unit: unit:Number
+      qudt:numericValue: 30
+    flowTime:
+      '@type': time:Instant
+      time:inXSDDateTimeStamp: 2018-12-09T09:30:00-5:00
+
+  - '@id': org:a31a3b48-0c7b-481c-a9f8-d3e579267d2d
+    '@type': Fulfillment
+    fulfills: org:8baa8ff7-9c1e-4586-ae7b-79d620a3cac8 # the commitment
+    fulfilledBy: ouikit:59ee2c77-ece6-4c2d-a316-160a89d035ee # the economic event
+    fulfilledQuantity:
+      qudt:unit: unit:Number
+      qudt:numericValue: 30
+
