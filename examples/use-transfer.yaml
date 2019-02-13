@@ -23,7 +23,7 @@
 
   - '@id': ouikit:c404cff5-19c7-453d-b0d8-d8e96055bd0b
     '@type': Intent
-    action: give
+    action: checkout
     provider: http://www.ouikit.org/
     involves: ouikit:9396d2d1-ded3-4b1c-8144-1c024e641039 # ouikits resource
     skos:note: We make this eating kit available to solidarity groups who need them occasionally.
