@@ -1,0 +1,119 @@
+# Example: Transfer of scheduled non-transported resource
+
+'@context':
+  - https://git.io/vf-examples-jsonld-context
+  - alice: https://alice.example/
+    hotel: http://hotel.example/
+
+'@id': rgh:valueflows/valueflows/master/examples/use-transfer.yaml
+'@graph':
+
+
+  # a room resource
+
+  - '@id': hotel:80e9ef99-5876-4529-8fcc-6f55060c3b3c
+    '@type': EconomicResource
+    resourceClassifiedAs: https://www.wikidata.org/wiki/Q23541360 # a hotel room
+    trackingIdentifier: Hotel-Williston-215
+    currentQuantity:
+      qudt:unit: unit:Number
+      qudt:numericValue: 1
+
+  # hotel offers rooms
+
+  - '@id': hotel:2d117224-9e34-4e86-adae-3a80ff5b8a48
+    '@type': Intent
+    action: checkin
+    provider: http://hotel.example/
+    resourceClassifiedAs: https://www.wikidata.org/wiki/Q23541360 # a hotel room
+
+  # alice reserves a room for a 2 day stay
+  # hotel confirms the reservation
+
+  - '@id': hotel:856c43b1-0a63-445f-a56f-707b257f086d
+    '@type': Commitment
+    action: checkin
+    provider: http://hotel.example/
+    receiver: https://alice.example/
+    involves: hotel:80e9ef99-5876-4529-8fcc-6f55060c3b3c # room 215
+    committedQuantity:
+      qudt:unit: unit:Number
+      qudt:numericValue: 1
+    committedTime:
+      '@type': time:Instant
+      time:inXSDDateTimeStamp: 2018-12-07T15:00:00-5:00
+
+  - '@id': hotel:70e38077-667d-40da-b198-e3d73ad4482a
+    '@type': Satisfaction
+    satisfies: hotel:2d117224-9e34-4e86-adae-3a80ff5b8a48 # the offer (intent)
+    satisfiedBy: hotel:856c43b1-0a63-445f-a56f-707b257f086d # the commitment
+    satisfiedQuantity:
+      qudt:unit: unit:Number
+      qudt:numericValue: 1
+
+  - '@id': hotel:541c6767-ef76-4cf4-a690-359f4396142b
+    '@type': Commitment
+    action: checkout
+    provider: http://alice.example/
+    receiver: https://hotel.example/
+    involves: hotel:80e9ef99-5876-4529-8fcc-6f55060c3b3c # room 215
+    committedQuantity:
+      qudt:unit: unit:Number
+      qudt:numericValue: 1
+    committedTime:
+      '@type': time:Instant
+      time:inXSDDateTimeStamp: 2018-12-09T11:00:00-5:00
+
+  - '@id': hotel:70e38077-667d-40da-b198-e3d73ad4482a
+    '@type': Satisfaction
+    satisfies: hotel:2d117224-9e34-4e86-adae-3a80ff5b8a48 # the offer (intent)
+    satisfiedBy: hotel:856c43b1-0a63-445f-a56f-707b257f086d # the commitment
+    satisfiedQuantity:
+      qudt:unit: unit:Number
+      qudt:numericValue: 1
+
+  # alice checks in to the hotel as planned
+
+  - '@id': hotel:da7bfa38-a1b2-4f6f-a896-b9bf1ec8807c
+    '@type': EconomicEvent
+    action: checkin
+    provider: http://hotel.example/
+    receiver: https://alice.example/
+    involves: hotel:80e9ef99-5876-4529-8fcc-6f55060c3b3c # room 215
+    observedQuantity:
+      qudt:unit: unit:Number
+      qudt:numericValue: 1
+    observedTime:
+      '@type': time:Instant
+      time:inXSDDateTimeStamp: 2018-12-07T16:30:00-5:00
+
+  - '@id': hotel:f0b8bfb1-ed29-4ab0-aabd-f5e2a3515624
+    '@type': Fulfillment
+    fulfills: hotel:856c43b1-0a63-445f-a56f-707b257f086d # the commitment
+    fulfilledBy: hotel:da7bfa38-a1b2-4f6f-a896-b9bf1ec8807c # the economic event
+    fulfilledQuantity:
+      qudt:unit: unit:Number
+      qudt:numericValue: 1
+
+  # alice checks out of the hotel as planned
+
+  - '@id': hotel:da7bfa38-a1b2-4f6f-a896-b9bf1ec8807b
+    '@type': EconomicEvent
+    action: checkout
+    provider: http://alice.example/
+    receiver: https://hotel.example/
+    involves: hotel:80e9ef99-5876-4529-8fcc-6f55060c3b3c # room 215
+    observedQuantity:
+      qudt:unit: unit:Number
+      qudt:numericValue: 1
+    observedTime:
+      '@type': time:Instant
+      time:inXSDDateTimeStamp: 2018-12-09T08:30:00-5:00
+
+  - '@id': hotel:f0b8bfb1-ed29-4ab0-aabd-f5e2a3515623
+    '@type': Fulfillment
+    fulfills: hotel:541c6767-ef76-4cf4-a690-359f4396142b # the commitment
+    fulfilledBy: hotel:da7bfa38-a1b2-4f6f-a896-b9bf1ec8807b # the economic event
+    fulfilledQuantity:
+      qudt:unit: unit:Number
+      qudt:numericValue: 1
