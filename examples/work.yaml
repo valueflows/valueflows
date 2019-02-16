@@ -147,10 +147,18 @@
       qudt:unit: unit:Hour
       qudt:numericValue: 21.5
     observedTime:
+      '@type': time:Instant
+      time:inXSDDateTimeStamp: 2018-10-31T00:00:00-5:00
+    accountDuring: org:9087abc4-6f2b-4f1f-9c56-611b7f7302a2
+
+  - @id': org:9087abc4-6f2b-4f1f-9c56-611b7f7302a2
+    '@type': AccountingPeriod
+    name: October 2018
+    accountingTime:
       '@type': time:ProperInterval
       time:intervalStarts:
         '@type': time:Instant
-        time:inXSDDateTimeStamp: 2018-10-01T00:00:00-5:00
+        time:inXSDDateTimeStamp: 2018-10-01T0:00:00-5:00
       time:intervalEnds:
         '@type': time:Instant
         time:inXSDDateTimeStamp: 2018-10-31T23:59:59-5:00
