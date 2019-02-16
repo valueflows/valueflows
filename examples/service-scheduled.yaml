@@ -11,13 +11,14 @@
 
   # a room resource
 
-  - '@id': hotel:80e9ef99-5876-4529-8fcc-6f55060c3b3c
+  - '@id': hotel:2c335f13-9896-4362-8d38-b9e409200296
     '@type': EconomicResource
-    resourceClassifiedAs: https://www.wikidata.org/wiki/Q23541360 # a hotel room
-    trackingIdentifier: Hotel-Williston-215
+    resourceClassifiedAs: https://www.wikidata.org/wiki/Q123733 # hospitality service
+    trackingIdentifier: Service-Hotel-Williston-215
     currentQuantity:
       qudt:unit: unit:Number
       qudt:numericValue: 1
+    specifiedUnit: unit:Day
 
   # hotel offers rooms
 
@@ -35,7 +36,7 @@
     action: service
     provider: http://hotel.example/
     receiver: https://alice.example/
-    involves: hotel:80e9ef99-5876-4529-8fcc-6f55060c3b3c # room 215
+    involves: hotel:80e9ef99-5876-4529-8fcc-6f55060c3b3c # hotel service room 215
     committedQuantity:
       qudt:unit: unit:Day
       qudt:numericValue: 2
@@ -64,7 +65,7 @@
     action: service
     provider: http://hotel.example/
     receiver: https://alice.example/
-    involves: hotel:80e9ef99-5876-4529-8fcc-6f55060c3b3c # room 215
+    involves: hotel:80e9ef99-5876-4529-8fcc-6f55060c3b3c # hotel service room 215
     observedQuantity:
       qudt:unit: unit:Day
       qudt:numericValue: 2
