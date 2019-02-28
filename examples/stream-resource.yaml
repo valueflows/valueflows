@@ -1,0 +1,37 @@
+# Example: Streaming resource (electricity)
+
+'@context':
+  - https://git.io/vf-examples-jsonld-context
+  - bob: https://bob.example/
+    elec: https://electricity-coop.example/
+
+'@id': rgh:valueflows/valueflows/master/examples/fstream-resource.yaml
+'@graph':
+
+  # electricity is metered
+
+  - '@id': elec:da7bfa38-a1b2-4f6f-a896-b9bf1ec8807a
+    '@type': EconomicEvent
+    action: transfer
+    provider: https://electricity-coop.example/
+    receiver: https://bob.example/
+    resourceClassifiedAs: wd:Q12725 # electricity
+    under: https://electricity-coop.example/agreement-vernon-county-2019
+    observedQuantity:
+      qudt:unit: unit:KilowattHours # KiloA?
+      qudt:numericValue: 435
+    observedTime:
+      hasEnd: 2019-01-31T10:00:00-5:00
+
+  - '@id': elec:da7bfa38-a1b2-4f6f-a896-b9bf1ec8807q
+    '@type': EconomicEvent
+    action: transfer
+    provider: https://electricity-coop.example/
+    receiver: https://bob.example/
+    resourceClassifiedAs: wd:Q12725 # electricity
+    under: https://electricity-coop.example/agreement-vernon-county-2019
+    observedQuantity:
+      qudt:unit: unit:KilowattHours # KiloA?
+      qudt:numericValue: 369
+    observedTime:
+      hasEnd: 2019-02-28T10:00:00-5:00
