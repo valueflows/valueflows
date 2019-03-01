@@ -75,7 +75,25 @@ lower | Decrement | N/A | N/A | N/A |
 
 We have defined a core set of actions, but expect that this will be extended with others. If extended, they should be defined as part of this or another formal vocabulary so that all can use them and assume the same meaning. 
 
-Temporary note: The actions `use` and `work` are time-based actions, either with or without an explicit schedule.  How to handle time-based resources is still under discussion.
+## Quantities and Times
+
+Quantities are used for counting, such as:
+* Exchange
+* Resource increment and decrement
+* Recipes
+
+Times are used for coordination, such as:
+* Calendar availability
+* Planned timelines
+
+They can be used together for analysis and reporting, such as:
+* Accounting totals (quantity) within accounting period (time)
+
+Quantities can be any needed unit of measure, including counts, volumes, weights, etc.  Time can be a duration or an instant.
+
+Sometimes a quantity is expressed in time-based units, like I worked 6 hours, or we used this machine for 8 hours.  These flows also will have a related time, like I worked from 10am to 4pm, or we used this machine from 8am to 4pm. In these examples, the quantity is used for accounting figures, exchange, recipes.  The time is used to schedule and coordinate the work and machine usage.
+
+Times can have different levels of exactness based on the need.  For example a commitment might specify that a task should be done by a certain date, but it doesn't matter when it is done before that date.
 
 ## Examples
 
