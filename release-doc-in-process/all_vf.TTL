@@ -376,6 +376,13 @@ vf:intendedTime a           owl:ObjectProperty ;
         vs:term_status      "unstable" ;
         rdfs:comment        "The intended temporal instant or interval." .
 
+vf:satisfiedTime a          owl:ObjectProperty ;
+        rdfs:label          "satisfied time" ;
+        rdfs:domain         vf:Satsifaction ;
+        rdfs:range          time:TemporalEntity ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "For satisfaction involving scheduling, the satisfied portion of the time." .
+
 vf:plannedTime a            owl:ObjectProperty ;
         rdfs:label          "planned time" ;
         rdfs:domain         vf:Process ;
