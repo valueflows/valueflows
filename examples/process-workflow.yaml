@@ -31,8 +31,8 @@
     action: accept
     provider: https://alice.example/
     receiver: https://auto-repair.example/
-    affects: alice:e1721a61-cd47-4556-84b9-8b1b81da15bf
-    affectedQuantity:
+    involves: alice:e1721a61-cd47-4556-84b9-8b1b81da15bf
+    observedQuantity:
       qudt:unit: unit:Number
       qudt:numericValue: 1
 
@@ -42,8 +42,8 @@
     action: improve
     provider: https://auto-repair.example/
     receiver: https://alice.example/
-    affects: alice:e1721a61-cd47-4556-84b9-8b1b81da15bf
-    affectedQuantity:
+    involves: alice:e1721a61-cd47-4556-84b9-8b1b81da15bf
+    observedQuantity:
       qudt:unit: unit:Number
       qudt:numericValue: 1
 

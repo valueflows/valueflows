@@ -65,7 +65,7 @@
     provider: https://bob.example/
     receiver: https://manufacturing.example/
     resourceClassifiedAs: https://www.wikidata.org/wiki/Q192047 # machining
-    affectedQuantity:
+    observedQuantity:
       qudt:unit: unit:Hour
       qudt:numericValue: 4
     observedTime:
@@ -91,7 +91,7 @@
     provider: https://bob.example/
     receiver: https://manufacturing.example/
     resourceClassifiedAs: https://www.wikidata.org/wiki/Q192047 # machining
-    affectedQuantity:
+    observedQuantity:
       qudt:unit: unit:Hour
       qudt:numericValue: 4
     observedTime:
