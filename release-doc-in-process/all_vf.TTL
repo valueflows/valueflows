@@ -358,21 +358,21 @@ vf:primaryLocation a        owl:ObjectProperty ;
 vf:observedTime a           owl:ObjectProperty ;
         rdfs:label          "observed time" ;
         rdfs:domain         vf:EconomicEvent ;
-        rdfs:range          time:TemporalEntity ;
+        rdfs:range          [ time:TemporalEntity time:Instant ] ;
         vs:term_status      "unstable" ;
         rdfs:comment        "The actual temporal instant or interval." .
 
 vf:committedTime a          owl:ObjectProperty ;
         rdfs:label          "committed time" ;
         rdfs:domain         vf:Commitment ;
-        rdfs:range          time:TemporalEntity ;
+        rdfs:range          [ time:TemporalEntity time:Instant ] ;
         vs:term_status      "unstable" ;
         rdfs:comment        "The promised temporal instant or interval." .
 
 vf:intendedTime a           owl:ObjectProperty ;
         rdfs:label          "intended time" ;
         rdfs:domain         vf:Intent ;
-        rdfs:range          time:TemporalEntity ;
+        rdfs:range          [ time:TemporalEntity time:Instant ] ;
         vs:term_status      "unstable" ;
         rdfs:comment        "The intended temporal instant or interval." .
 
