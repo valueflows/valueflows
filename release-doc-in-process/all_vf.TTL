@@ -292,26 +292,33 @@ vf:currentQuantity a        owl:ObjectProperty ;
         vs:term_status      "unstable" ;
         rdfs:comment        "The current amount and unit of the economic resource. This can be stored or derived from economic events affecting the resource" .
 
-vf:observedQuantity a       owl:ObjectProperty ;
-        rdfs:label          "observed quantity" ;
-        rdfs:domain         vf:EconomicEvent ;
+vf:flowQuantity a           owl:ObjectProperty ;
+        rdfs:label          "flow quantity" ;
+        rdfs:domain         [ owl:unionOf (vf:EconomicEvent vf:Commitment vf:Intent) ] ;
         rdfs:range          qudt:QuantityValue ;
         vs:term_status      "unstable" ;
-        rdfs:comment        "The amount and unit of the event. This is the quantity that could be used to increment or decrement a resource, depending on the type of resource and type of event.  It is also used in counting or accounting functions, and exchanges." .
+        rdfs:comment        "The numeric value and unit of the event, commitment, or intent." .
 
-vf:committedQuantity a      owl:ObjectProperty ;
-        rdfs:label          "committed quantity" ;
-        rdfs:domain         vf:Commitment ;
-        rdfs:range          qudt:QuantityValue ;
-        vs:term_status      "unstable" ;
-        rdfs:comment        "The amount and unit of the commitment." .
+#vf:observedQuantity a       owl:ObjectProperty ;
+#        rdfs:label          "observed quantity" ;
+#        rdfs:domain         vf:EconomicEvent ;
+#        rdfs:range          qudt:QuantityValue ;
+#        vs:term_status      "unstable" ;
+#        rdfs:comment        "The amount and unit of the event. This is the quantity that could be used to increment or decrement a resource, depending on the type of resource and type of event.  It is also used in counting or accounting functions, and exchanges." .
 
-vf:intendedQuantity a       owl:ObjectProperty ;
-        rdfs:label          "intended quantity" ;
-        rdfs:domain         vf:Intent ;
-        rdfs:range          qudt:QuantityValue ;
-        vs:term_status      "unstable" ;
-        rdfs:comment        "The amount and unit of the intent." .
+#vf:committedQuantity a      owl:ObjectProperty ;
+#        rdfs:label          "committed quantity" ;
+#        rdfs:domain         vf:Commitment ;
+#        rdfs:range          qudt:QuantityValue ;
+#        vs:term_status      "unstable" ;
+#        rdfs:comment        "The amount and unit of the commitment." .
+
+#vf:intendedQuantity a       owl:ObjectProperty ;
+#        rdfs:label          "intended quantity" ;
+#        rdfs:domain         vf:Intent ;
+#        rdfs:range          qudt:QuantityValue ;
+#        vs:term_status      "unstable" ;
+#        rdfs:comment        "The amount and unit of the intent." .
 
 vf:fulfilledQuantity a      owl:ObjectProperty ;
         rdfs:label          "fulfilled quantity" ;
@@ -355,26 +362,33 @@ vf:primaryLocation a        owl:ObjectProperty ;
         vs:term_status      "unstable" ;
         rdfs:comment        "The main place an agent is located, often an address where activities occur and mail can be sent. This is usually a mappable geographic location.  It also could be a website address, as in the case of agents who have no physical location." .
 
-vf:observedTime a           owl:ObjectProperty ;
-        rdfs:label          "observed time" ;
-        rdfs:domain         vf:EconomicEvent ;
+vf:flowTime a               owl:ObjectProperty ;
+        rdfs:label          "flow time" ;
+        rdfs:domain         [ owl:unionOf (vf:EconomicEvent vf:Commitment vf:Intent) ] ;
         rdfs:range          [ time:TemporalEntity time:Instant ] ;
         vs:term_status      "unstable" ;
-        rdfs:comment        "The actual temporal instant or interval." .
+        rdfs:comment        "The temporal instant or interval of the event, commitment, or intent." .
 
-vf:committedTime a          owl:ObjectProperty ;
-        rdfs:label          "committed time" ;
-        rdfs:domain         vf:Commitment ;
-        rdfs:range          [ time:TemporalEntity time:Instant ] ;
-        vs:term_status      "unstable" ;
-        rdfs:comment        "The promised temporal instant or interval." .
+#vf:observedTime a           owl:ObjectProperty ;
+#        rdfs:label          "observed time" ;
+#        rdfs:domain         vf:EconomicEvent ;
+#        rdfs:range          [ time:TemporalEntity time:Instant ] ;
+#        vs:term_status      "unstable" ;
+#        rdfs:comment        "The actual temporal instant or interval." .
 
-vf:intendedTime a           owl:ObjectProperty ;
-        rdfs:label          "intended time" ;
-        rdfs:domain         vf:Intent ;
-        rdfs:range          [ time:TemporalEntity time:Instant ] ;
-        vs:term_status      "unstable" ;
-        rdfs:comment        "The intended temporal instant or interval." .
+#vf:committedTime a          owl:ObjectProperty ;
+#        rdfs:label          "committed time" ;
+#        rdfs:domain         vf:Commitment ;
+#        rdfs:range          [ time:TemporalEntity time:Instant ] ;
+#        vs:term_status      "unstable" ;
+#        rdfs:comment        "The promised temporal instant or interval." .
+
+#vf:intendedTime a           owl:ObjectProperty ;
+#        rdfs:label          "intended time" ;
+#        rdfs:domain         vf:Intent ;
+#        rdfs:range          [ time:TemporalEntity time:Instant ] ;
+#        vs:term_status      "unstable" ;
+#        rdfs:comment        "The intended temporal instant or interval." .
 
 vf:satisfiedTime a          owl:ObjectProperty ;
         rdfs:label          "satisfied time" ;
