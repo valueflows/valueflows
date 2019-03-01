@@ -21,6 +21,7 @@
       qudt:unit: unit:KilowattHours # KiloA?
       qudt:numericValue: 435
     observedTime:
+      hasBeginning: 2018-12-31T10:00:00-5:00
       hasEnd: 2019-01-31T10:00:00-5:00
 
   - '@id': elec:da7bfa38-a1b2-4f6f-a896-b9bf1ec8807q
@@ -34,4 +35,5 @@
       qudt:unit: unit:KilowattHours # KiloA?
       qudt:numericValue: 369
     observedTime:
+      hasBeginning: 2019-01-31T10:00:00-5:00
       hasEnd: 2019-02-28T10:00:00-5:00
