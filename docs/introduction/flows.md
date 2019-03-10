@@ -89,7 +89,7 @@ Times are used for coordination, such as:
 They can be used together for analysis and reporting, such as:
 * Accounting totals (quantity) within accounting period (time)
 
-Quantities can be any needed unit of measure, including counts, volumes, weights, etc.  Time can be a duration or an instant.
+Quantities can be any needed unit of measure, including counts, volumes, weights, etc.  Time can be a duration or an instant.  Note that recipes may need to scale both quantities and calendar times when used to create a plan.
 
 Sometimes a quantity is expressed in time-based units, like I worked 6 hours, or we used this machine for 8 hours.  These flows also will have a related time, like I worked from 10am to 4pm, or we used this machine from 8am to 4pm. In these examples, the quantity is used for accounting figures, exchange, recipes.  The time is used to schedule and coordinate the work or machine usage.
 
