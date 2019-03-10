@@ -80,7 +80,7 @@ We have defined a core set of actions, but expect that this will be extended wit
 Quantities are used for counting, such as:
 * Exchange
 * Resource increment and decrement
-* Recipes
+* Recipes, how much or many goes into and out of a transformation process
 
 Times are used for coordination, such as:
 * Calendar availability
@@ -91,7 +91,9 @@ They can be used together for analysis and reporting, such as:
 
 Quantities can be any needed unit of measure, including counts, volumes, weights, etc.  Time can be a duration or an instant.
 
-Sometimes a quantity is expressed in time-based units, like I worked 6 hours, or we used this machine for 8 hours.  These flows also will have a related time, like I worked from 10am to 4pm, or we used this machine from 8am to 4pm. In these examples, the quantity is used for accounting figures, exchange, recipes.  The time is used to schedule and coordinate the work and machine usage.
+Sometimes a quantity is expressed in time-based units, like I worked 6 hours, or we used this machine for 8 hours.  These flows also will have a related time, like I worked from 10am to 4pm, or we used this machine from 8am to 4pm. In these examples, the quantity is used for accounting figures, exchange, recipes.  The time is used to schedule and coordinate the work or machine usage.
+
+Sometimes a situation may call for a "compound quantity", like "Number-per-Year".  In these cases, one can also carry the base quantities as supporting properties if desired.
 
 Times can have different levels of exactness based on the need.  For example a commitment might specify that a task should be done by a certain date, but it doesn't matter when it is done before that date.
 
