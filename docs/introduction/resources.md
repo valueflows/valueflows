@@ -26,11 +26,11 @@ So, for example, you may want an apple. Or you may want a green apple. Or you ma
 
 Or, Herb is the parent classification of Anise Hyssop, Goldenrod, Nettles, Red Clover, etc.  Besides its usefulness in understanding taxonomies of resource types, this can be useful when one can define a general recipe that will work for many more specific kinds of resources.
 
-People can use the multitude of existing taxonomies for resources, or can also create their own as needed.  The references to resource classifications are uri's, and not covered inside ValueFlows.
+People can use the multitude of existing taxonomies for resource classifications, or can also create their own as needed.  The references to resource classifications are uri's, and not covered inside ValueFlows.
 
 The ResourceSpecification is part of ValueFlows, and part of the recipe structure. 
 It is used when you need to have more definition and configurability than you can 
-find in a simple taxonomy, whether there is a recipe or not, but is required in a recipe.
+find in a simple taxonomy, whether there is a recipe or not.
 
 #### Identification and Behaviors of Resources
 
