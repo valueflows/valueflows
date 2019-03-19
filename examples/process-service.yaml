@@ -1,0 +1,114 @@
+# Example: Simple service process
+
+'@context':
+  - https://git.io/vf-examples-jsonld-context
+  - alice: https://alice.example/
+    bob: https://bob.example/
+    carol: https://carol.example/
+    training: https://training.example/
+
+'@id': rgh:valueflows/valueflows/master/examples/process-service.yaml
+'@graph':
+
+  # Economic resources and specifications
+
+  - '@id': training:e1721a61-cd47-4556-84b9-8b1b81da15bf
+    '@type': EconomicResource
+    classifiedAs: https://www.wikidata.org/wiki/Q53953506 # 3D printer
+    currentQuantity:
+      qudt:unit: unit:Number
+      qudt:numericValue: 1
+
+  - '@id': training:6b97b1be-8e07-44ac-82e5-214f1b2aaf33
+    '@type': EconomicResource
+    conformsTo: training:52f0e212-3c4f-4d27-b345-5e964c135824 # 3D printing class handout
+    currentQuantity:
+      qudt:unit: unit:Number
+      qudt:numericValue: 100
+
+  - '@id': training:3129ca8b-fcda-45be-bbda-294dc924d3b9
+    '@type': ResourceSpecification
+    name: 3D printing 1 day hands-on workshop
+    classifiedAs: [ https://www.wikidata.org/wiki/Q27556165, https://www.wikidata.org/wiki/Q229367 ] # workshop, 3d printing
+
+  - '@id': training:52f0e212-3c4f-4d27-b345-5e964c135824
+    '@type': ResourceSpecification
+    name: 3D printing workshop handout
+    skos:note: 3D printing class handout for the one day hands-on class, including exercises and review
+
+  - '@id': training:f438393-7f87-4914-806c-e23a4fd15e89
+    '@type': ResourceSpecification
+    name: 3D printing training
+    skos:note: In-house certified training on 3D printing
+
+  # Service delivery
+
+  - '@id': training:02b39a30-3e04-4305-9656-7f261aa63c84
+    '@type': Process
+    name: Give the 3D printing workshop
+
+  - '@id': training:b90b0b77-09a2-42e2-8bd4-e9ae2c1c617
+    '@type': EconomicEvent
+    inputOf: training:02b39a30-3e04-4305-9656-7f261aa63c84
+    action: consume
+    provider: https://training.example/
+    receiver: https://training.example/
+    involves: training:6b97b1be-8e07-44ac-82e5-214f1b2aaf33 # workshop handout
+    actionQuantity:
+      qudt:unit: unit:Number
+      qudt:numericValue: 3
+
+  - '@id': training:52f0e212-3c4f-4d27-b345-5e964c135824
+    '@type': EconomicEvent
+    inputOf: training:02b39a30-3e04-4305-9656-7f261aa63c84
+    action: use
+    provider: https://training.example/
+    receiver: https://training.example/
+    involves: training:e1721a61-cd47-4556-84b9-8b1b81da15bf # 3D printer
+    actionQuantity:
+      qudt:unit: unit:Hour
+      qudt:numericValue: 8
+
+  - '@id': training:a8236bbb-81e0-422d-9861-56d2417db0fb
+    '@type': EconomicEvent
+    inputOf: training:02b39a30-3e04-4305-9656-7f261aa63c84
+    action: work
+    provider: https://training.example/
+    receiver: https://training.example/
+    resourceConformsTo: training:f438393-7f87-4914-806c-e23a4fd15e89 # 3D printer training
+    actionQuantity:
+      qudt:unit: unit:Hour
+      qudt:numericValue: 8
+
+  - '@id': training:d4d2fd71-34f2-41c3-b1c5-19ad5ed2da59
+    '@type': EconomicEvent
+    outputOf: training:02b39a30-3e04-4305-9656-7f261aa63c84
+    action: provide
+    provider: https://training.example/
+    receiver: https://alice.example/
+    resourceConformsTo: training:3129ca8b-fcda-45be-bbda-294dc924d3b9 # one day 3D printing workshop
+    actionQuantity:
+      qudt:unit: unit:Number
+      qudt:numericValue: 1
+
+  - '@id': training:583e83d9-a46d-44ff-bd71-88513a1d83c0
+    '@type': EconomicEvent
+    outputOf: training:02b39a30-3e04-4305-9656-7f261aa63c84
+    action: provide
+    provider: https://training.example/
+    receiver: https://bob.example/
+    resourceConformsTo: training:3129ca8b-fcda-45be-bbda-294dc924d3b9 # one day 3D printing workshop
+    actionQuantity:
+      qudt:unit: unit:Number
+      qudt:numericValue: 1
+
+  - '@id': training:e4783bef-9006-490c-9c03-389272c7444d
+    '@type': EconomicEvent
+    outputOf: training:02b39a30-3e04-4305-9656-7f261aa63c84
+    action: provide
+    provider: https://training.example/
+    receiver: https://carol.example/
+    resourceConformsTo: training:3129ca8b-fcda-45be-bbda-294dc924d3b9 # one day 3D printing workshop
+    actionQuantity:
+      qudt:unit: unit:Number
+      qudt:numericValue: 1
