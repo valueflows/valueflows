@@ -587,6 +587,10 @@ vf:produce  a               vf:Action ;
         vs:term_status      "testing" ;
         rdfs:subPropertyOf  vf:increment .
 
+vf:service  a                vf:Action ;
+        vs:term_status      "unstable" ;
+        rdfs:label          "service" .
+
 vf:accept  a                vf:Action ;
         vs:term_status      "unstable" ;
         rdfs:label          "accept" .
