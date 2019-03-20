@@ -1,0 +1,140 @@
+'@context':
+  - https://git.io/vf-examples-jsonld-context
+  - bumblebee: https://bumblebee.example/
+
+'@id': rgh:valueflows/valueflows/master/examples/harvest-recipe.yaml
+'@graph':
+
+  - '@id': bumblebee:53b44c35-d514-4945-b257-9f66c7ec0d67
+    '@type': RecipeProcess
+    skos:note: two people harvesting an apple tree in 15 min
+
+  - '@id': bumblebee:fac5022d-463c-4a07-a601-8f54d12293bc
+    '@type': RecipeFlow
+    skos:note: tree bearing apples
+    action: consume
+    recipeInputOf: bumblebee:53b44c35-d514-4945-b257-9f66c7ec0d67
+    involvesQuantity:
+      qudt:unit: unit:Number
+      qudt:numericValue: 1
+
+  - '@id': bumblebee:8ffdef1c-2825-4ae1-9127-24cdacf09fde
+    '@type': RecipeFlow
+    skos:note: harvested apple tree
+    action: produce
+    recipeOutputOf: bumblebee:53b44c35-d514-4945-b257-9f66c7ec0d67
+    involvesQuantity:
+      qudt:unit: unit:Number
+      qudt:numericValue: 1
+
+  - '@id': bumblebee:efdf5c80-1a31-45bc-bb14-0e3746d1a81a
+    '@type': RecipeFlow
+    skos:note: apples
+    action: produce
+    recipeOutputOf: bumblebee:53b44c35-d514-4945-b257-9f66c7ec0d67
+    involvesQuantity:
+      qudt:unit: unit:Kilogram
+      qudt:numericValue: 20
+
+  - '@id': bumblebee:8e664596-30df-428e-b6fd-a784c2acf38b
+    '@type': RecipeFlow
+    skos:note: willow basket
+    action: use
+    recipeInputOf: bumblebee:53b44c35-d514-4945-b257-9f66c7ec0d67
+    involvesQuantity:
+      qudt:unit: unit:Number
+      qudt:numericValue: 2
+    temporalLength:
+      qudt:unit: unit:Hour
+      qudt:numericValue: 0.25
+
+  - '@id': bumblebee:76694411-781c-41b9-a265-5fe2ee456d79
+    '@type': RecipeFlow
+    skos:note: ladder
+    action: use
+    recipeInputOf: bumblebee:53b44c35-d514-4945-b257-9f66c7ec0d67
+    involvesQuantity:
+      qudt:unit: unit:Number
+      qudt:numericValue: 1
+    temporalLength:
+      qudt:unit: unit:Hour
+      qudt:numericValue: 0.25
+
+  - '@id': bumblebee:1178138b-21dd-42e1-8f43-c8462d14eaab
+    '@type': RecipeFlow
+    skos:note: person harvesting
+    action: work
+    recipeInputOf: bumblebee:53b44c35-d514-4945-b257-9f66c7ec0d67
+    involvesQuantity:
+      qudt:unit: unit:Number
+      qudt:numericValue: 2
+    temporalLength:
+      qudt:unit: unit:Hour
+      qudt:numericValue: 0.25
+
+  - '@id': bumblebee:11a2caee-a44d-4099-aa1b-56504684127f
+    '@type': Process
+    skos:note: ten people harvesting 30 apple trees in 3 hours
+
+  - '@id': bumblebee:60ac2d7c-e5cd-4de4-b981-0ad64ea716a2
+    '@type': Intent
+    skos:note: tree bearing apples
+    action: consume
+    inputOf: bumblebee:11a2caee-a44d-4099-aa1b-56504684127f
+    involvesQuantity:
+      qudt:unit: unit:Number
+      qudt:numericValue: 30
+
+  - '@id': bumblebee:0cdd34f8-e688-4d96-934e-b12b27d2c51b
+    '@type': Intent
+    skos:note: harvested apple tree
+    action: produce
+    outputOf: bumblebee:11a2caee-a44d-4099-aa1b-56504684127f
+    involvesQuantity:
+      qudt:unit: unit:Number
+      qudt:numericValue: 30
+
+  - '@id': bumblebee:b32fdc8f-dc39-4b9e-92e9-991aa5bac2ec
+    '@type': Intent
+    skos:note: apples
+    action: produce
+    outputOf: bumblebee:53b44c35-d514-4945-b257-9f66c7ec0d67
+    involvesQuantity:
+      qudt:unit: unit:Kilogram
+      qudt:numericValue: 600
+
+  - '@id': bumblebee:359dfdea-7f07-4977-820a-20214883068a
+    '@type': Intent
+    skos:note: willow basket
+    action: use
+    inputOf: bumblebee:11a2caee-a44d-4099-aa1b-56504684127f
+    involvesQuantity:
+      qudt:unit: unit:Number
+      qudt:numericValue: 10
+    temporalLength:
+      qudt:unit: unit:Hour
+      qudt:numericValue: 3
+
+  - '@id': bumblebee:32c8dc85-5700-406d-b1d0-f07c33210dc0
+    '@type': Intent
+    skos:note: ladder
+    action: use
+    inputOf: bumblebee:11a2caee-a44d-4099-aa1b-56504684127f
+    involvesQuantity:
+      qudt:unit: unit:Number
+      qudt:numericValue: 5
+    temporalLength:
+      qudt:unit: unit:Hour
+      qudt:numericValue: 3
+
+  - '@id': bumblebee:11fdbf89-90d4-47c8-a59d-37fdf2c3fb47
+    '@type': Intent
+    skos:note: person harvesting
+    action: work
+    inputOf: bumblebee:11a2caee-a44d-4099-aa1b-56504684127f
+    involvesQuantity:
+      qudt:unit: unit:Number
+      qudt:numericValue: 10
+    temporalLength:
+      qudt:unit: unit:Hour
+      qudt:numericValue: 3
