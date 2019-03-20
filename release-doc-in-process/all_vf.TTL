@@ -181,7 +181,7 @@ vf:involves
         rdfs:domain         [ owl:unionOf (vf:Commitment vf:Intent vf:EconomicEvent) ] ; 
         rdfs:range          vf:EconomicResource ;
         vs:term_status      "unstable" ;
-        rdfs:comment        "Economic resource referenced by the flow." .
+        rdfs:comment        "Economic resource involved in the flow." .
 
 vf:underlyingResource
         a                   owl:ObjectProperty ;
@@ -197,14 +197,6 @@ vf:relationship  a          owl:ObjectProperty ;
         rdfs:range          vf:AgentRelationshipRole ;
         vs:term_status      "unstable" ;
         rdfs:comment        "A kind of relationship that exists between 2 agents." .
-
-#vf:affects
-#        a                   owl:ObjectProperty ;
-#        rdfs:label          "affects" ;
-#        rdfs:domain         vf:EconomicEvent ;
-#        rdfs:range          vf:EconomicResource ;
-#        vs:term_status      "unstable" ;
-#        rdfs:comment        "The economic resource that is decremented or incremented by the economic event, or just what the economic event is about." .
 
 vf:appreciationOf
         a                   owl:ObjectProperty ;
