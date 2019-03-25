@@ -2,11 +2,11 @@
 
 ## Quantitative values
 
-### Real time tracking of resources
+### Real time tracking of resources, and planning
 
-*present*
+*present*, *future*
 
-It involves `vf:currentQuantity` as well as *available quantity*. They might differ for example when ongoing *use* event(s) involves certain quantity of resource. *Available quantity* would equal `vf:currentQuantity` minus all the quantities currently involved in *use* event(s).
+It involves `vf:currentQuantity` as well as *available quantity*. They might differ for example when ongoing *use* event(s) involves certain quantity of resource. *Available quantity* would equal `vf:currentQuantity` minus all the quantities currently involved in *use* event(s). Similar for planning at any time in the future projected `vf:currentQuantity` and *available quantity* might differ based on existing commitments.
 
 Use cases:
 
