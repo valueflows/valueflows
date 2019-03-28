@@ -51,17 +51,12 @@ When the roll at the end grows to the largest size the equipment can handle, the
 
 ## The rewinder station is where supply meets demand. 
 
-Demand-driven example: bicycle manufacturing
+The big wide roll goes thru a slitter which separates it out into narrower sheets according to orders from customers, and the narrower sheets are rewound into smaller rolls.
+![rewinder](https://sc01.alicdn.com/kf/HTB1HvCZkNWYBuNjy1zkq6xGGpXat/paper-mill-Slitter-Rewinder-slitter-rewinder-machine.jpg)
 
-See http://www.madehow.com/Volume-2/Bicycle.html
+The smaller rolls are then moved into railroad cars which are waiting on a siding by the paper mill, which will ship the paper rolls to customers which will make them into some kind of paper products.
 
-The demands for bicycles might come from stores or individual customers.
-
-Each bicycle model will have a recipe, usually in the form of a multi-level bill of materials and routing (sequence of manufacturing processes). In ValueFlows, we combine them into the same structure called a Recipe.
-
-The algorithm for planning is called a dependent demand explosion, which you can read about in some detail in this pattern: https://hillside.net/plop/plop97/Proceedings/haugen.pdf
-
-The recipe is called the Knowledge Level in that pattern.
+The rewinder station is a difficult scheduling job. The paper mill has limited space for rolls of paper and railroad cars, and the correctly-sized rolls of the required grade of paper need to be moved into the correct railroad car for the correct customer.
 
 # Demand-driven example: bicycle manufacturing
 
