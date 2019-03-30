@@ -275,12 +275,24 @@ vf:under  a                 owl:ObjectProperty ;
 #        vs:term_status      "unstable" ;
 #        rdfs:comment        "References the commitment that was fully or partially created because of the economic event, often based on a prior agreement." .
 
-vf:contains  a              owl:ObjectProperty ;
+vf:contains a               owl:ObjectProperty ;
         rdfs:label          "contains" ;
         rdfs:domain         vf:EconomicResource ;
         rdfs:range          vf:EconomicResource ;
         vs:term_status      "unstable" ;
         rdfs:comment        "Used when a stock economic resource contains units also defined as economic resources." .
+
+vf:hasBeginning a           owl:DatatypeProperty ;
+        rdfs:domain         time:TemporalEntity ;
+        rdfs:range          xsd:dateTimeStamp ;
+        owl:propertyChainAxiom (time:hasBeginning time:inXSDDateTimeStamp) ;
+        rdfs:comment        "Specific time marking the beginning of the flow".
+
+vf:hasEnd a                 owl:DatatypeProperty ;
+        rdfs:domain         time:TemporalEntity ;
+        rdfs:range          xsd:dateTimeStamp ;
+        owl:propertyChainAxiom (time:hasEnd time:inXSDDateTimeStamp) ;
+        rdfs:comment        "Specific time marking the end of the flow".
 
 vf:currentQuantity a        owl:ObjectProperty ;
         rdfs:label          "current quantity" ;
