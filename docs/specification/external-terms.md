@@ -44,8 +44,6 @@ https://www.w3.org/TR/owl-time
 * [`time:before`](https://www.w3.org/TR/owl-time/#time:before)
 * [`time:after`](https://www.w3.org/TR/owl-time/#time:after)
 * [`time:intervalDuring`](https://www.w3.org/TR/owl-time/#time:intervalDuring)
-* [`time:intervalStarts'](https://www.w3.org/TR/owl-time/#time:intervalStarts)
-* [`time:intervalFinishes'](https://www.w3.org/TR/owl-time/#time:intervalFinishes)
 
 `vf` defines two property chain axioms `vf:hasBeginning` and `vf:hasEnd` as slight variant
 of [Alignment of PROV-O with OWL-Time(https://www.w3.org/TR/owl-time/#time-prov)]

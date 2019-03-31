@@ -46,7 +46,6 @@ vf:RecipeProcess a          owl:Class ;
 
 vf:RecipeFlow a             owl:Class ;
         rdfs:label          "vf:RecipeFlow" ;
-        rdfs:subClassOf     time:TemporalEntity ;
         vs:term_status      "unstable" ;
         rdfs:comment        "The linkage between a process recipe, an action that structures a recipe, and a resource specification." .
 
@@ -55,13 +54,11 @@ vf:RecipeFlow a             owl:Class ;
 
 vf:Intent  a                owl:Class ;
         rdfs:label          "vf:Intent" ;
-        rdfs:subClassOf     time:TemporalEntity ;
         vs:term_status      "unstable" ;
         rdfs:comment        "A planned economic flow, which can lead to economic events (sometimes through commitments)" .
 
 vf:Commitment  a            owl:Class ;
         rdfs:label          "vf:Commitment" ;
-        rdfs:subClassOf     time:TemporalEntity ;
         vs:term_status      "testing" ;
         rdfs:comment        "A planned economic flow that has been promised by an agent to another agent." .
 
@@ -97,7 +94,6 @@ vf:EconomicResource  a      owl:Class ;
 
 vf:Process  a               owl:Class ;
         rdfs:label          "vf:Process" ;
-        rdfs:subClassOf     time:TemporalEntity ;
         vs:term_status      "testing" ;
         rdfs:comment        "An activity that changes inputs into outputs.  It could transform or transport economic resource(s)." .
 
@@ -108,7 +104,6 @@ vf:Transfer  a              owl:Class ;
 
 vf:EconomicEvent  a         owl:Class ;
         rdfs:label          "vf:EconomicEvent" ;
-        rdfs:subClassOf     time:TemporalEntity ;
         vs:term_status      "testing" ;
         rdfs:comment        "An observed economic flow, as opposed to a flow planned to happen in the future. This could reflect a change in the quantity of an economic resource. It is also defined by its behavior in relation to the economic resource (see vf:action)" .
 
@@ -286,13 +281,13 @@ vf:hasBeginning a           owl:DatatypeProperty ;
         rdfs:domain         time:TemporalEntity ;
         rdfs:range          xsd:dateTimeStamp ;
         owl:propertyChainAxiom (time:hasBeginning time:inXSDDateTimeStamp) ;
-        rdfs:comment        "Specific time marking the beginning of the flow".
+        rdfs:comment        "Specific time marking the exact beginning of flow or process".
 
 vf:hasEnd a                 owl:DatatypeProperty ;
         rdfs:domain         time:TemporalEntity ;
         rdfs:range          xsd:dateTimeStamp ;
         owl:propertyChainAxiom (time:hasEnd time:inXSDDateTimeStamp) ;
-        rdfs:comment        "Specific time marking the end of the flow".
+        rdfs:comment        "Specific time marking the exact end of flow or process".
 
 vf:currentQuantity a        owl:ObjectProperty ;
         rdfs:label          "current quantity" ;
