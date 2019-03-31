@@ -453,7 +453,7 @@ vf:unit a                   owl:ObjectProperty ;
 vf:duration a               owl:ObjectProperty ;
         rdfs:label          "duration" ;
         rdfs:domain         vf:RecipeProcess ;
-        rdfs:range          time:TemporalDuration ;
+        rdfs:range          time:Duration ;
         vs:term_status      "unstable" ;
         rdfs:comment        "The calendar duration defined for this type of process." .
 
