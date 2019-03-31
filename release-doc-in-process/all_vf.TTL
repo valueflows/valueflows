@@ -270,12 +270,24 @@ vf:under  a                 owl:ObjectProperty ;
 #        vs:term_status      "unstable" ;
 #        rdfs:comment        "References the commitment that was fully or partially created because of the economic event, often based on a prior agreement." .
 
-vf:contains  a              owl:ObjectProperty ;
+vf:contains a               owl:ObjectProperty ;
         rdfs:label          "contains" ;
         rdfs:domain         vf:EconomicResource ;
         rdfs:range          vf:EconomicResource ;
         vs:term_status      "unstable" ;
         rdfs:comment        "Used when a stock economic resource contains units also defined as economic resources." .
+
+vf:hasBeginning a           owl:DatatypeProperty ;
+        rdfs:domain         time:TemporalEntity ;
+        rdfs:range          xsd:dateTimeStamp ;
+        owl:propertyChainAxiom (time:hasBeginning time:inXSDDateTimeStamp) ;
+        rdfs:comment        "Specific time marking the exact beginning of flow or process".
+
+vf:hasEnd a                 owl:DatatypeProperty ;
+        rdfs:domain         time:TemporalEntity ;
+        rdfs:range          xsd:dateTimeStamp ;
+        owl:propertyChainAxiom (time:hasEnd time:inXSDDateTimeStamp) ;
+        rdfs:comment        "Specific time marking the exact end of flow or process".
 
 vf:currentQuantity a        owl:ObjectProperty ;
         rdfs:label          "current quantity" ;
@@ -346,34 +358,6 @@ vf:primaryLocation a        owl:ObjectProperty ;
         #rdfs:range          vf:Location ;
         vs:term_status      "unstable" ;
         rdfs:comment        "The main place an agent is located, often an address where activities occur and mail can be sent. This is usually a mappable geographic location.  It also could be a website address, as in the case of agents who have no physical location." .
-
-vf:observedTime a           owl:ObjectProperty ;
-        rdfs:label          "observed time" ;
-        rdfs:domain         vf:EconomicEvent ;
-        rdfs:range          time:TemporalEntity ;
-        vs:term_status      "unstable" ;
-        rdfs:comment        "The actual temporal instant or interval." .
-
-vf:committedTime a          owl:ObjectProperty ;
-        rdfs:label          "committed time" ;
-        rdfs:domain         vf:Commitment ;
-        rdfs:range          time:TemporalEntity ;
-        vs:term_status      "unstable" ;
-        rdfs:comment        "The promised temporal instant or interval." .
-
-vf:intendedTime a           owl:ObjectProperty ;
-        rdfs:label          "intended time" ;
-        rdfs:domain         vf:Intent ;
-        rdfs:range          time:TemporalEntity ;
-        vs:term_status      "unstable" ;
-        rdfs:comment        "The intended temporal instant or interval." .
-
-vf:plannedTime a            owl:ObjectProperty ;
-        rdfs:label          "planned time" ;
-        rdfs:domain         vf:Process ;
-        rdfs:range          time:TemporalEntity ;
-        vs:term_status      "unstable" ;
-        rdfs:comment        "The planned or estimated calendar time the process will take (whether being actually worked or not)." .
 
 vf:image a                  owl:DatatypeProperty ;
         vs:term_status      "unstable" ;
