@@ -23,6 +23,3 @@ Classifications can be created by user groups for themselves, or can be existing
     Barter - https://www.wikidata.org/wiki/Q484830
     Gift - https://www.wikidata.org/wiki/Q184303
 
-#### Recipes
-
-Coming in future releases.
