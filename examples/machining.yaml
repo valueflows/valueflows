@@ -1,70 +1,111 @@
-# Example: Part of planning and doing a translation - one step, proofreading
+# Example: Machine shop, one step of threading a part
 
 '@context':
   - https://git.io/vf-examples-jsonld-context
   - alice: https://alice.example/
-    translators: https://translators.example/
+    machine: https://machine-shop.example/
 
-'@id': rgh:valueflows/valueflows/master/examples/translate.yaml
+'@id': rgh:valueflows/valueflows/master/examples/machining.yaml
 '@graph':
 
-  # recipe (fragment: proofreading process)
+  # recipe
 
-  - '@id': translators:c404cff5-19c7-453d-b0d8-d8e96055bd0b
+  - '@id': machine:a7e94dde-2997-451e-a7e1-8d364d5e6dee
+    '@type': ResourceSpecification
+    name: Threaded part 87
+    unit: unit:Number
+    substitutable: True
+
+  - '@id': machine:2d350055-acba-4e17-92f8-8b126272ee40
+    '@type': ResourceSpecification
+    name: Unthreaded part 45
+    unit: unit:Number
+    substitutable: True
+
+  - '@id': machine:07819789-dd51-44c3-b35c-9210165bc832
+    '@type': ResourceSpecification
+    classifiedAs: https://www.wikidata.org/wiki/Q2211295 # drilling machine
+    name: Drill Press
+    unit: unit:Number
+    unitOfUse: unit:Hour # want a better way to do this!
+    substitutable: True
+
+  - '@id': machine:c404cff5-19c7-453d-b0d8-d8e96055bd0b
     '@type': RecipeProcess
-    skos:note: Proofread a translated blog post
+    skos:note: Thread a part
     time:hasDuration:
-      time:unitType: time:unitDay
+      time:unitType: time:unitHour
       time:numericDuration: 2
-    scalingFormula: D
+    scalingFormula: D*M
 
-  - '@id': translators:13cf44e5-eaa1-4ad0-88d5-e2910a73f377
+  - '@id': machine:c7897c39-7f05-4a5d-a487-80e130a2414b
     '@type': RecipeFlow
-    action: work 
-    resourceClassifiedAs: https://www.wikidata.org/wiki/Q834191 # proofreading
+    action: produce 
+    resourceConformsTo: machine:a7e94dde-2997-451e-a7e1-8d364d5e6dee # threaded part
     quantifiedAs:
-      qudt:unit: unit:Word
-      qudt:numericValue: 1
-    scalingFormula: M*Q
+      qudt:unit: unit:Number
+      qudt:numericValue: 80 # minimum batch size to be worth it for setup
+    scalingFormula: Q*M
     scalesPlan: True
 
-  - '@id': translators:9f112621-3f13-4f48-a3e2-fd2ca99493cd
+  - '@id': machine:13cf44e5-eaa1-4ad0-88d5-e2910a73f377
     '@type': RecipeFlow
-    action: accept
-    resourceClassifiedAs: https://www.wikidata.org/wiki/Q17928402 # blog post
+    action: work 
+    resourceClassifiedAs: https://www.wikidata.org/wiki/Q192047 # machining
+    quantifiedAs:
+      qudt:unit: unit:Hour
+      qudt:numericValue: 2
+    scalingFormula: Q*M
+
+  - '@id': machine:9f112621-3f13-4f48-a3e2-fd2ca99493cd
+    '@type': RecipeFlow
+    action: consume
+    resourceConformsTo: machine:2d350055-acba-4e17-92f8-8b126272ee40 # unthreaded part
     quantifiedAs:
       qudt:unit: unit:Number
-      qudt:numericValue: 1
-    scalingFormula: Q
+      qudt:numericValue: 80
+    scalingFormula: Q*M
 
-  - '@id': translators:c7897c39-7f05-4a5d-a487-80e130a2414b
+  - '@id': machine:ff208521-9fec-4bb4-a6d3-197f6735cb26
     '@type': RecipeFlow
-    action: improve 
-    resourceClassifiedAs: https://www.wikidata.org/wiki/Q17928402 # blog post
+    action: use
+    resourceConformsTo: machine:07819789-dd51-44c3-b35c-9210165bc832 # drill press
     quantifiedAs:
-      qudt:unit: unit:Number
-      qudt:numericValue: 1
-    scalingFormula: Q
+      qudt:unit: unit:Hour
+      qudt:numericValue: 2
+    scalingFormula: Q*M #?
 
-  # resources
+  # resources before
 
-  - '@id': translators:e1721a61-cd47-4556-84b9-8b1b81da15bf
+  - '@id': machine:e1721a61-cd47-4556-84b9-8b1b81da15bf
     '@type': EconomicResource
-    name: Summer of Commoning: A Tour of French Communities and Projects
-    classifiedAs: https://www.wikidata.org/wiki/Q17928402 # blog post
+    name: Drill Press
+    conformsTo: machine:07819789-dd51-44c3-b35c-9210165bc832
     currentQuantity:
       qudt:unit: unit:Number
-      qudt:numericValue: 1
+      qudt:numericValue: 4
 
-  # plan
+  - '@id': machine:e1721a61-cd47-4556-84b9-8b1b81da15bf
+    '@type': EconomicResource
+    name: Unthreaded Part 45
+    conformsTo: machine:2d350055-acba-4e17-92f8-8b126272ee40
+    currentQuantity:
+      qudt:unit: unit:Number
+      qudt:numericValue: 2500
 
-  - '@id': translators:02b39a30-3e04-4305-9656-7f261aa63c84
+  # plan (Multiplier = demand / recipe batch size, M = 1000 / 80 = 12.5)
+
+  ======================================================================
+  NOT DONE AFTER HERE
+  
+  
+  - '@id': machine:02b39a30-3e04-4305-9656-7f261aa63c84
     '@type': Process
     name: Proofread Summer of Comming
     hasBeginning: 2018-12-07T08:00:00-5:00
     hasEnd: 2018-12-09T08:00:00-5:0
 
-  - '@id': translators:a25500e0-0106-43cd-8cbb-e74779488835
+  - '@id': machine:a25500e0-0106-43cd-8cbb-e74779488835
     '@type': Intent
     skos:note: Proofreading a French to Spanish translation
     action: work
@@ -76,7 +117,7 @@
     after: 2018-12-07T08:00:00-5:00
     before: 2018-12-09T08:00:00-5:00
 
-  - '@id': translators:a96bab2f-a1f0-47f3-827d-b4fb491d376f
+  - '@id': machine:a96bab2f-a1f0-47f3-827d-b4fb491d376f
     '@type': Commitment
     action: accept
     provider: http://www.translators.example/
@@ -87,7 +128,7 @@
       qudt:numericValue: 1
     after: 2018-12-07T08:00:00-5:00
 
-  - '@id': translators:f99ba192-fb8d-419e-8246-c8ebac531100
+  - '@id': machine:f99ba192-fb8d-419e-8246-c8ebac531100
     '@type': Commitment
     action: improve
     provider: http://www.translators.example/
@@ -100,7 +141,7 @@
 
   # commit to the work
 
-  - '@id': translators:856c43b1-0a63-445f-a56f-707b257f086d
+  - '@id': machine:856c43b1-0a63-445f-a56f-707b257f086d
     '@type': Commitment
     action: work
     provider: http://www.alice.example/
@@ -112,7 +153,7 @@
     hasBeginning: 2018-12-08T10:00:00-5:00
     hasEnd: 2018-12-08T15:00:00-5:00
 
-  - '@id': translators:9cb4944b-d26d-4774-a530-d18f2747c0d7
+  - '@id': machine:9cb4944b-d26d-4774-a530-d18f2747c0d7
     '@type': Satisfaction
     satisfies: translators:a25500e0-0106-43cd-8cbb-e74779488835 # the intent
     satisfiedBy: translators:856c43b1-0a63-445f-a56f-707b257f086d # the commitment
@@ -122,7 +163,7 @@
 
   # do the work
 
-  - '@id': translators:4cb1f323-4390-4e4a-ac9e-ff64d42f08bc
+  - '@id': machine:4cb1f323-4390-4e4a-ac9e-ff64d42f08bc
     '@type': EconomicEvent
     action: work
     provider: http://www.alice.example/
@@ -134,7 +175,7 @@
     hasBeginning: 2018-12-08T11:00:00-5:00
     hasEnd: 2018-12-08T15:30:00-5:00
 
-  - '@id': translators:750ef3e1-525c-44d3-8b85-504435285e9f
+  - '@id': machine:750ef3e1-525c-44d3-8b85-504435285e9f
     '@type': Fulfillment
     fulfills: translators:856c43b1-0a63-445f-a56f-707b257f086d # the commitment
     fulfilledBy: translators:4cb1f323-4390-4e4a-ac9e-ff64d42f08bc # the economic event
@@ -142,7 +183,7 @@
       qudt:unit: unit:Words
       qudt:numericValue: 1025
 
-  - '@id': translators:cb2fd867-b034-4be5-82e7-1a99a353136f
+  - '@id': machine:cb2fd867-b034-4be5-82e7-1a99a353136f
     '@type': EconomicEvent
     action: accept
     provider: http://www.translators.example/
@@ -153,7 +194,7 @@
       qudt:numericValue: 1
     time:inXSDDateTimeStamp: 2018-12-08T11:00:00-5:00
 
-  - '@id': translators:750ef3e1-525c-44d3-8b85-504435285e9f
+  - '@id': machine:750ef3e1-525c-44d3-8b85-504435285e9f
     '@type': Fulfillment
     fulfills: translators:a96bab2f-a1f0-47f3-827d-b4fb491d376f # the commitment
     fulfilledBy: cb2fd867-b034-4be5-82e7-1a99a353136f # the economic event
@@ -161,7 +202,7 @@
       qudt:unit: unit:Number
       qudt:numericValue: 1
 
-  - '@id': translators:63acf47d-9911-4591-b140-e6e9a538d6ac
+  - '@id': machine:63acf47d-9911-4591-b140-e6e9a538d6ac
     '@type': EconomicEvent
     action: improve
     provider: http://www.translators.example/
@@ -172,7 +213,7 @@
       qudt:numericValue: 1
     time:inXSDDateTimeStamp: 2018-12-08T15:30:00-5:00
 
-  - '@id': translators:750ef3e1-525c-44d3-8b85-504435285e9f
+  - '@id': machine:750ef3e1-525c-44d3-8b85-504435285e9f
     '@type': Fulfillment
     fulfills: translators:a96bab2f-a1f0-47f3-827d-b4fb491d376f # the commitment
     fulfilledBy: 63acf47d-9911-4591-b140-e6e9a538d6ac # the economic event
