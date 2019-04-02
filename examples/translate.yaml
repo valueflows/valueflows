@@ -1,0 +1,97 @@
+# Example: Planning and doing a translation
+
+'@context':
+  - https://git.io/vf-examples-jsonld-context
+  - bob: https://bob.example/
+    translators: https://translators.example/
+
+'@id': rgh:valueflows/valueflows/master/examples/translate.yaml
+'@graph':
+
+  - '@id': translators:c404cff5-19c7-453d-b0d8-d8e96055bd0b
+    '@type': RecipeProcess
+    skos:note: Translate a document
+    time:hasDuration:
+      time:unitType: time:unitDay
+      time:numericDuration: 1
+    scaleUsing: D * M #not right, too hard to figure out right now
+
+  - '@id': translators:13cf44e5-eaa1-4ad0-88d5-e2910a73f377
+    '@type': RecipeFlow
+    action: work 
+    resourceClassifiedAs: https://www.wikidata.org/wiki/Q7553 #translation
+    flowQuantity:
+      qudt:unit: unit:Word
+      qudt:numericValue: 1
+    scalingFormula: M*Q
+    scalesPlan: True
+
+  - '@id': translators:9f112621-3f13-4f48-a3e2-fd2ca99493cd
+    '@type': RecipeFlow
+    action: accept
+    resourceClassifiedAs: https://www.wikidata.org/wiki/Q49848 #document
+    flowQuantity:
+      qudt:unit: unit:Number
+      qudt:numericValue: 1
+    scalingFormula: Q
+
+  - '@id': translators:c7897c39-7f05-4a5d-a487-80e130a2414b
+    '@type': RecipeFlow
+    action: improve 
+    resourceClassifiedAs: https://www.wikidata.org/wiki/Q49848 #document
+    flowQuantity:
+      qudt:unit: unit:Number
+      qudt:numericValue: 1
+    scalingFormula: Q
+
+  - '@id': translators:a25500e0-0106-43cd-8cbb-e74779488835
+    '@type': Intent
+    skos:note: English to Spanish
+    action: work
+    resourceClassifiedAs:  https://www.wikidata.org/wiki/Q7553 #translation
+    receiver: http://www.translators.example/
+    flowQuantity:
+      qudt:unit: unit:Words
+      qudt:numericValue: 1025
+    hasBeginning: 2018-12-07T00:00:00-5:00
+    hasEnd: 2018-12-12T00:00:00-5:00
+
+  - '@id': translators:856c43b1-0a63-445f-a56f-707b257f086d
+    '@type': Commitment
+    action: work
+    provider: http://www.alice.example/
+    receiver: http://www.translators.example/
+    resourceClassifiedAs: https://www.wikidata.org/wiki/Q7553 #translation
+    XQuantity:
+      qudt:unit: unit:Words
+      qudt:numericValue: 1025
+    hasBeginning: 2018-12-07T00:00:00-5:00
+    hasEnd: 2018-12-12T00:00:00-5:00
+
+  - '@id': translators:9cb4944b-d26d-4774-a530-d18f2747c0d7
+    '@type': Satisfaction
+    satisfies: translators:a25500e0-0106-43cd-8cbb-e74779488835 # the offer (intent)
+    satisfiedBy: translators:856c43b1-0a63-445f-a56f-707b257f086d # the commitment
+    XQuantity:
+      qudt:unit: unit:Words
+      qudt:numericValue: 1025
+
+  - '@id': translators:4cb1f323-4390-4e4a-ac9e-ff64d42f08bc
+    '@type': EconomicEvent
+    action: work
+    provider: http://www.alice.example/
+    receiver: http://www.translators.example/
+    resourceClassifiedAs: https://www.wikidata.org/wiki/Q7553 #translation
+    XQuantity:
+      qudt:unit: unit:Words
+      qudt:numericValue: 1025
+    hasBeginning: 2018-12-07T10:00:00-5:00
+    hasEnd: 2018-12-07T15:00:00-5:00
+
+  - '@id': translators:9cb4944b-d26d-4774-a530-d18f2747c0d7
+    '@type': Fulfillment
+    fulfills: translators:856c43b1-0a63-445f-a56f-707b257f086d # the commitment
+    fulfilledBy: translators:4cb1f323-4390-4e4a-ac9e-ff64d42f08bc # the economic event
+    XQuantity:
+      qudt:unit: unit:Words
+      qudt:numericValue: 1025
