@@ -450,13 +450,6 @@ vf:unit a                   owl:ObjectProperty ;
 #        vs:term_status      "unstable" ;
 #        rdfs:comment    "This recipe is an updated version of another recipe." .
 
-vf:duration a               owl:ObjectProperty ;
-        rdfs:label          "duration" ;
-        rdfs:domain         vf:RecipeProcess ;
-        rdfs:range          time:TemporalDuration ;
-        vs:term_status      "unstable" ;
-        rdfs:comment        "The calendar duration defined for this type of process." .
-
 vf:durationMultiplier 
         a                   owl:DatatypeProperty ;
         rdfs:label          "duration multiplier" ;
