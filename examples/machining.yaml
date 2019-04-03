@@ -3,6 +3,7 @@
 '@context':
   - https://git.io/vf-examples-jsonld-context
   - alice: https://alice.example/
+    bob: https://bob.example/
     machine: https://machine-shop.example/
 
 '@id': rgh:valueflows/valueflows/master/examples/machining.yaml
@@ -73,93 +74,163 @@
     quantifiedAs:
       qudt:unit: unit:Hour
       qudt:numericValue: 2
-    scalingFormula: Q*M #?
+    scalingFormula: Q*M
 
   # resources before
 
   - '@id': machine:e1721a61-cd47-4556-84b9-8b1b81da15bf
     '@type': EconomicResource
-    name: Drill Press
+    name: Drill Press 1
     conformsTo: machine:07819789-dd51-44c3-b35c-9210165bc832
     currentQuantity:
       qudt:unit: unit:Number
-      qudt:numericValue: 4
+      qudt:numericValue: 1
 
-  - '@id': machine:e1721a61-cd47-4556-84b9-8b1b81da15bf
+  - '@id': machine:e7482f32-25b5-4f79-934b-5d0db3a5b77d
     '@type': EconomicResource
-    name: Unthreaded Part 45
+    name: Drill Press 2
+    conformsTo: machine:07819789-dd51-44c3-b35c-9210165bc832
+    currentQuantity:
+      qudt:unit: unit:Number
+      qudt:numericValue: 1
+
+  - '@id': machine:6fb358a3-2859-4d6a-a4fa-431603ee70f5
+    '@type': EconomicResource
+    name: Unthreaded part 45
     conformsTo: machine:2d350055-acba-4e17-92f8-8b126272ee40
     currentQuantity:
       qudt:unit: unit:Number
-      qudt:numericValue: 2500
+      qudt:numericValue: 1
 
-  # plan (Multiplier = demand / recipe batch size, M = 1000 / 80 = 12.5)
+  # plan
 
-  ======================================================================
-  NOT DONE AFTER HERE
-  
-  
+  # Multiplier = demand / recipe batch size, M = 1000 / 80 = 12.5
+  # first pass, create plan from recipe assuming no limits on time (this is the optimum because of the least setup time)
+  # second pass, capacity planning to modify plan to fit due date and person/machine availability, this is the plan
+
   - '@id': machine:02b39a30-3e04-4305-9656-7f261aa63c84
     '@type': Process
-    name: Proofread Summer of Comming
+    name: Thread parts
     hasBeginning: 2018-12-07T08:00:00-5:00
-    hasEnd: 2018-12-09T08:00:00-5:0
+    hasEnd: 2018-12-08T17:00:00-5:0
 
   - '@id': machine:a25500e0-0106-43cd-8cbb-e74779488835
-    '@type': Intent
-    skos:note: Proofreading a French to Spanish translation
+    '@type': Commitment
     action: work
-    resourceClassifiedAs: https://www.wikidata.org/wiki/Q834191 # proofreading
-    receiver: http://www.translators.example/
+    resourceClassifiedAs: https://www.wikidata.org/wiki/Q192047 # machining
+    provider: http://www.alice.example/
+    receiver: http://www.machine-shop.example/
     quantifiedAs:
-      qudt:unit: unit:Words
-      qudt:numericValue: 1025
-    after: 2018-12-07T08:00:00-5:00
-    before: 2018-12-09T08:00:00-5:00
-
-  - '@id': machine:a96bab2f-a1f0-47f3-827d-b4fb491d376f
-    '@type': Commitment
-    action: accept
-    provider: http://www.translators.example/
-    receiver: http://www.translators.example/
-    resourceClassifiedAs: https://www.wikidata.org/wiki/Q17928402 # blog post
-    quantifiedAs:
-      qudt:unit: unit:Number
-      qudt:numericValue: 1
-    after: 2018-12-07T08:00:00-5:00
-
-  - '@id': machine:f99ba192-fb8d-419e-8246-c8ebac531100
-    '@type': Commitment
-    action: improve
-    provider: http://www.translators.example/
-    receiver: http://www.translators.example/
-    resourceClassifiedAs: https://www.wikidata.org/wiki/Q17928402 # blog post
-    quantifiedAs:
-      qudt:unit: unit:Number
-      qudt:numericValue: 1
-    before: 2018-12-09T08:00:00-5:00
-
-  # commit to the work
+      qudt:unit: unit:Hour
+      qudt:numericValue: 7
+    hasBeginning: 2018-12-07T08:00:00-5:00
+    hasEnd: 2018-12-07T15:00:00-5:00
 
   - '@id': machine:856c43b1-0a63-445f-a56f-707b257f086d
     '@type': Commitment
     action: work
+    resourceClassifiedAs: https://www.wikidata.org/wiki/Q192047 # machining
     provider: http://www.alice.example/
-    receiver: http://www.translators.example/
-    resourceClassifiedAs: https://www.wikidata.org/wiki/Q834191 # proofreading
+    receiver: http://www.machine-shop.example/
     quantifiedAs:
-      qudt:unit: unit:Words
-      qudt:numericValue: 1025
-    hasBeginning: 2018-12-08T10:00:00-5:00
-    hasEnd: 2018-12-08T15:00:00-5:00
+      qudt:unit: unit:Hour
+      qudt:numericValue: 5.5
+    hasBeginning: 2018-12-08T08:00:00-5:00
+    hasEnd: 2018-12-08T13:30:00-5:00
 
   - '@id': machine:9cb4944b-d26d-4774-a530-d18f2747c0d7
-    '@type': Satisfaction
-    satisfies: translators:a25500e0-0106-43cd-8cbb-e74779488835 # the intent
-    satisfiedBy: translators:856c43b1-0a63-445f-a56f-707b257f086d # the commitment
+    '@type': Commitment
+    action: work
+    resourceClassifiedAs: https://www.wikidata.org/wiki/Q192047 # machining
+    provider: http://www.bob.example/
+    receiver: http://www.machine-shop.example/
     quantifiedAs:
-      qudt:unit: unit:Words
-      qudt:numericValue: 1025
+      qudt:unit: unit:Hour
+      qudt:numericValue: 6
+    hasBeginning: 2018-12-07T09:00:00-5:00
+    hasEnd: 2018-12-07T15:00:00-5:00
+
+  - '@id': machine:c7897c39-7f05-4a5d-a487-80e130a2414b
+    '@type': Commitment
+    action: work
+    resourceClassifiedAs: https://www.wikidata.org/wiki/Q192047 # machining
+    provider: http://www.bob.example/
+    receiver: http://www.machine-shop.example/
+    quantifiedAs:
+      qudt:unit: unit:Hour
+      qudt:numericValue: 6.5
+    hasBeginning: 2018-12-08T09:00:00-5:00
+    hasEnd: 2018-12-08T15:30:00-5:00
+
+  - '@id': machine:a96bab2f-a1f0-47f3-827d-b4fb491d376f
+    '@type': Commitment
+    action: consume
+    provider: http://www.machine-shop.example/
+    receiver: http://www.machine-shop.example/
+    resourceConformsTo: machine:6fb358a3-2859-4d6a-a4fa-431603ee70f5 # unthreaded parts
+    quantifiedAs:
+      qudt:unit: unit:Number
+      qudt:numericValue: 1000
+    time:inXSDDateTimeStamp: 2018-12-07T08:00:00-5:00
+
+  - '@id': machine:f99ba192-fb8d-419e-8246-c8ebac531100
+    '@type': Commitment
+    action: use
+    provider: http://www.machine-shop.example/
+    receiver: http://www.machine-shop.example/
+    involves: machine:e1721a61-cd47-4556-84b9-8b1b81da15bf # drill press 1
+    quantifiedAs:
+      qudt:unit: unit:Number
+      qudt:numericValue: 
+    hasBeginning: 2018-12-07T08:00:00-5:00
+    hasEnd: 2018-12-07T15:00:00-5:00
+
+  - '@id': machine:c4cd539d-3684-4e4c-83f3-f04e89f571fd0
+    '@type': Commitment
+    action: use
+    provider: http://www.machine-shop.example/
+    receiver: http://www.machine-shop.example/
+    involves: machine:e1721a61-cd47-4556-84b9-8b1b81da15bf # drill press 1
+    quantifiedAs:
+      qudt:unit: unit:Number
+      qudt:numericValue: 
+    hasBeginning: 2018-12-08T08:00:00-5:00
+    hasEnd: 2018-12-08T13:30:00-5:00
+
+  - '@id': machine:b6059363-88fa-484f-af7d-f2ff5d17975a
+    '@type': Commitment
+    action: use
+    provider: http://www.machine-shop.example/
+    receiver: http://www.machine-shop.example/
+    involves: machine:e7482f32-25b5-4f79-934b-5d0db3a5b77d # drill press 2
+    quantifiedAs:
+      qudt:unit: unit:Number
+      qudt:numericValue: 
+    hasBeginning: 2018-12-07T09:00:00-5:00
+    hasEnd: 2018-12-07T15:00:00-5:00
+
+  - '@id': machine:a3246484-e862-4a12-b729-23986da5c033
+    '@type': Commitment
+    action: use
+    provider: http://www.machine-shop.example/
+    receiver: http://www.machine-shop.example/
+    involves: machine:e7482f32-25b5-4f79-934b-5d0db3a5b77d # drill press 2
+    quantifiedAs:
+      qudt:unit: unit:Number
+      qudt:numericValue: 
+    hasBeginning: 2018-12-08T09:00:00-5:00
+    hasEnd: 2018-12-08T15:30:00-5:00
+
+  - '@id': machine:7f8c9336-c91c-4096-9e03-543bb85e97f0
+    '@type': Commitment
+    action: produce
+    provider: http://www.machine-shop.example/
+    receiver: http://www.machine-shop.example/
+    resourceConformsTo: machine:c7897c39-7f05-4a5d-a487-80e130a2414b # threaded part
+    quantifiedAs:
+      qudt:unit: unit:Number
+      qudt:numericValue: 1000
+    before: 2018-12-08T17:00:00-5:0
 
   # do the work
 
@@ -167,57 +238,193 @@
     '@type': EconomicEvent
     action: work
     provider: http://www.alice.example/
-    receiver: http://www.translators.example/
-    resourceClassifiedAs: https://www.wikidata.org/wiki/Q834191 # proofreading
+    receiver: http://www.machine-shop.example/
     quantifiedAs:
-      qudt:unit: unit:Words
-      qudt:numericValue: 1025
-    hasBeginning: 2018-12-08T11:00:00-5:00
-    hasEnd: 2018-12-08T15:30:00-5:00
+      qudt:unit: unit:Hour
+      qudt:numericValue: 6.5
+    hasBeginning: 2018-12-07T08:00:00-5:00
+    hasEnd: 2018-12-07T15:00:00-5:00
 
   - '@id': machine:750ef3e1-525c-44d3-8b85-504435285e9f
     '@type': Fulfillment
-    fulfills: translators:856c43b1-0a63-445f-a56f-707b257f086d # the commitment
-    fulfilledBy: translators:4cb1f323-4390-4e4a-ac9e-ff64d42f08bc # the economic event
+    fulfills: machine:a25500e0-0106-43cd-8cbb-e74779488835 # the commitment
+    fulfilledBy: machine:4cb1f323-4390-4e4a-ac9e-ff64d42f08bc # the economic event
     quantifiedAs:
-      qudt:unit: unit:Words
-      qudt:numericValue: 1025
+      qudt:unit: unit:Hour
+      qudt:numericValue: 6.5
 
   - '@id': machine:cb2fd867-b034-4be5-82e7-1a99a353136f
     '@type': EconomicEvent
-    action: accept
-    provider: http://www.translators.example/
-    receiver: http://www.translators.example/
-    involves: translators:e1721a61-cd47-4556-84b9-8b1b81da15bf
+    action: work
+    provider: http://www.alice.example/
+    receiver: http://www.machine-shop.example/
     quantifiedAs:
-      qudt:unit: unit:Number
-      qudt:numericValue: 1
-    time:inXSDDateTimeStamp: 2018-12-08T11:00:00-5:00
+      qudt:unit: unit:Hour
+      qudt:numericValue: 5.5
+    hasBeginning: 2018-12-08T08:00:00-5:00
+    hasEnd: 2018-12-08T13:30:00-5:00
 
   - '@id': machine:750ef3e1-525c-44d3-8b85-504435285e9f
     '@type': Fulfillment
-    fulfills: translators:a96bab2f-a1f0-47f3-827d-b4fb491d376f # the commitment
-    fulfilledBy: cb2fd867-b034-4be5-82e7-1a99a353136f # the economic event
+    fulfills: machine:856c43b1-0a63-445f-a56f-707b257f086d # the commitment
+    fulfilledBy: machine:cb2fd867-b034-4be5-82e7-1a99a353136f # the economic event
     quantifiedAs:
-      qudt:unit: unit:Number
-      qudt:numericValue: 1
+      qudt:unit: unit:Hour
+      qudt:numericValue: 5.5
 
   - '@id': machine:63acf47d-9911-4591-b140-e6e9a538d6ac
     '@type': EconomicEvent
-    action: improve
-    provider: http://www.translators.example/
-    receiver: http://www.translators.example/
-    involves: translators:e1721a61-cd47-4556-84b9-8b1b81da15bf
+    action: work
+    provider: http://www.bob.example/
+    receiver: http://www.machine-shop.example/
     quantifiedAs:
-      qudt:unit: unit:Number
-      qudt:numericValue: 1
-    time:inXSDDateTimeStamp: 2018-12-08T15:30:00-5:00
+      qudt:unit: unit:Hour
+      qudt:numericValue: 6
+    hasBeginning: 2018-12-07T09:00:00-5:00
+    hasEnd: 2018-12-07T15:00:00-5:00
 
   - '@id': machine:750ef3e1-525c-44d3-8b85-504435285e9f
     '@type': Fulfillment
-    fulfills: translators:a96bab2f-a1f0-47f3-827d-b4fb491d376f # the commitment
-    fulfilledBy: 63acf47d-9911-4591-b140-e6e9a538d6ac # the economic event
+    fulfills: machine:9cb4944b-d26d-4774-a530-d18f2747c0d7 # the commitment
+    fulfilledBy: machine:63acf47d-9911-4591-b140-e6e9a538d6ac # the economic event
+    quantifiedAs:
+      qudt:unit: unit:Hour
+      qudt:numericValue: 6
+
+  - '@id': machine:a59e121a-89af-43c1-a247-e765137ba84c
+    '@type': EconomicEvent
+    action: work
+    provider: http://www.bob.example/
+    receiver: http://www.machine-shop.example/
+    quantifiedAs:
+      qudt:unit: unit:Hour
+      qudt:numericValue: 6.5
+    hasBeginning: 2018-12-08T09:00:00-5:00
+    hasEnd: 2018-12-08T15:30:00-5:00
+
+  - '@id': machine:84ee590e-d859-434c-b6f2-4d542d06fc7c
+    '@type': Fulfillment
+    fulfills: machine:c7897c39-7f05-4a5d-a487-80e130a2414b # the commitment
+    fulfilledBy: machine:a59e121a-89af-43c1-a247-e765137ba84c # the economic event
+    quantifiedAs:
+      qudt:unit: unit:Hour
+      qudt:numericValue: 6.5
+
+  - '@id': machine:73410782-74da-4165-ad2b-b92fdf55f795
+    '@type': EconomicEvent
+    action: consume
+    provider: http://www.machine-shop.example/
+    receiver: http://www.machine-shop.example/
+    involves: machine:6fb358a3-2859-4d6a-a4fa-431603ee70f5 # unthreaded parts
     quantifiedAs:
       qudt:unit: unit:Number
-      qudt:numericValue: 1
+      qudt:numericValue: 1015
+    time:inXSDDateTimeStamp: 2018-12-07T08:00:00-5:00
+
+  - '@id': machine:c9a6b8a7-f3ac-4272-bf21-53353b08fd7e
+    '@type': Fulfillment
+    fulfills: machine:a96bab2f-a1f0-47f3-827d-b4fb491d376f # the commitment
+    fulfilledBy: machine:73410782-74da-4165-ad2b-b92fdf55f795 # the economic event
+    quantifiedAs:
+      qudt:unit: unit:Number
+      qudt:numericValue: 1015
+
+  - '@id': machine:50203ab5-913f-49e8-a067-508cecf7d160
+    '@type': EconomicEvent
+    action: use
+    provider: http://www.machine-shop.example/
+    receiver: http://www.machine-shop.example/
+    involves: machine:e1721a61-cd47-4556-84b9-8b1b81da15bf # drill press 1
+    quantifiedAs:
+      qudt:unit: unit:Hour
+      qudt:numericValue: 6.5
+    hasBeginning: 2018-12-07T08:00:00-5:00
+    hasEnd: 2018-12-07T15:00:00-5:00
+
+  - '@id': machine:57f1c1d0-432e-4bfa-9d32-002b8955a708
+    '@type': Fulfillment
+    fulfills: machine:f99ba192-fb8d-419e-8246-c8ebac531100 # the commitment
+    fulfilledBy: machine:50203ab5-913f-49e8-a067-508cecf7d160 # the economic event
+    quantifiedAs:
+      qudt:unit: unit:Hour
+      qudt:numericValue: 6.5
+
+  - '@id': machine:baafadc0-9a75-414e-aee6-e9d790cab84e
+    '@type': EconomicEvent
+    action: use
+    provider: http://www.machine-shop.example/
+    receiver: http://www.machine-shop.example/
+    involves: machine:e1721a61-cd47-4556-84b9-8b1b81da15bf # drill press 1
+    quantifiedAs:
+      qudt:unit: unit:Hour
+      qudt:numericValue: 5.5
+    hasBeginning: 2018-12-08T08:00:00-5:00
+    hasEnd: 2018-12-08T13:30:00-5:00
+
+  - '@id': machine:8d7408a2-212b-4309-9f19-79787eec19b9
+    '@type': Fulfillment
+    fulfills: machine:c4cd539d-3684-4e4c-83f3-f04e89f571fd0 # the commitment
+    fulfilledBy: machine:baafadc0-9a75-414e-aee6-e9d790cab84e # the economic event
+    quantifiedAs:
+      qudt:unit: unit:Hour
+      qudt:numericValue: 5.5
+
+  - '@id': machine:5156fa9d-eea8-4516-bf8e-d4aabf5f05e6
+    '@type': EconomicEvent
+    action: use
+    provider: http://www.machine-shop.example/
+    receiver: http://www.machine-shop.example/
+    involves: machine:e7482f32-25b5-4f79-934b-5d0db3a5b77d # drill press 2
+    quantifiedAs:
+      qudt:unit: unit:Hour
+      qudt:numericValue: 6
+    hasBeginning: 2018-12-07T09:00:00-5:00
+    hasEnd: 2018-12-07T15:00:00-5:00
+
+  - '@id': machine:fd399b37-0740-4a68-a184-1e655021ca21
+    '@type': Fulfillment
+    fulfills: machine:b6059363-88fa-484f-af7d-f2ff5d17975a # the commitment
+    fulfilledBy: machine:5156fa9d-eea8-4516-bf8e-d4aabf5f05e6 # the economic event
+    quantifiedAs:
+      qudt:unit: unit:Hour
+      qudt:numericValue: 6
+
+  - '@id': machine:5c9316ad-ad0f-44e3-a6e1-240e7960e6cf
+    '@type': EconomicEvent
+    action: use
+    provider: http://www.machine-shop.example/
+    receiver: http://www.machine-shop.example/
+    involves: machine:e7482f32-25b5-4f79-934b-5d0db3a5b77d # drill press 2
+    quantifiedAs:
+      qudt:unit: unit:Hour
+      qudt:numericValue: 6.5
+    hasBeginning: 2018-12-08T09:00:00-5:00
+    hasEnd: 2018-12-08T15:30:00-5:00
+
+  - '@id': machine:633f6e56-6c7d-4a5b-b9c9-1a8adafd8960
+    '@type': Fulfillment
+    fulfills: machine:a3246484-e862-4a12-b729-23986da5c033 # the commitment
+    fulfilledBy: machine:5c9316ad-ad0f-44e3-a6e1-240e7960e6cf # the economic event
+    quantifiedAs:
+      qudt:unit: unit:Hour
+      qudt:numericValue: 6.5
+
+  - '@id': machine:404be322-8aff-468d-87d1-82e58b63d5b8
+    '@type': EconomicEvent
+    action: produce
+    provider: http://www.machine-shop.example/
+    receiver: http://www.machine-shop.example/
+    resourceConformsTo: machine:c7897c39-7f05-4a5d-a487-80e130a2414b # threaded part
+    quantifiedAs:
+      qudt:unit: unit:Number
+      qudt:numericValue: 1000
+    time:inXSDDateTimeStamp: 2018-12-08T17:00:00-5:0
+
+  - '@id': machine:baafadc0-9a75-414e-aee6-e9d790cab84e
+    '@type': Fulfillment
+    fulfills: machine:7f8c9336-c91c-4096-9e03-543bb85e97f0 # the commitment
+    fulfilledBy: machine:404be322-8aff-468d-87d1-82e58b63d5b8 # the economic event
+    quantifiedAs:
+      qudt:unit: unit:Number
+      qudt:numericValue: 1000
 
