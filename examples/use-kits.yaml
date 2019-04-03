@@ -1,0 +1,89 @@
+# Example: Use of non-serialized resources in quantity (ouikits)
+
+'@context':
+  - https://git.io/vf-examples-jsonld-context
+  - ouikit: http://www.ouikit.org/
+
+'@id': rgh:valueflows/valueflows/master/examples/use-kits.yaml
+'@graph':
+
+  # recipe
+
+  - '@id': ouikit:a7e94dde-2997-451e-a7e1-8d364d5e6dee
+    '@type': ResourceSpecification
+    name: Ouikits
+    skos:note: An eating kit containing plate, bowl, cup, utensils.
+    unit: unit:Number
+    substitutable: True
+
+  - '@id': ouikit:c404cff5-19c7-453d-b0d8-d8e96055bd0b
+    '@type': RecipeProcess
+    skos:note: Hold a workshop with meal
+    time:hasDuration:
+      time:unitType: time:unitHour
+      time:numericDuration: 4
+    scalingFormula: D
+
+  - '@id': ouikit:ff208521-9fec-4bb4-a6d3-197f6735cb26
+    '@type': RecipeFlow
+    action: use
+    resourceConformsTo: ouikit:a7e94dde-2997-451e-a7e1-8d364d5e6dee  # reusable eating kit
+    quantifiedAs:
+      qudt:unit: unit:Number
+      qudt:numericValue: 1
+    alsoQuantifiedAs:
+      qudt:unit: unit:Hour
+      qudt:numericValue: 1
+    scalingFormula: Q*M
+
+  # [..... many other inputs and outputs....]
+
+  # a resource
+
+  - '@id': ouikit:9396d2d1-ded3-4b1c-8144-1c024e641039
+    '@type': EconomicResource
+    resourceConformsTo: ouikit:a7e94dde-2997-451e-a7e1-8d364d5e6dee  # reusable eating kit
+    currentQuantity:
+      qudt:unit: unit:Number
+      qudt:numericValue: 100
+
+  # planning the event
+
+  - '@id': ouikit:a3277840-54b9-497e-9cf6-1902eda1584e
+    '@type': Process
+    name: Workshop dinner 2019-03-15
+    hasDuration:
+      time:unitType: time:unitHour
+      time:numericDuration: 4
+
+  - '@id': ouikit:bd5806d6-4a36-45b9-b3b6-3e7d361a5a13
+    '@type': Commitment
+    action: use
+    provider: http://www.ouikit.org/
+    receiver: http://www.ouikit.org/
+    involves: ouikit:9396d2d1-ded3-4b1c-8144-1c024e641039 # ouikits resource
+    quantifiedAs:
+      qudt:unit: unit:Number
+      qudt:numericValue: 30
+    hasBeginning: 2019-03-15T13:00:00-5:00
+    hasEnd: 2019-03-15T17:00:00-5:00
+
+  # [..... many other inputs and outputs....]
+
+  # using the kits for the event
+
+  - '@id': ouikit:30dad10d-606e-4188-80a2-4a1cf2454f58
+    '@type': EconomicEvent
+    action: use
+    provider: http://www.ouikit.org/
+    receiver: http://www.ouikit.org/
+    involves: ouikit:9396d2d1-ded3-4b1c-8144-1c024e641039 # ouikits resource
+    quantifiedAs:
+      qudt:unit: unit:Number
+      qudt:numericValue: 29
+    alsoQuantifiedAs:
+      qudt:unit: unit:Hour
+      qudt:numericValue: 2.5
+    hasBeginning: 2019-03-15T14:30:00-5:00
+    hasEnd: 2019-03-15T17:00:00-5:00
+
