@@ -1,74 +1,64 @@
-NOT DONE, JUST ASSEMBLING PREVIOUS WORK AND THOUGHTS
-
 # Example: Taxi ride
 
 '@context':
   - https://git.io/vf-examples-jsonld-context
   - alice: https://alice.example/
-    taxi: https://translators.example/
+    taxi: https://taxi.example/
 
 '@id': rgh:valueflows/valueflows/master/examples/taxi.yaml
 '@graph':
 
-  - '@id': translators:c404cff5-19c7-453d-b0d8-d8e96055bd0b
-    '@type': RecipeProcess
-    skos:note: Translate a document
-    time:hasDuration:
-      time:unitType: time:unitDay
-      time:numericDuration: 1
-    scaleUsing: D * M #not right, too hard to figure out right now
+  - '@id': taxi:a81675b7-2c8d-4ae6-9af6-ac72ddd0635f
+    '@type': ResourceSpecification
+    resourceClassifiedAs: https://www.wikidata.org/wiki/Q82650 # taxi
+    unit: unit:Number
+    substitutable: False
 
-  - '@id': translators:13cf44e5-eaa1-4ad0-88d5-e2910a73f377
+  - '@id': taxi:c404cff5-19c7-453d-b0d8-d8e96055bd0b
+    '@type': RecipeProcess
+    name: Taxi service one ride
+
+  - '@id': taxi:13cf44e5-eaa1-4ad0-88d5-e2910a73f377
     '@type': RecipeFlow
     action: use 
-    resourceClassifiedAs: https://www.wikidata.org/wiki/Q7553 #translation
-    flowQuantity:
+    resourceSpecifiedAs: taxi:a81675b7-2c8d-4ae6-9af6-ac72ddd0635f #taxi
+    quantifiedAs:
       qudt:unit: unit:Number
       qudt:numericValue: 1
 
-      
-      
-for recipe for extra event quantities:
-    reciprocalQuantity: 
-    - '@type': ReciprocalQuantity
-        name: Miles
-        qudt:unit: unit:Number
-    - '@type': ReciprocalQuantity
+  - '@id': taxi:6f67aeaa-89c2-437d-af69-ff69a995ef33
+    '@type': RecipeFlow
+    action: service 
+    resourceClassifiedAs: https://www.wikidata.org/wiki/Q41222493 # taxi service
+    quantifiedAs:
+      qudt:unit: unit:Number
+      qudt:numericValue: 1
+    alsoQuantifiedAs:
+    - '@type': ObservableQuantity
+        name: Distance
+        qudt:unit: unit:Kilometer
+    - '@type': ObservableQuantity
         name: IdlingTime
         qudt:unit: unit:Minute
-    - '@type': ReciprocalQuantity
+    - '@type': ObservableQuantity
         name: Bags
         qudt:unit: unit:Number
-    reciprocityFormula: 3+(.05*Miles)+(.05*IdlingTime)+(2*Bags)
 
-
-    
-    
-    
   # a taxi resource
 
   - '@id': taxi:e23799c14-c368-4653-a584-83bf9ae8b82a
     '@type': EconomicResource
-    resourceClassifiedAs: https://www.wikidata.org/wiki/Q82650 # taxi
+    resourceSpecifiedAs: taxi:a81675b7-2c8d-4ae6-9af6-ac72ddd0635f #taxi
     trackingIdentifier: SDERW432897348294
     currentQuantity:
       qudt:unit: unit:Number
       qudt:numericValue: 1
-    unitOfUse: [ unit:Minute, unit:Kilometer ]
 
   # the taxi transports a person
 
   - '@id': taxi:e18c808c-929a-450d-9d0d-3b3f531bc125
     '@type': Process
     name: Transport 1 person from Union Station to ORD airport
-    plannedTime:
-      '@type': time:ProperInterval
-      time:intervalStarts:
-        '@type': time:Instant
-        time:inXSDDateTimeStamp: 2018-10-14T08:45:00-5:00
-      time:intervalEnds:
-        '@type': time:Instant
-        time:inXSDDateTimeStamp: 2018-10-14T09:15:00-5:00
 
   - '@id': taxi:5d2fe7da-b91b-4dab-91d9-68db80c1feb6
     '@type': EconomicEvent
@@ -76,53 +66,27 @@ for recipe for extra event quantities:
     action: use
     provider: https://taxi.example/
     receiver: https://taxi.example/
-    affects: taxi:e23799c14-c368-4653-a584-83bf9ae8b82a # the taxi resource
-    observedQuantity: # distance of the ride
-      qudt:unit: unit:Kilometer
-      qudt:numericValue: 23
-    observedTime: # time of the ride
-      '@type': time:ProperInterval
-      time:intervalStarts:
-        '@type': time:Instant
-        time:inXSDDateTimeStamp: 2018-10-14T08:45:00-5:00
-      time:intervalEnds:
-        '@type': time:Instant
-        time:inXSDDateTimeStamp: 2018-10-14T09:10:00-5:00
+    involves: taxi:e23799c14-c368-4653-a584-83bf9ae8b82a # the taxi resource
+    quantifiedAs:
+      qudt:unit: unit:Number
+      qudt:numericValue: 1
+    hasBeginning: 2018-12-08T10:30:00-5:00
+    hasEnd: 2018-12-08T11:15:00-5:00
 
   - '@id': taxi:6405b8ad-0ac2-4d58-abdb-0808903c78ad
     '@type': EconomicEvent
     inputOf: taxi:e18c808c-929a-450d-9d0d-3b3f531bc125 # the transportation process
-    action: use
-    provider: https://taxi.example/
-    receiver: https://taxi.example/
-    affects: taxi:e23799c14-c368-4653-a584-83bf9ae8b82a # the taxi resource
-    observedQuantity: # time when idling (not moving)
-      qudt:unit: unit:Minute
-      qudt:numericValue: 4.5
-    observedTime: # time of the ride
-      '@type': time:ProperInterval
-      time:intervalStarts:
-        '@type': time:Instant
-        time:inXSDDateTimeStamp: 2018-10-14T08:45:00-5:00
-      time:intervalEnds:
-        '@type': time:Instant
-        time:inXSDDateTimeStamp: 2018-10-14T09:10:00-5:00
-
-  - '@id': taxi:e02e3f6b-420a-4ba8-89b0-909d7363ce06
-    '@type': EconomicEvent
-    outputOf: taxi:e18c808c-929a-450d-9d0d-3b3f531bc125 # the transportation process
     action: service
     provider: https://taxi.example/
     receiver: https://alice.example/
-    resourceClassifiedAs: https://www.wikidata.org/wiki/Q41222493 # taxi service
-    observedQuantity: # the service delivered
+    resourceSpecifiedAs: taxi:6f67aeaa-89c2-437d-af69-ff69a995ef33
+    quantifiedAs:
       qudt:unit: unit:Number
       qudt:numericValue: 1
-    observedTime: # time of the ride
-      '@type': time:ProperInterval
-      time:intervalStarts:
-        '@type': time:Instant
-        time:inXSDDateTimeStamp: 2018-10-14T08:45:00-5:00
-      time:intervalEnds:
-        '@type': time:Instant
-time:inXSDDateTimeStamp: 2018-10-14T09:10:00-5:00
+    alsoQuantifiedAs:
+      - qudt:unit: unit:Kilometer
+        qudt:numericValue: 23
+      - qudt:unit: unit:Minute
+        qudt:numericValue: 6.5
+      - qudt:unit: unit:Number
+        qudt:numericValue: 2
