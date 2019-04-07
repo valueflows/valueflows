@@ -175,9 +175,9 @@ vf:recipeOutputOf
         vs:term_status      "unstable" ;
         rdfs:comment        "Relates an output flow to it's node in a recipe." .
 
-vf:involves
+vf:resourceInventoriedAs
         a                   owl:ObjectProperty ;
-        rdfs:label          "involves" ;
+        rdfs:label          "resource inventoried as" ;
         rdfs:domain         [ owl:unionOf (vf:Commitment vf:Intent vf:EconomicEvent) ] ; 
         rdfs:range          vf:EconomicResource ;
         vs:term_status      "unstable" ;
