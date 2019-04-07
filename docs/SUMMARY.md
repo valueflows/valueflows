@@ -16,11 +16,12 @@
 
 ## Concepts
 
-* [Agent](introduction/agents.md)
-* [Resource](introduction/resources.md)
+* [Agents](introduction/agents.md)
+* [Resources](introduction/resources.md)
 * [Flows](introduction/flows.md)
-* [Process](introduction/processes.md)
-* [Exchange](introduction/exchanges.md)
+* [Processes](introduction/processes.md)
+* [Transfers](introduction/transfers.md)
+* [Exchanges](introduction/exchanges.md)
 * [Proposals](introduction/proposals.md)
 * [Scoping](introduction/scoping.md)
 * [Classification](introduction/classification.md)
