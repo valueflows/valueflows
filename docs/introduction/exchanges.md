@@ -4,6 +4,8 @@ Here we look at exchanges of resources from an independent or neutral viewpoint 
 
 Exchange is ubiquitous on the internet today, with offers everywhere. In ValueFlows, we want to track not only the offers and promises, but also the actual flows of resources in networks, in all directions. And we support exchanges that don't involve money as well as those that do.
 
+Valueflows enables multilateral exchange agreements as well. Any number of agents can commit to flows where they provide something and flows where they receive something. This way creating a reciprocal cycle in the flows graph. So for example, Alice can provide apples from her orchard to Bob, who can provide accommodation to Claire, who can provide tutoring to Alice's children. Such exchanges can happen in infinite number of possible ways, as long as all agents participating agree on specific reciprocal cycle in the flows graph.
+
 We also support non-reciprocal one-way transfers, such as in a gift economy.  However, an exchange implies at least two transfers with reciprocity.
 
 
