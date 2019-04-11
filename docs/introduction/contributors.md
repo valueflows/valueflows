@@ -8,6 +8,7 @@
 * Michael Williams
 * Paul Mackey
 * Kalin Maldzhanski
+* pospi (Sam Pospischil)
 
 #### Use cases, tools, and helpful discussion... and let's not forget the logo!
 
