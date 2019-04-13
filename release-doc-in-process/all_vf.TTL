@@ -296,26 +296,12 @@ vf:currentQuantity a        owl:ObjectProperty ;
         vs:term_status      "unstable" ;
         rdfs:comment        "The current amount and unit of the economic resource. This can be stored or derived from economic events affecting the resource" .
 
-vf:affectedQuantity a       owl:ObjectProperty ;
-        rdfs:label          "affected quantity" ;
-        rdfs:domain         vf:EconomicEvent ;
+vf:quantifiedAs a           owl:ObjectProperty ;
+        rdfs:label          "quantified as" ;
+        rdfs:domain         [ owl:unionOf (vf:EconomicEvent vf:Commitment vf:Intent vf:RecipeFlow ) ] ;
         rdfs:range          qudt:QuantityValue ;
         vs:term_status      "unstable" ;
-        rdfs:comment        "The amount and unit of the event. This is the quantity that could be used to increment or decrement a resource, depending on the type of resource and type of event." .
-
-vf:committedQuantity a      owl:ObjectProperty ;
-        rdfs:label          "committed quantity" ;
-        rdfs:domain         vf:Commitment ;
-        rdfs:range          qudt:QuantityValue ;
-        vs:term_status      "unstable" ;
-        rdfs:comment        "The amount and unit of the commitment." .
-
-vf:intendedQuantity a       owl:ObjectProperty ;
-        rdfs:label          "intended quantity" ;
-        rdfs:domain         vf:Intent ;
-        rdfs:range          qudt:QuantityValue ;
-        vs:term_status      "unstable" ;
-        rdfs:comment        "The amount and unit of the intent." .
+        rdfs:comment        "The amount and unit of the flow. It could be used to increment or decrement a resource, depending on the type of resource and type of event.  It also signifies how much is input or output of a process." .
 
 vf:fulfilledQuantity a      owl:ObjectProperty ;
         rdfs:label          "fulfilled quantity" ;
@@ -337,13 +323,6 @@ vf:satisfiedQuantity a      owl:ObjectProperty ;
 #        rdfs:range          qudt:QuantityValue ;
 #        vs:term_status      "unstable" ;
 #        rdfs:comment        "The quantity of the reciprocity when an event creates a commitment." .
-
-vf:definedQuantity a        owl:ObjectProperty ;
-        rdfs:label          "defined quantity" ;
-        rdfs:domain         vf:RecipeFlow ;
-        rdfs:range          qudt:QuantityValue ;
-        vs:term_status      "unstable" ;
-        rdfs:comment        "The amount and unit defined for this recipe flow." .
 
 vf:currentLocation a        owl:ObjectProperty ;
         rdfs:label          "current location" ;
