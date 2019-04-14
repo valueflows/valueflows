@@ -16,17 +16,11 @@
     action: work
     receiver: https://manufacturing.example/
     resourceClassifiedAs: https://www.wikidata.org/wiki/Q192047 # machining
-    intendedQuantity:
+    quantifiedAs:
       qudt:unit: unit:Hour
       qudt:numericValue: 8
-    intendedTime:
-      '@type': time:ProperInterval
-      time:intervalStarts:
-        '@type': time:Instant
-        time:inXSDDateTimeStamp: 2018-10-14T8:00:00-0:00
-      time:intervalEnds:
-        '@type': time:Instant
-        time:inXSDDateTimeStamp: 2018-10-15T18:00:00-0:00
+    time:hasBeginning: 2018-10-14T8:00:00-0:00
+    time:hasEnd: 2018-10-15T18:00:00-0:00
 
   # Bob commits to doing the work on Oct. 14
 
@@ -36,17 +30,11 @@
     provider: https://bob.example/
     receiver: https://manufacturing.example/
     resourceClassifiedAs: https://www.wikidata.org/wiki/Q192047 # machining
-    committedQuantity:
+    quantifiedAs:
       qudt:unit: unit:Hour
       qudt:numericValue: 8
-    committedTime:
-      '@type': time:ProperInterval
-      time:intervalStarts:
-        '@type': time:Instant
-        time:inXSDDateTimeStamp: 2018-10-14T8:00:00-0:00
-      time:intervalEnds:
-        '@type': time:Instant
-        time:inXSDDateTimeStamp: 2018-10-14T17:00:00-0:00
+    time:hasBeginning: 2018-10-14T8:00:00-0:00
+    tmie:hasEnd: 2018-10-14T17:00:00-0:00
 
 
   - '@id': mfg:b52a5815-fae9-43bf-be95-833b95dc0adb
@@ -65,7 +53,7 @@
     provider: https://bob.example/
     receiver: https://manufacturing.example/
     resourceClassifiedAs: https://www.wikidata.org/wiki/Q192047 # machining
-    affectedQuantity:
+    quantifiedAs:
       qudt:unit: unit:Hour
       qudt:numericValue: 4
     hasBeginning: 2018-10-14T8:00:00-0:00
@@ -85,7 +73,7 @@
     provider: https://bob.example/
     receiver: https://manufacturing.example/
     resourceClassifiedAs: https://www.wikidata.org/wiki/Q192047 # machining
-    affectedQuantity:
+    quantifiedAs:
       qudt:unit: unit:Hour
       qudt:numericValue: 4
     hasBeginning: 2018-10-14T13:00:00-0:00
