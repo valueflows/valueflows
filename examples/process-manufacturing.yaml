@@ -53,7 +53,7 @@
     provider: https://manufacturing.example/
     receiver: https://manufacturing.example/
     resourceInventoriedAs: mfg:3129ca8b-fcda-45be-bbda-294dc924d3b9 # plywood sheets
-    affectedQuantity:
+    involvesQuantity:
       qudt:unit: unit:Number
       qudt:numericValue: 3
 
@@ -64,9 +64,12 @@
     provider: https://manufacturing.example/
     receiver: https://manufacturing.example/
     resourceInventoriedAs: mfg:52f0e212-3c4f-4d27-b345-5e964c135824 # CNC machine
-    affectedQuantity:
-      qudt:unit: unit:Hour
-      qudt:numericValue: 3.5
+    involvesQuantity:
+      qudt:unit: unit:Number
+      qudt:numericValue: 1
+    time:hasDuration:
+      time:unitType: time:unitHour
+      time:numericDuration: 3.5
 
   - '@id': mfg:a8236bbb-81e0-422d-9861-56d2417db0fb
     '@type': EconomicEvent
@@ -75,7 +78,7 @@
     provider: https://makezine.com/
     receiver: https://manufacturing.example/
     resourceInventoriedAs: mfg:6b97b1be-8e07-44ac-82e5-214f1b2aaf33 # desk design specification
-    affectedQuantity:
+    involvesQuantity:
       qudt:unit: unit:Number
       qudt:numericValue: 1
 
@@ -85,10 +88,13 @@
     action: work
     provider: https://alice.example/
     receiver: https://manufacturing.example/
-    resourceClassifiedAs: https://www.wikidata.org/wiki/Q192047 # machining
-    affectedQuantity:
-      qudt:unit: unit:Hour
-      qudt:numericValue: 7
+    classifiedAs: https://www.wikidata.org/wiki/Q192047 # machining
+    involvesQuantity:
+      qudt:unit: unit:Number
+      qudt:numericValue: 1
+    time:hasDuration:
+      time:unitType: time:unitHour
+      time:numericDuration: 3.5
 
   - '@id': mfg:d4d2fd71-34f2-41c3-b1c5-19ad5ed2da59
     '@type': EconomicEvent
@@ -97,13 +103,13 @@
     provider: https://manufacturing.example/
     receiver: https://manufacturing.example/
     resourceInventoriedAs: mfg:e1721a61-cd47-4556-84b9-8b1b81da15bf # desk
-    affectedQuantity:
+    involvesQuantity:
       qudt:unit: unit:Number
       qudt:numericValue: 1
 
   # Economic resources after
 
-    - '@id': mfg:e1721a61-cd47-4556-84b9-8b1b81da15bf
+  - '@id': mfg:e1721a61-cd47-4556-84b9-8b1b81da15bf
     '@type': EconomicResource
     resourceConformsTo: https://www.opendesk.cc/lean/desk # desk
     currentQuantity:
