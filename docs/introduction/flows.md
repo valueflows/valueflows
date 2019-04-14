@@ -19,6 +19,10 @@ Commitments describe potential future events which the involved agents already a
 
 Economic Events describes past events, something observed, never some potential future event.  They can fulfill Commitments or satisfy Intents (when there is no Commitment).
 
+## Claims
+
+Claims resemble commitments, but are initiated by the receiver, not the provider.  An economic event can trigger a reciprocal claim.  Claims do not have to be instantiated, often they can be implied from an economic event and an agreement.
+
 ## Timeline, plans and observations
 
 Figure below shows that Economic Events have to be observed and for that reason only appear as records of the past. Future plans get represented with Intents and Commitments.
