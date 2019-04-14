@@ -15,18 +15,15 @@
     '@type': Intent
     action: work
     receiver: https://manufacturing.example/
-    resourceClassifiedAs: https://www.wikidata.org/wiki/Q192047 # machining
-    intendedQuantity:
-      qudt:unit: unit:Hour
-      qudt:numericValue: 8
-    intendedTime:
-      '@type': time:ProperInterval
-      time:intervalStarts:
-        '@type': time:Instant
-        time:inXSDDateTimeStamp: 2018-10-14T8:00:00-0:00
-      time:intervalEnds:
-        '@type': time:Instant
-        time:inXSDDateTimeStamp: 2018-10-15T18:00:00-0:00
+    classifiedAs: https://www.wikidata.org/wiki/Q192047 # machining
+    involvesQuantity:
+      qudt:unit: unit:Number
+      qudt:numericValue: 1
+    time:hasDuration:
+      time:unitType: time:unitHour
+      time:numbericDuration: 8
+    time:after: 2018-10-14T8:00:00-0:00
+    time:before: 2018-10-15T18:00:00-0:00
 
   # Bob commits to doing the work on Oct. 14
 
@@ -35,19 +32,15 @@
     action: work
     provider: https://bob.example/
     receiver: https://manufacturing.example/
-    resourceClassifiedAs: https://www.wikidata.org/wiki/Q192047 # machining
-    committedQuantity:
-      qudt:unit: unit:Hour
-      qudt:numericValue: 8
-    committedTime:
-      '@type': time:ProperInterval
-      time:intervalStarts:
-        '@type': time:Instant
-        time:inXSDDateTimeStamp: 2018-10-14T8:00:00-0:00
-      time:intervalEnds:
-        '@type': time:Instant
-        time:inXSDDateTimeStamp: 2018-10-14T17:00:00-0:00
-
+    classifiedAs: https://www.wikidata.org/wiki/Q192047 # machining
+    involvesQuantity:
+      qudt:unit: unit:Number
+      qudt:numericValue: 1
+    time:hasDuration:
+      time:unitType: time:unitHour
+      time:numbericDuration: 8
+    time:after: 2018-10-14T8:00:00-0:00
+    time:before: 2018-10-15T18:00:00-0:00
 
   - '@id': mfg:b52a5815-fae9-43bf-be95-833b95dc0adb
     '@type': Satisfaction
@@ -56,6 +49,11 @@
     satisfiedQuantity:
       qudt:unit: unit:Hour
       qudt:numericValue: 8
+    covers:
+      - coverageProperty: involvesQuantity
+        coverageQuantity: 1
+      - coverageProperty: time:hasDuration
+        coverageQuantity: 8
 
   # Bob does the work in two 4-hour shifts on Oct. 14
 
@@ -64,10 +62,13 @@
     action: work
     provider: https://bob.example/
     receiver: https://manufacturing.example/
-    resourceClassifiedAs: https://www.wikidata.org/wiki/Q192047 # machining
-    affectedQuantity:
-      qudt:unit: unit:Hour
-      qudt:numericValue: 4
+    classifiedAs: https://www.wikidata.org/wiki/Q192047 # machining
+    involvesQuantity:
+      qudt:unit: unit:Number
+      qudt:numericValue: 1
+    time:hasDuration:
+      time:unitType: time:unitHour
+      time:numbericDuration: 4
     hasBeginning: 2018-10-14T8:00:00-0:00
     hasEnd: 2018-10-14T12:00:00-0:00
 
@@ -75,19 +76,24 @@
     '@type': Fulfillment
     fulfills: mfg:02b39a30-3e04-4305-9656-7f261aa63c84 # the commitment
     fulfilledBy: mfg:d4d2fd71-34f2-41c3-b1c5-19ad5ed2da59 # the economic event
-    fulfilledQuantity:
-      qudt:unit: unit:Hour
-      qudt:numericValue: 4
+    covers:
+      - coverageProperty: involvesQuantity
+        coverageQuantity: 1
+      - coverageProperty: time:hasDuration
+        coverageQuantity: 4
 
   - '@id': mfg:c7897c39-7f05-4a5d-a487-80e130a2414b
     '@type': EconomicEvent
     action: work
     provider: https://bob.example/
     receiver: https://manufacturing.example/
-    resourceClassifiedAs: https://www.wikidata.org/wiki/Q192047 # machining
-    affectedQuantity:
-      qudt:unit: unit:Hour
-      qudt:numericValue: 4
+    classifiedAs: https://www.wikidata.org/wiki/Q192047 # machining
+    involvesQuantity:
+      qudt:unit: unit:Number
+      qudt:numericValue: 1
+    time:hasDuration:
+      time:unitType: time:unitHour
+      time:numbericDuration: 4
     hasBeginning: 2018-10-14T13:00:00-0:00
     hasEnd: 2018-10-14T17:00:00-0:00
 
@@ -95,6 +101,8 @@
     '@type': Fulfillment
     fulfills: mfg:02b39a30-3e04-4305-9656-7f261aa63c84 # the commitment
     fulfilledBy: mfg:c7897c39-7f05-4a5d-a487-80e130a2414b # the second economic event
-    fulfilledQuantity:
-      qudt:unit: unit:Hour
-      qudt:numericValue: 4
+    covers:
+      - coverageProperty: involvesQuantity
+        coverageQuantity: 1
+      - coverageProperty: time:hasDuration
+        coverageQuantity: 4
