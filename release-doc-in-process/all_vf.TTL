@@ -117,10 +117,15 @@ vf:Fulfillment  a           owl:Class ;
         vs:term_status      "unstable" ;
         rdfs:comment        "The quantity that the economic event fulfilled towards the commitment." .
 
-#vf:Reciprocity  a           owl:Class ;
-#        rdfs:label          "vf:Reciprocity" ;
-#        vs:term_status      "unstable" ;
-#        rdfs:comment        "The quantity that the economic event implies towards creation of the reciprocal commitment." .
+vf:Claim  a                 owl:Class ;
+        rdfs:label          "vf:Claim" ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "." .
+
+vf:Settlement  a            owl:Class ;
+        rdfs:label          "vf:Settlement" ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "." .
 
 vf:Appreciation  a          owl:Class ;
         rdfs:label          "vf:Appreciation" ;
@@ -138,7 +143,7 @@ vf:Appreciation  a          owl:Class ;
 vf:action
         a                   owl:ObjectProperty ;
         rdfs:label          "action" ;
-        rdfs:domain         [ owl:unionOf (vf:EconomicEvent vf:Commitment vf:Intent vf:RecipeFlow) ] ;
+        rdfs:domain         [ owl:unionOf (vf:EconomicEvent vf:Commitment vf:Intent vf:RecipeFlow vf:Claim) ] ;
         rdfs:range          vf:Action ;
         vs:term_status      "unstable" ;
         rdfs:comment        "Relates a process input or output to a verb, such as consume, produce, work, improve, etc." .
@@ -215,14 +220,14 @@ vf:appreciationWith
         rdfs:comment        "The economic event implemented in appreciation (gift economy)." .
 
 vf:provider  a              owl:ObjectProperty ;
-        rdfs:domain         [ owl:unionOf (vf:EconomicEvent vf:Commitment vf:Intent) ] ;
+        rdfs:domain         [ owl:unionOf (vf:EconomicEvent vf:Commitment vf:Intent vf:Claim) ] ;
         rdfs:label          "provider" ;
         rdfs:range          foaf:Agent ;
         vs:term_status      "testing" ;
         rdfs:comment        "The economic agent from whom the intended, committed, or actual economic event is initiated." .
 
 vf:receiver  a              owl:ObjectProperty ;
-        rdfs:domain         [ owl:unionOf (vf:EconomicEvent vf:Commitment vf:Intent) ] ;
+        rdfs:domain         [ owl:unionOf (vf:EconomicEvent vf:Commitment vf:Intent vf:Claim) ] ;
         rdfs:label          "receiver" ;
         rdfs:range          foaf:Agent ;
         vs:term_status      "testing" ;
@@ -250,25 +255,32 @@ vf:inScopeOf  a             owl:ObjectProperty ;
         rdfs:comment        "Grouping around something to create a boundary or context, used for documenting, accounting, planning." .
 
 vf:under  a                 owl:ObjectProperty ;
-        rdfs:domain         [ owl:unionOf (vf:EconomicEvent vf:Commitment vf:Intent vf:Fulfillment ) ] ; 
+        rdfs:domain         [ owl:unionOf (vf:EconomicEvent vf:Commitment vf:Intent vf:Fulfillment vf:Claim) ] ; 
         rdfs:label          "under" ;
         rdfs:range          vf:Agreement ;
         vs:term_status      "unstable" ;
         rdfs:comment        "Reference to an agreement between agents which specifies the rules or policies or calculations which govern this flow." .
 
-#vf:createdBy  a             owl:ObjectProperty ;
-#        rdfs:label          "created by" ;
-#        rdfs:domain         vf:Reciprocity ;
-#        rdfs:range          vf:EconomicEvent ;
-#        vs:term_status      "unstable" ;
-#        rdfs:comment        "References the economic event that fully or partially created the commitment, often based on a prior agreement." .
+vf:triggeredBy  a           owl:ObjectProperty ;
+        rdfs:label          "triggered by" ;
+        rdfs:domain         vf:Claim ;
+        rdfs:range          vf:EconomicEvent ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "References an economic event that implied the claim, often based on a prior agreement." .
 
-#vf:creates  a               owl:ObjectProperty ;
-#        rdfs:label          "creates" ;
-#        rdfs:domain         vf:Reciprocity ;
-#        rdfs:range          vf:Commitment ;
-#        vs:term_status      "unstable" ;
-#        rdfs:comment        "References the commitment that was fully or partially created because of the economic event, often based on a prior agreement." .
+vf:settles  a               owl:ObjectProperty ;
+        rdfs:label          "settles" ;
+        rdfs:domain         vf:Settlement ;
+        rdfs:range          vf:Claim ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "References a claim that fully or partially settled by the economic event." .
+
+vf:settledBy  a             owl:ObjectProperty ;
+        rdfs:label          "settled by" ;
+        rdfs:domain         vf:Settlement ;
+        rdfs:range          vf:EconomicEvent ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "References an economic event that fully or partially settles the claim." .
 
 vf:contains a               owl:ObjectProperty ;
         rdfs:label          "contains" ;
@@ -331,12 +343,12 @@ vf:satisfiedQuantity a      owl:ObjectProperty ;
         vs:term_status      "unstable" ;
         rdfs:comment        "The quantity of the satisfaction of an commitment towards an intent." .
 
-#vf:reciprocalQuantity a     owl:ObjectProperty ;
-#        rdfs:label          "reciprocal quantity" ;
-#        rdfs:domain         vf:Reciprocity ;
-#        rdfs:range          qudt:QuantityValue ;
-#        vs:term_status      "unstable" ;
-#        rdfs:comment        "The quantity of the reciprocity when an event creates a commitment." .
+vf:claimedQuantity a        owl:ObjectProperty ;
+        rdfs:label          "claimed quantity" ;
+        rdfs:domain         vf:Claim ;
+        rdfs:range          qudt:QuantityValue ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "The quantity of the initial expected reciprocity when an event materializes a claim." .
 
 vf:definedQuantity a        owl:ObjectProperty ;
         rdfs:label          "defined quantity" ;
@@ -409,7 +421,7 @@ vf:satisfiedBy
         rdfs:comment        "A commitment or economic event fully or partially satisfying an intent" .
 
 vf:finished  a              owl:DatatypeProperty ;
-        rdfs:domain         [ owl:unionOf (vf:Commitment vf:Process vf:Intent) ] ; 
+        rdfs:domain         [ owl:unionOf (vf:Commitment vf:Process vf:Intent vf:Claim) ] ; 
         rdfs:label          "finished" ;
         rdfs:range          xsd:boolean ;
         vs:term_status      "testing" ;
@@ -477,7 +489,7 @@ vf:classifiedAs
 vf:resourceClassifiedAs
         a                   owl:ObjectProperty ;
         rdfs:label          "resource classified as" ;
-        rdfs:domain         [ owl:unionOf (vf:ResourceSpecification vf:Intent vf:Commitment vf:EconomicEvent vf:RecipeFlow) ] ;
+        rdfs:domain         [ owl:unionOf (vf:ResourceSpecification vf:Intent vf:Commitment vf:EconomicEvent vf:RecipeFlow vf:Claim) ] ;
         rdfs:range          owl:Thing ;
         vs:term_status      "unstable" ;
         rdfs:comment        "References a concept in a common taxonomy or other classification scheme for purposes of categorization." .
@@ -493,7 +505,7 @@ vf:processClassifiedAs
 vf:resourceConformsTo
         a                   owl:ObjectProperty ;
         rdfs:label          "resource conforms to" ;
-        rdfs:domain         [ owl:unionOf (vf:Commitment vf:EconomicResource vf:Intent vf:RecipeFlow vf:EconomicEvent ) ] ;
+        rdfs:domain         [ owl:unionOf (vf:Commitment vf:EconomicResource vf:Intent vf:RecipeFlow vf:EconomicEvent vf:Claim ) ] ;
         rdfs:range          vf:ResourceSpecification ;
         vs:term_status      "unstable" ;
         rdfs:comment        "The primary resource knowledge specification or definition of an existing or potential resource." .
