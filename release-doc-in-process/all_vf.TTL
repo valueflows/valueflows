@@ -117,8 +117,13 @@ vf:Fulfillment  a           owl:Class ;
         vs:term_status      "unstable" ;
         rdfs:comment        "The quantity that the economic event fulfilled towards the commitment." .
 
-vf:Claim  a           owl:Class ;
+vf:Claim  a                 owl:Class ;
         rdfs:label          "vf:Claim" ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "." .
+
+vf:Settlement  a            owl:Class ;
+        rdfs:label          "vf:Settlement" ;
         vs:term_status      "unstable" ;
         rdfs:comment        "." .
 
@@ -256,19 +261,26 @@ vf:under  a                 owl:ObjectProperty ;
         vs:term_status      "unstable" ;
         rdfs:comment        "Reference to an agreement between agents which specifies the rules or policies or calculations which govern this flow." .
 
-vf:materializes  a          owl:ObjectProperty ;
-        rdfs:label          "materializes" ;
+vf:triggeredBy  a           owl:ObjectProperty ;
+        rdfs:label          "triggered by" ;
         rdfs:domain         vf:Claim ;
         rdfs:range          vf:EconomicEvent ;
         vs:term_status      "unstable" ;
-        rdfs:comment        "References an economic event that fully or partially implied the claim, often based on a prior agreement." .
+        rdfs:comment        "References an economic event that implied the claim, often based on a prior agreement." .
 
 vf:settles  a               owl:ObjectProperty ;
         rdfs:label          "settles" ;
-        rdfs:domain         vf:Claim ;
-        rdfs:range          vf:Commitment ;
+        rdfs:domain         vf:Settlement ;
+        rdfs:range          vf:Claim ;
         vs:term_status      "unstable" ;
-        rdfs:comment        "References an economic event that fully or partially settles the claim, often based on a prior agreement." .
+        rdfs:comment        "References a claim that fully or partially settled by the economic event.
+
+vf:settledBy  a             owl:ObjectProperty ;
+        rdfs:label          "settled by" ;
+        rdfs:domain         vf:Settlement ;
+        rdfs:range          vf:EconomicEvent ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "References an economic event that fully or partially settles the claim." .
 
 vf:contains a               owl:ObjectProperty ;
         rdfs:label          "contains" ;
@@ -337,13 +349,6 @@ vf:claimedQuantity a        owl:ObjectProperty ;
         rdfs:range          qudt:QuantityValue ;
         vs:term_status      "unstable" ;
         rdfs:comment        "The quantity of the initial expected reciprocity when an event materializes a claim." .
-
-vf:remainingQuantity a      owl:ObjectProperty ;
-        rdfs:label          "remaining quantity" ;
-        rdfs:domain         vf:Claim ;
-        rdfs:range          qudt:QuantityValue ;
-        vs:term_status      "unstable" ;
-        rdfs:comment        "The quantity not yet received of the expected reciprocity when an event materializes a claim." .
 
 vf:definedQuantity a        owl:ObjectProperty ;
         rdfs:label          "defined quantity" ;
