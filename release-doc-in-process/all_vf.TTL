@@ -273,7 +273,7 @@ vf:settles  a               owl:ObjectProperty ;
         rdfs:domain         vf:Settlement ;
         rdfs:range          vf:Claim ;
         vs:term_status      "unstable" ;
-        rdfs:comment        "References a claim that fully or partially settled by the economic event.
+        rdfs:comment        "References a claim that fully or partially settled by the economic event." .
 
 vf:settledBy  a             owl:ObjectProperty ;
         rdfs:label          "settled by" ;
