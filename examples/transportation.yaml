@@ -160,32 +160,43 @@
 # shipping
 # non serial
 
-# Bob receives 100kg of apples from Alice and Claudia transports them.
+# Bob receives 100kg of apples from Alice and Claudia transports them (FOB destination)
 
   - '@id': claudia:633f6e56-6c7d-4a5b-b9c9-1a8adafd8960
     '@type': Process
 
   - '@id': claudia:fd399b37-0740-4a68-a184-1e655021ca21
     '@type': EconomicEvent
-    provider: alice
-    receiver: claudia
     inputOf: claudia:633f6e56-6c7d-4a5b-b9c9-1a8adafd8960
     action: load
-    affects: alice:c7897c39-7f05-4a5d-a487-80e130a2414b
-    observedQuantity:
+    involves: alice:c7897c39-7f05-4a5d-a487-80e130a2414b
+    involvesQuantity:
       qudt:unit: unit:Kilogram
       qudt:numericValue: 100
+    tranfer:
+      - rights:
+        - load
+        - unload
+        provider: https://alice.example/
+        receiver: https://claudia.example/
     
   - '@id': claudia:57f1c1d0-432e-4bfa-9d32-002b8955a708
     '@type': EconomicEvent
-    provider: claudia
-    receiver: bob
     outputOf: claudia:633f6e56-6c7d-4a5b-b9c9-1a8adafd8960
     action: unload
-    affects: bob:a3246484-e862-4a12-b729-23986da5c033
-    observedQuantity:
+    involves: bob:a3246484-e862-4a12-b729-23986da5c033
+    involvesQuantity:
       qudt:unit: unit:Kilogram
       qudt:numericValue: 100
+    tranfer:
+      - rights: control
+        provider: https://alice.example/
+        receiver: https://bob.example/
+      - rights:
+        - load
+        - unload
+        provider: https://claudia.example/
+        receiver: https://bob.example/
 
 # relocation
 # packaged
