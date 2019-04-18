@@ -1,0 +1,57 @@
+
+'@context':
+  - https://git.io/vf-examples-jsonld-context
+  - library: https://library.example/
+    bob: https://bob.example/
+
+
+'@id': rgh:valueflows/valueflows/master/examples/book-checkout.yaml
+'@graph':
+
+  # resource before
+  - '@id': library:21f361a6-2375-46bb-b192-c21b5ba833bf
+    '@type': EconomicResource
+    skos:note: Valueflows cookbook
+    currentQuantity:
+      qudt:unit: unit:Number
+      qudt:numericValue: 1
+
+  - '@id': library:f47064eb-7120-4b31-b882-770165901fe6
+    '@type': Agreement
+    skos:note: renting Valueflows cookbook to Bob
+
+  - '@id': library:54b814ee-62dc-40c1-bb96-f8582aa4f771
+    '@type': EconomicEvent
+    clauseOf: library:f47064eb-7120-4b31-b882-770165901fe6
+    action: decrement
+    involves: library:21f361a6-2375-46bb-b192-c21b5ba833bf
+    involvesQuantity:
+      qudt:unit: unit:Number
+      qudt:numericValue: 1
+    time:inXSDDateTimeStamp: 2019-04-18T8:00:00-5:00
+    transfer:
+      - rights: use
+        provider: https://library.example/
+        receipient: https://bob.example/
+
+  - '@id': bob:98c2bfeb-9c70-4801-896c-4646b975a7d9
+    '@type': Commitment
+    clauseOf: library:f47064eb-7120-4b31-b882-770165901fe6
+    action: increment
+    involves: library:21f361a6-2375-46bb-b192-c21b5ba833bf
+    involvesQuantity:
+      qudt:unit: unit:Number
+      qudt:numericValue: 1
+    before:  2019-05-17T18:00:00-5:00
+    transfer:
+      - rights: use
+        provider: https://bob.example/
+        receipient: https://library.example/
+
+  # resource after
+  - '@id': library:21f361a6-2375-46bb-b192-c21b5ba833bf
+    '@type': EconomicResource
+    skos:note: Valueflows cookbook
+    currentQuantity:
+      qudt:unit: unit:Number
+      qudt:numericValue: 0
