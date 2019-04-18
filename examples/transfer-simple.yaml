@@ -1,0 +1,68 @@
+# Simple transfer
+
+'@context':
+  - https://git.io/vf-examples-jsonld-context
+  - bob: https://bob.example/
+    alice: https://alice.example/
+
+'@graph':
+
+  # initial resources
+
+  - '@id': alice:c7897c39-7f05-4a5d-a487-80e130a24345
+    '@type': EconomicResource
+    classifiedAs: http://www.wikidata.org/entity/Q89 # apples
+    currentQuantity:
+      qudt:unit: unit:Kilogram
+      qudt:numericValue: 670
+
+  - '@id': bob:0f563083-7f05-4a5d-a487-80e130a24345
+    '@type': EconomicResource
+    classifiedAs: http://www.wikidata.org/entity/Q89 # apples
+    currentQuantity:
+      qudt:unit: unit:Kilogram
+      qudt:numericValue: 0
+
+
+  # Alice gives Bob 200 kg apples.
+
+  - '@id': alice:e7482f32-25b5-4f79-934b-5d0db3a5b77d
+    '@type': Process
+
+  - '@id': alice:6fb358a3-2859-4d6a-a4fa-431603ee70f5
+    '@type': EconomicEvent
+    inputOf: alice:e7482f32-25b5-4f79-934b-5d0db3a5b77d 
+    action: decrement
+    involves: alice:c7897c39-7f05-4a5d-a487-80e130a24345
+    involvesQuantity:
+      qudt:unit: unit:Kilogram
+      qudt:numericValue: 200
+
+  - '@id': bob:73410782-74da-4165-ad2b-b92fdf55f795
+    '@type': EconomicEvent
+    outputOf: alice:e7482f32-25b5-4f79-934b-5d0db3a5b77d 
+    action: increment
+    involves: bob:0f563083-7f05-4a5d-a487-80e130a24345
+    involvedQuantity:
+      qudt:unit: unit:Kilogram
+      qudt:numericValue: 200
+    transfer:
+      - rights: control
+        provider: https://alice.example/
+        receipient: https://bob.example/
+
+  # - resources after transfers
+  
+  - '@id': alice:c7897c39-7f05-4a5d-a487-80e130a24345
+    '@type': EconomicResource
+    classifiedAs: http://www.wikidata.org/entity/Q89 # apples
+    currentQuantity:
+      qudt:unit: unit:Kilogram
+      qudt:numericValue: 470
+
+  - '@id': bob:0f563083-7f05-4a5d-a487-80e130a24345
+    '@type': EconomicResource
+    classifiedAs: http://www.wikidata.org/entity/Q89 # apples
+    currentQuantity:
+      qudt:unit: unit:Kilogram
+      qudt:numericValue: 200
