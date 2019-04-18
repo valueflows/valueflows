@@ -120,12 +120,12 @@ vf:Fulfillment  a           owl:Class ;
 vf:Claim  a                 owl:Class ;
         rdfs:label          "vf:Claim" ;
         vs:term_status      "unstable" ;
-        rdfs:comment        "." .
+        rdfs:comment        "A claim for a future economic event(s) in reciprocity for an economic event that already occurred." .
 
 vf:Settlement  a            owl:Class ;
         rdfs:label          "vf:Settlement" ;
         vs:term_status      "unstable" ;
-        rdfs:comment        "." .
+        rdfs:comment        "The quantity that the economic event settled of the claim." .
 
 vf:Appreciation  a          owl:Class ;
         rdfs:label          "vf:Appreciation" ;
@@ -349,6 +349,13 @@ vf:claimedQuantity a        owl:ObjectProperty ;
         rdfs:range          qudt:QuantityValue ;
         vs:term_status      "unstable" ;
         rdfs:comment        "The quantity of the initial expected reciprocity when an event materializes a claim." .
+
+vf:settledQuantity a        owl:ObjectProperty ;
+        rdfs:label          "settled quantity" ;
+        rdfs:domain         vf:Settlement ;
+        rdfs:range          qudt:QuantityValue ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "The quantity of the settlement of an economic event towards a claim." .
 
 vf:definedQuantity a        owl:ObjectProperty ;
         rdfs:label          "defined quantity" ;
