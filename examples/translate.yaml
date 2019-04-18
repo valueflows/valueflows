@@ -1,0 +1,222 @@
+# Example: Part of planning and doing a translation - one step, proofreading
+
+'@context':
+  - https://git.io/vf-examples-jsonld-context
+  - alice: https://alice.example/
+    translators: https://translators.example/
+    lingo: https://lingovocab.example/#
+
+'@id': rgh:valueflows/valueflows/master/examples/translate.yaml
+'@graph':
+
+  # recipe (fragment: proofreading process)
+
+  - '@id': translators:c404cff5-19c7-453d-b0d8-d8e96055bd0b
+    '@type': RecipeProcess
+    skos:note: Proofread a translated blog post
+
+  - '@id': translators:13cf44e5-eaa1-4ad0-88d5-e2910a73f377
+    '@type': RecipeFlow
+    action: work 
+    classifiedAs: https://www.wikidata.org/wiki/Q834191 # proofreading
+    involvesQuantity:
+      qudt:unit: unit:Number
+      qudt:numericValue: 1
+
+  - '@id': translators:9f112621-3f13-4f48-a3e2-fd2ca99493cd
+    '@type': RecipeFlow
+    action: accept
+    resourceClassifiedAs: https://www.wikidata.org/wiki/Q17928402 # blog post
+    involvesQuantity:
+      qudt:unit: unit:Number
+      qudt:numericValue: 1
+
+  - '@id': translators:c7897c39-7f05-4a5d-a487-80e130a2414b
+    '@type': RecipeFlow
+    action: improve 
+    resourceClassifiedAs: https://www.wikidata.org/wiki/Q17928402 # blog post
+    involvesQuantity:
+      qudt:unit: unit:Number
+      qudt:numericValue: 1
+
+  # resources
+
+  - '@id': translators:e1721a61-cd47-4556-84b9-8b1b81da15bf
+    '@type': EconomicResource
+    name: Summer of Commoning - A Tour of French Communities and Projects
+    classifiedAs: https://www.wikidata.org/wiki/Q17928402 # blog post
+    currentQuantity:
+      qudt:unit: unit:Number
+      qudt:numericValue: 1
+
+  # plan
+
+  - '@id': translators:02b39a30-3e04-4305-9656-7f261aa63c84
+    '@type': Process
+    name: Proofread Summer of Commoning
+    hasBeginning: 2018-12-07T08:00:00-5:00
+    hasEnd: 2018-12-09T08:00:00-5:0
+
+  - '@id': translators:a25500e0-0106-43cd-8cbb-e74779488835
+    '@type': Intent
+    skos:note: Proofreading a French to Spanish translation
+    action: work
+    classifiedAs: https://www.wikidata.org/wiki/Q834191 # proofreading
+    receiver: http://www.translators.example/
+    involvesQuantity:
+      qudt:unit: unit:Number
+      qudt:numericValue: 1
+    time:hasDuration:
+      time:unitType: time:unitHour
+      time:numericDuration: 3 # estimate based on 350 words / hour
+    lingo:wordCount:
+      qudt:unit: unit:Words
+      qudt:numericValue: 1025
+    reciprocityQuantity:
+      qudt:unit: unit:Words
+      qudt:numericValue: 1025
+    time:after: translators:a96bab2f-a1f0-47f3-827d-b4fb491d376f # after accept
+    time:before: translators:f99ba192-fb8d-419e-8246-c8ebac531100 # before improve
+    time:intervalDuring: translators:02b39a30-3e04-4305-9656-7f261aa63c84
+    # we can use topological temporal relation directly to process
+    # if we just copy values as below, when we update process we also need to update flow
+    # after: 2018-12-07T08:00:00-5:00
+    # before: 2018-12-09T08:00:00-5:00
+
+  - '@id': translators:a96bab2f-a1f0-47f3-827d-b4fb491d376f
+    '@type': Commitment
+    action: accept
+    provider: http://www.translators.example/
+    receiver: http://www.translators.example/
+    resourceClassifiedAs: https://www.wikidata.org/wiki/Q17928402 # blog post
+    quantifiedAs:
+      qudt:unit: unit:Number
+      qudt:numericValue: 1
+    time:intervalDuring: translators:02b39a30-3e04-4305-9656-7f261aa63c84
+    # work flow already positioned after
+    #after: 2018-12-07T08:00:00-5:00
+
+  - '@id': translators:f99ba192-fb8d-419e-8246-c8ebac531100
+    '@type': Commitment
+    action: improve
+    provider: http://www.translators.example/
+    receiver: http://www.translators.example/
+    resourceClassifiedAs: https://www.wikidata.org/wiki/Q17928402 # blog post
+    quantifiedAs:
+      qudt:unit: unit:Number
+      qudt:numericValue: 1
+    time:intervalDuring: translators:02b39a30-3e04-4305-9656-7f261aa63c84
+    # work flow already positioned before
+    #before: 2018-12-09T08:00:00-5:00
+
+  # commit to the work
+
+  - '@id': translators:856c43b1-0a63-445f-a56f-707b257f086d
+    '@type': Commitment
+    action: work
+    provider: http://www.alice.example/
+    receiver: http://www.translators.example/
+    classifiedAs: https://www.wikidata.org/wiki/Q834191 # proofreading
+    involvesQuantity:
+      qudt:unit: unit:Number
+      qudt:numericValue: 1
+    time:hasDuration:
+      time:unitType: time:unitHour
+      time:numericDuration: 3 # estimate based on 350 words / hour
+    lingo:wordCount:
+      qudt:unit: unit:Words
+      qudt:numericValue: 1025
+    reciprocityQuantity:
+      qudt:unit: unit:Words
+      qudt:numericValue: 1025
+    hasBeginning: 2018-12-08T10:00:00-5:00
+    hasEnd: 2018-12-08T13:00:00-5:00
+
+  - '@id': translators:9cb4944b-d26d-4774-a530-d18f2747c0d7
+    '@type': Satisfaction
+    satisfies: translators:a25500e0-0106-43cd-8cbb-e74779488835 # the intent
+    satisfiedBy: translators:856c43b1-0a63-445f-a56f-707b257f086d # the commitment
+    covers:
+      - coverageProperty: involvesQuantity
+        coverageQuantity: 1
+      - coverageProperty: time:hasDuration
+        coverageQuantity: 3
+      - coverageProperty: lingo:wordCount
+        coverageQuantity: 1025
+      - coverageProperty: reciprocityQuantity
+        coverageQuantity: 1025
+
+  # do the work
+
+  - '@id': translators:4cb1f323-4390-4e4a-ac9e-ff64d42f08bc
+    '@type': EconomicEvent
+    action: work
+    provider: http://www.alice.example/
+    receiver: http://www.translators.example/
+    classifiedAs: https://www.wikidata.org/wiki/Q834191 # proofreading
+    involvesQuantity:
+      qudt:unit: unit:Number
+      qudt:numericValue: 1
+    time:hasDuration:
+      time:unitType: time:unitHour
+      time:numericDuration: 3.5 # took .5h more than estimated
+    lingo:wordCount:
+      qudt:unit: unit:Words
+      qudt:numericValue: 1025
+    reciprocityQuantity:
+      qudt:unit: unit:Words
+      qudt:numericValue: 1025
+    hasBeginning: 2018-12-08T11:00:00-5:00
+    hasEnd: 2018-12-08T13:30:00-5:00
+
+  - '@id': translators:750ef3e1-525c-44d3-8b85-504435285e9f
+    '@type': Fulfillment
+    fulfills: translators:856c43b1-0a63-445f-a56f-707b257f086d # the commitment
+    fulfilledBy: translators:4cb1f323-4390-4e4a-ac9e-ff64d42f08bc # the economic event
+    covers:
+      - coverageProperty: involvesQuantity
+        coverageQuantity: 1
+      - coverageProperty: time:hasDuration
+        coverageQuantity: 3
+      - coverageProperty: lingo:wordCount
+        coverageQuantity: 1025
+      - coverageProperty: reciprocityQuantity
+        coverageQuantity: 1025
+
+  - '@id': translators:cb2fd867-b034-4be5-82e7-1a99a353136f
+    '@type': EconomicEvent
+    action: accept
+    provider: http://www.translators.example/
+    receiver: http://www.translators.example/
+    involves: translators:e1721a61-cd47-4556-84b9-8b1b81da15bf
+    involvesQuantity:
+      qudt:unit: unit:Number
+      qudt:numericValue: 1
+    time:inXSDDateTimeStamp: 2018-12-08T11:00:00-5:00
+
+  - '@id': translators:750ef3e1-525c-44d3-8b85-504435285e9f
+    '@type': Fulfillment
+    fulfills: translators:a96bab2f-a1f0-47f3-827d-b4fb491d376f # the commitment
+    fulfilledBy: cb2fd867-b034-4be5-82e7-1a99a353136f # the economic event
+    covers:
+      - coverageProperty: involvesQuantity
+        coverageQuantity: 1
+
+  - '@id': translators:63acf47d-9911-4591-b140-e6e9a538d6ac
+    '@type': EconomicEvent
+    action: improve
+    provider: http://www.translators.example/
+    receiver: http://www.translators.example/
+    involves: translators:e1721a61-cd47-4556-84b9-8b1b81da15bf
+    involvesQuantity:
+      qudt:unit: unit:Number
+      qudt:numericValue: 1
+    time:inXSDDateTimeStamp: 2018-12-08T15:30:00-5:00
+
+  - '@id': translators:750ef3e1-525c-44d3-8b85-504435285e9f
+    '@type': Fulfillment
+    fulfills: translators:a96bab2f-a1f0-47f3-827d-b4fb491d376f # the commitment
+    fulfilledBy: 63acf47d-9911-4591-b140-e6e9a538d6ac # the economic event
+    covers:
+      - coverageProperty: involvesQuantity
+        coverageQuantity: 1
