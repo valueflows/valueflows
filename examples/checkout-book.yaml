@@ -13,7 +13,7 @@
     skos:note: Valueflows cookbook
     currentQuantity:
       qudt:unit: unit:Number
-      qudt:numericValue: 1
+      qudt:numericValue: 2
 
   - '@id': library:21f361a6-2375-46bb-b192-c21b5ba833bf
     '@type': EconomicResource
@@ -21,7 +21,7 @@
     underlyingResource: library:2402b57c-1c45-423a-acb2-f50961c97d65 # maybe needs different name
     currentQuantity:
       qudt:unit: unit:Number
-      qudt:numericValue: 1
+      qudt:numericValue: 2
 
   # check out
   - '@id': library:f47064eb-7120-4b31-b882-770165901fe6
@@ -32,7 +32,7 @@
     '@type': EconomicEvent
     inputOf: library:f47064eb-7120-4b31-b882-770165901fe6
     action: give
-    resourceInventoriedAs: library:21f361a6-2375-46bb-b192-c21b5ba833bf
+    resourceInventoriedAs: library:21f361a6-2375-46bb-b192-c21b5ba833bf #library's possession resource
     time:inXSDDateTimeStamp: 2019-04-18T8:00:00-5:00
     provider: https://library.example/
     receipient: https://bob.example/
@@ -44,7 +44,7 @@
     '@type': EconomicEvent
     outputOf: library:f47064eb-7120-4b31-b882-770165901fe6
     action: receive
-    resourceInventoriedAs: library:21f361a6-2375-46bb-b192-c21b5ba833bf #??
+    resourceInventoriedAs: bob:99bc3e4e-79a6-4b52-a178-8075a268f0df #bob's possession resource
     time:inXSDDateTimeStamp: 2019-04-18T8:00:00-5:00
     provider: https://library.example/
     receipient: https://bob.example/
@@ -60,7 +60,7 @@
     '@type': Commitment
     inputOf: library:953b40f2-4e47-4486-afb2-402512f5269c
     action: give
-    resourceInventoriedAs: library:21f361a6-2375-46bb-b192-c21b5ba833bf #the possession resource
+    resourceInventoriedAs: bob:99bc3e4e-79a6-4b52-a178-8075a268f0df #bob's possession resource
     quantifiedAs:
       qudt:unit: unit:Number
       qudt:numericValue: 1
@@ -70,7 +70,7 @@
     '@type': Commitment
     outputOf: library:953b40f2-4e47-4486-afb2-402512f5269c
     action: receive
-    resourceInventoriedAs: library:21f361a6-2375-46bb-b192-c21b5ba833bf #the possession resource
+    resourceInventoriedAs: library:21f361a6-2375-46bb-b192-c21b5ba833bf #library's possession resource
     quantifiedAs:
       qudt:unit: unit:Number
       qudt:numericValue: 1
@@ -82,7 +82,7 @@
     skos:note: Valueflows cookbook
     currentQuantity:
       qudt:unit: unit:Number
-      qudt:numericValue: 1
+      qudt:numericValue: 2
 
   - '@id': library:21f361a6-2375-46bb-b192-c21b5ba833bf
     '@type': EconomicResource
@@ -90,4 +90,4 @@
     underlyingResource: library:2402b57c-1c45-423a-acb2-f50961c97d65 # maybe needs different name
     currentQuantity:
       qudt:unit: unit:Number
-      qudt:numericValue: 0
+      qudt:numericValue: 1
