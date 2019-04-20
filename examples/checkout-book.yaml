@@ -1,0 +1,93 @@
+'@context':
+  - https://git.io/vf-examples-jsonld-context
+  - library: https://library.example/
+    bob: https://bob.example/
+
+
+'@id': rgh:valueflows/valueflows/master/examples/checkout-book.yaml
+'@graph':
+
+  # resource before
+  - '@id': library:2402b57c-1c45-423a-acb2-f50961c97d65
+    '@type': EconomicResource
+    skos:note: Valueflows cookbook
+    currentQuantity:
+      qudt:unit: unit:Number
+      qudt:numericValue: 1
+
+  - '@id': library:21f361a6-2375-46bb-b192-c21b5ba833bf
+    '@type': EconomicResource
+    skos:note: Possession rights and responsibilities for the Valueflows cookbook
+    underlyingResource: library:2402b57c-1c45-423a-acb2-f50961c97d65 # maybe needs different name
+    currentQuantity:
+      qudt:unit: unit:Number
+      qudt:numericValue: 1
+
+  # check out
+  - '@id': library:f47064eb-7120-4b31-b882-770165901fe6
+    '@type': Process
+    skos:note: renting Valueflows cookbook to Bob
+
+  - '@id': library:54b814ee-62dc-40c1-bb96-f8582aa4f771
+    '@type': EconomicEvent
+    inputOf: library:f47064eb-7120-4b31-b882-770165901fe6
+    action: give
+    resourceInventoriedAs: library:21f361a6-2375-46bb-b192-c21b5ba833bf
+    time:inXSDDateTimeStamp: 2019-04-18T8:00:00-5:00
+    provider: https://library.example/
+    receipient: https://bob.example/
+    quantifiedAs:
+      qudt:unit: unit:Number
+      qudt:numericValue: 1
+
+  - '@id': bob:40bb78fe-28df-41a6-b698-525fa9d411d6
+    '@type': EconomicEvent
+    outputOf: library:f47064eb-7120-4b31-b882-770165901fe6
+    action: receive
+    resourceInventoriedAs: library:21f361a6-2375-46bb-b192-c21b5ba833bf #??
+    time:inXSDDateTimeStamp: 2019-04-18T8:00:00-5:00
+    provider: https://library.example/
+    receipient: https://bob.example/
+    quantifiedAs:
+      qudt:unit: unit:Number
+      qudt:numericValue: 1
+
+  - '@id': library:953b40f2-4e47-4486-afb2-402512f5269c
+    '@type': Process
+    skos:note: returning Valueflows cookbook to library
+
+  - '@id': bob:98c2bfeb-9c70-4801-896c-4646b975a7d9
+    '@type': Commitment
+    inputOf: library:953b40f2-4e47-4486-afb2-402512f5269c
+    action: give
+    resourceInventoriedAs: library:21f361a6-2375-46bb-b192-c21b5ba833bf #the possession resource
+    quantifiedAs:
+      qudt:unit: unit:Number
+      qudt:numericValue: 1
+    before:  2019-05-17T18:00:00-5:00
+
+  - '@id': library:18520fad-4443-4c55-8f76-67738b839950
+    '@type': Commitment
+    outputOf: library:953b40f2-4e47-4486-afb2-402512f5269c
+    action: receive
+    resourceInventoriedAs: library:21f361a6-2375-46bb-b192-c21b5ba833bf #the possession resource
+    quantifiedAs:
+      qudt:unit: unit:Number
+      qudt:numericValue: 1
+    before:  2019-05-17T18:00:00-5:00
+
+  # resource after
+  - '@id': library:2402b57c-1c45-423a-acb2-f50961c97d65
+    '@type': EconomicResource
+    skos:note: Valueflows cookbook
+    currentQuantity:
+      qudt:unit: unit:Number
+      qudt:numericValue: 1
+
+  - '@id': library:21f361a6-2375-46bb-b192-c21b5ba833bf
+    '@type': EconomicResource
+    skos:note: Possession rights and responsibilities for the Valueflows cookbook
+    underlyingResource: library:2402b57c-1c45-423a-acb2-f50961c97d65 # maybe needs different name
+    currentQuantity:
+      qudt:unit: unit:Number
+      qudt:numericValue: 0
