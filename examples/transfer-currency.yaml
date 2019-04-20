@@ -34,6 +34,9 @@
     action: give
     inputOf: lets:e0caf1e3-4a9b-4927-a19c-3f681d234529
     resourceInventoriedAs: lets:b75d8f6a-e2df-4e52-b36d-1a22a66f4ead
+    provider: https://alice.example
+    receiver: https://bob.example
+    inScopeOf: https://lets.example/
     quantifiedAs:
       qudt:unit: unit:Number
       qudt:numericValue: 100
@@ -43,6 +46,9 @@
     action: receive
     outputOf: lets:e0caf1e3-4a9b-4927-a19c-3f681d234529
     resourceInventoriedAs: lets:3be5259d-10f0-431c-9fec-9c0c15a461d3
+    provider: https://alice.example
+    receiver: https://bob.example
+    inScopeOf: https://lets.example/
     quantifiedAs:
       qudt:unit: unit:Number
       qudt:numericValue: 100
