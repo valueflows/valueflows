@@ -1,0 +1,66 @@
+'@context':
+  - https://git.io/vf-examples-jsonld-context
+  - bob: https://bob.example/
+    alice: https://alice.example/
+    lets: https://lets.example/
+
+'@id': rgh:valueflows/valueflows/master/examples/transfer-currency.yaml
+'@graph':
+
+  # accounts before
+
+  - '@id': lets:b75d8f6a-e2df-4e52-b36d-1a22a66f4ead
+    '@type': EconomicResource
+    skos:note: Alice's account 
+    classifiedAs: wd:Q179941
+    currentQuantity:
+      qudt:unit: unit:Number
+      qudt:numericValue: -200
+
+  - '@id': lets:3be5259d-10f0-431c-9fec-9c0c15a461d3
+    '@type': EconomicResource
+    skos:note: Bob's account 
+    classifiedAs: wd:Q179941
+    currentQuantity:
+      qudt:unit: unit:Number
+      qudt:numericValue: 500
+
+  - '@id': lets:e0caf1e3-4a9b-4927-a19c-3f681d234529
+    '@type': Process
+    skos:note: moving credits between accounts
+
+  - '@id': lets:0468e9b9-4d54-4eee-9d3f-bc76db11710a
+    '@type': EconomicEvent
+    action: give
+    inputOf: lets:e0caf1e3-4a9b-4927-a19c-3f681d234529
+    resourceInventoriedAs: lets:b75d8f6a-e2df-4e52-b36d-1a22a66f4ead
+    quantifiedAs:
+      qudt:unit: unit:Number
+      qudt:numericValue: 100
+
+  - '@id': lets:33f11508-92b3-4095-9e03-6678cddf7adf
+    '@type': EconomicEvent
+    action: receive
+    outputOf: lets:e0caf1e3-4a9b-4927-a19c-3f681d234529
+    resourceInventoriedAs: lets:3be5259d-10f0-431c-9fec-9c0c15a461d3
+    quantifiedAs:
+      qudt:unit: unit:Number
+      qudt:numericValue: 100
+
+  # accounts after
+
+  - '@id': lets:b75d8f6a-e2df-4e52-b36d-1a22a66f4ead
+    '@type': EconomicResource
+    skos:note: Alice's account 
+    classifiedAs: wd:Q179941
+    currentQuantity:
+      qudt:unit: unit:Number
+      qudt:numericValue: -300
+
+  - '@id': lets:3be5259d-10f0-431c-9fec-9c0c15a461d3
+    '@type': EconomicResource
+    skos:note: Bob's account 
+    classifiedAs: wd:Q179941
+    currentQuantity:
+      qudt:unit: unit:Number
+      qudt:numericValue: 600
