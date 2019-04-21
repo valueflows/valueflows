@@ -68,8 +68,8 @@ consume | Decrement  | Input | Yes | N/A | Yes | N/A |
 use | No effect  | Input | No | No | Yes | N/A |
 work | No effect  | Input | N/A | N/A | Yes | N/A |
 cite | No effect  | Input | No | No | No | N/A |
-load | Decrement  | Input | No | N/A | Yes | unload |
-unload | Increment  | Output | No | N/A | Yes | load |
+load | No effect  | Input | No | N/A | Yes | unload |
+unload | No effect  | Output | No | N/A | Yes | load |
 accept | No effect  | Input | No | N/A | Yes | improve |
 improve | No effect  | Output | No | N/A | Yes | accept |
 give | Decrement | Input | No | Yes | N/A | take |
