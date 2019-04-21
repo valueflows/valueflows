@@ -61,21 +61,23 @@ All flows use an action property to designate what the flow is doing and how it 
 * vf:raise - adjusts a quantity up based on a beginning balance or inventory count
 * vf:lower - adjusts a quantity down based on a beginning balance or inventory count
 
-Action | Affect | I/O | Changes existence | Pairs with |
------- | ------ | --- | ----------------- | ---------- |
-produce | Increment  | Output | Yes | N/A |
-consume | Decrement  | Input | Yes | N/A |
-use | No effect  | Input | No |N/A |
-work | No effect  | Input | N/A | N/A |
-cite | No effect  | Input | No | N/A |
-load | Decrement  | Input | No | unload |
-unload | Increment  | Output | No | load |
-accept | No effect  | Input | No | improve |
-improve | No effect  | Output | No | accept |
-give | Decrement | Input | No | receive |
-receive | Increment | Output | No | give |
-raise | Increment | N/A | N/A | N/A |
-lower | Decrement | N/A | N/A | N/A |
+Action | Affect | I/O | Changes existence | Changes possession | Changes availability | Pairs with |
+------ | ------ | --- | ----------------- | ------------------ | ---------------------| ---------- |
+produce | Increment  | Output | Yes | N/A | Yes | N/A |
+consume | Decrement  | Input | Yes | N/A | Yes | N/A |
+use | No effect  | Input | No | No | Yes | N/A |
+work | No effect  | Input | N/A | N/A | Yes | N/A |
+cite | No effect  | Input | No | No | No | N/A |
+load | Decrement  | Input | No | N/A | Yes | unload |
+unload | Increment  | Output | No | N/A | Yes | load |
+accept | No effect  | Input | No | N/A | Yes | improve |
+improve | No effect  | Output | No | N/A | Yes | accept |
+give | Decrement | Input | No | Yes | N/A | take |
+take | Increment | Output | No | Yes | N/A | issue |
+issue | Decrement | Input | No | No | No | receive |
+receive | Increment | Output | No | No | No | give |
+raise | Increment | N/A | No | No | No | N/A |
+lower | Decrement | N/A | No | No | No | N/A |
 
 We have defined a core set of actions, but expect that this will be extended with others. If extended, they should be defined as part of this or another formal vocabulary so that all can use them and assume the same meaning. 
 
