@@ -73,9 +73,9 @@ unload | Increment  | Output | No | N/A | Yes | load |
 accept | No effect  | Input | No | N/A | Yes | improve |
 improve | No effect  | Output | No | N/A | Yes | accept |
 give | Decrement | Input | No | Yes | N/A | take |
-take | Increment | Output | No | Yes | N/A | issue |
+take | Increment | Output | No | Yes | N/A | give |
 issue | Decrement | Input | No | No | No | receive |
-receive | Increment | Output | No | No | No | give |
+receive | Increment | Output | No | No | No | issue |
 raise | Increment | N/A | No | No | No | N/A |
 lower | Decrement | N/A | No | No | No | N/A |
 
