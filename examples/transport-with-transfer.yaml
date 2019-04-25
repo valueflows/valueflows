@@ -1,0 +1,86 @@
+'@context':
+  - https://git.io/vf-examples-jsonld-context
+  - alice: https://alice.example/
+    bob: https://bob.example/
+    claudia: https://claudia.example/
+
+'@id': rgh:valueflows/valueflows/master/examples/transport-with-transfer.yaml
+'@graph':
+
+# Bob receives 100kg of apples from Alice and Claudia transports them (FOB destination)
+
+  # resources before
+
+  - '@id': alice:c7897c39-7f05-4a5d-a487-80e130a2414b
+    '@type': EconomicResource
+    classifiedAs: https://www.wikidata.org/wiki/Q89 # apples
+    currentLocation: alice:40df0092-5455-4507-83fc-7f3d64538163 # alice's warehouse
+    currentQuantity:
+      qudt:unit: unit:Kilogram
+      qudt:numericValue: 640
+
+  - '@id': alice:21f361a6-2375-46bb-b192-c21b5ba833bf
+    '@type': EconomicResource
+    skos:note: Alice's apples in transit
+    underlyingResource: alice:c7897c39-7f05-4a5d-a487-80e130a2414b
+    currentQuantity:
+      qudt:unit: unit:Kilogram
+      qudt:numericValue: 0
+
+  # 
+  - '@id': alice:533f6e56-6c7d-4a5b-b9c9-1a8adafd8969
+    '@type': Process
+    skos:note: Alice transfers shipping R&R to Claudia for the apples to be shipped
+
+  - '@id': alice:6b5bc786-b9ed-4189-b34f-5ef7d10f1f86
+    '@type': EconomicEvent
+    inputOf: alice:533f6e56-6c7d-4a5b-b9c9-1a8adafd8969
+    action: give
+    resourceInventoriedAs: alice:21f361a6-2375-46bb-b192-c21b5ba833bf # in transit possession R&R
+    quantifiedAs:
+      qudt:unit: unit:Kilogram
+      qudt:numericValue: 100
+
+  - '@id': claudia:7dd207e3-8f11-4fe3-95f8-d02f6c180be3
+    '@type': EconomicEvent
+    outputOf: alice:533f6e56-6c7d-4a5b-b9c9-1a8adafd8969
+    action: receive
+    resourceInventoriedAs: claudia:27be5cab-d740-4194-9298-1661a69d9d95 # claudia's inventory / bill of lading on the truck
+    quantifiedAs:
+      qudt:unit: unit:Kilogram
+      qudt:numericValue: 100
+
+  - '@id': claudia:633f6e56-6c7d-4a5b-b9c9-1a8adafd8960
+    '@type': Process
+
+  - '@id': claudia:fd399b37-0740-4a68-a184-1e655021ca21
+    '@type': EconomicEvent
+    inputOf: claudia:633f6e56-6c7d-4a5b-b9c9-1a8adafd8960
+    action: load
+    involves: alice:27be5cab-d740-4194-9298-1661a69d9d95 #alice's inventory in transit
+    quantifiedAs:
+      qudt:unit: unit:Kilogram
+      qudt:numericValue: 100
+
+  - '@id': claudia:57f1c1d0-432e-4bfa-9d32-002b8955a708
+    '@type': EconomicEvent
+    outputOf: claudia:633f6e56-6c7d-4a5b-b9c9-1a8adafd8960
+    action: unload
+    involves: bob:a3246484-e862-4a12-b729-23986da5c033
+    quantifiedAs:
+      qudt:unit: unit:Kilogram
+      qudt:numericValue: 100
+
+    tranfer:
+      - rights: control
+        provider: https://alice.example/
+        receiver: https://bob.example/
+        resourceyThing: alice:27be5cab-d740-4194-9298-1661a69d9d95 #inventory in transit # the provider resource
+        #(do we need a time?)
+      - rights:
+        - load
+        - unload
+        provider: https://claudia.example/
+        receiver: https://bob.example/
+        resourceyThing: claudia:the-shipper-resource-in-the-process # the provider resource
+        #(do we need a time?)

@@ -7,36 +7,42 @@
 '@id': rgh:valueflows/valueflows/master/examples/checkout-book.yaml
 '@graph':
 
-  # resource before
+  # resource before 
+
   - '@id': library:2402b57c-1c45-423a-acb2-f50961c97d65
     '@type': EconomicResource
-    skos:note: Valueflows cookbook
+    skos:note: Valueflows cookbook ISBN:1234
     currentQuantity:
       qudt:unit: unit:Number
-      qudt:numericValue: 2
+      qudt:numericValue: 1
+    hasCategory: "inventory"
 
   - '@id': library:21f361a6-2375-46bb-b192-c21b5ba833bf
     '@type': EconomicResource
-    skos:note: Possession rights and responsibilities for the Valueflows cookbook
-    underlyingResource: library:2402b57c-1c45-423a-acb2-f50961c97d65 # maybe needs different name
+    skos:note: Possession with rights and responsibilities for the Valueflows cookbook
+    underlyingResource: library:2402b57c-1c45-423a-acb2-f50961c97d65
+    action: use
     currentQuantity:
       qudt:unit: unit:Number
-      qudt:numericValue: 2
+      qudt:numericValue: 1
+    hasCategory: "rights"
 
-  # check out
+
+  # one check out
+
   - '@id': library:f47064eb-7120-4b31-b882-770165901fe6
     '@type': Process
-    skos:note: renting Valueflows cookbook to Bob
+    skos:note: loaning Valueflows cookbook to Bob
 
   - '@id': library:54b814ee-62dc-40c1-bb96-f8582aa4f771
     '@type': EconomicEvent
     inputOf: library:f47064eb-7120-4b31-b882-770165901fe6
     action: give
-    resourceInventoriedAs: library:21f361a6-2375-46bb-b192-c21b5ba833bf #library's possession resource
+    resourceInventoriedAs: library:21f361a6-2375-46bb-b192-c21b5ba833bf #library's possession and use rights resource
     time:inXSDDateTimeStamp: 2019-04-18T8:00:00-5:00
     provider: https://library.example/
     receipient: https://bob.example/
-    quantifiedAs:
+    quantifiedAs: #quantity refers to the underlyingResource, which comes along with the rights resource
       qudt:unit: unit:Number
       qudt:numericValue: 1
 
@@ -44,7 +50,7 @@
     '@type': EconomicEvent
     outputOf: library:f47064eb-7120-4b31-b882-770165901fe6
     action: receive
-    resourceInventoriedAs: bob:99bc3e4e-79a6-4b52-a178-8075a268f0df #bob's possession resource
+    resourceInventoriedAs: bob:99bc3e4e-79a6-4b52-a178-8075a268f0df #bob's possession and use rights resource
     time:inXSDDateTimeStamp: 2019-04-18T8:00:00-5:00
     provider: https://library.example/
     receipient: https://bob.example/
