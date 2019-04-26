@@ -35,7 +35,6 @@
       qudt:numericValue: 1
     transferPossession: true
     transferAvailability: true
-    transferOwnership: false
 
   - '@id': bob:40bb78fe-28df-41a6-b698-525fa9d411d6
     '@type': EconomicEvent
@@ -66,7 +65,6 @@
     before:  2019-05-17T18:00:00-5:00
     transferPossession: true
     transferAvailability: true
-    transferOwnership: false
 
   - '@id': library:18520fad-4443-4c55-8f76-67738b839950
     '@type': Commitment
