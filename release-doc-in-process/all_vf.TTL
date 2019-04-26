@@ -185,13 +185,19 @@ vf:recipeOutputOf
         vs:term_status      "unstable" ;
         rdfs:comment        "Relates an output flow to it's node in a recipe." .
 
-vf:plannedWithin
+vf:organizedWithin
         a                   owl:OBjectProperty ;
-        rdfs:label          "planned within" ;
+        rdfs:label          "organized within" ;
         rdfs:domain         vf:Process ;
         rdfs:range          vf:Plan ;
         vs:term_status      "unstable" ;
         rdfs:comment        "The process with its inputs and outputs is part of the plan." .
+
+vf:deliverableFor
+        a                   owl:ObjectProperty ;
+        rdfs:label         "deliverable for" ;
+        rdfs:range          vf:Plan ;
+        rdfs:domain         vf:Commitment .
 
 vf:resourceInventoriedAs
         a                   owl:ObjectProperty ;
