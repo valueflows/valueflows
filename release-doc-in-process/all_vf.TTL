@@ -517,7 +517,7 @@ vf:realizationOf a          owl:ObjectProperty ;
         rdfs:domain         vf:EconomicEvent ;
         rdfs:range          vf:Agreement ;
         vs:term_status      "unstable" ;
-        rdfs:comment        "This economic event occurs as part of this exchange." .
+        rdfs:comment        "This economic event occurs as part of this agreement." .
 
 # ################################ agent relationship verbs
 
