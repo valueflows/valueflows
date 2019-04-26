@@ -7,80 +7,163 @@
 '@id': rgh:valueflows/valueflows/master/examples/transport-with-transfer.yaml
 '@graph':
 
-# Bob receives 100kg of apples from Alice and Claudia transports them (FOB destination)
+# Bob purchases 30kg of apples from Alice and Claudia transports them (FOB destination)
 
-  # resources before
+  # alice commits to transfer ownership of the apples to bob
 
-  - '@id': alice:c7897c39-7f05-4a5d-a487-80e130a2414b
-    '@type': EconomicResource
-    classifiedAs: https://www.wikidata.org/wiki/Q89 # apples
-    currentLocation: alice:40df0092-5455-4507-83fc-7f3d64538163 # alice's warehouse
-    currentQuantity:
+  - '@id': alice:33e8933b-ff73-4a01-964a-ca7a98893083
+    '@type': Process
+    skos:note: Transfer of ownership
+
+  - '@id': alice:6b5bc786-b9ed-4189-b34f-5ef7d10f1f86
+    '@type': Commitment
+    inputOf: alice:33e8933b-ff73-4a01-964a-ca7a98893083
+    action: give
+    resourceInventoriedAs: alice:21f361a6-2375-46bb-b192-c21b5ba833bf
+    provider: https://alice.example/
+    receiver: https://bob.example/
+    quantifiedAs:
       qudt:unit: unit:Kilogram
-      qudt:numericValue: 640
+      qudt:numericValue: 30
+    transferOwnership: true
 
-  - '@id': alice:21f361a6-2375-46bb-b192-c21b5ba833bf
-    '@type': EconomicResource
-    skos:note: Alice's apples in transit
-    underlyingResource: alice:c7897c39-7f05-4a5d-a487-80e130a2414b
-    currentQuantity:
+  - '@id': bob:60f4204e-b8d2-4026-8577-102c3f82c0af
+    '@type': Commitment
+    outputOf: alice:33e8933b-ff73-4a01-964a-ca7a98893083
+    action: take
+    resourceClassifiedAs: https://www.wikidata.org/wiki/Q89 # apples 
+    provider: https://alice.example/
+    receiver: https://bob.example/
+    quantifiedAs:
       qudt:unit: unit:Kilogram
-      qudt:numericValue: 0
+      qudt:numericValue: 30
+    transferOwnership: true
 
-  # 
+  # alice transfers possession of the apples to claudia
+
   - '@id': alice:533f6e56-6c7d-4a5b-b9c9-1a8adafd8969
     '@type': Process
-    skos:note: Alice transfers shipping R&R to Claudia for the apples to be shipped
+    skos:note: Alice issues the apples to Claudia to be shipped to Bob
 
   - '@id': alice:6b5bc786-b9ed-4189-b34f-5ef7d10f1f86
     '@type': EconomicEvent
     inputOf: alice:533f6e56-6c7d-4a5b-b9c9-1a8adafd8969
     action: give
-    resourceInventoriedAs: alice:21f361a6-2375-46bb-b192-c21b5ba833bf # in transit possession R&R
+    resourceInventoriedAs: alice:21f361a6-2375-46bb-b192-c21b5ba833bf
+    provider: https://alice.example/
+    receiver: https://claudia.example/
     quantifiedAs:
       qudt:unit: unit:Kilogram
-      qudt:numericValue: 100
+      qudt:numericValue: 30
+    transferPossession: true
 
   - '@id': claudia:7dd207e3-8f11-4fe3-95f8-d02f6c180be3
     '@type': EconomicEvent
     outputOf: alice:533f6e56-6c7d-4a5b-b9c9-1a8adafd8969
-    action: receive
+    action: take
     resourceInventoriedAs: claudia:27be5cab-d740-4194-9298-1661a69d9d95 # claudia's inventory / bill of lading on the truck
+    provider: https://alice.example/
+    receiver: https://claudia.example/
     quantifiedAs:
       qudt:unit: unit:Kilogram
-      qudt:numericValue: 100
+      qudt:numericValue: 30
+    transferPossession: true
+
+  # claudia transports the apples
 
   - '@id': claudia:633f6e56-6c7d-4a5b-b9c9-1a8adafd8960
     '@type': Process
+    skos:note: Claudia transports the apples
 
   - '@id': claudia:fd399b37-0740-4a68-a184-1e655021ca21
     '@type': EconomicEvent
     inputOf: claudia:633f6e56-6c7d-4a5b-b9c9-1a8adafd8960
     action: load
-    involves: alice:27be5cab-d740-4194-9298-1661a69d9d95 #alice's inventory in transit
+    resourceInventoriedAs: claudia:27be5cab-d740-4194-9298-1661a69d9d95 
+    provider: https://claudia.example/
+    receiver: https://claudia.example/
     quantifiedAs:
       qudt:unit: unit:Kilogram
-      qudt:numericValue: 100
+      qudt:numericValue: 30
 
   - '@id': claudia:57f1c1d0-432e-4bfa-9d32-002b8955a708
     '@type': EconomicEvent
     outputOf: claudia:633f6e56-6c7d-4a5b-b9c9-1a8adafd8960
     action: unload
-    involves: bob:a3246484-e862-4a12-b729-23986da5c033
+    resourceInventoriedAs: claudia:27be5cab-d740-4194-9298-1661a69d9d95
+    provider: https://claudia.example/
+    receiver: https://claudia.example/
     quantifiedAs:
       qudt:unit: unit:Kilogram
-      qudt:numericValue: 100
+      qudt:numericValue: 30
 
-    tranfer:
-      - rights: control
-        provider: https://alice.example/
-        receiver: https://bob.example/
-        resourceyThing: alice:27be5cab-d740-4194-9298-1661a69d9d95 #inventory in transit # the provider resource
-        #(do we need a time?)
-      - rights:
-        - load
-        - unload
-        provider: https://claudia.example/
-        receiver: https://bob.example/
-        resourceyThing: claudia:the-shipper-resource-in-the-process # the provider resource
-        #(do we need a time?)
+  # bob receives the apples
+
+  - '@id': bob:ee652454-ac08-4f5d-ae84-6b1753887086
+    '@type': Process
+
+  - '@id': bob:7a63ea10-b1c3-441a-9a08-fb8630c02614
+    '@type': EconomicEvent
+    inputOf: bob:ee652454-ac08-4f5d-ae84-6b1753887086
+    action: give
+    resourceInventoriedAs: claudia:27be5cab-d740-4194-9298-1661a69d9d95 
+    provider: https://claudia.example/
+    receiver: https://bob.example/
+    quantifiedAs:
+      qudt:unit: unit:Kilogram
+      qudt:numericValue: 30
+    transferPossession: true
+
+  - '@id': bob:8e5fe80d-a769-4bd5-89e5-2136d33eab9f
+    '@type': EconomicEvent
+    outputOf: bob:ee652454-ac08-4f5d-ae84-6b1753887086
+    action: take
+    resourceInventoriedAs: bob:9bd19194-a36d-4a1f-896b-8082887962cb 
+    provider: https://claudia.example/
+    receiver: https://bob.example/
+    quantifiedAs:
+      qudt:unit: unit:Kilogram
+      qudt:numericValue: 30
+    transferPossession: true
+
+  # receipt of the apples triggers finalizing the transfer of ownership
+
+  - '@id': alice:ad56a7ed-be3c-4937-a3fb-0f156bcd2c47
+    '@type': EconomicEvent
+    inputOf: alice:33e8933b-ff73-4a01-964a-ca7a98893083
+    action: give
+    resourceInventoriedAs: alice:21f361a6-2375-46bb-b192-c21b5ba833bf
+    provider: https://alice.example/
+    receiver: https://bob.example/
+    quantifiedAs:
+      qudt:unit: unit:Kilogram
+      qudt:numericValue: 30
+    transferOwnership: true
+
+  - '@id': alice:6f438393-7f87-4914-806c-e23a4fd15e89
+    '@type': Fulfillment
+    fulfills: alice:6b5bc786-b9ed-4189-b34f-5ef7d10f1f86 # the commitment
+    fulfilledBy: alice:ad56a7ed-be3c-4937-a3fb-0f156bcd2c47 # the economic event
+    fulfilledQuantity:
+      qudt:unit: unit:Kilogram
+      qudt:numericValue: 30
+
+  - '@id': bob:6078f30a-b15b-4b1c-8e77-797abae11378
+    '@type': EconomicEvent
+    outputOf: alice:33e8933b-ff73-4a01-964a-ca7a98893083
+    action: take
+    resourceInventoriedAs: bob:9bd19194-a36d-4a1f-896b-8082887962cb 
+    provider: https://alice.example/
+    receiver: https://bob.example/
+    quantifiedAs:
+      qudt:unit: unit:Kilogram
+      qudt:numericValue: 30
+    transferOwnership: true
+
+  - '@id': bob:6f438393-7f87-4914-806c-e23a4fd15e89
+    '@type': Fulfillment
+    fulfills: bob:60f4204e-b8d2-4026-8577-102c3f82c0af # the commitment
+    fulfilledBy: bob:6078f30a-b15b-4b1c-8e77-797abae11378 # the economic event
+    fulfilledQuantity:
+      qudt:unit: unit:Kilogram
+      qudt:numericValue: 30
