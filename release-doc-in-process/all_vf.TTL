@@ -52,6 +52,11 @@ vf:RecipeFlow a             owl:Class ;
 
 # PLAN CLASSES
 
+vf:Plan  a                  owl:Class ;
+        rdfs:label          "vf:Plan" ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "A logical collection of processes that constitute a body of planned work with defined deliverable(s)." .
+
 vf:Intent  a                owl:Class ;
         rdfs:label          "vf:Intent" ;
         vs:term_status      "unstable" ;
@@ -179,6 +184,14 @@ vf:recipeOutputOf
         rdfs:range          vf:RecipeProcess ;
         vs:term_status      "unstable" ;
         rdfs:comment        "Relates an output flow to it's node in a recipe." .
+
+vf:plannedWithin
+        a                   owl:OBjectProperty ;
+        rdfs:label          "planned within" ;
+        rdfs:domain         vf:Process ;
+        rdfs:range          vf:Plan ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "The process with its inputs and outputs is part of the plan." .
 
 vf:resourceInventoriedAs
         a                   owl:ObjectProperty ;
