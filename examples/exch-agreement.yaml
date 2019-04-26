@@ -13,7 +13,7 @@
   # Exchange agreement with commitments
 
   - '@id': alice:57f1c1d0-432e-4bfa-9d32-002b8955a708
-    '@type': ExchangeAgreement
+    '@type': Agreement
     skos:note: Alice commits to giving Bob 50 kg of apples in exchange for 10 liters of apple cider.
 
   - '@id': alice:2342d456-5d6f-46d5-a7ed-3ac7bfd5a86c
@@ -23,7 +23,7 @@
     provider: https://alice.example/
     receiver: https://bob.example/
     resourceClassifiedAs: https://www.wikidata.org/wiki/Q89 # apples
-    affectedQuantity:
+    quantifiedAs:
       qudt:unit: unit: Kilogram
       qudt:numericValue: 50
 
@@ -34,25 +34,35 @@
     provider: https://bob.example/
     receiver: https://alice.example/
     resourceClassifiedAs: https://www.wikidata.org/wiki/Q5977438 # soft apple cider
-    affectedQuantity:
+    quantifiedAs:
       qudt:unit: unit: Liter
       qudt:numericValue: 10
 
   # Exchange without commitments
 
   - '@id': store:ac9ec98d-db80-44dc-97be-7aa149b2fe5d
-    '@type': ExchangeAgreement
+    '@type': Agreement
     skos:note: Carol purchased a new bucket at the hardware store and paid 5 dollars for it.
 
   - '@id': store:a8356625-bf64-4c16-9099-28aa1b718c4b
     '@type': EconomicEvent
-    clauseOf: store:ac9ec98d-db80-44dc-97be-7aa149b2fe5d
+    realizationOf: store:ac9ec98d-db80-44dc-97be-7aa149b2fe5d
     action: give
-    provider: https://alice.example/
-    receiver: https://bob.example/
-    resourceClassifiedAs: https://www.wikidata.org/wiki/Q89 # apples
-    affectedQuantity:
-      qudt:unit: unit: Kilogram
-      qudt:numericValue: 50
+    provider: https://store.example/
+    receiver: https://carol.example/
+    resourceClassifiedAs: https://www.wikidata.org/wiki/Q47107 # bucket
+    quantifiedAs:
+      qudt:unit: unit: Number
+      qudt:numericValue: 1
 
-  
+  - '@id': store:a8356625-bf64-4c16-9099-28aa1b718c4b
+    '@type': EconomicEvent
+    realizationOf: store:ac9ec98d-db80-44dc-97be-7aa149b2fe5d
+    action: give
+    provider: https://carol.example/
+    receiver: https://store.example/
+    resourceClassifiedAs: https://www.wikidata.org/wiki/Q4917 # US dollar
+    resourceInventoriedAs: carol:e56fd654-7b94-4d96-8e60-de39e08329a7 # Carol's bank account
+    quantifiedAs:
+      qudt:unit: unit: Number
+      qudt:numericValue: 5

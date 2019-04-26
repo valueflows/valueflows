@@ -75,17 +75,17 @@ vf:Agreement  a             owl:Class ;
         vs:term_status      "unstable" ;
         rdfs:comment        "Any type of agreement among economic agents, that can be referenced in VF to clarify the economic activity.  This is a placeholder pending investigating other vocabularies." .
 
-vf:ExchangeAgreement  a     owl:Class ;
-        rdfs:label          "vf:ExchangeAgreement" ;
-        rdfs:subClassOf     vf:Agreement ;
-        vs:term_status      "unstable" ;
-        rdfs:comment        "An agreement to exchange something with another agent(s), covering one set of reciprocal commitments and/or economic events." .
+#vf:ExchangeAgreement  a     owl:Class ;
+#        rdfs:label          "vf:ExchangeAgreement" ;
+#        rdfs:subClassOf     vf:Agreement ;
+#       vs:term_status      "unstable" ;
+#        rdfs:comment        "An agreement to exchange something with another agent(s), covering one set of reciprocal commitments and/or economic events." .
 
-vf:DistributionAgreement  a  owl:Class ;
-        rdfs:label           "vf:DistributionAgreement" ;
-        rdfs:subClassOf      vf:Agreement ;
-        vs:term_status      "unstable" ;
-        rdfs:comment         "An agreement to distribute some resource in exchange for inputs or outputs created by other agents." .
+#vf:DistributionAgreement  a  owl:Class ;
+#        rdfs:label           "vf:DistributionAgreement" ;
+#        rdfs:subClassOf      vf:Agreement ;
+#        vs:term_status      "unstable" ;
+#        rdfs:comment         "An agreement to distribute some resource in exchange for inputs or outputs created by other agents." .
 
 # OBSERVATION CLASSES
 
@@ -544,14 +544,14 @@ vf:resourceConformsTo
 vf:clauseOf a               owl:ObjectProperty ;
         rdfs:label          "clause of" ;
         rdfs:domain         vf:Commitment ;
-        rdfs:range          vf:ExchangeAgreement ;
+        rdfs:range          vf:Agreement ;
         vs:term_status      "unstable" ;
-        rdfs:comment        "This commitment is part of the exchange agreement, which could not exist without it." .
+        rdfs:comment        "This commitment is part of the agreement, which could not exist without it." .
 
 vf:realizationOf a           owl:ObjectProperty ;
         rdfs:label          "realization of" ;
         rdfs:domain         vf:EconomicEvent ;
-        rdfs:range          vf:ExchangeAgreement ;
+        rdfs:range          vf:Agreement ;
         vs:term_status      "unstable" ;
         rdfs:comment        "This economic event occurs as part of this exchange." .
 
