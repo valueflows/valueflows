@@ -14,4 +14,4 @@ Some examples:
 
 * An organization decides to mount a campaign for some objective.  There might be many different deliverables: a fundraising website, some brochures, some events, etc.  All of these can be part of the same plan for easier coordination.  For example, a campaign logo could be used in all of these separate outputs.
 
-* An organization gets an order for something they produce.  They can create a plan to produce to that order.  Or they can gather all the orders for a time period for that item and produce to that as a larger plan.  Or they can produce a standard batch size to stock, in anticipation of orders.
+* An organization gets an order for some things they produce.  They can create a plan to produce to that order, including all line items.  Or they can gather all the orders for a time period for that item and produce to that as a larger plan.  Or they can produce a standard batch size to stock, in anticipation of orders.
