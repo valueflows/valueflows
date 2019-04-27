@@ -55,7 +55,17 @@ vf:RecipeFlow a             owl:Class ;
 vf:Intent  a                owl:Class ;
         rdfs:label          "vf:Intent" ;
         vs:term_status      "unstable" ;
-        rdfs:comment        "A planned economic flow, which can lead to economic events (sometimes through commitments)" .
+        rdfs:comment        "A proposed or planned or estimated economic flow, prior to a commitment or agreement, which can lead to commitments and/or economic events." .
+
+vf:Proposal  a              owl:Class ;
+        rdfs:label          "vf:Proposal" ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "Published requests or offers, sometimes with what is expected in return." .
+
+vf:ProposedIntent  a        owl:Class ;
+        rdfs:label          "vf:ProposedIntent" ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "Supports including intents in multiple proposals, as well as a proposal including multiple intents." .
 
 vf:Commitment  a            owl:Class ;
         rdfs:label          "vf:Commitment" ;
@@ -426,6 +436,30 @@ vf:satisfiedBy
         rdfs:range          [ owl:unionOf (vf:Commitment vf:EconomicEvent ) ] ;
         vs:term_status      "unstable" ;
         rdfs:comment        "A commitment or economic event fully or partially satisfying an intent" .
+
+vf:publishes
+        a                   owl:ObjectProperty ;
+        rdfs:label         "publishes" ;
+        rdfs:domain         vf:ProposedIntent ;
+        rdfs:range          vf:Intent ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "The intent which is part of this published proposal." .
+
+vf:publishedIn
+        a                   owl:ObjectProperty ;
+        rdfs:label         "published in" ;
+        rdfs:domain         vf:ProposedIntent ;
+        rdfs:range          vf:Proposal ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "The published proposal which this intent is part of." .
+
+vf:reciprocal
+        a                   owl:ObjectProperty ;
+        rdfs:label         "reciprocal" ;
+        rdfs:domain         vf:ProposedIntent ;
+        rdfs:range          xsd:boolean ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "This is a reciprocal intent of this proposal, not primary." .
 
 vf:finished  a              owl:DatatypeProperty ;
         rdfs:domain         [ owl:unionOf (vf:Commitment vf:Process vf:Intent vf:Claim) ] ; 
