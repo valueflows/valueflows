@@ -388,6 +388,13 @@ vf:primaryLocation a        owl:ObjectProperty ;
         vs:term_status      "unstable" ;
         rdfs:comment        "The main place an agent is located, often an address where activities occur and mail can be sent. This is usually a mappable geographic location.  It also could be a website address, as in the case of agents who have no physical location." .
 
+vf:publishingLocation a     owl:ObjectProperty ;
+        rdfs:label          "publishing location" ;
+        rdfs:domain         foaf:Agent ;
+        #rdfs:range          vf:Location ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "Location or area where the proposal is published." .
+
 vf:image a                  owl:DatatypeProperty ;
         vs:term_status      "unstable" ;
         rdfs:label          "image" .

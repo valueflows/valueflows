@@ -1,0 +1,148 @@
+# Example: Simple proposals
+
+'@context':
+  - https://git.io/vf-examples-jsonld-context
+  - alice: https://alice.example/
+    bob: https://bob.example/
+    carol: https://carol.example/
+    timebank: https://timebank.example/
+    fablab: https://fablab.example/
+    map: https://mapping.service/
+
+'@id': rgh:valueflows/valueflows/master/examples/simple-proposals.yaml
+'@graph':
+
+  # One offer, no reciprocity expected
+
+  - '@id': alice:8e5fe80d-a769-4bd5-89e5-2136d33eab9f
+    '@type': Proposal
+    name: Free used bike
+    hasBeginning: 2019-04-01T00:00:00-5:00
+    hasEnd: 2019-05-01T00:00:00-5:00
+    publishingLocation: map:566a2c01-96f8-4b3c-adcf-f197eced3092 # Madison, WI
+
+  - '@id': alice:02b39a30-3e04-4305-9656-7f261aa63c84
+    '@type': Intent
+    name: Old adult Schwinn one speed bike
+    skos:note: Pedals fine, not good for hills, has basket, brakes are a bit dodgy
+    action: give
+    provider: https://alice.example/
+    resourceClassifiedAs: https://www.wikidata.org/wiki/Q11442 # bicycle
+
+  - '@id': alice:a8236bbb-81e0-422d-9861-56d2417db0fb
+    '@type': ProposedIntent
+    publishedIn: alice:8e5fe80d-a769-4bd5-89e5-2136d33eab9f # the proposal
+    publishes: alice:02b39a30-3e04-4305-9656-7f261aa63c84 # the intent
+
+  # Timebank request, reciprocity defined in the timebank agreement (hour credits)
+
+  - '@id': bob:23799c14-c368-4653-a584-83bf9ae8b82a
+    '@type': Proposal
+    name: Seeking plumbing help
+    hasBeginning: 2019-04-01T00:00:00-5:00
+    hasEnd: 2019-04-05T00:00:00-5:00
+    inScopeOf: https://timebank.example/
+    under: https://timebank.example/member-agreement/
+
+  - '@id': bob:e18c808c-929a-450d-9d0d-3b3f531bc126
+    '@type': Intent
+    name: Plumbing help please
+    skos:note: Need someone with plumbing skills to fix leaky faucet and plugged drain asap
+    action: work
+    receiver: https://bob.example/
+    resourceClassifiedAs: https://www.wikidata.org/wiki/Q252924 # plumber
+
+  - '@id': bob:5d2fe7da-b91b-4dab-91d9-68db80c1feb7
+    '@type': ProposedIntent
+    publishedIn: bob:23799c14-c368-4653-a584-83bf9ae8b82a # the proposal
+    publishes: bob:e18c808c-929a-450d-9d0d-3b3f531bc126 # the intent
+
+  # Trade: barter
+
+  - '@id': carol:6405b8ad-0ac2-4d58-abdb-0808903c78ad
+    '@type': Proposal
+    name: Cider press for cider
+    hasBeginning: 2018-10-01T00:00:00-5:00
+    hasEnd: 2018-10-15T00:00:00-5:00
+    publishingLocation: map:566a2c01-96f8-4b3c-adcf-f197eced3092 # Madison, WI
+
+  - '@id': carol:e02e3f6b-420a-4ba8-89b0-909d7363ce07
+    '@type': Intent
+    name: Cider press
+    skos:note: I can pick up or come to your place, will clean up.
+    action: use
+    receiver: https://carol.example/
+    resourceClassifiedAs: https://www.wikidata.org/wiki/Q1111 # cider press (fictional)
+    quantifiedAs:
+      qudt:unit: unit:Hour
+      qudt:numericValue: 6
+
+  - '@id': carol:9f112621-3f13-4f48-a3e2-fd2ca99493cd
+    '@type': ProposedIntent
+    publishedIn: carol:6405b8ad-0ac2-4d58-abdb-0808903c78ad # the proposal
+    publishes: carol:e02e3f6b-420a-4ba8-89b0-909d7363ce07 # the intent
+
+  - '@id': carol:b52a5815-fae9-43bf-be95-833b95dc0adb
+    '@type': Intent
+    name: Cider
+    skos:note: Fresh cider from the pressing
+    action: give
+    provider: https://carol.example/
+    resourceClassifiedAs: https://www.wikidata.org/wiki/Q5977438 # apple cider
+    quantifiedAs:
+      qudt:unit: unit:Gallon
+      qudt:numericValue: 3
+
+  - '@id': carol:9bd19194-a36d-4a1f-896b-8082887962cb
+    '@type': ProposedIntent
+    publishedIn: carol:6405b8ad-0ac2-4d58-abdb-0808903c78ad # the proposal
+    publishes: carol:b52a5815-fae9-43bf-be95-833b95dc0adb7 # the intent
+    reciprocal: true
+
+  # Plan a process, broadcase request for worker with certain skills to collaborate
+
+  - '@id': fablab:ad56a7ed-be3c-4937-a3fb-0f156bcd2c47
+    '@type': Process
+    name: Develop soil moisture sensor
+    inScopeOf: https://fablab.example/
+
+  - '@id': fablab:60f4204e-b8d2-4026-8577-102c3f82c0af
+    '@type': Intent
+    inputOf: fablab:ad56a7ed-be3c-4937-a3fb-0f156bcd2c47
+    name: Help with R&D for the sensor
+    skos:note: Will need to be at the lab all day both days.
+    action: work
+    receiver: https://fablab.example/
+    resourceClassifiedAs: https://www.wikidata.org/wiki/Q2474620 # electrochemical engineering
+    quantifiedAs:
+      qudt:unit: unit:Hour
+      qudt:numericValue: 16
+    hasBeginning: 2019-04-12T08:00:00-5:00
+    hasEnd: 2019-04-13T17:00:00-5:00
+
+  - '@id': fablab:33e8933b-ff73-4a01-964a-ca7a98893083
+    '@type': Proposal
+    name: Electrochemical engineering skills
+    hasBeginning: 2019-04-01T08:00:00-5:00
+    hasEnd: 2019-04-11T17:00:00-5:00
+    publishingLocation: map:566a2c01-96f8-4b3c-adcf-f197eced3092 # Madison, WI
+
+  - '@id': fablab:b90b0b77-09a2-42e2-8bd4-e9ae2c1c6172
+    '@type': ProposedIntent
+    publishedIn: fablab:33e8933b-ff73-4a01-964a-ca7a98893083 # the proposal
+    publishes: fablab:60f4204e-b8d2-4026-8577-102c3f82c0af # the intent (part of the planned process above)
+
+  - '@id': fablab:583e83d9-a46d-44ff-bd71-88513a1d83c0
+    '@type': Intent
+    name: Payment
+    skos:note: Payment when the unit is manufactured and sold
+    action: give
+    provider: https://fablab.example/
+    resourceClassifiedAs: https://www.wikidata.org/wiki/Q4917 # USD
+    under: https://fablab.example/soil-sensor-project/value-equation/
+
+  - '@id': fablab:d4d2fd71-34f2-41c3-b1c5-19ad5ed2da59b
+    '@type': ProposedIntent
+    publishedIn: fablab:33e8933b-ff73-4a01-964a-ca7a98893083 # the proposal
+    publishes: fablab:583e83d9-a46d-44ff-bd71-88513a1d83c0 # the intent
+    reciprocal: true
