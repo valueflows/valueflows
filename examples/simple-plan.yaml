@@ -43,16 +43,6 @@
       qudt:unit: unit:Number
       qudt:numericValue: 1020
 
-  - '@id': printer:b90b0b77-09a2-42e2-8bd4-e9ae2c1c6172
-    '@type': Commitment
-    inputOf: printer:02b39a30-3e04-4305-9656-7f261aa63c84
-    action: use
-    provider: https://printer.example/
-    receiver: https://printer.example/
-    resourceInventoriedAs: printer:52f0e212-3c4f-4d27-b345-5e964c135824 # printing press
-    quantifiedAs:
-      qudt:unit: unit:Hour
-      qudt:numericValue: 1.5
 
   - '@id': printer:9bd19194-a36d-4a1f-896b-8082887962cb
     '@type': Process
@@ -82,13 +72,40 @@
       qudt:unit: unit:Number
       qudt:numericValue: 35
 
-  - '@id': printer:ad56a7ed-be3c-4937-a3fb-0f156bcd2c47
+  - '@id': printer:b90b0b77-09a2-42e2-8bd4-e9ae2c1c6172
     '@type': Commitment
     inputOf: printer:9bd19194-a36d-4a1f-896b-8082887962cb
     action: use
     provider: https://printer.example/
     receiver: https://printer.example/
-    resourceInventoriedAs: printer:86ad6e22-7640-4b93-972a-db7177ab2616 # printing press
+    resourceInventoriedAs: printer:e4783bef-9006-490c-9c03-389272c7444d # printing plate for the specific posters
     quantifiedAs:
       qudt:unit: unit:Hour
-      qudt:numericValue: 2
+      qudt:numericValue: 1.5
+
+  - '@id': printer:d4d2fd71-34f2-41c3-b1c5-19ad5ed2da59b
+    '@type': Process
+    name: Create poster plate
+    plannedWithin: printer:8e5fe80d-a769-4bd5-89e5-2136d33eab9f
+
+  - '@id': printer:583e83d9-a46d-44ff-bd71-88513a1d83c0
+    '@type': Commitment
+    outputOf: printer:d4d2fd71-34f2-41c3-b1c5-19ad5ed2da59b
+    action: produce
+    provider: https://printer.example/
+    receiver: https://printer.example/
+    resourceInventoriedAs: printer:e4783bef-9006-490c-9c03-389272c7444d # printing plate for the specific posters
+    quantifiedAs:
+      qudt:unit: unit:Number
+      qudt:numericValue: 1
+
+  - '@id': printer:ad56a7ed-be3c-4937-a3fb-0f156bcd2c47
+    '@type': Commitment
+    inputOf: printer:9bd19194-a36d-4a1f-896b-8082887962cb
+    action: consume
+    provider: https://printer.example/
+    receiver: https://printer.example/
+    resourceInventoriedAs: printer:86ad6e22-7640-4b93-972a-db7177ab2616 # blank printing plate
+    quantifiedAs:
+      qudt:unit: unit:Number
+      qudt:numericValue: 1
