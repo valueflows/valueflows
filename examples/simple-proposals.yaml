@@ -12,13 +12,13 @@
 '@id': rgh:valueflows/valueflows/master/examples/simple-proposals.yaml
 '@graph':
 
-  # One offer, no reciprocity expected
+  # One offer with expected reciprocity
 
-  - '@id': alice:8e5fe80d-a769-4bd5-89e5-2136d33eab9f
+  - '@id': alice:8791913c-0152-4c32-bb3f-f25d61df736c
     '@type': Proposal
-    name: Free used bike
-    hasBeginning: 2019-04-01T00:00:00-5:00
-    hasEnd: 2019-05-01T00:00:00-5:00
+    name: Used bike
+    hasBeginning: 2019-03-01T00:00:00-5:00
+    hasEnd: 2019-03-31T00:00:00-5:00
     publishingLocation: map:566a2c01-96f8-4b3c-adcf-f197eced3092 # Madison, WI
 
   - '@id': alice:02b39a30-3e04-4305-9656-7f261aa63c84
@@ -31,8 +31,24 @@
 
   - '@id': alice:a8236bbb-81e0-422d-9861-56d2417db0fb
     '@type': ProposedIntent
-    publishedIn: alice:8e5fe80d-a769-4bd5-89e5-2136d33eab9f # the proposal
-    publishes: alice:02b39a30-3e04-4305-9656-7f261aa63c84 # the intent
+    publishedIn: alice:8791913c-0152-4c32-bb3f-f25d61df736c # the proposal
+    publishes: alice:02b39a30-3e04-4305-9656-7f261aa63c84 # the intent (see top of examples)
+
+  - '@id': alice:e72f7d1d-4f0a-4518-a44c-96658cafda95
+    '@type': Intent
+    name: Payment
+    action: receive
+    receiver: https://alice.example/
+    resourceClassifiedAs: https://www.wikidata.org/wiki/Q4917 # US Dollar
+    quantifiedAs:
+      qudt:unit: unit:Number
+      qudt:numericValue: 15
+
+  - '@id': alice:f325a950-5737-488d-b122-8f21114d0eb0
+    '@type': ProposedIntent
+    publishedIn: alice:8791913c-0152-4c32-bb3f-f25d61df736c # the proposal
+    publishes: alice:e72f7d1d-4f0a-4518-a44c-96658cafda95 # the intent
+    reciprocal: true
 
   # Timebank request, reciprocity defined in the timebank agreement (hour credits)
 
@@ -99,7 +115,7 @@
     publishes: carol:b52a5815-fae9-43bf-be95-833b95dc0adb7 # the intent
     reciprocal: true
 
-  # Plan a process, broadcase request for worker with certain skills to collaborate
+  # Plan a process, broadcast request for worker with certain skills to collaborate
 
   - '@id': fablab:ad56a7ed-be3c-4937-a3fb-0f156bcd2c47
     '@type': Process
@@ -138,7 +154,7 @@
     skos:note: Payment when the unit is manufactured and sold
     action: give
     provider: https://fablab.example/
-    resourceClassifiedAs: https://www.wikidata.org/wiki/Q4917 # USD
+    resourceClassifiedAs: https://www.wikidata.org/wiki/Q4917 # US Dollar
     under: https://fablab.example/soil-sensor-project/value-equation/
 
   - '@id': fablab:d4d2fd71-34f2-41c3-b1c5-19ad5ed2da59b
@@ -146,3 +162,17 @@
     publishedIn: fablab:33e8933b-ff73-4a01-964a-ca7a98893083 # the proposal
     publishes: fablab:583e83d9-a46d-44ff-bd71-88513a1d83c0 # the intent
     reciprocal: true
+
+  # Intent as part of 2 proposals
+
+  - '@id': alice:8e5fe80d-a769-4bd5-89e5-2136d33eab9f
+    '@type': Proposal
+    name: Free used bike # alice did not get any responses to her proposal above, so decided to offer the bike for free
+    hasBeginning: 2019-04-01T00:00:00-5:00
+    hasEnd: 2019-05-01T00:00:00-5:00
+    publishingLocation: map:566a2c01-96f8-4b3c-adcf-f197eced3092 # Madison, WI
+
+  - '@id': alice:a8236bbb-81e0-422d-9861-56d2417db0fb
+    '@type': ProposedIntent
+    publishedIn: alice:8e5fe80d-a769-4bd5-89e5-2136d33eab9f # the proposal
+    publishes: alice:02b39a30-3e04-4305-9656-7f261aa63c84 # the intent (this is the same intent alice originally published)
