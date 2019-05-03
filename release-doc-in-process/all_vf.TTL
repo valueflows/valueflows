@@ -197,7 +197,8 @@ vf:independentDemandOf
         a                   owl:ObjectProperty ;
         rdfs:label         "independent demand of" ;
         rdfs:range          vf:Plan ;
-        rdfs:domain         vf:Commitment .
+        rdfs:domain         vf:Commitment ;
+        rdfs:comment        "Represents a desired deliverable to the outside of this plan." .
 
 vf:resourceInventoriedAs
         a                   owl:ObjectProperty ;
