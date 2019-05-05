@@ -54,7 +54,7 @@ Economic Resources can be inventoried, not inventoried but could be, or it doesn
 * Not inventoried: You could keep track of it, but it isn't worth it.  This usually happens for quantities of small or hard to measure items that are obtained in bulk, like solder or bolts.  In this case, you have to look at the actual resource to see if you need more, the data won't tell you.
 * Not applicable: This is for types of work (unless scheduled), and other resources where it just doesn't make sense.
 
-#### Unique identifiers fo resources
+#### Unique identifiers for resources
 
 This can vary.  And people can be allowed within some boundaries of agreement to specify which combination of other properties would constitute identifiers.
 
