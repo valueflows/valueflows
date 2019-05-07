@@ -1,6 +1,6 @@
 # Processes
 
-By Process, we mean an activity that transforms inputs into outputs. The outputs might then become inputs to other processes, forming networks and chains. Those chains may be circular, where an output from one process becomes an input to another process that occurred previously in the same chain.
+By Process, we mean an activity that makes inputs into outputs. The outputs might then become inputs to other processes, forming networks and chains. Those chains may be circular, where an output from one process becomes an input to another process that occurred previously in the same chain.
 
 For example: a farming process takes compost, soil, seeds, water and human and mechanical work as inputs, and transforms them into grains, nuts, fruit, and vegetables. Those ingredients may go to kitchens that create dinners for people to eat. Some of those ingredients may be pared off in preparation, or spoil, or be left on plates. Those leftovers go into compost, which starts the process chain over from the beginning.
 
@@ -19,6 +19,19 @@ Below is a view of processes, which occur in resource flow networks, and live in
 Here is a specific example:
 
 ![salsa flow](https://rawgit.com/valueflows/valueflows/master/release-doc-in-process/salsa-layer.png)
+
+## Types of processes
+
+Processes can perform different roles:
+* Transformation - Outputs have changed existence or changed form from the inputs; or are improved in some way.
+* Transportation - Outputs have changed location.
+* Transfer - Outputs have different agent rights and responsibililities, or different agent possession.
+
+We believe these are important distinctions as we seek to create infrastructure for a different economy. Transformations are the processes that truly "add value", even if it is recycling rather than producing. Transportation is needed for distribution, and before that for getting resources where they need to be for transformation processes.  Transfers facilitate other processes by putting the rights and responsibilities for, and/or possession of, a resource into a different agent's hands. In an economic system organized for common good rather than wealth accumulation, they play a coordinating role.
+
+Sometimes these roles can be combined or blended in one process.
+
+Note, processes, or series of processes, are one-way value flows and do not in and of themselves imply exchange.  Exchange implies at least two reciprocal but separate flows of processes.
 
 ## Examples
 

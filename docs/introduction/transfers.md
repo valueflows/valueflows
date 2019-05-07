@@ -1,4 +1,8 @@
-# Transfer
+# Inventory and Transfers
+
+Inventory is a term used primarily in today's economic system as 
+
+
 
 A transfer is an activity that assigns some rights and responsibilities for an economic resource from one agent to another.
 
@@ -12,15 +16,5 @@ Or let's say that a community has farmland and equipment held in common.  The co
 
 In spite of these examples, we also want to note that transfers do not imply explicit or implicit exchanges, only a one-directional flow.
 
-### Transfer vs Process
 
-Transfers and Processes both structure "value flows", but they are conceptually and functionally different.
-* Processes create or change or transport an economic resource, whether producing goods or services, recycling, even if they create "waste" as a by-product (that can hopefully be used somewhere else).
-* Transfers do not create or change or transport an economic resource, they just put the rights and responsibilities for a resource into a different agent's hands so that the resource can be used or consumed or transfered again.
-
-This is an important distinction as we seek to change the world, because transfer and exchange cannot move us beyond the current unsustainable and unjust system.  We the people need to manage our production and creation (and waste) for human and ecological needs rather than profit.
-
-That said, the structure in value flows is similar, allowing transfers and processes to participate seamlessly in value flows:
-
-![transfer-process](https://rawgit.com/valueflows/valueflows/master/release-doc-in-process/transfer.png)
 
