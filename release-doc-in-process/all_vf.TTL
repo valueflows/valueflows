@@ -378,12 +378,12 @@ vf:primaryLocation a        owl:ObjectProperty ;
         vs:term_status      "unstable" ;
         rdfs:comment        "The main place an agent is located, often an address where activities occur and mail can be sent. This is usually a mappable geographic location.  It also could be a website address, as in the case of agents who have no physical location." .
 
-vf:observedLocation a       owl:ObjectProperty ;
-        rdfs:label          "observed location" ;
-        rdfs:domain         vf:EconomicEvent ;
+vf:atLocation a             owl:ObjectProperty ;
+        rdfs:label          "at location" ;
+        rdfs:domain         [ owl:unionOf (vf:EconomicEvent vf:Commitment vf:Intent) ] ;  ;
         rdfs:range          vf:Location ;
         vs:term_status      "unstable" ;
-        rdfs:comment        "The place where an economic event occurs.  Usually mappable." .
+        rdfs:comment        "The place where an intent, commitment, or economic event occurs.  Usually mappable." .
 
 vf:image a                  owl:DatatypeProperty ;
         vs:term_status      "unstable" ;
