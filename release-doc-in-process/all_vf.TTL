@@ -380,7 +380,7 @@ vf:primaryLocation a        owl:ObjectProperty ;
 
 vf:atLocation a             owl:ObjectProperty ;
         rdfs:label          "at location" ;
-        rdfs:domain         [ owl:unionOf (vf:EconomicEvent vf:Commitment vf:Intent) ] ;  ;
+        rdfs:domain         [ owl:unionOf (vf:EconomicEvent vf:Commitment vf:Intent) ] ;
         rdfs:range          vf:Location ;
         vs:term_status      "unstable" ;
         rdfs:comment        "The place where an intent, commitment, or economic event occurs.  Usually mappable." .
