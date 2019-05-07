@@ -20,7 +20,7 @@
 * [Resources](introduction/resources.md)
 * [Flows](introduction/flows.md)
 * [Processes](introduction/processes.md)
-* [Transfers](introduction/transfers.md)
+* [Inventory](introduction/transfers.md)
 * [Exchanges](introduction/exchanges.md)
 * [Proposals](introduction/proposals.md)
 * [Scoping](introduction/scoping.md)
