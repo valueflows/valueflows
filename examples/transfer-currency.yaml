@@ -12,7 +12,7 @@
   - '@id': lets:b75d8f6a-e2df-4e52-b36d-1a22a66f4ead
     '@type': EconomicResource
     skos:note: Alice's account 
-    classifiedAs: wd:Q179941
+    classifiedAs: wd:Q179941 # LETS
     currentQuantity:
       qudt:unit: unit:Number
       qudt:numericValue: -200
@@ -20,7 +20,7 @@
   - '@id': lets:3be5259d-10f0-431c-9fec-9c0c15a461d3
     '@type': EconomicResource
     skos:note: Bob's account 
-    classifiedAs: wd:Q179941
+    classifiedAs: wd:Q179941 # LETS
     currentQuantity:
       qudt:unit: unit:Number
       qudt:numericValue: 500
@@ -40,8 +40,9 @@
     quantifiedAs:
       qudt:unit: unit:Number
       qudt:numericValue: 100
-    transferPossession: true
-    transferOwnership: true
+    transfer:
+    - possession
+    - ownership
 
   - '@id': lets:33f11508-92b3-4095-9e03-6678cddf7adf
     '@type': EconomicEvent
@@ -54,15 +55,16 @@
     quantifiedAs:
       qudt:unit: unit:Number
       qudt:numericValue: 100
-    transferPossession: true
-    transferOwnership: true
+    transfer:
+    - possession
+    - ownership
 
   # accounts after
 
   - '@id': lets:b75d8f6a-e2df-4e52-b36d-1a22a66f4ead
     '@type': EconomicResource
     skos:note: Alice's account 
-    classifiedAs: wd:Q179941
+    classifiedAs: wd:Q179941 # LETS
     currentQuantity:
       qudt:unit: unit:Number
       qudt:numericValue: -300
@@ -70,7 +72,7 @@
   - '@id': lets:3be5259d-10f0-431c-9fec-9c0c15a461d3
     '@type': EconomicResource
     skos:note: Bob's account 
-    classifiedAs: wd:Q179941
+    classifiedAs: wd:Q179941 # LETS
     currentQuantity:
       qudt:unit: unit:Number
       qudt:numericValue: 600
