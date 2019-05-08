@@ -33,8 +33,9 @@
     quantifiedAs: 
       qudt:unit: unit:Number
       qudt:numericValue: 1
-    transferPossession: true
-    transferAvailability: true
+    transfer:
+    - possession
+    - right-to-use
 
   - '@id': bob:40bb78fe-28df-41a6-b698-525fa9d411d6
     '@type': EconomicEvent
@@ -47,8 +48,9 @@
     quantifiedAs:
       qudt:unit: unit:Number
       qudt:numericValue: 1
-    transferPossession: true
-    transferAvailability: true
+    transfer:
+    - possession
+    - right-to-use
 
   - '@id': library:953b40f2-4e47-4486-afb2-402512f5269c
     '@type': Process
@@ -63,8 +65,9 @@
       qudt:unit: unit:Number
       qudt:numericValue: 1
     before:  2019-05-17T18:00:00-5:00
-    transferPossession: true
-    transferAvailability: true
+    transfer:
+    - possession
+    - right-to-use
 
   - '@id': library:18520fad-4443-4c55-8f76-67738b839950
     '@type': Commitment
@@ -75,6 +78,7 @@
       qudt:unit: unit:Number
       qudt:numericValue: 1
     before:  2019-05-17T18:00:00-5:00
-    transferPossession: true
-    transferAvailability: true
+    transfer:
+    - possession
+    - right-to-use
 

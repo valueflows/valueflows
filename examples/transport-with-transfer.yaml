@@ -25,7 +25,8 @@
     quantifiedAs:
       qudt:unit: unit:Kilogram
       qudt:numericValue: 30
-    transferOwnership: true
+    transfer:
+    - ownership
 
   - '@id': bob:60f4204e-b8d2-4026-8577-102c3f82c0af
     '@type': Commitment
@@ -37,7 +38,8 @@
     quantifiedAs:
       qudt:unit: unit:Kilogram
       qudt:numericValue: 30
-    transferOwnership: true
+    transfer:
+    - ownership
 
   # alice transfers possession of the apples to claudia
 
@@ -55,7 +57,8 @@
     quantifiedAs:
       qudt:unit: unit:Kilogram
       qudt:numericValue: 30
-    transferPossession: true
+    transfer:
+    - possession
 
   - '@id': claudia:7dd207e3-8f11-4fe3-95f8-d02f6c180be3
     '@type': EconomicEvent
@@ -67,7 +70,8 @@
     quantifiedAs:
       qudt:unit: unit:Kilogram
       qudt:numericValue: 30
-    transferPossession: true
+    transfer:
+    - possession
 
   # claudia transports the apples
 
@@ -112,7 +116,8 @@
     quantifiedAs:
       qudt:unit: unit:Kilogram
       qudt:numericValue: 30
-    transferPossession: true
+    transfer:
+    - possession
 
   - '@id': bob:8e5fe80d-a769-4bd5-89e5-2136d33eab9f
     '@type': EconomicEvent
@@ -124,7 +129,8 @@
     quantifiedAs:
       qudt:unit: unit:Kilogram
       qudt:numericValue: 30
-    transferPossession: true
+    transfer:
+    - possession
 
   # receipt of the apples triggers finalizing the transfer of ownership
 
@@ -138,7 +144,8 @@
     quantifiedAs:
       qudt:unit: unit:Kilogram
       qudt:numericValue: 30
-    transferOwnership: true
+    transfer:
+    - ownership
 
   - '@id': alice:6f438393-7f87-4914-806c-e23a4fd15e89
     '@type': Fulfillment
@@ -158,7 +165,8 @@
     quantifiedAs:
       qudt:unit: unit:Kilogram
       qudt:numericValue: 30
-    transferOwnership: true
+    transfer:
+    - ownership
 
   - '@id': bob:6f438393-7f87-4914-806c-e23a4fd15e89
     '@type': Fulfillment

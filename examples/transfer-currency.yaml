@@ -11,7 +11,7 @@
 
   - '@id': lets:b75d8f6a-e2df-4e52-b36d-1a22a66f4ead
     '@type': EconomicResource
-    skos:note: Alice's account 
+    skos:note: Alice's account
     classifiedAs: wd:Q179941 # LETS
     currentQuantity:
       qudt:unit: unit:Number
@@ -24,6 +24,8 @@
     currentQuantity:
       qudt:unit: unit:Number
       qudt:numericValue: 500
+
+  # transfer of credits
 
   - '@id': lets:e0caf1e3-4a9b-4927-a19c-3f681d234529
     '@type': Process
