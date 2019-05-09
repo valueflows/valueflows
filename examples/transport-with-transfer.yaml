@@ -73,7 +73,7 @@
     transfer:
     - possession
 
-  # claudia transports the apples
+  # claudia transports the apples in two hops
 
   - '@id': claudia:633f6e56-6c7d-4a5b-b9c9-1a8adafd8960
     '@type': Process
@@ -100,6 +100,44 @@
     quantifiedAs:
       qudt:unit: unit:Kilogram
       qudt:numericValue: 30
+
+  - '@id': claudia:c404cff5-19c7-453d-b0d8-d8e96055bd0c
+    '@type': Process
+    skos:note: Claudia transports the apples
+
+  - '@id': claudia:856c43b1-0a63-445f-a56f-707b257f086e
+    '@type': EconomicEvent
+    inputOf: claudia:c404cff5-19c7-453d-b0d8-d8e96055bd0c
+    action: load
+    resourceInventoriedAs: claudia:27be5cab-d740-4194-9298-1661a69d9d95 
+    provider: https://claudia.example/
+    receiver: https://claudia.example/
+    quantifiedAs:
+      qudt:unit: unit:Kilogram
+      qudt:numericValue: 30
+
+  - '@id': claudia:9cb4944b-d26d-4774-a530-d18f2747c0d8
+    '@type': EconomicEvent
+    outputOf: claudia:c404cff5-19c7-453d-b0d8-d8e96055bd0c
+    action: unload
+    resourceInventoriedAs: claudia:27be5cab-d740-4194-9298-1661a69d9d95
+    provider: https://claudia.example/
+    receiver: https://claudia.example/
+    quantifiedAs:
+      qudt:unit: unit:Kilogram
+      qudt:numericValue: 30
+
+  - '@id': claudia:68cabaf3-deb8-4bd5-a439-798263abe35a
+    '@type': EconomicEvent
+    skos:note: Transportation of alice's apples from alice's location to bob's location
+    outputOf: claudia:c404cff5-19c7-453d-b0d8-d8e96055bd0c
+    action: service
+    resourceClassifiedAs: wd:Q7590 # transportation service
+    provider: https://claudia.example/
+    receiver: https://alice.example/
+    quantifiedAs:
+      qudt:unit: unit:Number
+      qudt:numericValue: 1
 
   # bob receives the apples
 
