@@ -138,6 +138,7 @@
     quantifiedAs:
       qudt:unit: unit:Number
       qudt:numericValue: 1
+    realizationOf: alice:f325a950-5737-488d-b122-8f21114d0eb0 # transportation agreement
 
   # bob receives the apples
 
@@ -213,3 +214,44 @@
     fulfilledQuantity:
       qudt:unit: unit:Kilogram
       qudt:numericValue: 30
+
+  # alice pays claudia for the transportation service (see above for the service)
+
+  - '@id': alice:f0b8bfb1-ed29-4ab0-aabd-f5e2a3515626
+    '@type': Process
+
+  - '@id': alice:8baa8ff7-9c1e-4586-ae7b-79d620a3cac9
+    '@type': EconomicEvent
+    inputOf: alice:f0b8bfb1-ed29-4ab0-aabd-f5e2a3515626
+    action: give
+    resourceClassifedAs: wd:Q4917 # US Dollar
+    resourceInventoriedAs: alice:daa2ec3b-2c1a-4eb1-839f-8dcec1a1f93a # alice's bank account
+    provider: https://alice.example/
+    receiver: https://claudia.example/
+    quantifiedAs:
+      qudt:unit: unit:Number
+      qudt:numericValue: 10
+    transfer:
+    - ownership
+    - possession
+    realizationOf: alice:f325a950-5737-488d-b122-8f21114d0eb0 # transportation agreement
+
+  - '@id': alice:8baa8ff7-9c1e-4586-ae7b-79d620a3cac9
+    '@type': EconomicEvent
+    outputOf: alice:f0b8bfb1-ed29-4ab0-aabd-f5e2a3515626
+    action: take
+    resourceClassifedAs: wd:Q4917 # US Dollar
+    resourceInventoriedAs: claudia:bd5806d6-4a36-45b9-b3b6-3e7d361a5a14 # claudia's bank account
+    provider: https://alice.example/
+    receiver: https://claudia.example/
+    quantifiedAs:
+      qudt:unit: unit:Number
+      qudt:numericValue: 10
+    transfer:
+    - ownership
+    - possession
+    realizationOf: alice:f325a950-5737-488d-b122-8f21114d0eb0 # transportation agreement
+
+  - '@id': alice:f325a950-5737-488d-b122-8f21114d0eb0
+    '@type': Agreement
+    skos:note: exchange transportation service for currency
