@@ -383,6 +383,7 @@ vf:url a                    owl:DatatypeProperty ;
 
 vf:name a                   owl:DatatypeProperty ;
         rdfs:label          "name" ;
+        rdfs:range          xsd:string ;
         vs:term_status      "unstable" ;
         rdfs:comment        "An informal or formal textual identifier for an object. Does not imply uniqueness." .
 
@@ -525,6 +526,13 @@ vf:realizationOf a          owl:ObjectProperty ;
         rdfs:range          vf:Agreement ;
         vs:term_status      "unstable" ;
         rdfs:comment        "This economic event occurs as part of this agreement." .
+
+vf:mappableAddress a        owl:ObjectProperty ;
+        rdfs:label          "mappable address" ;
+        rdfs:domain         vf:Location ;
+        rdfs:range          xsd:string ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "A textual address that can be mapped using mapping software." .
 
 # ################################ agent relationship verbs
 
