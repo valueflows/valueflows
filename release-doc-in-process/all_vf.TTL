@@ -49,6 +49,11 @@ vf:RecipeFlow a             owl:Class ;
         vs:term_status      "unstable" ;
         rdfs:comment        "The linkage between a process recipe, an action that structures a recipe, and a resource specification." .
 
+vf:TransferOf a             owl:Class ;
+        rdfs:label          "vf:TransferOf" ;
+        rdfs:subClassOf     rdf:Property ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "Describes what is being transfered in this flow: possession, stewardship, right to use." .
 
 # PLAN CLASSES
 
@@ -96,11 +101,6 @@ vf:Process  a               owl:Class ;
         rdfs:label          "vf:Process" ;
         vs:term_status      "testing" ;
         rdfs:comment        "An activity that changes inputs into outputs.  It could transform or transport economic resource(s)." .
-
-vf:Transfer  a              owl:Class ;
-        rdfs:label          "vf:Transfer" ;
-        vs:term_status      "unstable" ;
-        rdfs:comment        "An activity that assigns the rights and responsibilities for an economic resource from one agent to another." .
 
 vf:EconomicEvent  a         owl:Class ;
         rdfs:label          "vf:EconomicEvent" ;
@@ -301,12 +301,29 @@ vf:hasEnd a                 owl:DatatypeProperty ;
         owl:propertyChainAxiom (time:hasEnd time:inXSDDateTimeStamp) ;
         rdfs:comment        "Specific time marking the exact end of flow or process".
 
-vf:currentQuantity a        owl:ObjectProperty ;
-        rdfs:label          "current quantity" ;
+vf:currentAccountingQuantity
+        a                   owl:ObjectProperty ;
+        rdfs:label          "current accounting quantity" ;
         rdfs:domain         vf:EconomicResource ;
         rdfs:range          qudt:QuantityValue ;
         vs:term_status      "unstable" ;
-        rdfs:comment        "The current amount and unit of the economic resource. This can be stored or derived from economic events affecting the resource" .
+        rdfs:comment        "The current amount and unit of the economic resource for accounting purposes, representing the ownership or stewardship (full rights and responsibilities) of the economic resource. This can be stored or derived from economic events affecting the resource." .
+
+vf:currentAvailableQuantity
+        a                   owl:ObjectProperty ;
+        rdfs:label          "current available quantity" ;
+        rdfs:domain         vf:EconomicResource ;
+        rdfs:range          qudt:QuantityValue ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "The current amount and unit of the economic resource available for economic activity. This can be stored or derived from economic events affecting the resource." . 
+
+vf:currentPossessedQuantity
+        a                   owl:ObjectProperty ;
+        rdfs:label          "current possessed quantity" ;
+        rdfs:domain         vf:EconomicResource ;
+        rdfs:range          qudt:QuantityValue ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "The current amount and unit of the economic resource in possession, irrespective of rights to that economic resource. This can be stored or derived from economic events affecting the resource." . 
 
 vf:affectedQuantity a       owl:ObjectProperty ;
         rdfs:label          "affected quantity" ;
@@ -517,9 +534,16 @@ vf:resourceConformsTo
         vs:term_status      "unstable" ;
         rdfs:comment        "The primary resource knowledge specification or definition of an existing or potential resource." .
 
+vf:transferOf
+        a                   owl:ObjectProperty ;
+        rdfs:label          "transfer of" ;
+        rdfs:domain         [ owl:unionOf (vf:EconomicEvent vf:Commitment vf:Intent) ] ;
+        rdfs:range          vf:TransferOf ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "Defines the type(s) of transfer for flows that include a transfer of possession or rights." .
 
 
-# ################################ agent relationship verbs
+# ################################ agent relationship properties
 
 #vf:memberOf  a              vf:AgentRelationshipRole ;
 #        vs:term_status      "unstable" ;
@@ -532,6 +556,20 @@ vf:resourceConformsTo
 #vf:peerOf  a                vf:AgentRelationshipRole ;
 #        vs:term_status      "unstable" ;
 #        rdfs:label          "peer of" .
+
+# ################################ transfer properties
+
+vf:possession  a            vf:TransferOf ;
+        vs:term_status      "unstable" ;
+        rdfs:label          "possession" .
+
+vf:right-to-use  a           vf:TransferOf ;
+        vs:term_status      "unstable" ;
+        rdfs:label          "right-to-use" .
+
+vf:stewardship  a           vf:TransferOf ;
+        vs:term_status      "unstable" ;
+        rdfs:label          "stewardship" .
 
 # ################################ action verbs
 

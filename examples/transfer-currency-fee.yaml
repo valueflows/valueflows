@@ -24,9 +24,9 @@
     quantifiedAs:
       qudt:unit: unit:Number
       qudt:numericValue: 100
-    transfer:
+    transferOf:
     - possession
-    - ownership
+    - stewardship
 
   - '@id': bank:33f11508-92b3-4095-9e03-6678cddf7adf
     '@type': EconomicEvent
@@ -39,9 +39,9 @@
     quantifiedAs:
       qudt:unit: unit:Number
       qudt:numericValue: 100
-    transfer:
+    transferOf:
     - possession
-    - ownership
+    - stewardship
 
   - '@id': bank:6405b8ad-0ac2-4d58-abdb-0808903c78ad
     '@type': EconomicEvent
@@ -73,9 +73,9 @@
     quantifiedAs:
       qudt:unit: unit:Number
       qudt:numericValue: 100
-    transfer:
+    transferOf:
     - possession
-    - ownership
+    - stewardship
     realizationOf: f325a950-5737-488d-b122-8f21114d0eb0
 
   - '@id': bank:33f11508-92b3-4095-9e03-6678cddf7adf
@@ -89,9 +89,9 @@
     quantifiedAs:
       qudt:unit: unit:Number
       qudt:numericValue: 1
-    transfer:
+    transferOf:
     - possession
-    - ownership
+    - stewardship
     realizationOf: f325a950-5737-488d-b122-8f21114d0eb0
 
   # record of the agreement (the exchange)
