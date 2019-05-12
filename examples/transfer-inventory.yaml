@@ -1,0 +1,219 @@
+'@context':
+  - https://git.io/vf-examples-jsonld-context
+  - bob: https://bob.example/
+    alice: https://alice.example/
+    carol: https://carol.example/
+    dan: https://dan.example/
+
+'@id': rgh:valueflows/valueflows/master/examples/transfer-inventory.yaml
+'@graph':
+
+  # resource before
+
+  - '@id': alice:b75d8f6a-e2df-4e52-b36d-1a22a66f4ead
+    '@type': EconomicResource
+    classifiedAs: wd:Q89 # apples
+    currentPossesion: https://alice.example/
+    currentQuantity:
+      qudt:unit: unit:Kilogram
+      qudt:numericValue: 230
+
+  # alice sells some of her apples at the farmer's market
+  # first she splits amount of apples
+
+  - '@id': alice:0468e9b9-4d54-4eee-9d3f-bc76db11710a
+    '@type': EconomicEvent
+    action: split
+    resourceInventoriedAs: alice:b75d8f6a-e2df-4e52-b36d-1a22a66f4ead
+    actsOnQuantity:
+      qudt:unit: unit:Kilogram
+      qudt:numericValue: 50
+
+  - '@id': alice:267a2f60-92e0-49c8-928b-601e89d5ddf9
+    '@type': EconomicEvent
+    action: merge
+    resourceInventoriedAs: alice:e55414b6-0b4d-42a5-b86c-d85d95979732
+    actsOnQuantity:
+      qudt:unit: unit:Kilogram
+      qudt:numericValue: 50
+
+  # then she transfer rights to them
+  - '@id': alice:267a2f60-92e0-49c8-928b-601e89d5ddf9
+    '@type': EconomicEvent
+    action:
+      - own
+      - possess
+    provider: https://alice.example/
+    receiver: https://dan.example/
+    resourceInventoriedAs: alice:e55414b6-0b4d-42a5-b86c-d85d95979732
+    actsOnQuantity:
+      qudt:unit: unit:Kilogram
+      qudt:numericValue: 50
+
+  - '@id': alice:b75d8f6a-e2df-4e52-b36d-1a22a66f4ead
+    '@type': EconomicResource
+    classifiedAs: wd:Q89 # apples
+    currentPossesion: https://alice.example/
+    currentQuantity:
+      qudt:unit: unit:Kilogram
+      qudt:numericValue: 180
+
+  - '@id': alice:e55414b6-0b4d-42a5-b86c-d85d95979732
+    '@type': EconomicResource
+    classifiedAs: wd:Q89 # apples
+    currentPossesion: https://dan.example/
+    currentQuantity:
+      qudt:unit: unit:Kilogram
+      qudt:numericValue: 50
+
+  # alice loans a basket of apples to her friend to use in a display for a few days
+
+  - '@id': alice:33f11508-92b3-4095-9e03-6678cddf7adf
+    '@type': EconomicEvent
+    action: split
+    resourceInventoriedAs: alice:b75d8f6a-e2df-4e52-b36d-1a22a66f4ead
+    actsOnQuantity:
+      qudt:unit: unit:Kilogram
+      qudt:numericValue: 10
+
+  - '@id': alice:d5062396-c17f-4880-9cb4-d25e74fe1f63
+    '@type': EconomicEvent
+    action: merge
+    resourceInventoriedAs: alice:01595d68-e3d6-40ab-a77d-3a48b64fc5ba
+    actsOnQuantity:
+      qudt:unit: unit:Kilogram
+      qudt:numericValue: 10
+
+  - '@id': alice:e899998e-36ca-4cd6-9c54-655346ac6102
+    '@type': EconomicEvent
+    action: possess
+    provider: https://alice.example/
+    receiver: https://carol.example/
+    resourceInventoriedAs: alice:01595d68-e3d6-40ab-a77d-3a48b64fc5ba
+    actsOnQuantity:
+      qudt:unit: unit:Kilogram
+      qudt:numericValue: 10
+
+  - '@id': carol:d5062396-c17f-4880-9cb4-d25e74fe1f63
+    '@type': Commitment
+    action: possess
+    provider: https://carol.example/
+    receiver: https://alice.example/
+    resourceInventoriedAs: alice:01595d68-e3d6-40ab-a77d-3a48b64fc5ba
+    actsOnQuantity:
+      qudt:unit: unit:Kilogram
+      qudt:numericValue: 10
+
+  - '@id': alice:b75d8f6a-e2df-4e52-b36d-1a22a66f4ead
+    '@type': EconomicResource
+    classifiedAs: wd:Q89 # apples
+    currentPossesion: https://alice.example/
+    currentQuantity:
+      qudt:unit: unit:Kilogram
+      qudt:numericValue: 170
+
+  - '@id': alice:01595d68-e3d6-40ab-a77d-3a48b64fc5ba
+    '@type': EconomicResource
+    classifiedAs: wd:Q89 # apples
+    currentPossesion: https://carol.example/
+    currentQuantity:
+      qudt:unit: unit:Kilogram
+      qudt:numericValue: 10
+
+  # alice sells some apples FOB destination, and has them shipped (they are enroute)
+
+  - '@id': alice:469a7adb-c7c0-44d2-99a2-df4e4eff97a3
+    '@type': EconomicEvent
+    action: split
+    resourceInventoriedAs: alice:b75d8f6a-e2df-4e52-b36d-1a22a66f4ead
+    actsOnQuantity:
+      qudt:unit: unit:Kilogram
+      qudt:numericValue: 100
+
+  - '@id': alice:12c25554-1d9f-47e7-9f23-038b8c3b1246
+    '@type': EconomicEvent
+    action: merge
+    resourceInventoriedAs: alice:7a3b3eda-bef6-4b15-bcec-8f0b172e4051
+    actsOnQuantity:
+      qudt:unit: unit:Kilogram
+      qudt:numericValue: 100
+
+  - '@id': alice:c44e95ed-6caf-47e6-b42d-dbfe3ac68aab
+    '@type': EconomicEvent
+    action: possess
+    atLocation: osm:eb90e9c9-0ea7-4da7-9db7-74fb928dcc3b
+    provider: https://alice.example/
+    receiver: https://carol.example/
+    resourceInventoriedAs: alice:7a3b3eda-bef6-4b15-bcec-8f0b172e4051
+    actsOnQuantity:
+      qudt:unit: unit:Kilogram
+      qudt:numericValue: 100
+
+  - '@id': carol:70e22de0-307f-4594-a7e3-d040a08a66d9
+    '@type': Commitment
+    action: possess
+    atLocation: osm:cd7f0598-6570-4780-b779-b04c91d72d95
+    provider: https://carol.example/
+    receiver: https://bob.example/
+    resourceInventoriedAs: alice:7a3b3eda-bef6-4b15-bcec-8f0b172e4051
+    actsOnQuantity:
+      qudt:unit: unit:Kilogram
+      qudt:numericValue: 100
+
+  - '@id': carol:dcef8fb3-18fc-47e0-89e9-7b14d0a734bf
+    '@type': EconomicEvent
+    action: load
+    atLocation: osm:eb90e9c9-0ea7-4da7-9db7-74fb928dcc3b
+    resourceInventoriedAs: alice:7a3b3eda-bef6-4b15-bcec-8f0b172e4051
+    actsOnQuantity:
+      qudt:unit: unit:Kilogram
+      qudt:numericValue: 100
+
+  - '@id': alice:b75d8f6a-e2df-4e52-b36d-1a22a66f4ead
+    '@type': EconomicResource
+    classifiedAs: wd:Q89 # apples
+    currentPossesion: https://alice.example/
+    currentQuantity:
+      qudt:unit: unit:Kilogram
+      qudt:numericValue: 70
+
+  - '@id': alice:01595d68-e3d6-40ab-a77d-3a48b64fc5ba
+    '@type': EconomicResource
+    classifiedAs: wd:Q89 # apples
+    currentPossesion: https://carol.example/
+    currentQuantity:
+      qudt:unit: unit:Kilogram
+      qudt:numericValue: 100
+
+  # alice sells some apples for which she has been pre-paid but not shipped yet
+
+  - '@id': alice:9396d2d1-ded3-4b1c-8144-1c024e641030
+    '@type': EconomicEvent
+    action: give
+    resourceInventoriedAs: alice:b75d8f6a-e2df-4e52-b36d-1a22a66f4ead
+    provider: https://alice.example
+    receiver: https://carol.example
+    actsOnQuantity:
+      qudt:unit: unit:Kilogram
+      qudt:numericValue: 40
+    transfer:
+    - stewardship
+
+  - '@id': alice:7fb920ae-bf36-4773-b6a1-c6417c64f9b5
+    '@type': EconomicEvent
+    action: own
+    provider: https://alice.example/
+    receiver: https://bob.example/
+    resourceInventoriedAs: alice:b75d8f6a-e2df-4e52-b36d-1a22a66f4ead
+    actsOnQuantity:
+      qudt:unit: unit:Kilogram
+      qudt:numericValue: 40
+
+  # bob owns 40kg of remaining 70
+  - '@id': alice:b75d8f6a-e2df-4e52-b36d-1a22a66f4ead
+    '@type': EconomicResource
+    classifiedAs: wd:Q89 # apples
+    currentPossesion: https://alice.example/
+    currentQuantity:
+      qudt:unit: unit:Kilogram
+      qudt:numericValue: 70
