@@ -21,9 +21,13 @@
   # alice sells some of her apples at the farmer's market
   # first she splits amount of apples
 
+  - '@id': alice:d27e7a9f-9850-4d11-9a46-1eefb8e6a629
+    '@type': Process
+
   - '@id': alice:0468e9b9-4d54-4eee-9d3f-bc76db11710a
     '@type': EconomicEvent
     action: split
+    inputOf: alice:d27e7a9f-9850-4d11-9a46-1eefb8e6a629
     resourceInventoriedAs: alice:b75d8f6a-e2df-4e52-b36d-1a22a66f4ead
     actsOnQuantity:
       qudt:unit: unit:Kilogram
@@ -32,6 +36,7 @@
   - '@id': alice:267a2f60-92e0-49c8-928b-601e89d5ddf9
     '@type': EconomicEvent
     action: merge
+    outputOf: alice:d27e7a9f-9850-4d11-9a46-1eefb8e6a629
     resourceInventoriedAs: alice:e55414b6-0b4d-42a5-b86c-d85d95979732
     actsOnQuantity:
       qudt:unit: unit:Kilogram
@@ -68,9 +73,13 @@
 
   # alice loans a basket of apples to her friend to use in a display for a few days
 
+  - '@id': alice:ee2331d6-f7de-4440-8006-5d01fee4c8d3
+    '@type': Process
+
   - '@id': alice:33f11508-92b3-4095-9e03-6678cddf7adf
     '@type': EconomicEvent
     action: split
+    inputOf: alice:ee2331d6-f7de-4440-8006-5d01fee4c8d3
     resourceInventoriedAs: alice:b75d8f6a-e2df-4e52-b36d-1a22a66f4ead
     actsOnQuantity:
       qudt:unit: unit:Kilogram
@@ -79,6 +88,7 @@
   - '@id': alice:d5062396-c17f-4880-9cb4-d25e74fe1f63
     '@type': EconomicEvent
     action: merge
+    outputOf: alice:ee2331d6-f7de-4440-8006-5d01fee4c8d3
     resourceInventoriedAs: alice:01595d68-e3d6-40ab-a77d-3a48b64fc5ba
     actsOnQuantity:
       qudt:unit: unit:Kilogram
@@ -122,9 +132,13 @@
 
   # alice sells some apples FOB destination, and has them shipped (they are enroute)
 
+  - '@id': alice:155f6552-f865-4b91-b65a-10d55b3918a6
+    '@type': Process
+
   - '@id': alice:469a7adb-c7c0-44d2-99a2-df4e4eff97a3
     '@type': EconomicEvent
     action: split
+    inputOf: alice:155f6552-f865-4b91-b65a-10d55b3918a6
     resourceInventoriedAs: alice:b75d8f6a-e2df-4e52-b36d-1a22a66f4ead
     actsOnQuantity:
       qudt:unit: unit:Kilogram
@@ -133,6 +147,7 @@
   - '@id': alice:12c25554-1d9f-47e7-9f23-038b8c3b1246
     '@type': EconomicEvent
     action: merge
+    outputOf: alice:155f6552-f865-4b91-b65a-10d55b3918a6
     resourceInventoriedAs: alice:7a3b3eda-bef6-4b15-bcec-8f0b172e4051
     actsOnQuantity:
       qudt:unit: unit:Kilogram
@@ -186,18 +201,6 @@
       qudt:numericValue: 100
 
   # alice sells some apples for which she has been pre-paid but not shipped yet
-
-  - '@id': alice:9396d2d1-ded3-4b1c-8144-1c024e641030
-    '@type': EconomicEvent
-    action: give
-    resourceInventoriedAs: alice:b75d8f6a-e2df-4e52-b36d-1a22a66f4ead
-    provider: https://alice.example
-    receiver: https://carol.example
-    actsOnQuantity:
-      qudt:unit: unit:Kilogram
-      qudt:numericValue: 40
-    transfer:
-    - stewardship
 
   - '@id': alice:7fb920ae-bf36-4773-b6a1-c6417c64f9b5
     '@type': EconomicEvent
