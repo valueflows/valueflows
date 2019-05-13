@@ -243,11 +243,11 @@ vf:inScopeOf  a             owl:ObjectProperty ;
         rdfs:comment        "Grouping around something to create a boundary or context, used for documenting, accounting, planning." .
 
 vf:under  a                 owl:ObjectProperty ;
-        rdfs:domain         [ owl:unionOf (vf:EconomicEvent vf:Commitment vf:Intent vf:Fulfillment vf:Claim) ] ; 
+        rdfs:domain         [ owl:unionOf (vf:EconomicEvent vf:Commitment vf:Intent vf:Claim) ] ; 
         rdfs:label          "under" ;
-        rdfs:range          vf:Agreement ;
+        rdfs:range          owl:Thing ;
         vs:term_status      "unstable" ;
-        rdfs:comment        "Reference to an agreement between agents which specifies the rules or policies or calculations which govern this flow." .
+        rdfs:comment        "Reference to an agreement between agents which specifies the rules, terms, policies, calculations, etc. which govern this flow." .
 
 vf:triggeredBy  a           owl:ObjectProperty ;
         rdfs:label          "triggered by" ;
