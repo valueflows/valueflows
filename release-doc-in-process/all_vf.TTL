@@ -7,6 +7,7 @@
 @prefix qudt:   <http://qudt.org/schema/qudt/> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 @prefix time:  <http://www.w3.org/2006/time#> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
 @prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
 
 
@@ -119,10 +120,6 @@ vf:Appreciation  a          owl:Class ;
         rdfs:label          "vf:Appreciation" ;
         vs:term_status      "unstable" ;
         rdfs:comment        "A way to tie an economic event that is given in loose fulfilment for another economic event, without commitments or expectations. Supports the gift economy." .
-
-vf:Location  a              owl:Class ;
-        vs:term_status      "unstable" ;
-        rdfs:label          "vf:Location" .
 
 
 # ####################################################################
@@ -355,21 +352,21 @@ vf:definedQuantity a        owl:ObjectProperty ;
 vf:currentLocation a        owl:ObjectProperty ;
         rdfs:label          "current location" ;
         rdfs:domain         vf:EconomicResource ;
-        rdfs:range          vf:Location ;
+        rdfs:range          geo:SpatialThing ;
         vs:term_status      "unstable" ;
         rdfs:comment        "The current place an economic resource is located.  Could be at any level of granularity, from a town to an address to a warehouse location.  Usually mappable." .
 
 vf:primaryLocation a        owl:ObjectProperty ;
         rdfs:label          "primary location" ;
         rdfs:domain         foaf:Agent ;
-        rdfs:range          vf:Location ;
+        rdfs:range          geo:SpatialThing ;
         vs:term_status      "unstable" ;
         rdfs:comment        "The main place an agent is located, often an address where activities occur and mail can be sent. This is usually a mappable geographic location.  It also could be a website address, as in the case of agents who have no physical location." .
 
 vf:atLocation a             owl:ObjectProperty ;
         rdfs:label          "at location" ;
         rdfs:domain         [ owl:unionOf (vf:EconomicEvent vf:Commitment vf:Intent) ] ;
-        rdfs:range          vf:Location ;
+        rdfs:range          geo:SpatialThing ;
         vs:term_status      "unstable" ;
         rdfs:comment        "The place where an intent, commitment, or economic event occurs.  Usually mappable." .
 
@@ -383,6 +380,7 @@ vf:url a                    owl:DatatypeProperty ;
 
 vf:name a                   owl:DatatypeProperty ;
         rdfs:label          "name" ;
+        rdfs:range          xsd:string ;
         vs:term_status      "unstable" ;
         rdfs:comment        "An informal or formal textual identifier for an object. Does not imply uniqueness." .
 
@@ -525,6 +523,13 @@ vf:realizationOf a          owl:ObjectProperty ;
         rdfs:range          vf:Agreement ;
         vs:term_status      "unstable" ;
         rdfs:comment        "This economic event occurs as part of this agreement." .
+
+vf:mappableAddress a        owl:ObjectProperty ;
+        rdfs:label          "mappable address" ;
+        rdfs:domain         geo:SpatialThing ;
+        rdfs:range          xsd:string ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "A textual address that can be mapped using mapping software." .
 
 # ################################ agent relationship verbs
 
