@@ -351,21 +351,21 @@ vf:definedQuantity a        owl:ObjectProperty ;
 vf:currentLocation a        owl:ObjectProperty ;
         rdfs:label          "current location" ;
         rdfs:domain         vf:EconomicResource ;
-        rdfs:range          vf:SpatialThing ;
+        rdfs:range          geo:SpatialThing ;
         vs:term_status      "unstable" ;
         rdfs:comment        "The current place an economic resource is located.  Could be at any level of granularity, from a town to an address to a warehouse location.  Usually mappable." .
 
 vf:primaryLocation a        owl:ObjectProperty ;
         rdfs:label          "primary location" ;
         rdfs:domain         foaf:Agent ;
-        rdfs:range          vf:SpatialThing ;
+        rdfs:range          geo:SpatialThing ;
         vs:term_status      "unstable" ;
         rdfs:comment        "The main place an agent is located, often an address where activities occur and mail can be sent. This is usually a mappable geographic location.  It also could be a website address, as in the case of agents who have no physical location." .
 
 vf:atLocation a             owl:ObjectProperty ;
         rdfs:label          "at location" ;
         rdfs:domain         [ owl:unionOf (vf:EconomicEvent vf:Commitment vf:Intent) ] ;
-        rdfs:range          vf:SpatialThing ;
+        rdfs:range          geo:SpatialThing ;
         vs:term_status      "unstable" ;
         rdfs:comment        "The place where an intent, commitment, or economic event occurs.  Usually mappable." .
 
@@ -525,7 +525,7 @@ vf:realizationOf a          owl:ObjectProperty ;
 
 vf:mappableAddress a        owl:ObjectProperty ;
         rdfs:label          "mappable address" ;
-        rdfs:domain         vf:SpatialThing ;
+        rdfs:domain         geo:SpatialThing ;
         rdfs:range          xsd:string ;
         vs:term_status      "unstable" ;
         rdfs:comment        "A textual address that can be mapped using mapping software." .
