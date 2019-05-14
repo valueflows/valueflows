@@ -159,13 +159,6 @@
     currentQuantity:
       qudt:unit: unit:Number
       qudt:numericValue: 600
-
-  - '@id': urn:uuid:9f5181db-7bd2-4ddf-92ff-10f0e8fad844
-    '@type': EconomicResource
-    skos:note: credits in transit
-    classifiedAs: wd:Q179941
-    currentQuantity:
-      qudt:numericValue: 0
     share:
       - owner: https://bob.example/
         quantity:
@@ -175,3 +168,10 @@
         quantity:
           qudt:unit: unit:Number
           qudt:numericValue: 300
+
+  - '@id': urn:uuid:9f5181db-7bd2-4ddf-92ff-10f0e8fad844
+    '@type': EconomicResource
+    skos:note: credits in transit
+    classifiedAs: wd:Q179941
+    currentQuantity:
+      qudt:numericValue: 0
