@@ -3,69 +3,175 @@
   - https://git.io/vf-examples-jsonld-context
   - bob: https://bob.example/
     alice: https://alice.example/
-    lets: https://lets.example/
+    abank: https://abank.example/
+    bbank: https://bbank.example/
+    notary: https://notary.example/
 
 '@id': rgh:valueflows/valueflows/master/examples/currency-transfer.yaml
 '@graph':
 
   # accounts before
 
-  - '@id': lets:b75d8f6a-e2df-4e52-b36d-1a22a66f4ead
+  - '@id': abank:b75d8f6a-e2df-4e52-b36d-1a22a66f4ead
     '@type': EconomicResource
-    skos:note: Alice's account 
+    skos:note: shared account Alice has some credits on
     classifiedAs: wd:Q179941
     currentQuantity:
       qudt:unit: unit:Number
-      qudt:numericValue: -200
+      qudt:numericValue: 200
+    share:
+      - owner: https://alice.example/
+        quantity:
+          qudt:unit: unit:Number
+          qudt:numericValue: 150
+      - owner: https://zoe.example/
+        quantity:
+          qudt:unit: unit:Number
+          qudt:numericValue: 50
 
-  - '@id': lets:3be5259d-10f0-431c-9fec-9c0c15a461d3
+  - '@id': bbank:3be5259d-10f0-431c-9fec-9c0c15a461d3
     '@type': EconomicResource
-    skos:note: Bob's account 
+    skos:note: shared account Bob has some credits on
     classifiedAs: wd:Q179941
     currentQuantity:
       qudt:unit: unit:Number
       qudt:numericValue: 500
+    share:
+      - owner: https://bob.example/
+        quantity:
+          qudt:unit: unit:Number
+          qudt:numericValue: 200
+      - owner: https://sam.example/
+        quantity:
+          qudt:unit: unit:Number
+          qudt:numericValue: 300
 
-  - '@id': lets:e0caf1e3-4a9b-4927-a19c-3f681d234529
+  - '@id': abank:e0caf1e3-4a9b-4927-a19c-3f681d234529
     '@type': Process
-    skos:note: moving credits between accounts
+    skos:note: debit Alice's credits on account
 
-  - '@id': lets:0468e9b9-4d54-4eee-9d3f-bc76db11710a
+  - '@id': abank:0468e9b9-4d54-4eee-9d3f-bc76db11710a
     '@type': EconomicEvent
-    action: decrement
-    inputOf: lets:e0caf1e3-4a9b-4927-a19c-3f681d234529
-    involves: lets:b75d8f6a-e2df-4e52-b36d-1a22a66f4ead
-    involvesQuantity:
+    action: split
+    inputOf: abank:e0caf1e3-4a9b-4927-a19c-3f681d234529
+    resourceInventoriedAs: abank:b75d8f6a-e2df-4e52-b36d-1a22a66f4ead
+    provider: https://alice.example/
+    recipient: https://alice.example/
+    actsOnQuantity:
       qudt:unit: unit:Number
       qudt:numericValue: 100
 
-  - '@id': lets:33f11508-92b3-4095-9e03-6678cddf7adf
+  - '@id': abank:58c36336-09fa-4be2-b1ac-d26ea91bd982
     '@type': EconomicEvent
-    action: increment
-    outputOf: lets:e0caf1e3-4a9b-4927-a19c-3f681d234529
-    involves: lets:3be5259d-10f0-431c-9fec-9c0c15a461d3
-    involvesQuantity:
+    action: merge
+    outputOf: abank:e0caf1e3-4a9b-4927-a19c-3f681d234529
+    resourceInventoriedAs: urn:uuid:9f5181db-7bd2-4ddf-92ff-10f0e8fad844
+    provider: https://alice.example/
+    recipient: https://alice.example/
+    actsOnQuantity:
       qudt:unit: unit:Number
       qudt:numericValue: 100
-    transfer:
-      - rights: control
-        provider: https://alice.example/
-        recipient: https://bob.example/
 
-  # accounts after
-
-  - '@id': lets:b75d8f6a-e2df-4e52-b36d-1a22a66f4ead
+  - '@id': abank:b75d8f6a-e2df-4e52-b36d-1a22a66f4ead
     '@type': EconomicResource
     skos:note: Alice's account 
     classifiedAs: wd:Q179941
     currentQuantity:
       qudt:unit: unit:Number
-      qudt:numericValue: -300
+      qudt:numericValue: 100
+    share:
+      - owner: https://alice.example/
+        quantity:
+          qudt:unit: unit:Number
+          qudt:numericValue: 150
+      - owner: https://zoe.example/
+        quantity:
+          qudt:unit: unit:Number
+          qudt:numericValue: 50
 
-  - '@id': lets:3be5259d-10f0-431c-9fec-9c0c15a461d3
+  - '@id': urn:uuid:9f5181db-7bd2-4ddf-92ff-10f0e8fad844
+    '@type': EconomicResource
+    skos:note: credits in transit
+    classifiedAs: wd:Q179941
+    currentQuantity:
+      qudt:unit: unit:Number
+      qudt:numericValue: 100
+    share:
+      - owner: https://alice.example/
+        quantity:
+          qudt:unit: unit:Number
+          qudt:numericValue: 100
+
+  # actual ownership transfer happens only in this flow
+  - '@id': notary:da8f3360-3a6d-4ea8-b57f-4d4236fe2c3e
+    '@type': EconomicEvent
+    action: own
+    provider: https://alice.example/
+    recipient: https://bob.example/
+    resourceInventoriedAs: urn:uuid:9f5181db-7bd2-4ddf-92ff-10f0e8fad844
+    actsOnQuantity:
+      qudt:unit: unit:Number
+      qudt:numericValue: 100
+
+  - '@id': urn:uuid:9f5181db-7bd2-4ddf-92ff-10f0e8fad844
+    '@type': EconomicResource
+    skos:note: credits in transit
+    classifiedAs: wd:Q179941
+    currentQuantity:
+      qudt:unit: unit:Number
+      qudt:numericValue: 100
+    share:
+      - owner: https://bob.example/
+        quantity:
+          qudt:unit: unit:Number
+          qudt:numericValue: 100
+
+  - '@id': bbank:57f01dbe-fd78-40d0-9278-60005debfba6
+    '@type': Process
+    skos:note: credit Bob's account
+
+  - '@id': bbank:33f11508-92b3-4095-9e03-6678cddf7adf
+    '@type': EconomicEvent
+    action: split
+    inputOf: bbank:57f01dbe-fd78-40d0-9278-60005debfba6
+    resourceInventoriedAs: urn:uuid:9f5181db-7bd2-4ddf-92ff-10f0e8fad844
+    provider: https://bob.example/
+    recipient: https://bob.example/
+    actsOnQuantity:
+      qudt:unit: unit:Number
+      qudt:numericValue: 100
+
+  - '@id': bbank:33f11508-92b3-4095-9e03-6678cddf7adf
+    '@type': EconomicEvent
+    action: merge
+    outputOf: bbank:57f01dbe-fd78-40d0-9278-60005debfba6
+    resourceInventoriedAs: bbank:3be5259d-10f0-431c-9fec-9c0c15a461d3
+    provider: https://bob.example/
+    recipient: https://bob.example/
+    actsOnQuantity:
+      qudt:unit: unit:Number
+      qudt:numericValue: 100
+
+  - '@id': bbank:3be5259d-10f0-431c-9fec-9c0c15a461d3
     '@type': EconomicResource
     skos:note: Bob's account 
     classifiedAs: wd:Q179941
     currentQuantity:
       qudt:unit: unit:Number
       qudt:numericValue: 600
+
+  - '@id': urn:uuid:9f5181db-7bd2-4ddf-92ff-10f0e8fad844
+    '@type': EconomicResource
+    skos:note: credits in transit
+    classifiedAs: wd:Q179941
+    currentQuantity:
+      qudt:numericValue: 0
+    share:
+      - owner: https://bob.example/
+        quantity:
+          qudt:unit: unit:Number
+          qudt:numericValue: 300
+      - owner: https://sam.example/
+        quantity:
+          qudt:unit: unit:Number
+          qudt:numericValue: 300
