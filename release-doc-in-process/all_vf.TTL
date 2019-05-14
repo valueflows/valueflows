@@ -148,6 +148,14 @@ vf:action
         vs:term_status      "unstable" ;
         rdfs:comment        "Relates a process input or output to a verb, such as consume, produce, work, improve, etc." .
 
+vf:transferOf
+        a                   owl:ObjectProperty ;
+        rdfs:label          "transfer of" ;
+        rdfs:domain         [ owl:unionOf (vf:EconomicEvent vf:Commitment vf:Intent) ] ;
+        rdfs:range          vf:TransferOf ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "Defines the type(s) of transfer for flows that include a transfer of possession or rights." .
+
 vf:inputOf
         a                   owl:ObjectProperty ;
         rdfs:label          "input of" ;
@@ -533,14 +541,6 @@ vf:resourceConformsTo
         rdfs:range          vf:ResourceSpecification ;
         vs:term_status      "unstable" ;
         rdfs:comment        "The primary resource knowledge specification or definition of an existing or potential resource." .
-
-vf:transferOf
-        a                   owl:ObjectProperty ;
-        rdfs:label          "transfer of" ;
-        rdfs:domain         [ owl:unionOf (vf:EconomicEvent vf:Commitment vf:Intent) ] ;
-        rdfs:range          vf:TransferOf ;
-        vs:term_status      "unstable" ;
-        rdfs:comment        "Defines the type(s) of transfer for flows that include a transfer of possession or rights." .
 
 
 # ################################ agent relationship properties
