@@ -11,7 +11,8 @@
 
   - '@id': alice:b75d8f6a-e2df-4e52-b36d-1a22a66f4ead
     '@type': EconomicResource
-    classifiedAs: wd:Q89 # apples
+    classifiedAs: wd:Q506040 # granny smith apples
+    trackingIdentifier: lot-alice-apples-2018-10-04
     currentAccountingQuantity:
       qudt:unit: unit:Kilogram
       qudt:numericValue: 230
@@ -26,19 +27,20 @@
 
   - '@id': alice:0468e9b9-4d54-4eee-9d3f-bc76db11710a
     '@type': EconomicEvent
-    action: give
-    resourceInventoriedAs: alice:b75d8f6a-e2df-4e52-b36d-1a22a66f4ead
+    action: transfer
+    transferOf:
+    - possession
+    - ownership
+    trackingIdentifier: lot-alice-apples-2018-10-04
     provider: https://alice.example
     quantifiedAs:
       qudt:unit: unit:Kilogram
       qudt:numericValue: 50
-    transferOf:
-    - possession
-    - stewardship
 
   - '@id': alice:b75d8f6a-e2df-4e52-b36d-1a22a66f4ead
     '@type': EconomicResource
-    classifiedAs: wd:Q89 # apples
+    classifiedAs: wd:Q506040 # granny smith apples
+    trackingIdentifier: lot-alice-apples-2018-10-04
     currentAccountingQuantity:
       qudt:unit: unit:Kilogram
       qudt:numericValue: 180
@@ -53,20 +55,21 @@
 
   - '@id': alice:33f11508-92b3-4095-9e03-6678cddf7adf
     '@type': EconomicEvent
-    action: load
-    resourceInventoriedAs: alice:b75d8f6a-e2df-4e52-b36d-1a22a66f4ead
+    action: transfer
+    transferOf:
+    - possession
+    - right-to-use
+    trackingIdentifier: lot-alice-apples-2018-10-04
     provider: https://alice.example
     receiver: https://carol.example
     quantifiedAs:
       qudt:unit: unit:Kilogram
       qudt:numericValue: 10
-    transferOf:
-    - possession
-    - right-to-use
 
   - '@id': alice:b75d8f6a-e2df-4e52-b36d-1a22a66f4ead
     '@type': EconomicResource
-    classifiedAs: wd:Q89 # apples
+    classifiedAs: wd:Q506040 # granny smith apples
+    trackingIdentifier: lot-alice-apples-2018-10-04
     currentAccountingQuantity:
       qudt:unit: unit:Kilogram
       qudt:numericValue: 180
@@ -82,18 +85,19 @@
   - '@id': alice:fdf65158-0223-4740-8ace-5323baa9fd07
     '@type': EconomicEvent
     action: load
-    resourceInventoriedAs: alice:b75d8f6a-e2df-4e52-b36d-1a22a66f4ead
+    transferOf:
+    - possession
+    trackingIdentifier: lot-alice-apples-2018-10-04
     provider: https://alice.example
     receiver: https://carol.example
     quantifiedAs:
       qudt:unit: unit:Kilogram
       qudt:numericValue: 100
-    transferOf:
-    - possession
 
   - '@id': alice:b75d8f6a-e2df-4e52-b36d-1a22a66f4ead
     '@type': EconomicResource
-    classifiedAs: wd:Q89 # apples
+    classifiedAs: wd:Q506040 # granny smith apples
+    trackingIdentifier: lot-alice-apples-2018-10-04
     currentAccountingQuantity:
       qudt:unit: unit:Kilogram
       qudt:numericValue: 180
@@ -108,19 +112,20 @@
 
   - '@id': alice:9396d2d1-ded3-4b1c-8144-1c024e641030
     '@type': EconomicEvent
-    action: give
-    resourceInventoriedAs: alice:b75d8f6a-e2df-4e52-b36d-1a22a66f4ead
+    action: transfer
+    transferOf:
+    - ownership
+    trackingIdentifier: lot-alice-apples-2018-10-04
     provider: https://alice.example
     receiver: https://carol.example
     quantifiedAs:
       qudt:unit: unit:Kilogram
       qudt:numericValue: 40
-    transferOf:
-    - stewardship
 
   - '@id': alice:b75d8f6a-e2df-4e52-b36d-1a22a66f4ead
     '@type': EconomicResource
-    classifiedAs: wd:Q89 # apples
+    classifiedAs: wd:Q506040 # granny smith apples
+    trackingIdentifier: lot-alice-apples-2018-10-04
     currentAccountingQuantity:
       qudt:unit: unit:Kilogram
       qudt:numericValue: 140

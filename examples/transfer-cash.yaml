@@ -1,0 +1,58 @@
+'@context':
+  - https://git.io/vf-examples-jsonld-context
+  - bob: https://bob.example/
+    alice: https://alice.example/
+
+'@id': rgh:valueflows/valueflows/master/examples/transfer-cash.yaml
+'@graph':
+
+  # accounts before
+
+  - '@id': alice:b75d8f6a-e2df-4e52-b36d-1a22a66f4ead
+    '@type': EconomicResource
+    skos:note: Alice's cash
+    classifiedAs: wd:Q4917 # US Dollar
+    currentQuantity:
+      qudt:unit: unit:Number
+      qudt:numericValue: 200
+
+  - '@id': bob:3be5259d-10f0-431c-9fec-9c0c15a461d3
+    '@type': EconomicResource
+    skos:note: Bob's cash 
+    classifiedAs: wd:Q4917 # US Dollar
+    currentQuantity:
+      qudt:unit: unit:Number
+      qudt:numericValue: 500
+
+  # transfer of cash
+
+  - '@id': alice:0468e9b9-4d54-4eee-9d3f-bc76db11710a
+    '@type': EconomicEvent
+    action: transfer
+    transferOf:
+    - possession
+    - ownership
+    resourceClassifiedAs: wd:Q4917 # US Dollar
+    provider: https://alice.example
+    receiver: https://bob.example
+    quantifiedAs:
+      qudt:unit: unit:Number
+      qudt:numericValue: 100
+
+  # accounts after
+
+  - '@id': alice:b75d8f6a-e2df-4e52-b36d-1a22a66f4ead
+    '@type': EconomicResource
+    skos:note: Alice's cash 
+    classifiedAs: wd:Q4917 # US DollarS
+    currentQuantity:
+      qudt:unit: unit:Number
+      qudt:numericValue: 100
+
+  - '@id': bob:3be5259d-10f0-431c-9fec-9c0c15a461d3
+    '@type': EconomicResource
+    skos:note: Bob's cash 
+    classifiedAs: wd:Q4917 # US Dollar
+    currentQuantity:
+      qudt:unit: unit:Number
+      qudt:numericValue: 600

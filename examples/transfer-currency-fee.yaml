@@ -2,100 +2,75 @@
   - https://git.io/vf-examples-jsonld-context
   - bob: https://bob.example/
     alice: https://alice.example/
-    bank: https://bank.example/
+    banka: https://banka.example/
+    bankb: https://bankb.example/
 
 '@id': rgh:valueflows/valueflows/master/examples/transfer-currency-fee.yaml
 '@graph':
 
   # transfer of currency from alice to bob
 
-  - '@id': bank:e0caf1e3-4a9b-4927-a19c-3f681d234529
+  - '@id': banka:e0caf1e3-4a9b-4927-a19c-3f681d234529
     '@type': Process
-    skos:note: moving currency between accounts
+    skos:note: Facilitate moving currency between accounts
+    inScopeOf: https://banka.example/
 
-  - '@id': bank:0468e9b9-4d54-4eee-9d3f-bc76db11710a
+  - '@id': banka:0468e9b9-4d54-4eee-9d3f-bc76db11710a
     '@type': EconomicEvent
-    action: give
-    inputOf: bank:e0caf1e3-4a9b-4927-a19c-3f681d234529
-    resourceInventoriedAs: bank:b75d8f6a-e2df-4e52-b36d-1a22a66f4ead
+    action: transfer
+    transferOf:
+    - possession
+    - ownership
+    outputOf: banka:e0caf1e3-4a9b-4927-a19c-3f681d234529
+    resourceClassifiedAs: wd:Q4917 # US Dollar
     provider: https://alice.example
     receiver: https://bob.example
-    inScopeOf: https://bank.example/
     quantifiedAs:
       qudt:unit: unit:Number
       qudt:numericValue: 100
-    transferOf:
-    - possession
-    - stewardship
 
-  - '@id': bank:33f11508-92b3-4095-9e03-6678cddf7adf
-    '@type': EconomicEvent
-    action: receive
-    outputOf: bank:e0caf1e3-4a9b-4927-a19c-3f681d234529
-    resourceInventoriedAs: bank:3be5259d-10f0-431c-9fec-9c0c15a461d3
-    provider: https://alice.example
-    receiver: https://bob.example
-    inScopeOf: https://bank.example/
-    quantifiedAs:
-      qudt:unit: unit:Number
-      qudt:numericValue: 100
-    transferOf:
-    - possession
-    - stewardship
+    # alice and banka record the exact resource (account) on their copies of the transfer
+    resourceInventoriedAs: banka:b75d8f6a-e2df-4e52-b36d-1a22a66f4ead
 
-  - '@id': bank:6405b8ad-0ac2-4d58-abdb-0808903c78ad
+    # bob and bankb record the exact resource (account) on their copies of the transfer
+    resourceInventoriedAs: bankb:3be5259d-10f0-431c-9fec-9c0c15a461d3
+
+  - '@id': banka:6405b8ad-0ac2-4d58-abdb-0808903c78ad
     '@type': EconomicEvent
     action: service
-    outputOf: bank:e0caf1e3-4a9b-4927-a19c-3f681d234529
+    outputOf: banka:e0caf1e3-4a9b-4927-a19c-3f681d234529
     resourceClassifiedAs: wd:Q7406919 # transfer service
-    provider: https://bank.example
+    provider: https://banka.example
     receiver: https://alice.example
-    inScopeOf: https://bank.example/
     quantifiedAs:
       qudt:unit: unit:Number
       qudt:numericValue: 1
-    realizationOf: f325a950-5737-488d-b122-8f21114d0eb0
+    realizationOf: banka:f325a950-5737-488d-b122-8f21114d0eb0
 
   # transfer of the fee
 
-  - '@id': bank:8791913c-0152-4c32-bb3f-f25d61df736c
-    '@type': Process
-    skos:note: moving currency between accounts
-
-  - '@id': bank:0468e9b9-4d54-4eee-9d3f-bc76db11710a
+  - '@id': banka:0468e9b9-4d54-4eee-9d3f-bc76db11710a
     '@type': EconomicEvent
-    action: give
-    inputOf: bank:8791913c-0152-4c32-bb3f-f25d61df736c
-    resourceInventoriedAs: bank:b75d8f6a-e2df-4e52-b36d-1a22a66f4ead # alice's account
-    provider: https://alice.example
-    receiver: https://bank.example
-    inScopeOf: https://bank.example/
-    quantifiedAs:
-      qudt:unit: unit:Number
-      qudt:numericValue: 100
+    action: transfer
     transferOf:
     - possession
-    - stewardship
-    realizationOf: f325a950-5737-488d-b122-8f21114d0eb0
-
-  - '@id': bank:33f11508-92b3-4095-9e03-6678cddf7adf
-    '@type': EconomicEvent
-    action: receive
-    outputOf: bank:8791913c-0152-4c32-bb3f-f25d61df736c
-    resourceInventoriedAs: bank:e72f7d1d-4f0a-4518-a44c-96658cafda95 # the bank's account
+    - ownership
+    resourceClassifiedAs: wd:Q4917 # US Dollar
     provider: https://alice.example
-    receiver: https://bank.example
-    inScopeOf: https://bank.example/
+    receiver: https://banka.example
     quantifiedAs:
       qudt:unit: unit:Number
-      qudt:numericValue: 1
-    transferOf:
-    - possession
-    - stewardship
-    realizationOf: f325a950-5737-488d-b122-8f21114d0eb0
+      qudt:numericValue: 1.5
+    realizationOf: banka:f325a950-5737-488d-b122-8f21114d0eb0
+
+    # alice records the exact resource (account) on their copy of the transfer
+    resourceInventoriedAs: banka:b75d8f6a-e2df-4e52-b36d-1a22a66f4ead # alice's account
+
+    # banka records the exact resource (account) on their copy of the transfer
+    resourceInventoriedAs: banka:e72f7d1d-4f0a-4518-a44c-96658cafda95 # the bank's account
 
   # record of the agreement (the exchange)
 
-  - '@id': bank:f325a950-5737-488d-b122-8f21114d0eb0
+  - '@id': banka:f325a950-5737-488d-b122-8f21114d0eb0
     '@type': Agreement
-    skos:note: exchange transfer fee for the currency transfer
+    skos:note: exchange transfer fee for the currency transfer service
