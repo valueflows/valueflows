@@ -3,6 +3,7 @@
   - bob: https://bob.example/
     alice: https://alice.example/
     carol: https://carol.example/
+    david: https://david.example/
 
 '@id': rgh:valueflows/valueflows/master/examples/transfer-inventory.yaml
 '@graph':
@@ -13,7 +14,8 @@
     '@type': EconomicResource
     classifiedAs: wd:Q506040 # granny smith apples
     trackingIdentifier: lot-alice-apples-2018-10-04
-    currentAccountingQuantity:
+    locatedAt: geo:70ee3034-0d15-4471-8ee3-91c60bb1a9c9
+    currentOwnedQuantity:
       qudt:unit: unit:Kilogram
       qudt:numericValue: 230
     currentAvailableQuantity:
@@ -33,7 +35,7 @@
     - ownership
     trackingIdentifier: lot-alice-apples-2018-10-04
     provider: https://alice.example
-    quantifiedAs:
+    flowQuantity:
       qudt:unit: unit:Kilogram
       qudt:numericValue: 50
 
@@ -41,7 +43,8 @@
     '@type': EconomicResource
     classifiedAs: wd:Q506040 # granny smith apples
     trackingIdentifier: lot-alice-apples-2018-10-04
-    currentAccountingQuantity:
+    locatedAt: geo:70ee3034-0d15-4471-8ee3-91c60bb1a9c9
+    currentOwnedQuantity:
       qudt:unit: unit:Kilogram
       qudt:numericValue: 180
     currentAvailableQuantity:
@@ -62,7 +65,7 @@
     trackingIdentifier: lot-alice-apples-2018-10-04
     provider: https://alice.example
     receiver: https://carol.example
-    quantifiedAs:
+    flowQuantity:
       qudt:unit: unit:Kilogram
       qudt:numericValue: 10
 
@@ -70,7 +73,8 @@
     '@type': EconomicResource
     classifiedAs: wd:Q506040 # granny smith apples
     trackingIdentifier: lot-alice-apples-2018-10-04
-    currentAccountingQuantity:
+    locatedAt: geo:70ee3034-0d15-4471-8ee3-91c60bb1a9c9
+    currentOwnedQuantity:
       qudt:unit: unit:Kilogram
       qudt:numericValue: 180
     currentAvailableQuantity:
@@ -79,6 +83,15 @@
     currentPossessedQuantity: 
       qudt:unit: unit:Kilogram
       qudt:numericValue: 170
+
+  - '@id': carol:02b39a30-3e04-4305-9656-7f261aa63c83
+    '@type': EconomicResource
+    classifiedAs: wd:Q506040 # granny smith apples
+    trackingIdentifier: lot-alice-apples-2018-10-04
+    locatedAt: geo:2f7bd443-2323-4039-9a52-b999288edbeb
+    currentPossessedQuantity: 
+      qudt:unit: unit:Kilogram
+      qudt:numericValue: 10
 
   # alice sells some apples FOB destination, and has them shipped (they are enroute)
 
@@ -89,8 +102,8 @@
     - possession
     trackingIdentifier: lot-alice-apples-2018-10-04
     provider: https://alice.example
-    receiver: https://carol.example
-    quantifiedAs:
+    receiver: https://david.example
+    flowQuantity:
       qudt:unit: unit:Kilogram
       qudt:numericValue: 100
 
@@ -98,7 +111,8 @@
     '@type': EconomicResource
     classifiedAs: wd:Q506040 # granny smith apples
     trackingIdentifier: lot-alice-apples-2018-10-04
-    currentAccountingQuantity:
+    locatedAt: geo:70ee3034-0d15-4471-8ee3-91c60bb1a9c9
+    currentOwnedQuantity:
       qudt:unit: unit:Kilogram
       qudt:numericValue: 180
     currentAvailableQuantity:
@@ -107,6 +121,14 @@
     currentPossessedQuantity: 
       qudt:unit: unit:Kilogram
       qudt:numericValue: 70
+
+  - '@id': david:d4d2fd71-34f2-41c3-b1c5-19ad5ed2da58
+    '@type': EconomicResource
+    classifiedAs: wd:Q506040 # granny smith apples
+    trackingIdentifier: lot-alice-apples-2018-10-04
+    currentPossessedQuantity: 
+      qudt:unit: unit:Kilogram
+      qudt:numericValue: 100
 
   # alice sells some apples for which she has been pre-paid but not shipped yet
 
@@ -117,8 +139,8 @@
     - ownership
     trackingIdentifier: lot-alice-apples-2018-10-04
     provider: https://alice.example
-    receiver: https://carol.example
-    quantifiedAs:
+    receiver: https://bob.example
+    flowQuantity:
       qudt:unit: unit:Kilogram
       qudt:numericValue: 40
 
@@ -126,7 +148,8 @@
     '@type': EconomicResource
     classifiedAs: wd:Q506040 # granny smith apples
     trackingIdentifier: lot-alice-apples-2018-10-04
-    currentAccountingQuantity:
+    locatedAt: geo:70ee3034-0d15-4471-8ee3-91c60bb1a9c9
+    currentOwnedQuantity:
       qudt:unit: unit:Kilogram
       qudt:numericValue: 140
     currentAvailableQuantity:
@@ -136,3 +159,17 @@
       qudt:unit: unit:Kilogram
       qudt:numericValue: 70
 
+  - '@id': bob:c7897c39-7f05-4a5d-a487-80e130a2414a
+    '@type': EconomicResource
+    classifiedAs: wd:Q506040 # granny smith apples
+    trackingIdentifier: lot-alice-apples-2018-10-04
+    locatedAt: geo:ba3c5350-e2e5-4e94-b971-84b1cd8ac236
+    currentOwnedQuantity:
+      qudt:unit: unit:Kilogram
+      qudt:numericValue: 40
+    currentAvailableQuantity:
+      qudt:unit: unit:Kilogram
+      qudt:numericValue: 0
+    currentPossessedQuantity: 
+      qudt:unit: unit:Kilogram
+      qudt:numericValue: 0

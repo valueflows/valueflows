@@ -5,7 +5,8 @@
 We think that now, and more so in the future, there will be more gradations of rights and responsibilities for resources than are sometimes considered now.  For example, as a society we may decide that we should take more responsibility for recycling or upcycling resources at the end of their useful life for us, or not wasting them.  The concept of "ownership" may transition more into "stewardship" in a concept of the world that does not put humans in a position of controlling the world's resources.
 
 Here are some defined roles that agents can play in relationship to resources, usually for some period of time.
-* *stewardship* (full rights and responsibilities, we use this to replace *ownership* in the current economic system)
+* *ownership* (full rights and responsibilities for a resource)
+* *stewardship* (responsible management of a resource with regards to people and the living ecosystems)
 * *right-to-use* (usufruct, rights to use a resource, usually with attendant responsibilities; does not imply actual use)
 * *possession* (does not imply any rights, although there likely are some responsibilities involved)
 
@@ -15,15 +16,13 @@ Those defined roles also affect the way we look at transfers.  Transfers can be 
 
 The above defined roles are used for both denoting what is transferred and what is in relevant inventory.
 
-To denote a transfer, the above roles are defined in any relevant flow.  For example: 
-* Flows with actions "give" and "receive" often define a transfer, although not always. But they can be used whenever there is not a physically defined flow that also defines a transfer.
-* Transportation related flows like "load" and "unload" can often have transfer roles defined for them, since transportation often accompanies transfers of rights.
+To denote a transfer, the above roles are defined in any relevant flow, including but not limited to "transfer" events.  For example, in some cases, a load or unload event on a shipping process could also include a transfer of rights.
 
-Some flows do not need to explicitly define a transfer, in cases where a transfer is implicit to the flow based on the provider and receiver agents. For example:
-* A "service" output flow almost always defines a transfer of all rights and possession.
+Some flows do not need to explicitly define a transfer, in cases where a transfer is implicit to the flow based on the provider and receiver agents. For example, a "service" output flow almost always defines a transfer of all rights and possession.
 
 In terms of inventory, we have defined the following properties for inventoried economic resources:
-* currentAccountingQuantity (for resources where the agent has *stewardship* rights and responsibilities; does not imply possession or availability; would correspond to owned resources that would show up on standard accounting reports)
+* currentOwnedQuantity (for resources where the agent has *ownership* rights and responsibilities; does not imply possession or availability; would correspond to owned resources that would show up on standard accounting reports)
+* currentStewardedQuantity (for resources where the agent has *stewardship* rights and responsibilities; does not imply possession or availability)
 * currentAvailableQuantity (the agent has rights of *stewardship* or *right-to-use*, and also *possession*)
 * currentPossessedQuantity (the agent has possession, nothing else is implied)
 

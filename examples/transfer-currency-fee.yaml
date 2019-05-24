@@ -21,11 +21,11 @@
     transferOf:
     - possession
     - ownership
-    outputOf: banka:e0caf1e3-4a9b-4927-a19c-3f681d234529
+    inputOutputOf: banka:e0caf1e3-4a9b-4927-a19c-3f681d234529
     resourceClassifiedAs: wd:Q4917 # US Dollar
     provider: https://alice.example
     receiver: https://bob.example
-    quantifiedAs:
+    flowQuantity:
       qudt:unit: unit:Number
       qudt:numericValue: 100
 
@@ -42,7 +42,7 @@
     resourceClassifiedAs: wd:Q7406919 # transfer service
     provider: https://banka.example
     receiver: https://alice.example
-    quantifiedAs:
+    flowQuantity:
       qudt:unit: unit:Number
       qudt:numericValue: 1
     realizationOf: banka:f325a950-5737-488d-b122-8f21114d0eb0
@@ -58,7 +58,7 @@
     resourceClassifiedAs: wd:Q4917 # US Dollar
     provider: https://alice.example
     receiver: https://banka.example
-    quantifiedAs:
+    flowQuantity:
       qudt:unit: unit:Number
       qudt:numericValue: 1.5
     realizationOf: banka:f325a950-5737-488d-b122-8f21114d0eb0

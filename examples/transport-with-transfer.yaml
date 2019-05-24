@@ -17,29 +17,16 @@
 
   - '@id': alice:6b5bc786-b9ed-4189-b34f-5ef7d10f1f86
     '@type': Commitment
-    inputOf: alice:33e8933b-ff73-4a01-964a-ca7a98893083
-    action: give
-    resourceInventoriedAs: alice:21f361a6-2375-46bb-b192-c21b5ba833bf
-    provider: https://alice.example/
-    receiver: https://bob.example/
-    quantifiedAs:
-      qudt:unit: unit:Kilogram
-      qudt:numericValue: 30
-    transferOf:
-    - stewardship
-
-  - '@id': bob:60f4204e-b8d2-4026-8577-102c3f82c0af
-    '@type': Commitment
     outputOf: alice:33e8933b-ff73-4a01-964a-ca7a98893083
-    action: take
-    resourceClassifiedAs: https://www.wikidata.org/wiki/Q89 # apples 
+    action: transfer
+    transferOf:
+    - ownership
+    resourceClassifiedAs: https://www.wikidata.org/wiki/Q41777871 # haralson apples
     provider: https://alice.example/
     receiver: https://bob.example/
-    quantifiedAs:
+    flowQuantity:
       qudt:unit: unit:Kilogram
       qudt:numericValue: 30
-    transferOf:
-    - stewardship
 
   # alice transfers possession of the apples to claudia
 
@@ -49,29 +36,18 @@
 
   - '@id': alice:6b5bc786-b9ed-4189-b34f-5ef7d10f1f86
     '@type': EconomicEvent
-    inputOf: alice:533f6e56-6c7d-4a5b-b9c9-1a8adafd8969
-    action: give
-    resourceInventoriedAs: alice:21f361a6-2375-46bb-b192-c21b5ba833bf
-    provider: https://alice.example/
-    receiver: https://claudia.example/
-    quantifiedAs:
-      qudt:unit: unit:Kilogram
-      qudt:numericValue: 30
-    transferOf:
-    - possession
-
-  - '@id': claudia:7dd207e3-8f11-4fe3-95f8-d02f6c180be3
-    '@type': EconomicEvent
     outputOf: alice:533f6e56-6c7d-4a5b-b9c9-1a8adafd8969
-    action: take
-    resourceInventoriedAs: claudia:27be5cab-d740-4194-9298-1661a69d9d95 # claudia's inventory / bill of lading on the truck
-    provider: https://alice.example/
-    receiver: https://claudia.example/
-    quantifiedAs:
-      qudt:unit: unit:Kilogram
-      qudt:numericValue: 30
+    action: transfer
     transferOf:
     - possession
+    resourceInventoriedAs: alice:21f361a6-2375-46bb-b192-c21b5ba833bf
+    resourceClassifiedAs: https://www.wikidata.org/wiki/Q41777871 # haralson apples
+    provider: https://alice.example/
+    receiver: https://claudia.example/
+    flowQuantity:
+      qudt:unit: unit:Kilogram
+      qudt:numericValue: 30
+    transferResourceInventoriedAs: claudia:27be5cab-d740-4194-9298-1661a69d9d95 # claudia's inventory / bill of lading on the truck
 
   # claudia transports the apples in two hops
 
@@ -86,7 +62,7 @@
     resourceInventoriedAs: claudia:27be5cab-d740-4194-9298-1661a69d9d95 
     provider: https://claudia.example/
     receiver: https://claudia.example/
-    quantifiedAs:
+    flowQuantity:
       qudt:unit: unit:Kilogram
       qudt:numericValue: 30
 
@@ -97,7 +73,7 @@
     resourceInventoriedAs: claudia:27be5cab-d740-4194-9298-1661a69d9d95
     provider: https://claudia.example/
     receiver: https://claudia.example/
-    quantifiedAs:
+    flowQuantity:
       qudt:unit: unit:Kilogram
       qudt:numericValue: 30
 
@@ -112,7 +88,7 @@
     resourceInventoriedAs: claudia:27be5cab-d740-4194-9298-1661a69d9d95 
     provider: https://claudia.example/
     receiver: https://claudia.example/
-    quantifiedAs:
+    flowQuantity:
       qudt:unit: unit:Kilogram
       qudt:numericValue: 30
 
@@ -123,7 +99,7 @@
     resourceInventoriedAs: claudia:27be5cab-d740-4194-9298-1661a69d9d95
     provider: https://claudia.example/
     receiver: https://claudia.example/
-    quantifiedAs:
+    flowQuantity:
       qudt:unit: unit:Kilogram
       qudt:numericValue: 30
 
@@ -135,7 +111,7 @@
     resourceClassifiedAs: wd:Q7590 # transportation service
     provider: https://claudia.example/
     receiver: https://alice.example/
-    quantifiedAs:
+    flowQuantity:
       qudt:unit: unit:Number
       qudt:numericValue: 1
     realizationOf: alice:f325a950-5737-488d-b122-8f21114d0eb0 # transportation agreement
@@ -147,70 +123,38 @@
 
   - '@id': bob:7a63ea10-b1c3-441a-9a08-fb8630c02614
     '@type': EconomicEvent
-    inputOf: bob:ee652454-ac08-4f5d-ae84-6b1753887086
-    action: give
+    outputOf: bob:ee652454-ac08-4f5d-ae84-6b1753887086
+    action: transfer
+    transferOf:
+    - possession
     resourceInventoriedAs: claudia:27be5cab-d740-4194-9298-1661a69d9d95 
     provider: https://claudia.example/
     receiver: https://bob.example/
-    quantifiedAs:
+    flowQuantity:
       qudt:unit: unit:Kilogram
       qudt:numericValue: 30
-    transferOf:
-    - possession
-
-  - '@id': bob:8e5fe80d-a769-4bd5-89e5-2136d33eab9f
-    '@type': EconomicEvent
-    outputOf: bob:ee652454-ac08-4f5d-ae84-6b1753887086
-    action: take
-    resourceInventoriedAs: bob:9bd19194-a36d-4a1f-896b-8082887962cb 
-    provider: https://claudia.example/
-    receiver: https://bob.example/
-    quantifiedAs:
-      qudt:unit: unit:Kilogram
-      qudt:numericValue: 30
-    transferOf:
-    - possession
+    transferResourceInventoriedAs: bob:9bd19194-a36d-4a1f-896b-8082887962cb 
 
   # receipt of the apples triggers finalizing the transfer of ownership
 
   - '@id': alice:ad56a7ed-be3c-4937-a3fb-0f156bcd2c47
     '@type': EconomicEvent
-    inputOf: alice:33e8933b-ff73-4a01-964a-ca7a98893083
-    action: give
+    outputOf: alice:33e8933b-ff73-4a01-964a-ca7a98893083
+    action: transfer
+    transferOf:
+    - ownership
     resourceInventoriedAs: alice:21f361a6-2375-46bb-b192-c21b5ba833bf
     provider: https://alice.example/
     receiver: https://bob.example/
-    quantifiedAs:
+    flowQuantity:
       qudt:unit: unit:Kilogram
       qudt:numericValue: 30
-    transferOf:
-    - stewardship
+    transferResourceInventoriedAs: bob:9bd19194-a36d-4a1f-896b-8082887962cb
 
   - '@id': alice:6f438393-7f87-4914-806c-e23a4fd15e89
     '@type': Fulfillment
     fulfills: alice:6b5bc786-b9ed-4189-b34f-5ef7d10f1f86 # the commitment
     fulfilledBy: alice:ad56a7ed-be3c-4937-a3fb-0f156bcd2c47 # the economic event
-    fulfilledQuantity:
-      qudt:unit: unit:Kilogram
-      qudt:numericValue: 30
-
-  - '@id': bob:6078f30a-b15b-4b1c-8e77-797abae11378
-    '@type': EconomicEvent
-    outputOf: alice:33e8933b-ff73-4a01-964a-ca7a98893083
-    action: take
-    resourceInventoriedAs: bob:9bd19194-a36d-4a1f-896b-8082887962cb 
-    provider: https://alice.example/
-    receiver: https://bob.example/
-    quantifiedAs:
-      qudt:unit: unit:Kilogram
-      qudt:numericValue: 30
-    transferOf:
-    - stewardship
-
-  - '@id': bob:6f438393-7f87-4914-806c-e23a4fd15e89
-    '@type': Fulfillment
-    fulfills: bob:60f4204e-b8d2-4026-8577-102c3f82c0af # the commitment
-    fulfilledBy: bob:6078f30a-b15b-4b1c-8e77-797abae11378 # the economic event
     fulfilledQuantity:
       qudt:unit: unit:Kilogram
       qudt:numericValue: 30
@@ -222,35 +166,21 @@
 
   - '@id': alice:8baa8ff7-9c1e-4586-ae7b-79d620a3cac9
     '@type': EconomicEvent
-    inputOf: alice:f0b8bfb1-ed29-4ab0-aabd-f5e2a3515626
-    action: give
+    outputOf: alice:f0b8bfb1-ed29-4ab0-aabd-f5e2a3515626
+    action: transfer
     resourceClassifedAs: wd:Q4917 # US Dollar
     resourceInventoriedAs: alice:daa2ec3b-2c1a-4eb1-839f-8dcec1a1f93a # alice's bank account
     provider: https://alice.example/
     receiver: https://claudia.example/
-    quantifiedAs:
+    flowQuantity:
       qudt:unit: unit:Number
       qudt:numericValue: 10
     transferOf:
-    - stewardship
+    - ownership
     - possession
     realizationOf: alice:f325a950-5737-488d-b122-8f21114d0eb0 # transportation agreement
+    transferResourceInventoriedAs: claudia:bd5806d6-4a36-45b9-b3b6-3e7d361a5a14 # claudia's bank account
 
-  - '@id': alice:8baa8ff7-9c1e-4586-ae7b-79d620a3cac9
-    '@type': EconomicEvent
-    outputOf: alice:f0b8bfb1-ed29-4ab0-aabd-f5e2a3515626
-    action: take
-    resourceClassifedAs: wd:Q4917 # US Dollar
-    resourceInventoriedAs: claudia:bd5806d6-4a36-45b9-b3b6-3e7d361a5a14 # claudia's bank account
-    provider: https://alice.example/
-    receiver: https://claudia.example/
-    quantifiedAs:
-      qudt:unit: unit:Number
-      qudt:numericValue: 10
-    transferOf:
-    - stewardship
-    - possession
-    realizationOf: alice:f325a950-5737-488d-b122-8f21114d0eb0 # transportation agreement
 
   - '@id': alice:f325a950-5737-488d-b122-8f21114d0eb0
     '@type': Agreement
