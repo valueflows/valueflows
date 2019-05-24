@@ -3,7 +3,6 @@
   - library: https://library.example/
     bob: https://bob.example/
 
-
 '@id': rgh:valueflows/valueflows/master/examples/checkout-book.yaml
 '@graph':
 
@@ -16,7 +15,7 @@
       qudt:unit: unit:Number
       qudt:numericValue: 1
 
-  # one check out
+  # one check out (experiment with checkout and return flows being part of the same process)
 
   - '@id': library:f47064eb-7120-4b31-b882-770165901fe6
     '@type': Process
@@ -24,61 +23,30 @@
 
   - '@id': library:54b814ee-62dc-40c1-bb96-f8582aa4f771
     '@type': EconomicEvent
-    inputOf: library:f47064eb-7120-4b31-b882-770165901fe6
-    action: give
+    inputOf: library:f47064eb-7120-4b31-b882-770165901fe6 #??
+    action: transfer
+    transferOf:
+    - possession
+    - right-to-use
     resourceInventoriedAs: library:2402b57c-1c45-423a-acb2-f50961c97d65
     time:inXSDDateTimeStamp: 2019-04-18T8:00:00-5:00
     provider: https://library.example/
-    recipient: https://bob.example/
+    receiver: https://bob.example/
     quantifiedAs: 
       qudt:unit: unit:Number
       qudt:numericValue: 1
-    transferOf:
-    - possession
-    - right-to-use
-
-  - '@id': bob:40bb78fe-28df-41a6-b698-525fa9d411d6
-    '@type': EconomicEvent
-    outputOf: library:f47064eb-7120-4b31-b882-770165901fe6
-    action: receive
-    resourceInventoriedAs: bob:99bc3e4e-79a6-4b52-a178-8075a268f0df
-    time:inXSDDateTimeStamp: 2019-04-18T8:00:00-5:00
-    provider: https://library.example/
-    recipient: https://bob.example/
-    quantifiedAs:
-      qudt:unit: unit:Number
-      qudt:numericValue: 1
-    transferOf:
-    - possession
-    - right-to-use
-
-  - '@id': library:953b40f2-4e47-4486-afb2-402512f5269c
-    '@type': Process
-    skos:note: returning Valueflows cookbook to library
+    transferResourceInventoriedAs: bob:99bc3e4e-79a6-4b52-a178-8075a268f0df
 
   - '@id': bob:98c2bfeb-9c70-4801-896c-4646b975a7d9
     '@type': Commitment
-    inputOf: library:953b40f2-4e47-4486-afb2-402512f5269c
-    action: give
+    outputOf: library:f47064eb-7120-4b31-b882-770165901fe6 #??
+    action: transfer
+    transferOf:
+    - possession
+    - right-to-use
     resourceInventoriedAs: bob:99bc3e4e-79a6-4b52-a178-8075a268f0df
     quantifiedAs:
       qudt:unit: unit:Number
       qudt:numericValue: 1
     before:  2019-05-17T18:00:00-5:00
-    transferOf:
-    - possession
-    - right-to-use
-
-  - '@id': library:18520fad-4443-4c55-8f76-67738b839950
-    '@type': Commitment
-    outputOf: library:953b40f2-4e47-4486-afb2-402512f5269c
-    action: receive
-    resourceInventoriedAs: library:21f361a6-2375-46bb-b192-c21b5ba833bf
-    quantifiedAs:
-      qudt:unit: unit:Number
-      qudt:numericValue: 1
-    before:  2019-05-17T18:00:00-5:00
-    transferOf:
-    - possession
-    - right-to-use
-
+    transferResourceInventoriedAs: library:21f361a6-2375-46bb-b192-c21b5ba833bf
