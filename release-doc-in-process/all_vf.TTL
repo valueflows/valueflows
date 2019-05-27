@@ -121,6 +121,11 @@ vf:Appreciation  a          owl:Class ;
         vs:term_status      "unstable" ;
         rdfs:comment        "A way to tie an economic event that is given in loose fulfilment for another economic event, without commitments or expectations. Supports the gift economy." .
 
+vf:Lot  a                   owl:Class ;
+        rdfs:label          "vf:Lot" ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "." .
+
 
 # ####################################################################
 # properties
