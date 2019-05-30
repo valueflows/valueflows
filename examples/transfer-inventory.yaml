@@ -56,7 +56,7 @@
 
   # alice loans a basket of apples to her friend to use in a display for a few days
 
-  - '@id': alice:33f11508-92b3-4095-9e03-6678cddf7adf
+  - '@id': urn:uuid:33f11508-92b3-4095-9e03-6678cddf7adf
     '@type': EconomicEvent
     action: transfer
     transferOf:
@@ -95,7 +95,7 @@
 
   # alice sells some apples FOB destination, and has them shipped (they are enroute)
 
-  - '@id': alice:fdf65158-0223-4740-8ace-5323baa9fd07
+  - '@id': urn:uuid:fdf65158-0223-4740-8ace-5323baa9fd07
     '@type': EconomicEvent
     action: load
     transferOf:
@@ -132,7 +132,7 @@
 
   # alice sells some apples for which she has been pre-paid but not shipped yet
 
-  - '@id': alice:9396d2d1-ded3-4b1c-8144-1c024e641030
+  - '@id': urn:uuid:9396d2d1-ded3-4b1c-8144-1c024e641030
     '@type': EconomicEvent
     action: transfer
     transferOf:

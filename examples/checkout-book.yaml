@@ -23,7 +23,7 @@
 
   - '@id': library:54b814ee-62dc-40c1-bb96-f8582aa4f771
     '@type': EconomicEvent
-    inputOf: library:f47064eb-7120-4b31-b882-770165901fe6 #??
+    inputOf: library:f47064eb-7120-4b31-b882-770165901fe6
     action: transfer
     transferOf:
     - possession
@@ -35,18 +35,16 @@
     quantifiedAs: 
       qudt:unit: unit:Number
       qudt:numericValue: 1
-    transferResourceInventoriedAs: bob:99bc3e4e-79a6-4b52-a178-8075a268f0df
 
   - '@id': bob:98c2bfeb-9c70-4801-896c-4646b975a7d9
     '@type': Commitment
-    outputOf: library:f47064eb-7120-4b31-b882-770165901fe6 #??
+    outputOf: library:f47064eb-7120-4b31-b882-770165901fe6
     action: transfer
     transferOf:
     - possession
     - right-to-use
-    resourceInventoriedAs: bob:99bc3e4e-79a6-4b52-a178-8075a268f0df
+    resourceInventoriedAs: library:21f361a6-2375-46bb-b192-c21b5ba833bf
     quantifiedAs:
       qudt:unit: unit:Number
       qudt:numericValue: 1
     before:  2019-05-17T18:00:00-5:00
-    transferResourceInventoriedAs: library:21f361a6-2375-46bb-b192-c21b5ba833bf

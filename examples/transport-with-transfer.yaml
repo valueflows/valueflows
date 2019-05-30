@@ -9,19 +9,31 @@
 
 # Bob purchases 30kg of apples from Alice and Claudia transports them (FOB destination)
 
-  # alice commits to transfer ownership of the apples to bob
+  # resources before
 
-  - '@id': alice:33e8933b-ff73-4a01-964a-ca7a98893083
-    '@type': Process
-    skos:note: Transfer of ownership
+  - '@id': alice:21f361a6-2375-46bb-b192-c21b5ba833bf
+    '@type': EconomicResource
+    classifiedAs: wd:Q41777871 # haralson apples
+    trackingIdentifier: lot-alice-apples-2018-10-11
+    locatedAt: geo:70ee3034-0d15-4471-8ee3-91c60bb1a9c9 # only the possessed amount
+    currentOwnedQuantity:
+      qudt:unit: unit:Kilogram
+      qudt:numericValue: 230
+    currentAvailableQuantity:
+      qudt:unit: unit:Kilogram
+      qudt:numericValue: 230
+    currentPossessedQuantity:
+      qudt:unit: unit:Kilogram
+      qudt:numericValue: 230
 
-  - '@id': alice:6b5bc786-b9ed-4189-b34f-5ef7d10f1f86
+  # alice commits to transfer ownership of some apples to bob
+
+  - '@id': urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10f1f86
     '@type': Commitment
-    outputOf: alice:33e8933b-ff73-4a01-964a-ca7a98893083
     action: transfer
     transferOf:
     - ownership
-    resourceClassifiedAs: https://www.wikidata.org/wiki/Q41777871 # haralson apples
+    resourceClassifiedAs: wd:Q41777871 # haralson apples
     provider: https://alice.example/
     receiver: https://bob.example/
     flowQuantity:
@@ -30,24 +42,43 @@
 
   # alice transfers possession of the apples to claudia for transportation
 
-  - '@id': alice:533f6e56-6c7d-4a5b-b9c9-1a8adafd8969
-    '@type': Process
-    skos:note: Alice issues the apples to Claudia to be shipped to Bob
-
-  - '@id': alice:6b5bc786-b9ed-4189-b34f-5ef7d10f1f86
+  - '@id': urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10f1f86
     '@type': EconomicEvent
-    outputOf: alice:533f6e56-6c7d-4a5b-b9c9-1a8adafd8969
     action: transfer
     transferOf:
     - possession
-    resourceInventoriedAs: alice:21f361a6-2375-46bb-b192-c21b5ba833bf
-    resourceClassifiedAs: https://www.wikidata.org/wiki/Q41777871 # haralson apples
+    resourceClassifiedAs: wd:Q41777871 # haralson apples
+    trackingIdentifier: lot-alice-apples-2018-10-11
     provider: https://alice.example/
     receiver: https://claudia.example/
     flowQuantity:
       qudt:unit: unit:Kilogram
       qudt:numericValue: 30
-    transferResourceInventoriedAs: claudia:27be5cab-d740-4194-9298-1661a69d9d95 # claudia's inventory / bill of lading on the truck
+
+  # resources snapshot
+
+  - '@id': alice:21f361a6-2375-46bb-b192-c21b5ba833bf
+    '@type': EconomicResource
+    classifiedAs: wd:Q41777871 # haralson apples
+    trackingIdentifier: lot-alice-apples-2018-10-11
+    locatedAt: geo:70ee3034-0d15-4471-8ee3-91c60bb1a9c9 # only the possessed amount
+    currentOwnedQuantity:
+      qudt:unit: unit:Kilogram
+      qudt:numericValue: 230
+    currentAvailableQuantity:
+      qudt:unit: unit:Kilogram
+      qudt:numericValue: 200
+    currentPossessedQuantity:
+      qudt:unit: unit:Kilogram
+      qudt:numericValue: 200
+
+  - '@id': claudia:27be5cab-d740-4194-9298-1661a69d9d95 # claudia's inventory / bill of lading on the truck
+    '@type': EconomicResource
+    classifiedAs: wd:Q41777871 # haralson apples
+    trackingIdentifier: lot-alice-apples-2018-10-11
+    currentPossessedQuantity:
+      qudt:unit: unit:Kilogram
+      qudt:numericValue: 30
 
   # claudia transports the apples in two hops
 
@@ -103,7 +134,7 @@
       qudt:unit: unit:Kilogram
       qudt:numericValue: 30
 
-  - '@id': claudia:68cabaf3-deb8-4bd5-a439-798263abe35a
+  - '@id': urn:uuid:68cabaf3-deb8-4bd5-a439-798263abe35a
     '@type': EconomicEvent
     skos:note: Transportation of alice's apples from alice's location to bob's location
     outputOf: claudia:c404cff5-19c7-453d-b0d8-d8e96055bd0c
@@ -114,59 +145,116 @@
     flowQuantity:
       qudt:unit: unit:Number
       qudt:numericValue: 1
-    realizationOf: alice:f325a950-5737-488d-b122-8f21114d0eb0 # transportation agreement
+    realizationOf: urn:uuid:f325a950-5737-488d-b122-8f21114d0eb0 # transportation agreement
 
   # bob receives the apples
 
-  - '@id': bob:ee652454-ac08-4f5d-ae84-6b1753887086
-    '@type': Process
-
-  - '@id': bob:7a63ea10-b1c3-441a-9a08-fb8630c02614
+  - '@id': urn:uuid:7a63ea10-b1c3-441a-9a08-fb8630c02614
     '@type': EconomicEvent
-    outputOf: bob:ee652454-ac08-4f5d-ae84-6b1753887086
     action: transfer
     transferOf:
     - possession
-    resourceInventoriedAs: claudia:27be5cab-d740-4194-9298-1661a69d9d95 
+    resourceClassifiedAs: wd:Q41777871 # haralson apples
+    trackingIdentifier: lot-alice-apples-2018-10-11
     provider: https://claudia.example/
     receiver: https://bob.example/
     flowQuantity:
       qudt:unit: unit:Kilogram
       qudt:numericValue: 30
-    transferResourceInventoriedAs: bob:9bd19194-a36d-4a1f-896b-8082887962cb 
+
+  # resources snapshot
+
+  - '@id': alice:21f361a6-2375-46bb-b192-c21b5ba833bf
+    '@type': EconomicResource
+    classifiedAs: wd:Q41777871 # haralson apples
+    trackingIdentifier: lot-alice-apples-2018-10-11
+    locatedAt: geo:70ee3034-0d15-4471-8ee3-91c60bb1a9c9 # only the possessed amount
+    currentOwnedQuantity:
+      qudt:unit: unit:Kilogram
+      qudt:numericValue: 230
+    currentAvailableQuantity:
+      qudt:unit: unit:Kilogram
+      qudt:numericValue: 200
+    currentPossessedQuantity:
+      qudt:unit: unit:Kilogram
+      qudt:numericValue: 200
+
+  - '@id': bob:9bd19194-a36d-4a1f-896b-8082887962cb
+    '@type': EconomicResource
+    classifiedAs: wd:Q41777871 # haralson apples
+    trackingIdentifier: lot-alice-apples-2018-10-11
+    locatedAt: geo:b52a5815-fae9-43bf-be95-833b95dc0ada # only the possessed amount
+    currentPossessedQuantity:
+      qudt:unit: unit:Kilogram
+      qudt:numericValue: 30
+
+  - '@id': claudia:27be5cab-d740-4194-9298-1661a69d9d95 # claudia's inventory / bill of lading on the truck
+    '@type': EconomicResource
+    classifiedAs: wd:Q41777871 # haralson apples
+    trackingIdentifier: lot-alice-apples-2018-10-11
+    currentPossessedQuantity:
+      qudt:unit: unit:Kilogram
+      qudt:numericValue: 0
 
   # receipt of the apples triggers finalizing the transfer of ownership
 
-  - '@id': alice:ad56a7ed-be3c-4937-a3fb-0f156bcd2c47
+  - '@id': urn:uuid:ad56a7ed-be3c-4937-a3fb-0f156bcd2c47
     '@type': EconomicEvent
-    outputOf: alice:33e8933b-ff73-4a01-964a-ca7a98893083
     action: transfer
     transferOf:
     - ownership
-    resourceInventoriedAs: alice:21f361a6-2375-46bb-b192-c21b5ba833bf
+    resourceClassifiedAs: wd:Q41777871 # haralson apples
+    trackingIdentifier: lot-alice-apples-2018-10-11
     provider: https://alice.example/
     receiver: https://bob.example/
     flowQuantity:
       qudt:unit: unit:Kilogram
       qudt:numericValue: 30
-    transferResourceInventoriedAs: bob:9bd19194-a36d-4a1f-896b-8082887962cb
 
-  - '@id': alice:6f438393-7f87-4914-806c-e23a4fd15e89
+  - '@id': urn:uuid:6f438393-7f87-4914-806c-e23a4fd15e89
     '@type': Fulfillment
-    fulfills: alice:6b5bc786-b9ed-4189-b34f-5ef7d10f1f86 # the commitment
-    fulfilledBy: alice:ad56a7ed-be3c-4937-a3fb-0f156bcd2c47 # the economic event
+    fulfills: urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10f1f86 # the commitment
+    fulfilledBy: urn:uuid:ad56a7ed-be3c-4937-a3fb-0f156bcd2c47 # the economic event
     fulfilledQuantity:
+      qudt:unit: unit:Kilogram
+      qudt:numericValue: 30
+
+  # resources snapshot
+
+  - '@id': alice:21f361a6-2375-46bb-b192-c21b5ba833bf
+    '@type': EconomicResource
+    classifiedAs: wd:Q41777871 # haralson apples
+    trackingIdentifier: lot-alice-apples-2018-10-11
+    locatedAt: geo:70ee3034-0d15-4471-8ee3-91c60bb1a9c9 # only the possessed amount
+    currentOwnedQuantity:
+      qudt:unit: unit:Kilogram
+      qudt:numericValue: 200
+    currentAvailableQuantity:
+      qudt:unit: unit:Kilogram
+      qudt:numericValue: 200
+    currentPossessedQuantity:
+      qudt:unit: unit:Kilogram
+      qudt:numericValue: 200
+
+  - '@id': bob:9bd19194-a36d-4a1f-896b-8082887962cb
+    '@type': EconomicResource
+    classifiedAs: wd:Q41777871 # haralson apples
+    trackingIdentifier: lot-alice-apples-2018-10-11
+    locatedAt: geo:b52a5815-fae9-43bf-be95-833b95dc0ada # only the possessed amount
+    currentOwnedQuantity:
+      qudt:unit: unit:Kilogram
+      qudt:numericValue: 30
+    currentAvailableQuantity:
+      qudt:unit: unit:Kilogram
+      qudt:numericValue: 30
+    currentPossessedQuantity:
       qudt:unit: unit:Kilogram
       qudt:numericValue: 30
 
   # alice pays claudia for the transportation service (see above for the service)
 
-  - '@id': alice:f0b8bfb1-ed29-4ab0-aabd-f5e2a3515626
-    '@type': Process
-
-  - '@id': alice:8baa8ff7-9c1e-4586-ae7b-79d620a3cac9
+  - '@id': urn:uuid:8baa8ff7-9c1e-4586-ae7b-79d620a3cac9
     '@type': EconomicEvent
-    outputOf: alice:f0b8bfb1-ed29-4ab0-aabd-f5e2a3515626
     action: transfer
     transferOf:
     - ownership
@@ -178,10 +266,10 @@
     flowQuantity:
       qudt:unit: unit:Number
       qudt:numericValue: 10
-    realizationOf: alice:f325a950-5737-488d-b122-8f21114d0eb0 # transportation agreement
-    transferResourceInventoriedAs: claudia:bd5806d6-4a36-45b9-b3b6-3e7d361a5a14 # claudia's bank account
+    realizationOf: urn:uuid:f325a950-5737-488d-b122-8f21114d0eb0 # transportation agreement
+    toResourceInventoriedAs: claudia:bd5806d6-4a36-45b9-b3b6-3e7d361a5a14 # claudia's bank account
 
 
-  - '@id': alice:f325a950-5737-488d-b122-8f21114d0eb0
+  - '@id': urn:uuid:f325a950-5737-488d-b122-8f21114d0eb0
     '@type': Agreement
     skos:note: exchange transportation service for currency
