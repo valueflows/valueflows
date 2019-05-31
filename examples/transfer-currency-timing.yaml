@@ -65,7 +65,7 @@
 
   # the central bank does its thing, and when it has determined the funds are available, transfers to bob
 
-  - '@id': central:6405b8ad-0ac2-4d58-abdb-0808903c78ad # maybe don't need this?
+  - '@id': urn:uuid:6405b8ad-0ac2-4d58-abdb-0808903c78ad
     '@type': EconomicEvent
     action: transfer
     transferOf:
@@ -80,7 +80,7 @@
       qudt:numericValue: 100
     time:inXSDDateTimeStamp: 2019-05-27T11:30:00-5:00
 
-  - '@id': central:98c2bfeb-9c70-4801-896c-4646b975a7d9
+  - '@id': urn:uuid:98c2bfeb-9c70-4801-896c-4646b975a7d9
     '@type': EconomicEvent
     action: transfer
     transferOf:
