@@ -20,7 +20,7 @@
     transferOf:
     - possession
     - ownership
-    inputOutputOf: banka:e0caf1e3-4a9b-4927-a19c-3f681d234529
+    outputOf: banka:e0caf1e3-4a9b-4927-a19c-3f681d234529
     resourceClassifiedAs: wd:Q4917 # US Dollar
     resourceInventoriedAs: banka:b75d8f6a-e2df-4e52-b36d-1a22a66f4ead # alices' account
     provider: https://alice.example
@@ -42,7 +42,7 @@
       qudt:numericValue: 1
     realizationOf: banka:f325a950-5737-488d-b122-8f21114d0eb0
 
-  # transfer of the fee (could this be part of the same process?
+  # transfer of the fee (could this be output of the same process?)
 
   - '@id': banka:0468e9b9-4d54-4eee-9d3f-bc76db11710a
     '@type': EconomicEvent
@@ -52,13 +52,13 @@
     - ownership
     resourceClassifiedAs: wd:Q4917 # US Dollar
     resourceInventoriedAs: banka:b75d8f6a-e2df-4e52-b36d-1a22a66f4ead # alice's account
+    toResourceInventoriedAs: banka:e72f7d1d-4f0a-4518-a44c-96658cafda95 # the bank's account
     provider: https://alice.example
     receiver: https://banka.example
     flowQuantity:
       qudt:unit: unit:Number
       qudt:numericValue: 1.5
     realizationOf: banka:f325a950-5737-488d-b122-8f21114d0eb0
-    transferResourceInventoriedAs: banka:e72f7d1d-4f0a-4518-a44c-96658cafda95 # the bank's account
 
   # record of the agreement (the exchange) (maybe don't need this?)
 

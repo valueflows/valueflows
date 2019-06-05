@@ -32,7 +32,7 @@
     time:inXSDDateTimeStamp: 2019-04-18T8:00:00-5:00
     provider: https://library.example/
     receiver: https://bob.example/
-    quantifiedAs: 
+    flowQuantity: 
       qudt:unit: unit:Number
       qudt:numericValue: 1
 
@@ -44,7 +44,7 @@
     - possession
     - right-to-use
     resourceInventoriedAs: library:21f361a6-2375-46bb-b192-c21b5ba833bf
-    quantifiedAs:
+    flowQuantity:
       qudt:unit: unit:Number
       qudt:numericValue: 1
     before:  2019-05-17T18:00:00-5:00

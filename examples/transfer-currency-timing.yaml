@@ -17,7 +17,7 @@
     '@type': EconomicResource
     skos:note: Alice's account
     classifiedAs: wd:Q4917 # US Dollar
-    currentPossessedQuantity:
+    currentQuantity:
       qudt:unit: unit:Number
       qudt:numericValue: 845
     currentOwnedQuantity:
@@ -28,7 +28,7 @@
     '@type': EconomicResource
     skos:note: Bob's account
     classifiedAs: wd:Q4917 # US Dollar
-    currentPossessedQuantity:
+    currentQuantity:
       qudt:unit: unit:Number
       qudt:numericValue: 530
     currentOwnedQuantity:
@@ -110,7 +110,7 @@
     '@type': EconomicResource
     skos:note: Alice's account
     classifiedAs: wd:Q4917 # US Dollar
-    currentPossessedQuantity:
+    currentQuantity:
       qudt:unit: unit:Number
       qudt:numericValue: 745
     currentOwnedQuantity:
@@ -121,7 +121,7 @@
     '@type': EconomicResource
     skos:note: Bob's account
     classifiedAs: wd:Q4917 # US Dollar
-    currentPossessedQuantity:
+    currentQuantity:
       qudt:unit: unit:Number
       qudt:numericValue: 630
     currentOwnedQuantity:

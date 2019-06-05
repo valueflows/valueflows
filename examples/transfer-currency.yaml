@@ -13,7 +13,7 @@
     '@type': EconomicResource
     skos:note: Alice's account
     classifiedAs: wd:Q179941 # LETS credit
-    currentOwnedQuantity:
+    currentQuantity:
       qudt:unit: unit:Number
       qudt:numericValue: -200
 
@@ -21,7 +21,7 @@
     '@type': EconomicResource
     skos:note: Bob's account 
     classifiedAs: wd:Q179941 # LETS credit
-    currentOwnedQuantity:
+    currentQuantity:
       qudt:unit: unit:Number
       qudt:numericValue: 500
 
@@ -47,7 +47,7 @@
     '@type': EconomicResource
     skos:note: Alice's account 
     classifiedAs: wd:Q179941 # LETS credit
-    currentOwnedQuantity:
+    currentQuantity:
       qudt:unit: unit:Number
       qudt:numericValue: -300
 
@@ -55,6 +55,6 @@
     '@type': EconomicResource
     skos:note: Bob's account 
     classifiedAs: wd:Q179941 # LETS credit
-    currentOwnedQuantity:
+    currentQuantity:
       qudt:unit: unit:Number
       qudt:numericValue: 600
