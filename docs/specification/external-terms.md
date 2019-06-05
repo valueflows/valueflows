@@ -47,3 +47,11 @@ https://www.w3.org/TR/owl-time
 
 `vf` defines two property chain axioms `vf:hasBeginning` and `vf:hasEnd` as slight variant
 of [Alignment of PROV-O with OWL-Time(https://www.w3.org/TR/owl-time/#time-prov)]
+
+## GEO
+
+https://www.w3.org/2003/01/geo/wgs84_pos#
+
+* [`geo:lat`](https://www.w3.org/2003/01/geo/wgs84_pos#lat)
+* [`geo:long`](https://www.w3.org/2003/01/geo/wgs84_pos#long)
+* [`geo:alt`](https://www.w3.org/2003/01/geo/wgs84_pos#alt)
