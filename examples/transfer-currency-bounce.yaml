@@ -1,3 +1,5 @@
+################### PROBABLY INVALID EXAMPLE ###############################3
+
 '@context':
   - https://git.io/vf-examples-jsonld-context
   - bob: https://bob.example/
@@ -15,7 +17,7 @@
     '@type': EconomicResource
     skos:note: Alice's account
     classifiedAs: wd:Q4917 # US Dollar
-    currentPossessedQuantity:
+    currentQuantity:
       qudt:unit: unit:Number
       qudt:numericValue: 845
     currentOwnedQuantity:
@@ -26,7 +28,7 @@
     '@type': EconomicResource
     skos:note: Bob's account
     classifiedAs: wd:Q4917 # US Dollar
-    currentPossessedQuantity:
+    currentQuantity:
       qudt:unit: unit:Number
       qudt:numericValue: 530
     currentOwnedQuantity:
@@ -56,7 +58,7 @@
     '@type': EconomicResource
     skos:note: Alice's account
     classifiedAs: wd:Q4917 # US Dollar
-    currentPossessedQuantity:
+    currentQuantity:
       qudt:unit: unit:Number
       qudt:numericValue: 745
     currentOwnedQuantity:
@@ -69,7 +71,7 @@
     '@type': EconomicEvent
     action: transfer
     transferOf:
-    - possession
+    - possession # or maybe ownership gets transferred without possession?  would need real information
     resourceClassifiedAs: wd:Q4917 # US Dollar
     resourceInventoriedAs: centralbank:f47064eb-7120-4b31-b882-770165901fe6
     toResourceInventoriedAs: banka:b75d8f6a-e2df-4e52-b36d-1a22a66f4ead # alice's account
@@ -86,7 +88,7 @@
     '@type': EconomicResource
     skos:note: Alice's account
     classifiedAs: wd:Q4917 # US Dollar
-    currentPossessedQuantity:
+    currentQuantity:
       qudt:unit: unit:Number
       qudt:numericValue: 845
     currentOwnedQuantity:
@@ -97,7 +99,7 @@
     '@type': EconomicResource
     skos:note: Bob's account
     classifiedAs: wd:Q4917 # US Dollar
-    currentPossessedQuantity:
+    currentQuantity:
       qudt:unit: unit:Number
       qudt:numericValue: 530
     currentOwnedQuantity:

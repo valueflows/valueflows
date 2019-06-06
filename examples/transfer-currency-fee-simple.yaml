@@ -5,7 +5,7 @@
     banka: https://banka.example/
     bankb: https://bankb.example/
 
-'@id': rgh:valueflows/valueflows/master/examples/transfer-currency-fee.yaml
+'@id': rgh:valueflows/valueflows/master/examples/transfer-currency-fee-simple.yaml
 '@graph':
 
   # transfer of currency from alice to bob, initiated through alice's bank
@@ -30,19 +30,7 @@
       qudt:unit: unit:Number
       qudt:numericValue: 100
 
-  - '@id': urn:uuid:6405b8ad-0ac2-4d58-abdb-0808903c78ad
-    '@type': EconomicEvent
-    action: service
-    outputOf: banka:e0caf1e3-4a9b-4927-a19c-3f681d234529
-    resourceClassifiedAs: wd:Q7406919 # transfer service
-    provider: https://banka.example
-    receiver: https://alice.example
-    flowQuantity:
-      qudt:unit: unit:Number
-      qudt:numericValue: 1
-    realizationOf: urn:uuid:f325a950-5737-488d-b122-8f21114d0eb0
-
-  # transfer of the fee
+  # transfer of the fee, under the same process
 
   - '@id': urn:uuid:8baa8ff7-9c1e-4586-ae7b-79d620a3cac9
     '@type': EconomicEvent
@@ -50,6 +38,7 @@
     transferOf:
     - possession
     - ownership
+    outputOf: banka:e0caf1e3-4a9b-4927-a19c-3f681d234529
     resourceClassifiedAs: wd:Q4917 # US Dollar
     resourceInventoriedAs: banka:b75d8f6a-e2df-4e52-b36d-1a22a66f4ead # alice's account
     toResourceInventoriedAs: banka:e72f7d1d-4f0a-4518-a44c-96658cafda95 # the bank's account
@@ -58,10 +47,3 @@
     flowQuantity:
       qudt:unit: unit:Number
       qudt:numericValue: 1.5
-    realizationOf: urn:uuid:f325a950-5737-488d-b122-8f21114d0eb0
-
-  # record of the agreement
-
-  - '@id': urn:uuid:f325a950-5737-488d-b122-8f21114d0eb0
-    '@type': Agreement
-    skos:note: exchange transfer fee for the currency transfer service

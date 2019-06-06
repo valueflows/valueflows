@@ -1,3 +1,4 @@
+############# INVALID EXAMPLE #############################################################
 # Alice writes Bob a check, which is then transferred from her account to Bob's account.
 
 '@context':
@@ -38,7 +39,7 @@
   # alice writes a check to bob and bob deposits it - bankb sends the instruction to the central bank
 
   - '@id': urn:uuid:c7897c39-7f05-4a5d-a487-80e130a2414a
-    '@type': Commitment
+    '@type': Commitment ### not good to have this as a commitment
     action: transfer
     transferOf:
     - possession

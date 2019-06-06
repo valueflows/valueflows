@@ -16,13 +16,13 @@
     classifiedAs: wd:Q41777871 # haralson apples
     trackingIdentifier: lot-alice-apples-2018-10-11
     locatedAt: geo:70ee3034-0d15-4471-8ee3-91c60bb1a9c9 # only the possessed amount
+    currentQuantity:
+      qudt:unit: unit:Kilogram
+      qudt:numericValue: 230
     currentOwnedQuantity:
       qudt:unit: unit:Kilogram
       qudt:numericValue: 230
     currentAvailableQuantity:
-      qudt:unit: unit:Kilogram
-      qudt:numericValue: 230
-    currentPossessedQuantity:
       qudt:unit: unit:Kilogram
       qudt:numericValue: 230
 
@@ -62,13 +62,13 @@
     classifiedAs: wd:Q41777871 # haralson apples
     trackingIdentifier: lot-alice-apples-2018-10-11
     locatedAt: geo:70ee3034-0d15-4471-8ee3-91c60bb1a9c9 # only the possessed amount
+    currentQuantity:
+      qudt:unit: unit:Kilogram
+      qudt:numericValue: 200
     currentOwnedQuantity:
       qudt:unit: unit:Kilogram
       qudt:numericValue: 230
     currentAvailableQuantity:
-      qudt:unit: unit:Kilogram
-      qudt:numericValue: 200
-    currentPossessedQuantity:
       qudt:unit: unit:Kilogram
       qudt:numericValue: 200
 
@@ -76,7 +76,7 @@
     '@type': EconomicResource
     classifiedAs: wd:Q41777871 # haralson apples
     trackingIdentifier: lot-alice-apples-2018-10-11
-    currentPossessedQuantity:
+    currentQuantity:
       qudt:unit: unit:Kilogram
       qudt:numericValue: 30
 
@@ -169,13 +169,13 @@
     classifiedAs: wd:Q41777871 # haralson apples
     trackingIdentifier: lot-alice-apples-2018-10-11
     locatedAt: geo:70ee3034-0d15-4471-8ee3-91c60bb1a9c9 # only the possessed amount
+    currentQuantity:
+      qudt:unit: unit:Kilogram
+      qudt:numericValue: 200
     currentOwnedQuantity:
       qudt:unit: unit:Kilogram
       qudt:numericValue: 230
     currentAvailableQuantity:
-      qudt:unit: unit:Kilogram
-      qudt:numericValue: 200
-    currentPossessedQuantity:
       qudt:unit: unit:Kilogram
       qudt:numericValue: 200
 
@@ -184,7 +184,7 @@
     classifiedAs: wd:Q41777871 # haralson apples
     trackingIdentifier: lot-alice-apples-2018-10-11
     locatedAt: geo:b52a5815-fae9-43bf-be95-833b95dc0ada # only the possessed amount
-    currentPossessedQuantity:
+    currentQuantity:
       qudt:unit: unit:Kilogram
       qudt:numericValue: 30
 
@@ -192,7 +192,7 @@
     '@type': EconomicResource
     classifiedAs: wd:Q41777871 # haralson apples
     trackingIdentifier: lot-alice-apples-2018-10-11
-    currentPossessedQuantity:
+    currentQuantity:
       qudt:unit: unit:Kilogram
       qudt:numericValue: 0
 
@@ -226,13 +226,13 @@
     classifiedAs: wd:Q41777871 # haralson apples
     trackingIdentifier: lot-alice-apples-2018-10-11
     locatedAt: geo:70ee3034-0d15-4471-8ee3-91c60bb1a9c9 # only the possessed amount
+    currentQuantity:
+      qudt:unit: unit:Kilogram
+      qudt:numericValue: 200
     currentOwnedQuantity:
       qudt:unit: unit:Kilogram
       qudt:numericValue: 200
     currentAvailableQuantity:
-      qudt:unit: unit:Kilogram
-      qudt:numericValue: 200
-    currentPossessedQuantity:
       qudt:unit: unit:Kilogram
       qudt:numericValue: 200
 
@@ -241,13 +241,13 @@
     classifiedAs: wd:Q41777871 # haralson apples
     trackingIdentifier: lot-alice-apples-2018-10-11
     locatedAt: geo:b52a5815-fae9-43bf-be95-833b95dc0ada # only the possessed amount
+    currentQuantity:
+      qudt:unit: unit:Kilogram
+      qudt:numericValue: 30
     currentOwnedQuantity:
       qudt:unit: unit:Kilogram
       qudt:numericValue: 30
     currentAvailableQuantity:
-      qudt:unit: unit:Kilogram
-      qudt:numericValue: 30
-    currentPossessedQuantity:
       qudt:unit: unit:Kilogram
       qudt:numericValue: 30
 
@@ -261,13 +261,13 @@
     - possession
     resourceClassifedAs: wd:Q4917 # US Dollar
     resourceInventoriedAs: alice:daa2ec3b-2c1a-4eb1-839f-8dcec1a1f93a # alice's bank account
+    toResourceInventoriedAs: claudia:bd5806d6-4a36-45b9-b3b6-3e7d361a5a14 # claudia's bank account
     provider: https://alice.example/
     receiver: https://claudia.example/
     flowQuantity:
       qudt:unit: unit:Number
       qudt:numericValue: 10
     realizationOf: urn:uuid:f325a950-5737-488d-b122-8f21114d0eb0 # transportation agreement
-    toResourceInventoriedAs: claudia:bd5806d6-4a36-45b9-b3b6-3e7d361a5a14 # claudia's bank account
 
 
   - '@id': urn:uuid:f325a950-5737-488d-b122-8f21114d0eb0
