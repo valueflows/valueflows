@@ -212,7 +212,7 @@
     action: transfer
     receiver: https://farm.example/
     resourceClassifiedAs: https://www.wikidata.org/wiki/Q4917 # US Dollar
-    flowQuantity:
+    exchangeRateQuantity:
       qudt:unit: unit:Number
       qudt:numericValue: 18
 
@@ -251,7 +251,7 @@
     action: transfer
     receiver: https://farm.example/
     resourceClassifiedAs: https://www.wikidata.org/wiki/Q4917 # US Dollar
-    flowQuantity:
+    exchangeRateQuantity:
       qudt:unit: unit:Number
       qudt:numericValue: 32
 
