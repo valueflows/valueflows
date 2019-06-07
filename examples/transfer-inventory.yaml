@@ -21,9 +21,6 @@
     currentOwnedQuantity:
       qudt:unit: unit:Kilogram
       qudt:numericValue: 230
-    currentAvailableQuantity:
-      qudt:unit: unit:Kilogram
-      qudt:numericValue: 230
 
   # alice sells some of her apples at the farmer's market
 
@@ -48,9 +45,6 @@
       qudt:unit: unit:Kilogram
       qudt:numericValue: 180
     currentOwnedQuantity:
-      qudt:unit: unit:Kilogram
-      qudt:numericValue: 180
-    currentAvailableQuantity:
       qudt:unit: unit:Kilogram
       qudt:numericValue: 180
 
@@ -80,9 +74,6 @@
     currentOwnedQuantity:
       qudt:unit: unit:Kilogram
       qudt:numericValue: 180
-    currentAvailableQuantity:
-      qudt:unit: unit:Kilogram
-      qudt:numericValue: 170
 
   - '@id': carol:02b39a30-3e04-4305-9656-7f261aa63c83
     '@type': EconomicResource
@@ -118,9 +109,6 @@
     currentOwnedQuantity:
       qudt:unit: unit:Kilogram
       qudt:numericValue: 180
-    currentAvailableQuantity:
-      qudt:unit: unit:Kilogram
-      qudt:numericValue: 70
 
   - '@id': david:d4d2fd71-34f2-41c3-b1c5-19ad5ed2da58
     '@type': EconomicResource
@@ -158,9 +146,6 @@
     currentOwnedQuantity:
       qudt:unit: unit:Kilogram
       qudt:numericValue: 140
-    currentAvailableQuantity:
-      qudt:unit: unit:Kilogram
-      qudt:numericValue: 30
 
   - '@id': bob:c7897c39-7f05-4a5d-a487-80e130a2414a
     '@type': EconomicResource
@@ -173,6 +158,3 @@
     currentOwnedQuantity:
       qudt:unit: unit:Kilogram
       qudt:numericValue: 40
-    currentAvailableQuantity:
-      qudt:unit: unit:Kilogram
-      qudt:numericValue: 0
