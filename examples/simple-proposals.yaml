@@ -1,4 +1,4 @@
-# Example: Simple proposals
+# Example: Simple proposals and intents
 
 '@context':
   - https://git.io/vf-examples-jsonld-context
@@ -19,28 +19,29 @@
     name: Used bike
     hasBeginning: 2019-03-01T00:00:00-5:00
     hasEnd: 2019-03-31T00:00:00-5:00
-    publishingLocation: map:566a2c01-96f8-4b3c-adcf-f197eced3092 # Madison, WI
+    eligibleLocation: map:566a2c01-96f8-4b3c-adcf-f197eced3092 # Madison, WI
 
   - '@id': alice:02b39a30-3e04-4305-9656-7f261aa63c84
     '@type': Intent
     name: Old adult Schwinn one speed bike
     skos:note: Pedals fine, not good for hills, has basket, brakes are a bit dodgy
-    action: give
+    action: transfer
     provider: https://alice.example/
     resourceClassifiedAs: https://www.wikidata.org/wiki/Q11442 # bicycle
 
   - '@id': alice:a8236bbb-81e0-422d-9861-56d2417db0fb
     '@type': ProposedIntent
     publishedIn: alice:8791913c-0152-4c32-bb3f-f25d61df736c # the proposal
-    publishes: alice:02b39a30-3e04-4305-9656-7f261aa63c84 # the intent (see top of examples)
+    publishes: alice:02b39a30-3e04-4305-9656-7f261aa63c84 # the intent
+    reciprocal: false
 
   - '@id': alice:e72f7d1d-4f0a-4518-a44c-96658cafda95
     '@type': Intent
     name: Payment
-    action: receive
+    action: transfer
     receiver: https://alice.example/
     resourceClassifiedAs: https://www.wikidata.org/wiki/Q4917 # US Dollar
-    quantifiedAs:
+    flowQuantity:
       qudt:unit: unit:Number
       qudt:numericValue: 15
 
@@ -80,7 +81,7 @@
     name: Cider press for cider
     hasBeginning: 2018-10-01T00:00:00-5:00
     hasEnd: 2018-10-15T00:00:00-5:00
-    publishingLocation: map:566a2c01-96f8-4b3c-adcf-f197eced3092 # Madison, WI
+    eligibleLocation: map:566a2c01-96f8-4b3c-adcf-f197eced3092 # Madison, WI
 
   - '@id': carol:e02e3f6b-420a-4ba8-89b0-909d7363ce07
     '@type': Intent
@@ -89,7 +90,7 @@
     action: use
     receiver: https://carol.example/
     resourceClassifiedAs: https://www.wikidata.org/wiki/Q1111 # cider press (fictional)
-    quantifiedAs:
+    flowQuantity:
       qudt:unit: unit:Hour
       qudt:numericValue: 6
 
@@ -97,15 +98,16 @@
     '@type': ProposedIntent
     publishedIn: carol:6405b8ad-0ac2-4d58-abdb-0808903c78ad # the proposal
     publishes: carol:e02e3f6b-420a-4ba8-89b0-909d7363ce07 # the intent
+    reciprocal: false
 
   - '@id': carol:b52a5815-fae9-43bf-be95-833b95dc0adb
     '@type': Intent
     name: Cider
     skos:note: Fresh cider from the pressing
-    action: give
+    action: transfer
     provider: https://carol.example/
     resourceClassifiedAs: https://www.wikidata.org/wiki/Q5977438 # apple cider
-    quantifiedAs:
+    flowQuantity:
       qudt:unit: unit:Gallon
       qudt:numericValue: 3
 
@@ -130,7 +132,7 @@
     action: work
     receiver: https://fablab.example/
     resourceClassifiedAs: https://www.wikidata.org/wiki/Q2474620 # electrochemical engineering
-    quantifiedAs:
+    flowQuantity:
       qudt:unit: unit:Hour
       qudt:numericValue: 16
     hasBeginning: 2019-04-12T08:00:00-5:00
@@ -141,18 +143,19 @@
     name: Electrochemical engineering skills
     hasBeginning: 2019-04-01T08:00:00-5:00
     hasEnd: 2019-04-11T17:00:00-5:00
-    publishingLocation: map:566a2c01-96f8-4b3c-adcf-f197eced3092 # Madison, WI
+    eligibleLocation: map:566a2c01-96f8-4b3c-adcf-f197eced3092 # Madison, WI
 
   - '@id': fablab:b90b0b77-09a2-42e2-8bd4-e9ae2c1c6172
     '@type': ProposedIntent
     publishedIn: fablab:33e8933b-ff73-4a01-964a-ca7a98893083 # the proposal
-    publishes: fablab:60f4204e-b8d2-4026-8577-102c3f82c0af # the intent (part of the planned process above)
+    publishes: fablab:60f4204e-b8d2-4026-8577-102c3f82c0af # the intent
+    reciprocal: false
 
   - '@id': fablab:583e83d9-a46d-44ff-bd71-88513a1d83c0
     '@type': Intent
     name: Payment
     skos:note: Payment when the unit is manufactured and sold
-    action: give
+    action: transfer
     provider: https://fablab.example/
     resourceClassifiedAs: https://www.wikidata.org/wiki/Q4917 # US Dollar
     under: https://fablab.example/soil-sensor-project/value-equation/
@@ -170,7 +173,7 @@
     name: Free used bike # alice did not get any responses to her proposal above, so decided to offer the bike for free
     hasBeginning: 2019-04-01T00:00:00-5:00
     hasEnd: 2019-05-01T00:00:00-5:00
-    publishingLocation: map:566a2c01-96f8-4b3c-adcf-f197eced3092 # Madison, WI
+    eligibleLocation: map:566a2c01-96f8-4b3c-adcf-f197eced3092 # Madison, WI
 
   - '@id': alice:a8236bbb-81e0-422d-9861-56d2417db0fb
     '@type': ProposedIntent
