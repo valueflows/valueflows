@@ -374,6 +374,20 @@ vf:definedQuantity a        owl:ObjectProperty ;
         vs:term_status      "unstable" ;
         rdfs:comment        "The amount and unit defined for this recipe flow." .
 
+vf:availableQuantity a      owl:ObjectProperty ;
+        rdfs:label          "available quantity" ;
+        rdfs:domain         vf:Intent ;
+        rdfs:range          qudt:QuantityValue ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "The total quantity of the offered or requested resource available." .
+
+vf:exchangeRateQuantity a   owl:ObjectProperty ;
+        rdfs:label          "exchange rate quantity" ;
+        rdfs:domain         vf:Intent ;
+        rdfs:range          qudt:QuantityValue ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "The base quantity of the offer or request, which can be multipied for an actual commitment.  Used for example for a price list." .
+
 vf:currentLocation a        owl:ObjectProperty ;
         rdfs:label          "current location" ;
         rdfs:domain         vf:EconomicResource ;
@@ -388,12 +402,12 @@ vf:primaryLocation a        owl:ObjectProperty ;
         vs:term_status      "unstable" ;
         rdfs:comment        "The main place an agent is located, often an address where activities occur and mail can be sent. This is usually a mappable geographic location.  It also could be a website address, as in the case of agents who have no physical location." .
 
-vf:publishingLocation a     owl:ObjectProperty ;
-        rdfs:label          "publishing location" ;
+vf:eligibleLocation a       owl:ObjectProperty ;
+        rdfs:label          "eligible location" ;
         rdfs:domain         vf:Proposal ;
         rdfs:range          geo:SpatialThing ;
         vs:term_status      "unstable" ;
-        rdfs:comment        "Location or area where the proposal is published." .
+        rdfs:comment        "Location or area where the proposal is valid." .
 
 vf:image a                  owl:DatatypeProperty ;
         vs:term_status      "unstable" ;
