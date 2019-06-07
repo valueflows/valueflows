@@ -390,8 +390,8 @@ vf:primaryLocation a        owl:ObjectProperty ;
 
 vf:publishingLocation a     owl:ObjectProperty ;
         rdfs:label          "publishing location" ;
-        rdfs:domain         foaf:Agent ;
-        #rdfs:range          vf:Location ;
+        rdfs:domain         vf:Proposal ;
+        rdfs:range          geo:SpatialThing ;
         vs:term_status      "unstable" ;
         rdfs:comment        "Location or area where the proposal is published." .
 
