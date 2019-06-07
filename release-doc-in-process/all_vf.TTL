@@ -54,7 +54,7 @@ vf:TransferOf a             owl:Class ;
         rdfs:label          "vf:TransferOf" ;
         rdfs:subClassOf     rdf:Property ;
         vs:term_status      "unstable" ;
-        rdfs:comment        "Describes what is being transfered in this flow: possession, stewardship, right to use." .
+        rdfs:comment        "Describes what is being transfered in this flow: ownership, possession, stewardship, right to use." .
 
 # PLAN CLASSES
 
@@ -136,7 +136,7 @@ vf:action
 vf:transferOf
         a                   owl:ObjectProperty ;
         rdfs:label          "transfer of" ;
-        rdfs:domain         [ owl:unionOf (vf:EconomicEvent vf:Commitment vf:Intent) ] ;
+        rdfs:domain         [ owl:unionOf (vf:EconomicEvent vf:Commitment vf:Intent vf:Claim) ] ;
         rdfs:range          vf:TransferOf ;
         vs:term_status      "unstable" ;
         rdfs:comment        "Defines the type(s) of transfer for flows that include a transfer of possession or rights." .
@@ -294,7 +294,7 @@ vf:hasEnd a                 owl:DatatypeProperty ;
         owl:propertyChainAxiom (time:hasEnd time:inXSDDateTimeStamp) ;
         rdfs:comment        "Specific time marking the exact end of flow or process".
 
-vf:currentAccountingQuantity
+vf:currentOwnedQuantity
         a                   owl:ObjectProperty ;
         rdfs:label          "current accounting quantity" ;
         rdfs:domain         vf:EconomicResource ;
@@ -302,15 +302,7 @@ vf:currentAccountingQuantity
         vs:term_status      "unstable" ;
         rdfs:comment        "The current amount and unit of the economic resource for accounting purposes, representing the ownership or stewardship (full rights and responsibilities) of the economic resource. This can be stored or derived from economic events affecting the resource." .
 
-vf:currentAvailableQuantity
-        a                   owl:ObjectProperty ;
-        rdfs:label          "current available quantity" ;
-        rdfs:domain         vf:EconomicResource ;
-        rdfs:range          qudt:QuantityValue ;
-        vs:term_status      "unstable" ;
-        rdfs:comment        "The current amount and unit of the economic resource available for economic activity. This can be stored or derived from economic events affecting the resource." . 
-
-vf:currentPossessedQuantity
+vf:currentQuantity
         a                   owl:ObjectProperty ;
         rdfs:label          "current possessed quantity" ;
         rdfs:domain         vf:EconomicResource ;
@@ -571,6 +563,10 @@ vf:mappableAddress a        owl:ObjectProperty ;
 #        rdfs:label          "peer of" .
 
 # ################################ transfer properties
+
+vf:ownership  a             vf:TransferOf ;
+        vs:term_status      "unstable" ;
+        rdfs:label          "ownership" .
 
 vf:possession  a            vf:TransferOf ;
         vs:term_status      "unstable" ;
