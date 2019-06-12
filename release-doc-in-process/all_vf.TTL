@@ -381,12 +381,12 @@ vf:availableQuantity a      owl:ObjectProperty ;
         vs:term_status      "unstable" ;
         rdfs:comment        "The total quantity of the offered or requested resource available." .
 
-vf:exchangeRateQuantity a   owl:ObjectProperty ;
-        rdfs:label          "exchange rate quantity" ;
+vf:unitQuantity a   owl:ObjectProperty ;
+        rdfs:label          "unit quantity" ;
         rdfs:domain         vf:Intent ;
         rdfs:range          qudt:QuantityValue ;
         vs:term_status      "unstable" ;
-        rdfs:comment        "The base quantity of the offer or request, which can be multipied for an actual commitment.  Used for example for a price list." .
+        rdfs:comment        "The base quantity of the offer or request, which can be multipied for an actual commitment; commonly seen in a price list or e-commerce." .
 
 vf:currentLocation a        owl:ObjectProperty ;
         rdfs:label          "current location" ;
@@ -480,7 +480,7 @@ vf:reciprocal
         rdfs:domain         vf:ProposedIntent ;
         rdfs:range          xsd:boolean ;
         vs:term_status      "unstable" ;
-        rdfs:comment        "This is a reciprocal intent of this proposal, not primary." .
+        rdfs:comment        "This is a reciprocal intent of this proposal, not primary. Not meant to be part of intent matching." .
 
 vf:finished  a              owl:DatatypeProperty ;
         rdfs:domain         [ owl:unionOf (vf:Commitment vf:Process vf:Intent vf:Claim) ] ; 
