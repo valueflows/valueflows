@@ -403,6 +403,13 @@ vf:intentLogic a            owl:DataTypeProperty ;
         vs:term_status      "unstable" ;
         rdfs:comment        "The logic used between provider or receiver intents is *and* or *or*, which is a non-exclusive or." .
 
+vf:publishTo a              owl:ObjectProperty ;
+        rdfs:label          "publish to" ;
+        rdfs:domain         vf:Proposal ;
+        rdfs:range          owl:Thing ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "A list of agents, addresses, applications, or other places to publish the proposal." .
+
 vf:currentLocation a        owl:ObjectProperty ;
         rdfs:label          "current location" ;
         rdfs:domain         vf:EconomicResource ;
