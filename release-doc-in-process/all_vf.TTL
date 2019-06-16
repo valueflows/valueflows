@@ -379,14 +379,29 @@ vf:availableQuantity a      owl:ObjectProperty ;
         rdfs:domain         vf:Intent ;
         rdfs:range          qudt:QuantityValue ;
         vs:term_status      "unstable" ;
-        rdfs:comment        "The total quantity of the offered or requested resource available." .
+        rdfs:comment        "The quantity of the offered or requested resource currently available." .
 
-vf:unitQuantity a   owl:ObjectProperty ;
+vf:unitQuantity a           owl:ObjectProperty ;
         rdfs:label          "unit quantity" ;
         rdfs:domain         vf:Intent ;
         rdfs:range          qudt:QuantityValue ;
         vs:term_status      "unstable" ;
-        rdfs:comment        "The base quantity of the offer or request, which can be multipied for an actual commitment; commonly seen in a price list or e-commerce." .
+        rdfs:comment        "The base quantity of the offer or request, which can be multipied to create a commitment; commonly seen in a price list or e-commerce." .
+
+vf:totalQuantity a          owl:ObjectProperty ;
+        rdfs:label          "total quantity" ;
+        rdfs:domain         vf:Intent ;
+        rdfs:range          qudt:QuantityValue ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "The total quantity of the intent, allowing multiple commitments for part of that quantity; commonly seen in multi-lateral agreement arrangements." .
+
+vf:intentLogic a            owl:DataTypeProperty ;
+        rdfs:label          "intent logic" ;
+        rdfs:domain         vf:ProposedIntent ;
+        rdfs:range          [   a  rdfs:Datatype;
+                                owl:oneOf  ( "and" "or" ) ] ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "The logic used between provider or receiver intents is *and* or *or*, which is a non-exclusive or." .
 
 vf:currentLocation a        owl:ObjectProperty ;
         rdfs:label          "current location" ;
