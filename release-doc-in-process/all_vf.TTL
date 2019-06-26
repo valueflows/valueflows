@@ -591,9 +591,13 @@ vf:accept  a                vf:Action ;
         vs:term_status      "unstable" ;
         rdfs:label          "accept" .
 
-vf:improve  a                vf:Action ;
+vf:modify  a                vf:Action ;
         vs:term_status      "unstable" ;
-        rdfs:label          "improve" .
+        rdfs:label          "modify" .
+
+vf:service  a               vf:Action ;
+        vs:term_status      "testing" ;
+        rdfs:label          "service" .
 
 vf:give  a                  vf:Action ;
         rdfs:label          "give" ;

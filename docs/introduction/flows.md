@@ -54,8 +54,9 @@ All flows use an action property to designate what the flow is doing and how it 
 * vf:work - labor power towards a process
 * vf:load -  transported resource enters the process, the same resource will appear in output with *vf:unload* verb
 * vf:unload -  transported resource leaves the process, the same resource will appear in input with *vf:load* verb
-* vf:accept - in processes like repair or maintentance, the same resource will appear in output with *vf:improve* verb
-* vf:improve - in processes like repair or maintentance, the same resource will appear in input with *vf:accept* verb
+* vf:accept - in processes like repair or maintentance, the same resource will appear in output with *vf:modify* verb
+* vf:modify - in processes like repair or maintentance, the same resource will appear in input with *vf:accept* verb
+* vf:service - new service produced and delivered (being a service implies that an agent actively receives the service
 * vf:give - give rights and responsibilities for the resource
 * vf:receive - receive rights and responsibilites for the resource
 * vf:raise - adjusts a quantity up based on a beginning balance or inventory count
@@ -70,8 +71,9 @@ work | No effect  | Input | N/A | N/A |
 cite | No effect  | Input | No | N/A |
 load | Decrement  | Input | No | unload |
 unload | Increment  | Output | No | load |
-accept | No effect  | Input | No | improve |
-improve | No effect  | Output | No | accept |
+accept | No effect  | Input | No | modify |
+modify | No effect  | Output | No | accept |
+service | No effect | either | Yes | N/A |
 give | Decrement | Input | No | receive |
 receive | Increment | Output | No | give |
 raise | Increment | N/A | N/A | N/A |
