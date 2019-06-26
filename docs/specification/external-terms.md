@@ -55,3 +55,12 @@ https://www.w3.org/2003/01/geo/wgs84_pos#
 * [`geo:lat`](https://www.w3.org/2003/01/geo/wgs84_pos#lat)
 * [`geo:long`](https://www.w3.org/2003/01/geo/wgs84_pos#long)
 * [`geo:alt`](https://www.w3.org/2003/01/geo/wgs84_pos#alt)
+
+## DFC
+
+http://www.virtual-assembly.org/DataFoodConsortium/FullModel#
+
+* [`dfc:ProductBatch`](http://www.virtual-assembly.org/DataFoodConsortium/FullModel#ProductBatch)
+* [`dfc:batchNumber`](http://www.virtual-assembly.org/DataFoodConsortium/FullModel#batchNumber)
+* [`dfc:expiryDate`](http://www.virtual-assembly.org/DataFoodConsortium/FullModel#expiryDate)
+* [`dfc:productionDate`](http://www.virtual-assembly.org/DataFoodConsortium/FullModel#productionDate)
