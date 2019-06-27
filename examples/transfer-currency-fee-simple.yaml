@@ -10,17 +10,12 @@
 
   # transfer of currency from alice to bob, initiated through alice's bank
 
-  - '@id': banka:e0caf1e3-4a9b-4927-a19c-3f681d234529
-    '@type': Process
-    skos:note: Facilitate moving currency between accounts
-
   - '@id': urn:uuid:0468e9b9-4d54-4eee-9d3f-bc76db11710a
     '@type': EconomicEvent
     action: transfer
     transferOf:
     - possession
     - ownership
-    outputOf: banka:e0caf1e3-4a9b-4927-a19c-3f681d234529
     resourceClassifiedAs: wd:Q4917 # US Dollar
     resourceInventoriedAs: banka:b75d8f6a-e2df-4e52-b36d-1a22a66f4ead # alices' account
     toResourceInventoriedAs: bankb:3be5259d-10f0-431c-9fec-9c0c15a461d3 # bob's account
@@ -38,7 +33,6 @@
     transferOf:
     - possession
     - ownership
-    outputOf: banka:e0caf1e3-4a9b-4927-a19c-3f681d234529
     resourceClassifiedAs: wd:Q4917 # US Dollar
     resourceInventoriedAs: banka:b75d8f6a-e2df-4e52-b36d-1a22a66f4ead # alice's account
     toResourceInventoriedAs: banka:e72f7d1d-4f0a-4518-a44c-96658cafda95 # the bank's account
@@ -47,3 +41,4 @@
     flowQuantity:
       qudt:unit: unit:Number
       qudt:numericValue: 1.5
+    triggeredBy: urn:uuid:0468e9b9-4d54-4eee-9d3f-bc76db11710a

@@ -35,7 +35,7 @@
     resourceClassifiedAs: wd:Q4917 # US Dollar
     provider: https://alice.example
     receiver: https://bob.example
-    quantifiedAs:
+    flowQuantity:
       qudt:unit: unit:Number
       qudt:numericValue: 100
     hasPointInTime: 2019-04-18T8:30:20-5:00
@@ -45,7 +45,7 @@
   - '@id': alice:b75d8f6a-e2df-4e52-b36d-1a22a66f4ead
     '@type': EconomicResource
     skos:note: Alice's cash 
-    classifiedAs: wd:Q4917 # US DollarS
+    classifiedAs: wd:Q4917 # US Dollar
     currentQuantity:
       qudt:unit: unit:Number
       qudt:numericValue: 100

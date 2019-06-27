@@ -6,24 +6,27 @@
 '@id': rgh:valueflows/valueflows/master/examples/checkout-book.yaml
 '@graph':
 
-  # resource before 
+  # resource before
 
   - '@id': library:2402b57c-1c45-423a-acb2-f50961c97d65
     '@type': EconomicResource
-    skos:note: Valueflows cookbook ISBN:1234
+    skos:note: Valueflows cookbook ISBN:1234 copy 2
     currentQuantity:
       qudt:unit: unit:Number
       qudt:numericValue: 1
+    currentOwnedQuantity:
+      qudt:unit: unit:Number
+      qudt:numericValue: 1
 
-  # one check out (experiment with checkout and return flows being part of the same process)
+  # check out
 
   - '@id': library:f47064eb-7120-4b31-b882-770165901fe6
-    '@type': Process
+    '@type': Agreement
     skos:note: loaning Valueflows cookbook to Bob
 
-  - '@id': library:54b814ee-62dc-40c1-bb96-f8582aa4f771
+  - '@id': urn:uuid:54b814ee-62dc-40c1-bb96-f8582aa4f771
     '@type': EconomicEvent
-    inputOf: library:f47064eb-7120-4b31-b882-770165901fe6
+    realizationOf: library:f47064eb-7120-4b31-b882-770165901fe6
     action: transfer
     transferOf:
     - possession
@@ -36,15 +39,66 @@
       qudt:unit: unit:Number
       qudt:numericValue: 1
 
-  - '@id': bob:98c2bfeb-9c70-4801-896c-4646b975a7d9
+  - '@id': urn:uuid:98c2bfeb-9c70-4801-896c-4646b975a7d9
     '@type': Commitment
-    outputOf: library:f47064eb-7120-4b31-b882-770165901fe6
+    clauseOf: library:f47064eb-7120-4b31-b882-770165901fe6
     action: transfer
     transferOf:
     - possession
     - right-to-use
     resourceInventoriedAs: library:2402b57c-1c45-423a-acb2-f50961c97d65
+    provider: https://bob.example/
+    receiver: https://library.example/
     flowQuantity:
       qudt:unit: unit:Number
       qudt:numericValue: 1
-    time:before:  2019-05-17T18:00:00-5:00
+    time:before: 2019-05-17T18:00:00-5:00
+
+  # resource after check out
+
+  - '@id': library:2402b57c-1c45-423a-acb2-f50961c97d65
+    '@type': EconomicResource
+    skos:note: Valueflows cookbook ISBN:1234 copy 2
+    currentQuantity:
+      qudt:unit: unit:Number
+      qudt:numericValue: 0
+    currentOwnedQuantity:
+      qudt:unit: unit:Number
+      qudt:numericValue: 1
+
+  # return
+
+  - '@id': urn:uuid:d4d2fd71-34f2-41c3-b1c5-19ad5ed2da59
+    '@type': EconomicEvent
+    realizationOf: library:f47064eb-7120-4b31-b882-770165901fe6
+    action: transfer
+    transferOf:
+    - possession
+    - right-to-use
+    resourceInventoriedAs: library:2402b57c-1c45-423a-acb2-f50961c97d65
+    provider: https://bob.example/
+    receiver: https://library.example/
+    flowQuantity:
+      qudt:unit: unit:Number
+      qudt:numericValue: 1
+    time:inXSDDateTimeStamp: 2019-05-14T10:20:00-5:00
+
+  - '@id': urn:uuid:6f438393-7f87-4914-806c-e23a4fd15e89
+    '@type': Fulfillment
+    fulfills: urn:uuid:98c2bfeb-9c70-4801-896c-4646b975a7d9 # the commitment
+    fulfilledBy: urn:uuid:d4d2fd71-34f2-41c3-b1c5-19ad5ed2da59 # the economic event
+    fulfilledQuantity:
+      qudt:unit: unit:Number
+      qudt:numericValue: 1
+
+  # resource after return
+
+  - '@id': library:2402b57c-1c45-423a-acb2-f50961c97d65
+    '@type': EconomicResource
+    skos:note: Valueflows cookbook ISBN:1234 copy 2
+    currentQuantity:
+      qudt:unit: unit:Number
+      qudt:numericValue: 1
+    currentOwnedQuantity:
+      qudt:unit: unit:Number
+      qudt:numericValue: 1

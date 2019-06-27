@@ -1,0 +1,121 @@
+# Transfer of crypto-currency, ignoring the fee, but to record time involved in the transfer validation process
+
+'@context':
+  - https://git.io/vf-examples-jsonld-context
+  - bob: https://bob.example/
+    alice: https://alice.example/
+    fair: https://faircoin.example/
+
+'@id': rgh:valueflows/valueflows/master/examples/transfer-crypto.yaml
+'@graph':
+
+  # accounts before
+
+  - '@id': fair:b75d8f6a-e2df-4e52-b36d-1a22a66f4ead
+    '@type': EconomicResource
+    skos:note: Alice's wallet address
+    classifiedAs: wd:Q21002847 # FairCoin
+    currentQuantity:
+      qudt:unit: unit:Number
+      qudt:numericValue: 540
+
+  - '@id': fair:3be5259d-10f0-431c-9fec-9c0c15a461d3
+    '@type': EconomicResource
+    skos:note: Bob's wallet address 
+    classifiedAs: wd:Q21002847 # FairCoin
+    currentQuantity:
+      qudt:unit: unit:Number
+      qudt:numericValue: 480
+
+  # transfer sequence
+
+  - '@id': urn:uuid:dbc325de-5446-4789-869d-7b0353b05136
+    '@type': Commitment
+    action: transfer
+    transferOf:
+    - ownership
+    resourceClassifiedAs: wd:Q21002847 # FairCoin
+    resourceInventoriedAs: fair:b75d8f6a-e2df-4e52-b36d-1a22a66f4ead # Alice's wallet address
+    toResourceInventoriedAs: fair:3be5259d-10f0-431c-9fec-9c0c15a461d3 # Bob's wallet address
+    provider: https://alice.example
+    receiver: https://bob.example
+    flowQuantity:
+      qudt:unit: unit:Number
+      qudt:numericValue: 100
+    time:inXSDDateTimeStamp: 2019-04-18T8:30:00-5:00
+
+  - '@id': fair:633f6e56-6c7d-4a5b-b9c9-1a8adafd8960
+    '@type': Process
+    skos:note: FairCoin process to make a transfer
+
+  - '@id': urn:uuid:0468e9b9-4d54-4eee-9d3f-bc76db11710a
+    '@type': EconomicEvent
+    action: transfer
+    transferOf:
+    - possession
+    inputOf: fair:633f6e56-6c7d-4a5b-b9c9-1a8adafd8960
+    resourceClassifiedAs: wd:Q21002847 # FairCoin
+    resourceInventoriedAs: fair:b75d8f6a-e2df-4e52-b36d-1a22a66f4ead # Alice's wallet address
+    provider: https://alice.example
+    receiver: https://faircoin.example
+    flowQuantity:
+      qudt:unit: unit:Number
+      qudt:numericValue: 100
+    time:inXSDDateTimeStamp: 2019-04-18T8:30:02-5:00
+
+  - '@id': urn:uuid:9259a983-2d8b-40bc-8fb6-883818eb1264
+    '@type': EconomicEvent
+    action: transfer
+    transferOf:
+    - possession
+    outputOf: fair:633f6e56-6c7d-4a5b-b9c9-1a8adafd8960
+    resourceClassifiedAs: wd:Q21002847 # FairCoin
+    resourceInventoriedAs: fair:3be5259d-10f0-431c-9fec-9c0c15a461d3 # Bob's wallet address
+    provider: https://faircoin.example
+    receiver: https://bob.example
+    flowQuantity:
+      qudt:unit: unit:Number
+      qudt:numericValue: 100
+    time:inXSDDateTimeStamp: 2019-04-18T8:30:08-5:00
+
+  - '@id': urn:uuid:e5afaa28-1080-4912-835b-46883efb83e6
+    '@type': EconomicEvent
+    action: transfer
+    transferOf:
+    - ownership
+    resourceClassifiedAs: wd:Q21002847 # FairCoin
+    resourceInventoriedAs: fair:b75d8f6a-e2df-4e52-b36d-1a22a66f4ead # Alice's wallet address
+    toResourceInventoriedAs: fair:3be5259d-10f0-431c-9fec-9c0c15a461d3 # Bob's wallet address
+    provider: https://alice.example
+    receiver: https://bob.example
+    flowQuantity:
+      qudt:unit: unit:Number
+      qudt:numericValue: 100
+    time:inXSDDateTimeStamp: 2019-04-18T8:30:08-5:00
+    triggeredBy: urn:uuid:9259a983-2d8b-40bc-8fb6-883818eb1264
+
+  - '@id': urn:uuid:6f438393-7f87-4914-806c-e23a4fd15e89
+    '@type': Fulfillment
+    fulfills: urn:uuid:dbc325de-5446-4789-869d-7b0353b05136 # the commitment
+    fulfilledBy: urn:uuid:e5afaa28-1080-4912-835b-46883efb83e6 # the economic event
+    fulfilledQuantity:
+      qudt:unit: unit:Number
+      qudt:numericValue: 100
+
+  # accounts after
+
+  - '@id': fair:b75d8f6a-e2df-4e52-b36d-1a22a66f4ead
+    '@type': EconomicResource
+    skos:note: Alice's wallet address 
+    classifiedAs: wd:Q21002847 # FairCoin
+    currentQuantity:
+      qudt:unit: unit:Number
+      qudt:numericValue: 440
+
+  - '@id': fair:3be5259d-10f0-431c-9fec-9c0c15a461d3
+    '@type': EconomicResource
+    skos:note: Bob's wallet address 
+    classifiedAs: wd:Q21002847 # FairCoin
+    currentQuantity:
+      qudt:unit: unit:Number
+      qudt:numericValue: 580
