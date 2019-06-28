@@ -56,8 +56,8 @@ All flows use an action property to designate what the flow is doing and how it 
 * vf:unload -  transported resource leaves the process, the same resource will appear in input with *vf:load* verb
 * vf:accept - in processes like repair or maintentance, the same resource will appear in output with *vf:improve* verb
 * vf:improve - in processes like repair or maintentance, the same resource will appear in input with *vf:accept* verb
-* vf:give - give rights and responsibilities for the resource
-* vf:receive - receive rights and responsibilites for the resource
+* vf:transfer - give rights and/or possession of a resource from one agent to another
+* vf:move - change location and/or identity of a resource with no change of agent
 * vf:raise - adjusts a quantity up based on a beginning balance or inventory count
 * vf:lower - adjusts a quantity down based on a beginning balance or inventory count
 
@@ -72,10 +72,8 @@ load | No effect  | Input | No | N/A | Yes | unload |
 unload | No effect  | Output | No | N/A | Yes | load |
 accept | No effect  | Input | No | N/A | Yes | improve |
 improve | No effect  | Output | No | N/A | Yes | accept |
-give | Decrement | Input | No | Yes | N/A | take |
-take | Increment | Output | No | Yes | N/A | give |
-issue | Decrement | Input | No | No | No | receive |
-receive | Increment | Output | No | No | No | issue |
+transfer | N/A | N/A | No | N/A | N/A | N/A |
+move | N/A | N/A | No | N/A | N/A | N/A |
 raise | Increment | N/A | No | No | No | N/A |
 lower | Decrement | N/A | No | No | No | N/A |
 

@@ -25,6 +25,12 @@ vf:Action  a                 owl:Class ;
         vs:term_status       "unstable" ;
         rdfs:comment         "An action verb defining the kind of event, commitment, or intent." .
 
+vf:TransferOf  a             owl:Class ;
+        rdfs:label           "vf:TransferOf" ;
+        rdfs:subClassOf      rdf:Property ;
+        vs:term_status       "unstable" ;
+        rdfs:comment         "Describes a right or possession that is transferred from one agent to another." .
+
 vf:AgentRelationshipRole  a  owl:Class ;
         rdfs:label           "vf:AgentRelationshipRole" ;
         rdfs:subClassOf      rdf:Property ;
@@ -49,12 +55,6 @@ vf:RecipeFlow a             owl:Class ;
         rdfs:label          "vf:RecipeFlow" ;
         vs:term_status      "unstable" ;
         rdfs:comment        "The linkage between a process recipe, an action that structures a recipe, and a resource specification." .
-
-vf:TransferOf a             owl:Class ;
-        rdfs:label          "vf:TransferOf" ;
-        rdfs:subClassOf     rdf:Property ;
-        vs:term_status      "unstable" ;
-        rdfs:comment        "Describes what is being transfered in this flow: ownership, possession, stewardship, right to use." .
 
 # PLAN CLASSES
 
@@ -181,6 +181,22 @@ vf:resourceInventoriedAs
         vs:term_status      "unstable" ;
         rdfs:comment        "Economic resource involved in the flow." .
 
+vf:toResourceInventoriedAs
+        a                   owl:ObjectProperty ;
+        rdfs:label          "to resource inventoried as" ;
+        rdfs:domain         vf:EconomicEvent ; 
+        rdfs:range          vf:EconomicResource ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "Additional economic resource on the economic event when needed for receipt." .
+
+vf:transferOf
+        a                   owl:ObjectProperty ;
+        rdfs:label          "transfer of" ;
+        rdfs:domain         [ owl:unionOf (vf:Commitment vf:Intent vf:EconomicEvent) ] ; 
+        rdfs:range          vf:EconomicResource ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "The rights to or possession of the economic resource being transferred." .
+
 vf:underlyingResource
         a                   owl:ObjectProperty ;
         rdfs:label          "underlying resource" ;
@@ -256,10 +272,10 @@ vf:under  a                 owl:ObjectProperty ;
 
 vf:triggeredBy  a           owl:ObjectProperty ;
         rdfs:label          "triggered by" ;
-        rdfs:domain         vf:Claim ;
+        rdfs:domain         [ owl:unionOf (vf:EconomicEvent vf:Claim ] ;
         rdfs:range          vf:EconomicEvent ;
         vs:term_status      "unstable" ;
-        rdfs:comment        "References an economic event that implied the claim, often based on a prior agreement." .
+        rdfs:comment        "References an economic event that implied the claim or event, often based on a prior agreement." .
 
 vf:settles  a               owl:ObjectProperty ;
         rdfs:label          "settles" ;
@@ -630,15 +646,13 @@ vf:improve  a                vf:Action ;
         vs:term_status      "unstable" ;
         rdfs:label          "improve" .
 
-vf:give  a                  vf:Action ;
-        rdfs:label          "give" ;
-        vs:term_status      "unstable" ;
-        rdfs:subPropertyOf  vf:decrement .
+vf:transfer  a              vf:Action ;
+        rdfs:label          "transfer" ;
+        vs:term_status      "unstable" .
 
-vf:receive  a                vf:Action ;
-        rdfs:label          "receive" ;
-        vs:term_status      "unstable" ;
-        rdfs:subPropertyOf  vf:increment .
+vf:move  a                  vf:Action ;
+        rdfs:label          "move" ;
+        vs:term_status      "unstable" .
 
 vf:raise  a                 vf:Action ;
         rdfs:label          "raise" ;
