@@ -251,7 +251,7 @@ vf:under  a                 owl:ObjectProperty ;
 
 vf:triggeredBy  a           owl:ObjectProperty ;
         rdfs:label          "triggered by" ;
-        rdfs:domain         [ owl:unionOf (vf:EconomicEvent vf:Claim ] ;
+        rdfs:domain         [ owl:unionOf (vf:EconomicEvent vf:Claim) ] ;
         rdfs:range          vf:EconomicEvent ;
         vs:term_status      "unstable" ;
         rdfs:comment        "References an economic event that implied the claim or event, often based on a prior agreement." .
