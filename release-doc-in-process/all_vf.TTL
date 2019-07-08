@@ -519,6 +519,14 @@ vf:processClassifiedAs
         vs:term_status      "unstable" ;
         rdfs:comment        "References a concept in a common taxonomy or other classification scheme for purposes of categorization." .
 
+vf:processConformsTo
+        a                   owl:ObjectProperty ;
+        rdfs:label          "process conforms to" ;
+        rdfs:domain         vf:RecipeProcess ;
+        rdfs:range          vf:ProcessSpecification ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "The standard specification or definition of a process."
+
 vf:resourceConformsTo
         a                   owl:ObjectProperty ;
         rdfs:label          "resource conforms to" ;
