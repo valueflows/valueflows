@@ -525,7 +525,7 @@ vf:processConformsTo
         rdfs:domain         vf:RecipeProcess ;
         rdfs:range          vf:ProcessSpecification ;
         vs:term_status      "unstable" ;
-        rdfs:comment        "The standard specification or definition of a process."
+        rdfs:comment        "The standard specification or definition of a process." .
 
 vf:resourceConformsTo
         a                   owl:ObjectProperty ;
