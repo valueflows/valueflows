@@ -23,6 +23,7 @@
 * [Transfers](introduction/transfers.md)
 * [Exchanges](introduction/exchanges.md)
 * [Proposals](introduction/proposals.md)
+* [Planning](introduction/plans.md)
 * [Scoping](introduction/scoping.md)
 * [Classification](introduction/classification.md)
 * [Recipes](introduction/recipes.md)
