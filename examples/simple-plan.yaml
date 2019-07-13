@@ -28,7 +28,7 @@
     provider: https://printer.example/
     receiver: https://printer.example/
     resourceInventoriedAs: printer:6b97b1be-8e07-44ac-82e5-214f1b2aaf33 # specific brochures
-    quantifiedAs:
+    flowQuantity:
       qudt:unit: unit:Number
       qudt:numericValue: 1000
 
@@ -39,7 +39,7 @@
     provider: https://printer.example/
     receiver: https://printer.example/
     resourceInventoriedAs: printer:3129ca8b-fcda-45be-bbda-294dc924d3b9 # paper
-    quantifiedAs:
+    flowQuantity:
       qudt:unit: unit:Number
       qudt:numericValue: 1020
 
@@ -57,7 +57,7 @@
     provider: https://printer.example/
     receiver: https://printer.example/
     resourceInventoriedAs: printer:6078f30a-b15b-4b1c-8e77-797abae11378 # specific posters
-    quantifiedAs:
+    flowQuantity:
       qudt:unit: unit:Number
       qudt:numericValue: 35
 
@@ -68,7 +68,7 @@
     provider: https://printer.example/
     receiver: https://printer.example/
     resourceInventoriedAs: printer:e56fd654-7b94-4d96-8e60-de39e08329a7 # paper
-    quantifiedAs:
+    flowQuantity:
       qudt:unit: unit:Number
       qudt:numericValue: 35
 
@@ -79,7 +79,7 @@
     provider: https://printer.example/
     receiver: https://printer.example/
     resourceInventoriedAs: printer:e4783bef-9006-490c-9c03-389272c7444d # printing plate for the specific posters
-    quantifiedAs:
+    flowQuantity:
       qudt:unit: unit:Hour
       qudt:numericValue: 1.5
 
@@ -95,7 +95,7 @@
     provider: https://printer.example/
     receiver: https://printer.example/
     resourceInventoriedAs: printer:e4783bef-9006-490c-9c03-389272c7444d # printing plate for the specific posters
-    quantifiedAs:
+    flowQuantity:
       qudt:unit: unit:Number
       qudt:numericValue: 1
 
@@ -106,6 +106,6 @@
     provider: https://printer.example/
     receiver: https://printer.example/
     resourceInventoriedAs: printer:86ad6e22-7640-4b93-972a-db7177ab2616 # blank printing plate
-    quantifiedAs:
+    flowQuantity:
       qudt:unit: unit:Number
       qudt:numericValue: 1
