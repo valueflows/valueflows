@@ -2,7 +2,7 @@
 
 An operational plan is a schedule of related operational processes, that constitute a body of scheduled work with defined deliverable(s).  A plan normally contains one or more process resource flows, one for each deliverable.
 
-Processes in a plan can be part of different scopes, if the different scopes are tightly coordinated with pre-agreed rules, for example sub-organizations of a main organization, or working together in an ongoing tightly coordinated supply chain that doesn't require new decisions.  If not, or if the agents prefer, then requirements from another scope should become deliverables for that scope's plan.  Different batch sizes could trigger a new plan for inputs to the main deliverable too.  But all of this does not affect the vocabulary or model.  Plans can relate to each other through resource flows just like Processes.
+A plan can cover more than one scope, if the different scopes are tightly coordinated with pre-agreed rules, for example sub-organizations of a main organization, or an ongoing supply chain.  If not, or if the agents prefer, then requirements from another scope should become deliverables for that scope's plan.  Different batch sizes could trigger a new plan for inputs to the main deliverable too.  But all of this does not affect the vocabulary or model.  Plans can relate to each other through resource flows just like Processes.
 
 Plans are used for understanding and coordinating what needs to happen for specific outputs. The size and complexity of a Plan is up to the people who are planning and coordinating the work.
 
