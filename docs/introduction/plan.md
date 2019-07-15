@@ -1,12 +1,12 @@
-# Plans
+# Operational Planning
 
-A plan is a logical collection of processes that constitute a body of planned work with defined deliverable(s).  A plan normally contains one or more process resource flows, one for each deliverable.
+An operational plan is a schedule of related operational processes, that constitute a body of scheduled work with defined deliverable(s).  A plan normally contains one or more process resource flows, one for each deliverable.
 
 Processes in a plan can be part of different scopes, if the different scopes are tightly coordinated with pre-agreed rules, for example sub-organizations of a main organization, or working together in an ongoing tightly coordinated supply chain that doesn't require new decisions.  If not, or if the agents prefer, then requirements from another scope should become deliverables for that scope's plan.  Different batch sizes could trigger a new plan for inputs to the main deliverable too.  But all of this does not affect the vocabulary or model.  Plans can relate to each other through resource flows just like Processes.
 
 Plans are used for understanding and coordinating what needs to happen for specific outputs. The size and complexity of a Plan is up to the people who are planning and coordinating the work.
 
-A Plan can be generated from a Recipe.
+A Plan can be generated from a Recipe, or created without one.
 
 Some examples:
 
@@ -14,4 +14,23 @@ Some examples:
 
 * An organization decides to mount a campaign for some objective.  There might be many different deliverables: a fundraising website, some brochures, some events, etc.  All of these can be part of the same plan for easier coordination.  For example, a campaign logo could be used in all of these separate outputs.
 
-* An organization gets an order for some things they produce.  They can create a plan to produce to that order, including all line items.  Or they can gather all the orders for a time period for that item and produce to that as a larger plan.  Or they can produce a standard batch size to stock, in anticipation of orders.
+* An organization gets an order for some things they produce.  They can create a plan to produce to that order, including all line items.  Or they can gather all the orders for a time period for an item and produce to that as a larger plan.
+
+* An organization produces a standard batch size to stock, in anticipation of future orders.
+
+### Processes nested in a Plan
+
+When processes are "nested", it is not random, nor based on a taxonomy. It is based on what processes are actually part of the plan. And not all the inputs and outputs of nested processes are considered inputs and outputs of the plan, since some are both produced and consumed within the plan.  In the following simplified example, the flows between plant/weed and weed/harvest are not flows input or output of the plan.
+
+![process nesting](https://rawgit.com/valueflows/valueflows/master/release-doc-in-process/nesting.png)
+
+* There are some common situations for nested processes that will not be as simple as the above diagram.  Thes include:
+    * Action makes a difference.  When a piece of equipment or tool is "used", it is not gone at the end of the nesting process.  But if it is managed as a time-based resource with a calandar, some calendar duration is in fact consumed.  Or if a citable resource is created and then cited inside, it is also still there at the end of the nesting process.
+    * Batch or lot size makes a difference.  If a deliverable is say 5 of some asssembled item, and 20 of some input component are needed to maek that item, but the minimum batch size that makes sense is 100 of them, then there will be 80 left in inventory at the end of the nesting process, also an output.
+
+
+### Planning from a Recipe
+
+Plans can be generated from a recipe.  This is called a "demand explosion".  The generation might take into account current inventories, batch sizes, etc., so it is not necessarily a "pure" reflection of the recipe.  In addition, often plans are tweaked after generation from a recipe, depending on how firm and exact the recipe is.  A manufacturing recipe might be more exact than a recipe for a more general business process.  For these reasons, a plans is decoupled from the recipe that generated it in the vocabulary.  It maintains only the references to the resource and process specifications that were supplied from the recipe.
+
+![recipe plan](https://rawgit.com/valueflows/valueflows/master/release-doc-in-process/plan-process-oper.png)

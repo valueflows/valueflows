@@ -200,6 +200,13 @@ vf:independentDemandOf
         rdfs:domain         vf:Commitment ;
         rdfs:comment        "Represents a desired deliverable to the outside of this plan." .
 
+vf:scheduled
+        a                   owl:ObjectProperty ;
+        rdfs:label         "scheduled" ;
+        rdfs:range          xsd:boolean ;
+        rdfs:domain         vf:Plan ;
+        rdfs:comment        "The plan is scheduled, or is a higher level estimated plan." .
+
 vf:resourceInventoriedAs
         a                   owl:ObjectProperty ;
         rdfs:label          "resource inventoried as" ;
