@@ -49,13 +49,18 @@ vf:RecipeFlow a             owl:Class ;
         vs:term_status      "unstable" ;
         rdfs:comment        "The linkage between a process recipe, an action that structures a recipe, and a resource specification." .
 
+vf:ScenarioDefinition a     owl:Class ;
+        rdfs:label          "vf:ScenarioDefinition" ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "The type definition of one or more scenarios." .
+
 
 # PLAN CLASSES
 
 vf:Plan  a                  owl:Class ;
         rdfs:label          "vf:Plan" ;
         vs:term_status      "unstable" ;
-        rdfs:comment        "A logical collection of processes that constitute a body of planned work with defined deliverable(s)." .
+        rdfs:comment        "A logical collection of processes that constitute a body of scheduled work with defined deliverable(s)." .
 
 vf:Intent  a                owl:Class ;
         rdfs:label          "vf:Intent" ;
@@ -88,6 +93,11 @@ vf:DistributionAgreement  a  owl:Class ;
         rdfs:subClassOf      vf:Agreement ;
         vs:term_status      "unstable" ;
         rdfs:comment         "An agreement to distribute some resource in exchange for inputs or outputs created by other agents." .
+
+vf:Scenario  a              owl:Class ;
+        rdfs:label          "vf:Scenario" ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "An estimated or analytical logical collection of higher level processes used for budgeting, analysis, plan refinement, etc." .
 
 # OBSERVATION CLASSES
 
@@ -544,6 +554,21 @@ vf:resourceConformsTo
         vs:term_status      "unstable" ;
         rdfs:comment        "The primary resource knowledge specification or definition of an existing or potential resource." .
 
+vf:refinementOf
+        a                   owl:ObjectProperty ;
+        rdfs:label          "refinement of" ;
+        rdfs:domain         vf:Scenario ;
+        rdfs:range          vf:Scenario ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "This scenario refines another scenario, often as time moves closer or for more detail." .
+
+vf:definedAs
+        a                   owl:ObjectProperty ;
+        rdfs:label          "defined as" ;
+        rdfs:domain         vf:Scenario ;
+        rdfs:range          vf:ScenarioDefinition ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "The scenario definition for this scenario, for example yearly budget." .
 
 
 # ################################ agent relationship verbs
