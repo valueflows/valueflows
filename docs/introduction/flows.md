@@ -62,25 +62,25 @@ All flows use an action property to designate what the flow is doing and how it 
 * vf:raise - adjusts a quantity up based on a beginning balance or inventory count
 * vf:lower - adjusts a quantity down based on a beginning balance or inventory count
 
-Action | Affect | I/O | Changes existence | Changes possession | Changes availability | Pairs with |
------- | ------ | --- | ----------------- | ------------------ | ---------------------| ---------- |
-produce | Increment  | Output | Yes | N/A | Yes | N/A |
-consume | Decrement  | Input | Yes | N/A | Yes | N/A |
-use | No effect  | Input | No | No | Yes | N/A |
-work | No effect  | Input | N/A | N/A | Yes | N/A |
-cite | No effect  | Input | No | No | No | N/A |
-load | No effect  | Input | No | N/A | Yes | unload |
-unload | No effect  | Output | No | N/A | Yes | load |
-accept | No effect  | Input | No | N/A | Yes | improve |
-improve | No effect  | Output | No | N/A | Yes | accept |
-transfer | N/A | N/A | No | N/A | N/A | N/A |
-move | N/A | N/A | No | N/A | N/A | N/A |
-raise | Increment | N/A | No | No | No | N/A |
-lower | Decrement | N/A | No | No | No | N/A |
+Action | Affect | I/O | Changes existence | Pairs with |
+------ | ------ | --- | ----------------- | ---------- |
+produce | Increment  | Output | Yes | N/A |
+consume | Decrement  | Input | Yes  | N/A |
+use | No effect(1)  | Input | No s | N/A |
+work | No effect(1)  | Input | N/A  | N/A |
+cite | No effect  | Input | No | N/A |
+load | No effect  | Input | No  | unload |
+unload | No effect  | Output | No  | load |
+accept | No effect  | Input | No  | improve |
+improve | No effect  | Output | No  | accept |
+transfer | Incr+Decr | N/A | No | N/A |
+move | Incr+Decr | N/A | No | N/A |
+raise | Increment | N/A | No | N/A |
+lower | Decrement | N/A | No | N/A |
 
 We have defined a core set of actions, but expect that this will be extended with others. If extended, they should be defined as part of this or another formal vocabulary so that all can use them and assume the same meaning. 
 
-Temporary note: The actions `use` and `work` are time-based actions, either with or without an explicit schedule.  How to handle time-based resources is still under discussion.
+(1) The actions `use` and `work` are time-based actions, either with or without an explicit schedule. If the schedule is documented as part of the economic resource, then those economic events could decrement that schedule, although not the "current quantity" of the resource.
 
 ## Examples
 
