@@ -65,7 +65,7 @@
     provider: https://bob.example/
     receiver: https://manufacturing.example/
     resourceClassifiedAs: https://www.wikidata.org/wiki/Q192047 # machining
-    affectedQuantity:
+    flowQuantity:
       qudt:unit: unit:Hour
       qudt:numericValue: 4
     hasBeginning: 2018-10-14T8:00:00-0:00
@@ -85,7 +85,7 @@
     provider: https://bob.example/
     receiver: https://manufacturing.example/
     resourceClassifiedAs: https://www.wikidata.org/wiki/Q192047 # machining
-    affectedQuantity:
+    flowQuantity:
       qudt:unit: unit:Hour
       qudt:numericValue: 4
     hasBeginning: 2018-10-14T13:00:00-0:00

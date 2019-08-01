@@ -32,7 +32,7 @@
     provider: https://alice.example/
     receiver: https://auto-repair.example/
     resourceInventoriedAs: alice:e1721a61-cd47-4556-84b9-8b1b81da15bf
-    affectedQuantity:
+    flowQuantity:
       qudt:unit: unit:Number
       qudt:numericValue: 1
 
@@ -43,7 +43,7 @@
     provider: https://auto-repair.example/
     receiver: https://alice.example/
     resourceInventoriedAs: alice:e1721a61-cd47-4556-84b9-8b1b81da15bf
-    affectedQuantity:
+    flowQuantity:
       qudt:unit: unit:Number
       qudt:numericValue: 1
 
