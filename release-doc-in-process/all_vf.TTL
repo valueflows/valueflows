@@ -493,7 +493,7 @@ vf:classifiedAs
         rdfs:domain         owl:Thing ;
         rdfs:range          owl:Thing ;
         vs:term_status      "unstable" ;
-        rdfs:comment        "References a concept in a common taxonomy or other classification scheme for purposes of categorization." .
+        rdfs:comment        "References a concept in a common taxonomy or other classification scheme for purposes of categorization or grouping." .
 
 vf:resourceClassifiedAs
         a                   owl:ObjectProperty ;
@@ -501,7 +501,7 @@ vf:resourceClassifiedAs
         rdfs:domain         [ owl:unionOf (vf:ResourceSpecification vf:Intent vf:Commitment vf:EconomicEvent vf:RecipeFlow vf:Claim) ] ;
         rdfs:range          owl:Thing ;
         vs:term_status      "unstable" ;
-        rdfs:comment        "References a concept in a common taxonomy or other classification scheme for purposes of categorization." .
+        rdfs:comment        "References a concept in a common taxonomy or other classification scheme for purposes of categorization or grouping." .
 
 vf:processClassifiedAs
         a                   owl:ObjectProperty ;
@@ -509,15 +509,15 @@ vf:processClassifiedAs
         rdfs:domain         vf:RecipeProcess ;
         rdfs:range          owl:Thing ;
         vs:term_status      "unstable" ;
-        rdfs:comment        "References a concept in a common taxonomy or other classification scheme for purposes of categorization." .
+        rdfs:comment        "References a concept in a common taxonomy or other classification scheme for purposes of categorization or grouping." .
 
 vf:resourceConformsTo
         a                   owl:ObjectProperty ;
         rdfs:label          "resource conforms to" ;
         rdfs:domain         [ owl:unionOf (vf:Commitment vf:EconomicResource vf:Intent vf:RecipeFlow vf:EconomicEvent vf:Claim ) ] ;
-        rdfs:range          vf:ResourceSpecification ;
+        rdfs:range          [ owl:unionOf (vf:ResourceSpecification owl:Thing) ] ;
         vs:term_status      "unstable" ;
-        rdfs:comment        "The primary resource knowledge specification or definition of an existing or potential resource." .
+        rdfs:comment        "The primary resource specification or definition of an existing or potential economic resource. A resource will have only one, as this specifies exactly what the resource is. If not a vf:ResourceSpecification, this can be a link to another specification." .
 
 vf:clauseOf a               owl:ObjectProperty ;
         rdfs:label          "clause of" ;
