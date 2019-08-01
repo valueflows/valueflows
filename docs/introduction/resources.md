@@ -10,27 +10,30 @@ And we want knowledge to be freely available.
 
 Also, we prefer to think of use value, but economic resources also often have exchange value.
 
-#### The difference between a resource and its specification or classification
+#### The difference between a resource and its specification/classification(s)
 
-An economic resource is observable.  Its specification or classification defines what type of thing the economic resource is.
+An economic resource is observable.  Its specification or classification defines what kind of thing the economic resource is.
 
-So, for example, most things offered for sale on an e-commerce site are specifications, which can be searched using classifications.
-The one in a box delivered to your door is a resource.
+So, for example, most things offered for sale on an e-commerce site are specifications, which can be searched using classifications. The one in a box delivered to your door is a resource.
 
 Or the description of the book entitled "The Power of Babel: A Natural History of Language", ISBN ISBN-13: 978-0060520854,
 is a specification. Your library may have two copies that you can check out. Those are resources.
 
-Resource classifications are a Taxonomy. That means they can be defined very broadly and generally and maybe vaguely, or they can be defined very narrowly, but fit into broader classifications. 
+#### The difference between a resource specification and a resource classification
+
+An economic resource or a flow can have only *resource specification*, defined by `resourceConformsTo`.  This defines the lowest level useful type or kind of the resource that is needed. It can be defined within the ValueFlows vocabulary as a ResourceSpecification, or can refer to a specification elsewhere using a uri.  Note that often taxonomies and other references on the web can define very specific resource specifications.
+
+An economic resource or a flow can have any number of *resource classifications*.  They are used to filter, match, or group economic resources.  Resource classifications can be part of a taxonomy. That means they can be defined very broadly and generally and maybe vaguely, or they can be defined very narrowly, but fit into broader classifications. 
 
 So, for example, you may want an apple. Or you may want a green apple. Or you may want a Granny Smith apple.
 
 Or, Herb is the parent classification of Anise Hyssop, Goldenrod, Nettles, Red Clover, etc.  Besides its usefulness in understanding taxonomies of resource types, this can be useful when one can define a general recipe that will work for many more specific kinds of resources.
 
-People can use the multitude of existing taxonomies for resource classifications, or can also create their own as needed.  The references to resource classifications are uri's, and not covered inside ValueFlows.
+People can use the multitude of existing taxonomies for resource classifications, or can also create their own as needed. 
 
-The ResourceSpecification is part of ValueFlows, and part of the recipe structure. 
-It is used when you need to have more definition and configurability than you can 
-find in a simple taxonomy, whether there is a recipe or not.
+Resource classifications can also use other schemes, like facets or tags.
+
+The references to resource classifications are uri's, and not covered inside ValueFlows.
 
 #### Identification and Behaviors of Resources
 
