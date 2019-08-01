@@ -375,9 +375,9 @@ vf:image a                  owl:DatatypeProperty ;
         vs:term_status      "unstable" ;
         rdfs:label          "image" .
 
-vf:url a                    owl:DatatypeProperty ;
+vf:uri a                    owl:DatatypeProperty ;
         vs:term_status      "unstable" ;
-        rdfs:label          "url" .
+        rdfs:label          "uri" .
 
 vf:name a                   owl:DatatypeProperty ;
         rdfs:label          "name" ;
