@@ -97,11 +97,6 @@ vf:Process  a               owl:Class ;
         vs:term_status      "testing" ;
         rdfs:comment        "An activity that changes inputs into outputs.  It could transform or transport economic resource(s)." .
 
-vf:Transfer  a              owl:Class ;
-        rdfs:label          "vf:Transfer" ;
-        vs:term_status      "unstable" ;
-        rdfs:comment        "An activity that assigns the rights and responsibilities for an economic resource from one agent to another." .
-
 vf:EconomicEvent  a         owl:Class ;
         rdfs:label          "vf:EconomicEvent" ;
         vs:term_status      "testing" ;
@@ -184,6 +179,14 @@ vf:resourceInventoriedAs
         vs:term_status      "unstable" ;
         rdfs:comment        "Economic resource involved in the flow." .
 
+vf:toResourceInventoriedAs
+        a                   owl:ObjectProperty ;
+        rdfs:label          "to resource inventoried as" ;
+        rdfs:domain         vf:EconomicEvent ; 
+        rdfs:range          vf:EconomicResource ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "Additional economic resource on the economic event when needed for receipt. Used when a transfer or move, or sometimes other actions, requires explicitly identifying an economic resource on the receiving side." .
+
 vf:underlyingResource
         a                   owl:ObjectProperty ;
         rdfs:label          "underlying resource" ;
@@ -259,10 +262,10 @@ vf:under  a                 owl:ObjectProperty ;
 
 vf:triggeredBy  a           owl:ObjectProperty ;
         rdfs:label          "triggered by" ;
-        rdfs:domain         vf:Claim ;
+        rdfs:domain         [ owl:unionOf (vf:EconomicEvent vf:Claim) ] ;
         rdfs:range          vf:EconomicEvent ;
         vs:term_status      "unstable" ;
-        rdfs:comment        "References an economic event that implied the claim, often based on a prior agreement." .
+        rdfs:comment        "References an economic event that implied the claim or event, often based on a prior agreement." .
 
 vf:settles  a               owl:ObjectProperty ;
         rdfs:label          "settles" ;
@@ -652,3 +655,11 @@ vf:raise  a                 vf:Action ;
 vf:lower  a                 vf:Action ;
         rdfs:label          "lower" ;
         rdfs:subPropertyOf  vf:decrement .
+
+vf:transfer  a              vf:Action ;
+        rdfs:label          "transfer" ;
+        vs:term_status      "unstable" .
+
+vf:move  a                  vf:Action ;
+        rdfs:label          "move" ;
+        vs:term_status      "unstable" .

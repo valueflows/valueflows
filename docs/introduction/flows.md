@@ -57,31 +57,30 @@ All flows use an action property to designate what the flow is doing and how it 
 * vf:accept - in processes like repair or maintentance, the same resource will appear in output with *vf:modify* verb
 * vf:modify - in processes like repair or maintentance, the same resource will appear in input with *vf:accept* verb
 * vf:service - new service produced and delivered (being a service implies that an agent actively receives the service
-* vf:give - give rights and responsibilities for the resource
-* vf:receive - receive rights and responsibilites for the resource
+* vf:transfer - give rights and/or possession of a resource from one agent to another
+* vf:move - change location and/or identity of a resource with no change of agent
 * vf:raise - adjusts a quantity up based on a beginning balance or inventory count
 * vf:lower - adjusts a quantity down based on a beginning balance or inventory count
 
 Action | Affect | I/O | Changes existence | Pairs with |
 ------ | ------ | --- | ----------------- | ---------- |
 produce | Increment  | Output | Yes | N/A |
-consume | Decrement  | Input | Yes | N/A |
-use | No effect  | Input | No |N/A |
-work | No effect  | Input | N/A | N/A |
+consume | Decrement  | Input | Yes  | N/A |
+use | No effect(1)  | Input | No s | N/A |
+work | No effect(1)  | Input | N/A  | N/A |
 cite | No effect  | Input | No | N/A |
-load | Decrement  | Input | No | unload |
-unload | Increment  | Output | No | load |
-accept | No effect  | Input | No | modify |
-modify | No effect  | Output | No | accept |
-service | No effect | either | Yes | N/A |
-give | Decrement | Input | No | receive |
-receive | Increment | Output | No | give |
-raise | Increment | N/A | N/A | N/A |
-lower | Decrement | N/A | N/A | N/A |
+load | No effect  | Input | No  | unload |
+unload | No effect  | Output | No  | load |
+accept | No effect  | Input | No  | improve |
+improve | No effect  | Output | No  | accept |
+transfer | Incr+Decr | N/A | No | N/A |
+move | Incr+Decr | N/A | No | N/A |
+raise | Increment | N/A | No | N/A |
+lower | Decrement | N/A | No | N/A |
 
 We have defined a core set of actions, but expect that this will be extended with others. If extended, they should be defined as part of this or another formal vocabulary so that all can use them and assume the same meaning. 
 
-Temporary note: The actions `use` and `work` are time-based actions, either with or without an explicit schedule.  How to handle time-based resources is still under discussion.
+(1) The actions `use` and `work` are time-based actions, either with or without an explicit schedule. If the schedule is documented as part of the economic resource, then those economic events could decrement that schedule, although not the "current quantity" of the resource.
 
 ## Examples
 
