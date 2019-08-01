@@ -10,7 +10,7 @@ A Plan can be generated from a Recipe, or created without one.
 
 Some examples:
 
-* A communications group publishes posts for the larger group.  The communications group needs some of their posts translated into various languages.
+* A communications group creates articles for a larger group. The communications group needs some of their articles to be translated into various languages, by another group within the larger group. Both the creation of an article and its translation could be part of the same plan.
 
 * An organization decides to mount a campaign for some objective.  There might be many different deliverables: a fundraising website, some brochures, some events, etc.  All of these can be part of the same plan for easier coordination.  For example, a campaign logo could be used in all of these separate outputs.
 
@@ -25,12 +25,12 @@ When processes are "nested", it is not random, nor based on a taxonomy. It is ba
 ![process nesting](https://rawgit.com/valueflows/valueflows/master/release-doc-in-process/nesting.png)
 
 * There are some common situations for nested processes that will not be as simple as the above diagram.  Thes include:
-    * Action makes a difference.  When a piece of equipment or tool is "used", it is not gone at the end of the nesting process.  But if it is managed as a time-based resource with a calandar, some calendar duration is in fact consumed.  Or if a citable resource is created and then cited inside, it is also still there at the end of the nesting process.
-    * Batch or lot size makes a difference.  If a deliverable is say 5 of some asssembled item, and 20 of some input component are needed to maek that item, but the minimum batch size that makes sense is 100 of them, then there will be 80 left in inventory at the end of the nesting process, also an output.
+    * Action makes a difference.  When a piece of equipment or tool is "used", it is not gone at the end of the nesting process.  But if it is managed as a time-based resource with a calendar, some calendar duration is in fact consumed.  Or if a citable resource is created and then cited inside, it is also still there at the end of the nesting process.
+    * Batch or lot size makes a difference. Suppose you have a requirement for 5 of some assembled item, and 4 of some input component are needed to make each item, 20 components in all. But the minimum batch size for the component is 100. Then 80 of the components will be left in inventory at the end of the nesting process, and that 80 will also an output of the outer process.
 
 
 ### Planning from a Recipe
 
-Plans can be generated from a recipe.  This is called a "demand explosion".  The generation might take into account current inventories, batch sizes, etc., so it is not necessarily a "pure" reflection of the recipe.  In addition, often plans are tweaked after generation from a recipe, depending on how firm and exact the recipe is.  A manufacturing recipe might be more exact than a recipe for a more general business process.  For these reasons, a plans is decoupled from the recipe that generated it in the vocabulary.  It maintains only the references to the resource and process specifications that were supplied from the recipe.
+Plans can be generated from a recipe by scaling the recipe according to the demanded quantity of the end outputs.  This is called a "demand explosion".  The generation might take into account current inventories, batch sizes, etc., so it is not necessarily a "pure" reflection of the recipe.  In addition, often plans are tweaked after generation from a recipe, depending on how firm and exact the recipe is.  A manufacturing recipe might be more exact than a recipe for a more general business process.  For these reasons, a plans is decoupled from the recipe that generated it in the vocabulary.  It maintains only the references to the resource and process specifications that were supplied from the recipe.
 
 ![recipe plan](https://rawgit.com/valueflows/valueflows/master/release-doc-in-process/plan-process-oper.png)
