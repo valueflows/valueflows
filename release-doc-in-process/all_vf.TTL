@@ -304,26 +304,12 @@ vf:currentQuantity a        owl:ObjectProperty ;
         vs:term_status      "unstable" ;
         rdfs:comment        "The current amount and unit of the economic resource. This can be stored or derived from economic events affecting the resource" .
 
-vf:affectedQuantity a       owl:ObjectProperty ;
-        rdfs:label          "affected quantity" ;
-        rdfs:domain         vf:EconomicEvent ;
+vf:flowQuantity a           owl:ObjectProperty ;
+        rdfs:label          "flow quantity" ;
+        rdfs:domain         [ owl:unionOf (vf:EconomicEvent vf:Commitment vf:Intent) ] ;
         rdfs:range          qudt:QuantityValue ;
         vs:term_status      "unstable" ;
-        rdfs:comment        "The amount and unit of the event. This is the quantity that could be used to increment or decrement a resource, depending on the type of resource and type of event." .
-
-vf:committedQuantity a      owl:ObjectProperty ;
-        rdfs:label          "committed quantity" ;
-        rdfs:domain         vf:Commitment ;
-        rdfs:range          qudt:QuantityValue ;
-        vs:term_status      "unstable" ;
-        rdfs:comment        "The amount and unit of the commitment." .
-
-vf:intendedQuantity a       owl:ObjectProperty ;
-        rdfs:label          "intended quantity" ;
-        rdfs:domain         vf:Intent ;
-        rdfs:range          qudt:QuantityValue ;
-        vs:term_status      "unstable" ;
-        rdfs:comment        "The amount and unit of the intent." .
+        rdfs:comment        "The amount and unit of the economic event, commitment, or intent." .
 
 vf:fulfilledQuantity a      owl:ObjectProperty ;
         rdfs:label          "fulfilled quantity" ;

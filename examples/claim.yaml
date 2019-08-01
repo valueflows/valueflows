@@ -16,7 +16,7 @@
     provider: https://bob.example/
     receiver: https://manufacturing.example/
     resourceClassifiedAs: https://www.wikidata.org/wiki/Q192047 # machining
-    quantifiedAs:
+    flowQuantity:
       qudt:unit: unit:Hour
       qudt:numericValue: 7
     hasBeginning: 2018-10-14T8:00:00-0:00
@@ -30,7 +30,7 @@
     provider: https://manufacturing.example/
     receiver: https://bob.example/
     resourceClassifiedAs: https://www.wikidata.org/wiki/Q1104069 # Canadian dollar
-    quantifiedAs:
+    claimedQuantity:
       qudt:unit: unit:Number
       qudt:numericValue: 140
     dcterms:created: 2018-10-14T15:30:00-0:00
@@ -45,7 +45,7 @@
     provider: https://bob.example/
     receiver: https://manufacturing.example/
     resourceClassifiedAs: https://www.wikidata.org/wiki/Q1104069 # Canadian dollar
-    quantifiedAs:
+    flowQuantity:
       qudt:unit: unit:Number
       qudt:numericValue: 260 # here Bob received income for more than one work event (others not included in the example)
     time:inXSDDateTimeStamp: 2018-10-25T09:30:00-0:00

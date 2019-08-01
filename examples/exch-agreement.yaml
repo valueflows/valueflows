@@ -23,7 +23,7 @@
     provider: https://alice.example/
     receiver: https://bob.example/
     resourceClassifiedAs: https://www.wikidata.org/wiki/Q89 # apples
-    quantifiedAs:
+    flowQuantity:
       qudt:unit: unit: Kilogram
       qudt:numericValue: 50
 
@@ -34,7 +34,7 @@
     provider: https://bob.example/
     receiver: https://alice.example/
     resourceClassifiedAs: https://www.wikidata.org/wiki/Q5977438 # soft apple cider
-    quantifiedAs:
+    flowQuantity:
       qudt:unit: unit: Liter
       qudt:numericValue: 10
 
@@ -51,7 +51,7 @@
     provider: https://store.example/
     receiver: https://carol.example/
     resourceClassifiedAs: https://www.wikidata.org/wiki/Q47107 # bucket
-    quantifiedAs:
+    flowQuantity:
       qudt:unit: unit: Number
       qudt:numericValue: 1
 
@@ -63,6 +63,6 @@
     receiver: https://store.example/
     resourceClassifiedAs: https://www.wikidata.org/wiki/Q4917 # US dollar
     resourceInventoriedAs: carol:e56fd654-7b94-4d96-8e60-de39e08329a7 # Carol's bank account
-    quantifiedAs:
+    flowQuantity:
       qudt:unit: unit: Number
       qudt:numericValue: 5

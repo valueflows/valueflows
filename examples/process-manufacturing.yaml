@@ -53,7 +53,7 @@
     provider: https://manufacturing.example/
     receiver: https://manufacturing.example/
     resourceInventoriedAs: mfg:3129ca8b-fcda-45be-bbda-294dc924d3b9 # plywood sheets
-    affectedQuantity:
+    flowQuantity:
       qudt:unit: unit:Number
       qudt:numericValue: 3
 
@@ -64,7 +64,7 @@
     provider: https://manufacturing.example/
     receiver: https://manufacturing.example/
     resourceInventoriedAs: mfg:52f0e212-3c4f-4d27-b345-5e964c135824 # CNC machine
-    affectedQuantity:
+    flowQuantity:
       qudt:unit: unit:Hour
       qudt:numericValue: 3.5
 
@@ -75,7 +75,7 @@
     provider: https://makezine.com/
     receiver: https://manufacturing.example/
     resourceInventoriedAs: mfg:6b97b1be-8e07-44ac-82e5-214f1b2aaf33 # desk design specification
-    affectedQuantity:
+    flowQuantity:
       qudt:unit: unit:Number
       qudt:numericValue: 1
 
@@ -86,7 +86,7 @@
     provider: https://alice.example/
     receiver: https://manufacturing.example/
     resourceClassifiedAs: https://www.wikidata.org/wiki/Q192047 # machining
-    affectedQuantity:
+    flowQuantity:
       qudt:unit: unit:Hour
       qudt:numericValue: 7
 
@@ -97,7 +97,7 @@
     provider: https://manufacturing.example/
     receiver: https://manufacturing.example/
     resourceInventoriedAs: mfg:e1721a61-cd47-4556-84b9-8b1b81da15bf # desk
-    affectedQuantity:
+    flowQuantity:
       qudt:unit: unit:Number
       qudt:numericValue: 1
 
