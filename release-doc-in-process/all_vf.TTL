@@ -36,6 +36,11 @@ vf:AgentRelationshipRole  a  owl:Class ;
 #        rdfs:label         "vf:Recipe" ;
 #        rdfs:comment       "Recipes contain all the info required to create or improve or move a resource." .
 
+vf:RecipeResource a         owl:Class ;
+        rdfs:label          "vf:RecipeResource" ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "Specifies the resource as part of a recipe, for use in planning from recipe." .
+
 vf:ResourceSpecification a  owl:Class ;
         rdfs:label          "vf:ResourceSpecification" ;
         vs:term_status      "unstable" ;
@@ -45,6 +50,11 @@ vf:RecipeProcess a          owl:Class ;
         rdfs:label          "vf:RecipeProcess" ;
         vs:term_status      "unstable" ;
         rdfs:comment        "Specifies the process part of a recipe for use in planning from recipe." .
+
+vf:ProcessSpecification a   owl:Class ;
+        rdfs:label          "vf:ProcessSpecification" ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "Specifies the kind of process." .
 
 vf:RecipeFlow a             owl:Class ;
         rdfs:label          "vf:RecipeFlow" ;
@@ -443,12 +453,19 @@ vf:substitutable a        owl:DatatypeProperty ;
         vs:term_status      "unstable" ;
         rdfs:comment        "Defines if any resource of that type can be freely substituted for any other resource of that type when used, consumed, traded, etc." .
 
-vf:unit a                   owl:ObjectProperty ;
-        rdfs:label          "unit" ;
+vf:defaultUnit a            owl:ObjectProperty ;
+        rdfs:label          "default unit" ;
         rdfs:domain         vf:ResourceSpecification ;
         rdfs:range          qudt:unit ;
         vs:term_status      "unstable" ;
         rdfs:comment        "The unit expected for this resource specification as a default." .
+
+vf:unit a                   owl:ObjectProperty ;
+        rdfs:label          "unit" ;
+        rdfs:domain         vf:RecipeResource ;
+        rdfs:range          qudt:unit ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "The unit used for this resource in the recipe." .
 
 # TODO: need to define this, something like currency, inventory, skill, service; may be other aspects too.
 #vf:resourceCategory a    owl:ObjectProperty ;
@@ -483,9 +500,9 @@ vf:basedOn
         a                   owl:ObjectProperty ;
         rdfs:label          "based on" ;
         rdfs:domain         vf:Process ;
-        rdfs:range          vf:RecipeProcess ;
+        rdfs:range          vf:ProcessSpecification ;
         vs:term_status      "unstable" ;
-        rdfs:comment        "The recipe definition or specification for a process." .
+        rdfs:comment        "The recipe definition or standard specification for a process." .
 
 vf:classifiedAs
         a                   owl:ObjectProperty ;
@@ -498,7 +515,7 @@ vf:classifiedAs
 vf:resourceClassifiedAs
         a                   owl:ObjectProperty ;
         rdfs:label          "resource classified as" ;
-        rdfs:domain         [ owl:unionOf (vf:ResourceSpecification vf:Intent vf:Commitment vf:EconomicEvent vf:RecipeFlow vf:Claim) ] ;
+        rdfs:domain         [ owl:unionOf (vf:RecipeResource vf:Intent vf:Commitment vf:EconomicEvent vf:RecipeFlow vf:Claim) ] ;
         rdfs:range          owl:Thing ;
         vs:term_status      "unstable" ;
         rdfs:comment        "References a concept in a common taxonomy or other classification scheme for purposes of categorization or grouping." .
@@ -511,13 +528,37 @@ vf:processClassifiedAs
         vs:term_status      "unstable" ;
         rdfs:comment        "References a concept in a common taxonomy or other classification scheme for purposes of categorization or grouping." .
 
+vf:processConformsTo
+        a                   owl:ObjectProperty ;
+        rdfs:label          "process conforms to" ;
+        rdfs:domain         vf:RecipeProcess ;
+        rdfs:range          vf:ProcessSpecification ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "The standard specification or definition of a process." .
+
 vf:resourceConformsTo
         a                   owl:ObjectProperty ;
         rdfs:label          "resource conforms to" ;
-        rdfs:domain         [ owl:unionOf (vf:Commitment vf:EconomicResource vf:Intent vf:RecipeFlow vf:EconomicEvent vf:Claim ) ] ;
+        rdfs:domain         [ owl:unionOf (vf:Commitment vf:Intent vf:EconomicEvent vf:Claim vf:RecipeResource) ] ;
         rdfs:range          [ owl:unionOf (vf:ResourceSpecification owl:Thing) ] ;
         vs:term_status      "unstable" ;
         rdfs:comment        "The primary resource specification or definition of an existing or potential economic resource. A resource will have only one, as this specifies exactly what the resource is. If not a vf:ResourceSpecification, this can be a link to another specification." .
+
+vf:conformsTo
+        a                   owl:ObjectProperty ;
+        rdfs:label          "conforms to" ;
+        rdfs:domain         vf:EconomicResource ;
+        rdfs:range          vf:ResourceSpecification ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "The primary resource knowledge specification or definition of an existing or potential resource." .
+
+vf:recipeFlowResource
+        a                   owl:ObjectProperty ;
+        rdfs:label          "recipe flow resource" ;
+        rdfs:domain         vf:RecipeFlow ;
+        rdfs:range          vf:RecipeResource ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "The resource definition referenced by this flow in the recipe." .
 
 vf:clauseOf a               owl:ObjectProperty ;
         rdfs:label          "clause of" ;
