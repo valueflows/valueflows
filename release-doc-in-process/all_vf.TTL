@@ -7,8 +7,9 @@
 @prefix qudt:   <http://qudt.org/schema/qudt/> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 @prefix time:  <http://www.w3.org/2006/time#> .
-@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
-@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix geo:   <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix vs:    <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix dfc:   <http://www.virtual-assembly.org/DataFoodConsortium/FullModel#> .
 
 
 <https://w3id.org/valueflows/> a owl:Ontology;
@@ -386,9 +387,17 @@ vf:name a                   owl:DatatypeProperty ;
 
 vf:trackingIdentifier a     owl:AnnotationProperty ;
         rdfs:label          "tracking identifier" ;
-        rdfs:domain         vf:EconomicResource ;   
+        rdfs:domain         vf:EconomicResource ;
+        rdfs:range          xsd:string ;
         vs:term_status      "unstable" ;
-        rdfs:comment        "Sometimes called lot number, used for trackable batched resources. Sometimes called serial number, used when each item must have a trackable identifier (like a computer). Could also be used for other unique tracking identifiers needed for resources." .  
+        rdfs:comment        "Sometimes called serial number, used when each item must have a trackable identifier (like a computer). Could also be used for other unique tracking identifiers needed for resources." .  
+
+vf:lot a                    owl:AnnotationProperty ;
+        rdfs:label          "lot" ;
+        rdfs:domain         vf:EconomicResource ;
+        rdfs:range          dfc:ProductBatch ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "Lot or batch of an economic resource, used to track forward or backwards to all occurrences of resources of that lot." .  
 
 vf:fulfilledBy              a owl:ObjectProperty ;
         rdfs:label          "fulfilled by" ;
