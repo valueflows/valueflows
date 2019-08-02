@@ -61,8 +61,18 @@ vf:RecipeFlow a             owl:Class ;
         vs:term_status      "unstable" ;
         rdfs:comment        "The linkage between a process recipe, an action that structures a recipe, and a resource specification." .
 
+vf:ScenarioDefinition a     owl:Class ;
+        rdfs:label          "vf:ScenarioDefinition" ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "The type definition of one or more scenarios." .
+
 
 # PLAN CLASSES
+
+vf:Plan  a                  owl:Class ;
+        rdfs:label          "vf:Plan" ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "A logical collection of processes that constitute a body of scheduled work with defined deliverable(s)." .
 
 vf:Intent  a                owl:Class ;
         rdfs:label          "vf:Intent" ;
@@ -83,6 +93,11 @@ vf:Agreement  a             owl:Class ;
         rdfs:label          "vf:Agreement" ;
         vs:term_status      "unstable" ;
         rdfs:comment        "Any type of agreement among economic agents." .
+
+vf:Scenario  a              owl:Class ;
+        rdfs:label          "vf:Scenario" ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "An estimated or analytical logical collection of higher level processes used for budgeting, analysis, plan refinement, etc." .
 
 # OBSERVATION CLASSES
 
@@ -170,6 +185,28 @@ vf:recipeOutputOf
         rdfs:range          vf:RecipeProcess ;
         vs:term_status      "unstable" ;
         rdfs:comment        "Relates an output flow to it's node in a recipe." .
+
+vf:plannedWithin
+        a                   owl:OBjectProperty ;
+        rdfs:label          "planned within" ;
+        rdfs:domain         vf:Process ;
+        rdfs:range          vf:Plan ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "The process with its inputs and outputs is part of the plan." .
+
+vf:independentDemandOf
+        a                   owl:ObjectProperty ;
+        rdfs:label         "independent demand of" ;
+        rdfs:range          vf:Plan ;
+        rdfs:domain         vf:Commitment ;
+        rdfs:comment        "Represents a desired deliverable to the outside of this plan." .
+
+vf:scheduled
+        a                   owl:ObjectProperty ;
+        rdfs:label         "scheduled" ;
+        rdfs:range          xsd:boolean ;
+        rdfs:domain         vf:Plan ;
+        rdfs:comment        "The plan is scheduled, or is a higher level estimated plan." .
 
 vf:resourceInventoriedAs
         a                   owl:ObjectProperty ;
@@ -540,6 +577,22 @@ vf:conformsTo
         rdfs:range          vf:ResourceSpecification ;
         vs:term_status      "unstable" ;
         rdfs:comment        "The primary resource knowledge specification or definition of an existing or potential resource." .
+
+vf:refinementOf
+        a                   owl:ObjectProperty ;
+        rdfs:label          "refinement of" ;
+        rdfs:domain         vf:Scenario ;
+        rdfs:range          vf:Scenario ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "This scenario refines another scenario, often as time moves closer or for more detail." .
+
+vf:definedAs
+        a                   owl:ObjectProperty ;
+        rdfs:label          "defined as" ;
+        rdfs:domain         vf:Scenario ;
+        rdfs:range          vf:ScenarioDefinition ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "The scenario definition for this scenario, for example yearly budget." .
 
 vf:recipeFlowResource
         a                   owl:ObjectProperty ;

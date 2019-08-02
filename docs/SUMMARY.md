@@ -23,6 +23,8 @@
 * [Transfers](introduction/transfers.md)
 * [Exchanges](introduction/exchanges.md)
 * [Proposals](introduction/proposals.md)
+* [Operational Planning](introduction/plans.md)
+* [Estimated Planning](introduction/estimates.md)
 * [Scoping](introduction/scoping.md)
 * [Classification](introduction/classification.md)
 * [Recipes](introduction/recipes.md)
