@@ -16,8 +16,10 @@ A key concept in REA is Duality, which means that each event wants one or more b
 
 All the levels of the REA ontology are similarly flexible and configurable:
 
+![REA layers](https://rawgit.com/valueflows/valueflows/master/release-doc-in-process/layers.png)
+
 * The Knowledge level represents classification, policies, procedures, rules and patterns. This is where each network or community can configure the core concepts to fit their desires.
 * The Plan level represents offers, requests, schedules and promises.
 * The Observation level represents what really happened.
 
-The core ValueFlows vocabulary includes some concepts for which we suggest using other rdf-based vocabularies. There will also be terms that applications will need that are not part of the ValueFlows economic model. This means that it expects people developing those applications to use VF together with other vocabularies / web ontologies. This documentation will suggest other vocabularies and specific terms from them that will come useful in common scenarios that VF aims to address.
+The core ValueFlows vocabulary includes some concepts for which we use other rdf-based vocabularies. There may also be terms that applications will need that are not part of the ValueFlows economic model. This means that it expects people developing those applications to use VF together with other vocabularies / web ontologies. This documentation will define other vocabularies and specific terms from them that will be needed in common scenarios that VF aims to address.
