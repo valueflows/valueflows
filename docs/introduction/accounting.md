@@ -20,4 +20,4 @@ Or potentially, views for a global value system economy (really).
 * from a network to the community 
 * from a network to the ecosystem
 
-Accounting isn't always just counting beans.  It will be important for community economies: what resources do we have, what happened with them, how are they doing? What resources do we need? Who needs what? Who can provide what?
+Accounting isn't always just counting beans.  It will be important for community economies: what resources do we have, what happened with them, how are they doing? What resources do we need? Who needs what? Who can provide what?  What waste have we generated and how can we improve?

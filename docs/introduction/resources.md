@@ -14,14 +14,14 @@ Also, we prefer to think of use value, but economic resources also often have ex
 
 An economic resource is observable.  Its specification or classification defines what kind of thing the economic resource is.
 
-So, for example, most things offered for sale on an e-commerce site are specifications, which can be searched using classifications. The one in a box delivered to your door is a resource.
+So, for example, most listings of things offered for sale on an e-commerce site are specifications, which can be searched using classifications. The one in a box delivered to your door is a resource.
 
 Or the description of the book entitled "The Power of Babel: A Natural History of Language", ISBN ISBN-13: 978-0060520854,
 is a specification. Your library may have two copies that you can check out. Those are resources.
 
 #### The difference between a resource specification and a resource classification
 
-An economic resource or a flow can have only *resource specification*, defined by `resourceConformsTo`.  This defines the lowest level useful type or kind of the resource that is needed. It can be defined within the ValueFlows vocabulary as a ResourceSpecification, or can refer to a specification elsewhere using a uri.  Note that often taxonomies and other references on the web can define very specific resource specifications.
+An economic resource or a flow can have only *resource specification*, defined by `resourceConformsTo`.  This defines the lowest level useful type or kind of the resource that is needed. It can be defined within the ValueFlows vocabulary as a ResourceSpecification, or can refer to a specification elsewhere using a uri.  Note that often taxonomies and other references on the web can define very specific resource specifications at their leaf levels.
 
 An economic resource or a flow can have any number of *resource classifications*.  They are used to filter, match, or group economic resources.  Resource classifications can be part of a taxonomy. That means they can be defined very broadly and generally and maybe vaguely, or they can be defined very narrowly, but fit into broader classifications. 
 
@@ -42,13 +42,13 @@ a) serialized resources, where each individual instance has a unique identifier,
 b) lot-controlled resources, where each lot or batch has a unique identifier, but the lot or batch may contain many individual instances, and
 c) count or volume or stock resources, where individual instances are indistinguishable, or in the case of fluids, only exist on a molecular level.
 
-Serialized resources would fit the direct identification pattern. Lots can be split up, so the identification of a subset of a lot would require some other properties, such as location. Stock resources can only be described indirectly, by means of some combination of properties, such as model and location. (Location is a complex ontology of its own: for example, in warehousing, a location is often composed of warehouse:room:aisle:row:tier.)
+Serialized resources would fit the direct identification pattern. Lots can be split up, so the identification of a subset of a lot would require some other properties, such as location. Stock resources can only be described indirectly, by means of some combination of properties, such as specification and location. (Location is a complex ontology of its own: for example, in warehousing, a location is often composed of warehouse:room:aisle:row:tier.)
 
 Moreover, identification of resources will depend on context and purpose. We want to allow each context to define resources that they have relationships with, according to the combination of properties that works best for them, which might include which agent has which relationship with a resource.
 
 And then in the "independent view", for larger-scale analysis of resource flows, or for example for lot tracking for public health issues like mad cow disease, different combinations of properties might be needed.
 
-Substitutability: This defines if any resources of that specification or classification can be freely substituted for any other resource of that same specification or classification when used, consumed, traded, etc.  For example, "B9R-1-red DLP resin photopolymer" is probably substitutable.  While each resource for a resource classification called "English-Spanish translation" is probably not substitutable because each will be a different document.
+Substitutability: This defines if any resources of that specification or classification can be freely substituted for any other resource of that same specification or classification when used, consumed, traded, etc.  For example, one container of "B9R-1-red DLP resin photopolymer" is probably substitutable for another container of the same photopolymer.  While each resource for a resource classification called "English-Spanish translation" is probably not substitutable because each will be a different document.
 
 #### Inventory
 

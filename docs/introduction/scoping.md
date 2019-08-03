@@ -2,13 +2,13 @@
 
 `vf:inScopeOf`
 
-Scoping allows grouping entities together in a defined boundary or context. Mostly used for sets of economic events, commitments, and intents.  This can be for purposes of:
+Scoping allows grouping entities together in a defined boundary or context. Mostly used for sets of economic events, commitments, and intents.  Some examples we are familiar with:
 
 * accounting
 * planning
 * distributing incoming resources
 
-The scope is where work is done, where processes live, where value is created and exchanged. Economic events, commitments and intents can reference an organization (an agent) as an entity that defines their scope. It may be a formal or informal organization, and will include the network(s) themselves.  Or economic events, commitments and intents can reference a geographic area (a city, a bio-region, etc.), or a community, or a loose network, or a less formal shorter lived project, or plan, or any other bounded concept that is useful for grouping economic events.
+The scope is where work is done, where processes live, where value is created and exchanged. Economic events, commitments and intents can reference an organization (an agent) as an entity that defines their scope. It may be a formal or informal organization, and will include the network(s) themselves.  Or economic events, commitments and intents can reference a geographic area (a city, a bio-region, etc.), or a community, or a loose network, or a less formal shorter lived project, or plan, or any other bounded concept that is useful for accounting for economic events.
 
 An economic event, commitment or intent can reference any number of entities which scope it. It is not required that events, commitments, or intents designate a scope.  In fact, sometimes the scope is the same as the provider or recipient agent.  Or sometimes there is no useful scope.
 
@@ -25,7 +25,7 @@ Accounting is usually done for an agent or other bounded scope. Where a computer
 
 ## Planning
 
-Sometimes a generic recipe will cross scope boundaries for particular agents. For example one agent could produce a resource that consumes a component made by another agent.  In this case, can the first agent schedule the production of the component by the second agent?  Possibly yes, if there are agreements in place for that, and the first agent has verified that inventory does not already exist.  Or possibly, based again on agreements, the first agent can assume the second agent will provide the component, with the second agent taking responsibility for checking if it is onhand, and if not, scheduling it for production.  Or possibly, the first agent plans only to source the component in some way.
+Sometimes a generic recipe will cross scope boundaries for particular agents. For example one agent could produce a resource that consumes a component made by another agent.  In this case, can the first agent schedule the production of the component by the second agent?  Possibly yes, if there are agreements in place for that, and the first agent has verified that inventory does not already exist.  Or possibly, based again on agreements, the first agent can assume the second agent will provide the component, with the second agent taking responsibility for checking if it is onhand, and if not, scheduling it for production.  Or possibly, the first agent plans only to source the component in some yet-to-be-defined way.
 
 ## Distributing Incoming Resources
 

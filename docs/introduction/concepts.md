@@ -1,4 +1,4 @@
-# Flows of Resources
+# Flows of Value
 
 ![networks of networks picture](https://rawgit.com/valueflows/valueflows/master/release-doc-in-process/network-of-networks.png)
 
@@ -9,7 +9,7 @@ This forms an economic network, where resources flow from agent to agent to agen
 
 ### Flows of value in which you can participate
 
-Like Activity Streams, but about value network activities.
+Like:
 * Needs, ideas, offers, requests, plans, new recipes, creations, work to do, stuff we need, income, exchanges
 * You will be able to subscribe to feeds from networks, with selections of types of activity.
 * You will be able to respond: offer work, stuff, money, ideas, requests, orders, improvements, etc.

@@ -20,4 +20,4 @@ All the levels of the REA ontology are similarly flexible and configurable:
 * The Plan level represents offers, requests, schedules and promises.
 * The Observation level represents what really happened.
 
-The core VF vocabulary includes some concepts for which we suggest using other vocabularies. There will also be terms that applications will need that are not part of the VF economic model. This means that it expects people developing those applications to use VF together with other vocabularies / web ontologies. This documentation will suggest other vocabularies and specific terms from them that will come useful in common scenarios that VF aims to address.
+The core ValueFlows vocabulary includes some concepts for which we suggest using other rdf-based vocabularies. There will also be terms that applications will need that are not part of the ValueFlows economic model. This means that it expects people developing those applications to use VF together with other vocabularies / web ontologies. This documentation will suggest other vocabularies and specific terms from them that will come useful in common scenarios that VF aims to address.
