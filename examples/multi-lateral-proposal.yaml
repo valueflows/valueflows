@@ -1,4 +1,5 @@
 # Example: Multi-lateral proposal and intents
+# Not ready to use yet !!
 
 '@context':
   - https://git.io/vf-examples-jsonld-context
@@ -9,7 +10,7 @@
 
   - '@id': alice:6b5bc786-b9ed-4189-b34f-5ef7d10f1f86
     '@type': Proposal
-    name: 2019 offers and wants
+    name: 2019 offers and wants to trade
     hasBeginning: 2019-01-01T00:00:00-5:00
     hasEnd: 2019-12-31T00:00:00-5:00
     eligibleLocation: map:566a2c01-96f8-4b3c-adcf-f197eced3092 # Madison, WI
@@ -17,7 +18,7 @@
   - '@id': alice:27be5cab-d740-4194-9298-1661a69d9d95
     '@type': Intent
     name: Housing
-    skos:note: One bedroom to rent
+    skos:note: One bedroom apartment to rent
     action: transfer
     receiver: https://alice.example/
     resourceClassifiedAs: wd:Q1247867 # housing
