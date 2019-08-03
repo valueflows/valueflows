@@ -173,7 +173,7 @@ vf:inputOf
         a                   owl:ObjectProperty ;
         rdfs:label          "input of" ;
         rdfs:domain         [ owl:unionOf (vf:EconomicEvent vf:Commitment vf:Intent) ] ;
-        rdfs:range          [ owl:unionOf (vf:Process vf:Transfer) ] ;
+        rdfs:range          vf:Process ;
         vs:term_status      "unstable" ;
         rdfs:comment        "Relates an input flow to it's node." .
 
@@ -181,7 +181,7 @@ vf:outputOf
         a                   owl:ObjectProperty ;
         rdfs:label          "output of" ;
         rdfs:domain         [ owl:unionOf (vf:EconomicEvent vf:Commitment vf:Intent) ] ;
-        rdfs:range          [ owl:unionOf (vf:Process vf:Transfer) ] ;
+        rdfs:range          vf:Process ;
         vs:term_status      "unstable" ;
         rdfs:comment        "Relates an output flow to it's node." .
 
@@ -305,9 +305,9 @@ vf:inScopeOf  a             owl:ObjectProperty ;
         vs:term_status      "unstable" ;
         rdfs:comment        "Grouping around something to create a boundary or context, used for documenting, accounting, planning." .
 
-vf:under  a                 owl:ObjectProperty ;
+vf:agreedIn  a              owl:ObjectProperty ;
         rdfs:domain         [ owl:unionOf (vf:EconomicEvent vf:Commitment vf:Intent vf:Claim) ] ; 
-        rdfs:label          "under" ;
+        rdfs:label          "agreed in" ;
         rdfs:range          owl:Thing ;
         vs:term_status      "unstable" ;
         rdfs:comment        "Reference to an agreement between agents which specifies the rules, terms, policies, calculations, etc. which govern this flow." .
