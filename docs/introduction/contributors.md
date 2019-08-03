@@ -30,6 +30,7 @@
 * Bill McCarthy
 * Wim Laurier
 * Christian Scheller
+* Anders Hessellund
 * Pavel Hruby
 * Graham Gal
 * Richard Newmark
