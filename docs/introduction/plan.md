@@ -22,7 +22,7 @@ Some examples:
 
 When processes are "nested", it is not random, nor based on a taxonomy. It is based on what processes are actually part of the plan. And not all the inputs and outputs of nested processes are considered inputs and outputs of the plan, since some are both produced and consumed within the plan.  In the following simplified example, the flows between plant/weed and weed/harvest are not flows input or output of the plan.
 
-![process nesting](https://rawgit.com/valueflows/valueflows/master/release-doc-in-process/nesting.png)
+![process nesting](https://rawgit.com/valueflows/valueflows/master/release-doc-in-process/nesting.jpg)
 
 * There are some common situations for nested processes that will not be as simple as the above diagram.  Thes include:
     * Action makes a difference.  When a piece of equipment or tool is "used", it is not gone at the end of the nesting process.  But if it is managed as a time-based resource with a calendar, some calendar duration is in fact consumed.  Or if a citable resource is created and then cited inside, it is also still there at the end of the nesting process.
