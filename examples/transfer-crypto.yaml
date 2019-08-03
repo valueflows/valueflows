@@ -1,0 +1,61 @@
+# Transfer of crypto-currency, ignoring the fee, but to record time involved in the transfer validation process
+
+'@context':
+  - https://git.io/vf-examples-jsonld-context
+  - bob: https://bob.example/
+    alice: https://alice.example/
+    fair: https://faircoin.example/
+
+'@id': rgh:valueflows/valueflows/master/examples/transfer-crypto.yaml
+'@graph':
+
+  # accounts before
+
+  - '@id': fair:b75d8f6a-e2df-4e52-b36d-1a22a66f4ead
+    '@type': EconomicResource
+    skos:note: Alice's wallet address
+    classifiedAs: wd:Q21002847 # FairCoin
+    currentQuantity:
+      qudt:unit: unit:Number
+      qudt:numericValue: 540
+
+  - '@id': fair:3be5259d-10f0-431c-9fec-9c0c15a461d3
+    '@type': EconomicResource
+    skos:note: Bob's wallet address 
+    classifiedAs: wd:Q21002847 # FairCoin
+    currentQuantity:
+      qudt:unit: unit:Number
+      qudt:numericValue: 480
+
+  # transfer from Alice to Bob
+
+  - '@id': urn:uuid:e5afaa28-1080-4912-835b-46883efb83e6
+    '@type': EconomicEvent
+    action: transfer
+    resourceClassifiedAs: wd:Q21002847 # FairCoin
+    resourceInventoriedAs: fair:b75d8f6a-e2df-4e52-b36d-1a22a66f4ead # Alice's wallet address
+    toResourceInventoriedAs: fair:3be5259d-10f0-431c-9fec-9c0c15a461d3 # Bob's wallet address
+    provider: https://alice.example
+    receiver: https://bob.example
+    flowQuantity:
+      qudt:unit: unit:Number
+      qudt:numericValue: 100
+    time:inXSDDateTimeStamp: 2019-04-18T8:30:08-5:00
+
+  # accounts after
+
+  - '@id': fair:b75d8f6a-e2df-4e52-b36d-1a22a66f4ead
+    '@type': EconomicResource
+    skos:note: Alice's wallet address 
+    classifiedAs: wd:Q21002847 # FairCoin
+    currentQuantity:
+      qudt:unit: unit:Number
+      qudt:numericValue: 440
+
+  - '@id': fair:3be5259d-10f0-431c-9fec-9c0c15a461d3
+    '@type': EconomicResource
+    skos:note: Bob's wallet address 
+    classifiedAs: wd:Q21002847 # FairCoin
+    currentQuantity:
+      qudt:unit: unit:Number
+      qudt:numericValue: 580

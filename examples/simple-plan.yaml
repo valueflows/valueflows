@@ -1,0 +1,111 @@
+# Example: Simple operational plan
+
+'@context':
+  - https://git.io/vf-examples-jsonld-context
+  - alice: https://alice.example/
+    printer: https://printer.example/
+
+'@id': rgh:valueflows/valueflows/master/examples/simple-plan.yaml
+'@graph':
+
+  - '@id': printer:8e5fe80d-a769-4bd5-89e5-2136d33eab9f
+    '@type': Plan
+    name: Anti climate change campaign materials
+    skos:note: A set of printed materials for the campaign by Students for Peace and Justice
+    time:before: 2019-04-08T17:00:00-5:00
+    dcterms:created: 2019-04-01T10:35:00-5:00
+
+  - '@id': printer:02b39a30-3e04-4305-9656-7f261aa63c84
+    '@type': Process
+    name: Print brochure
+    plannedWithin: printer:8e5fe80d-a769-4bd5-89e5-2136d33eab9f
+
+  - '@id': printer:a8236bbb-81e0-422d-9861-56d2417db0fb
+    '@type': Commitment
+    outputOf: printer:02b39a30-3e04-4305-9656-7f261aa63c84
+    independentDemandOf: printer:8e5fe80d-a769-4bd5-89e5-2136d33eab9f
+    action: produce
+    provider: https://printer.example/
+    receiver: https://printer.example/
+    resourceInventoriedAs: printer:6b97b1be-8e07-44ac-82e5-214f1b2aaf33 # specific brochures
+    flowQuantity:
+      qudt:unit: unit:Number
+      qudt:numericValue: 1000
+
+  - '@id': printer:b52a5815-fae9-43bf-be95-833b95dc0adb
+    '@type': Commitment
+    inputOf: printer:02b39a30-3e04-4305-9656-7f261aa63c84
+    action: consume
+    provider: https://printer.example/
+    receiver: https://printer.example/
+    resourceInventoriedAs: printer:3129ca8b-fcda-45be-bbda-294dc924d3b9 # paper
+    flowQuantity:
+      qudt:unit: unit:Number
+      qudt:numericValue: 1020
+
+
+  - '@id': printer:9bd19194-a36d-4a1f-896b-8082887962cb
+    '@type': Process
+    name: Print posters
+    plannedWithin: printer:8e5fe80d-a769-4bd5-89e5-2136d33eab9f
+
+  - '@id': printer:33e8933b-ff73-4a01-964a-ca7a98893083
+    '@type': Commitment
+    outputOf: printer:9bd19194-a36d-4a1f-896b-8082887962cb
+    independentDemandOf: printer:8e5fe80d-a769-4bd5-89e5-2136d33eab9f
+    action: produce
+    provider: https://printer.example/
+    receiver: https://printer.example/
+    resourceInventoriedAs: printer:6078f30a-b15b-4b1c-8e77-797abae11378 # specific posters
+    flowQuantity:
+      qudt:unit: unit:Number
+      qudt:numericValue: 35
+
+  - '@id': printer:60f4204e-b8d2-4026-8577-102c3f82c0af
+    '@type': Commitment
+    inputOf: printer:9bd19194-a36d-4a1f-896b-8082887962cb
+    action: consume
+    provider: https://printer.example/
+    receiver: https://printer.example/
+    resourceInventoriedAs: printer:e56fd654-7b94-4d96-8e60-de39e08329a7 # paper
+    flowQuantity:
+      qudt:unit: unit:Number
+      qudt:numericValue: 35
+
+  - '@id': printer:b90b0b77-09a2-42e2-8bd4-e9ae2c1c6172
+    '@type': Commitment
+    inputOf: printer:9bd19194-a36d-4a1f-896b-8082887962cb
+    action: use
+    provider: https://printer.example/
+    receiver: https://printer.example/
+    resourceInventoriedAs: printer:e4783bef-9006-490c-9c03-389272c7444d # printing plate for the specific posters
+    flowQuantity:
+      qudt:unit: unit:Hour
+      qudt:numericValue: 1.5
+
+  - '@id': printer:d4d2fd71-34f2-41c3-b1c5-19ad5ed2da59b
+    '@type': Process
+    name: Create poster plate
+    plannedWithin: printer:8e5fe80d-a769-4bd5-89e5-2136d33eab9f
+
+  - '@id': printer:583e83d9-a46d-44ff-bd71-88513a1d83c0
+    '@type': Commitment
+    outputOf: printer:d4d2fd71-34f2-41c3-b1c5-19ad5ed2da59b
+    action: produce
+    provider: https://printer.example/
+    receiver: https://printer.example/
+    resourceInventoriedAs: printer:e4783bef-9006-490c-9c03-389272c7444d # printing plate for the specific posters
+    flowQuantity:
+      qudt:unit: unit:Number
+      qudt:numericValue: 1
+
+  - '@id': printer:ad56a7ed-be3c-4937-a3fb-0f156bcd2c47
+    '@type': Commitment
+    inputOf: printer:9bd19194-a36d-4a1f-896b-8082887962cb
+    action: consume
+    provider: https://printer.example/
+    receiver: https://printer.example/
+    resourceInventoriedAs: printer:86ad6e22-7640-4b93-972a-db7177ab2616 # blank printing plate
+    flowQuantity:
+      qudt:unit: unit:Number
+      qudt:numericValue: 1
