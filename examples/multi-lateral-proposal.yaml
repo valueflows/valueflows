@@ -1,0 +1,115 @@
+# Example: Multi-lateral proposal and intents
+# Not ready to use yet !!
+
+'@context':
+  - https://git.io/vf-examples-jsonld-context
+  - alice: https://alice.example/
+
+'@id': rgh:valueflows/valueflows/master/examples/multi-lateral-proposal.yaml
+'@graph':
+
+  - '@id': alice:6b5bc786-b9ed-4189-b34f-5ef7d10f1f86
+    '@type': Proposal
+    name: 2019 offers and wants to trade
+    hasBeginning: 2019-01-01T00:00:00-5:00
+    hasEnd: 2019-12-31T00:00:00-5:00
+    eligibleLocation: map:566a2c01-96f8-4b3c-adcf-f197eced3092 # Madison, WI
+
+  - '@id': alice:27be5cab-d740-4194-9298-1661a69d9d95
+    '@type': Intent
+    name: Housing
+    skos:note: One bedroom apartment to rent
+    action: transfer
+    receiver: https://alice.example/
+    resourceClassifiedAs: wd:Q1247867 # housing
+
+  - '@id': alice:a8236bbb-81e0-422d-9861-56d2417db0fb
+    '@type': ProposedIntent
+    publishedIn: alice:6b5bc786-b9ed-4189-b34f-5ef7d10f1f86 # the proposal
+    publishes: alice:27be5cab-d740-4194-9298-1661a69d9d95 # the intent
+    reciprocal: false
+    intentLogic: or
+
+  - '@id': alice:40df0092-5455-4507-83fc-7f3d64538163
+    '@type': Intent
+    name: Community garden
+    skos:note: Access to space in a community garden
+    action: transfer
+    receiver: https://alice.example/
+    resourceClassifiedAs: wd:Q251958 # community garden
+
+  - '@id': alice:a8236bbb-81e0-422d-9861-56d2417db0fb
+    '@type': ProposedIntent
+    publishedIn: alice:6b5bc786-b9ed-4189-b34f-5ef7d10f1f86 # the proposal
+    publishes: alice:40df0092-5455-4507-83fc-7f3d645381635 # the intent
+    reciprocal: false
+    intentLogic: or
+
+  - '@id': alice:f12fc3b7-1033-4da0-85fd-a378b4cfb36f
+    '@type': Intent
+    name: CSA vegetable box
+    skos:note: CSA vegetable box weekly in season
+    action: transfer
+    receiver: https://alice.example/
+    resourceClassifiedAs: wd:Q427249 # community supported agriculture
+    totalQuantity:
+      qudt:unit: unit:Number
+      qudt:numericValue: 20
+
+  - '@id': alice:a8236bbb-81e0-422d-9861-56d2417db0fb
+    '@type': ProposedIntent
+    publishedIn: alice:6b5bc786-b9ed-4189-b34f-5ef7d10f1f86 # the proposal
+    publishes: alice:f12fc3b7-1033-4da0-85fd-a378b4cfb36f # the intent
+    reciprocal: false
+    intentLogic: or
+
+  - '@id': alice:40bb78fe-28df-41a6-b698-525fa9d411d6
+    '@type': Intent
+    name: Child clothing
+    skos:note: Clothing for child, age 10
+    action: transfer
+    receiver: https://alice.example/
+    resourceClassifiedAs: wd:Q11460 # clothing
+
+  - '@id': alice:a8236bbb-81e0-422d-9861-56d2417db0fb
+    '@type': ProposedIntent
+    publishedIn: alice:6b5bc786-b9ed-4189-b34f-5ef7d10f1f86 # the proposal
+    publishes: alice:40bb78fe-28df-41a6-b698-525fa9d411d6 # the intent
+    reciprocal: false
+    intentLogic: or
+
+  - '@id': alice:7a63ea10-b1c3-441a-9a08-fb8630c02614
+    '@type': Intent
+    name: Elder care
+    skos:note: Elder care in your home
+    action: work
+    provider: https://alice.example/
+    resourceClassifiedAs: wd:Q15297473 # care giving
+    totalQuantity:
+      qudt:unit: unit:Hour
+      qudt:numericValue: 1000
+
+  - '@id': alice:a8236bbb-81e0-422d-9861-56d2417db0fb
+    '@type': ProposedIntent
+    publishedIn: alice:6b5bc786-b9ed-4189-b34f-5ef7d10f1f86 # the proposal
+    publishes: alice:7a63ea10-b1c3-441a-9a08-fb8630c02614 # the intent
+    reciprocal: false
+    intentLogic: or
+
+  - '@id': alice:2402b57c-1c45-423a-acb2-f50961c97d65
+    '@type': Intent
+    name: Child clothing
+    skos:note: Clothing for children, ages 0 to 6
+    action: transfer
+    provider: https://alice.example/
+    resourceClassifiedAs: wd:Q11460 # clothing
+    totalQuantity:
+      qudt:unit: unit:Number
+      qudt:numericValue: 50
+
+  - '@id': alice:a8236bbb-81e0-422d-9861-56d2417db0fb
+    '@type': ProposedIntent
+    publishedIn: alice:6b5bc786-b9ed-4189-b34f-5ef7d10f1f86 # the proposal
+    publishes: alice:2402b57c-1c45-423a-acb2-f50961c97d65 # the intent
+    reciprocal: false
+    intentLogic: or

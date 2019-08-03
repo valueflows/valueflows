@@ -77,7 +77,22 @@ vf:Plan  a                  owl:Class ;
 vf:Intent  a                owl:Class ;
         rdfs:label          "vf:Intent" ;
         vs:term_status      "unstable" ;
-        rdfs:comment        "A planned economic flow, which can lead to economic events (sometimes through commitments)" .
+        rdfs:comment        "A proposed or planned or estimated economic flow, prior to a commitment or agreement, which can lead to commitments and/or economic events." .
+
+vf:Proposal  a              owl:Class ;
+        rdfs:label          "vf:Proposal" ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "Published requests or offers, sometimes with what is expected in return." .
+
+vf:ProposedIntent  a        owl:Class ;
+        rdfs:label          "vf:ProposedIntent" ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "Supports including intents in multiple proposals, as well as a proposal including multiple intents." .
+
+vf:ProposedTo  a            owl:Class ;
+        rdfs:label          "vf:ProposedTo" ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "An agent to which the proposal is to be published." .
 
 vf:Commitment  a            owl:Class ;
         rdfs:label          "vf:Commitment" ;
@@ -386,6 +401,20 @@ vf:definedQuantity a        owl:ObjectProperty ;
         vs:term_status      "unstable" ;
         rdfs:comment        "The amount and unit defined for this recipe flow." .
 
+vf:availableQuantity a      owl:ObjectProperty ;
+        rdfs:label          "available quantity" ;
+        rdfs:domain         vf:Intent ;
+        rdfs:range          qudt:QuantityValue ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "The quantity of the offered or requested resource currently available." .
+
+vf:unitQuantity a           owl:ObjectProperty ;
+        rdfs:label          "unit quantity" ;
+        rdfs:domain         vf:Intent ;
+        rdfs:range          qudt:QuantityValue ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "The base quantity of the offer or request, which can be multipied to create a commitment; commonly seen in a price list or e-commerce." .
+
 vf:currentLocation a        owl:ObjectProperty ;
         rdfs:label          "current location" ;
         rdfs:domain         vf:EconomicResource ;
@@ -399,6 +428,13 @@ vf:primaryLocation a        owl:ObjectProperty ;
         rdfs:range          geo:SpatialThing ;
         vs:term_status      "unstable" ;
         rdfs:comment        "The main place an agent is located, often an address where activities occur and mail can be sent. This is usually a mappable geographic location.  It also could be a website address, as in the case of agents who have no physical location." .
+
+vf:eligibleLocation a       owl:ObjectProperty ;
+        rdfs:label          "eligible location" ;
+        rdfs:domain         vf:Proposal ;
+        rdfs:range          geo:SpatialThing ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "Location or area where the proposal is valid." .
 
 vf:atLocation a             owl:ObjectProperty ;
         rdfs:label          "at location" ;
@@ -464,6 +500,46 @@ vf:satisfiedBy
         rdfs:range          [ owl:unionOf (vf:Commitment vf:EconomicEvent ) ] ;
         vs:term_status      "unstable" ;
         rdfs:comment        "A commitment or economic event fully or partially satisfying an intent" .
+
+vf:publishes
+        a                   owl:ObjectProperty ;
+        rdfs:label         "publishes" ;
+        rdfs:domain         vf:ProposedIntent ;
+        rdfs:range          vf:Intent ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "The intent which is part of this published proposal." .
+
+vf:publishedIn
+        a                   owl:ObjectProperty ;
+        rdfs:label         "published in" ;
+        rdfs:domain         vf:ProposedIntent ;
+        rdfs:range          vf:Proposal ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "The published proposal which this intent is part of." .
+
+vf:proposed
+        a                   owl:ObjectProperty ;
+        rdfs:label         "proposed" ;
+        rdfs:domain         vf:ProposedTo ;
+        rdfs:range          vf:Proposal ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "The proposal that is published to a specific agent." .
+
+vf:proposedTo
+        a                   owl:ObjectProperty ;
+        rdfs:label         "proposed" ;
+        rdfs:domain         vf:ProposedTo ;
+        rdfs:range          foaf:Agent ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "The agent to which the proposal is published." .
+
+vf:reciprocal
+        a                   owl:ObjectProperty ;
+        rdfs:label         "reciprocal" ;
+        rdfs:domain         vf:ProposedIntent ;
+        rdfs:range          xsd:boolean ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "This is a reciprocal intent of this proposal, not primary. Not meant to be part of intent matching." .
 
 vf:finished  a              owl:DatatypeProperty ;
         rdfs:domain         [ owl:unionOf (vf:Commitment vf:Process vf:Intent vf:Claim) ] ; 

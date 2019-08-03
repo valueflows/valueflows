@@ -1,9 +1,9 @@
 # Flows
 
-Flows come as fundamental construct in ValueFlows ontology. When put in chronological order, they form a progression:
+Flows are a fundamental construct in the ValueFlows ontology. When put in chronological order, they form a progression:
 
 1. Intents which can lead to Commitments
-2. Commitments which can lead to Economic Events
+2. Commitments which can lead to Economic Events (or Intents can lead directly to Economic Events)
 
 ## Intent
 
@@ -12,12 +12,12 @@ Intents describe potential future events which have not been agreed to by other 
 
 ## Commitment
 
-Commitments describe potential future events which the involved agents already agreed to pursue. Commitments can be considered contractual promises from one agent to another.  Commitments are "mirrors" of economic events, and Economic Events can fulfull Commitments.  Commitments can satisfy Intents. 
+Commitments describe potential future events which the involved agents have already agreed to pursue. Commitments can be considered contractual promises from one agent to another.  Commitments are "mirrors" of economic events, and Economic Events can fulfull Commitments.  Commitments can satisfy Intents. 
 
 
 ## Economic Events
 
-Economic Events describes past events, something observed, never some potential future event.  They can fulfill Commitments or satisfy Intents (when there is no Commitment).
+Economic Events describe past events, something observed, never some potential future event.  They can fulfill Commitments or satisfy Intents (when there is no Commitment).
 
 ## Claims
 
@@ -38,7 +38,7 @@ Often agents will start their plans independently and record their initial inten
 
 ## Granularity
 
-Intents, Commitments, and Economic Events can occur at any granularity that is needed or for which data can be obtained.  So they primarily are used for all operational needs, but can also be used at higher levels for analytical and high level planning needs for communities or regions, for example.
+Intents, Commitments, and Economic Events can occur at any granularity that is needed or for which data can be obtained.  So they primarily are used for all operational needs, but can also be used at higher levels for budgeting for organizations, analytical and high level planning needs for communities or regions, etc.
 
 ![Intent-Commitment-Event](https://rawgit.com/valueflows/valueflows/master/release-doc-in-process/i-c-e.png)
 
