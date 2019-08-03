@@ -657,10 +657,10 @@ vf:conformsTo
 vf:refinementOf
         a                   owl:ObjectProperty ;
         rdfs:label          "refinement of" ;
-        rdfs:domain         vf:Scenario ;
+        rdfs:domain         [ owl:unionOf (vf:Scenario vf:Plan) ] ;
         rdfs:range          vf:Scenario ;
         vs:term_status      "unstable" ;
-        rdfs:comment        "This scenario refines another scenario, often as time moves closer or for more detail." .
+        rdfs:comment        "This scenario or plan refines another scenario, often as time moves closer or for more detail." .
 
 vf:definedAs
         a                   owl:ObjectProperty ;

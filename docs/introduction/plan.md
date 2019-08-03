@@ -2,7 +2,7 @@
 
 An operational plan is a schedule of related operational processes, that constitute a body of scheduled work with defined deliverable(s).  A plan normally contains one or more process resource flows, one for each deliverable.
 
-A plan can cover more than one scope, if the different scopes are tightly coordinated with pre-agreed rules, for example sub-organizations of a main organization, or an ongoing supply chain.  If not, or if the agents prefer, then requirements from another scope should become deliverables for that scope's plan.  Different batch sizes could trigger a new plan for inputs to the main deliverable too.  But all of this does not affect the vocabulary or model.  Plans can relate to each other through resource flows just like Processes.
+A plan can cover more than one scope, if the different scopes are tightly coordinated with pre-agreed rules, for example sub-organizations of a main organization, or an ongoing supply chain.  If not, or if the agents prefer, then requirements from one scope could become deliverables for another scope's plan.  Different batch sizes could trigger a new plan for inputs to the main deliverable too.  But all of this does not affect the vocabulary or model.  Plans can relate to each other through resource flows just like Processes.
 
 Plans are used for understanding and coordinating what needs to happen for specific outputs. The size and complexity of a Plan is up to the people who are planning and coordinating the work.
 
@@ -20,7 +20,7 @@ Some examples:
 
 ### Processes nested in a Plan
 
-When processes are "nested", it is not random, nor based on a taxonomy. It is based on what processes are actually part of the plan. And not all the inputs and outputs of nested processes are considered inputs and outputs of the plan, since some are both produced and consumed within the plan.  In the following simplified example, the flows between plant/weed and weed/harvest are not flows input or output of the plan.
+When processes are "nested", it is not random, nor based on a taxonomy. It is based on what processes are actually part of the plan. And not all the inputs and outputs of nested processes are considered inputs and outputs of the plan, since some are both produced and consumed within the plan.  In the following simplified example, the flows between plant/weed and weed/harvest start and end inside the nest, and so are not inputs to, or outputs of, the plan.
 
 ![process nesting](https://rawgit.com/valueflows/valueflows/master/release-doc-in-process/nesting.jpg)
 
