@@ -33,4 +33,4 @@ When processes are "nested", it is not random, nor based on a taxonomy. It is ba
 
 Plans can be generated from a recipe by scaling the recipe according to the demanded quantity of the end outputs.  This is called a "demand explosion".  The generation might take into account current inventories, batch sizes, etc., so it is not necessarily a "pure" reflection of the recipe.  In addition, often plans are tweaked after generation from a recipe, depending on how firm and exact the recipe is.  A manufacturing recipe might be more exact than a recipe for a more general business process.  For these reasons, a plans is decoupled from the recipe that generated it in the vocabulary.  It maintains only the references to the resource and process specifications that were supplied from the recipe.
 
-![recipe plan](https://rawgit.com/valueflows/valueflows/master/release-doc-in-process/plan-process-oper.png)
+![recipe plan](https://rawgit.com/valueflows/valueflows/master/release-doc-in-process/plan-process.png)
