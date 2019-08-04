@@ -1,0 +1,67 @@
+# Transfer in a retail situation
+
+'@context':
+  - https://git.io/vf-examples-jsonld-context
+  - bob: https://bob.example/
+    alice: https://alice.example/
+
+'@id': rgh:valueflows/valueflows/master/examples/transfer-pos.yaml
+'@graph':
+
+  # exchange of alice's apples at the farmer's market for bob's cash
+
+  - '@id': alice:8e5fe80d-a769-4bd5-89e5-2136d33eab9d
+    '@type': Agreement
+    skos:note: Alice gives Bob a bushel of apples in exchange for $35
+
+  - '@id': urn:uuid:e5afaa28-1080-4912-835b-46883efb83e6
+    '@type': EconomicEvent
+    realizationOf: alice:8e5fe80d-a769-4bd5-89e5-2136d33eab9d # the agreement
+    action: possess
+    resourceClassifiedAs: wd:Q41777871 # Haralson apple
+    provider: https://alice.example
+    receiver: https://bob.example
+    flowQuantity:
+      qudt:unit: unit:Bushel
+      qudt:numericValue: 1
+    time:inXSDDateTimeStamp: 2019-04-18T8:30:08-5:00
+
+  - '@id': urn:uuid:98c2bfeb-9c70-4801-896c-4646b975a7d9
+    '@type': EconomicEvent
+    realizationOf: alice:8e5fe80d-a769-4bd5-89e5-2136d33eab9d # the agreement
+    triggeredBy: urn:uuid:e5afaa28-1080-4912-835b-46883efb83e6 #the possess event
+    action: transfer
+    resourceClassifiedAs: wd:Q41777871 # Haralson apple
+    provider: https://alice.example
+    receiver: https://bob.example
+    flowQuantity:
+      qudt:unit: unit:Bushel
+      qudt:numericValue: 1
+    time:inXSDDateTimeStamp: 2019-04-18T8:30:08-5:00
+
+  - '@id': urn:uuid:6f438393-7f87-4914-806c-e23a4fd15e89
+    '@type': EconomicEvent
+    realizationOf: alice:8e5fe80d-a769-4bd5-89e5-2136d33eab9d # the agreement
+    action: possess
+    resourceClassifiedAs: wd:Q4917 # US dollar
+    provider: https://bob.example
+    receiver: https://alice.example
+    flowQuantity:
+      qudt:unit: unit:Number
+      qudt:numericValue: 35
+    time:inXSDDateTimeStamp: 2019-04-18T8:30:08-5:00
+
+  - '@id': urn:uuid:3129ca8b-fcda-45be-bbda-294dc924d3b9
+    '@type': EconomicEvent
+    realizationOf: alice:8e5fe80d-a769-4bd5-89e5-2136d33eab9d # the agreement
+    triggeredBy: urn:uuid:6f438393-7f87-4914-806c-e23a4fd15e89 #the possess event
+    action: transfer
+    resourceClassifiedAs: wd:Q4917 # US dollar
+    resourceInventoriedAs: fair:b75d8f6a-e2df-4e52-b36d-1a22a66f4ead # Alice's wallet address
+    toResourceInventoriedAs: fair:3be5259d-10f0-431c-9fec-9c0c15a461d3 # Bob's wallet address
+    provider: https://bob.example
+    receiver: https://alice.example
+    flowQuantity:
+      qudt:unit: unit:Number
+      qudt:numericValue: 35
+    time:inXSDDateTimeStamp: 2019-04-18T8:30:08-5:00

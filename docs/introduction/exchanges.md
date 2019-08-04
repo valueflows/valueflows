@@ -8,6 +8,12 @@ Valueflows enables multilateral exchange agreements as well. Any number of agent
 
 We also support non-reciprocal one-way transfers, such as in a gift economy.  However, an exchange implies at least two transfers with reciprocity.
 
+A few examples:
+* For example, perhaps some agent has many apple trees, and plans on pressing apple cider. Another agent has an apple press and agrees to exchange use of the press (a resource) for a portion of the apple cider.  The use of the press involves some rights (to use the press for some period of time) and responsibilities (to not run it beyond its capacity and to clean it up before returning it). The rights and responsibilities to a portion of apple cider is transferred in exchange for the use of the press.
+
+* Or in a library, a book can be checked out for a period of time.  The agent who checks it out can read it and is responsible for caring for it and returning it on time.
+
+* Or let's say that a community has farmland and equipment held in common.  The community transfers responsibility for the land and equipment to some farmers to use and take care of.  The community also transfers seeds every year to the farmers, enough to grow the food the community needs.  During the year, the harvests are distributed (transferred) to the community members for their consumption.  In reciprocity, the community provides for other needs of the farmers.
 
 ### Exchanges and flows
 

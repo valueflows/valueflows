@@ -57,7 +57,8 @@ All flows use an action property to designate what the flow is doing and how it 
 * vf:accept - in processes like repair or modification, the same resource will appear in output with *vf:modify* verb
 * vf:modify - in processes like repair or modification, the same resource will appear in input with *vf:accept* verb
 * vf:service - new service produced and delivered (a service implies that an agent actively receives the service)
-* vf:transfer - give rights and/or possession of a resource from one agent to another
+* vf:transfer - assign primary rights and responsibilites for a resource from one agent to another (does not affect the resource physically)
+* vf:possess - change physical possession of a resource from one agent to another
 * vf:move - change location and possibly identifier, if location is part of the identification, of a resource with no change of agent rights or possession
 * vf:raise - adjusts a quantity up based on a beginning balance or inventory count
 * vf:lower - adjusts a quantity down based on a beginning balance or inventory count
@@ -74,6 +75,7 @@ unload | No effect  | Output | No  | load |
 accept | No effect  | Input | No  | modify |
 modify | No effect  | Output | No  | accept |
 transfer | Incr+Decr(2) | N/A | No | N/A |
+possess | Incr+Decr(2) | N/A | No | N/A |
 move | Incr+Decr(2) | N/A | No | N/A |
 raise | Increment | N/A | No | N/A |
 lower | Decrement | N/A | No | N/A |
@@ -82,7 +84,7 @@ We have defined a core set of actions, but expect that this will be extended wit
 
 (1) The actions `use` and `work` are time-based actions, either with or without an explicit schedule. If the schedule is documented as part of the economic resource, then those economic events could decrement that schedule, although not the "current quantity" of the resource.
 
-(2) The actions `transfer` and `move` can optionally define a second identified resource on the receiver side.
+(2) The actions `transfer` `possess` and `move` can optionally define a second identified resource on the receiver side.
 
 ### Quantities and Times
 
