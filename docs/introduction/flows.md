@@ -1,6 +1,6 @@
 # Flows
 
-Flows are a fundamental construct in the ValueFlows ontology. When put in chronological order, they form a progression:
+Flows are a fundamental construct in the ValueFlows ontology. When the types of flows are considered in chronological order, they form a progression from potential to scheduled to realized:
 
 1. Intents which can lead to Commitments
 2. Commitments which can lead to Economic Events (or Intents can lead directly to Economic Events)
