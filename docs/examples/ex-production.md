@@ -1,8 +1,8 @@
 # Production Examples
 
-[Manufacturing](#manufacturing)
-[Service](#service)
-[Workflow production](#workflow-production)
+1. [Manufacturing](#manufacturing)
+1. [Service](#service)
+1. [Workflow production](#workflow-production)
 
 #### Manufacturing
 

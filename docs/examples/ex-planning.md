@@ -1,15 +1,22 @@
 # Planning Examples
 
-[Simple plan](#simple-plan)
-[Fulfillment and satisfaction](#fulfillment-and-satisfaction)
-[Proposals with intents](#proposals-with-intents)
-[Budgeting](#budgeting)
+1. [Simple plan](#simple-plan)
+1. [Simple plan from recipe](#simple-plan-from-recipe)
+1. [Fulfillment and satisfaction](#fulfillment-and-satisfaction)
+1. [Proposals with intents](#proposals-with-intents)
+1. [Budgeting](#budgeting)
 
 #### Simple plan
 
 A plan for creating some different resources needed for one campaign.
 
 [import, lang:"yaml"](../../examples/simple-plan.yaml)
+
+#### Simple plan from recipe
+
+A plan generated from a recipe, for making a component.
+
+[import, lang:"yaml"](../../examples/plan-from-recipe.yaml)
 
 #### Fulfillment and satisfaction
 
