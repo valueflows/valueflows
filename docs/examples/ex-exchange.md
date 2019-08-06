@@ -1,5 +1,12 @@
 # Transfer and Exchange Examples
 
+[Exchange Agreements](#exchange-agreements)
+[Crypto-currency transfer](#crypto-currency-transfer)
+[Crypto-currency move](#moving-crypto-currency)
+[Checkout library book](#checkout-book)
+[Claim](#claim)
+
+
 #### Exchange agreements
 
 An exchange agreement with commitments and an exchange without prior agreement.

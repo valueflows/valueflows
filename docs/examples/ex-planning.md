@@ -1,5 +1,10 @@
 # Planning Examples
 
+[Simple plan](#simple-plan)
+[Fulfillment and satisfaction](#fulfillment-and-satisfaction)
+[Proposals with intents](#proposals-with-intents)
+[Budgeting](#budgeting)
+
 #### Simple plan
 
 A plan for creating some different resources needed for one campaign.
@@ -8,13 +13,13 @@ A plan for creating some different resources needed for one campaign.
 
 #### Fulfillment and satisfaction
 
-Examples of commitments satisfying intents, and economic events satisfying commitments.
+Commitments satisfying intents, and economic events satisfying commitments.
 
 [import, lang:"yaml"](../../examples/fulfill-satisfy.yaml)
 
 #### Proposals with intents
 
-Several simple examples of proposals, including requests and offers with and without expected reciprocity.  Also timebank intents, price lists, requests for help with a planned production process.
+Several simple proposals, including requests and offers with and without expected reciprocity, timebank intents, price lists, requests for help with a planned production process.
 
 [import, lang:"yaml"](../../examples/simple-proposals.yaml)
 

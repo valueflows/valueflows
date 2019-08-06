@@ -1,5 +1,5 @@
 # Economic Resource Examples
 
-These examples include economic resources, classified and with a resource specification.
+This example includes economic resources, with a resource specification.
 
 [import, lang:"yaml"](../../examples/resource.yaml)
