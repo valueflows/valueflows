@@ -105,8 +105,3 @@ Sometimes a quantity is expressed in time-based units, like "I worked 6 hours", 
 Sometimes a situation may call for a "compound quantity", like "Number-per-Year".
 
 Times can have different levels of exactness based on the need.  For example a commitment might specify that a task should be done by a certain date, but it doesn't matter when it is done before that date.
-
-
-### Examples
-
-[import, lang:"yaml"](../../examples/fulfill-satisfy.yaml)

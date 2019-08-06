@@ -8,7 +8,7 @@ We also want to acknowledge that some people prefer to think of themselves as in
 
 So, if people want to form a group that has agency as a group, fine.  If people want to consider that their group does not have agency as a group, also fine.  Not all groups, and especially not all networks, will be Agents in ValueFlows. That depends on the agreement of the people in the group.  Note that within the vocabulary, network formations will appear, as agents have economic interactions with each other in the world.  This does not mean that the network is necessarily a ValueFlows Agent.
 
-## Agent Relationships
+### Agent Relationships
 
 Agent relationships have many nuances, thus VF provides the ability to define one's own kinds of relationships.  For example people might "participate" with an organization by means of agreeing to terms and conditions.  Or people might have more active "membership" in a group or organization.  Or people might consider themselves members but want a more independently flavored term such as "affiliates".
 
@@ -19,7 +19,3 @@ There are a number of useful Properties in existing vocabularies that can be use
 Relationships have direction: For example, in "Michael is a member of Enspiral", Michael is the subject and Enspiral is the object.  In this case the inverse is also valid, "Enspiral has member Michael".
 
 Relationships can be in a scope (or not): For example, "Kathy is mentor of Sam, in the scope of Enspiral."
-
-## Examples
-
-[import, lang:"yaml"](../../examples/agent.yaml)
