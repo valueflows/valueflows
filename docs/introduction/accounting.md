@@ -21,3 +21,20 @@ Or potentially, views for a global value system economy (really).
 * from a network to the ecosystem
 
 Accounting isn't always just counting beans.  It will be important for community economies: what resources do we have, what happened with them, how are they doing? What resources do we need? Who needs what? Who can provide what?  What waste have we generated and how can we improve?
+
+
+### But if you want to count beans...
+
+The standard set of accounting reports are needed by many organizations. A standard General Ledger, Balance Sheet, and Income Statement can be generated automatically from ValueFlows data. No need to create a Chart of Accounts or post double-entries, those can all be created by a computer program on request. 
+
+![GL](https://rawgit.com/valueflows/valueflows/master/release-doc-in-process/std-accounting.png)
+
+Moreover, General Ledgers and accounting reports can be created automatically for each agent in an economic network using the VF vocabulary.
+
+This article describes how to generate General Ledgers etc from REA data using procedural code: [Operation of a Relational Accounting System, Graham Gal and Bill McCarthy](https://www.researchgate.net/publication/292781264_Operation_of_a_relational_accounting_system)
+
+Wim Laurier is working on how to do it declaratively. [This paper](http://ceur-ws.org/Vol-2383/paper8.pdf) gives an early view of how Wim and Satoshi Horiuchi intend to do it.
+
+The difference between doing it procedurally and doing it declaratively:
+* A procedural program defines a step-by-step method of getting the desired results.
+* A declarative program describes the desired results and hands it to another program that can generate the desired results from your description. The person who desires the results writes much less code.
