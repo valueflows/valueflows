@@ -19,14 +19,14 @@ For functions that require traversing value flows, often the value flow will cro
 * Standing agreements can govern what happens.
 * A conversation for action might be required to determine what should occur for the specific instance.
 
-## Accounting
+### Accounting
 
 Accounting is usually done for an agent or other bounded scope. Where a computer system supports one enterprise, this is simple.  When a computer system supports many organizations or there is a distributed network of economic activity, it is useful to be able to segregate the accounting using scope.  It basically enables multi-party accounting in a networked scenario.
 
-## Planning
+### Planning
 
 Sometimes a generic recipe will cross scope boundaries for particular agents. For example one agent could produce a resource that consumes a component made by another agent.  In this case, can the first agent schedule the production of the component by the second agent?  Possibly yes, if there are agreements in place for that, and the first agent has verified that inventory does not already exist.  Or possibly, based again on agreements, the first agent can assume the second agent will provide the component, with the second agent taking responsibility for checking if it is onhand, and if not, scheduling it for production.  Or possibly, the first agent plans only to source the component in some yet-to-be-defined way.
 
-## Distributing Incoming Resources
+### Distributing Incoming Resources
 
 Some organizations distribute incoming resources backwards on value flows, based on people's contributions to the resources that generated the income.  When traversing the value chain, it is useful to know when the traversal has crossed a scope boundary, because it is possible that the rules for distributing the incoming resources will change for a different scope.  If the rules change or the rules are unknown, the income can be passed on to the other scope for them to distribute.

@@ -36,6 +36,15 @@
 * [External terms](specification/external-terms.md)
 * [Classes and Properties](http://www.essepuntato.it/lode/owlapi/https://raw.githubusercontent.com/valueflows/valueflows/master/release-doc-in-process/all_vf.TTL)
 
+## Examples
+
+* [Agents](examples/ex-agent.md)
+* [Economic Resources](examples/ex-resource.md)
+* [Production](examples/ex-production.md)
+* [Exchanges and Transfers](examples/ex-exchange.md)
+* [Planning](examples/ex-planning.md)
+* [Combination Examples](examples/complex.md)
+
 ## Appendices
 
 * [REA References](appendix/rea.md)

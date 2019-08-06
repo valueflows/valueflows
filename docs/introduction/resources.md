@@ -92,7 +92,3 @@ One example: a resource which defines the rental of an apartment has the apartme
 Unlike underlying resource, if one resource contains other resources, the contained resources are part of, or make up the larger resource.
 
 For example, a bank account might contain a number of "virtual accounts" that a group manages itself, outside the bank's knowledge.  Or, a bike shed resource might contain 10 bikes, which are identified and tracked by their serial numbers as individual resources.
-
-## Examples
-
-[import, lang:"yaml"](../../examples/resource.yaml)
