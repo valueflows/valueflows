@@ -2,5 +2,5 @@
 
 These examples include agents (people and organizations) and their relationships.
 
-[import, lang:"yaml"](agent.yaml)
+[import, lang:"yaml"](../../examples/agent.yaml)
 
