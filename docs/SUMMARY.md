@@ -39,8 +39,8 @@
 ## Examples
 
 * [Agents](../../examples/ex-agent.md)
-* [Economic Resources](../../examples/ex-resource.md)
-* [Production](../../examples/ex-production.md)
+* [Economic Resources](../examples/ex-resource.md)
+* [Production](../examples/ex-production.md)
 * [Exchanges and Transfers](../../examples/ex-exchange.md)
 * [Planning](../../examples/ex-planning.md)
 * [Combination Examples](../../examples/complex.md)

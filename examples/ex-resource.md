@@ -2,4 +2,4 @@
 
 These examples include economic resources, classified and with a resource specification.
 
-[import, lang:"yaml"](resource.yaml)
+[import, lang:"yaml"](../../examples/resource.yaml)
