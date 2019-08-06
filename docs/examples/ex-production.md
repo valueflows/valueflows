@@ -4,11 +4,11 @@
 
 Execution of simple one-process manufacturing with typical inputs and outputs.
 
-[import, lang:"yaml"](../../process-manufacturing.yaml)
+[import, lang:"yaml"](../../examples/process-manufacturing.yaml)
 
 #### Workflow production
 
 A simple repair process with typical inputs and outputs.
 
-[import, lang:"yaml"](../../process-workflow.yaml)
+[import, lang:"yaml"](../../examples/process-workflow.yaml)
 
