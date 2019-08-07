@@ -2,8 +2,7 @@
 
 '@context':
   - https://git.io/vf-examples-jsonld-context
-  - alice: https://alice.example/
-    printer: https://printer.example/
+  - printer: https://printer.example/
 
 '@id': rgh:valueflows/valueflows/master/examples/simple-plan.yaml
 '@graph':
