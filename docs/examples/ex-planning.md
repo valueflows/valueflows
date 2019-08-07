@@ -3,7 +3,7 @@
 1. [Simple plan](#simple-plan)
 1. [Simple plan from recipe](#simple-plan-from-recipe)
 1. [Fulfillment and satisfaction](#fulfillment-and-satisfaction)
-1. [Proposals with intents](#proposals-with-intents)
+2. [Proposals with intents](#proposals-with-intents)
 2. [Budgeting](#budgeting)
 
 #### Simple plan
