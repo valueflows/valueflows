@@ -3,7 +3,7 @@
 '@context':
   - https://git.io/vf-examples-jsonld-context
   - alice: https://alice.example/
-    sensor: https://sencorica.example/
+    sensor: https://sensorica.example/
     open: https://openhardware.example
 
 '@id': rgh:valueflows/valueflows/master/examples/plan-from-recipe.yaml
@@ -15,6 +15,7 @@
     '@type': ResourceSpecification
     name: Delivery fiber
     uri: https://openhardware.example/delivery-fiber
+    skos:note: Optical fiber that connects 2 devices.
 
   - '@id': urn:uuid:b90b0b77-09a2-42e2-8bd4-e9ae2c1c6172
     '@type': RecipeResource
@@ -69,8 +70,8 @@
     independentDemandOf: sensor:8e5fe80d-a769-4bd5-89e5-2136d33eab9f
     outputOf: sensor:02b39a30-3e04-4305-9656-7f261aa63c84
     action: produce
-    provider: https://sensor.example/
-    receiver: https://sensor.example/
+    provider: https://sensorica.example/
+    receiver: https://sensorica.example/
     resourceConformsTo: urn:uuid:b90b0b77-09a2-42e2-8bd4-e9ae2c1c6172 # delivery fiber
     flowQuantity:
       qudt:unit: unit:Meter
@@ -86,8 +87,8 @@
     '@type': Commitment
     inputOf: sensor:02b39a30-3e04-4305-9656-7f261aa63c84
     action: consume
-    provider: https://sensor.example/
-    receiver: https://sensor.example/
+    provider: https://sensorica.example/
+    receiver: https://sensorica.example/
     resourceClassifiedAs: wd:Q162 # optical fiber
     flowQuantity:
       qudt:unit: unit:Meter
@@ -99,7 +100,7 @@
     inputOf: sensor:02b39a30-3e04-4305-9656-7f261aa63c84
     action: work
     provider: https://alice.example/
-    receiver: https://sensor.example/
+    receiver: https://sensorica.example/
     resourceClassifiedAs: wd:Q640621 # optical engineering
     flowQuantity:
       qudt:unit: unit:Hour

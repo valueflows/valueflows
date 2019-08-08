@@ -38,7 +38,7 @@
     '@type': Agreement
     skos:note: exchange transportation service for currency
 
-  - '@id': urn:uuid:8baa8ff7-9c1e-4586-ae7b-79d620a3cac9
+  - '@id': urn:uuid:33e8933b-ff73-4a01-964a-ca7a98893083
     '@type': Commitment
     action: transfer
     resourceClassifedAs: wd:Q4917 # US Dollar
@@ -248,7 +248,7 @@
 
   - '@id': urn:uuid:fbff9852-36ca-4364-a943-bc0b49e1cab5
     '@type': Fulfillment
-    fulfills: urn:uuid:8baa8ff7-9c1e-4586-ae7b-79d620a3cac9 # the commitment
+    fulfills: urn:uuid:33e8933b-ff73-4a01-964a-ca7a98893083 # the commitment
     fulfilledBy: urn:uuid:8baa8ff7-9c1e-4586-ae7b-79d620a3cac9 # the economic event
     fulfilledQuantity:
       qudt:unit: unit:Number

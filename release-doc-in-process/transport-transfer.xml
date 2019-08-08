@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<mxfile modified="2019-08-08T12:19:07.239Z" host="www.draw.io" agent="Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:68.0) Gecko/20100101 Firefox/68.0" version="11.1.1" etag="dxFxGoEpXFzokyGeznLk" type="device" compressed="false">
-  <diagram id="ySRBvQvr_8nwf4P8XMXW">
+<mxfile modified="2019-08-08T15:46:06.755Z" host="www.draw.io" agent="Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:68.0) Gecko/20100101 Firefox/68.0" version="11.1.1" etag="LGMQlCEzchTZCFKEAEUm" type="device" compressed="false">
+  <diagram id="mfRQpddUL4VJJqIOGON4">
     <mxGraphModel dx="2205" dy="778" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0"/>
@@ -32,16 +32,16 @@
         <mxCell id="8" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fad9d5;strokeColor=none;align=left;verticalAlign=top;" vertex="1" parent="1">
           <mxGeometry x="31" y="3730" width="939" height="120" as="geometry"/>
         </mxCell>
-        <mxCell id="9" value="commitment to transfer 30kg apples to Bob" style="shape=delay;whiteSpace=wrap;html=1;rounded=0;glass=1;comic=0;" vertex="1" parent="1">
-          <mxGeometry x="50" y="3750" width="132" height="40" as="geometry"/>
+        <mxCell id="9" value="commitment to transfer 30kg apples from Alice to Bob" style="shape=delay;whiteSpace=wrap;html=1;rounded=0;glass=1;comic=0;" vertex="1" parent="1">
+          <mxGeometry x="47" y="3750" width="133" height="40" as="geometry"/>
         </mxCell>
         <mxCell id="10" value="Transportation agreement" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="687" y="3740.5" width="125" height="40" as="geometry"/>
         </mxCell>
-        <mxCell id="11" value="commitment to transfer $10 to Claudia" style="shape=delay;whiteSpace=wrap;html=1;rounded=0;glass=1;comic=0;" vertex="1" parent="1">
-          <mxGeometry x="804" y="3800" width="123" height="40" as="geometry"/>
+        <mxCell id="11" value="commitment to transfer $10 from Alice to Claudia" style="shape=delay;whiteSpace=wrap;html=1;rounded=0;glass=1;comic=0;" vertex="1" parent="1">
+          <mxGeometry x="808" y="3800" width="123" height="40" as="geometry"/>
         </mxCell>
-        <mxCell id="12" value="commitment to Alice for transportation service" style="shape=delay;whiteSpace=wrap;html=1;rounded=0;glass=1;comic=0;" vertex="1" parent="1">
+        <mxCell id="12" value="commitment from Claudia to Alice for transportation service" style="shape=delay;whiteSpace=wrap;html=1;rounded=0;glass=1;comic=0;" vertex="1" parent="1">
           <mxGeometry x="544" y="3800" width="153" height="40" as="geometry"/>
         </mxCell>
         <mxCell id="13" value="" style="endArrow=none;dashed=1;html=1;entryX=0;entryY=0.75;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" source="12" target="10" parent="1">
@@ -56,8 +56,8 @@
             <mxPoint x="926" y="3776.5" as="targetPoint"/>
           </mxGeometry>
         </mxCell>
-        <mxCell id="15" value="transfer 30kg of apples to Claudia" style="shape=delay;whiteSpace=wrap;html=1;rounded=0;glass=1;comic=0;" vertex="1" parent="1">
-          <mxGeometry x="197" y="3866" width="114" height="40" as="geometry"/>
+        <mxCell id="15" value="transfer possession from Alice to Claudia 30kg apples" style="shape=delay;whiteSpace=wrap;html=1;rounded=0;glass=1;comic=0;" vertex="1" parent="1">
+          <mxGeometry x="197" y="3866" width="143" height="40" as="geometry"/>
         </mxCell>
         <mxCell id="16" value="Apples 30kg" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="82" y="3866" width="90" height="40" as="geometry"/>
@@ -69,7 +69,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="18" value="Apples 30kg" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="327.5" y="3864.5" width="90" height="40" as="geometry"/>
+          <mxGeometry x="360" y="3864.5" width="90" height="40" as="geometry"/>
         </mxCell>
         <mxCell id="19" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" source="15" target="18" parent="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
@@ -137,7 +137,7 @@
             <mxPoint x="313.5" y="4109.5" as="targetPoint"/>
           </mxGeometry>
         </mxCell>
-        <mxCell id="33" value="transfer Bob receives 30kg apples" style="shape=delay;whiteSpace=wrap;html=1;rounded=0;glass=1;comic=0;" vertex="1" parent="1">
+        <mxCell id="33" value="transfer possession from Claudia to Bob 30kg apples" style="shape=delay;whiteSpace=wrap;html=1;rounded=0;glass=1;comic=0;" vertex="1" parent="1">
           <mxGeometry x="636.5" y="4044" width="137" height="40" as="geometry"/>
         </mxCell>
         <mxCell id="34" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" source="29" target="33" parent="1">
@@ -152,7 +152,7 @@
             <mxPoint x="370" y="4160" as="targetPoint"/>
           </mxGeometry>
         </mxCell>
-        <mxCell id="36" value="transfer 30kg apples to Bob" style="shape=delay;whiteSpace=wrap;html=1;rounded=0;glass=1;comic=0;" vertex="1" parent="1">
+        <mxCell id="36" value="transfer 30kg apples from Alice to Bob" style="shape=delay;whiteSpace=wrap;html=1;rounded=0;glass=1;comic=0;" vertex="1" parent="1">
           <mxGeometry x="790.5" y="4043.5" width="97" height="40" as="geometry"/>
         </mxCell>
         <mxCell id="37" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" source="33" target="36" parent="1">
@@ -171,7 +171,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="39" value="transfer $10 to Claudia" style="shape=delay;whiteSpace=wrap;html=1;rounded=0;glass=1;comic=0;" vertex="1" parent="1">
+        <mxCell id="39" value="transfer $10 from Alice to Claudia" style="shape=delay;whiteSpace=wrap;html=1;rounded=0;glass=1;comic=0;" vertex="1" parent="1">
           <mxGeometry x="850" y="4120" width="102" height="40" as="geometry"/>
         </mxCell>
         <mxCell id="40" value="" style="endArrow=none;dashed=1;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.75;entryY=1;entryDx=0;entryDy=0;" edge="1" source="39" target="11" parent="1">
