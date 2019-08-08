@@ -17,7 +17,7 @@ An exchange agreement with commitments.
 
 #### Retail exchange
 
-An exchange without prior agreement.
+An exchange without prior commitments.  Note we are still using the Agreement to tie together the reciprocal events, even there were no commitments ahead of time.
 
 ![retail diagram](https://rawgit.com/valueflows/valueflows/master/release-doc-in-process/exch-pos.png)
 
