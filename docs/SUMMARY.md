@@ -43,7 +43,7 @@
 * [Production](examples/ex-production.md)
 * [Exchanges and Transfers](examples/ex-exchange.md)
 * [Planning](examples/ex-planning.md)
-* [Combinations](examples/complex.md)
+* [More Complex](examples/ex-complex.md)
 
 ## Appendices
 
