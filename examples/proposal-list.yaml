@@ -1,0 +1,89 @@
+# Example: Simple price list
+
+'@context':
+  - https://git.io/vf-examples-jsonld-context
+  - farm: https://farm.example/
+    map: https://mapping.service/
+
+'@id': rgh:valueflows/valueflows/master/examples/proposal-list.yaml
+'@graph':
+
+  # Price list
+
+  - '@id': farm:da7bfa38-a1b2-4f6f-a896-b9bf1ec8807a
+    '@type': Proposal
+    hasBeginning: 2019-03-01T00:00:00-5:00
+    hasEnd: 2019-03-31T00:00:00-5:00
+    eligibleLocation: map:566a2c01-96f8-4b3c-adcf-f197eced3092 # Madison, WI
+
+  - '@id': farm:c7897c39-7f05-4a5d-a487-80e130a24345
+    '@type': Intent
+    name: Carrots case 25#
+    action: transfer
+    provider: https://farm.example/
+    resourceClassifiedAs: wd:Q81 # carrot
+    resourceSpecifiedAs: farm:2402b57c-1c45-423a-acb2-f50961c97d65 # 25 pound case organic carrots seconds
+    unitQuantity:
+      qudt:unit: unit:Number
+      qudt:numericValue: 1
+
+  - '@id': farm:a8236bbb-81e0-422d-9861-56d2417db0fb
+    '@type': ProposedIntent
+    publishedIn: farm:da7bfa38-a1b2-4f6f-a896-b9bf1ec8807a # the proposal
+    publishes: farm:c7897c39-7f05-4a5d-a487-80e130a24345 # the intent
+    reciprocal: false
+
+  - '@id': farm:0f563083-7f05-4a5d-a487-80e130a24345
+    '@type': Intent
+    name: Payment
+    action: transfer
+    receiver: https://farm.example/
+    resourceClassifiedAs: https://www.wikidata.org/wiki/Q4917 # US Dollar
+    unitQuantity:
+      qudt:unit: unit:Number
+      qudt:numericValue: 18
+
+  - '@id': farm:f325a950-5737-488d-b122-8f21114d0eb0
+    '@type': ProposedIntent
+    publishedIn: farm:da7bfa38-a1b2-4f6f-a896-b9bf1ec8807a # the proposal
+    publishes: farm:0f563083-7f05-4a5d-a487-80e130a24345 # the intent
+    reciprocal: true
+
+  - '@id': farm:f47064eb-7120-4b31-b882-770165901fe6
+    '@type': Proposal
+    hasBeginning: 2019-03-01T00:00:00-5:00
+    hasEnd: 2019-03-31T00:00:00-5:00
+    eligibleLocation: map:566a2c01-96f8-4b3c-adcf-f197eced3092 # Madison, WI
+
+  - '@id': farm:54b814ee-62dc-40c1-bb96-f8582aa4f771
+    '@type': Intent
+    name: Beets case 25#
+    action: transfer
+    provider: https://farm.example/
+    resourceClassifiedAs: wd:Q165437 # beet root
+    resourceSpecifiedAs: farm:8baa8ff7-9c1e-4586-ae7b-79d620a3cac9 # 25 pound case organic beets
+    unitQuantity:
+      qudt:unit: unit:Number
+      qudt:numericValue: 1
+
+  - '@id': farm:98c2bfeb-9c70-4801-896c-4646b975a7d9
+    '@type': ProposedIntent
+    publishedIn: farm:f47064eb-7120-4b31-b882-770165901fe6 # the proposal
+    publishes: farm:54b814ee-62dc-40c1-bb96-f8582aa4f771 # the intent
+    reciprocal: false
+
+  - '@id': farm:21f361a6-2375-46bb-b192-c21b5ba833bf
+    '@type': Intent
+    name: Payment
+    action: transfer
+    receiver: https://farm.example/
+    resourceClassifiedAs: https://www.wikidata.org/wiki/Q4917 # US Dollar
+    unitQuantity:
+      qudt:unit: unit:Number
+      qudt:numericValue: 32
+
+  - '@id': farm:b75d8f6a-e2df-4e52-b36d-1a22a66f4ead
+    '@type': ProposedIntent
+    publishedIn: farm:f47064eb-7120-4b31-b882-770165901fe6 # the proposal
+    publishes: farm:21f361a6-2375-46bb-b192-c21b5ba833bf5 # the intent
+    reciprocal: true

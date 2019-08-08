@@ -51,5 +51,7 @@ Checking out and checking back in a library book (a loan).
 
 Logged work triggers a claim for future income distribution for that work.
 
+![claim diagram](https://rawgit.com/valueflows/valueflows/master/release-doc-in-process/claim.png)
+
 [import, lang:"yaml"](../../examples/claim.yaml)
 

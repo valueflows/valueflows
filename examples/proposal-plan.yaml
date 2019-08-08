@@ -1,0 +1,59 @@
+# Example: Simple proposal for commitment to an intent on a plan
+
+'@context':
+  - https://git.io/vf-examples-jsonld-context
+  - fablab: https://fablab.example/
+    map: https://mapping.service/
+
+'@id': rgh:valueflows/valueflows/master/examples/proposal-plan.yaml
+'@graph':
+
+
+  # Plan a process, broadcast request for worker with certain skills to collaborate
+
+  - '@id': fablab:ad56a7ed-be3c-4937-a3fb-0f156bcd2c47
+    '@type': Process
+    name: Develop soil moisture sensor
+    inScopeOf: https://fablab.example/
+
+  - '@id': fablab:60f4204e-b8d2-4026-8577-102c3f82c0af
+    '@type': Intent
+    inputOf: fablab:ad56a7ed-be3c-4937-a3fb-0f156bcd2c47
+    name: Help with R&D for the sensor
+    skos:note: Will need to be at the lab all day both days.
+    action: work
+    receiver: https://fablab.example/
+    resourceClassifiedAs: https://www.wikidata.org/wiki/Q2474620 # electrochemical engineering
+    flowQuantity:
+      qudt:unit: unit:Hour
+      qudt:numericValue: 16
+    hasBeginning: 2019-04-12T08:00:00-5:00
+    hasEnd: 2019-04-13T17:00:00-5:00
+
+  - '@id': fablab:33e8933b-ff73-4a01-964a-ca7a98893083
+    '@type': Proposal
+    name: Electrochemical engineering skills
+    hasBeginning: 2019-04-01T08:00:00-5:00
+    hasEnd: 2019-04-11T17:00:00-5:00
+    eligibleLocation: map:566a2c01-96f8-4b3c-adcf-f197eced3092 # Madison, WI
+
+  - '@id': fablab:b90b0b77-09a2-42e2-8bd4-e9ae2c1c6172
+    '@type': ProposedIntent
+    publishedIn: fablab:33e8933b-ff73-4a01-964a-ca7a98893083 # the proposal
+    publishes: fablab:60f4204e-b8d2-4026-8577-102c3f82c0af # the intent
+    reciprocal: false
+
+  - '@id': fablab:583e83d9-a46d-44ff-bd71-88513a1d83c0
+    '@type': Intent
+    name: Payment
+    skos:note: Payment when the unit is manufactured and sold
+    action: transfer
+    provider: https://fablab.example/
+    resourceClassifiedAs: https://www.wikidata.org/wiki/Q4917 # US Dollar
+    agreedIn: https://fablab.example/soil-sensor-project/value-equation/
+
+  - '@id': fablab:d4d2fd71-34f2-41c3-b1c5-19ad5ed2da59b
+    '@type': ProposedIntent
+    publishedIn: fablab:33e8933b-ff73-4a01-964a-ca7a98893083 # the proposal
+    publishes: fablab:583e83d9-a46d-44ff-bd71-88513a1d83c0 # the intent
+    reciprocal: true
