@@ -7,13 +7,21 @@
 1. [Claim](#claim)
 
 
-#### Exchange agreements
+#### Exchange agreement
 
-An exchange agreement with commitments and an exchange without prior agreement.
+An exchange agreement with commitments.
 
-![exchange diagram](https://rawgit.com/valueflows/valueflows/master/release-doc-in-process/exch-agreement.png)
+![agreement diagram](https://rawgit.com/valueflows/valueflows/master/release-doc-in-process/exch-commit.png)
 
 [import, lang:"yaml"](../../examples/exch-agreement.yaml)
+
+#### Retail exchange
+
+An exchange without prior agreement.
+
+![retail diagram](https://rawgit.com/valueflows/valueflows/master/release-doc-in-process/exch-pos.png)
+
+[import, lang:"yaml"](../../examples/exch-retail.yaml)
 
 #### Crypto-currency transfer
 
@@ -42,6 +50,8 @@ Checking out and checking back in a library book (a loan).
 #### Claim
 
 Logged work triggers a claim for future income distribution for that work.
+
+![claim diagram](https://rawgit.com/valueflows/valueflows/master/release-doc-in-process/claim.png)
 
 [import, lang:"yaml"](../../examples/claim.yaml)
 

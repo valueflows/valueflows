@@ -11,17 +11,22 @@
 
   # the recipe
 
-  - '@id': urn:uuid:b90b0b77-09a2-42e2-8bd4-e9ae2c1c6172
+  - '@id': urn:uuid:3be5259d-10f0-431c-9fec-9c0c15a461d3
     '@type': ResourceSpecification
-    name: Mosquito delivery fiber
+    name: Delivery fiber
     uri: https://openhardware.example/delivery-fiber
-    skos:note: Optical fiber that makes the connection between the Mosquito and the transducer. An adapter can also be used between the transducer and the delivery fiber.
+
+  - '@id': urn:uuid:b90b0b77-09a2-42e2-8bd4-e9ae2c1c6172
+    '@type': RecipeResource
+    resourceConformsTo: urn:uuid:3be5259d-10f0-431c-9fec-9c0c15a461d3 # the spec
+    name: Delivery fiber
+    skos:note: Optical fiber that makes the connection between the device and the transducer. An adapter can also be used between the transducer and the delivery fiber.
 
   - '@id': urn:uuid:33e8933b-ff73-4a01-964a-ca7a98893083
     '@type': RecipeFlow
     outputOf: urn:uuid:e1721a61-cd47-4556-84b9-8b1b81da15bf
     action: produce
-    resourceConformsTo: urn:uuid:b90b0b77-09a2-42e2-8bd4-e9ae2c1c6172 # Mosquito delivery fiber
+    recipeFlowResource: urn:uuid:b90b0b77-09a2-42e2-8bd4-e9ae2c1c6172 # delivery fiber
     flowQuantity:
       qudt:unit: unit:Meter
       qudt:numericValue: .5
@@ -54,8 +59,8 @@
 
   - '@id': sensor:8e5fe80d-a769-4bd5-89e5-2136d33eab9f
     '@type': Plan
-    name: Mosquito delivery fiber
-    skos:note: Make the optical fiber that makes the connection between the Mosquito and the transducer. 
+    name: Delivery fiber
+    skos:note: Make the optical fiber that makes the connection between the device and the transducer. 
     time:before: 2019-04-08T17:00:00-5:00
     dcterms:created: 2019-04-01T10:35:00-5:00
 
@@ -66,7 +71,7 @@
     action: produce
     provider: https://sensor.example/
     receiver: https://sensor.example/
-    resourceConformsTo: urn:uuid:b90b0b77-09a2-42e2-8bd4-e9ae2c1c6172 # Mosquito delivery fiber
+    resourceConformsTo: urn:uuid:b90b0b77-09a2-42e2-8bd4-e9ae2c1c6172 # delivery fiber
     flowQuantity:
       qudt:unit: unit:Meter
       qudt:numericValue: .5
