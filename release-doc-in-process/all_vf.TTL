@@ -239,14 +239,6 @@ vf:toResourceInventoriedAs
         vs:term_status      "unstable" ;
         rdfs:comment        "Additional economic resource on the economic event when needed for receipt. Used when a transfer or move, or sometimes other actions, requires explicitly identifying an economic resource on the receiving side." .
 
-vf:underlyingResource
-        a                   owl:ObjectProperty ;
-        rdfs:label          "underlying resource" ;
-        rdfs:domain         vf:EconomicResource ;
-        rdfs:range          vf:EconomicResource ;
-        vs:term_status      "unstable" ;
-        rdfs:comment        "A more concrete resource upon which a resource is based." .
-
 vf:relationship  a          owl:ObjectProperty ;
         rdfs:label          "relationship" ;
         rdfs:domain         vf:AgentRelationship ;
@@ -359,47 +351,19 @@ vf:currentQuantity a        owl:ObjectProperty ;
         vs:term_status      "unstable" ;
         rdfs:comment        "The current amount and unit of the economic resource. This can be stored or derived from economic events affecting the resource" .
 
-vf:flowQuantity a           owl:ObjectProperty ;
-        rdfs:label          "flow quantity" ;
-        rdfs:domain         [ owl:unionOf (vf:EconomicEvent vf:Commitment vf:Intent) ] ;
+vf:resourceQuantity a       owl:ObjectProperty ;
+        rdfs:label          "involved quantity" ;
+        rdfs:domain         [ owl:unionOf (vf:EconomicEvent vf:Commitment vf:Intent vf:RecipeFlow vf:Fulfillment vf:Satisfaction vf:Claim vf:Settlement) ] ;
         rdfs:range          qudt:QuantityValue ;
         vs:term_status      "unstable" ;
-        rdfs:comment        "The amount and unit of the economic event, commitment, or intent." .
+        rdfs:comment        "The amount and unit of the economic resource counted or inventoried in the flow." .
 
-vf:fulfilledQuantity a      owl:ObjectProperty ;
-        rdfs:label          "fulfilled quantity" ;
-        rdfs:domain         vf:Fulfillment ;
+vf:effortQuantity a         owl:ObjectProperty ;
+        rdfs:label          "effort quantity" ;
+        rdfs:domain         [ owl:unionOf (vf:EconomicEvent vf:Commitment vf:Intent vf:RecipeFlow vf:Fulfillment vf:Satisfaction vf:Claim vf:Settlement) ] ;
         rdfs:range          qudt:QuantityValue ;
         vs:term_status      "unstable" ;
-        rdfs:comment        "The quantity of the fulfillment of an event towards a commitment or an intent." .
-
-vf:satisfiedQuantity a      owl:ObjectProperty ;
-        rdfs:label          "satisfied quantity" ;
-        rdfs:domain         vf:Satisfaction ;
-        rdfs:range          qudt:QuantityValue ;
-        vs:term_status      "unstable" ;
-        rdfs:comment        "The quantity of the satisfaction of an commitment towards an intent." .
-
-vf:claimedQuantity a        owl:ObjectProperty ;
-        rdfs:label          "claimed quantity" ;
-        rdfs:domain         vf:Claim ;
-        rdfs:range          qudt:QuantityValue ;
-        vs:term_status      "unstable" ;
-        rdfs:comment        "The quantity of the initial expected reciprocity when an event materializes a claim." .
-
-vf:settledQuantity a        owl:ObjectProperty ;
-        rdfs:label          "settled quantity" ;
-        rdfs:domain         vf:Settlement ;
-        rdfs:range          qudt:QuantityValue ;
-        vs:term_status      "unstable" ;
-        rdfs:comment        "The quantity of the settlement of an economic event towards a claim." .
-
-vf:definedQuantity a        owl:ObjectProperty ;
-        rdfs:label          "defined quantity" ;
-        rdfs:domain         vf:RecipeFlow ;
-        rdfs:range          qudt:QuantityValue ;
-        vs:term_status      "unstable" ;
-        rdfs:comment        "The amount and unit defined for this recipe flow." .
+        rdfs:comment        "The amount and unit of the work or use effort based action of a flow or ." .
 
 vf:availableQuantity a      owl:ObjectProperty ;
         rdfs:label          "available quantity" ;
@@ -555,19 +519,19 @@ vf:substitutable a        owl:DatatypeProperty ;
         vs:term_status      "unstable" ;
         rdfs:comment        "Defines if any resource of that type can be freely substituted for any other resource of that type when used, consumed, traded, etc." .
 
-vf:defaultUnit a            owl:ObjectProperty ;
-        rdfs:label          "default unit" ;
-        rdfs:domain         vf:ResourceSpecification ;
-        rdfs:range          qudt:unit ;
-        vs:term_status      "unstable" ;
-        rdfs:comment        "The unit expected for this resource specification as a default." .
-
-vf:unit a                   owl:ObjectProperty ;
-        rdfs:label          "unit" ;
-        rdfs:domain         vf:RecipeResource ;
+vf:unitOfResource a         owl:ObjectProperty ;
+        rdfs:label          "unit of resource" ;
+        rdfs:domain         [ owl:unionOf (vf:RecipeResource vf:ResourceSpecification) ] ;
         rdfs:range          qudt:unit ;
         vs:term_status      "unstable" ;
         rdfs:comment        "The unit used for this resource in the recipe." .
+
+vf:unitOfEffort a           owl:ObjectProperty ;
+        rdfs:label          "unit of effort" ;
+        rdfs:domain         [ owl:unionOf (vf:RecipeResource vf:EconomicResource vf:ResourceSpecification) ] ;
+        rdfs:range          qudt:unit ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "The unit used for use or work actions." .
 
 # TODO: need to define this, something like currency, inventory, skill, service; may be other aspects too.
 #vf:resourceCategory a    owl:ObjectProperty ;

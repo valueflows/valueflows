@@ -21,7 +21,7 @@
     action: use
     receiver: https://carol.example/
     resourceClassifiedAs: https://www.wikidata.org/wiki/Q1111 # cider press (fictional)
-    flowQuantity:
+    effortQuantity:
       qudt:unit: unit:Hour
       qudt:numericValue: 6
 
@@ -38,7 +38,7 @@
     action: transfer
     provider: https://carol.example/
     resourceClassifiedAs: https://www.wikidata.org/wiki/Q5977438 # apple cider
-    flowQuantity:
+    resourceQuantity:
       qudt:unit: unit:Gallon
       qudt:numericValue: 3
 

@@ -36,7 +36,7 @@
     toResourceInventoriedAs: fair:3be5259d-10f0-431c-9fec-9c0c15a461d3 # Bob's second wallet address
     provider: https://bob.example
     receiver: https://bob.example
-    flowQuantity:
+    resourceQuantity:
       qudt:unit: unit:Number
       qudt:numericValue: 100
     time:inXSDDateTimeStamp: 2019-04-18T8:30:08-5:00

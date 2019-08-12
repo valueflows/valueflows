@@ -21,7 +21,7 @@
     provider: https://store.example/
     receiver: https://carol.example/
     resourceClassifiedAs: https://www.wikidata.org/wiki/Q47107 # bucket
-    flowQuantity:
+    resourceQuantity:
       qudt:unit: unit: Number
       qudt:numericValue: 1
 
@@ -33,6 +33,6 @@
     receiver: https://store.example/
     resourceClassifiedAs: https://www.wikidata.org/wiki/Q4917 # US dollar
     resourceInventoriedAs: carol:e56fd654-7b94-4d96-8e60-de39e08329a7 # Carol's bank account
-    flowQuantity:
+    resourceQuantity:
       qudt:unit: unit: Number
       qudt:numericValue: 5

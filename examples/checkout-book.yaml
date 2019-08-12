@@ -29,7 +29,7 @@
     time:inXSDDateTimeStamp: 2019-04-18T8:00:00-5:00
     provider: https://library.example/
     receiver: https://bob.example/
-    flowQuantity: 
+    resourceQuantity: 
       qudt:unit: unit:Number
       qudt:numericValue: 1
 
@@ -40,7 +40,7 @@
     resourceInventoriedAs: library:2402b57c-1c45-423a-acb2-f50961c97d65
     provider: https://bob.example/
     receiver: https://library.example/
-    flowQuantity:
+    resourceQuantity:
       qudt:unit: unit:Number
       qudt:numericValue: 1
     time:before: 2019-05-17T18:00:00-5:00
@@ -63,7 +63,7 @@
     resourceInventoriedAs: library:2402b57c-1c45-423a-acb2-f50961c97d65
     provider: https://bob.example/
     receiver: https://library.example/
-    flowQuantity:
+    resourceQuantity:
       qudt:unit: unit:Number
       qudt:numericValue: 1
     time:inXSDDateTimeStamp: 2019-05-14T10:20:00-5:00
@@ -72,7 +72,7 @@
     '@type': Fulfillment
     fulfills: urn:uuid:98c2bfeb-9c70-4801-896c-4646b975a7d9 # the commitment
     fulfilledBy: urn:uuid:d4d2fd71-34f2-41c3-b1c5-19ad5ed2da59 # the economic event
-    fulfilledQuantity:
+    resourceQuantity:
       qudt:unit: unit:Number
       qudt:numericValue: 1
 
