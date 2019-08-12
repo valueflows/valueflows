@@ -372,7 +372,7 @@ vf:availableQuantity a      owl:ObjectProperty ;
         vs:term_status      "unstable" ;
         rdfs:comment        "The quantity of the offered or requested resource currently available." .
 
-vf:unitBased  a              owl:DatatypeProperty ;
+vf:unitBased  a             owl:DatatypeProperty ;
         rdfs:label          "unit based" ;
         rdfs:domain         vf:Proposal ;
         rdfs:range          xsd:boolean ;
@@ -435,7 +435,7 @@ vf:lot a                    owl:AnnotationProperty ;
         vs:term_status      "unstable" ;
         rdfs:comment        "Lot or batch of an economic resource, used to track forward or backwards to all occurrences of resources of that lot." .  
 
-vf:fulfilledBy              a owl:ObjectProperty ;
+vf:fulfilledBy a            owl:ObjectProperty ;
         rdfs:label          "fulfilled by" ;
         rdfs:range          vf:EconomicEvent ;
         rdfs:domain         vf:Fulfillment ;
@@ -467,7 +467,7 @@ vf:satisfiedBy
 
 vf:publishes
         a                   owl:ObjectProperty ;
-        rdfs:label         "publishes" ;
+        rdfs:label          "publishes" ;
         rdfs:domain         vf:ProposedIntent ;
         rdfs:range          vf:Intent ;
         vs:term_status      "unstable" ;
@@ -475,7 +475,7 @@ vf:publishes
 
 vf:publishedIn
         a                   owl:ObjectProperty ;
-        rdfs:label         "published in" ;
+        rdfs:label          "published in" ;
         rdfs:domain         vf:ProposedIntent ;
         rdfs:range          vf:Proposal ;
         vs:term_status      "unstable" ;
@@ -483,7 +483,7 @@ vf:publishedIn
 
 vf:proposed
         a                   owl:ObjectProperty ;
-        rdfs:label         "proposed" ;
+        rdfs:label          "proposed" ;
         rdfs:domain         vf:ProposedTo ;
         rdfs:range          vf:Proposal ;
         vs:term_status      "unstable" ;
@@ -491,7 +491,7 @@ vf:proposed
 
 vf:proposedTo
         a                   owl:ObjectProperty ;
-        rdfs:label         "proposed" ;
+        rdfs:label          "proposed to" ;
         rdfs:domain         vf:ProposedTo ;
         rdfs:range          foaf:Agent ;
         vs:term_status      "unstable" ;
@@ -499,7 +499,7 @@ vf:proposedTo
 
 vf:reciprocal
         a                   owl:DatatypePropert ;
-        rdfs:label         "reciprocal" ;
+        rdfs:label          "reciprocal" ;
         rdfs:domain         vf:ProposedIntent ;
         rdfs:range          xsd:boolean ;
         vs:term_status      "unstable" ;
