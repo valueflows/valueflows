@@ -28,7 +28,7 @@
     outputOf: urn:uuid:e1721a61-cd47-4556-84b9-8b1b81da15bf
     action: produce
     recipeFlowResource: urn:uuid:b90b0b77-09a2-42e2-8bd4-e9ae2c1c6172 # delivery fiber
-    flowQuantity:
+    resourceQuantity:
       qudt:unit: unit:Meter
       qudt:numericValue: .5
 
@@ -42,7 +42,7 @@
     inputOf: urn:uuid:e1721a61-cd47-4556-84b9-8b1b81da15bf
     action: consume
     resourceClassifiedAs: wd:Q162 # optical fiber
-    flowQuantity:
+    resourceQuantity:
       qudt:unit: unit:Meter
       qudt:numericValue: .5
     skos:note: Optical guide, can be of glass of polymer. Usually it comes in a cylindrical shape. Can be MM (multimode) or SM (single mode)
@@ -52,7 +52,7 @@
     inputOf: urn:uuid:e1721a61-cd47-4556-84b9-8b1b81da15bf
     action: work
     resourceClassifiedAs: wd:Q640621 # optical engineering
-    flowQuantity:
+    effortQuantity:
       qudt:unit: unit:Hour
       qudt:numericValue: 2
 
@@ -73,7 +73,7 @@
     provider: https://sensorica.example/
     receiver: https://sensorica.example/
     resourceConformsTo: urn:uuid:b90b0b77-09a2-42e2-8bd4-e9ae2c1c6172 # delivery fiber
-    flowQuantity:
+    resourceQuantity:
       qudt:unit: unit:Meter
       qudt:numericValue: .5
 
@@ -90,7 +90,7 @@
     provider: https://sensorica.example/
     receiver: https://sensorica.example/
     resourceClassifiedAs: wd:Q162 # optical fiber
-    flowQuantity:
+    resourceQuantity:
       qudt:unit: unit:Meter
       qudt:numericValue: .5
     skos:note: Optical guide, can be of glass of polymer. Usually it comes in a cylindrical shape. Can be MM (multimode) or SM (single mode)
@@ -102,6 +102,6 @@
     provider: https://alice.example/
     receiver: https://sensorica.example/
     resourceClassifiedAs: wd:Q640621 # optical engineering
-    flowQuantity:
+    effortQuantity:
       qudt:unit: unit:Hour
       qudt:numericValue: 2

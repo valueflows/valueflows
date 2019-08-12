@@ -54,7 +54,7 @@
     provider: https://training.example/
     receiver: https://training.example/
     involves: training:6b97b1be-8e07-44ac-82e5-214f1b2aaf33 # workshop handout
-    flowQuantity:
+    resourceQuantity:
       qudt:unit: unit:Number
       qudt:numericValue: 3
 
@@ -65,7 +65,7 @@
     provider: https://training.example/
     receiver: https://training.example/
     involves: training:e1721a61-cd47-4556-84b9-8b1b81da15bf # 3D printer
-    flowQuantity:
+    effortQuantity:
       qudt:unit: unit:Hour
       qudt:numericValue: 8
 
@@ -76,7 +76,7 @@
     provider: https://training.example/
     receiver: https://training.example/
     resourceConformsTo: training:f438393-7f87-4914-806c-e23a4fd15e89 # 3D printer training
-    flowQuantity:
+    effortQuantity:
       qudt:unit: unit:Hour
       qudt:numericValue: 8
 
@@ -87,7 +87,7 @@
     provider: https://training.example/
     receiver: https://alice.example/
     resourceConformsTo: training:3129ca8b-fcda-45be-bbda-294dc924d3b9 # one day 3D printing workshop
-    flowQuantity:
+    resourceQuantity:
       qudt:unit: unit:Number
       qudt:numericValue: 1
 
@@ -98,7 +98,7 @@
     provider: https://training.example/
     receiver: https://bob.example/
     resourceConformsTo: training:3129ca8b-fcda-45be-bbda-294dc924d3b9 # one day 3D printing workshop
-    flowQuantity:
+    resourceQuantity:
       qudt:unit: unit:Number
       qudt:numericValue: 1
 
@@ -109,6 +109,6 @@
     provider: https://training.example/
     receiver: https://carol.example/
     resourceConformsTo: training:3129ca8b-fcda-45be-bbda-294dc924d3b9 # one day 3D printing workshop
-    flowQuantity:
+    resourceQuantity:
       qudt:unit: unit:Number
       qudt:numericValue: 1

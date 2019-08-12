@@ -1,6 +1,6 @@
 # Economic Resource Examples
 
-This example includes economic resources, with a resource specification.
+This example includes economic resources, with their resource specifications.  One resource has a lot identifier.
 
 ![resource diagram](https://rawgit.com/valueflows/valueflows/master/release-doc-in-process/resource-spec.png)
 

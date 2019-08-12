@@ -37,7 +37,7 @@
     action: transfer
     receiver: https://alice.example/
     resourceClassifiedAs: https://www.wikidata.org/wiki/Q4917 # US Dollar
-    flowQuantity:
+    resourceQuantity:
       qudt:unit: unit:Number
       qudt:numericValue: 15
 
