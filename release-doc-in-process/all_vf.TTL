@@ -377,7 +377,7 @@ vf:unitBased  a              owl:DatatypeProperty ;
         rdfs:domain         vf:Proposal ;
         rdfs:range          xsd:boolean ;
         vs:term_status      "unstable" ;
-        rdfs:comment        "This proposal contains unit based quantities, which can be committed to in any multiples." .
+        rdfs:comment        "This proposal contains unit based quantities, which can be multipied to create commitments; commonly seen in a price list or e-commerce." .
 
 vf:currentLocation a        owl:ObjectProperty ;
         rdfs:label          "current location" ;
