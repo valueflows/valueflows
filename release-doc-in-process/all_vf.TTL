@@ -356,14 +356,14 @@ vf:resourceQuantity a       owl:ObjectProperty ;
         rdfs:domain         [ owl:unionOf (vf:EconomicEvent vf:Commitment vf:Intent vf:RecipeFlow vf:Fulfillment vf:Satisfaction vf:Claim vf:Settlement) ] ;
         rdfs:range          qudt:QuantityValue ;
         vs:term_status      "unstable" ;
-        rdfs:comment        "The amount and unit of the economic resource counted or inventoried in the flow." .
+        rdfs:comment        "The amount and unit of the economic resource counted or inventoried." .
 
 vf:effortQuantity a         owl:ObjectProperty ;
         rdfs:label          "effort quantity" ;
         rdfs:domain         [ owl:unionOf (vf:EconomicEvent vf:Commitment vf:Intent vf:RecipeFlow vf:Fulfillment vf:Satisfaction vf:Claim vf:Settlement) ] ;
         rdfs:range          qudt:QuantityValue ;
         vs:term_status      "unstable" ;
-        rdfs:comment        "The amount and unit of the work or use effort based action of a flow or ." .
+        rdfs:comment        "The amount and unit of the work or use or citation effort-based action. This is often a time duration, but also could be cycle counts or other measures of effort or usefulness." .
 
 vf:availableQuantity a      owl:ObjectProperty ;
         rdfs:label          "available quantity" ;
@@ -372,12 +372,12 @@ vf:availableQuantity a      owl:ObjectProperty ;
         vs:term_status      "unstable" ;
         rdfs:comment        "The quantity of the offered or requested resource currently available." .
 
-vf:unitQuantity a           owl:ObjectProperty ;
-        rdfs:label          "unit quantity" ;
-        rdfs:domain         vf:Intent ;
-        rdfs:range          qudt:QuantityValue ;
+vf:unitBased  a              owl:DatatypeProperty ;
+        rdfs:label          "unit based" ;
+        rdfs:domain         vf:Proposal ;
+        rdfs:range          xsd:boolean ;
         vs:term_status      "unstable" ;
-        rdfs:comment        "The base quantity of the offer or request, which can be multipied to create a commitment; commonly seen in a price list or e-commerce." .
+        rdfs:comment        "This proposal contains unit based quantities, which can be committed to in any multiples." .
 
 vf:currentLocation a        owl:ObjectProperty ;
         rdfs:label          "current location" ;
@@ -498,7 +498,7 @@ vf:proposedTo
         rdfs:comment        "The agent to which the proposal is published." .
 
 vf:reciprocal
-        a                   owl:ObjectProperty ;
+        a                   owl:DatatypePropert ;
         rdfs:label         "reciprocal" ;
         rdfs:domain         vf:ProposedIntent ;
         rdfs:range          xsd:boolean ;
@@ -512,7 +512,7 @@ vf:finished  a              owl:DatatypeProperty ;
         vs:term_status      "testing" ;
         rdfs:comment        "The commitment or intent or process is complete or not." .
 
-vf:substitutable a        owl:DatatypeProperty ;
+vf:substitutable a          owl:DatatypeProperty ;
         rdfs:label          "substitutable" ;
         rdfs:domain         vf:ResourceSpecification ;
         rdfs:range          xsd:boolean ;
