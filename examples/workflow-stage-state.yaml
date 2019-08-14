@@ -1,0 +1,334 @@
+# Example: Workflow recipe, plan, execution, including stage and state usage
+
+'@context':
+  - https://git.io/vf-examples-jsonld-context
+  - mfg: https://manufacturing.example/
+
+'@id': rgh:valueflows/valueflows/master/examples/workflow-stage-state.yaml
+'@graph':
+
+  # specifications
+
+  - '@id': urn:uuid:3be5259d-10f0-431c-9fec-9c0c15a461d3
+    '@type': ResourceSpecification
+    name: Bucket white 5 gallon
+    unitOfResource: unit:Number
+    substitutable: true
+
+  - '@id': urn:uuid:d4d2fd71-34f2-41c3-b1c5-19ad5ed2da58
+    '@type': ResourceSpecification
+    name: Thermoplastic polymer white
+    unitOfResource: unit:Kilogram
+    substitutable: true
+
+  - '@id': urn:uuid:c7897c39-7f05-4a5d-a487-80e130a2414a
+    '@type': ResourceSpecification
+    name: Injection molding machine
+    unitOfResource: unit:Number
+    unitOfEffort: unit:Hour
+    substitutable: true
+
+  - '@id': mfg:27be5cab-d740-4194-9298-1661a69d9d95
+    '@type': ProcessSpecification
+    name: Make injection molded buckets
+
+  - '@id': mfg:6fb358a3-2859-4d6a-a4fa-431603ee70f5
+    '@type': ProcessSpecification
+    name: QT injection molded buckets
+
+  # resources before
+
+  - '@id': mfg:3129ca8b-fcda-45be-bbda-294dc924d3b9
+    '@type': EconomicResource
+    name: Bucket white 5 gallon
+    resourceConformsTo: urn:uuid:3be5259d-10f0-431c-9fec-9c0c15a461d3
+    currentQuantity:
+      qudt:unit: unit:Number
+      qudt:numericValue: 320
+
+  - '@id': mfg:6b5bc786-b9ed-4189-b34f-5ef7d10f1f86
+    '@type': EconomicResource
+    name: Thermoplastic polymer white
+    resourceConformsTo: urn:uuid:d4d2fd71-34f2-41c3-b1c5-19ad5ed2da58
+    currentQuantity:
+      qudt:unit: unit:Kilograms
+      qudt:numericValue: 2455
+
+  - '@id': mfg:23799c14-c368-4653-a584-83bf9ae8b82a
+    '@type': EconomicResource
+    name: Injection molding maching
+    resourceConformsTo: urn:uuid:c7897c39-7f05-4a5d-a487-80e130a2414a
+    trackingIdentifier: DDE098989099911
+    currentQuantity:
+      qudt:unit: unit:Number
+      qudt:numericValue: 1
+    unitOfEffort: unit:Hour
+
+  # the recipe (the recipe runs "backwards" from the final product)
+
+  - '@id': mfg:ac9ec98d-db80-44dc-97be-7aa149b2fe5d
+    '@type': RecipeResource
+    resourceConformsTo: urn:uuid:3be5259d-10f0-431c-9fec-9c0c15a461d3 # bucket
+
+  - '@id': mfg:33e8933b-ff73-4a01-964a-ca7a98893083
+    '@type': RecipeFlow
+    recipeOutputOf: mfg:a8356625-bf64-4c16-9099-28aa1b718c4b
+    action: pass
+    recipeFlowResource: mfg:ac9ec98d-db80-44dc-97be-7aa149b2fe5d
+    resourceQuantity:
+      qudt:unit: unit:Number
+      qudt:numericValue: 500
+
+  - '@id': mfg:a3be5259d-10f0-431c-9fec-9c0c15a461d3
+    '@type': RecipeResource
+    resourceConformsTo:urn:uuid:d4d2fd71-34f2-41c3-b1c5-19ad5ed2da58 # polymer
+
+  - '@id': mfg:54b814ee-62dc-40c1-bb96-f8582aa4f771
+    '@type': RecipeFlow
+    recipeOutputOf: mfg:a8356625-bf64-4c16-9099-28aa1b718c4b
+    action: fail
+    recipeFlowResource: mfg:a3be5259d-10f0-431c-9fec-9c0c15a461d3
+    resourceQuantity:
+      qudt:unit: unit:Kilogram
+      qudt:numericValue: 0
+
+  - '@id': mfg:a8356625-bf64-4c16-9099-28aa1b718c4b
+    '@type': RecipeProcess
+    name: QT bucket white 5 gallon - minimum run
+    basedOn: mfg:6fb358a3-2859-4d6a-a4fa-431603ee70f5 # the process specification
+    time:hasDuration:
+      time:unitType unit:Hour
+      time:numericDuration: 1
+
+  - '@id': mfg:2342d456-5d6f-46d5-a7ed-3ac7bfd5a86c
+    '@type': RecipeFlow
+    recipeInputOf: mfg:a8356625-bf64-4c16-9099-28aa1b718c4b
+    action: accept
+    recipeFlowResource: mfg:b75d8f6a-e2df-4e52-b36d-1a22a66f4ead
+    stage: mfg:27be5cab-d740-4194-9298-1661a69d9d95 # 'make' process specification
+    resourceQuantity:
+      qudt:unit: unit:Number
+      qudt:numericValue: 500
+
+  - '@id': mfg:b75d8f6a-e2df-4e52-b36d-1a22a66f4ead
+    '@type': RecipeResource
+    resourceConformsTo: urn:uuid:3be5259d-10f0-431c-9fec-9c0c15a461d3 # bucket
+
+  - '@id': mfg:33e8933b-ff73-4a01-964a-ca7a98893083
+    '@type': RecipeFlow
+    recipeOutputOf: mfg:e1721a61-cd47-4556-84b9-8b1b81da15bf
+    action: produce
+    recipeFlowResource: mfg:b75d8f6a-e2df-4e52-b36d-1a22a66f4ead
+    resourceQuantity:
+      qudt:unit: unit:Number
+      qudt:numericValue: 500
+
+  - '@id': mfg:e1721a61-cd47-4556-84b9-8b1b81da15bf
+    '@type': RecipeProcess
+    name: Make bucket white 5 gallon - minimum run
+    basedOn: mfg:27be5cab-d740-4194-9298-1661a69d9d95 # the process specification
+    time:hasDuration:
+      time:unitType unit:Hour
+      time:numericDuration: 7
+
+  - '@id': mfg:9bd19194-a36d-4a1f-896b-8082887962cb
+    '@type': RecipeFlow
+    recipeInputOf: mfg:e1721a61-cd47-4556-84b9-8b1b81da15bf
+    action: consume
+    recipeFlowResource: mfg:6405b8ad-0ac2-4d58-abdb-0808903c78ad
+    resourceQuantity:
+      qudt:unit: unit:Kilogram
+      qudt:numericValue: 450
+
+  - '@id': mfg:6405b8ad-0ac2-4d58-abdb-0808903c78ad
+    '@type': RecipeResource
+    resourceConformsTo: urn:uuid:d4d2fd71-34f2-41c3-b1c5-19ad5ed2da58 # polymer
+
+  - '@id': mfg:60f4204e-b8d2-4026-8577-102c3f82c0af
+    '@type': RecipeFlow
+    recipeInputOf: mfg:e1721a61-cd47-4556-84b9-8b1b81da15bf
+    action: use
+    recipeFlowResource: mfg:e02e3f6b-420a-4ba8-89b0-909d7363ce07
+    effortQuantity:
+      qudt:unit: unit:Hour
+      qudt:numericValue: 5.5
+
+  - '@id': mfg:e02e3f6b-420a-4ba8-89b0-909d7363ce07
+    '@type': RecipeResource
+    resourceConformsTo: urn:uuid:c7897c39-7f05-4a5d-a487-80e130a2414a # injection molding machine
+
+  # the plan (shown running "forwards")
+
+  - '@id': mfg:8e5fe80d-a769-4bd5-89e5-2136d33eab9f
+    '@type': Plan
+    name: Buckets run number 381
+    time:before: 2019-04-08T17:00:00-5:00 # due
+
+  - '@id': mfg:b52a5815-fae9-43bf-be95-833b95dc0adb
+    '@type': Commitment
+    inputOf: mfg:02b39a30-3e04-4305-9656-7f261aa63c84
+    action: consume
+    provider: https://manufacturing.example/
+    receiver: https://manufacturing.example/
+    resourceConformsTo: urn:uuid:d4d2fd71-34f2-41c3-b1c5-19ad5ed2da58 # polymer
+    resourceQuantity:
+      qudt:unit: unit:Kilogram
+      qudt:numericValue: 900
+
+  - '@id': mfg:52f0e212-3c4f-4d27-b345-5e964c135824
+    '@type': Commitment
+    inputOf: mfg:02b39a30-3e04-4305-9656-7f261aa63c84
+    action: use
+    provider: https://manufacturing.example/
+    receiver: https://manufacturing.example/
+    resourceConformsTo: urn:uuid:c7897c39-7f05-4a5d-a487-80e130a2414a # injection molding machine
+    effortQuantity:
+      qudt:unit: unit:Hour
+      qudt:numericValue: 11
+
+  - '@id': mfg:02b39a30-3e04-4305-9656-7f261aa63c84
+    '@type': Process
+    name: Make bucket white 5 gallon
+    plannedWithin: mfg:8e5fe80d-a769-4bd5-89e5-2136d33eab9f
+    time:hasDuration:
+      time:unitType unit:Hour
+      time:numericDuration: 14
+
+  - '@id': mfg:a8236bbb-81e0-422d-9861-56d2417db0fb
+    '@type': Commitment
+    outputOf: mfg:02b39a30-3e04-4305-9656-7f261aa63c84
+    action: produce
+    provider: https://manufacturing.example/
+    receiver: https://manufacturing.example/
+    resourceConformsTo: urn:uuid:3be5259d-10f0-431c-9fec-9c0c15a461d3 # bucket
+    resourceQuantity:
+      qudt:unit: unit:Number
+      qudt:numericValue: 1000
+
+  - '@id': mfg:fbff9852-36ca-4364-a943-bc0b49e1cab5
+    '@type': Commitment
+    inputOf: mfg:8baa8ff7-9c1e-4586-ae7b-79d620a3cac9
+    action: accept
+    provider: https://manufacturing.example/
+    receiver: https://manufacturing.example/
+    resourceConformsTo: urn:uuid:3be5259d-10f0-431c-9fec-9c0c15a461d3 # bucket
+    stage: mfg:27be5cab-d740-4194-9298-1661a69d9d95 # 'make' process specification
+    resourceQuantity:
+      qudt:unit: unit:Number
+      qudt:numericValue: 1000
+
+  - '@id': mfg:8baa8ff7-9c1e-4586-ae7b-79d620a3cac9
+    '@type': Process
+    name: QT bucket white 5 gallon
+    plannedWithin: mfg:8e5fe80d-a769-4bd5-89e5-2136d33eab9f
+    time:hasDuration:
+      time:unitType unit:Hour
+      time:numericDuration: 14
+
+  - '@id': mfg:21f361a6-2375-46bb-b192-c21b5ba833bf
+    '@type': Commitment
+    independentDemandOf: mfg:8e5fe80d-a769-4bd5-89e5-2136d33eab9f # the plan
+    outputOf: mfg:8baa8ff7-9c1e-4586-ae7b-79d620a3cac9
+    action: pass
+    provider: https://manufacturing.example/
+    receiver: https://manufacturing.example/
+    resourceConformsTo: urn:uuid:3be5259d-10f0-431c-9fec-9c0c15a461d3 # bucket
+    resourceQuantity:
+      qudt:unit: unit:Number
+      qudt:numericValue: 1000
+
+  # manufacture and test the buckets according to plan
+
+  - '@id': mfg:e18c808c-929a-450d-9d0d-3b3f531bc126
+    '@type': EconomicEvent
+    inputOf: mfg:02b39a30-3e04-4305-9656-7f261aa63c84 # planned make process
+    action: consume
+    provider: https://manufacturing.example/
+    receiver: https://manufacturing.example/
+    resourceInventoriedAs: mfg:6b5bc786-b9ed-4189-b34f-5ef7d10f1f86 # polymer stock
+    resourceQuantity:
+      qudt:unit: unit:Kilogram
+      qudt:numericValue: 925
+
+  - '@id': mfg:5d2fe7da-b91b-4dab-91d9-68db80c1feb7
+    '@type': EconomicEvent
+    inputOf: mfg:02b39a30-3e04-4305-9656-7f261aa63c84 # planned make process
+    action: use
+    provider: https://manufacturing.example/
+    receiver: https://manufacturing.example/
+    resourceInventoriedAs: mfg:23799c14-c368-4653-a584-83bf9ae8b82a # the machine
+    effortQuantity:
+      qudt:unit: unit:Hour
+      qudt:numericValue: 10.7
+
+  - '@id': mfg:8791913c-0152-4c32-bb3f-f25d61df736c
+    '@type': EconomicEvent
+    outputOf: mfg:02b39a30-3e04-4305-9656-7f261aa63c84 # planned make process
+    action: produce
+    provider: https://manufacturing.example/
+    receiver: https://manufacturing.example/
+    resourceInventoriedAs: mfg:3129ca8b-fcda-45be-bbda-294dc924d3b9 # buckets
+    resourceQuantity:
+      qudt:unit: unit:Number
+      qudt:numericValue: 1000
+
+  - '@id': mfg:a8236bbb-81e0-422d-9861-56d2417db0fb
+    '@type': EconomicEvent
+    inputOf: mfg:8baa8ff7-9c1e-4586-ae7b-79d620a3cac9 # planned qt process
+    action: accept
+    provider: https://manufacturing.example/
+    receiver: https://manufacturing.example/
+    resourceInventoriedAs: mfg:3129ca8b-fcda-45be-bbda-294dc924d3b9 #buckets
+    resourceQuantity:
+      qudt:unit: unit:Number
+      qudt:numericValue: 1000
+
+  - '@id': mfg:52f0e212-3c4f-4d27-b345-5e964c135824
+    '@type': EconomicEvent
+    outputOf: mfg:8baa8ff7-9c1e-4586-ae7b-79d620a3cac9 # planned qt process
+    action: pass
+    provider: https://manufacturing.example/
+    receiver: https://manufacturing.example/
+    resourceInventoriedAs: mfg:3129ca8b-fcda-45be-bbda-294dc924d3b9 # buckets
+    resourceQuantity:
+      qudt:unit: unit:Number
+      qudt:numericValue: 998
+
+  - '@id': mfg:e1721a61-cd47-4556-84b9-8b1b81da15bf
+    '@type': EconomicEvent
+    outputOf: mfg:8baa8ff7-9c1e-4586-ae7b-79d620a3cac9 # planned qt process
+    action: fail
+    provider: https://manufacturing.example/
+    receiver: https://manufacturing.example/
+    resourceInventoriedAs: mfg:6b5bc786-b9ed-4189-b34f-5ef7d10f1f86 # polymer stock
+    resourceQuantity:
+      qudt:unit: unit:Kilograms
+      qudt:numericValue: 1.8
+
+  # resources after
+
+  - '@id': mfg:3129ca8b-fcda-45be-bbda-294dc924d3b9
+    '@type': EconomicResource
+    name: Bucket white 5 gallon
+    resourceConformsTo: urn:uuid:3be5259d-10f0-431c-9fec-9c0c15a461d3
+    currentQuantity:
+      qudt:unit: unit:Number
+      qudt:numericValue: 1318
+
+  - '@id': mfg:6b5bc786-b9ed-4189-b34f-5ef7d10f1f86
+    '@type': EconomicResource
+    name: Thermoplastic polymer white
+    resourceConformsTo: urn:uuid:d4d2fd71-34f2-41c3-b1c5-19ad5ed2da58
+    currentQuantity:
+      qudt:unit: unit:Kilograms
+      qudt:numericValue: 1531.8
+
+  - '@id': mfg:23799c14-c368-4653-a584-83bf9ae8b82a
+    '@type': EconomicResource
+    name: Injection molding maching
+    resourceConformsTo: urn:uuid:c7897c39-7f05-4a5d-a487-80e130a2414a
+    trackingIdentifier: DDE098989099911
+    currentQuantity:
+      qudt:unit: unit:Number
+      qudt:numericValue: 1
+    unitOfEffort: unit:Hour

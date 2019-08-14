@@ -68,6 +68,15 @@ Here are some examples from manufacturing situations:
 
 Note in the last case, a transfer of rights means a different resource. This is common with resources that are not serialized, where one logical resource has a quantity greater than 1, and the individual instances are substitutable. (Think nuts and bolts, grain, strawberries, bottles of beer in cases, etc.)
 
+##### Stage and state
+
+Sometimes part of the logical identification of a resource includes:
+* stage: the ProcessSpecification of the most recent process the resource was output from, with the `modify` action
+* state: the Action (`pass` or `fail` only) of the most recent economic event the resource was output from
+
+Stage is used when the same resource passes through multiple processes in its lifetime, and that information is needed by the next process to determine which resources can be valid inputs.  For example, in creating a translation, you might have one translated document pass through translation, editing, proofreading, formatting stages. You don't want to bring that resource into the formatting stage until it has been proofread, for example. Or you might have a testing stage for a component or product, in which case you don't want to consume or transfer the resource until it both has been through the testing stage, and had a `pass` output result.
+
+These can be defined on the recipe or the plan, showing where an input flow expects a certain stage and/or state of a resource.  In user-interface forms for adding EconomicEvents, the input event form should query EconomicResources for required stage and state when offering selections of possible input resources.  The stage and state of an EconomicResource can be derived or stored, as preferred.
 
 #### How resources relate to events
 
@@ -78,6 +87,7 @@ Some people use the terms "stock" and "stock flow".  A stock is a resource; a st
 An event can trigger incrementing or decrementing a resource.  Sometimes it does neither, as in the case of using a piece of equipment or citing a document.  But in any case, the quantity of a resource related to the event is not a resource itself, it is just a property of the event.  For example a resource could be 100 widgets on a pallet, lot number 1234.  If 10 of those widgets are consumed in a process that makes something out of them, that is an event: consumption of 10 widgets of lot number 1234.  The 10 widgets are not a resource in their own right.  The event triggers the decrement of the original resource of 100 widgets, which now has quantity of 90.
 
 For serialized or uniquely identified resources, if the logical and technical unique identifiers are not changed by an event, such as moving a vehicle to another location without any changes to its custody (and assuming location is not part of the logical identifier), the resource does not behave like a stock and is not decremented or incremented.
+
 
 #### How resources related to each other
 

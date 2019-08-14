@@ -618,6 +618,22 @@ vf:conformsTo
         vs:term_status      "unstable" ;
         rdfs:comment        "The primary resource knowledge specification or definition of an existing or potential resource." .
 
+vf:stage
+        a                   owl:ObjectProperty ;
+        rdfs:label          "stage" ;
+        rdfs:domain         [ owl:unionOf (vf:Commitment vf:RecipeFlow vf:EconomicResource) ] ;
+        rdfs:range          vf:ProcessSpecification ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "The last stage the desired economic resource went through." .
+
+vf:state
+        a                   owl:ObjectProperty ;
+        rdfs:label          "state" ;
+        rdfs:domain         [ owl:unionOf (vf:Commitment vf:RecipeFlow vf:EconomicResource) ] ;
+        rdfs:range          vf:Action ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "The state of the desired economic resource (pass or fail), after coming out of a test or review process." .
+
 vf:refinementOf
         a                   owl:ObjectProperty ;
         rdfs:label          "refinement of" ;
@@ -726,6 +742,14 @@ vf:accept  a                vf:Action ;
 vf:modify  a                vf:Action ;
         vs:term_status      "unstable" ;
         rdfs:label          "modify" .
+
+vf:pass  a                  vf:Action ;
+        vs:term_status      "unstable" ;
+        rdfs:label          "pass" .
+
+vf:fail  a                  vf:Action ;
+        vs:term_status      "unstable" ;
+        rdfs:label          "fail" .
 
 vf:service  a               vf:Action ;
         vs:term_status      "testing" ;

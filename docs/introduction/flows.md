@@ -54,8 +54,10 @@ All flows use an action property to designate what the flow is doing and how it 
 * vf:work - labor power applied to a process
 * vf:load -  transported resource enters the process, the same resource will appear in output with *vf:unload* verb
 * vf:unload -  transported resource leaves the process, the same resource will appear in input with *vf:load* verb
-* vf:accept - in processes like repair or modification, the same resource will appear in output with *vf:modify* verb
+* vf:accept - in processes like repair or modification or testing, the same resource will appear in output with *vf:modify* verb
 * vf:modify - in processes like repair or modification, the same resource will appear in input with *vf:accept* verb
+* vf:pass - possible output of a testing or reviewing process, indicating the resource passed, the same resource will appear in input with *vf:accept* verb
+* vf:fail - possible output of a testing or reviewing process, indicating the resource failed, the same resource will appear in input with *vf:accept* verb
 * vf:service - new service produced and delivered (a service implies that an agent actively receives the service)
 * vf:transfer - give rights and/or possession of a resource from one agent to another
 * vf:move - change location and possibly identifier, if location is part of the identification, of a resource with no change of agent rights or possession
@@ -73,6 +75,8 @@ load | No effect  | Input | No  | unload |
 unload | No effect  | Output | No  | load |
 accept | No effect  | Input | No  | modify |
 modify | No effect  | Output | No  | accept |
+pass | No effect  | Output | No  | accept |
+fail | No effect  | Output | No  | accept |
 transfer | Incr+Decr(2) | N/A | No | N/A |
 move | Incr+Decr(2) | N/A | No | N/A |
 raise | Increment | N/A | No | N/A |
