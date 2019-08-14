@@ -95,7 +95,7 @@
   - '@id': mfg:a8356625-bf64-4c16-9099-28aa1b718c4b
     '@type': RecipeProcess
     name: QT bucket white 5 gallon - minimum run
-    basedOn: mfg:6fb358a3-2859-4d6a-a4fa-431603ee70f5 # the process specification
+    processConformsTo: mfg:6fb358a3-2859-4d6a-a4fa-431603ee70f5 # the process specification
     time:hasDuration:
       time:unitType unit:Hour
       time:numericDuration: 1
@@ -126,7 +126,7 @@
   - '@id': mfg:e1721a61-cd47-4556-84b9-8b1b81da15bf
     '@type': RecipeProcess
     name: Make bucket white 5 gallon - minimum run
-    basedOn: mfg:27be5cab-d740-4194-9298-1661a69d9d95 # the process specification
+    processConformsTo: mfg:27be5cab-d740-4194-9298-1661a69d9d95 # the process specification
     time:hasDuration:
       time:unitType unit:Hour
       time:numericDuration: 7
@@ -190,6 +190,7 @@
     '@type': Process
     name: Make bucket white 5 gallon
     plannedWithin: mfg:8e5fe80d-a769-4bd5-89e5-2136d33eab9f
+    basedOn: mfg:27be5cab-d740-4194-9298-1661a69d9d95 # the process specification
     time:hasDuration:
       time:unitType unit:Hour
       time:numericDuration: 14
@@ -221,6 +222,7 @@
     '@type': Process
     name: QT bucket white 5 gallon
     plannedWithin: mfg:8e5fe80d-a769-4bd5-89e5-2136d33eab9f
+    basedOn: mfg:6fb358a3-2859-4d6a-a4fa-431603ee70f5 # the process specification
     time:hasDuration:
       time:unitType unit:Hour
       time:numericDuration: 14
