@@ -76,7 +76,7 @@ Sometimes part of the logical identification of a resource includes:
 
 The stage is used when a resource passes through multiple stages in its lifetime, and that is important when determining the next process it should be input for.  For example, in creating a translation, you might have one translated document pass through translation, editing, proofreading, formatting stages. You don't want to bring that resource into the formatting stage until it has been proofread, for example. Or you might have a testing stage for a component or product, in which case you don't want to consume or transfer the resource until it both has been through the testing stage, and had a `pass` output result.
 
-These can be defined on the recipe or the plan, showing where an input flow expects a certain stage and/or state.  In the observation layer, the input event should then check those as required when offering selections of possible input resources.
+These can be defined on the recipe or the plan, showing where an input flow expects a certain stage and/or state of a resource.  In the observation layer, the input event should then check those as required when offering selections of possible input resources.
 
 #### How resources relate to events
 

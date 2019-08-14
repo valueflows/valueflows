@@ -1,0 +1,233 @@
+# Example: Workflow recipe, plan, execution, including stage and state usage
+
+'@context':
+  - https://git.io/vf-examples-jsonld-context
+  - mfg: https://manufacturing.example/
+
+'@id': rgh:valueflows/valueflows/master/examples/workflow-stage-state.yaml
+'@graph':
+
+  # resource specifications
+
+  - '@id': mfg:3be5259d-10f0-431c-9fec-9c0c15a461d3
+    '@type': ResourceSpecification
+    name: Bucket white 5 gallon
+    unitOfResource: unit:Number
+    substitutable: true
+
+  - '@id': mfg:d4d2fd71-34f2-41c3-b1c5-19ad5ed2da58
+    '@type': ResourceSpecification
+    name: Thermoplastic polymer white
+    unitOfResource: unit:Kilogram
+    substitutable: true
+
+  - '@id': mfg:c7897c39-7f05-4a5d-a487-80e130a2414a
+    '@type': ResourceSpecification
+    name: Injection molding machine
+    unitOfResource: unit:Number
+    unitOfEffort: unit:Hour
+    substitutable: true
+
+  # the recipe (test after producing)
+
+  - '@id': mfg:ac9ec98d-db80-44dc-97be-7aa149b2fe5d
+    '@type': RecipeResource
+    resourceConformsTo: mfg:3be5259d-10f0-431c-9fec-9c0c15a461d3 # bucket
+
+  - '@id': mfg:33e8933b-ff73-4a01-964a-ca7a98893083
+    '@type': RecipeFlow
+    recipeOutputOf: mfg:a8356625-bf64-4c16-9099-28aa1b718c4b
+    action: pass
+    recipeFlowResource: mfg:ac9ec98d-db80-44dc-97be-7aa149b2fe5d
+    resourceQuantity:
+      qudt:unit: unit:Number
+      qudt:numericValue: 500
+
+  - '@id': mfg:a3be5259d-10f0-431c-9fec-9c0c15a461d3
+    '@type': RecipeResource
+    resourceConformsTo: mfg:3be5259d-10f0-431c-9fec-9c0c15a461d3 # bucket
+
+  - '@id': mfg:54b814ee-62dc-40c1-bb96-f8582aa4f771
+    '@type': RecipeFlow
+    recipeOutputOf: mfg:a8356625-bf64-4c16-9099-28aa1b718c4b
+    action: fail
+    recipeFlowResource: mfg:a3be5259d-10f0-431c-9fec-9c0c15a461d3
+    resourceQuantity:
+      qudt:unit: unit:Number
+      qudt:numericValue: 0
+
+  - '@id': mfg:a8356625-bf64-4c16-9099-28aa1b718c4b
+    '@type': RecipeProcess
+    name: QT bucket white 5 gallon - 1 run
+    time:hasDuration:
+      time:unitType unit:Hour
+      time:numericDuration: 1
+
+  - '@id': mfg:2342d456-5d6f-46d5-a7ed-3ac7bfd5a86c
+    '@type': RecipeFlow
+    recipeInputOf: mfg:a8356625-bf64-4c16-9099-28aa1b718c4b
+    action: accept
+    recipeFlowResource: mfg:b75d8f6a-e2df-4e52-b36d-1a22a66f4ead 
+    resourceQuantity:
+      qudt:unit: unit:Number
+      qudt:numericValue: 500
+
+  - '@id': mfg:b75d8f6a-e2df-4e52-b36d-1a22a66f4ead
+    '@type': RecipeResource
+    resourceConformsTo: mfg:3be5259d-10f0-431c-9fec-9c0c15a461d3 # bucket
+
+  - '@id': mfg:b90b0b77-09a2-42e2-8bd4-e9ae2c1c6172
+    '@type': RecipeResource
+    resourceConformsTo: mfg:3be5259d-10f0-431c-9fec-9c0c15a461d3 # bucket
+
+  - '@id': mfg:33e8933b-ff73-4a01-964a-ca7a98893083
+    '@type': RecipeFlow
+    recipeOutputOf: mfg:e1721a61-cd47-4556-84b9-8b1b81da15bf
+    action: produce
+    recipeFlowResource: mfg:b90b0b77-09a2-42e2-8bd4-e9ae2c1c6172
+    resourceQuantity:
+      qudt:unit: unit:Number
+      qudt:numericValue: 500
+
+  - '@id': mfg:e1721a61-cd47-4556-84b9-8b1b81da15bf
+    '@type': RecipeProcess
+    name: Make bucket white 5 gallon - 1 run
+    time:hasDuration:
+      time:unitType unit:Hour
+      time:numericDuration: 7
+
+  - '@id': mfg:9bd19194-a36d-4a1f-896b-8082887962cb
+    '@type': RecipeFlow
+    recipeInputOf: mfg:e1721a61-cd47-4556-84b9-8b1b81da15bf
+    action: consume
+    recipeFlowResource: mfg:07819789-dd51-44c3-b35c-9210165bc832 # thermoplastic polymer
+    resourceQuantity:
+      qudt:unit: unit:Kilogram
+      qudt:numericValue: 450
+
+  - '@id': mfg:6405b8ad-0ac2-4d58-abdb-0808903c78ad
+    '@type': RecipeResource
+    resourceConformsTo: mfg:d4d2fd71-34f2-41c3-b1c5-19ad5ed2da58
+
+  - '@id': mfg:60f4204e-b8d2-4026-8577-102c3f82c0af
+    '@type': RecipeFlow
+    recipeInputOf: mfg:e1721a61-cd47-4556-84b9-8b1b81da15bf
+    action: use
+    recipeFlowResource: mfg:e5afaa28-1080-4912-835b-46883efb83e6 # injection molding machine
+    effortQuantity:
+      qudt:unit: unit:Hour
+      qudt:numericValue: 5.5
+
+  - '@id': mfg:e02e3f6b-420a-4ba8-89b0-909d7363ce07
+    '@type': RecipeResource
+    resourceConformsTo: mfg:c7897c39-7f05-4a5d-a487-80e130a2414a
+
+      
+      
+      
+      
+      
+
+  # the plan
+
+  - '@id': mfg:8e5fe80d-a769-4bd5-89e5-2136d33eab9f
+    '@type': Plan
+    name: Buckets run number 98
+    time:before: 2019-04-08T17:00:00-5:00
+    dcterms:created: 2019-04-01T10:35:00-5:00
+
+  - '@id': mfg:a8236bbb-81e0-422d-9861-56d2417db0fb
+    '@type': Commitment
+    independentDemandOf: mfg:8e5fe80d-a769-4bd5-89e5-2136d33eab9f
+    outputOf: mfg:02b39a30-3e04-4305-9656-7f261aa63c84
+    action: produce
+    provider: https://manufacturing.example/
+    receiver: https://manufacturing.example/
+    resourceConformsTo: mfg:3be5259d-10f0-431c-9fec-9c0c15a461d3 # bucket
+    resourceQuantity:
+      qudt:unit: unit:Number
+      qudt:numericValue: 1000
+
+  - '@id': mfg:02b39a30-3e04-4305-9656-7f261aa63c84
+    '@type': Process
+    name: Make bucket white 5 gallon
+    plannedWithin: mfg:8e5fe80d-a769-4bd5-89e5-2136d33eab9f
+    skos:note: The delivery fiber makes the optical connection between an optical transducer and the sensor [electro-photonics device]. Requires cutting a piece of optical fiber and connectorizing it
+
+  - '@id': mfg:b52a5815-fae9-43bf-be95-833b95dc0adb
+    '@type': Commitment
+    inputOf: mfg:02b39a30-3e04-4305-9656-7f261aa63c84
+    action: consume
+    provider: https://sensorica.example/
+    receiver: https://sensorica.example/
+    resourceClassifiedAs: wd:Q162 # optical fiber
+    resourceQuantity:
+      qudt:unit: unit:Meter
+      qudt:numericValue: .5
+    skos:note: Optical guide, can be of glass of polymer. Usually it comes in a cylindrical shape. Can be MM (multimode) or SM (single mode)
+
+  - '@id': mfg:52f0e212-3c4f-4d27-b345-5e964c135824
+    '@type': Commitment
+    inputOf: mfg:02b39a30-3e04-4305-9656-7f261aa63c84
+    action: work
+    provider: https://alice.example/
+    receiver: https://sensorica.example/
+    resourceClassifiedAs: wd:Q640621 # optical engineering
+    effortQuantity:
+      qudt:unit: unit:Hour
+      qudt:numericValue: 2
+
+      
+      
+      
+      
+      
+      
+  # Economic resource before
+
+  - '@id': alice:e1721a61-cd47-4556-84b9-8b1b81da15bf
+    '@type': EconomicResource
+    resourceConformsTo: http://opensourceecology.org/wiki/Wikispeed_SGT01 # car
+    trackingIdentifier: JHMCD38698S061469
+    currentQuantity:
+      qudt:unit: unit:Number
+      qudt:numericValue: 1
+
+  # Repair process
+
+  - '@id': repair:02b39a30-3e04-4305-9656-7f261aa63c84
+    '@type': Process
+    name: Oil change: JHMCD38698S061469
+    skos:note: Check over car, change oil (standard quantity).
+
+  - '@id': repair:a8236bbb-81e0-422d-9861-56d2417db0fb
+    '@type': EconomicEvent
+    inputOf: repair:02b39a30-3e04-4305-9656-7f261aa63c84
+    action: accept
+    provider: https://alice.example/
+    receiver: https://auto-repair.example/
+    resourceInventoriedAs: alice:e1721a61-cd47-4556-84b9-8b1b81da15bf
+    resourceQuantity:
+      qudt:unit: unit:Number
+      qudt:numericValue: 1
+
+  - '@id': repair:52f0e212-3c4f-4d27-b345-5e964c135824
+    '@type': EconomicEvent
+    inputOf: repair:02b39a30-3e04-4305-9656-7f261aa63c84
+    action: modify
+    provider: https://auto-repair.example/
+    receiver: https://alice.example/
+    resourceInventoriedAs: alice:e1721a61-cd47-4556-84b9-8b1b81da15bf
+    resourceQuantity:
+      qudt:unit: unit:Number
+      qudt:numericValue: 1
+
+  # Economic resource after
+
+  - '@id': alice:e1721a61-cd47-4556-84b9-8b1b81da15bf
+    '@type': EconomicResource
+    resourceConformsTo: http://opensourceecology.org/wiki/Wikispeed_SGT01 # car
+    trackingIdentifier: JHMCD38698S061469
+    currentQuantity:
+      qudt:unit: unit:Number
+      qudt:numericValue: 1
