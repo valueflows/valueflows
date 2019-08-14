@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile modified="2019-08-14T15:17:49.703Z" host="www.draw.io" agent="Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:68.0) Gecko/20100101 Firefox/68.0" version="11.1.4" etag="ku42pZZuXtmzxO0loXSN" type="device" compressed="false">
+  <diagram id="oRByQvfg-IzSfJMxYF46">
+    <mxGraphModel dx="2205" dy="778" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="2" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=none;align=left;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="-100" y="4730" width="1250" height="200" as="geometry"/>
+        </mxCell>
+        <mxCell id="3" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fad9d5;strokeColor=none;align=left;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="-100" y="4930" width="1251" height="130" as="geometry"/>
+        </mxCell>
+        <mxCell id="4" value="" style="endArrow=classic;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;endFill=1;" edge="1" source="6" target="7" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="332.5" y="4993" as="sourcePoint"/>
+            <mxPoint x="381.5" y="5023" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="5" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" target="55" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="503.5" y="4974.5" as="sourcePoint"/>
+            <mxPoint x="649" y="4972.5" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6" value="Make buckets" style="ellipse;whiteSpace=wrap;html=1;rounded=0;glass=1;comic=0;" vertex="1" parent="1">
+          <mxGeometry x="274.5" y="4950" width="88" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="7" value="produce buckets 1000" style="shape=delay;whiteSpace=wrap;html=1;rounded=0;glass=1;comic=0;" vertex="1" parent="1">
+          <mxGeometry x="390" y="4955" width="122" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="8" value="Input Economic Event" style="shape=delay;whiteSpace=wrap;html=1;rounded=0;glass=1;comic=0;" vertex="1" parent="1">
+          <mxGeometry x="149" y="4954.5" width="92" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="9" value="use injection molding machine 11 hours" style="shape=delay;whiteSpace=wrap;html=1;rounded=0;glass=1;comic=0;" vertex="1" parent="1">
+          <mxGeometry x="145.5" y="4955" width="111" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="10" value="" style="endArrow=classic;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endFill=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" source="9" target="6" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="260.5" y="5031.5" as="sourcePoint"/>
+            <mxPoint x="293.47800000000007" y="5037" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="11" value="consume polymer 900 kg" style="shape=delay;whiteSpace=wrap;html=1;rounded=0;glass=1;comic=0;" vertex="1" parent="1">
+          <mxGeometry x="145.5" y="5005" width="111" height="36" as="geometry"/>
+        </mxCell>
+        <mxCell id="12" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=1;entryDx=0;entryDy=0;" edge="1" source="11" target="6" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="319.5" y="5070" as="sourcePoint"/>
+            <mxPoint x="369.5" y="5020" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="13" value="" style="endArrow=classic;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;endFill=1;" edge="1" source="16" target="17" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="330" y="4800.5" as="sourcePoint"/>
+            <mxPoint x="379" y="4830.5" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="14" value="Bucket recipe resource" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="528" y="4761" width="101" height="43" as="geometry"/>
+        </mxCell>
+        <mxCell id="15" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" target="14" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="501" y="4782" as="sourcePoint"/>
+            <mxPoint x="546.5" y="4852" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="16" value="Make buckets" style="ellipse;whiteSpace=wrap;html=1;rounded=0;glass=1;comic=0;" vertex="1" parent="1">
+          <mxGeometry x="274.5" y="4757.5" width="88" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="17" value="&lt;div&gt;produce buckets 500&lt;br&gt;&lt;/div&gt;" style="shape=delay;whiteSpace=wrap;html=1;rounded=0;glass=1;comic=0;" vertex="1" parent="1">
+          <mxGeometry x="385.5" y="4762.5" width="122" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="18" value="Polymer specification" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-91.5" y="4871" width="90" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="19" value="" style="endArrow=classic;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;endFill=1;" edge="1" source="27" target="21" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-42" y="4946.5" as="sourcePoint"/>
+            <mxPoint x="25" y="4786.5" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="20" value="Input Economic Event" style="shape=delay;whiteSpace=wrap;html=1;rounded=0;glass=1;comic=0;" vertex="1" parent="1">
+          <mxGeometry x="146.5" y="4762" width="92" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="21" value="consume polymer 450 kg" style="shape=delay;whiteSpace=wrap;html=1;rounded=0;glass=1;comic=0;" vertex="1" parent="1">
+          <mxGeometry x="143" y="4762.5" width="111" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="22" value="" style="endArrow=classic;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endFill=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" source="21" target="16" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="258" y="4839" as="sourcePoint"/>
+            <mxPoint x="290.97800000000007" y="4844.5" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="23" value="use injection molding machine 5.5 hr" style="shape=delay;whiteSpace=wrap;html=1;rounded=0;glass=1;comic=0;" vertex="1" parent="1">
+          <mxGeometry x="143" y="4811" width="111" height="41" as="geometry"/>
+        </mxCell>
+        <mxCell id="24" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=1;entryDx=0;entryDy=0;" edge="1" source="23" target="16" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="317" y="4877.5" as="sourcePoint"/>
+            <mxPoint x="367" y="4827.5" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="25" value="" style="endArrow=none;dashed=1;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" source="11" target="18" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="74.5" y="4994.5" as="sourcePoint"/>
+            <mxPoint x="-100.5" y="4890" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="26" value="" style="endArrow=none;dashed=1;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0.25;entryY=1;entryDx=0;entryDy=0;" edge="1" source="7" target="28" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="579" y="4995" as="sourcePoint"/>
+            <mxPoint x="679.5" y="4720" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="27" value="&lt;div&gt;Polymer&lt;br&gt;&lt;/div&gt;&lt;div&gt;recipe resource&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="22" y="4762" width="101" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="28" value="Bucket specification" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="532.5" y="4872" width="91" height="36" as="geometry"/>
+        </mxCell>
+        <mxCell id="29" value="" style="endArrow=none;dashed=1;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" source="18" target="27" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-82" y="4876" as="sourcePoint"/>
+            <mxPoint x="-32" y="4826" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="30" value="" style="endArrow=none;dashed=1;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" source="28" target="14" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="751" y="4846" as="sourcePoint"/>
+            <mxPoint x="801" y="4796" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="31" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=none;align=left;verticalAlign=bottom;" vertex="1" parent="1">
+          <mxGeometry x="-100" y="5060" width="1250" height="140" as="geometry"/>
+        </mxCell>
+        <mxCell id="32" value="Molding machine recipe resource" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="17" y="4811" width="107" height="42" as="geometry"/>
+        </mxCell>
+        <mxCell id="33" value="Molding machine specification" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="13.5" y="4870" width="115" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="34" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" source="32" target="23" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="160" y="4950" as="sourcePoint"/>
+            <mxPoint x="210" y="4900" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="35" value="" style="endArrow=none;dashed=1;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" source="33" target="32" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="190" y="4950" as="sourcePoint"/>
+            <mxPoint x="240" y="4900" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="36" value="" style="endArrow=classic;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;endFill=1;" edge="1" source="39" target="40" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="834.5" y="4800.5" as="sourcePoint"/>
+            <mxPoint x="883.5" y="4830.5" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="37" value="Polymer recipe resource" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1032" y="4760" width="101" height="44" as="geometry"/>
+        </mxCell>
+        <mxCell id="38" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" target="37" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1005.5" y="4782" as="sourcePoint"/>
+            <mxPoint x="1051" y="4852" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="39" value="QT buckets" style="ellipse;whiteSpace=wrap;html=1;rounded=0;glass=1;comic=0;" vertex="1" parent="1">
+          <mxGeometry x="779" y="4757.5" width="88" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="40" value="&lt;div&gt;fail buckets &lt;br&gt;&lt;/div&gt;&lt;div&gt;0&lt;br&gt;&lt;/div&gt;" style="shape=delay;whiteSpace=wrap;html=1;rounded=0;glass=1;comic=0;" vertex="1" parent="1">
+          <mxGeometry x="890" y="4762.5" width="122" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="41" value="Input Economic Event" style="shape=delay;whiteSpace=wrap;html=1;rounded=0;glass=1;comic=0;" vertex="1" parent="1">
+          <mxGeometry x="651" y="4762" width="92" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="42" value="accept buckets @make 500" style="shape=delay;whiteSpace=wrap;html=1;rounded=0;glass=1;comic=0;" vertex="1" parent="1">
+          <mxGeometry x="647.5" y="4762.5" width="111" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="43" value="" style="endArrow=classic;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endFill=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" source="42" target="39" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="762.5" y="4839" as="sourcePoint"/>
+            <mxPoint x="795.4780000000001" y="4844.5" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="44" value="" style="endArrow=classic;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" target="42" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="630" y="4783" as="sourcePoint"/>
+            <mxPoint x="699" y="4830.5" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="45" value="" style="endArrow=none;dashed=1;html=1;entryX=0.25;entryY=1;entryDx=0;entryDy=0;exitX=1;exitY=0.25;exitDx=0;exitDy=0;" edge="1" source="28" target="58" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="910" y="5040" as="sourcePoint"/>
+            <mxPoint x="960" y="4990" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="46" value="" style="endArrow=none;dashed=1;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" source="9" target="33" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-70" y="5030" as="sourcePoint"/>
+            <mxPoint x="-20" y="4980" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="47" value="Make injected mold buckets specification" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="271" y="4872" width="96" height="43" as="geometry"/>
+        </mxCell>
+        <mxCell id="48" value="" style="endArrow=none;dashed=1;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" source="47" target="16" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="420" y="4900" as="sourcePoint"/>
+            <mxPoint x="470" y="4850" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="49" value="" style="endArrow=none;dashed=1;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" source="6" target="47" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-90" y="5040" as="sourcePoint"/>
+            <mxPoint x="-40" y="4990" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="50" value="" style="endArrow=classic;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;endFill=1;" edge="1" source="51" target="52" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="835.5" y="4992.5" as="sourcePoint"/>
+            <mxPoint x="884.5" y="5022.5" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="51" value="QT buckets" style="ellipse;whiteSpace=wrap;html=1;rounded=0;glass=1;comic=0;" vertex="1" parent="1">
+          <mxGeometry x="779" y="4949.5" width="88" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="52" value="&lt;div&gt;pass buckets &lt;br&gt;&lt;/div&gt;&lt;div&gt;1000&lt;br&gt;&lt;/div&gt;" style="shape=delay;whiteSpace=wrap;html=1;rounded=0;glass=1;comic=0;" vertex="1" parent="1">
+          <mxGeometry x="895" y="4954.5" width="122" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="53" value="" style="endArrow=classic;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endFill=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" source="55" target="51" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="770" y="4975" as="sourcePoint"/>
+            <mxPoint x="796.4780000000001" y="5036.5" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="54" value="" style="endArrow=none;dashed=1;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" edge="1" source="28" target="55" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="690" y="4940" as="sourcePoint"/>
+            <mxPoint x="649" y="4963.75" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="55" value="accept buckets @make 1000" style="shape=delay;whiteSpace=wrap;html=1;rounded=0;glass=1;comic=0;" vertex="1" parent="1">
+          <mxGeometry x="642.5" y="4955" width="122" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="56" value="&lt;div&gt;pass buckets &lt;br&gt;&lt;/div&gt;&lt;div&gt;500&lt;br&gt;&lt;/div&gt;" style="shape=delay;whiteSpace=wrap;html=1;rounded=0;glass=1;comic=0;" vertex="1" parent="1">
+          <mxGeometry x="890" y="4815" width="122" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="57" value="" style="endArrow=classic;html=1;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" source="39" target="56" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="740" y="4880" as="sourcePoint"/>
+            <mxPoint x="790" y="4830" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="58" value="Bucket recipe resource" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1032" y="4813" width="101" height="44" as="geometry"/>
+        </mxCell>
+        <mxCell id="59" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" source="56" target="58" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="800" y="4880" as="sourcePoint"/>
+            <mxPoint x="850" y="4830" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="60" value="" style="endArrow=none;dashed=1;html=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" edge="1" source="28" target="52" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1030" y="4920" as="sourcePoint"/>
+            <mxPoint x="1080" y="4870" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="61" value="" style="endArrow=none;dashed=1;html=1;exitX=0.25;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" source="18" target="37" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-70" y="4810" as="sourcePoint"/>
+            <mxPoint x="-20" y="4760" as="targetPoint"/>
+            <Array as="points">
+              <mxPoint x="-69" y="4750"/>
+              <mxPoint x="1083" y="4750"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="62" value="" style="endArrow=none;dashed=1;html=1;entryX=0.25;entryY=1;entryDx=0;entryDy=0;exitX=1;exitY=0.25;exitDx=0;exitDy=0;" edge="1" source="47" target="42" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="440" y="4880" as="sourcePoint"/>
+            <mxPoint x="490" y="4830" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="63" value="" style="endArrow=none;dashed=1;html=1;entryX=0;entryY=0.25;entryDx=0;entryDy=0;exitX=1;exitY=0.75;exitDx=0;exitDy=0;" edge="1" source="47" target="55" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="510" y="5130" as="sourcePoint"/>
+            <mxPoint x="560" y="5080" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="64" value="QT injected mold buckets specification" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="775" y="4878" width="96" height="43" as="geometry"/>
+        </mxCell>
+        <mxCell id="65" value="" style="endArrow=none;dashed=1;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" source="64" target="39" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1050" y="4930" as="sourcePoint"/>
+            <mxPoint x="1100" y="4880" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="66" value="" style="endArrow=none;dashed=1;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" source="51" target="64" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="560" y="5150" as="sourcePoint"/>
+            <mxPoint x="610" y="5100" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="67" value="" style="endArrow=classic;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;endFill=1;" edge="1" source="69" target="70" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="330.5" y="5123" as="sourcePoint"/>
+            <mxPoint x="379.5" y="5153" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="68" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" target="80" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="501.5" y="5104.5" as="sourcePoint"/>
+            <mxPoint x="647" y="5102.5" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="69" value="Make buckets" style="ellipse;whiteSpace=wrap;html=1;rounded=0;glass=1;comic=0;" vertex="1" parent="1">
+          <mxGeometry x="272.5" y="5080" width="88" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="70" value="produce buckets 1000" style="shape=delay;whiteSpace=wrap;html=1;rounded=0;glass=1;comic=0;" vertex="1" parent="1">
+          <mxGeometry x="388" y="5085" width="122" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="71" value="Input Economic Event" style="shape=delay;whiteSpace=wrap;html=1;rounded=0;glass=1;comic=0;" vertex="1" parent="1">
+          <mxGeometry x="147" y="5084.5" width="92" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="72" value="use injection molding machine 10.7 hours" style="shape=delay;whiteSpace=wrap;html=1;rounded=0;glass=1;comic=0;" vertex="1" parent="1">
+          <mxGeometry x="143.5" y="5085" width="111" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="73" value="" style="endArrow=classic;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endFill=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" source="72" target="69" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="258.5" y="5161.5" as="sourcePoint"/>
+            <mxPoint x="291.47800000000007" y="5167" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="74" value="consume polymer 925 kg" style="shape=delay;whiteSpace=wrap;html=1;rounded=0;glass=1;comic=0;" vertex="1" parent="1">
+          <mxGeometry x="143.5" y="5135" width="111" height="36" as="geometry"/>
+        </mxCell>
+        <mxCell id="75" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=1;entryDx=0;entryDy=0;" edge="1" source="74" target="69" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="317.5" y="5200" as="sourcePoint"/>
+            <mxPoint x="367.5" y="5150" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="76" value="" style="endArrow=classic;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;endFill=1;" edge="1" source="77" target="78" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="833.5" y="5122.5" as="sourcePoint"/>
+            <mxPoint x="882.5" y="5152.5" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="77" value="QT buckets" style="ellipse;whiteSpace=wrap;html=1;rounded=0;glass=1;comic=0;" vertex="1" parent="1">
+          <mxGeometry x="777" y="5079.5" width="88" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="78" value="&lt;div&gt;pass buckets &lt;br&gt;&lt;/div&gt;&lt;div&gt;998&lt;br&gt;&lt;/div&gt;" style="shape=delay;whiteSpace=wrap;html=1;rounded=0;glass=1;comic=0;" vertex="1" parent="1">
+          <mxGeometry x="893" y="5084.5" width="122" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="79" value="" style="endArrow=classic;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endFill=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" source="80" target="77" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="768" y="5105" as="sourcePoint"/>
+            <mxPoint x="794.4780000000001" y="5166.5" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="80" value="accept buckets @make 1000" style="shape=delay;whiteSpace=wrap;html=1;rounded=0;glass=1;comic=0;" vertex="1" parent="1">
+          <mxGeometry x="640.5" y="5085" width="122" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="81" value="" style="endArrow=none;dashed=1;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" source="18" target="83" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="90" y="5300" as="sourcePoint"/>
+            <mxPoint x="140" y="5250" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="82" value="" style="endArrow=none;dashed=1;html=1;entryX=0.25;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" source="85" target="33" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="5310" as="sourcePoint"/>
+            <mxPoint x="450" y="5260" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="83" value="&lt;div&gt;Polymer&lt;br&gt;&lt;/div&gt;&lt;div&gt;resource&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="19" y="5133" width="101" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="84" value="" style="endArrow=classic;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" source="83" target="74" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="70" y="5280" as="sourcePoint"/>
+            <mxPoint x="120" y="5230" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="85" value="Injection molding machine" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="13" y="5085" width="112" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="86" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" source="85" target="72" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="140" y="5280" as="sourcePoint"/>
+            <mxPoint x="190" y="5230" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="87" value="fail buckets &lt;br&gt;&lt;div&gt;1.8 kg&lt;br&gt;&lt;/div&gt;" style="shape=delay;whiteSpace=wrap;html=1;rounded=0;glass=1;comic=0;" vertex="1" parent="1">
+          <mxGeometry x="895" y="5135" width="122" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="88" value="" style="endArrow=classic;html=1;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" source="77" target="87" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="820" y="5280" as="sourcePoint"/>
+            <mxPoint x="870" y="5230" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="89" value="" style="endArrow=none;dashed=1;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" source="83" target="87" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="730" y="5310" as="sourcePoint"/>
+            <mxPoint x="780" y="5260" as="targetPoint"/>
+            <Array as="points">
+              <mxPoint x="70" y="5190"/>
+              <mxPoint x="956" y="5190"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="90" value="Bucket resource" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1040" y="5084.5" width="101" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="91" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" source="78" target="90" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="890" y="5290" as="sourcePoint"/>
+            <mxPoint x="940" y="5240" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="92" value="" style="endArrow=none;dashed=1;html=1;exitX=0.25;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" source="90" target="28" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1060" y="5030" as="sourcePoint"/>
+            <mxPoint x="1110" y="4980" as="targetPoint"/>
+            <Array as="points">
+              <mxPoint x="610" y="5020"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
