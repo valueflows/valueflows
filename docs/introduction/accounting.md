@@ -31,6 +31,8 @@ The standard set of accounting reports are needed by many organizations. A stand
 
 Moreover, General Ledgers and accounting reports can be created automatically for each agent in an economic network using the VF vocabulary.
 
+Accounting statements can also be updated instantly for each participant in any economic event as soon as the event is recorded. For example, consider an economic exchange, where one agent transfers some goods to another, and the other agent transfers some money in return. The inventory of the goods-providing agent will be instantly decremented, and the receiving agent's incremented. Likewise the money accounts of the money-providing and receiving agents will immediately change. Income statements, balance sheets, and cash flow reports can reflect the new changes immediately. The financial positions of each agent can always be up-to-date as of the last recorded event.
+
 This article describes how to generate General Ledgers etc from REA data using procedural code: [Operation of a Relational Accounting System, Graham Gal and Bill McCarthy](https://www.researchgate.net/publication/292781264_Operation_of_a_relational_accounting_system)
 
 Wim Laurier is working on how to do it declaratively. [This paper](http://ceur-ws.org/Vol-2383/paper8.pdf) gives an early view of how Wim and Satoshi Horiuchi intend to do it.
