@@ -74,9 +74,9 @@ Sometimes part of the logical identification of a resource includes:
 * stage: the ProcessSpecification of the most recent process the resource was output from, with the `modify` action
 * state: the Action (`pass` or `fail` only) of the most recent economic event the resource was output from
 
-The stage is used when a resource passes through multiple stages in its lifetime, and that is important when determining the next process it should be input for.  For example, in creating a translation, you might have one translated document pass through translation, editing, proofreading, formatting stages. You don't want to bring that resource into the formatting stage until it has been proofread, for example. Or you might have a testing stage for a component or product, in which case you don't want to consume or transfer the resource until it both has been through the testing stage, and had a `pass` output result.
+Stage is used when the same resource passes through multiple processes in its lifetime, and that information is needed by the next process to determine which resources can be valid inputs.  For example, in creating a translation, you might have one translated document pass through translation, editing, proofreading, formatting stages. You don't want to bring that resource into the formatting stage until it has been proofread, for example. Or you might have a testing stage for a component or product, in which case you don't want to consume or transfer the resource until it both has been through the testing stage, and had a `pass` output result.
 
-These can be defined on the recipe or the plan, showing where an input flow expects a certain stage and/or state of a resource.  In the observation layer, the input event should then check those as required when offering selections of possible input resources.
+These can be defined on the recipe or the plan, showing where an input flow expects a certain stage and/or state of a resource.  In user-interface forms for adding EconomicEvents, the input event form should query EconomicResources for required stage and state when offering selections of possible input resources.  The stage and state of an EconomicResource can be derived or stored, as preferred.
 
 #### How resources relate to events
 

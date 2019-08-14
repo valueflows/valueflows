@@ -621,7 +621,7 @@ vf:conformsTo
 vf:stage
         a                   owl:ObjectProperty ;
         rdfs:label          "stage" ;
-        rdfs:domain         [ owl:unionOf (vf:Commitment vf:RecipeFlow) ] ;
+        rdfs:domain         [ owl:unionOf (vf:Commitment vf:RecipeFlow vf:EconomicResource) ] ;
         rdfs:range          vf:ProcessSpecification ;
         vs:term_status      "unstable" ;
         rdfs:comment        "The last stage the desired economic resource went through." .
@@ -629,7 +629,7 @@ vf:stage
 vf:state
         a                   owl:ObjectProperty ;
         rdfs:label          "state" ;
-        rdfs:domain         [ owl:unionOf (vf:Commitment vf:RecipeFlow) ] ;
+        rdfs:domain         [ owl:unionOf (vf:Commitment vf:RecipeFlow vf:EconomicResource) ] ;
         rdfs:range          vf:Action ;
         vs:term_status      "unstable" ;
         rdfs:comment        "The state of the desired economic resource (pass or fail), after coming out of a test or review process." .
