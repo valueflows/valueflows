@@ -26,7 +26,7 @@
 
   - '@id': mfg:d4d2fd71-34f2-41c3-b1c5-19ad5ed2da58
     '@type': Claim
-    action: transfer
+    action: transfer-complete
     provider: https://manufacturing.example/
     receiver: https://bob.example/
     resourceClassifiedAs: https://www.wikidata.org/wiki/Q1104069 # Canadian dollar
@@ -41,9 +41,9 @@
 
   - '@id': mfg:c7897c39-7f05-4a5d-a487-80e130a2414a
     '@type': EconomicEvent
-    action: transfer
-    provider: https://bob.example/
-    receiver: https://manufacturing.example/
+    action: transfer-complete
+    provider: https://manufacturing.example/
+    receiver: https://bob.example/
     resourceClassifiedAs: https://www.wikidata.org/wiki/Q1104069 # Canadian dollar
     resourceQuantity:
       qudt:unit: unit:Number

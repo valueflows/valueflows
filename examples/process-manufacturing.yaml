@@ -4,7 +4,6 @@
   - https://git.io/vf-examples-jsonld-context
   - alice: https://alice.example/
     mfg: https://manufacturing.example/
-    make: https://makezine.com/
 
 '@id': rgh:valueflows/valueflows/master/examples/process-manufacturing.yaml
 '@graph':
@@ -14,14 +13,14 @@
   - '@id': mfg:e1721a61-cd47-4556-84b9-8b1b81da15bf
     '@type': EconomicResource
     resourceConformsTo: https://www.opendesk.cc/lean/desk # desk
-    currentQuantity:
+    accountingQuantity:
       qudt:unit: unit:Number
       qudt:numericValue: 8
 
   - '@id': mfg:3129ca8b-fcda-45be-bbda-294dc924d3b9
     '@type': EconomicResource
     classifiedAs: https://www.wikidata.org/wiki/Q219803 # plywood
-    currentQuantity:
+    accountingQuantity:
       qudt:unit: unit:Number
       qudt:numericValue: 130
     skos:note: 4 x 8 sheet of 1/2 inch plywood
@@ -29,14 +28,14 @@
   - '@id': mfg:6b97b1be-8e07-44ac-82e5-214f1b2aaf33
     '@type': EconomicResource
     classifiedAs: https://www.wikidata.org/wiki/Q2101564 # desk design specification
-    currentQuantity:
+    accountingQuantity:
       qudt:unit: unit:Number
       qudt:numericValue: 1
 
   - '@id': mfg:52f0e212-3c4f-4d27-b345-5e964c135824
     '@type': EconomicResource
     classifiedAs: https://www.wikidata.org/wiki/Q13231055 # CNC machine
-    currentQuantity:
+    accountingQuantity:
       qudt:unit: unit:Number
       qudt:numericValue: 1
 
@@ -106,14 +105,14 @@
     - '@id': mfg:e1721a61-cd47-4556-84b9-8b1b81da15bf
     '@type': EconomicResource
     resourceConformsTo: https://www.opendesk.cc/lean/desk # desk
-    currentQuantity:
+    accountingQuantity:
       qudt:unit: unit:Number
       qudt:numericValue: 9
 
   - '@id': mfg:3129ca8b-fcda-45be-bbda-294dc924d3b9
     '@type': EconomicResource
     classifiedAs: https://www.wikidata.org/wiki/Q219803 # plywood
-    currentQuantity:
+    accountingQuantity:
       qudt:unit: unit:Number
       qudt:numericValue: 127
     note: 4 x 8 sheet of 1/2 inch plywood
@@ -121,13 +120,13 @@
   - '@id': mfg:6b97b1be-8e07-44ac-82e5-214f1b2aaf33
     '@type': EconomicResource
     classifiedAs: https://www.wikidata.org/wiki/Q2101564 # desk design specification
-    currentQuantity:
+    accountingQuantity:
       qudt:unit: unit:Unitless
       qudt:numericValue: 1
 
   - '@id': mfg:52f0e212-3c4f-4d27-b345-5e964c135824
     '@type': EconomicResource
     classifiedAs: https://www.wikidata.org/wiki/Q13231055 # CNC machine
-    currentQuantity:
+    accountingQuantity:
       qudt:unit: unit:Unitless
       qudt:numericValue: 1

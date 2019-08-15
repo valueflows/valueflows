@@ -88,17 +88,16 @@ An event can trigger incrementing or decrementing a resource.  Sometimes it does
 
 For serialized or uniquely identified resources, if the logical and technical unique identifiers are not changed by an event, such as moving a vehicle to another location without any changes to its custody (and assuming location is not part of the logical identifier), the resource does not behave like a stock and is not decremented or incremented.
 
+#### How resources relate to transfers
 
-#### How resources related to each other
+Two different kinds of "inventorying" of resources are affected by transfers.
+* quantity of the resource where the agent has full (human realm) rights and responsibilities, irrespective of custody
+* quantity of the resource where the agent has custody or physical possession, irrespective of rights, more of an operational focus
 
-##### Underlying resource
+We are defining two current quantities on the economic resource for these two concepts, accounting quantity for the first and onhand quantity for the second.
 
-This occurs when a resource is basically certain defined rights to another resource. It is often useful to define the rights as a different resource for purposes of processes or exchanges.
+#### How resources related to each other: contained resources
 
-One example: a resource which defines the rental of an apartment has the apartment itself as its underlying resource.
-
-##### Contains resource
-
-Unlike underlying resource, if one resource contains other resources, the contained resources are part of, or make up the larger resource.
+If one resource contains other resources, the contained resources are part of, or make up the larger resource.
 
 For example, a bank account might contain a number of "virtual accounts" that a group manages itself, outside the bank's knowledge.  Or, a bike shed resource might contain 10 bikes, which are identified and tracked by their serial numbers as individual resources.

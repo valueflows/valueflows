@@ -216,13 +216,6 @@ vf:independentDemandOf
         rdfs:domain         vf:Commitment ;
         rdfs:comment        "Represents a desired deliverable to the outside of this plan." .
 
-vf:scheduled
-        a                   owl:ObjectProperty ;
-        rdfs:label         "scheduled" ;
-        rdfs:range          xsd:boolean ;
-        rdfs:domain         vf:Plan ;
-        rdfs:comment        "The plan is scheduled, or is a higher level estimated plan." .
-
 vf:resourceInventoriedAs
         a                   owl:ObjectProperty ;
         rdfs:label          "resource inventoried as" ;
@@ -344,12 +337,19 @@ vf:hasEnd a                 owl:DatatypeProperty ;
         owl:propertyChainAxiom (time:hasEnd time:inXSDDateTimeStamp) ;
         rdfs:comment        "Specific time marking the exact end of flow or process".
 
-vf:currentQuantity a        owl:ObjectProperty ;
-        rdfs:label          "current quantity" ;
+vf:accountingQuantity a     owl:ObjectProperty ;
+        rdfs:label          "accounting quantity" ;
         rdfs:domain         vf:EconomicResource ;
         rdfs:range          qudt:QuantityValue ;
         vs:term_status      "unstable" ;
-        rdfs:comment        "The current amount and unit of the economic resource. This can be stored or derived from economic events affecting the resource" .
+        rdfs:comment        "The current amount and unit of the economic resource for which the agent has primary rights and responsibilities, sometimes thought of as ownership. This can be stored or derived from economic events affecting the resource." .
+
+vf:onhandQuantity a         owl:ObjectProperty ;
+        rdfs:label          "onhand quantity" ;
+        rdfs:domain         vf:EconomicResource ;
+        rdfs:range          qudt:QuantityValue ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "The current amount and unit of the economic resource which is under direct control of the agent.  It may be more or less than the accounting quantity. This can be stored or derived from economic events affecting the resource." .
 
 vf:resourceQuantity a       owl:ObjectProperty ;
         rdfs:label          "involved quantity" ;
@@ -773,8 +773,16 @@ vf:lower  a                 vf:Action ;
         rdfs:label          "lower" ;
         rdfs:subPropertyOf  vf:decrement .
 
-vf:transfer  a              vf:Action ;
-        rdfs:label          "transfer" ;
+vf:transfer-complete  a     vf:Action ;
+        rdfs:label          "transfer-complete" ;
+        vs:term_status      "unstable" .
+
+vf:transfer-all-rights  a   vf:Action ;
+        rdfs:label          "transfer-all-rights" ;
+        vs:term_status      "unstable" .
+
+vf:transfer-custody  a      vf:Action ;
+        rdfs:label          "transfer-custody" ;
         vs:term_status      "unstable" .
 
 vf:move  a                  vf:Action ;
