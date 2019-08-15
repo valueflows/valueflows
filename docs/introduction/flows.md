@@ -52,8 +52,8 @@ All flows use an action property to designate what the flow is doing and how it 
 * vf:consume - for example an ingredient or component composed into the output, after the process the ingredient is gone
 * vf:cite - for example a design file, neither used nor consumed, the file remains available at all times
 * vf:work - labor power applied to a process
-* vf:load -  transported resource enters the process, the same resource will appear in output with *vf:unload* verb
-* vf:unload -  transported resource leaves the process, the same resource will appear in input with *vf:load* verb
+* vf:pickup -  transported resource or person enters the process, the same resource will appear in output with *vf:dropoff* verb
+* vf:dropoff -  transported resource or person leaves the process, the same resource will appear in input with *vf:pickup* verb
 * vf:accept - in processes like repair or modification or testing, the same resource will appear in output with *vf:modify* verb
 * vf:modify - in processes like repair or modification, the same resource will appear in input with *vf:accept* verb
 * vf:pass - possible output of a testing or reviewing process, indicating the resource passed, the same resource will appear in input with *vf:accept* verb
@@ -73,8 +73,8 @@ consume | Decrement  | Input | Yes  | N/A |
 use | No effect(1)  | Input | No | N/A |
 work | No effect(1)  | Input | N/A  | N/A |
 cite | No effect  | Input | No | N/A |
-load | No effect  | Input | No  | unload |
-unload | No effect  | Output | No  | load |
+pickup | No effect  | Input | No  | dropoff |
+dropoff | No effect  | Output | No  | pickup |
 accept | No effect  | Input | No  | modify |
 modify | No effect  | Output | No  | accept |
 pass | No effect  | Output | No  | accept |
