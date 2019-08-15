@@ -42,7 +42,7 @@
     '@type': EconomicResource
     name: Bucket white 5 gallon
     resourceConformsTo: urn:uuid:3be5259d-10f0-431c-9fec-9c0c15a461d3
-    currentQuantity:
+    accountingQuantity:
       qudt:unit: unit:Number
       qudt:numericValue: 320
 
@@ -50,7 +50,7 @@
     '@type': EconomicResource
     name: Thermoplastic polymer white
     resourceConformsTo: urn:uuid:d4d2fd71-34f2-41c3-b1c5-19ad5ed2da58
-    currentQuantity:
+    accountingQuantity:
       qudt:unit: unit:Kilograms
       qudt:numericValue: 2455
 
@@ -59,7 +59,7 @@
     name: Injection molding maching
     resourceConformsTo: urn:uuid:c7897c39-7f05-4a5d-a487-80e130a2414a
     trackingIdentifier: DDE098989099911
-    currentQuantity:
+    accountingQuantity:
       qudt:unit: unit:Number
       qudt:numericValue: 1
     unitOfEffort: unit:Hour
@@ -313,7 +313,7 @@
     '@type': EconomicResource
     name: Bucket white 5 gallon
     resourceConformsTo: urn:uuid:3be5259d-10f0-431c-9fec-9c0c15a461d3
-    currentQuantity:
+    accountingQuantity:
       qudt:unit: unit:Number
       qudt:numericValue: 1318
 
@@ -321,7 +321,7 @@
     '@type': EconomicResource
     name: Thermoplastic polymer white
     resourceConformsTo: urn:uuid:d4d2fd71-34f2-41c3-b1c5-19ad5ed2da58
-    currentQuantity:
+    accountingQuantity:
       qudt:unit: unit:Kilograms
       qudt:numericValue: 1531.8
 
@@ -330,7 +330,7 @@
     name: Injection molding maching
     resourceConformsTo: urn:uuid:c7897c39-7f05-4a5d-a487-80e130a2414a
     trackingIdentifier: DDE098989099911
-    currentQuantity:
+    accountingQuantity:
       qudt:unit: unit:Number
       qudt:numericValue: 1
     unitOfEffort: unit:Hour

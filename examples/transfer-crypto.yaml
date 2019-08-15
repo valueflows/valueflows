@@ -15,7 +15,7 @@
     '@type': EconomicResource
     skos:note: Alice's wallet address
     classifiedAs: wd:Q21002847 # FairCoin
-    currentQuantity:
+    accountingQuantity:
       qudt:unit: unit:Number
       qudt:numericValue: 540
 
@@ -23,7 +23,7 @@
     '@type': EconomicResource
     skos:note: Bob's wallet address 
     classifiedAs: wd:Q21002847 # FairCoin
-    currentQuantity:
+    accountingQuantity:
       qudt:unit: unit:Number
       qudt:numericValue: 480
 
@@ -31,7 +31,7 @@
 
   - '@id': urn:uuid:e5afaa28-1080-4912-835b-46883efb83e6
     '@type': EconomicEvent
-    action: transfer
+    action: transfer-complete
     resourceClassifiedAs: wd:Q21002847 # FairCoin
     resourceInventoriedAs: fair:b75d8f6a-e2df-4e52-b36d-1a22a66f4ead # Alice's wallet address
     toResourceInventoriedAs: fair:3be5259d-10f0-431c-9fec-9c0c15a461d3 # Bob's wallet address
@@ -48,7 +48,7 @@
     '@type': EconomicResource
     skos:note: Alice's wallet address 
     classifiedAs: wd:Q21002847 # FairCoin
-    currentQuantity:
+    accountingQuantity:
       qudt:unit: unit:Number
       qudt:numericValue: 440
 
@@ -56,6 +56,6 @@
     '@type': EconomicResource
     skos:note: Bob's wallet address 
     classifiedAs: wd:Q21002847 # FairCoin
-    currentQuantity:
+    accountingQuantity:
       qudt:unit: unit:Number
       qudt:numericValue: 580

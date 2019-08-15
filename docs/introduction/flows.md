@@ -59,9 +59,9 @@ All flows use an action property to designate what the flow is doing and how it 
 * vf:pass - possible output of a testing or reviewing process, indicating the resource passed, the same resource will appear in input with *vf:accept* verb
 * vf:fail - possible output of a testing or reviewing process, indicating the resource failed, the same resource will appear in input with *vf:accept* verb
 * vf:service - new service produced and delivered (a service implies that an agent actively receives the service)
-* vf:transfer-accounting - give full (in the human realm) rights and responsibilities to another agent, without transferring physical custody
+* vf:transfer-all-rights - give full (in the human realm) rights and responsibilities to another agent, without transferring physical custody
 * vf:transfer-custody - give physical custody and control of a resource, without full accounting or ownership rights
-* vf:transfer-complete - give full accounting rights and responsibilities plus physical custody
+* vf:transfer-complete - give full rights and responsibilities plus physical custody
 * vf:move - change location and possibly identifier, if location is part of the identification, of a resource with no change of agent rights or possession
 * vf:raise - adjusts a quantity up based on a beginning balance or inventory count
 * vf:lower - adjusts a quantity down based on a beginning balance or inventory count
@@ -80,7 +80,7 @@ modify | No effect  | Output | No  | accept |
 pass | No effect  | Output | No  | accept |
 fail | No effect  | Output | No  | accept |
 transfer-custody | Decr+Incr(2) | N/A | No | N/A |
-transfer-accounting | Decr+Incr(2) | N/A | No | N/A |
+transfer-all-rights | Decr+Incr(2) | N/A | No | N/A |
 transfer-complete | Decr+Incr(2) | N/A | No | N/A |
 move | Decr+Incr(2) | N/A | No | N/A |
 raise | Increment | N/A | No | N/A |

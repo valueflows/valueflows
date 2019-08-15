@@ -30,14 +30,14 @@
   - '@id': training:e1721a61-cd47-4556-84b9-8b1b81da15bf
     '@type': EconomicResource
     classifiedAs: https://www.wikidata.org/wiki/Q53953506 # 3D printer
-    currentQuantity:
+    accountingQuantity:
       qudt:unit: unit:Number
       qudt:numericValue: 1
 
   - '@id': training:6b97b1be-8e07-44ac-82e5-214f1b2aaf33
     '@type': EconomicResource
     conformsTo: training:52f0e212-3c4f-4d27-b345-5e964c135824 # 3D printing class handout
-    currentQuantity:
+    accountingQuantity:
       qudt:unit: unit:Number
       qudt:numericValue: 100
 

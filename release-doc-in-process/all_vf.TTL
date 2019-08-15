@@ -777,8 +777,8 @@ vf:transfer-complete  a     vf:Action ;
         rdfs:label          "transfer-complete" ;
         vs:term_status      "unstable" .
 
-vf:transfer-accounting  a   vf:Action ;
-        rdfs:label          "transfer-accounting" ;
+vf:transfer-all-rights  a   vf:Action ;
+        rdfs:label          "transfer-all-rights" ;
         vs:term_status      "unstable" .
 
 vf:transfer-custody  a      vf:Action ;
