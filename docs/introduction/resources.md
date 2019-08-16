@@ -21,7 +21,7 @@ is a specification. Your library may have two copies that you can check out. Tho
 
 #### The difference between a resource specification and a resource classification
 
-An economic resource or a flow can have only one *resource specification* in ValueFlows.  This defines the lowest level useful type or kind of the resource that is needed. It can be defined within the ValueFlows vocabulary as a ResourceSpecification, or can refer to a specification elsewhere using a uri.  Note that often taxonomies and other references on the web can define very specific resource specifications at their leaf levels.
+An economic resource or a flow can have only one *resource specification* in ValueFlows.  This defines the lowest level useful type or kind of the resource that is needed. The ValueFlows vocabulary defines the ResourceSpecification vocabulary.  Note that often taxonomies and other references on the web can define very specific resource specifications at their leaf levels, and these can be used if the necessary properties can be found.
 
 An economic resource or a flow can have any number of *resource classifications*.  They are used to filter, match, or group economic resources.  Resource classifications can be part of a taxonomy. That means they can be defined very broadly and generally and maybe vaguely, or they can be defined very narrowly, but fit into broader classifications. 
 
@@ -71,8 +71,8 @@ Note in the last case, a transfer of rights means a different resource. This is 
 ##### Stage and state
 
 Sometimes part of the logical identification of a resource includes:
-* stage: the ProcessSpecification of the most recent process the resource was output from, with the `modify` action
-* state: the Action (`pass` or `fail` only) of the most recent economic event the resource was output from
+* *stage*: the ProcessSpecification of the most recent process the resource was output from, with the `modify` action
+* *state*: the Action (`pass` or `fail` only) of the most recent economic event the resource was output from
 
 Stage is used when the same resource passes through multiple processes in its lifetime, and that information is needed by the next process to determine which resources can be valid inputs.  For example, in creating a translation, you might have one translated document pass through translation, editing, proofreading, formatting stages. You don't want to bring that resource into the formatting stage until it has been proofread, for example. Or you might have a testing stage for a component or product, in which case you don't want to consume or transfer the resource until it both has been through the testing stage, and had a `pass` output result.
 
@@ -94,9 +94,9 @@ Two different kinds of "inventorying" of resources are affected by transfers.
 * quantity of the resource where the agent has full (human realm) rights and responsibilities, irrespective of custody
 * quantity of the resource where the agent has custody or physical possession, irrespective of rights, more of an operational focus
 
-We are defining two current quantities on the economic resource for these two concepts, accounting quantity for the first and onhand quantity for the second.
+We are defining two current quantities on the economic resource for these two concepts, *accounting quantity* for the first and *onhand quantity* for the second.
 
-For example, in vendor-managed inventory, the vendor owns the inventory (they see if in their accounting) but the store sees it in their onhand quantities. Or for inventory being shipped FOB source, the intended receiver owns the inventory and sees it in their accounting, but the goods are actually onhand in a truck.
+For example, in vendor-managed inventory, the vendor owns the inventory so they see it in their accounting; but the store sees it in their onhand quantities. Or for inventory being shipped FOB source, the intended receiver owns the inventory and sees it in their accounting, but the goods are actually onhand in a truck.
 
 #### How resources related to each other: contained resources
 

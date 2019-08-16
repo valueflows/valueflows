@@ -19,6 +19,8 @@ Other relatively consolidated parts of the vocabulary include:
 Less stable are: 
 * Intents and Proposals
 * Budgeting and Analysis
-* Recipes - forking/versioning
-* Conversations for Action/Agreement
 * Claims
+
+Coming in future releases are:
+* Forking/versioning of Recipes
+* Conversations for Action
