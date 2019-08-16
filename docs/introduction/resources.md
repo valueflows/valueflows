@@ -21,7 +21,7 @@ is a specification. Your library may have two copies that you can check out. Tho
 
 #### The difference between a resource specification and a resource classification
 
-An economic resource or a flow can have only one *resource specification* in ValueFlows.  This defines the lowest level useful type or kind of the resource that is needed. The ValueFlows vocabulary defines the ResourceSpecification vocabulary.  Note that often taxonomies and other references on the web can define very specific resource specifications at their leaf levels, and these can be used if the necessary properties can be found.
+An economic resource or a flow can have only one *resource specification* in ValueFlows.  This defines the lowest level useful type or kind of the resource that is needed. The ValueFlows vocabulary defines this as the ResourceSpecification.  Note that often taxonomies and other references on the web can define very specific resource specifications at their leaf levels, and these can be used if the necessary properties can be found.
 
 An economic resource or a flow can have any number of *resource classifications*.  They are used to filter, match, or group economic resources.  Resource classifications can be part of a taxonomy. That means they can be defined very broadly and generally and maybe vaguely, or they can be defined very narrowly, but fit into broader classifications. 
 
@@ -97,6 +97,8 @@ Two different kinds of "inventorying" of resources are affected by transfers.
 We are defining two current quantities on the economic resource for these two concepts, *accounting quantity* for the first and *onhand quantity* for the second.
 
 For example, in vendor-managed inventory, the vendor owns the inventory so they see it in their accounting; but the store sees it in their onhand quantities. Or for inventory being shipped FOB source, the intended receiver owns the inventory and sees it in their accounting, but the goods are actually onhand in a truck.
+
+For example, in vendor-managed inventory, the vendor owns the inventory (they see if in their accounting) but the store sees it in their onhand quantities. Or for inventory being shipped FOB source, the intended receiver owns the inventory and sees it in their accounting, but the goods are actually onhand in a truck.
 
 #### How resources related to each other: contained resources
 
