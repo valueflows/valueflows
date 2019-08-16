@@ -69,16 +69,16 @@ All flows use an action property to designate what the flow is doing and how it 
 Action | Affect | I/O | Changes existence | Pairs with |
 ------ | ------ | --- | ----------------- | ---------- |
 produce | Increment  | Output | Yes | N/A |
-consume | Decrement  | Input | Yes  | N/A |
+consume | Decrement  | Input | Yes | N/A |
 use | No effect(1)  | Input | No | N/A |
-work | No effect(1)  | Input | N/A  | N/A |
+work | No effect(1)  | Input | N/A | N/A |
 cite | No effect  | Input | No | N/A |
-pickup | No effect  | Input | No  | dropoff |
-dropoff | No effect  | Output | No  | pickup |
-accept | No effect  | Input | No  | modify |
-modify | No effect  | Output | No  | accept |
-pass | No effect  | Output | No  | accept |
-fail | No effect  | Output | No  | accept |
+pickup | No effect  | Input | No | dropoff |
+dropoff | No effect  | Output | No | pickup |
+accept | No effect  | Input | No | modify |
+modify | No effect  | Output | No | accept |
+pass | No effect  | Output | No | accept |
+fail | No effect  | Output | No | accept |
 transfer-custody | Decr+Incr(2) | N/A | No | N/A |
 transfer-all-rights | Decr+Incr(2) | N/A | No | N/A |
 transfer-complete | Decr+Incr(2) | N/A | No | N/A |

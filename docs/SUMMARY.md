@@ -35,6 +35,7 @@
 
 * [External terms](specification/external-terms.md)
 * [Classes and Properties](http://www.essepuntato.it/lode/owlapi/https://raw.githubusercontent.com/valueflows/valueflows/master/release-doc-in-process/all_vf.TTL)
+* [Graphql Reference](https://github.com/valueflows/vf-graphql/tree/master/lib/schemas)
 
 ## Examples
 

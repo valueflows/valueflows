@@ -4,7 +4,7 @@ The vocabulary has a core that would fit many different kinds of economic format
 
 The core is based on the REA (Resource, Event, Agent) ontology. You can find all the details by following the [links here](https://valueflows.gitbooks.io/valueflows/content/appendix/rea.html).  
 
-ValueFlows takes the "independent view" of REA, which is a neutral viewpoint in the "collaboration space" between agents. The "trading partner view" happens intenral to one agent.  For example, from one agent's viewpoint, the exchange may be a "purchase", from the other agent's viewpoint, it might be a "sale". From the neutral viewpoint, it is an exchange of resources, with usually at least two flows of resources, from different directions. 
+ValueFlows takes the "independent view" of REA, which is a neutral viewpoint in the "collaboration space" between agents. The "trading partner view" happens internal to one agent.  For example, from one agent's viewpoint, the exchange may be a "purchase", from the other agent's viewpoint, it might be a "sale". From the neutral viewpoint, it is an exchange of resources, with usually at least two flows of resources, from different directions. 
 
 These are the main concepts in the REA ontology, as pictured in this [document](http://www.msu.edu/user/mccarth4/Alabama.doc):
 
