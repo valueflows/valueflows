@@ -703,15 +703,13 @@ vf:decrement  a             vf:Action ;
         vs:term_status      "unstable" ;
         rdfs:label          "decrement" .
 
-vf:unload  a                vf:Action ;
-        rdfs:label          "unload" ;
-        vs:term_status      "unstable" ;
-        rdfs:subPropertyOf  vf:increment .
+vf:dropoff  a               vf:Action ;
+        rdfs:label          "dropoff" ;
+        vs:term_status      "unstable"  .
 
-vf:load  a                  vf:Action ;
-        rdfs:label          "load" ;
-        vs:term_status      "unstable" ;
-        rdfs:subPropertyOf  vf:decrement .
+vf:pickup  a                vf:Action ;
+        rdfs:label          "pickup" ;
+        vs:term_status      "unstable" .
 
 vf:consume  a               vf:Action ;
         rdfs:label          "consume" ;
@@ -754,16 +752,6 @@ vf:fail  a                  vf:Action ;
 vf:service  a               vf:Action ;
         vs:term_status      "testing" ;
         rdfs:label          "service" .
-
-vf:give  a                  vf:Action ;
-        rdfs:label          "give" ;
-        vs:term_status      "unstable" ;
-        rdfs:subPropertyOf  vf:decrement .
-
-vf:receive  a                vf:Action ;
-        rdfs:label          "receive" ;
-        vs:term_status      "unstable" ;
-        rdfs:subPropertyOf  vf:increment .
 
 vf:raise  a                 vf:Action ;
         rdfs:label          "raise" ;

@@ -8,16 +8,16 @@ Basically, you traverse a graph of Recipe Processes backwards from the last Reci
 
 This description refers to this diagram:
 ![process resource flow](https://rawgit.com/valueflows/valueflows/master/release-doc-in-process/process-layer.png)
-Take each request for quantities of Resource Category as a demand and start the traversal.
+Take each request for quantities of Recipe Resource as a demand and start the traversal.
 
 **Start:** 
-* First check for onhand and available Economic Resources, or previously scheduled Output Intents, that are not yet allocated to any demand. 
-* Allocate any that you find to the highest priority demand (where highest priority usually means earliest delivery date). _(Those are soft allocations, known only in the computer system.)_
-* For demands that find no or insufficient available inventory or Output Intents, look for a Recipe Process that can create some. If you can't find a Recipe Process, suggest a purchase.
+* First check for onhand and available Economic Resources, or previously scheduled output Intents, that are not yet allocated to any demand. 
+* Allocate any that you find to the highest priority demand (where highest priority usually means earliest delivery date). _(Those are soft allocations, known only in the computer system.)
+* For demands that find no or insufficient available inventory or output Intents, look for a Recipe Process that can create some. If you can't find a Recipe Process, suggest a purchase.
 
-    * _(Note: a Recipe is not really a thing, it's just a graph. A requested Resource Category may have one or more Recipe Processes that can create some Resources of that category. Each of those Recipe Processes may have Recipe Inputs that specify some other Resource Categories, and each of those Resource Categories may have Recipe Processes that can create them, and so on, recursively, until you can't find any more creation Recipe Processes. If you find more than one creation Recipe Processes, you will need some way to select one.)_
+    * (Note: a Recipe is not really a thing, it's just a graph - although in a future release it will be a thing. A requested Recipe Resource may have one or more Recipe Processes that can create some Resources of that specification. Each of those Recipe Processes may have Recipe Flow inputs that specify some other Recipe Resources, and each of those Recipe Resources may have Recipe Processes that can create them, and so on, recursively, until you can't find any more creation Recipe Processes. If you find more than one creation Recipe Processes, you will need some way to select one.)
 
-* When you find a Recipe Processes, 
-    * then schedule a Planned Process based on the Recipe Process, with a Output Intent of the required quantity of the demanded Resource Category. Backschedule so that the end of the process meets the timing requirements of the inputs to the processes that will be waiting for them. 
-    * Then schedule Input Intents for each of the Recipe Inputs of that Recipe Process, with their quantities scaled to the quantity of the planned output. 
-    * Then start over from the **Start** with each of those new Input Intents as the demand.
+* When you find a Recipe Process, 
+    * then schedule a planned Process based on the Recipe Process, with an output Intent of the required quantity of the demanded Recipe Resource. Backschedule so that the end of the process meets the timing requirements of the inputs to the processes that will be waiting for them. 
+    * Then schedule input Intents for each of the recipe inputs of that Recipe Process, with their quantities scaled to the quantity of the planned output. 
+    * Then start over from the **Start** with each of those new input Intents as the demand.

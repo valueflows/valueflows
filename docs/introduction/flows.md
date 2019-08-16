@@ -1,6 +1,6 @@
 # Flows
 
-Flows are a fundamental construct in the ValueFlows ontology. When the types of flows are considered in chronological order, they form a progression from potential to scheduled to realized:
+Flows are a fundamental construct in the ValueFlows ontology. The types of flows form a progression from potential to scheduled to realized:
 
 1. Intents which can lead to Commitments
 2. Commitments which can lead to Economic Events (or Intents can lead directly to Economic Events)
@@ -12,7 +12,7 @@ Intents describe potential future events which have not been agreed to by other 
 
 ### Commitment
 
-Commitments describe potential future events which the involved agents have already agreed to pursue. Commitments can be considered contractual promises from one agent to another.  Commitments can be thought of as "mirrors" of economic events, and Economic Events can fulfull Commitments.  Commitments can satisfy Intents. 
+Commitments describe potential future events which the involved agents have already agreed to pursue. Commitments can be considered contractual promises from one agent to another.  Commitments can be thought of as plans of economic events, and Economic Events can fulfull Commitments.  Commitments can satisfy Intents. 
 
 
 ### Economic Events
@@ -48,12 +48,12 @@ Intents, Commitments, and Economic Events can occur at any granularity that is n
 All flows use an action property to designate what the flow is doing and how it will affect an economic resource (or not).  Actions are defined as follows.
 
 * vf:produce - new resource created in that process or an existing stock resource added to
-* vf:use - for example a tool used in process, after the process, the tool still exists
+* vf:use - for example a tool used in process; after the process, the tool still exists
 * vf:consume - for example an ingredient or component composed into the output, after the process the ingredient is gone
 * vf:cite - for example a design file, neither used nor consumed, the file remains available at all times
 * vf:work - labor power applied to a process
-* vf:pickup -  transported resource or person enters the process, the same resource will appear in output with *vf:dropoff* verb
-* vf:dropoff -  transported resource or person leaves the process, the same resource will appear in input with *vf:pickup* verb
+* vf:pickup -  transported resource or person enters the process; the same resource will appear in output with *vf:dropoff* verb
+* vf:dropoff -  transported resource or person leaves the process; the same resource or person appeared in input with vf:pickup verb
 * vf:accept - in processes like repair or modification or testing, the same resource will appear in output with *vf:modify* verb
 * vf:modify - in processes like repair or modification, the same resource will appear in input with *vf:accept* verb
 * vf:pass - possible output of a testing or reviewing process, indicating the resource passed, the same resource will appear in input with *vf:accept* verb

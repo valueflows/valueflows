@@ -1,12 +1,12 @@
 # Agents
 
-The agent vocabulary describes networks of people, organizations and networks, constructed using a simple but powerful model of agents and their relationships.
+Agents can be individual persons or organizations. The agent vocabulary describes networks of people, organizations and networks, constructed using a simple but powerful model of agents and their relationships.
 
 In ValueFlows, we are talking about economic agents, agents who can create or exchange value, and make agreements with each other - who have economic agency.  But we want to re-use existing vocabularies for commonly defined things (foaf:Agent, foaf:Person, org:Organization), so we have elected to use those as much as possible here, even though they are sometimes more broadly defined.
 
 We also want to acknowledge that some people prefer to think of themselves as independent and decentralized agents who interact in different places in the economy as individuals, and some people think of themselves more as members of different groups and networks and communities and interact more in the context of those groups and networks and communities.  Many experiments are going on as people strive towards another economy.  We want to support all these experiments, so want to support both of these ways of thinking and organizing ourselves.  The agent vocabulary is very flexible, and will support these as well as current conventional structures.
 
-So, if people want to form a group that has agency as a group, fine.  If people want to consider that their group does not have agency as a group, also fine.  Not all groups, and especially not all networks, will be Agents in ValueFlows. That depends on the agreement of the people in the group.  Note that within the vocabulary, network formations will appear, as agents have economic interactions with each other in the world.  This does not mean that the network is necessarily a ValueFlows Agent.
+So, if people want to form a group that has agency as a group, fine.  If people want to consider that their group does not have agency as a group, also fine.  Not all groups, and especially not all networks, will be Agents in ValueFlows. That depends on the agreement of the people in the group, and what the group needs to do as-a-group. For example, does the group need to make agreements as-a-group with other groups? Or exchange resources with other agents as-a-group?  Note that within the vocabulary, network formations will appear, as agents have economic interactions with each other in the world.  This does not mean that the network is necessarily a ValueFlows Agent, but it could be, if the participants want.
 
 ### Agent Relationships
 
@@ -18,4 +18,4 @@ There are a number of useful Properties in existing vocabularies that can be use
 
 Relationships have direction: For example, in "Michael is a member of Enspiral", Michael is the subject and Enspiral is the object.  In this case the inverse is also valid, "Enspiral has member Michael".
 
-Relationships can be in a scope (or not): For example, "Kathy is mentor of Sam, in the scope of Enspiral."
+Relationships can be in a [scope](https://valueflo.ws/introduction/scoping.html) (or not): For example, "Kathy is mentor of Sam, in the scope of Enspiral."

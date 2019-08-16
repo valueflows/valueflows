@@ -16,12 +16,12 @@ An economic resource is observable.  Its specification or classification defines
 
 So, for example, most listings of things offered for sale on an e-commerce site are specifications, which can be searched using classifications. The one in a box delivered to your door is a resource.
 
-Or the description of the book entitled "The Power of Babel: A Natural History of Language", ISBN ISBN-13: 978-0060520854,
+Or the description of the book entitled "The Power of Babel: A Natural History of Language", ISBN-13: 978-0060520854,
 is a specification. Your library may have two copies that you can check out. Those are resources.
 
 #### The difference between a resource specification and a resource classification
 
-An economic resource or a flow can have only *resource specification*, defined by `resourceConformsTo`.  This defines the lowest level useful type or kind of the resource that is needed. It can be defined within the ValueFlows vocabulary as a ResourceSpecification, or can refer to a specification elsewhere using a uri.  Note that often taxonomies and other references on the web can define very specific resource specifications at their leaf levels.
+An economic resource or a flow can have only one *resource specification* in ValueFlows.  This defines the lowest level useful type or kind of the resource that is needed. It can be defined within the ValueFlows vocabulary as a ResourceSpecification, or can refer to a specification elsewhere using a uri.  Note that often taxonomies and other references on the web can define very specific resource specifications at their leaf levels.
 
 An economic resource or a flow can have any number of *resource classifications*.  They are used to filter, match, or group economic resources.  Resource classifications can be part of a taxonomy. That means they can be defined very broadly and generally and maybe vaguely, or they can be defined very narrowly, but fit into broader classifications. 
 
@@ -33,7 +33,7 @@ People can use the multitude of existing taxonomies for resource classifications
 
 Resource classifications can also use other schemes, like facets or tags.
 
-The references to resource classifications are uri's, and not covered inside ValueFlows.
+The references to resource classifications are uri's, and not otherwise defined inside ValueFlows.
 
 #### Identification and Behaviors of Resources
 
@@ -53,7 +53,7 @@ Substitutability: This defines if any resources of that specification or classif
 #### Inventory
 
 Economic Resources can be inventoried, not inventoried but could be, or it doesn't make sense to think about inventory.
-* Inventoried: You want to keep track of it, changes in quantity, and how many you have right now.
+* Inventoried: You want to keep track of it, its changes in quantity, and how many you have right now.
 * Not inventoried: You could keep track of it, but it isn't worth it.  This usually happens for quantities of small or hard to measure items that are obtained in bulk, like solder or bolts.  In this case, you have to look at the actual resource to see if you need more, the data won't tell you.
 * Not applicable: This is for types of work (unless scheduled), and other resources where it just doesn't make sense.
 
@@ -76,7 +76,7 @@ Sometimes part of the logical identification of a resource includes:
 
 Stage is used when the same resource passes through multiple processes in its lifetime, and that information is needed by the next process to determine which resources can be valid inputs.  For example, in creating a translation, you might have one translated document pass through translation, editing, proofreading, formatting stages. You don't want to bring that resource into the formatting stage until it has been proofread, for example. Or you might have a testing stage for a component or product, in which case you don't want to consume or transfer the resource until it both has been through the testing stage, and had a `pass` output result.
 
-These can be defined on the recipe or the plan, showing where an input flow expects a certain stage and/or state of a resource.  In user-interface forms for adding EconomicEvents, the input event form should query EconomicResources for required stage and state when offering selections of possible input resources.  The stage and state of an EconomicResource can be derived or stored, as preferred.
+These can be defined on the recipe or the plan, showing where an input flow expects a certain stage and/or state of a resource. In that case, [Dependent demand planning](https://valueflo.ws/appendix/dependent-demand.html) will select only those resources that fit the specified stage and state.  In user-interface forms for adding EconomicEvents, the input event form should query EconomicResources for required stage and state when offering selections of possible input resources.  The stage and state of an EconomicResource can be derived or stored, as preferred.
 
 #### How resources relate to events
 
@@ -96,8 +96,10 @@ Two different kinds of "inventorying" of resources are affected by transfers.
 
 We are defining two current quantities on the economic resource for these two concepts, accounting quantity for the first and onhand quantity for the second.
 
+For example, in vendor-managed inventory, the vendor owns the inventory (they see if in their accounting) but the store sees it in their onhand quantities. Or for inventory being shipped FOB source, the intended receiver owns the inventory and sees it in their accounting, but the goods are actually onhand in a truck.
+
 #### How resources related to each other: contained resources
 
 If one resource contains other resources, the contained resources are part of, or make up the larger resource.
 
-For example, a bank account might contain a number of "virtual accounts" that a group manages itself, outside the bank's knowledge.  Or, a bike shed resource might contain 10 bikes, which are identified and tracked by their serial numbers as individual resources.
+For example, a bank account might contain a number of "virtual accounts" that a group manages itself, outside the bank's knowledge.  Or, a makerspace network shared packages of resources for projects, where the package moved as a whole, but the resources inside were what the project used. Or, a bike shed resource might contain 10 bikes, which are identified and tracked by their serial numbers as individual resources.
