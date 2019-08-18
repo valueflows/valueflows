@@ -34,7 +34,7 @@
 ## Specification
 
 * [External terms](specification/external-terms.md)
-* [Classes and Properties](specification/protege-generated-doc/contents.html)
+* [Classes and Properties](specification/protege-spec.md)
 * [Graphql Reference](https://github.com/valueflows/vf-graphql/tree/master/lib/schemas)
 
 ## Examples
