@@ -21,7 +21,7 @@ is a specification. Your library may have two copies that you can check out. Tho
 
 #### The difference between a resource specification and a resource classification
 
-An economic resource or a flow can have only one *resource specification* in ValueFlows.  This defines the lowest level useful type or kind of the resource that is needed. The ValueFlows vocabulary defines this as the ResourceSpecification.  Note that often taxonomies and other references on the web can define very specific resource specifications at their leaf levels, and these can be used if the necessary properties can be found.
+An economic resource or a flow can have only one *resource specification* in ValueFlows.  This defines the lowest level useful type or kind of the resource that is needed. The ValueFlows vocabulary defines this as the ResourceSpecification.  Note that often taxonomies and other references on the web can define very specific resource specifications at their leaf levels, and these can be used if the necessary properties can be found.  Note also that for specific global identifiers such as GTIN, we recommend using properties of the [GoodRelations ProductOrServiceModel](http://www.heppnetz.de/ontologies/goodrelations/v1.html#ProductOrServiceModel).
 
 An economic resource or a flow can have any number of *resource classifications*.  They are used to filter, match, or group economic resources.  Resource classifications can be part of a taxonomy. That means they can be defined very broadly and generally and maybe vaguely, or they can be defined very narrowly, but fit into broader classifications. 
 
