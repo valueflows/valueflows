@@ -514,24 +514,24 @@ vf:finished  a              owl:DatatypeProperty ;
 
 vf:substitutable a          owl:DatatypeProperty ;
         rdfs:label          "substitutable" ;
-        rdfs:domain         vf:ResourceSpecification ;
+        rdfs:domain         vf:RecipeResource ;
         rdfs:range          xsd:boolean ;
         vs:term_status      "unstable" ;
         rdfs:comment        "Defines if any resource of that type can be freely substituted for any other resource of that type when used, consumed, traded, etc." .
 
 vf:unitOfResource a         owl:ObjectProperty ;
         rdfs:label          "unit of resource" ;
-        rdfs:domain         [ owl:unionOf (vf:RecipeResource vf:ResourceSpecification) ] ;
+        rdfs:domain         vf:RecipeResource ;
         rdfs:range          qudt:unit ;
         vs:term_status      "unstable" ;
         rdfs:comment        "The unit used for this resource in the recipe." .
 
 vf:unitOfEffort a           owl:ObjectProperty ;
         rdfs:label          "unit of effort" ;
-        rdfs:domain         [ owl:unionOf (vf:RecipeResource vf:EconomicResource vf:ResourceSpecification) ] ;
+        rdfs:domain         [ owl:unionOf (vf:RecipeResource vf:EconomicResource) ] ;
         rdfs:range          qudt:unit ;
         vs:term_status      "unstable" ;
-        rdfs:comment        "The unit used for use or work actions." .
+        rdfs:comment        "The unit used for use or work or sometimes cite actions." .
 
 # TODO: need to define this, something like currency, inventory, skill, service; may be other aspects too.
 #vf:resourceCategory a    owl:ObjectProperty ;
