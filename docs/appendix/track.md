@@ -28,9 +28,9 @@ Here is the logic for tracking and tracing.
         * an EconomicResource which it affected as the output of a Process, or
         * if it is a transfer or move event, the `toResourceInventoriedAs` EconomicResource
     * before:
-        * a Process from which is is an output, or
+        * a Process from which it is an output, or
         * if it is an input to a Process, the EconomicResource which it affects, or
-        * if it is a transfer or move eventand is the `toResourceInventoriedAs`, then the `resourceInventoriedAs` EconomicResource 
+        * if it is a transfer or move event and is the `toResourceInventoriedAs`, then the `resourceInventoriedAs` EconomicResource 
 
 When more than one resource of the same specification goes from input to output of the same process, use the tracking identifier if you need to track or trace the same resource. And example of this would be less-than-truckload shipments, where many separate resources with different destinations are included in the same shipment process.
 
