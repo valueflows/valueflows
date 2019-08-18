@@ -1,0 +1,751 @@
+@prefix vf:    <https://w3id.org/valueflows#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix qudt:   <http://qudt.org/schema/qudt/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix geo:   <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix vs:    <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix dfc:   <http://www.virtual-assembly.org/DataFoodConsortium/FullModel#> .
+
+
+<https://w3id.org/valueflows/> a owl:Ontology;
+    dcterms:title "Value Flows Ontology";
+    dcterms:type <http://purl.org/adms/assettype/Ontology>;
+    dcterms:status <http://purl.org/adms/status/UnderDevelopment>.
+
+#####################################################
+# TEMPORARY section to make protege doc work
+# Also look below for provider, receiver, resourceQuantity, effortQuantity, atLocation, finished, unitOfEffort
+
+vf:Agent a owl:Class.
+vf:Unit a owl:Class.
+vf:QuantityValue a owl:Class.
+vf:SpatialThing a owl:Class.
+vf:Boolean a owl:Class.
+
+#########################################################
+
+# ABSTRACT / CLASSIFICATION CLASSES (KNOWLEDGE LAYER)
+
+vf:Action  a                 owl:Class ;
+        rdfs:label           "vf:Action" ;
+        rdfs:subClassOf      rdf:Property ;
+        vs:term_status       "unstable" ;
+        rdfs:comment         "An action verb defining the kind of event, commitment, or intent." .
+
+vf:AgentRelationshipRole  a  owl:Class ;
+        rdfs:label           "vf:AgentRelationshipRole" ;
+        rdfs:subClassOf      rdf:Property ;
+        vs:term_status       "unstable" ;
+        rdfs:comment         "A relationship role defining the kind of association one agent can have with another." .
+
+vf:RecipeResource a         owl:Class ;
+        rdfs:label          "vf:RecipeResource" ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "Specifies the resource as part of a recipe, for use in planning from recipe." .
+
+vf:ResourceSpecification a  owl:Class ;
+        rdfs:label          "vf:ResourceSpecification" ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "Specification of a kind of resource. Could define a material item, service, digital item, currency account, etc." .
+
+vf:RecipeProcess a          owl:Class ;
+        rdfs:label          "vf:RecipeProcess" ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "Specifies the process part of a recipe for use in planning from recipe." .
+
+vf:ProcessSpecification a   owl:Class ;
+        rdfs:label          "vf:ProcessSpecification" ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "Specifies the kind of process." .
+
+vf:RecipeFlow a             owl:Class ;
+        rdfs:label          "vf:RecipeFlow" ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "The linkage between a process recipe, an action that structures a recipe, and a resource specification." .
+
+vf:ScenarioDefinition a     owl:Class ;
+        rdfs:label          "vf:ScenarioDefinition" ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "The type definition of one or more scenarios." .
+
+
+# PLAN CLASSES
+
+vf:Plan  a                  owl:Class ;
+        rdfs:label          "vf:Plan" ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "A logical collection of processes that constitute a body of scheduled work with defined deliverable(s)." .
+
+vf:Intent  a                owl:Class ;
+        rdfs:label          "vf:Intent" ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "A proposed or planned or estimated economic flow, prior to a commitment or agreement, which can lead to commitments and/or economic events." .
+
+vf:Proposal  a              owl:Class ;
+        rdfs:label          "vf:Proposal" ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "Published requests or offers, sometimes with what is expected in return." .
+
+vf:ProposedIntent  a        owl:Class ;
+        rdfs:label          "vf:ProposedIntent" ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "Supports including intents in multiple proposals, as well as a proposal including multiple intents." .
+
+vf:ProposedTo  a            owl:Class ;
+        rdfs:label          "vf:ProposedTo" ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "An agent to which the proposal is to be published." .
+
+vf:Commitment  a            owl:Class ;
+        rdfs:label          "vf:Commitment" ;
+        vs:term_status      "testing" ;
+        rdfs:comment        "A planned economic flow that has been promised by an agent to another agent." .
+
+vf:Satisfaction  a          owl:Class ;
+        rdfs:label          "vf:Satisfaction" ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "A commitment or economic event that partially or fully satisfies one or more intents." .
+
+vf:Agreement  a             owl:Class ;
+        rdfs:label          "vf:Agreement" ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "Any type of agreement among economic agents." .
+
+vf:Scenario  a              owl:Class ;
+        rdfs:label          "vf:Scenario" ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "An estimated or analytical logical collection of higher level processes used for budgeting, analysis, plan refinement, etc." .
+
+# OBSERVATION CLASSES
+
+
+vf:EconomicResource  a      owl:Class ;
+        rdfs:label          "vf:EconomicResource" ;
+        vs:term_status      "testing" ;
+        rdfs:comment        "A resource which is useful to people or the ecosystem." .
+
+vf:Process  a               owl:Class ;
+        rdfs:label          "vf:Process" ;
+        vs:term_status      "testing" ;
+        rdfs:comment        "An activity that changes inputs into outputs.  It could transform or transport economic resource(s)." .
+
+vf:EconomicEvent  a         owl:Class ;
+        rdfs:label          "vf:EconomicEvent" ;
+        vs:term_status      "testing" ;
+        rdfs:comment        "An observed economic flow, as opposed to a flow planned to happen in the future. This could reflect a change in the quantity of an economic resource. It is also defined by its behavior in relation to the economic resource (see vf:action)" .
+
+vf:AgentRelationship  a     owl:Class ;
+        rdfs:label          "vf:AgentRelationship" ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "An ongoing voluntary association between 2 agents of any kind." .
+
+vf:Fulfillment  a           owl:Class ;
+        rdfs:label          "vf:Fulfillment" ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "The quantity that the economic event fulfilled towards the commitment." .
+
+vf:Claim  a                 owl:Class ;
+        rdfs:label          "vf:Claim" ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "A claim for a future economic event(s) in reciprocity for an economic event that already occurred." .
+
+vf:Settlement  a            owl:Class ;
+        rdfs:label          "vf:Settlement" ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "The quantity that the economic event settled of the claim." .
+
+vf:Appreciation  a          owl:Class ;
+        rdfs:label          "vf:Appreciation" ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "A way to tie an economic event that is given in loose fulfilment for another economic event, without commitments or expectations. Supports the gift economy." .
+
+
+# ####################################################################
+# properties
+
+vf:action
+        a                   owl:ObjectProperty ;
+        rdfs:label          "action" ;
+        rdfs:domain         [ owl:unionOf (vf:EconomicEvent vf:Commitment vf:Intent vf:RecipeFlow vf:Claim) ] ;
+        rdfs:range          vf:Action ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "Relates a process input or output to a verb, such as consume, produce, work, improve, etc." .
+
+vf:inputOf
+        a                   owl:ObjectProperty ;
+        rdfs:label          "input of" ;
+        rdfs:domain         [ owl:unionOf (vf:EconomicEvent vf:Commitment vf:Intent) ] ;
+        rdfs:range          vf:Process ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "Relates an input flow to it's node." .
+
+vf:outputOf
+        a                   owl:ObjectProperty ;
+        rdfs:label          "output of" ;
+        rdfs:domain         [ owl:unionOf (vf:EconomicEvent vf:Commitment vf:Intent) ] ;
+        rdfs:range          vf:Process ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "Relates an output flow to it's node." .
+
+vf:recipeInputOf
+        a                   owl:ObjectProperty ;
+        rdfs:label          "recipe input of" ;
+        rdfs:domain         vf:RecipeFlow ;
+        rdfs:range          vf:RecipeProcess ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "Relates an input flow to it's node in a recipe." .
+
+vf:recipeOutputOf
+        a                   owl:ObjectProperty ;
+        rdfs:label          "recipe output of" ;
+        rdfs:domain         vf:RecipeFlow ;
+        rdfs:range          vf:RecipeProcess ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "Relates an output flow to it's node in a recipe." .
+
+vf:plannedWithin
+        a                   owl:ObjectProperty ;
+        rdfs:label          "planned within" ;
+        rdfs:domain         vf:Process ;
+        rdfs:range          vf:Plan ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "The process with its inputs and outputs is part of the plan." .
+
+vf:independentDemandOf
+        a                   owl:ObjectProperty ;
+        rdfs:label         "independent demand of" ;
+        rdfs:range          vf:Plan ;
+        rdfs:domain         vf:Commitment ;
+        rdfs:comment        "Represents a desired deliverable to the outside of this plan." .
+
+vf:resourceInventoriedAs
+        a                   owl:ObjectProperty ;
+        rdfs:label          "resource inventoried as" ;
+        rdfs:domain         [ owl:unionOf (vf:Commitment vf:Intent vf:EconomicEvent) ] ; 
+        rdfs:range          vf:EconomicResource ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "Economic resource involved in the flow." .
+
+vf:toResourceInventoriedAs
+        a                   owl:ObjectProperty ;
+        rdfs:label          "to resource inventoried as" ;
+        rdfs:domain         vf:EconomicEvent ; 
+        rdfs:range          vf:EconomicResource ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "Additional economic resource on the economic event when needed for receipt. Used when a transfer or move, or sometimes other actions, requires explicitly identifying an economic resource on the receiving side." .
+
+vf:relationship  a          owl:ObjectProperty ;
+        rdfs:label          "relationship" ;
+        rdfs:domain         vf:AgentRelationship ;
+        rdfs:range          vf:AgentRelationshipRole ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "A kind of relationship that exists between 2 agents." .
+
+vf:appreciationOf
+        a                   owl:ObjectProperty ;
+        rdfs:label          "appreciation of" ;
+        rdfs:domain         vf:Appreciation ;
+        rdfs:range          vf:EconomicEvent ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "The economic event being appreciated (gift economy)." .
+
+vf:appreciationWith
+        a                   owl:ObjectProperty ;
+        rdfs:label          "appreciation with" ;
+        rdfs:domain         vf:Appreciation ;
+        rdfs:range          vf:EconomicEvent ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "The economic event implemented in appreciation (gift economy)." .
+
+vf:provider  a              owl:ObjectProperty ;
+        rdfs:domain         [ owl:unionOf (vf:EconomicEvent vf:Commitment vf:Intent vf:Claim) ] ;
+        rdfs:label          "provider" ;
+        rdfs:range          vf:Agent ; #foaf:Agent ;
+        vs:term_status      "testing" ;
+        rdfs:comment        "The economic agent from whom the intended, committed, or actual economic event is initiated." .
+
+vf:receiver  a              owl:ObjectProperty ;
+        rdfs:domain         [ owl:unionOf (vf:EconomicEvent vf:Commitment vf:Intent vf:Claim) ] ;
+        rdfs:label          "receiver" ;
+        rdfs:range          vf:Agent ; #foaf:Agent ;
+        vs:term_status      "testing" ;
+        rdfs:comment        "The economic agent whom the intended, committed, or actual economic event is for." .
+
+vf:subject  a               owl:ObjectProperty ;
+        rdfs:domain         vf:AgentRelationship ;
+        rdfs:label          "subject" ;
+        rdfs:range          foaf:Agent ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "The subject of a relationship between 2 agents." .
+
+vf:object  a                owl:ObjectProperty ;
+        rdfs:domain         vf:AgentRelationship ;
+        rdfs:label          "object" ;
+        rdfs:range          foaf:Agent ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "The object of a relationship between 2 agents." .
+
+vf:inScopeOf  a             owl:ObjectProperty ;
+        rdfs:domain         owl:Thing ;
+        rdfs:label          "in scope of" ;
+        rdfs:range          owl:Thing ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "Grouping around something to create a boundary or context, used for documenting, accounting, planning." .
+
+vf:agreedIn  a              owl:ObjectProperty ;
+        rdfs:domain         [ owl:unionOf (vf:EconomicEvent vf:Commitment vf:Intent vf:Claim) ] ; 
+        rdfs:label          "agreed in" ;
+        rdfs:range          owl:Thing ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "Reference to an agreement between agents which specifies the rules, terms, policies, calculations, etc. which govern this flow." .
+
+vf:triggeredBy  a           owl:ObjectProperty ;
+        rdfs:label          "triggered by" ;
+        rdfs:domain         [ owl:unionOf (vf:EconomicEvent vf:Claim) ] ;
+        rdfs:range          vf:EconomicEvent ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "References an economic event that implied the claim or event, often based on a prior agreement." .
+
+vf:settles  a               owl:ObjectProperty ;
+        rdfs:label          "settles" ;
+        rdfs:domain         vf:Settlement ;
+        rdfs:range          vf:Claim ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "References a claim that fully or partially settled by the economic event." .
+
+vf:settledBy  a             owl:ObjectProperty ;
+        rdfs:label          "settled by" ;
+        rdfs:domain         vf:Settlement ;
+        rdfs:range          vf:EconomicEvent ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "References an economic event that fully or partially settles the claim." .
+
+vf:containedIn a            owl:ObjectProperty ;
+        rdfs:label          "contained in" ;
+        rdfs:domain         vf:EconomicResource ;
+        rdfs:range          vf:EconomicResource ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "Used when a stock economic resource contains units also defined as economic resources." .
+
+vf:hasBeginning a           owl:DatatypeProperty ;
+        rdfs:domain         time:TemporalEntity ;
+        rdfs:range          xsd:dateTimeStamp ;
+        owl:propertyChainAxiom (time:hasBeginning time:inXSDDateTimeStamp) ;
+        rdfs:comment        "Specific time marking the exact beginning of flow or process".
+
+vf:hasEnd a                 owl:DatatypeProperty ;
+        rdfs:domain         time:TemporalEntity ;
+        rdfs:range          xsd:dateTimeStamp ;
+        owl:propertyChainAxiom (time:hasEnd time:inXSDDateTimeStamp) ;
+        rdfs:comment        "Specific time marking the exact end of flow or process".
+
+vf:accountingQuantity a     owl:ObjectProperty ;
+        rdfs:label          "accounting quantity" ;
+        rdfs:domain         vf:EconomicResource ;
+        rdfs:range          qudt:QuantityValue ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "The current amount and unit of the economic resource for which the agent has primary rights and responsibilities, sometimes thought of as ownership. This can be stored or derived from economic events affecting the resource." .
+
+vf:onhandQuantity a         owl:ObjectProperty ;
+        rdfs:label          "onhand quantity" ;
+        rdfs:domain         vf:EconomicResource ;
+        rdfs:range          qudt:QuantityValue ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "The current amount and unit of the economic resource which is under direct control of the agent.  It may be more or less than the accounting quantity. This can be stored or derived from economic events affecting the resource." .
+
+vf:resourceQuantity a       owl:ObjectProperty ;
+        rdfs:label          "resource quantity" ;
+        rdfs:domain         [ owl:unionOf (vf:EconomicEvent vf:Commitment vf:Intent vf:RecipeFlow vf:Fulfillment vf:Satisfaction vf:Claim vf:Settlement) ] ;
+        rdfs:range          vf:QuantityValue ; #qudt:QuantityValue ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "The amount and unit of the economic resource counted or inventoried." .
+
+vf:effortQuantity a         owl:ObjectProperty ;
+        rdfs:label          "effort quantity" ;
+        rdfs:domain         [ owl:unionOf (vf:EconomicEvent vf:Commitment vf:Intent vf:RecipeFlow vf:Fulfillment vf:Satisfaction vf:Claim vf:Settlement) ] ;
+        rdfs:range          vf:QuantityValue ; #qudt:QuantityValue ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "The amount and unit of the work or use or citation effort-based action. This is often a time duration, but also could be cycle counts or other measures of effort or usefulness." .
+
+vf:availableQuantity a      owl:ObjectProperty ;
+        rdfs:label          "available quantity" ;
+        rdfs:domain         vf:Intent ;
+        rdfs:range          qudt:QuantityValue ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "The quantity of the offered or requested resource currently available." .
+
+vf:unitBased  a             owl:DatatypeProperty ;
+        rdfs:label          "unit based" ;
+        rdfs:domain         vf:Proposal ;
+        rdfs:range          xsd:boolean ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "This proposal contains unit based quantities, which can be multipied to create commitments; commonly seen in a price list or e-commerce." .
+
+vf:currentLocation a        owl:ObjectProperty ;
+        rdfs:label          "current location" ;
+        rdfs:domain         vf:EconomicResource ;
+        rdfs:range          geo:SpatialThing ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "The current place an economic resource is located.  Could be at any level of granularity, from a town to an address to a warehouse location.  Usually mappable." .
+
+vf:primaryLocation a        owl:ObjectProperty ;
+        rdfs:label          "primary location" ;
+        rdfs:domain         foaf:Agent ;
+        rdfs:range          geo:SpatialThing ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "The main place an agent is located, often an address where activities occur and mail can be sent. This is usually a mappable geographic location.  It also could be a website address, as in the case of agents who have no physical location." .
+
+vf:eligibleLocation a       owl:ObjectProperty ;
+        rdfs:label          "eligible location" ;
+        rdfs:domain         vf:Proposal ;
+        rdfs:range          geo:SpatialThing ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "Location or area where the proposal is valid." .
+
+vf:atLocation a             owl:ObjectProperty ;
+        rdfs:label          "at location" ;
+        rdfs:domain         [ owl:unionOf (vf:EconomicEvent vf:Commitment vf:Intent) ] ;
+        rdfs:range          vf:SpatialThing ; #geo:SpatialThing ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "The place where an intent, commitment, or economic event occurs.  Usually mappable." .
+
+vf:image a                  owl:DatatypeProperty ;
+        vs:term_status      "unstable" ;
+        rdfs:label          "image" .
+
+vf:uri a                    owl:DatatypeProperty ;
+        vs:term_status      "unstable" ;
+        rdfs:label          "uri" .
+
+vf:name a                   owl:DatatypeProperty ;
+        rdfs:label          "name" ;
+        rdfs:range          xsd:string ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "An informal or formal textual identifier for an object. Does not imply uniqueness." .
+
+vf:trackingIdentifier a     owl:AnnotationProperty ;
+        rdfs:label          "tracking identifier" ;
+        rdfs:domain         vf:EconomicResource ;
+        rdfs:range          xsd:string ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "Sometimes called serial number, used when each item must have a trackable identifier (like a computer). Could also be used for other unique tracking identifiers needed for resources." .  
+
+vf:lot a                    owl:AnnotationProperty ;
+        rdfs:label          "lot" ;
+        rdfs:domain         vf:EconomicResource ;
+        rdfs:range          dfc:ProductBatch ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "Lot or batch of an economic resource, used to track forward or backwards to all occurrences of resources of that lot." .  
+
+vf:fulfilledBy a            owl:ObjectProperty ;
+        rdfs:label          "fulfilled by" ;
+        rdfs:range          vf:EconomicEvent ;
+        rdfs:domain         vf:Fulfillment ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "The economic event which completely or partially fulfills a commitment." .
+
+vf:fulfills  a              owl:ObjectProperty ;
+        rdfs:label          "fulfills" ;
+        rdfs:range          vf:Commitment ;
+        rdfs:domain         vf:Fulfillment ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "The commitment which is completely or partially fulfilled by an economic event." .
+
+vf:satisfies
+        a                   owl:ObjectProperty ;
+        rdfs:label         "satisfies" ;
+        rdfs:domain         vf:Satisfaction ;
+        rdfs:range          vf:Intent ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "An intent satisfied fully or partially by an economic event or commitment." .
+
+vf:satisfiedBy
+        a                   owl:ObjectProperty ;
+        rdfs:label         "satisfied by" ;
+        rdfs:domain         vf:Satisfaction ;
+        rdfs:range          [ owl:unionOf (vf:Commitment vf:EconomicEvent ) ] ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "A commitment or economic event fully or partially satisfying an intent" .
+
+vf:publishes
+        a                   owl:ObjectProperty ;
+        rdfs:label          "publishes" ;
+        rdfs:domain         vf:ProposedIntent ;
+        rdfs:range          vf:Intent ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "The intent which is part of this published proposal." .
+
+vf:publishedIn
+        a                   owl:ObjectProperty ;
+        rdfs:label          "published in" ;
+        rdfs:domain         vf:ProposedIntent ;
+        rdfs:range          vf:Proposal ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "The published proposal which this intent is part of." .
+
+vf:proposed
+        a                   owl:ObjectProperty ;
+        rdfs:label          "proposed" ;
+        rdfs:domain         vf:ProposedTo ;
+        rdfs:range          vf:Proposal ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "The proposal that is published to a specific agent." .
+
+vf:proposedTo
+        a                   owl:ObjectProperty ;
+        rdfs:label          "proposed to" ;
+        rdfs:domain         vf:ProposedTo ;
+        rdfs:range          foaf:Agent ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "The agent to which the proposal is published." .
+
+vf:reciprocal
+        a                   owl:DatatypeProperty ;
+        rdfs:label          "reciprocal" ;
+        rdfs:domain         vf:ProposedIntent ;
+        rdfs:range          xsd:boolean ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "This is a reciprocal intent of this proposal, not primary. Not meant to be part of intent matching." .
+
+vf:finished  a              owl:DatatypeProperty ;
+        rdfs:domain         [ owl:unionOf (vf:Commitment vf:Process vf:Intent vf:Claim) ] ; 
+        rdfs:label          "finished" ;
+        rdfs:range          vf:Boolean ; #xsd:boolean ;
+        vs:term_status      "testing" ;
+        rdfs:comment        "The commitment or intent or process is complete or not." .
+
+vf:substitutable a          owl:DatatypeProperty ;
+        rdfs:label          "substitutable" ;
+        rdfs:domain         vf:RecipeResource ;
+        rdfs:range          xsd:boolean ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "Defines if any resource of that type can be freely substituted for any other resource of that type when used, consumed, traded, etc." .
+
+vf:unitOfResource a         owl:ObjectProperty ;
+        rdfs:label          "unit of resource" ;
+        rdfs:domain         vf:RecipeResource ;
+        rdfs:range          qudt:unit ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "The unit used for this resource in the recipe." .
+
+vf:unitOfEffort a           owl:ObjectProperty ;
+        rdfs:label          "unit of effort" ;
+        rdfs:domain         [ owl:unionOf (vf:RecipeResource vf:EconomicResource) ] ;
+        rdfs:range          vf:Unit ; #qudt:unit ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "The unit used for use or work or sometimes cite actions." .
+
+vf:durationMultiplier 
+        a                   owl:DatatypeProperty ;
+        rdfs:label          "duration multiplier" ;
+        rdfs:domain         vf:RecipeProcess ;
+        rdfs:range          xsd:float ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "The multiplier for duration based on capacities for the recipe." .
+
+vf:basedOn
+        a                   owl:ObjectProperty ;
+        rdfs:label          "based on" ;
+        rdfs:domain         vf:Process ;
+        rdfs:range          vf:ProcessSpecification ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "The recipe definition or standard specification for a process." .
+
+vf:classifiedAs
+        a                   owl:ObjectProperty ;
+        rdfs:label          "classified as" ;
+        rdfs:domain         owl:Thing ;
+        rdfs:range          owl:Thing ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "References a concept in a common taxonomy or other classification scheme for purposes of categorization or grouping." .
+
+vf:resourceClassifiedAs
+        a                   owl:ObjectProperty ;
+        rdfs:label          "resource classified as" ;
+        rdfs:domain         [ owl:unionOf (vf:RecipeResource vf:Intent vf:Commitment vf:EconomicEvent vf:RecipeFlow vf:Claim) ] ;
+        rdfs:range          owl:Thing ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "References a concept in a common taxonomy or other classification scheme for purposes of categorization or grouping." .
+
+vf:processClassifiedAs
+        a                   owl:ObjectProperty ;
+        rdfs:label          "process classified as" ;
+        rdfs:domain         vf:RecipeProcess ;
+        rdfs:range          owl:Thing ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "References a concept in a common taxonomy or other classification scheme for purposes of categorization or grouping." .
+
+vf:processConformsTo
+        a                   owl:ObjectProperty ;
+        rdfs:label          "process conforms to" ;
+        rdfs:domain         vf:RecipeProcess ;
+        rdfs:range          vf:ProcessSpecification ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "The standard specification or definition of a process." .
+
+vf:resourceConformsTo
+        a                   owl:ObjectProperty ;
+        rdfs:label          "resource conforms to" ;
+        rdfs:domain         [ owl:unionOf (vf:Commitment vf:Intent vf:EconomicEvent vf:Claim vf:RecipeResource) ] ;
+        rdfs:range          vf:ResourceSpecification ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "The primary resource specification or definition of an existing or potential economic resource. A resource will have only one, as this specifies exactly what the resource is. If not a vf:ResourceSpecification, this can be a link to another specification." .
+
+vf:conformsTo
+        a                   owl:ObjectProperty ;
+        rdfs:label          "conforms to" ;
+        rdfs:domain         vf:EconomicResource ;
+        rdfs:range          vf:ResourceSpecification ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "The primary resource knowledge specification or definition of an existing or potential resource." .
+
+vf:stage
+        a                   owl:ObjectProperty ;
+        rdfs:label          "stage" ;
+        rdfs:domain         [ owl:unionOf (vf:Commitment vf:RecipeFlow vf:EconomicResource) ] ;
+        rdfs:range          vf:ProcessSpecification ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "The last stage the desired economic resource went through." .
+
+vf:state
+        a                   owl:ObjectProperty ;
+        rdfs:label          "state" ;
+        rdfs:domain         [ owl:unionOf (vf:Commitment vf:RecipeFlow vf:EconomicResource) ] ;
+        rdfs:range          vf:Action ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "The state of the desired economic resource (pass or fail), after coming out of a test or review process." .
+
+vf:refinementOf
+        a                   owl:ObjectProperty ;
+        rdfs:label          "refinement of" ;
+        rdfs:domain         [ owl:unionOf (vf:Scenario vf:Plan) ] ;
+        rdfs:range          vf:Scenario ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "This scenario or plan refines another scenario, often as time moves closer or for more detail." .
+
+vf:definedAs
+        a                   owl:ObjectProperty ;
+        rdfs:label          "defined as" ;
+        rdfs:domain         vf:Scenario ;
+        rdfs:range          vf:ScenarioDefinition ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "The scenario definition for this scenario, for example yearly budget." .
+
+vf:recipeFlowResource
+        a                   owl:ObjectProperty ;
+        rdfs:label          "recipe flow resource" ;
+        rdfs:domain         vf:RecipeFlow ;
+        rdfs:range          vf:RecipeResource ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "The resource definition referenced by this flow in the recipe." .
+
+vf:clauseOf a               owl:ObjectProperty ;
+        rdfs:label          "clause of" ;
+        rdfs:domain         vf:Commitment ;
+        rdfs:range          vf:Agreement ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "This commitment is part of the agreement, which could not exist without it." .
+
+vf:realizationOf a          owl:ObjectProperty ;
+        rdfs:label          "realization of" ;
+        rdfs:domain         vf:EconomicEvent ;
+        rdfs:range          vf:Agreement ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "This economic event occurs as part of this agreement." .
+
+vf:mappableAddress a        owl:ObjectProperty ;
+        rdfs:label          "mappable address" ;
+        rdfs:domain         geo:SpatialThing ;
+        rdfs:range          xsd:string ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "A textual address that can be mapped using mapping software." .
+
+
+# ################################ action verbs
+
+vf:increment  a             vf:Action ;
+        vs:term_status      "unstable" ;
+        rdfs:label          "increment" .
+
+vf:decrement  a             vf:Action ;
+        vs:term_status      "unstable" ;
+        rdfs:label          "decrement" .
+
+vf:dropoff  a               vf:Action ;
+        rdfs:label          "dropoff" ;
+        vs:term_status      "unstable"  .
+
+vf:pickup  a                vf:Action ;
+        rdfs:label          "pickup" ;
+        vs:term_status      "unstable" .
+
+vf:consume  a               vf:Action ;
+        rdfs:label          "consume" ;
+        vs:term_status      "testing" ;
+        rdfs:subPropertyOf  vf:decrement .
+
+vf:use  a                   vf:Action ;
+        vs:term_status      "unstable" ;
+        rdfs:label          "use" .
+
+vf:work  a                  vf:Action ;
+        vs:term_status      "testing" ;
+        rdfs:label          "work" .
+
+vf:cite  a                  vf:Action ;
+        vs:term_status      "testing" ;
+        rdfs:label          "cite" .
+
+vf:produce  a               vf:Action ;
+        rdfs:label          "produce" ;
+        vs:term_status      "testing" ;
+        rdfs:subPropertyOf  vf:increment .
+
+vf:accept  a                vf:Action ;
+        vs:term_status      "unstable" ;
+        rdfs:label          "accept" .
+
+vf:modify  a                vf:Action ;
+        vs:term_status      "unstable" ;
+        rdfs:label          "modify" .
+
+vf:pass  a                  vf:Action ;
+        vs:term_status      "unstable" ;
+        rdfs:label          "pass" .
+
+vf:fail  a                  vf:Action ;
+        vs:term_status      "unstable" ;
+        rdfs:label          "fail" .
+
+vf:service  a               vf:Action ;
+        vs:term_status      "testing" ;
+        rdfs:label          "service" .
+
+vf:raise  a                 vf:Action ;
+        rdfs:label          "raise" ;
+        rdfs:subPropertyOf  vf:increment .
+
+vf:lower  a                 vf:Action ;
+        rdfs:label          "lower" ;
+        rdfs:subPropertyOf  vf:decrement .
+
+vf:transfer-complete  a     vf:Action ;
+        rdfs:label          "transfer-complete" ;
+        vs:term_status      "unstable" .
+
+vf:transfer-all-rights  a   vf:Action ;
+        rdfs:label          "transfer-all-rights" ;
+        vs:term_status      "unstable" .
+
+vf:transfer-custody  a      vf:Action ;
+        rdfs:label          "transfer-custody" ;
+        vs:term_status      "unstable" .
+
+vf:move  a                  vf:Action ;
+        rdfs:label          "move" ;
+        vs:term_status      "unstable" .
