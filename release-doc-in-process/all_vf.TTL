@@ -32,10 +32,6 @@ vf:AgentRelationshipRole  a  owl:Class ;
         vs:term_status       "unstable" ;
         rdfs:comment         "A relationship role defining the kind of association one agent can have with another." .
 
-#vf:Recipe a                owl:Class ;
-#        rdfs:label         "vf:Recipe" ;
-#        rdfs:comment       "Recipes contain all the info required to create or improve or move a resource." .
-
 vf:RecipeResource a         owl:Class ;
         rdfs:label          "vf:RecipeResource" ;
         vs:term_status      "unstable" ;
@@ -202,7 +198,7 @@ vf:recipeOutputOf
         rdfs:comment        "Relates an output flow to it's node in a recipe." .
 
 vf:plannedWithin
-        a                   owl:OBjectProperty ;
+        a                   owl:ObjectProperty ;
         rdfs:label          "planned within" ;
         rdfs:domain         vf:Process ;
         rdfs:range          vf:Plan ;
@@ -352,7 +348,7 @@ vf:onhandQuantity a         owl:ObjectProperty ;
         rdfs:comment        "The current amount and unit of the economic resource which is under direct control of the agent.  It may be more or less than the accounting quantity. This can be stored or derived from economic events affecting the resource." .
 
 vf:resourceQuantity a       owl:ObjectProperty ;
-        rdfs:label          "involved quantity" ;
+        rdfs:label          "resource quantity" ;
         rdfs:domain         [ owl:unionOf (vf:EconomicEvent vf:Commitment vf:Intent vf:RecipeFlow vf:Fulfillment vf:Satisfaction vf:Claim vf:Settlement) ] ;
         rdfs:range          qudt:QuantityValue ;
         vs:term_status      "unstable" ;
@@ -498,7 +494,7 @@ vf:proposedTo
         rdfs:comment        "The agent to which the proposal is published." .
 
 vf:reciprocal
-        a                   owl:DatatypePropert ;
+        a                   owl:DatatypeProperty ;
         rdfs:label          "reciprocal" ;
         rdfs:domain         vf:ProposedIntent ;
         rdfs:range          xsd:boolean ;
@@ -532,27 +528,6 @@ vf:unitOfEffort a           owl:ObjectProperty ;
         rdfs:range          qudt:unit ;
         vs:term_status      "unstable" ;
         rdfs:comment        "The unit used for use or work or sometimes cite actions." .
-
-# TODO: need to define this, something like currency, inventory, skill, service; may be other aspects too.
-#vf:resourceCategory a    owl:ObjectProperty ;
-#        rdfs:label      "category" ;
-#        rdfs:domain     vf:ResourceSpecification ;
-#        vs:term_status      "unstable" ;
-#        rdfs:comment    "Defines the category of behavior expected for the type of resource." .
-
-#vf:variantOf a          owl:ObjectProperty ;
-#        rdfs:label      "variant of" ;
-#        rdfs:domain     vf:Recipe ;
-#        rdfs:range      vf:Recipe ;
-#        vs:term_status      "unstable" ;
-#        rdfs:comment    "This recipe is a variation of another recipe." .
-
-#vf:successorOf a        owl:ObjectProperty ;
-#        rdfs:label      "successor of" ;
-#        rdfs:domain     vf:Recipe ;
-#        rdfs:range      vf:Recipe ;
-#        vs:term_status      "unstable" ;
-#        rdfs:comment    "This recipe is an updated version of another recipe." .
 
 vf:durationMultiplier 
         a                   owl:DatatypeProperty ;
@@ -679,19 +654,6 @@ vf:mappableAddress a        owl:ObjectProperty ;
         vs:term_status      "unstable" ;
         rdfs:comment        "A textual address that can be mapped using mapping software." .
 
-# ################################ agent relationship verbs
-
-#vf:memberOf  a              vf:AgentRelationshipRole ;
-#        vs:term_status      "unstable" ;
-#        rdfs:label          "member of" .
-
-#vf:partOf  a                vf:AgentRelationshipRole ;
-#        vs:term_status      "unstable" ;
-#        rdfs:label          "part of" .
-
-#vf:peerOf  a                vf:AgentRelationshipRole ;
-#        vs:term_status      "unstable" ;
-#        rdfs:label          "peer of" .
 
 # ################################ action verbs
 
