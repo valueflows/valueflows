@@ -657,103 +657,103 @@ vf:mappableAddress a        owl:ObjectProperty ;
 vf:increment  a             vf:Action ;
         vs:term_status      "unstable" ;
         rdfs:label          "increment" ;
-        rdfs:comment        " ." .
+        rdfs:comment        "Parent property for all actions that can increment a resource." .
 
 vf:decrement  a             vf:Action ;
         vs:term_status      "unstable" ;
         rdfs:label          "decrement" ;
-        rdfs:comment        " ." .
+        rdfs:comment        "Parent property for all actions that can decrement a resource." .
 
 vf:dropoff  a               vf:Action ;
         rdfs:label          "dropoff" ;
         vs:term_status      "unstable"  ;
-        rdfs:comment        " ." .
+        rdfs:comment        "Transported resource or person leaves the process; the same resource or person appeared in the input." .
 
 vf:pickup  a                vf:Action ;
         rdfs:label          "pickup" ;
         vs:term_status      "unstable" ;
-        rdfs:comment        " ." .
+        rdfs:comment        "Transported resource or person enters the process; the same resource will appear in the output." .
 
 vf:consume  a               vf:Action ;
         rdfs:label          "consume" ;
         vs:term_status      "testing" ;
         rdfs:subPropertyOf  vf:decrement ;
-        rdfs:comment        " ." .
+        rdfs:comment        "For example an ingredient or component composed into the output, after the process the ingredient is gone." .
 
 vf:use  a                   vf:Action ;
         vs:term_status      "testing" ;
         rdfs:label          "use" ;
-        rdfs:comment        " ." .
+        rdfs:comment        "For example a tool used in process; after the process, the tool still exists." .
 
 vf:work  a                  vf:Action ;
         vs:term_status      "testing" ;
         rdfs:label          "work" ;
-        rdfs:comment        " ." .
+        rdfs:comment        "Labor power applied to a process." .
 
 vf:cite  a                  vf:Action ;
         vs:term_status      "testing" ;
         rdfs:label          "cite" ;
-        rdfs:comment        " ." .
+        rdfs:comment        "For example a design file, neither used nor consumed, the file remains available at all times." .
 
 vf:produce  a               vf:Action ;
         rdfs:label          "produce" ;
         vs:term_status      "testing" ;
         rdfs:subPropertyOf  vf:increment ;
-        rdfs:comment        " ." .
+        rdfs:comment        "New resource was created in that process or an existing stock resource was added to." .
 
 vf:accept  a                vf:Action ;
         vs:term_status      "testing" ;
         rdfs:label          "accept" ;
-        rdfs:comment        " ." .
+        rdfs:comment        "In processes like repair or modification or testing, the same resource will appear in the output." .
 
 vf:modify  a                vf:Action ;
         vs:term_status      "testing" ;
         rdfs:label          "modify" ;
-        rdfs:comment        " ." .
+        rdfs:comment        "In processes like repair or modification, the same resource will appear in the input." .
 
 vf:pass  a                  vf:Action ;
         vs:term_status      "unstable" ;
         rdfs:label          "pass" ;
-        rdfs:comment        " ." .
+        rdfs:comment        "Possible output of a testing or reviewing process, indicating the resource passed, the same resource will appear in the input." .
 
 vf:fail  a                  vf:Action ;
         vs:term_status      "unstable" ;
         rdfs:label          "fail" ;
-        rdfs:comment        " ." .
+        rdfs:comment        "Possible output of a testing or reviewing process, indicating the resource failed, the same resource will appear in the input." .
 
 vf:deliver-service  a       vf:Action ;
         vs:term_status      "unstable" ;
         rdfs:label          "deliver-service" ;
-        rdfs:comment        " ." .
+        rdfs:comment        "New service produced and delivered (a service implies that an agent actively receives the service)." .
 
 vf:raise  a                 vf:Action ;
         vs:term_status      "unstable" ;
         rdfs:label          "raise" ;
         rdfs:subPropertyOf  vf:increment ;
-        rdfs:comment        " ." .
+        rdfs:comment        "Adjusts a quantity up based on a beginning balance or inventory count." .
 
 vf:lower  a                 vf:Action ;
         vs:term_status      "unstable" ;
         rdfs:label          "lower" ;
         rdfs:subPropertyOf  vf:decrement ;
-        rdfs:comment        " ." .
+        rdfs:comment        "Adjusts a quantity down based on a beginning balance or inventory count." .
 
 vf:transfer-complete  a     vf:Action ;
         rdfs:label          "transfer-complete" ;
         vs:term_status      "unstable" ;
-        rdfs:comment        " ." .
+        rdfs:comment        "Give full rights and responsibilities plus physical custody." .
 
 vf:transfer-all-rights  a   vf:Action ;
         rdfs:label          "transfer-all-rights" ;
         vs:term_status      "unstable" ;
-        rdfs:comment        " ." .
+        rdfs:comment        "Give full (in the human realm) rights and responsibilities to another agent, without transferring physical custody." .
 
 vf:transfer-custody  a      vf:Action ;
         rdfs:label          "transfer-custody" ;
         vs:term_status      "unstable" ;
-        rdfs:comment        " ." .
+        rdfs:comment        "Give physical custody and control of a resource, without full accounting or ownership rights." .
 
 vf:move  a                  vf:Action ;
         rdfs:label          "move" ;
         vs:term_status      "unstable" ;
-        rdfs:comment        " ." .
+        rdfs:comment        "Change location and possibly identifier, if location is part of the identification, of a resource with no change of agent rights or possession." .
