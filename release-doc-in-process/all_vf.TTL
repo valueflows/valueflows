@@ -23,7 +23,7 @@
 vf:Action  a                 owl:Class ;
         rdfs:label           "vf:Action" ;
         rdfs:subClassOf      rdf:Property ;
-        vs:term_status       "unstable" ;
+        vs:term_status       "testing" ;
         rdfs:comment         "An action verb defining the kind of event, commitment, or intent." .
 
 vf:AgentRelationshipRole  a  owl:Class ;
@@ -67,7 +67,7 @@ vf:ScenarioDefinition a     owl:Class ;
 
 vf:Plan  a                  owl:Class ;
         rdfs:label          "vf:Plan" ;
-        vs:term_status      "unstable" ;
+        vs:term_status      "testing" ;
         rdfs:comment        "A logical collection of processes that constitute a body of scheduled work with defined deliverable(s)." .
 
 vf:Intent  a                owl:Class ;
@@ -130,7 +130,7 @@ vf:EconomicEvent  a         owl:Class ;
 
 vf:AgentRelationship  a     owl:Class ;
         rdfs:label          "vf:AgentRelationship" ;
-        vs:term_status      "unstable" ;
+        vs:term_status      "testing" ;
         rdfs:comment        "An ongoing voluntary association between 2 agents of any kind." .
 
 vf:Fulfillment  a           owl:Class ;
@@ -162,7 +162,7 @@ vf:action
         rdfs:label          "action" ;
         rdfs:domain         [ owl:unionOf (vf:EconomicEvent vf:Commitment vf:Intent vf:RecipeFlow vf:Claim) ] ;
         rdfs:range          vf:Action ;
-        vs:term_status      "unstable" ;
+        vs:term_status      "testing" ;
         rdfs:comment        "Relates a process input or output to a verb, such as consume, produce, work, improve, etc." .
 
 vf:inputOf
@@ -170,7 +170,7 @@ vf:inputOf
         rdfs:label          "input of" ;
         rdfs:domain         [ owl:unionOf (vf:EconomicEvent vf:Commitment vf:Intent) ] ;
         rdfs:range          vf:Process ;
-        vs:term_status      "unstable" ;
+        vs:term_status      "testing" ;
         rdfs:comment        "Relates an input flow to it's node." .
 
 vf:outputOf
@@ -178,7 +178,7 @@ vf:outputOf
         rdfs:label          "output of" ;
         rdfs:domain         [ owl:unionOf (vf:EconomicEvent vf:Commitment vf:Intent) ] ;
         rdfs:range          vf:Process ;
-        vs:term_status      "unstable" ;
+        vs:term_status      "testing" ;
         rdfs:comment        "Relates an output flow to it's node." .
 
 vf:recipeInputOf
@@ -202,7 +202,7 @@ vf:plannedWithin
         rdfs:label          "planned within" ;
         rdfs:domain         vf:Process ;
         rdfs:range          vf:Plan ;
-        vs:term_status      "unstable" ;
+        vs:term_status      "testing" ;
         rdfs:comment        "The process with its inputs and outputs is part of the plan." .
 
 vf:independentDemandOf
@@ -210,6 +210,7 @@ vf:independentDemandOf
         rdfs:label         "independent demand of" ;
         rdfs:range          vf:Plan ;
         rdfs:domain         vf:Commitment ;
+        vs:term_status      "testing" ;
         rdfs:comment        "Represents a desired deliverable to the outside of this plan." .
 
 vf:resourceInventoriedAs
@@ -217,7 +218,7 @@ vf:resourceInventoriedAs
         rdfs:label          "resource inventoried as" ;
         rdfs:domain         [ owl:unionOf (vf:Commitment vf:Intent vf:EconomicEvent) ] ; 
         rdfs:range          vf:EconomicResource ;
-        vs:term_status      "unstable" ;
+        vs:term_status      "testing" ;
         rdfs:comment        "Economic resource involved in the flow." .
 
 vf:toResourceInventoriedAs
@@ -232,7 +233,7 @@ vf:relationship  a          owl:ObjectProperty ;
         rdfs:label          "relationship" ;
         rdfs:domain         vf:AgentRelationship ;
         rdfs:range          vf:AgentRelationshipRole ;
-        vs:term_status      "unstable" ;
+        vs:term_status      "testing" ;
         rdfs:comment        "A kind of relationship that exists between 2 agents." .
 
 vf:appreciationOf
@@ -269,14 +270,14 @@ vf:subject  a               owl:ObjectProperty ;
         rdfs:domain         vf:AgentRelationship ;
         rdfs:label          "subject" ;
         rdfs:range          foaf:Agent ;
-        vs:term_status      "unstable" ;
+        vs:term_status      "testing" ;
         rdfs:comment        "The subject of a relationship between 2 agents." .
 
 vf:object  a                owl:ObjectProperty ;
         rdfs:domain         vf:AgentRelationship ;
         rdfs:label          "object" ;
         rdfs:range          foaf:Agent ;
-        vs:term_status      "unstable" ;
+        vs:term_status      "testing" ;
         rdfs:comment        "The object of a relationship between 2 agents." .
 
 vf:inScopeOf  a             owl:ObjectProperty ;
@@ -324,12 +325,14 @@ vf:containedIn a            owl:ObjectProperty ;
 vf:hasBeginning a           owl:DatatypeProperty ;
         rdfs:domain         time:TemporalEntity ;
         rdfs:range          xsd:dateTimeStamp ;
+        vs:term_status      "unstable" ;
         owl:propertyChainAxiom (time:hasBeginning time:inXSDDateTimeStamp) ;
         rdfs:comment        "Specific time marking the exact beginning of flow or process".
 
 vf:hasEnd a                 owl:DatatypeProperty ;
         rdfs:domain         time:TemporalEntity ;
         rdfs:range          xsd:dateTimeStamp ;
+        vs:term_status      "unstable" ;
         owl:propertyChainAxiom (time:hasEnd time:inXSDDateTimeStamp) ;
         rdfs:comment        "Specific time marking the exact end of flow or process".
 
@@ -405,11 +408,13 @@ vf:atLocation a             owl:ObjectProperty ;
 
 vf:image a                  owl:DatatypeProperty ;
         vs:term_status      "unstable" ;
-        rdfs:label          "image" .
+        rdfs:label          "image" ;
+        rdfs:comment        "The uri to an image relevant to the entity, such as a logo, avatar, photo, diagram, etc." .
 
 vf:uri a                    owl:DatatypeProperty ;
         vs:term_status      "unstable" ;
-        rdfs:label          "uri" .
+        rdfs:label          "uri" ;
+        rdfs:comment        "The web address relevant to the entity." .
 
 vf:name a                   owl:DatatypeProperty ;
         rdfs:label          "name" ;
@@ -659,82 +664,104 @@ vf:mappableAddress a        owl:ObjectProperty ;
 
 vf:increment  a             vf:Action ;
         vs:term_status      "unstable" ;
-        rdfs:label          "increment" .
+        rdfs:label          "increment" ;
+        rdfs:comment        " ." .
 
 vf:decrement  a             vf:Action ;
         vs:term_status      "unstable" ;
-        rdfs:label          "decrement" .
+        rdfs:label          "decrement" ;
+        rdfs:comment        " ." .
 
 vf:dropoff  a               vf:Action ;
         rdfs:label          "dropoff" ;
-        vs:term_status      "unstable"  .
+        vs:term_status      "unstable"  ;
+        rdfs:comment        " ." .
 
 vf:pickup  a                vf:Action ;
         rdfs:label          "pickup" ;
-        vs:term_status      "unstable" .
+        vs:term_status      "unstable" ;
+        rdfs:comment        " ." .
 
 vf:consume  a               vf:Action ;
         rdfs:label          "consume" ;
         vs:term_status      "testing" ;
-        rdfs:subPropertyOf  vf:decrement .
+        rdfs:subPropertyOf  vf:decrement ;
+        rdfs:comment        " ." .
 
 vf:use  a                   vf:Action ;
-        vs:term_status      "unstable" ;
-        rdfs:label          "use" .
+        vs:term_status      "testing" ;
+        rdfs:label          "use" ;
+        rdfs:comment        " ." .
 
 vf:work  a                  vf:Action ;
         vs:term_status      "testing" ;
-        rdfs:label          "work" .
+        rdfs:label          "work" ;
+        rdfs:comment        " ." .
 
 vf:cite  a                  vf:Action ;
         vs:term_status      "testing" ;
-        rdfs:label          "cite" .
+        rdfs:label          "cite" ;
+        rdfs:comment        " ." .
 
 vf:produce  a               vf:Action ;
         rdfs:label          "produce" ;
         vs:term_status      "testing" ;
-        rdfs:subPropertyOf  vf:increment .
+        rdfs:subPropertyOf  vf:increment ;
+        rdfs:comment        " ." .
 
 vf:accept  a                vf:Action ;
-        vs:term_status      "unstable" ;
-        rdfs:label          "accept" .
+        vs:term_status      "testing" ;
+        rdfs:label          "accept" ;
+        rdfs:comment        " ." .
 
 vf:modify  a                vf:Action ;
-        vs:term_status      "unstable" ;
-        rdfs:label          "modify" .
+        vs:term_status      "testing" ;
+        rdfs:label          "modify" ;
+        rdfs:comment        " ." .
 
 vf:pass  a                  vf:Action ;
         vs:term_status      "unstable" ;
-        rdfs:label          "pass" .
+        rdfs:label          "pass" ;
+        rdfs:comment        " ." .
 
 vf:fail  a                  vf:Action ;
         vs:term_status      "unstable" ;
-        rdfs:label          "fail" .
+        rdfs:label          "fail" ;
+        rdfs:comment        " ." .
 
 vf:service  a               vf:Action ;
-        vs:term_status      "testing" ;
-        rdfs:label          "service" .
+        vs:term_status      "unstable" ;
+        rdfs:label          "service" ;
+        rdfs:comment        " ." .
 
 vf:raise  a                 vf:Action ;
+        vs:term_status      "unstable" ;
         rdfs:label          "raise" ;
-        rdfs:subPropertyOf  vf:increment .
+        rdfs:subPropertyOf  vf:increment ;
+        rdfs:comment        " ." .
 
 vf:lower  a                 vf:Action ;
+        vs:term_status      "unstable" ;
         rdfs:label          "lower" ;
-        rdfs:subPropertyOf  vf:decrement .
+        rdfs:subPropertyOf  vf:decrement ;
+        rdfs:comment        " ." .
 
 vf:transfer-complete  a     vf:Action ;
         rdfs:label          "transfer-complete" ;
-        vs:term_status      "unstable" .
+        vs:term_status      "unstable" ;
+        rdfs:comment        " ." .
 
 vf:transfer-all-rights  a   vf:Action ;
         rdfs:label          "transfer-all-rights" ;
-        vs:term_status      "unstable" .
+        vs:term_status      "unstable" ;
+        rdfs:comment        " ." .
 
 vf:transfer-custody  a      vf:Action ;
         rdfs:label          "transfer-custody" ;
-        vs:term_status      "unstable" .
+        vs:term_status      "unstable" ;
+        rdfs:comment        " ." .
 
 vf:move  a                  vf:Action ;
         rdfs:label          "move" ;
-        vs:term_status      "unstable" .
+        vs:term_status      "unstable" ;
+        rdfs:comment        " ." .
