@@ -4,8 +4,6 @@ The vocabulary has a core that would fit many different kinds of economic format
 
 The core is based on the REA (Resource, Event, Agent) ontology. You can find all the details by following the [links here](https://valueflows.gitbooks.io/valueflows/content/appendix/rea.html).  
 
-ValueFlows takes the "independent view" of REA, which is a neutral viewpoint in the "collaboration space" between agents. The "trading partner view" happens internal to one agent.  For example, from one agent's viewpoint, the exchange may be a "purchase", from the other agent's viewpoint, it might be a "sale". From the neutral viewpoint, it is an exchange of resources, with usually at least two flows of resources, from different directions. 
-
 These are the main concepts in the REA ontology, as pictured in this [document](http://www.msu.edu/user/mccarth4/Alabama.doc):
 
 ![REA event](https://raw.github.com/valnet/valuenetwork/master/valuenetwork/site_media/media/photos/REA_event.png)
@@ -13,6 +11,17 @@ These are the main concepts in the REA ontology, as pictured in this [document](
 Economic events are the movers and shakers.  They say what is happening to economic resources, and what economic agents are involved along the way.  They create the "value flows".
 
 A key concept in REA is Duality, which means that each event wants one or more balancing events: in other words, some kind of reciprocity.  REA uses an abstract word for this relationship in order to make the meaning configurable. The reciprocity does not need to happen at the same time, or in the same transaction.  And it can have any logic that a network wants: payment in money, swap, earn credits, earn reputation points, share with the commons, from each according to ability and to each according to need, etc.
+
+### Independent vs Dependent views
+
+![independent vs dependent](https://rawgit.com/valueflows/valueflows/master/release-doc-in-process/REAviews.png)
+
+Conventional accounting always takes the view of an individual agent: often a company. REA, and ValueFlows, take an independent view, sometimes called a “collaboration space” or economic network or supply chain view.  At the same time, derived from the independent view, REA and ValueFlows support each agent's own accounting view.
+
+For example, from one agent's viewpoint, the exchange may be a "purchase", from the other agent's viewpoint, it might be a "sale". From the neutral viewpoint, it is an exchange of resources, with usually at least two flows of resources, from different directions. 
+
+For the individual agent’s accounting systems, assuming an Exchange of goods for money, when the goods are transferred from the seller to the purchaser, the purchaser’s Accounts Payable are increased (credited) and the seller’s Accounts Receivable are increased (debited). The independent view sees a transfer of goods from one agent to another.
+
 
 ### Levels of the ontology
 
