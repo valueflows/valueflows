@@ -58,7 +58,7 @@ All flows use an action property to designate what the flow is doing and how it 
 * vf:modify - in processes like repair or modification, the same resource will appear in input with *vf:accept* verb
 * vf:pass - possible output of a testing or reviewing process, indicating the resource passed, the same resource will appear in input with *vf:accept* verb
 * vf:fail - possible output of a testing or reviewing process, indicating the resource failed, the same resource will appear in input with *vf:accept* verb
-* vf:service - new service produced and delivered (a service implies that an agent actively receives the service)
+* vf:deliver-service - new service produced and delivered (a service implies that an agent actively receives the service)
 * vf:transfer-all-rights - give full (in the human realm) rights and responsibilities to another agent, without transferring physical custody
 * vf:transfer-custody - give physical custody and control of a resource, without full accounting or ownership rights
 * vf:transfer-complete - give full rights and responsibilities plus physical custody
@@ -77,6 +77,7 @@ pickup | No effect  | Input | No | dropoff |
 dropoff | No effect  | Output | No | pickup |
 accept | No effect  | Input | No | modify |
 modify | No effect  | Output | No | accept |
+deliver-service | No effect | Output | No | N/A |
 pass | No effect  | Output | No | accept |
 fail | No effect  | Output | No | accept |
 transfer-custody | Decr+Incr(2) | N/A | No | N/A |
