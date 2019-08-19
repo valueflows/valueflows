@@ -29,7 +29,7 @@ The standard set of accounting reports are needed by many organizations. A stand
 
 ![GL](https://rawgit.com/valueflows/valueflows/master/release-doc-in-process/std-accounting.png)
 
-Moreover, General Ledgers and accounting reports can be created automatically for each agent in an economic network using the VF vocabulary.
+Moreover, General Ledgers and accounting reports can be created automatically for each agent in an economic network using the VF vocabulary.  The accounting views use the Dependent or Individual Agent view of ValueFlows. See also [Independent vs Dependent views](https://valueflo.ws/introduction/core.html#independent-vs-dependent-views).
 
 Accounting statements can also be updated instantly for each participant in any economic event as soon as the event is recorded. For example, consider an economic exchange, where one agent transfers some goods to another, and the other agent transfers some money in return. The inventory of the goods-providing agent will be instantly decremented, and the receiving agent's incremented. Likewise the money accounts of the money-providing and receiving agents will immediately change. Income statements, balance sheets, and cash flow reports can reflect the new changes immediately. The financial positions of each agent can always be up-to-date as of the last recorded event.
 
