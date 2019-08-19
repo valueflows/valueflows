@@ -22,6 +22,7 @@ Extending REA from internal business systems into larger economic networks:
 
 [REA Beyond the Enterprise](http://mikorizal.org/BeyondTheEnterprise.html)
 
+[From private ownership to commons accounting](http://mikorizal.org/Fromprivateownershipaccountingtocommonsaccoun.html)
+
 Besides REA, the other main core concept is [dependent demand](http://hillside.net/plop/plop97/Proceedings/haugen.pdf). We do event-driven Resource Requirements Planning based on that pattern.
 
-We have made some significant changes from what we might call "Classical REA", which you can read about [here](http://mikorizal.org/Fromprivateownershipaccountingtocommonsaccoun.html). _Warning: that document will probably be interesting only to REA and Linked Data wonks..._
