@@ -22,6 +22,8 @@ For example, from one agent's viewpoint, the exchange may be a "purchase", from 
 
 For the individual agent’s accounting systems, assuming an Exchange of goods for money, when the goods are transferred from the seller to the purchaser, the purchaser’s Accounts Payable are increased (credited) and the seller’s Accounts Receivable are increased (debited). The independent view sees a transfer of goods from one agent to another.
 
+While conventional accounting uses the individual agent view, larger-scale economic analyses and planning, like for networks, communities, and bioregions, use the independent view. See [Value Flow Algorithms](https://valueflo.ws/appendix/overview.html).
+
 
 ### Levels of the ontology
 
