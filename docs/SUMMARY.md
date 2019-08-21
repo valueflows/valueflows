@@ -36,7 +36,7 @@
 * [Classes and Properties](specification/protege-spec.md)
 * [External terms](specification/external-terms.md)
 * [Graphql Reference](https://github.com/valueflows/vf-graphql/tree/master/lib/schemas)
-* [JSON-schema Reference](specification/json-schema-ref.md)
+* [JSON-schema Reference](https://github.com/valueflows/vf-json-schema/tree/master/schemas)
 
 ## Examples
 
