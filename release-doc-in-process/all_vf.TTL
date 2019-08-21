@@ -45,7 +45,7 @@ vf:ResourceSpecification a  owl:Class ;
 vf:RecipeProcess a          owl:Class ;
         rdfs:label          "vf:RecipeProcess" ;
         vs:term_status      "unstable" ;
-        rdfs:comment        "Specifies the process part of a recipe for use in planning from recipe." .
+        rdfs:comment        "Specifies a process in a recipe for use in planning from recipe." .
 
 vf:ProcessSpecification a   owl:Class ;
         rdfs:label          "vf:ProcessSpecification" ;
@@ -55,7 +55,7 @@ vf:ProcessSpecification a   owl:Class ;
 vf:RecipeFlow a             owl:Class ;
         rdfs:label          "vf:RecipeFlow" ;
         vs:term_status      "unstable" ;
-        rdfs:comment        "The linkage between a process recipe, an action that structures a recipe, and a resource specification." .
+        rdfs:comment        "The specification of a resource inflow to, or outflow from, a recipe process.." .
 
 vf:ScenarioDefinition a     owl:Class ;
         rdfs:label          "vf:ScenarioDefinition" ;
@@ -596,7 +596,7 @@ vf:stage
         rdfs:domain         [ owl:unionOf (vf:Commitment vf:RecipeFlow vf:EconomicResource) ] ;
         rdfs:range          vf:ProcessSpecification ;
         vs:term_status      "unstable" ;
-        rdfs:comment        "The last stage the desired economic resource went through." .
+        rdfs:comment        "References the ProcessSpecification of the last process the desired economic resource went through. Stage is used when the last process is important for finding proper resources, such as where the publishing process wants only documents that have gone through the editing process." .
 
 vf:state
         a                   owl:ObjectProperty ;
