@@ -146,7 +146,7 @@ vf:Claim  a                 owl:Class ;
 vf:Settlement  a            owl:Class ;
         rdfs:label          "vf:Settlement" ;
         vs:term_status      "unstable" ;
-        rdfs:comment        "Represents many-to-many relationships between claim and economic events that uflly or parially settle the one or more claims." .
+        rdfs:comment        "Represents many-to-many relationships between claim and economic events that fully or partially settle one or more claims." .
 
 vf:Appreciation  a          owl:Class ;
         rdfs:label          "vf:Appreciation" ;
@@ -327,14 +327,14 @@ vf:hasBeginning a           owl:DatatypeProperty ;
         rdfs:range          xsd:dateTimeStamp ;
         vs:term_status      "unstable" ;
         owl:propertyChainAxiom (time:hasBeginning time:inXSDDateTimeStamp) ;
-        rdfs:comment        "Specific time marking the exact beginning of flow or process".
+        rdfs:comment        "The planned or actual beginning of a flow or process." .
 
 vf:hasEnd a                 owl:DatatypeProperty ;
         rdfs:domain         time:TemporalEntity ;
         rdfs:range          xsd:dateTimeStamp ;
         vs:term_status      "unstable" ;
         owl:propertyChainAxiom (time:hasEnd time:inXSDDateTimeStamp) ;
-        rdfs:comment        "Specific time marking the exact end of flow or process".
+        rdfs:comment        "The planned or actual end of a flow or process." .
 
 vf:accountingQuantity a     owl:ObjectProperty ;
         rdfs:label          "accounting quantity" ;
@@ -540,7 +540,7 @@ vf:basedOn
         rdfs:domain         vf:Process ;
         rdfs:range          vf:ProcessSpecification ;
         vs:term_status      "unstable" ;
-        rdfs:comment        "The recipe definition or standard specification for a process." .
+        rdfs:comment        "The definition or standard specification for a process." .
 
 vf:classifiedAs
         a                   owl:ObjectProperty ;
@@ -580,7 +580,7 @@ vf:resourceConformsTo
         rdfs:domain         [ owl:unionOf (vf:Commitment vf:Intent vf:EconomicEvent vf:Claim vf:RecipeResource) ] ;
         rdfs:range          vf:ResourceSpecification ;
         vs:term_status      "unstable" ;
-        rdfs:comment        "The primary resource specification or definition of an existing or potential economic resource. A resource will have only one, as this specifies exactly what the resource is. If not a vf:ResourceSpecification, this can be a link to another specification." .
+        rdfs:comment        "The primary resource specification or definition of an existing or potential economic resource. A resource will have only one, as this specifies exactly what the resource is." .
 
 vf:conformsTo
         a                   owl:ObjectProperty ;
