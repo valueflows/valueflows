@@ -14,4 +14,4 @@ For the current rdf turtle file reference, [click here](https://raw.githubuserco
 
 ### Complete References
 
-For a complete reference, see the [UML diagram](https://valueflo.ws/specification/diagrams/uml.html), which also documents the appropriate rdf namespace for each element.  Also the [graphql reference](https://github.com/valueflows/vf-graphql/tree/master/lib/schemas) includes the entire vocabulary in a non-rdf format.
+For a complete reference, see the [UML diagram](https://valueflo.ws/specification/diagrams/uml.html), which also documents the appropriate rdf namespace for each element.  Also the [graphql reference](https://github.com/valueflows/vf-graphql/tree/master/lib/schemas) includes the entire vocabulary in a non-rdf format, as does the [json-schema reference](https://valueflo.ws/specification/json-schema-ref.html).
