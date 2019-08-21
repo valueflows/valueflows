@@ -33,11 +33,11 @@ The following are the classes needed for a ValueFlows implementation, in json-sc
 
 #### Action
 
-[import, lang:"json"](../../../vf-json-schema/schemas/Action.json)
+[import, lang:"json"](../../../opt/build/vf-json-schema/schemas/Action.json)
 
 #### Agent
 
-[import, lang:"json"](../../../vf-json-schema/schemas/Agent.json)
+[import, lang:"json"](https://rawgit.com/valueflows/vf-json-schema/master/schemas/Agent.json)
 
 #### AgentRelationship
 
