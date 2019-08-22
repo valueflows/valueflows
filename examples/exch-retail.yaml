@@ -20,7 +20,7 @@
     receiver: https://carol.example/
     resourceClassifiedAs: https://www.wikidata.org/wiki/Q47107 # bucket
     resourceQuantity:
-      qudt:unit: unit: Number
+      qudt:unit: unit:Number
       qudt:numericValue: 1
 
   - '@id': store:2342d456-5d6f-46d5-a7ed-3ac7bfd5a86c
@@ -32,5 +32,5 @@
     resourceClassifiedAs: https://www.wikidata.org/wiki/Q4917 # US dollar
     resourceInventoriedAs: carol:e56fd654-7b94-4d96-8e60-de39e08329a7 # Carol's bank account
     resourceQuantity:
-      qudt:unit: unit: Number
+      qudt:unit: unit:Number
       qudt:numericValue: 5

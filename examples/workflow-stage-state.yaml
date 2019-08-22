@@ -81,7 +81,7 @@
 
   - '@id': mfg:a3be5259d-10f0-431c-9fec-9c0c15a461d3
     '@type': RecipeResource
-    resourceConformsTo:urn:uuid:d4d2fd71-34f2-41c3-b1c5-19ad5ed2da58 # polymer
+    resourceConformsTo: urn:uuid:d4d2fd71-34f2-41c3-b1c5-19ad5ed2da58 # polymer
 
   - '@id': mfg:54b814ee-62dc-40c1-bb96-f8582aa4f771
     '@type': RecipeFlow
@@ -98,7 +98,7 @@
     processConformsTo: mfg:6fb358a3-2859-4d6a-a4fa-431603ee70f5 # the process specification
     time:hasDuration:
       time:unitType unit:Hour
-      time:numericDuration: 1
+      time:numericDuration 1
 
   - '@id': mfg:2342d456-5d6f-46d5-a7ed-3ac7bfd5a86c
     '@type': RecipeFlow
@@ -129,7 +129,7 @@
     processConformsTo: mfg:27be5cab-d740-4194-9298-1661a69d9d95 # the process specification
     time:hasDuration:
       time:unitType unit:Hour
-      time:numericDuration: 7
+      time:numericDuration 7
 
   - '@id': mfg:9bd19194-a36d-4a1f-896b-8082887962cb
     '@type': RecipeFlow
@@ -193,7 +193,7 @@
     basedOn: mfg:27be5cab-d740-4194-9298-1661a69d9d95 # the process specification
     time:hasDuration:
       time:unitType unit:Hour
-      time:numericDuration: 14
+      time:numericDuration 14
 
   - '@id': mfg:a8236bbb-81e0-422d-9861-56d2417db0fb
     '@type': Commitment
@@ -225,7 +225,7 @@
     basedOn: mfg:6fb358a3-2859-4d6a-a4fa-431603ee70f5 # the process specification
     time:hasDuration:
       time:unitType unit:Hour
-      time:numericDuration: 14
+      time:numericDuration 14
 
   - '@id': mfg:21f361a6-2375-46bb-b192-c21b5ba833bf
     '@type': Commitment
