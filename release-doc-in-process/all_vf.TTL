@@ -281,7 +281,7 @@ vf:object  a                owl:ObjectProperty ;
         rdfs:comment        "The object of a relationship between 2 agents.  For example, if Mary is a member of a group, then the group is the object." .
 
 vf:inScopeOf  a             owl:ObjectProperty ;
-        rdfs:domain         owl:Thing ;
+        rdfs:domain         [ owl:unionOf (vf:Claim vf:Commitment vf:EconomicEvent vf:Proposal vf:Intent vf:Scenario vf:Process vf:AgentRelationship) ] ;
         rdfs:label          "in scope of" ;
         rdfs:range          owl:Thing ;
         vs:term_status      "unstable" ;
@@ -553,7 +553,7 @@ vf:classifiedAs
 vf:resourceClassifiedAs
         a                   owl:ObjectProperty ;
         rdfs:label          "resource classified as" ;
-        rdfs:domain         [ owl:unionOf (vf:RecipeResource vf:Intent vf:Commitment vf:EconomicEvent vf:RecipeFlow vf:Claim) ] ;
+        rdfs:domain         [ owl:unionOf (vf:RecipeResource vf:Intent vf:Commitment vf:EconomicEvent vf:Claim) ] ;
         rdfs:range          owl:Thing ;
         vs:term_status      "unstable" ;
         rdfs:comment        "References a concept in a common taxonomy or other classification scheme for purposes of categorization or grouping." .
@@ -614,6 +614,14 @@ vf:refinementOf
         vs:term_status      "unstable" ;
         rdfs:comment        "This scenario or plan refines another scenario, often as time moves closer or for more detail." .
 
+vf:nestedIn
+        a                   owl:ObjectProperty ;
+        rdfs:label          "nested in" ;
+        rdfs:domain         vf:Process ;
+        rdfs:range          vf:Scenario ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "The process with its inputs and outputs is part of the scenario." .
+
 vf:definedAs
         a                   owl:ObjectProperty ;
         rdfs:label          "defined as" ;
@@ -650,6 +658,13 @@ vf:mappableAddress a        owl:ObjectProperty ;
         rdfs:range          xsd:string ;
         vs:term_status      "unstable" ;
         rdfs:comment        "A textual address that can be mapped using mapping software." .
+
+vf:inverseLabel a           owl:DatatypeProperty ;
+        rdfs:label          "inverse label" ;
+        rdfs:domain         vf:AgentRelationshipRole ;
+        rdfs:range          rdfs:label ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "The human readable name of the role, inverse from the object to the subject." .
 
 
 # ################################ action verbs
