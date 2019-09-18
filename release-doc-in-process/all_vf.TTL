@@ -661,7 +661,7 @@ vf:mappableAddress a        owl:ObjectProperty ;
 
 vf:inverseLabel a           owl:DatatypeProperty ;
         rdfs:label          "inverse label" ;
-        rdfs:domain         AgentRelationshipRole ;
+        rdfs:domain         vf:AgentRelationshipRole ;
         rdfs:range          rdfs:label ;
         vs:term_status      "unstable" ;
         rdfs:comment        "The human readable name of the role, inverse from the object to the subject." .
