@@ -64,3 +64,9 @@ http://www.virtual-assembly.org/DataFoodConsortium/FullModel#
 * [`dfc:batchNumber`](http://www.virtual-assembly.org/DataFoodConsortium/FullModel#batchNumber)
 * [`dfc:expiryDate`](http://www.virtual-assembly.org/DataFoodConsortium/FullModel#expiryDate)
 * [`dfc:productionDate`](http://www.virtual-assembly.org/DataFoodConsortium/FullModel#productionDate)
+
+## DCTERMS
+
+http://purl.org/dc/terms/
+
+* [`dcterms:created`](http://purl.org/dc/terms/created)
