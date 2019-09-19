@@ -33,7 +33,7 @@
 
 ## Specification
 
-* [Classes and Properties](specification/protege-spec.md)
+* [Classes and Properties](https://w3id.org/lode/owlapi/https://raw.githubusercontent.com/valueflows/valueflows/master/release-doc-in-process/all_vf.TTL)
 * [External terms](specification/external-terms.md)
 * [Graphql Reference](https://github.com/valueflows/vf-graphql/tree/master/lib/schemas)
 * [JSON-schema Reference](https://github.com/valueflows/vf-json-schema/tree/master/schemas)
