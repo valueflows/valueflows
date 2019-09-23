@@ -11,7 +11,7 @@
 
 An exchange agreement with commitments.
 
-![agreement diagram](https://rawgit.com/valueflows/valueflows/master/release-doc-in-process/exch-commit.png)
+![agreement diagram](https://raw.githubusercontent.com/valueflows/valueflows/master/release-doc-in-process/exch-commit.png)
 
 [import, lang:"yaml"](../../examples/exch-agreement.yaml)
 
@@ -19,7 +19,7 @@ An exchange agreement with commitments.
 
 An exchange without prior commitments.  Note we are still using the Agreement to tie together the reciprocal events, even there were no commitments ahead of time.
 
-![retail diagram](https://rawgit.com/valueflows/valueflows/master/release-doc-in-process/exch-pos.png)
+![retail diagram](https://raw.githubusercontent.com/valueflows/valueflows/master/release-doc-in-process/exch-pos.png)
 
 [import, lang:"yaml"](../../examples/exch-retail.yaml)
 
@@ -27,7 +27,7 @@ An exchange without prior commitments.  Note we are still using the Agreement to
 
 A simple transfer of a currency from one agent to another.
 
-![crypto transfer diagram](https://rawgit.com/valueflows/valueflows/master/release-doc-in-process/xfer-crypto.png)
+![crypto transfer diagram](https://raw.githubusercontent.com/valueflows/valueflows/master/release-doc-in-process/xfer-crypto.png)
 
 [import, lang:"yaml"](../../examples/transfer-crypto.yaml)
 
@@ -35,7 +35,7 @@ A simple transfer of a currency from one agent to another.
 
 A simple move of a currency from one account to another by one agent.
 
-![crypto move diagram](https://rawgit.com/valueflows/valueflows/master/release-doc-in-process/move-crypto.png)
+![crypto move diagram](https://raw.githubusercontent.com/valueflows/valueflows/master/release-doc-in-process/move-crypto.png)
 
 [import, lang:"yaml"](../../examples/move-crypto.yaml)
 
@@ -43,7 +43,7 @@ A simple move of a currency from one account to another by one agent.
 
 Checking out and checking back in a library book (a loan).
 
-![checkout diagram](https://rawgit.com/valueflows/valueflows/master/release-doc-in-process/book.png)
+![checkout diagram](https://raw.githubusercontent.com/valueflows/valueflows/master/release-doc-in-process/book.png)
 
 [import, lang:"yaml"](../../examples/checkout-book.yaml)
 
@@ -51,7 +51,7 @@ Checking out and checking back in a library book (a loan).
 
 Logged work triggers a claim for future income distribution for that work.
 
-![claim diagram](https://rawgit.com/valueflows/valueflows/master/release-doc-in-process/claim.png)
+![claim diagram](https://raw.githubusercontent.com/valueflows/valueflows/master/release-doc-in-process/claim.png)
 
 [import, lang:"yaml"](../../examples/claim.yaml)
 

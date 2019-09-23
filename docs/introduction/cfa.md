@@ -12,5 +12,5 @@ ISO lists 5 phases:
 
 Offers and Wants are matched in the Planning and Identification Phases. Conversation for Action covers Negotiation, Actualization and some of Post-Actualization.
 
-![Conversation for Action](https://rawgit.com/valueflows/valueflows/master/release-doc-in-process/CfA_state_machine.png)
+![Conversation for Action](https://raw.githubusercontent.com/valueflows/valueflows/master/release-doc-in-process/CfA_state_machine.png)
 

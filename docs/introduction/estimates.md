@@ -26,4 +26,4 @@ Scenarios can be refinements of other scenarios.  For example, a group might do 
 
 If other requirements arise, we are happy to add connections as needed to the vocabulary.
 
-![recipe plan process](https://rawgit.com/valueflows/valueflows/master/release-doc-in-process/plan-process-oper.png)
+![recipe plan process](https://raw.githubusercontent.com/valueflows/valueflows/master/release-doc-in-process/plan-process-oper.png)

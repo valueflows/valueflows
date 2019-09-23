@@ -1,6 +1,6 @@
 # [Value Flows `vf` vocabs](https://github.com/valueflows/valueflows)
 
-![Value Flows icon](https://rawgit.com/valueflows/valueflows/master/assets/icon-0.svg)
+![Value Flows icon](https://raw.githubusercontent.com/valueflows/valueflows/master/assets/icon-0.svg)
 
 Here is the current release spec: https://www.valueflo.ws/
 

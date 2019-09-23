@@ -7,7 +7,7 @@ Here is a long description of [Dependent Demand](http://hillside.net/plop/plop97
 Basically, you traverse a graph of Recipe Processes backwards from the last Recipe Output, connecting Recipe Inputs with Recipe Outputs that have matching Resource Categories, and backscheduling all the processes and resource requirements based on estimated process durations.   See [Graph search algorithms](http://jasonpark.me/AlgorithmVisualizer/).
 
 This description refers to this diagram:
-![process resource flow](https://rawgit.com/valueflows/valueflows/master/release-doc-in-process/process-layer.png)
+![process resource flow](https://raw.githubusercontent.com/valueflows/valueflows/master/release-doc-in-process/process-layer.png)
 Take each request for quantities of Recipe Resource as a demand and start the traversal.
 
 **Start:** 

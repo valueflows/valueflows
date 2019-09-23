@@ -14,7 +14,7 @@ A key concept in REA is Duality, which means that each event wants one or more b
 
 ### Independent vs Dependent views
 
-![independent vs dependent](https://rawgit.com/valueflows/valueflows/master/release-doc-in-process/REAviews.png)
+![independent vs dependent](https://raw.githubusercontent.com/valueflows/valueflows/master/release-doc-in-process/REAviews.png)
 
 Conventional accounting always takes the view of an individual agent: often a company. REA, and ValueFlows, take an independent view, sometimes called a “collaboration space” or economic network or supply chain view.  At the same time, derived from the independent view, REA and ValueFlows support each agent's own accounting view.
 
@@ -29,7 +29,7 @@ While conventional accounting uses the individual agent view, larger-scale econo
 
 All the levels of the REA ontology are similarly flexible and configurable:
 
-![REA layers](https://rawgit.com/valueflows/valueflows/master/release-doc-in-process/layers.png)
+![REA layers](https://raw.githubusercontent.com/valueflows/valueflows/master/release-doc-in-process/layers.png)
 
 * The Knowledge level represents classification, policies, procedures, rules and patterns. This is where each network or community can configure the core concepts to fit their desires.
 * The Plan level represents offers, requests, schedules and promises.

@@ -1,6 +1,6 @@
 # Flows of Value
 
-![networks of networks picture](https://rawgit.com/valueflows/valueflows/master/release-doc-in-process/network-of-networks.png)
+![networks of networks picture](https://raw.githubusercontent.com/valueflows/valueflows/master/release-doc-in-process/network-of-networks.png)
 
 Networks of value flows are created when processes are linked together through flows of resources.
 
@@ -19,18 +19,18 @@ Like:
 
 This is a (simplified) very specific example taken from the Open Value Network (OVN) Sensorica, where contributions to processes are rewarded according to agreed upon rules when there is income.
 
-![sensorica flow 1](https://rawgit.com/valueflows/valueflows/master/release-doc-in-process/sens-flow-1.png)
-![sensorica flow 2](https://rawgit.com/valueflows/valueflows/master/release-doc-in-process/sens-flow-2.png)
+![sensorica flow 1](https://raw.githubusercontent.com/valueflows/valueflows/master/release-doc-in-process/sens-flow-1.png)
+![sensorica flow 2](https://raw.githubusercontent.com/valueflows/valueflows/master/release-doc-in-process/sens-flow-2.png)
 
 ### ... another little value flow....
 
 Producing and exchange olive oil and coffee, even more simplified.
 
-![coffee olive oil](https://rawgit.com/valueflows/valueflows/master/release-doc-in-process/coffee-oliveoil-flows.png)
+![coffee olive oil](https://raw.githubusercontent.com/valueflows/valueflows/master/release-doc-in-process/coffee-oliveoil-flows.png)
 
 ### ... to thinking bigger.
 
-![river flow](https://rawgit.com/valueflows/valueflows/master/release-doc-in-process/vf-river.png)
+![river flow](https://raw.githubusercontent.com/valueflows/valueflows/master/release-doc-in-process/vf-river.png)
 
 ### Traversing value flows
 

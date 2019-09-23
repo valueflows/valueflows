@@ -1,4 +1,4 @@
-![Value Flows icon](https://rawgit.com/valueflows/valueflows/master/release-doc-in-process/VF-logo-heading.jpg)
+![Value Flows icon](https://raw.githubusercontent.com/valueflows/valueflows/master/release-doc-in-process/VF-logo-heading.jpg)
 # A vocabulary for distributed economic systems
 
 ## Table of Contents
@@ -18,7 +18,7 @@ We want to support RDF based and non-RDF based use of the vocabulary, basically 
 
 ### Concepts
 
-![networks of networks picture](https://rawgit.com/valueflows/valueflows/master/release-doc-in-process/network-elio-cropped.jpg)
+![networks of networks picture](https://raw.githubusercontent.com/valueflows/valueflows/master/release-doc-in-process/network-elio-cropped.jpg)
 
 Networks of value flows are created when processes are linked together through flows of resources.
 
@@ -68,11 +68,11 @@ Yet to come:
 
 ### UML
 
-![VF uml picture](https://rawgit.com/valueflows/valueflows/master/release-doc-in-process/core-rel.png)
+![VF uml picture](https://raw.githubusercontent.com/valueflows/valueflows/master/release-doc-in-process/core-rel.png)
 
 ### RDF
 
-![VF vowl picture](https://rawgit.com/valueflows/valueflows/master/release-doc-in-process/release-vowl.png)
+![VF vowl picture](https://raw.githubusercontent.com/valueflows/valueflows/master/release-doc-in-process/release-vowl.png)
 
 ### Classes
 

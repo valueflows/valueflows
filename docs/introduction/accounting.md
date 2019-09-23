@@ -27,7 +27,7 @@ Accounting isn't always just counting beans.  It will be important for community
 
 The standard set of accounting reports are needed by many organizations. A standard General Ledger, Balance Sheet, and Income Statement can be generated automatically from ValueFlows data. No need to create a Chart of Accounts or post double-entries, those can all be created by a computer program on request. 
 
-![GL](https://rawgit.com/valueflows/valueflows/master/release-doc-in-process/std-accounting.png)
+![GL](https://raw.githubusercontent.com/valueflows/valueflows/master/release-doc-in-process/std-accounting.png)
 
 Moreover, General Ledgers and accounting reports can be created automatically for each agent in an economic network using the VF vocabulary.  The accounting views use the Dependent or Individual Agent view of ValueFlows. See also [Independent vs Dependent views](https://valueflo.ws/introduction/core.html#independent-vs-dependent-views).
 

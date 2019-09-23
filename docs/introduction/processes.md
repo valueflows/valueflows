@@ -14,8 +14,8 @@ Connected processes enable us to see cause and effect, if we want.
 
 Below is a view of processes, which occur in resource flow networks, and live in three layers: Knowledge, which describe how processes work. Plans, which describe processes which are intended to happen. And Observation, which is a record of processes that have already happened.
 
-![process resource flow](https://rawgit.com/valueflows/valueflows/master/release-doc-in-process/process-layer.png)
+![process resource flow](https://raw.githubusercontent.com/valueflows/valueflows/master/release-doc-in-process/process-layer.png)
 
 Here is a specific example:
 
-![salsa flow](https://rawgit.com/valueflows/valueflows/master/release-doc-in-process/salsa-layer.png)
+![salsa flow](https://raw.githubusercontent.com/valueflows/valueflows/master/release-doc-in-process/salsa-layer.png)
