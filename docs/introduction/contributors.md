@@ -9,6 +9,7 @@
 * Paul Mackey
 * Kalin Maldzhanski
 * pospi (Sam Pospischil)
+* Jef Vanbockryck
 
 #### Use cases, tools, and helpful discussion... and let's not forget the logo!
 
