@@ -13,7 +13,7 @@
 
 A plan for creating two different resources needed for one campaign.  The first resource requires two chained processes.
 
-![plan diagram](https://rawgit.com/valueflows/valueflows/master/release-doc-in-process/simple-plan.png)
+![plan diagram](https://raw.githubusercontent.com/valueflows/valueflows/master/release-doc-in-process/simple-plan.png)
 
 [import, lang:"yaml"](../../examples/simple-plan.yaml)
 
@@ -21,7 +21,7 @@ A plan for creating two different resources needed for one campaign.  The first 
 
 A plan generated from a recipe, for making a component.
 
-![plan from recipe diagram](https://rawgit.com/valueflows/valueflows/master/release-doc-in-process/plan-recipe.png)
+![plan from recipe diagram](https://raw.githubusercontent.com/valueflows/valueflows/master/release-doc-in-process/plan-recipe.png)
 
 [import, lang:"yaml"](../../examples/plan-from-recipe.yaml)
 
@@ -29,7 +29,7 @@ A plan generated from a recipe, for making a component.
 
 Commitments satisfying intents, and economic events fulfilling commitments.
 
-![fulfillment diagram](https://rawgit.com/valueflows/valueflows/master/release-doc-in-process/ful-sat.png)
+![fulfillment diagram](https://raw.githubusercontent.com/valueflows/valueflows/master/release-doc-in-process/ful-sat.png)
 
 [import, lang:"yaml"](../../examples/fulfill-satisfy.yaml)
 
@@ -37,7 +37,7 @@ Commitments satisfying intents, and economic events fulfilling commitments.
 
 A simple proposal with reciprocity expected, then another one to give the item away.
 
-![sell give diagram](https://rawgit.com/valueflows/valueflows/master/release-doc-in-process/prop-sell-give.png)
+![sell give diagram](https://raw.githubusercontent.com/valueflows/valueflows/master/release-doc-in-process/prop-sell-give.png)
 
 [import, lang:"yaml"](../../examples/simple-proposals.yaml)
 
@@ -45,7 +45,7 @@ A simple proposal with reciprocity expected, then another one to give the item a
 
 A simple proposal for a timebank.  The reciprocity is assumed based on the timebank policies.
 
-![timebank diagram](https://rawgit.com/valueflows/valueflows/master/release-doc-in-process/prop-timebank.png)
+![timebank diagram](https://raw.githubusercontent.com/valueflows/valueflows/master/release-doc-in-process/prop-timebank.png)
 
 [import, lang:"yaml"](../../examples/proposal-timebank.yaml)
 
@@ -53,7 +53,7 @@ A simple proposal for a timebank.  The reciprocity is assumed based on the timeb
 
 A simple proposal for barter.
 
-![barter diagram](https://rawgit.com/valueflows/valueflows/master/release-doc-in-process/prop-barter.png)
+![barter diagram](https://raw.githubusercontent.com/valueflows/valueflows/master/release-doc-in-process/prop-barter.png)
 
 [import, lang:"yaml"](../../examples/proposal-barter.yaml)
 
@@ -61,7 +61,7 @@ A simple proposal for barter.
 
 A simple proposal requesting help for work on a planned production process.  The reciprocal intent (payment) is governed by a previous agreement, and based on the actual hours that will be worked.
 
-![proposal work diagram](https://rawgit.com/valueflows/valueflows/master/release-doc-in-process/prop-work.png)
+![proposal work diagram](https://raw.githubusercontent.com/valueflows/valueflows/master/release-doc-in-process/prop-work.png)
 
 [import, lang:"yaml"](../../examples/proposal-plan.yaml)
 
@@ -69,6 +69,6 @@ A simple proposal requesting help for work on a planned production process.  The
 
 A simple set of proposals that make up a price list.
 
-![price list diagram](https://rawgit.com/valueflows/valueflows/master/release-doc-in-process/prop-list.png)
+![price list diagram](https://raw.githubusercontent.com/valueflows/valueflows/master/release-doc-in-process/prop-list.png)
 
 [import, lang:"yaml"](../../examples/proposal-list.yaml)

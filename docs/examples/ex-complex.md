@@ -7,7 +7,7 @@
 
 Bob purchases 30kg of apples from Alice and Claudia transports them (FOB destination)
 
-![transport diagram](https://rawgit.com/valueflows/valueflows/master/release-doc-in-process/transport-transfer.png)
+![transport diagram](https://raw.githubusercontent.com/valueflows/valueflows/master/release-doc-in-process/transport-transfer.png)
 
 [import, lang:"yaml"](../../examples/transport-with-transfer.yaml)
 
@@ -19,6 +19,6 @@ The QT needs the stage and state of the input component resource, because QT wou
 
 This example includes recipe, plan, and actuals.
 
-![stage-state diagram](https://rawgit.com/valueflows/valueflows/master/release-doc-in-process/stage-state.png)
+![stage-state diagram](https://raw.githubusercontent.com/valueflows/valueflows/master/release-doc-in-process/stage-state.png)
 
 [import, lang:"yaml"](../../examples/workflow-stage-state.yaml)

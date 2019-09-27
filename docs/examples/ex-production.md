@@ -8,7 +8,7 @@
 
 Simple one-process manufacturing with typical inputs and outputs.
 
-![manufacturing diagram](https://rawgit.com/valueflows/valueflows/master/release-doc-in-process/proc-mfg.png)
+![manufacturing diagram](https://raw.githubusercontent.com/valueflows/valueflows/master/release-doc-in-process/proc-mfg.png)
 
 [import, lang:"yaml"](../../examples/process-manufacturing.yaml)
 
@@ -16,7 +16,7 @@ Simple one-process manufacturing with typical inputs and outputs.
 
 Simple delivery of a service with typical inputs and outputs.
 
-![service diagram](https://rawgit.com/valueflows/valueflows/master/release-doc-in-process/proc-svc.png)
+![service diagram](https://raw.githubusercontent.com/valueflows/valueflows/master/release-doc-in-process/proc-svc.png)
 
 [import, lang:"yaml"](../../examples/process-service.yaml)
 
@@ -24,7 +24,7 @@ Simple delivery of a service with typical inputs and outputs.
 
 Simple repair process with typical inputs and outputs.  The same economic resource goes into and out of the process(es).
 
-![workflow diagram](https://rawgit.com/valueflows/valueflows/master/release-doc-in-process/proc-workflow.png)
+![workflow diagram](https://raw.githubusercontent.com/valueflows/valueflows/master/release-doc-in-process/proc-workflow.png)
 
 [import, lang:"yaml"](../../examples/process-workflow.yaml)
 

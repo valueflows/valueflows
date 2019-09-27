@@ -8,9 +8,9 @@ This is a (simplified) very specific example taken from Sensorica:
 
 Contributing to creating the output:
 
-![sensorica flow 1](https://rawgit.com/valueflows/valueflows/master/release-doc-in-process/sens-flow-1.png)
+![sensorica flow 1](https://raw.githubusercontent.com/valueflows/valueflows/master/release-doc-in-process/sens-flow-1.png)
 
 Distributing income according to the value equation:
-![sensorica flow 2](https://rawgit.com/valueflows/valueflows/master/release-doc-in-process/sens-flow-2.png)
+![sensorica flow 2](https://raw.githubusercontent.com/valueflows/valueflows/master/release-doc-in-process/sens-flow-2.png)
 
 Here's [a lot more detail about value equations](https://speakerdeck.com/mikorizal/10-nrp-value-equation-concepts-and-tutorial) as implemented in Sensorica's NRP software, one of the precursors to Value Flows.

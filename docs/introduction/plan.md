@@ -22,7 +22,7 @@ Some examples:
 
 When processes are "nested", it is not random, nor based on a taxonomy. It is based on what processes are actually part of the plan. And not all the inputs and outputs of nested processes are considered inputs and outputs of the plan, since some are both produced and consumed within the plan.  In the following simplified example, the flows between plant/weed and weed/harvest start and end inside the nest, and so are not inputs to, or outputs of, the plan.
 
-![process nesting](https://rawgit.com/valueflows/valueflows/master/release-doc-in-process/nesting.jpg)
+![process nesting](https://raw.githubusercontent.com/valueflows/valueflows/master/release-doc-in-process/nesting.jpg)
 
 * There are some common situations for nested processes that will not be as simple as the above diagram.  Thes include:
     * Action makes a difference.  When a piece of equipment or tool is "used", it is not gone at the end of the nesting process.  But if it is managed as a time-based resource with a calendar, some calendar duration is in fact consumed.  Or if a citable resource is created and then cited inside, it is also still there at the end of the nesting process.
@@ -33,4 +33,4 @@ When processes are "nested", it is not random, nor based on a taxonomy. It is ba
 
 Plans can be generated from a recipe by scaling the recipe according to the demanded quantity of the end outputs.  This is called a "demand explosion".  The generation might take into account current inventories, batch sizes, etc., so it is not necessarily a "pure" reflection of the recipe.  In addition, often plans are tweaked after generation from a recipe, depending on how firm and exact the recipe is.  A manufacturing recipe might be more exact than a recipe for a more general business process.  For these reasons, a plans is decoupled from the recipe that generated it in the vocabulary.  It maintains only the references to the resource and process specifications that were supplied from the recipe.
 
-![recipe plan](https://rawgit.com/valueflows/valueflows/master/release-doc-in-process/plan-process.png)
+![recipe plan](https://raw.githubusercontent.com/valueflows/valueflows/master/release-doc-in-process/plan-process.png)

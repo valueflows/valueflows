@@ -40,7 +40,7 @@ Often agents will start their plans independently and record their initial inten
 
 Intents, Commitments, and Economic Events can occur at any granularity that is needed or for which data can be obtained.  So they primarily are used for all operational needs, but can also be used at higher levels for budgeting for organizations, analytical and high level planning needs for communities or regions, etc.
 
-![Intent-Commitment-Event](https://rawgit.com/valueflows/valueflows/master/release-doc-in-process/i-c-e.png)
+![Intent-Commitment-Event](https://raw.githubusercontent.com/valueflows/valueflows/master/release-doc-in-process/i-c-e.png)
 
 
 ### Actions
