@@ -14,3 +14,5 @@ The vocabulary is presented in several ways, as Linked Open Data using the Resou
 If this document seems too much to start with, or you just want a quicker overview, you can start here with a [ValueFlows Story](http://mikorizal.org/ValueFlows-Story.pdf).
 
 You can find us [here on github](https://github.com/valueflows).  Or come on over and ask questions in the [Welcome Chat](https://gitter.im/valueflows/welcome).
+
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This vocabulary and documentation is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
