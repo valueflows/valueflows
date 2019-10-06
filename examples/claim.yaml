@@ -48,7 +48,7 @@
     resourceQuantity:
       qudt:unit: unit:Number
       qudt:numericValue: 260 # here Bob received income for more than one work event (others not included in the example)
-    time:inXSDDateTimeStamp: 2018-10-25T09:30:00-0:00
+    hasPointInTime: 2018-10-25T09:30:00-0:00
 
   - '@id': mfg:b52a5815-fae9-43bf-be95-833b95dc0ada
     '@type': Settlement

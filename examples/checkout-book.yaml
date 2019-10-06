@@ -29,7 +29,7 @@
     realizationOf: library:f47064eb-7120-4b31-b882-770165901fe6
     action: transfer-custody
     resourceInventoriedAs: library:2402b57c-1c45-423a-acb2-f50961c97d65
-    time:inXSDDateTimeStamp: 2019-04-18T8:00:00-5:00
+    hasPointInTime: 2019-04-18T8:00:00-5:00
     provider: https://library.example/
     receiver: https://bob.example/
     resourceQuantity: 
@@ -72,7 +72,7 @@
     resourceQuantity:
       qudt:unit: unit:Number
       qudt:numericValue: 1
-    time:inXSDDateTimeStamp: 2019-05-14T10:20:00-5:00
+    hasPointInTime: 2019-05-14T10:20:00-5:00
 
   - '@id': urn:uuid:6f438393-7f87-4914-806c-e23a4fd15e89
     '@type': Fulfillment
