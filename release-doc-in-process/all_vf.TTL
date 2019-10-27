@@ -340,7 +340,7 @@ vf:hasPointInTime a         owl:DatatypeProperty ;
         rdfs:domain         [ owl:unionOf (vf:Intent vf:EconomicEvent vf:Commitment) ] ;
         rdfs:range          xsd:dateTimeStamp ;
         vs:term_status      "unstable" ;
-        rdfs:comment        “The planned or actual time of a flow. Can be used instead of beginning and end." .
+        rdfs:comment        “The planned or actual time of a flow; can be used instead of beginning and end." .
 
 vf:accountingQuantity a     owl:ObjectProperty ;
         rdfs:label          "accounting quantity" ;
