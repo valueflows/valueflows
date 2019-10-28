@@ -323,24 +323,46 @@ vf:containedIn a            owl:ObjectProperty ;
         rdfs:comment        "Used when a stock economic resource contains units also defined as economic resources." .
 
 vf:hasBeginning a           owl:DatatypeProperty ;
-        rdfs:domain         time:TemporalEntity ;
+        rdfs:domain         [ owl:unionOf (
+                                time:TemporalEntity
+                                vf:Commitment
+                                vf:EconomicEvent
+                                vf:Intent
+                                vf:Proposal
+                                vf:Scenario
+                                vf:Process) ] ;
         rdfs:range          xsd:dateTimeStamp ;
         vs:term_status      "unstable" ;
         owl:propertyChainAxiom (time:hasBeginning time:inXSDDateTimeStamp) ;
         rdfs:comment        "The planned or actual beginning of a flow or process." .
 
 vf:hasEnd a                 owl:DatatypeProperty ;
-        rdfs:domain         time:TemporalEntity ;
+        rdfs:domain         [ owl:unionOf (
+                                time:TemporalEntity
+                                vf:Commitment
+                                vf:EconomicEvent
+                                vf:Intent
+                                vf:Proposal
+                                vf:Scenario
+                                vf:Process) ] ;
         rdfs:range          xsd:dateTimeStamp ;
         vs:term_status      "unstable" ;
         owl:propertyChainAxiom (time:hasEnd time:inXSDDateTimeStamp) ;
         rdfs:comment        "The planned or actual end of a flow or process." .
 
 vf:hasPointInTime a         owl:DatatypeProperty ;
-        rdfs:domain         [ owl:unionOf (vf:Intent vf:EconomicEvent vf:Commitment) ] ;
+        rdfs:domain         [ owl:unionOf (
+                                time:Instant
+                                vf:Commitment
+                                vf:EconomicEvent
+                                vf:Intent) ] ;
         rdfs:range          xsd:dateTimeStamp ;
         vs:term_status      "unstable" ;
-        rdfs:comment        “The planned or actual time of a flow; can be used instead of beginning and end." .
+        owl:equivalentProperty  time:inXSDDateTimeStamp ;
+        rdfs:comment        "The planned or actual time of a flow; can be used instead of hasBeginning and hasEnd, if so, hasBeginning and hasEnd should be able to be returned with this value." .
+
+time:hasDuration
+        rdfs:domain         [ owl:unionOf (vf:RecipeProcess vf:ScenarioDefinition) ] .
 
 vf:accountingQuantity a     owl:ObjectProperty ;
         rdfs:label          "accounting quantity" ;
