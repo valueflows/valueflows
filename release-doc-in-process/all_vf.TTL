@@ -364,6 +364,16 @@ vf:hasPointInTime a         owl:DatatypeProperty ;
 time:hasDuration
         rdfs:domain         [ owl:unionOf (vf:RecipeProcess vf:ScenarioDefinition) ] .
 
+vf:due a                    owl:DatatypeProperty ;
+        rdfs:domain         [ owl:unionOf (
+                                vf:Plan
+                                vf:Commitment
+                                vf:Claim
+                                vf:Intent) ] ;
+        rdfs:range          xsd:dateTimeStamp ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "The time something is expected to be complete." .
+
 vf:accountingQuantity a     owl:ObjectProperty ;
         rdfs:label          "accounting quantity" ;
         rdfs:domain         vf:EconomicResource ;
