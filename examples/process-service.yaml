@@ -32,14 +32,15 @@
     classifiedAs: https://www.wikidata.org/wiki/Q53953506 # 3D printer
     accountingQuantity:
       qudt:unit: unit:Number
-      qudt:numericValue: 1
+      om2:hasUnit: om2:one
+      om2:hasNumericalValue: 1
 
   - '@id': training:6b97b1be-8e07-44ac-82e5-214f1b2aaf33
     '@type': EconomicResource
     conformsTo: training:52f0e212-3c4f-4d27-b345-5e964c135824 # 3D printing class handout
     accountingQuantity:
-      qudt:unit: unit:Number
-      qudt:numericValue: 100
+      om2:hasUnit: om2:one
+      om2:hasNumericalValue: 100
 
   # Service delivery
 
@@ -55,8 +56,8 @@
     receiver: https://training.example/
     involves: training:6b97b1be-8e07-44ac-82e5-214f1b2aaf33 # workshop handout
     resourceQuantity:
-      qudt:unit: unit:Number
-      qudt:numericValue: 3
+      om2:hasUnit: om2:one
+      om2:hasNumericalValue: 3
 
   - '@id': training:b52a5815-fae9-43bf-be95-833b95dc0adb
     '@type': EconomicEvent
@@ -66,8 +67,8 @@
     receiver: https://training.example/
     involves: training:e1721a61-cd47-4556-84b9-8b1b81da15bf # 3D printer
     effortQuantity:
-      qudt:unit: unit:Hour
-      qudt:numericValue: 8
+      om2:hasUnit: om2:hour
+      om2:hasNumericalValue: 8
 
   - '@id': training:a8236bbb-81e0-422d-9861-56d2417db0fb
     '@type': EconomicEvent
@@ -77,8 +78,8 @@
     receiver: https://training.example/
     resourceConformsTo: training:f438393-7f87-4914-806c-e23a4fd15e89 # 3D printer training
     effortQuantity:
-      qudt:unit: unit:Hour
-      qudt:numericValue: 8
+      om2:hasUnit: om2:hour
+      om2:hasNumericalValue: 8
 
   - '@id': training:d4d2fd71-34f2-41c3-b1c5-19ad5ed2da59
     '@type': EconomicEvent
@@ -88,8 +89,8 @@
     receiver: https://alice.example/
     resourceConformsTo: training:3129ca8b-fcda-45be-bbda-294dc924d3b9 # one day 3D printing workshop
     resourceQuantity:
-      qudt:unit: unit:Number
-      qudt:numericValue: 1
+      om2:hasUnit: om2:one
+      om2:hasNumericalValue: 1
 
   - '@id': training:583e83d9-a46d-44ff-bd71-88513a1d83c0
     '@type': EconomicEvent
@@ -99,8 +100,8 @@
     receiver: https://bob.example/
     resourceConformsTo: training:3129ca8b-fcda-45be-bbda-294dc924d3b9 # one day 3D printing workshop
     resourceQuantity:
-      qudt:unit: unit:Number
-      qudt:numericValue: 1
+      om2:hasUnit: om2:one
+      om2:hasNumericalValue: 1
 
   - '@id': training:e4783bef-9006-490c-9c03-389272c7444d
     '@type': EconomicEvent
@@ -110,5 +111,5 @@
     receiver: https://carol.example/
     resourceConformsTo: training:3129ca8b-fcda-45be-bbda-294dc924d3b9 # one day 3D printing workshop
     resourceQuantity:
-      qudt:unit: unit:Number
-      qudt:numericValue: 1
+      om2:hasUnit: om2:one
+      om2:hasNumericalValue: 1

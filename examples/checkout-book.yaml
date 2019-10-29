@@ -12,11 +12,11 @@
     '@type': EconomicResource
     skos:note: Valueflows cookbook ISBN:1234 copy 2
     accountingQuantity:
-      qudt:unit: unit:Number
-      qudt:numericValue: 1
+      om2:hasUnit: om2:one
+      om2:hasNumericalValue: 1
     onhandQuantity:
-      qudt:unit: unit:Number
-      qudt:numericValue: 1
+      om2:hasUnit: om2:one
+      om2:hasNumericalValue: 1
 
   # check out
 
@@ -33,8 +33,8 @@
     provider: https://library.example/
     receiver: https://bob.example/
     resourceQuantity: 
-      qudt:unit: unit:Number
-      qudt:numericValue: 1
+      om2:hasUnit: om2:one
+      om2:hasNumericalValue: 1
 
   - '@id': urn:uuid:98c2bfeb-9c70-4801-896c-4646b975a7d9
     '@type': Commitment
@@ -44,8 +44,8 @@
     provider: https://bob.example/
     receiver: https://library.example/
     resourceQuantity:
-      qudt:unit: unit:Number
-      qudt:numericValue: 1
+      om2:hasUnit: om2:one
+      om2:hasNumericalValue: 1
     time:before: 2019-05-17T18:00:00-5:00
 
   # resource after check out
@@ -54,11 +54,11 @@
     '@type': EconomicResource
     skos:note: Valueflows cookbook ISBN:1234 copy 2
     accountingQuantity:
-      qudt:unit: unit:Number
-      qudt:numericValue: 1
+      om2:hasUnit: om2:one
+      om2:hasNumericalValue: 1
     onhandQuantity:
-      qudt:unit: unit:Number
-      qudt:numericValue: 0
+      om2:hasUnit: unit:Number
+      om2:hasNumericalValue: 0
 
   # return
 
@@ -70,8 +70,8 @@
     provider: https://bob.example/
     receiver: https://library.example/
     resourceQuantity:
-      qudt:unit: unit:Number
-      qudt:numericValue: 1
+      om2:hasUnit: om2:one
+      om2:hasNumericalValue: 1
     time:inXSDDateTimeStamp: 2019-05-14T10:20:00-5:00
 
   - '@id': urn:uuid:6f438393-7f87-4914-806c-e23a4fd15e89
@@ -79,8 +79,8 @@
     fulfills: urn:uuid:98c2bfeb-9c70-4801-896c-4646b975a7d9 # the commitment
     fulfilledBy: urn:uuid:d4d2fd71-34f2-41c3-b1c5-19ad5ed2da59 # the economic event
     resourceQuantity:
-      qudt:unit: unit:Number
-      qudt:numericValue: 1
+      om2:hasUnit: om2:one
+      om2:hasNumericalValue: 1
 
   # resource after return
 
@@ -88,8 +88,8 @@
     '@type': EconomicResource
     skos:note: Valueflows cookbook ISBN:1234 copy 2
     accountingQuantity:
-      qudt:unit: unit:Number
-      qudt:numericValue: 1
+      om2:hasUnit: om2:one
+      om2:hasNumericalValue: 1
     onhandQuantity:
-      qudt:unit: unit:Number
-      qudt:numericValue: 1
+      om2:hasUnit: om2:one
+      om2:hasNumericalValue: 1

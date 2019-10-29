@@ -21,19 +21,22 @@ https://www.w3.org/TR/vocab-org/
 
 * [`org:Organization`](https://www.w3.org/TR/vocab-org/#org:Organization)
 
-## QUDT
+## OM2
 
-http://qudt.org/doc/2016/DOC_SCHEMA-QUDT-v2.0.html
+http://www.ontology-of-units-of-measure.org/resource/om-2/
 
-* [`qudt:QuantityValue`](http://qudt.org/doc/2016/DOC_SCHEMA-QUDT-v2.0.html#Classes)
-* [`qudt:unit`](http://qudt.org/doc/2016/DOC_SCHEMA-QUDT-v2.0.html#Properties)
-* [`qudt:numericValue`](http://qudt.org/doc/2016/DOC_SCHEMA-QUDT-v2.0.html#Properties)
+* [`om2:Measure`](http://www.ontology-of-units-of-measure.org/resource/om-2/Measure)
+* [`om2:Unit`](http://www.ontology-of-units-of-measure.org/resource/om-2/Unit)
+    * A list of units can also be found here.  Each subclass on this page has an additional list of units.
+* [`om2:hasUnit`](http://www.ontology-of-units-of-measure.org/resource/om-2/hasUnit)
+* [`om2:hasNumericalValue`](http://www.ontology-of-units-of-measure.org/resource/om-2/hasNumericalValue)
 
-### UNIT
 
-http://qudt.org/doc/2017/DOC_VOCAB-UNITS-BASE.html
+### DTYPE
 
-* [`unit:Number`](http://qudt.org/doc/2017/DOC_VOCAB-UNITS-BASE.html#Instances)
+http://www.linkedmodel.org/schema/dtype#
+
+* [`dtype:numericUnion`](http://www.linkedmodel.org/schema/dtype#numericUnion)
 
 ## TIME
 

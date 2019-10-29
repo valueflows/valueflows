@@ -29,8 +29,8 @@
     action: produce
     recipeFlowResource: urn:uuid:b90b0b77-09a2-42e2-8bd4-e9ae2c1c6172 # delivery fiber
     resourceQuantity:
-      qudt:unit: unit:Meter
-      qudt:numericValue: .5
+      om2:hasUnit: om2:metre
+      om2:hasNumericalValue: .5
 
   - '@id': urn:uuid:e1721a61-cd47-4556-84b9-8b1b81da15bf
     '@type': RecipeProcess
@@ -43,8 +43,8 @@
     action: consume
     resourceClassifiedAs: wd:Q162 # optical fiber
     resourceQuantity:
-      qudt:unit: unit:Meter
-      qudt:numericValue: .5
+      om2:hasUnit: om2:metre
+      om2:hasNumericalValue: .5
     skos:note: Optical guide, can be of glass of polymer. Usually it comes in a cylindrical shape. Can be MM (multimode) or SM (single mode)
 
   - '@id': urn:uuid:60f4204e-b8d2-4026-8577-102c3f82c0af
@@ -53,8 +53,8 @@
     action: work
     resourceClassifiedAs: wd:Q640621 # optical engineering
     effortQuantity:
-      qudt:unit: unit:Hour
-      qudt:numericValue: 2
+      om2:hasUnit: om2:hour
+      om2:hasNumericalValue: 2
 
   # the plan
 
@@ -74,8 +74,8 @@
     receiver: https://sensorica.example/
     resourceConformsTo: urn:uuid:b90b0b77-09a2-42e2-8bd4-e9ae2c1c6172 # delivery fiber
     resourceQuantity:
-      qudt:unit: unit:Meter
-      qudt:numericValue: .5
+      om2:hasUnit: om2:metre
+      om2:hasNumericalValue: .5
 
   - '@id': sensor:02b39a30-3e04-4305-9656-7f261aa63c84
     '@type': Process
@@ -91,8 +91,8 @@
     receiver: https://sensorica.example/
     resourceClassifiedAs: wd:Q162 # optical fiber
     resourceQuantity:
-      qudt:unit: unit:Meter
-      qudt:numericValue: .5
+      om2:hasUnit: om2:metre
+      om2:hasNumericalValue: .5
     skos:note: Optical guide, can be of glass of polymer. Usually it comes in a cylindrical shape. Can be MM (multimode) or SM (single mode)
 
   - '@id': sensor:52f0e212-3c4f-4d27-b345-5e964c135824
@@ -103,5 +103,5 @@
     receiver: https://sensorica.example/
     resourceClassifiedAs: wd:Q640621 # optical engineering
     effortQuantity:
-      qudt:unit: unit:Hour
-      qudt:numericValue: 2
+      om2:hasUnit: om2:hour
+      om2:hasNumericalValue: 2

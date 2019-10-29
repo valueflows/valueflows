@@ -1,4 +1,5 @@
 # Example: Simple operational plan
+# Not used, if we do use it, it needs to be upgraded
 
 '@context':
   - https://git.io/vf-examples-jsonld-context
@@ -27,7 +28,7 @@
     receiver: https://csa.example/
     resourceClassifiedAs: csa:6b97b1be-8e07-44ac-82e5-214f1b2aaf33 # seeds
     flowQuantity:
-      qudt:unit: unit:Kg
+      om2:hasUnit: unit:Kg
       qudt:numericValue: 1000
 
   - '@id': csa:b52a5815-fae9-43bf-be95-833b95dc0adb
@@ -38,7 +39,7 @@
     receiver: https://csa.example/
     resourceInventoriedAs: csa:3129ca8b-fcda-45be-bbda-294dc924d3b9 # paper
     flowQuantity:
-      qudt:unit: unit:Number
+      om2:hasUnit: unit:Number
       qudt:numericValue: 1020
 
   - '@id': csa:33e8933b-ff73-4a01-964a-ca7a98893083
@@ -50,7 +51,7 @@
     receiver: https://csa.example/
     resourceInventoriedAs: csa:6078f30a-b15b-4b1c-8e77-797abae11378 # specific posters
     flowQuantity:
-      qudt:unit: unit:Number
+      om2:hasUnit: unit:Number
       qudt:numericValue: 35
 
   - '@id': csa:60f4204e-b8d2-4026-8577-102c3f82c0af
@@ -61,7 +62,7 @@
     receiver: https://csa.example/
     resourceInventoriedAs: csa:e56fd654-7b94-4d96-8e60-de39e08329a7 # paper
     flowQuantity:
-      qudt:unit: unit:Number
+      om2:hasUnit: unit:Number
       qudt:numericValue: 35
 
   - '@id': csa:b90b0b77-09a2-42e2-8bd4-e9ae2c1c6172

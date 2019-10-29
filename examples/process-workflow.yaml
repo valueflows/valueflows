@@ -15,8 +15,8 @@
     resourceConformsTo: http://opensourceecology.org/wiki/Wikispeed_SGT01 # car
     trackingIdentifier: JHMCD38698S061469
     accountingQuantity:
-      qudt:unit: unit:Number
-      qudt:numericValue: 1
+      om2:hasUnit: om2:one
+      om2:hasNumericalValue: 1
 
   # Repair process
 
@@ -33,8 +33,8 @@
     receiver: https://auto-repair.example/
     resourceInventoriedAs: alice:e1721a61-cd47-4556-84b9-8b1b81da15bf
     resourceQuantity:
-      qudt:unit: unit:Number
-      qudt:numericValue: 1
+      om2:hasUnit: om2:one
+      om2:hasNumericalValue: 1
 
   - '@id': repair:52f0e212-3c4f-4d27-b345-5e964c135824
     '@type': EconomicEvent
@@ -44,8 +44,8 @@
     receiver: https://alice.example/
     resourceInventoriedAs: alice:e1721a61-cd47-4556-84b9-8b1b81da15bf
     resourceQuantity:
-      qudt:unit: unit:Number
-      qudt:numericValue: 1
+      om2:hasUnit: om2:one
+      om2:hasNumericalValue: 1
 
   # Economic resource after
 
@@ -54,5 +54,5 @@
     resourceConformsTo: http://opensourceecology.org/wiki/Wikispeed_SGT01 # car
     trackingIdentifier: JHMCD38698S061469
     accountingQuantity:
-      qudt:unit: unit:Number
-      qudt:numericValue: 1
+      om2:hasUnit: om2:one
+      om2:hasNumericalValue: 1

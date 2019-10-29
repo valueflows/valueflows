@@ -12,20 +12,20 @@
   - '@id': urn:uuid:3be5259d-10f0-431c-9fec-9c0c15a461d3
     '@type': ResourceSpecification
     name: Bucket white 5 gallon
-    unitOfResource: unit:Number
+    unitOfResource: om2:one
     substitutable: true
 
   - '@id': urn:uuid:d4d2fd71-34f2-41c3-b1c5-19ad5ed2da58
     '@type': ResourceSpecification
     name: Thermoplastic polymer white
-    unitOfResource: unit:Kilogram
+    unitOfResource: om2:kilogram
     substitutable: true
 
   - '@id': urn:uuid:c7897c39-7f05-4a5d-a487-80e130a2414a
     '@type': ResourceSpecification
     name: Injection molding machine
-    unitOfResource: unit:Number
-    unitOfEffort: unit:Hour
+    unitOfResource: om2:one
+    unitOfEffort: om2:hour
     substitutable: true
 
   - '@id': mfg:27be5cab-d740-4194-9298-1661a69d9d95
@@ -43,16 +43,16 @@
     name: Bucket white 5 gallon
     resourceConformsTo: urn:uuid:3be5259d-10f0-431c-9fec-9c0c15a461d3
     accountingQuantity:
-      qudt:unit: unit:Number
-      qudt:numericValue: 320
+      om2:hasUnit: om2:one
+      om2:hasNumericalValue: 320
 
   - '@id': mfg:6b5bc786-b9ed-4189-b34f-5ef7d10f1f86
     '@type': EconomicResource
     name: Thermoplastic polymer white
     resourceConformsTo: urn:uuid:d4d2fd71-34f2-41c3-b1c5-19ad5ed2da58
     accountingQuantity:
-      qudt:unit: unit:Kilograms
-      qudt:numericValue: 2455
+      om2:hasUnit: om2:kilogram
+      om2:hasNumericalValue: 2455
 
   - '@id': mfg:23799c14-c368-4653-a584-83bf9ae8b82a
     '@type': EconomicResource
@@ -60,9 +60,9 @@
     resourceConformsTo: urn:uuid:c7897c39-7f05-4a5d-a487-80e130a2414a
     trackingIdentifier: DDE098989099911
     accountingQuantity:
-      qudt:unit: unit:Number
-      qudt:numericValue: 1
-    unitOfEffort: unit:Hour
+      om2:hasUnit: om2:one
+      om2:hasNumericalValue: 1
+    unitOfEffort: om2:hour
 
   # the recipe (the recipe runs "backwards" from the final product)
 
@@ -76,8 +76,8 @@
     action: pass
     recipeFlowResource: mfg:ac9ec98d-db80-44dc-97be-7aa149b2fe5d
     resourceQuantity:
-      qudt:unit: unit:Number
-      qudt:numericValue: 500
+      om2:hasUnit: om2:one
+      om2:hasNumericalValue: 500
 
   - '@id': mfg:a3be5259d-10f0-431c-9fec-9c0c15a461d3
     '@type': RecipeResource
@@ -89,8 +89,8 @@
     action: fail
     recipeFlowResource: mfg:a3be5259d-10f0-431c-9fec-9c0c15a461d3
     resourceQuantity:
-      qudt:unit: unit:Kilogram
-      qudt:numericValue: 0
+      om2:hasUnit: om2:kilogram
+      om2:hasNumericalValue: 0
 
   - '@id': mfg:a8356625-bf64-4c16-9099-28aa1b718c4b
     '@type': RecipeProcess
@@ -107,8 +107,8 @@
     recipeFlowResource: mfg:b75d8f6a-e2df-4e52-b36d-1a22a66f4ead
     stage: mfg:27be5cab-d740-4194-9298-1661a69d9d95 # 'make' process specification
     resourceQuantity:
-      qudt:unit: unit:Number
-      qudt:numericValue: 500
+      om2:hasUnit: om2:one
+      om2:hasNumericalValue: 500
 
   - '@id': mfg:b75d8f6a-e2df-4e52-b36d-1a22a66f4ead
     '@type': RecipeResource
@@ -120,8 +120,8 @@
     action: produce
     recipeFlowResource: mfg:b75d8f6a-e2df-4e52-b36d-1a22a66f4ead
     resourceQuantity:
-      qudt:unit: unit:Number
-      qudt:numericValue: 500
+      om2:hasUnit: om2:one
+      om2:hasNumericalValue: 500
 
   - '@id': mfg:e1721a61-cd47-4556-84b9-8b1b81da15bf
     '@type': RecipeProcess
@@ -137,8 +137,8 @@
     action: consume
     recipeFlowResource: mfg:6405b8ad-0ac2-4d58-abdb-0808903c78ad
     resourceQuantity:
-      qudt:unit: unit:Kilogram
-      qudt:numericValue: 450
+      om2:hasUnit: om2:kilogram
+      om2:hasNumericalValue: 450
 
   - '@id': mfg:6405b8ad-0ac2-4d58-abdb-0808903c78ad
     '@type': RecipeResource
@@ -150,8 +150,8 @@
     action: use
     recipeFlowResource: mfg:e02e3f6b-420a-4ba8-89b0-909d7363ce07
     effortQuantity:
-      qudt:unit: unit:Hour
-      qudt:numericValue: 5.5
+      om2:hasUnit: om2:hour
+      om2:hasNumericalValue: 5.5
 
   - '@id': mfg:e02e3f6b-420a-4ba8-89b0-909d7363ce07
     '@type': RecipeResource
@@ -172,8 +172,8 @@
     receiver: https://manufacturing.example/
     resourceConformsTo: urn:uuid:d4d2fd71-34f2-41c3-b1c5-19ad5ed2da58 # polymer
     resourceQuantity:
-      qudt:unit: unit:Kilogram
-      qudt:numericValue: 900
+      om2:hasUnit: om2:kilogram
+      om2:hasNumericalValue: 900
 
   - '@id': mfg:52f0e212-3c4f-4d27-b345-5e964c135824
     '@type': Commitment
@@ -183,8 +183,8 @@
     receiver: https://manufacturing.example/
     resourceConformsTo: urn:uuid:c7897c39-7f05-4a5d-a487-80e130a2414a # injection molding machine
     effortQuantity:
-      qudt:unit: unit:Hour
-      qudt:numericValue: 11
+      om2:hasUnit: om2:hour
+      om2:hasNumericalValue: 11
 
   - '@id': mfg:02b39a30-3e04-4305-9656-7f261aa63c84
     '@type': Process
@@ -203,8 +203,8 @@
     receiver: https://manufacturing.example/
     resourceConformsTo: urn:uuid:3be5259d-10f0-431c-9fec-9c0c15a461d3 # bucket
     resourceQuantity:
-      qudt:unit: unit:Number
-      qudt:numericValue: 1000
+      om2:hasUnit: om2:one
+      om2:hasNumericalValue: 1000
 
   - '@id': mfg:fbff9852-36ca-4364-a943-bc0b49e1cab5
     '@type': Commitment
@@ -215,8 +215,8 @@
     resourceConformsTo: urn:uuid:3be5259d-10f0-431c-9fec-9c0c15a461d3 # bucket
     stage: mfg:27be5cab-d740-4194-9298-1661a69d9d95 # 'make' process specification
     resourceQuantity:
-      qudt:unit: unit:Number
-      qudt:numericValue: 1000
+      om2:hasUnit: om2:one
+      om2:hasNumericalValue: 1000
 
   - '@id': mfg:8baa8ff7-9c1e-4586-ae7b-79d620a3cac9
     '@type': Process
@@ -236,8 +236,8 @@
     receiver: https://manufacturing.example/
     resourceConformsTo: urn:uuid:3be5259d-10f0-431c-9fec-9c0c15a461d3 # bucket
     resourceQuantity:
-      qudt:unit: unit:Number
-      qudt:numericValue: 1000
+      om2:hasUnit: om2:one
+      om2:hasNumericalValue: 1000
 
   # manufacture and test the buckets according to plan
 
@@ -249,8 +249,8 @@
     receiver: https://manufacturing.example/
     resourceInventoriedAs: mfg:6b5bc786-b9ed-4189-b34f-5ef7d10f1f86 # polymer stock
     resourceQuantity:
-      qudt:unit: unit:Kilogram
-      qudt:numericValue: 925
+      om2:hasUnit: om2:kilogram
+      om2:hasNumericalValue: 925
 
   - '@id': mfg:5d2fe7da-b91b-4dab-91d9-68db80c1feb7
     '@type': EconomicEvent
@@ -260,8 +260,8 @@
     receiver: https://manufacturing.example/
     resourceInventoriedAs: mfg:23799c14-c368-4653-a584-83bf9ae8b82a # the machine
     effortQuantity:
-      qudt:unit: unit:Hour
-      qudt:numericValue: 10.7
+      om2:hasUnit: om2:hour
+      om2:hasNumericalValue: 10.7
 
   - '@id': mfg:8791913c-0152-4c32-bb3f-f25d61df736c
     '@type': EconomicEvent
@@ -271,8 +271,8 @@
     receiver: https://manufacturing.example/
     resourceInventoriedAs: mfg:3129ca8b-fcda-45be-bbda-294dc924d3b9 # buckets
     resourceQuantity:
-      qudt:unit: unit:Number
-      qudt:numericValue: 1000
+      om2:hasUnit: om2:one
+      om2:hasNumericalValue: 1000
 
   - '@id': mfg:a8236bbb-81e0-422d-9861-56d2417db0fb
     '@type': EconomicEvent
@@ -282,8 +282,8 @@
     receiver: https://manufacturing.example/
     resourceInventoriedAs: mfg:3129ca8b-fcda-45be-bbda-294dc924d3b9 #buckets
     resourceQuantity:
-      qudt:unit: unit:Number
-      qudt:numericValue: 1000
+      om2:hasUnit: om2:one
+      om2:hasNumericalValue: 1000
 
   - '@id': mfg:52f0e212-3c4f-4d27-b345-5e964c135824
     '@type': EconomicEvent
@@ -293,8 +293,8 @@
     receiver: https://manufacturing.example/
     resourceInventoriedAs: mfg:3129ca8b-fcda-45be-bbda-294dc924d3b9 # buckets
     resourceQuantity:
-      qudt:unit: unit:Number
-      qudt:numericValue: 998
+      om2:hasUnit: om2:one
+      om2:hasNumericalValue: 998
 
   - '@id': mfg:e1721a61-cd47-4556-84b9-8b1b81da15bf
     '@type': EconomicEvent
@@ -304,8 +304,8 @@
     receiver: https://manufacturing.example/
     resourceInventoriedAs: mfg:6b5bc786-b9ed-4189-b34f-5ef7d10f1f86 # polymer stock
     resourceQuantity:
-      qudt:unit: unit:Kilograms
-      qudt:numericValue: 1.8
+      om2:hasUnit: om2:kilogram
+      om2:hasNumericalValue: 1.8
 
   # resources after
 
@@ -314,16 +314,16 @@
     name: Bucket white 5 gallon
     resourceConformsTo: urn:uuid:3be5259d-10f0-431c-9fec-9c0c15a461d3
     accountingQuantity:
-      qudt:unit: unit:Number
-      qudt:numericValue: 1318
+      om2:hasUnit: om2:one
+      om2:hasNumericalValue: 1318
 
   - '@id': mfg:6b5bc786-b9ed-4189-b34f-5ef7d10f1f86
     '@type': EconomicResource
     name: Thermoplastic polymer white
     resourceConformsTo: urn:uuid:d4d2fd71-34f2-41c3-b1c5-19ad5ed2da58
     accountingQuantity:
-      qudt:unit: unit:Kilograms
-      qudt:numericValue: 1531.8
+      om2:hasUnit: om2:kilogram
+      om2:hasNumericalValue: 1531.8
 
   - '@id': mfg:23799c14-c368-4653-a584-83bf9ae8b82a
     '@type': EconomicResource
@@ -331,6 +331,6 @@
     resourceConformsTo: urn:uuid:c7897c39-7f05-4a5d-a487-80e130a2414a
     trackingIdentifier: DDE098989099911
     accountingQuantity:
-      qudt:unit: unit:Number
-      qudt:numericValue: 1
-    unitOfEffort: unit:Hour
+      om2:hasUnit: om2:one
+      om2:hasNumericalValue: 1
+    unitOfEffort: om2:hour

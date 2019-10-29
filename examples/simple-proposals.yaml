@@ -38,8 +38,8 @@
     receiver: https://alice.example/
     resourceClassifiedAs: https://www.wikidata.org/wiki/Q4917 # US Dollar
     resourceQuantity:
-      qudt:unit: unit:Number
-      qudt:numericValue: 15
+      om2:hasUnit: om2:one
+      om2:hasNumericalValue: 15
 
   - '@id': alice:f325a950-5737-488d-b122-8f21114d0eb0
     '@type': ProposedIntent
