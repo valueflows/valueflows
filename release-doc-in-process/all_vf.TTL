@@ -28,9 +28,13 @@ vf:Action  a                 owl:Class ;
 
 vf:AgentRelationshipRole  a  owl:Class ;
         rdfs:label           "vf:AgentRelationshipRole" ;
-        rdfs:subClassOf      rdf:Property ;
         vs:term_status       "unstable" ;
         rdfs:comment         "A relationship role defining the kind of association one agent can have with another." .
+
+vf:AgentRoleBehavior  a      owl:Class ;
+        rdfs:label           "vf:AgentRoleBehavior" ;
+        vs:term_status       "unstable" ;
+        rdfs:comment         "A globally defined kind of agent relationship role." .
 
 vf:RecipeResource a         owl:Class ;
         rdfs:label          "vf:RecipeResource" ;
@@ -659,12 +663,26 @@ vf:mappableAddress a        owl:ObjectProperty ;
         vs:term_status      "unstable" ;
         rdfs:comment        "A textual address that can be mapped using mapping software." .
 
-vf:inverseLabel a           owl:DatatypeProperty ;
-        rdfs:label          "inverse label" ;
+vf:roleLabel a              owl:DatatypeProperty ;
+        rdfs:label          "role label" ;
         rdfs:domain         vf:AgentRelationshipRole ;
-        rdfs:range          rdfs:label ;
+        rdfs:range          xsd:string ;
         vs:term_status      "unstable" ;
-        rdfs:comment        "The human readable name of the role, inverse from the object to the subject." .
+        rdfs:comment        "The human readable name of the role, inverse from the object to the subject. For example, 'is member of'." .
+
+vf:inverseRoleLabel a       owl:DatatypeProperty ;
+        rdfs:label          "inverse role label" ;
+        rdfs:domain         vf:AgentRelationshipRole ;
+        rdfs:range          xsd:string ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "The human readable name of the role, inverse from the object to the subject. For example, 'has member'." .
+
+vf:behavesAs a              owl:DatatypeProperty ;
+        rdfs:label          "behaves as" ;
+        rdfs:domain         vf:AgentRelationshipRole ;
+        rdfs:range          vf:AgentRoleBehavior ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "The kind of agent relationship role, defining common behaviors, so that relationship roles can be labeled as desired." .
 
 
 # ################################ action verbs
@@ -772,3 +790,41 @@ vf:move  a                  vf:Action ;
         rdfs:label          "move" ;
         vs:term_status      "unstable" ;
         rdfs:comment        "Change location and possibly identifier, if location is part of the identification, of a resource with no change of agent rights or possession." .
+
+
+
+
+
+
+# Agent role behaviors
+
+vf:member a                 owl:NamedIndividual ,
+                            vf:AgentRoleBehavior ;
+        rdfs:comment        "An agent who is part of a group and participates in the group. Members can be people or organizations." ;
+        rdfs:label          "member" ;
+        vs:term_status      "unstable" .
+
+vf:tradingPartner a         owl:NamedIndividual ,
+                            vf:AgentRoleBehavior ;
+        rdfs:comment        "An agent who trades with with another agent, often with a supplier or customer relationship." ;
+        rdfs:label          "trading partner" ;
+        vs:term_status      "unstable" .
+
+vf:partOf a                 owl:NamedIndividual ,
+                            vf:AgentRoleBehavior ;
+        rdfs:comment        "An organization that is part of or a sub-organization of another organization.  Implies that the agent is not part of any other organization." ;
+        rdfs:label          "part of" ;
+        vs:term_status      "unstable" .
+
+vf:follower a               owl:NamedIndividual ,
+                            vf:AgentRoleBehavior ;
+        rdfs:comment        "An agent who registers to be notified and able to view activities of another agent.  This is a one-direction relationship." ;
+        rdfs:label          "follower" ;
+        vs:term_status      "unstable" .
+
+vf:other a                  owl:NamedIndividual ,
+                            vf:AgentRoleBehavior ;
+        rdfs:comment        "Any role behavior not otherwise defined." ;
+        rdfs:label          "other" ;
+        vs:term_status      "unstable" .
+
