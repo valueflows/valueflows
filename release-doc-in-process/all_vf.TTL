@@ -710,7 +710,7 @@ vf:resourceEffect a         owl:ObjectProperty ;
 
 vf:accept a                 owl:NamedIndividual ,
                             vf:Action ;
-        vf:inputOutput      vf:no ;
+        vf:inputOutput      vf:input ;
         vf:pairsWith        vf:modify ;
         vf:resourceEffect   vf:noEffect ;
         rdfs:comment        "In processes like repair or modification or testing, the same resource will appear in the output." ;
