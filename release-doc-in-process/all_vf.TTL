@@ -55,7 +55,7 @@ vf:ProcessSpecification a   owl:Class ;
 vf:RecipeFlow a             owl:Class ;
         rdfs:label          "vf:RecipeFlow" ;
         vs:term_status      "unstable" ;
-        rdfs:comment        "The specification of a resource inflow to, or outflow from, a recipe process.." .
+        rdfs:comment        "The specification of a resource inflow to, or outflow from, a recipe process." .
 
 vf:ScenarioDefinition a     owl:Class ;
         rdfs:label          "vf:ScenarioDefinition" ;
@@ -358,7 +358,7 @@ vf:hasPointInTime a         owl:DatatypeProperty ;
                                 vf:Intent) ] ;
         rdfs:range          xsd:dateTimeStamp ;
         vs:term_status      "unstable" ;
-        owl:equivalentProperty  time:inXSDDateTimeStamp ;
+        owl:propertyChainAxiom (time:hasEnd time:inXSDDateTimeStamp) ;
         rdfs:comment        "The planned or actual time of a flow; can be used instead of hasBeginning and hasEnd, if so, hasBeginning and hasEnd should be able to be returned with this value." .
 
 time:hasDuration
