@@ -11,8 +11,10 @@ One of the purposes of this vocab is to support resource flows connecting many s
 
 The vocabulary is presented in several ways, as Linked Open Data using the Resource Description Framework (RDF) family of languages, as well as a GraphQL API and a UML model, and other notations to come. We want to support RDF based and non-RDF based use of the vocabulary, basically any way that people want to use software and data on the internet to help create economic networks.
 
-If this document seems too much to start with, or you just want a quicker overview, you can start here with a [ValueFlows Story](http://mikorizal.org/ValueFlows-Story.pdf).
+If this document seems too much to start with, or you just want a quicker overview, you can start here with a [ValueFlows Story](http://mikorizal.org/ValueFlows-Story.pdf) about apple pie (yum!).
 
 You can find us [here on github](https://github.com/valueflows).  Or come on over and ask questions in the [Welcome Chat](https://gitter.im/valueflows/welcome).
+
+<hr/>
 
 <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This vocabulary and documentation is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
