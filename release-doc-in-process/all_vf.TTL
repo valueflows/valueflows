@@ -378,6 +378,18 @@ vf:unitBased  a             owl:DatatypeProperty ;
         vs:term_status      "unstable" ;
         rdfs:comment        "This proposal contains unit based quantities, which can be multipied to create commitments; commonly seen in a price list or e-commerce." .
 
+dcterms:created 
+        rdfs:domain         [ owl:unionOf (vf:Agreement vf:Claim vf:Commitment vf:Plan vf:Proposal) ] .
+
+geo:long
+        rdfs:range          xsd:double .
+
+geo:lat
+        rdfs:range          xsd:double .
+
+geo:alt
+        rdfs:range          xsd:double .
+
 vf:currentLocation a        owl:ObjectProperty ;
         rdfs:label          "current location" ;
         rdfs:domain         vf:EconomicResource ;
