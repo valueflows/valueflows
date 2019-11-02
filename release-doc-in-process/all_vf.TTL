@@ -54,7 +54,7 @@ vf:ProcessSpecification a   owl:Class ;
 vf:RecipeFlow a             owl:Class ;
         rdfs:label          "vf:RecipeFlow" ;
         vs:term_status      "unstable" ;
-        rdfs:comment        "The specification of a resource inflow to, or outflow from, a recipe process.." .
+        rdfs:comment        "The specification of a resource inflow to, or outflow from, a recipe process." .
 
 vf:ScenarioDefinition a     owl:Class ;
         rdfs:label          "vf:ScenarioDefinition" ;
@@ -323,6 +323,13 @@ vf:containedIn a            owl:ObjectProperty ;
 
 vf:hasBeginning a           owl:DatatypeProperty ;
         rdfs:domain         time:TemporalEntity ;
+        rdfs:domain         [ owl:unionOf (
+                                vf:Commitment
+                                vf:EconomicEvent
+                                vf:Intent
+                                vf:Proposal
+                                vf:Scenario
+                                vf:Process) ] ;
         rdfs:range          xsd:dateTimeStamp ;
         vs:term_status      "unstable" ;
         owl:propertyChainAxiom (time:hasBeginning time:inXSDDateTimeStamp) ;
@@ -330,10 +337,41 @@ vf:hasBeginning a           owl:DatatypeProperty ;
 
 vf:hasEnd a                 owl:DatatypeProperty ;
         rdfs:domain         time:TemporalEntity ;
+        rdfs:domain         [ owl:unionOf (
+                                vf:Commitment
+                                vf:EconomicEvent
+                                vf:Intent
+                                vf:Proposal
+                                vf:Scenario
+                                vf:Process) ] ;
         rdfs:range          xsd:dateTimeStamp ;
         vs:term_status      "unstable" ;
         owl:propertyChainAxiom (time:hasEnd time:inXSDDateTimeStamp) ;
         rdfs:comment        "The planned or actual end of a flow or process." .
+
+vf:hasPointInTime a         owl:DatatypeProperty ;
+        rdfs:domain         time:Instant ;
+        rdfs:domain         [ owl:unionOf (
+                                vf:Commitment
+                                vf:EconomicEvent
+                                vf:Intent) ] ;
+        rdfs:range          xsd:dateTimeStamp ;
+        vs:term_status      "unstable" ;
+        owl:propertyChainAxiom (time:hasEnd time:inXSDDateTimeStamp) ;
+        rdfs:comment        "The planned or actual time of a flow; can be used instead of hasBeginning and hasEnd, if so, hasBeginning and hasEnd should be able to be returned with this value." .
+
+time:hasDuration
+        rdfs:domain         [ owl:unionOf (vf:RecipeProcess vf:ScenarioDefinition) ] .
+
+vf:due a                    owl:DatatypeProperty ;
+        rdfs:domain         [ owl:unionOf (
+                                vf:Plan
+                                vf:Commitment
+                                vf:Claim
+                                vf:Intent) ] ;
+        rdfs:range          xsd:dateTimeStamp ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "The time something is expected to be complete." .
 
 vf:accountingQuantity a     owl:ObjectProperty ;
         rdfs:label          "accounting quantity" ;
