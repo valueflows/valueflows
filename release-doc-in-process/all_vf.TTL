@@ -28,7 +28,6 @@ vf:Action  a                 owl:Class ;
 
 vf:AgentRelationshipRole  a  owl:Class ;
         rdfs:label           "vf:AgentRelationshipRole" ;
-        rdfs:subClassOf      rdf:Property ;
         vs:term_status       "unstable" ;
         rdfs:comment         "A relationship role defining the kind of association one agent can have with another." .
 
@@ -671,12 +670,19 @@ vf:mappableAddress a        owl:ObjectProperty ;
         vs:term_status      "unstable" ;
         rdfs:comment        "A textual address that can be mapped using mapping software." .
 
-vf:inverseLabel a           owl:DatatypeProperty ;
-        rdfs:label          "inverse label" ;
+vf:roleLabel a              owl:DatatypeProperty ;
+        rdfs:label          "role label" ;
         rdfs:domain         vf:AgentRelationshipRole ;
-        rdfs:range          rdfs:label ;
+        rdfs:range          xsd:string ;
         vs:term_status      "unstable" ;
-        rdfs:comment        "The human readable name of the role, inverse from the object to the subject." .
+        rdfs:comment        "The human readable name of the role, inverse from the object to the subject. For example, 'is member of'." .
+
+vf:inverseRoleLabel a       owl:DatatypeProperty ;
+        rdfs:label          "inverse role label" ;
+        rdfs:domain         vf:AgentRelationshipRole ;
+        rdfs:range          xsd:string ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "The human readable name of the role, inverse from the object to the subject. For example, 'has member'." .
 
 
 # ################################ action verbs
