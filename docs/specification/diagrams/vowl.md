@@ -4,6 +4,8 @@ You can view this in an active environment [here](http://www.visualdataweb.de/we
 
 Note that this diagram includes only the linked open data VF namespace, so does not include important items for which we are re-using other namespaces.  See [the UML Diagram](https://valueflo.ws/specification/diagrams/uml.html) for a complete model with the namespaces identified.
 
-[VF OWL picture](http://mikorizal.org/all-vf-vowl.svg)
+*To make the diagram bigger, you can right click and select View Image.*
+
+![VF owl picture](https://raw.githubusercontent.com/valueflows/valueflows/master/release-doc-in-process/ValueFlowsOWL.png)
 
 Credit: http://visualdataweb.de/
