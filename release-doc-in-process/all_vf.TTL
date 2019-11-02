@@ -2,19 +2,22 @@
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix owl:   <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix foaf:  <http://xmlns.com/foaf/0.1/#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix org:   <http://www.w3.org/ns/org#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix qudt:   <http://qudt.org/schema/qudt/> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 @prefix time:  <http://www.w3.org/2006/time#> .
 @prefix geo:   <http://www.w3.org/2003/01/geo/wgs84_pos#> .
 @prefix vs:    <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
-@prefix dfc:   <http://www.virtual-assembly.org/DataFoodConsortium/FullModel#> .
+@prefix dfc:   <http://www.virtual-assembly.org/DataFoodConsortium/BusinessOntology#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
 
 
 <https://w3id.org/valueflows/> a owl:Ontology;
     dcterms:title "Value Flows Ontology";
     dcterms:type <http://purl.org/adms/assettype/Ontology>;
+    owl:versionIRI <https://w3id.org/valueflows/0.4/> ;
     dcterms:status <http://purl.org/adms/status/UnderDevelopment>.
 
 
@@ -472,27 +475,80 @@ vf:atLocation a             owl:ObjectProperty ;
 vf:image a                  owl:DatatypeProperty ;
         vs:term_status      "unstable" ;
         rdfs:label          "image" ;
+        rdfs:domain         [ owl:unionOf (
+                                foaf:Agent 
+                                vf:EconomicEvent 
+                                vf:EconomicResource 
+                                vf:Intent 
+                                vf:RecipeResource 
+                                vf:ResourceSpecification) ] ;
+        rdfs:range          xsd:anyURI ;
         rdfs:comment        "The uri to an image relevant to the entity, such as a logo, avatar, photo, diagram, etc." .
 
 vf:uri a                    owl:DatatypeProperty ;
         vs:term_status      "unstable" ;
+        rdfs:range          xsd:anyURI ;
         rdfs:label          "uri" ;
         rdfs:comment        "The web address relevant to the entity." .
 
 vf:name a                   owl:DatatypeProperty ;
         rdfs:label          "name" ;
         rdfs:range          xsd:string ;
+        rdfs:domain         [ owl:unionOf (
+                                geo:SpatialThing 
+                                foaf:Agent 
+                                vf:Agreement 
+                                vf:Commitment 
+                                vf:EconomicResource 
+                                vf:Intent 
+                                vf:Plan 
+                                vf:Process 
+                                vf:ProcessSpecification 
+                                vf:Proposal 
+                                vf:RecipeProcess 
+                                vf:RecipeResource 
+                                vf:ResourceSpecification 
+                                vf:Scenario 
+                                vf:ScenarioDefinition) ] ;
         vs:term_status      "unstable" ;
         rdfs:comment        "An informal or formal textual identifier for an object. Does not imply uniqueness." .
 
-vf:trackingIdentifier a     owl:AnnotationProperty ;
+skos:note 
+        rdfs:domain         [ owl:unionOf (
+                                geo:SpatialThing 
+                                foaf:Agent 
+                                vf:AgentRelationship 
+                                vf:AgentRelationshipRole 
+                                vf:Agreement 
+                                vf:Appreciation 
+                                vf:Claim 
+                                vf:Commitment 
+                                vf:EconomicEvent 
+                                vf:EconomicResource 
+                                vf:ExternalLink 
+                                vf:Fulfillment 
+                                vf:Intent 
+                                vf:Plan 
+                                vf:Process 
+                                vf:ProcessSpecification 
+                                vf:Proposal 
+                                vf:RecipeFlow 
+                                vf:RecipeProcess 
+                                vf:RecipeResource 
+                                vf:ResourceSpecification 
+                                vf:Satisfaction 
+                                vf:Scenario 
+                                vf:ScenarioDefinition 
+                                vf:Settlement) ] .
+
+vf:trackingIdentifier a     owl:DatatypeProperty ;
         rdfs:label          "tracking identifier" ;
         rdfs:domain         vf:EconomicResource ;
         rdfs:range          xsd:string ;
         vs:term_status      "unstable" ;
         rdfs:comment        "Sometimes called serial number, used when each item must have a trackable identifier (like a computer). Could also be used for other unique tracking identifiers needed for resources." .  
 
-vf:lot a                    owl:AnnotationProperty ;
+vf:lot a                    owl:ObjectProperty ;
         rdfs:label          "lot" ;
         rdfs:domain         vf:EconomicResource ;
         rdfs:range          dfc:ProductBatch ;
