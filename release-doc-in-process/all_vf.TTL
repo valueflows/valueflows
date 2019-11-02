@@ -323,8 +323,8 @@ vf:containedIn a            owl:ObjectProperty ;
         rdfs:comment        "Used when a stock economic resource contains units also defined as economic resources." .
 
 vf:hasBeginning a           owl:DatatypeProperty ;
+        rdfs:domain         time:TemporalEntity ;
         rdfs:domain         [ owl:unionOf (
-                                time:TemporalEntity
                                 vf:Commitment
                                 vf:EconomicEvent
                                 vf:Intent
@@ -337,8 +337,8 @@ vf:hasBeginning a           owl:DatatypeProperty ;
         rdfs:comment        "The planned or actual beginning of a flow or process." .
 
 vf:hasEnd a                 owl:DatatypeProperty ;
+        rdfs:domain         time:TemporalEntity ;
         rdfs:domain         [ owl:unionOf (
-                                time:TemporalEntity
                                 vf:Commitment
                                 vf:EconomicEvent
                                 vf:Intent
@@ -351,8 +351,8 @@ vf:hasEnd a                 owl:DatatypeProperty ;
         rdfs:comment        "The planned or actual end of a flow or process." .
 
 vf:hasPointInTime a         owl:DatatypeProperty ;
+        rdfs:domain         time:Instant ;
         rdfs:domain         [ owl:unionOf (
-                                time:Instant
                                 vf:Commitment
                                 vf:EconomicEvent
                                 vf:Intent) ] ;
