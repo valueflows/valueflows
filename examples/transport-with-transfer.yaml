@@ -17,11 +17,11 @@
     trackingIdentifier: lot-alice-apples-2018-10-11
     locatedAt: geo:70ee3034-0d15-4471-8ee3-91c60bb1a9c9
     accountingQuantity:
-      qudt:unit: unit:Kilogram
-      qudt:numericValue: 230
+      om2:hasUnit: om2:kilogram
+      om2:hasNumericalValue: 230
     onhandQuantity:
-      qudt:unit: unit:Kilogram
-      qudt:numericValue: 230
+      om2:hasUnit: om2:kilogram
+      om2:hasNumericalValue: 230
 
   # alice commits to transfer some apples to bob
 
@@ -32,8 +32,8 @@
     provider: https://alice.example/
     receiver: https://bob.example/
     resourceQuantity:
-      qudt:unit: unit:Kilogram
-      qudt:numericValue: 30
+      om2:hasUnit: om2:kilogram
+      om2:hasNumericalValue: 30
 
   # alice and claudia agree on transportation of the apples
 
@@ -48,8 +48,8 @@
     provider: https://alice.example/
     receiver: https://claudia.example/
     resourceQuantity:
-      qudt:unit: unit:Number
-      qudt:numericValue: 10
+      om2:hasUnit: om2:one
+      om2:hasNumericalValue: 10
     clauseOf: urn:uuid:f325a950-5737-488d-b122-8f21114d0eb0 # transportation agreement
 
   - '@id': urn:uuid:c7897c39-7f05-4a5d-a487-80e130a2414a
@@ -60,8 +60,8 @@
     provider: https://claudia.example/
     receiver: https://alice.example/
     resourceQuantity:
-      qudt:unit: unit:Number
-      qudt:numericValue: 1
+      om2:hasUnit: om2:one
+      om2:hasNumericalValue: 1
     clauseOf: urn:uuid:f325a950-5737-488d-b122-8f21114d0eb0 # transportation agreement
 
   # alice transfers custody of the apples to claudia for transportation
@@ -75,8 +75,8 @@
     receiver: https://claudia.example/
     toResourceInventoriedAs: claudia:27be5cab-d740-4194-9298-1661a69d9d95 # claudia's bill of lading on the truck
     resourceQuantity:
-      qudt:unit: unit:Kilogram
-      qudt:numericValue: 30
+      om2:hasUnit: om2:kilogram
+      om2:hasNumericalValue: 30
 
   # resources snapshot
 
@@ -86,19 +86,19 @@
     trackingIdentifier: lot-alice-apples-2018-10-11
     locatedAt: geo:70ee3034-0d15-4471-8ee3-91c60bb1a9c9
     accountingQuantity:
-      qudt:unit: unit:Kilogram
-      qudt:numericValue: 230
+      om2:hasUnit: om2:kilogram
+      om2:hasNumericalValue: 230
     onhandQuantity:
-      qudt:unit: unit:Kilogram
-      qudt:numericValue: 200
+      om2:hasUnit: om2:kilogram
+      om2:hasNumericalValue: 200
 
   - '@id': claudia:27be5cab-d740-4194-9298-1661a69d9d95
     '@type': EconomicResource
     classifiedAs: wd:Q41777871 # haralson apples
     trackingIdentifier: lot-alice-apples-2018-10-11
     onhandQuantity:
-      qudt:unit: unit:Kilogram
-      qudt:numericValue: 30
+      om2:hasUnit: om2:kilogram
+      om2:hasNumericalValue: 30
 
   # claudia transports the apples in two hops
 
@@ -114,8 +114,8 @@
     provider: https://claudia.example/
     receiver: https://claudia.example/
     resourceQuantity:
-      qudt:unit: unit:Kilogram
-      qudt:numericValue: 30
+      om2:hasUnit: om2:kilogram
+      om2:hasNumericalValue: 30
 
   - '@id': claudia:57f1c1d0-432e-4bfa-9d32-002b8955a708
     '@type': EconomicEvent
@@ -125,8 +125,8 @@
     provider: https://claudia.example/
     receiver: https://claudia.example/
     resourceQuantity:
-      qudt:unit: unit:Kilogram
-      qudt:numericValue: 30
+      om2:hasUnit: om2:kilogram
+      om2:hasNumericalValue: 30
 
   - '@id': claudia:c404cff5-19c7-453d-b0d8-d8e96055bd0c
     '@type': Process
@@ -140,8 +140,8 @@
     provider: https://claudia.example/
     receiver: https://claudia.example/
     resourceQuantity:
-      qudt:unit: unit:Kilogram
-      qudt:numericValue: 30
+      om2:hasUnit: om2:kilogram
+      om2:hasNumericalValue: 30
 
   - '@id': claudia:9cb4944b-d26d-4774-a530-d18f2747c0d8
     '@type': EconomicEvent
@@ -151,8 +151,8 @@
     provider: https://claudia.example/
     receiver: https://claudia.example/
     resourceQuantity:
-      qudt:unit: unit:Kilogram
-      qudt:numericValue: 30
+      om2:hasUnit: om2:kilogram
+      om2:hasNumericalValue: 30
 
   - '@id': urn:uuid:68cabaf3-deb8-4bd5-a439-798263abe35a
     '@type': EconomicEvent
@@ -163,16 +163,16 @@
     provider: https://claudia.example/
     receiver: https://alice.example/
     resourceQuantity:
-      qudt:unit: unit:Number
-      qudt:numericValue: 1
+      om2:hasUnit: om2:one
+      om2:hasNumericalValue: 1
 
   - '@id': urn:uuid:d4d2fd71-34f2-41c3-b1c5-19ad5ed2da58
     '@type': Fulfillment
     fulfills: urn:uuid:c7897c39-7f05-4a5d-a487-80e130a2414a # the commitment
     fulfilledBy: urn:uuid:68cabaf3-deb8-4bd5-a439-798263abe35a # the economic event
     resourceQuantity:
-      qudt:unit: unit:Number
-      qudt:numericValue: 1
+      om2:hasUnit: om2:one
+      om2:hasNumericalValue: 1
 
   # bob receives the apples
 
@@ -186,8 +186,8 @@
     provider: https://claudia.example/
     receiver: https://bob.example/
     resourceQuantity:
-      qudt:unit: unit:Kilogram
-      qudt:numericValue: 30
+      om2:hasUnit: om2:kilogram
+      om2:hasNumericalValue: 30
 
   # receipt of the apples triggers finalizing the transfer of ownership
 
@@ -199,8 +199,8 @@
     provider: https://alice.example/
     receiver: https://bob.example/
     resourceQuantity:
-      qudt:unit: unit:Kilogram
-      qudt:numericValue: 30
+      om2:hasUnit: om2:kilogram
+      om2:hasNumericalValue: 30
     triggeredBy: urn:uuid:7a63ea10-b1c3-441a-9a08-fb8630c02614
 
   - '@id': urn:uuid:6f438393-7f87-4914-806c-e23a4fd15e89
@@ -208,8 +208,8 @@
     fulfills: urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10f1f86 # the commitment
     fulfilledBy: urn:uuid:ad56a7ed-be3c-4937-a3fb-0f156bcd2c47 # the economic event
     resourceQuantity:
-      qudt:unit: unit:Kilogram
-      qudt:numericValue: 30
+      om2:hasUnit: om2:kilogram
+      om2:hasNumericalValue: 30
 
   # resources snapshot
 
@@ -219,11 +219,11 @@
     trackingIdentifier: lot-alice-apples-2018-10-11
     locatedAt: geo:70ee3034-0d15-4471-8ee3-91c60bb1a9c9 # only the possessed amount
     accountingQuantity:
-      qudt:unit: unit:Kilogram
-      qudt:numericValue: 200
+      om2:hasUnit: om2:kilogram
+      om2:hasNumericalValue: 200
     onhandQuantity:
-      qudt:unit: unit:Kilogram
-      qudt:numericValue: 200
+      om2:hasUnit: om2:kilogram
+      om2:hasNumericalValue: 200
 
   - '@id': bob:9bd19194-a36d-4a1f-896b-8082887962cb
     '@type': EconomicResource
@@ -231,18 +231,18 @@
     trackingIdentifier: lot-alice-apples-2018-10-11
     locatedAt: geo:b52a5815-fae9-43bf-be95-833b95dc0ada # only the possessed amount
     accountingQuantity:
-      qudt:unit: unit:Kilogram
-      qudt:numericValue: 30
+      om2:hasUnit: om2:kilogram
+      om2:hasNumericalValue: 30
     onhandQuantity:
-      qudt:unit: unit:Kilogram
-      qudt:numericValue: 30
+      om2:hasUnit: om2:kilogram
+      om2:hasNumericalValue: 30
 
   - '@id': claudia:27be5cab-d740-4194-9298-1661a69d9d95 # claudia's bill of lading on the truck
     '@type': EconomicResource
     classifiedAs: wd:Q41777871 # haralson apples
     onhandQuantity:
-      qudt:unit: unit:Kilogram
-      qudt:numericValue: 0
+      om2:hasUnit: om2:kilogram
+      om2:hasNumericalValue: 0
 
   # alice pays claudia for the transportation service
 
@@ -255,14 +255,14 @@
     provider: https://alice.example/
     receiver: https://claudia.example/
     resourceQuantity:
-      qudt:unit: unit:Number
-      qudt:numericValue: 10
+      om2:hasUnit: om2:one
+      om2:hasNumericalValue: 10
 
   - '@id': urn:uuid:fbff9852-36ca-4364-a943-bc0b49e1cab5
     '@type': Fulfillment
     fulfills: urn:uuid:33e8933b-ff73-4a01-964a-ca7a98893083 # the commitment
     fulfilledBy: urn:uuid:8baa8ff7-9c1e-4586-ae7b-79d620a3cac9 # the economic event
     resourceQuantity:
-      qudt:unit: unit:Number
-      qudt:numericValue: 10
+      om2:hasUnit: om2:one
+      om2:hasNumericalValue: 10
 

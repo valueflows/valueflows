@@ -5,11 +5,12 @@
 @prefix foaf:  <http://xmlns.com/foaf/0.1/> .
 @prefix org:   <http://www.w3.org/ns/org#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix qudt:   <http://qudt.org/schema/qudt/> .
+@prefix om2: <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 @prefix time:  <http://www.w3.org/2006/time#> .
 @prefix geo:   <http://www.w3.org/2003/01/geo/wgs84_pos#> .
 @prefix vs:    <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix dtype: <http://www.linkedmodel.org/schema/dtype#> .
 @prefix dfc:   <http://www.virtual-assembly.org/DataFoodConsortium/BusinessOntology#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
 
@@ -393,37 +394,40 @@ vf:due a                    owl:DatatypeProperty ;
 vf:accountingQuantity a     owl:ObjectProperty ;
         rdfs:label          "accounting quantity" ;
         rdfs:domain         vf:EconomicResource ;
-        rdfs:range          qudt:QuantityValue ;
+        rdfs:range          om2:Measure ;
         vs:term_status      "unstable" ;
         rdfs:comment        "The current amount and unit of the economic resource for which the agent has primary rights and responsibilities, sometimes thought of as ownership. This can be either stored or derived from economic events affecting the resource." .
 
 vf:onhandQuantity a         owl:ObjectProperty ;
         rdfs:label          "onhand quantity" ;
         rdfs:domain         vf:EconomicResource ;
-        rdfs:range          qudt:QuantityValue ;
+        rdfs:range          om2:Measure ;
         vs:term_status      "unstable" ;
         rdfs:comment        "The current amount and unit of the economic resource which is under direct control of the agent.  It may be more or less than the accounting quantity. This can be either stored or derived from economic events affecting the resource." .
 
 vf:resourceQuantity a       owl:ObjectProperty ;
         rdfs:label          "resource quantity" ;
         rdfs:domain         [ owl:unionOf (vf:EconomicEvent vf:Commitment vf:Intent vf:RecipeFlow vf:Fulfillment vf:Satisfaction vf:Claim vf:Settlement) ] ;
-        rdfs:range          qudt:QuantityValue ;
+        rdfs:range          om2:Measure ;
         vs:term_status      "unstable" ;
         rdfs:comment        "The amount and unit of the economic resource counted or inventoried." .
 
 vf:effortQuantity a         owl:ObjectProperty ;
         rdfs:label          "effort quantity" ;
         rdfs:domain         [ owl:unionOf (vf:EconomicEvent vf:Commitment vf:Intent vf:RecipeFlow vf:Fulfillment vf:Satisfaction vf:Claim vf:Settlement) ] ;
-        rdfs:range          qudt:QuantityValue ;
+        rdfs:range          om2:Measure ;
         vs:term_status      "unstable" ;
         rdfs:comment        "The amount and unit of the work or use or citation effort-based action. This is often a time duration, but also could be cycle counts or other measures of effort or usefulness." .
 
 vf:availableQuantity a      owl:ObjectProperty ;
         rdfs:label          "available quantity" ;
         rdfs:domain         vf:Intent ;
-        rdfs:range          qudt:QuantityValue ;
+        rdfs:range          om2:Measure ;
         vs:term_status      "unstable" ;
         rdfs:comment        "The quantity of the offered resource currently available." .
+
+om2:hasNumericalValue
+        rdfs:range          dtype:numericUnion .
 
 vf:unitBased  a             owl:DatatypeProperty ;
         rdfs:label          "unit based" ;
@@ -642,14 +646,14 @@ vf:substitutable a          owl:DatatypeProperty ;
 vf:unitOfResource a         owl:ObjectProperty ;
         rdfs:label          "unit of resource" ;
         rdfs:domain         vf:RecipeResource ;
-        rdfs:range          qudt:unit ;
+        rdfs:range          om2:Unit ;
         vs:term_status      "unstable" ;
         rdfs:comment        "The unit used for this resource in the recipe." .
 
 vf:unitOfEffort a           owl:ObjectProperty ;
         rdfs:label          "unit of effort" ;
         rdfs:domain         [ owl:unionOf (vf:RecipeResource vf:EconomicResource) ] ;
-        rdfs:range          qudt:unit ;
+        rdfs:range          om2:Unit ;
         vs:term_status      "unstable" ;
         rdfs:comment        "The unit used for use or work or sometimes cite actions." .
 

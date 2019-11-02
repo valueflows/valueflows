@@ -25,8 +25,8 @@
     receiver: https://fablab.example/
     resourceClassifiedAs: https://www.wikidata.org/wiki/Q2474620 # electrochemical engineering
     flowQuantity:
-      qudt:unit: unit:Hour
-      qudt:numericValue: 16
+      om2:hasUnit: om2:hour
+      om2:hasNumericalValue: 16
     hasBeginning: 2019-04-12T08:00:00-5:00
     hasEnd: 2019-04-13T17:00:00-5:00
 

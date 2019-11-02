@@ -22,8 +22,8 @@
     receiver: https://carol.example/
     resourceClassifiedAs: https://www.wikidata.org/wiki/Q1111 # cider press (fictional)
     effortQuantity:
-      qudt:unit: unit:Hour
-      qudt:numericValue: 6
+      om2:hasUnit: om2:hour
+      om2:hasNumericalValue: 6
 
   - '@id': carol:9f112621-3f13-4f48-a3e2-fd2ca99493cd
     '@type': ProposedIntent
@@ -39,8 +39,8 @@
     provider: https://carol.example/
     resourceClassifiedAs: https://www.wikidata.org/wiki/Q5977438 # apple cider
     resourceQuantity:
-      qudt:unit: unit:Gallon
-      qudt:numericValue: 3
+      om2:hasUnit: om2:gallon-US
+      om2:hasNumericalValue: 3
 
   - '@id': carol:9bd19194-a36d-4a1f-896b-8082887962cb
     '@type': ProposedIntent

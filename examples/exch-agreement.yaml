@@ -22,8 +22,8 @@
     receiver: https://bob.example/
     resourceClassifiedAs: https://www.wikidata.org/wiki/Q89 # apples
     resourceQuantity:
-      qudt:unit: unit:Kilogram
-      qudt:numericValue: 50
+      om2:hasUnit: om2:kilogram
+      om2:hasNumericalValue: 50
 
   - '@id': bob:fd399b37-0740-4a68-a184-1e655021ca21
     '@type': Commitment
@@ -33,5 +33,5 @@
     receiver: https://alice.example/
     resourceClassifiedAs: https://www.wikidata.org/wiki/Q5977438 # soft apple cider
     resourceQuantity:
-      qudt:unit: unit:Liter
-      qudt:numericValue: 10
+      om2:hasUnit: om2:litre
+      om2:hasNumericalValue: 10

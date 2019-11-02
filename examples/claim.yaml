@@ -17,8 +17,8 @@
     receiver: https://manufacturing.example/
     resourceClassifiedAs: https://www.wikidata.org/wiki/Q192047 # machining
     effortQuantity:
-      qudt:unit: unit:Hour
-      qudt:numericValue: 7
+      om2:hasUnit: om2:hour
+      om2:hasNumericalValue: 7
     hasBeginning: 2018-10-14T8:00:00-0:00
     hasEnd: 2018-10-14T15:00:00-0:00
 
@@ -31,8 +31,8 @@
     receiver: https://bob.example/
     resourceClassifiedAs: https://www.wikidata.org/wiki/Q1104069 # Canadian dollar
     resourceQuantity:
-      qudt:unit: unit:Number
-      qudt:numericValue: 140
+      om2:hasUnit: om2:one
+      om2:hasNumericalValue: 140
     dcterms:created: 2018-10-14T15:30:00-0:00
     triggeredBy: mfg:02b39a30-3e04-4305-9656-7f261aa63c83
     agreedIn: mfg:e1721a61-cd47-4556-84b9-8b1b81da15be # a distribution agreement (not detailed in example)
@@ -46,8 +46,8 @@
     receiver: https://bob.example/
     resourceClassifiedAs: https://www.wikidata.org/wiki/Q1104069 # Canadian dollar
     resourceQuantity:
-      qudt:unit: unit:Number
-      qudt:numericValue: 260 # here Bob received income for more than one work event (others not included in the example)
+      om2:hasUnit: om2:one
+      om2:hasNumericalValue: 260 # here Bob received income for more than one work event (others not included in the example)
     hasPointInTime: 2018-10-25T09:30:00-0:00
 
   - '@id': mfg:b52a5815-fae9-43bf-be95-833b95dc0ada
@@ -55,5 +55,5 @@
     settles: mfg:d4d2fd71-34f2-41c3-b1c5-19ad5ed2da58 # the claim
     settlededBy: mfg:c7897c39-7f05-4a5d-a487-80e130a2414a # the economic event
     resourceQuantity:
-      qudt:unit: unit:Number
-      qudt:numericValue: 70 # half of the original claim for the work
+      om2:hasUnit: om2:one
+      om2:hasNumericalValue: 70 # half of the original claim for the work

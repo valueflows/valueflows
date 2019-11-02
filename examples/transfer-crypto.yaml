@@ -16,16 +16,16 @@
     skos:note: Alice's wallet address
     classifiedAs: wd:Q21002847 # FairCoin
     accountingQuantity:
-      qudt:unit: unit:Number
-      qudt:numericValue: 540
+      om2:hasUnit: om2:one
+      om2:hasNumericalValue: 540
 
   - '@id': fair:3be5259d-10f0-431c-9fec-9c0c15a461d3
     '@type': EconomicResource
     skos:note: Bob's wallet address 
     classifiedAs: wd:Q21002847 # FairCoin
     accountingQuantity:
-      qudt:unit: unit:Number
-      qudt:numericValue: 480
+      om2:hasUnit: om2:one
+      om2:hasNumericalValue: 480
 
   # transfer from Alice to Bob
 
@@ -38,8 +38,8 @@
     provider: https://alice.example
     receiver: https://bob.example
     resourceQuantity:
-      qudt:unit: unit:Number
-      qudt:numericValue: 100
+      om2:hasUnit: om2:one
+      om2:hasNumericalValue: 100
     hasPointInTime: 2019-04-18T8:30:08-5:00
 
   # accounts after
@@ -49,13 +49,13 @@
     skos:note: Alice's wallet address 
     classifiedAs: wd:Q21002847 # FairCoin
     accountingQuantity:
-      qudt:unit: unit:Number
-      qudt:numericValue: 440
+      om2:hasUnit: om2:one
+      om2:hasNumericalValue: 440
 
   - '@id': fair:3be5259d-10f0-431c-9fec-9c0c15a461d3
     '@type': EconomicResource
     skos:note: Bob's wallet address 
     classifiedAs: wd:Q21002847 # FairCoin
     accountingQuantity:
-      qudt:unit: unit:Number
-      qudt:numericValue: 580
+      om2:hasUnit: om2:one
+      om2:hasNumericalValue: 580
