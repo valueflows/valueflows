@@ -1021,7 +1021,7 @@ vf:noEffect a              owl:NamedIndividual ,
         rdfs:label          "no effect" ;
         vs:term_status      "unstable" .
 
-# Input/output
+# Input/output (and N/A for pairs with)
 
 vf:input a                  owl:NamedIndividual ,
                             vf:InputOutput ;
@@ -1030,8 +1030,9 @@ vf:input a                  owl:NamedIndividual ,
         vs:term_status      "unstable" .
 
 vf:notApplicable a          owl:NamedIndividual ,
-                            vf:InputOutput ;
-        rdfs:comment        "This kind of flow is not related to a process." ;
+                            vf:InputOutput ,
+                            vf:PairsWith ;
+        rdfs:comment        "This property is not applicable to this kind of flow." ;
         rdfs:label          "not applicable" ;
         vs:term_status      "unstable" .
 

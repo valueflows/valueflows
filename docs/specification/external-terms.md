@@ -26,11 +26,13 @@ https://www.w3.org/TR/vocab-org/
 http://www.ontology-of-units-of-measure.org/resource/om-2/
 
 * [`om2:Measure`](http://www.ontology-of-units-of-measure.org/resource/om-2/Measure)
-* [`om2:Unit`](http://www.ontology-of-units-of-measure.org/resource/om-2/Unit)
-    * A list of units can also be found here.  Each subclass on this page has an additional list of units.
 * [`om2:hasUnit`](http://www.ontology-of-units-of-measure.org/resource/om-2/hasUnit)
 * [`om2:hasNumericalValue`](http://www.ontology-of-units-of-measure.org/resource/om-2/hasNumericalValue)
 
+
+* [`om2:Unit`](http://www.ontology-of-units-of-measure.org/resource/om-2/Unit)
+    * A list of units can also be found here.  Each subclass on this page has an additional list of units.
+    * VF will use (at least) rdfs:label and om:symbol as properties of Units.
 
 ### DTYPE
 
