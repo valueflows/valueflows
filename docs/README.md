@@ -9,7 +9,7 @@ Or, with less buzzwords, "let's help a lot of alternative economic software proj
 
 One of the purposes of this vocab is to support resource flows connecting many software applications. These flows may be oriented around processes that make things, exchanges that trade things, or combinations of both.
 
-The vocabulary is presented in several ways, as Linked Open Data using the Resource Description Framework (RDF) family of languages, as well as a GraphQL API and a UML model, and other notations to come. We want to support RDF based and non-RDF based use of the vocabulary, basically any way that people want to use software and data on the internet to help create economic networks.
+The vocabulary is presented in several ways, as Linked Open Data using the Resource Description Framework (RDF) family of languages, as well as a GraphQL reference, json-schema reference, and a UML model. We want to support RDF based and non-RDF based use of the vocabulary, basically any way that people want to use software and data on the internet to help create economic networks.
 
 If this document seems too much to start with, or you just want a quicker overview, you can start here with a [ValueFlows Story](http://mikorizal.org/ValueFlows-Story.pdf) about apple pie (yum!).
 
