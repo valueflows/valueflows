@@ -5,6 +5,7 @@
 1. [Crypto-currency move](#moving-crypto-currency)
 1. [Checkout library book](#checkout-book)
 1. [Claim](#claim)
+1. [Plan from recipe with production and exchange](#plan-from-recipe-with-production-and-exchange)
 
 
 #### Exchange agreement
@@ -55,3 +56,11 @@ Logged work triggers a claim for future income distribution for that work.
 
 [import, lang:"yaml"](../../examples/claim.yaml)
 
+
+#### Plan from recipe with production and exchange
+
+This shows a simple recipe that includes both a process and the exchange of work that is input to the process for currency.
+
+![process-exchange diagram](https://raw.githubusercontent.com/valueflows/valueflows/master/release-doc-in-process/process-exchange.png)
+
+[import, lang:"yaml"](../../examples/recipe-with-exchange.yaml)
