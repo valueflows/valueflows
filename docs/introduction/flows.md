@@ -70,9 +70,9 @@ Action | Accounting affect | Onhand affect | I/O | Changes existence | Pairs wit
 ------ | ------ | --- | ----------------- | ---------- | --------- |
 produce | Increment | Increment | Output | Yes | N/A |
 consume | Decrement | Decrement | Input | Yes | N/A |
-use | No effect(1)  | No effect(1) | Input | No | N/A |
-work | No effect(1)  | No effect(1) | Input | N/A | N/A |
-cite | No effect  |No effect  | Input | No | N/A |
+use | No effect(1) | No effect(1) | Input | No | N/A |
+work | No effect(1) | No effect(1) | Input | N/A | N/A |
+cite | No effect  | No effect  | Input | No | N/A |
 pickup | No effect | No effect  | Input | No | dropoff |
 dropoff | No effect | No effect | Output | No | pickup |
 accept | No effect | Decrement  | Input | No | modify |
@@ -83,7 +83,7 @@ fail | No effect | (3) | Output | (3) | accept |
 transfer-custody | No effect | Decr+Incr(2) | N/A | No | N/A |
 transfer-all-rights | Decr+Incr(2) | No effect | N/A | No | N/A |
 transfer-complete | Decr+Incr(2) | Decr+Incr(2) | N/A | No | N/A |
-move | Decr+Incr(2) | N/A | No | N/A |
+move | Decr+Incr(2) |Decr+Incr(2) | N/A | No | N/A |
 raise | Increment | Increment | N/A | No | N/A |
 lower | Decrement | Decrement | N/A | No | N/A |
 
