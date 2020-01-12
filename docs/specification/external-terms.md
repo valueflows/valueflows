@@ -1,4 +1,4 @@
-# External terms
+# External namespaces and terms
 
 Most applications using VF will need terms defined in various other vocabularies.  In fact, some of these are essential to the complete ValueFlows model. Below are the essential elements we are reusing from well established vocabularies (web ontologies).
 

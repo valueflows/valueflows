@@ -57,7 +57,7 @@ All flows use an action property to designate what the flow is doing and how it 
 * vf:accept - in processes like repair or modification or testing, the same resource will appear in output with *vf:modify* verb
 * vf:modify - in processes like repair or modification, the same resource will appear in input with *vf:accept* verb
 * vf:pass - possible output of a testing or reviewing process, indicating the resource passed, the same resource will appear in input with *vf:accept* verb
-* vf:fail - possible output of a testing or reviewing process, indicating the resource failed, the same resource will appear in input with *vf:accept* verb
+* vf:fail - possible output of a testing or reviewing process, indicating the resource failed, the same resource will appear in input with *vf:accept* verb (3)
 * vf:deliver-service - new service produced and delivered (a service implies that an agent actively receives the service)
 * vf:transfer-all-rights - give full (in the human realm) rights and responsibilities to another agent, without transferring physical custody
 * vf:transfer-custody - give physical custody and control of a resource, without full accounting or ownership rights
@@ -66,32 +66,34 @@ All flows use an action property to designate what the flow is doing and how it 
 * vf:raise - adjusts a quantity up based on a beginning balance or inventory count
 * vf:lower - adjusts a quantity down based on a beginning balance or inventory count
 
-Action | Affect | I/O | Changes existence | Pairs with |
------- | ------ | --- | ----------------- | ---------- |
-produce | Increment  | Output | Yes | N/A |
-consume | Decrement  | Input | Yes | N/A |
-use | No effect(1)  | Input | No | N/A |
-work | No effect(1)  | Input | N/A | N/A |
-cite | No effect  | Input | No | N/A |
-pickup | No effect  | Input | No | dropoff |
-dropoff | No effect  | Output | No | pickup |
-accept | No effect  | Input | No | modify |
-modify | No effect  | Output | No | accept |
-deliver-service | No effect | Output | No | N/A |
-pass | No effect  | Output | No | accept |
-fail | No effect  | Output | No | accept |
-transfer-custody | Decr+Incr(2) | N/A | No | N/A |
-transfer-all-rights | Decr+Incr(2) | N/A | No | N/A |
-transfer-complete | Decr+Incr(2) | N/A | No | N/A |
+Action | Accounting affect | Onhand affect | I/O | Changes existence | Pairs with |
+------ | ------ | --- | ----------------- | ---------- | --------- |
+produce | Increment | Increment | Output | Yes | N/A |
+consume | Decrement | Decrement | Input | Yes | N/A |
+use | No effect(1)  | No effect(1) | Input | No | N/A |
+work | No effect(1)  | No effect(1) | Input | N/A | N/A |
+cite | No effect  |No effect  | Input | No | N/A |
+pickup | No effect | No effect  | Input | No | dropoff |
+dropoff | No effect | No effect | Output | No | pickup |
+accept | No effect | Decrement  | Input | No | modify |
+modify | No effect | Increment  | Output | No | accept |
+deliver-service | No effect | No effect | Output | No | N/A |
+pass | No effect | Increment| Output | No | accept |
+fail | No effect | (3) | Output | (3) | accept |
+transfer-custody | No effect | Decr+Incr(2) | N/A | No | N/A |
+transfer-all-rights | Decr+Incr(2) | No effect | N/A | No | N/A |
+transfer-complete | Decr+Incr(2) | Decr+Incr(2) | N/A | No | N/A |
 move | Decr+Incr(2) | N/A | No | N/A |
-raise | Increment | N/A | No | N/A |
-lower | Decrement | N/A | No | N/A |
+raise | Increment | Increment | N/A | No | N/A |
+lower | Decrement | Decrement | N/A | No | N/A |
 
 We have defined a core set of actions, but expect that this will be extended with some others. If extended, they should be defined as part of this or another formal vocabulary so that all can use them and assume the same meaning. 
 
 (1) The actions `use` and `work` are time-based actions, either with or without an explicit schedule. If the schedule is documented as part of the economic resource, then those economic events could decrement that schedule, although not the "current quantity" of the resource.
 
 (2) The actions `transfer` and `move` can optionally define a second identified resource on the receiver side.
+
+(3) Under discussion
 
 ### Quantities and Times
 
