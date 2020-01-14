@@ -21,7 +21,7 @@
     '@type': Intent
     name: Old adult Schwinn one speed bike
     skos:note: Pedals fine, not good for hills, has basket, brakes are a bit dodgy
-    action: transfer-complete
+    action: transfer
     provider: https://alice.example/
     resourceClassifiedAs: https://www.wikidata.org/wiki/Q11442 # bicycle
 
@@ -34,7 +34,7 @@
   - '@id': alice:e72f7d1d-4f0a-4518-a44c-96658cafda95
     '@type': Intent
     name: Payment
-    action: transfer-complete
+    action: transfer
     receiver: https://alice.example/
     resourceClassifiedAs: https://www.wikidata.org/wiki/Q4917 # US Dollar
     resourceQuantity:

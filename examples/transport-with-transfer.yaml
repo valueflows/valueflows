@@ -27,7 +27,7 @@
 
   - '@id': urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10f1f86
     '@type': Commitment
-    action: transfer-complete
+    action: transfer
     resourceClassifiedAs: wd:Q41777871 # haralson apples
     provider: https://alice.example/
     receiver: https://bob.example/
@@ -43,7 +43,7 @@
 
   - '@id': urn:uuid:33e8933b-ff73-4a01-964a-ca7a98893083
     '@type': Commitment
-    action: transfer-complete
+    action: transfer
     resourceClassifedAs: wd:Q4917 # US Dollar
     provider: https://alice.example/
     receiver: https://claudia.example/
@@ -248,7 +248,7 @@
 
   - '@id': urn:uuid:8baa8ff7-9c1e-4586-ae7b-79d620a3cac9
     '@type': EconomicEvent
-    action: transfer-complete
+    action: transfer
     resourceClassifedAs: wd:Q4917 # US Dollar
     resourceInventoriedAs: alice:daa2ec3b-2c1a-4eb1-839f-8dcec1a1f93a # alice's bank account
     toResourceInventoriedAs: claudia:bd5806d6-4a36-45b9-b3b6-3e7d361a5a14 # claudia's bank account

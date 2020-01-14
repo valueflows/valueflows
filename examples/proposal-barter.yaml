@@ -35,7 +35,7 @@
     '@type': Intent
     name: Cider
     skos:note: Fresh cider from the pressing
-    action: transfer-complete
+    action: transfer
     provider: https://carol.example/
     resourceClassifiedAs: https://www.wikidata.org/wiki/Q5977438 # apple cider
     resourceQuantity:

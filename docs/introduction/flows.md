@@ -61,7 +61,7 @@ All flows use an action property to designate what the flow is doing and how it 
 * vf:deliver-service - new service produced and delivered (a service implies that an agent actively receives the service)
 * vf:transfer-all-rights - give full (in the human realm) rights and responsibilities to another agent, without transferring physical custody
 * vf:transfer-custody - give physical custody and control of a resource, without full accounting or ownership rights
-* vf:transfer-complete - give full rights and responsibilities plus physical custody
+* vf:transfer - give full rights and responsibilities plus physical custody
 * vf:move - change location and possibly identifier, if location is part of the identification, of a resource with no change of agent rights or possession
 * vf:raise - adjusts a quantity up based on a beginning balance or inventory count
 * vf:lower - adjusts a quantity down based on a beginning balance or inventory count
@@ -82,7 +82,7 @@ pass | No effect | Increment| Output | No | accept |
 fail | No effect | (3) | Output | (3) | accept |
 transfer-custody | No effect | Decr+Incr(2) | N/A | No | N/A |
 transfer-all-rights | Decr+Incr(2) | No effect | N/A | No | N/A |
-transfer-complete | Decr+Incr(2) | Decr+Incr(2) | N/A | No | N/A |
+transfer | Decr+Incr(2) | Decr+Incr(2) | N/A | No | N/A |
 move | Decr+Incr(2) |Decr+Incr(2) | N/A | No | N/A |
 raise | Increment | Increment | N/A | No | N/A |
 lower | Decrement | Decrement | N/A | No | N/A |

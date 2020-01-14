@@ -17,7 +17,7 @@
   - '@id': alice:2342d456-5d6f-46d5-a7ed-3ac7bfd5a86c
     '@type': Commitment
     clauseOf: alice:57f1c1d0-432e-4bfa-9d32-002b8955a708
-    action: transfer-complete
+    action: transfer
     provider: https://alice.example/
     receiver: https://bob.example/
     resourceClassifiedAs: https://www.wikidata.org/wiki/Q89 # apples
@@ -28,7 +28,7 @@
   - '@id': bob:fd399b37-0740-4a68-a184-1e655021ca21
     '@type': Commitment
     clauseOf: alice:57f1c1d0-432e-4bfa-9d32-002b8955a708
-    action: transfer-complete
+    action: transfer
     provider: https://bob.example/
     receiver: https://alice.example/
     resourceClassifiedAs: https://www.wikidata.org/wiki/Q5977438 # soft apple cider

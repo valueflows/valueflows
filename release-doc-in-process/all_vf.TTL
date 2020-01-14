@@ -959,13 +959,13 @@ vf:transfer-all-rights a    owl:NamedIndividual ,
         rdfs:label          "transfer-all-rights" ;
         vs:term_status      "unstable" .
 
-vf:transfer-complete a      owl:NamedIndividual ,
+vf:transfer a               owl:NamedIndividual ,
                             vf:Action ;
         vf:inputOutput      vf:notApplicable ;
         vf:pairsWith        vf:notApplicable ;
         vf:resourceEffect   vf:decrementIncrement ;
         rdfs:comment        "Give full rights and responsibilities plus physical custody." ;
-        rdfs:label          "transfer-complete" ;
+        rdfs:label          "transfer" ;
         vs:term_status      "unstable" .
 
 vf:transfer-custody a      owl:NamedIndividual ,
