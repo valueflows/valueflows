@@ -339,6 +339,13 @@ vf:containedIn a            owl:ObjectProperty ;
         vs:term_status      "unstable" ;
         rdfs:comment        "Used when a stock economic resource contains units also defined as economic resources." .
 
+vf:primaryAccountable a      owl:ObjectProperty ;
+        rdfs:label          "primary accountable" ;
+        rdfs:domain         vf:EconomicResource ;
+        rdfs:range          vf:Agent ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "The agent currently with primary rights and responsibilites for the economic resource. It is the agent that is associated with the accountingQuantity of the economic resource." .
+
 vf:hasBeginning a           owl:DatatypeProperty ;
         rdfs:domain         time:TemporalEntity ;
         rdfs:domain         [ owl:unionOf (
