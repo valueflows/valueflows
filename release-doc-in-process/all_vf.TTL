@@ -344,7 +344,7 @@ vf:primaryAccountable a      owl:ObjectProperty ;
         rdfs:domain         vf:EconomicResource ;
         rdfs:range          vf:Agent ;
         vs:term_status      "unstable" ;
-        rdfs:comment        "The agent currently with primary rights and responsibilites for the economic resource. This agent will normally do the accounting for the resource." .
+        rdfs:comment        "The agent currently with primary rights and responsibilites for the economic resource.  It is the agent that includes the resource in their accounting reports or inventory." .
 
 vf:hasBeginning a           owl:DatatypeProperty ;
         rdfs:domain         time:TemporalEntity ;
