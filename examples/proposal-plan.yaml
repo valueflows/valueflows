@@ -47,7 +47,7 @@
     '@type': Intent
     name: Payment
     skos:note: Payment when the unit is manufactured and sold
-    action: transfer-complete
+    action: transfer
     provider: https://fablab.example/
     resourceClassifiedAs: https://www.wikidata.org/wiki/Q4917 # US Dollar
     agreedIn: https://fablab.example/soil-sensor-project/value-equation/

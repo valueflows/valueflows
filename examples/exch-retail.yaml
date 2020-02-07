@@ -15,7 +15,7 @@
   - '@id': store:a8356625-bf64-4c16-9099-28aa1b718c4b
     '@type': EconomicEvent
     realizationOf: store:ac9ec98d-db80-44dc-97be-7aa149b2fe5d
-    action: transfer-complete
+    action: transfer
     provider: https://store.example/
     receiver: https://carol.example/
     resourceClassifiedAs: https://www.wikidata.org/wiki/Q47107 # bucket
@@ -26,7 +26,7 @@
   - '@id': store:2342d456-5d6f-46d5-a7ed-3ac7bfd5a86c
     '@type': EconomicEvent
     realizationOf: store:ac9ec98d-db80-44dc-97be-7aa149b2fe5d
-    action: transfer-complete
+    action: transfer
     provider: https://carol.example/
     receiver: https://store.example/
     resourceClassifiedAs: https://www.wikidata.org/wiki/Q4917 # US dollar
