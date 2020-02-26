@@ -56,8 +56,6 @@ All flows use an action property to designate what the flow is doing and how it 
 * vf:dropoff -  transported resource or person leaves the process; the same resource or person appeared in input with vf:pickup verb
 * vf:accept - in processes like repair or modification or testing, the same resource will appear in output with *vf:modify* verb
 * vf:modify - in processes like repair or modification, the same resource will appear in input with *vf:accept* verb
-* vf:pass - possible output of a testing or reviewing process, indicating the resource passed, the same resource will appear in input with *vf:accept* verb
-* vf:fail - possible output of a testing or reviewing process, indicating the resource failed, the same resource will appear in input with *vf:accept* verb (3)
 * vf:deliver-service - new service produced and delivered (a service implies that an agent actively receives the service)
 * vf:transfer-all-rights - give full (in the human realm) rights and responsibilities to another agent, without transferring physical custody
 * vf:transfer-custody - give physical custody and control of a resource, without full accounting or ownership rights
@@ -78,8 +76,6 @@ dropoff | No effect | No effect | Output | No | pickup |
 accept | No effect | Decrement  | Input | No | modify |
 modify | No effect | Increment  | Output | No | accept |
 deliver-service | No effect | No effect | Output | No | N/A |
-pass | No effect | Increment| Output | No | accept |
-fail | No effect | (3) | Output | (3) | accept |
 transfer-custody | No effect | Decr+Incr(2) | N/A | No | N/A |
 transfer-all-rights | Decr+Incr(2) | No effect | N/A | No | N/A |
 transfer | Decr+Incr(2) | Decr+Incr(2) | N/A | No | N/A |
