@@ -732,9 +732,9 @@ vf:state
         a                   owl:ObjectProperty ;
         rdfs:label          "state" ;
         rdfs:domain         vf:EconomicResource ;
-        rdfs:range          vf:Action ;
+        rdfs:range          xsd:string ;
         vs:term_status      "unstable" ;
-        rdfs:comment        "The state of the desired economic resource (pass or fail), after coming out of a test or review process." .
+        rdfs:comment        "The state of the desired economic resource, after coming out of a test or review process." .
 
 vf:refinementOf
         a                   owl:ObjectProperty ;
@@ -885,15 +885,6 @@ vf:dropoff a                owl:NamedIndividual ,
         rdfs:label          "dropoff" ;
         vs:term_status      "unstable" .
 
-vf:fail a                   owl:NamedIndividual ,
-                            vf:Action ;
-        vf:inputOutput      vf:output ;
-        vf:pairsWith        vf:accept ;
-        vf:resourceEffect   vf:noEffect ;
-        rdfs:comment        "Possible output of a testing or reviewing process, indicating the resource failed, the same resource will appear in the input." ;
-        rdfs:label          "fail" ;
-        vs:term_status      "unstable" .
-
 vf:lower a                  owl:NamedIndividual ,
                             vf:Action ;
         vf:inputOutput      vf:notApplicable ;
@@ -919,15 +910,6 @@ vf:move a                   owl:NamedIndividual ,
         vf:resourceEffect   vf:decrementIncrement ;
         rdfs:comment        "Change location and possibly identifier, if location is part of the identification, of a resource with no change of agent rights or possession." ;
         rdfs:label          "move" ;
-        vs:term_status      "unstable" .
-
-vf:pass a                   owl:NamedIndividual ,
-                            vf:Action ;
-        vf:inputOutput      vf:output ;
-        vf:pairsWith        vf:accept ;
-        vf:resourceEffect   vf:noEffect ;
-        rdfs:comment        "Possible output of a testing or reviewing process, indicating the resource passed, the same resource will appear in the input." ;
-        rdfs:label          "pass" ;
         vs:term_status      "unstable" .
 
 vf:pickup a                 owl:NamedIndividual ,
