@@ -33,6 +33,11 @@ vf:Action  a                 owl:Class ;
         vs:term_status       "testing" ;
         rdfs:comment         "An action verb defining the kind of flow and its behavior." .
 
+vf:PairsWith a              owl:Class ;
+        rdfs:comment        "The action that should be included on the other direction of the process, for example accept with modify; also includes not applicable." ;
+        rdfs:label          "vf:PairsWith" ;
+        vs:term_status      "unstable" .
+
 vf:InputOutput a            owl:Class ;
         rdfs:comment        "The action is an input or output of a process, or not related to a process." ;
         rdfs:label          "vf:InputOutput" ;
@@ -832,21 +837,13 @@ vf:resourceEffect a         owl:ObjectProperty ;
 # Actions
 
 vf:accept a                 owl:NamedIndividual ,
-                            vf:Action ;
+                            vf:Action ,
+                            vf:PairsWith ;
         vf:inputOutput      vf:input ;
         vf:pairsWith        vf:modify ;
         vf:resourceEffect   vf:noEffect ;
         rdfs:comment        "In processes like repair or modification or testing, the same resource will appear in the output." ;
         rdfs:label          "accept" ;
-        vs:term_status      "unstable" .
-
-vf:cite a                   owl:NamedIndividual ,
-                            vf:Action ;
-        vf:inputOutput      vf:input ;
-        vf:pairsWith        vf:notApplicable ;
-        vf:resourceEffect   vf:noEffect ;
-        rdfs:comment        "For example a design file, neither used nor consumed, the file remains available at all times." ;
-        rdfs:label          "cite" ;
         vs:term_status      "unstable" .
 
 vf:consume a                owl:NamedIndividual ,
@@ -877,7 +874,8 @@ vf:deliver-service a        owl:NamedIndividual ,
         vs:term_status      "unstable" .
 
 vf:dropoff a                owl:NamedIndividual ,
-                            vf:Action ;
+                            vf:Action ,
+                            vf:PairsWith ;
         vf:inputOutput      vf:output ;
         vf:pairsWith        vf:pickup ;
         vf:resourceEffect   vf:noEffect ;
@@ -895,7 +893,8 @@ vf:lower a                  owl:NamedIndividual ,
         vs:term_status      "unstable" .
 
 vf:modify a                 owl:NamedIndividual ,
-                            vf:Action ;
+                            vf:Action ,
+                            vf:PairsWith ;
         vf:inputOutput      vf:output ;
         vf:pairsWith        vf:accept ;
         vf:resourceEffect   vf:noEffect ;
@@ -913,7 +912,8 @@ vf:move a                   owl:NamedIndividual ,
         vs:term_status      "unstable" .
 
 vf:pickup a                 owl:NamedIndividual ,
-                            vf:Action ;
+                            vf:Action ,
+                            vf:PairsWith ;
         vf:inputOutput      vf:input ;
         vf:pairsWith        vf:dropoff ;
         vf:resourceEffect   vf:noEffect ;
@@ -957,7 +957,7 @@ vf:transfer a               owl:NamedIndividual ,
         rdfs:label          "transfer" ;
         vs:term_status      "unstable" .
 
-vf:transfer-custody a      owl:NamedIndividual ,
+vf:transfer-custody a       owl:NamedIndividual ,
                             vf:Action ;
         vf:inputOutput      vf:notApplicable ;
         vf:pairsWith        vf:notApplicable ;
@@ -966,7 +966,7 @@ vf:transfer-custody a      owl:NamedIndividual ,
         rdfs:label          "transfer-custody" ;
         vs:term_status      "unstable" .
 
-vf:use a                owl:NamedIndividual ,
+vf:use a                    owl:NamedIndividual ,
                             vf:Action ;
         vf:inputOutput      vf:input ;
         vf:pairsWith        vf:notApplicable ;
