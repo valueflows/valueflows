@@ -33,11 +33,6 @@ vf:Action  a                 owl:Class ;
         vs:term_status       "testing" ;
         rdfs:comment         "An action verb defining the kind of flow and its behavior." .
 
-vf:PairsWith a              owl:Class ;
-        rdfs:comment        "The action that should be included on the other direction of the process, for example accept with modify; also includes not applicable." ;
-        rdfs:label          "vf:PairsWith" ;
-        vs:term_status      "unstable" .
-
 vf:InputOutput a            owl:Class ;
         rdfs:comment        "The action is an input or output of a process, or not related to a process." ;
         rdfs:label          "vf:InputOutput" ;
@@ -849,7 +844,6 @@ vf:accept a                 owl:NamedIndividual ,
 vf:consume a                owl:NamedIndividual ,
                             vf:Action ;
         vf:inputOutput      vf:input ;
-        vf:pairsWith        vf:notApplicable ;
         vf:resourceEffect   vf:decrement ;
         rdfs:comment        "For example an ingredient or component composed into the output, after the process the ingredient is gone." ;
         rdfs:label          "consume" ;
@@ -858,7 +852,6 @@ vf:consume a                owl:NamedIndividual ,
 vf:cite a                   owl:NamedIndividual ,
                             vf:Action ;
         vf:inputOutput      vf:input ;
-        vf:pairsWith        vf:notApplicable ;
         vf:resourceEffect   vf:noEffect ;
         rdfs:comment        "For example a design file, neither used nor consumed, the file remains available at all times." ;
         rdfs:label          "cite" ;
@@ -867,7 +860,6 @@ vf:cite a                   owl:NamedIndividual ,
 vf:deliver-service a        owl:NamedIndividual ,
                             vf:Action ;
         vf:inputOutput      vf:output ;
-        vf:pairsWith        vf:notApplicable ;
         vf:resourceEffect   vf:noEffect ;
         rdfs:comment        "New service produced and delivered (a service implies that an agent actively receives the service)." ;
         rdfs:label          "deliver-service" ;
@@ -885,8 +877,6 @@ vf:dropoff a                owl:NamedIndividual ,
 
 vf:lower a                  owl:NamedIndividual ,
                             vf:Action ;
-        vf:inputOutput      vf:notApplicable ;
-        vf:pairsWith        vf:notApplicable ;
         vf:resourceEffect   vf:decrement ;
         rdfs:comment        "Adjusts a quantity down based on a beginning balance or inventory count." ;
         rdfs:label          "lower" ;
@@ -904,8 +894,6 @@ vf:modify a                 owl:NamedIndividual ,
 
 vf:move a                   owl:NamedIndividual ,
                             vf:Action ;
-        vf:inputOutput      vf:notApplicable ;
-        vf:pairsWith        vf:notApplicable ;
         vf:resourceEffect   vf:decrementIncrement ;
         rdfs:comment        "Change location and possibly identifier, if location is part of the identification, of a resource with no change of agent rights or possession." ;
         rdfs:label          "move" ;
@@ -924,7 +912,6 @@ vf:pickup a                 owl:NamedIndividual ,
 vf:produce a                owl:NamedIndividual ,
                             vf:Action ;
         vf:inputOutput      vf:output ;
-        vf:pairsWith        vf:notApplicable ;
         vf:resourceEffect   vf:increment ;
         rdfs:comment        "New resource was created in that process or an existing stock resource was added to." ;
         rdfs:label          "produce" ;
@@ -932,8 +919,6 @@ vf:produce a                owl:NamedIndividual ,
 
 vf:raise a                  owl:NamedIndividual ,
                             vf:Action ;
-        vf:inputOutput      vf:notApplicable ;
-        vf:pairsWith        vf:notApplicable ;
         vf:resourceEffect   vf:increment ;
         rdfs:comment        "Adjusts a quantity up based on a beginning balance or inventory count." ;
         rdfs:label          "raise" ;
@@ -941,8 +926,6 @@ vf:raise a                  owl:NamedIndividual ,
 
 vf:transfer-all-rights a    owl:NamedIndividual ,
                             vf:Action ;
-        vf:inputOutput      vf:notApplicable ;
-        vf:pairsWith        vf:notApplicable ;
         vf:resourceEffect   vf:decrementIncrement ;
         rdfs:comment        "Give full (in the human realm) rights and responsibilities to another agent, without transferring physical custody." ;
         rdfs:label          "transfer-all-rights" ;
@@ -950,8 +933,6 @@ vf:transfer-all-rights a    owl:NamedIndividual ,
 
 vf:transfer a               owl:NamedIndividual ,
                             vf:Action ;
-        vf:inputOutput      vf:notApplicable ;
-        vf:pairsWith        vf:notApplicable ;
         vf:resourceEffect   vf:decrementIncrement ;
         rdfs:comment        "Give full rights and responsibilities plus physical custody." ;
         rdfs:label          "transfer" ;
@@ -959,8 +940,6 @@ vf:transfer a               owl:NamedIndividual ,
 
 vf:transfer-custody a       owl:NamedIndividual ,
                             vf:Action ;
-        vf:inputOutput      vf:notApplicable ;
-        vf:pairsWith        vf:notApplicable ;
         vf:resourceEffect   vf:decrementIncrement ;
         rdfs:comment        "Give physical custody and control of a resource, without full accounting or ownership rights." ;
         rdfs:label          "transfer-custody" ;
@@ -969,7 +948,6 @@ vf:transfer-custody a       owl:NamedIndividual ,
 vf:use a                    owl:NamedIndividual ,
                             vf:Action ;
         vf:inputOutput      vf:input ;
-        vf:pairsWith        vf:notApplicable ;
         vf:resourceEffect   vf:noEffect ;
         rdfs:comment        "For example a tool used in process; after the process, the tool still exists." ;
         rdfs:label          "use" ;
@@ -978,7 +956,6 @@ vf:use a                    owl:NamedIndividual ,
 vf:work a                   owl:NamedIndividual ,
                             vf:Action ;
         vf:inputOutput      vf:input ;
-        vf:pairsWith        vf:notApplicable ;
         vf:resourceEffect   vf:noEffect ;
         rdfs:comment        "Labor power applied to a process." ;
         rdfs:label          "work" ;
@@ -1016,13 +993,6 @@ vf:input a                  owl:NamedIndividual ,
                             vf:InputOutput ;
         rdfs:comment        "This kind of flow can be an input to a process." ;
         rdfs:label          "input" ;
-        vs:term_status      "unstable" .
-
-vf:notApplicable a          owl:NamedIndividual ,
-                            vf:InputOutput ,
-                            vf:PairsWith ;
-        rdfs:comment        "This property is not applicable to this kind of flow." ;
-        rdfs:label          "not applicable" ;
         vs:term_status      "unstable" .
 
 vf:output a                  owl:NamedIndividual ,
