@@ -688,7 +688,7 @@ vf:classifiedAs
 vf:resourceClassifiedAs
         a                   owl:ObjectProperty ;
         rdfs:label          "resource classified as" ;
-        rdfs:domain         [ owl:unionOf (vf:RecipeResource vf:Intent vf:Commitment vf:EconomicEvent vf:Claim) ] ;
+        rdfs:domain         [ owl:unionOf (vf:ResourceSpecification vf:RecipeResource vf:Intent vf:Commitment vf:EconomicEvent vf:Claim) ] ;
         rdfs:range          owl:Thing ;
         vs:term_status      "unstable" ;
         rdfs:comment        "References a concept in a common taxonomy or other classification scheme for purposes of categorization or grouping." .
