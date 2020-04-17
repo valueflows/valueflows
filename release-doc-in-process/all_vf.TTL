@@ -832,8 +832,7 @@ vf:resourceEffect a         owl:ObjectProperty ;
 # Actions
 
 vf:accept a                 owl:NamedIndividual ,
-                            vf:Action ,
-                            vf:PairsWith ;
+                            vf:Action ;
         vf:inputOutput      vf:input ;
         vf:pairsWith        vf:modify ;
         vf:resourceEffect   vf:noEffect ;
@@ -866,8 +865,7 @@ vf:deliver-service a        owl:NamedIndividual ,
         vs:term_status      "unstable" .
 
 vf:dropoff a                owl:NamedIndividual ,
-                            vf:Action ,
-                            vf:PairsWith ;
+                            vf:Action ;
         vf:inputOutput      vf:output ;
         vf:pairsWith        vf:pickup ;
         vf:resourceEffect   vf:noEffect ;
@@ -883,8 +881,7 @@ vf:lower a                  owl:NamedIndividual ,
         vs:term_status      "unstable" .
 
 vf:modify a                 owl:NamedIndividual ,
-                            vf:Action ,
-                            vf:PairsWith ;
+                            vf:Action ;
         vf:inputOutput      vf:output ;
         vf:pairsWith        vf:accept ;
         vf:resourceEffect   vf:noEffect ;
@@ -900,8 +897,7 @@ vf:move a                   owl:NamedIndividual ,
         vs:term_status      "unstable" .
 
 vf:pickup a                 owl:NamedIndividual ,
-                            vf:Action ,
-                            vf:PairsWith ;
+                            vf:Action ;
         vf:inputOutput      vf:input ;
         vf:pairsWith        vf:dropoff ;
         vf:resourceEffect   vf:noEffect ;
