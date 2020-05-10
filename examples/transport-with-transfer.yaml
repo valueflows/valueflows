@@ -73,6 +73,7 @@
     trackingIdentifier: lot-alice-apples-2018-10-11
     provider: https://alice.example/
     receiver: https://claudia.example/
+    resourceInventoriedAs: alice:21f361a6-2375-46bb-b192-c21b5ba833bf # alice's apples
     toResourceInventoriedAs: claudia:27be5cab-d740-4194-9298-1661a69d9d95 # claudia's bill of lading on the truck
     resourceQuantity:
       om2:hasUnit: om2:kilogram
