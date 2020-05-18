@@ -680,7 +680,7 @@ vf:basedOn
 vf:classifiedAs
         a                   owl:ObjectProperty ;
         rdfs:label          "classified as" ;
-        rdfs:domain         [ owl:unionOf (vf:Process vf:EconomicResource) ] ;
+        rdfs:domain         [ owl:unionOf (vf:Process vf:EconomicResource org:Organization) ] ;
         rdfs:range          owl:Thing ;
         vs:term_status      "unstable" ;
         rdfs:comment        "References one or more concepts in a common taxonomy or other classification scheme for purposes of categorization or grouping." .
