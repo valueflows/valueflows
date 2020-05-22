@@ -6,6 +6,6 @@ Note that this diagram includes only the linked open data VF namespace, so does 
 
 *To make the diagram bigger, you can right click and select View Image.*
 
-![VF owl picture](https://raw.githubusercontent.com/valueflows/valueflows/master/release-doc-in-process/ValueFlowsOWL.png)
+![VF owl picture](https://raw.githubusercontent.com/valueflows/valueflows/master/release-doc-in-process/all-vf-vowl.svg)
 
 Credit: http://visualdataweb.de/
