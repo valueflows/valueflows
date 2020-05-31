@@ -669,6 +669,20 @@ vf:unitOfEffort a           owl:ObjectProperty ;
         vs:term_status      "unstable" ;
         rdfs:comment        "The unit used for use or work or sometimes cite actions." .
 
+vf:defaultUnitOfEffort a    owl:ObjectProperty ;
+        rdfs:label          "default unit of effort" ;
+        rdfs:domain         vf:ResourceSpecification ;
+        rdfs:range          om2:Unit ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "The default unit used for use or work." .
+
+vf:defaultUnitOfResource a  owl:ObjectProperty ;
+        rdfs:label          "default unit of resource" ;
+        rdfs:domain         vf:ResourceSpecification ;
+        rdfs:range          om2:Unit ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "The default unit used for the resource itself." .
+
 vf:basedOn
         a                   owl:ObjectProperty ;
         rdfs:label          "based on" ;
