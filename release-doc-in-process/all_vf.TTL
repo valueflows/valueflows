@@ -78,6 +78,11 @@ vf:RecipeFlow a             owl:Class ;
         vs:term_status      "unstable" ;
         rdfs:comment        "The specification of a resource inflow to, or outflow from, a recipe process." .
 
+vf:RecipeExchange a         owl:Class ;
+        rdfs:label          "vf:RecipeExchange" ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "Specifies an exchange type agreement as part of a recipe." .
+
 vf:ScenarioDefinition a     owl:Class ;
         rdfs:label          "vf:ScenarioDefinition" ;
         vs:term_status      "unstable" ;
@@ -193,7 +198,7 @@ vf:inputOf
         rdfs:domain         [ owl:unionOf (vf:EconomicEvent vf:Commitment vf:Intent) ] ;
         rdfs:range          vf:Process ;
         vs:term_status      "testing" ;
-        rdfs:comment        "Relates an input flow to it's process." .
+        rdfs:comment        "Relates an input flow to its process." .
 
 vf:outputOf
         a                   owl:ObjectProperty ;
@@ -201,7 +206,7 @@ vf:outputOf
         rdfs:domain         [ owl:unionOf (vf:EconomicEvent vf:Commitment vf:Intent) ] ;
         rdfs:range          vf:Process ;
         vs:term_status      "testing" ;
-        rdfs:comment        "Relates an output flow to it's process." .
+        rdfs:comment        "Relates an output flow to its process." .
 
 vf:recipeInputOf
         a                   owl:ObjectProperty ;
@@ -209,7 +214,7 @@ vf:recipeInputOf
         rdfs:domain         vf:RecipeFlow ;
         rdfs:range          vf:RecipeProcess ;
         vs:term_status      "unstable" ;
-        rdfs:comment        "Relates an input flow to it's process in a recipe." .
+        rdfs:comment        "Relates an input flow to its process in a recipe." .
 
 vf:recipeOutputOf
         a                   owl:ObjectProperty ;
@@ -217,7 +222,15 @@ vf:recipeOutputOf
         rdfs:domain         vf:RecipeFlow ;
         rdfs:range          vf:RecipeProcess ;
         vs:term_status      "unstable" ;
-        rdfs:comment        "Relates an output flow to it's process in a recipe." .
+        rdfs:comment        "Relates an output flow to its process in a recipe." .
+
+vf:recipeClauseOf
+        a                   owl:ObjectProperty ;
+        rdfs:label          "recipe clause of" ;
+        rdfs:domain         vf:RecipeFlow ;
+        rdfs:range          vf:RecipeExchange ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "Relates a flow to its exchange agreement in a recipe." .
 
 vf:plannedWithin
         a                   owl:ObjectProperty ;
@@ -1041,7 +1054,7 @@ vf:increment a              owl:NamedIndividual ,
         rdfs:label          "increment" ;
         vs:term_status      "unstable" .
 
-vf:noEffect a              owl:NamedIndividual ,
+vf:noEffect a               owl:NamedIndividual ,
                             vf:ResourceEffect ;
         rdfs:comment        "The effect is to do nothing to the inventoried resource." ;
         rdfs:label          "no effect" ;

@@ -1,0 +1,118 @@
+# Example: Simple recipe with both process and exchange
+
+'@context':
+  - https://git.io/vf-examples-jsonld-context
+  - alice: https://alice.example/
+    doc: https://documenters.example
+
+'@id': rgh:valueflows/valueflows/master/examples/recipe-with-exchange.yaml
+'@graph':
+
+  # the recipe
+
+  - '@id': urn:uuid:3be5259d-10f0-431c-9fec-9c0c15a461d3
+    '@type': ResourceSpecification
+    name: Training handout
+    uri: https://documenters.example/training-handout
+    skos:note: This is an electronic version of the formatted handout
+
+  - '@id': urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10f1f86
+    '@type': ResourceSpecification
+    name: Technical writing
+
+  - '@id': urn:uuid:b90b0b77-09a2-42e2-8bd4-e9ae2c1c6172
+    '@type': RecipeResource
+    resourceConformsTo: urn:uuid:3be5259d-10f0-431c-9fec-9c0c15a461d3 # the spec
+    name: Training handout
+
+  - '@id': urn:uuid:33e8933b-ff73-4a01-964a-ca7a98893083
+    '@type': RecipeFlow
+    recipeOutputOf: urn:uuid:e1721a61-cd47-4556-84b9-8b1b81da15bf
+    action: produce
+    recipeFlowResource: urn:uuid:b90b0b77-09a2-42e2-8bd4-e9ae2c1c6172 # handout
+    resourceQuantity:
+      om2:hasUnit: one
+      om2:hasNumericalValue: 1
+
+  - '@id': urn:uuid:e1721a61-cd47-4556-84b9-8b1b81da15bf
+    '@type': RecipeProcess
+    name: Write and format training handout
+
+  - '@id': urn:uuid:60f4204e-b8d2-4026-8577-102c3f82c0af
+    '@type': RecipeFlow
+    recipeInputOf: urn:uuid:e1721a61-cd47-4556-84b9-8b1b81da15bf
+    recipeClauseOf: urn:uuid:9bd19194-a36d-4a1f-896b-8082887962cb # the recipe exchange
+    action: work
+    resourceConformsTo: urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10f1f86
+    resourceClassifiedAs: wd:Q1193158 # technical writing
+    effortQuantity:
+      om2:hasUnit: om2:hour
+      om2:hasNumericalValue: 15
+
+  - '@id': urn:uuid:9bd19194-a36d-4a1f-896b-8082887962cb
+    '@type': RecipeExchange
+    name: Exchange work for FairCoin
+
+  - '@id': urn:uuid:3129ca8b-fcda-45be-bbda-294dc924d3b9
+    '@type': RecipeFlow
+    recipeClauseOf: urn:uuid:9bd19194-a36d-4a1f-896b-8082887962cb # the recipe exchange
+    action: transfer
+    resourceConformsTo: wd:Q21002847 # FairCoin
+    resourceQuantity:
+      om2:hasUnit: om2:one
+      om2:hasNumericalValue: 300
+
+
+  # the plan
+
+  - '@id': doc:8e5fe80d-a769-4bd5-89e5-2136d33eab9f
+    '@type': Plan
+    name: Training Handout and Payment
+    skos:note: Write and format the training handout, payment for writing work.
+    due: 2019-04-08T17:00:00-5:00
+    dcterms:created: 2019-04-01T10:35:00-5:00
+
+  - '@id': doc:a8236bbb-81e0-422d-9861-56d2417db0fb
+    '@type': Commitment
+    independentDemandOf: doc:8e5fe80d-a769-4bd5-89e5-2136d33eab9f
+    outputOf: doc:02b39a30-3e04-4305-9656-7f261aa63c84
+    action: produce
+    provider: https://documenters.example/
+    receiver: https://documenters.example/
+    resourceConformsTo: urn:uuid:3be5259d-10f0-431c-9fec-9c0c15a461d3 # training handout
+    resourceQuantity:
+      om2:hasUnit: om2:one
+      om2:hasNumericalValue: 1
+
+  - '@id': doc:02b39a30-3e04-4305-9656-7f261aa63c84
+    '@type': Process
+    name: Write and format training handout
+    plannedWithin: doc:8e5fe80d-a769-4bd5-89e5-2136d33eab9f
+
+  - '@id': doc:52f0e212-3c4f-4d27-b345-5e964c135824
+    '@type': Commitment
+    inputOf: doc:02b39a30-3e04-4305-9656-7f261aa63c84
+    clauseOf: urn:uuid:583e83d9-a46d-44ff-bd71-88513a1d83c0
+    action: work
+    provider: https://alice.example/
+    receiver: https://documenters.example/
+    resourceConformsTo: urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10f1f86
+    resourceClassifiedAs: wd:Q1193158 # technical writing
+    effortQuantity:
+      om2:hasUnit: om2:hour
+      om2:hasNumericalValue: 20 # the estimate for this particular work is higher than the recipe's
+
+  - '@id': urn:uuid:583e83d9-a46d-44ff-bd71-88513a1d83c0
+    '@type': Agreement
+    name: Exchange technical documentation work for FairCoin
+
+  - '@id': doc:b52a5815-fae9-43bf-be95-833b95dc0adb
+    '@type': Commitment
+    clauseOf: doc:02b39a30-3e04-4305-9656-7f261aa63c84
+    action: transfer
+    provider: https://documenters.example/
+    receiver: https://alice.example/
+    resourceConformsTo: wd:Q21002847 # FairCoin
+    resourceQuantity:
+      om2:hasUnit: om2:one
+      om2:hasNumericalValue: 400
