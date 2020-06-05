@@ -56,7 +56,7 @@
   - '@id': urn:uuid:3129ca8b-fcda-45be-bbda-294dc924d3b9
     '@type': RecipeFlow
     recipeClauseOf: urn:uuid:9bd19194-a36d-4a1f-896b-8082887962cb # the recipe exchange
-    action: transfer-complete
+    action: transfer
     resourceConformsTo: wd:Q21002847 # FairCoin
     resourceQuantity:
       om2:hasUnit: om2:one
@@ -109,7 +109,7 @@
   - '@id': doc:b52a5815-fae9-43bf-be95-833b95dc0adb
     '@type': Commitment
     clauseOf: doc:02b39a30-3e04-4305-9656-7f261aa63c84
-    action: transfer-complete
+    action: transfer
     provider: https://documenters.example/
     receiver: https://alice.example/
     resourceConformsTo: wd:Q21002847 # FairCoin
