@@ -4,7 +4,7 @@
 
 Here is the current release spec: https://www.valueflo.ws/
 
-If you would like to be part of this conversation, please [raise an issue here](https://github.com/valueflows/valueflows/issues), or fork this or any of the related repositories and issue pull requests.  You can also pop into our [welcome gitter chat](https://gitter.im/valueflows/welcome) to make comments, ask questions, or introduce yourself!
+If you would like to be part of this conversation, please [raise an issue here](https://lab.allmende.io/valueflows/valueflows/-/issues), or fork this or any of the related repositories and issue pull requests.  You can also pop into our [welcome gitter chat](https://gitter.im/valueflows/welcome) to make comments, ask questions, or introduce yourself!
 
 ## License
 
