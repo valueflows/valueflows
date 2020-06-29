@@ -33,108 +33,108 @@ The following are the classes needed for a ValueFlows implementation, in json-sc
 
 #### Action
 
-[import, lang:"json"](https://github.com/valueflows/vf-json-schema/blob/master/schemas/Action.json)
+[import, lang:"json"](https://lab.allmende.io/valueflows/vf-schemas/vf-json-schema/-/tree/master/schemas/Action.json)
 
 #### Agent
 
-[import, lang:"json"](https://raw.githubusercontent.com/valueflows/vf-json-schema/master/schemas/Agent.json)
+[import, lang:"json"](https://lab.allmende.io/valueflows/vf-schemas/vf-json-schema/-/tree/master/schemas/Agent.json)
 
 #### AgentRelationship
 
-[import, lang:"json"](../../../vf-json-schema/schemas/AgentRelationship.json)
+[import, lang:"json"](https://lab.allmende.io/valueflows/vf-schemas/vf-json-schema/-/tree/master/schemas/AgentRelationship.json)
 
 #### AgentRelationshipRole
 
-[import, lang:"json"](../../../vf-json-schema/schemas/AgentRelationshipRole.json)
+[import, lang:"json"](https://lab.allmende.io/valueflows/vf-schemas/vf-json-schema/-/tree/master/schemas/AgentRelationshipRole.json)
 
 #### Agreement
 
-[import, lang:"json"](../../../vf-json-schema/schemas/Agreement.json)
+[import, lang:"json"](https://lab.allmende.io/valueflows/vf-schemas/vf-json-schema/-/tree/master/schemas/Agreement.json)
 
 #### Appreciation
 
-[import, lang:"json"](../../../vf-json-schema/schemas/Appreciation.json)
+[import, lang:"json"](https://lab.allmende.io/valueflows/vf-schemas/vf-json-schema/-/tree/master/schemas/Appreciation.json)
 
 #### Claim
 
-[import, lang:"json"](../../../vf-json-schema/schemas/Claim.json)
+[import, lang:"json"](https://lab.allmende.io/valueflows/vf-schemas/vf-json-schema/-/tree/master/schemas/Claim.json)
 
 #### Commitment
 
-[import, lang:"json"](../../../vf-json-schema/schemas/Commitment.json)
+[import, lang:"json"](https://lab.allmende.io/valueflows/vf-schemas/vf-json-schema/-/tree/master/schemas/Commitment.json)
 
 #### Duration
 
-[import, lang:"json"](../../../vf-json-schema/schemas/Duration.json)
+[import, lang:"json"](https://lab.allmende.io/valueflows/vf-schemas/vf-json-schema/-/tree/master/schemas/Duration.json)
 
 #### EconomicEvent
 
-[import, lang:"json"](../../../vf-json-schema/schemas/EconomicEvent.json)
+[import, lang:"json"](https://lab.allmende.io/valueflows/vf-schemas/vf-json-schema/-/tree/master/schemas/EconomicEvent.json)
 
 #### EconomicResource
 
-[import, lang:"json"](../../../vf-json-schema/schemas/EconomicResource.json)
+[import, lang:"json"](https://lab.allmende.io/valueflows/vf-schemas/vf-json-schema/-/tree/master/schemas/EconomicResource.json)
 
 #### Fulfillment
 
-[import, lang:"json"](../../../vf-json-schema/schemas/Fulfillment.json)
+[import, lang:"json"](https://lab.allmende.io/valueflows/vf-schemas/vf-json-schema/-/tree/master/schemas/Fulfillment.json)
 
 #### Intent
 
-[import, lang:"json"](../../../vf-json-schema/schemas/Intent.json)
+[import, lang:"json"](https://lab.allmende.io/valueflows/vf-schemas/vf-json-schema/-/tree/master/schemas/Intent.json)
 
 #### Plan
 
-[import, lang:"json"](../../../vf-json-schema/schemas/Plan.json)
+[import, lang:"json"](https://lab.allmende.io/valueflows/vf-schemas/vf-json-schema/-/tree/master/schemas/Plan.json)
 
 #### Process
 
-[import, lang:"json"](../../../vf-json-schema/schemas/Process.json)
+[import, lang:"json"](https://lab.allmende.io/valueflows/vf-schemas/vf-json-schema/-/tree/master/schemas/Process.json)
 
 #### ProcessSpecification
 
-[import, lang:"json"](../../../vf-json-schema/schemas/ProcessSpecification.json)
+[import, lang:"json"](https://lab.allmende.io/valueflows/vf-schemas/vf-json-schema/-/tree/master/schemas/ProcessSpecification.json)
 
 #### ProductBatch
 
-[import, lang:"json"](../../../vf-json-schema/schemas/ProductBatch.json)
+[import, lang:"json"](https://lab.allmende.io/valueflows/vf-schemas/vf-json-schema/-/tree/master/schemas/ProductBatch.json)
 
 #### QuantityValue
 
-[import, lang:"json"](../../../vf-json-schema/schemas/QuantityValue.json)
+[import, lang:"json"](https://lab.allmende.io/valueflows/vf-schemas/vf-json-schema/-/tree/master/schemas/QuantityValue.json)
 
 #### RecipeFlow
 
-[import, lang:"json"](../../../vf-json-schema/schemas/RecipeFlow.json)
+[import, lang:"json"](https://lab.allmende.io/valueflows/vf-schemas/vf-json-schema/-/tree/master/schemas/RecipeFlow.json)
 
 #### RecipeProcess
 
-[import, lang:"json"](../../../vf-json-schema/schemas/RecipeProcess.json)
+[import, lang:"json"](https://lab.allmende.io/valueflows/vf-schemas/vf-json-schema/-/tree/master/schemas/RecipeProcess.json)
 
 #### RecipeResource
 
-[import, lang:"json"](../../../vf-json-schema/schemas/RecipeResource.json)
+[import, lang:"json"](https://lab.allmende.io/valueflows/vf-schemas/vf-json-schema/-/tree/master/schemas/RecipeResource.json)
 
 #### ResourceSpecification
 
-[import, lang:"json"](../../../vf-json-schema/schemas/ResourceSpecification.json)
+[import, lang:"json"](https://lab.allmende.io/valueflows/vf-schemas/vf-json-schema/-/tree/master/schemas/ResourceSpecification.json)
 
 #### Satisfaction
 
-[import, lang:"json"](../../../vf-json-schema/schemas/Satisfaction.json)
+[import, lang:"json"](https://lab.allmende.io/valueflows/vf-schemas/vf-json-schema/-/tree/master/schemas/Satisfaction.json)
 
 #### Scenario
 
-[import, lang:"json"](../../../vf-json-schema/schemas/Scenario.json)
+[import, lang:"json"](https://lab.allmende.io/valueflows/vf-schemas/vf-json-schema/-/tree/master/schemas/Scenario.json)
 
 #### ScenarioDefinition
 
-[import, lang:"json"](../../../vf-json-schema/schemas/ScenarioDefinition.json)
+[import, lang:"json"](https://lab.allmende.io/valueflows/vf-schemas/vf-json-schema/-/tree/master/schemas/ScenarioDefinition.json)
 
 #### Settlement
 
-[import, lang:"json"](../../../vf-json-schema/schemas/Settlement.json)
+[import, lang:"json"](https://lab.allmende.io/valueflows/vf-schemas/vf-json-schema/-/tree/master/schemas/Settlement.json)
 
 #### SpatialThing
 
-[import, lang:"json"](../../../vf-json-schema/schemas/SpatialThing.json)
+[import, lang:"json"](https://lab.allmende.io/valueflows/vf-schemas/vf-json-schema/-/tree/master/schemas/SpatialThing.json)

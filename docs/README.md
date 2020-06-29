@@ -13,7 +13,7 @@ The vocabulary is presented in several ways, as Linked Open Data using the Resou
 
 If this document seems too much to start with, or you just want a quicker overview, you can start here with a [ValueFlows Story](http://mikorizal.org/ValueFlows-Story.pdf) about apple pie (yum!).
 
-You can find us [here on github](https://github.com/valueflows).  Or come on over and ask questions in the [Welcome Chat](https://gitter.im/valueflows/welcome).
+You can find us [here on gitlab](https://lab.allmende.io/valueflows).  Or come on over and ask questions in the [Welcome Chat](https://gitter.im/valueflows/welcome).
 
 <hr/>
 
