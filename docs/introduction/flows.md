@@ -113,3 +113,4 @@ Sometimes a quantity is expressed in time-based units, like "I worked 6 hours", 
 
 Sometimes a situation may call for a "compound quantity", like "Number-per-Year".
 
+Display note: The OM2 ontology defines a Unit called `one` that is used for one-dimensional units.  This is confusing for many economic applications, where something like `each` would be used, or nothing at all.  We recommend that user interfaces handle this by not displaying the unit `one` where it would be confusing, or substituting a more applicable name.
