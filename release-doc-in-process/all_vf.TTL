@@ -53,6 +53,11 @@ vf:AgentRelationshipRole  a  owl:Class ;
         vs:term_status       "unstable" ;
         rdfs:comment         "A relationship role defining the kind of association one agent can have with another." .
 
+vf:RoleBehavior  a           owl:Class ;
+        rdfs:label           "vf:RoleBehavior" ;
+        vs:term_status       "unstable" ;
+        rdfs:comment         "The general shape or behavior grouping of an agent relationship role." .
+
 vf:RecipeResource a         owl:Class ;
         rdfs:label          "vf:RecipeResource" ;
         vs:term_status      "unstable" ;
@@ -537,6 +542,7 @@ vf:name a                   owl:DatatypeProperty ;
                                 vf:RecipeProcess 
                                 vf:RecipeResource 
                                 vf:ResourceSpecification 
+                                vf:RoleBehavior 
                                 vf:Scenario 
                                 vf:ScenarioDefinition) ] ;
         vs:term_status      "unstable" ;
@@ -565,6 +571,7 @@ skos:note
                                 vf:RecipeProcess 
                                 vf:RecipeResource 
                                 vf:ResourceSpecification 
+                                vf:RoleBehavior 
                                 vf:Satisfaction 
                                 vf:Scenario 
                                 vf:ScenarioDefinition 
@@ -835,6 +842,13 @@ vf:inverseRoleLabel a       owl:DatatypeProperty ;
         vs:term_status      "unstable" ;
         rdfs:comment        "The human readable name of the role, inverse from the object to the subject. For example, 'has member'." .
 
+vf:roleBehavior a           owl:ObjectProperty ;
+        rdfs:label          "role behavior" ;
+        rdfs:domain         vf:AgentRelationshipRole ;
+        rdfs:range          vf:RoleBehavior ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "The generalized behavior of this agent relationship role." .
+
 vf:inputOutput a            owl:ObjectProperty ;
         rdfs:domain         vf:Action ;
         rdfs:range          vf:InputOutput ;
@@ -1079,4 +1093,24 @@ vf:output a                  owl:NamedIndividual ,
                             vf:InputOutput ;
         rdfs:comment        "This kind of flow can be an output to a process." ;
         rdfs:label          "output" ;
+        vs:term_status      "unstable" .
+
+# Agent Relationship Role Behaviors
+
+vf:member a                 owl:NamedIndividual ,
+                            vf:RoleBehavior ;
+        rdfs:comment        "The role is a member type role in relation to an organization.  An agent can be a member of many organizations." ;
+        rdfs:label          "member" ;
+        vs:term_status      "testing" .
+
+vf:subOrganization a        owl:NamedIndividual ,
+                            vf:RoleBehavior ;
+        rdfs:comment        "The role is a sub-organization type role in relation to an organization. An agent can be a sub-organization of no more than one organization." ;
+        rdfs:label          "sub-organization" ;
+        vs:term_status      "testing" .
+
+vf:peer a                   owl:NamedIndividual ,
+                            vf:RoleBehavior ;
+        rdfs:comment        "The role is a peer type role in relation to an agent. Examples are trading partners or mentors." ;
+        rdfs:label          "peer" ;
         vs:term_status      "unstable" .
