@@ -542,6 +542,7 @@ vf:name a                   owl:DatatypeProperty ;
                                 vf:RecipeProcess 
                                 vf:RecipeResource 
                                 vf:ResourceSpecification 
+                                vf:RoleBehavior 
                                 vf:Scenario 
                                 vf:ScenarioDefinition) ] ;
         vs:term_status      "unstable" ;
@@ -570,6 +571,7 @@ skos:note
                                 vf:RecipeProcess 
                                 vf:RecipeResource 
                                 vf:ResourceSpecification 
+                                vf:RoleBehavior 
                                 vf:Satisfaction 
                                 vf:Scenario 
                                 vf:ScenarioDefinition 
@@ -839,6 +841,13 @@ vf:inverseRoleLabel a       owl:DatatypeProperty ;
         rdfs:range          xsd:string ;
         vs:term_status      "unstable" ;
         rdfs:comment        "The human readable name of the role, inverse from the object to the subject. For example, 'has member'." .
+
+vf:roleBehavior a           owl:ObjectProperty ;
+        rdfs:label          "role behavior" ;
+        rdfs:domain         vf:AgentRelationshipRole ;
+        rdfs:range          vf:RoleBehavior ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "The generalized behavior of this agent relationship role." .
 
 vf:inputOutput a            owl:ObjectProperty ;
         rdfs:domain         vf:Action ;
