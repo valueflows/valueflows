@@ -27,7 +27,7 @@ An issue can be created for each use case, and people can discuss.  People can p
 
 Based on the models, we can start to refine the vocabulary.  When it is getting solid, we can write up the .md doc for that subject area so it will get pulled into the main website.  Then continue to refine as needed.
 
-For new people, reading the [existing use cases](https://github.com/valueflows/valueflows/tree/master/use-cases) could be a good way to see how they might plug in to this workflow.
+For new people, looking through the formal gitbook documentation here https://valueflo.ws might be the best way to become familiar with the work done to date.  It also might be useful to look through the [existing use cases](https://lab.allmende.io/valueflows/valueflows/-/tree/master/use-cases).
 
 We use [Term-centric Semantic Web Vocabulary Annotations](https://www.w3.org/2003/06/sw-vocab-status/note) in following way:
 * unstable - included in the vocabulary based on discussions and couple of examples
@@ -36,12 +36,14 @@ We use [Term-centric Semantic Web Vocabulary Annotations](https://www.w3.org/200
 
 ### Examples
 
-We write example snippets using [JSON-LD](https://json-ld.org/) compatible subset of YAML. Later any implementation of YAML to JSON should be able to convert them and any implementation of JSON-LD parse them.
-Examples should include common JSON-LD `@context` we use in examples: `https://git.io/vf-examples-jsonld-context` which we maintain in https://github.com/valueflows/vf-examples-jsonld-context
+Helpful examples are published here: https://valueflo.ws/examples/ex-agent.html.
 
-## Github process
+In terms of our process, we also write example snippets using [JSON-LD](https://json-ld.org/) compatible subset of YAML. Later any implementation of YAML to JSON should be able to convert them and any implementation of JSON-LD parse them.
+Examples should include common JSON-LD `@context` we use in examples: `https://git.io/vf-examples-jsonld-context` which we maintain in https://lab.allmende.io/valueflows/support-tools/vf-examples-jsonld-context.
 
-Value Flows follows the ["GitHub Flow"](http://scottchacon.com/2011/08/31/github-flow.html) workflow for using [our GitHub repos](https://github.com/valueflows):
+## Git process
+
+Value Flows follows the ["GitHub Flow"](http://scottchacon.com/2011/08/31/github-flow.html) workflow for using [our GitLab repos](https://lab.allmende.io/valueflows):
 
 * Anything in the master branch is deployable
 * To work on something new, create a descriptively named branch off of master (i.e. fairy-princess-use-case)
