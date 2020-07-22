@@ -18,7 +18,7 @@
 
 * [Classes and Properties](https://w3id.org/lode/owlapi/https://lab.allmende.io/valueflows/valueflows/-/raw/master/release-doc-in-process/all_vf.TTL)
 * [Other Namespaces/Terms](specification/external-terms.md)
-* [GraphQL Reference](https://lab.allmende.io/valueflows/vf-schemas/vf-graphql/-/tree/master/lib/schemas)
+* [GraphQL Reference](https://lab.allmende.io/valueflows/vf-schemas/vf-graphql/-/tree/sprout/lib/schemas)
 * [JSON-schema Reference](https://lab.allmende.io/valueflows/vf-schemas/vf-json-schema/-/tree/master/schemas)
 
 ## Concepts
