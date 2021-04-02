@@ -29,67 +29,67 @@
 # ABSTRACT / CLASSIFICATION CLASSES (KNOWLEDGE LAYER)
 
 vf:Action  a                 owl:Class ;
-        rdfs:label           "vf:Action" ;
+        rdfs:label           "Action" ;
         vs:term_status       "testing" ;
         rdfs:comment         "An action verb defining the kind of flow and its behavior." .
 
 vf:PairsWith a              owl:Class ;
         rdfs:comment        "The action that should be included on the other direction of the process, for example accept with modify; also includes not applicable." ;
-        rdfs:label          "vf:PairsWith" ;
+        rdfs:label          "Pairs With" ;
         vs:term_status      "unstable" .
 
 vf:InputOutput a            owl:Class ;
         rdfs:comment        "The action is an input or output of a process, or not related to a process." ;
-        rdfs:label          "vf:InputOutput" ;
+        rdfs:label          "Input/Output" ;
         vs:term_status      "unstable" .
 
 vf:ResourceEffect a         owl:Class ;
         rdfs:comment        "The action has this effect on an inventoried resource." ;
-        rdfs:label          "vf:ResourceEffect" ;
+        rdfs:label          "Resource Effect" ;
         vs:term_status      "unstable" .
 
 vf:AgentRelationshipRole  a  owl:Class ;
-        rdfs:label           "vf:AgentRelationshipRole" ;
+        rdfs:label           "Agent Relationship Role" ;
         vs:term_status       "testing" ;
         rdfs:comment         "A relationship role defining the kind of association one agent can have with another." .
 
 vf:RoleBehavior  a           owl:Class ;
-        rdfs:label           "vf:RoleBehavior" ;
+        rdfs:label           "Role Behavior" ;
         vs:term_status       "unstable" ;
         rdfs:comment         "The general shape or behavior grouping of an agent relationship role." .
 
 vf:RecipeResource a         owl:Class ;
-        rdfs:label          "vf:RecipeResource" ;
+        rdfs:label          "Recipe Resource" ;
         vs:term_status      "unstable" ;
         rdfs:comment        "Specifies the resource as part of a recipe, for use in planning from recipe." .
 
 vf:ResourceSpecification a  owl:Class ;
-        rdfs:label          "vf:ResourceSpecification" ;
+        rdfs:label          "Resource Specification" ;
         vs:term_status      "testing" ;
         rdfs:comment        "Specification of a kind of resource. Could define a material item, service, digital item, currency account, etc." .
 
 vf:RecipeProcess a          owl:Class ;
-        rdfs:label          "vf:RecipeProcess" ;
+        rdfs:label          "Recipe Process" ;
         vs:term_status      "unstable" ;
         rdfs:comment        "Specifies a process in a recipe for use in planning from recipe." .
 
 vf:ProcessSpecification a   owl:Class ;
-        rdfs:label          "vf:ProcessSpecification" ;
+        rdfs:label          "Process Specification" ;
         vs:term_status      "unstable" ;
         rdfs:comment        "Specifies the kind of process." .
 
 vf:RecipeFlow a             owl:Class ;
-        rdfs:label          "vf:RecipeFlow" ;
+        rdfs:label          "Recipe Flow" ;
         vs:term_status      "testing" ;
         rdfs:comment        "The specification of a resource inflow to, or outflow from, a recipe process." .
 
 vf:RecipeExchange a         owl:Class ;
-        rdfs:label          "vf:RecipeExchange" ;
+        rdfs:label          "Recipe Exchange" ;
         vs:term_status      "unstable" ;
         rdfs:comment        "Specifies an exchange type agreement as part of a recipe." .
 
 vf:ScenarioDefinition a     owl:Class ;
-        rdfs:label          "vf:ScenarioDefinition" ;
+        rdfs:label          "Scenario Definition" ;
         vs:term_status      "unstable" ;
         rdfs:comment        "The type definition of one or more scenarios." .
 
@@ -97,47 +97,47 @@ vf:ScenarioDefinition a     owl:Class ;
 # PLAN CLASSES
 
 vf:Plan  a                  owl:Class ;
-        rdfs:label          "vf:Plan" ;
+        rdfs:label          "Plan" ;
         vs:term_status      "testing" ;
         rdfs:comment        "A logical collection of processes that constitute a body of scheduled work with defined deliverable(s)." .
 
 vf:Intent  a                owl:Class ;
-        rdfs:label          "vf:Intent" ;
+        rdfs:label          "Intent" ;
         vs:term_status      "unstable" ;
         rdfs:comment        "A proposed or planned or estimated economic flow, prior to a commitment or agreement, which can lead to commitments and/or economic events." .
 
 vf:Proposal  a              owl:Class ;
-        rdfs:label          "vf:Proposal" ;
+        rdfs:label          "Proposal" ;
         vs:term_status      "unstable" ;
         rdfs:comment        "Published requests or offers, sometimes with what is expected in return." .
 
 vf:ProposedIntent  a        owl:Class ;
-        rdfs:label          "vf:ProposedIntent" ;
+        rdfs:label          "Proposed Intent" ;
         vs:term_status      "unstable" ;
         rdfs:comment        "Represents many-to-many relationships between Proposals and Intents, supporting including intents in multiple proposals, as well as a proposal including multiple intents." .
 
 vf:ProposedTo  a            owl:Class ;
-        rdfs:label          "vf:ProposedTo" ;
+        rdfs:label          "Proposed To" ;
         vs:term_status      "unstable" ;
         rdfs:comment        "An agent to which the proposal is to be published." .
 
 vf:Commitment  a            owl:Class ;
-        rdfs:label          "vf:Commitment" ;
+        rdfs:label          "Commitment" ;
         vs:term_status      "stable" ;
         rdfs:comment        "A planned economic flow that has been promised by an agent to another agent." .
 
 vf:Satisfaction  a          owl:Class ;
-        rdfs:label          "vf:Satisfaction" ;
+        rdfs:label          "Satisfaction" ;
         vs:term_status      "unstable" ;
         rdfs:comment        "Represents many-to-many relationships between intents and commitments or events that partially or full satisfy one or more intents." .
 
 vf:Agreement  a             owl:Class ;
-        rdfs:label          "vf:Agreement" ;
+        rdfs:label          "Agreement" ;
         vs:term_status      "unstable" ;
         rdfs:comment        "Any type of agreement among economic agents." .
 
 vf:Scenario  a              owl:Class ;
-        rdfs:label          "vf:Scenario" ;
+        rdfs:label          "Scenario" ;
         vs:term_status      "unstable" ;
         rdfs:comment        "An estimated or analytical logical collection of higher level processes used for budgeting, analysis, plan refinement, etc." .
 
@@ -145,42 +145,42 @@ vf:Scenario  a              owl:Class ;
 # OBSERVATION CLASSES
 
 vf:EconomicResource  a      owl:Class ;
-        rdfs:label          "vf:EconomicResource" ;
+        rdfs:label          "Economic Resource" ;
         vs:term_status      "stable" ;
         rdfs:comment        "A resource which is useful to people or the ecosystem." .
 
 vf:Process  a               owl:Class ;
-        rdfs:label          "vf:Process" ;
+        rdfs:label          "Process" ;
         vs:term_status      "stable" ;
         rdfs:comment        "An activity that changes inputs into outputs.  It could transform or transport economic resource(s)." .
 
 vf:EconomicEvent  a         owl:Class ;
-        rdfs:label          "vf:EconomicEvent" ;
+        rdfs:label          "Economic Event" ;
         vs:term_status      "stable" ;
         rdfs:comment        "An observed economic flow, as opposed to a flow planned to happen in the future. This could reflect a change in the quantity of an economic resource. It is also defined by its behavior in relation to the economic resource (see vf:action)" .
 
 vf:AgentRelationship  a     owl:Class ;
-        rdfs:label          "vf:AgentRelationship" ;
+        rdfs:label          "Agent Relationship" ;
         vs:term_status      "stable" ;
         rdfs:comment        "An ongoing voluntary association between 2 agents of any kind." .
 
 vf:Fulfillment  a           owl:Class ;
-        rdfs:label          "vf:Fulfillment" ;
+        rdfs:label          "Fulfillment" ;
         vs:term_status      "testing" ;
         rdfs:comment        "Represents many-to-many relationships between commitments and economic events that fully or partially satisfy one or more commitments." .
 
 vf:Claim  a                 owl:Class ;
-        rdfs:label          "vf:Claim" ;
+        rdfs:label          "Claim" ;
         vs:term_status      "unstable" ;
         rdfs:comment        "A claim for a future economic event(s) in reciprocity for an economic event that already occurred. For example, a claim for payment for goods received." .
 
 vf:Settlement  a            owl:Class ;
-        rdfs:label          "vf:Settlement" ;
+        rdfs:label          "Settlement" ;
         vs:term_status      "unstable" ;
         rdfs:comment        "Represents many-to-many relationships between claim and economic events that fully or partially settle one or more claims." .
 
 vf:Appreciation  a          owl:Class ;
-        rdfs:label          "vf:Appreciation" ;
+        rdfs:label          "Appreciation" ;
         vs:term_status      "unstable" ;
         rdfs:comment        "A way to tie an economic event that is given in loose fulfilment for another economic event, without commitments or expectations. Supports the gift economy." .
 
@@ -922,7 +922,7 @@ vf:deliver-service a        owl:NamedIndividual ,
         vf:resourceEffect   vf:noEffect ;
         vf:onhandEffect     vf:noEffect ;
         rdfs:comment        "New service produced and delivered (a service implies that an agent actively receives the service)." ;
-        rdfs:label          "deliver-service" ;
+        rdfs:label          "deliver service" ;
         vs:term_status      "unstable" .
 
 vf:dropoff a                owl:NamedIndividual ,
@@ -1005,7 +1005,7 @@ vf:transfer-all-rights a    owl:NamedIndividual ,
         vf:resourceEffect   vf:decrementIncrement ;
         vf:onhandEffect     vf:noEffect ;
         rdfs:comment        "Give full (in the human realm) rights and responsibilities to another agent, without transferring physical custody." ;
-        rdfs:label          "transfer-all-rights" ;
+        rdfs:label          "transfer all rights" ;
         vs:term_status      "unstable" .
 
 vf:transfer a               owl:NamedIndividual ,
@@ -1025,7 +1025,7 @@ vf:transfer-custody a       owl:NamedIndividual ,
         vf:resourceEffect   vf:noEffect ;
         vf:onhandEffect     vf:decrementIncrement ;
         rdfs:comment        "Give physical custody and control of a resource, without full accounting or ownership rights." ;
-        rdfs:label          "transfer-custody" ;
+        rdfs:label          "transfer custody" ;
         vs:term_status      "unstable" .
 
 vf:use a                    owl:NamedIndividual ,
