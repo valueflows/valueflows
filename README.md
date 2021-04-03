@@ -2,22 +2,20 @@
 
 ![Value Flows icon](https://raw.githubusercontent.com/valueflows/valueflows/master/assets/icon-0.svg)
 
-Here is the current release spec: https://www.valueflo.ws/
+Here is the current release spec, which also includes concepts: https://www.valueflo.ws/
 
-If you would like to be part of this conversation, please [raise an issue here](https://lab.allmende.io/valueflows/valueflows/-/issues), or fork this or any of the related repositories and issue pull requests.  You can also pop into our [welcome gitter chat](https://gitter.im/valueflows/welcome) to make comments, ask questions, or introduce yourself!
+Some specific links of interest for devs:
+
+* [Classes and Properties](https://w3id.org/lode/owlapi/https://lab.allmende.io/valueflows/valueflows/-/raw/master/release-doc-in-process/all_vf.TTL).  This is the standard specification format, which includes the VF namespace only.  (We have tried to re-use other vocabularies when we can.)  For a view of the whole model with references to the vocabularies used, see [this diagram](https://valueflo.ws/specification/diagrams/uml.html).
+* [Other Namespaces/Terms](specification/external-terms.md).  This references the other vocabulary elements that are also necessary for a complete value flows economic model.
+* [RDF Reference](https://lab.allmende.io/valueflows/valueflows/-/blob/master/release-doc-in-process/all_vf.TTL)  This is the "turtle" file that is the system of record source for the specification.  It includes only the VF namespace.
+* [GraphQL Reference](https://lab.allmende.io/valueflows/vf-schemas/vf-graphql/-/tree/sprout/lib/schemas).  This is actively used, and maintained mostly by the projects using it.  It includes the whole vocabulary.
+* [JSON-schema Reference](https://lab.allmende.io/valueflows/vf-schemas/vf-json-schema/-/tree/master/schemas).  This is out of date, but will be updated upon request if a project who wants to use it.  It includes the whole vocabulary.
+
+
+If you would like to be part of the Valueflows conversation, please [raise an issue here](https://lab.allmende.io/valueflows/valueflows/-/issues), or fork this or any of the related repositories and issue pull requests.  You can also pop into our [welcome gitter chat](https://gitter.im/valueflows/welcome) to make comments, ask questions, or introduce yourself!  And please visit the gitter chat if you have difficulty accessing the gitlab repositories.
 
 ## License
 
 <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This vocabulary and documentation is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
-
-
-## Why?
-
-This effort began in a conversation between the [Network Requirements Planning](https://github.com/valnet/valuenetwork) (NRP), and the [Open Apps](https://github.com/open-app/core) software projects. 
-
-The NRP gang kept running into other apps that did a lot of the same things, or at least parts of the same things, that were used by different groups who wanted to collaborate with each other. So, let's have the different apps be able to collaborate with each other!
-
-And the Open Apps gang (which includes the NRP gang) wants to create "a suite of integrated and open sourced apps which support transparent, democratic and decentralised organising".
-
-Which potentially means many different apps that want to talk to each other. Thus the desire for a common vocabulary.
 
