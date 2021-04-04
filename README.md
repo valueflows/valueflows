@@ -7,7 +7,7 @@ Here is the current release spec, which also includes concepts: https://www.valu
 Some specific links of interest for devs:
 
 * [Classes and Properties](https://w3id.org/lode/owlapi/https://lab.allmende.io/valueflows/valueflows/-/raw/master/release-doc-in-process/all_vf.TTL).  This is the standard specification format, which includes the VF namespace only.  (We have tried to re-use other vocabularies when we can.)  For a view of the whole model with references to the vocabularies used, see [this diagram](https://valueflo.ws/specification/diagrams/uml.html).
-* [Other Namespaces/Terms](specification/external-terms.md).  This references the other vocabulary elements that are also necessary for a complete value flows economic model.
+* [Other Namespaces/Terms](https://valueflo.ws/specification/external-terms.html).  This references the other vocabulary elements that are also necessary for a complete value flows economic model.
 * [RDF Reference](https://lab.allmende.io/valueflows/valueflows/-/blob/master/release-doc-in-process/all_vf.TTL)  This is the "turtle" file that is the system of record source for the specification.  It includes only the VF namespace.
 * [GraphQL Reference](https://lab.allmende.io/valueflows/vf-schemas/vf-graphql/-/tree/sprout/lib/schemas).  This is actively used, and maintained mostly by the projects using it.  It includes the whole vocabulary.
 * [JSON-schema Reference](https://lab.allmende.io/valueflows/vf-schemas/vf-json-schema/-/tree/master/schemas).  This is out of date, but will be updated upon request if a project who wants to use it.  It includes the whole vocabulary.
