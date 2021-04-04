@@ -13,7 +13,9 @@ Some specific links of interest for devs:
 * [JSON-schema Reference](https://lab.allmende.io/valueflows/vf-schemas/vf-json-schema/-/tree/master/schemas).  This is out of date, but will be updated upon request if a project who wants to use it.  It includes the whole vocabulary.
 
 
-If you would like to be part of the Valueflows conversation, please [raise an issue here](https://lab.allmende.io/valueflows/valueflows/-/issues), or fork this or any of the related repositories and issue pull requests.  You can also pop into our [welcome gitter chat](https://gitter.im/valueflows/welcome) to make comments, ask questions, or introduce yourself!  And please visit the gitter chat if you have difficulty accessing the gitlab repositories.
+If you would like to be part of the Valueflows conversation, please [raise an issue here](https://lab.allmende.io/valueflows/valueflows/-/issues), or fork this or any of the related repositories and issue pull requests.  You can also pop into our [welcome gitter chat](https://gitter.im/valueflows/welcome) to make comments, ask questions, or introduce yourself!  
+
+And please visit the gitter chat if you have difficulty accessing the gitlab repositories!  There have been closures due to spam that may affect your ability to register.
 
 ## License
 
