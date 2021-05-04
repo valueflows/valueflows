@@ -70,7 +70,8 @@ resource.depth_first_search():
 
 ## Actual code
 
-(These links will become obsolete soon...will either delete or do something better...)
+<!-- TODO --> (These links will become obsolete soon...
+will either delete or do something better...)
 
 * [incoming_value_flows](https://github.com/valnet/valuenetwork/blob/master/valuenetwork/valueaccounting/models.py#L4708)
 * [calls a recursive depth-first-search](https://github.com/valnet/valuenetwork/blob/master/valuenetwork/valueaccounting/models.py#L4729)

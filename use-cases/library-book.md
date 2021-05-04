@@ -1,6 +1,6 @@
 # Library Book
 
-First draft, incomplete.
+<!-- TODO --> First draft, incomplete.
 
 Checking out a book from the library and then returning it:
 
