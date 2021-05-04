@@ -602,14 +602,14 @@ vf:trackingIdentifier a     owl:DatatypeProperty ;
         rdfs:domain         vf:EconomicResource ;
         rdfs:range          xsd:string ;
         vs:term_status      "unstable" ;
-        rdfs:comment        "Sometimes called serial number, used when each item must have a trackable identifier (like a computer). Could also be used for other unique tracking identifiers needed for resources."@en .  
+        rdfs:comment        "Sometimes called serial number, used when each item must have a trackable identifier (like a computer). Could also be used for other unique tracking identifiers needed for resources."@en .
 
 vf:lot a                    owl:ObjectProperty ;
         rdfs:label          "lot"@en ;
         rdfs:domain         vf:EconomicResource ;
         rdfs:range          dfc:ProductBatch ;
         vs:term_status      "unstable" ;
-        rdfs:comment        "Lot or batch of an economic resource, used to track forward or backwards to all occurrences of resources of that lot."@en .  
+        rdfs:comment        "Lot or batch of an economic resource, used to track forward or backwards to all occurrences of resources of that lot."@en .
 
 vf:fulfilledBy a            owl:ObjectProperty ;
         rdfs:label          "fulfilled by"@en ;
@@ -682,7 +682,7 @@ vf:reciprocal
         rdfs:comment        "This is a reciprocal intent of this proposal, not primary. Not meant to be used for intent matching."@en .
 
 vf:finished  a              owl:DatatypeProperty ;
-        rdfs:domain         [ owl:unionOf (vf:Commitment vf:Process vf:Intent vf:Claim) ] ; 
+        rdfs:domain         [ owl:unionOf (vf:Commitment vf:Process vf:Intent vf:Claim) ] ;
         rdfs:label          "finished"@en ;
         rdfs:range          xsd:boolean ;
         vs:term_status      "testing" ;
