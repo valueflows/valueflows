@@ -18,11 +18,7 @@ exclude_rule 'MD002'
 # Inconsistent indentation for list items at the same level
 # - This rule will always trigger
 #   when mixing ordered and unordered lists recursively
-exclude_rule 'MD005'
-# Unordered list indentation
-# - This rule will always trigger
-#   when mixing ordered and unordered lists recursively
-exclude_rule 'MD007'
+#exclude_rule 'MD005'
 # Multiple top level headers in the same document
 # - We have the title in the YAML meta-data,
 #   so we can legitimately level 1 headers for sections
@@ -31,5 +27,9 @@ exclude_rule 'MD025'
 exclude_rule 'MD026'
 # Inline HTML
 exclude_rule 'MD033'
+# Fenced code blocks should have a language specified
+# - We have 'pseudo-code' code-blocks,
+#   for which there is no language tag
+exclude_rule 'MD040'
 # First line in file should be a top level header
 exclude_rule 'MD041'
