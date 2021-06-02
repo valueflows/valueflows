@@ -75,7 +75,7 @@ pickup | No effect | No effect  | Input | No | dropoff |
 dropoff | No effect | No effect | Output | No | pickup |
 accept | No effect | Decrement  | Input | No | modify |
 modify | No effect | Increment  | Output | No | accept |
-deliver-service | No effect | No effect | Output | No | N/A |
+deliver-service | No effect | No effect | Output(3) | No | N/A |
 transfer-custody | No effect | Decr+Incr(2) | N/A | No | N/A |
 transfer-all-rights | Decr+Incr(2) | No effect | N/A | No | N/A |
 transfer | Decr+Incr(2) | Decr+Incr(2) | N/A | No | N/A |
@@ -89,7 +89,7 @@ We have defined a core set of actions, but expect that this will be extended wit
 
 (2) The actions `transfer` and `move` can optionally define a second identified resource on the receiver side.
 
-(3) Under discussion
+(3) The action `deliver-service` can sometimes also be an input to another process, at the same time as it is an output from a process.  This is because services imply delivery as they are created.
 
 ### Quantities and Times
 
