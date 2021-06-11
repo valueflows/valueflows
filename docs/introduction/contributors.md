@@ -15,7 +15,7 @@
 
 * Jon Richter
 * Steve Bosserman
-* Greg Cassell
+* Greg Cassel
 * Connor Turland
 * Brent Shambaugh
 * Dan Hassan
