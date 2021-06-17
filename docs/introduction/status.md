@@ -24,3 +24,5 @@ Less stable are:
 Coming in future releases are:
 * Forking/versioning of Recipes
 * Conversations for Action
+* Quantitative and qualitative measurements, with SOSA
+* One or more extensions for value calculation, distribution algorithms
