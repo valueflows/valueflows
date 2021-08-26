@@ -1,4 +1,5 @@
-@prefix vf:    <https://w3id.org/valueflows#> .
+@base          <https://w3id.org/valueflows> .
+@prefix vf:    <#> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix owl:   <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
@@ -15,10 +16,10 @@
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
 
 
-<https://w3id.org/valueflows/> a owl:Ontology;
+<> a owl:Ontology;
     dcterms:title "Value Flows Ontology";
     dcterms:type <http://purl.org/adms/assettype/Ontology>;
-    owl:versionIRI <https://w3id.org/valueflows/0.5/> ;
+    owl:versionIRI </0.5/> ;
     dcterms:status <http://purl.org/adms/status/UnderDevelopment>.
 
 
