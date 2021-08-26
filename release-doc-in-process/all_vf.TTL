@@ -157,7 +157,7 @@ vf:Scenario  a              owl:Class ;
         vs:term_status      "unstable" ;
         rdfs:comment        "An estimated or analytical logical collection of higher level processes used for budgeting, analysis, plan refinement, etc."@en .
 
-        
+
 # OBSERVATION CLASSES
 
 vf:EconomicResource  a      owl:Class ;
@@ -272,7 +272,7 @@ vf:independentDemandOf
 vf:resourceInventoriedAs
         a                   owl:ObjectProperty ;
         rdfs:label          "resource inventoried as"@en ;
-        rdfs:domain         [ owl:unionOf (vf:Commitment vf:Intent vf:EconomicEvent) ] ; 
+        rdfs:domain         [ owl:unionOf (vf:Commitment vf:Intent vf:EconomicEvent) ] ;
         rdfs:range          vf:EconomicResource ;
         vs:term_status      "testing" ;
         rdfs:comment        "Economic resource involved in the flow."@en .
@@ -280,7 +280,7 @@ vf:resourceInventoriedAs
 vf:toResourceInventoriedAs
         a                   owl:ObjectProperty ;
         rdfs:label          "to resource inventoried as"@en ;
-        rdfs:domain         vf:EconomicEvent ; 
+        rdfs:domain         vf:EconomicEvent ;
         rdfs:range          vf:EconomicResource ;
         vs:term_status      "unstable" ;
         rdfs:comment        "Additional economic resource on the economic event when needed by the receiver. Used when a transfer or move, or sometimes other actions, requires explicitly identifying an economic resource on the receiving side."@en .
@@ -344,7 +344,7 @@ vf:inScopeOf  a             owl:ObjectProperty ;
         rdfs:comment        "Grouping around something to create a boundary or context, used for documenting, accounting, planning."@en .
 
 vf:agreedIn  a              owl:ObjectProperty ;
-        rdfs:domain         [ owl:unionOf (vf:EconomicEvent vf:Commitment vf:Intent vf:Claim) ] ; 
+        rdfs:domain         [ owl:unionOf (vf:EconomicEvent vf:Commitment vf:Intent vf:Claim) ] ;
         rdfs:label          "agreed in"@en ;
         rdfs:range          owl:Thing ;
         vs:term_status      "unstable" ;
@@ -487,7 +487,7 @@ vf:unitBased  a             owl:DatatypeProperty ;
         vs:term_status      "unstable" ;
         rdfs:comment        "This proposal contains unit based quantities, which can be multipied to create commitments; commonly seen in a price list or e-commerce."@en .
 
-dcterms:created 
+dcterms:created
         rdfs:domain         [ owl:unionOf (vf:Agreement vf:Claim vf:Commitment vf:Plan vf:Proposal) ] .
 
 geo:long
@@ -531,11 +531,11 @@ vf:image a                  owl:DatatypeProperty ;
         vs:term_status      "unstable" ;
         rdfs:label          "image"@en ;
         rdfs:domain         [ owl:unionOf (
-                                foaf:Agent 
-                                vf:EconomicEvent 
-                                vf:EconomicResource 
-                                vf:Intent 
-                                vf:RecipeResource 
+                                foaf:Agent
+                                vf:EconomicEvent
+                                vf:EconomicResource
+                                vf:Intent
+                                vf:RecipeResource
                                 vf:ResourceSpecification) ] ;
         rdfs:range          xsd:anyURI ;
         rdfs:comment        "The uri to an image relevant to the entity, such as a logo, avatar, photo, diagram, etc."@en .
@@ -550,52 +550,52 @@ vf:name a                   owl:DatatypeProperty ;
         rdfs:label          "name"@en ;
         rdfs:range          xsd:string ;
         rdfs:domain         [ owl:unionOf (
-                                geo:SpatialThing 
-                                foaf:Agent 
-                                vf:Agreement 
-                                vf:Commitment 
-                                vf:EconomicResource 
-                                vf:Intent 
-                                vf:Plan 
-                                vf:Process 
-                                vf:ProcessSpecification 
-                                vf:Proposal 
-                                vf:RecipeProcess 
-                                vf:RecipeResource 
-                                vf:ResourceSpecification 
-                                vf:RoleBehavior 
-                                vf:Scenario 
+                                geo:SpatialThing
+                                foaf:Agent
+                                vf:Agreement
+                                vf:Commitment
+                                vf:EconomicResource
+                                vf:Intent
+                                vf:Plan
+                                vf:Process
+                                vf:ProcessSpecification
+                                vf:Proposal
+                                vf:RecipeProcess
+                                vf:RecipeResource
+                                vf:ResourceSpecification
+                                vf:RoleBehavior
+                                vf:Scenario
                                 vf:ScenarioDefinition) ] ;
         vs:term_status      "testing" ;
         rdfs:comment        "An informal or formal textual identifier for an object. Does not imply uniqueness."@en .
 
-skos:note 
+skos:note
         rdfs:domain         [ owl:unionOf (
-                                geo:SpatialThing 
-                                foaf:Agent 
-                                vf:AgentRelationship 
-                                vf:AgentRelationshipRole 
-                                vf:Agreement 
-                                vf:Appreciation 
-                                vf:Claim 
-                                vf:Commitment 
-                                vf:EconomicEvent 
-                                vf:EconomicResource 
-                                vf:ExternalLink 
-                                vf:Fulfillment 
-                                vf:Intent 
-                                vf:Plan 
-                                vf:Process 
-                                vf:ProcessSpecification 
-                                vf:Proposal 
-                                vf:RecipeFlow 
-                                vf:RecipeProcess 
-                                vf:RecipeResource 
-                                vf:ResourceSpecification 
-                                vf:RoleBehavior 
-                                vf:Satisfaction 
-                                vf:Scenario 
-                                vf:ScenarioDefinition 
+                                geo:SpatialThing
+                                foaf:Agent
+                                vf:AgentRelationship
+                                vf:AgentRelationshipRole
+                                vf:Agreement
+                                vf:Appreciation
+                                vf:Claim
+                                vf:Commitment
+                                vf:EconomicEvent
+                                vf:EconomicResource
+                                vf:ExternalLink
+                                vf:Fulfillment
+                                vf:Intent
+                                vf:Plan
+                                vf:Process
+                                vf:ProcessSpecification
+                                vf:Proposal
+                                vf:RecipeFlow
+                                vf:RecipeProcess
+                                vf:RecipeResource
+                                vf:ResourceSpecification
+                                vf:RoleBehavior
+                                vf:Satisfaction
+                                vf:Scenario
+                                vf:ScenarioDefinition
                                 vf:Settlement) ] .
 
 vf:trackingIdentifier a     owl:DatatypeProperty ;
