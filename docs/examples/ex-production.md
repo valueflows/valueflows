@@ -3,6 +3,7 @@
 1. [Manufacturing](#manufacturing)
 1. [Service](#service)
 1. [Workflow production](#workflow-production)
+1. [Pack unpack](#pack-unpack)
 
 #### Manufacturing
 
@@ -28,3 +29,10 @@ Simple repair process with typical inputs and outputs.  The same economic resour
 
 [import, lang:"yaml"](../../examples/process-workflow.yaml)
 
+#### Pack unpack
+
+Simple pack and unpack of resources into and out of a container resource.
+
+![pack unpack diagram](https://raw.githubusercontent.com/valueflows/valueflows/master/release-doc-in-process/pack-unpack.png)
+
+[import, lang:"yaml"](../../examples/process-pack-unpack.yaml)

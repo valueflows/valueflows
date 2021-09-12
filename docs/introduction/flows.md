@@ -52,36 +52,40 @@ All flows use an action property to designate what the flow is doing and how it 
 * vf:consume - for example an ingredient or component composed into the output, after the process the ingredient is gone
 * vf:cite - for example a design file, neither used nor consumed, the file remains available at all times
 * vf:work - labor power applied to a process
-* vf:pickup -  transported resource or person enters the process; the same resource will appear in output with *vf:dropoff* verb
-* vf:dropoff -  transported resource or person leaves the process; the same resource or person appeared in input with vf:pickup verb
-* vf:accept - in processes like repair or modification or testing, the same resource will appear in output with *vf:modify* verb
-* vf:modify - in processes like repair or modification, the same resource will appear in input with *vf:accept* verb
+* vf:pickup -  transported resource or person enters the process; the same resource will appear in output with *vf:dropoff*
+* vf:dropoff -  transported resource or person leaves the process; the same resource or person appeared in input with vf:pickup
+* vf:accept - in processes like repair or modification or testing, the same resource will appear in output with *vf:modify*
+* vf:modify - in processes like repair or modification, the same resource will appear in input with *vf:accept*
+* vf:pack - put a resource into a container resource; the container resource is input with *vf:accept*
+* vf:unpack - remove a resource from a container resource; the container resource is input with *vf:accept*
 * vf:deliver-service - new service produced and delivered (a service implies that an agent actively receives the service)
 * vf:transfer-all-rights - give full (in the human realm) rights and responsibilities to another agent, without transferring physical custody
 * vf:transfer-custody - give physical custody and control of a resource, without full accounting or ownership rights
 * vf:transfer - give full rights and responsibilities plus physical custody
 * vf:move - change location and possibly identifier, if location is part of the identification, of a resource with no change of agent rights or possession
 * vf:raise - adjusts a quantity up based on a beginning balance or inventory count
-* vf:lower - adjusts a quantity down based on a beginning balance or inventory count
+* vf:lower - adjusts a quantity down based on an inventory count
 
-Action | Accounting affect | Onhand affect | I/O | Changes existence | Pairs with |
+Action | Accounting effect | Onhand effect | I/O | Other effect | Pairs with |
 ------ | ------ | --- | ----------------- | ---------- | --------- |
-produce | Increment | Increment | Output | Yes | N/A |
-consume | Decrement | Decrement | Input | Yes | N/A |
-use | No effect(1) | No effect(1) | Input | No | N/A |
+produce | Increment | Increment | Output | N/A | N/A |
+consume | Decrement | Decrement | Input | N/A | N/A |
+use | No effect(1) | No effect(1) | Input | N/A | N/A |
 work | No effect(1) | No effect(1) | Input | N/A | N/A |
-cite | No effect  | No effect  | Input | No | N/A |
-pickup | No effect | No effect  | Input | No | dropoff |
-dropoff | No effect | No effect | Output | No | pickup |
-accept | No effect | Decrement  | Input | No | modify |
-modify | No effect | Increment  | Output | No | accept |
-deliver-service | No effect | No effect | Output(3) | No | N/A |
-transfer-custody | No effect | Decr+Incr(2) | N/A | No | N/A |
-transfer-all-rights | Decr+Incr(2) | No effect | N/A | No | N/A |
-transfer | Decr+Incr(2) | Decr+Incr(2) | N/A | No | N/A |
-move | Decr+Incr(2) |Decr+Incr(2) | N/A | No | N/A |
-raise | Increment | Increment | N/A | No | N/A |
-lower | Decrement | Decrement | N/A | No | N/A |
+cite | No effect  | No effect  | Input | N/A | N/A |
+deliver-service | No effect | No effect | Output(3) | N/A | N/A |
+pickup | No effect | No effect  | Input | N/A | dropoff |
+dropoff | No effect | No effect | Output | currentLocation | pickup |
+accept | No effect | Decrement  | Input | N/A | modify |
+modify | No effect | Increment  | Output | N/A | accept |
+pack | No effect | Decrement  | Input | add containedIn | accept |
+unpack | No effect | Increment | Output | remove containedIn | accept |
+transfer-custody | No effect | Decr+Incr(2) | N/A | N/A | N/A |
+transfer-all-rights | Decr+Incr(2) | No effect | N/A | N/A | N/A |
+transfer | Decr+Incr(2) | Decr+Incr(2) | N/A | N/A | N/A |
+move | Decr+Incr(2) |Decr+Incr(2) | N/A | currentLocation | N/A |
+raise | Increment | Increment | N/A | N/A | N/A |
+lower | Decrement | Decrement | N/A | N/A | N/A |
 
 We have defined a core set of actions, but expect that this will be extended with some others. If extended, they should be defined as part of this or another formal vocabulary so that all can use them and assume the same meaning. 
 
@@ -89,7 +93,7 @@ We have defined a core set of actions, but expect that this will be extended wit
 
 (2) The actions `transfer` and `move` can optionally define a second identified resource on the receiver side.
 
-(3) The action `deliver-service` can sometimes also be an input to another process, at the same time as it is an output from a process.  This is because services imply delivery as they are created.
+(3) The action `deliver-service` can sometimes be an input to another process, at the same time as it is an output from a process.  This is because services imply delivery as they are created.
 
 ### Quantities and Times
 
