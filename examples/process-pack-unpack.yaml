@@ -1,0 +1,262 @@
+# Example: Simple pack and unpack processes
+
+'@context':
+  - https://git.io/vf-examples-jsonld-context
+  - med: https://medical.example/
+    wash: https://laundry.example/
+
+'@id': rgh:valueflows/valueflows/master/examples/process-pack-unpack.yaml
+'@graph':
+
+  # Economic resources before
+
+  - '@id': med:e1721a61-cd47-4556-84b9-8b1b81da15bf
+    '@type': EconomicResource
+    conformsTo: https://www.wikidata.org/wiki/Q987767 # container
+    trackingIdentifier: cont234
+    accountingQuantity:
+      om2:hasUnit: om2:one
+      om2:hasNumericalValue: 1
+
+  - '@id': med:3129ca8b-fcda-45be-bbda-294dc924d3b9
+    '@type': EconomicResource
+    conformsTo: https://www.wikidata.org/wiki/Q89990310 # medical gown
+    trackingIdentifier: gown789
+    accountingQuantity:
+      om2:hasUnit: om2:one
+      om2:hasNumericalValue: 1
+    containedIn: 
+
+  - '@id': med:3129ca8b-fcda-45be-bbda-294dc924d3b0
+    '@type': EconomicResource
+    conformsTo: https://www.wikidata.org/wiki/Q89990310 # medical gown
+    trackingIdentifier: gown734
+    accountingQuantity:
+      om2:hasUnit: om2:one
+      om2:hasNumericalValue: 1
+    containedIn: 
+
+  - '@id': med:3129ca8b-fcda-45be-bbda-294dc924d3b1
+    '@type': EconomicResource
+    conformsTo: https://www.wikidata.org/wiki/Q89990310 # medical gown
+    trackingIdentifier: gown698
+    accountingQuantity:
+      om2:hasUnit: om2:one
+      om2:hasNumericalValue: 1
+    containedIn: 
+
+  # Packing process
+
+  - '@id': med:02b39a30-3e04-4305-9656-7f261aa63c84
+    '@type': Process
+    name: Pack medical gowns
+    note: Each gown is scanned for tracking identifier as packed
+
+  - '@id': med:b52a5815-fae9-43bf-be95-833b95dc0adb
+    '@type': EconomicEvent
+    inputOf: med:02b39a30-3e04-4305-9656-7f261aa63c84
+    action: accept
+    provider: https://medical.example/
+    receiver: https://medical.example/
+    resourceInventoriedAs: med:e1721a61-cd47-4556-84b9-8b1b81da15bf # a container
+    resourceQuantity:
+      om2:hasUnit: om2:one
+      om2:hasNumericalValue: 1
+    note: Container is empty at this point.
+
+  - '@id': med:b90b0b77-09a2-42e2-8bd4-e9ae2c1c6172
+    '@type': EconomicEvent
+    inputOf: med:02b39a30-3e04-4305-9656-7f261aa63c84
+    action: pack
+    provider: https://medical.example/
+    receiver: https://medical.example/
+    resourceInventoriedAs: med:3129ca8b-fcda-45be-bbda-294dc924d3b9 # a medical gown
+    resourceQuantity:
+      om2:hasUnit: om2:one
+      om2:hasNumericalValue: 1
+
+  - '@id': med:a8236bbb-81e0-422d-9861-56d2417db0fb
+    '@type': EconomicEvent
+    inputOf: med:02b39a30-3e04-4305-9656-7f261aa63c84
+    action: pack
+    provider: https://medical.example/
+    receiver: https://medical.example/
+    resourceInventoriedAs: med:3129ca8b-fcda-45be-bbda-294dc924d3b0 # a medical gown
+    resourceQuantity:
+      om2:hasUnit: om2:one
+      om2:hasNumericalValue: 1
+
+  - '@id': med:6f438393-7f87-4914-806c-e23a4fd15e89
+    '@type': EconomicEvent
+    inputOf: med:02b39a30-3e04-4305-9656-7f261aa63c84
+    action: pack
+    provider: https://medical.example/
+    receiver: https://medical.example/
+    resourceInventoriedAs: med:3129ca8b-fcda-45be-bbda-294dc924d3b1 # a medical gown
+    resourceQuantity:
+      om2:hasUnit: om2:one
+      om2:hasNumericalValue: 1
+
+  - '@id': med:b52a5815-fae9-43bf-be95-833b95dc0adb
+    '@type': EconomicEvent
+    outputOf: med:02b39a30-3e04-4305-9656-7f261aa63c84
+    action: modify
+    provider: https://medical.example/
+    receiver: https://medical.example/
+    resourceInventoriedAs: med:e1721a61-cd47-4556-84b9-8b1b81da15bf # a container
+    resourceQuantity:
+      om2:hasUnit: om2:one
+      om2:hasNumericalValue: 1
+    note: Container is full at this point.
+
+  # Economic resources after packing
+
+  - '@id': med:e1721a61-cd47-4556-84b9-8b1b81da15bf
+    '@type': EconomicResource
+    conformsTo: https://www.wikidata.org/wiki/Q987767 # container
+    trackingIdentifier: cont234
+    accountingQuantity:
+      om2:hasUnit: om2:one
+      om2:hasNumericalValue: 1
+
+  - '@id': med:3129ca8b-fcda-45be-bbda-294dc924d3b9
+    '@type': EconomicResource
+    conformsTo: https://www.wikidata.org/wiki/Q89990310 # medical gown
+    trackingIdentifier: gown789
+    accountingQuantity:
+      om2:hasUnit: om2:one
+      om2:hasNumericalValue: 1
+    containedIn: med:e1721a61-cd47-4556-84b9-8b1b81da15bf
+
+  - '@id': med:3129ca8b-fcda-45be-bbda-294dc924d3b0
+    '@type': EconomicResource
+    conformsTo: https://www.wikidata.org/wiki/Q89990310 # medical gown
+    trackingIdentifier: gown734
+    accountingQuantity:
+      om2:hasUnit: om2:one
+      om2:hasNumericalValue: 1
+    containedIn: med:e1721a61-cd47-4556-84b9-8b1b81da15bf
+
+  - '@id': med:3129ca8b-fcda-45be-bbda-294dc924d3b1
+    '@type': EconomicResource
+    conformsTo: https://www.wikidata.org/wiki/Q89990310 # medical gown
+    trackingIdentifier: gown698
+    accountingQuantity:
+      om2:hasUnit: om2:one
+      om2:hasNumericalValue: 1
+    containedIn: med:e1721a61-cd47-4556-84b9-8b1b81da15bf
+
+  # The container is transferred to the laundry
+
+  - '@id': med:b52a5815-fae9-43bf-be95-833berqojdasf7
+    '@type': EconomicEvent
+    action: transfer-custody
+    provider: https://medical.example/
+    receiver: https://laundry.example/
+    resourceInventoriedAs: med:e1721a61-cd47-4556-84b9-8b1b81da15bf # the container
+    resourceQuantity:
+      om2:hasUnit: om2:one
+      om2:hasNumericalValue: 1
+    note: Container is all that is needed here.
+
+  # The container is unpacked at the laundry
+  
+  - '@id': wash:8e5fe80d-a769-4bd5-89e5-2136d33eab9f
+    '@type': Process
+    name: Unpack medical gowns
+    note: Each gown is scanned for tracking identifier as unpacked
+
+  - '@id': wash:33e8933b-ff73-4a01-964a-ca7a98893083
+    '@type': EconomicEvent
+    inputOf: wash:8e5fe80d-a769-4bd5-89e5-2136d33eab9f
+    action: accept
+    provider: https://laundry.example/
+    receiver: https://laundry.example/
+    resourceInventoriedAs: med:e1721a61-cd47-4556-84b9-8b1b81da15bf # a container
+    resourceQuantity:
+      om2:hasUnit: om2:one
+      om2:hasNumericalValue: 1
+    note: Container is full at this point.
+
+  - '@id': wash:60f4204e-b8d2-4026-8577-102c3f82c0af
+    '@type': EconomicEvent
+    outputOf: wash:33e8933b-ff73-4a01-964a-ca7a98893083
+    action: modify
+    provider: https://laundry.example/
+    receiver: https://laundry.example/
+    resourceInventoriedAs: med:e1721a61-cd47-4556-84b9-8b1b81da15bf # a container
+    resourceQuantity:
+      om2:hasUnit: om2:one
+      om2:hasNumericalValue: 1
+    note: Container is full at this point.
+
+  - '@id': wash:60f4204e-b8d2-4026-8577-102c3fkm98g1
+    '@type': EconomicEvent
+    outputOf: wash:33e8933b-ff73-4a01-964a-ca7a98893083
+    action: unpack
+    provider: https://laundry.example/
+    receiver: https://laundry.example/
+    resourceInventoriedAs: med:3129ca8b-fcda-45be-bbda-294dc924d3b9 # a medical gown
+    resourceQuantity:
+      om2:hasUnit: om2:one
+      om2:hasNumericalValue: 1
+
+  - '@id': wash:60f4204e-b8d2-4026-8577-102c3fsd89cv
+    '@type': EconomicEvent
+    outputOf: wash:33e8933b-ff73-4a01-964a-ca7a98893083
+    action: unpack
+    provider: https://laundry.example/
+    receiver: https://laundry.example/
+    resourceInventoriedAs: med:3129ca8b-fcda-45be-bbda-294dc924d3b0 # a medical gown
+    resourceQuantity:
+      om2:hasUnit: om2:one
+      om2:hasNumericalValue: 1
+
+  - '@id': wash:60f4204e-b8d2-4026-8577-102c3fd9kjre
+    '@type': EconomicEvent
+    outputOf: wash:33e8933b-ff73-4a01-964a-ca7a98893083
+    action: unpack
+    provider: https://laundry.example/
+    receiver: https://laundry.example/
+    resourceInventoriedAs: med:3129ca8b-fcda-45be-bbda-294dc924d3b1 # a medical gown
+    resourceQuantity:
+      om2:hasUnit: om2:one
+      om2:hasNumericalValue: 1
+
+  # Economic resources after unpacking
+
+  - '@id': med:e1721a61-cd47-4556-84b9-8b1b81da15bf
+    '@type': EconomicResource
+    conformsTo: https://www.wikidata.org/wiki/Q987767 # container
+    trackingIdentifier: cont234
+    accountingQuantity:
+      om2:hasUnit: om2:one
+      om2:hasNumericalValue: 1
+
+  - '@id': med:3129ca8b-fcda-45be-bbda-294dc924d3b9
+    '@type': EconomicResource
+    conformsTo: https://www.wikidata.org/wiki/Q89990310 # medical gown
+    trackingIdentifier: gown789
+    accountingQuantity:
+      om2:hasUnit: om2:one
+      om2:hasNumericalValue: 1
+    containedIn: 
+
+  - '@id': med:3129ca8b-fcda-45be-bbda-294dc924d3b0
+    '@type': EconomicResource
+    conformsTo: https://www.wikidata.org/wiki/Q89990310 # medical gown
+    trackingIdentifier: gown734
+    accountingQuantity:
+      om2:hasUnit: om2:one
+      om2:hasNumericalValue: 1
+    containedIn:
+
+  - '@id': med:3129ca8b-fcda-45be-bbda-294dc924d3b1
+    '@type': EconomicResource
+    conformsTo: https://www.wikidata.org/wiki/Q89990310 # medical gown
+    trackingIdentifier: gown698
+    accountingQuantity:
+      om2:hasUnit: om2:one
+      om2:hasNumericalValue: 1
+    containedIn: 
+
