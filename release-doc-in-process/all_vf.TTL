@@ -972,6 +972,17 @@ vf:move a                   owl:NamedIndividual ,
         rdfs:label          "move"@en ;
         vs:term_status      "unstable" .
 
+vf:pack a                   owl:NamedIndividual ,
+                            vf:Action ,
+                            vf:PairsWith ;
+        vf:inputOutput      vf:input ;
+        vf:pairsWith        vf:modify ;
+        vf:resourceEffect   vf:noEffect ;
+        vf:onhandEffect     vf:decrement ;
+        rdfs:comment        "A resource is put into the container resource that is being modified."@en ;
+        rdfs:label          "pack"@en ;
+        vs:term_status      "unstable" .
+
 vf:pickup a                 owl:NamedIndividual ,
                             vf:Action ,
                             vf:PairsWith ;
@@ -1031,6 +1042,17 @@ vf:transfer-custody a       owl:NamedIndividual ,
         vf:onhandEffect     vf:decrementIncrement ;
         rdfs:comment        "Give physical custody and control of a resource, without full accounting or ownership rights."@en ;
         rdfs:label          "transfer custody"@en ;
+        vs:term_status      "unstable" .
+
+vf:unpack a                 owl:NamedIndividual ,
+                            vf:Action ,
+                            vf:PairsWith ;
+        vf:inputOutput      vf:output ;
+        vf:pairsWith        vf:accept ;
+        vf:resourceEffect   vf:noEffect ;
+        vf:onhandEffect     vf:increment ;
+        rdfs:comment        "A resource is removed from the container resource that was accepted to the process."@en ;
+        rdfs:label          "unpack"@en ;
         vs:term_status      "unstable" .
 
 vf:use a                    owl:NamedIndividual ,

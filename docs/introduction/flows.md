@@ -78,7 +78,7 @@ pickup | No effect | No effect  | Input | N/A | dropoff |
 dropoff | No effect | No effect | Output | currentLocation | pickup |
 accept | No effect | Decrement  | Input | N/A | modify |
 modify | No effect | Increment  | Output | N/A | accept |
-pack | No effect | Decrement  | Input | add containedIn | accept |
+pack | No effect | Decrement  | Input | add containedIn | modify |
 unpack | No effect | Increment | Output | remove containedIn | accept |
 transfer-custody | No effect | Decr+Incr(2) | N/A | N/A | N/A |
 transfer-all-rights | Decr+Incr(2) | No effect | N/A | N/A | N/A |
