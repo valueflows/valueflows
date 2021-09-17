@@ -52,6 +52,7 @@
 
 * [REA References](appendix/rea.md)
 * [Uses of the Vocabulary](introduction/usedfor.md)
+* [Presentations](appendix/presentations.md)
 
 ### Algorithms
 
