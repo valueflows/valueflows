@@ -26,8 +26,6 @@ All of the following presentations can also be found in [this directory](https:/
 
 [Accounting for Good by pospi](https://docs.google.com/presentation/d/1qpjqBv4dU4J7FxWTacFKfu-XqnsOx5GRYF58z9VKSMs/edit#slide=id.g4413bbb7b0_0_0), lead developer of the hREA, the VF backend framework for Holochain.
 
-[Adding sematics to business contracts by Jesper Kiehn](https://speakerdeck.com/mikorizal/adding-sematics-to-business-contracts), an REA practitioner and author.
-
 [Citizen involvement in Amsterdam textiles circular economy](https://speakerdeck.com/mikorizal/amsterdam-textiles-citizen-donations)
 
 
