@@ -8,7 +8,7 @@ Most of the graphics on these VF website pages are available in xml (for drawing
 
 ## Presentations
 
-All of the following presentations can also be found in [this directory](https://lab.allmende.io/valueflows/valueflows/-/tree/master/presentations) in pdf, with editable versions in odp where we have them.
+All of the following presentations can also be found in [this directory](https://lab.allmende.io/valueflows/valueflows/-/tree/master/docs/presentations) in pdf, with editable versions in odp where we have them.
 
 [A basic VF presentation, 2021](http://mikorizal.org/VF-Basic-Presentation.pdf)
 
