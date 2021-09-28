@@ -44,8 +44,23 @@ vf:InputOutput a            owl:Class ;
         vs:term_status      "unstable" .
 
 vf:ResourceEffect a         owl:Class ;
-        rdfs:comment        "The action has this effect on an inventoried resource."@en ;
+        rdfs:comment        "The action has this effect on an inventoried resource accounting quantity."@en ;
         rdfs:label          "Resource Effect"@en ;
+        vs:term_status      "unstable" .
+
+vf:OnhandEffect a           owl:Class ;
+        rdfs:comment        "The action has this effect on an inventoried resource onhand quantity."@en ;
+        rdfs:label          "Onhand Effect"@en ;
+        vs:term_status      "unstable" .
+
+vf:LocationEffect a         owl:Class ;
+        rdfs:comment        "The action has this effect on an inventoried resource location."@en ;
+        rdfs:label          "Location Effect"@en ;
+        vs:term_status      "unstable" .
+
+vf:ContainedEffect a        owl:Class ;
+        rdfs:comment        "The action has this effect on an inventoried resource contained in resource."@en ;
+        rdfs:label          "Contained Effect"@en ;
         vs:term_status      "unstable" .
 
 vf:AgentRelationshipRole  a  owl:Class ;
@@ -896,6 +911,8 @@ vf:accept a                 owl:NamedIndividual ,
         vf:pairsWith        vf:modify ;
         vf:resourceEffect   vf:noEffect ;
         vf:onhandEffect     vf:decrement ;
+        vf:locationEffect   vf:notApplicable ;
+        vf:containedEffect  vf:notApplicable ;
         rdfs:comment        "In processes like repair or modification or testing, the same resource will appear in the output."@en ;
         rdfs:label          "accept"@en ;
         vs:term_status      "testing" .
@@ -906,6 +923,8 @@ vf:consume a                owl:NamedIndividual ,
         vf:pairsWith        vf:notApplicable ;
         vf:resourceEffect   vf:decrement ;
         vf:onhandEffect     vf:decrement ;
+        vf:locationEffect   vf:notApplicable ;
+        vf:containedEffect  vf:notApplicable ;
         rdfs:comment        "For example an ingredient or component composed into the output, after the process the ingredient is gone."@en ;
         rdfs:label          "consume"@en ;
         vs:term_status      "testing" .
@@ -916,6 +935,8 @@ vf:cite a                   owl:NamedIndividual ,
         vf:pairsWith        vf:notApplicable ;
         vf:resourceEffect   vf:noEffect ;
         vf:onhandEffect     vf:noEffect ;
+        vf:locationEffect   vf:notApplicable ;
+        vf:containedEffect  vf:notApplicable ;
         rdfs:comment        "For example a design file, neither used nor consumed, the file remains available at all times."@en ;
         rdfs:label          "cite"@en ;
         vs:term_status      "testing" .
@@ -926,6 +947,8 @@ vf:deliver-service a        owl:NamedIndividual ,
         vf:pairsWith        vf:notApplicable ;
         vf:resourceEffect   vf:noEffect ;
         vf:onhandEffect     vf:noEffect ;
+        vf:locationEffect   vf:notApplicable ;
+        vf:containedEffect  vf:notApplicable ;
         rdfs:comment        "New service produced and delivered (a service implies that an agent actively receives the service)."@en ;
         rdfs:label          "deliver service"@en ;
         vs:term_status      "unstable" .
@@ -937,6 +960,8 @@ vf:dropoff a                owl:NamedIndividual ,
         vf:pairsWith        vf:pickup ;
         vf:resourceEffect   vf:noEffect ;
         vf:onhandEffect     vf:noEffect ;
+        vf:locationEffect   vf:update ;
+        vf:containedEffect  vf:notApplicable ;
         rdfs:comment        "Transported resource or person leaves the process; the same resource or person appeared in the input."@en ;
         rdfs:label          "dropoff"@en ;
         vs:term_status      "unstable" .
@@ -947,6 +972,8 @@ vf:lower a                  owl:NamedIndividual ,
         vf:pairsWith        vf:notApplicable ;
         vf:resourceEffect   vf:decrement ;
         vf:onhandEffect     vf:decrement ;
+        vf:locationEffect   vf:notApplicable ;
+        vf:containedEffect  vf:notApplicable ;
         rdfs:comment        "Adjusts a quantity down based on a beginning balance or inventory count."@en ;
         rdfs:label          "lower"@en ;
         vs:term_status      "unstable" .
@@ -958,6 +985,8 @@ vf:modify a                 owl:NamedIndividual ,
         vf:pairsWith        vf:accept ;
         vf:resourceEffect   vf:noEffect ;
         vf:onhandEffect     vf:increment ;
+        vf:locationEffect   vf:notApplicable ;
+        vf:containedEffect  vf:notApplicable ;
         rdfs:comment        "In processes like repair or modification, the same resource will appear in the input."@en ;
         rdfs:label          "modify"@en ;
         vs:term_status      "testing" .
@@ -968,6 +997,8 @@ vf:move a                   owl:NamedIndividual ,
         vf:pairsWith        vf:notApplicable ;
         vf:resourceEffect   vf:decrementIncrement ;
         vf:onhandEffect     vf:decrementIncrement ;
+        vf:locationEffect   vf:update ;
+        vf:containedEffect  vf:notApplicable ;
         rdfs:comment        "Change location and possibly identifier, if location is part of the identification, of a resource with no change of agent rights or possession."@en ;
         rdfs:label          "move"@en ;
         vs:term_status      "unstable" .
@@ -979,6 +1010,8 @@ vf:pack a                   owl:NamedIndividual ,
         vf:pairsWith        vf:modify ;
         vf:resourceEffect   vf:noEffect ;
         vf:onhandEffect     vf:decrement ;
+        vf:locationEffect   vf:notApplicable ;
+        vf:containedEffect  vf:update ;
         rdfs:comment        "A resource is put into the container resource that is being modified."@en ;
         rdfs:label          "pack"@en ;
         vs:term_status      "unstable" .
@@ -990,6 +1023,8 @@ vf:pickup a                 owl:NamedIndividual ,
         vf:pairsWith        vf:dropoff ;
         vf:resourceEffect   vf:noEffect ;
         vf:onhandEffect     vf:noEffect ;
+        vf:locationEffect   vf:remove ;
+        vf:containedEffect  vf:notApplicable ;
         rdfs:comment        "Transported resource or person enters the process; the same resource will appear in the output."@en ;
         rdfs:label          "pickup"@en ;
         vs:term_status      "unstable" .
@@ -1000,6 +1035,8 @@ vf:produce a                owl:NamedIndividual ,
         vf:pairsWith        vf:notApplicable ;
         vf:resourceEffect   vf:increment ;
         vf:onhandEffect     vf:increment ;
+        vf:locationEffect   vf:notApplicable ;
+        vf:containedEffect  vf:notApplicable ;
         rdfs:comment        "New resource was created in that process or an existing stock resource was added to."@en ;
         rdfs:label          "produce"@en ;
         vs:term_status      "testing" .
@@ -1010,6 +1047,8 @@ vf:raise a                  owl:NamedIndividual ,
         vf:pairsWith        vf:notApplicable ;
         vf:resourceEffect   vf:increment ;
         vf:onhandEffect     vf:increment ;
+        vf:locationEffect   vf:notApplicable ;
+        vf:containedEffect  vf:notApplicable ;
         rdfs:comment        "Adjusts a quantity up based on a beginning balance or inventory count."@en ;
         rdfs:label          "raise"@en ;
         vs:term_status      "unstable" .
@@ -1020,6 +1059,8 @@ vf:transfer-all-rights a    owl:NamedIndividual ,
         vf:pairsWith        vf:notApplicable ;
         vf:resourceEffect   vf:decrementIncrement ;
         vf:onhandEffect     vf:noEffect ;
+        vf:locationEffect   vf:notApplicable ;
+        vf:containedEffect  vf:notApplicable ;
         rdfs:comment        "Give full (in the human realm) rights and responsibilities to another agent, without transferring physical custody."@en ;
         rdfs:label          "transfer all rights"@en ;
         vs:term_status      "unstable" .
@@ -1030,6 +1071,8 @@ vf:transfer a               owl:NamedIndividual ,
         vf:pairsWith        vf:notApplicable ;
         vf:resourceEffect   vf:decrementIncrement ;
         vf:onhandEffect     vf:decrementIncrement ;
+        vf:locationEffect   vf:update ;
+        vf:containedEffect  vf:notApplicable ;
         rdfs:comment        "Give full rights and responsibilities plus physical custody."@en ;
         rdfs:label          "transfer"@en ;
         vs:term_status      "unstable" .
@@ -1040,6 +1083,8 @@ vf:transfer-custody a       owl:NamedIndividual ,
         vf:pairsWith        vf:notApplicable ;
         vf:resourceEffect   vf:noEffect ;
         vf:onhandEffect     vf:decrementIncrement ;
+        vf:locationEffect   vf:update ;
+        vf:containedEffect  vf:notApplicable ;
         rdfs:comment        "Give physical custody and control of a resource, without full accounting or ownership rights."@en ;
         rdfs:label          "transfer custody"@en ;
         vs:term_status      "unstable" .
@@ -1051,6 +1096,8 @@ vf:unpack a                 owl:NamedIndividual ,
         vf:pairsWith        vf:accept ;
         vf:resourceEffect   vf:noEffect ;
         vf:onhandEffect     vf:increment ;
+        vf:locationEffect   vf:notApplicable ;
+        vf:containedEffect  vf:remove ;
         rdfs:comment        "A resource is removed from the container resource that was accepted to the process."@en ;
         rdfs:label          "unpack"@en ;
         vs:term_status      "unstable" .
@@ -1061,6 +1108,8 @@ vf:use a                    owl:NamedIndividual ,
         vf:pairsWith        vf:notApplicable ;
         vf:resourceEffect   vf:noEffect ;
         vf:onhandEffect     vf:noEffect ;
+        vf:locationEffect   vf:notApplicable ;
+        vf:containedEffect  vf:notApplicable ;
         rdfs:comment        "For example a tool used in process; after the process, the tool still exists."@en ;
         rdfs:label          "use"@en ;
         vs:term_status      "testing" .
@@ -1071,6 +1120,8 @@ vf:work a                   owl:NamedIndividual ,
         vf:pairsWith        vf:notApplicable ;
         vf:resourceEffect   vf:noEffect ;
         vf:onhandEffect     vf:noEffect ;
+        vf:locationEffect   vf:notApplicable ;
+        vf:containedEffect  vf:notApplicable ;
         rdfs:comment        "Labor power applied to a process."@en ;
         rdfs:label          "work"@en ;
         vs:term_status      "testing" .
@@ -1078,30 +1129,47 @@ vf:work a                   owl:NamedIndividual ,
 # Resource effects
 
 vf:decrement a              owl:NamedIndividual ,
-                            vf:ResourceEffect ;
+                            vf:ResourceEffect ,
+                            vf:OnhandEffect ;
         rdfs:comment        "The effect is to subtract from the inventoried resource."@en ;
         rdfs:label          "decrement"@en ;
         vs:term_status      "unstable" .
 
 vf:decrementIncrement a     owl:NamedIndividual ,
-                            vf:ResourceEffect ;
+                            vf:ResourceEffect ,
+                            vf:OnhandEffect ;
         rdfs:comment        "The effect is to subtract from the 'from' inventoried resource, and add to the 'to' inventoried resource."@en ;
         rdfs:label          "decrement/increment"@en ;
         vs:term_status      "unstable" .
 
 vf:increment a              owl:NamedIndividual ,
-                            vf:ResourceEffect ;
+                            vf:ResourceEffect ,
+                            vf:OnhandEffect ;
         rdfs:comment        "The effect is to add to the inventoried resource."@en ;
         rdfs:label          "increment"@en ;
         vs:term_status      "unstable" .
 
+vf:update a                 owl:NamedIndividual ,
+                            vf:ContainedEffect ,
+                            vf:LocationEffect ;
+        rdfs:comment        "The effect is to update the resource in the specified property."@en ;
+        rdfs:label          "update"@en ;
+        vs:term_status      "unstable" .
+
+vf:remove a                 owl:NamedIndividual ,
+                            vf:ContainedEffect ;
+        rdfs:comment        "The effect is to remove or nullify the specified property from the resource."@en ;
+        rdfs:label          "remove"@en ;
+        vs:term_status      "unstable" .
+
 vf:noEffect a               owl:NamedIndividual ,
-                            vf:ResourceEffect ;
+                            vf:ResourceEffect ,
+                            vf:OnhandEffect ;
         rdfs:comment        "The effect is to do nothing to the inventoried resource."@en ;
         rdfs:label          "no effect"@en ;
         vs:term_status      "unstable" .
 
-# Input/output (and N/A for pairs with)
+# Input/output
 
 vf:input a                  owl:NamedIndividual ,
                             vf:InputOutput ;
@@ -1109,17 +1177,21 @@ vf:input a                  owl:NamedIndividual ,
         rdfs:label          "input"@en ;
         vs:term_status      "unstable" .
 
-vf:notApplicable a          owl:NamedIndividual ,
-                            vf:InputOutput ,
-                            vf:PairsWith ;
-        rdfs:comment        "This property is not applicable to this kind of flow."@en ;
-        rdfs:label          "not applicable"@en ;
-        vs:term_status      "unstable" .
-
 vf:output a                  owl:NamedIndividual ,
                             vf:InputOutput ;
         rdfs:comment        "This kind of flow can be an output to a process."@en ;
         rdfs:label          "output"@en ;
+        vs:term_status      "unstable" .
+
+# Not applicable
+
+vf:notApplicable a          owl:NamedIndividual ,
+                            vf:InputOutput ,
+                            vf:PairsWith ,
+                            vf:LocationEffect ,
+                            vf:ContainedEffect;
+        rdfs:comment        "This property is not applicable to this kind of flow."@en ;
+        rdfs:label          "not applicable"@en ;
         vs:term_status      "unstable" .
 
 # Agent Relationship Role Behaviors
