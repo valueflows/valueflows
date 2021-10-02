@@ -75,15 +75,15 @@ work | No effect(1) | No effect(1) | Input | N/A | N/A |
 cite | No effect  | No effect  | Input | N/A | N/A |
 deliver-service | No effect | No effect | Output(3) | N/A | N/A |
 pickup | No effect | No effect  | Input | N/A | dropoff |
-dropoff | No effect | No effect | Output | currentLocation | pickup |
+dropoff | No effect | No effect | Output | currentLocation(4) | pickup |
 accept | No effect | Decrement  | Input | N/A | modify |
 modify | No effect | Increment  | Output | N/A | accept |
 pack | No effect | Decrement  | Input | add containedIn | modify |
 unpack | No effect | Increment | Output | remove containedIn | accept |
-transfer-custody | No effect | Decr+Incr(2) | N/A | N/A | N/A |
+transfer-custody | No effect | Decr+Incr(2) | N/A | currentLocation(4) | N/A |
 transfer-all-rights | Decr+Incr(2) | No effect | N/A | N/A | N/A |
-transfer | Decr+Incr(2) | Decr+Incr(2) | N/A | N/A | N/A |
-move | Decr+Incr(2) |Decr+Incr(2) | N/A | currentLocation | N/A |
+transfer | Decr+Incr(2) | Decr+Incr(2) | N/A | currentLocation(4) | N/A |
+move | Decr+Incr(2) |Decr+Incr(2) | N/A | currentLocation(4) | N/A |
 raise | Increment | Increment | N/A | N/A | N/A |
 lower | Decrement | Decrement | N/A | N/A | N/A |
 
@@ -94,6 +94,8 @@ We have defined a core set of actions, but expect that this will be extended wit
 (2) The actions `transfer` and `move` can optionally define a second identified resource on the receiver side.
 
 (3) The action `deliver-service` can sometimes be an input to another process, at the same time as it is an output from a process.  This is because services imply delivery as they are created.
+
+(4) These actions should update the resource's `currentLocation` if `atLocation` is provided on the event.
 
 ### Quantities and Times
 
