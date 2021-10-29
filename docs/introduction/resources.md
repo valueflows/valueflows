@@ -98,8 +98,6 @@ We are defining two current quantities on the economic resource for these two co
 
 For example, in vendor-managed inventory, the vendor owns the inventory so they see it in their accounting; but the store sees it in their onhand quantities. Or for inventory being shipped FOB source, the intended receiver owns the inventory and sees it in their accounting, but the goods are actually onhand in a truck.
 
-For example, in vendor-managed inventory, the vendor owns the inventory (they see if in their accounting) but the store sees it in their onhand quantities. Or for inventory being shipped FOB source, the intended receiver owns the inventory and sees it in their accounting, but the goods are actually onhand in a truck.
-
 #### How resources related to each other: contained resources
 
 If one resource contains other resources, the contained resources are part of, or make up the larger resource.
