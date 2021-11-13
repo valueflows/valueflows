@@ -33,7 +33,7 @@ http://www.ontology-of-units-of-measure.org/resource/om-2/
 * [`om2:Unit`](http://www.ontology-of-units-of-measure.org/resource/om-2/Unit)
     * A list of units can also be found here.  Each subclass on this page has an additional list of units.
     * VF will use (at least) `rdfs:label` and `om2:symbol` as properties of Units.
-    * See note at the end of [Flows](https://valueflo.ws/introduction/flows.html) regarding display of unit `om2:one`.
+    * See note at the end of [Flows](/introduction/flows.md) regarding display of unit `om2:one`.
 
 ### DTYPE
 

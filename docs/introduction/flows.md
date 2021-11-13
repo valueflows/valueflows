@@ -12,7 +12,7 @@ Intents describe potential future events which have not been agreed to by other 
 
 ### Commitment
 
-Commitments describe potential future events which the involved agents have already agreed to pursue. Commitments can be considered contractual promises from one agent to another.  Commitments can be thought of as plans of economic events, and Economic Events can fulfull Commitments.  Commitments can satisfy Intents. 
+Commitments describe potential future events which the involved agents have already agreed to pursue. Commitments can be considered contractual promises from one agent to another.  Commitments can be thought of as plans of economic events, and Economic Events can fulfill Commitments.  Commitments can satisfy Intents. 
 
 
 ### Economic Events
