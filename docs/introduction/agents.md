@@ -18,4 +18,4 @@ There are a number of useful Properties in existing vocabularies that can be use
 
 Relationships have direction: For example, in "Michael is a member of Enspiral", Michael is the subject and Enspiral is the object.  In this case the inverse is also valid, "Enspiral has member Michael".
 
-Relationships can be in a [scope](https://valueflo.ws/introduction/scoping.html) (or not): For example, "Kathy is mentor of Sam, in the scope of Enspiral."
+Relationships can be in a [scope](scoping.md) (or not): For example, "Kathy is mentor of Sam, in the scope of Enspiral."

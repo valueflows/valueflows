@@ -17,7 +17,7 @@ Or potentially, views for a global value system economy (really).
 * from members to a network
 * from a network to the members
 * from one network to another
-* from a network to the community 
+* from a network to the community
 * from a network to the ecosystem
 
 Accounting isn't always just counting beans.  It will be important for community economies: what resources do we have, what happened with them, how are they doing? What resources do we need? Who needs what? Who can provide what?  What waste have we generated and how can we improve?
@@ -25,11 +25,11 @@ Accounting isn't always just counting beans.  It will be important for community
 
 ### But if you want to count beans...
 
-The standard set of accounting reports are needed by many organizations. A standard General Ledger, Balance Sheet, and Income Statement can be generated automatically from ValueFlows data. No need to create a Chart of Accounts or post double-entries, those can all be created by a computer program on request. 
+The standard set of accounting reports are needed by many organizations. A standard General Ledger, Balance Sheet, and Income Statement can be generated automatically from ValueFlows data. No need to create a Chart of Accounts or post double-entries, those can all be created by a computer program on request.
 
 ![GL](https://raw.githubusercontent.com/valueflows/valueflows/master/release-doc-in-process/std-accounting.png)
 
-Moreover, General Ledgers and accounting reports can be created automatically for each agent in an economic network using the VF vocabulary.  The accounting views use the Dependent or Individual Agent view of ValueFlows. See also [Independent vs Dependent views](https://valueflo.ws/introduction/core.html#independent-vs-dependent-views).
+Moreover, General Ledgers and accounting reports can be created automatically for each agent in an economic network using the VF vocabulary.  The accounting views use the Dependent or Individual Agent view of ValueFlows. See also [Independent vs Dependent views](core.md#independent-vs-dependent-views).
 
 Accounting statements can also be updated instantly for each participant in any economic event as soon as the event is recorded. For example, consider an economic exchange, where one agent transfers some goods to another, and the other agent transfers some money in return. The inventory of the goods-providing agent will be instantly decremented, and the receiving agent's incremented. Likewise the money accounts of the money-providing and receiving agents will immediately change. Income statements, balance sheets, and cash flow reports can reflect the new changes immediately. The financial positions of each agent can always be up-to-date as of the last recorded event.
 

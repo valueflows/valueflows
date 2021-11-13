@@ -1,7 +1,7 @@
 # Economic Resources
 
 Traditionally, an economic resource is defined by its utility, but also by its scarcity and its control by an economic agent. That definition is too limited. Its limitations include:
-* Intellectual creations like designs are not scarce, yet they clearly are economic resources. They only become scarce when legally restricted by patents and copyrights. 
+* Intellectual creations like designs are not scarce, yet they clearly are economic resources. They only become scarce when legally restricted by patents and copyrights.
 * Air, water, and other products of nature are clearly economic resources, but they are not under the control of an agent unless they are legally restricted by ownership. However, by means of the invisible foot that accompanies the invisible hand, they are regularly degraded by enterprises, and not accounted for, classified as “externalities”.
 
 We want to think of ourselves as participants in ecosystems, not competing enterprises. As such, we need to account for our effects on all aspects of our ecosystem.
@@ -23,13 +23,13 @@ is a specification. Your library may have two copies that you can check out. Tho
 
 An economic resource or a flow can have only one *resource specification* in ValueFlows.  This defines the lowest level useful type or kind of the resource that is needed. The ValueFlows vocabulary defines this as the ResourceSpecification.  Note that often taxonomies and other references on the web can define very specific resource specifications at their leaf levels, and these can be used if the necessary properties can be found.  Note also that for specific global identifiers such as GTIN, we recommend using properties of the [GoodRelations ProductOrServiceModel](http://www.heppnetz.de/ontologies/goodrelations/v1.html#ProductOrServiceModel).
 
-An economic resource or a flow can have any number of *resource classifications*.  They are used to filter, match, or group economic resources.  Resource classifications can be part of a taxonomy. That means they can be defined very broadly and generally and maybe vaguely, or they can be defined very narrowly, but fit into broader classifications. 
+An economic resource or a flow can have any number of *resource classifications*.  They are used to filter, match, or group economic resources.  Resource classifications can be part of a taxonomy. That means they can be defined very broadly and generally and maybe vaguely, or they can be defined very narrowly, but fit into broader classifications.
 
 So, for example, you may want an apple. Or you may want a green apple. Or you may want a Granny Smith apple.
 
 Or, Herb is the parent classification of Anise Hyssop, Goldenrod, Nettles, Red Clover, etc.  Besides its usefulness in understanding taxonomies of resource types, this can be useful when one can define a general recipe that will work for many more specific kinds of resources.
 
-People can use the multitude of existing taxonomies for resource classifications, or can also create their own as needed. 
+People can use the multitude of existing taxonomies for resource classifications, or can also create their own as needed.
 
 Resource classifications can also use other schemes, like facets or tags.
 
@@ -64,7 +64,7 @@ This can vary.  And people can be allowed within some boundaries of agreement to
 Here are some examples from manufacturing situations:
 
 * Unique identifier = an assigned serialized identifier, which is unique across manufacturers, due to agreements in an industry.  Examples are computers, vehicles, and other equipment.
-* Unique identifier = resource model + lot identifier + location + owner: so in other words, the owner of the rights was part of the unique identifier of the resource, and if the resource got transferred from one owner to another, the first owner's resources would be decremented, and the second owner's resources would be incremented. 
+* Unique identifier = resource model + lot identifier + location + owner: so in other words, the owner of the rights was part of the unique identifier of the resource, and if the resource got transferred from one owner to another, the first owner's resources would be decremented, and the second owner's resources would be incremented.
 
 Note in the last case, a transfer of rights means a different resource. This is common with resources that are not serialized, where one logical resource has a quantity greater than 1, and the individual instances are substitutable. (Think nuts and bolts, grain, strawberries, bottles of beer in cases, etc.)
 
@@ -76,7 +76,7 @@ Sometimes part of the logical identification of a resource includes:
 
 Stage is used when the same resource passes through multiple processes in its lifetime, and that information is needed by the next process to determine which resources can be valid inputs.  For example, in creating a translation, you might have one translated document pass through translation, editing, proofreading, formatting stages. You don't want to bring that resource into the formatting stage until it has been proofread, for example. Or you might have a testing stage for a component or product, in which case you don't want to consume or transfer the resource until it both has been through the testing stage, and had a `pass` output result.
 
-These can be defined on the recipe or the plan, showing where an input flow expects a certain stage and/or state of a resource. In that case, [Dependent demand planning](https://valueflo.ws/appendix/dependent-demand.html) will select only those resources that fit the specified stage and state.  In user-interface forms for adding EconomicEvents, the input event form should query EconomicResources for required stage and state when offering selections of possible input resources.  The stage and state of an EconomicResource can be derived or stored, as preferred.
+These can be defined on the recipe or the plan, showing where an input flow expects a certain stage and/or state of a resource. In that case, [Dependent demand planning](/appendix/dependent-demand.md) will select only those resources that fit the specified stage and state.  In user-interface forms for adding EconomicEvents, the input event form should query EconomicResources for required stage and state when offering selections of possible input resources.  The stage and state of an EconomicResource can be derived or stored, as preferred.
 
 #### How resources relate to events
 
