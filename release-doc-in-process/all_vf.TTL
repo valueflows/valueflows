@@ -606,6 +606,14 @@ vf:atLocation a             owl:ObjectProperty ;
         rdfs:comment        "The place where an intent, commitment, or economic event occurs.  Usually mappable."@en ;
         .
 
+vf:toLocation a             owl:ObjectProperty ;
+        rdfs:label          "to location"@en ;
+        rdfs:domain         vf:EconomicEvent ;
+        rdfs:range          geo:SpatialThing ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "The new location of the receiver resource."@en ;
+        .
+
 vf:image a                  owl:DatatypeProperty ;
         vs:term_status      "unstable" ;
         rdfs:label          "image"@en ;
