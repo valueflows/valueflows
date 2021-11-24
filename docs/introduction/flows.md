@@ -95,7 +95,7 @@ We have defined a core set of actions, but expect that this will be extended wit
 
 (3) The action `deliver-service` can sometimes be an input to another process, at the same time as it is an output from a process.  This is because services imply delivery as they are created.
 
-(4) These actions should update the resource's `currentLocation` if `toLocation` is provided on the event. For `dropoff` it is the resource, for all others the to resource.
+(4) These actions should update the resource's `currentLocation` if `toLocation` is provided on the event. For `dropoff` it is the resource which is affected by the event, for all others it is the to resource, the resource that results from the event. For the latter, the resource and to resource may be the same resource, depending on how resources are identified in the user community.
 
 ### Quantities and Times
 
