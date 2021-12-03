@@ -1,0 +1,82 @@
+site_name: Valueflows
+
+theme:
+  name: material
+  logo: assets/icon-0.svg
+  favicon: assets/favicon.ico
+  features:
+    - navigation.indexes
+    - navigation.sections
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.tracking
+  palette:
+    primary: white
+    accent: cyan
+
+nav:
+    - Home: index.md
+    - Introduction:
+        - Flows of Value: introduction/concepts.md
+        - Core: introduction/core.md
+        - Principles: introduction/principles.md
+        - Contributors: introduction/contributors.md
+        - Status: introduction/status.md
+    - Specification:
+        - Complete Diagram: specification/uml.md
+        - VF Specification: specification/vfspec.md
+        - Other Namespaces: specification/external-terms.md
+        - GraphQL Reference: specification/graphql.md
+    - Concepts:
+        - Agents: concepts/agents.md
+        - Economic Resources: concepts/resources.md
+        - Flows: concepts/flows.md
+        - Processes: concepts/processes.md
+        - Transfers: concepts/transfers.md
+        - Exchanges: concepts/exchanges.md
+        - Proposals: concepts/proposals.md
+        - Operational Planning: concepts/plan.md
+        - Budgeting and Analysis: concepts/estimates.md
+        - Recipes: concepts/recipes.md
+        - Classification: concepts/classification.md
+        - Scoping: concepts/scoping.md
+        - Conversations: concepts/cfa.md
+        - Accounting: concepts/accounting.md
+    - Examples:
+        - Agents: examples/ex-agent.md
+        - Resources: examples/ex-resource.md
+        - Production: examples/ex-production.md
+        - Exchanges and Transfers: examples/ex-exchange.md
+        - Planning: examples/ex-planning.md
+        - More Complex: examples/ex-complex.md
+    - Algorithms:
+        - Overview: algorithms/overview.md
+        - Dependent Demand: algorithms/dependent-demand.md
+        - Critical Path: algorithms/critical-path.md
+        - Value Rollup: algorithms/rollup.md
+        - Value Equations: algorithms/equations.md
+        - Track and Trace: algorithms/track.md
+        - Provenance: algorithms/provenance.md
+        - Cash Flows: algorithms/cashflows.md
+        - Network Flows: algorithms/netflows.md
+    - Appendices:
+        - REA References: appendix/rea.md
+        - Uses of the Vocabulary: appendix/usedfor.md
+        - Other Documentation: appendix/presentations.md
+
+markdown_extensions:
+  - pymdownx.snippets
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.superfences
+  - toc:
+      title: On this page
+
+extra_css:
+  - stylesheets/extra.css
+
+extra:
+  social:
+    - icon: fontawesome/brands/gitter
+      link: https://gitter.im/valueflows/welcome
+      name: Come chat with us on gitter
