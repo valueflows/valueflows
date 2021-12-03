@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile modified="2019-08-08T15:31:27.378Z" host="www.draw.io" agent="Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:68.0) Gecko/20100101 Firefox/68.0" version="11.1.1" etag="rkBW0LSuDt24I535eQL0" type="device" compressed="false">
+  <diagram id="EdAMWooHoyToYXzOGRlz">
+    <mxGraphModel dx="2205" dy="778" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="2" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fad9d5;strokeColor=none;align=left;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="30" y="3500" width="590" height="120" as="geometry"/>
+        </mxCell>
+        <mxCell id="3" value="Proposal: carrots" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="117" y="3511" width="125" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="4" value="intent to receive $18" style="shape=delay;whiteSpace=wrap;html=1;rounded=0;glass=1;comic=0;" vertex="1" parent="1">
+          <mxGeometry x="193.5" y="3569.5" width="123" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="5" value="&lt;div&gt;intent to provide &lt;br&gt;&lt;/div&gt;&lt;div&gt;carrots 25# case&lt;br&gt;&lt;/div&gt;" style="shape=delay;whiteSpace=wrap;html=1;rounded=0;glass=1;comic=0;" vertex="1" parent="1">
+          <mxGeometry x="40" y="3570" width="130" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="6" value="" style="endArrow=none;dashed=1;html=1;entryX=0;entryY=0.75;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" source="5" target="3" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-70" y="3557" as="sourcePoint"/>
+            <mxPoint x="-20" y="3507" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7" value="" style="endArrow=none;dashed=1;html=1;entryX=1;entryY=0.75;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" source="4" target="3" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="350" y="3597" as="sourcePoint"/>
+            <mxPoint x="400" y="3547" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8" value="Proposal: beets" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="407.5" y="3510.5" width="125" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="9" value="intent to receive $32" style="shape=delay;whiteSpace=wrap;html=1;rounded=0;glass=1;comic=0;" vertex="1" parent="1">
+          <mxGeometry x="484" y="3569" width="123" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="10" value="&lt;div&gt;intent to provide &lt;br&gt;&lt;/div&gt;&lt;div&gt;beets 25# case&lt;br&gt;&lt;/div&gt;" style="shape=delay;whiteSpace=wrap;html=1;rounded=0;glass=1;comic=0;" vertex="1" parent="1">
+          <mxGeometry x="330.5" y="3569.5" width="130" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="11" value="" style="endArrow=none;dashed=1;html=1;entryX=0;entryY=0.75;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" source="10" target="8" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="220.5" y="3556.5" as="sourcePoint"/>
+            <mxPoint x="270.5" y="3506.5" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="12" value="" style="endArrow=none;dashed=1;html=1;entryX=1;entryY=0.75;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" source="9" target="8" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="640.5" y="3596.5" as="sourcePoint"/>
+            <mxPoint x="690.5" y="3546.5" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
