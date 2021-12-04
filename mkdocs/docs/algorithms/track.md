@@ -19,8 +19,8 @@ One of the most-often used traces is to find the origins of health problems like
 Here is the logic finding the flow element that comes after a particular element (tracking) and before a particular element (tracing):
 
 * For an EconomicResource:
-    * after: EconomicEvents affecting it that are inputs to Processes or transfer/move EconomicEvents with the resource defined as the `resourceInventoriedAs`
-    * before: EconomicEvents affecting it that are outputs from Processes or transfer/move EconomicEvents with the resource defined as the `toResourceInventoriedAs`
+    * after: EconomicEvents affecting it that are inputs to Processes, or transfer/move EconomicEvents with the resource defined as the `resourceInventoriedAs`
+    * before: EconomicEvents affecting it that are outputs from Processes, or transfer/move EconomicEvents with the resource defined as the `toResourceInventoriedAs`
 * For a Process:
     * after: EconomicEvents that are outputs
     * before: EconomicEvents that are inputs
@@ -34,6 +34,10 @@ Here is the logic finding the flow element that comes after a particular element
         * if it is an input to a Process, the EconomicResource which it affects, or
         * if it is a transfer or move event and the current EconomicResource is the toResourceInventoriedAs, then the previous EconomicResource is the resourceInventoriedAs
 
+#### Additional special logic
+
 When more than one resource of the same specification goes from input to output of the same process, use the tracking identifier if you need to track or trace the same resource. And example of this would be less-than-truckload shipments, where many separate resources with different destinations are included in the same shipment process.
+
+When dealing with resources that packed into and unpacked from a container resource, if the resource is currently packed, then the logic needs to follow the container resource until the resource is unpacked.
 
 When the same economic resource is both input and output of a process, sometimes a series of processes, such as for repair or quality testing or a workflow where a resource is refined through stages like writing/editing/etc, the stage must be identified, based on the kind of process the resource was last output of.
