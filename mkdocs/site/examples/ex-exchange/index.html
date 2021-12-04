@@ -1,0 +1,1943 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../../assets/favicon.ico">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.0.2">
+    
+    
+      
+        <title>Exchanges and Transfers - Valueflows</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.816931ca.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.9204c3b2.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#ffffff">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>function __md_scope(e,t,_){return new URL(_||(t===localStorage?"../..":"../.."),location).pathname+"."+e}function __md_get(e,t=localStorage,_){return JSON.parse(t.getItem(__md_scope(e,t,_)))}function __md_set(e,t,_=localStorage,o){try{_.setItem(__md_scope(e,_,o),JSON.stringify(t))}catch(e){}}</script>
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="white" data-md-color-accent="cyan">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#transfer-and-exchange-examples" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Valueflows" class="md-header__button md-logo" aria-label="Valueflows" data-md-component="logo">
+      
+  <img src="../../assets/icon-0.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Valueflows
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Exchanges and Transfers
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../.." class="md-tabs__link">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../introduction/concepts/" class="md-tabs__link">
+        Introduction
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../specification/uml/" class="md-tabs__link">
+        Specification
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../concepts/agents/" class="md-tabs__link">
+        Concepts
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../ex-agent/" class="md-tabs__link md-tabs__link--active">
+        Examples
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../algorithms/overview/" class="md-tabs__link">
+        Algorithms
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../appendix/rea/" class="md-tabs__link">
+        Appendices
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Valueflows" class="md-nav__button md-logo" aria-label="Valueflows" data-md-component="logo">
+      
+  <img src="../../assets/icon-0.svg" alt="logo">
+
+    </a>
+    Valueflows
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Introduction
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Introduction" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Introduction
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introduction/concepts/" class="md-nav__link">
+        Flows of Value
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introduction/core/" class="md-nav__link">
+        Core
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introduction/principles/" class="md-nav__link">
+        Principles
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introduction/contributors/" class="md-nav__link">
+        Contributors
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introduction/status/" class="md-nav__link">
+        Status
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Specification
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Specification" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Specification
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../specification/uml/" class="md-nav__link">
+        Complete Diagram
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../specification/vfspec/" class="md-nav__link">
+        VF Specification
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../specification/external-terms/" class="md-nav__link">
+        Other Namespaces
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../specification/graphql/" class="md-nav__link">
+        GraphQL Reference
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Concepts
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Concepts" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Concepts
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/agents/" class="md-nav__link">
+        Agents
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/resources/" class="md-nav__link">
+        Economic Resources
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/flows/" class="md-nav__link">
+        Flows
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/processes/" class="md-nav__link">
+        Processes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/transfers/" class="md-nav__link">
+        Transfers
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/exchanges/" class="md-nav__link">
+        Exchanges
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/proposals/" class="md-nav__link">
+        Proposals
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/plan/" class="md-nav__link">
+        Operational Planning
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/estimates/" class="md-nav__link">
+        Budgeting and Analysis
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/recipes/" class="md-nav__link">
+        Recipes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/classification/" class="md-nav__link">
+        Classification
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/scoping/" class="md-nav__link">
+        Scoping
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/cfa/" class="md-nav__link">
+        Conversations
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/accounting/" class="md-nav__link">
+        Accounting
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Examples
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Examples" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Examples
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ex-agent/" class="md-nav__link">
+        Agents
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ex-resource/" class="md-nav__link">
+        Resources
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ex-production/" class="md-nav__link">
+        Production
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Exchanges and Transfers
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Exchanges and Transfers
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#exchange-agreement" class="md-nav__link">
+    Exchange agreement
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#retail-exchange" class="md-nav__link">
+    Retail exchange
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#crypto-currency-transfer" class="md-nav__link">
+    Crypto-currency transfer
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#moving-crypto-currency" class="md-nav__link">
+    Moving crypto-currency
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#checkout-book" class="md-nav__link">
+    Checkout book
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#claim" class="md-nav__link">
+    Claim
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#plan-from-recipe-with-production-and-exchange" class="md-nav__link">
+    Plan from recipe with production and exchange
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ex-planning/" class="md-nav__link">
+        Planning
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ex-complex/" class="md-nav__link">
+        More Complex
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          Algorithms
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Algorithms" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Algorithms
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algorithms/overview/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algorithms/dependent-demand/" class="md-nav__link">
+        Dependent Demand
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algorithms/critical-path/" class="md-nav__link">
+        Critical Path
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algorithms/rollup/" class="md-nav__link">
+        Value Rollup
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algorithms/equations/" class="md-nav__link">
+        Value Equations
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algorithms/track/" class="md-nav__link">
+        Track and Trace
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algorithms/provenance/" class="md-nav__link">
+        Provenance
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algorithms/cashflows/" class="md-nav__link">
+        Cash Flows
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algorithms/netflows/" class="md-nav__link">
+        Network Flows
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_7">
+          Appendices
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Appendices" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Appendices
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendix/rea/" class="md-nav__link">
+        REA References
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendix/usedfor/" class="md-nav__link">
+        Uses of the Vocabulary
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendix/presentations/" class="md-nav__link">
+        Other Documentation
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#exchange-agreement" class="md-nav__link">
+    Exchange agreement
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#retail-exchange" class="md-nav__link">
+    Retail exchange
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#crypto-currency-transfer" class="md-nav__link">
+    Crypto-currency transfer
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#moving-crypto-currency" class="md-nav__link">
+    Moving crypto-currency
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#checkout-book" class="md-nav__link">
+    Checkout book
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#claim" class="md-nav__link">
+    Claim
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#plan-from-recipe-with-production-and-exchange" class="md-nav__link">
+    Plan from recipe with production and exchange
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+<h1 id="transfer-and-exchange-examples">Transfer and Exchange Examples</h1>
+<h4 id="exchange-agreement">Exchange agreement</h4>
+<p>An exchange agreement with commitments.</p>
+<p><img alt="agreement diagram" src="../../assets/examples/exch-commit.png" /></p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Example: Simple exchange agreement</span>
+
+<span class="s">&#39;@context&#39;</span><span class="p p-Indicator">:</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">https://git.io/vf-examples-jsonld-context</span>
+  <span class="p p-Indicator">-</span> <span class="nt">alice</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://alice.example/</span>
+    <span class="nt">bob</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://bob.example/</span>
+
+<span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">rgh:valueflows/valueflows/master/examples/exch-agreement.yaml</span>
+<span class="s">&#39;@graph&#39;</span><span class="p p-Indicator">:</span>
+
+  <span class="c1"># Exchange agreement with commitments</span>
+
+  <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">alice:57f1c1d0-432e-4bfa-9d32-002b8955a708</span>
+    <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Agreement</span>
+    <span class="l l-Scalar l-Scalar-Plain">skos:note</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Alice commits to giving Bob 50 kg of apples in exchange for 10 liters of apple cider.</span>
+
+  <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">alice:2342d456-5d6f-46d5-a7ed-3ac7bfd5a86c</span>
+    <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Commitment</span>
+    <span class="nt">clauseOf</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">alice:57f1c1d0-432e-4bfa-9d32-002b8955a708</span>
+    <span class="nt">action</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">transfer</span>
+    <span class="nt">provider</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://alice.example/</span>
+    <span class="nt">receiver</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://bob.example/</span>
+    <span class="nt">resourceClassifiedAs</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://www.wikidata.org/wiki/Q89</span> <span class="c1"># apples</span>
+    <span class="nt">resourceQuantity</span><span class="p">:</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasUnit</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">om2:kilogram</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasNumericalValue</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">50</span>
+
+  <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">bob:fd399b37-0740-4a68-a184-1e655021ca21</span>
+    <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Commitment</span>
+    <span class="nt">clauseOf</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">alice:57f1c1d0-432e-4bfa-9d32-002b8955a708</span>
+    <span class="nt">action</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">transfer</span>
+    <span class="nt">provider</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://bob.example/</span>
+    <span class="nt">receiver</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://alice.example/</span>
+    <span class="nt">resourceClassifiedAs</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://www.wikidata.org/wiki/Q5977438</span> <span class="c1"># soft apple cider</span>
+    <span class="nt">resourceQuantity</span><span class="p">:</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasUnit</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">om2:litre</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasNumericalValue</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">10</span>
+</code></pre></div>
+<h4 id="retail-exchange">Retail exchange</h4>
+<p>An exchange without prior commitments.  Note we are still using the Agreement to tie together the reciprocal events, even there were no commitments ahead of time.</p>
+<p><img alt="retail diagram" src="../../assets/examples/exch-pos.png" /></p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Example: Simple retail exchange without commitments</span>
+
+<span class="s">&#39;@context&#39;</span><span class="p p-Indicator">:</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">https://git.io/vf-examples-jsonld-context</span>
+  <span class="p p-Indicator">-</span> <span class="nt">carol</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://carol.example/</span>
+    <span class="nt">store</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://store.example/</span>
+
+<span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">rgh:valueflows/valueflows/master/examples/exch-retail.yaml</span>
+<span class="s">&#39;@graph&#39;</span><span class="p p-Indicator">:</span>
+
+  <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">store:ac9ec98d-db80-44dc-97be-7aa149b2fe5d</span>
+    <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Agreement</span>
+    <span class="l l-Scalar l-Scalar-Plain">skos:note</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Carol purchased a new bucket at the hardware store and paid 5 dollars for it.</span>
+
+  <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">store:a8356625-bf64-4c16-9099-28aa1b718c4b</span>
+    <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">EconomicEvent</span>
+    <span class="nt">realizationOf</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">store:ac9ec98d-db80-44dc-97be-7aa149b2fe5d</span>
+    <span class="nt">action</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">transfer</span>
+    <span class="nt">provider</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://store.example/</span>
+    <span class="nt">receiver</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://carol.example/</span>
+    <span class="nt">resourceClassifiedAs</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://www.wikidata.org/wiki/Q47107</span> <span class="c1"># bucket</span>
+    <span class="nt">resourceQuantity</span><span class="p">:</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasUnit</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">om2:one</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasNumericalValue</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
+
+  <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">store:2342d456-5d6f-46d5-a7ed-3ac7bfd5a86c</span>
+    <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">EconomicEvent</span>
+    <span class="nt">realizationOf</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">store:ac9ec98d-db80-44dc-97be-7aa149b2fe5d</span>
+    <span class="nt">action</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">transfer</span>
+    <span class="nt">provider</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://carol.example/</span>
+    <span class="nt">receiver</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://store.example/</span>
+    <span class="nt">resourceClassifiedAs</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://www.wikidata.org/wiki/Q4917</span> <span class="c1"># US dollar</span>
+    <span class="nt">resourceInventoriedAs</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">carol:e56fd654-7b94-4d96-8e60-de39e08329a7</span> <span class="c1"># Carol&#39;s bank account</span>
+    <span class="nt">resourceQuantity</span><span class="p">:</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasUnit</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">om2:one</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasNumericalValue</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">5</span>
+</code></pre></div>
+<h4 id="crypto-currency-transfer">Crypto-currency transfer</h4>
+<p>A simple transfer of a currency from one agent to another.</p>
+<p><img alt="crypto transfer diagram" src="../../assets/examples/xfer-crypto.png" /></p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Transfer of crypto-currency, ignoring the fee, but to record time involved in the transfer validation process</span>
+
+<span class="s">&#39;@context&#39;</span><span class="p p-Indicator">:</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">https://git.io/vf-examples-jsonld-context</span>
+  <span class="p p-Indicator">-</span> <span class="nt">bob</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://bob.example/</span>
+    <span class="nt">alice</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://alice.example/</span>
+    <span class="nt">fair</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://faircoin.example/</span>
+
+<span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">rgh:valueflows/valueflows/master/examples/transfer-crypto.yaml</span>
+<span class="s">&#39;@graph&#39;</span><span class="p p-Indicator">:</span>
+
+  <span class="c1"># accounts before</span>
+
+  <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">fair:b75d8f6a-e2df-4e52-b36d-1a22a66f4ead</span>
+    <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">EconomicResource</span>
+    <span class="l l-Scalar l-Scalar-Plain">skos:note</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Alice&#39;s wallet address</span>
+    <span class="nt">classifiedAs</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">wd:Q21002847</span> <span class="c1"># FairCoin</span>
+    <span class="nt">accountingQuantity</span><span class="p">:</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasUnit</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">om2:one</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasNumericalValue</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">540</span>
+
+  <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">fair:3be5259d-10f0-431c-9fec-9c0c15a461d3</span>
+    <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">EconomicResource</span>
+    <span class="l l-Scalar l-Scalar-Plain">skos:note</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Bob&#39;s wallet address</span> 
+    <span class="nt">classifiedAs</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">wd:Q21002847</span> <span class="c1"># FairCoin</span>
+    <span class="nt">accountingQuantity</span><span class="p">:</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasUnit</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">om2:one</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasNumericalValue</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">480</span>
+
+  <span class="c1"># transfer from Alice to Bob</span>
+
+  <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">urn:uuid:e5afaa28-1080-4912-835b-46883efb83e6</span>
+    <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">EconomicEvent</span>
+    <span class="nt">action</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">transfer</span>
+    <span class="nt">resourceClassifiedAs</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">wd:Q21002847</span> <span class="c1"># FairCoin</span>
+    <span class="nt">resourceInventoriedAs</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">fair:b75d8f6a-e2df-4e52-b36d-1a22a66f4ead</span> <span class="c1"># Alice&#39;s wallet address</span>
+    <span class="nt">toResourceInventoriedAs</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">fair:3be5259d-10f0-431c-9fec-9c0c15a461d3</span> <span class="c1"># Bob&#39;s wallet address</span>
+    <span class="nt">provider</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://alice.example</span>
+    <span class="nt">receiver</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://bob.example</span>
+    <span class="nt">resourceQuantity</span><span class="p">:</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasUnit</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">om2:one</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasNumericalValue</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">100</span>
+    <span class="nt">hasPointInTime</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">2019-04-18T8:30:08-5:00</span>
+
+  <span class="c1"># accounts after</span>
+
+  <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">fair:b75d8f6a-e2df-4e52-b36d-1a22a66f4ead</span>
+    <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">EconomicResource</span>
+    <span class="l l-Scalar l-Scalar-Plain">skos:note</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Alice&#39;s wallet address</span> 
+    <span class="nt">classifiedAs</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">wd:Q21002847</span> <span class="c1"># FairCoin</span>
+    <span class="nt">accountingQuantity</span><span class="p">:</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasUnit</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">om2:one</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasNumericalValue</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">440</span>
+
+  <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">fair:3be5259d-10f0-431c-9fec-9c0c15a461d3</span>
+    <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">EconomicResource</span>
+    <span class="l l-Scalar l-Scalar-Plain">skos:note</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Bob&#39;s wallet address</span> 
+    <span class="nt">classifiedAs</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">wd:Q21002847</span> <span class="c1"># FairCoin</span>
+    <span class="nt">accountingQuantity</span><span class="p">:</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasUnit</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">om2:one</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasNumericalValue</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">580</span>
+</code></pre></div>
+<h4 id="moving-crypto-currency">Moving crypto-currency</h4>
+<p>A simple move of a currency from one account to another by one agent.</p>
+<p><img alt="crypto move diagram" src="../../assets/examples/move-crypto.png" /></p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Move of crypto-currency for one agent, ignoring the fee</span>
+
+<span class="s">&#39;@context&#39;</span><span class="p p-Indicator">:</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">https://git.io/vf-examples-jsonld-context</span>
+  <span class="p p-Indicator">-</span> <span class="nt">bob</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://bob.example/</span>
+    <span class="nt">fair</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://faircoin.example/</span>
+
+<span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">rgh:valueflows/valueflows/master/examples/move-crypto.yaml</span>
+<span class="s">&#39;@graph&#39;</span><span class="p p-Indicator">:</span>
+
+  <span class="c1"># accounts before</span>
+
+  <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">fair:6fb358a3-2859-4d6a-a4fa-431603ee70f5</span>
+    <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">EconomicResource</span>
+    <span class="l l-Scalar l-Scalar-Plain">skos:note</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Bob&#39;s first wallet address</span>
+    <span class="nt">classifiedAs</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">wd:Q21002847</span> <span class="c1"># FairCoin</span>
+    <span class="nt">accountingQuantity</span><span class="p">:</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasUnit</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">om2:one</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasNumericalValue</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">540</span>
+
+  <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">fair:3be5259d-10f0-431c-9fec-9c0c15a461d3</span>
+    <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">EconomicResource</span>
+    <span class="l l-Scalar l-Scalar-Plain">skos:note</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Bob&#39;s second wallet address</span> 
+    <span class="nt">classifiedAs</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">wd:Q21002847</span> <span class="c1"># FairCoin</span>
+    <span class="nt">accountingQuantity</span><span class="p">:</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasUnit</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">om2:one</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasNumericalValue</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">480</span>
+
+  <span class="c1"># move between Bob&#39;s accounts</span>
+
+  <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">urn:uuid:e5afaa28-1080-4912-835b-46883efb83e6</span>
+    <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">EconomicEvent</span>
+    <span class="nt">action</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">move</span>
+    <span class="nt">resourceClassifiedAs</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">wd:Q21002847</span> <span class="c1"># FairCoin</span>
+    <span class="nt">resourceInventoriedAs</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">fair:6fb358a3-2859-4d6a-a4fa-431603ee70f5</span> <span class="c1"># Bob&#39;s first wallet address</span>
+    <span class="nt">toResourceInventoriedAs</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">fair:3be5259d-10f0-431c-9fec-9c0c15a461d3</span> <span class="c1"># Bob&#39;s second wallet address</span>
+    <span class="nt">provider</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://bob.example</span>
+    <span class="nt">receiver</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://bob.example</span>
+    <span class="nt">resourceQuantity</span><span class="p">:</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasUnit</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">om2:one</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasNumericalValue</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">100</span>
+    <span class="nt">hasPointInTime</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">2019-04-18T8:30:08-5:00</span>
+
+  <span class="c1"># accounts after</span>
+
+  <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">fair:b6fb358a3-2859-4d6a-a4fa-431603ee70f5</span>
+    <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">EconomicResource</span>
+    <span class="l l-Scalar l-Scalar-Plain">skos:note</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Bob&#39;s first wallet address</span> 
+    <span class="nt">classifiedAs</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">wd:Q21002847</span> <span class="c1"># FairCoin</span>
+    <span class="nt">accountingQuantity</span><span class="p">:</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasUnit</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">om2:one</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasNumericalValue</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">440</span>
+
+  <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">fair:3be5259d-10f0-431c-9fec-9c0c15a461d3</span>
+    <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">EconomicResource</span>
+    <span class="l l-Scalar l-Scalar-Plain">skos:note</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Bob&#39;s second wallet address</span> 
+    <span class="nt">classifiedAs</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">wd:Q21002847</span> <span class="c1"># FairCoin</span>
+    <span class="nt">accountingQuantity</span><span class="p">:</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasUnit</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">om2:one</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasNumericalValue</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">580</span>
+</code></pre></div>
+<h4 id="checkout-book">Checkout book</h4>
+<p>Checking out and checking back in a library book (a loan).</p>
+<p><img alt="checkout diagram" src="../../assets/examples/book.png" /></p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Checking out a book</span>
+
+<span class="s">&#39;@context&#39;</span><span class="p p-Indicator">:</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">https://git.io/vf-examples-jsonld-context</span>
+  <span class="p p-Indicator">-</span> <span class="nt">library</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://library.example/</span>
+    <span class="nt">bob</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://bob.example/</span>
+
+<span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">rgh:valueflows/valueflows/master/examples/checkout-book.yaml</span>
+<span class="s">&#39;@graph&#39;</span><span class="p p-Indicator">:</span>
+
+  <span class="c1"># resource before</span>
+
+  <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">library:2402b57c-1c45-423a-acb2-f50961c97d65</span>
+    <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">EconomicResource</span>
+    <span class="l l-Scalar l-Scalar-Plain">skos:note</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Valueflows cookbook ISBN:1234 copy 2</span>
+    <span class="nt">accountingQuantity</span><span class="p">:</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasUnit</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">om2:one</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasNumericalValue</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
+    <span class="nt">onhandQuantity</span><span class="p">:</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasUnit</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">om2:one</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasNumericalValue</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
+
+  <span class="c1"># check out</span>
+
+  <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">library:f47064eb-7120-4b31-b882-770165901fe6</span>
+    <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Agreement</span>
+    <span class="l l-Scalar l-Scalar-Plain">skos:note</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">loaning Valueflows cookbook to Bob</span>
+
+  <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">urn:uuid:54b814ee-62dc-40c1-bb96-f8582aa4f771</span>
+    <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">EconomicEvent</span>
+    <span class="nt">realizationOf</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">library:f47064eb-7120-4b31-b882-770165901fe6</span>
+    <span class="nt">action</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">transfer-custody</span>
+    <span class="nt">resourceInventoriedAs</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">library:2402b57c-1c45-423a-acb2-f50961c97d65</span>
+    <span class="nt">hasPointInTime</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">2019-04-18T8:00:00-5:00</span>
+    <span class="nt">provider</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://library.example/</span>
+    <span class="nt">receiver</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://bob.example/</span>
+    <span class="nt">resourceQuantity</span><span class="p">:</span> 
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasUnit</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">om2:one</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasNumericalValue</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
+
+  <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">urn:uuid:98c2bfeb-9c70-4801-896c-4646b975a7d9</span>
+    <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Commitment</span>
+    <span class="nt">clauseOf</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">library:f47064eb-7120-4b31-b882-770165901fe6</span>
+    <span class="nt">action</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">transfer-custody</span>
+    <span class="nt">resourceInventoriedAs</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">library:2402b57c-1c45-423a-acb2-f50961c97d65</span>
+    <span class="nt">provider</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://bob.example/</span>
+    <span class="nt">receiver</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://library.example/</span>
+    <span class="nt">resourceQuantity</span><span class="p">:</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasUnit</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">om2:one</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasNumericalValue</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
+    <span class="nt">due</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">2019-05-17T18:00:00-5:00</span>
+
+  <span class="c1"># resource after check out</span>
+
+  <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">library:2402b57c-1c45-423a-acb2-f50961c97d65</span>
+    <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">EconomicResource</span>
+    <span class="l l-Scalar l-Scalar-Plain">skos:note</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Valueflows cookbook ISBN:1234 copy 2</span>
+    <span class="nt">accountingQuantity</span><span class="p">:</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasUnit</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">om2:one</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasNumericalValue</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
+    <span class="nt">onhandQuantity</span><span class="p">:</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasUnit</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">om2:one</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasNumericalValue</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">0</span>
+
+  <span class="c1"># return</span>
+
+  <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">urn:uuid:d4d2fd71-34f2-41c3-b1c5-19ad5ed2da59</span>
+    <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">EconomicEvent</span>
+    <span class="nt">realizationOf</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">library:f47064eb-7120-4b31-b882-770165901fe6</span>
+    <span class="nt">action</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">transfer-custody</span>
+    <span class="nt">resourceInventoriedAs</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">library:2402b57c-1c45-423a-acb2-f50961c97d65</span>
+    <span class="nt">provider</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://bob.example/</span>
+    <span class="nt">receiver</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://library.example/</span>
+    <span class="nt">resourceQuantity</span><span class="p">:</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasUnit</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">om2:one</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasNumericalValue</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
+    <span class="nt">hasPointInTime</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">2019-05-14T10:20:00-5:00</span>
+
+  <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">urn:uuid:6f438393-7f87-4914-806c-e23a4fd15e89</span>
+    <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Fulfillment</span>
+    <span class="nt">fulfills</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">urn:uuid:98c2bfeb-9c70-4801-896c-4646b975a7d9</span> <span class="c1"># the commitment</span>
+    <span class="nt">fulfilledBy</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">urn:uuid:d4d2fd71-34f2-41c3-b1c5-19ad5ed2da59</span> <span class="c1"># the economic event</span>
+    <span class="nt">resourceQuantity</span><span class="p">:</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasUnit</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">om2:one</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasNumericalValue</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
+
+  <span class="c1"># resource after return</span>
+
+  <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">library:2402b57c-1c45-423a-acb2-f50961c97d65</span>
+    <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">EconomicResource</span>
+    <span class="l l-Scalar l-Scalar-Plain">skos:note</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Valueflows cookbook ISBN:1234 copy 2</span>
+    <span class="nt">accountingQuantity</span><span class="p">:</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasUnit</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">om2:one</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasNumericalValue</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
+    <span class="nt">onhandQuantity</span><span class="p">:</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasUnit</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">om2:one</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasNumericalValue</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
+</code></pre></div>
+<h4 id="claim">Claim</h4>
+<p>Logged work triggers a claim for future income distribution for that work.</p>
+<p><img alt="claim diagram" src="../../assets/examples/claim.png" /></p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Example: Claim (simple)</span>
+
+<span class="s">&#39;@context&#39;</span><span class="p p-Indicator">:</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">https://git.io/vf-examples-jsonld-context</span>
+  <span class="p p-Indicator">-</span> <span class="nt">bob</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://bob.example/</span>
+    <span class="nt">mfg</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://manufacturer.example/</span>
+
+<span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">rgh:valueflows/valueflows/master/examples/claim.yaml</span>
+<span class="s">&#39;@graph&#39;</span><span class="p p-Indicator">:</span>
+
+  <span class="c1"># Bob does some work to create a product that the mfg team wishes to sell on the marketplace</span>
+
+  <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">mfg:02b39a30-3e04-4305-9656-7f261aa63c83</span>
+    <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">EconomicEvent</span>
+    <span class="nt">action</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">work</span>
+    <span class="nt">provider</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://bob.example/</span>
+    <span class="nt">receiver</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
+    <span class="nt">resourceClassifiedAs</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://www.wikidata.org/wiki/Q192047</span> <span class="c1"># machining</span>
+    <span class="nt">effortQuantity</span><span class="p">:</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasUnit</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">om2:hour</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasNumericalValue</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">7</span>
+    <span class="nt">hasBeginning</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">2018-10-14T8:00:00-0:00</span>
+    <span class="nt">hasEnd</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">2018-10-14T15:00:00-0:00</span>
+
+  <span class="c1"># this triggers a claim for payment in the future based on an income distribution agreement among the mfg group</span>
+
+  <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">mfg:d4d2fd71-34f2-41c3-b1c5-19ad5ed2da58</span>
+    <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Claim</span>
+    <span class="nt">action</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">transfer</span>
+    <span class="nt">provider</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
+    <span class="nt">receiver</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://bob.example/</span>
+    <span class="nt">resourceClassifiedAs</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://www.wikidata.org/wiki/Q1104069</span> <span class="c1"># Canadian dollar</span>
+    <span class="nt">resourceQuantity</span><span class="p">:</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasUnit</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">om2:one</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasNumericalValue</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">140</span>
+    <span class="l l-Scalar l-Scalar-Plain">dcterms:created</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">2018-10-14T15:30:00-0:00</span>
+    <span class="nt">triggeredBy</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">mfg:02b39a30-3e04-4305-9656-7f261aa63c83</span>
+    <span class="nt">agreedIn</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">mfg:e1721a61-cd47-4556-84b9-8b1b81da15be</span> <span class="c1"># a distribution agreement (not detailed in example)</span>
+
+  <span class="c1"># half of the manufactured product is sold along with some other products, and income is distributed</span>
+
+  <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">mfg:c7897c39-7f05-4a5d-a487-80e130a2414a</span>
+    <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">EconomicEvent</span>
+    <span class="nt">action</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">transfer</span>
+    <span class="nt">provider</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
+    <span class="nt">receiver</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://bob.example/</span>
+    <span class="nt">resourceClassifiedAs</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://www.wikidata.org/wiki/Q1104069</span> <span class="c1"># Canadian dollar</span>
+    <span class="nt">resourceQuantity</span><span class="p">:</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasUnit</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">om2:one</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasNumericalValue</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">260</span> <span class="c1"># here Bob received income for more than one work event (others not included in the example)</span>
+    <span class="nt">hasPointInTime</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">2018-10-25T09:30:00-0:00</span>
+
+  <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">mfg:b52a5815-fae9-43bf-be95-833b95dc0ada</span>
+    <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Settlement</span>
+    <span class="nt">settles</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">mfg:d4d2fd71-34f2-41c3-b1c5-19ad5ed2da58</span> <span class="c1"># the claim</span>
+    <span class="nt">settlededBy</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">mfg:c7897c39-7f05-4a5d-a487-80e130a2414a</span> <span class="c1"># the economic event</span>
+    <span class="nt">resourceQuantity</span><span class="p">:</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasUnit</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">om2:one</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasNumericalValue</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">70</span> <span class="c1"># half of the original claim for the work</span>
+</code></pre></div>
+<h4 id="plan-from-recipe-with-production-and-exchange">Plan from recipe with production and exchange</h4>
+<p>This shows a simple recipe that includes both a process and the exchange of work that is input to the process for currency.</p>
+<p><img alt="process-exchange diagram" src="../../assets/examples/process-exchange.png" /></p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Example: Simple recipe with both process and exchange</span>
+
+<span class="s">&#39;@context&#39;</span><span class="p p-Indicator">:</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">https://git.io/vf-examples-jsonld-context</span>
+  <span class="p p-Indicator">-</span> <span class="nt">alice</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://alice.example/</span>
+    <span class="nt">doc</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://documenters.example</span>
+
+<span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">rgh:valueflows/valueflows/master/examples/recipe-with-exchange.yaml</span>
+<span class="s">&#39;@graph&#39;</span><span class="p p-Indicator">:</span>
+
+  <span class="c1"># the recipe</span>
+
+  <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">urn:uuid:3be5259d-10f0-431c-9fec-9c0c15a461d3</span>
+    <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">ResourceSpecification</span>
+    <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Training handout</span>
+    <span class="nt">uri</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://documenters.example/training-handout</span>
+    <span class="l l-Scalar l-Scalar-Plain">skos:note</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">This is an electronic version of the formatted handout</span>
+
+  <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10f1f86</span>
+    <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">ResourceSpecification</span>
+    <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Technical writing</span>
+
+  <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">urn:uuid:b90b0b77-09a2-42e2-8bd4-e9ae2c1c6172</span>
+    <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">RecipeResource</span>
+    <span class="nt">resourceConformsTo</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">urn:uuid:3be5259d-10f0-431c-9fec-9c0c15a461d3</span> <span class="c1"># the spec</span>
+    <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Training handout</span>
+
+  <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">urn:uuid:33e8933b-ff73-4a01-964a-ca7a98893083</span>
+    <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">RecipeFlow</span>
+    <span class="nt">recipeOutputOf</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">urn:uuid:e1721a61-cd47-4556-84b9-8b1b81da15bf</span>
+    <span class="nt">action</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">produce</span>
+    <span class="nt">recipeFlowResource</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">urn:uuid:b90b0b77-09a2-42e2-8bd4-e9ae2c1c6172</span> <span class="c1"># handout</span>
+    <span class="nt">resourceQuantity</span><span class="p">:</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasUnit</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">one</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasNumericalValue</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
+
+  <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">urn:uuid:e1721a61-cd47-4556-84b9-8b1b81da15bf</span>
+    <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">RecipeProcess</span>
+    <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Write and format training handout</span>
+
+  <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">urn:uuid:60f4204e-b8d2-4026-8577-102c3f82c0af</span>
+    <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">RecipeFlow</span>
+    <span class="nt">recipeInputOf</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">urn:uuid:e1721a61-cd47-4556-84b9-8b1b81da15bf</span>
+    <span class="nt">recipeClauseOf</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">urn:uuid:9bd19194-a36d-4a1f-896b-8082887962cb</span> <span class="c1"># the recipe exchange</span>
+    <span class="nt">action</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">work</span>
+    <span class="nt">resourceConformsTo</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10f1f86</span>
+    <span class="nt">resourceClassifiedAs</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">wd:Q1193158</span> <span class="c1"># technical writing</span>
+    <span class="nt">effortQuantity</span><span class="p">:</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasUnit</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">om2:hour</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasNumericalValue</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">15</span>
+
+  <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">urn:uuid:9bd19194-a36d-4a1f-896b-8082887962cb</span>
+    <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">RecipeExchange</span>
+    <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Exchange work for FairCoin</span>
+
+  <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">urn:uuid:3129ca8b-fcda-45be-bbda-294dc924d3b9</span>
+    <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">RecipeFlow</span>
+    <span class="nt">recipeClauseOf</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">urn:uuid:9bd19194-a36d-4a1f-896b-8082887962cb</span> <span class="c1"># the recipe exchange</span>
+    <span class="nt">action</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">transfer</span>
+    <span class="nt">resourceConformsTo</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">wd:Q21002847</span> <span class="c1"># FairCoin</span>
+    <span class="nt">resourceQuantity</span><span class="p">:</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasUnit</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">om2:one</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasNumericalValue</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">300</span>
+
+
+  <span class="c1"># the plan</span>
+
+  <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">doc:8e5fe80d-a769-4bd5-89e5-2136d33eab9f</span>
+    <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Plan</span>
+    <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Training Handout and Payment</span>
+    <span class="l l-Scalar l-Scalar-Plain">skos:note</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Write and format the training handout, payment for writing work.</span>
+    <span class="nt">due</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">2019-04-08T17:00:00-5:00</span>
+    <span class="l l-Scalar l-Scalar-Plain">dcterms:created</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">2019-04-01T10:35:00-5:00</span>
+
+  <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">doc:a8236bbb-81e0-422d-9861-56d2417db0fb</span>
+    <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Commitment</span>
+    <span class="nt">independentDemandOf</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">doc:8e5fe80d-a769-4bd5-89e5-2136d33eab9f</span>
+    <span class="nt">outputOf</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">doc:02b39a30-3e04-4305-9656-7f261aa63c84</span>
+    <span class="nt">action</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">produce</span>
+    <span class="nt">provider</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://documenters.example/</span>
+    <span class="nt">receiver</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://documenters.example/</span>
+    <span class="nt">resourceConformsTo</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">urn:uuid:3be5259d-10f0-431c-9fec-9c0c15a461d3</span> <span class="c1"># training handout</span>
+    <span class="nt">resourceQuantity</span><span class="p">:</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasUnit</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">om2:one</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasNumericalValue</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
+
+  <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">doc:02b39a30-3e04-4305-9656-7f261aa63c84</span>
+    <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Process</span>
+    <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Write and format training handout</span>
+    <span class="nt">plannedWithin</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">doc:8e5fe80d-a769-4bd5-89e5-2136d33eab9f</span>
+
+  <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">doc:52f0e212-3c4f-4d27-b345-5e964c135824</span>
+    <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Commitment</span>
+    <span class="nt">inputOf</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">doc:02b39a30-3e04-4305-9656-7f261aa63c84</span>
+    <span class="nt">clauseOf</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">urn:uuid:583e83d9-a46d-44ff-bd71-88513a1d83c0</span>
+    <span class="nt">action</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">work</span>
+    <span class="nt">provider</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://alice.example/</span>
+    <span class="nt">receiver</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://documenters.example/</span>
+    <span class="nt">resourceConformsTo</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10f1f86</span>
+    <span class="nt">resourceClassifiedAs</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">wd:Q1193158</span> <span class="c1"># technical writing</span>
+    <span class="nt">effortQuantity</span><span class="p">:</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasUnit</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">om2:hour</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasNumericalValue</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">20</span> <span class="c1"># the estimate for this particular work is higher than the recipe&#39;s</span>
+
+  <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">urn:uuid:583e83d9-a46d-44ff-bd71-88513a1d83c0</span>
+    <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Agreement</span>
+    <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Exchange technical documentation work for FairCoin</span>
+
+  <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">doc:b52a5815-fae9-43bf-be95-833b95dc0adb</span>
+    <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Commitment</span>
+    <span class="nt">clauseOf</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">doc:02b39a30-3e04-4305-9656-7f261aa63c84</span>
+    <span class="nt">action</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">transfer</span>
+    <span class="nt">provider</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://documenters.example/</span>
+    <span class="nt">receiver</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://alice.example/</span>
+    <span class="nt">resourceConformsTo</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">wd:Q21002847</span> <span class="c1"># FairCoin</span>
+    <span class="nt">resourceQuantity</span><span class="p">:</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasUnit</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">om2:one</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasNumericalValue</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">400</span>
+</code></pre></div>
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../ex-production/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Production" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Production
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../ex-planning/" class="md-footer__link md-footer__link--next" aria-label="Next: Planning" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Planning
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    <a href="https://gitter.im/valueflows/welcome" target="_blank" rel="noopener" title="Come chat with us on gitter" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M66.4 322.5H16V0h50.4v322.5zM166.9 76.1h-50.4V512h50.4V76.1zm100.6 0h-50.4V512h50.4V76.1zM368 76h-50.4v247H368V76z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.indexes", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.tracking"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.01824240.min.js"}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.ff0eccb3.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,1993 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../../assets/favicon.ico">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.0.2">
+    
+    
+      
+        <title>More Complex - Valueflows</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.816931ca.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.9204c3b2.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#ffffff">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>function __md_scope(e,t,_){return new URL(_||(t===localStorage?"../..":"../.."),location).pathname+"."+e}function __md_get(e,t=localStorage,_){return JSON.parse(t.getItem(__md_scope(e,t,_)))}function __md_set(e,t,_=localStorage,o){try{_.setItem(__md_scope(e,_,o),JSON.stringify(t))}catch(e){}}</script>
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="white" data-md-color-accent="cyan">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#complex-examples" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Valueflows" class="md-header__button md-logo" aria-label="Valueflows" data-md-component="logo">
+      
+  <img src="../../assets/icon-0.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Valueflows
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              More Complex
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../.." class="md-tabs__link">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../introduction/concepts/" class="md-tabs__link">
+        Introduction
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../specification/uml/" class="md-tabs__link">
+        Specification
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../concepts/agents/" class="md-tabs__link">
+        Concepts
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../ex-agent/" class="md-tabs__link md-tabs__link--active">
+        Examples
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../algorithms/overview/" class="md-tabs__link">
+        Algorithms
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../appendix/rea/" class="md-tabs__link">
+        Appendices
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Valueflows" class="md-nav__button md-logo" aria-label="Valueflows" data-md-component="logo">
+      
+  <img src="../../assets/icon-0.svg" alt="logo">
+
+    </a>
+    Valueflows
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Introduction
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Introduction" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Introduction
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introduction/concepts/" class="md-nav__link">
+        Flows of Value
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introduction/core/" class="md-nav__link">
+        Core
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introduction/principles/" class="md-nav__link">
+        Principles
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introduction/contributors/" class="md-nav__link">
+        Contributors
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introduction/status/" class="md-nav__link">
+        Status
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Specification
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Specification" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Specification
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../specification/uml/" class="md-nav__link">
+        Complete Diagram
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../specification/vfspec/" class="md-nav__link">
+        VF Specification
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../specification/external-terms/" class="md-nav__link">
+        Other Namespaces
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../specification/graphql/" class="md-nav__link">
+        GraphQL Reference
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Concepts
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Concepts" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Concepts
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/agents/" class="md-nav__link">
+        Agents
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/resources/" class="md-nav__link">
+        Economic Resources
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/flows/" class="md-nav__link">
+        Flows
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/processes/" class="md-nav__link">
+        Processes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/transfers/" class="md-nav__link">
+        Transfers
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/exchanges/" class="md-nav__link">
+        Exchanges
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/proposals/" class="md-nav__link">
+        Proposals
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/plan/" class="md-nav__link">
+        Operational Planning
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/estimates/" class="md-nav__link">
+        Budgeting and Analysis
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/recipes/" class="md-nav__link">
+        Recipes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/classification/" class="md-nav__link">
+        Classification
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/scoping/" class="md-nav__link">
+        Scoping
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/cfa/" class="md-nav__link">
+        Conversations
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/accounting/" class="md-nav__link">
+        Accounting
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Examples
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Examples" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Examples
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ex-agent/" class="md-nav__link">
+        Agents
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ex-resource/" class="md-nav__link">
+        Resources
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ex-production/" class="md-nav__link">
+        Production
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ex-exchange/" class="md-nav__link">
+        Exchanges and Transfers
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ex-planning/" class="md-nav__link">
+        Planning
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          More Complex
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        More Complex
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#transportation-with-transfer" class="md-nav__link">
+    Transportation with transfer
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#manufacturing-and-workflow" class="md-nav__link">
+    Manufacturing and workflow
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          Algorithms
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Algorithms" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Algorithms
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algorithms/overview/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algorithms/dependent-demand/" class="md-nav__link">
+        Dependent Demand
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algorithms/critical-path/" class="md-nav__link">
+        Critical Path
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algorithms/rollup/" class="md-nav__link">
+        Value Rollup
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algorithms/equations/" class="md-nav__link">
+        Value Equations
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algorithms/track/" class="md-nav__link">
+        Track and Trace
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algorithms/provenance/" class="md-nav__link">
+        Provenance
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algorithms/cashflows/" class="md-nav__link">
+        Cash Flows
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algorithms/netflows/" class="md-nav__link">
+        Network Flows
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_7">
+          Appendices
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Appendices" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Appendices
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendix/rea/" class="md-nav__link">
+        REA References
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendix/usedfor/" class="md-nav__link">
+        Uses of the Vocabulary
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendix/presentations/" class="md-nav__link">
+        Other Documentation
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#transportation-with-transfer" class="md-nav__link">
+    Transportation with transfer
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#manufacturing-and-workflow" class="md-nav__link">
+    Manufacturing and workflow
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+<h1 id="complex-examples">Complex Examples</h1>
+<h4 id="transportation-with-transfer">Transportation with transfer</h4>
+<p>Bob purchases 30kg of apples from Alice and Claudia transports them (FOB destination).  The receipt of the apples triggers the transfer of ownership.</p>
+<p><img alt="transport diagram" src="../../assets/examples/transport-transfer.png" /></p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Transportation with transfer</span>
+
+<span class="s">&#39;@context&#39;</span><span class="p p-Indicator">:</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">https://git.io/vf-examples-jsonld-context</span>
+  <span class="p p-Indicator">-</span> <span class="nt">alice</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://alice.example/</span>
+    <span class="nt">bob</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://bob.example/</span>
+    <span class="nt">claudia</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://claudia.example/</span>
+
+<span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">rgh:valueflows/valueflows/master/examples/transport-with-transfer.yaml</span>
+<span class="s">&#39;@graph&#39;</span><span class="p p-Indicator">:</span>
+
+<span class="c1"># Bob purchases 30kg of apples from Alice and Claudia transports them (FOB destination)</span>
+
+  <span class="c1"># resources before</span>
+
+  <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">alice:21f361a6-2375-46bb-b192-c21b5ba833bf</span>
+    <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">EconomicResource</span>
+    <span class="nt">classifiedAs</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">wd:Q41777871</span> <span class="c1"># haralson apples</span>
+    <span class="nt">trackingIdentifier</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">lot-alice-apples-2018-10-11</span>
+    <span class="nt">locatedAt</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">geo:70ee3034-0d15-4471-8ee3-91c60bb1a9c9</span>
+    <span class="nt">accountingQuantity</span><span class="p">:</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasUnit</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">om2:kilogram</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasNumericalValue</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">230</span>
+    <span class="nt">onhandQuantity</span><span class="p">:</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasUnit</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">om2:kilogram</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasNumericalValue</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">230</span>
+
+  <span class="c1"># alice commits to transfer some apples to bob</span>
+
+  <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10f1f86</span>
+    <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Commitment</span>
+    <span class="nt">action</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">transfer</span>
+    <span class="nt">resourceClassifiedAs</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">wd:Q41777871</span> <span class="c1"># haralson apples</span>
+    <span class="nt">provider</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://alice.example/</span>
+    <span class="nt">receiver</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://bob.example/</span>
+    <span class="nt">resourceQuantity</span><span class="p">:</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasUnit</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">om2:kilogram</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasNumericalValue</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">30</span>
+
+  <span class="c1"># alice and claudia agree on transportation of the apples</span>
+
+  <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">urn:uuid:f325a950-5737-488d-b122-8f21114d0eb0</span>
+    <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Agreement</span>
+    <span class="l l-Scalar l-Scalar-Plain">skos:note</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">exchange transportation service for currency</span>
+
+  <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">urn:uuid:33e8933b-ff73-4a01-964a-ca7a98893083</span>
+    <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Commitment</span>
+    <span class="nt">action</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">transfer</span>
+    <span class="nt">resourceClassifedAs</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">wd:Q4917</span> <span class="c1"># US Dollar</span>
+    <span class="nt">provider</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://alice.example/</span>
+    <span class="nt">receiver</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://claudia.example/</span>
+    <span class="nt">resourceQuantity</span><span class="p">:</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasUnit</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">om2:one</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasNumericalValue</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">10</span>
+    <span class="nt">clauseOf</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">urn:uuid:f325a950-5737-488d-b122-8f21114d0eb0</span> <span class="c1"># transportation agreement</span>
+
+  <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">urn:uuid:c7897c39-7f05-4a5d-a487-80e130a2414a</span>
+    <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Commitment</span>
+    <span class="l l-Scalar l-Scalar-Plain">skos:note</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Transportation of alice&#39;s apples from alice&#39;s location to bob&#39;s location</span>
+    <span class="nt">action</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">service</span>
+    <span class="nt">resourceClassifiedAs</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">wd:Q7590</span> <span class="c1"># transportation service</span>
+    <span class="nt">provider</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://claudia.example/</span>
+    <span class="nt">receiver</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://alice.example/</span>
+    <span class="nt">resourceQuantity</span><span class="p">:</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasUnit</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">om2:one</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasNumericalValue</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
+    <span class="nt">clauseOf</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">urn:uuid:f325a950-5737-488d-b122-8f21114d0eb0</span> <span class="c1"># transportation agreement</span>
+
+  <span class="c1"># alice transfers custody of the apples to claudia for transportation</span>
+
+  <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10f1f87</span>
+    <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">EconomicEvent</span>
+    <span class="nt">action</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">transfer-custody</span>
+    <span class="nt">resourceClassifiedAs</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">wd:Q41777871</span> <span class="c1"># haralson apples</span>
+    <span class="nt">trackingIdentifier</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">lot-alice-apples-2018-10-11</span>
+    <span class="nt">provider</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://alice.example/</span>
+    <span class="nt">receiver</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://claudia.example/</span>
+    <span class="nt">resourceInventoriedAs</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">alice:21f361a6-2375-46bb-b192-c21b5ba833bf</span> <span class="c1"># alice&#39;s apples</span>
+    <span class="nt">toResourceInventoriedAs</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">claudia:27be5cab-d740-4194-9298-1661a69d9d95</span> <span class="c1"># claudia&#39;s bill of lading on the truck</span>
+    <span class="nt">resourceQuantity</span><span class="p">:</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasUnit</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">om2:kilogram</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasNumericalValue</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">30</span>
+
+  <span class="c1"># resources snapshot</span>
+
+  <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">alice:21f361a6-2375-46bb-b192-c21b5ba833bf</span>
+    <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">EconomicResource</span>
+    <span class="nt">classifiedAs</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">wd:Q41777871</span> <span class="c1"># haralson apples</span>
+    <span class="nt">trackingIdentifier</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">lot-alice-apples-2018-10-11</span>
+    <span class="nt">locatedAt</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">geo:70ee3034-0d15-4471-8ee3-91c60bb1a9c9</span>
+    <span class="nt">accountingQuantity</span><span class="p">:</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasUnit</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">om2:kilogram</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasNumericalValue</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">230</span>
+    <span class="nt">onhandQuantity</span><span class="p">:</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasUnit</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">om2:kilogram</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasNumericalValue</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">200</span>
+
+  <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">claudia:27be5cab-d740-4194-9298-1661a69d9d95</span>
+    <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">EconomicResource</span>
+    <span class="nt">classifiedAs</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">wd:Q41777871</span> <span class="c1"># haralson apples</span>
+    <span class="nt">trackingIdentifier</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">lot-alice-apples-2018-10-11</span>
+    <span class="nt">onhandQuantity</span><span class="p">:</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasUnit</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">om2:kilogram</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasNumericalValue</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">30</span>
+
+  <span class="c1"># claudia transports the apples in two hops</span>
+
+  <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">claudia:633f6e56-6c7d-4a5b-b9c9-1a8adafd8960</span>
+    <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Process</span>
+    <span class="l l-Scalar l-Scalar-Plain">skos:note</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Claudia transports the apples</span>
+
+  <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">claudia:fd399b37-0740-4a68-a184-1e655021ca21</span>
+    <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">EconomicEvent</span>
+    <span class="nt">inputOf</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">claudia:633f6e56-6c7d-4a5b-b9c9-1a8adafd8960</span>
+    <span class="nt">action</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">pickup</span>
+    <span class="nt">resourceInventoriedAs</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">claudia:27be5cab-d740-4194-9298-1661a69d9d95</span> 
+    <span class="nt">provider</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://claudia.example/</span>
+    <span class="nt">receiver</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://claudia.example/</span>
+    <span class="nt">resourceQuantity</span><span class="p">:</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasUnit</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">om2:kilogram</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasNumericalValue</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">30</span>
+
+  <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">claudia:57f1c1d0-432e-4bfa-9d32-002b8955a708</span>
+    <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">EconomicEvent</span>
+    <span class="nt">outputOf</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">claudia:633f6e56-6c7d-4a5b-b9c9-1a8adafd8960</span>
+    <span class="nt">action</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">dropoff</span>
+    <span class="nt">resourceInventoriedAs</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">claudia:27be5cab-d740-4194-9298-1661a69d9d95</span>
+    <span class="nt">provider</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://claudia.example/</span>
+    <span class="nt">receiver</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://claudia.example/</span>
+    <span class="nt">resourceQuantity</span><span class="p">:</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasUnit</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">om2:kilogram</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasNumericalValue</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">30</span>
+
+  <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">claudia:c404cff5-19c7-453d-b0d8-d8e96055bd0c</span>
+    <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Process</span>
+    <span class="l l-Scalar l-Scalar-Plain">skos:note</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Claudia transports the apples</span>
+
+  <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">claudia:856c43b1-0a63-445f-a56f-707b257f086e</span>
+    <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">EconomicEvent</span>
+    <span class="nt">inputOf</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">claudia:c404cff5-19c7-453d-b0d8-d8e96055bd0c</span>
+    <span class="nt">action</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">pickup</span>
+    <span class="nt">resourceInventoriedAs</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">claudia:27be5cab-d740-4194-9298-1661a69d9d95</span> 
+    <span class="nt">provider</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://claudia.example/</span>
+    <span class="nt">receiver</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://claudia.example/</span>
+    <span class="nt">resourceQuantity</span><span class="p">:</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasUnit</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">om2:kilogram</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasNumericalValue</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">30</span>
+
+  <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">claudia:9cb4944b-d26d-4774-a530-d18f2747c0d8</span>
+    <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">EconomicEvent</span>
+    <span class="nt">outputOf</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">claudia:c404cff5-19c7-453d-b0d8-d8e96055bd0c</span>
+    <span class="nt">action</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">dropoff</span>
+    <span class="nt">resourceInventoriedAs</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">claudia:27be5cab-d740-4194-9298-1661a69d9d95</span>
+    <span class="nt">provider</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://claudia.example/</span>
+    <span class="nt">receiver</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://claudia.example/</span>
+    <span class="nt">resourceQuantity</span><span class="p">:</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasUnit</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">om2:kilogram</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasNumericalValue</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">30</span>
+
+  <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">urn:uuid:68cabaf3-deb8-4bd5-a439-798263abe35a</span>
+    <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">EconomicEvent</span>
+    <span class="l l-Scalar l-Scalar-Plain">skos:note</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Transportation of alice&#39;s apples from alice&#39;s location to bob&#39;s location</span>
+    <span class="nt">outputOf</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">claudia:c404cff5-19c7-453d-b0d8-d8e96055bd0c</span>
+    <span class="nt">action</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">service</span>
+    <span class="nt">resourceClassifiedAs</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">wd:Q7590</span> <span class="c1"># transportation service</span>
+    <span class="nt">provider</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://claudia.example/</span>
+    <span class="nt">receiver</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://alice.example/</span>
+    <span class="nt">resourceQuantity</span><span class="p">:</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasUnit</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">om2:one</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasNumericalValue</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
+
+  <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">urn:uuid:d4d2fd71-34f2-41c3-b1c5-19ad5ed2da58</span>
+    <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Fulfillment</span>
+    <span class="nt">fulfills</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">urn:uuid:c7897c39-7f05-4a5d-a487-80e130a2414a</span> <span class="c1"># the commitment</span>
+    <span class="nt">fulfilledBy</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">urn:uuid:68cabaf3-deb8-4bd5-a439-798263abe35a</span> <span class="c1"># the economic event</span>
+    <span class="nt">resourceQuantity</span><span class="p">:</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasUnit</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">om2:one</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasNumericalValue</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
+
+  <span class="c1"># bob receives the apples</span>
+
+  <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">urn:uuid:7a63ea10-b1c3-441a-9a08-fb8630c02614</span>
+    <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">EconomicEvent</span>
+    <span class="nt">action</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">transfer-custody</span>
+    <span class="nt">resourceClassifiedAs</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">wd:Q41777871</span> <span class="c1"># haralson apples</span>
+    <span class="nt">trackingIdentifier</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">lot-alice-apples-2018-10-11</span>
+    <span class="nt">resourceInventoriedAs</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">claudia:27be5cab-d740-4194-9298-1661a69d9d95</span>
+    <span class="nt">toResourceInventoriedAs</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">bob:9bd19194-a36d-4a1f-896b-8082887962cb</span>
+    <span class="nt">provider</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://claudia.example/</span>
+    <span class="nt">receiver</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://bob.example/</span>
+    <span class="nt">resourceQuantity</span><span class="p">:</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasUnit</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">om2:kilogram</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasNumericalValue</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">30</span>
+
+  <span class="c1"># receipt of the apples triggers finalizing the transfer of ownership</span>
+
+  <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">urn:uuid:ad56a7ed-be3c-4937-a3fb-0f156bcd2c47</span>
+    <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">EconomicEvent</span>
+    <span class="nt">action</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">transfer-all-rights</span>
+    <span class="nt">resourceClassifiedAs</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">wd:Q41777871</span> <span class="c1"># haralson apples</span>
+    <span class="nt">trackingIdentifier</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">lot-alice-apples-2018-10-11</span>
+    <span class="nt">provider</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://alice.example/</span>
+    <span class="nt">receiver</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://bob.example/</span>
+    <span class="nt">resourceQuantity</span><span class="p">:</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasUnit</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">om2:kilogram</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasNumericalValue</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">30</span>
+    <span class="nt">triggeredBy</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">urn:uuid:7a63ea10-b1c3-441a-9a08-fb8630c02614</span>
+
+  <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">urn:uuid:6f438393-7f87-4914-806c-e23a4fd15e89</span>
+    <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Fulfillment</span>
+    <span class="nt">fulfills</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10f1f86</span> <span class="c1"># the commitment</span>
+    <span class="nt">fulfilledBy</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">urn:uuid:ad56a7ed-be3c-4937-a3fb-0f156bcd2c47</span> <span class="c1"># the economic event</span>
+    <span class="nt">resourceQuantity</span><span class="p">:</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasUnit</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">om2:kilogram</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasNumericalValue</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">30</span>
+
+  <span class="c1"># resources snapshot</span>
+
+  <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">alice:21f361a6-2375-46bb-b192-c21b5ba833bf</span>
+    <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">EconomicResource</span>
+    <span class="nt">classifiedAs</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">wd:Q41777871</span> <span class="c1"># haralson apples</span>
+    <span class="nt">trackingIdentifier</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">lot-alice-apples-2018-10-11</span>
+    <span class="nt">locatedAt</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">geo:70ee3034-0d15-4471-8ee3-91c60bb1a9c9</span> <span class="c1"># only the possessed amount</span>
+    <span class="nt">accountingQuantity</span><span class="p">:</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasUnit</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">om2:kilogram</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasNumericalValue</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">200</span>
+    <span class="nt">onhandQuantity</span><span class="p">:</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasUnit</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">om2:kilogram</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasNumericalValue</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">200</span>
+
+  <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">bob:9bd19194-a36d-4a1f-896b-8082887962cb</span>
+    <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">EconomicResource</span>
+    <span class="nt">classifiedAs</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">wd:Q41777871</span> <span class="c1"># haralson apples</span>
+    <span class="nt">trackingIdentifier</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">lot-alice-apples-2018-10-11</span>
+    <span class="nt">locatedAt</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">geo:b52a5815-fae9-43bf-be95-833b95dc0ada</span> <span class="c1"># only the possessed amount</span>
+    <span class="nt">accountingQuantity</span><span class="p">:</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasUnit</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">om2:kilogram</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasNumericalValue</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">30</span>
+    <span class="nt">onhandQuantity</span><span class="p">:</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasUnit</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">om2:kilogram</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasNumericalValue</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">30</span>
+
+  <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">claudia:27be5cab-d740-4194-9298-1661a69d9d95</span> <span class="c1"># claudia&#39;s bill of lading on the truck</span>
+    <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">EconomicResource</span>
+    <span class="nt">classifiedAs</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">wd:Q41777871</span> <span class="c1"># haralson apples</span>
+    <span class="nt">onhandQuantity</span><span class="p">:</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasUnit</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">om2:kilogram</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasNumericalValue</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">0</span>
+
+  <span class="c1"># alice pays claudia for the transportation service</span>
+
+  <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">urn:uuid:8baa8ff7-9c1e-4586-ae7b-79d620a3cac9</span>
+    <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">EconomicEvent</span>
+    <span class="nt">action</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">transfer</span>
+    <span class="nt">resourceClassifedAs</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">wd:Q4917</span> <span class="c1"># US Dollar</span>
+    <span class="nt">resourceInventoriedAs</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">alice:daa2ec3b-2c1a-4eb1-839f-8dcec1a1f93a</span> <span class="c1"># alice&#39;s bank account</span>
+    <span class="nt">toResourceInventoriedAs</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">claudia:bd5806d6-4a36-45b9-b3b6-3e7d361a5a14</span> <span class="c1"># claudia&#39;s bank account</span>
+    <span class="nt">provider</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://alice.example/</span>
+    <span class="nt">receiver</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://claudia.example/</span>
+    <span class="nt">resourceQuantity</span><span class="p">:</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasUnit</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">om2:one</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasNumericalValue</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">10</span>
+
+  <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">urn:uuid:fbff9852-36ca-4364-a943-bc0b49e1cab5</span>
+    <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Fulfillment</span>
+    <span class="nt">fulfills</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">urn:uuid:33e8933b-ff73-4a01-964a-ca7a98893083</span> <span class="c1"># the commitment</span>
+    <span class="nt">fulfilledBy</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">urn:uuid:8baa8ff7-9c1e-4586-ae7b-79d620a3cac9</span> <span class="c1"># the economic event</span>
+    <span class="nt">resourceQuantity</span><span class="p">:</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasUnit</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">om2:one</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasNumericalValue</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">10</span>
+</code></pre></div>
+<h4 id="manufacturing-and-workflow">Manufacturing and workflow</h4>
+<p>A component is produced (manufacturing pattern) and tested (workflow pattern).  QT ("quality testing") gives pass and/or fail outputs.  The failed components are passed back into a source resource (because it can be re-used as an input as part of the QT process, to be used in this or the next manufacturing run.</p>
+<p>The QT needs the stage and state of the input component resource, because QT would only be done on components that are made and not tested yet.  By the same token, components would only be sent into the next assembly process if they have passed the QT process/stage (not part of this example).</p>
+<p>This example includes recipe, plan, and actuals.</p>
+<p><img alt="stage-state diagram" src="../../assets/examples/stage-state.png" /></p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Example: Workflow recipe, plan, execution, including stage and state usage</span>
+
+<span class="s">&#39;@context&#39;</span><span class="p p-Indicator">:</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">https://git.io/vf-examples-jsonld-context</span>
+  <span class="p p-Indicator">-</span> <span class="nt">mfg</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
+
+<span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">rgh:valueflows/valueflows/master/examples/workflow-stage-state.yaml</span>
+<span class="s">&#39;@graph&#39;</span><span class="p p-Indicator">:</span>
+
+  <span class="c1"># specifications</span>
+
+  <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">urn:uuid:3be5259d-10f0-431c-9fec-9c0c15a461d3</span>
+    <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">ResourceSpecification</span>
+    <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Bucket white 5 gallon</span>
+    <span class="nt">unitOfResource</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">om2:one</span>
+    <span class="nt">substitutable</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+
+  <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">urn:uuid:d4d2fd71-34f2-41c3-b1c5-19ad5ed2da58</span>
+    <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">ResourceSpecification</span>
+    <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Thermoplastic polymer white</span>
+    <span class="nt">unitOfResource</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">om2:kilogram</span>
+    <span class="nt">substitutable</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+
+  <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">urn:uuid:c7897c39-7f05-4a5d-a487-80e130a2414a</span>
+    <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">ResourceSpecification</span>
+    <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Injection molding machine</span>
+    <span class="nt">unitOfResource</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">om2:one</span>
+    <span class="nt">unitOfEffort</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">om2:hour</span>
+    <span class="nt">substitutable</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+
+  <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">mfg:27be5cab-d740-4194-9298-1661a69d9d95</span>
+    <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">ProcessSpecification</span>
+    <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Make injection molded buckets</span>
+
+  <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">mfg:6fb358a3-2859-4d6a-a4fa-431603ee70f5</span>
+    <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">ProcessSpecification</span>
+    <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">QT injection molded buckets</span>
+
+  <span class="c1"># resources before</span>
+
+  <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">mfg:3129ca8b-fcda-45be-bbda-294dc924d3b9</span>
+    <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">EconomicResource</span>
+    <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Bucket white 5 gallon</span>
+    <span class="nt">resourceConformsTo</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">urn:uuid:3be5259d-10f0-431c-9fec-9c0c15a461d3</span>
+    <span class="nt">accountingQuantity</span><span class="p">:</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasUnit</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">om2:one</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasNumericalValue</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">320</span>
+
+  <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">mfg:6b5bc786-b9ed-4189-b34f-5ef7d10f1f86</span>
+    <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">EconomicResource</span>
+    <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Thermoplastic polymer white</span>
+    <span class="nt">resourceConformsTo</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">urn:uuid:d4d2fd71-34f2-41c3-b1c5-19ad5ed2da58</span>
+    <span class="nt">accountingQuantity</span><span class="p">:</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasUnit</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">om2:kilogram</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasNumericalValue</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">2455</span>
+
+  <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">mfg:23799c14-c368-4653-a584-83bf9ae8b82a</span>
+    <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">EconomicResource</span>
+    <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Injection molding maching</span>
+    <span class="nt">resourceConformsTo</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">urn:uuid:c7897c39-7f05-4a5d-a487-80e130a2414a</span>
+    <span class="nt">trackingIdentifier</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">DDE098989099911</span>
+    <span class="nt">accountingQuantity</span><span class="p">:</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasUnit</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">om2:one</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasNumericalValue</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
+    <span class="nt">unitOfEffort</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">om2:hour</span>
+
+  <span class="c1"># the recipe (the recipe runs &quot;backwards&quot; from the final product)</span>
+
+  <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">mfg:ac9ec98d-db80-44dc-97be-7aa149b2fe5d</span>
+    <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">RecipeResource</span>
+    <span class="nt">resourceConformsTo</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">urn:uuid:3be5259d-10f0-431c-9fec-9c0c15a461d3</span> <span class="c1"># bucket</span>
+
+  <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">mfg:33e8933b-ff73-4a01-964a-ca7a98893083</span>
+    <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">RecipeFlow</span>
+    <span class="nt">recipeOutputOf</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">mfg:a8356625-bf64-4c16-9099-28aa1b718c4b</span>
+    <span class="nt">action</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">pass</span>
+    <span class="nt">recipeFlowResource</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">mfg:ac9ec98d-db80-44dc-97be-7aa149b2fe5d</span>
+    <span class="nt">resourceQuantity</span><span class="p">:</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasUnit</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">om2:one</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasNumericalValue</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">500</span>
+
+  <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">mfg:a3be5259d-10f0-431c-9fec-9c0c15a461d3</span>
+    <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">RecipeResource</span>
+    <span class="nt">resourceConformsTo</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">urn:uuid:d4d2fd71-34f2-41c3-b1c5-19ad5ed2da58</span> <span class="c1"># polymer</span>
+
+  <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">mfg:54b814ee-62dc-40c1-bb96-f8582aa4f771</span>
+    <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">RecipeFlow</span>
+    <span class="nt">recipeOutputOf</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">mfg:a8356625-bf64-4c16-9099-28aa1b718c4b</span>
+    <span class="nt">action</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">fail</span>
+    <span class="nt">recipeFlowResource</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">mfg:a3be5259d-10f0-431c-9fec-9c0c15a461d3</span>
+    <span class="nt">resourceQuantity</span><span class="p">:</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasUnit</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">om2:kilogram</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasNumericalValue</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">0</span>
+
+  <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">mfg:a8356625-bf64-4c16-9099-28aa1b718c4b</span>
+    <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">RecipeProcess</span>
+    <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">QT bucket white 5 gallon - minimum run</span>
+    <span class="nt">processConformsTo</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">mfg:6fb358a3-2859-4d6a-a4fa-431603ee70f5</span> <span class="c1"># the process specification</span>
+    <span class="l l-Scalar l-Scalar-Plain">time:hasDuration</span><span class="p p-Indicator">:</span>
+      <span class="l l-Scalar l-Scalar-Plain">time:unitType unit:Hour</span>
+      <span class="l l-Scalar l-Scalar-Plain">time:numericDuration 1</span>
+
+  <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">mfg:2342d456-5d6f-46d5-a7ed-3ac7bfd5a86c</span>
+    <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">RecipeFlow</span>
+    <span class="nt">recipeInputOf</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">mfg:a8356625-bf64-4c16-9099-28aa1b718c4b</span>
+    <span class="nt">action</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">accept</span>
+    <span class="nt">recipeFlowResource</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">mfg:b75d8f6a-e2df-4e52-b36d-1a22a66f4ead</span>
+    <span class="nt">stage</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">mfg:27be5cab-d740-4194-9298-1661a69d9d95</span> <span class="c1"># &#39;make&#39; process specification</span>
+    <span class="nt">resourceQuantity</span><span class="p">:</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasUnit</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">om2:one</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasNumericalValue</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">500</span>
+
+  <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">mfg:b75d8f6a-e2df-4e52-b36d-1a22a66f4ead</span>
+    <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">RecipeResource</span>
+    <span class="nt">resourceConformsTo</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">urn:uuid:3be5259d-10f0-431c-9fec-9c0c15a461d3</span> <span class="c1"># bucket</span>
+
+  <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">mfg:33e8933b-ff73-4a01-964a-ca7a98893083</span>
+    <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">RecipeFlow</span>
+    <span class="nt">recipeOutputOf</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">mfg:e1721a61-cd47-4556-84b9-8b1b81da15bf</span>
+    <span class="nt">action</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">produce</span>
+    <span class="nt">recipeFlowResource</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">mfg:b75d8f6a-e2df-4e52-b36d-1a22a66f4ead</span>
+    <span class="nt">resourceQuantity</span><span class="p">:</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasUnit</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">om2:one</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasNumericalValue</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">500</span>
+
+  <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">mfg:e1721a61-cd47-4556-84b9-8b1b81da15bf</span>
+    <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">RecipeProcess</span>
+    <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Make bucket white 5 gallon - minimum run</span>
+    <span class="nt">processConformsTo</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">mfg:27be5cab-d740-4194-9298-1661a69d9d95</span> <span class="c1"># the process specification</span>
+    <span class="l l-Scalar l-Scalar-Plain">time:hasDuration</span><span class="p p-Indicator">:</span>
+      <span class="l l-Scalar l-Scalar-Plain">time:unitType unit:Hour</span>
+      <span class="l l-Scalar l-Scalar-Plain">time:numericDuration 7</span>
+
+  <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">mfg:9bd19194-a36d-4a1f-896b-8082887962cb</span>
+    <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">RecipeFlow</span>
+    <span class="nt">recipeInputOf</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">mfg:e1721a61-cd47-4556-84b9-8b1b81da15bf</span>
+    <span class="nt">action</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">consume</span>
+    <span class="nt">recipeFlowResource</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">mfg:6405b8ad-0ac2-4d58-abdb-0808903c78ad</span>
+    <span class="nt">resourceQuantity</span><span class="p">:</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasUnit</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">om2:kilogram</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasNumericalValue</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">450</span>
+
+  <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">mfg:6405b8ad-0ac2-4d58-abdb-0808903c78ad</span>
+    <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">RecipeResource</span>
+    <span class="nt">resourceConformsTo</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">urn:uuid:d4d2fd71-34f2-41c3-b1c5-19ad5ed2da58</span> <span class="c1"># polymer</span>
+
+  <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">mfg:60f4204e-b8d2-4026-8577-102c3f82c0af</span>
+    <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">RecipeFlow</span>
+    <span class="nt">recipeInputOf</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">mfg:e1721a61-cd47-4556-84b9-8b1b81da15bf</span>
+    <span class="nt">action</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">use</span>
+    <span class="nt">recipeFlowResource</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">mfg:e02e3f6b-420a-4ba8-89b0-909d7363ce07</span>
+    <span class="nt">effortQuantity</span><span class="p">:</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasUnit</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">om2:hour</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasNumericalValue</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">5.5</span>
+
+  <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">mfg:e02e3f6b-420a-4ba8-89b0-909d7363ce07</span>
+    <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">RecipeResource</span>
+    <span class="nt">resourceConformsTo</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">urn:uuid:c7897c39-7f05-4a5d-a487-80e130a2414a</span> <span class="c1"># injection molding machine</span>
+
+  <span class="c1"># the plan (shown running &quot;forwards&quot;)</span>
+
+  <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">mfg:8e5fe80d-a769-4bd5-89e5-2136d33eab9f</span>
+    <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Plan</span>
+    <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Buckets run number 381</span>
+    <span class="nt">due</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">2019-04-08T17:00:00-5:00</span> <span class="c1"># due</span>
+
+  <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">mfg:b52a5815-fae9-43bf-be95-833b95dc0adb</span>
+    <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Commitment</span>
+    <span class="nt">inputOf</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">mfg:02b39a30-3e04-4305-9656-7f261aa63c84</span>
+    <span class="nt">action</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">consume</span>
+    <span class="nt">provider</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
+    <span class="nt">receiver</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
+    <span class="nt">resourceConformsTo</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">urn:uuid:d4d2fd71-34f2-41c3-b1c5-19ad5ed2da58</span> <span class="c1"># polymer</span>
+    <span class="nt">resourceQuantity</span><span class="p">:</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasUnit</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">om2:kilogram</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasNumericalValue</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">900</span>
+
+  <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">mfg:52f0e212-3c4f-4d27-b345-5e964c135824</span>
+    <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Commitment</span>
+    <span class="nt">inputOf</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">mfg:02b39a30-3e04-4305-9656-7f261aa63c84</span>
+    <span class="nt">action</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">use</span>
+    <span class="nt">provider</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
+    <span class="nt">receiver</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
+    <span class="nt">resourceConformsTo</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">urn:uuid:c7897c39-7f05-4a5d-a487-80e130a2414a</span> <span class="c1"># injection molding machine</span>
+    <span class="nt">effortQuantity</span><span class="p">:</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasUnit</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">om2:hour</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasNumericalValue</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">11</span>
+
+  <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">mfg:02b39a30-3e04-4305-9656-7f261aa63c84</span>
+    <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Process</span>
+    <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Make bucket white 5 gallon</span>
+    <span class="nt">plannedWithin</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">mfg:8e5fe80d-a769-4bd5-89e5-2136d33eab9f</span>
+    <span class="nt">basedOn</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">mfg:27be5cab-d740-4194-9298-1661a69d9d95</span> <span class="c1"># the process specification</span>
+    <span class="l l-Scalar l-Scalar-Plain">time:hasDuration</span><span class="p p-Indicator">:</span>
+      <span class="l l-Scalar l-Scalar-Plain">time:unitType unit:Hour</span>
+      <span class="l l-Scalar l-Scalar-Plain">time:numericDuration 14</span>
+
+  <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">mfg:a8236bbb-81e0-422d-9861-56d2417db0fb</span>
+    <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Commitment</span>
+    <span class="nt">outputOf</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">mfg:02b39a30-3e04-4305-9656-7f261aa63c84</span>
+    <span class="nt">action</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">produce</span>
+    <span class="nt">provider</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
+    <span class="nt">receiver</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
+    <span class="nt">resourceConformsTo</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">urn:uuid:3be5259d-10f0-431c-9fec-9c0c15a461d3</span> <span class="c1"># bucket</span>
+    <span class="nt">resourceQuantity</span><span class="p">:</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasUnit</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">om2:one</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasNumericalValue</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">1000</span>
+
+  <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">mfg:fbff9852-36ca-4364-a943-bc0b49e1cab5</span>
+    <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Commitment</span>
+    <span class="nt">inputOf</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">mfg:8baa8ff7-9c1e-4586-ae7b-79d620a3cac9</span>
+    <span class="nt">action</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">accept</span>
+    <span class="nt">provider</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
+    <span class="nt">receiver</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
+    <span class="nt">resourceConformsTo</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">urn:uuid:3be5259d-10f0-431c-9fec-9c0c15a461d3</span> <span class="c1"># bucket</span>
+    <span class="nt">stage</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">mfg:27be5cab-d740-4194-9298-1661a69d9d95</span> <span class="c1"># &#39;make&#39; process specification</span>
+    <span class="nt">resourceQuantity</span><span class="p">:</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasUnit</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">om2:one</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasNumericalValue</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">1000</span>
+
+  <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">mfg:8baa8ff7-9c1e-4586-ae7b-79d620a3cac9</span>
+    <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Process</span>
+    <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">QT bucket white 5 gallon</span>
+    <span class="nt">plannedWithin</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">mfg:8e5fe80d-a769-4bd5-89e5-2136d33eab9f</span>
+    <span class="nt">basedOn</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">mfg:6fb358a3-2859-4d6a-a4fa-431603ee70f5</span> <span class="c1"># the process specification</span>
+    <span class="l l-Scalar l-Scalar-Plain">time:hasDuration</span><span class="p p-Indicator">:</span>
+      <span class="l l-Scalar l-Scalar-Plain">time:unitType unit:Hour</span>
+      <span class="l l-Scalar l-Scalar-Plain">time:numericDuration 14</span>
+
+  <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">mfg:21f361a6-2375-46bb-b192-c21b5ba833bf</span>
+    <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Commitment</span>
+    <span class="nt">independentDemandOf</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">mfg:8e5fe80d-a769-4bd5-89e5-2136d33eab9f</span> <span class="c1"># the plan</span>
+    <span class="nt">outputOf</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">mfg:8baa8ff7-9c1e-4586-ae7b-79d620a3cac9</span>
+    <span class="nt">action</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">pass</span>
+    <span class="nt">provider</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
+    <span class="nt">receiver</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
+    <span class="nt">resourceConformsTo</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">urn:uuid:3be5259d-10f0-431c-9fec-9c0c15a461d3</span> <span class="c1"># bucket</span>
+    <span class="nt">resourceQuantity</span><span class="p">:</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasUnit</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">om2:one</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasNumericalValue</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">1000</span>
+
+  <span class="c1"># manufacture and test the buckets according to plan</span>
+
+  <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">mfg:e18c808c-929a-450d-9d0d-3b3f531bc126</span>
+    <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">EconomicEvent</span>
+    <span class="nt">inputOf</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">mfg:02b39a30-3e04-4305-9656-7f261aa63c84</span> <span class="c1"># planned make process</span>
+    <span class="nt">action</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">consume</span>
+    <span class="nt">provider</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
+    <span class="nt">receiver</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
+    <span class="nt">resourceInventoriedAs</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">mfg:6b5bc786-b9ed-4189-b34f-5ef7d10f1f86</span> <span class="c1"># polymer stock</span>
+    <span class="nt">resourceQuantity</span><span class="p">:</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasUnit</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">om2:kilogram</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasNumericalValue</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">925</span>
+
+  <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">mfg:5d2fe7da-b91b-4dab-91d9-68db80c1feb7</span>
+    <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">EconomicEvent</span>
+    <span class="nt">inputOf</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">mfg:02b39a30-3e04-4305-9656-7f261aa63c84</span> <span class="c1"># planned make process</span>
+    <span class="nt">action</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">use</span>
+    <span class="nt">provider</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
+    <span class="nt">receiver</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
+    <span class="nt">resourceInventoriedAs</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">mfg:23799c14-c368-4653-a584-83bf9ae8b82a</span> <span class="c1"># the machine</span>
+    <span class="nt">effortQuantity</span><span class="p">:</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasUnit</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">om2:hour</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasNumericalValue</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">10.7</span>
+
+  <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">mfg:8791913c-0152-4c32-bb3f-f25d61df736c</span>
+    <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">EconomicEvent</span>
+    <span class="nt">outputOf</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">mfg:02b39a30-3e04-4305-9656-7f261aa63c84</span> <span class="c1"># planned make process</span>
+    <span class="nt">action</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">produce</span>
+    <span class="nt">provider</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
+    <span class="nt">receiver</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
+    <span class="nt">resourceInventoriedAs</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">mfg:3129ca8b-fcda-45be-bbda-294dc924d3b9</span> <span class="c1"># buckets</span>
+    <span class="nt">resourceQuantity</span><span class="p">:</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasUnit</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">om2:one</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasNumericalValue</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">1000</span>
+
+  <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">mfg:a8236bbb-81e0-422d-9861-56d2417db0fb</span>
+    <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">EconomicEvent</span>
+    <span class="nt">inputOf</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">mfg:8baa8ff7-9c1e-4586-ae7b-79d620a3cac9</span> <span class="c1"># planned qt process</span>
+    <span class="nt">action</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">accept</span>
+    <span class="nt">provider</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
+    <span class="nt">receiver</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
+    <span class="nt">resourceInventoriedAs</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">mfg:3129ca8b-fcda-45be-bbda-294dc924d3b9</span> <span class="c1">#buckets</span>
+    <span class="nt">resourceQuantity</span><span class="p">:</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasUnit</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">om2:one</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasNumericalValue</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">1000</span>
+
+  <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">mfg:52f0e212-3c4f-4d27-b345-5e964c135824</span>
+    <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">EconomicEvent</span>
+    <span class="nt">outputOf</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">mfg:8baa8ff7-9c1e-4586-ae7b-79d620a3cac9</span> <span class="c1"># planned qt process</span>
+    <span class="nt">action</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">pass</span>
+    <span class="nt">provider</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
+    <span class="nt">receiver</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
+    <span class="nt">resourceInventoriedAs</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">mfg:3129ca8b-fcda-45be-bbda-294dc924d3b9</span> <span class="c1"># buckets</span>
+    <span class="nt">resourceQuantity</span><span class="p">:</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasUnit</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">om2:one</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasNumericalValue</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">998</span>
+
+  <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">mfg:e1721a61-cd47-4556-84b9-8b1b81da15bf</span>
+    <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">EconomicEvent</span>
+    <span class="nt">outputOf</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">mfg:8baa8ff7-9c1e-4586-ae7b-79d620a3cac9</span> <span class="c1"># planned qt process</span>
+    <span class="nt">action</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">fail</span>
+    <span class="nt">provider</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
+    <span class="nt">receiver</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
+    <span class="nt">resourceInventoriedAs</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">mfg:6b5bc786-b9ed-4189-b34f-5ef7d10f1f86</span> <span class="c1"># polymer stock</span>
+    <span class="nt">resourceQuantity</span><span class="p">:</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasUnit</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">om2:kilogram</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasNumericalValue</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">1.8</span>
+
+  <span class="c1"># resources after</span>
+
+  <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">mfg:3129ca8b-fcda-45be-bbda-294dc924d3b9</span>
+    <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">EconomicResource</span>
+    <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Bucket white 5 gallon</span>
+    <span class="nt">resourceConformsTo</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">urn:uuid:3be5259d-10f0-431c-9fec-9c0c15a461d3</span>
+    <span class="nt">accountingQuantity</span><span class="p">:</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasUnit</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">om2:one</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasNumericalValue</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">1318</span>
+
+  <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">mfg:6b5bc786-b9ed-4189-b34f-5ef7d10f1f86</span>
+    <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">EconomicResource</span>
+    <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Thermoplastic polymer white</span>
+    <span class="nt">resourceConformsTo</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">urn:uuid:d4d2fd71-34f2-41c3-b1c5-19ad5ed2da58</span>
+    <span class="nt">accountingQuantity</span><span class="p">:</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasUnit</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">om2:kilogram</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasNumericalValue</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">1531.8</span>
+
+  <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">mfg:23799c14-c368-4653-a584-83bf9ae8b82a</span>
+    <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">EconomicResource</span>
+    <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Injection molding maching</span>
+    <span class="nt">resourceConformsTo</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">urn:uuid:c7897c39-7f05-4a5d-a487-80e130a2414a</span>
+    <span class="nt">trackingIdentifier</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">DDE098989099911</span>
+    <span class="nt">accountingQuantity</span><span class="p">:</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasUnit</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">om2:one</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasNumericalValue</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
+    <span class="nt">unitOfEffort</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">om2:hour</span>
+</code></pre></div>
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../ex-planning/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Planning" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Planning
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../../algorithms/overview/" class="md-footer__link md-footer__link--next" aria-label="Next: Overview" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Overview
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    <a href="https://gitter.im/valueflows/welcome" target="_blank" rel="noopener" title="Come chat with us on gitter" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M66.4 322.5H16V0h50.4v322.5zM166.9 76.1h-50.4V512h50.4V76.1zm100.6 0h-50.4V512h50.4V76.1zM368 76h-50.4v247H368V76z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.indexes", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.tracking"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.01824240.min.js"}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.ff0eccb3.min.js"></script>
+      
+    
+  </body>
+</html>
