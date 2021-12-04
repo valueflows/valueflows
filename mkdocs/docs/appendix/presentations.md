@@ -4,11 +4,14 @@ We are occasionally asked for other documentation and visuals for Valueflows.  W
 
 ## Graphics in this documentation
 
-Most of the graphics on these VF website pages are available in xml (for drawing tools) and as images, in [this directory](https://lab.allmende.io/valueflows/valueflows/-/tree/master/release-doc-in-process).
+Most of the graphics on these VF website pages are available in xml (for drawing tools) and as images here:
+
+* [images in the main documentation](https://lab.allmende.io/valueflows/valueflows/-/tree/master/mkdocs/docs/assets)
+* [images on the example pages](https://lab.allmende.io/valueflows/valueflows/-/tree/master/mkdocs/docs/assets/examples)
 
 ## Presentations
 
-All of the following presentations can also be found in [this directory](https://lab.allmende.io/valueflows/valueflows/-/tree/master/docs/presentations) in pdf, with editable versions in odp where we have them.
+All of the following presentations can also be found in [this directory](https://lab.allmende.io/valueflows/valueflows/-/tree/master/presentations), with editable versions where we have them.
 
 [A basic VF presentation, 2021](http://mikorizal.org/VF-Basic-Presentation.pdf)
 
