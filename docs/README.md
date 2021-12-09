@@ -1,3 +1,6 @@
+# This directory is deprecated.  The current documentation is in the mkdocs directory.  This will be removed when we are sure the new doc is OK.
+
+
 ![Value Flows](https://raw.githubusercontent.com/valueflows/valueflows/master/release-doc-in-process/VF-logo-heading.jpg)
 ### A vocabulary for the distributed economic networks of the next economy
 
