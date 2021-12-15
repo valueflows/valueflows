@@ -23,7 +23,7 @@ All of the following presentations can also be found in [this directory](https:/
 
 [A presentation to a Bill McCarthy accounting class in 2017](https://speakerdeck.com/mikorizal/2017-04-26-mccarthy-class), including some history of Valueflows in relation to REA, comparisons, and example projects.
 
-[A presentation to a Bill McCarthy accounting class in 2020](https://speakerdeck.com/mikorizal/mccarthy-class-april-22-20), including "what can an economic network can do that an enterprise can't?", and example projects.
+[A presentation to a Bill McCarthy accounting class in 2020](https://speakerdeck.com/mikorizal/mccarthy-class-april-22-20), including "what can an economic network do that an enterprise can't?", and example projects.
 
 [Intro to REA, selected slides from Bill McCarthy](https://speakerdeck.com/mikorizal/rea-intro), and a few others.
 
