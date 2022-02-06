@@ -602,7 +602,7 @@ Simple pack and unpack of resources into and out of a container resource.
     containedIn: 
 ```
 
-#### Using stage and state
+#### Stage and state
 
 Assembly and testing showing use of stage and state.
 
