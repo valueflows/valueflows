@@ -1618,6 +1618,8 @@
     <span class="nt">accountingQuantity</span><span class="p">:</span>
       <span class="l l-Scalar l-Scalar-Plain">om2:hasUnit</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">om2:one</span>
       <span class="l l-Scalar l-Scalar-Plain">om2:hasNumericalValue</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">320</span>
+    <span class="nt">state</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">pass</span>
+    <span class="nt">stage</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">mfg:6fb358a3-2859-4d6a-a4fa-431603ee70f5</span> <span class="c1"># QT</span>
 
   <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">mfg:6b5bc786-b9ed-4189-b34f-5ef7d10f1f86</span>
     <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">EconomicResource</span>
@@ -1637,7 +1639,7 @@
       <span class="l l-Scalar l-Scalar-Plain">om2:hasNumericalValue</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
     <span class="nt">unitOfEffort</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">om2:hour</span>
 
-  <span class="c1"># the recipe (the recipe runs &quot;backwards&quot; from the final product)</span>
+  <span class="c1"># the recipe (here the recipe runs &quot;backwards&quot; from the final product, similar to a BOM)</span>
 
   <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">mfg:ac9ec98d-db80-44dc-97be-7aa149b2fe5d</span>
     <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">RecipeResource</span>
@@ -1646,7 +1648,8 @@
   <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">mfg:33e8933b-ff73-4a01-964a-ca7a98893083</span>
     <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">RecipeFlow</span>
     <span class="nt">recipeOutputOf</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">mfg:a8356625-bf64-4c16-9099-28aa1b718c4b</span>
-    <span class="nt">action</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">pass</span>
+    <span class="nt">action</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">modify</span>
+    <span class="nt">state</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">pass</span>
     <span class="nt">recipeFlowResource</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">mfg:ac9ec98d-db80-44dc-97be-7aa149b2fe5d</span>
     <span class="nt">resourceQuantity</span><span class="p">:</span>
       <span class="l l-Scalar l-Scalar-Plain">om2:hasUnit</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">om2:one</span>
@@ -1659,7 +1662,7 @@
   <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">mfg:54b814ee-62dc-40c1-bb96-f8582aa4f771</span>
     <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">RecipeFlow</span>
     <span class="nt">recipeOutputOf</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">mfg:a8356625-bf64-4c16-9099-28aa1b718c4b</span>
-    <span class="nt">action</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">fail</span>
+    <span class="nt">action</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">produce</span> <span class="c1"># fail</span>
     <span class="nt">recipeFlowResource</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">mfg:a3be5259d-10f0-431c-9fec-9c0c15a461d3</span>
     <span class="nt">resourceQuantity</span><span class="p">:</span>
       <span class="l l-Scalar l-Scalar-Plain">om2:hasUnit</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">om2:kilogram</span>
@@ -1735,7 +1738,7 @@
   <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">mfg:8e5fe80d-a769-4bd5-89e5-2136d33eab9f</span>
     <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Plan</span>
     <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Buckets run number 381</span>
-    <span class="nt">due</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">2019-04-08T17:00:00-5:00</span> <span class="c1"># due</span>
+    <span class="nt">due</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">2019-04-08T17:00:00-5:00</span>
 
   <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">mfg:b52a5815-fae9-43bf-be95-833b95dc0adb</span>
     <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Commitment</span>
@@ -1804,13 +1807,25 @@
     <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Commitment</span>
     <span class="nt">independentDemandOf</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">mfg:8e5fe80d-a769-4bd5-89e5-2136d33eab9f</span> <span class="c1"># the plan</span>
     <span class="nt">outputOf</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">mfg:8baa8ff7-9c1e-4586-ae7b-79d620a3cac9</span>
-    <span class="nt">action</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">pass</span>
+    <span class="nt">action</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">modify</span>
+    <span class="nt">state</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">pass</span>
     <span class="nt">provider</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
     <span class="nt">receiver</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
     <span class="nt">resourceConformsTo</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">urn:uuid:3be5259d-10f0-431c-9fec-9c0c15a461d3</span> <span class="c1"># bucket</span>
     <span class="nt">resourceQuantity</span><span class="p">:</span>
       <span class="l l-Scalar l-Scalar-Plain">om2:hasUnit</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">om2:one</span>
       <span class="l l-Scalar l-Scalar-Plain">om2:hasNumericalValue</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">1000</span>
+
+  <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">mfg:21f361a6-2375-46bb-b192-c21b5ba833bf</span>
+    <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Commitment</span>
+    <span class="nt">outputOf</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">mfg:8baa8ff7-9c1e-4586-ae7b-79d620a3cac9</span>
+    <span class="nt">action</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">produce</span>
+    <span class="nt">provider</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
+    <span class="nt">receiver</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
+    <span class="nt">resourceConformsTo</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">urn:uuid:d4d2fd71-34f2-41c3-b1c5-19ad5ed2da58</span> <span class="c1"># polymer</span>
+    <span class="nt">resourceQuantity</span><span class="p">:</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasUnit</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">om2:kilogram</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasNumericalValue</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">0</span>
 
   <span class="c1"># manufacture and test the buckets according to plan</span>
 
@@ -1861,7 +1876,8 @@
   <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">mfg:52f0e212-3c4f-4d27-b345-5e964c135824</span>
     <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">EconomicEvent</span>
     <span class="nt">outputOf</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">mfg:8baa8ff7-9c1e-4586-ae7b-79d620a3cac9</span> <span class="c1"># planned qt process</span>
-    <span class="nt">action</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">pass</span>
+    <span class="nt">action</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">modify</span>
+    <span class="nt">state</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">pass</span>
     <span class="nt">provider</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
     <span class="nt">receiver</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
     <span class="nt">resourceInventoriedAs</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">mfg:3129ca8b-fcda-45be-bbda-294dc924d3b9</span> <span class="c1"># buckets</span>
@@ -1872,7 +1888,7 @@
   <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">mfg:e1721a61-cd47-4556-84b9-8b1b81da15bf</span>
     <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">EconomicEvent</span>
     <span class="nt">outputOf</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">mfg:8baa8ff7-9c1e-4586-ae7b-79d620a3cac9</span> <span class="c1"># planned qt process</span>
-    <span class="nt">action</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">fail</span>
+    <span class="nt">action</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">produce</span>
     <span class="nt">provider</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
     <span class="nt">receiver</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
     <span class="nt">resourceInventoriedAs</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">mfg:6b5bc786-b9ed-4189-b34f-5ef7d10f1f86</span> <span class="c1"># polymer stock</span>
@@ -1889,6 +1905,8 @@
     <span class="nt">accountingQuantity</span><span class="p">:</span>
       <span class="l l-Scalar l-Scalar-Plain">om2:hasUnit</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">om2:one</span>
       <span class="l l-Scalar l-Scalar-Plain">om2:hasNumericalValue</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">1318</span>
+    <span class="nt">state</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">pass</span>
+    <span class="nt">stage</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">mfg:6fb358a3-2859-4d6a-a4fa-431603ee70f5</span> <span class="c1">#QT</span>
 
   <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">mfg:6b5bc786-b9ed-4189-b34f-5ef7d10f1f86</span>
     <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">EconomicResource</span>

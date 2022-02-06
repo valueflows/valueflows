@@ -1,4 +1,4 @@
-<mxfile modified="2022-02-05T23:03:10.649Z" host="app.diagrams.net" agent="5.0 (X11)" etag="A6cs5GzR5cr9dEbGP52t" compressed="false" version="16.5.3" type="device">
+<mxfile modified="2022-02-06T17:12:54.955Z" host="app.diagrams.net" agent="5.0 (X11)" etag="QuNHf43J4K74pxFYYHsx" compressed="false" version="16.5.3" type="device">
   <diagram id="oRByQvfg-IzSfJMxYF46" name="Page-1">
     <mxGraphModel dx="1738" dy="-3849" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -121,7 +121,7 @@
         <mxCell id="28" value="Bucket specification" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="532.5" y="4872" width="91" height="36" as="geometry" />
         </mxCell>
-        <mxCell id="29" value="" style="endArrow=none;dashed=1;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" parent="1" source="18" target="27" edge="1">
+        <mxCell id="29" value="" style="endArrow=none;dashed=1;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0.75;exitY=0;exitDx=0;exitDy=0;" parent="1" source="18" target="27" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="-82" y="4876" as="sourcePoint" />
             <mxPoint x="-32" y="4826" as="targetPoint" />
@@ -172,7 +172,7 @@
         <mxCell id="39" value="QT buckets" style="ellipse;whiteSpace=wrap;html=1;rounded=0;glass=1;comic=0;" parent="1" vertex="1">
           <mxGeometry x="779" y="4757.5" width="88" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="40" value="&lt;div&gt;fail buckets &lt;br&gt;&lt;/div&gt;&lt;div&gt;0&lt;br&gt;&lt;/div&gt;" style="shape=delay;whiteSpace=wrap;html=1;rounded=0;glass=1;comic=0;" parent="1" vertex="1">
+        <mxCell id="40" value="&lt;div&gt;produce polymer &lt;br&gt;&lt;/div&gt;&lt;div&gt;(fail buckets) 0&lt;/div&gt;" style="shape=delay;whiteSpace=wrap;html=1;rounded=0;glass=1;comic=0;" parent="1" vertex="1">
           <mxGeometry x="890" y="4762.5" width="122" height="40" as="geometry" />
         </mxCell>
         <mxCell id="41" value="Input Economic Event" style="shape=delay;whiteSpace=wrap;html=1;rounded=0;glass=1;comic=0;" parent="1" vertex="1">
@@ -229,7 +229,7 @@
         <mxCell id="51" value="QT buckets" style="ellipse;whiteSpace=wrap;html=1;rounded=0;glass=1;comic=0;" parent="1" vertex="1">
           <mxGeometry x="779" y="4949.5" width="88" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="52" value="&lt;div&gt;pass buckets &lt;br&gt;&lt;/div&gt;&lt;div&gt;1000&lt;br&gt;&lt;/div&gt;" style="shape=delay;whiteSpace=wrap;html=1;rounded=0;glass=1;comic=0;" parent="1" vertex="1">
+        <mxCell id="52" value="modify buckets &lt;br&gt;&lt;div&gt;pass 1000&lt;br&gt;&lt;/div&gt;" style="shape=delay;whiteSpace=wrap;html=1;rounded=0;glass=1;comic=0;" parent="1" vertex="1">
           <mxGeometry x="895" y="4954.5" width="122" height="40" as="geometry" />
         </mxCell>
         <mxCell id="53" value="" style="endArrow=classic;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endFill=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="55" target="51" edge="1">
@@ -247,7 +247,7 @@
         <mxCell id="55" value="accept buckets @make 1000" style="shape=delay;whiteSpace=wrap;html=1;rounded=0;glass=1;comic=0;" parent="1" vertex="1">
           <mxGeometry x="642.5" y="4955" width="122" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="56" value="&lt;div&gt;pass buckets &lt;br&gt;&lt;/div&gt;&lt;div&gt;500&lt;br&gt;&lt;/div&gt;" style="shape=delay;whiteSpace=wrap;html=1;rounded=0;glass=1;comic=0;" parent="1" vertex="1">
+        <mxCell id="56" value="&lt;div&gt;modify buckets&lt;/div&gt;&lt;div&gt;pass 500&lt;br&gt;&lt;/div&gt;" style="shape=delay;whiteSpace=wrap;html=1;rounded=0;glass=1;comic=0;" parent="1" vertex="1">
           <mxGeometry x="890" y="4815" width="122" height="40" as="geometry" />
         </mxCell>
         <mxCell id="57" value="" style="endArrow=classic;html=1;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="39" target="56" edge="1">
@@ -271,12 +271,12 @@
             <mxPoint x="1080" y="4870" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="61" value="" style="endArrow=none;dashed=1;html=1;exitX=0.25;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="18" target="37" edge="1">
+        <mxCell id="61" value="" style="endArrow=none;dashed=1;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" target="37" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="-70" y="4810" as="sourcePoint" />
+            <mxPoint x="-50" y="4870" as="sourcePoint" />
             <mxPoint x="-20" y="4760" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="-69" y="4750" />
+              <mxPoint x="-50" y="4750" />
               <mxPoint x="1083" y="4750" />
             </Array>
           </mxGeometry>
@@ -356,7 +356,7 @@
         <mxCell id="77" value="QT buckets" style="ellipse;whiteSpace=wrap;html=1;rounded=0;glass=1;comic=0;" parent="1" vertex="1">
           <mxGeometry x="777" y="5079.5" width="88" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="78" value="&lt;div&gt;pass buckets &lt;br&gt;&lt;/div&gt;&lt;div&gt;998&lt;br&gt;&lt;/div&gt;" style="shape=delay;whiteSpace=wrap;html=1;rounded=0;glass=1;comic=0;" parent="1" vertex="1">
+        <mxCell id="78" value="&lt;div&gt;modify buckets &lt;br&gt;&lt;/div&gt;&lt;div&gt;pass 998&lt;br&gt;&lt;/div&gt;" style="shape=delay;whiteSpace=wrap;html=1;rounded=0;glass=1;comic=0;" parent="1" vertex="1">
           <mxGeometry x="893" y="5084.5" width="122" height="40" as="geometry" />
         </mxCell>
         <mxCell id="79" value="" style="endArrow=classic;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endFill=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="80" target="77" edge="1">
@@ -398,7 +398,7 @@
             <mxPoint x="190" y="5230" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="87" value="fail buckets &lt;br&gt;&lt;div&gt;1.8 kg&lt;br&gt;&lt;/div&gt;" style="shape=delay;whiteSpace=wrap;html=1;rounded=0;glass=1;comic=0;" parent="1" vertex="1">
+        <mxCell id="87" value="&lt;div&gt;produce polymer&lt;/div&gt;&lt;div&gt;(fail buckets) 1.8 kg&lt;br&gt;&lt;/div&gt;" style="shape=delay;whiteSpace=wrap;html=1;rounded=0;glass=1;comic=0;" parent="1" vertex="1">
           <mxGeometry x="895" y="5135" width="122" height="40" as="geometry" />
         </mxCell>
         <mxCell id="88" value="" style="endArrow=classic;html=1;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="77" target="87" edge="1">
@@ -633,6 +633,26 @@
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="1020" y="5570" as="sourcePoint" />
             <mxPoint x="1070" y="5520" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Zbl0LCOZEq55gC4ndTe_-202" value="&lt;div&gt;produce polymer &lt;br&gt;&lt;/div&gt;&lt;div&gt;(fail buckets) 0&lt;/div&gt;" style="shape=delay;whiteSpace=wrap;html=1;rounded=0;glass=1;comic=0;" vertex="1" parent="1">
+          <mxGeometry x="895" y="5001" width="122" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Zbl0LCOZEq55gC4ndTe_-203" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="51" target="Zbl0LCOZEq55gC4ndTe_-202">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="790" y="5060" as="sourcePoint" />
+            <mxPoint x="840" y="5010" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Zbl0LCOZEq55gC4ndTe_-205" value="" style="endArrow=none;dashed=1;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="Zbl0LCOZEq55gC4ndTe_-202" target="18">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1050" y="5000" as="sourcePoint" />
+            <mxPoint x="1100" y="4950" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1140" y="5021" />
+              <mxPoint x="1140" y="4740" />
+              <mxPoint x="-69" y="4740" />
+            </Array>
           </mxGeometry>
         </mxCell>
       </root>
