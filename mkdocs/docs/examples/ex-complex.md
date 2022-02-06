@@ -381,8 +381,7 @@ This example includes recipe, plan, and actuals.
   - '@id': mfg:54b814ee-62dc-40c1-bb96-f8582aa4f771
     '@type': RecipeFlow
     recipeOutputOf: mfg:a8356625-bf64-4c16-9099-28aa1b718c4b
-    action: produce
-    state: fail
+    action: produce # fail
     recipeFlowResource: mfg:a3be5259d-10f0-431c-9fec-9c0c15a461d3
     resourceQuantity:
       om2:hasUnit: om2:kilogram
