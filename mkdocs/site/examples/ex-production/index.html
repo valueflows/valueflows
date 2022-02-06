@@ -929,6 +929,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#stage-and-state" class="md-nav__link">
+    Stage and state
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1302,6 +1309,13 @@
         <li class="md-nav__item">
   <a href="#pack-unpack" class="md-nav__link">
     Pack unpack
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stage-and-state" class="md-nav__link">
+    Stage and state
   </a>
   
 </li>
@@ -1901,6 +1915,146 @@
       <span class="l l-Scalar l-Scalar-Plain">om2:hasUnit</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">om2:one</span>
       <span class="l l-Scalar l-Scalar-Plain">om2:hasNumericalValue</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
     <span class="nt">containedIn</span><span class="p">:</span> 
+</code></pre></div>
+<h4 id="stage-and-state">Stage and state</h4>
+<p>Assembly and testing showing use of stage and state.</p>
+<p><img alt="stage state diagram" src="../../assets/examples/stage-state-simple.png" /></p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Example: Process using stage and state</span>
+<span class="c1"># credit Fabulaser-Mini, https://github.com/fab-machines/Fabulaser-Mini/blob/main/manual/Fabulaser%20manual%20L2M2.pdf</span>
+
+<span class="s">&#39;@context&#39;</span><span class="p p-Indicator">:</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">https://git.io/vf-examples-jsonld-context</span>
+  <span class="p p-Indicator">-</span> <span class="nt">mfg</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
+
+<span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">rgh:valueflows/valueflows/master/examples/process-stage-state.yaml</span>
+<span class="s">&#39;@graph&#39;</span><span class="p p-Indicator">:</span>
+
+  <span class="c1"># Process Specifications</span>
+
+  <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">mfg:3be5259d-10f0-431c-9fec-9c0c15a461d3</span>
+    <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">ProcessSpecification</span>
+    <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Attach air filter</span>
+
+  <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">mfg:3be5259d-10f0-431c-9fec-9c0c15a461e4</span>
+    <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">ProcessSpecification</span>
+    <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Attach air compressor</span>
+
+  <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">mfg:3be5259d-10f0-431c-9fec-9c0c15a461f9</span>
+    <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">ProcessSpecification</span>
+    <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Test machine</span>
+
+  <span class="c1"># Economic resource before attach air filter process</span>
+
+  <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">mfg:e1721a61-cd47-4556-84b9-8b1b81da15bf</span>
+    <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">EconomicResource</span>
+    <span class="nt">resourceConformsTo</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">http://manufacturing.org/wiki/Fabulaser</span>
+    <span class="nt">accountingQuantity</span><span class="p">:</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasUnit</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">om2:one</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasNumericalValue</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
+    <span class="nt">stage</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">mfg:3be5259d-10f0-431c-9fec-9c0c15a461e4</span> <span class="c1"># attach air compressor</span>
+
+  <span class="c1"># Assembly process</span>
+
+  <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">mfg:02b39a30-3e04-4305-9656-7f261aa63c84</span>
+    <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Process</span>
+    <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Attach the air filter (step 33)</span>
+    <span class="nt">basedOn</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">mfg:3be5259d-10f0-431c-9fec-9c0c15a461d3</span> <span class="c1"># process specification: attach air filter</span>
+
+  <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">mfg:a8236bbb-81e0-422d-9861-56d2417db0fb</span>
+    <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">EconomicEvent</span>
+    <span class="nt">inputOf</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">mfg:02b39a30-3e04-4305-9656-7f261aa63c84</span>
+    <span class="nt">action</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">accept</span>
+    <span class="nt">provider</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
+    <span class="nt">receiver</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
+    <span class="nt">resourceInventoriedAs</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">manufacturing:e1721a61-cd47-4556-84b9-8b1b81da15bf</span> <span class="c1"># a laser cutter</span>
+    <span class="nt">resourceQuantity</span><span class="p">:</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasUnit</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">om2:one</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasNumericalValue</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
+    <span class="nt">stage</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">mfg:3be5259d-10f0-431c-9fec-9c0c15a461e4</span> <span class="c1"># attach air compressor</span>
+
+  <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">mfg:a8236bbb-81e0-422d-9861-56d2417db0ss</span>
+    <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">EconomicEvent</span>
+    <span class="nt">inputOf</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">mfg:02b39a30-3e04-4305-9656-7f261aa63c84</span>
+    <span class="nt">action</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">consume</span>
+    <span class="nt">provider</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
+    <span class="nt">receiver</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
+    <span class="nt">resourceInventoriedAs</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">manufacturing:e1721a61-cd47-4556-84b9-8b1b81dlk4d0</span> <span class="c1"># an air filter</span>
+    <span class="nt">resourceQuantity</span><span class="p">:</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasUnit</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">om2:one</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasNumericalValue</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
+
+  <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">mfg:a8236bbb-81e0-422d-9861-56d2417db0st</span>
+    <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">EconomicEvent</span>
+    <span class="nt">inputOf</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">mfg:02b39a30-3e04-4305-9656-7f261aa63c84</span>
+    <span class="nt">action</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">consume</span>
+    <span class="nt">provider</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
+    <span class="nt">receiver</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
+    <span class="nt">resourceInventoriedAs</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">manufacturing:e1721a61-cd47-4556-84b9-8b1b81dlcvgk</span> <span class="c1"># a hose clamp</span>
+    <span class="nt">resourceQuantity</span><span class="p">:</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasUnit</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">om2:one</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasNumericalValue</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
+
+  <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">mfg:52f0e212-3c4f-4d27-b345-5e964c135824</span>
+    <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">EconomicEvent</span>
+    <span class="nt">outputOf</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">mfg:02b39a30-3e04-4305-9656-7f261aa63c84</span>
+    <span class="nt">action</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">modify</span>
+    <span class="nt">provider</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
+    <span class="nt">receiver</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
+    <span class="nt">resourceInventoriedAs</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">manufacturing:e1721a61-cd47-4556-84b9-8b1b81da15bf</span> <span class="c1"># a laser cutter</span>
+    <span class="nt">resourceQuantity</span><span class="p">:</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasUnit</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">om2:one</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasNumericalValue</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
+
+  <span class="c1"># Economic resource after attach air filter process</span>
+
+  <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">mfg:e1721a61-cd47-4556-84b9-8b1b81da15bf</span>
+    <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">EconomicResource</span>
+    <span class="nt">resourceConformsTo</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">http://manufacturing.org/wiki/Fabulaser</span>
+    <span class="nt">accountingQuantity</span><span class="p">:</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasUnit</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">om2:one</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasNumericalValue</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
+    <span class="nt">stage</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">mfg:3be5259d-10f0-431c-9fec-9c0c15a461d3</span> <span class="c1"># attach air filter</span>
+
+  <span class="c1"># Testing process</span>
+
+  <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">mfg:02b39a30-3e04-4305-9656-7f261aa63c98</span>
+    <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Process</span>
+    <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Test the laser cutter</span>
+    <span class="nt">basedOn</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">mfg:3be5259d-10f0-431c-9fec-9c0c15a461d3</span> <span class="c1"># final test after all assembly</span>
+
+  <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">mfg:a8236bbb-81e0-422d-9861-56d2417db0fb</span>
+    <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">EconomicEvent</span>
+    <span class="nt">inputOf</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">mfg:02b39a30-3e04-4305-9656-7f261aa63c98</span>
+    <span class="nt">action</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">accept</span>
+    <span class="nt">provider</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
+    <span class="nt">receiver</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
+    <span class="nt">resourceInventoriedAs</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">manufacturing:e1721a61-cd47-4556-84b9-8b1b81da15bf</span> <span class="c1"># a laser cutter</span>
+    <span class="nt">resourceQuantity</span><span class="p">:</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasUnit</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">om2:one</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasNumericalValue</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
+    <span class="nt">stage</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">mfg:02b39a30-3e04-4305-9656-7f261aa63c84</span> <span class="c1">#attach air filter</span>
+
+  <span class=" -Error"> </span><span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">mfg:52f0e212-3c4f-4d27-b345-5e964c135824</span>
+   <span class=" -Error"> </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">EconomicEvent</span>
+    <span class="nt">outputOf</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">mfg:02b39a30-3e04-4305-9656-7f261aa63c98</span>
+    <span class="nt">action</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">modify</span>
+    <span class="nt">provider</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
+    <span class="nt">receiver</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
+    <span class="nt">resourceInventoriedAs</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">manufacturing:e1721a61-cd47-4556-84b9-8b1b81da15bf</span> <span class="c1"># a laser cutter</span>
+    <span class="nt">resourceQuantity</span><span class="p">:</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasUnit</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">om2:one</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasNumericalValue</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
+
+  <span class="c1"># Economic resource after testing</span>
+
+  <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">mfg:e1721a61-cd47-4556-84b9-8b1b81da15bf</span>
+    <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">EconomicResource</span>
+    <span class="nt">resourceConformsTo</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">http://manufacturing.org/wiki/Fabulaser</span>
+    <span class="nt">accountingQuantity</span><span class="p">:</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasUnit</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">om2:one</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasNumericalValue</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
+    <span class="nt">stage</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">mfg:02b39a30-3e04-4305-9656-7f261aa63c98</span> <span class="c1"># test machine</span>
+    <span class="nt">state</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">pass</span>
 </code></pre></div>
 
               

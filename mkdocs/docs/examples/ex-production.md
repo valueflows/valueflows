@@ -602,3 +602,148 @@ Simple pack and unpack of resources into and out of a container resource.
     containedIn: 
 ```
 
+#### Stage and state
+
+Assembly and testing showing use of stage and state.
+
+![stage state diagram](../assets/examples/stage-state-simple.png)
+
+``` yaml
+# Example: Process using stage and state
+# credit Fabulaser-Mini, https://github.com/fab-machines/Fabulaser-Mini/blob/main/manual/Fabulaser%20manual%20L2M2.pdf
+
+'@context':
+  - https://git.io/vf-examples-jsonld-context
+  - mfg: https://manufacturing.example/
+
+'@id': rgh:valueflows/valueflows/master/examples/process-stage-state.yaml
+'@graph':
+
+  # Process Specifications
+
+  - '@id': mfg:3be5259d-10f0-431c-9fec-9c0c15a461d3
+    '@type': ProcessSpecification
+    name: Attach air filter
+
+  - '@id': mfg:3be5259d-10f0-431c-9fec-9c0c15a461e4
+    '@type': ProcessSpecification
+    name: Attach air compressor
+
+  - '@id': mfg:3be5259d-10f0-431c-9fec-9c0c15a461f9
+    '@type': ProcessSpecification
+    name: Test machine
+
+  # Economic resource before attach air filter process
+
+  - '@id': mfg:e1721a61-cd47-4556-84b9-8b1b81da15bf
+    '@type': EconomicResource
+    resourceConformsTo: http://manufacturing.org/wiki/Fabulaser
+    accountingQuantity:
+      om2:hasUnit: om2:one
+      om2:hasNumericalValue: 1
+    stage: mfg:3be5259d-10f0-431c-9fec-9c0c15a461e4 # attach air compressor
+
+  # Assembly process
+
+  - '@id': mfg:02b39a30-3e04-4305-9656-7f261aa63c84
+    '@type': Process
+    name: Attach the air filter (step 33)
+    basedOn: mfg:3be5259d-10f0-431c-9fec-9c0c15a461d3 # process specification: attach air filter
+
+  - '@id': mfg:a8236bbb-81e0-422d-9861-56d2417db0fb
+    '@type': EconomicEvent
+    inputOf: mfg:02b39a30-3e04-4305-9656-7f261aa63c84
+    action: accept
+    provider: https://manufacturing.example/
+    receiver: https://manufacturing.example/
+    resourceInventoriedAs: manufacturing:e1721a61-cd47-4556-84b9-8b1b81da15bf # a laser cutter
+    resourceQuantity:
+      om2:hasUnit: om2:one
+      om2:hasNumericalValue: 1
+    stage: mfg:3be5259d-10f0-431c-9fec-9c0c15a461e4 # attach air compressor
+
+  - '@id': mfg:a8236bbb-81e0-422d-9861-56d2417db0ss
+    '@type': EconomicEvent
+    inputOf: mfg:02b39a30-3e04-4305-9656-7f261aa63c84
+    action: consume
+    provider: https://manufacturing.example/
+    receiver: https://manufacturing.example/
+    resourceInventoriedAs: manufacturing:e1721a61-cd47-4556-84b9-8b1b81dlk4d0 # an air filter
+    resourceQuantity:
+      om2:hasUnit: om2:one
+      om2:hasNumericalValue: 1
+
+  - '@id': mfg:a8236bbb-81e0-422d-9861-56d2417db0st
+    '@type': EconomicEvent
+    inputOf: mfg:02b39a30-3e04-4305-9656-7f261aa63c84
+    action: consume
+    provider: https://manufacturing.example/
+    receiver: https://manufacturing.example/
+    resourceInventoriedAs: manufacturing:e1721a61-cd47-4556-84b9-8b1b81dlcvgk # a hose clamp
+    resourceQuantity:
+      om2:hasUnit: om2:one
+      om2:hasNumericalValue: 1
+
+  - '@id': mfg:52f0e212-3c4f-4d27-b345-5e964c135824
+    '@type': EconomicEvent
+    outputOf: mfg:02b39a30-3e04-4305-9656-7f261aa63c84
+    action: modify
+    provider: https://manufacturing.example/
+    receiver: https://manufacturing.example/
+    resourceInventoriedAs: manufacturing:e1721a61-cd47-4556-84b9-8b1b81da15bf # a laser cutter
+    resourceQuantity:
+      om2:hasUnit: om2:one
+      om2:hasNumericalValue: 1
+
+  # Economic resource after attach air filter process
+
+  - '@id': mfg:e1721a61-cd47-4556-84b9-8b1b81da15bf
+    '@type': EconomicResource
+    resourceConformsTo: http://manufacturing.org/wiki/Fabulaser
+    accountingQuantity:
+      om2:hasUnit: om2:one
+      om2:hasNumericalValue: 1
+    stage: mfg:3be5259d-10f0-431c-9fec-9c0c15a461d3 # attach air filter
+
+  # Testing process
+
+  - '@id': mfg:02b39a30-3e04-4305-9656-7f261aa63c98
+    '@type': Process
+    name: Test the laser cutter
+    basedOn: mfg:3be5259d-10f0-431c-9fec-9c0c15a461d3 # final test after all assembly
+
+  - '@id': mfg:a8236bbb-81e0-422d-9861-56d2417db0fb
+    '@type': EconomicEvent
+    inputOf: mfg:02b39a30-3e04-4305-9656-7f261aa63c98
+    action: accept
+    provider: https://manufacturing.example/
+    receiver: https://manufacturing.example/
+    resourceInventoriedAs: manufacturing:e1721a61-cd47-4556-84b9-8b1b81da15bf # a laser cutter
+    resourceQuantity:
+      om2:hasUnit: om2:one
+      om2:hasNumericalValue: 1
+    stage: mfg:02b39a30-3e04-4305-9656-7f261aa63c84 #attach air filter
+
+   - '@id': mfg:52f0e212-3c4f-4d27-b345-5e964c135824
+    '@type': EconomicEvent
+    outputOf: mfg:02b39a30-3e04-4305-9656-7f261aa63c98
+    action: modify
+    provider: https://manufacturing.example/
+    receiver: https://manufacturing.example/
+    resourceInventoriedAs: manufacturing:e1721a61-cd47-4556-84b9-8b1b81da15bf # a laser cutter
+    resourceQuantity:
+      om2:hasUnit: om2:one
+      om2:hasNumericalValue: 1
+
+  # Economic resource after testing
+
+  - '@id': mfg:e1721a61-cd47-4556-84b9-8b1b81da15bf
+    '@type': EconomicResource
+    resourceConformsTo: http://manufacturing.org/wiki/Fabulaser
+    accountingQuantity:
+      om2:hasUnit: om2:one
+      om2:hasNumericalValue: 1
+    stage: mfg:02b39a30-3e04-4305-9656-7f261aa63c98 # test machine
+    state: pass
+
+```
