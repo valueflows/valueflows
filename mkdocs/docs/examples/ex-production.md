@@ -604,7 +604,7 @@ Simple pack and unpack of resources into and out of a container resource.
 
 #### Stage and state
 
-Assembly and testing showing use of stage and state.
+Simple assembly and testing showing use of stage and state.
 
 ![stage state diagram](../assets/examples/stage-state-simple.png)
 
@@ -728,6 +728,7 @@ Assembly and testing showing use of stage and state.
     '@type': EconomicEvent
     outputOf: mfg:02b39a30-3e04-4305-9656-7f261aa63c98
     action: modify
+    state: pass
     provider: https://manufacturing.example/
     receiver: https://manufacturing.example/
     resourceInventoriedAs: manufacturing:e1721a61-cd47-4556-84b9-8b1b81da15bf # a laser cutter
