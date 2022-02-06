@@ -898,7 +898,7 @@ vf:conformsTo
 vf:stage
         a                   owl:ObjectProperty ;
         rdfs:label          "stage"@en ;
-        rdfs:domain         vf:EconomicResource ;
+        rdfs:domain         [ owl:unionOf (vf:EconomicResource vf:Commitment vf:RecipeFlow) ] ;
         rdfs:range          vf:ProcessSpecification ;
         vs:term_status      "unstable" ;
         rdfs:comment        "References the ProcessSpecification of the last process the economic resource went through. Stage is used when the last process is important for finding proper resources, such as where the publishing process wants only documents that have gone through the editing process."@en ;
@@ -907,7 +907,7 @@ vf:stage
 vf:state
         a                   owl:ObjectProperty ;
         rdfs:label          "state"@en ;
-        rdfs:domain         vf:EconomicResource ;
+        rdfs:domain         [ owl:unionOf (vf:EconomicResource vf:EconomicEvent vf:RecipeFlow vf:Commitment) ] ;
         rdfs:range          xsd:string ;
         vs:term_status      "unstable" ;
         rdfs:comment        "The state of the desired economic resource, after coming out of a test or review process."@en ;
