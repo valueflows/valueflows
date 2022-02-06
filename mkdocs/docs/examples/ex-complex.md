@@ -337,6 +337,8 @@ This example includes recipe, plan, and actuals.
     accountingQuantity:
       om2:hasUnit: om2:one
       om2:hasNumericalValue: 320
+    state: pass
+    stage: mfg:6fb358a3-2859-4d6a-a4fa-431603ee70f5 # QT
 
   - '@id': mfg:6b5bc786-b9ed-4189-b34f-5ef7d10f1f86
     '@type': EconomicResource
@@ -356,7 +358,7 @@ This example includes recipe, plan, and actuals.
       om2:hasNumericalValue: 1
     unitOfEffort: om2:hour
 
-  # the recipe (the recipe runs "backwards" from the final product)
+  # the recipe (here the recipe runs "backwards" from the final product, similar to a BOM)
 
   - '@id': mfg:ac9ec98d-db80-44dc-97be-7aa149b2fe5d
     '@type': RecipeResource
@@ -365,7 +367,8 @@ This example includes recipe, plan, and actuals.
   - '@id': mfg:33e8933b-ff73-4a01-964a-ca7a98893083
     '@type': RecipeFlow
     recipeOutputOf: mfg:a8356625-bf64-4c16-9099-28aa1b718c4b
-    action: pass
+    action: modify
+    state: pass
     recipeFlowResource: mfg:ac9ec98d-db80-44dc-97be-7aa149b2fe5d
     resourceQuantity:
       om2:hasUnit: om2:one
@@ -378,7 +381,8 @@ This example includes recipe, plan, and actuals.
   - '@id': mfg:54b814ee-62dc-40c1-bb96-f8582aa4f771
     '@type': RecipeFlow
     recipeOutputOf: mfg:a8356625-bf64-4c16-9099-28aa1b718c4b
-    action: fail
+    action: produce
+    state: fail
     recipeFlowResource: mfg:a3be5259d-10f0-431c-9fec-9c0c15a461d3
     resourceQuantity:
       om2:hasUnit: om2:kilogram
@@ -454,7 +458,7 @@ This example includes recipe, plan, and actuals.
   - '@id': mfg:8e5fe80d-a769-4bd5-89e5-2136d33eab9f
     '@type': Plan
     name: Buckets run number 381
-    due: 2019-04-08T17:00:00-5:00 # due
+    due: 2019-04-08T17:00:00-5:00
 
   - '@id': mfg:b52a5815-fae9-43bf-be95-833b95dc0adb
     '@type': Commitment
@@ -523,13 +527,25 @@ This example includes recipe, plan, and actuals.
     '@type': Commitment
     independentDemandOf: mfg:8e5fe80d-a769-4bd5-89e5-2136d33eab9f # the plan
     outputOf: mfg:8baa8ff7-9c1e-4586-ae7b-79d620a3cac9
-    action: pass
+    action: modify
+    state: pass
     provider: https://manufacturing.example/
     receiver: https://manufacturing.example/
     resourceConformsTo: urn:uuid:3be5259d-10f0-431c-9fec-9c0c15a461d3 # bucket
     resourceQuantity:
       om2:hasUnit: om2:one
       om2:hasNumericalValue: 1000
+
+  - '@id': mfg:21f361a6-2375-46bb-b192-c21b5ba833bf
+    '@type': Commitment
+    outputOf: mfg:8baa8ff7-9c1e-4586-ae7b-79d620a3cac9
+    action: produce
+    provider: https://manufacturing.example/
+    receiver: https://manufacturing.example/
+    resourceConformsTo: urn:uuid:d4d2fd71-34f2-41c3-b1c5-19ad5ed2da58 # polymer
+    resourceQuantity:
+      om2:hasUnit: om2:kilogram
+      om2:hasNumericalValue: 0
 
   # manufacture and test the buckets according to plan
 
@@ -580,7 +596,8 @@ This example includes recipe, plan, and actuals.
   - '@id': mfg:52f0e212-3c4f-4d27-b345-5e964c135824
     '@type': EconomicEvent
     outputOf: mfg:8baa8ff7-9c1e-4586-ae7b-79d620a3cac9 # planned qt process
-    action: pass
+    action: modify
+    state: pass
     provider: https://manufacturing.example/
     receiver: https://manufacturing.example/
     resourceInventoriedAs: mfg:3129ca8b-fcda-45be-bbda-294dc924d3b9 # buckets
@@ -591,7 +608,7 @@ This example includes recipe, plan, and actuals.
   - '@id': mfg:e1721a61-cd47-4556-84b9-8b1b81da15bf
     '@type': EconomicEvent
     outputOf: mfg:8baa8ff7-9c1e-4586-ae7b-79d620a3cac9 # planned qt process
-    action: fail
+    action: produce
     provider: https://manufacturing.example/
     receiver: https://manufacturing.example/
     resourceInventoriedAs: mfg:6b5bc786-b9ed-4189-b34f-5ef7d10f1f86 # polymer stock
@@ -608,6 +625,8 @@ This example includes recipe, plan, and actuals.
     accountingQuantity:
       om2:hasUnit: om2:one
       om2:hasNumericalValue: 1318
+    state: pass
+    stage: mfg:6fb358a3-2859-4d6a-a4fa-431603ee70f5 #QT
 
   - '@id': mfg:6b5bc786-b9ed-4189-b34f-5ef7d10f1f86
     '@type': EconomicResource

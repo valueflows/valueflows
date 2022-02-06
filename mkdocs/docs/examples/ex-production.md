@@ -604,7 +604,7 @@ Simple pack and unpack of resources into and out of a container resource.
 
 #### Stage and state
 
-Assembly and testing showing use of stage and state.
+Simple assembly and testing showing use of stage and state.
 
 ![stage state diagram](../assets/examples/stage-state-simple.png)
 
@@ -633,11 +633,17 @@ Assembly and testing showing use of stage and state.
     '@type': ProcessSpecification
     name: Test machine
 
+  # Resource Specification
+
+  - '@id': mfg:3be525ee-10f0-431c-9fec-9c0c15a4dv97
+    '@type': ResourceSpecification
+    name: Fabulaser laser cutter
+
   # Economic resource before attach air filter process
 
   - '@id': mfg:e1721a61-cd47-4556-84b9-8b1b81da15bf
     '@type': EconomicResource
-    resourceConformsTo: http://manufacturing.org/wiki/Fabulaser
+    resourceConformsTo: mfg:3be525ee-10f0-431c-9fec-9c0c15a4dv97 # Fabulaser
     accountingQuantity:
       om2:hasUnit: om2:one
       om2:hasNumericalValue: 1
@@ -656,7 +662,7 @@ Assembly and testing showing use of stage and state.
     action: accept
     provider: https://manufacturing.example/
     receiver: https://manufacturing.example/
-    resourceInventoriedAs: manufacturing:e1721a61-cd47-4556-84b9-8b1b81da15bf # a laser cutter
+    resourceInventoriedAs: mfg:e1721a61-cd47-4556-84b9-8b1b81da15bf # a laser cutter
     resourceQuantity:
       om2:hasUnit: om2:one
       om2:hasNumericalValue: 1
@@ -668,7 +674,7 @@ Assembly and testing showing use of stage and state.
     action: consume
     provider: https://manufacturing.example/
     receiver: https://manufacturing.example/
-    resourceInventoriedAs: manufacturing:e1721a61-cd47-4556-84b9-8b1b81dlk4d0 # an air filter
+    resourceInventoriedAs: mfg:e1721a61-cd47-4556-84b9-8b1b81dlk4d0 # an air filter
     resourceQuantity:
       om2:hasUnit: om2:one
       om2:hasNumericalValue: 1
@@ -679,7 +685,7 @@ Assembly and testing showing use of stage and state.
     action: consume
     provider: https://manufacturing.example/
     receiver: https://manufacturing.example/
-    resourceInventoriedAs: manufacturing:e1721a61-cd47-4556-84b9-8b1b81dlcvgk # a hose clamp
+    resourceInventoriedAs: mfg:e1721a61-cd47-4556-84b9-8b1b81dlcvgk # a hose clamp
     resourceQuantity:
       om2:hasUnit: om2:one
       om2:hasNumericalValue: 1
@@ -690,7 +696,7 @@ Assembly and testing showing use of stage and state.
     action: modify
     provider: https://manufacturing.example/
     receiver: https://manufacturing.example/
-    resourceInventoriedAs: manufacturing:e1721a61-cd47-4556-84b9-8b1b81da15bf # a laser cutter
+    resourceInventoriedAs: mfg:e1721a61-cd47-4556-84b9-8b1b81da15bf # a laser cutter
     resourceQuantity:
       om2:hasUnit: om2:one
       om2:hasNumericalValue: 1
@@ -699,7 +705,7 @@ Assembly and testing showing use of stage and state.
 
   - '@id': mfg:e1721a61-cd47-4556-84b9-8b1b81da15bf
     '@type': EconomicResource
-    resourceConformsTo: http://manufacturing.org/wiki/Fabulaser
+    resourceConformsTo: mfg:3be525ee-10f0-431c-9fec-9c0c15a4dv97 # Fabulaser
     accountingQuantity:
       om2:hasUnit: om2:one
       om2:hasNumericalValue: 1
@@ -718,19 +724,20 @@ Assembly and testing showing use of stage and state.
     action: accept
     provider: https://manufacturing.example/
     receiver: https://manufacturing.example/
-    resourceInventoriedAs: manufacturing:e1721a61-cd47-4556-84b9-8b1b81da15bf # a laser cutter
+    resourceInventoriedAs: mfg:e1721a61-cd47-4556-84b9-8b1b81da15bf # a laser cutter
     resourceQuantity:
       om2:hasUnit: om2:one
       om2:hasNumericalValue: 1
     stage: mfg:02b39a30-3e04-4305-9656-7f261aa63c84 #attach air filter
 
-   - '@id': mfg:52f0e212-3c4f-4d27-b345-5e964c135824
+  - '@id': mfg:52f0e212-3c4f-4d27-b345-5e964c135824
     '@type': EconomicEvent
     outputOf: mfg:02b39a30-3e04-4305-9656-7f261aa63c98
     action: modify
+    state: pass
     provider: https://manufacturing.example/
     receiver: https://manufacturing.example/
-    resourceInventoriedAs: manufacturing:e1721a61-cd47-4556-84b9-8b1b81da15bf # a laser cutter
+    resourceInventoriedAs: mfg:e1721a61-cd47-4556-84b9-8b1b81da15bf # a laser cutter
     resourceQuantity:
       om2:hasUnit: om2:one
       om2:hasNumericalValue: 1
@@ -739,7 +746,7 @@ Assembly and testing showing use of stage and state.
 
   - '@id': mfg:e1721a61-cd47-4556-84b9-8b1b81da15bf
     '@type': EconomicResource
-    resourceConformsTo: http://manufacturing.org/wiki/Fabulaser
+    resourceConformsTo: mfg:3be525ee-10f0-431c-9fec-9c0c15a4dv97 # Fabulaser
     accountingQuantity:
       om2:hasUnit: om2:one
       om2:hasNumericalValue: 1
