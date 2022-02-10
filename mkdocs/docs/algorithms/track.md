@@ -25,14 +25,14 @@ Here is the logic finding the flow element that comes after a particular element
     * after: EconomicEvents that are outputs
     * before: EconomicEvents that are inputs
 * For an EconomicEvent:
-    * after: 
+    * after:
         * a Process to which it is an input, or
         * an EconomicResource which it affected as the output of a Process, or
         * if it is a transfer or move event, the EconomicResource labelled `toResourceInventoriedAs`
     * before:
         * a Process from which it is an output, or
-        * if it is an input to a Process, the EconomicResource which it affects, or
-        * if it is a transfer or move event and the current EconomicResource is the toResourceInventoriedAs, then the previous EconomicResource is the resourceInventoriedAs
+        * an EconomicResource which it affected as the input of a Process, or
+        * if it is a transfer or move event, the EconomicResource labelled `resourceInventoriedAs`
 
 #### Additional special logic
 
