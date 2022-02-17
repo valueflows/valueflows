@@ -1079,28 +1079,29 @@
       
         <li class="md-nav__item">
   <a href="#difference-between-tracking-and-tracing" class="md-nav__link">
-    Difference between Tracking and Tracing
+    Difference between tracking and tracing
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#previous-and-next-logic" class="md-nav__link">
+    Previous and next logic
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tracking-identifier-and-lot" class="md-nav__link">
+    Tracking identifier and lot
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#track-and-trace-logic" class="md-nav__link">
-    Track and Trace Logic
+    Track and trace Logic
   </a>
-  
-    <nav class="md-nav" aria-label="Track and Trace Logic">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#additional-special-logic" class="md-nav__link">
-    Additional special logic
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1273,28 +1274,29 @@
       
         <li class="md-nav__item">
   <a href="#difference-between-tracking-and-tracing" class="md-nav__link">
-    Difference between Tracking and Tracing
+    Difference between tracking and tracing
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#previous-and-next-logic" class="md-nav__link">
+    Previous and next logic
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tracking-identifier-and-lot" class="md-nav__link">
+    Tracking identifier and lot
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#track-and-trace-logic" class="md-nav__link">
-    Track and Trace Logic
+    Track and trace Logic
   </a>
-  
-    <nav class="md-nav" aria-label="Track and Trace Logic">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#additional-special-logic" class="md-nav__link">
-    Additional special logic
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1313,7 +1315,7 @@
 
   <h1>Track and Trace</h1>
 
-<h3 id="difference-between-tracking-and-tracing">Difference between Tracking and Tracing</h3>
+<h3 id="difference-between-tracking-and-tracing">Difference between tracking and tracing</h3>
 <p><a href="http://ell.stackexchange.com/questions/34391/difference-between-track-and-trace">From StackExchange:</a>:</p>
 <blockquote>
 <p>The difference is in direction &amp; point in time:</p>
@@ -1322,40 +1324,74 @@
 <p>When you "trace" a cellphone call, you try to determine its origin... You go backward to the starting point.</p>
 <p>When you "track" a cellphone, you monitor [the starting] location ... and follow it wherever it goes...</p>
 </blockquote>
-<p>One of the most-often used traces is to find the origins of health problems like mad cow disease and tainted drugs and food. In Value Flows terms, that would start with the product (economic resource) that caused a health problem, and trace back along the chain of resource flows to the source or sources of the product.  Then it might be necessary to also track forwards from the source(s) to find everything else that might include that source(s).</p>
-<h3 id="track-and-trace-logic">Track and Trace Logic</h3>
-<p>Here is the logic finding the flow element that comes after a particular element (tracking) and before a particular element (tracing):</p>
+<p>One of the most-often used traces is to find the origins of health problems like mad cow disease and tainted drugs and food. In Valueflows terms, that would start with the product (economic resource) that caused a health problem, and trace back along the chain of resource flows to the source or sources of the product.  Then it might be necessary to also track forwards from the source(s) to find everything else that might include that source(s).</p>
+<p>It is also used when the provenance is useful for other information, like to determine the sustainability of the creation of a resource (like fossil fuel inputs, potential carbon implications, etc.), how healthy the inputs are, how local is the production and distribution, etc.  Or when an agent is interested in what happens to a resource they created, for example what is the effect of their recycling efforts or material donations to an educational program.</p>
+<p>Also, this logic is used in other features, like "contribution economy" calculations.</p>
+<p>Terminology note:</p>
+<ul>
+<li><code>previous</code> and <code>next</code> bring back the element one flow step backwards or forwards</li>
+<li><code>track</code> and <code>trace</code> bring back the whole resource flow forwards or backwards, starting with a resource or an output event</li>
+</ul>
+<h3 id="previous-and-next-logic">Previous and next logic</h3>
+<p>Here is the logic finding the flow element that comes directly after a particular element (next for tracking) and immediately before a particular element (previous for tracing):</p>
 <ul>
 <li>For an EconomicResource:<ul>
-<li>after: EconomicEvents affecting it that are inputs to Processes, or transfer/move EconomicEvents with the resource defined as the <code>resourceInventoriedAs</code></li>
-<li>before: EconomicEvents affecting it that are outputs from Processes, or transfer/move EconomicEvents with the resource defined as the <code>toResourceInventoriedAs</code></li>
+<li>next:<ul>
+<li>EconomicEvents affecting it that are inputs to Processes (<code>resourceInventoriedAs</code>), or</li>
+<li>transfer (any kind) or move EconomicEvents with the EconomicResource referenced as <code>resourceInventoriedAs</code></li>
+</ul>
+</li>
+<li>previous:<ul>
+<li>EconomicEvents affecting it that are outputs from Processes (<code>resourceInventoriedAs</code>), or</li>
+<li>transfer (any kind) or move EconomicEvents with the EconomicResource referenced as <code>toResourceInventoriedAs</code></li>
+</ul>
+</li>
 </ul>
 </li>
 <li>For a Process:<ul>
-<li>after: EconomicEvents that are outputs</li>
-<li>before: EconomicEvents that are inputs</li>
+<li>next:<ul>
+<li>EconomicEvents that are outputs</li>
 </ul>
 </li>
-<li>For an EconomicEvent:<ul>
-<li>after: <ul>
+<li>previous:<ul>
+<li>EconomicEvents that are inputs</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>For an EconomicEvent:</p>
+<ul>
+<li>
+<p>next:</p>
+<ul>
 <li>a Process to which it is an input, or</li>
 <li>an EconomicResource which it affected as the output of a Process, or</li>
-<li>if it is a transfer or move event, the EconomicResource labelled <code>toResourceInventoriedAs</code></li>
+<li>if it is a transfer (any kind) or move event, the EconomicResource referenced as <code>toResourceInventoriedAs</code></li>
 </ul>
 </li>
-<li>before:<ul>
+<li>
+<p>previous:</p>
+<ul>
 <li>a Process from which it is an output, or</li>
-<li>if it is an input to a Process, the EconomicResource which it affects, or</li>
-<li>if it is a transfer or move event and the current EconomicResource is the toResourceInventoriedAs, then the previous EconomicResource is the resourceInventoriedAs</li>
+<li>an EconomicResource which it affected as the input of a Process, or</li>
+<li>if it is a transfer (any kind) or move event, the EconomicResource referenced as <code>resourceInventoriedAs</code></li>
+<li>if it is a pack event, the EconomicResource referenced as <code>containedIn</code></li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
-<h4 id="additional-special-logic">Additional special logic</h4>
-<p>When more than one resource of the same specification goes from input to output of the same process, use the tracking identifier if you need to track or trace the same resource. And example of this would be less-than-truckload shipments, where many separate resources with different destinations are included in the same shipment process.</p>
-<p>When dealing with resources that packed into and unpacked from a container resource, if the resource is currently packed, then the logic needs to follow the container resource until the resource is unpacked.</p>
-<p>When the same economic resource is both input and output of a process, sometimes a series of processes, such as for repair or quality testing or a workflow where a resource is refined through stages like writing/editing/etc, the stage must be identified, based on the kind of process the resource was last output of.</p>
+<h3 id="tracking-identifier-and-lot">Tracking identifier and lot</h3>
+<p>Currently, often companies' internal flow information is not public, although in many countries they are required to be able to provide input and output information when needed in a medical emergency, without connecting all the dots internally.  Also any organization can be missing resource flow data so that there are gaps in the flows, no matter the level of transparency.</p>
+<p>For these reasons, tracking identifier (often a serial number) and a standard lot identifier are currently used when food or medical tracing and tracking is required.  And in VF, they can be used whenever there is missing resource flow information for any reason.</p>
+<p>Note that in VF, for simplicity, besides <code>lot</code>, a lot identifier can be stored in the <code>trackingIdentifier</code> property.</p>
+<p>Also note that lots get "spread out" into splits of a resource or different types of resources.  For example, one cow could have a lot identifier, which when the cow goes through a butchering process will be included in all the cuts of beef from that cow.  Or one production batch of a medicine that contains many packages of the same medicine would have a lot identifier, which stays attached to the individual packages wherever they go.</p>
+<h3 id="track-and-trace-logic">Track and trace Logic</h3>
+<p>To gather a whole track or trace, the previous and next methods should be used in recursive logic, traveling down the flow and each branch of the flow, when there are many inputs or many outputs.  For most production flows, this will be relatively straight-forward.</p>
+<p>Sometimes the economic resource is both input and output of a process, sometimes a series of processes, such as for repair or quality testing or a workflow where a resource is refined through stages like writing/editing/etc. 
+In those cases, tracking and tracing logic needs to identify where in the flow paths the resource is located at each step of the flow.</p>
+<p>When dealing with resources that are packed into and unpacked from a container resource, if the resource has been packed, then the logic needs to follow the container resource until the resource (being traced} is unpacked, while also remembering the specific resource being followed.</p>
 
               
             </article>
