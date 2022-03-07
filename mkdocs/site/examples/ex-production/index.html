@@ -1652,7 +1652,7 @@
       <span class="l l-Scalar l-Scalar-Plain">om2:hasNumericalValue</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
 </code></pre></div>
 <h4 id="pack-unpack">Pack unpack</h4>
-<p>Simple pack and unpack of resources into and out of a container resource.</p>
+<p>Simple pack and unpack of resources into and out of a container resource, using <code>combine</code> and <code>separate</code>.</p>
 <p><img alt="pack unpack diagram" src="../../assets/examples/pack-unpack.png" /></p>
 <div class="highlight"><pre><span></span><code><span class="c1"># Example: Simple pack and unpack processes</span>
 
@@ -1673,6 +1673,7 @@
     <span class="nt">accountingQuantity</span><span class="p">:</span>
       <span class="l l-Scalar l-Scalar-Plain">om2:hasUnit</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">om2:one</span>
       <span class="l l-Scalar l-Scalar-Plain">om2:hasNumericalValue</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
+    <span class="nt">containedIn</span><span class="p">:</span>
 
   <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">med:3129ca8b-fcda-45be-bbda-294dc924d3b9</span>
     <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">EconomicResource</span>
@@ -1711,7 +1712,7 @@
   <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">med:b52a5815-fae9-43bf-be95-833b95dc0adb</span>
     <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">EconomicEvent</span>
     <span class="nt">inputOf</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">med:02b39a30-3e04-4305-9656-7f261aa63c84</span>
-    <span class="nt">action</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">accept</span>
+    <span class="nt">action</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">combine</span>
     <span class="nt">provider</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://medical.example/</span>
     <span class="nt">receiver</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://medical.example/</span>
     <span class="nt">resourceInventoriedAs</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">med:e1721a61-cd47-4556-84b9-8b1b81da15bf</span> <span class="c1"># a container</span>
@@ -1723,7 +1724,7 @@
   <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">med:b90b0b77-09a2-42e2-8bd4-e9ae2c1c6172</span>
     <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">EconomicEvent</span>
     <span class="nt">inputOf</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">med:02b39a30-3e04-4305-9656-7f261aa63c84</span>
-    <span class="nt">action</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">pack</span>
+    <span class="nt">action</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">combine</span>
     <span class="nt">provider</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://medical.example/</span>
     <span class="nt">receiver</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://medical.example/</span>
     <span class="nt">resourceInventoriedAs</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">med:3129ca8b-fcda-45be-bbda-294dc924d3b9</span> <span class="c1"># a medical gown</span>
@@ -1734,7 +1735,7 @@
   <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">med:a8236bbb-81e0-422d-9861-56d2417db0fb</span>
     <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">EconomicEvent</span>
     <span class="nt">inputOf</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">med:02b39a30-3e04-4305-9656-7f261aa63c84</span>
-    <span class="nt">action</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">pack</span>
+    <span class="nt">action</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">combine</span>
     <span class="nt">provider</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://medical.example/</span>
     <span class="nt">receiver</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://medical.example/</span>
     <span class="nt">resourceInventoriedAs</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">med:3129ca8b-fcda-45be-bbda-294dc924d3b0</span> <span class="c1"># a medical gown</span>
@@ -1745,7 +1746,7 @@
   <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">med:6f438393-7f87-4914-806c-e23a4fd15e89</span>
     <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">EconomicEvent</span>
     <span class="nt">inputOf</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">med:02b39a30-3e04-4305-9656-7f261aa63c84</span>
-    <span class="nt">action</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">pack</span>
+    <span class="nt">action</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">combine</span>
     <span class="nt">provider</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://medical.example/</span>
     <span class="nt">receiver</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://medical.example/</span>
     <span class="nt">resourceInventoriedAs</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">med:3129ca8b-fcda-45be-bbda-294dc924d3b1</span> <span class="c1"># a medical gown</span>
@@ -1756,14 +1757,14 @@
   <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">med:b52a5815-fae9-43bf-be95-833b95dc0adb</span>
     <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">EconomicEvent</span>
     <span class="nt">outputOf</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">med:02b39a30-3e04-4305-9656-7f261aa63c84</span>
-    <span class="nt">action</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">modify</span>
+    <span class="nt">action</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">produce</span>
     <span class="nt">provider</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://medical.example/</span>
     <span class="nt">receiver</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://medical.example/</span>
-    <span class="nt">resourceInventoriedAs</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">med:e1721a61-cd47-4556-84b9-8b1b81da15bf</span> <span class="c1"># a container</span>
+    <span class="nt">resourceConformsTo</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://www.wikidata.org/wiki/Q2127468</span> <span class="c1"># packaging unit</span>
     <span class="nt">resourceQuantity</span><span class="p">:</span>
       <span class="l l-Scalar l-Scalar-Plain">om2:hasUnit</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">om2:one</span>
       <span class="l l-Scalar l-Scalar-Plain">om2:hasNumericalValue</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
-    <span class="nt">note</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Container is full at this point.</span>
+    <span class="nt">note</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">This is a new resource, a package containing all inputs.</span>
 
   <span class="c1"># Economic resources after packing</span>
 
@@ -1774,6 +1775,7 @@
     <span class="nt">accountingQuantity</span><span class="p">:</span>
       <span class="l l-Scalar l-Scalar-Plain">om2:hasUnit</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">om2:one</span>
       <span class="l l-Scalar l-Scalar-Plain">om2:hasNumericalValue</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
+    <span class="nt">containedIn</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">med:e1721a61-cd47-4556-84b9-8b1b81da564h</span>
 
   <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">med:3129ca8b-fcda-45be-bbda-294dc924d3b9</span>
     <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">EconomicResource</span>
@@ -1782,7 +1784,7 @@
     <span class="nt">accountingQuantity</span><span class="p">:</span>
       <span class="l l-Scalar l-Scalar-Plain">om2:hasUnit</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">om2:one</span>
       <span class="l l-Scalar l-Scalar-Plain">om2:hasNumericalValue</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
-    <span class="nt">containedIn</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">med:e1721a61-cd47-4556-84b9-8b1b81da15bf</span>
+    <span class="nt">containedIn</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">med:e1721a61-cd47-4556-84b9-8b1b81da564h</span>
 
   <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">med:3129ca8b-fcda-45be-bbda-294dc924d3b0</span>
     <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">EconomicResource</span>
@@ -1791,7 +1793,7 @@
     <span class="nt">accountingQuantity</span><span class="p">:</span>
       <span class="l l-Scalar l-Scalar-Plain">om2:hasUnit</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">om2:one</span>
       <span class="l l-Scalar l-Scalar-Plain">om2:hasNumericalValue</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
-    <span class="nt">containedIn</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">med:e1721a61-cd47-4556-84b9-8b1b81da15bf</span>
+    <span class="nt">containedIn</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">med:e1721a61-cd47-4556-84b9-8b1b81da564h</span>
 
   <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">med:3129ca8b-fcda-45be-bbda-294dc924d3b1</span>
     <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">EconomicResource</span>
@@ -1800,56 +1802,62 @@
     <span class="nt">accountingQuantity</span><span class="p">:</span>
       <span class="l l-Scalar l-Scalar-Plain">om2:hasUnit</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">om2:one</span>
       <span class="l l-Scalar l-Scalar-Plain">om2:hasNumericalValue</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
-    <span class="nt">containedIn</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">med:e1721a61-cd47-4556-84b9-8b1b81da15bf</span>
+    <span class="nt">containedIn</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">med:e1721a61-cd47-4556-84b9-8b1b81da564h</span>
 
-  <span class="c1"># The container is transferred to the laundry</span>
+  <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">med:e1721a61-cd47-4556-84b9-8b1b81da564h</span>
+    <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">EconomicResource</span>
+    <span class="nt">conformsTo</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://www.wikidata.org/wiki/Q2127468</span> <span class="c1"># packaging unit</span>
+    <span class="nt">trackingIdentifier</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">pack6789</span>
+    <span class="nt">accountingQuantity</span><span class="p">:</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasUnit</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">om2:one</span>
+      <span class="l l-Scalar l-Scalar-Plain">om2:hasNumericalValue</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
+
+  <span class="c1"># The package is transferred to the laundry</span>
 
   <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">med:b52a5815-fae9-43bf-be95-833berqojdasf7</span>
     <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">EconomicEvent</span>
     <span class="nt">action</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">transfer-custody</span>
     <span class="nt">provider</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://medical.example/</span>
     <span class="nt">receiver</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://laundry.example/</span>
-    <span class="nt">resourceInventoriedAs</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">med:e1721a61-cd47-4556-84b9-8b1b81da15bf</span> <span class="c1"># the container</span>
+    <span class="nt">resourceInventoriedAs</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">med:e1721a61-cd47-4556-84b9-8b1b81da564h</span> <span class="c1"># the package</span>
     <span class="nt">resourceQuantity</span><span class="p">:</span>
       <span class="l l-Scalar l-Scalar-Plain">om2:hasUnit</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">om2:one</span>
       <span class="l l-Scalar l-Scalar-Plain">om2:hasNumericalValue</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
-    <span class="nt">note</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Container is all that is needed here.</span>
+    <span class="nt">note</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Contains gowns and container.</span>
 
-  <span class="c1"># The container is unpacked at the laundry</span>
+  <span class="c1"># The package is unpacked at the laundry</span>
 
-  <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">wash:8e5fe80d-a769-4bd5-89e5-2136d33eab9f</span>
+  <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">wash:33e8933b-ff73-4a01-964a-ca7a98893083</span>
     <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Process</span>
     <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Unpack medical gowns</span>
     <span class="nt">note</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Each gown is scanned for tracking identifier as unpacked</span>
 
-  <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">wash:33e8933b-ff73-4a01-964a-ca7a98893083</span>
+  <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">wash:33e8933b-ff73-4a01-964a-ca7a98893</span>
     <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">EconomicEvent</span>
-    <span class="nt">inputOf</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">wash:8e5fe80d-a769-4bd5-89e5-2136d33eab9f</span>
-    <span class="nt">action</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">accept</span>
+    <span class="nt">inputOf</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">wash:33e8933b-ff73-4a01-964a-ca7a98893083</span>
+    <span class="nt">action</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">consume</span>
     <span class="nt">provider</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://laundry.example/</span>
     <span class="nt">receiver</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://laundry.example/</span>
-    <span class="nt">resourceInventoriedAs</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">med:e1721a61-cd47-4556-84b9-8b1b81da15bf</span> <span class="c1"># a container</span>
+    <span class="nt">resourceInventoriedAs</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">med:e1721a61-cd47-4556-84b9-8b1b81da564h</span> <span class="c1"># the package</span>
     <span class="nt">resourceQuantity</span><span class="p">:</span>
       <span class="l l-Scalar l-Scalar-Plain">om2:hasUnit</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">om2:one</span>
       <span class="l l-Scalar l-Scalar-Plain">om2:hasNumericalValue</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
-    <span class="nt">note</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Container is full at this point.</span>
 
   <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">wash:60f4204e-b8d2-4026-8577-102c3f82c0af</span>
     <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">EconomicEvent</span>
     <span class="nt">outputOf</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">wash:33e8933b-ff73-4a01-964a-ca7a98893083</span>
-    <span class="nt">action</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">modify</span>
+    <span class="nt">action</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">separate</span>
     <span class="nt">provider</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://laundry.example/</span>
     <span class="nt">receiver</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://laundry.example/</span>
     <span class="nt">resourceInventoriedAs</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">med:e1721a61-cd47-4556-84b9-8b1b81da15bf</span> <span class="c1"># a container</span>
     <span class="nt">resourceQuantity</span><span class="p">:</span>
       <span class="l l-Scalar l-Scalar-Plain">om2:hasUnit</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">om2:one</span>
       <span class="l l-Scalar l-Scalar-Plain">om2:hasNumericalValue</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
-    <span class="nt">note</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Container is full at this point.</span>
 
   <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">wash:60f4204e-b8d2-4026-8577-102c3fkm98g1</span>
     <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">EconomicEvent</span>
     <span class="nt">outputOf</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">wash:33e8933b-ff73-4a01-964a-ca7a98893083</span>
-    <span class="nt">action</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">unpack</span>
+    <span class="nt">action</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">separate</span>
     <span class="nt">provider</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://laundry.example/</span>
     <span class="nt">receiver</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://laundry.example/</span>
     <span class="nt">resourceInventoriedAs</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">med:3129ca8b-fcda-45be-bbda-294dc924d3b9</span> <span class="c1"># a medical gown</span>
@@ -1860,7 +1868,7 @@
   <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">wash:60f4204e-b8d2-4026-8577-102c3fsd89cv</span>
     <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">EconomicEvent</span>
     <span class="nt">outputOf</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">wash:33e8933b-ff73-4a01-964a-ca7a98893083</span>
-    <span class="nt">action</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">unpack</span>
+    <span class="nt">action</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">separate</span>
     <span class="nt">provider</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://laundry.example/</span>
     <span class="nt">receiver</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://laundry.example/</span>
     <span class="nt">resourceInventoriedAs</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">med:3129ca8b-fcda-45be-bbda-294dc924d3b0</span> <span class="c1"># a medical gown</span>
@@ -1871,7 +1879,7 @@
   <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">wash:60f4204e-b8d2-4026-8577-102c3fd9kjre</span>
     <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">EconomicEvent</span>
     <span class="nt">outputOf</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">wash:33e8933b-ff73-4a01-964a-ca7a98893083</span>
-    <span class="nt">action</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">unpack</span>
+    <span class="nt">action</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">separate</span>
     <span class="nt">provider</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://laundry.example/</span>
     <span class="nt">receiver</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://laundry.example/</span>
     <span class="nt">resourceInventoriedAs</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">med:3129ca8b-fcda-45be-bbda-294dc924d3b1</span> <span class="c1"># a medical gown</span>

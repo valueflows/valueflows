@@ -49,7 +49,6 @@ Here is the logic finding the flow element that comes directly after a particula
         * a Process from which it is an output, or
         * an EconomicResource which it affected as the input of a Process, or
         * if it is a transfer (any kind) or move event, the EconomicResource referenced as `resourceInventoriedAs`
-        * if it is a pack event, the EconomicResource referenced as `containedIn`
 
 ### Tracking identifier and lot
 
@@ -66,7 +65,4 @@ Also note that lots get "spread out" into splits of a resource or different type
 
 To gather a whole track or trace, the previous and next methods should be used in recursive logic, traveling down the flow and each branch of the flow, when there are many inputs or many outputs.  For most production flows, this will be relatively straight-forward.
 
-Sometimes the economic resource is both input and output of a process, sometimes a series of processes, such as for repair or quality testing or a workflow where a resource is refined through stages like writing/editing/etc. 
-In those cases, tracking and tracing logic needs to identify where in the flow paths the resource is located at each step of the flow.
-
-When dealing with resources that are packed into and unpacked from a container resource, if the resource has been packed, then the logic needs to follow the container resource until the resource (being traced} is unpacked, while also remembering the specific resource being followed.
+Further detail will be provided soon.

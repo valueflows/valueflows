@@ -1478,17 +1478,17 @@
 <h4 id="definitions">Definitions</h4>
 <p>All flows use an action property to designate what the flow is doing and how it will affect an economic resource (or not).  Actions are defined as follows.</p>
 <ul>
-<li>vf:produce - new resource created in that process or an existing stock resource added to</li>
-<li>vf:use - for example a tool used in process; after the process, the tool still exists</li>
-<li>vf:consume - for example an ingredient or component composed into the output, after the process the ingredient is gone</li>
+<li>vf:produce - new resource created in that process or an existing stock resource of the same type added to</li>
+<li>vf:use - for example a tool used in process; after the process, the tool still exists, but during the process, the tool is unavailable</li>
+<li>vf:consume - for example an ingredient or component used up or transformed into the output, after the process the input is gone</li>
 <li>vf:cite - for example a design file, neither used nor consumed, the file remains available at all times</li>
 <li>vf:work - labor power applied to a process</li>
 <li>vf:pickup -  transported resource or person enters the process; the same resource will appear in output with <em>vf:dropoff</em></li>
 <li>vf:dropoff -  transported resource or person leaves the process; the same resource or person appeared in input with <em>vf:pickup</em></li>
-<li>vf:accept - in processes like repair or modification or testing, the same resource will appear in output with <em>vf:modify</em></li>
-<li>vf:modify - in processes like repair or modification, the same resource will appear in input with <em>vf:accept</em></li>
-<li>vf:pack - put a resource into a container resource; the container resource is input with <em>vf:accept</em></li>
-<li>vf:unpack - remove a resource from a container resource; the container resource is input with <em>vf:accept</em></li>
+<li>vf:accept - input to processes like repair or modification or testing, the same resource will appear in output with <em>vf:modify</em></li>
+<li>vf:modify - output of processes like repair or modification or testing, the same resource will appear in input with <em>vf:accept</em></li>
+<li>vf:combine - put a resource in a package or combination resource; the same resource will appear later with <em>vf:separate</em></li>
+<li>vf:separate - remove a resource from a package or combination resource; the same resource appeared as input with <em>vf:combine</em></li>
 <li>vf:deliver-service - new service produced and delivered (a service implies that an agent actively receives the service)</li>
 <li>vf:transfer-all-rights - give full (in the human realm) rights and responsibilities to another agent, without transferring physical custody</li>
 <li>vf:transfer-custody - give physical custody and control of a resource, without full accounting or ownership rights</li>
@@ -1591,20 +1591,20 @@
 <td>accept</td>
 </tr>
 <tr>
-<td>pack</td>
+<td>combine</td>
 <td>No effect</td>
 <td>Decrement</td>
 <td>Input</td>
 <td>add containedIn</td>
-<td>modify</td>
+<td>separate</td>
 </tr>
 <tr>
-<td>unpack</td>
+<td>separate</td>
 <td>No effect</td>
 <td>Increment</td>
 <td>Output</td>
 <td>remove containedIn</td>
-<td>accept</td>
+<td>combine</td>
 </tr>
 <tr>
 <td>transfer-custody</td>

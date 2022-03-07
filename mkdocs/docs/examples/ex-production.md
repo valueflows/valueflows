@@ -334,7 +334,7 @@ Simple repair process with typical inputs and outputs.  The same economic resour
 
 #### Pack unpack
 
-Simple pack and unpack of resources into and out of a container resource.
+Simple pack and unpack of resources into and out of a container resource, using `combine` and `separate`.
 
 ![pack unpack diagram](../assets/examples/pack-unpack.png)
 
@@ -358,6 +358,7 @@ Simple pack and unpack of resources into and out of a container resource.
     accountingQuantity:
       om2:hasUnit: om2:one
       om2:hasNumericalValue: 1
+    containedIn:
 
   - '@id': med:3129ca8b-fcda-45be-bbda-294dc924d3b9
     '@type': EconomicResource
@@ -396,7 +397,7 @@ Simple pack and unpack of resources into and out of a container resource.
   - '@id': med:b52a5815-fae9-43bf-be95-833b95dc0adb
     '@type': EconomicEvent
     inputOf: med:02b39a30-3e04-4305-9656-7f261aa63c84
-    action: accept
+    action: combine
     provider: https://medical.example/
     receiver: https://medical.example/
     resourceInventoriedAs: med:e1721a61-cd47-4556-84b9-8b1b81da15bf # a container
@@ -408,7 +409,7 @@ Simple pack and unpack of resources into and out of a container resource.
   - '@id': med:b90b0b77-09a2-42e2-8bd4-e9ae2c1c6172
     '@type': EconomicEvent
     inputOf: med:02b39a30-3e04-4305-9656-7f261aa63c84
-    action: pack
+    action: combine
     provider: https://medical.example/
     receiver: https://medical.example/
     resourceInventoriedAs: med:3129ca8b-fcda-45be-bbda-294dc924d3b9 # a medical gown
@@ -419,7 +420,7 @@ Simple pack and unpack of resources into and out of a container resource.
   - '@id': med:a8236bbb-81e0-422d-9861-56d2417db0fb
     '@type': EconomicEvent
     inputOf: med:02b39a30-3e04-4305-9656-7f261aa63c84
-    action: pack
+    action: combine
     provider: https://medical.example/
     receiver: https://medical.example/
     resourceInventoriedAs: med:3129ca8b-fcda-45be-bbda-294dc924d3b0 # a medical gown
@@ -430,7 +431,7 @@ Simple pack and unpack of resources into and out of a container resource.
   - '@id': med:6f438393-7f87-4914-806c-e23a4fd15e89
     '@type': EconomicEvent
     inputOf: med:02b39a30-3e04-4305-9656-7f261aa63c84
-    action: pack
+    action: combine
     provider: https://medical.example/
     receiver: https://medical.example/
     resourceInventoriedAs: med:3129ca8b-fcda-45be-bbda-294dc924d3b1 # a medical gown
@@ -441,14 +442,14 @@ Simple pack and unpack of resources into and out of a container resource.
   - '@id': med:b52a5815-fae9-43bf-be95-833b95dc0adb
     '@type': EconomicEvent
     outputOf: med:02b39a30-3e04-4305-9656-7f261aa63c84
-    action: modify
+    action: produce
     provider: https://medical.example/
     receiver: https://medical.example/
-    resourceInventoriedAs: med:e1721a61-cd47-4556-84b9-8b1b81da15bf # a container
+    resourceConformsTo: https://www.wikidata.org/wiki/Q2127468 # packaging unit
     resourceQuantity:
       om2:hasUnit: om2:one
       om2:hasNumericalValue: 1
-    note: Container is full at this point.
+    note: This is a new resource, a package containing all inputs.
 
   # Economic resources after packing
 
@@ -459,6 +460,7 @@ Simple pack and unpack of resources into and out of a container resource.
     accountingQuantity:
       om2:hasUnit: om2:one
       om2:hasNumericalValue: 1
+    containedIn: med:e1721a61-cd47-4556-84b9-8b1b81da564h
 
   - '@id': med:3129ca8b-fcda-45be-bbda-294dc924d3b9
     '@type': EconomicResource
@@ -467,7 +469,7 @@ Simple pack and unpack of resources into and out of a container resource.
     accountingQuantity:
       om2:hasUnit: om2:one
       om2:hasNumericalValue: 1
-    containedIn: med:e1721a61-cd47-4556-84b9-8b1b81da15bf
+    containedIn: med:e1721a61-cd47-4556-84b9-8b1b81da564h
 
   - '@id': med:3129ca8b-fcda-45be-bbda-294dc924d3b0
     '@type': EconomicResource
@@ -476,7 +478,7 @@ Simple pack and unpack of resources into and out of a container resource.
     accountingQuantity:
       om2:hasUnit: om2:one
       om2:hasNumericalValue: 1
-    containedIn: med:e1721a61-cd47-4556-84b9-8b1b81da15bf
+    containedIn: med:e1721a61-cd47-4556-84b9-8b1b81da564h
 
   - '@id': med:3129ca8b-fcda-45be-bbda-294dc924d3b1
     '@type': EconomicResource
@@ -485,56 +487,62 @@ Simple pack and unpack of resources into and out of a container resource.
     accountingQuantity:
       om2:hasUnit: om2:one
       om2:hasNumericalValue: 1
-    containedIn: med:e1721a61-cd47-4556-84b9-8b1b81da15bf
+    containedIn: med:e1721a61-cd47-4556-84b9-8b1b81da564h
 
-  # The container is transferred to the laundry
+  - '@id': med:e1721a61-cd47-4556-84b9-8b1b81da564h
+    '@type': EconomicResource
+    conformsTo: https://www.wikidata.org/wiki/Q2127468 # packaging unit
+    trackingIdentifier: pack6789
+    accountingQuantity:
+      om2:hasUnit: om2:one
+      om2:hasNumericalValue: 1
+
+  # The package is transferred to the laundry
 
   - '@id': med:b52a5815-fae9-43bf-be95-833berqojdasf7
     '@type': EconomicEvent
     action: transfer-custody
     provider: https://medical.example/
     receiver: https://laundry.example/
-    resourceInventoriedAs: med:e1721a61-cd47-4556-84b9-8b1b81da15bf # the container
+    resourceInventoriedAs: med:e1721a61-cd47-4556-84b9-8b1b81da564h # the package
     resourceQuantity:
       om2:hasUnit: om2:one
       om2:hasNumericalValue: 1
-    note: Container is all that is needed here.
+    note: Contains gowns and container.
 
-  # The container is unpacked at the laundry
+  # The package is unpacked at the laundry
   
-  - '@id': wash:8e5fe80d-a769-4bd5-89e5-2136d33eab9f
+  - '@id': wash:33e8933b-ff73-4a01-964a-ca7a98893083
     '@type': Process
     name: Unpack medical gowns
     note: Each gown is scanned for tracking identifier as unpacked
 
-  - '@id': wash:33e8933b-ff73-4a01-964a-ca7a98893083
+  - '@id': wash:33e8933b-ff73-4a01-964a-ca7a98893
     '@type': EconomicEvent
-    inputOf: wash:8e5fe80d-a769-4bd5-89e5-2136d33eab9f
-    action: accept
+    inputOf: wash:33e8933b-ff73-4a01-964a-ca7a98893083
+    action: consume
     provider: https://laundry.example/
     receiver: https://laundry.example/
-    resourceInventoriedAs: med:e1721a61-cd47-4556-84b9-8b1b81da15bf # a container
+    resourceInventoriedAs: med:e1721a61-cd47-4556-84b9-8b1b81da564h # the package
     resourceQuantity:
       om2:hasUnit: om2:one
       om2:hasNumericalValue: 1
-    note: Container is full at this point.
 
   - '@id': wash:60f4204e-b8d2-4026-8577-102c3f82c0af
     '@type': EconomicEvent
     outputOf: wash:33e8933b-ff73-4a01-964a-ca7a98893083
-    action: modify
+    action: separate
     provider: https://laundry.example/
     receiver: https://laundry.example/
     resourceInventoriedAs: med:e1721a61-cd47-4556-84b9-8b1b81da15bf # a container
     resourceQuantity:
       om2:hasUnit: om2:one
       om2:hasNumericalValue: 1
-    note: Container is full at this point.
 
   - '@id': wash:60f4204e-b8d2-4026-8577-102c3fkm98g1
     '@type': EconomicEvent
     outputOf: wash:33e8933b-ff73-4a01-964a-ca7a98893083
-    action: unpack
+    action: separate
     provider: https://laundry.example/
     receiver: https://laundry.example/
     resourceInventoriedAs: med:3129ca8b-fcda-45be-bbda-294dc924d3b9 # a medical gown
@@ -545,7 +553,7 @@ Simple pack and unpack of resources into and out of a container resource.
   - '@id': wash:60f4204e-b8d2-4026-8577-102c3fsd89cv
     '@type': EconomicEvent
     outputOf: wash:33e8933b-ff73-4a01-964a-ca7a98893083
-    action: unpack
+    action: separate
     provider: https://laundry.example/
     receiver: https://laundry.example/
     resourceInventoriedAs: med:3129ca8b-fcda-45be-bbda-294dc924d3b0 # a medical gown
@@ -556,7 +564,7 @@ Simple pack and unpack of resources into and out of a container resource.
   - '@id': wash:60f4204e-b8d2-4026-8577-102c3fd9kjre
     '@type': EconomicEvent
     outputOf: wash:33e8933b-ff73-4a01-964a-ca7a98893083
-    action: unpack
+    action: separate
     provider: https://laundry.example/
     receiver: https://laundry.example/
     resourceInventoriedAs: med:3129ca8b-fcda-45be-bbda-294dc924d3b1 # a medical gown
