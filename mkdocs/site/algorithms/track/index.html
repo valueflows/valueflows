@@ -1376,7 +1376,6 @@
 <li>a Process from which it is an output, or</li>
 <li>an EconomicResource which it affected as the input of a Process, or</li>
 <li>if it is a transfer (any kind) or move event, the EconomicResource referenced as <code>resourceInventoriedAs</code></li>
-<li>if it is a pack event, the EconomicResource referenced as <code>containedIn</code></li>
 </ul>
 </li>
 </ul>
@@ -1389,9 +1388,7 @@
 <p>Also note that lots get "spread out" into splits of a resource or different types of resources.  For example, one cow could have a lot identifier, which when the cow goes through a butchering process will be included in all the cuts of beef from that cow.  Or one production batch of a medicine that contains many packages of the same medicine would have a lot identifier, which stays attached to the individual packages wherever they go.</p>
 <h3 id="track-and-trace-logic">Track and trace Logic</h3>
 <p>To gather a whole track or trace, the previous and next methods should be used in recursive logic, traveling down the flow and each branch of the flow, when there are many inputs or many outputs.  For most production flows, this will be relatively straight-forward.</p>
-<p>Sometimes the economic resource is both input and output of a process, sometimes a series of processes, such as for repair or quality testing or a workflow where a resource is refined through stages like writing/editing/etc. 
-In those cases, tracking and tracing logic needs to identify where in the flow paths the resource is located at each step of the flow.</p>
-<p>When dealing with resources that are packed into and unpacked from a container resource, if the resource has been packed, then the logic needs to follow the container resource until the resource (being traced} is unpacked, while also remembering the specific resource being followed.</p>
+<p>Further detail will be provided soon.</p>
 
               
             </article>
