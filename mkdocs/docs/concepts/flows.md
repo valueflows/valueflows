@@ -49,17 +49,17 @@ Intents, Commitments, and Economic Events can occur at any granularity that is n
 
 All flows use an action property to designate what the flow is doing and how it will affect an economic resource (or not).  Actions are defined as follows.
 
-* vf:produce - new resource created in that process or an existing stock resource added to
-* vf:use - for example a tool used in process; after the process, the tool still exists
-* vf:consume - for example an ingredient or component composed into the output, after the process the ingredient is gone
+* vf:produce - new resource created in that process or an addition to an existing stock resource of the same type
+* vf:use - for example a tool used in process; after the process, the tool still exists, but during the process, the tool is unavailable
+* vf:consume - for example an ingredient or component used up or transformed into the output, after the process the input is gone
 * vf:cite - for example a design file, neither used nor consumed, the file remains available at all times
 * vf:work - labor power applied to a process
 * vf:pickup -  transported resource or person enters the process; the same resource will appear in output with *vf:dropoff*
 * vf:dropoff -  transported resource or person leaves the process; the same resource or person appeared in input with *vf:pickup*
-* vf:accept - in processes like repair or modification or testing, the same resource will appear in output with *vf:modify*
-* vf:modify - in processes like repair or modification, the same resource will appear in input with *vf:accept*
-* vf:pack - put a resource into a container resource; the container resource is input with *vf:accept*
-* vf:unpack - remove a resource from a container resource; the container resource is input with *vf:accept*
+* vf:accept - input to processes like repair or modification or testing, the same resource will appear in output with *vf:modify*
+* vf:modify - output of processes like repair or modification or testing, the same resource will appear in input with *vf:accept*
+* vf:combine - put a resource in a package or combination resource; the same resource might appear later with *vf:separate*
+* vf:separate - remove a resource from a package or combination resource; the same resource appeared as input with *vf:combine*
 * vf:deliver-service - new service produced and delivered (a service implies that an agent actively receives the service)
 * vf:transfer-all-rights - give full (in the human realm) rights and responsibilities to another agent, without transferring physical custody
 * vf:transfer-custody - give physical custody and control of a resource, without full accounting or ownership rights
@@ -82,8 +82,8 @@ pickup | No effect | No effect  | Input | N/A | dropoff |
 dropoff | No effect | No effect | Output | currentLocation(4) | pickup |
 accept | No effect | Decrement  | Input | N/A | modify |
 modify | No effect | Increment  | Output | N/A | accept |
-pack | No effect | Decrement  | Input | add containedIn | modify |
-unpack | No effect | Increment | Output | remove containedIn | accept |
+combine | No effect | Decrement  | Input | add containedIn | separate |
+separate | No effect | Increment | Output | remove containedIn | combine |
 transfer-custody | No effect | Decr+Incr(2) | N/A | currentLocation(4) | N/A |
 transfer-all-rights | Decr+Incr(2) | No effect | N/A | N/A | N/A |
 transfer | Decr+Incr(2) | Decr+Incr(2) | N/A | currentLocation(4) | N/A |
