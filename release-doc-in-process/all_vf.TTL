@@ -297,10 +297,10 @@ vf:recipeClauseOf
 vf:plannedWithin
         a                   owl:ObjectProperty ;
         rdfs:label          "planned within"@en ;
-        rdfs:domain         vf:Process ;
+        rdfs:domain         [ owl:unionOf (vf:Process vf:EconomicEvent) ] ;
         rdfs:range          vf:Plan ;
         vs:term_status      "testing" ;
-        rdfs:comment        "The process with its inputs and outputs is part of the plan."@en ;
+        rdfs:comment        "The transfer or process with its inputs and outputs is part of the plan."@en ;
         .
 
 vf:independentDemandOf
