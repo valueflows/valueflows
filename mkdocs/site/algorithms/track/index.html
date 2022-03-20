@@ -1085,13 +1085,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#previous-and-next-logic" class="md-nav__link">
-    Previous and next logic
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#tracking-identifier-and-lot" class="md-nav__link">
     Tracking identifier and lot
   </a>
@@ -1280,13 +1273,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#previous-and-next-logic" class="md-nav__link">
-    Previous and next logic
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#tracking-identifier-and-lot" class="md-nav__link">
     Tracking identifier and lot
   </a>
@@ -1332,62 +1318,13 @@
 <li><code>previous</code> and <code>next</code> bring back the element one flow step backwards or forwards</li>
 <li><code>track</code> and <code>trace</code> bring back the whole resource flow forwards or backwards, starting with a resource or an output event</li>
 </ul>
-<h3 id="previous-and-next-logic">Previous and next logic</h3>
-<p>Here is the logic finding the flow element that comes directly after a particular element (next for tracking) and immediately before a particular element (previous for tracing):</p>
-<ul>
-<li>For an EconomicResource:<ul>
-<li>next:<ul>
-<li>EconomicEvents affecting it that are inputs to Processes (<code>resourceInventoriedAs</code>), or</li>
-<li>transfer (any kind) or move EconomicEvents with the EconomicResource referenced as <code>resourceInventoriedAs</code></li>
-</ul>
-</li>
-<li>previous:<ul>
-<li>EconomicEvents affecting it that are outputs from Processes (<code>resourceInventoriedAs</code>), or</li>
-<li>transfer (any kind) or move EconomicEvents with the EconomicResource referenced as <code>toResourceInventoriedAs</code></li>
-</ul>
-</li>
-</ul>
-</li>
-<li>For a Process:<ul>
-<li>next:<ul>
-<li>EconomicEvents that are outputs</li>
-</ul>
-</li>
-<li>previous:<ul>
-<li>EconomicEvents that are inputs</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>
-<p>For an EconomicEvent:</p>
-<ul>
-<li>
-<p>next:</p>
-<ul>
-<li>a Process to which it is an input, or</li>
-<li>an EconomicResource which it affected as the output of a Process, or</li>
-<li>if it is a transfer (any kind) or move event, the EconomicResource referenced as <code>toResourceInventoriedAs</code></li>
-</ul>
-</li>
-<li>
-<p>previous:</p>
-<ul>
-<li>a Process from which it is an output, or</li>
-<li>an EconomicResource which it affected as the input of a Process, or</li>
-<li>if it is a transfer (any kind) or move event, the EconomicResource referenced as <code>resourceInventoriedAs</code></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
 <h3 id="tracking-identifier-and-lot">Tracking identifier and lot</h3>
 <p>Currently, often companies' internal flow information is not public, although in many countries they are required to be able to provide input and output information when needed in a medical emergency, without connecting all the dots internally.  Also any organization can be missing resource flow data so that there are gaps in the flows, no matter the level of transparency.</p>
 <p>For these reasons, tracking identifier (often a serial number) and a standard lot identifier are currently used when food or medical tracing and tracking is required.  And in VF, they can be used whenever there is missing resource flow information for any reason.</p>
 <p>Note that in VF, for simplicity, besides <code>lot</code>, a lot identifier can be stored in the <code>trackingIdentifier</code> property.</p>
 <p>Also note that lots get "spread out" into splits of a resource or different types of resources.  For example, one cow could have a lot identifier, which when the cow goes through a butchering process will be included in all the cuts of beef from that cow.  Or one production batch of a medicine that contains many packages of the same medicine would have a lot identifier, which stays attached to the individual packages wherever they go.</p>
 <h3 id="track-and-trace-logic">Track and trace Logic</h3>
-<p>To gather a whole track or trace, the previous and next methods should be used in recursive logic, traveling down the flow and each branch of the flow, when there are many inputs or many outputs.  For most production flows, this will be relatively straight-forward.</p>
+<p>To gather a whole track or trace, the previous and next methods should be used in recursive logic, traveling down the flow and each branch of the flow, when there are many inputs or many outputs.</p>
 <p>Further detail will be provided soon.</p>
 
               
