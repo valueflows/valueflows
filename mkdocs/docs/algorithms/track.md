@@ -23,33 +23,6 @@ Terminology note:
 * `previous` and `next` bring back the element one flow step backwards or forwards
 * `track` and `trace` bring back the whole resource flow forwards or backwards, starting with a resource or an output event
 
-### Previous and next logic
-
-Here is the logic finding the flow element that comes directly after a particular element (next for tracking) and immediately before a particular element (previous for tracing):
-
-* For an EconomicResource:
-    * next:
-        * EconomicEvents affecting it that are inputs to Processes (`resourceInventoriedAs`), or
-        * transfer (any kind) or move EconomicEvents with the EconomicResource referenced as `resourceInventoriedAs`
-    * previous:
-        * EconomicEvents affecting it that are outputs from Processes (`resourceInventoriedAs`), or
-        * transfer (any kind) or move EconomicEvents with the EconomicResource referenced as `toResourceInventoriedAs`
-* For a Process:
-    * next:
-        * EconomicEvents that are outputs
-    * previous:
-        * EconomicEvents that are inputs
-* For an EconomicEvent:
-    * next:
-        * a Process to which it is an input, or
-        * an EconomicResource which it affected as the output of a Process, or
-        * if it is a transfer (any kind) or move event, the EconomicResource referenced as `toResourceInventoriedAs`
-
-    * previous:
-        * a Process from which it is an output, or
-        * an EconomicResource which it affected as the input of a Process, or
-        * if it is a transfer (any kind) or move event, the EconomicResource referenced as `resourceInventoriedAs`
-
 ### Tracking identifier and lot
 
 Currently, often companies' internal flow information is not public, although in many countries they are required to be able to provide input and output information when needed in a medical emergency, without connecting all the dots internally.  Also any organization can be missing resource flow data so that there are gaps in the flows, no matter the level of transparency.
@@ -63,6 +36,6 @@ Also note that lots get "spread out" into splits of a resource or different type
 
 ### Track and trace Logic
 
-To gather a whole track or trace, the previous and next methods should be used in recursive logic, traveling down the flow and each branch of the flow, when there are many inputs or many outputs.  For most production flows, this will be relatively straight-forward.
+To gather a whole track or trace, the previous and next methods should be used in recursive logic, traveling down the flow and each branch of the flow, when there are many inputs or many outputs.
 
 Further detail will be provided soon.
