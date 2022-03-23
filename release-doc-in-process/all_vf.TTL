@@ -27,7 +27,7 @@
 #    Classes
 #################################################################
 
-# ABSTRACT / CLASSIFICATION CLASSES (KNOWLEDGE LAYER)
+# KNOWLEDGE LAYER CLASSES
 
 vf:Action  a                 owl:Class ;
         rdfs:label           "Action"@en ;
@@ -128,7 +128,7 @@ vf:ScenarioDefinition a     owl:Class ;
         .
 
 
-# PLAN CLASSES
+# PLANNING LAYER CLASSES
 
 vf:Plan  a                  owl:Class ;
         rdfs:label          "Plan"@en ;
@@ -185,7 +185,7 @@ vf:Scenario  a              owl:Class ;
         .
 
 
-# OBSERVATION CLASSES
+# OBSERVATION LAYER CLASSES
 
 vf:EconomicResource  a      owl:Class ;
         rdfs:label          "Economic Resource"@en ;
