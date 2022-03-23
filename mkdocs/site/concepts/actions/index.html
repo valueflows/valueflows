@@ -13,7 +13,7 @@
     
     
       
-        <title>Transfers - Valueflows</title>
+        <title>Actions - Valueflows</title>
       
     
     
@@ -65,7 +65,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#transfers" class="md-skip">
+        <a href="#action-definitions" class="md-skip">
           Skip to content
         </a>
       
@@ -99,7 +99,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Transfers
+              Actions
             
           </span>
         </div>
@@ -636,11 +636,57 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../actions/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Actions
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Actions
       </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#action-definitions" class="md-nav__link">
+    Action Definitions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#action-behaviors" class="md-nav__link">
+    Action Behaviors
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -664,21 +710,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../transfers/" class="md-nav__link">
         Transfers
       </a>
-      
     </li>
   
 
@@ -1231,8 +1267,28 @@
   
   
   
-    
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#action-definitions" class="md-nav__link">
+    Action Definitions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#action-behaviors" class="md-nav__link">
+    Action Behaviors
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -1245,23 +1301,192 @@
               
                 
 
-<h1 id="transfers">Transfers</h1>
-<p>One kind of transfer is an activity that re-assigns rights and responsibilities for an economic resource from one agent to another.  A second kind is an activity that operationally changes physical custody or possession of an economic resource from one agent to another, without affecting rights.</p>
-<p>Note that a transfer is a one-way activity.  Two or more reciprocal transfers form an exchange.</p>
-<p>We think that now, and more so in the future, there will be more gradations of rights and responsibilities for resources than are sometimes considered now.  For example, as a society we may decide that we should take more responsibility for recycling or upcycling resources at the end of their useful life for us, or not wasting them.  The concept of "ownership" may transition more into "stewardship" in a concept of the world that does not put humans in a position of controlling the world's resources or abdicating responsibilities to the ecosystem in the name of ownership.  So, we are for the most part avoiding talking about ownership in this vocabulary, as we work towards more of an ecosystemic perspective.</p>
-<p><strong>Examples</strong></p>
-<ul>
-<li>
-<p>For example, perhaps some agent has many apple trees, and plans on pressing apple cider. Another agent has an apple press and agrees to transfer use of the press (a resource) in exchange for a reciprocal transfer of a portion of the apple cider.  The use of the press involves some rights (to use the press for some period of time) and responsibilities (to not run it beyond its capacity and to clean it up before returning it).</p>
-</li>
-<li>
-<p>Or in a library, a book can be checked out, a transfer from the library to the reader.  The agent who checks it out can read it and is responsible for caring for it and returning it on time, another transfer.</p>
-</li>
-<li>
-<p>Or let's say that a community has farmland and equipment held in common.  The community transfers responsibility for the land and equipment to some farmers to use and take care of.  The community also transfers seeds every year to the farmers, enough to grow the food the community needs.  During the year, the harvests are distributed (transferred) to the community members for their consumption.  In reciprocity, the community provides for other needs of the farmers.</p>
-</li>
-</ul>
-<p><em>Implementation note</em>: Different networks may choose to handle namespaces and identifiers at different granularity.  This also may depend on the technology used.  So one network may have separate namespaces for the nodes in the network; another may have one namespace for the whole network.  In the latter case, an implication on transfers is that the provider agent and the receiver agent may use the same resource identifier for <code>resourceInventoriedAs</code> and <code>toResourceInventoriedAs</code>, even though the primary accountable has changed.</p>
+  <h1>Actions</h1>
+
+<h3 id="action-definitions">Action Definitions</h3>
+<p>All flows (Economic Event, Commitment, Intent, Claim, Recipe Flow) use an action property to designate what the flow is doing and how it will affect an economic resource (or not).  Actions are defined as follows.</p>
+<p><strong>vf:produce</strong> - A new resource is created in that process or an addition to an existing stock resource of the same type is incremented.  <code>produce</code> is used in manufacturing of goods, but also in any kind of creation of a material or digital or energy resource.</p>
+<p><strong>vf:use</strong> - Most often <code>use</code> is employed for equipment or tools that are used in a process, but not consumed.  After the process, the piece of equipment of tool still exists, but during the process, it is unavailable. This can be useful to know if the resource must be scheduled, or if one needs to know how much the resource is used.</p>
+<p><strong>vf:consume</strong> - Most often, an ingredient or component is transformed  into the output(s) of the process. Or the input resource can be used up during the process, like energy. After the process the specified quantity of the consumed input is gone.</p>
+<p><strong>vf:cite</strong> - <code>cite</code> is used when a resource is input to a process, but is neigher used nor consumed, and remains available during the process.  Examples are a design file or a scientific paper, any digital knowledge, which is cited so that the agent(s) responsible for the resource receive credit.</p>
+<p><strong>vf:work</strong> - <code>work</code> refers to labor power applied to a process.  There is generally no identifiable resource involved, only the provider agent. In this case, the type of work or skill involved can be identifies by a resource specification. A possible exception would be if the agent's work schedule is kept on a calendar, representing when the specific agent is available to work.</p>
+<p><strong>vf:pickup</strong> -  The transported resource or person enters the process; the same resource will appear later in an output of the process.  It is assumed that the resource is already in custody of the agent providing the transportation.</p>
+<p><strong>vf:dropoff</strong> -  The transported resource or person leaves the process; the same resource or person appeared in an input of this process.</p>
+<p><strong>vf:accept</strong> - This is used as input to a process involving repair, modification, testing, or similar of a resource.  The same resource will appear in the output of the process.  It is sometimes a bit of a gray area when to use <code>accept</code>/<code>modify</code> vs. <code>consume</code>/<code>produce</code>.  The choice is based on the need to have the same identified resource before and after the process. Generally if the resource is involved in a series of processes to create it before anything else happens to it, <code>accept</code>/<code>modify</code> is appropriate.  If the input resource and the output resource need to be identified as different resource specifications for any reason, then <code>accept</code>/<code>modify</code> is not appropriate.</p>
+<p><strong>vf:modify</strong> - The identified resource that was accepted into a process appears in the output of that process, with modifications made.  Note not all modifications require a physical change, for example quality testing.  In all cases though, it matters that the resource has gone through that process, and the <code>stage</code> of the resource (the process specification of the process) is then used as part of the logical identification of the resource when the resource is requested as a process input or for a transfer.</p>
+<p><strong>vf:combine</strong> - A resource is put in a package or a combination resource; the same resource might appear later when it is separated.  Examples are packing one or more resources for transportation or storage, or creation of a kit resource.  The combined resource is still identified in the system, but is <code>containedIn</code> the package or combination resource, which would be usually produced in the process.  When a resource is <code>containedIn</code> another resource, it is not available on its own.  Note that packing materials or containers which will continue to have their own identity later are also combined in the process; if not, they can be consumed.</p>
+<p><strong>vf:separate</strong> - A resource is removed from a package or a combination resource; the same resource appeared as input earlier in this or another process when it was combined.  When the resource is separated, it loses its <code>containedIn</code> reference, and becomes available on its own.</p>
+<p><strong>vf:deliver-service</strong> - A new service is produced and delivered as output of a process. A service implies that an agent actively receives the service at the same time as it is delivered.  Services are not tangible, so would not create or increment an inventoried resource. Services are perhaps most often delivered directly to an agent. But unlike other actions, sometimes the service is at the same time being delivered into another documented process, in which case it can be output from a process and input to another, at the same time. </p>
+<p><strong>vf:transfer-all-rights</strong> - This action gives full (in the human realm) rights and responsibilities to another agent, without transferring physical custody.  People might call this "ownership"; or it might be considered "stewardship" or similar.  This occurs instantaneously, and does not involve documented physical transfer.  It is often <code>triggeredBy</code> a transfer of custody, for example shipping or receipt of goods.</p>
+<p><strong>vf:transfer-custody</strong> - This action gives physical custody and control of a resource to another agent, without full rights. The physical custodian often has responsibilities associated with custody, however.  Examples where transfer of custody is useful are loaning a resource to another agent, or when a resource is transferred to have a service performed by another agent, like transportation or repair.</p>
+<p><strong>vf:transfer</strong> - This action gives full (human) rights and responsibilities plus physical custody, combining the last two actions.</p>
+<p><strong>vf:move</strong> - <code>move</code> changes the location, and possibly the identifier, if location is part of the logical identifier, of a resource with no transfer of agent rights or custodianship.</p>
+<p><strong>vf:raise</strong> - This action adjusts a quantity up, used either when a computer system is brought up and existing resources must be entered with a beginning balance, or when an inventory count in the real world shows that there the quantity in the computer system is too low.  When it is known how a resource was obtained, it is preferable to use the real action.</p>
+<p><strong>vf:lower</strong> - This action adjusts a quantity down, based on an inventory count in the real world showing that the quantity in the computer system is too high.  When it is known how a resource was lowered, it is preferable to use the real action.</p>
+<h3 id="action-behaviors">Action Behaviors</h3>
+<table>
+<thead>
+<tr>
+<th>Action</th>
+<th>Accounting effect</th>
+<th>Onhand effect</th>
+<th>I/O</th>
+<th>Other effect</th>
+<th>Pairs with</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>produce</td>
+<td>Increment</td>
+<td>Increment</td>
+<td>Output</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>consume</td>
+<td>Decrement</td>
+<td>Decrement</td>
+<td>Input</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>use</td>
+<td>No effect(1)</td>
+<td>No effect(1)</td>
+<td>Input</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>work</td>
+<td>No effect(1)</td>
+<td>No effect(1)</td>
+<td>Input</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>cite</td>
+<td>No effect</td>
+<td>No effect</td>
+<td>Input</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>deliver-service</td>
+<td>No effect</td>
+<td>No effect</td>
+<td>Output(3)</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>pickup</td>
+<td>No effect</td>
+<td>No effect</td>
+<td>Input</td>
+<td>N/A</td>
+<td>dropoff</td>
+</tr>
+<tr>
+<td>dropoff</td>
+<td>No effect</td>
+<td>No effect</td>
+<td>Output</td>
+<td>currentLocation(4)</td>
+<td>pickup</td>
+</tr>
+<tr>
+<td>accept</td>
+<td>No effect</td>
+<td>Decrement</td>
+<td>Input</td>
+<td>N/A</td>
+<td>modify</td>
+</tr>
+<tr>
+<td>modify</td>
+<td>No effect</td>
+<td>Increment</td>
+<td>Output</td>
+<td>N/A</td>
+<td>accept</td>
+</tr>
+<tr>
+<td>combine</td>
+<td>No effect</td>
+<td>Decrement</td>
+<td>Input</td>
+<td>add containedIn</td>
+<td>separate</td>
+</tr>
+<tr>
+<td>separate</td>
+<td>No effect</td>
+<td>Increment</td>
+<td>Output</td>
+<td>remove containedIn</td>
+<td>combine</td>
+</tr>
+<tr>
+<td>transfer-custody</td>
+<td>No effect</td>
+<td>Decr+Incr(2)</td>
+<td>N/A</td>
+<td>currentLocation(4)</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>transfer-all-rights</td>
+<td>Decr+Incr(2)</td>
+<td>No effect</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>transfer</td>
+<td>Decr+Incr(2)</td>
+<td>Decr+Incr(2)</td>
+<td>N/A</td>
+<td>currentLocation(4)</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>move</td>
+<td>Decr+Incr(2)</td>
+<td>Decr+Incr(2)</td>
+<td>N/A</td>
+<td>currentLocation(4)</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>raise</td>
+<td>Increment</td>
+<td>Increment</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>lower</td>
+<td>Decrement</td>
+<td>Decrement</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+<p>We have defined a core set of actions, but expect that this will be extended with some others. If extended, they should be defined as part of this or another formal vocabulary so that all can use them and assume the same meaning. However, the effects of the actions are included in the data definitions so that computer systems can be "data driven" in their effects on resources if desired.</p>
+<p>(1) The actions <code>use</code> and <code>work</code> are time-based actions, either with or without an explicit schedule. If the schedule is documented as part of the economic resource, then those economic events could decrement that schedule, although not the "current quantity" of the resource.</p>
+<p>(2) The actions <code>transfer</code> and <code>move</code> can optionally define a second identified resource on the receiver side.</p>
+<p>(3) The action <code>deliver-service</code> can sometimes be an input to another process, at the same time as it is an output from a process.  This is because services imply delivery as they are created.</p>
+<p>(4) These actions should update the resource's <code>currentLocation</code> if <code>toLocation</code> is provided on the event. For <code>dropoff</code> it is the resource which is affected by the event, for all others it is the to resource, the resource that results from the event. For the latter, the resource and to resource may be the same resource, depending on how resources are identified in the user community.</p>
 
               
             </article>
@@ -1275,7 +1500,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../processes/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Processes" rel="prev">
+        <a href="../flows/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Flows" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -1284,20 +1509,20 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              Processes
+              Flows
             </div>
           </div>
         </a>
       
       
         
-        <a href="../exchanges/" class="md-footer__link md-footer__link--next" aria-label="Next: Exchanges" rel="next">
+        <a href="../processes/" class="md-footer__link md-footer__link--next" aria-label="Next: Processes" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Exchanges
+              Processes
             </div>
           </div>
           <div class="md-footer__button md-icon">

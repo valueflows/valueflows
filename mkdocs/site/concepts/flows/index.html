@@ -574,6 +574,8 @@
         
           
         
+          
+        
       
       
         <label class="md-nav__link" for="__nav_4">
@@ -689,6 +691,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#recipe-flow" class="md-nav__link">
+    Recipe Flow
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -720,26 +729,6 @@
     Actions
   </a>
   
-    <nav class="md-nav" aria-label="Actions">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#definitions" class="md-nav__link">
-    Definitions
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#behaviors" class="md-nav__link">
-    Behaviors
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -753,6 +742,20 @@
   
 </nav>
       
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../actions/" class="md-nav__link">
+        Actions
+      </a>
     </li>
   
 
@@ -1376,6 +1379,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#recipe-flow" class="md-nav__link">
+    Recipe Flow
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1407,26 +1417,6 @@
     Actions
   </a>
   
-    <nav class="md-nav" aria-label="Actions">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#definitions" class="md-nav__link">
-    Definitions
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#behaviors" class="md-nav__link">
-    Behaviors
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -1452,7 +1442,7 @@
   <h1>Flows</h1>
 
 <h3 id="kinds-of-flows">Kinds of Flows</h3>
-<p>Flows are a fundamental construct in the ValueFlows ontology. The types of flows form a progression from potential to scheduled to realized:</p>
+<p>Flows are a fundamental construct in the Valueflows ontology. The types of flows form a progression from potential to scheduled to realized:</p>
 <ol>
 <li>Intents which can lead to Commitments</li>
 <li>Commitments which can lead to Economic Events (or Intents can lead directly to Economic Events)</li>
@@ -1465,6 +1455,8 @@
 <p>Economic Events describe past events, something observed, never some potential future event.  They can fulfill Commitments or satisfy Intents (when there is no Commitment).</p>
 <h4 id="claim">Claim</h4>
 <p>Claims resemble Commitments, but are initiated by the receiver, not the provider.  An Economic Event can trigger a reciprocal Claim.  Claims sometimes do not have to actually be saved, often they can be implied from an Economic Event and an Agreement.  For example, if Alice has agreed to sell Bob some carrots for $2, then if Alice delivers the carrots to Bob, she has an implicit claim for $2 from Bob.</p>
+<h4 id="recipe-flow">Recipe Flow</h4>
+<p><a href="../recipes/">Recipes</a> are used to create plans, and the Recipe Flow can create a corresponding Intent or a Commitment in a Plan, depending on if all the agents are known and the level of certainty of the planning.</p>
 <h3 id="timeline-plans-and-observations">Timeline, plans and observations</h3>
 <p>The figure below shows that Economic Events have to be observed and for that reason only appear as records of the past. Future plans get represented with Intents and Commitments.</p>
 <p><img alt="flows" src="../../assets/flows.png" /></p>
@@ -1475,192 +1467,7 @@
 <p>Intents, Commitments, and Economic Events can occur at any granularity that is needed or for which data can be obtained.  So they primarily are used for all operational needs, but can also be used at higher levels for budgeting for organizations, analytical and high level planning needs for communities or regions, etc.</p>
 <p><img alt="Intent-Commitment-Event" src="../../assets/i-c-e.png" /></p>
 <h3 id="actions">Actions</h3>
-<h4 id="definitions">Definitions</h4>
-<p>All flows use an action property to designate what the flow is doing and how it will affect an economic resource (or not).  Actions are defined as follows.</p>
-<ul>
-<li>vf:produce - new resource created in that process or an addition to an existing stock resource of the same type</li>
-<li>vf:use - for example a tool used in process; after the process, the tool still exists, but during the process, the tool is unavailable</li>
-<li>vf:consume - for example an ingredient or component used up or transformed into the output, after the process the input is gone</li>
-<li>vf:cite - for example a design file, neither used nor consumed, the file remains available at all times</li>
-<li>vf:work - labor power applied to a process</li>
-<li>vf:pickup -  transported resource or person enters the process; the same resource will appear in output with <em>vf:dropoff</em></li>
-<li>vf:dropoff -  transported resource or person leaves the process; the same resource or person appeared in input with <em>vf:pickup</em></li>
-<li>vf:accept - input to processes like repair or modification or testing, the same resource will appear in output with <em>vf:modify</em></li>
-<li>vf:modify - output of processes like repair or modification or testing, the same resource will appear in input with <em>vf:accept</em></li>
-<li>vf:combine - put a resource in a package or combination resource; the same resource might appear later with <em>vf:separate</em></li>
-<li>vf:separate - remove a resource from a package or combination resource; the same resource appeared as input with <em>vf:combine</em></li>
-<li>vf:deliver-service - new service produced and delivered (a service implies that an agent actively receives the service)</li>
-<li>vf:transfer-all-rights - give full (in the human realm) rights and responsibilities to another agent, without transferring physical custody</li>
-<li>vf:transfer-custody - give physical custody and control of a resource, without full accounting or ownership rights</li>
-<li>vf:transfer - give full rights and responsibilities plus physical custody</li>
-<li>vf:move - change location and possibly identifier, if location is part of the identification, of a resource with no change of agent rights or possession</li>
-<li>vf:raise - adjusts a quantity up based on a beginning balance or inventory count</li>
-<li>vf:lower - adjusts a quantity down based on an inventory count</li>
-</ul>
-<h4 id="behaviors">Behaviors</h4>
-<table>
-<thead>
-<tr>
-<th>Action</th>
-<th>Accounting effect</th>
-<th>Onhand effect</th>
-<th>I/O</th>
-<th>Other effect</th>
-<th>Pairs with</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>produce</td>
-<td>Increment</td>
-<td>Increment</td>
-<td>Output</td>
-<td>N/A</td>
-<td>N/A</td>
-</tr>
-<tr>
-<td>consume</td>
-<td>Decrement</td>
-<td>Decrement</td>
-<td>Input</td>
-<td>N/A</td>
-<td>N/A</td>
-</tr>
-<tr>
-<td>use</td>
-<td>No effect(1)</td>
-<td>No effect(1)</td>
-<td>Input</td>
-<td>N/A</td>
-<td>N/A</td>
-</tr>
-<tr>
-<td>work</td>
-<td>No effect(1)</td>
-<td>No effect(1)</td>
-<td>Input</td>
-<td>N/A</td>
-<td>N/A</td>
-</tr>
-<tr>
-<td>cite</td>
-<td>No effect</td>
-<td>No effect</td>
-<td>Input</td>
-<td>N/A</td>
-<td>N/A</td>
-</tr>
-<tr>
-<td>deliver-service</td>
-<td>No effect</td>
-<td>No effect</td>
-<td>Output(3)</td>
-<td>N/A</td>
-<td>N/A</td>
-</tr>
-<tr>
-<td>pickup</td>
-<td>No effect</td>
-<td>No effect</td>
-<td>Input</td>
-<td>N/A</td>
-<td>dropoff</td>
-</tr>
-<tr>
-<td>dropoff</td>
-<td>No effect</td>
-<td>No effect</td>
-<td>Output</td>
-<td>currentLocation(4)</td>
-<td>pickup</td>
-</tr>
-<tr>
-<td>accept</td>
-<td>No effect</td>
-<td>Decrement</td>
-<td>Input</td>
-<td>N/A</td>
-<td>modify</td>
-</tr>
-<tr>
-<td>modify</td>
-<td>No effect</td>
-<td>Increment</td>
-<td>Output</td>
-<td>N/A</td>
-<td>accept</td>
-</tr>
-<tr>
-<td>combine</td>
-<td>No effect</td>
-<td>Decrement</td>
-<td>Input</td>
-<td>add containedIn</td>
-<td>separate</td>
-</tr>
-<tr>
-<td>separate</td>
-<td>No effect</td>
-<td>Increment</td>
-<td>Output</td>
-<td>remove containedIn</td>
-<td>combine</td>
-</tr>
-<tr>
-<td>transfer-custody</td>
-<td>No effect</td>
-<td>Decr+Incr(2)</td>
-<td>N/A</td>
-<td>currentLocation(4)</td>
-<td>N/A</td>
-</tr>
-<tr>
-<td>transfer-all-rights</td>
-<td>Decr+Incr(2)</td>
-<td>No effect</td>
-<td>N/A</td>
-<td>N/A</td>
-<td>N/A</td>
-</tr>
-<tr>
-<td>transfer</td>
-<td>Decr+Incr(2)</td>
-<td>Decr+Incr(2)</td>
-<td>N/A</td>
-<td>currentLocation(4)</td>
-<td>N/A</td>
-</tr>
-<tr>
-<td>move</td>
-<td>Decr+Incr(2)</td>
-<td>Decr+Incr(2)</td>
-<td>N/A</td>
-<td>currentLocation(4)</td>
-<td>N/A</td>
-</tr>
-<tr>
-<td>raise</td>
-<td>Increment</td>
-<td>Increment</td>
-<td>N/A</td>
-<td>N/A</td>
-<td>N/A</td>
-</tr>
-<tr>
-<td>lower</td>
-<td>Decrement</td>
-<td>Decrement</td>
-<td>N/A</td>
-<td>N/A</td>
-<td>N/A</td>
-</tr>
-</tbody>
-</table>
-<p>We have defined a core set of actions, but expect that this will be extended with some others. If extended, they should be defined as part of this or another formal vocabulary so that all can use them and assume the same meaning. </p>
-<p>(1) The actions <code>use</code> and <code>work</code> are time-based actions, either with or without an explicit schedule. If the schedule is documented as part of the economic resource, then those economic events could decrement that schedule, although not the "current quantity" of the resource.</p>
-<p>(2) The actions <code>transfer</code> and <code>move</code> can optionally define a second identified resource on the receiver side.</p>
-<p>(3) The action <code>deliver-service</code> can sometimes be an input to another process, at the same time as it is an output from a process.  This is because services imply delivery as they are created.</p>
-<p>(4) These actions should update the resource's <code>currentLocation</code> if <code>toLocation</code> is provided on the event. For <code>dropoff</code> it is the resource which is affected by the event, for all others it is the to resource, the resource that results from the event. For the latter, the resource and to resource may be the same resource, depending on how resources are identified in the user community.</p>
+<p>All types of flows use the same set of actions, which define what the flow does and how it behaves in relation to resources.  You can find detailed documentation on actions <a href="../actions/">in the next section</a>.</p>
 <h3 id="quantities-and-times">Quantities and Times</h3>
 <p>Quantities are used for counting, such as:</p>
 <ul>
@@ -1711,13 +1518,13 @@
       
       
         
-        <a href="../processes/" class="md-footer__link md-footer__link--next" aria-label="Next: Processes" rel="next">
+        <a href="../actions/" class="md-footer__link md-footer__link--next" aria-label="Next: Actions" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Processes
+              Actions
             </div>
           </div>
           <div class="md-footer__button md-icon">
