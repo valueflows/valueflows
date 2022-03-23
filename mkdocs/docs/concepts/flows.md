@@ -1,6 +1,6 @@
 ### Kinds of Flows
 
-Flows are a fundamental construct in the ValueFlows ontology. The types of flows form a progression from potential to scheduled to realized:
+Flows are a fundamental construct in the Valueflows ontology. The types of flows form a progression from potential to scheduled to realized:
 
 1. Intents which can lead to Commitments
 2. Commitments which can lead to Economic Events (or Intents can lead directly to Economic Events)
@@ -22,6 +22,10 @@ Economic Events describe past events, something observed, never some potential f
 #### Claim
 
 Claims resemble Commitments, but are initiated by the receiver, not the provider.  An Economic Event can trigger a reciprocal Claim.  Claims sometimes do not have to actually be saved, often they can be implied from an Economic Event and an Agreement.  For example, if Alice has agreed to sell Bob some carrots for $2, then if Alice delivers the carrots to Bob, she has an implicit claim for $2 from Bob.
+
+#### Recipe Flow
+
+[Recipes](recipes.md) are used to create plans, and the Recipe Flow can create a corresponding Intent or a Commitment in a Plan, depending on if all the agents are known and the level of certainty of the planning.
 
 ### Timeline, plans and observations
 
@@ -45,61 +49,7 @@ Intents, Commitments, and Economic Events can occur at any granularity that is n
 
 ### Actions
 
-#### Definitions
-
-All flows use an action property to designate what the flow is doing and how it will affect an economic resource (or not).  Actions are defined as follows.
-
-* vf:produce - new resource created in that process or an addition to an existing stock resource of the same type
-* vf:use - for example a tool used in process; after the process, the tool still exists, but during the process, the tool is unavailable
-* vf:consume - for example an ingredient or component used up or transformed into the output, after the process the input is gone
-* vf:cite - for example a design file, neither used nor consumed, the file remains available at all times
-* vf:work - labor power applied to a process
-* vf:pickup -  transported resource or person enters the process; the same resource will appear in output with *vf:dropoff*
-* vf:dropoff -  transported resource or person leaves the process; the same resource or person appeared in input with *vf:pickup*
-* vf:accept - input to processes like repair or modification or testing, the same resource will appear in output with *vf:modify*
-* vf:modify - output of processes like repair or modification or testing, the same resource will appear in input with *vf:accept*
-* vf:combine - put a resource in a package or combination resource; the same resource might appear later with *vf:separate*
-* vf:separate - remove a resource from a package or combination resource; the same resource appeared as input with *vf:combine*
-* vf:deliver-service - new service produced and delivered (a service implies that an agent actively receives the service)
-* vf:transfer-all-rights - give full (in the human realm) rights and responsibilities to another agent, without transferring physical custody
-* vf:transfer-custody - give physical custody and control of a resource, without full accounting or ownership rights
-* vf:transfer - give full rights and responsibilities plus physical custody
-* vf:move - change location and possibly identifier, if location is part of the identification, of a resource with no change of agent rights or possession
-* vf:raise - adjusts a quantity up based on a beginning balance or inventory count
-* vf:lower - adjusts a quantity down based on an inventory count
-
-#### Behaviors
-
-Action | Accounting effect | Onhand effect | I/O | Other effect | Pairs with |
------- | ------ | --- | ----------------- | ---------- | --------- |
-produce | Increment | Increment | Output | N/A | N/A |
-consume | Decrement | Decrement | Input | N/A | N/A |
-use | No effect(1) | No effect(1) | Input | N/A | N/A |
-work | No effect(1) | No effect(1) | Input | N/A | N/A |
-cite | No effect  | No effect  | Input | N/A | N/A |
-deliver-service | No effect | No effect | Output(3) | N/A | N/A |
-pickup | No effect | No effect  | Input | N/A | dropoff |
-dropoff | No effect | No effect | Output | currentLocation(4) | pickup |
-accept | No effect | Decrement  | Input | N/A | modify |
-modify | No effect | Increment  | Output | N/A | accept |
-combine | No effect | Decrement  | Input | add containedIn | separate |
-separate | No effect | Increment | Output | remove containedIn | combine |
-transfer-custody | No effect | Decr+Incr(2) | N/A | currentLocation(4) | N/A |
-transfer-all-rights | Decr+Incr(2) | No effect | N/A | N/A | N/A |
-transfer | Decr+Incr(2) | Decr+Incr(2) | N/A | currentLocation(4) | N/A |
-move | Decr+Incr(2) |Decr+Incr(2) | N/A | currentLocation(4) | N/A |
-raise | Increment | Increment | N/A | N/A | N/A |
-lower | Decrement | Decrement | N/A | N/A | N/A |
-
-We have defined a core set of actions, but expect that this will be extended with some others. If extended, they should be defined as part of this or another formal vocabulary so that all can use them and assume the same meaning. 
-
-(1) The actions `use` and `work` are time-based actions, either with or without an explicit schedule. If the schedule is documented as part of the economic resource, then those economic events could decrement that schedule, although not the "current quantity" of the resource.
-
-(2) The actions `transfer` and `move` can optionally define a second identified resource on the receiver side.
-
-(3) The action `deliver-service` can sometimes be an input to another process, at the same time as it is an output from a process.  This is because services imply delivery as they are created.
-
-(4) These actions should update the resource's `currentLocation` if `toLocation` is provided on the event. For `dropoff` it is the resource which is affected by the event, for all others it is the to resource, the resource that results from the event. For the latter, the resource and to resource may be the same resource, depending on how resources are identified in the user community.
+All types of flows use the same set of actions, which define what the flow does and how it behaves in relation to resources.  You can find detailed documentation on actions [in the next section](actions.md).
 
 ### Quantities and Times
 
