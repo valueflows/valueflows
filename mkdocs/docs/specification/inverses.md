@@ -2,21 +2,29 @@
 
 ### Introduction
 
-Although queries and query filters are not specified in the RDF core, this set of guidelines should be used, to facilitate standard communication.  It is possible that at some point they will be included in the formal VF namespace.
+Although queries and query filters are not specified in the RDF core, this set of guidelines should be used, to facilitate standard api naming.  It is possible that at some point they will be included in the formal VF namespace.
 
-There are no implications for which (if any) of these any particular application would want to implement.
+This document is not meant to imply that all of these named queries and filters should be implemented in any particular application api.
 
-*Note:* The main queries are not listed below, but would be the name of the type/class to return a specific item, and the plural name of the type/class to return all or a filtered set of the items.  For example, `process` and `processes` for vf:Process.
+*Note:* Filters can be applicable to any query that can return more than one of the class.  For example all processes, processes in scope of an agent, processes in a plan, could each use the process filters.
 
-*Note:* Filters can be applicable to any query that can return more than one of the class.  For example all processes, processes in scope of an agent, processes in a plan could all use the process filters.
-
-*Status:* Not all of these queries are tested, and there will certainly be other useful queries. If anyone has recommended changes or additions, please start an issue or merge request, or just let us know in the Welcome chat (links on the home page).
+*Status:* Not all of these queries and filters are tested, and there will certainly be other useful queries and filters. If anyone has recommended changes or additions, please start an issue or merge request, or just let us know in the Welcome chat (links on the home page).
 
 ### Observation layer
 
-#### Agent
+#### Agent (also subclasses Person, Organization)
 
-*filters:* classifiedAs (organizations only), locatedIn (some geographic boundary, city, region, etc.)
+*main queries:*
+
+   * agent
+   * agents
+   * myAgent
+   * person
+   * people
+   * organization
+   * organizations
+
+*filters:* classifiedAs (Organizations only), locatedIn (some geographic boundary, city, region, etc.)
 
 *inverse queries:*
 
@@ -38,9 +46,19 @@ There are no implications for which (if any) of these any particular application
 
 #### AgentRelationship
 
+*main queries:*
+
+   * agentRelationship
+   * agentRelationships
+
 *filters:* subject, object, role, inScopeOf
 
 #### Process
+
+*main queries:*
+
+   * process
+   * processes
 
 *filters:* finished, classifiedAs, inScopeOf, startDate, endDate (include any process that overlaps the start date to end date range inclusive; missing start date is from the beginning, missing end date is to the end)
 
@@ -71,6 +89,11 @@ There are no implications for which (if any) of these any particular application
 
 #### EconomicEvent
 
+*main queries:*
+
+   * economicEvent
+   * economicEvents
+
 *filters:* action, provider, receiver, resourceClassifiedAs, startDate, endDate (include any EconomicEvent that overlaps the start date to end date range inclusive; missing start date is from the beginning, missing end date is to the end) 
 
 *inverse queries:*
@@ -85,6 +108,11 @@ There are no implications for which (if any) of these any particular application
    * next (Process, EconomicEvent, EconomicResource, see Track and Trace for logic)
 
 #### EconomicResource
+
+*main queries:*
+
+  * economicResource
+  * economicResources
 
 *filters:* excludeZeroQuantities (boolean)
 
@@ -104,13 +132,26 @@ There are no implications for which (if any) of these any particular application
 
 #### Fulfillment
 
+*main queries:*
+
+   * fulfillment
+   * fulfillments
 
 #### Appreciation
 
+*main queries:*
+
+   * appreciation
+   * appreciations
 
 ### Plan layer
 
 #### Proposal
+
+*main queries:*
+
+   * proposal
+   * proposals
 
 *filters:* TBD (possibly some valid date filter, something for location for offers/needs search)
 
@@ -119,6 +160,11 @@ There are no implications for which (if any) of these any particular application
    * publishes: (ProposedIntent.publishes)
 
 #### Intent
+
+*main queries:*
+
+   * intent
+   * intents
 
 *filters:* action, provider, receiver, resourceClassifiedAs, resourceConformsTo, finished (default false only?)
 
@@ -130,8 +176,17 @@ There are no implications for which (if any) of these any particular application
 
 #### ProposedIntent
 
+*main queries:*
+
+   * proposedIntent
+   * proposedIntents
 
 #### Agreement
+
+*main queries:*
+
+   * agreement
+   * agreements
 
 *inverse queries:*
 
@@ -145,6 +200,11 @@ There are no implications for which (if any) of these any particular application
 
 #### Commitment
 
+*main queries:*
+
+   * commitment
+   * commitments
+
 *filters:* action, provider, receiver, resourceClassifiedAs, resourceConformsTo, finished, startDate, endDate (include any Commitment that overlaps the start date to end date range inclusive; missing start date is from the beginning, missing end date is to the end)
 
 *inverse queries:*
@@ -155,8 +215,17 @@ There are no implications for which (if any) of these any particular application
 
 #### Satisfaction
 
+*main queries:*
+
+   * satisfaction
+   * satisfactions
 
 #### Claim
+
+*main queries:*
+
+   * claim
+   * claims
 
 *filters:* action, provider, receiver, resourceClassifiedAs, resourceConformsTo, finished, startDate, endDate (include any Claim that overlaps the start date to end date range inclusive; missing start date is from the beginning, missing end date is to the end)
 
@@ -166,8 +235,17 @@ There are no implications for which (if any) of these any particular application
 
 #### Settlement
 
+*main queries:*
+
+   * settlement
+   * settlements
 
 #### Plan
+
+*main queries:*
+
+   * plan
+   * plans
 
 *filters:* finished (true means all the processes and commitments that are part of the Plan are finished), TBD possibly some date related logic
 
@@ -183,9 +261,13 @@ There are no implications for which (if any) of these any particular application
    * involvedAgents (all the Process.involvedAgents)
    * startDate TBD
    * endDate TBD
-}
 
 #### Scenario
+
+*main queries:*
+
+   * scenario
+   * scenarios
 
 *filters:* (TBD date logic)
 
@@ -201,6 +283,11 @@ There are no implications for which (if any) of these any particular application
 
 #### ResourceSpecification
 
+*main queries:*
+
+   * resourceSpecification
+   * resourceSpecifications
+
 *filters:* resourceClassifiedAs
 
 *inverse queries:*
@@ -214,26 +301,87 @@ There are no implications for which (if any) of these any particular application
 
 #### ProcessSpecification
 
+*main queries:*
+
+   * processSpecification
+   * processSpecifications
+
 *inverse queries:*
 
    * processes (Process.basedOn)
 
 #### RecipeResource
 
+*main queries:*
+
+   * recipeResource
+   * recipeResources
+
 TBD
 
 #### RecipeFlow
+
+*main queries:*
+
+   * recipeFlow
+   * reciprFlows
 
 TBD
 
 #### RecipeExchange
 
+*main queries:*
+
+   * recipeExchange
+   * recipeExchanges
+
+TBD
+
+#### RecipeProcess
+
+*main queries:*
+
+   * recipeProcess
+   * recipeProcesses
+
 TBD
 
 #### ScenarioDefinition
+
+*main queries:*
+
+   * scenarioDefinition
+   * scenarioDefinitions
 
 *inverse queries:*
 
    * scenarios (Scenario.definedAs)
 
 #### Action
+
+*main queries:*
+
+   * action
+   * actions
+
+#### AgentRelationshipRole
+
+*main queries:*
+
+   * agentRelationshipRole
+   * agentRelationshipRoles
+
+*inverse queries:*
+
+   * agentRelationships (AgentRelationship.relationship)
+
+#### RoleBehavior
+
+*main queries:*
+
+   * roleBehavior
+   * roleBehaviors
+
+*inverse Queries:*
+
+   * agentRelationshipRoles (agentRelationshipRole.roleBehavior)
