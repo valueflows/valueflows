@@ -42,7 +42,7 @@ This document is not meant to imply that all of these named queries and filters 
    * claims (Claim.provider or .receiver or .inScopeOf)
    * proposals (Proposal.inScopeOf, or a related Intent.provider or Intent.receiver)
    * relationships (Relationship.object or .subject or .inScopeOf)
-   * roles (TBD)
+   * roles (AgentRelationshipRoles that are AgentRelationship.relationship where the .subject or .object or .inScopeOf is the Agent)
 
 #### AgentRelationship
 
@@ -60,7 +60,7 @@ This document is not meant to imply that all of these named queries and filters 
    * process
    * processes
 
-*filters:* finished, classifiedAs, inScopeOf, startDate, endDate (include any process that overlaps the start date to end date range inclusive; missing start date is from the beginning, missing end date is to the end)
+*filters:* searchString, finished, classifiedAs, inScopeOf, startDate, endDate (include any process that overlaps the start date to end date range inclusive; missing start date is from the beginning, missing end date is to the end)
 
 *inverse queries:*
 
@@ -82,6 +82,7 @@ This document is not meant to imply that all of these named queries and filters 
    * unplannedInputs (any EconomicEvent.inputOf that doesn't fulfill a Commitment)
    * unplannedOutputs (any EconomicEvent.outputOf that doesn't fulfill a Commitment)
    * involvedAgents (any .provider or .receivers or .inScopeOf on Commitments or EconomicEvents or Intents, and self.inScopeOf)
+   * workingAgents (any EconomicEvent.provider on an input EconomicEvent with action equal to work)
    * nextProcesses (Processes where .inputOf references the same .resourceInventoriedAs as self.outputOf references)
    * previousProcesses (Processes where .outputOf references the same .resourceInventoriedAs as self.inputOf references)
    * previous (EconomicEvent.inputOf, same as observedInputs)
@@ -94,18 +95,23 @@ This document is not meant to imply that all of these named queries and filters 
    * economicEvent
    * economicEvents
 
-*filters:* action, provider, receiver, resourceClassifiedAs, startDate, endDate (include any EconomicEvent that overlaps the start date to end date range inclusive; missing start date is from the beginning, missing end date is to the end) 
+*filters:* searchString, action, provider, receiver, resourceClassifiedAs, startDate, endDate (include any EconomicEvent that overlaps the start date to end date range inclusive; missing start date is from the beginning, missing end date is to the end) 
 
 *inverse queries:*
 
    * settles (Settlement.settles)
    * fulfills (Fulfillment.fulfills)
    * satisfies (Satisfaction.satisfies)
+   * appreciationOf (Appreciation.appreciationOf)
+   * appreciatedBy (Appreciation.appreciatedBy)
 
 *other queries:*
 
-   * previous (Process, EconomicEvent, EconomicResource, see Track and Trace for logic)
-   * next (Process, EconomicEvent, EconomicResource, see Track and Trace for logic)
+   * reciprocalEvents (EconomicEvents.realizationOf the same Agreement with opposite provider, receiver)
+   * previous (Process, EconomicEvent, EconomicResource, see [Track and Trace](../algorithms/track.md) for logic)
+   * next (Process, EconomicEvent, EconomicResource, see [Track and Trace](../algorithms/track.md) for logic)
+   * trace (ordered incoming value flows, see [Track and Trace](../algorithms/track.md) for logic)
+   * track (ordered outgoing value flows, see [Track and Trace](../algorithms/track.md) for logic)
 
 #### EconomicResource
 
@@ -114,7 +120,7 @@ This document is not meant to imply that all of these named queries and filters 
   * economicResource
   * economicResources
 
-*filters:* excludeZeroQuantities (boolean)
+*filters:* searchString, accountableAgent, currentLocation, withinLocation,  excludeZeroQuantities (boolean), classifiedAs, state, trackingIdentifier
 
 *inverse queries:*
 
@@ -127,8 +133,8 @@ This document is not meant to imply that all of these named queries and filters 
    * economicEvents (either EconomicEvent.resourceInventoriedAs or .toResourceInventoriedAs)
    * previous (EconomicEvent, see Track and Trace)
    * next (EconomicEvent, see Track and Trace)
-   * trace (ordered incoming value flows, see Track and Trace for logic)
-   * track (ordered outgoing value flows, see Track and Trace for logic)
+   * trace (ordered incoming value flows, see [Track and Trace](../algorithms/track.md) for logic)
+   * track (ordered outgoing value flows, see [Track and Trace](../algorithms/track.md) for logic)
 
 #### Fulfillment
 
@@ -153,7 +159,7 @@ This document is not meant to imply that all of these named queries and filters 
    * proposal
    * proposals
 
-*filters:* TBD (possibly some valid date filter, something for location for offers/needs search)
+*filters:* inScopeOf, withinLocation (the proposed intents are withinLocation), active (boolean, the current date is within the hasBeginning and hasEnd, inclusive), offer (boolean, the non-reciprocal intents have provider), request (boolean, the non-reciprocal intents have receiver)
 
 *inverse queries:*
 
@@ -166,7 +172,7 @@ This document is not meant to imply that all of these named queries and filters 
    * intent
    * intents
 
-*filters:* action, provider, receiver, resourceClassifiedAs, resourceConformsTo, finished (default false only?)
+*filters:* searchString, action, provider, receiver, resourceClassifiedAs, resourceConformsTo, finished, startDate, endDate, inScopeOf, withinLocation
 
 *inverse queries:*
 
@@ -205,13 +211,17 @@ This document is not meant to imply that all of these named queries and filters 
    * commitment
    * commitments
 
-*filters:* action, provider, receiver, resourceClassifiedAs, resourceConformsTo, finished, startDate, endDate (include any Commitment that overlaps the start date to end date range inclusive; missing start date is from the beginning, missing end date is to the end)
+*filters:* searchString, action, provider, receiver, resourceClassifiedAs, resourceConformsTo, finished, startDate, endDate (include any Commitment that overlaps the start date to end date range inclusive; missing start date is from the beginning, missing end date is to the end)
 
 *inverse queries:*
 
    * fulfilledBy: (Fulfillment.fulfilledBy)
    * satisfies (Satisfaction.satisfies)
    * (probably some location based queries, TBD)
+
+*other queries:*
+
+   * involvedAgents (Commitment.provider, .receiver, .inScopeOf if agent)
 
 #### Satisfaction
 
@@ -247,7 +257,7 @@ This document is not meant to imply that all of these named queries and filters 
    * plan
    * plans
 
-*filters:* finished (true means all the processes and commitments that are part of the Plan are finished), TBD possibly some date related logic
+*filters:* searchString, finished (true means all the processes and commitments that are part of the Plan are finished), TBD possibly some date related logic
 
 *inverse queries:*
 
@@ -269,7 +279,7 @@ This document is not meant to imply that all of these named queries and filters 
    * scenario
    * scenarios
 
-*filters:* (TBD date logic)
+*filters:* searchString, (TBD date logic)
 
 *inverse queries:*
 
@@ -288,7 +298,7 @@ This document is not meant to imply that all of these named queries and filters 
    * resourceSpecification
    * resourceSpecifications
 
-*filters:* resourceClassifiedAs
+*filters:* searchString, resourceClassifiedAs
 
 *inverse queries:*
 
