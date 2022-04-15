@@ -35,7 +35,7 @@ For the most part, the structure provides the causal order of the flows.  But fo
 
 #### Where to start a trace
 
-The "starting item" can be an EconomicResource or EconomicEvent.  If you want to start at the present time, and trace everything that ever happened to the resource, start with the resource and its `previousEvent`.  If you just want to know how a resource was made, and what inputs went into it, start with selecting the output event where that resource was initially created, or if it is a stock resource, where it was last incremented. 
+The "starting item" can be an EconomicResource or EconomicEvent.  If you want to start at the present time, and trace everything that ever happened to the resource, start with the resource and the value of its `previousEvent`.  If you just want to know how a resource was made, and what inputs went into it, start with selecting the output event where that resource was initially created, or if it is a stock resource, where it was last incremented. 
 
 #### Pseudocode
 
