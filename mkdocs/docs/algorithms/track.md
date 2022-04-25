@@ -116,10 +116,33 @@ trace-depth-first-search (parameters: "flows", "visited", "contained", "modified
 
 ### Track logic
 
-#### TBD
+#### Pseudocode
 
-Coming soon....
+Again, the following is included to give some idea of the logic required.  It tries to cover all actions and scenarios, but is meant as a suggested starting point, it has not been tested in code.
 
+```
+EconomicResource "next":
+    return all events where the resource is resourceInventoriedAs
+
+Process "next":
+    return all events that are output of the process
+
+EconomicEvent "next":
+    if the event is input of a process
+        return the process
+    if there are any events that are triggeredBy this event
+        return them
+    if the event is output of a process
+        return the resourceInventoriedAs
+    if the toResourceInventoriedAs of the event exists
+        return the toResourceInventoriedAs
+```
+
+```
+track (parameter: starting item)
+    TBD....
+    return "flows"
+```
 
 ### Tracking identifier and lot
 

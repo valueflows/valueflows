@@ -1166,8 +1166,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#tbd" class="md-nav__link">
-    TBD
+  <a href="#pseudocode_1" class="md-nav__link">
+    Pseudocode
   </a>
   
 </li>
@@ -1408,8 +1408,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#tbd" class="md-nav__link">
-    TBD
+  <a href="#pseudocode_1" class="md-nav__link">
+    Pseudocode
   </a>
   
 </li>
@@ -1545,8 +1545,28 @@ trace-depth-first-search (parameters: &quot;flows&quot;, &quot;visited&quot;, &q
     return &quot;flows&quot;
 </code></pre></div>
 <h3 id="track-logic">Track logic</h3>
-<h4 id="tbd">TBD</h4>
-<p>Coming soon....</p>
+<h4 id="pseudocode_1">Pseudocode</h4>
+<p>Again, the following is included to give some idea of the logic required.  It tries to cover all actions and scenarios, but is meant as a suggested starting point, it has not been tested in code.</p>
+<div class="highlight"><pre><span></span><code>EconomicResource &quot;next&quot;:
+    return all events where the resource is resourceInventoriedAs
+
+Process &quot;next&quot;:
+    return all events that are output of the process
+
+EconomicEvent &quot;next&quot;:
+    if the event is input of a process
+        return the process
+    if there are any events that are triggeredBy this event
+        return them
+    if the event is output of a process
+        return the resourceInventoriedAs
+    if the toResourceInventoriedAs of the event exists
+        return the toResourceInventoriedAs
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>track (parameter: starting item)
+    TBD....
+    return &quot;flows&quot;
+</code></pre></div>
 <h3 id="tracking-identifier-and-lot">Tracking identifier and lot</h3>
 <p>Currently, often companies' internal flow information is not public, although in many countries they are required to be able to provide input and output information when needed in a medical emergency, without connecting all the dots internally.  Also any organization can be missing resource flow data so that there are gaps in the flows, no matter the level of transparency.</p>
 <p>For these reasons, tracking identifier (often a serial number) and a standard lot identifier are currently used when food or medical tracing and tracking is required.  And in VF, they can be used whenever there is missing resource flow information for any reason; or when many resources go in and out of one process, such as might happen in transportation.</p>
