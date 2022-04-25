@@ -35,7 +35,7 @@ http://www.ontology-of-units-of-measure.org/resource/om-2/
     * VF will use (at least) `rdfs:label` and `om2:symbol` as properties of Units.
     * See note at the end of [Flows](/introduction/flows.md) regarding display of unit `om2:one`.
 
-### DTYPE
+## DTYPE
 
 http://www.linkedmodel.org/schema/dtype#
 
