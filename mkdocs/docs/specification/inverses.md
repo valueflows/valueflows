@@ -24,12 +24,26 @@ This document is not meant to imply that all of these named queries and filters 
    * organization
    * organizations
 
-*filters:* classifiedAs (Organizations only), locatedIn (some geographic boundary, city, region, etc.)
+*filters:* classifiedAs (Organizations only), withinLocation (some geographic boundary, city, region, etc.)
 
 *inverse queries:*
 
    * processes (Process.inScopeOf)
    * inventoriedEconomicResources (EconomicResource.primaryAccountable)
+   * commitmentsAsProvider (Commitment.provider)
+   * commitmentsAsReceiver (Commitment.receiver)
+   * commitmentsInScope (Commitment.inScopeOf)
+   * economicEventsAsProvider (EconomicEvent.provider)
+   * economicEventsAsReceiver (EconomicEvent.receiver)
+   * economicEventsInScope (EconomicEvent.inScopeOf)
+   * intentsAsProvider (Intent.provider)
+   * intentsAsReceiver (Intent.receiver)
+   * intentsInScope (Intent.inScopeOf)
+   * claimsAsProvider (Claim.provider)
+   * claimsAsReceiver (Claim.receiver)
+   * claimsInScope (Claim.inScopeOf)
+   * proposalsInScope (Proposal.inScopeOf)
+   * scenariosInScope (Scenario.inScopeOf)
    * relationshipsAsSubject (Relationship.subject)
    * relationshipsAsObject (Relationship.object)
 
@@ -41,6 +55,7 @@ This document is not meant to imply that all of these named queries and filters 
    * intents (Intent.provider or .receiver or .inScopeOf)
    * claims (Claim.provider or .receiver or .inScopeOf)
    * proposals (Proposal.inScopeOf, or a related Intent.provider or Intent.receiver)
+   * proposalsTo (Proposals.proposed where ProposedTo.proposedTo is the Agent)
    * relationships (Relationship.object or .subject or .inScopeOf)
    * roles (AgentRelationshipRoles that are AgentRelationship.relationship where the .subject or .object or .inScopeOf is the Agent)
 
@@ -99,11 +114,12 @@ This document is not meant to imply that all of these named queries and filters 
 
 *inverse queries:*
 
-   * settles (Settlement.settles)
-   * fulfills (Fulfillment.fulfills)
-   * satisfies (Satisfaction.satisfies)
-   * appreciationOf (Appreciation.appreciationOf)
-   * appreciatedBy (Appreciation.appreciatedBy)
+   * settles (Settlement.settledBy)
+   * fulfills (Fulfillment.fulfilledBy)
+   * satisfies (Satisfaction.satisfiedBy)
+   * appreciationOf (Appreciation.appreciatedWith)
+   * appreciatedWith (Appreciation.appreciationOf)
+   * triggers (EconomicEvent.triggeredBy)
 
 *other queries:*
 
@@ -120,19 +136,21 @@ This document is not meant to imply that all of these named queries and filters 
   * economicResource
   * economicResources
 
-*filters:* searchString, accountableAgent, currentLocation, withinLocation,  excludeZeroQuantities (boolean), classifiedAs, state, trackingIdentifier
+*filters:* searchString, accountableAgent, currentLocation, withinLocation (some geographic boundary, city, region, etc.),  excludeZeroQuantities (boolean), classifiedAs, state, trackingIdentifier
 
 *inverse queries:*
 
    * contains (EconomicResource.containedIn)
    * intents (Intent.resourceInventoriedAs)
    * commitments (Commitment.resourceInventoriedAs)
+   * economicEventsInOutFrom (EconomicEvent.resourceInventoriedAs)
+   * economicEventsTo (EconomicEvent.toResourceInventoriedAs)
 
 *other queries:*
 
    * economicEvents (either EconomicEvent.resourceInventoriedAs or .toResourceInventoriedAs)
-   * previous (EconomicEvent, see Track and Trace)
-   * next (EconomicEvent, see Track and Trace)
+   * previous (EconomicEvent, see [Track and Trace](../algorithms/track.md) for logic)
+   * next (EconomicEvent, see [Track and Trace](../algorithms/track.md) for logic)
    * trace (ordered incoming value flows, see [Track and Trace](../algorithms/track.md) for logic)
    * track (ordered outgoing value flows, see [Track and Trace](../algorithms/track.md) for logic)
 
@@ -158,12 +176,23 @@ This document is not meant to imply that all of these named queries and filters 
 
    * proposal
    * proposals
+   * offers (Proposals where a .publishedIn ProposedIntent.reciprocal is false and the ProposedIntent.publishes Intent has a .provider)
+   * requests (Proposals where a .publishedIn ProposedIntent.reciprocal is false and the ProposedIntent.publishes Intent has a .receiver)
 
-*filters:* inScopeOf, withinLocation (the proposed intents are withinLocation), active (boolean, the current date is within the hasBeginning and hasEnd, inclusive), offer (boolean, the non-reciprocal intents have provider), request (boolean, the non-reciprocal intents have receiver)
+
+*filters:* inScopeOf, withinLocation (the proposed intents are withinLocation), active (boolean, the current date is within the hasBeginning and hasEnd, inclusive), isOffer (boolean, the non-reciprocal intents have provider), isRequest (boolean, the non-reciprocal intents have receiver)
 
 *inverse queries:*
 
-   * publishes: (ProposedIntent.publishes)
+   * publishes (ProposedIntent.publishedIn)
+   * proposedTo (ProposedTo.proposed)
+
+*other queries:*
+
+   * isOffer (boolean, true if a .publishedIn ProposedIntent.reciprocal is false and the ProposedIntent.publishes Intent has a .provider)
+   * isRequest (boolean, true if a .publishedIn ProposedIntent.reciprocal is false and the ProposedIntent.publishes Intent has a .receiver)
+   * primaryIntents (.publishes Intents where the self.publishedIn ProposedIntent.reciprocal is false)
+   * reciprocalIntents (.publishes Intents where the self.publishedIn ProposedIntent.reciprocal is true)
 
 #### Intent
 
@@ -172,15 +201,17 @@ This document is not meant to imply that all of these named queries and filters 
    * intent
    * intents
 
-*filters:* searchString, action, provider, receiver, resourceClassifiedAs, resourceConformsTo, finished, startDate, endDate, inScopeOf, withinLocation
+*filters:* searchString, action, provider, receiver, resourceClassifiedAs, resourceConformsTo, finished, startDate, endDate, inScopeOf, withinLocation (some geographic boundary, city, region, etc.)
 
 *inverse queries:*
 
-   * publishedIn (ProposedIntent.publishedIn)
-   * satisfiedBy (Satisfaction.satisfiedBy)
+   * publishedIn (ProposedIntent.publishes)
+   * satisfiedBy (Satisfaction.satisfies)
    * (probably some location based queries, TBD)
 
 #### ProposedIntent
+
+*filters:* reciprocal
 
 *main queries:*
 
@@ -211,17 +242,17 @@ This document is not meant to imply that all of these named queries and filters 
    * commitment
    * commitments
 
-*filters:* searchString, action, provider, receiver, resourceClassifiedAs, resourceConformsTo, finished, startDate, endDate (include any Commitment that overlaps the start date to end date range inclusive; missing start date is from the beginning, missing end date is to the end)
+*filters:* searchString, action, provider, receiver, resourceClassifiedAs, resourceConformsTo, finished, startDate, endDate (include any Commitment that overlaps the start date to end date range inclusive; missing start date is from the beginning, missing end date is to the end), withinLocation (some geographic boundary, city, region, etc.)
 
 *inverse queries:*
 
-   * fulfilledBy: (Fulfillment.fulfilledBy)
-   * satisfies (Satisfaction.satisfies)
-   * (probably some location based queries, TBD)
+   * fulfilledBy: (Fulfillment.fulfills)
+   * satisfies (Satisfaction.satisfiedBy)
 
 *other queries:*
 
    * involvedAgents (Commitment.provider, .receiver, .inScopeOf if agent)
+   * (possibly some location based queries, TBD)
 
 #### Satisfaction
 
@@ -237,11 +268,11 @@ This document is not meant to imply that all of these named queries and filters 
    * claim
    * claims
 
-*filters:* action, provider, receiver, resourceClassifiedAs, resourceConformsTo, finished, startDate, endDate (include any Claim that overlaps the start date to end date range inclusive; missing start date is from the beginning, missing end date is to the end)
+*filters:* action, provider, receiver, resourceClassifiedAs, resourceConformsTo, finished, startDate, endDate (include any Claim where due overlaps the start date to end date range inclusive; missing start date is from the beginning, missing end date is to the end)
 
 *inverse queries:*
 
-   * settledBy (Settlement.settledBy)
+   * settledBy (Settlement.settles)
 
 #### Settlement
 
@@ -257,7 +288,7 @@ This document is not meant to imply that all of these named queries and filters 
    * plan
    * plans
 
-*filters:* searchString, finished (true means all the processes and commitments that are part of the Plan are finished), TBD possibly some date related logic
+*filters:* searchString, finished (true means all the processes that are part of the Plan are finished), TBD possibly some date related logic
 
 *inverse queries:*
 
@@ -267,10 +298,11 @@ This document is not meant to imply that all of these named queries and filters 
 
 *other queries:*
 
-   * inScopeOf (all the Process.inScopeOf)
-   * involvedAgents (all the Process.involvedAgents)
-   * startDate TBD
-   * endDate TBD
+   * inScopeOf (all the .plannedWithin Process.inScopeOf)
+   * involvedAgents (all the .plannedWithin Process.involvedAgents)
+   * startDate (earliest .plannedWithin Process.hasBeginning)
+   * endDate (latest .plannedWithin Process.hasEnd)
+   * finished (all the .plannedWithin Process.finished are true)
 
 #### Scenario
 
@@ -302,7 +334,7 @@ This document is not meant to imply that all of these named queries and filters 
 
 *inverse queries:*
 
-   * economicResources (EconomicResource.conformsTo)
+   * conformingResources (EconomicResource.conformsTo)
    * economicEvents (EconomicEvent.resourceConformsTo)
    * commitments (Commitment.resourceConformsTo)
    * intents (Intent.resourceConformsTo)
@@ -318,7 +350,11 @@ This document is not meant to imply that all of these named queries and filters 
 
 *inverse queries:*
 
-   * processes (Process.basedOn)
+   * conformingProcesses (Process.basedOn)
+   * conformingRecipeProcesses (RecipeProcess.processConformsTo)
+   * commitmentsRequiringStage (Commitment.stage)
+   * resourcesCurrentlyAtStage (EconomicResource.stage)
+   * recipeFlowsRequiringStage (RecipeFlow.stage)
 
 #### RecipeResource
 
