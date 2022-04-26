@@ -1783,11 +1783,25 @@
 <li>organization</li>
 <li>organizations</li>
 </ul>
-<p><em>filters:</em> classifiedAs (Organizations only), locatedIn (some geographic boundary, city, region, etc.)</p>
+<p><em>filters:</em> classifiedAs (Organizations only), withinLocation (some geographic boundary, city, region, etc.)</p>
 <p><em>inverse queries:</em></p>
 <ul>
 <li>processes (Process.inScopeOf)</li>
 <li>inventoriedEconomicResources (EconomicResource.primaryAccountable)</li>
+<li>commitmentsAsProvider (Commitment.provider)</li>
+<li>commitmentsAsReceiver (Commitment.receiver)</li>
+<li>commitmentsInScope (Commitment.inScopeOf)</li>
+<li>economicEventsAsProvider (EconomicEvent.provider)</li>
+<li>economicEventsAsReceiver (EconomicEvent.receiver)</li>
+<li>economicEventsInScope (EconomicEvent.inScopeOf)</li>
+<li>intentsAsProvider (Intent.provider)</li>
+<li>intentsAsReceiver (Intent.receiver)</li>
+<li>intentsInScope (Intent.inScopeOf)</li>
+<li>claimsAsProvider (Claim.provider)</li>
+<li>claimsAsReceiver (Claim.receiver)</li>
+<li>claimsInScope (Claim.inScopeOf)</li>
+<li>proposalsInScope (Proposal.inScopeOf)</li>
+<li>scenariosInScope (Scenario.inScopeOf)</li>
 <li>relationshipsAsSubject (Relationship.subject)</li>
 <li>relationshipsAsObject (Relationship.object)</li>
 </ul>
@@ -1799,6 +1813,7 @@
 <li>intents (Intent.provider or .receiver or .inScopeOf)</li>
 <li>claims (Claim.provider or .receiver or .inScopeOf)</li>
 <li>proposals (Proposal.inScopeOf, or a related Intent.provider or Intent.receiver)</li>
+<li>proposalsTo (Proposals.proposed where ProposedTo.proposedTo is the Agent)</li>
 <li>relationships (Relationship.object or .subject or .inScopeOf)</li>
 <li>roles (AgentRelationshipRoles that are AgentRelationship.relationship where the .subject or .object or .inScopeOf is the Agent)</li>
 </ul>
@@ -1851,11 +1866,12 @@
 <p><em>filters:</em> searchString, action, provider, receiver, resourceClassifiedAs, startDate, endDate (include any EconomicEvent that overlaps the start date to end date range inclusive; missing start date is from the beginning, missing end date is to the end) </p>
 <p><em>inverse queries:</em></p>
 <ul>
-<li>settles (Settlement.settles)</li>
-<li>fulfills (Fulfillment.fulfills)</li>
-<li>satisfies (Satisfaction.satisfies)</li>
-<li>appreciationOf (Appreciation.appreciationOf)</li>
-<li>appreciatedBy (Appreciation.appreciatedBy)</li>
+<li>settles (Settlement.settledBy)</li>
+<li>fulfills (Fulfillment.fulfilledBy)</li>
+<li>satisfies (Satisfaction.satisfiedBy)</li>
+<li>appreciationOf (Appreciation.appreciatedWith)</li>
+<li>appreciatedWith (Appreciation.appreciationOf)</li>
+<li>triggers (EconomicEvent.triggeredBy)</li>
 </ul>
 <p><em>other queries:</em></p>
 <ul>
@@ -1871,18 +1887,20 @@
 <li>economicResource</li>
 <li>economicResources</li>
 </ul>
-<p><em>filters:</em> searchString, accountableAgent, currentLocation, withinLocation,  excludeZeroQuantities (boolean), classifiedAs, state, trackingIdentifier</p>
+<p><em>filters:</em> searchString, accountableAgent, currentLocation, withinLocation (some geographic boundary, city, region, etc.),  excludeZeroQuantities (boolean), classifiedAs, state, trackingIdentifier</p>
 <p><em>inverse queries:</em></p>
 <ul>
 <li>contains (EconomicResource.containedIn)</li>
 <li>intents (Intent.resourceInventoriedAs)</li>
 <li>commitments (Commitment.resourceInventoriedAs)</li>
+<li>economicEventsInOutFrom (EconomicEvent.resourceInventoriedAs)</li>
+<li>economicEventsTo (EconomicEvent.toResourceInventoriedAs)</li>
 </ul>
 <p><em>other queries:</em></p>
 <ul>
 <li>economicEvents (either EconomicEvent.resourceInventoriedAs or .toResourceInventoriedAs)</li>
-<li>previous (EconomicEvent, see Track and Trace)</li>
-<li>next (EconomicEvent, see Track and Trace)</li>
+<li>previous (EconomicEvent, see <a href="../../algorithms/track/">Track and Trace</a> for logic)</li>
+<li>next (EconomicEvent, see <a href="../../algorithms/track/">Track and Trace</a> for logic)</li>
 <li>trace (ordered incoming value flows, see <a href="../../algorithms/track/">Track and Trace</a> for logic)</li>
 <li>track (ordered outgoing value flows, see <a href="../../algorithms/track/">Track and Trace</a> for logic)</li>
 </ul>
@@ -1904,11 +1922,21 @@
 <ul>
 <li>proposal</li>
 <li>proposals</li>
+<li>offers (Proposals where a .publishedIn ProposedIntent.reciprocal is false and the ProposedIntent.publishes Intent has a .provider)</li>
+<li>requests (Proposals where a .publishedIn ProposedIntent.reciprocal is false and the ProposedIntent.publishes Intent has a .receiver)</li>
 </ul>
-<p><em>filters:</em> inScopeOf, withinLocation (the proposed intents are withinLocation), active (boolean, the current date is within the hasBeginning and hasEnd, inclusive), offer (boolean, the non-reciprocal intents have provider), request (boolean, the non-reciprocal intents have receiver)</p>
+<p><em>filters:</em> inScopeOf, withinLocation (the proposed intents are withinLocation), active (boolean, the current date is within the hasBeginning and hasEnd, inclusive), isOffer (boolean, the non-reciprocal intents have provider), isRequest (boolean, the non-reciprocal intents have receiver)</p>
 <p><em>inverse queries:</em></p>
 <ul>
-<li>publishes: (ProposedIntent.publishes)</li>
+<li>publishes (ProposedIntent.publishedIn)</li>
+<li>proposedTo (ProposedTo.proposed)</li>
+</ul>
+<p><em>other queries:</em></p>
+<ul>
+<li>isOffer (boolean, true if a .publishedIn ProposedIntent.reciprocal is false and the ProposedIntent.publishes Intent has a .provider)</li>
+<li>isRequest (boolean, true if a .publishedIn ProposedIntent.reciprocal is false and the ProposedIntent.publishes Intent has a .receiver)</li>
+<li>primaryIntents (.publishes Intents where the self.publishedIn ProposedIntent.reciprocal is false)</li>
+<li>reciprocalIntents (.publishes Intents where the self.publishedIn ProposedIntent.reciprocal is true)</li>
 </ul>
 <h4 id="intent">Intent</h4>
 <p><em>main queries:</em></p>
@@ -1916,14 +1944,15 @@
 <li>intent</li>
 <li>intents</li>
 </ul>
-<p><em>filters:</em> searchString, action, provider, receiver, resourceClassifiedAs, resourceConformsTo, finished, startDate, endDate, inScopeOf, withinLocation</p>
+<p><em>filters:</em> searchString, action, provider, receiver, resourceClassifiedAs, resourceConformsTo, finished, startDate, endDate, inScopeOf, withinLocation (some geographic boundary, city, region, etc.)</p>
 <p><em>inverse queries:</em></p>
 <ul>
-<li>publishedIn (ProposedIntent.publishedIn)</li>
-<li>satisfiedBy (Satisfaction.satisfiedBy)</li>
+<li>publishedIn (ProposedIntent.publishes)</li>
+<li>satisfiedBy (Satisfaction.satisfies)</li>
 <li>(probably some location based queries, TBD)</li>
 </ul>
 <h4 id="proposedintent">ProposedIntent</h4>
+<p><em>filters:</em> reciprocal</p>
 <p><em>main queries:</em></p>
 <ul>
 <li>proposedIntent</li>
@@ -1951,16 +1980,16 @@
 <li>commitment</li>
 <li>commitments</li>
 </ul>
-<p><em>filters:</em> searchString, action, provider, receiver, resourceClassifiedAs, resourceConformsTo, finished, startDate, endDate (include any Commitment that overlaps the start date to end date range inclusive; missing start date is from the beginning, missing end date is to the end)</p>
+<p><em>filters:</em> searchString, action, provider, receiver, resourceClassifiedAs, resourceConformsTo, finished, startDate, endDate (include any Commitment that overlaps the start date to end date range inclusive; missing start date is from the beginning, missing end date is to the end), withinLocation (some geographic boundary, city, region, etc.)</p>
 <p><em>inverse queries:</em></p>
 <ul>
-<li>fulfilledBy: (Fulfillment.fulfilledBy)</li>
-<li>satisfies (Satisfaction.satisfies)</li>
-<li>(probably some location based queries, TBD)</li>
+<li>fulfilledBy: (Fulfillment.fulfills)</li>
+<li>satisfies (Satisfaction.satisfiedBy)</li>
 </ul>
 <p><em>other queries:</em></p>
 <ul>
 <li>involvedAgents (Commitment.provider, .receiver, .inScopeOf if agent)</li>
+<li>(possibly some location based queries, TBD)</li>
 </ul>
 <h4 id="satisfaction">Satisfaction</h4>
 <p><em>main queries:</em></p>
@@ -1974,10 +2003,10 @@
 <li>claim</li>
 <li>claims</li>
 </ul>
-<p><em>filters:</em> action, provider, receiver, resourceClassifiedAs, resourceConformsTo, finished, startDate, endDate (include any Claim that overlaps the start date to end date range inclusive; missing start date is from the beginning, missing end date is to the end)</p>
+<p><em>filters:</em> action, provider, receiver, resourceClassifiedAs, resourceConformsTo, finished, startDate, endDate (include any Claim where due overlaps the start date to end date range inclusive; missing start date is from the beginning, missing end date is to the end)</p>
 <p><em>inverse queries:</em></p>
 <ul>
-<li>settledBy (Settlement.settledBy)</li>
+<li>settledBy (Settlement.settles)</li>
 </ul>
 <h4 id="settlement">Settlement</h4>
 <p><em>main queries:</em></p>
@@ -1991,7 +2020,7 @@
 <li>plan</li>
 <li>plans</li>
 </ul>
-<p><em>filters:</em> searchString, finished (true means all the processes and commitments that are part of the Plan are finished), TBD possibly some date related logic</p>
+<p><em>filters:</em> searchString, finished (true means all the processes that are part of the Plan are finished), TBD possibly some date related logic</p>
 <p><em>inverse queries:</em></p>
 <ul>
 <li>processes (Process.plannedWithin)</li>
@@ -2000,10 +2029,11 @@
 </ul>
 <p><em>other queries:</em></p>
 <ul>
-<li>inScopeOf (all the Process.inScopeOf)</li>
-<li>involvedAgents (all the Process.involvedAgents)</li>
-<li>startDate TBD</li>
-<li>endDate TBD</li>
+<li>inScopeOf (all the .plannedWithin Process.inScopeOf)</li>
+<li>involvedAgents (all the .plannedWithin Process.involvedAgents)</li>
+<li>startDate (earliest .plannedWithin Process.hasBeginning)</li>
+<li>endDate (latest .plannedWithin Process.hasEnd)</li>
+<li>finished (all the .plannedWithin Process.finished are true)</li>
 </ul>
 <h4 id="scenario">Scenario</h4>
 <p><em>main queries:</em></p>
@@ -2030,7 +2060,7 @@
 <p><em>filters:</em> searchString, resourceClassifiedAs</p>
 <p><em>inverse queries:</em></p>
 <ul>
-<li>economicResources (EconomicResource.conformsTo)</li>
+<li>conformingResources (EconomicResource.conformsTo)</li>
 <li>economicEvents (EconomicEvent.resourceConformsTo)</li>
 <li>commitments (Commitment.resourceConformsTo)</li>
 <li>intents (Intent.resourceConformsTo)</li>
@@ -2045,7 +2075,11 @@
 </ul>
 <p><em>inverse queries:</em></p>
 <ul>
-<li>processes (Process.basedOn)</li>
+<li>conformingProcesses (Process.basedOn)</li>
+<li>conformingRecipeProcesses (RecipeProcess.processConformsTo)</li>
+<li>commitmentsRequiringStage (Commitment.stage)</li>
+<li>resourcesCurrentlyAtStage (EconomicResource.stage)</li>
+<li>recipeFlowsRequiringStage (RecipeFlow.stage)</li>
 </ul>
 <h4 id="reciperesource">RecipeResource</h4>
 <p><em>main queries:</em></p>
