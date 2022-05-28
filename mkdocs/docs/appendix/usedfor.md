@@ -22,7 +22,7 @@ The [Fediverse](https://fediverse.party/en/fediverse/) is a collection of networ
 
 * Bonfire kicked the federation direction off by supporting Valueflows as an extension of ActivityPub, and including the same [graphql api](https://lab.allmende.io/valueflows/vf-schemas/vf-graphql) as hREA. This supports a user-friendly integration of social and economic networking, which we think is an important direction. Information is at their [website](https://bonfirenetworks.org/), the Valueflows extension is on [github](https://github.com/bonfire-networks/bonfire_valueflows).
 
-* [Reflow](https://reflowproject.eu/) was an EU H2020 funded project that seeks to understand and transform urban material flows, co-create and test regenerative solutions at business, governance, and citizen levels to create a resilient circular economy.  The ReflowOS backend, developed by Dyne (see below), enhanced the Bonfire application.
+* [Reflow](https://reflowproject.eu/) was an EU H2020 funded project that seeks to understand and transform urban material flows, co-create and test regenerative solutions at business, governance, and citizen levels to create a resilient circular economy.  The ReflowOS backend, developed by Dyne (see below), built on the Bonfire application.
 
 * [FabCity Hamburg](https://fabcity.hamburg/en/) (in process) will build on Reflow to support a global network of [Fab Cities](https://fab.city/) that proposes a new urban, economic, social and industrial model that relocalises production to the city and its bioregional context, while building a digital infrastructure enabling ecological, economic and social sustainability.  Dyne (see below) is also heavily involved in this development.
 
