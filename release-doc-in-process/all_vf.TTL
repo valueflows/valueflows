@@ -103,10 +103,8 @@ vf:RecipeProcess a          owl:Class ;
 
 vf:ProcessSpecification a   owl:Class ;
         rdfs:label          "Process Specification"@en ;
-        rdfs:label          "Prozess Spezifikation"@de ;
         vs:term_status      "unstable" ;
         rdfs:comment        "Specifies the kind of process."@en ;
-        rdfs:comment        "Beschreibt die Art des Prozesses."@de ;
         .
 
 vf:RecipeFlow a             owl:Class ;

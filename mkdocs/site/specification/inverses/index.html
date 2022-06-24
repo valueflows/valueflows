@@ -1869,8 +1869,8 @@
 <li>settles (Settlement.settledBy)</li>
 <li>fulfills (Fulfillment.fulfilledBy)</li>
 <li>satisfies (Satisfaction.satisfiedBy)</li>
-<li>appreciationOf (Appreciation.appreciatedWith)</li>
-<li>appreciatedWith (Appreciation.appreciationOf)</li>
+<li>appreciationOf (Appreciation.appreciationWith)</li>
+<li>appreciationWith (Appreciation.appreciationOf)</li>
 <li>triggers (EconomicEvent.triggeredBy)</li>
 </ul>
 <p><em>other queries:</em></p>
@@ -1893,8 +1893,8 @@
 <li>contains (EconomicResource.containedIn)</li>
 <li>intents (Intent.resourceInventoriedAs)</li>
 <li>commitments (Commitment.resourceInventoriedAs)</li>
-<li>economicEventsInOutFrom (EconomicEvent.resourceInventoriedAs)</li>
-<li>economicEventsTo (EconomicEvent.toResourceInventoriedAs)</li>
+<li>economicEventsInOutFrom (All economic events with the economic resource in the EconomicEvent.resourceInventoriedAs, which includes all process related events, the provider resource in transfers/moves, and raise/lower)</li>
+<li>economicEventsTo (All economic events with the economic Resource in the EconomicEvent.toResourceInventoriedAs, which is the receiver resource in transfers and moves)</li>
 </ul>
 <p><em>other queries:</em></p>
 <ul>
