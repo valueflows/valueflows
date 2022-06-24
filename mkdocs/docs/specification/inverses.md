@@ -117,8 +117,8 @@ This document is not meant to imply that all of these named queries and filters 
    * settles (Settlement.settledBy)
    * fulfills (Fulfillment.fulfilledBy)
    * satisfies (Satisfaction.satisfiedBy)
-   * appreciationOf (Appreciation.appreciatedWith)
-   * appreciatedWith (Appreciation.appreciationOf)
+   * appreciationOf (Appreciation.appreciationWith)
+   * appreciationWith (Appreciation.appreciationOf)
    * triggers (EconomicEvent.triggeredBy)
 
 *other queries:*
@@ -143,8 +143,8 @@ This document is not meant to imply that all of these named queries and filters 
    * contains (EconomicResource.containedIn)
    * intents (Intent.resourceInventoriedAs)
    * commitments (Commitment.resourceInventoriedAs)
-   * economicEventsInOutFrom (EconomicEvent.resourceInventoriedAs)
-   * economicEventsTo (EconomicEvent.toResourceInventoriedAs)
+   * economicEventsInOutFrom (All economic events with the economic resource in the EconomicEvent.resourceInventoriedAs, which includes all process related events, the provider resource in transfers/moves, and raise/lower)
+   * economicEventsTo (All economic events with the economic Resource in the EconomicEvent.toResourceInventoriedAs, which is the receiver resource in transfers and moves)
 
 *other queries:*
 
