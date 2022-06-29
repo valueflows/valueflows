@@ -42,7 +42,7 @@ All flows (Economic Event, Commitment, Intent, Claim, Recipe Flow) use an action
 
 Action | Accounting effect | Onhand effect | I/O | Other effect | Pairs with |
 ------ | ------ | --- | ----------------- | ---------- | --------- |
-produce | Increment | Increment | Output | N/A | N/A |
+produce | Increment | Increment | Output | primaryAccountable(5) | N/A |
 consume | Decrement | Decrement | Input | N/A | N/A |
 use | No effect(1) | No effect(1) | Input | N/A | N/A |
 work | No effect(1) | No effect(1) | Input | N/A | N/A |
@@ -55,8 +55,8 @@ modify | No effect | Increment  | Output | N/A | accept |
 combine | No effect | Decrement  | Input | add containedIn | separate |
 separate | No effect | Increment | Output | remove containedIn | combine |
 transfer-custody | No effect | Decr+Incr(2) | N/A | currentLocation(4) | N/A |
-transfer-all-rights | Decr+Incr(2) | No effect | N/A | N/A | N/A |
-transfer | Decr+Incr(2) | Decr+Incr(2) | N/A | currentLocation(4) | N/A |
+transfer-all-rights | Decr+Incr(2) | No effect | N/A | primaryAccountable(5) | N/A |
+transfer | Decr+Incr(2) | Decr+Incr(2) | N/A | currentLocation(4), primaryAccountable(5) | N/A |
 move | Decr+Incr(2) |Decr+Incr(2) | N/A | currentLocation(4) | N/A |
 raise | Increment | Increment | N/A | N/A | N/A |
 lower | Decrement | Decrement | N/A | N/A | N/A |
@@ -65,8 +65,10 @@ We have defined a core set of actions, but expect that this will be extended wit
 
 (1) The actions `use` and `work` are time-based actions, either with or without an explicit schedule. If the schedule is documented as part of the economic resource, then those economic events could decrement that schedule, although not the "current quantity" of the resource.
 
-(2) The actions `transfer` and `move` can optionally define a second identified resource on the receiver side.
+(2) The `transfer` actions and `move` can optionally define a second identified resource on the receiver side.
 
 (3) The action `deliver-service` can sometimes be an input to another process, at the same time as it is an output from a process.  This is because services imply delivery as they are created.
 
 (4) These actions should update the resource's `currentLocation` if `toLocation` is provided on the event. For `dropoff` it is the resource which is affected by the event, for all others it is the to resource, the resource that results from the event. For the latter, the resource and to resource may be the same resource, depending on how resources are identified in the user community.
+
+(5) These actions should update the resource's `primaryAccountable` agent using the event's `receiver` agent.  For `produce`, the resource is the one that is created by the event, if one is created.  For the transfers, the resource updated is the `toResourceInventoriedAs`.
