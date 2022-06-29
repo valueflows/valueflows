@@ -59,7 +59,7 @@ transfer-all-rights | Decr+Incr(2) | No effect | N/A | primaryAccountable(5) | N
 transfer | Decr+Incr(2) | Decr+Incr(2) | N/A | currentLocation(4), primaryAccountable(5) | N/A |
 move | Decr+Incr(2) |Decr+Incr(2) | N/A | currentLocation(4) | N/A |
 raise | Increment | Increment | N/A | N/A | N/A |
-lower | Decrement | Decrement | N/A | N/A | N/A |
+lower | Decrement | Decrement | N/A | primaryAccountable(5) | N/A |
 
 We have defined a core set of actions, but expect that this will be extended with some others. If extended, they should be defined as part of this or another formal vocabulary so that all can use them and assume the same meaning. However, the effects of the actions are included in the data definitions so that computer systems can be "data driven" in their effects on resources if desired.
 
@@ -71,4 +71,4 @@ We have defined a core set of actions, but expect that this will be extended wit
 
 (4) These actions should update the resource's `currentLocation` if `toLocation` is provided on the event. For `dropoff` it is the resource which is affected by the event, for all others it is the to resource, the resource that results from the event. For the latter, the resource and to resource may be the same resource, depending on how resources are identified in the user community.
 
-(5) These actions should update the resource's `primaryAccountable` agent using the event's `receiver` agent.  For `produce`, the resource is the one that is created by the event, if one is created.  For the transfers, the resource updated is the `toResourceInventoriedAs`.
+(5) These actions should update the resource's `primaryAccountable` agent using the event's `receiver` agent.  For `produce`, the resource is the one that is created by the event, if one is created.  For the transfers, the resource updated is the `toResourceInventoriedAs`.  For `raise`, this only applies if a new resource is created, not if an existing resource is raised.
