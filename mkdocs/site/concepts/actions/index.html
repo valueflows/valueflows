@@ -454,6 +454,8 @@
         
           
         
+          
+        
       
       
         <label class="md-nav__link" for="__nav_3">
@@ -504,6 +506,20 @@
     <li class="md-nav__item">
       <a href="../../specification/external-terms/" class="md-nav__link">
         Other Namespaces
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../specification/units/" class="md-nav__link">
+        Units of Measure
       </a>
     </li>
   
@@ -1485,7 +1501,7 @@
 <td>Increment</td>
 <td>Increment</td>
 <td>N/A</td>
-<td>N/A</td>
+<td>primaryAccountable(5)</td>
 <td>N/A</td>
 </tr>
 <tr>
@@ -1503,7 +1519,7 @@
 <p>(2) The <code>transfer</code> actions and <code>move</code> can optionally define a second identified resource on the receiver side.</p>
 <p>(3) The action <code>deliver-service</code> can sometimes be an input to another process, at the same time as it is an output from a process.  This is because services imply delivery as they are created.</p>
 <p>(4) These actions should update the resource's <code>currentLocation</code> if <code>toLocation</code> is provided on the event. For <code>dropoff</code> it is the resource which is affected by the event, for all others it is the to resource, the resource that results from the event. For the latter, the resource and to resource may be the same resource, depending on how resources are identified in the user community.</p>
-<p>(5) These actions should update the resource's <code>primaryAccountable</code> agent using the event's <code>receiver</code> agent.  For <code>produce</code>, the resource is the one that is created by the event, if one is created.  For the transfers, the resource updated is the <code>toResourceInventoriedAs</code>.</p>
+<p>(5) These actions should update the resource's <code>primaryAccountable</code> agent using the event's <code>receiver</code> agent.  For <code>produce</code>, the resource is the one that is created by the event, if one is created.  For the transfers, the resource updated is the <code>toResourceInventoriedAs</code>.  For <code>raise</code>, this only applies if a new resource is created, not if an existing resource is raised.</p>
 
               
             </article>
