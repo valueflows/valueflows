@@ -1,0 +1,210 @@
+#!/usr/bin/env bash
+
+# SPDX-FileCopyrightText: 2022 Robin Vobruba <hoijui.quaero@gmail.com>
+#
+# SPDX-License-Identifier: Unlicense
+
+# See the output of "$0 -h" for details.
+
+# Exit immediately on each error and unset variable;
+# see: https://vaneyckt.io/posts/safer_bash_scripts_with_set_euxo_pipefail/
+set -Eeuo pipefail
+#set -Eeu
+
+script_dir=$(dirname "$(readlink -f "${BASH_SOURCE[0]}")")
+
+APP_NAME="RDF DB Filler"
+#JENA_VERSION="4.2.0"
+JENA_VERSION="4.5.0"
+JENA_DL_BASE_URL="https://dlcdn.apache.org/jena/binaries"
+JENA_DL_URL="$JENA_DL_BASE_URL/apache-jena-$JENA_VERSION.zip"
+JENA_FUSEKI_DL_URL="$JENA_DL_BASE_URL/apache-jena-fuseki-$JENA_VERSION.zip"
+ONT_VF_URL="https://lab.allmende.io/valueflows/valueflows/-/raw/master/release-doc-in-process/all_vf.TTL"
+ONT_OM2_URL="https://raw.githubusercontent.com/HajoRijgersberg/OM/master/om-2.0.rdf"
+DATA_URL_DEFAULT="$ONT_OM2_URL"
+online=true
+cleanup=false
+data_url="$DATA_URL_DEFAULT"
+data_dir="data"
+data_file="$data_dir/data.rdf"
+dataset_name="test_data"
+browse_url="http://localhost:3030/#/dataset/$dataset_name/query"
+
+# For the DB
+JENA_HOME="$HOME/.local/opt/apache-jena-$JENA_VERSION"
+# For the (SPARQL) query web interface to the DB
+JENA_FUSEKI_HOME="$HOME/.local/opt/apache-jena-fuseki-$JENA_VERSION"
+
+# This dir is where our RDF data will be stored
+# (in a query-efficient way)
+db_dir="$script_dir/rdf_db"
+jena_db_data_injector="$JENA_HOME/bin/tdb2.tdbloader"
+jena_db_data_querier="$JENA_HOME/bin/tdb2.tdbquery"
+jena_fuseki_server="$JENA_FUSEKI_HOME/fuseki-server"
+
+function print_help() {
+
+	script_name="$(basename "$0")"
+	echo "$APP_NAME - Fills an Apache Jena RDF DB"
+	echo "  with data from an online RDF data file."
+	echo
+	echo "Usage:"
+	echo "  $script_name [OPTION...]"
+	echo "Options:"
+	echo "  -h, --help          Print this usage help and exit"
+	echo "  --offline           Do not try to fetch git repos"
+	echo "  --data [URL]        Download RDF data from here instead (default: '$DATA_URL_DEFAULT')"
+	echo "  --clean             Delete the Jena DB file, to make room for new - fresh data - and exit"
+	echo "Examples:"
+	echo "  $script_name"
+}
+
+function ensure_tool() {
+	home="$1"
+	url="$2"
+	name="$3"
+
+	echo
+	printf 'Checking %s is available ... ' "$name"
+	if [ -d "$home" ]
+	then
+		echo "yes!"
+	else
+		echo "no,"
+		echo "installing it under $home ..."
+		mkdir -p "$home"
+		rm -Rf "${home:?}"
+		archive_name="$(basename "$url")"
+		dir_name="${archive_name%.zip}"
+		wget "$url"
+		unzip "$archive_name"
+		mv "$dir_name" "$home"
+		rm "$archive_name"
+		echo "done."
+	fi
+}
+
+function repo_ensure_latest() {
+	dir="$1"
+	clone_url="$2"
+	main_branch="${3:-master}"
+	if [ -d "$dir" ]
+	then
+		if $online
+		then
+			git -C "$dir" fetch
+			git -C "$dir" rebase "origin/$main_branch"
+		fi
+	else
+		if $online
+		then
+			>&2 echo "ERROR: --offline chosen and repo '$dir' not present!"
+			exit 1
+		fi
+		git clone "$clone_url" "$dir"
+	fi
+}
+
+function clean_db() {
+
+	if [ -d "$db_dir" ]
+	then
+		echo
+		echo "Cleaning DB dir '$db_dir' ..."
+		rm -Rf "${db_dir:?}/"*
+		rmdir "$db_dir"
+		echo "done."
+	else
+		echo "Nothing to do."
+	fi
+}
+
+# read command-line args
+POSITIONAL=()
+while [[ $# -gt 0 ]]
+do
+	arg="$1"
+	shift # $2 -> $1, $3 -> $2, ...
+
+	case "$arg" in
+		-h|--help)
+			print_help
+			exit 0
+			;;
+		-o|--offline)
+			online=false
+			;;
+		-d|--data)
+			online=false
+			;;
+		--clean)
+			clean_db
+			exit 0
+			;;
+		*) # non-/unknown option
+			POSITIONAL+=("$arg") # save it in an array for later
+			;;
+	esac
+done
+set -- "${POSITIONAL[@]}" # restore positional parameters
+
+ensure_tool "$JENA_HOME" "$JENA_DL_URL" "Apache Jena"
+ensure_tool "$JENA_FUSEKI_HOME" "$JENA_FUSEKI_DL_URL" "Apache Jena Fuseki"
+
+if ! [ -f "$db_dir" ]
+then
+	echo
+	echo "Get/Update input RDF ..."
+	mkdir -p "$data_dir"
+
+	if $online
+	then
+		curl -o "$data_file" "$data_url"
+	else
+		if ! [ -e "$data_file" ]
+		then
+			>&2 echo "ERROR: --offline chosen and data file '$data_file' not present!"
+			exit 1
+		fi
+	fi
+
+	if $cleanup
+	then
+		:
+	fi
+
+	echo
+	echo "Setting up the DB in '$db_dir' ..."
+
+	mkdir -p "$db_dir"
+	find \
+		"$data_dir" \
+		-regex ".*\.\(rdf\|ttl\)\$" \
+		-print0 \
+		| xargs -0 "$jena_db_data_injector" \
+		--loc "$db_dir" #\
+	#	--syntax turtle
+	echo "done. (Setting up the DB)"
+fi
+
+echo
+echo "Ready to run SPARQL querries!"
+echo
+echo "for example:"
+echo "$jena_db_data_querier \\"
+echo "    --loc \"$db_dir\" \\"
+echo "    --query \"sample-query.txt\""
+echo
+
+echo
+echo "Starting Apache Jena Fuseki on '$db_dir' ..."
+echo
+echo "Once it is started, you are ready to run SPARQL querries"
+echo "in your browser under: $browse_url"
+echo
+"$jena_fuseki_server" \
+	--update \
+	--localhost \
+	--tdb2 \
+	--loc "$db_dir" \
+	"/$dataset_name"
