@@ -4,7 +4,7 @@ All economic information in an Economic Resource must be put there by an Economi
 
 ### Pseudo-code
 
-Here is suggested pseudo-code for an EconomicEvent creating or affecting an EconomicResource.  It is not meant to indicate developers have to use this exact logical structure; it is just one method to detail out the intended logic.  We hope this helps developers understand the intended logic.
+Here is suggested pseudo-code for an Economic Event creating or affecting an Economic Resource.  It is not meant to indicate developers have to use this exact logical structure; it is just one method to communicate the intended logic, which we hope is helpful.  It has not been directly translated to code and tested.
 
 ```
 If action.resourceEffect is "+" or "-"
