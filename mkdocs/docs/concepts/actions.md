@@ -58,8 +58,8 @@ transfer-custody | No effect | Decr+Incr(2) | N/A | currentLocation(4) | N/A |
 transfer-all-rights | Decr+Incr(2) | No effect | N/A | primaryAccountable(5) | N/A |
 transfer | Decr+Incr(2) | Decr+Incr(2) | N/A | currentLocation(4), primaryAccountable(5) | N/A |
 move | Decr+Incr(2) |Decr+Incr(2) | N/A | currentLocation(4) | N/A |
-raise | Increment | Increment | N/A | N/A | N/A |
-lower | Decrement | Decrement | N/A | primaryAccountable(5) | N/A |
+raise | Increment | Increment | N/A | primaryAccountable(5) | N/A |
+lower | Decrement | Decrement | N/A | N/A | N/A |
 
 We have defined a core set of actions, but expect that this will be extended with some others. If extended, they should be defined as part of this or another formal vocabulary so that all can use them and assume the same meaning. However, the effects of the actions are included in the data definitions so that computer systems can be "data driven" in their effects on resources if desired.
 
