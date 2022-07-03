@@ -6,7 +6,7 @@ As of now, a file of units has been extracted to make it easier for user groups 
 
 The complete rdf reference for OM2 can be found [here](https://raw.githubusercontent.com/HajoRijgersberg/OM/master/om-2.0.rdf).
 
-A csv file derived from that can be found [here](https://lab.allmende.io/valueflows/valueflows/-/tree/master/units/unit-en-useful.csv).  This file includes units from OM2 as of 2022/06. It includes only the English version for now.  The currencies have been removed, since we recommend these be set up as Resource Specifications instead, semantically, and specifically given the proliferation of alternate currencies.  We have added classifications (partially complete) to facilitate search for needed units. The columns in this file are, left to right:
+A csv file derived from that can be found [here](https://lab.allmende.io/valueflows/valueflows/-/blob/master/units/units-en-useful.csv).  This file includes units from OM2 as of 2022/06. It includes only the English version for now.  The currencies have been removed, since we recommend these be set up as Resource Specifications instead, semantically, and specifically given the proliferation of alternate currencies.  We have added classifications (partially complete) to facilitate search for needed units. The columns in this file are, left to right:
 
 * OM2 owl Class.  When a Unit belonged to multiple classes, those were consolidated to one row, under "Unit".
 * Identifier in OM2.  These can be prefixed with "http://www.ontology-of-units-of-measure.org/resource/om-2/" for direct access.
