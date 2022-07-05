@@ -7,7 +7,7 @@ Unit,foot-USSurvey,foot (US survey),ft,The US survey foot is a unit of length de
 Unit,furlong-International,furlong (international),,The international furlong is a unit of length defined as 201.168 metre.,length
 Unit,inch-International,inch (international),in,The international inch is a unit of length defined as 2.54e-2 metre.,length
 Unit,metre,metre,m,The metre is a unit of length defined as the length of the path travelled by light in vacuum during a time interval of 1/299 792 458 of a second.,length
-Unit,micron,micron,Î¼,The micron is a unit of length defined as 1.0e-6 metre.,length
+Unit,micron,micron,μ,The micron is a unit of length defined as 1.0e-6 metre.,length
 Unit,mil-Length,mil (length),,The mil (length) is a unit of length defined as 2.54e-5 metre.,length
 Unit,mile-Statute,mile (statute),mi,The statute mile is a unit of length defined as 1.609344e3 metre.,length
 Unit,mile-USSurvey,mile (US survey),,The US survey mile is a unit of length defined as 1.609347e3 metre.,length
@@ -21,8 +21,8 @@ Unit,point-Postscript,point (Postscript),pt,The Postscript point is a unit of le
 Unit,point-TeX,point (TeX),pt,The TeX point is a unit of length defined as 0.01383700013837000138370001383 inch.,length
 Unit,rod-US,rod (US),rd,The US rod is a unit of length defined as 5.029210 metre.,length
 Unit,yard-International,yard (international),yd,The international yard is a unit of length defined as 9.144e-1 metre.,length
-Unit,angstrom,Ã¥ngstrÃ¶m,Ã…,The Ã¥ngstrÃ¶m is a unit of length defined as 1.0e-10 metre. The unit is often used for wavelengths of electromagnetic radiation or to express the sizes of atoms and molecules.,length
-Unit,astronomicalUnit,astronomical unit,au,The atronomical unit is a unit of length defined as 149 597 870 700 metre (IAU 2012 Resolution).,length
+Unit,angstrom,ångström,Å,The ångström is a unit of length defined as 1.0e-10 metre. The unit is often used for wavelengths of electromagnetic radiation or to express the sizes of atoms and molecules.,length
+Unit,astronomicalUnit,astronomical unit,au,The astronomical unit is a unit of length defined as 149 597 870 700 metre (IAU 2012 Resolution).,length
 Unit,lightYear,light year,ly,The light year is a unit of length defined as 9.46073e15 metre.,length
 Unit,parsec,parsec,pc,The parsec is a unit of length defined as 3.08567758149137e16 metre.,length
 Unit,acre-International,acre (international),ac,The international acre is a unit of area defined as 4.0468564224e3 square metre.,area
@@ -55,7 +55,7 @@ Unit,tablespoon-US,tablespoon (US),,The US tablespoon is a unit of volume define
 Unit,teaspoon-US,teaspoon (US),,The US teaspoon is a unit of volume defined as 4.928922e-6 cubic metre.,volume
 Unit,dessertspoon,dessertspoon,,The desserspoon is a unit of volume defined as 2 teaspoon.,volume
 Unit,ton-Register,ton (register),,The register ton is a unit of volume defined as 100 cubic foot = 2.8316846592 cubic metre.,volume
-Unit,degree,degree,Â°,The degree is a unit of angle defined as 1.745329e-2 radian.,angle
+Unit,degree,degree,°,The degree is a unit of angle defined as 1.745329e-2 radian.,angle
 Unit,gon,gon,gon,The gon is a unit of angle defined as 1.570796e-2 radian.,angle
 Unit,mil-Angle,mil (angle),,The mil (angle) is a unit of angle defined as 9.817477e-4 radian.,angle
 Unit,minute-Angle,minute (angle),',The minute (angle) is a unit of angle defined as 2.908882e-4 radian.,angle
@@ -65,26 +65,26 @@ Unit,second-Angle,second (angle),"""",The second (angle) is a unit of angle defi
 Unit,steradian,steradian,sr,The steradian is a unit of solid angle defined as the solid angle subtended at the center of a sphere by a portion of the surface of the sphere that has an area equal to the square of the radius of the sphere.,angle
 Unit,BirminghamGauge,Birmingham gauge,G,,
 Unit,FrenchGauge,French gauge,Fr,,
-Unit,solarRadius,solar radius,R_â˜‰,Solar radius is a unit used in astronomy to denote stellar or stellar system radii (http://en.wikipedia.org/wiki/solarRadius).,astronomy
-Unit,bar-Food,bar (food),,,one
-Unit,bottle,bottle,,,one
-Unit,bowl,bowl,,,one
-Unit,cup,cup,,,volume
-Unit,dash,dash,,,one
-Unit,deepBowl,deep bowl,,,one
-Unit,drop,drop,,,one
-Unit,fillet,fillet,,,one
-Unit,glass,glass,,,one
-Unit,handful,handful,,,one
-Unit,piece,piece,,,one
-Unit,pinch,pinch,,,one
-Unit,portion,portion,,,one
-Unit,scoop,scoop,,,one
-Unit,servingSpoon,serving spoon,,,one
-Unit,slice,slice,,,one
-Unit,spread,spread,,,one
-Unit,wedge,wedge,,,one
-Unit,wineGlass,wine glass,,,volume
+Unit,solarRadius,solar radius,R_☉,Solar radius is a unit used in astronomy to denote stellar or stellar system radii (http://en.wikipedia.org/wiki/solarRadius).,astronomy
+Unit,bar-Food,bar (food),,,
+Unit,bottle,bottle,,,
+Unit,bowl,bowl,,,
+Unit,cup,cup,,,
+Unit,dash,dash,,,
+Unit,deepBowl,deep bowl,,,
+Unit,drop,drop,,,
+Unit,fillet,fillet,,,
+Unit,glass,glass,,,
+Unit,handful,handful,,,
+Unit,piece,piece,,,
+Unit,pinch,pinch,,,
+Unit,portion,portion,,,
+Unit,scoop,scoop,,,
+Unit,servingSpoon,serving spoon,,,
+Unit,slice,slice,,,
+Unit,spread,spread,,,
+Unit,wedge,wedge,,,
+Unit,wineGlass,wine glass,,,
 Unit,gram,gram,g,The gram is a unit of mass defined as 1.0e-3 kilogram.,mass
 Unit,second-Time,second,s,The second is a unit of time defined as the duration of 9 192 631 770 periods of the radiation corresponding to the transition between the two hyperfine levels of the ground state of the cesium 133 atom.,time
 Unit,hertz,hertz,Hz,The hertz is a unit of frequency defined as 1 divided by second.,frequency
@@ -113,7 +113,7 @@ Unit,stattesla,stattesla,statT,The stattesla is a unit of magnetic flux density 
 Unit,statfarad,statfarad,statF,The statfarad is a unit of capacitance defined as 1.112650e-12 farad.,electricity
 Unit,stathenry,stathenry,statH,The stathenry is a unit of inductance defined as 8.987552e11 henry.,electricity
 Unit,statmho,statmho,,The statmho is a unit of electrical conductance defined as 1.112650e-12 siemens.,electricity
-Unit,statohm,statohm,statÎ©,The statohm is a unit of electrical resistance defined as 8.987552e11 ohm.,electricity
+Unit,statohm,statohm,statΩ,The statohm is a unit of electrical resistance defined as 8.987552e11 ohm.,electricity
 Unit,statweber,statweber,statWb,The statweber is a unit of magnetic flux defined as 2.9979e2 weber.,magnetism
 Unit,biot,biot,Bi,The biot is a unit of electric current defined as 10 ampere.,electricity
 Unit,franklin,franklin,Fr,The franklin is a unit of electric charge defined as 3.335641e-10 coulomb.,electricity
@@ -128,12 +128,12 @@ Unit,watt,watt,W,The watt is a unit of power defined as joule divided by second 
 Unit,coulomb,coulomb,C,The coulomb is a unit of electric charge defined as ampere times second = farad times volt.,electricity
 Unit,volt,volt,V,The volt is a unit of electric potential defined as watt divided by ampere = joule divided by coulomb = newton times metre divided by ampere times second = kilogram times square metre divided by ampere times second to the power 3.,electricity
 Unit,farad,farad,F,The farad is a unit of capacitance defined as ampere times second divided by volt = coulomb divided by volt = coulomb squared divided by joule = coulomb squared divided by newton times metre = second squared times coulomb squared divided by square metre times kilogram = second to the power 4 times ampere squared divided by square metre times kilogram.,electricity
-Unit,ohm,ohm,Î©,The ohm is a unit of electrical resistance defined as volt divided by ampere = square metre times kilogram divided by second to the power 3 times ampere squared.,electricity
+Unit,ohm,ohm,Ω,The ohm is a unit of electrical resistance defined as volt divided by ampere = square metre times kilogram divided by second to the power 3 times ampere squared.,electricity
 Unit,siemens,siemens,S,The siemens is a unit of electrical conductance defined as 1 divided by ohm = ampere divided by volt = coulomb squared times second divided by kilogram times square metre = ampere squared times second to the power 3 divided by kilogram times square metre.,electricity
 Unit,weber,weber,Wb,The weber is a unit of magnetic flux defined as kilogram times square metre divided by second squared times ampere = volt times second = joule divided by ampere.,magnetism
 Unit,tesla,tesla,T,The tesla is a unit of magnetic flux density defined as volt times second divided by square metre = newton divided by ampere times metre = weber divided by square metre = kilogram divided by coulomb times second = kilogram divided by ampere times second squared.,magnetism
 Unit,henry,henry,H,The henry is a unit of inductance defined as square metre times kilogram divided by second squared times ampere squared = weber divided by ampere = volt second divided by ampere = (joule divided by coulomb) times second divided by (coulomb divided by second) = joule times second squared divided by coulomb squared = square metre times kilogram divided by coulomb squared.,electricity
-Unit,degreeCelsius,degree Celsius,Â°C,The degree Celsius is a unit of temperature defined as 1 kelvin.,temperature
+Unit,degreeCelsius,degree Celsius,°C,The degree Celsius is a unit of temperature defined as 1 kelvin.,temperature
 Unit,lumen,lumen,lm,The lumen is a unit of luminous flux defined as candela times steradian = lux times square metre.,luminance
 Unit,lux,lux,lx,The lux is a unit of illuminance defined as lumen divided by square metre = candela times steradian divided by square metre.,luminance
 Unit,becquerel,becquerel,Bq,The becquerel is a unit of activity defined as the activity of a quantity of radioactive material in which one nucleus decays per second. Algebraically it is defined as 1 divided by second.,activity
@@ -167,7 +167,7 @@ Unit,pennyweight-Troy,pennyweight (Troy),dwt,The Troy pennyweight is a unit of m
 Unit,poundApothecaries,pound (apthecaries'),lb,The apothecaries' pound is a unit of mass defined as 3.732417e-1 kilogram.,mass
 Unit,poundAvoirdupois,pound (avoirdupois),lb,The avoirdupois pound is a unit of mass defined as 4.535924e-1 kilogram.,mass
 Unit,slug,slug,slug,The slug is a unit of mass defined as 1.459390e1 kilogram.,mass
-Unit,solarMass,solar mass,M_â˜‰,Solar mass is a unit used in astronomy to denote stellar or galactic masses (http://en.wikipedia.org/wiki/SolarMass).,astronomy
+Unit,solarMass,solar mass,M_☉,Solar mass is a unit used in astronomy to denote stellar or galactic masses (http://en.wikipedia.org/wiki/SolarMass).,astronomy
 Unit,ton-ShortAssay,ton (short assay),,The short assay ton is a unit of mass defined as 2.916667e-2 kilogram.,mass
 Unit,ton-Long,ton (long),,The long ton is a unit of mass defined as 1.016047e3 kilogram.,mass
 Unit,ton-Short,ton (short),,The short ton is a unit of mass defined as 9.071847e2 kilogram.,mass
@@ -191,14 +191,14 @@ Unit,bar,bar,bar,The bar is a unit of pressure defined as 100 000 pascal.,pressu
 Unit,barye,barye,ba,The barye is a unit of pressure defined as 0.1 pascal.,pressure
 Unit,metreOfMercury,metre of mercury,m Hg,The metre of mercury is a unit of pressure defined as 133 322 pascal.,pressure
 Unit,torr,torr,Torr,The torr is a unit of pressure defined as 1.333224e2 pascal.,pressure
-Unit,BritishThermalUnit-39F,British thermal unit (39 Â°F),Btu,,energy
-Unit,BritishThermalUnit-59F,British thermal unit (59 Â°F),Btu,,energy
-Unit,BritishThermalUnit-60F,British thermal unit (60 Â°F),Btu,,energy
+Unit,BritishThermalUnit-39F,British thermal unit (39 °F),Btu,,energy
+Unit,BritishThermalUnit-59F,British thermal unit (59 °F),Btu,,energy
+Unit,BritishThermalUnit-60F,British thermal unit (60 °F),Btu,,energy
 Unit,BritishThermalUnit-InternationalTable,British thermal unit (International Table),Btu_IT,,energy
 Unit,BritishThermalUnit-Mean,British thermal unit (mean),Btu,,energy
 Unit,BritishThermalUnit-Thermochemical,British thermal unit (thermochemical),Btu_th,,energy
-Unit,calorie-15C,calorie (15 Â°C),cal_15,,energy
-Unit,calorie-20C,calorie (20 Â°C),cal_20,,energy
+Unit,calorie-15C,calorie (15 °C),cal_15,,energy
+Unit,calorie-20C,calorie (20 °C),cal_20,,energy
 Unit,calorie-InternationalTable,calorie (International Table),cal_IT,,energy
 Unit,calorie-Mean,calorie (mean),cal,The mean calorie is a unit of energy defined as 4.19002 joule.,energy
 Unit,calorie-Thermochemical,calorie (thermochemical),cal_th,,energy
@@ -214,16 +214,16 @@ Unit,horsepower-Electric,horsepower (electric),,The electric horsepower is a uni
 Unit,horsepower-Metric,horsepower (metric),PS,The metric horsepower is a unit of power defined as 7.354988e2 watt.,power
 Unit,horsepower-Water,horsepower (water),,The water horsepower is a unit of power defined as 7.46043e2 watt.,power
 Unit,kilocalorie-MeanPerDay,kilocalorie (mean) per day,kcal/d,,energy
-Unit,solarLuminosity,solar luminosity,L_â˜‰,Solar luminosity is a unit used in astronomy to denote stellar or galactic radiant fluxes (http://en.wikipedia.org/wiki/SolarLuminosity).,astronomy
+Unit,solarLuminosity,solar luminosity,L_☉,Solar luminosity is a unit used in astronomy to denote stellar or galactic radiant fluxes (http://en.wikipedia.org/wiki/SolarLuminosity).,astronomy
 Unit,tonOfRefrigeration,ton of refrigeration,,The ton of refrigeration is a unit of power defined as 3.516853e3 watt.,power
 Unit,rhe,rhe,,The rhe is a unit of fluidity defined as 10 reciprocal pascal second (time).,fluidity
-Unit,degreeFahrenheit,degree Fahrenheit,Â°F,The degree Fahrenheit is a unit of temperature defined as 5.555556e-1 kelvin.,temperature
-Unit,degreeRankine,degree Rankine,Â°R,The degree Rankine is a unit of temperature defined as 5.555556e-1 kelvin.,temperature
-Unit,degreeReaumur,degree RÃ©aumur,Â°RÃ©,The degree RÃ©aumur is a unit of temperature defined as 1.25 kelvin.,temperature
+Unit,degreeFahrenheit,degree Fahrenheit,°F,The degree Fahrenheit is a unit of temperature defined as 5.555556e-1 kelvin.,temperature
+Unit,degreeRankine,degree Rankine,°R,The degree Rankine is a unit of temperature defined as 5.555556e-1 kelvin.,temperature
+Unit,degreeReaumur,degree Réaumur ,°Ré,The degree Réaumur  is a unit of temperature defined as 1.25 kelvin.,temperature
 Unit,faraday,faraday,,The faraday is a unit of electric charge defined as 9.648531e4 coulomb.,electricity
 Unit,mho,mho,,The mho is a unit of electrical conductance defined as 1 siemens.,electricity
 Unit,unitPole,unit pole,,The unit pole is a unit of magnetic flux defined as 1.256637e-7 weber.,magnetism
-Unit,gamma,gamma,Î³,The gamma is a unit of magnetic flux density defined as 1.0e-9 tesla.,magnetism
+Unit,gamma,gamma,γ,The gamma is a unit of magnetic flux density defined as 1.0e-9 tesla.,magnetism
 Unit,debye,debye,D,The debye is a unit of electric dipole moment defined as 3.33564e-30 coulomb metre.,electricity
 Unit,molar,molar,M,Molar is a unit of amount of substance concentration defined as 1 mole per litre.,concentration
 Unit,amylaseUnit,amylase unit,AU,The amylase unit is a unit of catalytic activity.,activity
@@ -234,15 +234,15 @@ Unit,footcandle,footcandle,,The footcandle is a unit of illuminance defined as 1
 Unit,rad,rad,rad,The rad is a unit of absorbed dose defined as 1.0e-2 gray.,dose
 Unit,rem,rem,rem,The rem is a unit of dose equivalent defined as 1.0e-2 sievert.,dose
 Unit,curie,curie,Ci,The curie is a unit of activity defined as 3.7e10 becquerel.,activity
-Unit,rÃ¶ntgen,rÃ¶ntgen,R,The rÃ¶ntgen is a unit of exposure to x and Î³ rays defined as 2.58e-4 coulomb per kilogram.,exposure
-Unit,hour-HourAngle,hour (hour angle),h,"Wordt gebruikt als hoek (360Â°=24) voor o.a. rechte klimming. De h wordt meestal als superscript achter de waarde gezet gevolgd door de verdere opdeling naar minuten en seconden. Zoals in 5h34m12s09. Vaak wordt de fractie in seconden zonder punt geschreven, de s wordt als afscheiding gebruikt (http://en.wikipedia.org/wiki/Right_ascension).",
+Unit,röntgen,röntgen,R,The röntgen is a unit of exposure to x and Î³ rays defined as 2.58e-4 coulomb per kilogram.,exposure
+Unit,hour-HourAngle,hour (hour angle),h,,
 Unit,jansky,jansky,Jy,,
-Unit,magnitude,magnitude,mag,Eenheid waarmee de helderheid van sterren wordt aangegeven. Meestal wordt het symbool niet aangeduid (http://en.wikipedia.org/wiki/Magnitude_(astronomy)).,
-Unit,minute-HourAngle,minute (hour angle),m,"Wordt gebruikt als hoek (360Â°=1440) voor o.a. rechte klimming. De m wordt meestal als superscript achter de waarde gezet gevolgd door de verdere opdeling naar seconden. Zoals in 5h34m12s09. Vaak wordt de fractie in seconden zonder punt geschreven, de s wordt als afscheiding gebruikt (http://en.wikipedia.org/wiki/Right_ascension).",
-Unit,second-HourAngle,second (hour angle),s,"Wordt gebruikt als hoek (360Â°=864000) voor o.a. rechte klimming. De s wordt meestal als superscript achter de waarde gezet. Zoals in 5h34m12s09. Vaak wordt de fractie in seconden zonder punt geschreven, de s wordt als afscheiding gebruikt (http://en.wikipedia.org/wiki/Right_ascension).",
+Unit,magnitude,magnitude,mag,,
+Unit,minute-HourAngle,minute (hour angle),m,,
+Unit,second-HourAngle,second (hour angle),s,,
 Unit,darcy,darcy,,The darcy is a unit of area defined as 9.869233e-13 square metre.,
-Unit,perm-0C,perm (0 Â°C),,The 0 Â°C perm is a unit ofpermeance defined as 5.72135e-11 kilogram per pascal second (time) square metre.,
-Unit,perm-23C,perm (23 Â°C),,The 23 Â°C perm is a unit of permeance defined as 5.74525e-11 kilogram per pascal second (time) square metre.,
+Unit,perm-0C,perm (0 °C),,The 0 °C perm is a unit of permeance defined as 5.72135e-11 kilogram per pascal second (time) square metre.,
+Unit,perm-23C,perm (23 °C),,The 23 °C  perm is a unit of permeance defined as 5.74525e-11 kilogram per pascal second (time) square metre.,
 Unit,colonyFormingUnit,colony forming unit,CFU,,
 Unit,bel,bel,B,,
 Unit,bit,bit,bit,The bit is a unit of information capacity defined as the information capacity of one binary digit.,information
@@ -257,7 +257,7 @@ Unit,_1-10,1-10,,,
 Unit,_0-100,0-100,,,
 Unit,AFS,AFS,,,
 Unit,_0-5,0-5,,,
-PrefixedUnit,micrometre,micrometre,Î¼m,The micrometre is a unit of length defined as 1.0e-6 metre.,length
+PrefixedUnit,micrometre,micrometre,μm,The micrometre is a unit of length defined as 1.0e-6 metre.,length
 PrefixedUnit,millimetre,millimetre,mm,The millimetre is a unit of length defined as 1.0e-3 metre.,length
 PrefixedUnit,centimetre,centimetre,cm,The centimetre is a unit of length defined as 1.0e-2 metre.,length
 PrefixedUnit,decimetre,decimetre,dm,The decimetre is a unit of length defined as 1.0e-1 metre.,length
@@ -276,7 +276,7 @@ PrefixedUnit,exametre,exametre,Em,The exametre is a unit of length defined as 1.
 PrefixedUnit,megaparsec,megaparsec,Mpc,The megaparsec is a unit of length defined as 1.0e6 parsec. Gebruikt voor afstanden op de schaal van clusters.,length
 PrefixedUnit,centiare,centiare,ca,The centiare is a unit of area defined as 1.0e-2 are.,area
 PrefixedUnit,hectare,hectare,ha,The hectare is a unit of area defined as 1.0e2 are.,area
-PrefixedUnit,microlitre,microlitre,Î¼l,,volume
+PrefixedUnit,microlitre,microlitre,μl,,volume
 PrefixedUnit,millilitre,millilitre,ml,,volume
 PrefixedUnit,centilitre,centilitre,cl,,volume
 PrefixedUnit,decilitre,decilitre,dl,,volume
@@ -292,7 +292,7 @@ PrefixedUnit,nanolitre,nanolitre,nl,,volume
 PrefixedUnit,teralitre,teralitre,Tl,,volume
 PrefixedUnit,petalitre,petalitre,Pl,,volume
 PrefixedUnit,exalitre,exalitre,El,,volume
-PrefixedUnit,microradian,microradian,Î¼rad,,angle
+PrefixedUnit,microradian,microradian,μrad,,angle
 PrefixedUnit,milliradian,milliradian,mrad,,angle
 PrefixedUnit,centiradian,centiradian,crad,,angle
 PrefixedUnit,deciradian,deciradian,drad,,angle
@@ -301,8 +301,8 @@ PrefixedUnit,femtoradian,femtoradian,frad,,angle
 PrefixedUnit,picoradian,picoradian,prad,,angle
 PrefixedUnit,nanoradian,nanoradian,nrad,,angle
 PrefixedUnit,millisecond-Angle,millisecond (angle),mas,"The millisecond (angle) is a unit of length defined as 1.0e-3 second (angle). Used in astronomy (measurements of positions of stars, galaxies, etc.) to represent the error.",angle
-PrefixedUnit,microsecond-Angle,microsecond (angle),Î¼as,"The microsecond (angle) is a unit of length defined as 1.0e-6 second (angle). Used in astronomy (measurements of positions of stars, galaxies, etc.) to represent the error.",angle
-PrefixedUnit,microsteradian,microsteradian,Î¼sr,,angle
+PrefixedUnit,microsecond-Angle,microsecond (angle),μas,"The microsecond (angle) is a unit of length defined as 1.0e-6 second (angle). Used in astronomy (measurements of positions of stars, galaxies, etc.) to represent the error.",angle
+PrefixedUnit,microsteradian,microsteradian,μsr,,angle
 PrefixedUnit,millisteradian,millisteradian,msr,,angle
 PrefixedUnit,centisteradian,centisteradian,csr,,angle
 PrefixedUnit,decisteradian,decisteradian,dsr,,angle
@@ -324,7 +324,7 @@ PrefixedUnit,yoctoradian,yoctoradian,yrad,,angle
 PrefixedUnit,zeptoradian,zeptoradian,zrad,,angle
 PrefixedUnit,yoctosteradian,yoctosteradian,ysr,,angle
 PrefixedUnit,zeptosteradian,zeptosteradian,zsr,,angle
-PrefixedUnit,microbar,microbar,Î¼bar,The microbar is a unit of pressure defined as 1.0e-6 bar.,pressure
+PrefixedUnit,microbar,microbar,μsr,The microbar is a unit of pressure defined as 1.0e-6 bar.,pressure
 PrefixedUnit,kilogram,kilogram,kg,The kilogram is a unit of mass defined as the mass of the international prototype of the kilogram.,mass
 PrefixedUnit,yoctogram,yoctogram,yg,The yoctogram is a unit of mass defined as 1.0e-24 gram.,mass
 PrefixedUnit,zeptogram,zeptogram,zg,The zeptgram is a unit of mass defined as 1.0e-21 gram.,mass
@@ -332,7 +332,7 @@ PrefixedUnit,attogram,attogram,ag,The attogram is a unit of mass defined as 1.0e
 PrefixedUnit,picogram,picogram,pg,The picogram is a unit of mass defined as 1.0e-12 gram.,mass
 PrefixedUnit,femtogram,femtogram,fg,The femtogram is a unit of mass defined as 1.0e-15 gram.,mass
 PrefixedUnit,nanogram,nanogram,ng,The nanogram is a unit of mass defined as 1.0e-9 gram.,mass
-PrefixedUnit,microgram,microgram,Î¼g,The microgram is a unit of mass defined as 1.0e-6 gram.,mass
+PrefixedUnit,microgram,microgram,μg,The microgram is a unit of mass defined as 1.0e-6 gram.,mass
 PrefixedUnit,milligram,milligram,mg,The milligram is a unit of mass defined as 1.0e-3 gram.,mass
 PrefixedUnit,centigram,centigram,cg,The centigram is a unit of mass defined as 1.0e-2 gram.,mass
 PrefixedUnit,decigram,decigram,dg,The decigram is a unit of mass defined as 1.0e-1 gram.,mass
@@ -351,7 +351,7 @@ PrefixedUnit,attosecond-Time,attosecond,as,,time
 PrefixedUnit,picosecond-Time,picosecond,ps,,time
 PrefixedUnit,femtosecond-Time,femtosecond,fs,,time
 PrefixedUnit,nanosecond-Time,nanosecond,ns,,time
-PrefixedUnit,microsecond-Time,microsecond,Î¼s,,time
+PrefixedUnit,microsecond-Time,microsecond,μs,,time
 PrefixedUnit,millisecond-Time,millisecond,ms,,time
 PrefixedUnit,centisecond-Time,centisecond,cs,,time
 PrefixedUnit,decisecond-Time,decisecond,ds,,time
@@ -371,7 +371,7 @@ PrefixedUnit,attoampere,attoampere,aA,The attoampere is a unit of electric curre
 PrefixedUnit,picoampere,picoampere,pA,The picoampere is a unit of electric current defined as 1.0e-12 ampere.,electricity
 PrefixedUnit,femtoampere,femtoampere,fA,The femtoampere is a unit of electric current defined as 1.0e-15 ampere.,electricity
 PrefixedUnit,nanoampere,nanoampere,nA,The nanoampere is a unit of electric current defined as 1.0e-9 ampere.,electricity
-PrefixedUnit,microampere,microampere,Î¼A,The microampere is a unit of electric current defined as 1.0e-6 ampere.,electricity
+PrefixedUnit,microampere,microampere,μA,The microampere is a unit of electric current defined as 1.0e-6 ampere.,electricity
 PrefixedUnit,milliampere,milliampere,mA,The milliampere is a unit of electric current defined as 1.0e-3 ampere.,electricity
 PrefixedUnit,centiampere,centiampere,cA,The centiampere is a unit of electric current defined as 1.0e-2 ampere.,electricity
 PrefixedUnit,deciampere,deciampere,dA,The deciampere is a unit of electric current defined as 1.0e-1 ampere.,electricity
@@ -391,7 +391,7 @@ PrefixedUnit,attokelvin,attokelvin,aK,The attokelvin is a unit of temperature de
 PrefixedUnit,picokelvin,picokelvin,pK,The picokelvin is a unit of temperature defined as 1.0e-12 kelvin.,temperature
 PrefixedUnit,femtokelvin,femtokelvin,fK,The femtokelvin is a unit of temperature defined as 1.0e-15 kelvin.,temperature
 PrefixedUnit,nanokelvin,nanokelvin,nK,The nanokelvin is a unit of temperature defined as 1.0e-9 kelvin.,temperature
-PrefixedUnit,microkelvin,microkelvin,Î¼K,The microkelvin is a unit of temperature defined as 1.0e-6 kelvin.,temperature
+PrefixedUnit,microkelvin,microkelvin,μK,The microkelvin is a unit of temperature defined as 1.0e-6 kelvin.,temperature
 PrefixedUnit,millikelvin,millikelvin,mK,The millikelvin is a unit of temperature defined as 1.0e-3 kelvin.,temperature
 PrefixedUnit,centikelvin,centikelvin,cK,The centikelvin is a unit of temperature defined as 1.0e-2 kelvin.,temperature
 PrefixedUnit,decikelvin,decikelvin,dK,The decikelvin is a unit of temperature defined as 1.0e-1 kelvin.,temperature
@@ -411,7 +411,7 @@ PrefixedUnit,attomole,attomole,amol,,
 PrefixedUnit,picomole,picomole,pmol,,
 PrefixedUnit,femtomole,femtomole,fmol,,
 PrefixedUnit,nanomole,nanomole,nmol,,
-PrefixedUnit,micromole,micromole,Î¼mol,,
+PrefixedUnit,micromole,micromole,μmol,,
 PrefixedUnit,millimole,millimole,mmol,,
 PrefixedUnit,centimole,centimole,cmol,,
 PrefixedUnit,decimole,decimole,dmol,,
@@ -431,7 +431,7 @@ PrefixedUnit,attocandela,attocandela,acd,The attocandela is a unit of luminous i
 PrefixedUnit,picocandela,picocandela,pcd,The picocandela is a unit of luminous intensity defined as 1.0e-12 candela.,luminance
 PrefixedUnit,femtocandela,femtocandela,fcd,The femtocandela is a unit of luminous intensity defined as 1.0e-15 candela.,luminance
 PrefixedUnit,nanocandela,nanocandela,ncd,The nanocandela is a unit of luminous intensity defined as 1.0e-9 candela.,luminance
-PrefixedUnit,microcandela,microcandela,Î¼cd,The microcandela is a unit of luminous intensity defined as 1.0e-6 candela.,luminance
+PrefixedUnit,microcandela,microcandela,μcd,The microcandela is a unit of luminous intensity defined as 1.0e-6 candela.,luminance
 PrefixedUnit,millicandela,millicandela,mcd,The millicandela is a unit of luminous intensity defined as 1.0e-3 candela.,luminance
 PrefixedUnit,centicandela,centicandela,ccd,The centicandela is a unit of luminous intensity defined as 1.0e-2 candela.,luminance
 PrefixedUnit,decicandela,decicandela,dcd,The decicandela is a unit of luminous intensity defined as 1.0e-1 candela.,luminance
@@ -451,7 +451,7 @@ PrefixedUnit,attohertz,attohertz,aHz,The attohertz is a unit of frequency define
 PrefixedUnit,picohertz,picohertz,pHz,The picohertz is a unit of frequency defined as 1.0e-12 hertz.,frequency
 PrefixedUnit,femtohertz,femtohertz,fHz,The femtohertz is a unit of frequency defined as 1.0e-15 hertz.,frequency
 PrefixedUnit,nanohertz,nanohertz,nHz,The nanohertz is a unit of frequency defined as 1.0e-9 hertz.,frequency
-PrefixedUnit,microhertz,microhertz,Î¼Hz,The microhertz is a unit of frequency defined as 1.0e-6 hertz.,frequency
+PrefixedUnit,microhertz,microhertz,μHz,The microhertz is a unit of frequency defined as 1.0e-6 hertz.,frequency
 PrefixedUnit,millihertz,millihertz,mHz,The millihertz is a unit of frequency defined as 1.0e-3 hertz.,frequency
 PrefixedUnit,centihertz,centihertz,cHz,The centihertz is a unit of frequency defined as 1.0e-2 hertz.,frequency
 PrefixedUnit,decihertz,decihertz,dHz,The decihertz is a unit of frequency defined as 1.0e-1 hertz.,frequency
@@ -471,7 +471,7 @@ PrefixedUnit,attonewton,attonewton,aN,,force
 PrefixedUnit,piconewton,piconewton,pN,,force
 PrefixedUnit,femtonewton,femtonewton,fN,,force
 PrefixedUnit,nanonewton,nanonewton,nN,,force
-PrefixedUnit,micronewton,micronewton,Î¼N,,force
+PrefixedUnit,micronewton,micronewton,μN,,force
 PrefixedUnit,millinewton,millinewton,mN,,force
 PrefixedUnit,centinewton,centinewton,cN,,force
 PrefixedUnit,decinewton,decinewton,dN,,force
@@ -491,7 +491,7 @@ PrefixedUnit,attopascal,attopascal,aPa,,pressure
 PrefixedUnit,picopascal,picopascal,pPa,,pressure
 PrefixedUnit,femtopascal,femtopascal,fPa,,pressure
 PrefixedUnit,nanopascal,nanopascal,nPa,,pressure
-PrefixedUnit,micropascal,micropascal,Î¼Pa,,pressure
+PrefixedUnit,micropascal,micropascal,μPa,,pressure
 PrefixedUnit,millipascal,millipascal,mPa,,pressure
 PrefixedUnit,centipascal,centipascal,cPa,,pressure
 PrefixedUnit,decipascal,decipascal,dPa,,pressure
@@ -511,7 +511,7 @@ PrefixedUnit,attojoule,attojoule,aJ,The attojoule is a unit of energy defined as
 PrefixedUnit,picojoule,picojoule,pJ,The picojoule is a unit of energy defined as 1.0e-12 joule.,energy
 PrefixedUnit,femtojoule,femtojoule,fJ,The femtojoule is a unit of energy defined as 1.0e-15 joule.,energy
 PrefixedUnit,nanojoule,nanojoule,nJ,The nanojoule is a unit of energy defined as 1.0e-9 joule.,energy
-PrefixedUnit,microjoule,microjoule,Î¼J,The microjoule is a unit of energy defined as 1.0e-6 joule.,energy
+PrefixedUnit,microjoule,microjoule,μJ,The microjoule is a unit of energy defined as 1.0e-6 joule.,energy
 PrefixedUnit,millijoule,millijoule,mJ,The millijoule is a unit of energy defined as 1.0e-3 joule.,energy
 PrefixedUnit,centijoule,centijoule,cJ,The centijoule is a unit of energy defined as 1.0e-2 joule.,energy
 PrefixedUnit,decijoule,decijoule,dJ,The decijoule is a unit of energy defined as 1.0e-1 joule.,energy
@@ -531,7 +531,7 @@ PrefixedUnit,attowatt,attowatt,aW,,power
 PrefixedUnit,picowatt,picowatt,pW,,power
 PrefixedUnit,femtowatt,femtowatt,fW,,power
 PrefixedUnit,nanowatt,nanowatt,nW,,power
-PrefixedUnit,microwatt,microwatt,Î¼W,,power
+PrefixedUnit,microwatt,microwatt,μW,,power
 PrefixedUnit,milliwatt,milliwatt,mW,,power
 PrefixedUnit,centiwatt,centiwatt,cW,,power
 PrefixedUnit,deciwatt,deciwatt,dW,,power
@@ -551,7 +551,7 @@ PrefixedUnit,attocoulomb,attocoulomb,aC,The attocoulomb is a unit of electric ch
 PrefixedUnit,picocoulomb,picocoulomb,pC,The picocoulomb is a unit of electric charge defined as 1.0e-12 coulomb.,electricity
 PrefixedUnit,femtocoulomb,femtocoulomb,fC,The femtocoulomb is a unit of electric charge defined as 1.0e-15 coulomb.,electricity
 PrefixedUnit,nanocoulomb,nanocoulomb,nC,The nanocoulomb is a unit of electric charge defined as 1.0e-9 coulomb.,electricity
-PrefixedUnit,microcoulomb,microcoulomb,Î¼C,The microcoulomb is a unit of electric charge defined as 1.0e-6 coulomb.,electricity
+PrefixedUnit,microcoulomb,microcoulomb,μC,The microcoulomb is a unit of electric charge defined as 1.0e-6 coulomb.,electricity
 PrefixedUnit,millicoulomb,millicoulomb,mC,The millicoulomb is a unit of electric charge defined as 1.0e-3 coulomb.,electricity
 PrefixedUnit,centicoulomb,centicoulomb,cC,The centicoulomb is a unit of electric charge defined as 1.0e-2 coulomb.,electricity
 PrefixedUnit,decicoulomb,decicoulomb,dC,The decicoulomb is a unit of electric charge defined as 1.0e-1 coulomb.,electricity
@@ -571,7 +571,7 @@ PrefixedUnit,attovolt,attovolt,aV,,electricity
 PrefixedUnit,picovolt,picovolt,pV,,electricity
 PrefixedUnit,femtovolt,femtovolt,fV,,electricity
 PrefixedUnit,nanovolt,nanovolt,nV,,electricity
-PrefixedUnit,microvolt,microvolt,Î¼V,,electricity
+PrefixedUnit,microvolt,microvolt,μV,,electricity
 PrefixedUnit,millivolt,millivolt,mV,,electricity
 PrefixedUnit,centivolt,centivolt,cV,,electricity
 PrefixedUnit,decivolt,decivolt,dV,,electricity
@@ -591,7 +591,7 @@ PrefixedUnit,attofarad,attofarad,aF,The attofarad is a unit of capacitance defin
 PrefixedUnit,picofarad,picofarad,pF,The picofarad is a unit of capacitance defined as 1.0e-12 farad.,electricity
 PrefixedUnit,femtofarad,femtofarad,fF,The femtofarad is a unit of capacitance defined as 1.0e-15 farad.,electricity
 PrefixedUnit,nanofarad,nanofarad,nF,The nanofarad is a unit of capacitance defined as 1.0e-9 farad.,electricity
-PrefixedUnit,microfarad,microfarad,Î¼F,The microfarad is a unit of capacitance defined as 1.0e-6 farad.,electricity
+PrefixedUnit,microfarad,microfarad,μF,The microfarad is a unit of capacitance defined as 1.0e-6 farad.,electricity
 PrefixedUnit,millifarad,millifarad,mF,The millifarad is a unit of capacitance defined as 1.0e-3 farad.,electricity
 PrefixedUnit,centifarad,centifarad,cF,The centifarad is a unit of capacitance defined as 1.0e-2 farad.,electricity
 PrefixedUnit,decifarad,decifarad,dF,The decifarad is a unit of capacitance defined as 1.0e-1 farad.,electricity
@@ -605,33 +605,33 @@ PrefixedUnit,petafarad,petafarad,PF,The petafarad is a unit of capacitance defin
 PrefixedUnit,exafarad,exafarad,EF,The exafarad is a unit of capacitance defined as 1.0e18 farad.,electricity
 PrefixedUnit,zettafarad,zettafarad,ZF,The zettafarad is a unit of capacitance defined as 1.0e21 farad.,electricity
 PrefixedUnit,yottafarad,yottafarad,YF,The yottafarad is a unit of capacitance defined as 1.0e24 farad.,electricity
-PrefixedUnit,yoctoohm,yoctoohm,yÎ©,,electricity
-PrefixedUnit,zeptoohm,zeptoohm,zÎ©,,electricity
-PrefixedUnit,attoohm,attoohm,aÎ©,,electricity
-PrefixedUnit,picoohm,picoohm,pÎ©,,electricity
-PrefixedUnit,femtoohm,femtoohm,fÎ©,,electricity
-PrefixedUnit,nanoohm,nanoohm,nÎ©,,electricity
-PrefixedUnit,microohm,microohm,Î¼Î©,,electricity
-PrefixedUnit,milliohm,milliohm,mÎ©,,electricity
-PrefixedUnit,centiohm,centiohm,cÎ©,,electricity
-PrefixedUnit,deciohm,deciohm,dÎ©,,electricity
-PrefixedUnit,decaohm,decaohm,daÎ©,,electricity
-PrefixedUnit,hectoohm,hectoohm,hÎ©,,electricity
-PrefixedUnit,kilohm,kilohm,kÎ©,,electricity
-PrefixedUnit,megohm,megohm,MÎ©,,electricity
-PrefixedUnit,gigaohm,gigaohm,GÎ©,,electricity
-PrefixedUnit,teraohm,teraohm,TÎ©,,electricity
-PrefixedUnit,petaohm,petaohm,PÎ©,,electricity
-PrefixedUnit,exaohm,exaohm,EÎ©,,electricity
-PrefixedUnit,zettaohm,zettaohm,ZÎ©,,electricity
-PrefixedUnit,yottaohm,yottaohm,YÎ©,,electricity
+PrefixedUnit,yoctoohm,yoctoohm,yΩ,,electricity
+PrefixedUnit,zeptoohm,zeptoohm,zΩ,,electricity
+PrefixedUnit,attoohm,attoohm,aΩ,,electricity
+PrefixedUnit,picoohm,picoohm,pΩ,,electricity
+PrefixedUnit,femtoohm,femtoohm,fΩ,,electricity
+PrefixedUnit,nanoohm,nanoohm,nΩ,,electricity
+PrefixedUnit,microohm,microohm,μΩ,,electricity
+PrefixedUnit,milliohm,milliohm,mΩ,,electricity
+PrefixedUnit,centiohm,centiohm,cΩ,,electricity
+PrefixedUnit,deciohm,deciohm,dΩ,,electricity
+PrefixedUnit,decaohm,decaohm,daΩ,,electricity
+PrefixedUnit,hectoohm,hectoohm,hΩ,,electricity
+PrefixedUnit,kilohm,kilohm,kΩ,,electricity
+PrefixedUnit,megohm,megohm,MΩ,,electricity
+PrefixedUnit,gigaohm,gigaohm,GΩ,,electricity
+PrefixedUnit,teraohm,teraohm,TΩ,,electricity
+PrefixedUnit,petaohm,petaohm,PΩ,,electricity
+PrefixedUnit,exaohm,exaohm,EΩ,,electricity
+PrefixedUnit,zettaohm,zettaohm,ZΩ,,electricity
+PrefixedUnit,yottaohm,yottaohm,YΩ,,electricity
 PrefixedUnit,yoctosiemens,yoctosiemens,yS,,electricity
 PrefixedUnit,zeptosiemens,zeptosiemens,zS,,electricity
 PrefixedUnit,attosiemens,attosiemens,aS,,electricity
 PrefixedUnit,picosiemens,picosiemens,pS,,electricity
 PrefixedUnit,femtosiemens,femtosiemens,fS,,electricity
 PrefixedUnit,nanosiemens,nanosiemens,nS,,electricity
-PrefixedUnit,microsiemens,microsiemens,Î¼S,,electricity
+PrefixedUnit,microsiemens,microsiemens,μS,,electricity
 PrefixedUnit,millisiemens,millisiemens,mS,,electricity
 PrefixedUnit,centisiemens,centisiemens,cS,,electricity
 PrefixedUnit,decisiemens,decisiemens,dS,,electricity
@@ -651,7 +651,7 @@ PrefixedUnit,attoweber,attoweber,aWb,,magnetism
 PrefixedUnit,picoweber,picoweber,pWb,,magnetism
 PrefixedUnit,femtoweber,femtoweber,fWb,,magnetism
 PrefixedUnit,nanoweber,nanoweber,nWb,,magnetism
-PrefixedUnit,microweber,microweber,Î¼Wb,,magnetism
+PrefixedUnit,microweber,microweber,μWb,,magnetism
 PrefixedUnit,milliweber,milliweber,mWb,,magnetism
 PrefixedUnit,centiweber,centiweber,cWb,,magnetism
 PrefixedUnit,deciweber,deciweber,dWb,,magnetism
@@ -671,7 +671,7 @@ PrefixedUnit,attotesla,attotesla,aT,,magnetism
 PrefixedUnit,picotesla,picotesla,pT,,magnetism
 PrefixedUnit,femtotesla,femtotesla,fT,,magnetism
 PrefixedUnit,nanotesla,nanotesla,nT,,magnetism
-PrefixedUnit,microtesla,microtesla,Î¼T,,magnetism
+PrefixedUnit,microtesla,microtesla,μT,,magnetism
 PrefixedUnit,millitesla,millitesla,mT,,magnetism
 PrefixedUnit,centitesla,centitesla,cT,,magnetism
 PrefixedUnit,decitesla,decitesla,dT,,magnetism
@@ -691,7 +691,7 @@ PrefixedUnit,attohenry,attohenry,aH,The attohenry is a unit of inductance define
 PrefixedUnit,picohenry,picohenry,pH,The picohenry is a unit of inductance defined as 1.0e-12 henry.,electricity
 PrefixedUnit,femtohenry,femtohenry,fH,The femtohenry is a unit of inductance defined as 1.0e-15 henry.,electricity
 PrefixedUnit,nanohenry,nanohenry,nH,The nanohenry is a unit of inductance defined as 1.0e-9 henry.,electricity
-PrefixedUnit,microhenry,microhenry,Î¼H,The microhenry is a unit of inductance defined as 1.0e-6 henry.,electricity
+PrefixedUnit,microhenry,microhenry,μH,The microhenry is a unit of inductance defined as 1.0e-6 henry.,electricity
 PrefixedUnit,millihenry,millihenry,mH,The millihenry is a unit of inductance defined as 1.0e-3 henry.,electricity
 PrefixedUnit,centihenry,centihenry,cH,The centihenry is a unit of inductance defined as 1.0e-2 henry.,electricity
 PrefixedUnit,decihenry,decihenry,dH,The decihenry is a unit of inductance defined as 1.0e-1 henry.,electricity
@@ -705,23 +705,23 @@ PrefixedUnit,petahenry,petahenry,PH,The petahenry is a unit of inductance define
 PrefixedUnit,exahenry,exahenry,EH,The exahenry is a unit of inductance defined as 1.0e18 henry.,electricity
 PrefixedUnit,zettahenry,zettahenry,ZH,The zettahenry is a unit of inductance defined as 1.0e21 henry.,electricity
 PrefixedUnit,yottahenry,yottahenry,YH,The yottahenry is a unit of inductance defined as 1.0e24 henry.,electricity
-PrefixedUnit,yoctodegreeCelsius,yoctodegree Celsius,yÂ°C,The yoctodegree Celsius is a unit of temperature defined as 1.0e-24 degree Celsius.,temperature
-PrefixedUnit,zeptodegreeCelsius,zeptodegree Celsius,zÂ°C,The zeptdegree Celsius is a unit of temperature defined as 1.0e-21 degree Celsius.,temperature
-PrefixedUnit,attodegreeCelsius,attodegree Celsius,aÂ°C,The attodegree Celsius is a unit of temperature defined as 1.0e-18 degree Celsius.,temperature
-PrefixedUnit,picodegreeCelsius,picodegree Celsius,pÂ°C,The picodegree Celsius is a unit of temperature defined as 1.0e-12 degree Celsius.,temperature
-PrefixedUnit,femtodegreeCelsius,femtodegree Celsius,fÂ°C,The femtodegree Celsius is a unit of temperature defined as 1.0e-15 degree Celsius.,temperature
-PrefixedUnit,nanodegreeCelsius,nanodegree Celsius,nÂ°C,The nanodegree Celsius is a unit of temperature defined as 1.0e-9 degree Celsius.,temperature
-PrefixedUnit,microdegreeCelsius,microdegree Celsius,Î¼Â°C,The microdegree Celsius is a unit of temperature defined as 1.0e-6 degree Celsius.,temperature
-PrefixedUnit,millidegreeCelsius,millidegree Celsius,mÂ°C,The millidegree Celsius is a unit of temperature defined as 1.0e-3 degree Celsius.,temperature
-PrefixedUnit,centidegreeCelsius,centidegree Celsius,cÂ°C,The centidegree Celsius is a unit of temperature defined as 1.0e-2 degree Celsius.,temperature
-PrefixedUnit,decidegreeCelsius,decidegree Celsius,dÂ°C,The decidegree Celsius is a unit of temperature defined as 1.0e-1 degree Celsius.,temperature
+PrefixedUnit,yoctodegreeCelsius,yoctodegree Celsius,y°C,The yoctodegree Celsius is a unit of temperature defined as 1.0e-24 degree Celsius.,temperature
+PrefixedUnit,zeptodegreeCelsius,zeptodegree Celsius,z°C,The zeptdegree Celsius is a unit of temperature defined as 1.0e-21 degree Celsius.,temperature
+PrefixedUnit,attodegreeCelsius,attodegree Celsius,a°C,The attodegree Celsius is a unit of temperature defined as 1.0e-18 degree Celsius.,temperature
+PrefixedUnit,picodegreeCelsius,picodegree Celsius,p°C,The picodegree Celsius is a unit of temperature defined as 1.0e-12 degree Celsius.,temperature
+PrefixedUnit,femtodegreeCelsius,femtodegree Celsius,f°C,The femtodegree Celsius is a unit of temperature defined as 1.0e-15 degree Celsius.,temperature
+PrefixedUnit,nanodegreeCelsius,nanodegree Celsius,n°C,The nanodegree Celsius is a unit of temperature defined as 1.0e-9 degree Celsius.,temperature
+PrefixedUnit,microdegreeCelsius,microdegree Celsius,μ°C,The microdegree Celsius is a unit of temperature defined as 1.0e-6 degree Celsius.,temperature
+PrefixedUnit,millidegreeCelsius,millidegree Celsius,m°C,The millidegree Celsius is a unit of temperature defined as 1.0e-3 degree Celsius.,temperature
+PrefixedUnit,centidegreeCelsius,centidegree Celsius,c°C,The centidegree Celsius is a unit of temperature defined as 1.0e-2 degree Celsius.,temperature
+PrefixedUnit,decidegreeCelsius,decidegree Celsius,d°C,The decidegree Celsius is a unit of temperature defined as 1.0e-1 degree Celsius.,temperature
 PrefixedUnit,yoctolumen,yoctolumen,ylm,,luminance
 PrefixedUnit,zeptolumen,zeptolumen,zlm,,luminance
 PrefixedUnit,attolumen,attolumen,alm,,luminance
 PrefixedUnit,picolumen,picolumen,plm,,luminance
 PrefixedUnit,femtolumen,femtolumen,flm,,luminance
 PrefixedUnit,nanolumen,nanolumen,nlm,,luminance
-PrefixedUnit,microlumen,microlumen,Î¼lm,,luminance
+PrefixedUnit,microlumen,microlumen,μlm,,luminance
 PrefixedUnit,millilumen,millilumen,mlm,,luminance
 PrefixedUnit,centilumen,centilumen,clm,,luminance
 PrefixedUnit,decilumen,decilumen,dlm,,luminance
@@ -741,7 +741,7 @@ PrefixedUnit,attolux,attolux,alx,,luminance
 PrefixedUnit,picolux,picolux,plx,,luminance
 PrefixedUnit,femtolux,femtolux,flx,,luminance
 PrefixedUnit,nanolux,nanolux,nlx,,luminance
-PrefixedUnit,microlux,microlux,Î¼lx,,luminance
+PrefixedUnit,microlux,microlux,μlx,,luminance
 PrefixedUnit,millilux,millilux,mlx,,luminance
 PrefixedUnit,centilux,centilux,clx,,luminance
 PrefixedUnit,decilux,decilux,dlx,,luminance
@@ -761,7 +761,7 @@ PrefixedUnit,attobecquerel,attobecquerel,aBq,The attobecquerel is a unit of acti
 PrefixedUnit,picobecquerel,picobecquerel,pBq,The picobecquerel is a unit of activity defined as 1.0e-12 becquerel.,activity
 PrefixedUnit,femtobecquerel,femtobecquerel,fBq,The femtobecquerel is a unit of activity defined as 1.0e-15 becquerel.,activity
 PrefixedUnit,nanobecquerel,nanobecquerel,nBq,The nanobecquerel is a unit of activity defined as 1.0e-9 becquerel.,activity
-PrefixedUnit,microbecquerel,microbecquerel,Î¼Bq,The microbecquerel is a unit of activity defined as 1.0e-6 becquerel.,activity
+PrefixedUnit,microbecquerel,microbecquerel,μBq,The microbecquerel is a unit of activity defined as 1.0e-6 becquerel.,activity
 PrefixedUnit,millibecquerel,millibecquerel,mBq,The millibecquerel is a unit of activity defined as 1.0e-3 becquerel.,activity
 PrefixedUnit,centibecquerel,centibecquerel,cBq,The centibecquerel is a unit of activity defined as 1.0e-2 becquerel.,activity
 PrefixedUnit,decibecquerel,decibecquerel,dBq,The decibecquerel is a unit of activity defined as 1.0e-1 becquerel.,activity
@@ -781,7 +781,7 @@ PrefixedUnit,attogray,attogray,aGy,The attogray is a unit of absorbed dose defin
 PrefixedUnit,picogray,picogray,pGy,The picogray is a unit of absorbed dose defined as 1.0e-12 gray.,dose
 PrefixedUnit,femtogray,femtogray,fGy,The femtogray is a unit of absorbed dose defined as 1.0e-15 gray.,dose
 PrefixedUnit,nanogray,nanogray,nGy,The nanogray is a unit of absorbed dose defined as 1.0e-9 gray.,dose
-PrefixedUnit,microgray,microgray,Î¼Gy,The microgray is a unit of absorbed dose defined as 1.0e-6 gray.,dose
+PrefixedUnit,microgray,microgray,μGy,The microgray is a unit of absorbed dose defined as 1.0e-6 gray.,dose
 PrefixedUnit,milligray,milligray,mGy,The milligray is a unit of absorbed dose defined as 1.0e-3 gray.,dose
 PrefixedUnit,centigray,centigray,cGy,The centigray is a unit of absorbed dose defined as 1.0e-2 gray.,dose
 PrefixedUnit,decigray,decigray,dGy,The decigray is a unit of absorbed dose defined as 1.0e-1 gray.,dose
@@ -801,7 +801,7 @@ PrefixedUnit,attosievert,attosievert,aSv,,dose
 PrefixedUnit,picosievert,picosievert,pSv,,dose
 PrefixedUnit,femtosievert,femtosievert,fSv,,dose
 PrefixedUnit,nanosievert,nanosievert,nSv,,dose
-PrefixedUnit,microsievert,microsievert,Î¼Sv,,dose
+PrefixedUnit,microsievert,microsievert,μSv,,dose
 PrefixedUnit,millisievert,millisievert,mSv,,dose
 PrefixedUnit,centisievert,centisievert,cSv,,dose
 PrefixedUnit,decisievert,decisievert,dSv,,dose
@@ -821,7 +821,7 @@ PrefixedUnit,attokatal,attokatal,akat,The attokatal is a unit of catalytic activ
 PrefixedUnit,picokatal,picokatal,pkat,The picokatal is a unit of catalytic activity defined as 1.0e-12 katal.,activity
 PrefixedUnit,femtokatal,femtokatal,fkat,The femtokatal is a unit of catalytic activity defined as 1.0e-15 katal.,activity
 PrefixedUnit,nanokatal,nanokatal,nkat,The nanokatal is a unit of catalytic activity defined as 1.0e-9 katal.,activity
-PrefixedUnit,microkatal,microkatal,Î¼kat,The microkatal is a unit of catalytic activity defined as 1.0e-6 katal.,activity
+PrefixedUnit,microkatal,microkatal,μkat,The microkatal is a unit of catalytic activity defined as 1.0e-6 katal.,activity
 PrefixedUnit,millikatal,millikatal,mkat,The millikatal is a unit of catalytic activity defined as 1.0e-3 katal.,activity
 PrefixedUnit,centikatal,centikatal,ckat,The centikatal is a unit of catalytic activity defined as 1.0e-2 katal.,activity
 PrefixedUnit,decikatal,decikatal,dkat,The decikatal is a unit of catalytic activity defined as 1.0e-1 katal.,activity
@@ -872,7 +872,7 @@ PrefixedUnit,petamolar,petamolar,PM,The petamolar is a unit of amount of substan
 PrefixedUnit,examolar,examolar,EM,The examolar is a unit of amount of substance concentration defined as 1.0e18 molar.,substance
 PrefixedUnit,zettamolar,zettamolar,ZM,The zettamolar is a unit of amount of substance concentration defined as 1.0e21 molar.,substance
 PrefixedUnit,yottamolar,yottamolar,YM,The yottamolar is a unit of amount of substance concentration defined as 1.0e24 molar.,substance
-PrefixedUnit,micromagnitude,micromagnitude,Î¼mag,The micromagnitude is a unit of magnitude defined as 1.0e-6 magnitude.,magnitude
+PrefixedUnit,micromagnitude,micromagnitude,μmag,The micromagnitude is a unit of magnitude defined as 1.0e-6 magnitude.,magnitude
 PrefixedUnit,millimagnitude,millimagnitude,mmag,The millimagnitude is a unit of magnitude defined as 1.0e-3 magnitude.,magnitude
 PrefixedUnit,decibel,decibel,dB,,
 PrefixedUnit,kibibit,kibibit,Kibit,,information
@@ -916,7 +916,7 @@ GramPerPrefixedLitre,gramPerAttolitre,gram per attolitre,g/al,Gram per attolitre
 GramPerPrefixedLitre,gramPerFemtolitre,gram per femtolitre,g/fl,Gram per femtolitre is a unit of density defined as gram divided by femtolitre.,density
 GramPerPrefixedLitre,gramPerPicolitre,gram per picolitre,g/pl,Gram per picolitre is a unit of density defined as gram divided by picolitre.,density
 GramPerPrefixedLitre,gramPerNanolitre,gram per nanolitre,g/nl,Gram per nanolitre is a unit of density defined as gram divided by nanolitre.,density
-GramPerPrefixedLitre,gramPerMicrolitre,gram per microlitre,g/Î¼l,Gram per microlitre is a unit of density defined as gram divided by microlitre.,density
+GramPerPrefixedLitre,gramPerMicrolitre,gram per microlitre,g/μl,Gram per microlitre is a unit of density defined as gram divided by microlitre.,density
 GramPerPrefixedLitre,gramPerMillilitre,gram per millilitre,g/ml,Gram per millilitre is a unit of density defined as gram divided by millilitre.,density
 GramPerPrefixedLitre,gramPerCentilitre,gram per centilitre,g/cl,Gram per centilitre is a unit of density defined as gram divided by centilitre.,density
 GramPerPrefixedLitre,gramPerDecilitre,gram per decilitre,g/dl,Gram per decilitre is a unit of density defined as gram divided by decilitre.,density
@@ -936,7 +936,7 @@ MetrePerPrefixedSecond-Time,metrePerAttosecond-Time,metre per attosecond,m/as,Me
 MetrePerPrefixedSecond-Time,metrePerPicosecond-Time,metre per picosecond,m/ps,Metre per picosecond is a unit of speed defined as metre divided by picosecond.,speed
 MetrePerPrefixedSecond-Time,metrePerFemtosecond-Time,metre per femtosecond,m/fs,Metre per femtosecond is a unit of speed defined as metre divided by femtosecond.,speed
 MetrePerPrefixedSecond-Time,metrePerNanosecond-Time,metre per nanosecond,m/ns,Metre per nanosecond is a unit of speed defined as metre divided by nanosecond.,speed
-MetrePerPrefixedSecond-Time,metrePerMicrosecond-Time,metre per microsecond,m/Î¼s,Metre per microsecond is a unit of speed defined as metre divided by microsecond.,speed
+MetrePerPrefixedSecond-Time,metrePerMicrosecond-Time,metre per microsecond,m/μs,Metre per microsecond is a unit of speed defined as metre divided by microsecond.,speed
 MetrePerPrefixedSecond-Time,metrePerMillisecond-Time,metre per millisecond,m/ms,Metre per millisecond is a unit of speed defined as metre divided by millisecond.,speed
 MetrePerPrefixedSecond-Time,metrePerCentisecond-Time,metre per centisecond,m/cs,Metre per centisecond is a unit of speed defined as metre divided by centisecond.,speed
 MetrePerPrefixedSecond-Time,metrePerDecisecond-Time,metre per decisecond,m/ds,Metre per decisecond is a unit of speed defined as metre divided by decisecond.,speed
@@ -956,7 +956,7 @@ MetrePerPrefixedSecond-TimeSquared,metrePerAttosecond-TimeSquared,metre per atto
 MetrePerPrefixedSecond-TimeSquared,metrePerPicosecond-TimeSquared,metre per picosecond squared,m/ps2,Metre per picosecond squared is a unit of acceleration defined as metre divided by picosecond squared.,acceleration
 MetrePerPrefixedSecond-TimeSquared,metrePerFemtosecond-TimeSquared,metre per femtosecond squared,m/fs2,Metre per femtosecond squared is a unit of acceleration defined as metre divided by femtosecond squared.,acceleration
 MetrePerPrefixedSecond-TimeSquared,metrePerNanosecond-TimeSquared,metre per nanosecond squared,m/ns2,Metre per nanosecond squared is a unit of acceleration defined as metre divided by nanosecond squared.,acceleration
-MetrePerPrefixedSecond-TimeSquared,metrePerMicrosecond-TimeSquared,metre per microsecond squared,m/Î¼s2,Metre per microsecond squared is a unit of acceleration defined as metre divided by microsecond squared.,acceleration
+MetrePerPrefixedSecond-TimeSquared,metrePerMicrosecond-TimeSquared,metre per microsecond squared,m/μs2,Metre per microsecond squared is a unit of acceleration defined as metre divided by microsecond squared.,acceleration
 MetrePerPrefixedSecond-TimeSquared,metrePerMillisecond-TimeSquared,metre per millisecond squared,m/ms2,Metre per millisecond squared is a unit of acceleration defined as metre divided by millisecond squared.,acceleration
 MetrePerPrefixedSecond-TimeSquared,metrePerCentisecond-TimeSquared,metre per centisecond squared,m/cs2,Metre per centisecond squared is a unit of acceleration defined as metre divided by centisecond squared.,acceleration
 MetrePerPrefixedSecond-TimeSquared,metrePerDecisecond-TimeSquared,metre per decisecond squared,m/ds2,Metre per decisecond squared is a unit of acceleration defined as metre divided by decisecond squared.,acceleration
@@ -980,7 +980,7 @@ MolePerPrefixedLitre,molePerGigalitre,mole per gigalitre,mol/Gl,Mole per gigalit
 MolePerPrefixedLitre,molePerHectolitre,mole per hectolitre,mol/hl,Mole per hectolitre is a unit of amount of substance concentration defined as mole divided by hectolitre.,substance
 MolePerPrefixedLitre,molePerKilolitre,mole per kilolitre,mol/kl,Mole per kilolitre is a unit of amount of substance concentration defined as mole divided by kilolitre.,substance
 MolePerPrefixedLitre,molePerMegalitre,mole per megalitre,mol/Ml,Mole per megalitre is a unit of amount of substance concentration defined as mole divided by megalitre.,substance
-MolePerPrefixedLitre,molePerMicrolitre,mole per microlitre,mol/Î¼l,Mole per microlitre is a unit of amount of substance concentration defined as mole divided by microlitre.,substance
+MolePerPrefixedLitre,molePerMicrolitre,mole per microlitre,mol/μl,Mole per microlitre is a unit of amount of substance concentration defined as mole divided by microlitre.,substance
 MolePerPrefixedLitre,molePerMillilitre,mole per millilitre,mol/ml,Mole per millilitre is a unit of amount of substance concentration defined as mole divided by millilitre.,substance
 MolePerPrefixedLitre,molePerNanolitre,mole per nanolitre,mol/nl,Mole per nanolitre is a unit of amount of substance concentration defined as mole divided by nanolitre.,substance
 MolePerPrefixedLitre,molePerPetalitre,mole per petalitre,mol/Pl,Mole per petalitre is a unit of amount of substance concentration defined as mole divided by petalitre.,substance
@@ -996,7 +996,7 @@ MolePerPrefixedMetre,molePerAttometre,mole per attometre,mol/am,,substance
 MolePerPrefixedMetre,molePerFemtometre,mole per femtometre,mol/fm,,substance
 MolePerPrefixedMetre,molePerPicometre,mole per picometre,mol/pm,,substance
 MolePerPrefixedMetre,molePerNanometre,mole per nanometre,mol/nm,,substance
-MolePerPrefixedMetre,molePerMicrometre,mole per micrometre,mol/Î¼m,,substance
+MolePerPrefixedMetre,molePerMicrometre,mole per micrometre,mol/μm,,substance
 MolePerPrefixedMetre,molePerMillimetre,mole per millimetre,mol/mm,,substance
 MolePerPrefixedMetre,molePerCentimetre,mole per centimetre,mol/cm,,substance
 MolePerPrefixedMetre,molePerDecimetre,mole per decimetre,mol/dm,,substance
@@ -1016,7 +1016,7 @@ PrefixedGramPerLitre,attogramPerLitre,attogram per litre,ag/l,Attogram per litre
 PrefixedGramPerLitre,femtogramPerLitre,femtogram per litre,fg/l,Femtogram per litre is a unit of density defined as femtogram divided by litre.,density
 PrefixedGramPerLitre,picogramPerLitre,picogram per litre,pg/l,Picogram per litre is a unit of density defined as picogram divided by litre.,density
 PrefixedGramPerLitre,nanogramPerLitre,nanogram per litre,ng/l,Nanogram per litre is a unit of density defined as nanogram divided by litre.,density
-PrefixedGramPerLitre,microgramPerLitre,microgram per litre,Î¼g/l,Microgram per litre is a unit of density defined as microgram divided by litre.,density
+PrefixedGramPerLitre,microgramPerLitre,microgram per litre,μg/l,Microgram per litre is a unit of density defined as microgram divided by litre.,density
 PrefixedGramPerLitre,milligramPerLitre,milligram per litre,mg/l,Milligram per litre is a unit of density defined as milligram divided by litre.,density
 PrefixedGramPerLitre,centigramPerLitre,centigram per litre,cg/l,Centigram per litre is a unit of density defined as centigram divided by litre.,density
 PrefixedGramPerLitre,decigramPerLitre,decigram per litre,dg/l,Decigram per litre is a unit of density defined as decigram divided by litre.,density
@@ -1036,7 +1036,7 @@ PrefixedMetrePerSecond-Time,attometrePerSecond-Time,attometre per second,am/s,At
 PrefixedMetrePerSecond-Time,picometrePerSecond-Time,picometre per second,pm/s,Picometre per second is a unit of speed defined as picometre divided by second.,speed
 PrefixedMetrePerSecond-Time,femtometrePerSecond-Time,femtometre per second,fm/s,Femtometre per second is a unit of speed defined as femtometre divided by second.,speed
 PrefixedMetrePerSecond-Time,nanometrePerSecond-Time,nanometre per second,nm/s,Nanometre per second is a unit of speed defined as nanometre divided by second.,speed
-PrefixedMetrePerSecond-Time,micrometrePerSecond-Time,micrometre per second,Î¼m/s,Micrometre per second is a unit of speed defined as micrometre divided by second.,speed
+PrefixedMetrePerSecond-Time,micrometrePerSecond-Time,micrometre per second,μm/s,Micrometre per second is a unit of speed defined as micrometre divided by second.,speed
 PrefixedMetrePerSecond-Time,millimetrePerSecond-Time,millimetre per second,mm/s,Millimetre per second is a unit of speed defined as millimetre divided by second.,speed
 PrefixedMetrePerSecond-Time,centimetrePerSecond-Time,centimetre per second,cm/s,Centimetre per second is a unit of speed defined as centimetre divided by second.,speed
 PrefixedMetrePerSecond-Time,decimetrePerSecond-Time,decimetre per second,dm/s,Decimetre per second is a unit of speed defined as decimetre divided by second.,speed
@@ -1056,7 +1056,7 @@ PrefixedMetrePerSecond-TimeSquared,attometrePerSecond-TimeSquared,attometre per 
 PrefixedMetrePerSecond-TimeSquared,picometrePerSecond-TimeSquared,picometre per second squared,pm/s2,Picometre per second squared is a unit of acceleration defined as picometre divided by second squared.,acceleration
 PrefixedMetrePerSecond-TimeSquared,femtometrePerSecond-TimeSquared,femtometre per second squared,fm/s2,Femtometre per second squared is a unit of acceleration defined as femtometre divided by second squared.,acceleration
 PrefixedMetrePerSecond-TimeSquared,nanometrePerSecond-TimeSquared,nanometre per second squared,nm/s2,Nanometre per second squared is a unit of acceleration defined as nanometre divided by second squared.,acceleration
-PrefixedMetrePerSecond-TimeSquared,micrometrePerSecond-TimeSquared,micrometre per second squared,Î¼m/s2,Micrometre per second squared is a unit of acceleration defined as micrometre divided by second squared.,acceleration
+PrefixedMetrePerSecond-TimeSquared,micrometrePerSecond-TimeSquared,micrometre per second squared,μm/s2,Micrometre per second squared is a unit of acceleration defined as micrometre divided by second squared.,acceleration
 PrefixedMetrePerSecond-TimeSquared,millimetrePerSecond-TimeSquared,millimetre per second squared,mm/s2,Millimetre per second squared is a unit of acceleration defined as millimetre divided by second squared.,acceleration
 PrefixedMetrePerSecond-TimeSquared,centimetrePerSecond-TimeSquared,centimetre per second squared,cm/s2,Centimetre per second squared is a unit of acceleration defined as centimetre divided by second squared.,acceleration
 PrefixedMetrePerSecond-TimeSquared,decimetrePerSecond-TimeSquared,decimetre per second squared,dm/s2,Decimetre per second squared is a unit of acceleration defined as decimetre divided by second squared.,acceleration
@@ -1080,7 +1080,7 @@ PrefixedMolePerLitre,gigamolePerLitre,gigamole per litre,Gmol/l,Gigamole per lit
 PrefixedMolePerLitre,hectomolePerLitre,hectomole per litre,hmol/l,Hectomole per litre is a unit of amount of substance concentration defined as hectomole divided by litre.,substance
 PrefixedMolePerLitre,kilomolePerLitre,kilomole per litre,kmol/l,Kilomole per litre is a unit of amount of substance concentration defined as kilomole divided by litre.,substance
 PrefixedMolePerLitre,megamolePerLitre,megamole per litre,Mmol/l,Megamole per litre is a unit of amount of substance concentration defined as megamole divided by litre.,substance
-PrefixedMolePerLitre,micromolePerLitre,micromole per litre,Î¼mol/l,Micromole per litre is a unit of amount of substance concentration defined as micromole divided by litre.,substance
+PrefixedMolePerLitre,micromolePerLitre,micromole per litre,μmol/l,Micromole per litre is a unit of amount of substance concentration defined as micromole divided by litre.,substance
 PrefixedMolePerLitre,millimolePerLitre,millimole per litre,mmol/l,Millimole per litre is a unit of amount of substance concentration defined as millimole divided by litre.,substance
 PrefixedMolePerLitre,nanomolePerLitre,nanomole per litre,nmol/l,Nanomole per litre is a unit of amount of substance concentration defined as nanomole divided by litre.,substance
 PrefixedMolePerLitre,petamolePerLitre,petamole per litre,Pmol/l,Petamole per litre is a unit of amount of substance concentration defined as petamole divided by litre.,substance
@@ -1094,7 +1094,7 @@ PrefixedMolePerMetre,attomolePerMetre,attomole per metre,amol/m,,substance
 PrefixedMolePerMetre,femtomolePerMetre,femtomole per metre,fmol/m,,substance
 PrefixedMolePerMetre,picomolePerMetre,picomole per metre,pmol/m,,substance
 PrefixedMolePerMetre,nanomolePerMetre,nanomole per metre,nmol/m,,substance
-PrefixedMolePerMetre,micromolePerMetre,micromole per metre,Î¼mol/m,,substance
+PrefixedMolePerMetre,micromolePerMetre,micromole per metre,μmol/m,,substance
 PrefixedMolePerMetre,millimolePerMetre,millimole per metre,mmol/m,,substance
 PrefixedMolePerMetre,centimolePerMetre,centimole per metre,cmol/m,,substance
 PrefixedMolePerMetre,decimolePerMetre,decimole per metre,dmol/m,,substance
@@ -1117,7 +1117,7 @@ SquarePrefixedMetre,squareGigametre,square gigametre,Gm2,,area
 SquarePrefixedMetre,squareHectometre,square hectometre,hm2,,area
 SquarePrefixedMetre,squareKilometre,square kilometre,km2,,area
 SquarePrefixedMetre,squareMegametre,square megametre,Mm2,,area
-SquarePrefixedMetre,squareMicrometre,square micrometre,Î¼m2,,area
+SquarePrefixedMetre,squareMicrometre,square micrometre,μm2,,area
 SquarePrefixedMetre,squareMillimetre,square millimetre,mm2,,area
 SquarePrefixedMetre,squareAttometre,square attometre,am2,,area
 SquarePrefixedMetre,squareFemtometre,square femtometre,fm2,,area
@@ -1136,7 +1136,7 @@ PrefixedSecond-TimeSquared,attosecond-TimeSquared,attosecond squared,as2,,time
 PrefixedSecond-TimeSquared,femtosecond-TimeSquared,femtosecond squared,fs2,,time
 PrefixedSecond-TimeSquared,picosecond-TimeSquared,picosecond squared,ps2,,time
 PrefixedSecond-TimeSquared,nanosecond-TimeSquared,nanosecond squared,ns2,,time
-PrefixedSecond-TimeSquared,microsecond-TimeSquared,microsecond squared,Î¼s2,,time
+PrefixedSecond-TimeSquared,microsecond-TimeSquared,microsecond squared,μs2,,time
 PrefixedSecond-TimeSquared,millisecond-TimeSquared,millisecond squared,ms2,,time
 PrefixedSecond-TimeSquared,centisecond-TimeSquared,centisecond squared,cs2,,time
 PrefixedSecond-TimeSquared,decisecond-TimeSquared,decisecond squared,ds2,,time
@@ -1157,7 +1157,7 @@ CubicPrefixedMetre,cubicGigametre,cubic gigametre,Gm3,,volume
 CubicPrefixedMetre,cubicHectometre,cubic hectometre,hm3,,volume
 CubicPrefixedMetre,cubicKilometre,cubic kilometre,km3,,volume
 CubicPrefixedMetre,cubicMegametre,cubic megametre,Mm3,,volume
-CubicPrefixedMetre,cubicMicrometre,cubic micrometre,Î¼m3,,volume
+CubicPrefixedMetre,cubicMicrometre,cubic micrometre,μm3,,volume
 CubicPrefixedMetre,cubicMillimetre,cubic millimetre,mm3,,volume
 CubicPrefixedMetre,cubicAttometre,cubic attometre,am3,,volume
 CubicPrefixedMetre,cubicFemtometre,cubic femtometre,fm3,,volume
@@ -1175,7 +1175,7 @@ UnitMultiplication,newtonMetre,newton metre,N m,,
 UnitMultiplication,metreKilogram,metre kilogram,m kg,,
 UnitMultiplication,kilogramSecond-TimeToThePower-2ReciprocalMetre,reciprocal metre kilogram second to the power -2,m-1 kg s-2,,
 UnitMultiplication,kilogramSecond-TimeToThePower-2,kilogram second to the power -2,kg s-2,,
-UnitMultiplication,micronewtonMetre,micronewton metre,Î¼N m,,
+UnitMultiplication,micronewtonMetre,micronewton metre,μN m,,
 UnitMultiplication,millinewtonMetre,millinewton metre,mN m,,
 UnitMultiplication,wattHour,watt hour,W h,,power
 UnitMultiplication,kilowattHour,kilowatt hour,kW h,,power
@@ -1200,17 +1200,17 @@ UnitMultiplication,kelvinKilogram,kelvin kilogram,K kg,,
 UnitMultiplication,metreKelvin,metre kelvin,m K,,
 UnitMultiplication,squareMetreKelvin,square metre kelvin,m2 K,,
 UnitMultiplication,pascalSecond-TimeSquareMetre,pascal second square metre,Pa s m2,,
-UnitMultiplication,degreeCelsiusDay,degree Celsius day,Â°C d,,
+UnitMultiplication,degreeCelsiusDay,degree Celsius day,μN m,,
 UnitMultiplication,cubicMetreKelvin,cubic metre kelvin,m3 K,,
 UnitMultiplication,second-TimeAmpere,second ampere,s A,,
 UnitMultiplication,voltSecond-Time,volt second,V s,,
 UnitMultiplication,coulombMetre,coulomb metre,C m,,
-UnitMultiplication,ohmMetre,ohm metre,Î© m,,
+UnitMultiplication,ohmMetre,ohm metre,Ω m,,
 UnitMultiplication,ampereHour,ampere hour,A h,,
 UnitMultiplication,milliampereHour,milliampere hour,mA h,,
-UnitMultiplication,moleMicrometre,mole micrometre,mol Î¼m,,
-UnitMultiplication,moleMicrometreReciprocalSquareCentimetre,mole micrometre reciprocal square centimetre,mol Î¼m cm-2,,
-UnitMultiplication,moleMicrometreReciprocalSquareCentimetreReciprocalSecond-Time,mole micrometre reciprocal square centimetre reciprocal second,mol Î¼m cm-2 s-1,,
+UnitMultiplication,moleMicrometre,mole micrometre,mol μm,,
+UnitMultiplication,moleMicrometreReciprocalSquareCentimetre,mole micrometre reciprocal square centimetre,mol μm cm-2,,
+UnitMultiplication,moleMicrometreReciprocalSquareCentimetreReciprocalSecond-Time,mole micrometre reciprocal square centimetre reciprocal second,mol μm cm-2 s-1,,
 UnitMultiplication,kelvinMole,kelvin mole,K mol,,
 UnitMultiplication,candelaSteradian,candela steradian,cd sr,,
 UnitMultiplication,lumenSecond-Time,lumen second,lm s,,
@@ -1247,6 +1247,171 @@ UnitExponentiation,reciprocalSquareCentimetre,reciprocal square centimetre,cm-2,
 UnitExponentiation,reciprocalPartsPerMillionPerYear,reciprocal parts per million,ppm-1,,
 UnitExponentiation,reciprocalAtmosphere-Standard,reciprocal atmosphere (standard),atm-1,,
 UnitExponentiation,reciprocalKelvin,reciprocal kelvin,K-1,,
-UnitExponentiation,reciprocalDegreeCelsius,reciprocal degree Celsius,Â°C-1,,
-UnitExponentiation,reciprocalDegreeCelsiusDay,reciprocal degree Celsius day,(Â°C d)-1,,
+UnitExponentiation,reciprocalDegreeCelsius,reciprocal degree Celsius,°C-1,,
+UnitExponentiation,reciprocalDegreeCelsiusDay,reciprocal degree Celsius day,(°C d)-1,,
 UnitExponentiation,reciprocalHenry,reciprocal henry,H-1,,
+UnitDivision,metrePerMetre,metre per metre,m/m,,
+UnitDivision,millimetrePerMetre,millimetre per metre,mm/m,,
+UnitDivision,squareMetrePerSquareMetre,square metre per square metre,m2/m2,,
+UnitDivision,metrePerSecond-Time,metre per second,m/s,Metre per second is a unit of speed defined as metre divided by second.,speed
+UnitDivision,metrePerSecond-TimeSquared,metre per second squared,m/s2,Metre per second squared is a unit of acceleration defined as metre divided by second squared.,acceleration
+UnitDivision,kilogramPerCubicmetre,kilogram per cubic metre,kg/m3,Kilogram per cubic metre is a unit of density defined as kilogram divided by cubic metre.,density
+UnitDivision,gramPerCubicmetre,gram per cubic metre,g/m3,Gram per cubic metre is a unit of density defined as gram divided by cubic metre.,density
+UnitDivision,milligramPerCubicmetre,milligram per cubic metre,mg/m3,Milligram per cubic metre is a unit of density defined as milligram divided by cubic metre.,density
+UnitDivision,gramPerCubicCentimetre,gram per cubic centimetre,g/cm3,Gram per cubic centimetre is a unit of density defined as gram divided by cubic centimetre.,density
+UnitDivision,microgramPerCubicCentimetre,microgram per cubic centimetre,μg/cm3,Microram per cubic centimetre is a unit of density defined as microgram divided by cubic centimetre.,density
+UnitDivision,kilogramPerCubicDecimetre,kilogram per cubic decimetre,kg/dm3,Kilogram per cubic decimetre is a unit of density defined as kilogram divided by cubic decimetre.,density
+UnitDivision,cubicMetrePerKilogram,cubic metre per kilogram,m3/kg,Cubic metre per kilogram is a unit of specific volume defined as cubic metre divided by kilogram.,volume
+UnitDivision,litrePerKilogram,litre per kilogram,l/kg,Litre per kilogram is a unit of specific volume defined as litre divided by kilogram.,volume
+UnitDivision,amperePerSquareMetre,ampere per square metre,A/m2,Ampere per square metre is a unit of current density defined as ampere divided by square metre.,electricity
+UnitDivision,amperePerMetre,ampere per metre,A/m,Ampere per metre is a unit of magnetic field defined as ampere divided by metre.,magnetism
+UnitDivision,molePerCubicmetre,mole per cubic metre,mol/m3,Mole per cubic metre is a unit of amount of substance concentration defined as mole divided by cubic metre.,substance
+UnitDivision,candelaPerSquareMetre,candela per square metre,cd/m,Candela per square metre is a unit of luminance defined as candela divided by square metre.,luminance
+UnitDivision,radianPerSecond-Time,radian per second,rad/s,,
+UnitDivision,radianPerSecond-TimeSquared,radian per second squared,rad/s2,,
+UnitDivision,wattPerSquareMetre,watt per square metre,W/m2,,
+UnitDivision,wattPerSteradian,watt per steradian,W/sr,,
+UnitDivision,wattPerSquareMetreSteradian,watt per square metre steradian,W/(m2 sr),,
+UnitDivision,joulePerKelvin,joule per kelvin,J/K,,
+UnitDivision,joulePerKelvinKilogram,joule per kelvin kilogram,J/(K kg),,
+UnitDivision,joulePerKilogram,joule per kilogram,J/kg,,
+UnitDivision,wattPerMetreKelvin,watt per metre kelvin,W/(m K),,
+UnitDivision,joulePerCubicmetre,joule per cubic metre,J/m3,,
+UnitDivision,voltPerMetre,volt per metre,V/m,,
+UnitDivision,coulombPerCubicmetre,coulomb per cubic metre,C/m3,,
+UnitDivision,coulombPerSquareMetre,coulomb per square metre,C/m2,,
+UnitDivision,faradPerMetre,farad per metre,F/m,,
+UnitDivision,henryPerMetre,henry per metre,H/m,,
+UnitDivision,joulePerMole,joule per mole,J/mol,,
+UnitDivision,joulePerKelvinMole,joule per kelvin mole,J/(K mol),,
+UnitDivision,coulombPerKilogram,coulomb per kilogram,C/kg,,
+UnitDivision,grayPerSecond-Time,gray per second,Gy/s,,
+UnitDivision,milligrayPerSecond-Time,milligray per second,mGy/s,,
+UnitDivision,kilojoulePerHectogram,kilojoule per hectogram,kJ/hg,,
+UnitDivision,millimetrePerHour,millimetre per hour,mm/h,Millimetre per hour is a unit of speed defined as millimetre divided by hour.,speed
+UnitDivision,kilometrePerHour,kilometre per hour,km/h,Kilometre per hour is a unit of speed defined as kilometre divided by hour.,speed
+UnitDivision,centimetrePerDay,centimetre per day,cm/d,Centimetre per day is a unit of speed defined as centimetre divided by day.,speed
+UnitDivision,metrePerDay,metre per day,m/d,Metre per day is a unit of speed defined as metre divided by day.,speed
+UnitDivision,millimetrePerDay,millimetre per day,mm/d,Millimetre per day is a unit of speed defined as millimetre divided by day.,speed
+UnitDivision,nauticalMile-InternationalPerHour,nautical mile per hour,nmi/h,Nautical mile per hour is a unit of speed defined as nautical mile divided by hour.,speed
+UnitDivision,nauticalMile-InternationalPerHour,nautical mile per hour,M/h,Nautical mile per hour is a unit of speed defined as nautical mile divided by hour.,speed
+UnitDivision,gramPerGram,gram per gram,g/g,,
+UnitDivision,gramPerKilogram,gram per kilogram,g/kg,,
+UnitDivision,gramPerHectogram,gram per hectogram,g/hg,,
+UnitDivision,kilogramPerKilogram,kilogram per kilogram,kg/kg,,
+UnitDivision,milligramPerHectogram,milligram per hectogram,mg/hg,,
+UnitDivision,milligramPerKilogram,milligram per kilogram,mg/kg,,
+UnitDivision,microgramPerHectogram,microgram per hectogram,μg/hg,,
+UnitDivision,cubicCentimetrePerCubicCentimetre,cubic centimetre per cubic centimetre,cm3/cm3,,
+UnitDivision,cubicMetrePerCubicmetre,cubic metre per cubic metre,m3/m3,,
+UnitDivision,cubicMillimetrePerCubicMillimetre,cubic millimetre per cubic millimetre,mm3/mm3,,
+UnitDivision,gramPerLitre,gram per litre,g/l,Gram per litre is a unit of density defined as gram divided by litre.,density
+UnitDivision,solarMassPerCubicParsec,solar mass per cubic parsec,M_☉/pc3,The mass (in solar masses) per cubic parsec.,
+UnitDivision,mile-StatutePerHour,mile (statute) per hour,mi/h,Mile (statute) per hour is a unit of speed defined as mile (statute) divided by hour.,speed
+UnitDivision,metreKilogramPerSecond-TimeSquared,metre kilogram per second squared,m kg/s2,,
+UnitDivision,newtonPerSquareMetre,newton per square metre,N/m2,,
+UnitDivision,joulePerSecond-Time,joule per second,J/s,,
+UnitDivision,kilocalorie-MeanPerHectogram,kilocalorie (mean) per hectogram,kcal/hg,,
+UnitDivision,millisecond-AnglePerYear,millisecond (angle) per year,mas/yr,,
+UnitDivision,squareMetrePerSecond-Time,square metre per second,m2/s,,
+UnitDivision,metreKilogramPerSecond-Time,metre kilogram per second,m kg/s,,
+UnitDivision,newtonPerMetre,newton per metre,N/m,,
+UnitDivision,cubicMetrePerSecond-Time,cubic metre per second,m3/s,,
+UnitDivision,cubicMetrePerYear,cubic metre per year,,,
+UnitDivision,litrePerHour,litre per hour,l/h,,
+UnitDivision,kilogramPerSecond-Time,kilogram per second,kg/s,,
+UnitDivision,gramPerDay,gram per day,g/d,,
+UnitDivision,milligramPerDay,milligram per day,mg/d,,
+UnitDivision,gramPerJoule,gram per joule,g/J,Gram per joule is a unit of energy consumption.,energy
+UnitDivision,kilogramPerGigajoule,kilogram per gigajoule,kg/GJ,Kilogram per gigajoule is a unit of energy consumption.,energy
+UnitDivision,gramPerMetre,gram per metre,g/m,,
+UnitDivision,milligramPerKilometre,milligram per kilometre,mg/km,,
+UnitDivision,gramPerSquareMetre,gram per square metre,g/m2,,
+UnitDivision,kilogramPerSquareMetre,kilogram per square metre,kg/m2,,
+UnitDivision,kilogramPerHectare,kilogram per hectare,kg/ha,,
+UnitDivision,ounceAvoirdupoisPerSquareYard-International,ounce (avoirdupois) per square yard (international),oz/yd2,,
+UnitDivision,kilogramPerHectareDay,kilogram per hectare day,kg/(ha d),,
+UnitDivision,joulePerSquareMetre,joule per square metre,J/m2,,
+UnitDivision,megajoulePerSquareMetre,megajoule per square metre,MJ/m2,,
+UnitDivision,joulePerSquareMetreSecond-Time,joule per square metre second,J/(m2 s),,
+UnitDivision,joulePerSquareMetreDay,joule per square metre day,J/(m2 d),,
+UnitDivision,kilojoulePerSquareMetreDay,kilojoule per square metre day,kJ/(m2 d),,
+UnitDivision,megajoulePerSquareMetreDay,megajoule per square metre day,MJ/(m2 d),,
+UnitDivision,gramPerSquareMetreSecond-Time,gram per square metre second,g/(m2 s),,
+UnitDivision,gramPerSquareMetreDay,gram per square metre day,g/(m2 d),,
+UnitDivision,microgramPerSquareMetreSecond-Time,microgram per square metre second,mg/(m2 s),,
+UnitDivision,microgramPerJoule,microgram per joule,mg/J,,
+UnitDivision,tonnePerCubicmetre,tonne per cubic metre,t/m3,,
+UnitDivision,gramPerMegajoule,gram per megajoule,g/MJ,,
+UnitDivision,wattPerCubicmetre,watt per cubic metre,W/m3,,
+UnitDivision,wattPerHertz,watt per hertz,W/Hz,,
+UnitDivision,wattPerNanometre,watt per nanometre,W/nm,,
+UnitDivision,wattPerSquareMetreHertz,watt per square metre hertz,W/(m2 Hz),,
+UnitDivision,wattPerSquareMetreNanometre,watt per square metre nanometre,W/(m2 nm),,
+UnitDivision,wattPerSteradianSquareMetre,watt per steradian square metre,W/(sr m2),,
+UnitDivision,wattPerSteradianSquareMetreHertz,watt per steradian square metre hertz,W/(sr m2 Hz),,
+UnitDivision,squareMetrePerGram,square metre per gram,m2/g,,
+UnitDivision,megametrePerKilojoule,megametre per kilojoule,Mm/kJ,,
+UnitDivision,megaeuroPerPetajoule,megaeuro per petajoule,,,
+UnitDivision,megaeuroPerMegawatt,megaeuro per megawatt,,,
+UnitDivision,gramPerSquareMetreMetre,gram per square metre metre,g/(m2 m),,
+UnitDivision,gramPerSquareMetreCentimetre,gram per square metre centimetre,g/(m2 cm),,
+UnitDivision,tonnePerHectare,tonne per hectare,t/ha,,
+UnitDivision,metrePerSecond-TimePerMetre,metre per second per metre,m/s/m,,
+UnitDivision,metrePerCubicMetre,metre per cubic metre,m/m3,,
+UnitDivision,centimetrePerCubicCentimetre,centimetre per cubic centimetre,cm/cm3,,
+UnitDivision,second-TimePerDay,second per day,s/d,,
+UnitDivision,partsPerMillionPerYear,parts per million per year,ppm/a,,
+UnitDivision,second-TimePerSquareMetre,second per square metre,s/m2,,
+UnitDivision,squareMetrePerSquareMetreDay,square metre per square metre day,m2/(m2 d),,
+UnitDivision,litrePer100Kilometre,litre per 100 kilometre,l/100 km,,
+UnitDivision,squareMetreKelvinPerWatt,square metre kelvin per watt,m2 K/W,,
+UnitDivision,degreeCelsiusPerMinute-Time,degree Celsius per minute,°C/min,,
+UnitDivision,wattPerSquareMetreKelvin,watt per square metre kelvin,W/m2 K,,
+UnitDivision,kelvinPerWatt,kelvin per watt,K/W,,
+UnitDivision,degreeCelsiusPerHour,degree Celsius per hour,°C/h,,
+UnitDivision,degreeCelsiusPerSecond-Time,degree Celsius per second,°C/s,,
+UnitDivision,joulePerCubicMetreKelvin,joule per cubic metre kelvin,J/m3 K,,
+UnitDivision,wattPerAmpere,watt per ampere,W/A,,
+UnitDivision,coulombPerVolt,coulomb per volt,C/V,,
+UnitDivision,voltPerAmpere,volt per ampere,V/A,,
+UnitDivision,amperePerVolt,ampere per volt,A/V,,
+UnitDivision,newtonPerCoulomb,newton per coulomb,N/C,,
+UnitDivision,weberPerSquareMetre,weber per square metre,Wb/m2,,
+UnitDivision,weberPerAmpere,weber per ampere,Wb/A,,
+UnitDivision,siemensPerMetre,siemens per metre,S/m,,
+UnitDivision,molePerLitre,mole per litre,mol/l,Mole per litre is a unit of amount of substance concentration defined as mole divided by litre.,substance
+UnitDivision,molePerMole,mole per mole,mol/mol,,substance
+UnitDivision,micromolePerMole,micromole per mole,μmol/mol,,substance
+UnitDivision,molePerKilogram,mole per kilogram,mol/kg,,substance
+UnitDivision,kilogramPerMole,kilogram per mole,kg/mol,,
+UnitDivision,cubicMetrePerMole,cubic metre per mole,m3/mol,,
+UnitDivision,litrePerMole,litre per mole,l/mol,,
+UnitDivision,molePerMetre,mole per metre,mol/m,,
+UnitDivision,micromolePerSecond-TimeGram,micromole per second gram,μmol/(s g),,
+UnitDivision,micromolePerSecond-Time,micromole per second,μmol/s,,
+UnitDivision,nanomolePerHour,nanomole per hour,nmol/h,,
+UnitDivision,nanomolePerHourMillilitre,nanomole per hour millilitre,nmol/(h ml),,
+UnitDivision,molePerSecond-Time,mole per second,mol/s,,
+UnitDivision,deltaA450PerSecond-Time,delta A450 per second,,,
+UnitDivision,katalPerCubicmetre,katal per cubic metre,kat/m3,,
+UnitDivision,nanokatalPerMilligram,nanokatal per milligram,nkat/mg,,
+UnitDivision,deltaA450PerSecond-TimePerMilligram,delta A450 per second per milligram,,,
+UnitDivision,candelaPerSquareCentimetre,candela per square centimetre,cd/cm,,
+UnitDivision,lumenPerSquareMetre,lumen per square metre,lm/m2,,
+UnitDivision,lumenPerWatt,lumen per watt,lm/W,,
+UnitDivision,amperePerWatt,ampere per watt,A/W,,
+UnitDivision,bitPerSecond-Time,bit per second,bit/s,,
+UnitDivision,kilometrePerSecond-TimePerMegaparsec,kilometre per second per megaparsec,km s-1 Mpc-1,,
+UnitDivision,magnitudePerSecond-AngleSquared,magnitude per second (angle) squared,mag/arcsec2,The brightness (in magnitudes) of an area on the celestial sphere of 1 arcsecond by 1 arcsecond.,
+UnitDivision,solarMassPerGigayearCubicKiloparsec,solar mass per gigayear cubic kiloparsec,M_☉/(Gyr kpc3),The amount of stellar mass created per cubic kiloparsec in each billion years.,mass
+UnitDivision,solarMassPerGigayearCubicParsec,solar mass per gigayear cubic parsec,M_☉/(Gyr pc3),The amount of stellar mass created per cubic parsec in each billion years.,mass
+UnitDivision,voltPerWatt,volt per watt,V/W,,
+UnitDivision,wattPerSecond-AngleSquared,watt per second (angle) squared,W/arcsec2,The radiative intensity (in watts) of an area on the celestial sphere of 1 arcsecond by 1 arcsecond.,
+UnitDivision,kilogramPerPascalSecond-TimeSquareMetre,kilogram per pascal second square metre,kg Pa-1 s-1 m-2,,
+UnitDivision,colonyFormingUnitPerGram,colony forming unit per gram,CFU/g,,
+UnitDivision,colonyFormingUnitPerMillilitre,colony forming unit per millilitre,CFU/ml,,
+UnitDivision,colonyFormingUnitPer25Millilitre,colony forming unit per 25 millilitre,CFU/ml,,
+UnitDivision,_1000ColonyFormingUnitPerMillilitre,1000 colony forming unit per millilitre,1000 CFU/ml,,
+UnitDivision,euroPerTonne,euro per tonne,,,
+UnitDivision,megaeuroPerMegatonne,megaeuro per megatonne,,,
