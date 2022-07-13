@@ -234,7 +234,7 @@ Simple delivery of a service with typical inputs and outputs.
   - '@id': training:d4d2fd71-34f2-41c3-b1c5-19ad5ed2da59
     '@type': EconomicEvent
     outputOf: training:02b39a30-3e04-4305-9656-7f261aa63c84
-    action: service
+    action: deliverService
     provider: https://training.example/
     receiver: https://alice.example/
     resourceConformsTo: training:3129ca8b-fcda-45be-bbda-294dc924d3b9 # one day 3D printing workshop
@@ -245,7 +245,7 @@ Simple delivery of a service with typical inputs and outputs.
   - '@id': training:583e83d9-a46d-44ff-bd71-88513a1d83c0
     '@type': EconomicEvent
     outputOf: training:02b39a30-3e04-4305-9656-7f261aa63c84
-    action: service
+    action: deliverService
     provider: https://training.example/
     receiver: https://bob.example/
     resourceConformsTo: training:3129ca8b-fcda-45be-bbda-294dc924d3b9 # one day 3D printing workshop
@@ -256,7 +256,7 @@ Simple delivery of a service with typical inputs and outputs.
   - '@id': training:e4783bef-9006-490c-9c03-389272c7444d
     '@type': EconomicEvent
     outputOf: training:02b39a30-3e04-4305-9656-7f261aa63c84
-    action: service
+    action: deliverService
     provider: https://training.example/
     receiver: https://carol.example/
     resourceConformsTo: training:3129ca8b-fcda-45be-bbda-294dc924d3b9 # one day 3D printing workshop
@@ -501,7 +501,7 @@ Simple pack and unpack of resources into and out of a container resource, using 
 
   - '@id': med:b52a5815-fae9-43bf-be95-833berqojdasf7
     '@type': EconomicEvent
-    action: transfer-custody
+    action: transferCustody
     provider: https://medical.example/
     receiver: https://laundry.example/
     resourceInventoriedAs: med:e1721a61-cd47-4556-84b9-8b1b81da564h # the package

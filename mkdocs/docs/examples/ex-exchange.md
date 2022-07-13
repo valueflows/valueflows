@@ -268,7 +268,7 @@ Checking out and checking back in a library book (a loan).
   - '@id': urn:uuid:54b814ee-62dc-40c1-bb96-f8582aa4f771
     '@type': EconomicEvent
     realizationOf: library:f47064eb-7120-4b31-b882-770165901fe6
-    action: transfer-custody
+    action: transferCustody
     resourceInventoriedAs: library:2402b57c-1c45-423a-acb2-f50961c97d65
     hasPointInTime: 2019-04-18T8:00:00-5:00
     provider: https://library.example/
@@ -280,7 +280,7 @@ Checking out and checking back in a library book (a loan).
   - '@id': urn:uuid:98c2bfeb-9c70-4801-896c-4646b975a7d9
     '@type': Commitment
     clauseOf: library:f47064eb-7120-4b31-b882-770165901fe6
-    action: transfer-custody
+    action: transferCustody
     resourceInventoriedAs: library:2402b57c-1c45-423a-acb2-f50961c97d65
     provider: https://bob.example/
     receiver: https://library.example/
@@ -306,7 +306,7 @@ Checking out and checking back in a library book (a loan).
   - '@id': urn:uuid:d4d2fd71-34f2-41c3-b1c5-19ad5ed2da59
     '@type': EconomicEvent
     realizationOf: library:f47064eb-7120-4b31-b882-770165901fe6
-    action: transfer-custody
+    action: transferCustody
     resourceInventoriedAs: library:2402b57c-1c45-423a-acb2-f50961c97d65
     provider: https://bob.example/
     receiver: https://library.example/

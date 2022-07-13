@@ -25,19 +25,19 @@ Else if action.resourceEffect is "-+" or action.onhandEffect is "-+" (two resour
         Get the to-resource based on toResourceInventoriedAs  
     If it exists in the event
         Get the from-resource based on the resourceInventoriedAs  
-    If action is "transfer-custody" or "transfer" or "move"
+    If action is "transferCustody" or "transfer" or "move"
         If the from-resource exists
             Subtract event resourceQuantity from from-resource.onhandQuantity
         If the to-resource exists
             Add event resourceQuantity to to-resource.onhandQuantity
-    If action is "transfer-all-rights" or "transfer" or "move"
+    If action is "transferAllRights" or "transfer" or "move"
         If the from-resource exists
             Subtract event resourceQuantity from from-resource.accountingQuantity
         If the to-resource exists
             Add event resourceQuantity to to-resource.accountingQuantity
 
 If a new resource is created by the economic event 
- or if ((action is "transfer-all-rights" or "transfer") 
+ or if ((action is "transferAllRights" or "transfer") 
  and resourceInventoriedAs is the same as toResourceInventoriedAs)
     Set the  primaryAccountable to the receiver agent
 

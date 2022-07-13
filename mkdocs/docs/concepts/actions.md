@@ -24,11 +24,11 @@ All flows (Economic Event, Commitment, Intent, Claim, Recipe Flow) use an action
 
 **vf:separate** - A resource is removed from a package or a combination resource; the same resource appeared as input earlier in this or another process when it was combined.  When the resource is separated, it loses its `containedIn` reference, and becomes available on its own.
 
-**vf:deliver-service** - A new service is produced and delivered as output of a process. A service implies that an agent actively receives the service at the same time as it is delivered.  Services are not tangible, so would not create or increment an inventoried resource. Services are perhaps most often delivered directly to an agent. But unlike other actions, sometimes the service is at the same time being delivered into another documented process, in which case it can be output from a process and input to another, at the same time. 
+**vf:deliverService** - A new service is produced and delivered as output of a process. A service implies that an agent actively receives the service at the same time as it is delivered.  Services are not tangible, so would not create or increment an inventoried resource. Services are perhaps most often delivered directly to an agent. But unlike other actions, sometimes the service is at the same time being delivered into another documented process, in which case it can be output from a process and input to another, at the same time. 
 
-**vf:transfer-all-rights** - This action gives full (in the human realm) rights and responsibilities to another agent, without transferring physical custody.  People might call this "ownership"; or it might be considered "stewardship" or similar.  This occurs instantaneously, and does not involve documented physical transfer.  It is often `triggeredBy` a transfer of custody, for example shipping or receipt of goods.
+**vf:transferAllRights** - This action gives full (in the human realm) rights and responsibilities to another agent, without transferring physical custody.  People might call this "ownership"; or it might be considered "stewardship" or similar.  This occurs instantaneously, and does not involve documented physical transfer.  It is often `triggeredBy` a transfer of custody, for example shipping or receipt of goods.
 
-**vf:transfer-custody** - This action gives physical custody and control of a resource to another agent, without full rights. The physical custodian often has responsibilities associated with custody, however.  Examples where transfer of custody is useful are loaning a resource to another agent, or when a resource is transferred to have a service performed by another agent, like transportation or repair.
+**vf:transferCustody** - This action gives physical custody and control of a resource to another agent, without full rights. The physical custodian often has responsibilities associated with custody, however.  Examples where transfer of custody is useful are loaning a resource to another agent, or when a resource is transferred to have a service performed by another agent, like transportation or repair.
 
 **vf:transfer** - This action gives full (human) rights and responsibilities plus physical custody, combining the last two actions.
 
@@ -47,15 +47,15 @@ consume | Decrement | Decrement | Input | N/A | N/A |
 use | No effect(1) | No effect(1) | Input | N/A | N/A |
 work | No effect(1) | No effect(1) | Input | N/A | N/A |
 cite | No effect  | No effect  | Input | N/A | N/A |
-deliver-service | No effect | No effect | Output(3) | N/A | N/A |
+deliverService | No effect | No effect | Output(3) | N/A | N/A |
 pickup | No effect | No effect  | Input | N/A | dropoff |
 dropoff | No effect | No effect | Output | currentLocation(4) | pickup |
 accept | No effect | Decrement  | Input | N/A | modify |
 modify | No effect | Increment  | Output | N/A | accept |
 combine | No effect | Decrement  | Input | add containedIn | separate |
 separate | No effect | Increment | Output | remove containedIn | combine |
-transfer-custody | No effect | Decr+Incr(2) | N/A | currentLocation(4) | N/A |
-transfer-all-rights | Decr+Incr(2) | No effect | N/A | primaryAccountable(5) | N/A |
+transferCustody | No effect | Decr+Incr(2) | N/A | currentLocation(4) | N/A |
+transferAllRights | Decr+Incr(2) | No effect | N/A | primaryAccountable(5) | N/A |
 transfer | Decr+Incr(2) | Decr+Incr(2) | N/A | currentLocation(4), primaryAccountable(5) | N/A |
 move | Decr+Incr(2) |Decr+Incr(2) | N/A | currentLocation(4) | N/A |
 raise | Increment | Increment | N/A | primaryAccountable(5) | N/A |
@@ -67,7 +67,7 @@ We have defined a core set of actions, but expect that this will be extended wit
 
 (2) The `transfer` actions and `move` can optionally define a second identified resource on the receiver side.
 
-(3) The action `deliver-service` can sometimes be an input to another process, at the same time as it is an output from a process.  This is because services imply delivery as they are created.
+(3) The action `deliverService` can sometimes be an input to another process, at the same time as it is an output from a process.  This is because services imply delivery as they are created.
 
 (4) These actions should update the resource's `currentLocation` if `toLocation` is provided on the event. For `dropoff` it is the resource which is affected by the event, for all others it is the to resource, the resource that results from the event. For the latter, the resource and to resource may be the same resource, depending on how resources are identified in the user community.
 
