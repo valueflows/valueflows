@@ -1418,7 +1418,7 @@
   <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">urn:uuid:c7897c39-7f05-4a5d-a487-80e130a2414a</span>
     <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Commitment</span>
     <span class="l l-Scalar l-Scalar-Plain">skos:note</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Transportation of alice&#39;s apples from alice&#39;s location to bob&#39;s location</span>
-    <span class="nt">action</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">service</span>
+    <span class="nt">action</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">deliverService</span>
     <span class="nt">resourceClassifiedAs</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">wd:Q7590</span> <span class="c1"># transportation service</span>
     <span class="nt">provider</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://claudia.example/</span>
     <span class="nt">receiver</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://alice.example/</span>
@@ -1431,7 +1431,7 @@
 
   <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10f1f87</span>
     <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">EconomicEvent</span>
-    <span class="nt">action</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">transfer-custody</span>
+    <span class="nt">action</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">transferCustody</span>
     <span class="nt">resourceClassifiedAs</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">wd:Q41777871</span> <span class="c1"># haralson apples</span>
     <span class="nt">trackingIdentifier</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">lot-alice-apples-2018-10-11</span>
     <span class="nt">provider</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://alice.example/</span>
@@ -1522,7 +1522,7 @@
     <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">EconomicEvent</span>
     <span class="l l-Scalar l-Scalar-Plain">skos:note</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Transportation of alice&#39;s apples from alice&#39;s location to bob&#39;s location</span>
     <span class="nt">outputOf</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">claudia:c404cff5-19c7-453d-b0d8-d8e96055bd0c</span>
-    <span class="nt">action</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">service</span>
+    <span class="nt">action</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">deliverService</span>
     <span class="nt">resourceClassifiedAs</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">wd:Q7590</span> <span class="c1"># transportation service</span>
     <span class="nt">provider</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://claudia.example/</span>
     <span class="nt">receiver</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://alice.example/</span>
@@ -1542,7 +1542,7 @@
 
   <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">urn:uuid:7a63ea10-b1c3-441a-9a08-fb8630c02614</span>
     <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">EconomicEvent</span>
-    <span class="nt">action</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">transfer-custody</span>
+    <span class="nt">action</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">transferCustody</span>
     <span class="nt">resourceClassifiedAs</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">wd:Q41777871</span> <span class="c1"># haralson apples</span>
     <span class="nt">trackingIdentifier</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">lot-alice-apples-2018-10-11</span>
     <span class="nt">resourceInventoriedAs</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">claudia:27be5cab-d740-4194-9298-1661a69d9d95</span>
@@ -1557,7 +1557,7 @@
 
   <span class="p p-Indicator">-</span> <span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">urn:uuid:ad56a7ed-be3c-4937-a3fb-0f156bcd2c47</span>
     <span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">EconomicEvent</span>
-    <span class="nt">action</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">transfer-all-rights</span>
+    <span class="nt">action</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">transferAllRights</span>
     <span class="nt">resourceClassifiedAs</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">wd:Q41777871</span> <span class="c1"># haralson apples</span>
     <span class="nt">trackingIdentifier</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">lot-alice-apples-2018-10-11</span>
     <span class="nt">provider</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://alice.example/</span>
