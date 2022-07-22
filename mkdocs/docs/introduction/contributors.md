@@ -10,6 +10,7 @@
 * Kalin Maldzhanski
 * pospi (Sam Pospischil)
 * Jef Vanbockryck
+* Robin Vobruba
 
 #### Use cases, tools, and helpful discussion... and let's not forget the logo!
 

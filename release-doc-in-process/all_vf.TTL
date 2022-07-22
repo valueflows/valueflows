@@ -1086,7 +1086,7 @@ vf:cite a                   owl:NamedIndividual ,
         vs:term_status      "testing" ;
         .
 
-vf:deliver-service a        owl:NamedIndividual ,
+vf:deliverService a        owl:NamedIndividual ,
                             vf:Action ;
         vf:inputOutput      vf:output ;
         vf:pairsWith        vf:notApplicable ;
@@ -1206,7 +1206,7 @@ vf:separate a               owl:NamedIndividual ,
         vs:term_status      "unstable" ;
         .
 
-vf:transfer-all-rights a    owl:NamedIndividual ,
+vf:transferAllRights a    owl:NamedIndividual ,
                             vf:Action ;
         vf:inputOutput      vf:notApplicable ;
         vf:pairsWith        vf:notApplicable ;
@@ -1232,7 +1232,7 @@ vf:transfer a               owl:NamedIndividual ,
         vs:term_status      "unstable" ;
         .
 
-vf:transfer-custody a       owl:NamedIndividual ,
+vf:transferCustody a       owl:NamedIndividual ,
                             vf:Action ;
         vf:inputOutput      vf:notApplicable ;
         vf:pairsWith        vf:notApplicable ;

@@ -66,7 +66,7 @@ Bob purchases 30kg of apples from Alice and Claudia transports them (FOB destina
   - '@id': urn:uuid:c7897c39-7f05-4a5d-a487-80e130a2414a
     '@type': Commitment
     skos:note: Transportation of alice's apples from alice's location to bob's location
-    action: service
+    action: deliverService
     resourceClassifiedAs: wd:Q7590 # transportation service
     provider: https://claudia.example/
     receiver: https://alice.example/
@@ -79,7 +79,7 @@ Bob purchases 30kg of apples from Alice and Claudia transports them (FOB destina
 
   - '@id': urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10f1f87
     '@type': EconomicEvent
-    action: transfer-custody
+    action: transferCustody
     resourceClassifiedAs: wd:Q41777871 # haralson apples
     trackingIdentifier: lot-alice-apples-2018-10-11
     provider: https://alice.example/
@@ -170,7 +170,7 @@ Bob purchases 30kg of apples from Alice and Claudia transports them (FOB destina
     '@type': EconomicEvent
     skos:note: Transportation of alice's apples from alice's location to bob's location
     outputOf: claudia:c404cff5-19c7-453d-b0d8-d8e96055bd0c
-    action: service
+    action: deliverService
     resourceClassifiedAs: wd:Q7590 # transportation service
     provider: https://claudia.example/
     receiver: https://alice.example/
@@ -190,7 +190,7 @@ Bob purchases 30kg of apples from Alice and Claudia transports them (FOB destina
 
   - '@id': urn:uuid:7a63ea10-b1c3-441a-9a08-fb8630c02614
     '@type': EconomicEvent
-    action: transfer-custody
+    action: transferCustody
     resourceClassifiedAs: wd:Q41777871 # haralson apples
     trackingIdentifier: lot-alice-apples-2018-10-11
     resourceInventoriedAs: claudia:27be5cab-d740-4194-9298-1661a69d9d95
@@ -205,7 +205,7 @@ Bob purchases 30kg of apples from Alice and Claudia transports them (FOB destina
 
   - '@id': urn:uuid:ad56a7ed-be3c-4937-a3fb-0f156bcd2c47
     '@type': EconomicEvent
-    action: transfer-all-rights
+    action: transferAllRights
     resourceClassifiedAs: wd:Q41777871 # haralson apples
     trackingIdentifier: lot-alice-apples-2018-10-11
     provider: https://alice.example/
