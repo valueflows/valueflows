@@ -1,3 +1,13 @@
+## 0.6 (July 2022)
+
+- Actions to camelCase (breaking)
+- Transfer can be part of a Plan
+- Combine and separate actions
+- Stage and state improvements
+- Add toLocation as event effect on resource
+- Add RoleBehavior
+- Many documentation improvements and dev suggestions
+
 ## 0.5 (June 2020)
 
 - Added exchange to recipe
