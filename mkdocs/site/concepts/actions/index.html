@@ -1531,7 +1531,7 @@
 </tbody>
 </table>
 <p>We have defined a core set of actions, but expect that this will be extended with some others. If extended, they should be defined as part of this or another formal vocabulary so that all can use them and assume the same meaning. However, the effects of the actions are included in the data definitions so that computer systems can be "data driven" in their effects on resources if desired.</p>
-<p>(1) The actions <code>use</code> and <code>work</code> are time-based actions, either with or without an explicit schedule. If the schedule is documented as part of the economic resource, then those economic events could decrement that schedule, although not the "current quantity" of the resource.</p>
+<p>(1) The actions <code>use</code> and <code>work</code> are time-based actions, either with or without an explicit schedule. If the schedule is documented as part of the economic resource, then those economic events could decrement that schedule in some way.</p>
 <p>(2) The <code>transfer</code> actions and <code>move</code> can optionally define a second identified resource on the receiver side.</p>
 <p>(3) The action <code>deliverService</code> can sometimes be an input to another process, at the same time as it is an output from a process.  This is because services imply delivery as they are created.</p>
 <p>(4) These actions should update the resource's <code>currentLocation</code> if <code>toLocation</code> is provided on the event. For <code>dropoff</code> it is the resource which is affected by the event, for all others it is the to resource, the resource that results from the event. For the latter, the resource and to resource may be the same resource, depending on how resources are identified in the user community.</p>
