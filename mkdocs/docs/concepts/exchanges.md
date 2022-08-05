@@ -11,7 +11,7 @@ We also support non-reciprocal one-way transfers, such as in a gift economy.  Ho
 
 ### Exchanges and flows
 
-Exchanges as modeled in VF actually relate to flows within agreements, not resources directly.  Flows involved in transfers of rights and responsibilities are more obvious.  Process related flows can also imply a transfer, and can thus be used as part of an exchange.
+Exchanges as modeled in VF actually relate to flows within agreements, not resources directly.  Flows involved in transfers of rights and responsibilities are more obvious.  Other types of flows can also imply a transfer, and can thus be used as part of an exchange, for details see [Explicit and implied transfers](transfers.md#explicit-and-implied-transfers).
 
 * For example, most timebanks exchange work for credits.  The work event can be part of a process that produces something for some other agent.  It is also part of an exchange in the timebank.  The transfer of credits on the other hand, is not part of any process that creates or transports something, it is merely the timebank recording that one account was decremented and another account was incremented.
 
