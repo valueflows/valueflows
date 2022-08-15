@@ -63,6 +63,8 @@ lower | Decrement | Decrement | N/A | N/A | N/A |
 
 We have defined a core set of actions, but expect that this will be extended with some others. If extended, they should be defined as part of this or another formal vocabulary so that all can use them and assume the same meaning. However, the effects of the actions are included in the data definitions so that computer systems can be "data driven" in their effects on resources if desired.
 
+The economic resource's accounting quantity and onhand quantity are both affected by the resource quantity of the economic event, in the ways listed above as "accounting effect" and "onhand effect" for each action. The effects are decrement (subtract from), increment (add to), or no effect. Other specifics are noted below.
+
 (1) The actions `use` and `work` are time-based actions, either with or without an explicit schedule. If the schedule is documented as part of the economic resource, then those economic events could decrement that schedule in some way.
 
 (2) The `transfer` actions and `move` can optionally define a second identified resource on the receiver side.
