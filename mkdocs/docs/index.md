@@ -5,19 +5,17 @@ hide:
 ---
 
 ![Value Flows](assets/VF-logo-heading.jpg)
-## *A vocabulary for the distributed economic networks of the next economy*
+# *A vocabulary for the distributed economic networks of the next economy*
 
-Valueflows (VF) is a set of common vocabularies to describe flows of economic resources of all kinds within distributed economic ecosystems.
+**Valueflows (VF) is a standard vocabulary (ontology) to coordinate the creation, distribution, and exchange of economic resources.**
 
-Purpose: to enable internetworking among many different software projects for resource planning and accounting within fractal networks of people and groups.  The vocabulary will work for any kind of economic activity, but the focus is to facilitate groups experimenting with solidarity / cooperative / collaborative / small business ecosystem / commons based peer production / any transitional economies.
+The vocabulary will work for any kind of economic activity, but the focus is to facilitate groups experimenting with solidarity / cooperative / collaborative / small business ecosystem / commons based peer production / any transitional economies.  We want to enable internetworking among many different software projects for resource planning and accounting within fractal networks of people and groups.  Specifically, we want to support resource flows connecting many software applications. 
 
-Or, with less buzzwords, "let's help a lot of alternative economic software projects that are solving different pieces of the same puzzle be able to work together".
+Or, with less buzzwords, **"let's help a lot of alternative economic software projects that are solving different pieces of the same puzzle be able to interoperate"**.
 
-One of the purposes of this vocab is to support resource flows connecting many software applications. These flows may be oriented around processes that make things, exchanges that trade things, or combinations of both.
+The vocabulary is presented in several ways, as Linked Open Data using the Resource Description Framework (RDF) family of languages, as well as a GraphQL reference and a UML model. We want to support RDF based and non-RDF based uses of the vocabulary, basically any way that people want to use software and data on the internet to help create economic networks.  We will add formats as requested.
 
-The vocabulary is presented in several ways, as Linked Open Data using the Resource Description Framework (RDF) family of languages, as well as a GraphQL reference and a UML model. We want to support RDF based and non-RDF based uses of the vocabulary, basically any way that people want to use software and data on the internet to help create economic networks.
-
-If this document seems too much to start with, or you just want a quicker overview, you can start here with a [**Valueflows Story**](assets/ValueFlows-Story.pdf) about apple pie (yum!).
+If this document seems too much to start with, or you just want a more friendly overview, you can start here with a [**Valueflows Story**](assets/ValueFlows-Story.pdf) about apple pie (yum!).
 
 You can find us here on [**gitlab**](https://lab.allmende.io/valueflows), also mirrored on [**github**](https://github.com/valueflows).  
 
