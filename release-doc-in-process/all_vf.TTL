@@ -48,14 +48,8 @@ vf:InputOutput a            owl:Class ;
         .
 
 vf:ResourceEffect a         owl:Class ;
-        rdfs:comment        "The action has this effect on an inventoried resource accounting quantity."@en ;
+        rdfs:comment        "The action has this effect on an inventoried resource accounting or onhand quantity."@en ;
         rdfs:label          "Resource Effect"@en ;
-        vs:term_status      "unstable" ;
-        .
-
-vf:OnhandEffect a           owl:Class ;
-        rdfs:comment        "The action has this effect on an inventoried resource onhand quantity."@en ;
-        rdfs:label          "Onhand Effect"@en ;
         vs:term_status      "unstable" ;
         .
 
@@ -1009,7 +1003,7 @@ vf:pairsWith a              owl:ObjectProperty ;
         vs:term_status      "unstable" ;
         .
 
-vf:resourceEffect a         owl:ObjectProperty ;
+vf:accountingEffect a       owl:ObjectProperty ;
         rdfs:domain         vf:Action ;
         rdfs:range          vf:ResourceEffect ;
         rdfs:comment        "The increment and/or decrement effect the action will have on the accounting quantity of an inventoried resource."@en ;
@@ -1037,7 +1031,7 @@ vf:accept a                 owl:NamedIndividual ,
                             vf:PairsWith ;
         vf:inputOutput      vf:input ;
         vf:pairsWith        vf:modify ;
-        vf:resourceEffect   vf:noEffect ;
+        vf:accountingEffect vf:noEffect ;
         vf:onhandEffect     vf:decrement ;
         vf:locationEffect   vf:notApplicable ;
         vf:containedEffect  vf:notApplicable ;
@@ -1051,7 +1045,7 @@ vf:combine a                owl:NamedIndividual ,
                             vf:PairsWith ;
         vf:inputOutput      vf:input ;
         vf:pairsWith        vf:separate ;
-        vf:resourceEffect   vf:noEffect ;
+        vf:accountingEffect vf:noEffect ;
         vf:onhandEffect     vf:decrement ;
         vf:locationEffect   vf:notApplicable ;
         vf:containedEffect  vf:update ;
@@ -1064,7 +1058,7 @@ vf:consume a                owl:NamedIndividual ,
                             vf:Action ;
         vf:inputOutput      vf:input ;
         vf:pairsWith        vf:notApplicable ;
-        vf:resourceEffect   vf:decrement ;
+        vf:accountingEffect vf:decrement ;
         vf:onhandEffect     vf:decrement ;
         vf:locationEffect   vf:notApplicable ;
         vf:containedEffect  vf:notApplicable ;
@@ -1077,7 +1071,7 @@ vf:cite a                   owl:NamedIndividual ,
                             vf:Action ;
         vf:inputOutput      vf:input ;
         vf:pairsWith        vf:notApplicable ;
-        vf:resourceEffect   vf:noEffect ;
+        vf:accountingEffect vf:noEffect ;
         vf:onhandEffect     vf:noEffect ;
         vf:locationEffect   vf:notApplicable ;
         vf:containedEffect  vf:notApplicable ;
@@ -1090,7 +1084,7 @@ vf:deliverService a        owl:NamedIndividual ,
                             vf:Action ;
         vf:inputOutput      vf:output ;
         vf:pairsWith        vf:notApplicable ;
-        vf:resourceEffect   vf:noEffect ;
+        vf:accountingEffect vf:noEffect ;
         vf:onhandEffect     vf:noEffect ;
         vf:locationEffect   vf:notApplicable ;
         vf:containedEffect  vf:notApplicable ;
@@ -1104,7 +1098,7 @@ vf:dropoff a                owl:NamedIndividual ,
                             vf:PairsWith ;
         vf:inputOutput      vf:output ;
         vf:pairsWith        vf:pickup ;
-        vf:resourceEffect   vf:noEffect ;
+        vf:accountingEffect vf:noEffect ;
         vf:onhandEffect     vf:noEffect ;
         vf:locationEffect   vf:update ;
         vf:containedEffect  vf:notApplicable ;
@@ -1117,7 +1111,7 @@ vf:lower a                  owl:NamedIndividual ,
                             vf:Action ;
         vf:inputOutput      vf:notApplicable ;
         vf:pairsWith        vf:notApplicable ;
-        vf:resourceEffect   vf:decrement ;
+        vf:accountingEffect vf:decrement ;
         vf:onhandEffect     vf:decrement ;
         vf:locationEffect   vf:notApplicable ;
         vf:containedEffect  vf:notApplicable ;
@@ -1131,7 +1125,7 @@ vf:modify a                 owl:NamedIndividual ,
                             vf:PairsWith ;
         vf:inputOutput      vf:output ;
         vf:pairsWith        vf:accept ;
-        vf:resourceEffect   vf:noEffect ;
+        vf:accountingEffect vf:noEffect ;
         vf:onhandEffect     vf:increment ;
         vf:locationEffect   vf:notApplicable ;
         vf:containedEffect  vf:notApplicable ;
@@ -1144,7 +1138,7 @@ vf:move a                   owl:NamedIndividual ,
                             vf:Action ;
         vf:inputOutput      vf:notApplicable ;
         vf:pairsWith        vf:notApplicable ;
-        vf:resourceEffect   vf:decrementIncrement ;
+        vf:accountingEffect vf:decrementIncrement ;
         vf:onhandEffect     vf:decrementIncrement ;
         vf:locationEffect   vf:update ;
         vf:containedEffect  vf:notApplicable ;
@@ -1157,7 +1151,7 @@ vf:pickup a                 owl:NamedIndividual ,
                             vf:PairsWith ;
         vf:inputOutput      vf:input ;
         vf:pairsWith        vf:dropoff ;
-        vf:resourceEffect   vf:noEffect ;
+        vf:accountingEffect vf:noEffect ;
         vf:onhandEffect     vf:noEffect ;
         vf:locationEffect   vf:remove ;
         vf:containedEffect  vf:notApplicable ;
@@ -1170,7 +1164,7 @@ vf:produce a                owl:NamedIndividual ,
                             vf:Action ;
         vf:inputOutput      vf:output ;
         vf:pairsWith        vf:notApplicable ;
-        vf:resourceEffect   vf:increment ;
+        vf:accountingEffect vf:increment ;
         vf:onhandEffect     vf:increment ;
         vf:locationEffect   vf:notApplicable ;
         vf:containedEffect  vf:notApplicable ;
@@ -1183,7 +1177,7 @@ vf:raise a                  owl:NamedIndividual ,
                             vf:Action ;
         vf:inputOutput      vf:notApplicable ;
         vf:pairsWith        vf:notApplicable ;
-        vf:resourceEffect   vf:increment ;
+        vf:accountingEffect vf:increment ;
         vf:onhandEffect     vf:increment ;
         vf:locationEffect   vf:notApplicable ;
         vf:containedEffect  vf:notApplicable ;
@@ -1197,7 +1191,7 @@ vf:separate a               owl:NamedIndividual ,
                             vf:PairsWith ;
         vf:inputOutput      vf:output ;
         vf:pairsWith        vf:combine ;
-        vf:resourceEffect   vf:noEffect ;
+        vf:accountingEffect vf:noEffect ;
         vf:onhandEffect     vf:increment ;
         vf:locationEffect   vf:notApplicable ;
         vf:containedEffect  vf:remove ;
@@ -1210,7 +1204,7 @@ vf:transferAllRights a    owl:NamedIndividual ,
                             vf:Action ;
         vf:inputOutput      vf:notApplicable ;
         vf:pairsWith        vf:notApplicable ;
-        vf:resourceEffect   vf:decrementIncrement ;
+        vf:accountingEffect vf:decrementIncrement ;
         vf:onhandEffect     vf:noEffect ;
         vf:locationEffect   vf:notApplicable ;
         vf:containedEffect  vf:notApplicable ;
@@ -1223,7 +1217,7 @@ vf:transfer a               owl:NamedIndividual ,
                             vf:Action ;
         vf:inputOutput      vf:notApplicable ;
         vf:pairsWith        vf:notApplicable ;
-        vf:resourceEffect   vf:decrementIncrement ;
+        vf:accountingEffect vf:decrementIncrement ;
         vf:onhandEffect     vf:decrementIncrement ;
         vf:locationEffect   vf:update ;
         vf:containedEffect  vf:notApplicable ;
@@ -1236,7 +1230,7 @@ vf:transferCustody a       owl:NamedIndividual ,
                             vf:Action ;
         vf:inputOutput      vf:notApplicable ;
         vf:pairsWith        vf:notApplicable ;
-        vf:resourceEffect   vf:noEffect ;
+        vf:accountingEffect vf:noEffect ;
         vf:onhandEffect     vf:decrementIncrement ;
         vf:locationEffect   vf:update ;
         vf:containedEffect  vf:notApplicable ;
@@ -1249,7 +1243,7 @@ vf:use a                    owl:NamedIndividual ,
                             vf:Action ;
         vf:inputOutput      vf:input ;
         vf:pairsWith        vf:notApplicable ;
-        vf:resourceEffect   vf:noEffect ;
+        vf:accountingEffect vf:noEffect ;
         vf:onhandEffect     vf:noEffect ;
         vf:locationEffect   vf:notApplicable ;
         vf:containedEffect  vf:notApplicable ;
@@ -1262,7 +1256,7 @@ vf:work a                   owl:NamedIndividual ,
                             vf:Action ;
         vf:inputOutput      vf:input ;
         vf:pairsWith        vf:notApplicable ;
-        vf:resourceEffect   vf:noEffect ;
+        vf:accountingEffect vf:noEffect ;
         vf:onhandEffect     vf:noEffect ;
         vf:locationEffect   vf:notApplicable ;
         vf:containedEffect  vf:notApplicable ;
@@ -1274,25 +1268,22 @@ vf:work a                   owl:NamedIndividual ,
 # Resource effects
 
 vf:decrement a              owl:NamedIndividual ,
-                            vf:ResourceEffect ,
-                            vf:OnhandEffect ;
-        rdfs:comment        "The effect is to subtract from the inventoried resource."@en ;
+                            vf:ResourceEffect ;
+        rdfs:comment        "The effect is to subtract from the inventoried resource accounting or onhand quantity."@en ;
         rdfs:label          "decrement"@en ;
         vs:term_status      "unstable" ;
         .
 
 vf:decrementIncrement a     owl:NamedIndividual ,
-                            vf:ResourceEffect ,
-                            vf:OnhandEffect ;
-        rdfs:comment        "The effect is to subtract from the 'from' inventoried resource, and add to the 'to' inventoried resource."@en ;
+                            vf:ResourceEffect ;
+        rdfs:comment        "The effect is to subtract from the 'from' inventoried resource, and add to the 'to' inventoried resource, accounting or onhand quantity."@en ;
         rdfs:label          "decrement/increment"@en ;
         vs:term_status      "unstable" ;
         .
 
 vf:increment a              owl:NamedIndividual ,
-                            vf:ResourceEffect ,
-                            vf:OnhandEffect ;
-        rdfs:comment        "The effect is to add to the inventoried resource."@en ;
+                            vf:ResourceEffect ;
+        rdfs:comment        "The effect is to add to the inventoried resource accounting or onhand quantity."@en ;
         rdfs:label          "increment"@en ;
         vs:term_status      "unstable" ;
         .
@@ -1313,9 +1304,8 @@ vf:remove a                 owl:NamedIndividual ,
         .
 
 vf:noEffect a               owl:NamedIndividual ,
-                            vf:ResourceEffect ,
-                            vf:OnhandEffect ;
-        rdfs:comment        "The effect is to do nothing to the inventoried resource."@en ;
+                            vf:ResourceEffect ;
+        rdfs:comment        "The effect is to do nothing to the inventoried resource accounting or onhand quantity."@en ;
         rdfs:label          "no effect"@en ;
         vs:term_status      "unstable" ;
         .
