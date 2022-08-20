@@ -92,6 +92,10 @@ An event can trigger incrementing or decrementing a resource.  Sometimes it does
 
 For serialized or uniquely identified resources, if the logical and technical unique identifiers are not changed by an event, such as moving a vehicle to another location without any changes to its accountable agent (and assuming location is not part of the logical identifier), the resource does not behave like a stock and is not decremented or incremented.
 
+All economic information in an Economic Resource must be put there by an Economic Event.  Non-economic information (note, image, etc.) can be updated on the Economic Resource directly. Economic information is anything that might affect periodic accounting or financial reporting.  In this way, there is always an immutable detailed time-based record of information that affected such reporting.  And there are not excessive (non-economic) events for only non-economic updates.
+
+Note that the economic information is therefore derived information, and could be re-calculated as needed by iterating through the Economic Events. But that could have performance issues, so isn't generally recommended.
+
 ### How resources relate to transfers
 
 Two different kinds of "inventorying" of resources are affected by transfers.

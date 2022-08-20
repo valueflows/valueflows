@@ -47,8 +47,20 @@ vf:InputOutput a            owl:Class ;
         vs:term_status      "unstable" ;
         .
 
-vf:ResourceEffect a         owl:Class ;
-        rdfs:comment        "The action has this effect on an inventoried resource accounting or onhand quantity."@en ;
+vf:CanCreate a              owl:Class ;
+        rdfs:comment        "The action can create an economic resource or not."@en ;
+        rdfs:label          "Can Create Resource"@en ;
+        vs:term_status      "unstable" ;
+        .
+
+vf:AccountingEffect a        owl:Class ;
+        rdfs:comment        "The action has this effect on an inventoried resource accounting quantity."@en ;
+        rdfs:label          "Resource Effect"@en ;
+        vs:term_status      "unstable" ;
+        .
+
+vf:OnhandEffect a           owl:Class ;
+        rdfs:comment        "The action has this effect on an inventoried resource onhand quantity."@en ;
         rdfs:label          "Resource Effect"@en ;
         vs:term_status      "unstable" ;
         .
@@ -62,6 +74,18 @@ vf:LocationEffect a         owl:Class ;
 vf:ContainedEffect a        owl:Class ;
         rdfs:comment        "The action has this effect on an inventoried resource contained in resource."@en ;
         rdfs:label          "Contained Effect"@en ;
+        vs:term_status      "unstable" ;
+        .
+
+vf:StageEffect a            owl:Class ;
+        rdfs:comment        "The action has this effect on an inventoried resource stage."@en ;
+        rdfs:label          "Stage Effect"@en ;
+        vs:term_status      "unstable" ;
+        .
+
+vf:StateEffect a            owl:Class ;
+        rdfs:comment        "The action has this effect on an inventoried resource state."@en ;
+        rdfs:label          "State Effect"@en ;
         vs:term_status      "unstable" ;
         .
 
@@ -1003,9 +1027,17 @@ vf:pairsWith a              owl:ObjectProperty ;
         vs:term_status      "unstable" ;
         .
 
+vf:canCreate a              owl:ObjectProperty ;
+        rdfs:domain         vf:Action ;
+        rdfs:range          xsd:boolean ;
+        rdfs:comment        "The action can create an economic resource."@en ;
+        rdfs:label          "can create resource"@en ;
+        vs:term_status      "unstable" ;
+        .
+
 vf:accountingEffect a       owl:ObjectProperty ;
         rdfs:domain         vf:Action ;
-        rdfs:range          vf:ResourceEffect ;
+        rdfs:range          vf:AccountingEffect ;
         rdfs:comment        "The increment and/or decrement effect the action will have on the accounting quantity of an inventoried resource."@en ;
         rdfs:label          "resource effect"@en ;
         vs:term_status      "unstable" ;
@@ -1013,12 +1045,42 @@ vf:accountingEffect a       owl:ObjectProperty ;
 
 vf:onhandEffect a           owl:ObjectProperty ;
         rdfs:domain         vf:Action ;
-        rdfs:range          vf:ResourceEffect ;
+        rdfs:range          vf:OnhandEffect ;
         rdfs:comment        "The increment and/or decrement effect the action will have on the onhand quantity of an inventoried resource."@en ;
         rdfs:label          "onhand effect"@en ;
         vs:term_status      "unstable" ;
         .
 
+vf:locationEffect a         owl:ObjectProperty ;
+        rdfs:domain         vf:Action ;
+        rdfs:range          vf:LocationEffect ;
+        rdfs:comment        "The location of an inventoried resource."@en ;
+        rdfs:label          "location effect"@en ;
+        vs:term_status      "unstable" ;
+        .
+
+vf:containedEffect a        owl:ObjectProperty ;
+        rdfs:domain         vf:Action ;
+        rdfs:range          vf:ContainedEffect ;
+        rdfs:comment        "The increment and/or decrement effect the action will have on the onhand quantity of an inventoried resource."@en ;
+        rdfs:label          "contained effect"@en ;
+        vs:term_status      "unstable" ;
+        .
+
+vf:stageEffect a            owl:ObjectProperty ;
+        rdfs:domain         vf:Action ;
+        rdfs:range          vf:ContainedEffect ;
+        rdfs:comment        "The increment and/or decrement effect the action will have on the onhand quantity of an inventoried resource."@en ;
+        rdfs:label          "contained effect"@en ;
+        vs:term_status      "unstable" ;
+        .
+vf:stateEffect a            owl:ObjectProperty ;
+        rdfs:domain         vf:Action ;
+        rdfs:range          vf:ContainedEffect ;
+        rdfs:comment        "The increment and/or decrement effect the action will have on the onhand quantity of an inventoried resource."@en ;
+        rdfs:label          "contained effect"@en ;
+        vs:term_status      "unstable" ;
+        .
 
 #################################################################
 #    Individuals
@@ -1031,6 +1093,7 @@ vf:accept a                 owl:NamedIndividual ,
                             vf:PairsWith ;
         vf:inputOutput      vf:input ;
         vf:pairsWith        vf:modify ;
+        vf:canCreate        "false" ;
         vf:accountingEffect vf:noEffect ;
         vf:onhandEffect     vf:decrement ;
         vf:locationEffect   vf:notApplicable ;
@@ -1268,21 +1331,24 @@ vf:work a                   owl:NamedIndividual ,
 # Resource effects
 
 vf:decrement a              owl:NamedIndividual ,
-                            vf:ResourceEffect ;
+                            vf:AccountingEffect ,
+                            vf:OnhandEffect ;
         rdfs:comment        "The effect is to subtract from the inventoried resource accounting or onhand quantity."@en ;
         rdfs:label          "decrement"@en ;
         vs:term_status      "unstable" ;
         .
 
 vf:decrementIncrement a     owl:NamedIndividual ,
-                            vf:ResourceEffect ;
+                            vf:AccountingEffect ,
+                            vf:OnhandEffect ;
         rdfs:comment        "The effect is to subtract from the 'from' inventoried resource, and add to the 'to' inventoried resource, accounting or onhand quantity."@en ;
         rdfs:label          "decrement/increment"@en ;
         vs:term_status      "unstable" ;
         .
 
 vf:increment a              owl:NamedIndividual ,
-                            vf:ResourceEffect ;
+                            vf:AccountingEffect ,
+                            vf:OnhandEffect ;
         rdfs:comment        "The effect is to add to the inventoried resource accounting or onhand quantity."@en ;
         rdfs:label          "increment"@en ;
         vs:term_status      "unstable" ;
@@ -1304,7 +1370,8 @@ vf:remove a                 owl:NamedIndividual ,
         .
 
 vf:noEffect a               owl:NamedIndividual ,
-                            vf:ResourceEffect ;
+                            vf:AccountingEffect ,
+                            vf:OnhandEffect ;
         rdfs:comment        "The effect is to do nothing to the inventoried resource accounting or onhand quantity."@en ;
         rdfs:label          "no effect"@en ;
         vs:term_status      "unstable" ;
