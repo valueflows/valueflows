@@ -4,7 +4,7 @@ See also [Economic Resources](https://www.valueflo.ws/concepts/resources/).
 
 We have defined a core set of actions, but expect that this will be extended with some others. If extended, we recommend that they be defined as part of this or another formal vocabulary so that all can use them and assume the same meaning.
 
-### Action Definitions
+## Action Definitions
 
 **produce** - A new resource is created in the process, or an addition to an existing stock resource of the same type is incremented.  `produce` is used in manufacturing of goods, but also in any kind of creation of a material or digital or energy resource.
 
@@ -38,107 +38,53 @@ We have defined a core set of actions, but expect that this will be extended wit
 
 **move** - `move` changes the location, and possibly the identifier, if location is part of the logical identifier, of a resource with no transfer of agent rights or custodianship.
 
-**raise** - This action adjusts a quantity up, used either when a computer system is brought up and existing resources must be entered with a beginning balance, or when an inventory count in the real world shows that there the quantity in the computer system is too low.  When it is known how a resource was obtained, it is preferable to use the real action.
+**raise** - This action adjusts a quantity up, used either when a computer system is brought up and existing resources must be entered with a beginning balance, or when an inventory count in the real world shows that the quantity in the computer system is too low.  When it is known how a resource was obtained, it is preferable to use the real action.
 
 **lower** - This action adjusts a quantity down, used either when a computer system is brought up and existing resources must be entered with a negative beginning balance (very rare!), or when an inventory count in the real world showing that the quantity in the computer system is too high.  When it is known how a resource was lowered, it is preferable to use the real action.
 
-### Action Behaviors
+## Action Behaviors
 
 The behaviors that are included on the tables below are also defined as Action properties so that computer systems can be "data driven" in this respect if desired.
 
-#### Event Input Effects
+### Event Effects
 
-Action | EventQuantity | InputOutput | PairsWith | CreateResource |
------- | ------ | --- | ----------------- | ---------- |
-produce | resource |  output | notApplicable | optional |
-consume | resource |  input | notApplicable | notApplicable |
-use | both | input | notApplicable | notApplicable |
-work | effort | input | notApplicable | notApplicable |
-cite | resource  | input | notApplicable | notApplicable |
-deliverService | resource | outputInput | notApplicable | notApplicable |
-pickup | resource | input | dropoff | notApplicable |
-dropoff | resource | output | pickup | notApplicable |
-accept | resource | input | modify | notApplicable |
-modify | resource | output | accept | notApplicable |
-combine | resource | input | separate | notApplicable |
-separate | resource | output | combine | notApplicable |
-transferCustody | resource | notApplicable | notApplicable | optionalTo |
-transferAllRights | resource | notApplicable | notApplicable | optionalTo |
-transfer | resource | notApplicable | notApplicable | optionalTo |
-move | resource | notApplicable | notApplicable | optionalTo |
-raise | resource | notApplicable | notApplicable | optional |
-lower | resource | notApplicable | notApplicable | optional |
+**eventQuantity** - Either only `resourceQuantity` or only `effortQuantity` or both make sense on an economic event with this action.  The action `use` provides for both because there can be a requirement for use of some number of a resource (or resource specification) for some time or other effort unit.
 
-**EventQuantity** - Either only `resourceQuantity` or only `effortQuantity` or both make sense on an economic event with this action.  The action `use` provides for both because there can be a requirement for use of some number of a resource (or resource specification) for some time or other effort unit.
+**inputOutput** - An event with this action can be `input` of a process, or `output` of a process, or should not be related to a process.  The event with the special case `outputInput` is basically an output of a process, but can sometimes also be an input to another recorded process, at the same time as it is an output.  This is because services imply delivery as they are created.
 
-**InputOutput** - An event with this action can be `input` of a process, or `output` of a process, or should not be related to a process.  The event with the special case `outputInput` is basically an output of a process, but can sometimes also be an input to another recorded process, at the same time as it is an output.  This is because services imply delivery as they are created.
+**pairsWith** - These pairings indicate that events with these actions usually will be part of the same flow, either input and output of the same process, or different connected processes.
 
-**PairsWith** - These pairings indicate that events with these actions usually will be part of the same flow, either input and output of the same process, or different connected processes.
+**createResource** - An event with this action generally should support the options to create a new resource or to increment an existing "stock" resource. This will be a choice the user (or possibly specific application rules) must make, there are no rules defined in the vocabulary or data, and it depends on what actually is done operationally, and how agents choose to identify and manage their resources. It is also possible that neither will occur, if the agent does not inventory this particular resource for whatever reason.  If a resource is created by the actions with `optional`, it is the `resourceInventoriedAs`; if with `optionalTo`, it is the `toResourceInventoriedAs`.  
 
-**CreateResource** - An event with this action generally should support the options to create a new resource or to increment an existing "stock" resource. This will be a choice the user (or possibly specific application rules) must make, there are no rules defined in the vocabulary or data, and it depends on what actually is done operationally, and how agents choose to identify and manage their resources. It is also possible that neither will occur, if the agent does not inventory this particular resource for whatever reason.  If a resource is created by the actions with `optional`, it is the `resourceInventoriedAs`; if with `optionalTo`, it is the `toResourceInventoriedAs`.
+Note: Any action that can create a new resource can alternatively affect (almost always increment) an existing "stock" resource. 
 
-The last column defines if the action can create a new resource. Any action that can create a new resource can also affect (almost always increment) an existing "stock" resource. 
+### Resource Effects
 
-#### Resource Quantity Effects
+**accountingEffect** - If there is an inventoried resource, this defines how the economic resource's `accountingQuantity` is affected by the event's `resourceQuantity`.
 
-Action | AccountingEffect | OnhandEffect | LocationEffect |
------- | ------ | --- | --- |
-produce | increment | increment | new |
-consume | decrement | decrement | noEffect |
-use | noEffect | noEffect | noEffect |
-work | noEffect | noEffect | noEffect |
-cite | noEffect  | noEffect  | noEffect |
-deliverService | noEffect | noEffect | noEffect |
-pickup | noEffect | noEffect  | update |
-dropoff | noEffect | noEffect | update |
-accept | noEffect | decrement  | update |
-modify | noEffect | increment  | update |
-combine | noEffect | decrement  | noEffect |
-separate | noEffect | increment | noEffect |
-transferCustody | noEffect | decrementIncrement | updateTo |
-transferAllRights | decrementIncrement | noEffect | noEffect |
-transfer | decrementIncrement | decrementIncrement | updateTo |
-move | decrementIncrement |decrementIncrement | updateTo |
-raise | increment | increment | noEffect |
-lower | decrement | decrement | noEffect |
-
-**AccountingEffect** - If there is an inventoried resource, this defines how the economic resource's `accountingQuantity` is affected by the event's `resourceQuantity`.
-
-**OnhandEffect** - If there is an inventoried resource, this defines how the economic resource's `onhandQuantity` is affected by the event's `resourceQuantity`.
+**onhandEffect** - If there is an inventoried resource, this defines how the economic resource's `onhandQuantity` is affected by the event's `resourceQuantity`.
 
 For both AccountingEffect and OnhandEffect, the main options are `decrement` (subtract from), `increment` (add to), or no effect. For actions with the option `decrementIncrement`, the `resourceInventoriedAs` should be decremented (if there is one);and the `toResourceInventoriedAs` should be incremented (if there is one).
 
 Note: The event's `effortQuantity` does not affect economic resources.
 
-Note: The actions `use` and `work` are time-based actions, either with or without an explicit schedule. Although not defined in VF, if a calendar schedule is documented as connected to the economic resource, then those economic events could "decrement" that calendar schedule in some way.
+Note: The actions `use` and `work` are time-based actions, either with or without an explicit schedule. Although not defined in VF, if a calendar schedule is documented as connected to the economic resource, then those economic events could possibly "decrement" that calendar schedule in some way.
 
-**LocationEffect** - For this action, if the economic event's `toLocation` exists, then the affected economic resource's `currentLocation` should be set to the same location.  For `new`, the resource's location should be set only if it is a new resource.  For `updateTo`, the resource is the one in `toResourceInventoriedAs`.  For `update`, the resource is the one in `resourceInventoriedAs`.
+**locationEffect** - For this action, if the economic event's `toLocation` exists, then the affected economic resource's `currentLocation` should be set to the same location.  For `new`, the resource's location should be set only if it is a new resource.  For `updateTo`, the resource is the one in `toResourceInventoriedAs`.  For `update`, the resource is the one in `resourceInventoriedAs`.
 
-Action | ContainedEffect | AccountableEffect | StageEffect | StateEffect |
------- | ------ | --- | ----------------- | ---------- |
-produce | noEffect | new | stage | update |
-consume |  noEffect | noEffect | notApplicable  | update |
-use |  noEffect | noEffect |  notApplicable | update |
-work | notApplicable  | notApplicable |  notApplicable | notApplicable |
-cite | noEffect  | noEffect | noEffect  | update |
-deliverService |  notApplicable | notApplicable | notApplicable | notApplicable |
-pickup |  noEffect | noEffect |  noEffect | update |
-dropoff | noEffect  | noEffect | stage | update |
-accept | noEffect  | noEffect | noEffect  | update |
-modify | noEffect | noEffect | stage  | update |
-combine |  update | noEffect | noEffect  | update |
-separate |  remove | noEffect | stage  | update |
-transferCustody |  noEffect | noEffect |  noEffect | updateTo |
-transferAllRights | noEffect  | updateTo | noEffect  | updateTo |
-transfer |  noEffect | updateTo | noEffect  |  updateTo |
-move | noEffect  | noEffect |  noEffect | updateTo |
-raise | noEffect  | new | noEffect  | update |
-lower | noEffect  | mew | noEffect  | update |
+**containedEffect** - This applies to the actions that deal with resources contained in other resources, and applies to the `resourceInventoriedAs`.  The `update` option sets the resource's `containedIn` resource, which can be referenced in the event's `toResourceInventoriedAs`; the `remove` option nulls the resource's `containedIn` resource.
 
-**ContainedEffect** - This applies to the actions that deal with resources contained in other resources, and applies to the `resourceInventoriedAs`.  The `update` option sets the resource's `containedIn` resource, which can be referenced in the event's `toResourceInventoriedAs`; the `remove` option nulls the resource's `containedIn` resource.
+**accountableEffect** - If there is an inventoried resource, these actions should set the resource's `primaryAccountable` agent using the event's `receiver` agent.  For `new`, this applies to new resources created by the event (otherwise the `receiver` and the `primaryAccountable` should already match).  For `updateTo`, the resource updated is the `toResourceInventoriedAs`.
 
-**AccountableEffect** - If there is an inventoried resource, these actions should set the resource's `primaryAccountable` agent using the event's `receiver` agent.  For `new`, this applies to new resources created by the event (otherwise the `receiver` and the `primaryAccountable` should already match).  For `updateTo`, the resource updated is the `toResourceInventoriedAs`.
+**stageEffect** - For actions with `stage`, if the process which the event is output of is based on a process specification, set the `stage` of the `resourceInventoriedAs`, or of the new resource if one is created, to the process specification.
 
-**StageEffect** - For actions with `stage`, if the process which the event is output of is based on a process specification, set the `stage` of the `resourceInventoriedAs`, or of the new resource if one is created, to the process specification.
+**stateEffect** - If a resource is created or updated by the economic event, if the `state` is included in the event, set the `state` of the resource to the event `state`.  If `update` the resource is the `resourceInventoriedAs`; if `updateTo` the resource is the `toResourceInventoriedAs`.
 
-**StateEffect** - If a resource is created or updated by the economic event, if the `state` is included in the event, set the `state` of the resource to the event `state`.  If `update` the resource is the `resourceInventoriedAs`; if `updateTo` the resource is the `toResourceInventoriedAs`.
+### Behaviors by Action
+
+*To make the diagram bigger, you can right click and select 'View Image' or 'Open Image in New Tab' or a similar command in your browser.*
+
+![VF uml picture](../assets/vf-actions.png)
+
+*In the above chart, the `notApplicable` values are not included, for easier overall viewing.  For the complete list of behavior values by action as defined in the rdf vocabulary, see the [turtle file starting here](https://lab.allmende.io/valueflows/valueflows/-/blob/master/release-doc-in-process/all_vf.TTL#L1113).
+
