@@ -456,8 +456,6 @@
         
           
         
-          
-        
       
       
         <label class="md-nav__link" for="__nav_3">
@@ -536,20 +534,6 @@
     <li class="md-nav__item">
       <a href="../../specification/inverses/" class="md-nav__link">
         Query Naming
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../specification/event-resource/" class="md-nav__link">
-        Event Resource Logic
       </a>
     </li>
   
@@ -728,6 +712,33 @@
   <a href="#action-behaviors" class="md-nav__link">
     Action Behaviors
   </a>
+  
+    <nav class="md-nav" aria-label="Action Behaviors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#event-effects" class="md-nav__link">
+    Event Effects
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resource-effects" class="md-nav__link">
+    Resource Effects
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#behaviors-by-action" class="md-nav__link">
+    Behaviors by Action
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1334,6 +1345,33 @@
     Action Behaviors
   </a>
   
+    <nav class="md-nav" aria-label="Action Behaviors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#event-effects" class="md-nav__link">
+    Event Effects
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resource-effects" class="md-nav__link">
+    Resource Effects
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#behaviors-by-action" class="md-nav__link">
+    Behaviors by Action
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -1351,192 +1389,51 @@
 
   <h1>Actions</h1>
 
-<h3 id="action-definitions">Action Definitions</h3>
-<p>All flows (Economic Event, Commitment, Intent, Claim, Recipe Flow) use an action property to designate what the flow is doing and how it will affect an economic resource (or not).  Actions are defined as follows.</p>
-<p><strong>vf:produce</strong> - A new resource is created in the process, or an addition to an existing stock resource of the same type is incremented.  <code>produce</code> is used in manufacturing of goods, but also in any kind of creation of a material or digital or energy resource.</p>
-<p><strong>vf:use</strong> - Most often <code>use</code> is employed for equipment or tools that are used in a process, but not consumed.  After the process, the piece of equipment of tool still exists, but during the process, it is unavailable. The unavailability can be useful to know if the resource must be scheduled, or if one needs to know how much the resource is used.</p>
-<p><strong>vf:consume</strong> - Most often, an ingredient or component is transformed  into the output(s) of the process. Or the input resource can be used up during the process, like energy. After the process the specified quantity of the consumed input is gone.</p>
-<p><strong>vf:cite</strong> - <code>cite</code> is used when a resource is input to a process, but is neither used nor consumed, and remains available during the process.  Examples are a design file or a scientific paper, any digital knowledge, which is cited so that the agent(s) responsible for the resource receive credit.</p>
-<p><strong>vf:work</strong> - <code>work</code> refers to labor power applied to a process.  There is generally no identifiable resource involved, only the provider agent. In this case, the type of work or skill involved can be identified by a resource specification. A possible exception would be if the agent's work schedule is kept on a calendar, representing when the specific agent is available to work.</p>
-<p><strong>vf:pickup</strong> -  The transported resource or person enters the process; the same resource will appear later in an output of the process.  It is assumed that the resource is already in custody of the agent providing the transportation.</p>
-<p><strong>vf:dropoff</strong> -  The transported resource or person leaves the process; the same resource or person appeared in an input of this process.</p>
-<p><strong>vf:accept</strong> - This is used as input to a process involving repair, modification, testing, or similar of a resource.  The same resource will appear in the output of the process.  It is sometimes a bit of a gray area when to use <code>accept</code>/<code>modify</code> vs. <code>consume</code>/<code>produce</code>.  The choice is based on the need to have the same identified resource before and after the process. Generally if the resource is involved in a series of processes to create it before anything else happens to it, <code>accept</code>/<code>modify</code> is appropriate.  If the input resource and the output resource need to be identified as different resource specifications for any reason, then <code>accept</code>/<code>modify</code> is not appropriate.</p>
-<p><strong>vf:modify</strong> - The identified resource that was accepted into a process appears in the output of that process, with modifications made.  Note not all modifications require a physical change, for example quality testing.  In all cases though, it matters that the resource has gone through that process, and the <code>stage</code> of the resource (the process specification of the process) is then used as part of the logical identification of the resource when the resource is requested as a process input or for a transfer.</p>
-<p><strong>vf:combine</strong> - A resource is put in a package or a combination resource; the same resource might appear later when it is separated.  Examples are packing one or more resources for transportation or storage, or creation of a kit resource.  The combined resource is still identified in the system, but is <code>containedIn</code> the package or combination resource, which would be usually produced in the process.  When a resource is <code>containedIn</code> another resource, it is not available on its own.  Note that packing materials or containers which will continue to have their own identity later are also combined in the process; if not, they can be consumed.</p>
-<p><strong>vf:separate</strong> - A resource is removed from a package or a combination resource; the same resource appeared as input earlier in this or another process when it was combined.  When the resource is separated, it loses its <code>containedIn</code> reference, and becomes available on its own.</p>
-<p><strong>vf:deliverService</strong> - A new service is produced and delivered as output of a process. A service implies that an agent actively receives the service at the same time as it is delivered.  Services are not tangible, so would not create or increment an inventoried resource. Services are perhaps most often delivered directly to an agent. But unlike other actions, sometimes the service is at the same time being delivered into another documented process, in which case it can be output from a process and input to another, at the same time. </p>
-<p><strong>vf:transferAllRights</strong> - This action gives full (in the human realm) rights and responsibilities to another agent, without transferring physical custody.  People might call this "ownership"; or it might be considered "stewardship" or similar.  This occurs instantaneously, and does not involve documented physical transfer.  It is often <code>triggeredBy</code> a transfer of custody, for example shipping or receipt of goods.</p>
-<p><strong>vf:transferCustody</strong> - This action gives physical custody and control of a resource to another agent, without full rights. The physical custodian often has responsibilities associated with custody, however.  Examples where transfer of custody is useful are loaning a resource to another agent, or when a resource is transferred to have a service performed by another agent, like transportation or repair.</p>
-<p><strong>vf:transfer</strong> - This action gives full (human) rights and responsibilities plus physical custody, combining the last two actions.</p>
-<p><strong>vf:move</strong> - <code>move</code> changes the location, and possibly the identifier, if location is part of the logical identifier, of a resource with no transfer of agent rights or custodianship.</p>
-<p><strong>vf:raise</strong> - This action adjusts a quantity up, used either when a computer system is brought up and existing resources must be entered with a beginning balance, or when an inventory count in the real world shows that there the quantity in the computer system is too low.  When it is known how a resource was obtained, it is preferable to use the real action.</p>
-<p><strong>vf:lower</strong> - This action adjusts a quantity down, based on an inventory count in the real world showing that the quantity in the computer system is too high.  When it is known how a resource was lowered, it is preferable to use the real action.</p>
-<h3 id="action-behaviors">Action Behaviors</h3>
-<table>
-<thead>
-<tr>
-<th>Action</th>
-<th>Accounting effect</th>
-<th>Onhand effect</th>
-<th>I/O</th>
-<th>Other effect</th>
-<th>Pairs with</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>produce</td>
-<td>Increment</td>
-<td>Increment</td>
-<td>Output</td>
-<td>primaryAccountable(5)</td>
-<td>N/A</td>
-</tr>
-<tr>
-<td>consume</td>
-<td>Decrement</td>
-<td>Decrement</td>
-<td>Input</td>
-<td>N/A</td>
-<td>N/A</td>
-</tr>
-<tr>
-<td>use</td>
-<td>No effect(1)</td>
-<td>No effect(1)</td>
-<td>Input</td>
-<td>N/A</td>
-<td>N/A</td>
-</tr>
-<tr>
-<td>work</td>
-<td>No effect(1)</td>
-<td>No effect(1)</td>
-<td>Input</td>
-<td>N/A</td>
-<td>N/A</td>
-</tr>
-<tr>
-<td>cite</td>
-<td>No effect</td>
-<td>No effect</td>
-<td>Input</td>
-<td>N/A</td>
-<td>N/A</td>
-</tr>
-<tr>
-<td>deliverService</td>
-<td>No effect</td>
-<td>No effect</td>
-<td>Output(3)</td>
-<td>N/A</td>
-<td>N/A</td>
-</tr>
-<tr>
-<td>pickup</td>
-<td>No effect</td>
-<td>No effect</td>
-<td>Input</td>
-<td>N/A</td>
-<td>dropoff</td>
-</tr>
-<tr>
-<td>dropoff</td>
-<td>No effect</td>
-<td>No effect</td>
-<td>Output</td>
-<td>currentLocation(4)</td>
-<td>pickup</td>
-</tr>
-<tr>
-<td>accept</td>
-<td>No effect</td>
-<td>Decrement</td>
-<td>Input</td>
-<td>N/A</td>
-<td>modify</td>
-</tr>
-<tr>
-<td>modify</td>
-<td>No effect</td>
-<td>Increment</td>
-<td>Output</td>
-<td>N/A</td>
-<td>accept</td>
-</tr>
-<tr>
-<td>combine</td>
-<td>No effect</td>
-<td>Decrement</td>
-<td>Input</td>
-<td>add containedIn</td>
-<td>separate</td>
-</tr>
-<tr>
-<td>separate</td>
-<td>No effect</td>
-<td>Increment</td>
-<td>Output</td>
-<td>remove containedIn</td>
-<td>combine</td>
-</tr>
-<tr>
-<td>transferCustody</td>
-<td>No effect</td>
-<td>Decr+Incr(2)</td>
-<td>N/A</td>
-<td>currentLocation(4)</td>
-<td>N/A</td>
-</tr>
-<tr>
-<td>transferAllRights</td>
-<td>Decr+Incr(2)</td>
-<td>No effect</td>
-<td>N/A</td>
-<td>primaryAccountable(5)</td>
-<td>N/A</td>
-</tr>
-<tr>
-<td>transfer</td>
-<td>Decr+Incr(2)</td>
-<td>Decr+Incr(2)</td>
-<td>N/A</td>
-<td>currentLocation(4), primaryAccountable(5)</td>
-<td>N/A</td>
-</tr>
-<tr>
-<td>move</td>
-<td>Decr+Incr(2)</td>
-<td>Decr+Incr(2)</td>
-<td>N/A</td>
-<td>currentLocation(4)</td>
-<td>N/A</td>
-</tr>
-<tr>
-<td>raise</td>
-<td>Increment</td>
-<td>Increment</td>
-<td>N/A</td>
-<td>primaryAccountable(5)</td>
-<td>N/A</td>
-</tr>
-<tr>
-<td>lower</td>
-<td>Decrement</td>
-<td>Decrement</td>
-<td>N/A</td>
-<td>N/A</td>
-<td>N/A</td>
-</tr>
-</tbody>
-</table>
-<p>We have defined a core set of actions, but expect that this will be extended with some others. If extended, they should be defined as part of this or another formal vocabulary so that all can use them and assume the same meaning. However, the effects of the actions are included in the data definitions so that computer systems can be "data driven" in their effects on resources if desired.</p>
-<p>The economic resource's accounting quantity and onhand quantity are both affected by the resource quantity of the economic event, in the ways listed above as "accounting effect" and "onhand effect" for each action. The effects are decrement (subtract from), increment (add to), or no effect. Other specifics are noted below.</p>
-<p>(1) The actions <code>use</code> and <code>work</code> are time-based actions, either with or without an explicit schedule. If the schedule is documented as part of the economic resource, then those economic events could decrement that schedule in some way.</p>
-<p>(2) The <code>transfer</code> actions and <code>move</code> can optionally define a second identified resource on the receiver side.</p>
-<p>(3) The action <code>deliverService</code> can sometimes be an input to another process, at the same time as it is an output from a process.  This is because services imply delivery as they are created.</p>
-<p>(4) These actions should update the resource's <code>currentLocation</code> if <code>toLocation</code> is provided on the event. For <code>dropoff</code> it is the resource which is affected by the event, for all others it is the to resource, the resource that results from the event. For the latter, the resource and to resource may be the same resource, depending on how resources are identified in the user community.</p>
-<p>(5) These actions should update the resource's <code>primaryAccountable</code> agent using the event's <code>receiver</code> agent.  For <code>produce</code>, the resource is the one that is created by the event, if one is created.  For the transfers, the resource updated is the <code>toResourceInventoriedAs</code>.  For <code>raise</code>, this only applies if a new resource is created, not if an existing resource is raised.</p>
+<p>All flows (Economic Event, Commitment, Intent, Claim, Recipe Flow) use an action property to designate what the flow is doing and how it will affect or has affected an economic resource (or not).</p>
+<p>See also <a href="https://www.valueflo.ws/concepts/resources/">Economic Resources</a>.</p>
+<p>We have defined a core set of actions, but expect that this will be extended with some others. If extended, we recommend that they be defined as part of this or another formal vocabulary so that all can use them and assume the same meaning.</p>
+<h2 id="action-definitions">Action Definitions</h2>
+<p><strong>produce</strong> - A new resource is created in the process, or an addition to an existing stock resource of the same type is incremented.  <code>produce</code> is used in manufacturing of goods, but also in any kind of creation of a material or digital or energy resource.</p>
+<p><strong>use</strong> - Most often <code>use</code> is employed for equipment or tools that are used in a process, but not consumed.  After the process, the piece of equipment of tool still exists, but during the process, it is unavailable. The unavailability can be useful to know if the resource must be scheduled, or if one needs to know how much the resource is used.</p>
+<p><strong>consume</strong> - Most often, an ingredient or component is transformed  into the output(s) of the process. Or the input resource can be used up during the process, like energy. After the process the specified quantity of the consumed input is gone.</p>
+<p><strong>cite</strong> - <code>cite</code> is used when a resource is input to a process, but is neither used nor consumed, and remains available during the process.  Examples are a design file or a scientific paper, any digital knowledge, which is cited so that the agent(s) responsible for the resource receive credit.</p>
+<p><strong>work</strong> - <code>work</code> refers to labor power applied to a process.  There is generally no identifiable resource involved, only the provider agent. In this case, the type of work or skill involved can be identified by a resource specification. A possible exception would be if the agent's work schedule is kept on a calendar, representing when the specific agent is available to work.</p>
+<p><strong>pickup</strong> -  The transported resource or person enters the process; the same resource will appear later in an output of the process.  It is assumed that the resource is already in custody of the agent providing the transportation.</p>
+<p><strong>dropoff</strong> -  The transported resource or person leaves the process; the same resource or person appeared in an input of this process.</p>
+<p><strong>accept</strong> - This is used as input to a process involving repair, modification, testing, or similar of a resource.  The same resource will appear in the output of the process.  It is sometimes a bit of a gray area when to use <code>accept</code>/<code>modify</code> vs. <code>consume</code>/<code>produce</code>.  The choice is based on the need to have the same identified resource before and after the process. Generally if the resource is involved in a series of processes to create it before anything else happens to it, <code>accept</code>/<code>modify</code> is appropriate.  If the input resource and the output resource need to be identified as different resource specifications for any reason, then <code>accept</code>/<code>modify</code> is not appropriate.</p>
+<p><strong>modify</strong> - The identified resource that was accepted into a process appears in the output of that process, with modifications made.  Note not all modifications require a physical change, for example quality testing.  In all cases though, it matters that the resource has gone through that process, and the <code>stage</code> of the resource (the process specification of the process) is then used as part of the logical identification of the resource when the resource is requested as a process input or for a transfer.</p>
+<p><strong>combine</strong> - A resource is put in a package or a combination resource; the same resource might appear later when it is separated.  Examples are packing one or more resources for transportation or storage, or creation of a kit resource.  The combined resource is still identified in the system, but is <code>containedIn</code> the package or combination resource, which would be usually produced in the process.  When a resource is <code>containedIn</code> another resource, it is not available on its own.  Note that packing materials or containers which will continue to have their own identity later are also combined in the process; if not, they can be consumed.</p>
+<p><strong>separate</strong> - A resource is removed from a package or a combination resource; the same resource appeared as input earlier in this or another process when it was combined.  When the resource is separated, it loses its <code>containedIn</code> reference, and becomes available on its own.</p>
+<p><strong>deliverService</strong> - A new service is produced and delivered as output of a process. A service implies that an agent actively receives the service at the same time as it is delivered.  Services are not tangible, so would not create or increment an inventoried resource. Services are perhaps most often delivered directly to an agent. But unlike other actions, sometimes the service is at the same time being delivered into another documented process, in which case it can be output from a process and input to another, at the same time. </p>
+<p><strong>transferAllRights</strong> - This action gives full (in the human realm) rights and responsibilities to another agent, without transferring physical custody.  People might call this "ownership"; or it might be considered "stewardship" or similar.  This occurs instantaneously, and does not involve documented physical transfer.  It is often <code>triggeredBy</code> a transfer of custody, for example shipping or receipt of goods.</p>
+<p><strong>transferCustody</strong> - This action gives physical custody and control of a resource to another agent, without full rights. The physical custodian often has responsibilities associated with custody, however.  Examples where transfer of custody is useful are loaning a resource to another agent, or when a resource is transferred to have a service performed by another agent, like transportation or repair.</p>
+<p><strong>transfer</strong> - This action gives full (human) rights and responsibilities plus physical custody, combining the last two actions.</p>
+<p><strong>move</strong> - <code>move</code> changes the location, and possibly the identifier, if location is part of the logical identifier, of a resource with no transfer of agent rights or custodianship.</p>
+<p><strong>raise</strong> - This action adjusts a quantity up, used either when a computer system is brought up and existing resources must be entered with a beginning balance, or when an inventory count in the real world shows that the quantity in the computer system is too low.  When it is known how a resource was obtained, it is preferable to use the real action.</p>
+<p><strong>lower</strong> - This action adjusts a quantity down, used either when a computer system is brought up and existing resources must be entered with a negative beginning balance (very rare!), or when an inventory count in the real world showing that the quantity in the computer system is too high.  When it is known how a resource was lowered, it is preferable to use the real action.</p>
+<h2 id="action-behaviors">Action Behaviors</h2>
+<p>The behaviors that are included on the tables below are also defined as Action properties so that computer systems can be "data driven" in this respect if desired.</p>
+<h3 id="event-effects">Event Effects</h3>
+<p><strong>eventQuantity</strong> - Either only <code>resourceQuantity</code> or only <code>effortQuantity</code> or both make sense on an economic event with this action.  The action <code>use</code> provides for both because there can be a requirement for use of some number of a resource (or resource specification) for some time or other effort unit.</p>
+<p><strong>inputOutput</strong> - An event with this action can be <code>input</code> of a process, or <code>output</code> of a process, or should not be related to a process.  The event with the special case <code>outputInput</code> is basically an output of a process, but can sometimes also be an input to another recorded process, at the same time as it is an output.  This is because services imply delivery as they are created.</p>
+<p><strong>pairsWith</strong> - These pairings indicate that events with these actions usually will be part of the same flow, either input and output of the same process, or different connected processes.</p>
+<p><strong>createResource</strong> - An event with this action generally should support the options to create a new resource or to increment an existing "stock" resource. This will be a choice the user (or possibly specific application rules) must make, there are no rules defined in the vocabulary or data, and it depends on what actually is done operationally, and how agents choose to identify and manage their resources. It is also possible that neither will occur, if the agent does not inventory this particular resource for whatever reason.  If a resource is created by the actions with <code>optional</code>, it is the <code>resourceInventoriedAs</code>; if with <code>optionalTo</code>, it is the <code>toResourceInventoriedAs</code>.  </p>
+<p>Note: Any action that can create a new resource can alternatively affect (almost always increment) an existing "stock" resource. </p>
+<h3 id="resource-effects">Resource Effects</h3>
+<p><strong>accountingEffect</strong> - If there is an inventoried resource, this defines how the economic resource's <code>accountingQuantity</code> is affected by the event's <code>resourceQuantity</code>.</p>
+<p><strong>onhandEffect</strong> - If there is an inventoried resource, this defines how the economic resource's <code>onhandQuantity</code> is affected by the event's <code>resourceQuantity</code>.</p>
+<p>For both AccountingEffect and OnhandEffect, the main options are <code>decrement</code> (subtract from), <code>increment</code> (add to), or no effect. For actions with the option <code>decrementIncrement</code>, the <code>resourceInventoriedAs</code> should be decremented (if there is one);and the <code>toResourceInventoriedAs</code> should be incremented (if there is one).</p>
+<p>Note: The event's <code>effortQuantity</code> does not affect economic resources.</p>
+<p>Note: The actions <code>use</code> and <code>work</code> are time-based actions, either with or without an explicit schedule. Although not defined in VF, if a calendar schedule is documented as connected to the economic resource, then those economic events could possibly "decrement" that calendar schedule in some way.</p>
+<p><strong>locationEffect</strong> - For this action, if the economic event's <code>toLocation</code> exists, then the affected economic resource's <code>currentLocation</code> should be set to the same location.  For <code>new</code>, the resource's location should be set only if it is a new resource.  For <code>updateTo</code>, the resource is the one in <code>toResourceInventoriedAs</code>.  For <code>update</code>, the resource is the one in <code>resourceInventoriedAs</code>.</p>
+<p><strong>containedEffect</strong> - This applies to the actions that deal with resources contained in other resources, and applies to the <code>resourceInventoriedAs</code>.  The <code>update</code> option sets the resource's <code>containedIn</code> resource, which can be referenced in the event's <code>toResourceInventoriedAs</code>; the <code>remove</code> option nulls the resource's <code>containedIn</code> resource.</p>
+<p><strong>accountableEffect</strong> - If there is an inventoried resource, these actions should set the resource's <code>primaryAccountable</code> agent using the event's <code>receiver</code> agent.  For <code>new</code>, this applies to new resources created by the event (otherwise the <code>receiver</code> and the <code>primaryAccountable</code> should already match).  For <code>updateTo</code>, the resource updated is the <code>toResourceInventoriedAs</code>.</p>
+<p><strong>stageEffect</strong> - For actions with <code>stage</code>, if the process which the event is output of is based on a process specification, set the <code>stage</code> of the <code>resourceInventoriedAs</code>, or of the new resource if one is created, to the process specification.</p>
+<p><strong>stateEffect</strong> - If a resource is created or updated by the economic event, if the <code>state</code> is included in the event, set the <code>state</code> of the resource to the event <code>state</code>.  If <code>update</code> the resource is the <code>resourceInventoriedAs</code>; if <code>updateTo</code> the resource is the <code>toResourceInventoriedAs</code>.</p>
+<h3 id="behaviors-by-action">Behaviors by Action</h3>
+<p><em>To make the diagram bigger, you can right click and select 'View Image' or 'Open Image in New Tab' or a similar command in your browser.</em></p>
+<p><img alt="VF uml picture" src="../../assets/vf-actions.png" /></p>
+<p>*In the above chart, the <code>notApplicable</code> values are not included, for easier overall viewing.  For the complete list of behavior values by action as defined in the rdf vocabulary, see the <a href="https://lab.allmende.io/valueflows/valueflows/-/blob/master/release-doc-in-process/all_vf.TTL#L1113">turtle file starting here</a>.</p>
 
               
             </article>
