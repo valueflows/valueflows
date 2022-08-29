@@ -181,15 +181,13 @@
         
   
   
-    
-  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../uml/" class="md-tabs__link md-tabs__link--active">
+      <a href="../uml/" class="md-tabs__link">
         Specification
       </a>
     </li>
@@ -434,19 +432,15 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
       
       
       
-        
-          
         
           
         
@@ -539,63 +533,6 @@
       <a href="../inverses/" class="md-nav__link">
         Query Naming
       </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-    
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Event Resource Logic
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        Event Resource Logic
-      </a>
-      
-        
-
-  
-
-<nav class="md-nav md-nav--secondary" aria-label="On this page">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      On this page
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#pseudo-code" class="md-nav__link">
-    Pseudo-code
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1322,6 +1259,20 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#economic-resource-information" class="md-nav__link">
+    Economic Resource information
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resource-effect-naming" class="md-nav__link">
+    Resource effect naming
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#pseudo-code" class="md-nav__link">
     Pseudo-code
   </a>
@@ -1342,9 +1293,22 @@
                 
 
 <h1 id="event-resource-logic">Event Resource Logic</h1>
-<p>All economic information in an Economic Resource must be put there by an Economic Event.  Non-economic information (note, image, etc.) can be updated on the Economic Resource directly. Economic information is anything that might affect periodic accounting or financial reporting.  In this way, there is always an immutable detailed time-based record of information that affected such reporting.</p>
+<h3 id="economic-resource-information">Economic Resource information</h3>
+<p>All economic information in an Economic Resource must be put there by an Economic Event.  Non-economic information (note, image, etc.) can be updated on the Economic Resource directly. Economic information is anything that might affect periodic accounting or financial reporting.  In this way, there is always an immutable detailed time-based record of information that affected such reporting.  And there are not excessive (non-economic) events for only non-economic updates.</p>
+<p>Note that the economic information is therefore derived information, and could be re-calculated as needed by iterating through the Economic Events. But that could have performance issues, so isn't generally recommended.</p>
+<h3 id="resource-effect-naming">Resource effect naming</h3>
+<p>The quantities on the Economic Event are <code>resourceQuantity</code> and <code>effortQuantity</code>.</p>
+<p>The quantities on the Economic Resource are <code>accountingQuantity</code> and <code>onhandQuantity</code>.</p>
+<p>The properties of Action that can be used to drive the logic are <code>accountingEffect</code> and <code>onhandEffect</code>.</p>
+<p>This is how they relate:</p>
+<ul>
+<li>The <code>resourceQuantity</code> on the Economic Event could affect both the <code>accountingQuantity</code> and <code>onhandQuantity</code> on the Economic Resource, depending on the action, as defined <a href="../../concepts/actions/">here</a>.</li>
+<li>The <code>effortQuantity</code> on the Economic Event does not affect the quantities on the Economic Resource at all.</li>
+<li>The Action <code>accountingEffect</code> defines how the Economic Resource <code>accountingQuantity</code> is affected.</li>
+<li>The Action <code>onhandEffect</code> defines how the Economic Resource <code>onhandQuantity</code> is affected.</li>
+</ul>
 <h3 id="pseudo-code">Pseudo-code</h3>
-<p>Here is suggested pseudo-code for an Economic Event creating or affecting an Economic Resource.  It is not meant to indicate developers have to use this exact logical structure; it is just one method to communicate the intended logic, which we hope is helpful.  It has not been directly translated to code and tested.</p>
+<p>Here is suggested pseudo-code for an Economic Event creating or affecting an Economic Resource.  It is not meant to indicate developers have to use this exact logical structure; it is just one method to communicate the intended logic, which we hope is helpful.  It has not been directly translated to code and tested.  The logic can also be directly derived from the table on the <a href="../../concepts/actions/">Actions page</a>.</p>
 <div class="highlight"><pre><span></span><code>If action.resourceEffect is &quot;+&quot; or &quot;-&quot;
     If a new resource is to be created
         Create the resource with zero quantity fields
@@ -1380,7 +1344,8 @@ If a new resource is created by the economic event
     Set the  primaryAccountable to the receiver agent
 
 If the action.locationEffect is update
-    Set the resource currentLocation to the event toLocation
+    If the event toLocation exists
+        Set the resource currentLocation to the event toLocation
 
 If the action.containedEffect is update
     Set the resource containedIn to the container resource
@@ -1405,41 +1370,6 @@ If a resource is created or updated by the economic event
       </main>
       
         <footer class="md-footer">
-  
-    <nav class="md-footer__inner md-grid" aria-label="Footer">
-      
-        
-        <a href="../inverses/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Query Naming" rel="prev">
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              Query Naming
-            </div>
-          </div>
-        </a>
-      
-      
-        
-        <a href="../graphql/" class="md-footer__link md-footer__link--next" aria-label="Next: GraphQL Reference" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              GraphQL Reference
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-          </div>
-        </a>
-      
-    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
