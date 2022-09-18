@@ -17,7 +17,7 @@
 
 
 <> a owl:Ontology;
-    dcterms:title "Value Flows Ontology";
+    dcterms:title "Valueflows Ontology";
     dcterms:type <http://purl.org/adms/assettype/Ontology>;
     owl:versionIRI </0.6/> ;
     dcterms:status <http://purl.org/adms/status/UnderDevelopment>.
@@ -604,6 +604,14 @@ vf:currentLocation a        owl:ObjectProperty ;
         rdfs:comment        "The current place an economic resource is located.  Could be at any level of granularity, from a town to an address to a warehouse location.  Usually mappable."@en ;
         .
 
+vf:currentVirtualLocation a owl:DatatypeProperty ;
+        rdfs:label          "current virtual location"@en ;
+        rdfs:domain         vf:EconomicResource ;
+        rdfs:range          xsd:anyURI ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "The current virtual place an electronic economic resource is located."@en ;
+        .
+
 vf:primaryLocation a        owl:ObjectProperty ;
         rdfs:label          "primary location"@en ;
         rdfs:domain         foaf:Agent ;
@@ -648,6 +656,17 @@ vf:image a                  owl:DatatypeProperty ;
                                 vf:ResourceSpecification) ] ;
         rdfs:range          xsd:anyURI ;
         rdfs:comment        "The uri to an image relevant to the entity, such as a logo, avatar, photo, diagram, etc."@en ;
+        .
+
+vf:imageList a              owl:DatatypeProperty ;
+        vs:term_status      "unstable" ;
+        rdfs:label          "image list"@en ;
+        rdfs:domain         [ owl:unionOf (
+                                vf:EconomicResource
+                                vf:Intent
+                                vf:ResourceSpecification) ] ;
+        rdfs:range          xsd:anyURI ;
+        rdfs:comment        "A comma separated list uri addresses to images relevant to the resource."@en ;
         .
 
 vf:uri a                    owl:DatatypeProperty ;
