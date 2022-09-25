@@ -1563,6 +1563,7 @@ vf:notApplicable a          owl:NamedIndividual ,
                             vf:InputOutput ,
                             vf:PairsWith ,
                             vf:LocationEffect ,
+                            vf:CreateResource ,
                             vf:ContainedEffect;
         rdfs:comment        "This property is not applicable to this kind of flow."@en ;
         rdfs:label          "not applicable"@en ;
