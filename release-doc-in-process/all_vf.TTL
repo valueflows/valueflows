@@ -1541,6 +1541,22 @@ vf:both  a                  owl:NamedIndividual ,
         vs:term_status      "unstable" ;
         .
 
+# Create a new resource behavior
+        
+vf:optional  a              owl:NamedIndividual ,
+                            vf:CreateResource ;
+        rdfs:comment        "This kind of flow gives the user the option to create a new resource using resourceInventoriedAs."@en ;
+        rdfs:label          "optional"@en ;
+        vs:term_status      "unstable" ;
+        .
+
+vf:optionalTo  a            owl:NamedIndividual ,
+                            vf:CreateResource ;
+        rdfs:comment        "This kind of flow gives the user the option to create a new resource using toResourceInventoriedAs."@en ;
+        rdfs:label          "optional to"@en ;
+        vs:term_status      "unstable" ;
+        .
+
 # Not applicable
 
 vf:notApplicable a          owl:NamedIndividual ,
