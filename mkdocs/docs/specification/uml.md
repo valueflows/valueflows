@@ -60,7 +60,7 @@ ProductBatch is a lot or batch associated with an EconomicResource.  It has its 
 
 ### Putting flows into motion...
 
-First, some necessary pieces. More flow info at [Flows concepts](../concepts/flows.md), [Actions concepts](../concepts/actions.md), [Processes concepts](../concepts/processes.md), [Transfers concepts](../concepts/transfers.md), [Eschanges concepts](../concepts/exchanges.md).
+First, some necessary pieces. More flow info at [Flows concepts](../concepts/flows.md), [Actions concepts](../concepts/actions.md), [Processes concepts](../concepts/processes.md), [Transfers concepts](../concepts/transfers.md), [Exchanges concepts](../concepts/exchanges.md).
 
 #### vf:Action
 
@@ -156,7 +156,7 @@ Since a Proposal can publish more than one Intent, and an Intent can be publishe
 
 ### Flows in motion: Observation
 
-The Observation subject area is where economic activity actually happens.  The basic input-process-output graph pattern is again the same as for recipes and planning. More info at [Flows concepts](../concepts/flows.md), .
+The Observation subject area is where economic activity actually happens.  The basic input-process-output graph pattern is again the same as for recipes and planning. More info at [Flows concepts](../concepts/flows.md).
 
 #### vf:Process
 

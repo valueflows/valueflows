@@ -10,13 +10,13 @@ A generic Valueflows backend is being developed in [Holochain](https://www.holoc
 
 Some of the UI/UX apps being built on hREA are 
 
-* Code A, an international group of university professors working on climate change issues, wants to create an application for classes to use as they do practical work to learn about methods for micro to macro climate accounting, and how to coordinate among themselves and with their communities.  Code is on [github](https://github.com/lightningrodlabs/rea-playspace).
+* Code A, an international group of university professors working on climate change issues, wants to create an application for classes to use as they do practical work to learn about methods for micro to macro climate accounting, and how to coordinate among themselves and with their communities.  Code is on [github](https://github.com/lightningrodlabs/rea-playspace).  This is the first real visualization based core UI for Valueflows, and we think will be useful for other apps.
 
 * [New York Textile Lab](https://www.newyorktextilelab.com/) is a supply chain network that connects designers to fiber producers and mills to help grow an economically diverse textile supply ecosystem. They are featured on this Holochain Ecosystem [video](https://www.youtube.com/watch?v=D7xDZaaQOpM).
  
 * [Sensorica](https://www.sensorica.co/), an open value network in Montreal, is just starting design on a new version of their NRP software, which was used as one input for Valueflows.
 
-An post called [Economy as Ecosystem](https://blog.holochain.org/economy-as-ecosystem/) highlights these user groups.
+A post called [Economy as Ecosystem](https://blog.holochain.org/economy-as-ecosystem/) highlights these user groups.
 
 ### Fediverse ecosystem
 
