@@ -1,6 +1,6 @@
-## Full UML diagram
+## UML diagram
 
-This UML diagram includes all elements necessary for a complete REA-based core economic vocabulary, so includes elements that we re-use from other vocabularies.  All namespaces are documented by the prefix to each element.
+This diagram includes all elements necessary for a complete REA-based core economic vocabulary, so includes elements that we re-use from other vocabularies.  All namespaces are documented by the prefix to each element.
 
 *To make the diagram bigger, you can right click and select 'View Image' or 'Open Image in New Tab' or a similar command in your browser.*
 
@@ -10,82 +10,115 @@ This UML diagram includes all elements necessary for a complete REA-based core e
 
 ### Agent
 
-The Agent portion of the model contains role definitions in the Knowledge Layer and actual agent and relationship definitions in the Observation Layer.
-
-#### vf:AgentRelationshipRole
-
-Agent relationship roles define the roles or types of agent relationships within a network, completely defined by the network itself.  Each role has a role behavior.  Roles can be a good base to define user permissions.
-
-#### vf:RoleBehavior
-
-Role behaviors, on the other hand, are defined in Valueflows, so that there are standard kinds of behavior of roles and therefore relationships.  These are meant to cover the basic "shape" of the role, for example members (more like a circle) or sub-organizations (more like a tree).
+The Agent subject area contains role definitions in the Knowledge Layer and actual agent and relationship definitions in the Observation Layer.  [More info at Agent concepts](../concepts/agents.md).
 
 #### foaf:Agent
 
 The Valueflows view of Agent is fairly broad, including people, organizations (formal or informal), and (coming soon) ecological agents such as non-human beings and ecosystems.  But all of these have economic or governance agency of some sort.
 
-Unlike foaf, Valueflows will be including non-human agents.  Also unlike foaf, Valueflows currently does not include software agents, at least at this point.
+Unlike foaf, Valueflows will be including non-human agents.  Also unlike foaf, Valueflows does not include software agents, at least at this point.
 
-Agents are key to the overall ontology, particularly the flows in Planning and Observation: Intents, Commitments, EconomicEvents, Claims, where each can reference a provider and receiver Agent. Also Proposals can be published to Agent(s).
+Agents are key to the overall ontology, particularly the flows in Planning and Observation: Intents, Commitments, EconomicEvents, Claims, where each can reference a provider and receiver Agent. Proposals can be published to Agent(s), and Agents can have many AgentRelationships with other Agents of any type.
 
 #### foaf:Person
 
-This is a real human being, a type of Agent.
+This is a real human being, a type of Agent.  A Person can have user accounts and credentials (not defined as part of VF). 
 
 #### org:Organization
 
-This is an organization or group, from large to small, formal to informal, a type of Agent.
+This is an organization or group or network, from large to small, formal to informal, a type of Agent.
 
 #### vf:AgentRelationship
 
-It is often important to know what roles Agents play in relationship to each other in a network. The subject and object of an AgentRelationship are Agents.  Their role is represented by the AgentRelationshipRole.  Agents can have multiple relationships and multiple kinds of relationships in the same network.
+The subject and object of an AgentRelationship are Agents.  Their role the subject plays in relation to the object is represented by the AgentRelationshipRole.  Agents can have multiple relationships and multiple kinds of relationships in the same network.
 
-### Knowledge Layer Types
+#### vf:AgentRelationshipRole
 
-#### vf:Action
+Agent relationship roles define the roles or types of agent relationships within a network, completely defined by the network itself.  Each role has a RoleBehavior.  Roles can be a good base to define user account permissions.
 
-An Actions specifies the type of a flow (EconomicEvent, Commitment, Intent, Claim, RecipeFlow).  These are defined in Valueflows to cover the various ways flows affect EconomicResources (or resources of the ResourceSpecification type).  Actions have properties defined that can drive the code logic to create or change EconomicResources when EconomicEvents are entered and saved, if desired.
+#### vf:RoleBehavior
+
+Role behaviors, on the other hand, are defined in Valueflows, so that there are standard types of AgentRelationshipRole (and therefore AgentRelationship) that can govern behavior in and across applications.  Examples are "member" or "sub-organization".
+
+
+### Resource
+
+Resources are defined in different ways, depending on their need and ability to be accounted for specifically.  Every flow of any kind will reference a resource, represented either by ResourceSpecification or EconomicResource. Resource classifications also assist in understanding or finding a resource. [More info at Resource concepts](../concepts/resources.md).
 
 #### vf:ResourceSpecification
 
-This specifies the kind of EconomicResource (inventoried or otherwise instantiated), to the most specific level needed.  It also fills the space for the resource when it is not yet, or never will be an actual resource.  It can be used in and across networks to communicate the resource type needed.  EconomicResource and RecipeResource, as well as the resources affected in flows (EconomicEvent, Intent, Commitment, Claim), conform to a ResourceSpecification.
+This specifies the kind of resource, to the most specific level needed.  It also fills the space for the resource when it is not yet, or never will be, an actual resource.  It can be used in and across networks to communicate the resource type needed.  EconomicResource and RecipeResource, as well as the resource concept referenced in flows (EconomicEvent, Intent, Commitment, Claim), conform to a ResourceSpecification.
 
-#### vf:ProcessSpecification
+#### vf:EconomicResource
 
-This specifies the kind of Process, to the most specific level needed.  Processes can be based on a ProcessSpecification.  It is also used as the stage of an EconomicResource that is created in stages, and is part of the logical identifier in those cases.  RecipeFlow and Commitment can have a ProcessSpecification stage specified to indicate that the resource they expect is at a particular stage, for example "tested" or "edited".
+An actual EconomicResource is created only by EconomicEvents.  It is also updated only by EconomicEvents for all its accounting related properties.  It becomes involved in a Process by being referenced by an EconomicEvent. It can appear on a Commitment or Intent if recording of a specific resource is needed.  It must have a ResourceSpecification.  It can have a stage and/or a state.  It knows its primary accountable Agent at any point in time.  It can be contained in another EconomicResource.
 
-### Recipe
+#### dfc:ProductBatch
 
-This set of Knowledge Layer entities together make a recipe for a ResourceSpecification. It can be used to automate generating a plan in the Plan Layer, since they follow the same basic input-process-output graph pattern. The recipe model will probably be made more complete in the future, to support forking, versioning, and variants.  It currently supports multiple recipes for the same ResourceSpecification.
+ProductBatch is a lot or batch associated with an EconomicResource.  It has its own identity because many EconomicResources can be part of the same lot/batch, and it has other useful information as a lot.
+
+
+### Putting flows into motion...
+
+First, some necessary pieces. [More info at Flows concepts](../concepts/flows.md) and [Actions concepts](../concepts/actions.md).
+
+#### vf:Action
+
+An Action specifies the type of flow and what the flow will do or has done. EconomicEvent, Commitment, Intent, Claim, RecipeFlow have an Action.  Actions are specified in Valueflows to cover the various ways flows affect resources.  Actions have properties defined that can drive the code logic to create or change EconomicResources when EconomicEvents are recorded, if desired.
+
+#### geo:SpatialThing
+
+Location, represented by SpatialThing, is not used by itself in Valueflows, although it can stand on its own if needed. It is primarily used for mapping. Although the relationships are not shown in the above diagram, the following are a SpatialThing: in EconomicResource, currentLocation; in Agent, primaryLocation; in EconomicEvent, Commitment, Intent, atLocation; and in EconomicEvent, toLocation. 
+
+#### om2:Measure
+
+Measure does not ever live on its own, it is a way to unify how quantities are represented in Valueflows.  Although the relationships are not shown in the above diagram, the following are Measures: in EconomicResource, accountingQuantity and onhandQuantity; in EconomicEvent, Commitment, Intent, RecipeFlow, resourceQuantity, effortQuantity.  Measure is a numerical value plus a Unit.
+
+#### om2:Unit
+
+It is very helpful for interoperaability that the same units of measure are used as networks communicate.  OM2 has a long list of recommended Units.
+
+
+### Flows in motion: Recipe
+
+This set of Knowledge Layer entities together make a recipe for a ResourceSpecification. It can be used to automate generating a plan in the Plan Layer, since they follow the same basic input-process-output graph pattern. The recipe model will probably be made more complete in the future, to support forking, versioning, and variants.  It currently supports multiple recipes for the same ResourceSpecification.  [More info at Recipes concepts](../concepts/recipes.md)
 
 #### vf:RecipeResource
 
-This is the resource portion, and conforms to but can override data from the ResourceSpecification as needed.  It can be thought of as part of the RecipeFlow, or as a node in the graph.
+This is the resource portion of a recipe, and conforms to, but can override data from, the ResourceSpecification.  It can be thought of as part of the RecipeFlow, or as a node in the recipe graph.
 
 #### vf:RecipeProcess
 
-This defines a process in the recipe graph.  A recipe can contain as many processes as it needs to make the resource defined in the final ResourceSpecification. It can optionally conform to a ProcessSpecification.  I will have at least one input or output RecipeFlow, usually at least one both input and output.
+This defines a process node in the recipe graph.  A recipe can contain as many RecipeProcesses as it needs to produce the resource defined in the final ResourceSpecification. It can optionally conform to a ProcessSpecification.  It will have at least one input or output RecipeFlow.
+
+#### time:Duration
+
+A RecipeProcess has a Duration, used in planning.
+
+#### vf:RecipeExchange
+
+RecipeExchange corresponds to the Agreement in the Plan Layer.  It enables generation of plans that include agreements.  It can contain as many RecipeFlows as needed.
 
 #### vf:RecipeFlow
 
 A RecipeFlow defines either an input or output to a RecipeProcess, and/or a clause of a RecipeExchange.  RecipeProcesses and RecipeExchanges can be combined into one recipe if desired.  A RecipeFlow through its Action defines how it will affect its RecipeResource.  If it defines a ProcessSpecification stage, then the flow expects a resource at that stage of production.
 
-#### vf:RecipeExchange
 
-This corresponds to the Agreement in the Plan Layer.  It enables generation of plans that include agreements.
+### Flows in motion: Planning
 
-
-### Planning
-
-Planning can be done with or without recipes.  And planning is not always done, sometimes the economic activity is only observed, depending on the use case.  This section is about operational planning, processes and agreements that are intended to be executed in this lowest level of detail.
+Planning can be done with or without recipes.  And planning is not always done, sometimes the economic activity is only observed, depending on the use case.  This section is about operational planning, processes and agreements that are intended to be executed in this lowest level of detail.  [More info at Planning concepts](../concepts/plan.md) and [Processes concepts](../concepts/processes.md).
 
 #### vf:Plan
 
-A Plan is a collection of one or more operational Processes and/or non-process Commitments in the input-output-process graph pattern.  Plans can also reference a Commitment that creates the independent demand(s) that provide the reason for the Plan. If the use case calls for it, Plans can be nested in Scenarios to give higher level views that drill down to operational Plans, or reference a Scenario that was done as a pre-planning effort.
+A Plan is a collection of one or more operational Processes and/or non-process Commitments in the input-output-process graph pattern.  Plans can also reference a Commitment that creates the independent demand(s) that provide the reason for and final output of the Plan. If the use case calls for it, Plans can be nested in Scenarios to give higher level views that drill down to operational Plans, or reference a Scenario that was done as a pre-planning effort.
 
 #### vf:Process
 
 This section talks about operational processes, see below for higher level processes.  Process can exist both in the Plan and Observation Layers, or either one.  If it is planned, then observed as an actual process, it remains the same Process.  So it can input or output Commitments, and/or input or output EconomicEvents.  It can also have input or output Intents, if all or some of its flows are not committed, but are intended to happen.  Processes are usually (but not required to be) planned within a Plan.  A Process can be based on a ProcessSpecification or not.
+
+#### vf:ProcessSpecification
+
+This specifies the kind of Process, to the most specific level needed.  Processes can be based on a ProcessSpecification.  It is also used as the stage of an EconomicResource that is created in stages, and is part of the logical identifier in those cases.  RecipeFlow and Commitment can have a ProcessSpecification stage specified to indicate that the resource they expect is at a particular stage, for example "tested" or "edited".
 
 #### vf:Commitment
 
@@ -97,19 +130,20 @@ An Agreement is a purposefully abstract term, so that it can represent many exis
 
 #### vf:Intent
 
-Intent are defined here as part of operational planning, but can also be key as part of a Proposal or part of a Scenario, see below for those uses of Intent.  An Intent has a provider or a receiver Agent, but not both. As part of planning, they can be entered or generated from recipe, as inputs or outputs to a Process, or as non-process flows, when there is no known Agent assumed to be the missing provider or receiver.  An Intent can be satisfied by one or more Commitments, and/or one or more EconomicEvents if the Commitment does not exist.  And as a flow, an Intent will have an Action. In operational planning, it will also reference a ResourceSpecification or EconomicResource.
+Intent are defined here as part of operational planning, but can also be key as part of a Proposal or part of a Scenario, see below for those uses of Intent.  An Intent has a provider or a receiver Agent, but not both. As part of planning, Intents can be entered directly or generated from recipe, as inputs or outputs to a Process, or as non-process flows, when there is no known Agent assumed to be the missing provider or receiver.  An Intent can be satisfied by one or more Commitments, and/or one or more EconomicEvents if the Commitment does not exist.  And as a flow, an Intent will have an Action. In operational planning, it will also reference a ResourceSpecification or EconomicResource.
 
 #### vf:Satisfaction
 
-Since a Commitment (or EconomicEvent) can satisfy more than one Intent, or an Intent can be satisfied by more than one Commitment (or EconomicEvent), this is needed, along with the quantity satisfied.
+Since a Commitment (or EconomicEvent) can satisfy more than one Intent, or an Intent can be satisfied by more than one Commitment (or EconomicEvent), Satisfaction is needed, along with the quantity satisfied.
 
-### Proposal (Offers and Requests)
 
-Offers and requests are published primarily to look for a reciprocal match, although they can also be gift offers or requests. Common use cases are e-commerce, timebanks, mutual aid, price lists, publication of help needed for planned work in a network.
+### Flows in motion: Offers and Requests
+
+Offers and requests are published primarily to look for a reciprocal match, although they can also be gift offers or requests. Common use cases are e-commerce, timebanks, mutual aid, price lists, publication of help needed for planned work in a network.  [More info at Proposals concepts](../concepts/proposals.md).
 
 #### vf:Proposal
 
-A Proposal is a container of related Intents, and is an offer or a request, determined by the whether the provider or receiver Agent is undefined in the non-reciprocal Intent. Proposals often have more than one Intent, either because there is a reciprocal Intent, or because more than one resource is being offered or requested.  An Intent can be re-used in more than one Proposal.  A Proposal can be proposed to one or more specific Agents, or just be part of a scope where Proposals are published.
+A Proposal is a container of related Intents, and is an offer or a request, determined by the whether the provider or receiver Agent is undefined in the non-reciprocal Intent. Proposals often have more than one Intent, either because there is a reciprocal Intent, or because more than one resource is being offered or requested together.  An Intent can be re-used in more than one Proposal.  A Proposal can be proposed to one or more specific Agents, or just be part of a scope where Proposals are published.
 
 #### vf:Intent
 
@@ -117,16 +151,16 @@ Intents that are part of Proposals can be more loosely defined than if they are 
 
 #### vf:ProposedIntent
 
-Since a Proposal can publish more than one Intent, and an Intent can be published in more than one Proposal, in this type of model, an intermediate entity is needed to make that association.
+Since a Proposal can publish more than one Intent, and an Intent can be published in more than one Proposal, in this type of model, an intermediate entity is needed to make that association.  Reciprocal ProposedIntents are not meant to show up in Proposal search or filter.
 
 
-### Observation
+### Flows in motion: Observation
 
-The Observation subject area is where economic activity actually happens.  The basic input-process-output graph pattern is again the same as for recipes and planning.
+The Observation subject area is where economic activity actually happens.  The basic input-process-output graph pattern is again the same as for recipes and planning. [More info at Flows concepts](../concepts/flows.md), .
 
 #### vf:Process
 
-See the operational Process defined in the Planning subject area.
+See the operational Process defined in the Planning subject area.  Operational Processes are carried down to the Observation layer as they are executed, or can be directly defined for Observation if planning is not done.
 
 #### vf:EconomicEvent
 
@@ -134,26 +168,20 @@ An EconomicEvent is the "real" flow.  Its behavior is governed by its Action.  I
 
 #### vf:Fulfillment
 
-Since a  EconomicEvent can fulfill more than one Commitment, or an Intent can be satisfied by more than one Commitment (or EconomicEvent), this is needed, along with the quantity satisfied.
+Since a  EconomicEvent can fulfill more than one Commitment, or a Commitment can be fulfilled by more than one EconomicEvent, this is needed, along with the quantity fulfilled.
 
 #### vf:Claim
 
 A Claim on another Agent is triggered by an EconomicEvent, according to rules agreed to elsewhere, although most EconomicEvents do not trigger a Claim, and if there is already a Commitment, a Claim is not needed.  The Claim then can be settled by other EconomicEvent(s).  As a flow, a Claim has an Action, provider and receiver Agent, and reference to a ResourceSpecification.
-
-#### vf:EconomicResource
-
-An EconomicResource is created only by EconomicEvents.  It is also updated by EconomicEvents for all its accounting related properties.  It also becomes involved in a Process by being part of an EconomicEvent. It can appear on a Commitment or Intent if recording of a specific resource is needed.  It must have a ResourceSpecification.  It can have a stage and/or a state.  It knows its primary accountable Agent at any point in time.  It can be contained in another EconomicResource.
-
-#### dfc:ProductBatch
-
-ProductBatch is a lot or batch associated with an EconomicResource.  It has its own identity because many EconomicResources can be part of the same lot/batch, and it has other useful information as a lot.
 
 #### vf:Appreciation
 
 An EconomicEvent can be recorded in appreciation for a prior EconomicEvent, with no prior Commitment or Intent, in support of gift economies.
 
 
-### Scenario (Analysis, Pre-planning, Aggregation) 
+### Analysis, Pre-planning, Aggregation 
+
+[More info at Budgeting and Analysis concepts](../concepts/estimates.md)
 
 #### vf:Scenario
 
