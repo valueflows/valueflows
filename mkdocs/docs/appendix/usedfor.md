@@ -22,7 +22,7 @@ An post called [Economy as Ecosystem](https://blog.holochain.org/economy-as-ecos
 
 The [Fediverse](https://fediverse.party/en/fediverse/) is a collection of networking applications that federate with each other using the [ActivityPub](https://activitypub.rocks/) social networking protocol as the core.
 
-* Bonfire kicked the federation direction off by supporting Valueflows as an extension of ActivityPub, and including the same [graphql api](https://lab.allmende.io/valueflows/vf-schemas/vf-graphql) as hREA. This supports a user-friendly integration of social and economic networking, which we think is an important direction. Information is at their [website](https://bonfirenetworks.org/), the Valueflows extension is on [github](https://github.com/bonfire-networks/bonfire_valueflows).
+* Bonfire kicked the federation direction off by supporting Valueflows as an extension of ActivityPub, and including the same [graphql api](https://lab.allmende.io/valueflows/vf-schemas/vf-graphql) as hREA. This supports a user-friendly integration of social and economic networking, which we think is an important direction. Information is at their [website](https://bonfirenetworks.org/), the Valueflows extension is on [gitlab](https://gitlab.com/bonfire-networks/bonfire_valueflows).
 
 * [Reflow](https://reflowproject.eu/) was an EU H2020 funded project that seeks to understand and transform urban material flows, co-create and test regenerative solutions at business, governance, and citizen levels to create a resilient circular economy.  The ReflowOS backend, developed by Dyne (see below), built on the Bonfire application.
 
@@ -30,7 +30,7 @@ The [Fediverse](https://fediverse.party/en/fediverse/) is a collection of networ
 
 * [Dyne](https://www.dyne.org/) has done and is doing development on Reflow and FabCity Hamburg, including developing the Reflow "[Digital Product Passport](https://www.circularise.com/blog/digital-product-passports-dpp-what-how-and-why)" based on Valueflows for a number of pilots, including some Reflow pilots and FabCity Hamburg (see above).
 
-* [LearnDeep](https://learndeep.org/), initially created by students at [MSOE](https://www.msoe.edu/), supports a network of high school fablabs in Milwaukee that receive contributions of materials from the community and share these with each other. Their code has been merged upstream and is being completed as a Bonfire flavour by the Bonfire team.
+* [LearnDeep](https://learndeep.org/), initially created by students at [MSOE](https://www.msoe.edu/), supports a network of high school fablabs in Milwaukee that receive contributions of materials from the community and share these with each other. Their code has been merged upstream and is being completed as a Bonfire flavour by the Bonfire team on [gitlab](https://gitlab.com/bonfire-networks/bonfire_upcycle).
 
 
 ### Other applications

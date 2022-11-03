@@ -10,7 +10,7 @@ This diagram includes all elements necessary for a complete REA-based core econo
 
 ### Agent
 
-The Agent subject area contains role definitions in the Knowledge Layer and actual agent and relationship definitions in the Observation Layer.  More info at [Agent concepts](../concepts/agents.md).
+The Agent subject area defines roles in the Knowledge Layer and defines agents and their relationships in the Observation Layer.  More info at [Agent concepts](../concepts/agents.md).
 
 #### foaf:Agent
 
@@ -76,12 +76,12 @@ Measure does not ever live on its own, it is a way to unify how quantities are r
 
 #### om2:Unit
 
-It is very helpful for interoperaability that the same units of measure are used as networks communicate.  OM2 has a long list of recommended Units.
+It is very helpful for interoperaability that the same units of measure are used as networks communicate.  OM2 has a long list of recommended Units, extracted [here](https://lab.allmende.io/valueflows/valueflows/-/blob/master/units/units-en-useful.csv).
 
 
 ### Flows in motion: Recipe
 
-This set of Knowledge Layer entities together make a recipe for a ResourceSpecification. It can be used to automate generating a plan in the Plan Layer, since they follow the same basic input-process-output graph pattern. The recipe model will probably be made more complete in the future, to support forking, versioning, and variants.  It currently supports multiple recipes for the same ResourceSpecification.  More info at [Recipes concepts](../concepts/recipes.md)
+This set of Knowledge Layer entities together make a recipe for creating a Resource conforming to this ResourceSpecification. It can be used to automate generating a plan in the Plan Layer, since they follow the same basic input-process-output graph pattern. The recipe model will probably be made more complete in the future, to support forking, versioning, and variants.  It currently supports multiple recipes for the same ResourceSpecification.  More info at [Recipes concepts](../concepts/recipes.md)
 
 #### vf:RecipeResource
 
@@ -114,7 +114,7 @@ A Plan is a collection of one or more operational Processes and/or non-process C
 
 #### vf:Process
 
-This section talks about operational processes, see below for higher level processes.  Process can exist both in the Plan and Observation Layers, or either one.  If it is planned, then observed as an actual process, it remains the same Process.  So it can input or output Commitments, and/or input or output EconomicEvents.  It can also have input or output Intents, if all or some of its flows are not committed, but are intended to happen.  Processes are usually (but not required to be) planned within a Plan.  A Process can be based on a ProcessSpecification or not.
+This section talks about operational processes, see below for higher level processes.  Process can exist both in the Plan and Observation Layers, or either one.  If it is planned, then observed as an actual process, it remains the same Process.  So it can have input or output Commitments, and/or input or output EconomicEvents.  It can also have input or output Intents, if all or some of its flows are not committed, but are intended to happen.  Processes are usually (but not required to be) planned within a Plan.  A Process can be based on a ProcessSpecification or not.
 
 #### vf:ProcessSpecification
 
@@ -130,7 +130,7 @@ An Agreement is a purposefully abstract term, so that it can represent many exis
 
 #### vf:Intent
 
-Intent are defined here as part of operational planning, but can also be key as part of a Proposal or part of a Scenario, see below for those uses of Intent.  An Intent has a provider or a receiver Agent, but not both. As part of planning, Intents can be entered directly or generated from recipe, as inputs or outputs to a Process, or as non-process flows, when there is no known Agent assumed to be the missing provider or receiver.  An Intent can be satisfied by one or more Commitments, and/or one or more EconomicEvents if the Commitment does not exist.  And as a flow, an Intent will have an Action. In operational planning, it will also reference a ResourceSpecification or EconomicResource.
+Intent is defined here as part of operational planning, but can also be key as part of a Proposal or part of a Scenario, see below for those uses of Intent.  An Intent has a provider or a receiver Agent, but not both. As part of planning, Intents can be entered directly or generated from recipe, as inputs or outputs to a Process, or as non-process flows, when there is no known Agent assumed to be the missing provider or receiver.  An Intent can be satisfied by one or more Commitments, and/or one or more EconomicEvents if the Commitment does not exist.  And as a flow, an Intent will have an Action. In operational planning, it will also reference a ResourceSpecification or EconomicResource.
 
 #### vf:Satisfaction
 
@@ -147,7 +147,7 @@ A Proposal is a container of related Intents, and is an offer or a request, dete
 
 #### vf:Intent
 
-Intents that are part of Proposals can be more loosely defined than if they are part of a Plan, although planned Intents can also be part of one or more Proposals.  For example, the note is often used to explain some of the defined fields when the venue application mostly supports just text.  But all Intents need either a provider or receiver Agent, and can use anything in an Intent as part of a Proposal.
+Intents that are part of Proposals can be more loosely defined than if they are part of a Plan, although planned Intents can also be part of one or more Proposals.  For example, the note is often used to explain some of the defined fields when the offers/needs application mostly supports just text.  But all Intents need an Action, and either a provider or receiver Agent.
 
 #### vf:ProposedIntent
 
@@ -202,3 +202,9 @@ A Scenario can nest Processes with Intents that are part of a budget, forecast, 
 #### vf:EconomicEvent
 
 When EconomicEvents are inside a Scenario, they tend to be aggregated events for a time period.  They could either be inputs or outputs of Processes in the Scenario, or be non-process events such as transfer.
+
+### Accounting & Reporting
+
+More info at [Accounting concepts](../concepts/accounting.md).
+
+Wherever an entity is recorded as in scope of an Agent, the entity can be part of the formal accounting of that Agent.  This usually applies to EconomicEvent, Process (can be used to get in-scope EconomicEvents), Commitment, Claim.  Also, in general, these and other entities can be in scope of an Agent in order to gather the right data for display and processing.
