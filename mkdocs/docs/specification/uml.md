@@ -10,7 +10,7 @@ This diagram includes all elements necessary for a complete REA-based core econo
 
 ### Agent
 
-The Agent subject area contains role definitions in the Knowledge Layer and actual agent and relationship definitions in the Observation Layer.  [More info at Agent concepts](../concepts/agents.md).
+The Agent subject area contains role definitions in the Knowledge Layer and actual agent and relationship definitions in the Observation Layer.  More info at [Agent concepts](../concepts/agents.md).
 
 #### foaf:Agent
 
@@ -43,7 +43,7 @@ Role behaviors, on the other hand, are defined in Valueflows, so that there are 
 
 ### Resource
 
-Resources are defined in different ways, depending on their need and ability to be accounted for specifically.  Every flow of any kind will reference a resource, represented either by ResourceSpecification or EconomicResource. Resource classifications also assist in understanding or finding a resource. [More info at Resource concepts](../concepts/resources.md).
+Resources are defined in different ways, depending on their need and ability to be accounted for specifically.  Every flow of any kind will reference a resource, represented either by ResourceSpecification or EconomicResource. Resource classifications also assist in understanding or finding a resource. More info at [Resource concepts](../concepts/resources.md), [Classification concepts](../concepts/classification.md).
 
 #### vf:ResourceSpecification
 
@@ -60,7 +60,7 @@ ProductBatch is a lot or batch associated with an EconomicResource.  It has its 
 
 ### Putting flows into motion...
 
-First, some necessary pieces. [More info at Flows concepts](../concepts/flows.md) and [Actions concepts](../concepts/actions.md).
+First, some necessary pieces. More flow info at [Flows concepts](../concepts/flows.md), [Actions concepts](../concepts/actions.md), [Processes concepts](../concepts/processes.md), [Transfers concepts](../concepts/transfers.md), [Eschanges concepts](../concepts/exchanges.md).
 
 #### vf:Action
 
@@ -81,7 +81,7 @@ It is very helpful for interoperaability that the same units of measure are used
 
 ### Flows in motion: Recipe
 
-This set of Knowledge Layer entities together make a recipe for a ResourceSpecification. It can be used to automate generating a plan in the Plan Layer, since they follow the same basic input-process-output graph pattern. The recipe model will probably be made more complete in the future, to support forking, versioning, and variants.  It currently supports multiple recipes for the same ResourceSpecification.  [More info at Recipes concepts](../concepts/recipes.md)
+This set of Knowledge Layer entities together make a recipe for a ResourceSpecification. It can be used to automate generating a plan in the Plan Layer, since they follow the same basic input-process-output graph pattern. The recipe model will probably be made more complete in the future, to support forking, versioning, and variants.  It currently supports multiple recipes for the same ResourceSpecification.  More info at [Recipes concepts](../concepts/recipes.md)
 
 #### vf:RecipeResource
 
@@ -106,7 +106,7 @@ A RecipeFlow defines either an input or output to a RecipeProcess, and/or a clau
 
 ### Flows in motion: Planning
 
-Planning can be done with or without recipes.  And planning is not always done, sometimes the economic activity is only observed, depending on the use case.  This section is about operational planning, processes and agreements that are intended to be executed in this lowest level of detail.  [More info at Planning concepts](../concepts/plan.md) and [Processes concepts](../concepts/processes.md).
+Planning can be done with or without recipes.  And planning is not always done, sometimes the economic activity is only observed, depending on the use case.  This section is about operational planning, proesses and agreements that are intended to be executed in this lowest level of detail.  [More info at [Planning concepts](../concepts/plan.md).
 
 #### vf:Plan
 
@@ -139,7 +139,7 @@ Since a Commitment (or EconomicEvent) can satisfy more than one Intent, or an In
 
 ### Flows in motion: Offers and Requests
 
-Offers and requests are published primarily to look for a reciprocal match, although they can also be gift offers or requests. Common use cases are e-commerce, timebanks, mutual aid, price lists, publication of help needed for planned work in a network.  [More info at Proposals concepts](../concepts/proposals.md).
+Offers and requests are published primarily to look for a reciprocal match, although they can also be gift offers or requests. Common use cases are e-commerce, timebanks, mutual aid, price lists, publication of help needed for planned work in a network.  More info at [Proposals concepts](../concepts/proposals.md).
 
 #### vf:Proposal
 
@@ -156,7 +156,7 @@ Since a Proposal can publish more than one Intent, and an Intent can be publishe
 
 ### Flows in motion: Observation
 
-The Observation subject area is where economic activity actually happens.  The basic input-process-output graph pattern is again the same as for recipes and planning. [More info at Flows concepts](../concepts/flows.md), .
+The Observation subject area is where economic activity actually happens.  The basic input-process-output graph pattern is again the same as for recipes and planning. More info at [Flows concepts](../concepts/flows.md), .
 
 #### vf:Process
 
@@ -181,8 +181,24 @@ An EconomicEvent can be recorded in appreciation for a prior EconomicEvent, with
 
 ### Analysis, Pre-planning, Aggregation 
 
-[More info at Budgeting and Analysis concepts](../concepts/estimates.md)
+More info at [Budgeting and Analysis concepts](../concepts/estimates.md).
 
 #### vf:Scenario
 
-A Scenario is used as a grouping mechanism for flows if something non-operational is needed, i.e. anything directly related to a Scenario cannot be executed.  It is a loose concept, and can support many situations.  It can be defined by a ScenarioDefinition.  It can contain Plans, Processes, Intents, aggregated EconomicEvents, other Scenarios.  Examples are nested Plans for zooming out to less detail in a UX; Processes with Intents that are part of a budget, forecast, suggested plan; a wish list if Intents for large many-agent barter; aggregated as-is or to-be resource flows for analysis or persuasion; and many more, including ones people haven't thought of.  A Scenario can also be nested in itself, to support continued zooming out to less detail.
+A Scenario is used as a grouping mechanism for flows if something non-operational is needed, i.e. anything directly related to a Scenario cannot be executed.  It is a loose concept, and can support many situations.  It can be defined by a ScenarioDefinition.  It can contain Plans, Processes, Intents, aggregated EconomicEvents.  A Scenario can also be nested in itself, to support continued zooming out to less detail.  The uses below are some but probably not all of the possibilities.
+
+#### vf:Plan
+
+When Plans are nested in a Scenario, the Scenario can be used to zoom out for less detail in a UX.  When a Plan is a refinement of a Scenario, the Scenario was chosen as a suggested plan.
+
+#### vf:Process
+
+When Processes are nested in a Scenario, they are generally higher level processes for aggregated as-is or to-be resource flows for analysis or persuasion.  Processes would also be nested when they are a suggested Plan.
+
+#### vf:Intent
+
+A Scenario can nest Processes with Intents that are part of a budget, forecast, suggested plan; or could also nest them directly if they are non-process Intents or used as something like a wish list of Intents, say for large many-agent barter, or when saved for future Proposals.
+
+#### vf:EconomicEvent
+
+When EconomicEvents are inside a Scenario, they tend to be aggregated events for a time period.  They could either be inputs or outputs of Processes in the Scenario, or be non-process events such as transfer.
