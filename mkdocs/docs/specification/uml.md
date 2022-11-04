@@ -185,23 +185,17 @@ More info at [Budgeting and Analysis concepts](../concepts/estimates.md).
 
 #### vf:Scenario
 
-A Scenario is used as a grouping mechanism for flows if something non-operational is needed, i.e. anything directly related to a Scenario cannot be executed.  It is a loose concept, and can support many situations.  It can be defined by a ScenarioDefinition.  It can contain Plans, Processes, Intents, aggregated EconomicEvents.  A Scenario can also be nested in itself, to support continued zooming out to less detail.  The uses below are some but probably not all of the possibilities.
+A Scenario is used as a grouping mechanism for flows.  It is a loose concept, and can support many situations.  It can be defined by a ScenarioDefinition.  It can contain Plans, Processes, Intents, aggregated EconomicEvents.  A Scenario can also be nested in itself, to support continued zooming out to less detail.  The uses below are some but probably not all of the possibilities.
 
 #### vf:Plan
 
-When Plans are nested in a Scenario, the Scenario can be used to zoom out for less detail in a UX.  When a Plan is a refinement of a Scenario, the Scenario was chosen as a suggested plan.
+When Plans (which are operational) are nested in a Scenario, the Scenario can be used to zoom out for less detail in a UX.  When a Plan is a refinement of a Scenario, the Scenario was an earlier estimate or pre-plan.
 
-#### vf:Process
+#### vf:Process, vf:Intent, vf:EconomicEvent
 
-When Processes are nested in a Scenario, they are generally higher level processes for aggregated as-is or to-be resource flows for analysis or persuasion.  Processes would also be nested when they are a suggested Plan.
+When Processes are nested in a Scenario, they are generally higher level processes for aggregated as-is or to-be resource flows, for analysis or persuasion. Non-process Intents or EconomicEvents could also be part of these Process higher level flows.
 
-#### vf:Intent
-
-A Scenario can nest Processes with Intents that are part of a budget, forecast, suggested plan; or could also nest them directly if they are non-process Intents or used as something like a wish list of Intents, say for large many-agent barter, or when saved for future Proposals.
-
-#### vf:EconomicEvent
-
-When EconomicEvents are inside a Scenario, they tend to be aggregated events for a time period.  They could either be inputs or outputs of Processes in the Scenario, or be non-process events such as transfer.
+Processes and/or Intents could also be nested when they are part of a budget, forecast, or other higher level pre-plan. Or with-list Intents might be listed, say for large many-agent barter, or when saved for future Proposals.
 
 ### Accounting & Reporting
 
