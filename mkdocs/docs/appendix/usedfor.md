@@ -6,29 +6,31 @@ Listed here are some of the developer teams and user groups who have implemented
 
 ### Holochain ecosystem
 
-A generic Valueflows backend is being developed in [Holochain](https://www.holochain.org/), called hREA.  Information can be found on the [website](https://hrea.io/), on [github](https://github.com/h-REA), chat in [discord](https://discord.gg/rZkhBJ5QsP). hREA exposes the [graphql api](https://lab.allmende.io/valueflows/vf-schemas/vf-graphql) for UI/UX apps to build on.
+A generic Valueflows backend is being developed in [Holochain](https://www.holochain.org/), called hREA.  Information can be found on the [website](https://hrea.io/), on [github](https://github.com/h-REA), chat in [discord](https://discord.gg/rZkhBJ5QsP). hREA exposes the [graphql api](https://lab.allmende.io/valueflows/vf-schemas/vf-graphql) for UI/UX apps to build on.  Blog entry [here](https://blog.holochain.org/happs-spotlight-hrea/).
 
 Some of the UI/UX apps being built on hREA are 
 
-* Code A, an international group of university professors working on climate change issues, wants to create an application for classes to use as they do practical work to learn about methods for micro to macro climate accounting, and how to coordinate among themselves and with their communities.  Code is on [github](https://github.com/lightningrodlabs/rea-playspace).
+* Code A, an international group of university professors working on climate change issues, wants to create an application for classes to use as they do practical work to learn about methods for micro to macro climate accounting, and how to coordinate among themselves and with their communities.  Code is on [github](https://github.com/lightningrodlabs/rea-playspace).  This is the first real visualization based core UI for Valueflows, and we think will be useful for other apps.
 
 * [New York Textile Lab](https://www.newyorktextilelab.com/) is a supply chain network that connects designers to fiber producers and mills to help grow an economically diverse textile supply ecosystem. They are featured on this Holochain Ecosystem [video](https://www.youtube.com/watch?v=D7xDZaaQOpM).
  
 * [Sensorica](https://www.sensorica.co/), an open value network in Montreal, is just starting design on a new version of their NRP software, which was used as one input for Valueflows.
 
+A post called [Economy as Ecosystem](https://blog.holochain.org/economy-as-ecosystem/) highlights these user groups.
+
 ### Fediverse ecosystem
 
 The [Fediverse](https://fediverse.party/en/fediverse/) is a collection of networking applications that federate with each other using the [ActivityPub](https://activitypub.rocks/) social networking protocol as the core.
 
-* Bonfire kicked the federation direction off by supporting Valueflows as an extension of ActivityPub, and including the same [graphql api](https://lab.allmende.io/valueflows/vf-schemas/vf-graphql) as hREA. This supports a user-friendly integration of social and economic networking, which we think is an important direction. Information is at their [website](https://bonfirenetworks.org/), the Valueflows extension is on [github](https://github.com/bonfire-networks/bonfire_valueflows).
+* Bonfire kicked the federation direction off by supporting Valueflows as an extension of ActivityPub, and including the same [graphql api](https://lab.allmende.io/valueflows/vf-schemas/vf-graphql) as hREA. This supports a user-friendly integration of social and economic networking, which we think is an important direction. Information is at their [website](https://bonfirenetworks.org/), the Valueflows extension is on [gitlab](https://gitlab.com/bonfire-networks/bonfire_valueflows).
 
 * [Reflow](https://reflowproject.eu/) was an EU H2020 funded project that seeks to understand and transform urban material flows, co-create and test regenerative solutions at business, governance, and citizen levels to create a resilient circular economy.  The ReflowOS backend, developed by Dyne (see below), built on the Bonfire application.
 
-* [FabCity Hamburg](https://fabcity.hamburg/en/) (in process) will build on Reflow to support a global network of [Fab Cities](https://fab.city/) that proposes a new urban, economic, social and industrial model that relocalises production to the city and its bioregional context, while building a digital infrastructure enabling ecological, economic and social sustainability.  Dyne (see below) is also heavily involved in this development.
+* [FabCity Hamburg](https://fabcity.hamburg/en/) (in process) will build on Reflow to support a global network of [Fab Cities](https://fab.city/) that proposes a new urban, economic, social and industrial model that relocalises production to the city and its bioregional context, while building a digital infrastructure enabling ecological, economic and social sustainability.  Dyne (see below) is speaheading the Valueflows portion of this development, which includes this [new backend](https://github.com/dyne/zenflows) supporting the VF graphql api.
 
 * [Dyne](https://www.dyne.org/) has done and is doing development on Reflow and FabCity Hamburg, including developing the Reflow "[Digital Product Passport](https://www.circularise.com/blog/digital-product-passports-dpp-what-how-and-why)" based on Valueflows for a number of pilots, including some Reflow pilots and FabCity Hamburg (see above).
 
-* [LearnDeep](https://learndeep.org/), created by students at [MSOE](https://www.msoe.edu/), supports a network of high school fablabs in Milwaukee that receive contributions of materials from the community and share these with each other.   Their [gitlab](https://gitlab.com/msoe.edu-public/sdl/y22sdl/upcycle/bonfire_upcycle) code will soon be merged upstream and completed as a Bonfire flavour.
+* [LearnDeep](https://learndeep.org/), initially created by students at [MSOE](https://www.msoe.edu/), supports a network of high school fablabs in Milwaukee that receive contributions of materials from the community and share these with each other. Their code has been merged upstream and is being completed as a Bonfire flavour by the Bonfire team on [gitlab](https://gitlab.com/bonfire-networks/bonfire_upcycle).
 
 
 ### Other applications
