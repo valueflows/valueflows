@@ -1,6 +1,6 @@
 # Contributors
 
-#### Committers
+### Committers
 
 * Lynn Foster
 * elf Pavlik
@@ -12,7 +12,7 @@
 * Jef Vanbockryck
 * Robin Vobruba
 
-#### Use cases, tools, and helpful discussion... and let's not forget the logo!
+### Use cases, tools, and helpful discussion... and let's not forget the logo!
 
 * Jon Richter
 * Steve Bosserman
@@ -27,7 +27,7 @@
 * Johannes Winter
 * Elio Qoshi
 
-#### REA assistance
+### REA assistance
 
 * Bill McCarthy
 * Wim Laurier

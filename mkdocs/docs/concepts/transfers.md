@@ -1,6 +1,6 @@
 # Transfers
 
-### Transfer concepts
+## Transfer concepts
 
 One concept of transfer is an activity that re-assigns rights and responsibilities for an economic resource from one agent to another.  A second concept is an activity that operationally changes physical custody or possession of an economic resource from one agent to another, without affecting rights.
 
@@ -8,7 +8,7 @@ Note that a transfer is a one-way activity.  Two or more reciprocal transfers fo
 
 We think that now, and more so in the future, there will be more gradations of rights and responsibilities for resources than are sometimes considered now.  For example, as a society we may decide that we should take more responsibility for recycling or upcycling resources at the end of their useful life for us, or not wasting them.  The concept of "ownership" may transition more into "stewardship" in a concept of the world that does not put humans in a position of controlling the world's resources or abdicating responsibilities to the ecosystem in the name of ownership.  So, we are for the most part avoiding talking about ownership in this vocabulary, as we work towards more of an ecosystemic perspective.
 
-### Explicit and implied transfers
+## Explicit and implied transfers
 
 In Valueflows, several actions can involve the transfer concepts.  (For more detailed information, see the [Actions section](actions.md).
 
@@ -26,7 +26,7 @@ Other actions that can imply a transfer when the receiver agent is different tha
 * work
 * deliver service (almost always will imply a transfer by its nature)
 
-### Examples
+## Examples
 
 * For example, perhaps some agent has many apple trees, and plans on pressing apple cider. Another agent has an apple press and agrees to transfer use of the press (a resource) in exchange for a reciprocal transfer of a portion of the apple cider.  The use of the press involves some rights (to use the press for some period of time) and responsibilities (to not run it beyond its capacity and to clean it up before returning it).
 

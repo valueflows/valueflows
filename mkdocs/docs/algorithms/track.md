@@ -1,4 +1,4 @@
-### Difference between tracking and tracing
+## Difference between tracking and tracing
 
 [From StackExchange:](http://ell.stackexchange.com/questions/34391/difference-between-track-and-trace):
 
@@ -14,16 +14,16 @@ It is also used when the provenance is useful for other information, like to det
 
 Also, this logic is used in other features, like "contribution economy" calculations, where all contributions of various kinds over time can be found be tracing backwards from an end resource.
 
-### Valueflows query terminology
+## Valueflows query terminology
 
 * `previous` and `next` bring back the element one flow step backwards or forwards
 * `track` and `trace` bring back the whole resource flow tree forwards or backwards, starting with a resource or an output event
 
 Briefly, to gather a whole track or trace, the previous or next methods should be used in recursive logic, traveling down the flow and each branch of the flow, when there are many inputs or many outputs.
 
-### Trace logic
+## Trace logic
 
-#### Adding breadcrumbs on initial save
+### Adding breadcrumbs on initial save
 
 For the most part, the structure provides the causal order of the flows.  But for some specific situations, such as repeated cycles referencing the same ProcessSpecifications, additional information should be saved on the EconomicEvent and EconomicResource to aid in obtaining consistent causal order. (Timestamps are not reliable in distributed systems.)
 
@@ -33,11 +33,11 @@ For the most part, the structure provides the causal order of the flows.  But fo
 
 * Those previousEvent references provide breadcrumbs for tracking and tracing through ambiguous situations, see pseudocode below.
 
-#### Where to start a trace
+### Where to start a trace
 
 The "starting item" can be an EconomicResource or EconomicEvent.  If you want to start at the present time, and trace everything that ever happened to the resource, start with the resource and the value of its `previousEvent`.  If you just want to know how a resource was made, and what inputs went into it, start with selecting the output event where that resource was initially created, or if it is a stock resource, where it was last incremented. 
 
-#### Pseudocode
+### Pseudocode
 
 The following is included to give some idea of the logic required.  It tries to cover all actions and scenarios, but is meant as a suggestion, and has not been thoroughly tested in code.
 
@@ -114,9 +114,9 @@ trace-depth-first-search (parameters: "flows", "visited", "contained", "modified
     return "flows"
 ```
 
-### Track logic
+## Track logic
 
-#### Pseudocode
+### Pseudocode
 
 Again, the following is included to give some idea of the logic required.  It tries to cover all actions and scenarios, but is meant as a suggested starting point, it has not been tested in code.
 
@@ -144,7 +144,7 @@ track (parameter: starting item)
     return "flows"
 ```
 
-### Tracking identifier and lot
+## Tracking identifier and lot
 
 Currently, often companies' internal flow information is not public, although in many countries they are required to be able to provide input and output information when needed in a medical emergency, without connecting all the dots internally.  Also any organization can be missing resource flow data so that there are gaps in the flows, no matter the level of transparency.
 

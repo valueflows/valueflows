@@ -1,4 +1,4 @@
-### Coordinating work
+## Coordinating work
 
 An operational plan is a schedule of related operational processes, that constitute a body of scheduled work with defined deliverable(s).  A plan normally contains one or more process resource flows, one for each deliverable.
 
@@ -18,7 +18,7 @@ Some examples:
 
 * An organization produces a standard batch size to stock, in anticipation of future orders.
 
-### Processes nested in a Plan
+## Processes nested in a Plan
 
 When processes are "nested", it is not random, nor based on a taxonomy. It is based on what processes are actually part of the plan. And not all the inputs and outputs of nested processes are considered inputs and outputs of the plan, since some are both produced and consumed within the plan.  In the following simplified example, the flows between plant/weed and weed/harvest start and end inside the nest, and so are not inputs to, or outputs of, the plan.
 
@@ -29,7 +29,7 @@ When processes are "nested", it is not random, nor based on a taxonomy. It is ba
     * Batch or lot size makes a difference. Suppose you have a requirement for 5 of some assembled item, and 4 of some input component are needed to make each item, 20 components in all. But the minimum batch size for the component is 100. Then 80 of the components will be left in inventory at the end of the nesting process, and that 80 will also an output of the outer process.
 
 
-### Planning from a Recipe
+## Planning from a Recipe
 
 Plans can be generated from a recipe by scaling the recipe according to the demanded quantity of the end outputs.  This is called a "demand explosion".  The generation might take into account current inventories, batch sizes, etc., so it is not necessarily a "pure" reflection of the recipe.  In addition, often plans are tweaked after generation from a recipe, depending on how firm and exact the recipe is.  A manufacturing recipe might be more exact than a recipe for a more general business process.  For these reasons, a plans is decoupled from the recipe that generated it in the vocabulary.  It maintains only the references to the resource and process specifications that were supplied from the recipe.
 

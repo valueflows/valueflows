@@ -1,5 +1,5 @@
 
-### Scenarios
+## Scenarios
 
 The Processes section explains processes at their basic level, starting with operational observable processes. The Operational Planning section explains how to group those processes into a scheduled plan at an operational level. This section explains how to use the same process and plan pattern to represent higher level requirements, those that are not (yet) actually scheduled.  We are calling those Scenarios.
 
@@ -16,7 +16,7 @@ Agents can define different scenarios that they want to use. So for example, if 
 
 The model itself is quite flexible, and we expect there will be more uses for it, all using the basic input-process-output structure with resource flows connecting them, contained by a scenario.
 
-### Connecting Plans and Scenarios
+## Connecting Plans and Scenarios
 
 Plans do not need to be directly connected to Scenarios, although they can be. If comparisons are needed, often the time periods and scope are all that is needed.  In addition, if resource specifications and/or process specifications are part of a classification taxonomy, that can be used for connecting the higher to lower perspectives.  For example, the plan for carrots could be aggregated into the higher level plan for all vegetables.
 
