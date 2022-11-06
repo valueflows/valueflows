@@ -1782,13 +1782,13 @@
                 
 
 <h1 id="query-and-filter-naming">Query and Filter Naming</h1>
-<h3 id="introduction">Introduction</h3>
+<h2 id="introduction">Introduction</h2>
 <p>Although queries and query filters are not specified in the RDF core, this set of guidelines should be used, to facilitate standard api naming.  It is possible that at some point they will be included in the formal VF namespace.</p>
 <p>This document is not meant to imply that all of these named queries and filters should be implemented in any particular application api.</p>
 <p><em>Note:</em> Filters can be applicable to any query that can return more than one of the class.  For example all processes, processes in scope of an agent, processes in a plan, could each use the process filters.</p>
 <p><em>Status:</em> Not all of these queries and filters are tested, and there will certainly be other useful queries and filters. If anyone has recommended changes or additions, please start an issue or merge request, or just let us know in the Welcome chat (links on the home page).</p>
-<h3 id="observation-layer">Observation layer</h3>
-<h4 id="agent-also-subclasses-person-organization">Agent (also subclasses Person, Organization)</h4>
+<h2 id="observation-layer">Observation layer</h2>
+<h3 id="agent-also-subclasses-person-organization">Agent (also subclasses Person, Organization)</h3>
 <p><em>main queries:</em></p>
 <ul>
 <li>agent</li>
@@ -1833,14 +1833,14 @@
 <li>relationships (Relationship.object or .subject or .inScopeOf)</li>
 <li>roles (AgentRelationshipRoles that are AgentRelationship.relationship where the .subject or .object or .inScopeOf is the Agent)</li>
 </ul>
-<h4 id="agentrelationship">AgentRelationship</h4>
+<h3 id="agentrelationship">AgentRelationship</h3>
 <p><em>main queries:</em></p>
 <ul>
 <li>agentRelationship</li>
 <li>agentRelationships</li>
 </ul>
 <p><em>filters:</em> subject, object, role, inScopeOf</p>
-<h4 id="process">Process</h4>
+<h3 id="process">Process</h3>
 <p><em>main queries:</em></p>
 <ul>
 <li>process</li>
@@ -1873,7 +1873,7 @@
 <li>previous (EconomicEvent.inputOf, same as observedInputs)</li>
 <li>next (EconomicEvent.outputOf, same as observedOutputs)</li>
 </ul>
-<h4 id="economicevent">EconomicEvent</h4>
+<h3 id="economicevent">EconomicEvent</h3>
 <p><em>main queries:</em></p>
 <ul>
 <li>economicEvent</li>
@@ -1897,7 +1897,7 @@
 <li>trace (ordered incoming value flows, see <a href="../../algorithms/track/">Track and Trace</a> for logic)</li>
 <li>track (ordered outgoing value flows, see <a href="../../algorithms/track/">Track and Trace</a> for logic)</li>
 </ul>
-<h4 id="economicresource">EconomicResource</h4>
+<h3 id="economicresource">EconomicResource</h3>
 <p><em>main queries:</em></p>
 <ul>
 <li>economicResource</li>
@@ -1920,20 +1920,20 @@
 <li>trace (ordered incoming value flows, see <a href="../../algorithms/track/">Track and Trace</a> for logic)</li>
 <li>track (ordered outgoing value flows, see <a href="../../algorithms/track/">Track and Trace</a> for logic)</li>
 </ul>
-<h4 id="fulfillment">Fulfillment</h4>
+<h3 id="fulfillment">Fulfillment</h3>
 <p><em>main queries:</em></p>
 <ul>
 <li>fulfillment</li>
 <li>fulfillments</li>
 </ul>
-<h4 id="appreciation">Appreciation</h4>
+<h3 id="appreciation">Appreciation</h3>
 <p><em>main queries:</em></p>
 <ul>
 <li>appreciation</li>
 <li>appreciations</li>
 </ul>
-<h3 id="plan-layer">Plan layer</h3>
-<h4 id="proposal">Proposal</h4>
+<h2 id="plan-layer">Plan layer</h2>
+<h3 id="proposal">Proposal</h3>
 <p><em>main queries:</em></p>
 <ul>
 <li>proposal</li>
@@ -1954,7 +1954,7 @@
 <li>primaryIntents (.publishes Intents where the self.publishedIn ProposedIntent.reciprocal is false)</li>
 <li>reciprocalIntents (.publishes Intents where the self.publishedIn ProposedIntent.reciprocal is true)</li>
 </ul>
-<h4 id="intent">Intent</h4>
+<h3 id="intent">Intent</h3>
 <p><em>main queries:</em></p>
 <ul>
 <li>intent</li>
@@ -1967,14 +1967,14 @@
 <li>satisfiedBy (Satisfaction.satisfies)</li>
 <li>(probably some location based queries, TBD)</li>
 </ul>
-<h4 id="proposedintent">ProposedIntent</h4>
+<h3 id="proposedintent">ProposedIntent</h3>
 <p><em>filters:</em> reciprocal</p>
 <p><em>main queries:</em></p>
 <ul>
 <li>proposedIntent</li>
 <li>proposedIntents</li>
 </ul>
-<h4 id="agreement">Agreement</h4>
+<h3 id="agreement">Agreement</h3>
 <p><em>main queries:</em></p>
 <ul>
 <li>agreement</li>
@@ -1990,7 +1990,7 @@
 <li>involvedAgents (any .provider, .receiver, .inScopeOf on commitments or economicEvents)</li>
 <li>economicEvents (EconomicEvent.realizationOf, and any EconomicEvents that fulfill Commitments that are .clauseOf the Agreement)</li>
 </ul>
-<h4 id="commitment">Commitment</h4>
+<h3 id="commitment">Commitment</h3>
 <p><em>main queries:</em></p>
 <ul>
 <li>commitment</li>
@@ -2007,13 +2007,13 @@
 <li>involvedAgents (Commitment.provider, .receiver, .inScopeOf if agent)</li>
 <li>(possibly some location based queries, TBD)</li>
 </ul>
-<h4 id="satisfaction">Satisfaction</h4>
+<h3 id="satisfaction">Satisfaction</h3>
 <p><em>main queries:</em></p>
 <ul>
 <li>satisfaction</li>
 <li>satisfactions</li>
 </ul>
-<h4 id="claim">Claim</h4>
+<h3 id="claim">Claim</h3>
 <p><em>main queries:</em></p>
 <ul>
 <li>claim</li>
@@ -2024,13 +2024,13 @@
 <ul>
 <li>settledBy (Settlement.settles)</li>
 </ul>
-<h4 id="settlement">Settlement</h4>
+<h3 id="settlement">Settlement</h3>
 <p><em>main queries:</em></p>
 <ul>
 <li>settlement</li>
 <li>settlements</li>
 </ul>
-<h4 id="plan">Plan</h4>
+<h3 id="plan">Plan</h3>
 <p><em>main queries:</em></p>
 <ul>
 <li>plan</li>
@@ -2051,7 +2051,7 @@
 <li>endDate (latest .plannedWithin Process.hasEnd)</li>
 <li>finished (all the .plannedWithin Process.finished are true)</li>
 </ul>
-<h4 id="scenario">Scenario</h4>
+<h3 id="scenario">Scenario</h3>
 <p><em>main queries:</em></p>
 <ul>
 <li>scenario</li>
@@ -2066,8 +2066,8 @@
 <li>startDate TBD</li>
 <li>endDate TBD</li>
 </ul>
-<h3 id="knowledge-layer">Knowledge layer</h3>
-<h4 id="resourcespecification">ResourceSpecification</h4>
+<h2 id="knowledge-layer">Knowledge layer</h2>
+<h3 id="resourcespecification">ResourceSpecification</h3>
 <p><em>main queries:</em></p>
 <ul>
 <li>resourceSpecification</li>
@@ -2083,7 +2083,7 @@
 <li>claims (Claim.resourceConformsTo)</li>
 <li>recipes TBD</li>
 </ul>
-<h4 id="processspecification">ProcessSpecification</h4>
+<h3 id="processspecification">ProcessSpecification</h3>
 <p><em>main queries:</em></p>
 <ul>
 <li>processSpecification</li>
@@ -2097,35 +2097,35 @@
 <li>resourcesCurrentlyAtStage (EconomicResource.stage)</li>
 <li>recipeFlowsRequiringStage (RecipeFlow.stage)</li>
 </ul>
-<h4 id="reciperesource">RecipeResource</h4>
+<h3 id="reciperesource">RecipeResource</h3>
 <p><em>main queries:</em></p>
 <ul>
 <li>recipeResource</li>
 <li>recipeResources</li>
 </ul>
 <p>TBD</p>
-<h4 id="recipeflow">RecipeFlow</h4>
+<h3 id="recipeflow">RecipeFlow</h3>
 <p><em>main queries:</em></p>
 <ul>
 <li>recipeFlow</li>
 <li>reciprFlows</li>
 </ul>
 <p>TBD</p>
-<h4 id="recipeexchange">RecipeExchange</h4>
+<h3 id="recipeexchange">RecipeExchange</h3>
 <p><em>main queries:</em></p>
 <ul>
 <li>recipeExchange</li>
 <li>recipeExchanges</li>
 </ul>
 <p>TBD</p>
-<h4 id="recipeprocess">RecipeProcess</h4>
+<h3 id="recipeprocess">RecipeProcess</h3>
 <p><em>main queries:</em></p>
 <ul>
 <li>recipeProcess</li>
 <li>recipeProcesses</li>
 </ul>
 <p>TBD</p>
-<h4 id="scenariodefinition">ScenarioDefinition</h4>
+<h3 id="scenariodefinition">ScenarioDefinition</h3>
 <p><em>main queries:</em></p>
 <ul>
 <li>scenarioDefinition</li>
@@ -2135,13 +2135,13 @@
 <ul>
 <li>scenarios (Scenario.definedAs)</li>
 </ul>
-<h4 id="action">Action</h4>
+<h3 id="action">Action</h3>
 <p><em>main queries:</em></p>
 <ul>
 <li>action</li>
 <li>actions</li>
 </ul>
-<h4 id="agentrelationshiprole">AgentRelationshipRole</h4>
+<h3 id="agentrelationshiprole">AgentRelationshipRole</h3>
 <p><em>main queries:</em></p>
 <ul>
 <li>agentRelationshipRole</li>
@@ -2151,7 +2151,7 @@
 <ul>
 <li>agentRelationships (AgentRelationship.relationship)</li>
 </ul>
-<h4 id="rolebehavior">RoleBehavior</h4>
+<h3 id="rolebehavior">RoleBehavior</h3>
 <p><em>main queries:</em></p>
 <ul>
 <li>roleBehavior</li>

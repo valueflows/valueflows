@@ -1473,34 +1473,34 @@
 
   <h1>Flows</h1>
 
-<h3 id="kinds-of-flows">Kinds of Flows</h3>
+<h2 id="kinds-of-flows">Kinds of Flows</h2>
 <p>Flows are a fundamental construct in the Valueflows ontology. The types of flows form a progression from potential to scheduled to realized:</p>
 <ol>
 <li>Intents which can lead to Commitments</li>
 <li>Commitments which can lead to Economic Events (or Intents can lead directly to Economic Events)</li>
 </ol>
-<h4 id="intent">Intent</h4>
+<h3 id="intent">Intent</h3>
 <p>Intents describe potential future events which have not been agreed to by other agents, such as offers and requests. Intents are often used for discovering another agent to participate in a desired event. On the process side, for example, planned work could be an Intent, but planned work that some agent committed to is a Commitment.</p>
-<h4 id="commitment">Commitment</h4>
+<h3 id="commitment">Commitment</h3>
 <p>Commitments describe potential future events which the involved agents have already agreed to pursue. Commitments can be considered contractual promises from one agent to another.  Commitments can be thought of as plans for Economic Events, and Economic Events can fulfill Commitments.  Commitments can satisfy Intents. </p>
-<h4 id="economic-event">Economic Event</h4>
+<h3 id="economic-event">Economic Event</h3>
 <p>Economic Events describe past events, something observed, never some potential future event.  They can fulfill Commitments or satisfy Intents (when there is no Commitment).</p>
-<h4 id="claim">Claim</h4>
+<h3 id="claim">Claim</h3>
 <p>Claims resemble Commitments, but are initiated by the receiver, not the provider.  An Economic Event can trigger a reciprocal Claim.  Claims sometimes do not have to actually be saved, often they can be implied from an Economic Event and an Agreement.  For example, if Alice has agreed to sell Bob some carrots for $2, then if Alice delivers the carrots to Bob, she has an implicit claim for $2 from Bob.</p>
-<h4 id="recipe-flow">Recipe Flow</h4>
+<h3 id="recipe-flow">Recipe Flow</h3>
 <p><a href="../recipes/">Recipes</a> are used to create plans, and the Recipe Flow can create a corresponding Intent or a Commitment in a Plan, depending on if all the agents are known and the level of certainty of the planning.</p>
-<h3 id="timeline-plans-and-observations">Timeline, plans and observations</h3>
+<h2 id="timeline-plans-and-observations">Timeline, plans and observations</h2>
 <p>The figure below shows that Economic Events have to be observed and for that reason only appear as records of the past. Future plans get represented with Intents and Commitments.</p>
 <p><img alt="flows" src="../../assets/flows.png" /></p>
-<h3 id="matching-intents">Matching Intents</h3>
+<h2 id="matching-intents">Matching Intents</h2>
 <p>Often agents will start their plans independently and record their initial intents. Later once they make a Commitment with another agent, it will represent a specific shared part of their plans. For that reason any Commitment can result in Satisfaction of the providing agent's Intent as well as Satisfaction of the receiving agent's Intent.</p>
 <p><img alt="matching" src="../../assets/matched.png" /></p>
-<h3 id="granularity">Granularity</h3>
+<h2 id="granularity">Granularity</h2>
 <p>Intents, Commitments, and Economic Events can occur at any granularity that is needed or for which data can be obtained.  So they primarily are used for all operational needs, but can also be used at higher levels for budgeting for organizations, analytical and high level planning needs for communities or regions, etc.</p>
 <p><img alt="Intent-Commitment-Event" src="../../assets/i-c-e.png" /></p>
-<h3 id="actions">Actions</h3>
+<h2 id="actions">Actions</h2>
 <p>All types of flows use the same set of actions, which define what the flow does and how it behaves in relation to resources.  You can find detailed documentation on actions <a href="../actions/">in the next section</a>.</p>
-<h3 id="quantities-and-times">Quantities and Times</h3>
+<h2 id="quantities-and-times">Quantities and Times</h2>
 <p>Quantities are used for counting, such as:</p>
 <ul>
 <li>Exchange/transfer</li>

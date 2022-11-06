@@ -1335,7 +1335,7 @@
 
   <h1>Budgeting and Analysis</h1>
 
-<h3 id="scenarios">Scenarios</h3>
+<h2 id="scenarios">Scenarios</h2>
 <p>The Processes section explains processes at their basic level, starting with operational observable processes. The Operational Planning section explains how to group those processes into a scheduled plan at an operational level. This section explains how to use the same process and plan pattern to represent higher level requirements, those that are not (yet) actually scheduled.  We are calling those Scenarios.</p>
 <p>Processes can be composed into scenarios at any level.  Like scheduled plans, these scenarios can be created from recipes.  Like scheduled plans, they have inputs and outputs (usually intents, sometimes sumarized economic events), derived from nested processes.</p>
 <p>Some examples we have seen:</p>
@@ -1347,7 +1347,7 @@
 </ul>
 <p>Agents can define different scenarios that they want to use. So for example, if a group does yearly budgets, each budget for different years could reference the same "yearly budget" scenario definition.</p>
 <p>The model itself is quite flexible, and we expect there will be more uses for it, all using the basic input-process-output structure with resource flows connecting them, contained by a scenario.</p>
-<h3 id="connecting-plans-and-scenarios">Connecting Plans and Scenarios</h3>
+<h2 id="connecting-plans-and-scenarios">Connecting Plans and Scenarios</h2>
 <p>Plans do not need to be directly connected to Scenarios, although they can be. If comparisons are needed, often the time periods and scope are all that is needed.  In addition, if resource specifications and/or process specifications are part of a classification taxonomy, that can be used for connecting the higher to lower perspectives.  For example, the plan for carrots could be aggregated into the higher level plan for all vegetables.</p>
 <p>Often Plans do not fit cleanly within Scenarios, because plans tend to be for real production when it happens, which usually does not fit nicely into accounting periods or planning horizons.  Seasonal food production can be an exception to this.</p>
 <p>Scenarios can be refinements of other scenarios.  For example, a group might do scenarios for yearly estimates, then refine those for each month, before creating operational plans which will be executed.</p>
