@@ -1,4 +1,4 @@
-### Definition
+## Definition
 
 Traditionally, an economic resource is defined by its utility, but also by its scarcity and its control by an economic agent. That definition is too limited. Its limitations include:
 
@@ -11,7 +11,7 @@ And we want knowledge to be freely available.
 
 Also, we prefer to think of use value, but economic resources also often have exchange value.
 
-#### The difference between a resource and its specification/classification(s)
+### The difference between a resource and its specification/classification(s)
 
 An economic resource is observable.  Its specification or classification defines what kind of thing the economic resource is.
 
@@ -20,7 +20,7 @@ So, for example, most listings of things offered for sale on an e-commerce site 
 Or the description of the book entitled "The Power of Babel: A Natural History of Language", ISBN-13: 978-0060520854,
 is a specification. Your library may have two copies that you can check out. Those are resources.
 
-#### The difference between a resource specification and a resource classification
+### The difference between a resource specification and a resource classification
 
 An economic resource or a flow can have only one *resource specification* in Valueflows.  This defines the lowest level useful type or kind of the resource that is needed. The Valueflows vocabulary defines this as the ResourceSpecification.  Note that often taxonomies and other references on the web can define very specific resource specifications at their leaf levels, and these can be used if the necessary properties can be found.  Note also that for specific global identifiers such as GTIN, we recommend using properties of the [GoodRelations ProductOrServiceModel](http://www.heppnetz.de/ontologies/goodrelations/v1.html#ProductOrServiceModel).
 
@@ -36,7 +36,7 @@ Resource classifications can also use other schemes, like facets or tags.
 
 The references to resource classifications are uri's, and not otherwise defined inside Valueflows.
 
-### Identification and Behaviors of Resources
+## Identification and Behaviors of Resources
 
 Here are three different kinds of resources from the viewpoint of identification:
 
@@ -52,7 +52,7 @@ And then in the "independent view", for larger-scale analysis of resource flows,
 
 *Substitutability*: This defines if any resources of that specification can be freely substituted for any other resource of that same specification when used, consumed, traded, etc.  For example, one container of "B9R-1-red DLP resin photopolymer" is probably substitutable for another container of the same photopolymer.  While each resource for a resource specification called "English-Spanish translation" is probably not substitutable because each will be a different document.
 
-#### Unique identifiers for resources
+### Unique identifiers for resources
 
 This can vary.  And people can be allowed within some boundaries of agreement to specify which combination of other properties would constitute identifiers.
 
@@ -63,7 +63,7 @@ Here are some examples from manufacturing situations:
 
 Note in the last case, a transfer of rights means a different resource. This is common with resources that are not serialized, where one logical resource has a quantity greater than 1, and the individual instances are substitutable. (Think nuts and bolts, grain, strawberries, bottles of beer in cases, etc.)
 
-#### Stage and state
+### Stage and state
 
 Sometimes part of the logical identification of a resource includes:
 
@@ -74,7 +74,7 @@ Stage is used when the same resource passes through multiple processes in its li
 
 These can be defined on the recipe or the plan, showing where an input flow expects a certain stage and/or state of a resource. In that case, [Dependent demand planning](../algorithms/dependent-demand.md) will select only those resources that fit the specified stage and state.  In user-interface forms for adding EconomicEvents, the input event form should query EconomicResources for required stage and state when offering selections of possible input resources.  The stage and state of an EconomicResource can be derived or stored, as preferred.
 
-#### Inventory
+### Inventory
 
 Economic Resources can be inventoried, not inventoried but could be, or it doesn't make sense to think about inventory.  If a resource is not inventoried, it is generally not instantiated in the software, but defined using resource specification and other properties, such as the accountable agent or location.
 
@@ -82,7 +82,7 @@ Economic Resources can be inventoried, not inventoried but could be, or it doesn
 * Not inventoried: You could keep track of it, but it isn't worth it.  This usually happens for quantities of small or hard to measure items that are obtained in bulk, like solder or bolts.  In this case, you have to look at the actual resource to see if you need more, the data won't tell you.
 * Not applicable: This is for types of work (unless scheduled), services, and other resources where it just doesn't make sense.
 
-### How resources relate to events
+## How resources relate to events
 
 In the original REA ontology, an Economic Event is a change in the quantity or in the rights to an Economic Resource performed by Economic Agents. An event is also defined by its behavior in relation to the resource  (consume, use, produce, transfer, etc.).
 
@@ -96,7 +96,7 @@ All economic information in an Economic Resource must be put there by an Economi
 
 Note that the economic information is therefore derived information, and could be re-calculated as needed by iterating through the Economic Events. But that could have performance issues, so isn't generally recommended.
 
-### How resources relate to transfers
+## How resources relate to transfers
 
 Two different kinds of "inventorying" of resources are affected by transfers.
 
@@ -107,7 +107,7 @@ We define two current quantities on the economic resource for these two concepts
 
 For example, in vendor-managed inventory, the vendor owns the inventory so they see it in their accounting; but the store sees it in their onhand quantities. Or for inventory being shipped FOB source, the intended receiver owns the inventory and sees it in their accounting, but the goods are actually onhand in a truck.
 
-### How resources related to each other
+## How resources related to each other
 
 If one resource contains other resources, the contained resources are part of, or make up the larger resource.
 

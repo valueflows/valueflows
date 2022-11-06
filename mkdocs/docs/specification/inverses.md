@@ -1,6 +1,6 @@
 # Query and Filter Naming
 
-### Introduction
+## Introduction
 
 Although queries and query filters are not specified in the RDF core, this set of guidelines should be used, to facilitate standard api naming.  It is possible that at some point they will be included in the formal VF namespace.
 
@@ -10,9 +10,9 @@ This document is not meant to imply that all of these named queries and filters 
 
 *Status:* Not all of these queries and filters are tested, and there will certainly be other useful queries and filters. If anyone has recommended changes or additions, please start an issue or merge request, or just let us know in the Welcome chat (links on the home page).
 
-### Observation layer
+## Observation layer
 
-#### Agent (also subclasses Person, Organization)
+### Agent (also subclasses Person, Organization)
 
 *main queries:*
 
@@ -59,7 +59,7 @@ This document is not meant to imply that all of these named queries and filters 
    * relationships (Relationship.object or .subject or .inScopeOf)
    * roles (AgentRelationshipRoles that are AgentRelationship.relationship where the .subject or .object or .inScopeOf is the Agent)
 
-#### AgentRelationship
+### AgentRelationship
 
 *main queries:*
 
@@ -68,7 +68,7 @@ This document is not meant to imply that all of these named queries and filters 
 
 *filters:* subject, object, role, inScopeOf
 
-#### Process
+### Process
 
 *main queries:*
 
@@ -103,7 +103,7 @@ This document is not meant to imply that all of these named queries and filters 
    * previous (EconomicEvent.inputOf, same as observedInputs)
    * next (EconomicEvent.outputOf, same as observedOutputs)
 
-#### EconomicEvent
+### EconomicEvent
 
 *main queries:*
 
@@ -129,7 +129,7 @@ This document is not meant to imply that all of these named queries and filters 
    * trace (ordered incoming value flows, see [Track and Trace](../algorithms/track.md) for logic)
    * track (ordered outgoing value flows, see [Track and Trace](../algorithms/track.md) for logic)
 
-#### EconomicResource
+### EconomicResource
 
 *main queries:*
 
@@ -154,23 +154,23 @@ This document is not meant to imply that all of these named queries and filters 
    * trace (ordered incoming value flows, see [Track and Trace](../algorithms/track.md) for logic)
    * track (ordered outgoing value flows, see [Track and Trace](../algorithms/track.md) for logic)
 
-#### Fulfillment
+### Fulfillment
 
 *main queries:*
 
    * fulfillment
    * fulfillments
 
-#### Appreciation
+### Appreciation
 
 *main queries:*
 
    * appreciation
    * appreciations
 
-### Plan layer
+## Plan layer
 
-#### Proposal
+### Proposal
 
 *main queries:*
 
@@ -194,7 +194,7 @@ This document is not meant to imply that all of these named queries and filters 
    * primaryIntents (.publishes Intents where the self.publishedIn ProposedIntent.reciprocal is false)
    * reciprocalIntents (.publishes Intents where the self.publishedIn ProposedIntent.reciprocal is true)
 
-#### Intent
+### Intent
 
 *main queries:*
 
@@ -209,7 +209,7 @@ This document is not meant to imply that all of these named queries and filters 
    * satisfiedBy (Satisfaction.satisfies)
    * (probably some location based queries, TBD)
 
-#### ProposedIntent
+### ProposedIntent
 
 *filters:* reciprocal
 
@@ -218,7 +218,7 @@ This document is not meant to imply that all of these named queries and filters 
    * proposedIntent
    * proposedIntents
 
-#### Agreement
+### Agreement
 
 *main queries:*
 
@@ -235,7 +235,7 @@ This document is not meant to imply that all of these named queries and filters 
    * involvedAgents (any .provider, .receiver, .inScopeOf on commitments or economicEvents)
    * economicEvents (EconomicEvent.realizationOf, and any EconomicEvents that fulfill Commitments that are .clauseOf the Agreement)
 
-#### Commitment
+### Commitment
 
 *main queries:*
 
@@ -254,14 +254,14 @@ This document is not meant to imply that all of these named queries and filters 
    * involvedAgents (Commitment.provider, .receiver, .inScopeOf if agent)
    * (possibly some location based queries, TBD)
 
-#### Satisfaction
+### Satisfaction
 
 *main queries:*
 
    * satisfaction
    * satisfactions
 
-#### Claim
+### Claim
 
 *main queries:*
 
@@ -274,14 +274,14 @@ This document is not meant to imply that all of these named queries and filters 
 
    * settledBy (Settlement.settles)
 
-#### Settlement
+### Settlement
 
 *main queries:*
 
    * settlement
    * settlements
 
-#### Plan
+### Plan
 
 *main queries:*
 
@@ -304,7 +304,7 @@ This document is not meant to imply that all of these named queries and filters 
    * endDate (latest .plannedWithin Process.hasEnd)
    * finished (all the .plannedWithin Process.finished are true)
 
-#### Scenario
+### Scenario
 
 *main queries:*
 
@@ -321,9 +321,9 @@ This document is not meant to imply that all of these named queries and filters 
    * startDate TBD
    * endDate TBD
 
-### Knowledge layer
+## Knowledge layer
 
-#### ResourceSpecification
+### ResourceSpecification
 
 *main queries:*
 
@@ -341,7 +341,7 @@ This document is not meant to imply that all of these named queries and filters 
    * claims (Claim.resourceConformsTo)
    * recipes TBD
 
-#### ProcessSpecification
+### ProcessSpecification
 
 *main queries:*
 
@@ -356,7 +356,7 @@ This document is not meant to imply that all of these named queries and filters 
    * resourcesCurrentlyAtStage (EconomicResource.stage)
    * recipeFlowsRequiringStage (RecipeFlow.stage)
 
-#### RecipeResource
+### RecipeResource
 
 *main queries:*
 
@@ -365,7 +365,7 @@ This document is not meant to imply that all of these named queries and filters 
 
 TBD
 
-#### RecipeFlow
+### RecipeFlow
 
 *main queries:*
 
@@ -374,7 +374,7 @@ TBD
 
 TBD
 
-#### RecipeExchange
+### RecipeExchange
 
 *main queries:*
 
@@ -383,7 +383,7 @@ TBD
 
 TBD
 
-#### RecipeProcess
+### RecipeProcess
 
 *main queries:*
 
@@ -392,7 +392,7 @@ TBD
 
 TBD
 
-#### ScenarioDefinition
+### ScenarioDefinition
 
 *main queries:*
 
@@ -403,14 +403,14 @@ TBD
 
    * scenarios (Scenario.definedAs)
 
-#### Action
+### Action
 
 *main queries:*
 
    * action
    * actions
 
-#### AgentRelationshipRole
+### AgentRelationshipRole
 
 *main queries:*
 
@@ -421,7 +421,7 @@ TBD
 
    * agentRelationships (AgentRelationship.relationship)
 
-#### RoleBehavior
+### RoleBehavior
 
 *main queries:*
 

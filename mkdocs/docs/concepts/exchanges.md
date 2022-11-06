@@ -1,4 +1,4 @@
-### The independent viewpoint
+## The independent viewpoint
 
 Here we look at exchanges of resources from an independent or neutral viewpoint (not the viewpoint of one of the Agents in the exchange). For example, from one Agent's viewpoint, the exchange may be a Purchase, from the other Agent's viewpoint, it might be a Sale. From the neutral viewpoint, it is an exchange of resources, with usually at least two flows of resources, from different directions. So for example, the seller might give some goods to the buyer, and the buyer might give some money to the seller. Or in a barter exchange, one agent might give the other some books, and the other agent might compensate with some cookies.
 
@@ -9,7 +9,7 @@ Valueflows enables multilateral exchange agreements as well. Any number of agent
 We also support non-reciprocal one-way transfers, such as in a gift economy.  However, an exchange implies at least two transfers with reciprocity.
 
 
-### Exchanges and flows
+## Exchanges and flows
 
 Exchanges as modeled in VF actually relate to flows within agreements, not resources directly.  Flows involved in transfers of rights and responsibilities are more obvious.  Other types of flows can also imply a transfer, and can thus be used as part of an exchange, for details see [Explicit and implied transfers](transfers.md#explicit-and-implied-transfers).
 
@@ -19,7 +19,7 @@ Exchanges as modeled in VF actually relate to flows within agreements, not resou
 
 * Another example is when a service is created as an output of a process, where that service delivery event can be considered an implied transfer, and exchanged for some other resource.
 
-### Agreements
+## Agreements
 
 Various kinds of agreements between agents often define the rights and responsibilities for economic resources that are transferred. Agreements can reflect any economic paradigm, so make it possible for the Exchange and Transfer vocabulary to work equally well for capitalist businesses, transitional economic interactions, and next economy interactions.
 

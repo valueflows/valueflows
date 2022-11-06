@@ -1,4 +1,4 @@
-### Not just for cooking
+## Not just for cooking
 
 Recipes are for:
 
@@ -8,7 +8,7 @@ Recipes are for:
 
 Recipes contain all the info required to create a resource or provide a service.  In ERP (Enterprise Resource Planning) terms, it’s a combination of bills of material and routings and suppliers.
 
-### Recipe patterns
+## Recipe patterns
 
 Recipe patterns can be used alone, or mixed and matched in a recipe:
 
@@ -26,7 +26,7 @@ Recipe patterns can be used alone, or mixed and matched in a recipe:
 The examples above have to do with producing specific goods or services.  Recipes can also be used to document more general business processes that an organization uses to produce more generally defined kinds of outputs.  For example, an R&D process might be hard to document in detail, but it does have general steps like researching existing technology, concept generation, experimentation, concept selection, refinement, testing, documenting the design. 
 
 
-### Generation of plans
+## Generation of plans
 
 <b>Back-scheduling a plan from a Recipe</b>:
 Start with end items and a due date, generate the plan from the end item to its inputs, to the outputs leading the inputs, to their inputs, etc.

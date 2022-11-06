@@ -1,6 +1,6 @@
 # Core
 
-### REA (Resource, Event, Agent)
+## REA (Resource, Event, Agent)
 
 The vocabulary has a core that would fit many different kinds of economic formations  - value networks, supply chains, joint ventures, business collaboration network, distributed cooperatives, multi-stakeholder cooperatives.... as well as more traditional enterprises.
 
@@ -14,7 +14,7 @@ Economic events are the movers and shakers.  They say what is happening to econo
 
 A key concept in REA is Duality, which means that each event wants one or more balancing events: in other words, some kind of reciprocity.  REA uses an abstract word for this relationship in order to make the meaning configurable. The reciprocity does not need to happen at the same time, or in the same transaction.  And it can have any logic that a network wants: payment in money, swap, earn credits, earn reputation points, share with the commons, from each according to ability and to each according to need, etc.
 
-### Independent vs Dependent views
+## Independent vs Dependent views
 
 ![independent vs dependent](../assets/REAviews.png)
 
@@ -27,7 +27,7 @@ For the individual agent’s accounting systems, assuming an Exchange of goods f
 While conventional accounting uses the individual agent view, larger-scale economic analyses and planning, like for networks, communities, and bioregions, use the independent view. See [Value Flow Algorithms](../algorithms/overview.md).
 
 
-### Levels of the ontology
+## Levels of the ontology
 
 All the levels of the REA ontology are similarly flexible and configurable:
 

@@ -1,6 +1,6 @@
 The agent vocabulary describes networks of people, organizations and networks, constructed using a simple but powerful model of agents and their relationships.
 
-### Agents
+## Agents
 
 Agents can be individual persons or organizations. Organizations include formal or informal organizations of all kinds. (The concept of "Agent" will in the future probably include "ecological agents", as we explore with others how to use REA for ecological accounting to combat climate change. The concept of "Agent" could also in the future include software agents, but this is controversial.)
 
@@ -8,7 +8,7 @@ In Valueflows, we are talking about economic agents, agents who can create or ex
 
 If people want to define types of organizations (like cooperative, corporation, network, community, etc.) we provide a classification property which people can define as they wish.
 
-### Agent Relationships
+## Agent Relationships
 
 Agent relationships have many nuances, thus VF provides the ability to define one's own kinds of relationships.  For example people might "participate" with an organization by means of agreeing to terms and conditions.  Or people might have more active "membership" in a group or organization.  Or people might consider themselves members but want a more independently flavored term such as "affiliates".
 
@@ -22,7 +22,7 @@ Relationships have direction: For example, in "Michael is a member of Enspiral",
 
 Relationships can be in a [scope](scoping.md) (or not): For example, "Kathy is mentor of Sam, in the scope of Enspiral."
 
-### Agent Philosophies
+## Agent Philosophies
 
 We also want to acknowledge that some people prefer to think of themselves as independent and decentralized agents who interact in different places in the economy as individuals, and some people think of themselves more as members of different groups and networks and communities and interact more in the context of those groups and networks and communities.  Many experiments are going on as people strive towards another economy.  We want to support all these experiments, so want to support both of these ways of thinking and organizing ourselves.  The agent vocabulary is very flexible, and will support these as well as current conventional structures.
 

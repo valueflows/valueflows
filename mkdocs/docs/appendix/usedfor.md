@@ -39,6 +39,8 @@ The [Fediverse](https://fediverse.party/en/fediverse/) is a collection of networ
 
 * [Basis Project](https://basisproject.net/) is a protocol for scalable, ecological production.  It's using an auto-generated (from the owl file) Valueflows class structure in Rust to drive a reference implementation.  The code lives on [github](https://github.com/basisproject/).
 
+* [The Weather Makers](https://theweathermakers.nl/) are using Valueflows to model their ecosystem planning, engineering and management strategy for restoring water cycles as the key to achieving overall biosphere restoration. [Green the Sinai](https://www.greenthesinai.com/) is one ambitious potential project.
+
 ## Whither from here? 
 
 Valueflows philosophically seeks to develop in collaboration with user groups on the ground. This round of projects is providing valuable input to the Valueflows vocabulary. We can expect some additions and extensions.
