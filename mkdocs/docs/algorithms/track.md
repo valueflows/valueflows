@@ -21,9 +21,7 @@ Also, this logic is used in other features, like "contribution economy" calculat
 
 Briefly, to gather a whole track or trace, the previous or next methods should be used in recursive logic, traveling down the flow and each branch of the flow, when there are many inputs or many outputs.
 
-## Trace logic
-
-### Adding breadcrumbs on initial save
+## Adding breadcrumbs on initial save
 
 For the most part, the structure provides the causal order of the flows.  But for some specific situations, such as repeated cycles referencing the same ProcessSpecifications, additional information should be saved on the EconomicEvent and EconomicResource to aid in obtaining consistent causal order. (Timestamps are not reliable in distributed systems.)
 
@@ -33,13 +31,15 @@ For the most part, the structure provides the causal order of the flows.  But fo
 
 * Those previousEvent references provide breadcrumbs for tracking and tracing through ambiguous situations, see pseudocode below.
 
+## Trace logic
+
 ### Where to start a trace
 
 The "starting item" can be an EconomicResource or EconomicEvent.  If you want to start at the present time, and trace everything that ever happened to the resource, start with the resource and the value of its `previousEvent`.  If you just want to know how a resource was made, and what inputs went into it, start with selecting the output event where that resource was initially created, or if it is a stock resource, where it was last incremented. 
 
 ### Pseudocode
 
-The following is included to give some idea of the logic required.  It tries to cover all actions and scenarios, but is meant as a suggestion, and has not been thoroughly tested in code.
+The following is included to give some idea of the logic required.  It tries to cover all actions and scenarios, but is meant as a suggestion, and has not been thoroughly tested in code.  It is not meant to reflect code, for example "null" could be "nil" or "none", and "list" could be any collection.
 
 ```
 EconomicResource "previous":
@@ -56,9 +56,12 @@ EconomicEvent "previous":
         return the process
     else if the event is triggeredBy another event
         return the triggeredBy event
+    else if the event action is raise or lower, and the event's previousEvent is null
+        return empty list
+    else if resourceInventoriedAs of the event exists
+        return the resourceInventoriedAs resource
     else
-        if resourceInventoriedAs of the event exists
-            return the resourceInventoriedAs
+        return empty list
 ```
 
 ```
@@ -67,7 +70,7 @@ trace (parameter: starting item)
             (list or similar, "flows" must be ordered)
     add the starting item to "visited"
     add the starting item to "flows"
-    if the item is an unpack event
+    if the item is an separate event
         add the resourceInventoriedAs to "contained"
     if the item is a modify event
         add the resourceInventoriedAs to "modified"
@@ -77,12 +80,16 @@ trace (parameter: starting item)
     return "flows"
 
 trace-depth-first-search (parameters: "flows", "visited", "contained", "modified", "delivered", "savedEvent")
-    for the last item in "flows", get "previous" (defined below)
-    if that last item is an event
-        save the previousEvent in savedEvent
-    order descending the "previous" items by id or other unique element
-    if the savedEvent is one of those items
+    for the last item in "flows", get "previous" (defined above)
+    if that last item in "flows" is an event
+        save the previousEvent in "savedEvent"
+    order descending the "previous" items by id or other unique element (approximate time order is helpful)
+    for each of those items
+        put the last item in "flows" in the item's "parent" (facilitates showing as a tree)
+    if the "savedEvent" is one of those items
         move it to the position where it will be processed first
+    else if the item that will be processed first is a resource in "visited"
+        put the "savedEvent" in the position where it will be processed first
     for each of those items
         if the item is not in "visited"
             set "skip" to false
@@ -96,12 +103,12 @@ trace-depth-first-search (parameters: "flows", "visited", "contained", "modified
                     remove it from "modified"
                 else 
                     set "skip" to true
-            else if the item is a pack event
+            else if the item is a combine event
                 if the event's resourceInventoriedAs is in "contained"
                     remove it from "contained"
                 else 
                     set "skip" to true
-            else if the item is an unpack event
+            else if the item is an separate event
                 add the resourceInventoriedAs to "contained"
             else if the item is a modify event
                 add the resourceInventoriedAs to "modified"
@@ -136,11 +143,68 @@ EconomicEvent "next":
         return the resourceInventoriedAs
     if the toResourceInventoriedAs of the event exists
         return the toResourceInventoriedAs
+    else
+        return an empty list
 ```
 
 ```
 track (parameter: starting item)
-    TBD....
+    initialize "flows", "visited", "contains", "modifies", "delivers"
+            (list or similar, "flows" must be ordered)
+    add the starting item to "visited"
+    add the starting item to "flows"
+    if the item is a combine event
+        add the resourceInventoriedAs to "contains"
+    if the item is an accept event
+        add the resourceInventoriedAs to "modifies"
+    if the item is a pickup event
+        add the resourceInventoriedAs to "delivers"
+    call track-depth-first-search (which will go recursively forwards through the tree)
+    return "flows"
+
+track-depth-first-search (parameters: "flows", "visited", "contains", "modifies", "delivers", "savedEvent")
+    for the last item in "flows", get "next" (defined above)
+    if that last item is an event
+        find the next event by looking for the last item event in any event's previousEvent field
+        if it exists (would you ever get multiples???)
+            save it in "savedEvent"
+        else
+            remove the old "savedEvent" (???)
+    order the "next" items by id or other unique element (approximate time order is helpful)
+    for each of those "next" items
+        put the last item in "flows" in the item's "parent" (facilitates showing as a tree)
+    if the savedEvent is one of those items
+        move it to the position where it will be processed first
+    else if the item that will be processed first is a resource in "visited"
+        put the savedEvent in the position where it will be processed first
+    for each of those items
+        if the item is not in "visited"
+            set "skip" to false
+            if the item is a dropoff event
+                if the event's resourceInventoriedAs is in "delivers"
+                    remove it from "delivers"
+                else
+                    set "skip" to true
+            else if the item is an modify event
+                if the event's resourceInventoriedAs is in "modifies"
+                    remove it from "modifies"
+                else
+                    set "skip" to true
+            else if the item is a separate event
+                if the event's resourceInventoriedAs is in "contains"
+                    remove it from "contains"
+                else
+                    set "skip" to true
+            else if the item is an combine event
+                add the resourceInventoriedAs to "contains"
+            else if the item is a accept event
+                add the resourceInventoriedAs to "modifies"
+            else if the item is a pickup event
+                add the resourceInventoriedAs to "delivers"
+            if "skip" is false
+                add the item to "visited"
+                add the item to "flows"
+                call track-depth-first-search
     return "flows"
 ```
 
