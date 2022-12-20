@@ -1,0 +1,25 @@
+# Official language image. Look for the different tagged releases at:
+# https://hub.docker.com/r/library/ruby/tags/
+image: "ruby:2.7"
+
+# Cache gems in between builds
+cache:
+  paths:
+    - vendor/ruby
+
+check-style:
+  before_script:
+  - ruby -v                                   # Print out ruby version for debugging
+  - gem install mdl                           # Installs the Markdown Linter (ruby based)
+  - mdl --version                             # Print out mdl version for debugging
+  allow_failure: true
+  script:
+  # Check Markdown style (excluding LICENSE.md)
+  - |
+    find . \
+      -type f \
+      -name "*.md" \
+      ! -name LICENSE.md \
+      -print0 \
+      | xargs -0 mdl -i -c .mdlrc
+
