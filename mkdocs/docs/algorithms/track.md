@@ -39,7 +39,7 @@ The "starting item" can be an EconomicResource or EconomicEvent.  If you want to
 
 ### Pseudocode
 
-The following is included to give some idea of the logic required.  It tries to cover all actions and scenarios, but is meant as a suggestion, and has not been thoroughly tested in code.  It is not meant to reflect code, for example "null" could be "nil" or "none", and "list" could be any collection.
+The following is included to give some idea of the logic required.  It is not meant to reflect code, for example "null" could be "nil" or "none", and "list" could be any collection.  It tries to cover all actions and scenarios, and has been tested in one installation, but is still meant as a suggestion.
 
 ```
 EconomicResource "previous":
@@ -125,7 +125,7 @@ trace-depth-first-search (parameters: "flows", "visited", "contained", "modified
 
 ### Pseudocode
 
-Again, the following is included to give some idea of the logic required.  It tries to cover all actions and scenarios, but is meant as a suggested starting point, it has not been tested in code.
+Again, the following is included to give some idea of the logic required.  It tries to cover all actions and scenarios, but is meant as a suggested starting point, it has *not* been tested in code, nor even desk-checked.  Rather it is a starting point that reverses the `trace` logic.  When it has been tested, we will update here.
 
 ```
 EconomicResource "next":
