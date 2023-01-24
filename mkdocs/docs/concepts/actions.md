@@ -88,3 +88,6 @@ Note: The actions `use` and `work` are time-based actions, either with or withou
 
 *In the above chart, the `notApplicable` values are not included, for easier overall viewing.  For the complete list of behavior values by action as defined in the rdf vocabulary, see the [turtle file starting here](https://lab.allmende.io/valueflows/valueflows/-/blob/master/release-doc-in-process/all_vf.TTL#L1113).
 
+### Saving Breadcrumbs for Track and Trace
+
+If you will be using the track or trace algorithms to find the connected value flows forwards or backwards, an additional field is needed when saving an event.  See [Breadcrumbs in the Track and Trace algorithm](../../algorithms/track#adding-breadcrumbs-on-initial-save) for the procedure.
