@@ -20,22 +20,22 @@ This example include agents (people and organizations) and their relationships.
   # Agents
 
   - '@id': https://alice.example/
-    '@type': foaf:Person
+    '@type': vf:Person
     name: Alice
     image: https://alice.example/avatar.png
     primaryLocation: https://somelocation.example
     skos:note: Alice is a mechanical engineer who likes to work in the fablab.
 
   - '@id': https://bob.example/
-    '@type': foaf:Person
+    '@type': vf:Person
     name: Bob
 
   - '@id': https://fablab.example/
-    '@type': org:Organization
+    '@type': vf:Organization
     name: Driftless Fablab
 
   - '@id': https://coop.example/
-    '@type': org:Organization
+    '@type': vf:Organization
     name: Community Tool Lending Coop
 
   # Roles

@@ -12,7 +12,7 @@ This document is not meant to imply that all of these named queries and filters 
 
 ## Observation layer
 
-### Agent (also subclasses Person, Organization)
+### Agent (also subclasses Person, Organization, EcologicalAgent)
 
 *main queries:*
 
