@@ -19,7 +19,7 @@
 <> a owl:Ontology;
     dcterms:title "Valueflows Ontology";
     dcterms:type <http://purl.org/adms/assettype/Ontology>;
-    owl:versionIRI </0.6/> ;
+    owl:versionIRI </0.7/> ;
     dcterms:status <http://purl.org/adms/status/UnderDevelopment>.
 
 
@@ -31,74 +31,74 @@
 
 vf:ResourceSpecification a  owl:Class ;
         rdfs:label          "Resource Specification"@en ;
-        vs:term_status      "testing" ;
-        rdfs:comment        "Specifies the kind of resource. Could define a material item, service, digital item, currency account, etc."@en ;
+        vs:term_status      "stable" ;
+        rdfs:comment        "Specifies the kind of resource, even if the resource is not instantiated as an EconomicResource. Could define a material item, service, digital item, currency account, skill or type of work, etc."@en ;
         .
 
 vf:ProcessSpecification a   owl:Class ;
         rdfs:label          "Process Specification"@en ;
-        vs:term_status      "unstable" ;
+        vs:term_status      "testing" ;
         rdfs:comment        "Specifies the kind of process."@en ;
         .
 
 vf:Action  a                owl:Class ;
         rdfs:label          "Action"@en ;
-        vs:term_status      "testing" ;
+        vs:term_status      "stable" ;
         rdfs:comment        "An action verb defining the kind of flow and its behavior."@en ;
         .
 
 vf:InputOutput a            owl:Class ;
         rdfs:comment        "The action is an input or output of a process, or not related to a process."@en ;
         rdfs:label          "Input/Output"@en ;
-        vs:term_status      "unstable" ;
+        vs:term_status      "testing" ;
         .
 
 vf:CreateResource a         owl:Class ;
         rdfs:comment        "The action can create an economic resource."@en ;
         rdfs:label          "Create Resource"@en ;
-        vs:term_status      "unstable" ;
+        vs:term_status      "testing" ;
         .
 
 vf:EventQuantity a          owl:Class ;
         rdfs:comment        "The action involves the event resource quantity, event quantity, or both."@en ;
         rdfs:label          "Event Quantity"@en ;
-        vs:term_status      "unstable" ;
+        vs:term_status      "testing" ;
         .
 
 vf:AccountingEffect a        owl:Class ;
         rdfs:comment        "The action has this effect on an inventoried resource accounting quantity."@en ;
         rdfs:label          "Accounting Effect"@en ;
-        vs:term_status      "unstable" ;
+        vs:term_status      "testing" ;
         .
 
 vf:OnhandEffect a           owl:Class ;
         rdfs:comment        "The action has this effect on an inventoried resource onhand quantity."@en ;
         rdfs:label          "Onhand Effect"@en ;
-        vs:term_status      "unstable" ;
+        vs:term_status      "testing" ;
         .
 
 vf:LocationEffect a         owl:Class ;
         rdfs:comment        "The action has this effect on an inventoried resource current location."@en ;
         rdfs:label          "Location Effect"@en ;
-        vs:term_status      "unstable" ;
+        vs:term_status      "testing" ;
         .
 
 vf:ContainedEffect a        owl:Class ;
         rdfs:comment        "The action has this effect on an inventoried resource contained in resource."@en ;
         rdfs:label          "Contained Effect"@en ;
-        vs:term_status      "unstable" ;
+        vs:term_status      "testing" ;
         .
 
 vf:AccountableEffect a      owl:Class ;
         rdfs:comment        "The action has this effect on an inventoried resource primary accountable agent."@en ;
         rdfs:label          "Accountable Effect"@en ;
-        vs:term_status      "unstable" ;
+        vs:term_status      "testing" ;
         .
 
 vf:StageEffect a            owl:Class ;
         rdfs:comment        "The action has this effect on an inventoried resource stage."@en ;
         rdfs:label          "Stage Effect"@en ;
-        vs:term_status      "unstable" ;
+        vs:term_status      "testing" ;
         .
 
 vf:StateEffect a            owl:Class ;
@@ -121,13 +121,13 @@ vf:RoleBehavior  a           owl:Class ;
 
 vf:RecipeResource a         owl:Class ;
         rdfs:label          "Recipe Resource"@en ;
-        vs:term_status      "unstable" ;
+        vs:term_status      "testing" ;
         rdfs:comment        "Specifies the resource as part of a recipe, for use in planning from recipe."@en ;
         .
 
 vf:RecipeProcess a          owl:Class ;
         rdfs:label          "Recipe Process"@en ;
-        vs:term_status      "unstable" ;
+        vs:term_status      "testing" ;
         rdfs:comment        "Specifies a process in a recipe for use in planning from recipe."@en ;
         .
 
@@ -160,19 +160,19 @@ vf:Plan  a                  owl:Class ;
 
 vf:Intent  a                owl:Class ;
         rdfs:label          "Intent"@en ;
-        vs:term_status      "unstable" ;
+        vs:term_status      "testing" ;
         rdfs:comment        "A proposed or planned or estimated economic flow, prior to a commitment or agreement, which can lead to commitments and/or economic events."@en ;
         .
 
 vf:Proposal  a              owl:Class ;
         rdfs:label          "Proposal"@en ;
-        vs:term_status      "unstable" ;
+        vs:term_status      "testing" ;
         rdfs:comment        "Published requests or offers, sometimes with what is expected in return."@en ;
         .
 
 vf:ProposedIntent  a        owl:Class ;
         rdfs:label          "Proposed Intent"@en ;
-        vs:term_status      "unstable" ;
+        vs:term_status      "testing" ;
         rdfs:comment        "Represents many-to-many relationships between Proposals and Intents, supporting including intents in multiple proposals, as well as a proposal including multiple intents."@en ;
         .
 
@@ -190,13 +190,13 @@ vf:Commitment  a            owl:Class ;
 
 vf:Satisfaction  a          owl:Class ;
         rdfs:label          "Satisfaction"@en ;
-        vs:term_status      "unstable" ;
+        vs:term_status      "testing" ;
         rdfs:comment        "Represents many-to-many relationships between intents and commitments or events that partially or full satisfy one or more intents."@en ;
         .
 
 vf:Agreement  a             owl:Class ;
         rdfs:label          "Agreement"@en ;
-        vs:term_status      "unstable" ;
+        vs:term_status      "testing" ;
         rdfs:comment        "Any type of agreement among economic agents."@en ;
         .
 
@@ -209,16 +209,43 @@ vf:Scenario  a              owl:Class ;
 
 # OBSERVATION LAYER CLASSES
 
+vf:Agent  a                 owl:Class ;
+        rdfs:label          "Agent"@en ;
+        vs:term_status      "stable" ;
+        rdfs:comment        "An entity that can perform economic and ecological actions under its own power or authority."@en ;
+        .
+
+vf:Person  a                owl:Class ;
+        rdfs:label          "Person"@en ;
+        rdfs:subClassOf     vf:Agent ;
+        vs:term_status      "stable" ;
+        rdfs:comment        "A human being. All people are considered agents."@en ;
+        .
+
+vf:Organization  a          owl:Class ;
+        rdfs:label          "Organization"@en ;
+        rdfs:subClassOf     vf:Agent ;
+        vs:term_status      "stable" ;
+        rdfs:comment        "A functional structure, formal or informal, which can include people and/or other organizations, and has its own agency.  Something called a group is an Organization in Valueflows if it has its own agency."@en ;
+        .
+
+vf:EcologicalAgent  a       owl:Class ;
+        rdfs:label          "Ecological Agent"@en ;
+        rdfs:subClassOf     vf:Agent ;
+        vs:term_status      "testing" ;
+        rdfs:comment        "A non-human agent, or a functional group or ecosystem of living beings that includes non-humans."@en ;
+        .
+
 vf:EconomicResource  a      owl:Class ;
         rdfs:label          "Economic Resource"@en ;
         vs:term_status      "stable" ;
-        rdfs:comment        "A resource which is useful to people or the ecosystem."@en ;
+        rdfs:comment        "Economic or environmental inputs to or outputs from processes."@en ;
         .
 
 vf:Process  a               owl:Class ;
         rdfs:label          "Process"@en ;
         vs:term_status      "stable" ;
-        rdfs:comment        "An activity that changes inputs into outputs.  It could transform or transport economic resource(s)."@en ;
+        rdfs:comment        "An activity that changes inputs into outputs, by transforming or transporting economic resource(s)."@en ;
         .
 
 vf:EconomicEvent  a         owl:Class ;
@@ -247,7 +274,7 @@ vf:Claim  a                 owl:Class ;
 
 vf:Settlement  a            owl:Class ;
         rdfs:label          "Settlement"@en ;
-        vs:term_status      "unstable" ;
+        vs:term_status      "testing" ;
         rdfs:comment        "Represents many-to-many relationships between claim and economic events that fully or partially settle one or more claims."@en ;
         .
 
@@ -381,7 +408,7 @@ vf:appreciationWith
 vf:provider  a              owl:ObjectProperty ;
         rdfs:domain         [ owl:unionOf (vf:EconomicEvent vf:Commitment vf:Intent vf:Claim) ] ;
         rdfs:label          "provider"@en ;
-        rdfs:range          foaf:Agent ;
+        rdfs:range          vf:Agent ;
         vs:term_status      "testing" ;
         rdfs:comment        "The economic agent from whom the intended, committed, or actual economic event is initiated."@en ;
         .
@@ -389,7 +416,7 @@ vf:provider  a              owl:ObjectProperty ;
 vf:receiver  a              owl:ObjectProperty ;
         rdfs:domain         [ owl:unionOf (vf:EconomicEvent vf:Commitment vf:Intent vf:Claim) ] ;
         rdfs:label          "receiver"@en ;
-        rdfs:range          foaf:Agent ;
+        rdfs:range          vf:Agent ;
         vs:term_status      "testing" ;
         rdfs:comment        "The economic agent whom the intended, committed, or actual economic event is for."@en ;
         .
@@ -397,7 +424,7 @@ vf:receiver  a              owl:ObjectProperty ;
 vf:subject  a               owl:ObjectProperty ;
         rdfs:domain         vf:AgentRelationship ;
         rdfs:label          "subject"@en ;
-        rdfs:range          foaf:Agent ;
+        rdfs:range          vf:Agent ;
         vs:term_status      "testing" ;
         rdfs:comment        "The subject of a relationship between 2 agents.  For example, if Mary is a member of a group, then Mary is the subject."@en ;
         .
@@ -405,7 +432,7 @@ vf:subject  a               owl:ObjectProperty ;
 vf:object  a                owl:ObjectProperty ;
         rdfs:domain         vf:AgentRelationship ;
         rdfs:label          "object"@en ;
-        rdfs:range          foaf:Agent ;
+        rdfs:range          vf:Agent ;
         vs:term_status      "testing" ;
         rdfs:comment        "The object of a relationship between 2 agents.  For example, if Mary is a member of a group, then the group is the object."@en ;
         .
@@ -461,7 +488,7 @@ vf:containedIn a            owl:ObjectProperty ;
 vf:primaryAccountable a      owl:ObjectProperty ;
         rdfs:label          "primary accountable"@en ;
         rdfs:domain         vf:EconomicResource ;
-        rdfs:range          foaf:Agent ;
+        rdfs:range          vf:Agent ;
         vs:term_status      "unstable" ;
         rdfs:comment        "The agent currently with primary rights and responsibilites for the economic resource. It is the agent that is associated with the accountingQuantity of the economic resource."@en ;
         .
@@ -614,7 +641,7 @@ vf:currentVirtualLocation a owl:DatatypeProperty ;
 
 vf:primaryLocation a        owl:ObjectProperty ;
         rdfs:label          "primary location"@en ;
-        rdfs:domain         foaf:Agent ;
+        rdfs:domain         vf:Agent ;
         rdfs:range          geo:SpatialThing ;
         vs:term_status      "unstable" ;
         rdfs:comment        "The main place an agent is located, often an address where activities occur and mail can be sent. This is usually a mappable geographic location.  It also could be a website address, as in the case of agents who have no physical location."@en ;
@@ -648,7 +675,7 @@ vf:image a                  owl:DatatypeProperty ;
         vs:term_status      "unstable" ;
         rdfs:label          "image"@en ;
         rdfs:domain         [ owl:unionOf (
-                                foaf:Agent
+                                vf:Agent
                                 vf:EconomicEvent
                                 vf:EconomicResource
                                 vf:Intent
@@ -681,7 +708,7 @@ vf:name a                   owl:DatatypeProperty ;
         rdfs:range          xsd:string ;
         rdfs:domain         [ owl:unionOf (
                                 geo:SpatialThing
-                                foaf:Agent
+                                vf:Agent
                                 vf:Agreement
                                 vf:EconomicResource
                                 vf:Plan
@@ -701,7 +728,7 @@ vf:name a                   owl:DatatypeProperty ;
 skos:note
         rdfs:domain         [ owl:unionOf (
                                 geo:SpatialThing
-                                foaf:Agent
+                                vf:Agent
                                 vf:AgentRelationship
                                 vf:AgentRelationshipRole
                                 vf:Agreement
@@ -809,7 +836,7 @@ vf:proposedTo
         a                   owl:ObjectProperty ;
         rdfs:label          "proposed to"@en ;
         rdfs:domain         vf:ProposedTo ;
-        rdfs:range          foaf:Agent ;
+        rdfs:range          vf:Agent ;
         vs:term_status      "unstable" ;
         rdfs:comment        "The agent to which the proposal is published."@en ;
         .

@@ -12,21 +12,13 @@ This diagram includes all elements necessary for a complete REA-based core econo
 
 The Agent subject area defines roles in the Knowledge Layer and defines agents and their relationships in the Observation Layer.  More info at [Agent concepts](../concepts/agents.md).
 
-#### foaf:Agent
+#### vf:Agent
 
-The Valueflows view of Agent is fairly broad, including people, organizations (formal or informal), and (coming soon) ecological agents such as non-human beings and ecosystems.  But all of these have economic or governance agency of some sort.
-
-Unlike foaf, Valueflows will be including non-human agents.  Also unlike foaf, Valueflows does not include software agents, at least at this point.
+The Valueflows view of Agent is fairly broad, including people, organizations (formal or informal), and ecological agents such as non-human beings and ecosystems.  But all of these have economic or governance agency of some sort.
 
 Agents are key to the overall ontology, particularly the flows in Planning and Observation: Intents, Commitments, EconomicEvents, Claims, where each can reference a provider and receiver Agent. Proposals can be published to Agent(s), and Agents can have many AgentRelationships with other Agents of any type.
 
-#### foaf:Person
-
-This is a real human being, a type of Agent.  A Person can have user accounts and credentials (not defined as part of VF). 
-
-#### org:Organization
-
-This is an organization or group or network, from large to small, formal to informal, a type of Agent.
+There are 3 subclasses of Agent: **Person**, **Organization**, and **EcologicalAgent**.
 
 #### vf:AgentRelationship
 
