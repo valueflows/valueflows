@@ -18,7 +18,7 @@ The Valueflows view of Agent is fairly broad, including people, organizations (f
 
 Agents are key to the overall ontology, particularly the flows in Planning and Observation: Intents, Commitments, EconomicEvents, Claims, where each can reference a provider and receiver Agent. Proposals can be published to Agent(s), and Agents can have many AgentRelationships with other Agents of any type.
 
-There are 3 subclasses of Agent: **Person**, **Organization**, and **EcologicalAgent**.
+There are 3 subclasses of Agent: **vf:Person**, **vf:Organization**, and **vf:EcologicalAgent**.
 
 #### vf:AgentRelationship
 
