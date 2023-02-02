@@ -779,6 +779,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#correcting-events" class="md-nav__link">
+    Correcting Events
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1484,6 +1491,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#correcting-events" class="md-nav__link">
+    Correcting Events
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1550,6 +1564,8 @@
 <p>Sometimes a quantity is expressed in time-based units, like "I worked 6 hours", or "we used this machine for 8 hours".  These flows also will have a related time, like "I worked from 10am to 4pm", or "we used this machine from 8am to 4pm". In these examples, the quantity is used for accounting figures, exchange, recipes.  The time is used to schedule and coordinate the work or machine usage.</p>
 <p>Sometimes a situation may call for a "compound quantity", like "Number-per-Year".</p>
 <p>Display note: The OM2 ontology defines a Unit called <code>one</code> that is used for one-dimensional units.  This is confusing for many economic applications, where something like <code>each</code> would be used, or nothing at all.  We recommend that user interfaces handle this by not displaying the unit <code>one</code> where it would be confusing, or substituting a more applicable name.</p>
+<h2 id="correcting-events">Correcting Events</h2>
+<p>Economic events are immutable in accounting practice, since at any time they could have been reported formally.  Do correct an economic event, you need another economic event, which can be related to the first one with the relationship <code>corrects</code>.  The correcting event can have a negative number.  It can either completely back out the original event or adjust it.</p>
 
 
 
