@@ -461,6 +461,14 @@ vf:triggeredBy  a           owl:ObjectProperty ;
         rdfs:comment        "References an economic event that implied the claim or event, often based on a prior agreement."@en ;
         .
 
+vf:corrects  a              owl:ObjectProperty ;
+        rdfs:label          "corrects"@en ;
+        rdfs:domain         vf:EconomicEvent ;
+        rdfs:range          vf:EconomicEvent ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "Used when an event was entered incorrectly and needs to be backed out or corrected. (The initial event cannot be changed.)"@en ;
+        .
+
 vf:settles  a               owl:ObjectProperty ;
         rdfs:label          "settles"@en ;
         rdfs:domain         vf:Settlement ;

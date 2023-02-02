@@ -77,3 +77,7 @@ Sometimes a quantity is expressed in time-based units, like "I worked 6 hours", 
 Sometimes a situation may call for a "compound quantity", like "Number-per-Year".
 
 Display note: The OM2 ontology defines a Unit called `one` that is used for one-dimensional units.  This is confusing for many economic applications, where something like `each` would be used, or nothing at all.  We recommend that user interfaces handle this by not displaying the unit `one` where it would be confusing, or substituting a more applicable name.
+
+## Correcting Events
+
+Economic events are immutable in accounting practice, since at any time they could have been reported formally.  Do correct an economic event, you need another economic event, which can be related to the first one with the relationship `corrects`.  The correcting event can have a negative number.  It can either completely back out the original event or adjust it.
