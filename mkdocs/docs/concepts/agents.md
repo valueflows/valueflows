@@ -8,7 +8,7 @@ Subclasses:
 * Organizations include formal or informal organizations of all kinds. This also includes groups, as long as they consider themselves to have some agency as a group.
 * The ecological agent concept is added to expand the scope of REA to do ecological and climate accounting, including impact of various resources on agents in the environment.
 
-(The concept of "Agent" could also in the future include software agents, but this is controversial.)
+(The concept of "Agent" could also in the future include software/AI-based agents(bots, self-driving vehicles, etc.), but this is controversial and somewhat complex.)
 
 In Valueflows, we are talking about economic agents, agents who can create or modify or exchange value, and make agreements with each other - who have economic agency.  Adding the class Ecological Agent also expands the concept of "economic", bringing that kind of activity and impact, and even agency, out to the whole ecosystem, not just the human one.
 

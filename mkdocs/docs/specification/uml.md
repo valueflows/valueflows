@@ -18,7 +18,7 @@ The Valueflows view of Agent is fairly broad, including people, organizations (f
 
 Agents are key to the overall ontology, particularly the flows in Planning and Observation: Intents, Commitments, EconomicEvents, Claims, where each can reference a provider and receiver Agent. Proposals can be published to Agent(s), and Agents can have many AgentRelationships with other Agents of any type.
 
-There are 3 subclasses of Agent: **Person**, **Organization**, and **EcologicalAgent**.
+There are 3 subclasses of Agent: **vf:Person**, **vf:Organization**, and **vf:EcologicalAgent**.
 
 #### vf:AgentRelationship
 
@@ -156,7 +156,7 @@ See the operational Process defined in the Planning subject area.  Operational P
 
 #### vf:EconomicEvent
 
-An EconomicEvent is the "real" flow.  Its behavior is governed by its Action.  It actually affects an EconomicResource if one is defined as inventoried in the EconomicEvent, possibly including quantities, location, primary accountable, stage, state, containment.  EconomicEvent always has a provider and receiver Agent, and can be input or output of a Process, and/or part of an Agreement.  An EconomicEvent knows its resource, either an EconomicResource or a ResourceSpecification.  In some actions, for example transfers and moves, there can also be another EconomicResource on the receiver side.  EconomicEvents can fulfill Commitments or satisfy Intents (where there is no Commitment) or settle Claims.  An EconomicEvent can be triggered by another EconomicEvent, for example a transfer of accountability triggered by a receipt of a resource.
+An EconomicEvent is the "real" flow.  Its behavior is governed by its Action.  It actually affects an EconomicResource if one is defined as inventoried in the EconomicEvent, possibly including quantities, location, primary accountable, stage, state, containment.  EconomicEvent always has a provider and receiver Agent, and can be input or output of a Process, and/or part of an Agreement.  An EconomicEvent knows its resource, either an EconomicResource or a ResourceSpecification.  In some actions, for example transfers and moves, there can also be another EconomicResource on the receiver side.  EconomicEvents can fulfill Commitments or satisfy Intents (where there is no Commitment) or settle Claims.  An EconomicEvent can be triggered by another EconomicEvent, for example a transfer of accountability triggered by a receipt of a resource.  An EconomicEvent can correct a previous EconomicEvent, or back it out completely.
 
 #### vf:Fulfillment
 

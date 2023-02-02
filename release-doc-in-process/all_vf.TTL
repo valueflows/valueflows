@@ -212,7 +212,7 @@ vf:Scenario  a              owl:Class ;
 vf:Agent  a                 owl:Class ;
         rdfs:label          "Agent"@en ;
         vs:term_status      "stable" ;
-        rdfs:comment        "An entity that can perform economic and ecological actions under its own power or authority."@en ;
+        rdfs:comment        "An entity that can commit to and/or perform economic and/or ecological activity under its own power or authority."@en ;
         .
 
 vf:Person  a                owl:Class ;
@@ -233,7 +233,7 @@ vf:EcologicalAgent  a       owl:Class ;
         rdfs:label          "Ecological Agent"@en ;
         rdfs:subClassOf     vf:Agent ;
         vs:term_status      "testing" ;
-        rdfs:comment        "A non-human agent, or a functional group or ecosystem of living beings that includes non-humans."@en ;
+        rdfs:comment        "A non-human being; or a functional group of non-human beings; or an ecosystem of living beings that includes non-humans."@en ;
         .
 
 vf:EconomicResource  a      owl:Class ;
@@ -459,6 +459,14 @@ vf:triggeredBy  a           owl:ObjectProperty ;
         rdfs:range          vf:EconomicEvent ;
         vs:term_status      "unstable" ;
         rdfs:comment        "References an economic event that implied the claim or event, often based on a prior agreement."@en ;
+        .
+
+vf:corrects  a              owl:ObjectProperty ;
+        rdfs:label          "corrects"@en ;
+        rdfs:domain         vf:EconomicEvent ;
+        rdfs:range          vf:EconomicEvent ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "Used when an event was entered incorrectly and needs to be backed out or corrected. (The initial event cannot be changed.)"@en ;
         .
 
 vf:settles  a               owl:ObjectProperty ;
@@ -910,7 +918,7 @@ vf:basedOn
 vf:classifiedAs
         a                   owl:ObjectProperty ;
         rdfs:label          "classified as"@en ;
-        rdfs:domain         [ owl:unionOf (vf:Process vf:EconomicResource org:Organization) ] ;
+        rdfs:domain         [ owl:unionOf (vf:Process vf:EconomicResource vf:Organization vf:EcologicalAgent) ] ;
         rdfs:range          owl:Thing ;
         vs:term_status      "unstable" ;
         rdfs:comment        "References one or more concepts in a common taxonomy or other classification scheme for purposes of categorization or grouping."@en ;
