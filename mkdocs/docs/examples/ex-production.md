@@ -763,7 +763,7 @@ Simple assembly and testing showing use of stage and state.
 
 ```
 
-#### Manufacturing
+#### Correcting
 
 Simple one-process manufacturing with corrections.
 
@@ -924,4 +924,5 @@ Simple one-process manufacturing with corrections.
     hasPointInTime: 2019-04-08T17:30:00-5:00
     created: 2019-04-08T18:02:00-5:00
 
- ```
+```
+
