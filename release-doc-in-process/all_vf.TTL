@@ -616,7 +616,7 @@ vf:unitBased  a             owl:DatatypeProperty ;
         .
 
 dcterms:created
-        rdfs:domain         [ owl:unionOf (vf:Agreement vf:Claim vf:Commitment vf:Plan vf:Proposal) ] ;
+        rdfs:domain         [ owl:unionOf ( vf:Agreement vf:Claim vf:Commitment vf:Plan vf:Proposal vf:EconomicEvent ) ] ;
         .
 
 geo:long

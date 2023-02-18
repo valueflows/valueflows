@@ -1008,6 +1008,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#correcting" class="md-nav__link">
+    Correcting
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1390,6 +1397,13 @@
         <li class="md-nav__item">
   <a href="#stage-and-state" class="md-nav__link">
     Stage and state
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#correcting" class="md-nav__link">
+    Correcting
   </a>
   
 </li>
@@ -2147,6 +2161,163 @@
 <span class="w">      </span><span class="nt">om2:hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
 <span class="w">    </span><span class="nt">stage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:02b39a30-3e04-4305-9656-7f261aa63c98</span><span class="w"> </span><span class="c1"># test machine</span>
 <span class="w">    </span><span class="nt">state</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pass</span>
+</code></pre></div>
+<h4 id="correcting">Correcting</h4>
+<p>Simple one-process manufacturing with corrections.</p>
+<p><img alt="correction diagram" src="../../assets/examples/correction.png" /></p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Example: Correcting an error</span>
+
+<span class="s">&#39;@context&#39;</span><span class="p p-Indicator">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://git.io/vf-examples-jsonld-context</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">alice</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://alice.example/</span>
+<span class="w">    </span><span class="nt">mfg</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
+
+<span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rgh:valueflows/valueflows/master/examples/correction.yaml</span>
+<span class="s">&#39;@graph&#39;</span><span class="p p-Indicator">:</span>
+
+<span class="w">  </span><span class="c1"># Before corrections</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:02b39a30-3e04-4305-9656-7f261aa63c84</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Process</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Make the lean desk</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:b52a5815-fae9-43bf-be95-833b95dc0adb</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EconomicEvent</span>
+<span class="w">    </span><span class="nt">inputOf</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:02b39a30-3e04-4305-9656-7f261aa63c84</span>
+<span class="w">    </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">consume</span>
+<span class="w">    </span><span class="nt">provider</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
+<span class="w">    </span><span class="nt">receiver</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
+<span class="w">    </span><span class="nt">resourceInventoriedAs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:3129ca8b-fcda-45be-bbda-294dc924d3b9</span><span class="w"> </span><span class="c1"># plywood sheets</span>
+<span class="w">    </span><span class="nt">resourceQuantity</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">om2:hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">om2:one</span>
+<span class="w">      </span><span class="nt">om2:hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
+<span class="w">    </span><span class="nt">hasPointInTime</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2019-04-08T10:00:00-5:00</span>
+<span class="w">    </span><span class="nt">created</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2019-04-08T18:00:00-5:00</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:6f438393-7f87-4914-806c-e23a4fd15e89</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EconomicEvent</span>
+<span class="w">    </span><span class="nt">inputOf</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:02b39a30-3e04-4305-9656-7f261aa63c84</span>
+<span class="w">    </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">work</span>
+<span class="w">    </span><span class="nt">provider</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://alice.example/</span>
+<span class="w">    </span><span class="nt">receiver</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
+<span class="w">    </span><span class="nt">resourceClassifiedAs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://www.wikidata.org/wiki/Q192047</span><span class="w"> </span><span class="c1"># machining</span>
+<span class="w">    </span><span class="nt">effortQuantity</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">om2:hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">om2:hour</span>
+<span class="w">      </span><span class="nt">om2:hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">7</span>
+<span class="w">    </span><span class="nt">hasBeginning</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2019-04-08T10:30:00-5:00</span>
+<span class="w">    </span><span class="nt">hasEnd</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2019-04-08T16:30:00-5:00</span>
+<span class="w">    </span><span class="nt">created</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2019-04-08T18:00:00-5:00</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:d4d2fd71-34f2-41c3-b1c5-19ad5ed2da59</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EconomicEvent</span>
+<span class="w">    </span><span class="nt">outputOf</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:02b39a30-3e04-4305-9656-7f261aa63c84</span>
+<span class="w">    </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">produce</span>
+<span class="w">    </span><span class="nt">provider</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
+<span class="w">    </span><span class="nt">receiver</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
+<span class="w">    </span><span class="nt">resourceInventoriedAs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:e1721a61-cd47-4556-84b9-8b1b81da15bf</span><span class="w"> </span><span class="c1"># desk</span>
+<span class="w">    </span><span class="nt">resourceQuantity</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">om2:hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">om2:one</span>
+<span class="w">      </span><span class="nt">om2:hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">    </span><span class="nt">hasPointInTime</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2019-04-08T17:30:00-5:00</span>
+<span class="w">    </span><span class="nt">created</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2019-04-08T18:02:00-5:00</span>
+
+<span class="w">  </span><span class="c1"># After corrections</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:02b39a30-3e04-4305-9656-7f261aa63c84</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Process</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Make the lean desk</span>
+
+<span class="w">  </span><span class="c1"># original consume event</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:b52a5815-fae9-43bf-be95-833b95dc0adb</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EconomicEvent</span>
+<span class="w">    </span><span class="nt">inputOf</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:02b39a30-3e04-4305-9656-7f261aa63c84</span>
+<span class="w">    </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">consume</span>
+<span class="w">    </span><span class="nt">provider</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
+<span class="w">    </span><span class="nt">receiver</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
+<span class="w">    </span><span class="nt">resourceInventoriedAs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:3129ca8b-fcda-45be-bbda-294dc924d3b9</span><span class="w"> </span><span class="c1"># plywood sheets</span>
+<span class="w">    </span><span class="nt">resourceQuantity</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">om2:hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">om2:one</span>
+<span class="w">      </span><span class="nt">om2:hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
+<span class="w">    </span><span class="nt">hasPointInTime</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2019-04-08T10:00:00-5:00</span>
+<span class="w">    </span><span class="nt">created</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2019-04-08T18:00:00-5:00</span>
+
+<span class="w">  </span><span class="c1"># the consume event is backed out completely and a new event entered to replace it</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:b52a5815-fae9-43bf-be95-833b95dc0sdf</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EconomicEvent</span>
+<span class="w">    </span><span class="nt">inputOf</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:02b39a30-3e04-4305-9656-7f261aa63c84</span>
+<span class="w">    </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">consume</span>
+<span class="w">    </span><span class="nt">provider</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
+<span class="w">    </span><span class="nt">receiver</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
+<span class="w">    </span><span class="nt">resourceInventoriedAs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:3129ca8b-fcda-45be-bbda-294dc924d3b9</span><span class="w"> </span><span class="c1"># plywood sheets</span>
+<span class="w">    </span><span class="nt">resourceQuantity</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">om2:hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">om2:one</span>
+<span class="w">      </span><span class="nt">om2:hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">-3</span>
+<span class="w">    </span><span class="nt">hasPointInTime</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2019-04-08T18:00:00-5:00</span>
+<span class="w">    </span><span class="nt">created</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2019-04-08T18:00:00-5:00</span>
+<span class="w">    </span><span class="nt">corrects</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:b52a5815-fae9-43bf-be95-833b95dc0adb</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:b52a5815-fae9-43bf-be95-833b95dc0yu8</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EconomicEvent</span>
+<span class="w">    </span><span class="nt">inputOf</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:02b39a30-3e04-4305-9656-7f261aa63c84</span>
+<span class="w">    </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">consume</span>
+<span class="w">    </span><span class="nt">provider</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
+<span class="w">    </span><span class="nt">receiver</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
+<span class="w">    </span><span class="nt">resourceInventoriedAs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:3129ca8b-fcda-45be-bbda-294dc924d3b9</span><span class="w"> </span><span class="c1"># plywood sheets</span>
+<span class="w">    </span><span class="nt">resourceQuantity</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">om2:hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">om2:one</span>
+<span class="w">      </span><span class="nt">om2:hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5</span>
+<span class="w">    </span><span class="nt">hasPointInTime</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2019-04-08T10:00:00-5:00</span>
+<span class="w">    </span><span class="nt">created</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2019-04-08T18:01:00-5:00</span>
+
+<span class="w">  </span><span class="c1"># original work event</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:6f438393-7f87-4914-806c-e23a4fd15e89</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EconomicEvent</span>
+<span class="w">    </span><span class="nt">inputOf</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:02b39a30-3e04-4305-9656-7f261aa63c84</span>
+<span class="w">    </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">work</span>
+<span class="w">    </span><span class="nt">provider</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://alice.example/</span>
+<span class="w">    </span><span class="nt">receiver</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
+<span class="w">    </span><span class="nt">resourceClassifiedAs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://www.wikidata.org/wiki/Q192047</span><span class="w"> </span><span class="c1"># machining</span>
+<span class="w">    </span><span class="nt">effortQuantity</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">om2:hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">om2:hour</span>
+<span class="w">      </span><span class="nt">om2:hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">7</span>
+<span class="w">    </span><span class="nt">hasBeginning</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2019-04-08T10:30:00-5:00</span>
+<span class="w">    </span><span class="nt">hasEnd</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2019-04-08T16:30:00-5:00</span>
+<span class="w">    </span><span class="nt">created</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2019-04-08T18:00:00-5:00</span>
+
+<span class="w">  </span><span class="c1"># the work event is corrected without backing it out completely</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:6f438393-7f87-4914-806c-e23a4fd158uj</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EconomicEvent</span>
+<span class="w">    </span><span class="nt">inputOf</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:02b39a30-3e04-4305-9656-7f261aa63c84</span>
+<span class="w">    </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">work</span>
+<span class="w">    </span><span class="nt">provider</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://alice.example/</span>
+<span class="w">    </span><span class="nt">receiver</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
+<span class="w">    </span><span class="nt">resourceClassifiedAs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://www.wikidata.org/wiki/Q192047</span><span class="w"> </span><span class="c1"># machining</span>
+<span class="w">    </span><span class="nt">effortQuantity</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">om2:hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">om2:hour</span>
+<span class="w">      </span><span class="nt">om2:hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">-1</span>
+<span class="w">    </span><span class="nt">hasBeginning</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2019-04-08T10:30:00-5:00</span>
+<span class="w">    </span><span class="nt">hasEnd</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2019-04-08T16:30:00-5:00</span>
+<span class="w">    </span><span class="nt">created</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2019-04-08T18:00:00-5:00</span>
+<span class="w">    </span><span class="nt">corrects</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:6f438393-7f87-4914-806c-e23a4fd15e89</span>
+
+<span class="w">  </span><span class="c1"># the produce event is not corrected</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:d4d2fd71-34f2-41c3-b1c5-19ad5ed2da59</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EconomicEvent</span>
+<span class="w">    </span><span class="nt">outputOf</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:02b39a30-3e04-4305-9656-7f261aa63c84</span>
+<span class="w">    </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">produce</span>
+<span class="w">    </span><span class="nt">provider</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
+<span class="w">    </span><span class="nt">receiver</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
+<span class="w">    </span><span class="nt">resourceInventoriedAs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:e1721a61-cd47-4556-84b9-8b1b81da15bf</span><span class="w"> </span><span class="c1"># desk</span>
+<span class="w">    </span><span class="nt">resourceQuantity</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">om2:hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">om2:one</span>
+<span class="w">      </span><span class="nt">om2:hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">    </span><span class="nt">hasPointInTime</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2019-04-08T17:30:00-5:00</span>
+<span class="w">    </span><span class="nt">created</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2019-04-08T18:02:00-5:00</span>
 </code></pre></div>
 
 
