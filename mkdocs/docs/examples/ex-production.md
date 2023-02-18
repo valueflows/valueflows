@@ -763,9 +763,9 @@ Simple assembly and testing showing use of stage and state.
 
 ```
 
-#### Correcting
+#### Correcting errors
 
-Simple one-process manufacturing with corrections.
+Simple one-process manufacturing with corrections.  Note that the diagram below shows the actual data.  If a use case calls for it, the events can be combined on the UI so that a "corrected" event would be displayed, for example just "work: 6 hours" and "consume: 5 plywood sheets" as the two inputs to this process.
 
 ![correction diagram](../assets/examples/correction.png)
 
