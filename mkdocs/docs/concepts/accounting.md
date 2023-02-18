@@ -41,3 +41,13 @@ The difference between doing it procedurally and doing it declaratively:
 
 * A procedural program defines a step-by-step method of getting the desired results.
 * A declarative program describes the desired results and hands it to another program that can generate the desired results from your description. The person who desires the results writes much less code.
+
+## Making Corrections
+
+It is standard accounting practice that recorded activity that affect financial and other accounting reports cannot be changed directly in case of error.  That is because one cannot tell when reports could have been published containing that data, and many financial reports cannot be amended.
+
+Valueflows allows for correction of an economic event with another economic event, which should be recorded with a `corrects` relationship to the original event.  This gives flexibility to display the event as corrected, or as separate events, as desired.  The quantity should be the amount to be added or subtracted from the original event quantity.  So this works differently than the increment/decrement rules, and will be the only time negative quantities can be used.  It is not required, but is often customary to completely "back out" the original record (i.e. if the quantity was 10, then the quantity of the correction record is -10, as of the date corrected), then the original event can be re-entered correctly with the earlier correct date. Both records would use the `corrects` relationship so the original d  Alternatively, the correction event could just record the difference, as of the date of correction, and linking to the original.
+
+If the original event was input to or output of a process, or was part of an agreement, then the correction event should contain those same relationships so it will appear embedded into the flow(s) where it belongs.  The correction event should be recorded as of the date of the correction though.
+
+All events should record the date and time the event was stored as data also, as this may be used in periodic reports to keep the events filtered properly without missing or double counting anything.

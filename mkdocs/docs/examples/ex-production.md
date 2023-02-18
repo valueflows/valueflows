@@ -762,3 +762,166 @@ Simple assembly and testing showing use of stage and state.
     state: pass
 
 ```
+
+#### Manufacturing
+
+Simple one-process manufacturing with corrections.
+
+![correction diagram](../assets/examples/correction.png)
+
+``` yaml
+# Example: Correcting an error
+
+'@context':
+  - https://git.io/vf-examples-jsonld-context
+  - alice: https://alice.example/
+    mfg: https://manufacturing.example/
+
+'@id': rgh:valueflows/valueflows/master/examples/correction.yaml
+'@graph':
+
+  # Before corrections
+
+  - '@id': mfg:02b39a30-3e04-4305-9656-7f261aa63c84
+    '@type': Process
+    name: Make the lean desk
+
+  - '@id': mfg:b52a5815-fae9-43bf-be95-833b95dc0adb
+    '@type': EconomicEvent
+    inputOf: mfg:02b39a30-3e04-4305-9656-7f261aa63c84
+    action: consume
+    provider: https://manufacturing.example/
+    receiver: https://manufacturing.example/
+    resourceInventoriedAs: mfg:3129ca8b-fcda-45be-bbda-294dc924d3b9 # plywood sheets
+    resourceQuantity:
+      om2:hasUnit: om2:one
+      om2:hasNumericalValue: 3
+    hasPointInTime: 2019-04-08T10:00:00-5:00
+    created: 2019-04-08T18:00:00-5:00
+
+  - '@id': mfg:6f438393-7f87-4914-806c-e23a4fd15e89
+    '@type': EconomicEvent
+    inputOf: mfg:02b39a30-3e04-4305-9656-7f261aa63c84
+    action: work
+    provider: https://alice.example/
+    receiver: https://manufacturing.example/
+    resourceClassifiedAs: https://www.wikidata.org/wiki/Q192047 # machining
+    effortQuantity:
+      om2:hasUnit: om2:hour
+      om2:hasNumericalValue: 7
+    hasBeginning: 2019-04-08T10:30:00-5:00
+    hasEnd: 2019-04-08T16:30:00-5:00
+    created: 2019-04-08T18:00:00-5:00
+
+  - '@id': mfg:d4d2fd71-34f2-41c3-b1c5-19ad5ed2da59
+    '@type': EconomicEvent
+    outputOf: mfg:02b39a30-3e04-4305-9656-7f261aa63c84
+    action: produce
+    provider: https://manufacturing.example/
+    receiver: https://manufacturing.example/
+    resourceInventoriedAs: mfg:e1721a61-cd47-4556-84b9-8b1b81da15bf # desk
+    resourceQuantity:
+      om2:hasUnit: om2:one
+      om2:hasNumericalValue: 1
+    hasPointInTime: 2019-04-08T17:30:00-5:00
+    created: 2019-04-08T18:02:00-5:00
+
+  # After corrections
+
+  - '@id': mfg:02b39a30-3e04-4305-9656-7f261aa63c84
+    '@type': Process
+    name: Make the lean desk
+
+  # original consume event
+
+  - '@id': mfg:b52a5815-fae9-43bf-be95-833b95dc0adb
+    '@type': EconomicEvent
+    inputOf: mfg:02b39a30-3e04-4305-9656-7f261aa63c84
+    action: consume
+    provider: https://manufacturing.example/
+    receiver: https://manufacturing.example/
+    resourceInventoriedAs: mfg:3129ca8b-fcda-45be-bbda-294dc924d3b9 # plywood sheets
+    resourceQuantity:
+      om2:hasUnit: om2:one
+      om2:hasNumericalValue: 3
+    hasPointInTime: 2019-04-08T10:00:00-5:00
+    created: 2019-04-08T18:00:00-5:00
+
+  # the consume event is backed out completely and a new event entered to replace it
+
+  - '@id': mfg:b52a5815-fae9-43bf-be95-833b95dc0sdf
+    '@type': EconomicEvent
+    inputOf: mfg:02b39a30-3e04-4305-9656-7f261aa63c84
+    action: consume
+    provider: https://manufacturing.example/
+    receiver: https://manufacturing.example/
+    resourceInventoriedAs: mfg:3129ca8b-fcda-45be-bbda-294dc924d3b9 # plywood sheets
+    resourceQuantity:
+      om2:hasUnit: om2:one
+      om2:hasNumericalValue: -3
+    hasPointInTime: 2019-04-08T18:00:00-5:00
+    created: 2019-04-08T18:00:00-5:00
+    corrects: mfg:b52a5815-fae9-43bf-be95-833b95dc0adb
+
+  - '@id': mfg:b52a5815-fae9-43bf-be95-833b95dc0yu8
+    '@type': EconomicEvent
+    inputOf: mfg:02b39a30-3e04-4305-9656-7f261aa63c84
+    action: consume
+    provider: https://manufacturing.example/
+    receiver: https://manufacturing.example/
+    resourceInventoriedAs: mfg:3129ca8b-fcda-45be-bbda-294dc924d3b9 # plywood sheets
+    resourceQuantity:
+      om2:hasUnit: om2:one
+      om2:hasNumericalValue: 5
+    hasPointInTime: 2019-04-08T10:00:00-5:00
+    created: 2019-04-08T18:01:00-5:00
+
+  # original work event
+
+  - '@id': mfg:6f438393-7f87-4914-806c-e23a4fd15e89
+    '@type': EconomicEvent
+    inputOf: mfg:02b39a30-3e04-4305-9656-7f261aa63c84
+    action: work
+    provider: https://alice.example/
+    receiver: https://manufacturing.example/
+    resourceClassifiedAs: https://www.wikidata.org/wiki/Q192047 # machining
+    effortQuantity:
+      om2:hasUnit: om2:hour
+      om2:hasNumericalValue: 7
+    hasBeginning: 2019-04-08T10:30:00-5:00
+    hasEnd: 2019-04-08T16:30:00-5:00
+    created: 2019-04-08T18:00:00-5:00
+
+  # the work event is corrected without backing it out completely
+
+  - '@id': mfg:6f438393-7f87-4914-806c-e23a4fd158uj
+    '@type': EconomicEvent
+    inputOf: mfg:02b39a30-3e04-4305-9656-7f261aa63c84
+    action: work
+    provider: https://alice.example/
+    receiver: https://manufacturing.example/
+    resourceClassifiedAs: https://www.wikidata.org/wiki/Q192047 # machining
+    effortQuantity:
+      om2:hasUnit: om2:hour
+      om2:hasNumericalValue: -1
+    hasBeginning: 2019-04-08T10:30:00-5:00
+    hasEnd: 2019-04-08T16:30:00-5:00
+    created: 2019-04-08T18:00:00-5:00
+    corrects: mfg:6f438393-7f87-4914-806c-e23a4fd15e89
+
+  # the produce event is not corrected
+
+  - '@id': mfg:d4d2fd71-34f2-41c3-b1c5-19ad5ed2da59
+    '@type': EconomicEvent
+    outputOf: mfg:02b39a30-3e04-4305-9656-7f261aa63c84
+    action: produce
+    provider: https://manufacturing.example/
+    receiver: https://manufacturing.example/
+    resourceInventoriedAs: mfg:e1721a61-cd47-4556-84b9-8b1b81da15bf # desk
+    resourceQuantity:
+      om2:hasUnit: om2:one
+      om2:hasNumericalValue: 1
+    hasPointInTime: 2019-04-08T17:30:00-5:00
+    created: 2019-04-08T18:02:00-5:00
+
+ ```
