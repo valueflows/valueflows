@@ -1238,6 +1238,24 @@ vf:cite a                   owl:NamedIndividual ,
         vs:term_status      "testing" ;
         .
 
+vf:copy a                   owl:NamedIndividual ,
+                            vf:Action ;
+        vf:inputOutput      vf:notApplicable ;
+        vf:pairsWith        vf:notApplicable ;
+        vf:createResource   vf:optionalTo ;
+        vf:eventQuantity    vf:resource ;
+        vf:accountingEffect vf:incrementTo ;
+        vf:onhandEffect     vf:incrementTo ;
+        vf:locationEffect   vf:new ;
+        vf:containedEffect  vf:notApplicable ;
+        vf:accountableEffect vf:new ;
+        vf:stageEffect      vf:notApplicable ;
+        vf:stateEffect      vf:updateTo ;
+        rdfs:comment        "Create a new version of the resource, without any change to the original."@en ;
+        rdfs:label          "copy"@en ;
+        vs:term_status      "unstable" ;
+        .
+
 vf:deliverService a        owl:NamedIndividual ,
                             vf:Action ;
         vf:inputOutput      vf:outputInput ;
@@ -1325,7 +1343,8 @@ vf:move a                   owl:NamedIndividual ,
         vf:stateEffect      vf:updateTo ;
         rdfs:comment        "Change location and possibly identifier, if location is part of the identification, of a resource with no change of agent rights or possession."@en ;
         rdfs:label          "move"@en ;
-        vs:term_status      "unstable" .
+        vs:term_status      "unstable" ;
+        .
 
 vf:pickup a                 owl:NamedIndividual ,
                             vf:Action ;
@@ -1512,6 +1531,14 @@ vf:increment a              owl:NamedIndividual ,
                             vf:OnhandEffect ;
         rdfs:comment        "The effect is to add to the inventoried resource accounting or onhand quantity."@en ;
         rdfs:label          "increment"@en ;
+        vs:term_status      "unstable" ;
+        .
+
+vf:incrementTo a            owl:NamedIndividual ,
+                            vf:AccountingEffect ,
+                            vf:OnhandEffect ;
+        rdfs:comment        "The effect is to add to the to (receiver) inventoried resource accounting or onhand quantity."@en ;
+        rdfs:label          "increment to"@en ;
         vs:term_status      "unstable" ;
         .
 
