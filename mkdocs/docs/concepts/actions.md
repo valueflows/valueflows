@@ -36,7 +36,9 @@ We have defined a core set of actions, but expect that this will be extended wit
 
 **transfer** - This action gives full (human) rights and responsibilities plus physical custody, combining the last two actions.
 
-**move** - `move` changes the location, and possibly the identifier, if location is part of the logical identifier, of a resource with no transfer of agent rights or custodianship.
+**move** - `move` changes the location (and possibly the identifier, if location is part of the logical identifier) of a resource, but does not transfer agent rights or custodianship.
+
+**copy** - A new resource is created for the receiver, an exact copy of the original provider resource.
 
 **raise** - This action adjusts a quantity up, used either when a computer system is brought up and existing resources must be entered with a beginning balance, or when an inventory count in the real world shows that the quantity in the computer system is too low.  When it is known how a resource was obtained, it is preferable to use the real action.
 
@@ -64,7 +66,7 @@ Note: Any action that can create a new resource can alternatively affect (almost
 
 **onhandEffect** - If there is an inventoried resource, this defines how the economic resource's `onhandQuantity` is affected by the event's `resourceQuantity`.
 
-For both AccountingEffect and OnhandEffect, the main options are `decrement` (subtract from), `increment` (add to), or no effect. For actions with the option `decrementIncrement`, the `resourceInventoriedAs` should be decremented (if there is one);and the `toResourceInventoriedAs` should be incremented (if there is one).
+For both AccountingEffect and OnhandEffect, the main options are `decrement` (subtract from), `increment` (add to), or no effect. For actions with the option `decrementIncrement`, the `resourceInventoriedAs` should be decremented (if there is one);and the `toResourceInventoriedAs` should be incremented (if there is one).  For actions with the option `incrementTo`, the `toResourceInventoriedAs` should be created/incremented, and the `resourceInventoriedAs` should be left as-is.
 
 Note: The event's `effortQuantity` does not affect economic resources.
 
