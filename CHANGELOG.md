@@ -1,3 +1,12 @@
+## 0.7 (March 2023)
+
+- Many documentation improvements
+- New action: copy
+- Actions can be fully data driven
+- Trace logic improved and tested in a project
+- Added ecological agent, ecological accounting documentation
+- Added EconomicEvent.corrects another EconomicEvent
+
 ## 0.6 (July 2022)
 
 - Actions to camelCase (breaking)

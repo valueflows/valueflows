@@ -38,7 +38,7 @@ We have defined a core set of actions, but expect that this will be extended wit
 
 **move** - `move` changes the location (and possibly the identifier, if location is part of the logical identifier) of a resource, but does not transfer agent rights or custodianship.
 
-**copy** - A new resource is created for the receiver, an exact copy of the original provider resource.
+**copy** - A new resource is created for the receiver, an exact copy of the original provider resource, used for digital resources.
 
 **raise** - This action adjusts a quantity up, used either when a computer system is brought up and existing resources must be entered with a beginning balance, or when an inventory count in the real world shows that the quantity in the computer system is too low.  When it is known how a resource was obtained, it is preferable to use the real action.
 
