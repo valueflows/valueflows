@@ -1,6 +1,8 @@
-Background of the REA (Resource, Event, Agent) model which this vocabulary is based on:
+## REA (Resources, Events, Agents)
 
-[Bill McCarthy's REA papers](https://www.williamemccarthy.com/)
+The REA ontology is the main basis for the Valueflows model.  Here is some background.
+
+[Bill McCarthy's list of REA papers](https://www.williamemccarthy.com/)
 
 [McCarthy's original 1982 REA paper](../linked-docs/REA+Accounting+Model_A+Generalized+Framework+for+Accounting+Systems+in+a+Shared+Data+Environment_1982.pdf)
 
@@ -24,4 +26,14 @@ International Standards Organization, [â€œISO 15944-4: Information Technology â€
 
 [From private ownership to commons accounting](http://mikorizal.org/Fromprivateownershipaccountingtocommonsaccoun.html)
 
-Besides REA, the other main core concept is dependent demand. We do event-driven Resource Requirements Planning based on that pattern.  [Dependent Demand - a Business Pattern](../linked-docs/dependent_demand.pdf)
+## IPO (Input-Process-Output)
+
+Merged into the REA pattern, is the [IPO pattern](https://en.wikipedia.org/wiki/IPO_model), which is used in many fields of study and analysis. IPO use for [Material Flow Analysis](https://en.wikipedia.org/wiki/Material_flow_analysis) is almost the same as we use it in Valueflows.
+
+## Dependent Demand
+
+We do event-driven Resource Requirements Planning based on that pattern.  [Dependent Demand - a Business Pattern](../linked-docs/dependent_demand.pdf)
+
+## REA and Climate
+
+REA (and Valueflows) works very well for climate analysis and accounting, see [Accounting for Planetary Survival](../linked-docs/AccountingForPlanetarySurvival_defx-2.pdf), especially *Resources - Events - Agents (REA): An accounting system for networked cooperation and shared supply chains* starting on pg. 85; and *Appendix I: From private ownership accounting to commons accounting*.

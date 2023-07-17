@@ -9,7 +9,7 @@
       
       
       
-        <link rel="prev" href="../concepts/">
+        <link rel="prev" href="../introduction/">
       
       
         <link rel="next" href="../principles/">
@@ -19,7 +19,7 @@
     
     
       
-        <title>Core - Valueflows</title>
+        <title>Core Concepts - Valueflows</title>
       
     
     
@@ -103,7 +103,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Core
+              Core Concepts
             
           </span>
         </div>
@@ -177,7 +177,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../concepts/" class="md-tabs__link md-tabs__link--active">
+      <a href="../introduction/" class="md-tabs__link md-tabs__link--active">
         Introduction
       </a>
     </li>
@@ -193,7 +193,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../specification/uml/" class="md-tabs__link">
+      <a href="../../specification/spec-overview/" class="md-tabs__link">
         Specification
       </a>
     </li>
@@ -209,7 +209,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../concepts/agents/" class="md-tabs__link">
+      <a href="../../concepts/concepts-overview/" class="md-tabs__link">
         Concepts
       </a>
     </li>
@@ -225,7 +225,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../examples/ex-agent/" class="md-tabs__link">
+      <a href="../../examples/ex-overview/" class="md-tabs__link">
         Examples
       </a>
     </li>
@@ -257,8 +257,24 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../appendix/rea/" class="md-tabs__link">
+      <a href="../../appendix/usedfor/" class="md-tabs__link">
         Appendices
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../faq/" class="md-tabs__link">
+        FAQ
       </a>
     </li>
   
@@ -365,8 +381,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../concepts/" class="md-nav__link">
-        Flows of Value
+      <a href="../introduction/" class="md-nav__link">
+        What is Valueflows
       </a>
     </li>
   
@@ -389,12 +405,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Core
+          Core Concepts
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Core
+        Core Concepts
       </a>
       
         
@@ -415,15 +431,50 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#rea-resource-event-agent" class="md-nav__link">
-    REA (Resource, Event, Agent)
+  <a href="#flows-of-value" class="md-nav__link">
+    Flows of value
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#independent-vs-dependent-views" class="md-nav__link">
-    Independent vs Dependent views
+  <a href="#the-patterns-used-in-valueflows" class="md-nav__link">
+    The patterns used in Valueflows
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rea-resources-events-agents" class="md-nav__link">
+    REA (Resources, Events, Agents)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ipo-input-process-output" class="md-nav__link">
+    IPO (Input-Process-Output)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#putting-them-together" class="md-nav__link">
+    Putting them together
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flows-without-processes" class="md-nav__link">
+    Flows without processes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#traversing-value-flows" class="md-nav__link">
+    Traversing value flows
   </a>
   
 </li>
@@ -521,6 +572,8 @@
         
           
         
+          
+        
       
       
         <label class="md-nav__link" for="__nav_3" tabindex="0" aria-expanded="false">
@@ -541,8 +594,22 @@
   
   
     <li class="md-nav__item">
+      <a href="../../specification/spec-overview/" class="md-nav__link">
+        Specification Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../specification/uml/" class="md-nav__link">
-        Diagram & Relationships
+        UML Diagram & Text
       </a>
     </li>
   
@@ -674,6 +741,8 @@
         
           
         
+          
+        
       
       
         <label class="md-nav__link" for="__nav_4" tabindex="0" aria-expanded="false">
@@ -687,6 +756,20 @@
           Concepts
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/concepts-overview/" class="md-nav__link">
+        Concepts Overview
+      </a>
+    </li>
+  
+
+            
           
             
               
@@ -793,7 +876,7 @@
   
     <li class="md-nav__item">
       <a href="../../concepts/proposals/" class="md-nav__link">
-        Proposals
+        Offers and Requests
       </a>
     </li>
   
@@ -947,6 +1030,8 @@
         
           
         
+          
+        
       
       
         <label class="md-nav__link" for="__nav_5" tabindex="0" aria-expanded="false">
@@ -960,6 +1045,20 @@
           Examples
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/ex-overview/" class="md-nav__link">
+        Examples Overview
+      </a>
+    </li>
+  
+
+            
           
             
               
@@ -1107,7 +1206,7 @@
   
     <li class="md-nav__item">
       <a href="../../algorithms/overview/" class="md-nav__link">
-        Overview
+        Algorithms Overview
       </a>
     </li>
   
@@ -1275,8 +1374,22 @@
   
   
     <li class="md-nav__item">
+      <a href="../../appendix/usedfor/" class="md-nav__link">
+        Implementations
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../appendix/rea/" class="md-nav__link">
-        REA References
+        REA & Other References
       </a>
     </li>
   
@@ -1290,12 +1403,51 @@
   
     <li class="md-nav__item">
       <a href="../../appendix/presentations/" class="md-nav__link">
-        Other Documentation
+        Available Documentation
       </a>
     </li>
   
 
             
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_8" type="checkbox" id="__nav_8" >
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_8" tabindex="0" aria-expanded="false">
+          FAQ
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="FAQ" data-md-level="1">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          FAQ
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
           
             
               
@@ -1303,8 +1455,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../appendix/usedfor/" class="md-nav__link">
-        Implementations
+      <a href="../faq/" class="md-nav__link">
+        Frequently Asked Questions
       </a>
     </li>
   
@@ -1346,15 +1498,50 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#rea-resource-event-agent" class="md-nav__link">
-    REA (Resource, Event, Agent)
+  <a href="#flows-of-value" class="md-nav__link">
+    Flows of value
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#independent-vs-dependent-views" class="md-nav__link">
-    Independent vs Dependent views
+  <a href="#the-patterns-used-in-valueflows" class="md-nav__link">
+    The patterns used in Valueflows
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rea-resources-events-agents" class="md-nav__link">
+    REA (Resources, Events, Agents)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ipo-input-process-output" class="md-nav__link">
+    IPO (Input-Process-Output)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#putting-them-together" class="md-nav__link">
+    Putting them together
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flows-without-processes" class="md-nav__link">
+    Flows without processes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#traversing-value-flows" class="md-nav__link">
+    Traversing value flows
   </a>
   
 </li>
@@ -1383,28 +1570,56 @@
 
 
 <h1 id="core">Core</h1>
-<h2 id="rea-resource-event-agent">REA (Resource, Event, Agent)</h2>
-<p>The vocabulary has a core that would fit many different kinds of economic formations  - value networks, supply chains, joint ventures, business collaboration network, distributed cooperatives, multi-stakeholder cooperatives.... as well as more traditional enterprises.</p>
-<p>The core is based on the REA (Resource, Event, Agent) ontology. You can find all the details by following the <a href="../../appendix/rea/">links here</a>.</p>
-<p>These are the main concepts in the REA ontology, as pictured in this <a href="../../linked-docs/The%2BOntological%2BFoundations%2Bof%2BREA%2BEnterprise%2BInformation%2BSystems_2000.pdf">document</a>:</p>
-<p><img alt="REA event" src="../../assets/REA_event.png" /></p>
-<p>Economic events are the movers and shakers.  They say what is happening to economic resources, and what economic agents are involved along the way.  They create the "value flows".</p>
-<p>A key concept in REA is Duality, which means that each event wants one or more balancing events: in other words, some kind of reciprocity.  REA uses an abstract word for this relationship in order to make the meaning configurable. The reciprocity does not need to happen at the same time, or in the same transaction.  And it can have any logic that a network wants: payment in money, swap, earn credits, earn reputation points, share with the commons, from each according to ability and to each according to need, etc.</p>
-<h2 id="independent-vs-dependent-views">Independent vs Dependent views</h2>
-<p><img alt="independent vs dependent" src="../../assets/REAviews.png" /></p>
-<p>Conventional accounting always takes the view of an individual agent: often a company. REA, and Valueflows, take an independent view, sometimes called a “collaboration space” or economic network or supply chain view.  At the same time, derived from the independent view, REA and Valueflows support each agent's own accounting view.</p>
-<p>For example, from one agent's viewpoint, the exchange may be a "purchase", from the other agent's viewpoint, it might be a "sale". From the neutral viewpoint, it is an exchange of resources, with usually at least two flows of resources, from different directions.</p>
-<p>For the individual agent’s accounting systems, assuming an Exchange of goods for money, when the goods are transferred from the seller to the purchaser, the purchaser’s Accounts Payable are increased (credited) and the seller’s Accounts Receivable are increased (debited). The independent view sees a transfer of goods from one agent to another.</p>
-<p>While conventional accounting uses the individual agent view, larger-scale economic analyses and planning, like for networks, communities, and bioregions, use the independent view. See <a href="../../algorithms/overview/">Value Flow Algorithms</a>.</p>
+<h2 id="flows-of-value">Flows of value</h2>
+<p><img alt="networks of networks picture" src="../../assets/network-of-networks.png" /></p>
+<p>Networks of value flows are created when processes are linked together through flows of resources.</p>
+<p>This forms an economic network, where resources flow from agent to agent to agent via events. These resource flow networks do not care about company or national boundaries.</p>
+<h2 id="the-patterns-used-in-valueflows">The patterns used in Valueflows</h2>
+<p>There are two basic patterns used in Valueflows:</p>
+<ul>
+<li>
+<p>Resources, Events, and Agents (REA)</p>
+</li>
+<li>
+<p>Input-Process-Output Resource Flows (IPO)</p>
+</li>
+</ul>
+<h2 id="rea-resources-events-agents">REA (Resources, Events, Agents)</h2>
+<p>The core is based on the REA (Resource, Event, Agent) ontology.  You can find all the details by following the <a href="../../appendix/rea/">links here</a>.</p>
+<p><strong>Agents</strong> are individual persons or organizations or ecological agents, who perform Economic Events affecting Economic Resources.</p>
+<p>An <strong>Economic Event</strong> can take actions like produce, modify, consume, or use Economic Resources, or transfer them from one Agent to another, or transport them from one location to another.</p>
+<p><strong>Economic Resources</strong> would typically be useful goods and services, but could also be money, credits, energy, knowledge, designs, skills, CO2, methane, air, water, or almost anything else that some Agents can agree should be accounted for in their economic networks.</p>
+<p><img alt="REA" src="../../assets/R-E-A.png" /></p>
+<h2 id="ipo-input-process-output">IPO (Input-Process-Output)</h2>
+<p>The IPO pattern is used to enhance the ability of REA to represent complex flows of value.  The flows are IPOs...</p>
+<p>...Input-Process-Output resource chains, where one <strong>Economic Resource</strong> is the output of one <strong>Process</strong> and then becomes an input to another, thus connecting the processes into a flow. The <strong>Agents</strong> involved in each Process in the chain need to coordinate with the previous and next Processes about the quantity, quality, and timing of resource flows between them.</p>
+<p><img alt="IPO schematic" src="../../assets/process-resource.png" /></p>
+<h2 id="putting-them-together">Putting them together</h2>
+<p>In general, how they fit together: Agents perform Economic Events that provide Inputs to Processes and take Outputs from Processes and move Resources from one Process to another.  This forms a directed graph of value flows.</p>
+<p><img alt="REA-IPO-VF" src="../../assets/REA-IPO-VF.png" /></p>
+<p>For example: a food network</p>
+<p>...might include farmers, food processors, restaurants and bakeries, grocery stores, families to eat the food. And vehicles to move everything from place to place. Coordination might be needed between each of those stages: seeds and other inputs for planting crops, workers etc for harvesting crops. when are the crops ready for processing, when is the grain ready for milling and then for baking and then for people to eat, when is the fruit ready for pies, etc.</p>
+<h2 id="flows-without-processes">Flows without processes</h2>
+<p>Some flows do not involve processing, i.e. there is no transformation of Economic Resources.  These flows simply transfer Economic Resources between Agents or move them between locations. One common example is an exchange of one Economic Resource for another Economic Resource between two Agents, as below, with two reciprocal flows based on an Agreement.</p>
+<p><img alt="exchange" src="../../assets/exchange.png" /></p>
+<p>It can also be simpler, such as a gift, or more complex, involving many Agents.  Also, these flows can mix in with Process-based flows.</p>
+<p>For example: in that food network above</p>
+<p>...food processors might purchase the harvested food from farmers, sell processed food to restaurants and stores... or families might provide land and labor for a farm and receive harvested food each week in return.  That becomes part of the coordination.</p>
+<h2 id="traversing-value-flows">Traversing value flows</h2>
+<p>Value flows can be traversed forwards ("tracking") or backwards ("tracing").  Often people use the term "provenance" when looking backwards towards the source of some resource, sometimes when a problem emerges (as in a disease outbreak from food), sometimes to know the quality of the resource (as in wanting local humanely produced food with lower ecological impact).</p>
+<p>The data structures of ValueFlows provide the ability to trace or track any value flow, no matter how long or complex, see <a href="../../algorithms/track/">Track and Trace</a>.</p>
 <h2 id="levels-of-the-ontology">Levels of the ontology</h2>
-<p>All the levels of the REA ontology are similarly flexible and configurable:</p>
+<p>Valueflows uses the layers of ontology documented by REA.  Each of the layers follows the core patterns above.</p>
 <p><img alt="REA layers" src="../../assets/layers.png" /></p>
 <ul>
-<li>The Knowledge level represents classification, policies, procedures, rules and patterns. This is where each network or community can configure the core concepts to fit their desires.</li>
-<li>The Plan level represents offers, requests, schedules and promises.</li>
+<li>The Knowledge level represents classification, policies, procedures, rules and patterns. This is where each network or community can configure the core concepts to fit their needs.</li>
+<li>The Plan level represents offers and requests, schedules and promises.</li>
 <li>The Observation level represents what really happened.</li>
 </ul>
-<p>The core Valueflows vocabulary includes some concepts for which we use other rdf-based vocabularies. There may also be terms that applications will need that are not part of the Valueflows economic model. This means that it expects people developing those applications to use VF together with other vocabularies / web ontologies. This documentation will define other vocabularies and specific terms from them that will be needed in common scenarios that VF aims to address.</p>
+<p>Here is a simplified view of how they connect.</p>
+<p><img alt="process resource flow" src="../../assets/process-layer.png" /></p>
+<p>Here is a specific example of the simplified view:</p>
+<p><img alt="salsa flow" src="../../assets/salsa-layer.png" /></p>
 
 
 
@@ -1443,13 +1658,7 @@
   
     
     
-    <a href="https://gitter.im/valueflows/welcome" target="_blank" rel="noopener" title="Chat with us on gitter" class="md-social__link">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M66.4 322.5H16V0h50.4v322.5zM166.9 76.1h-50.4V512h50.4V76.1zm100.6 0h-50.4V512h50.4V76.1zM368 76h-50.4v247H368V76z"/></svg>
-    </a>
-  
-    
-    
-    <a href="https://matrix.to/#/#valueflows:matrix.org" target="_blank" rel="noopener" title="Chat with us on matrix element" class="md-social__link">
+    <a href="https://matrix.to/#/#valueflows:matrix.org" target="_blank" rel="noopener" title="Chat with us on matrix" class="md-social__link">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 2h4v2H4v16h2v2H2V2m18 2h-2V2h4v20h-4v-2h2V4M9 5h1v5h1v1H8v-1h1V6l-1 .5v-1L9 5m6 8h1v5h1v1h-3v-1h1v-4l-1 .5v-1l1-.5m-6 0c1.1 0 2 1.34 2 3s-.9 3-2 3-2-1.34-2-3 .9-3 2-3m0 1c-.55 0-1 .9-1 2s.45 2 1 2 1-.9 1-2-.45-2-1-2m6-9c1.1 0 2 1.34 2 3s-.9 3-2 3-2-1.34-2-3 .9-3 2-3m0 1c-.55 0-1 .9-1 2s.45 2 1 2 1-.9 1-2-.45-2-1-2Z"/></svg>
     </a>
   

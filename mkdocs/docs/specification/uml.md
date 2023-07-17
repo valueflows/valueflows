@@ -2,6 +2,8 @@
 
 This diagram includes all elements necessary for a complete REA-based core economic vocabulary, so includes elements that we re-use from other vocabularies.  All namespaces are documented by the prefix to each element.
 
+The arrows point towards a single instance of the class at the end of the arrow, relational-style.  So each arrow represents an additional property in the class at the beginning of the arrow.  The subordinate classes in the gray section at the bottom are not connected with arrows, so the viewer should assume that every property ending in "Quantity" is a om2:Measure; every property ending in "Duration" is a time:Duration, and every property ending in "Location" is a geo:SpatialThing.
+
 *To make the diagram bigger, you can right click and select 'View Image' or 'Open Image in New Tab' or a similar command in your browser.*
 
 ![VF uml picture](../assets/ValueFlowsUML.png)
@@ -73,7 +75,7 @@ It is very helpful for interoperaability that the same units of measure are used
 
 ### Flows in motion: Recipe
 
-This set of Knowledge Layer entities together make a recipe for creating a Resource conforming to this ResourceSpecification. It can be used to automate generating a plan in the Plan Layer, since they follow the same basic input-process-output graph pattern. The recipe model will probably be made more complete in the future, to support forking, versioning, and variants.  It currently supports multiple recipes for the same ResourceSpecification.  More info at [Recipes concepts](../concepts/recipes.md)
+This set of Knowledge Layer entities together make a recipe for creating a Resource conforming to this ResourceSpecification. It can be used to automate generating a plan in the Plan Layer, since they follow the same basic input-process-output graph pattern. The recipe model will probably be made more complete in the future, to support forking, versioning, and variants.  It currently supports multiple recipes for the same ResourceSpecification.  More info at [Recipes concepts](../concepts/recipes.md).
 
 #### vf:RecipeResource
 
@@ -98,7 +100,7 @@ A RecipeFlow defines either an input or output to a RecipeProcess, and/or a clau
 
 ### Flows in motion: Planning
 
-Planning can be done with or without recipes.  And planning is not always done, sometimes the economic activity is only observed, depending on the use case.  This section is about operational planning, proesses and agreements that are intended to be executed in this lowest level of detail.  [More info at [Planning concepts](../concepts/plan.md).
+Planning can be done with or without recipes.  And planning is not always done, sometimes the economic activity is only observed, depending on the use case.  This section is about operational planning, proesses and agreements that are intended to be executed in this lowest level of detail.  More info at [Planning concepts](../concepts/plan.md).
 
 #### vf:Plan
 

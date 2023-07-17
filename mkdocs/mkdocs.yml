@@ -17,19 +17,21 @@ theme:
 nav:
     - Home: index.md
     - Introduction:
-        - Flows of Value: introduction/concepts.md
-        - Core: introduction/core.md
+        - What is Valueflows: introduction/introduction.md
+        - Core Concepts: introduction/core.md
         - Principles: introduction/principles.md
         - Contributors: introduction/contributors.md
         - Release and Status: introduction/status.md
     - Specification:
-        - Diagram & Relationships: specification/uml.md
+        - Specification Overview: specification/spec-overview.md
+        - UML Diagram & Text: specification/uml.md
         - RDF Specification: specification/vfspec.md
         - Other Namespaces: specification/external-terms.md
         - Units of Measure: specification/units.md
         - Query Naming: specification/inverses.md
         - GraphQL Reference: specification/graphql.md
     - Concepts:
+        - Concepts Overview: concepts/concepts-overview.md
         - Agents: concepts/agents.md
         - Economic Resources: concepts/resources.md
         - Flows: concepts/flows.md
@@ -37,7 +39,7 @@ nav:
         - Processes: concepts/processes.md
         - Transfers: concepts/transfers.md
         - Exchanges: concepts/exchanges.md
-        - Proposals: concepts/proposals.md
+        - Offers and Requests: concepts/proposals.md
         - Operational Planning: concepts/plan.md
         - Budgeting and Analysis: concepts/estimates.md
         - Recipes: concepts/recipes.md
@@ -47,6 +49,7 @@ nav:
         - Accounting: concepts/accounting.md
         - Ecological Accounting: concepts/ecology.md
     - Examples:
+        - Examples Overview: examples/ex-overview.md
         - Agents: examples/ex-agent.md
         - Resources: examples/ex-resource.md
         - Production: examples/ex-production.md
@@ -54,7 +57,7 @@ nav:
         - Planning: examples/ex-planning.md
         - More Complex: examples/ex-complex.md
     - Algorithms:
-        - Overview: algorithms/overview.md
+        - Algorithms Overview: algorithms/overview.md
         - Dependent Demand: algorithms/dependent-demand.md
         - Critical Path: algorithms/critical-path.md
         - Value Rollup: algorithms/rollup.md
@@ -64,9 +67,11 @@ nav:
         - Cash Flows: algorithms/cashflows.md
         - Network Flows: algorithms/netflows.md
     - Appendices:
-        - REA References: appendix/rea.md
-        - Other Documentation: appendix/presentations.md
         - Implementations: appendix/usedfor.md
+        - REA & Other References: appendix/rea.md
+        - Available Documentation: appendix/presentations.md
+    - FAQ:
+        - Frequently Asked Questions: introduction/faq.md
 
 markdown_extensions:
   - pymdownx.snippets
@@ -84,9 +89,6 @@ extra:
     - icon: fontawesome/brands/gitlab
       link: https://lab.allmende.io/valueflows
       name: Find us on gitlab
-    - icon: fontawesome/brands/gitter
-      link: https://gitter.im/valueflows/welcome
-      name: Chat with us on gitter
     - icon: material/matrix
       link: https://matrix.to/#/#valueflows:matrix.org
-      name: Chat with us on matrix element
+      name: Chat with us on matrix

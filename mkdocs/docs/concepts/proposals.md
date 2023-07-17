@@ -1,6 +1,6 @@
 # Proposals
 
-Proposals refer to published requests or offers (Intents), sometimes with what is expected in return. Agreements, which are committed to by agents, can evolve from proposals, or be entered into without proposals.
+Proposals are published requests or offers, sometimes with what is expected in return. Agreements, which are committed to by agents, can evolve from proposals, or be entered into without proposals.
 
 Proposals are everywhere in advertising.  But we see many groups posting proposals that are different from commercial advertisements or e-commerce offers.
 

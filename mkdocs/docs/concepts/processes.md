@@ -11,11 +11,3 @@ By Process, we mean an activity that transforms inputs into outputs. The outputs
   * The antibiotics then breed resistant bacteria, which end up in the people, and send them to the hospital, and then kill the people, because the common antibiotics no longer work. And the resistant bacteria remain in the hospital to kill other people.
 
 Connected processes enable us to see cause and effect, if we want.
-
-Below is a view of processes, which occur in resource flow networks, and live in three layers: Knowledge, which describe how processes work. Plans, which describe processes which are intended to happen. And Observation, which is a record of processes that have already happened.
-
-![process resource flow](../assets/process-layer.png)
-
-Here is a specific example:
-
-![salsa flow](../assets/salsa-layer.png)

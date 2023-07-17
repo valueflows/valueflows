@@ -1,4 +1,4 @@
-# Value Flow Algorithms
+# Algorithms Overview
 
 This section is about what computer programs (or humans with pencil and paper and a lot of work) can do with Valueflows economic networks once they are constructed on the Web or in a database.
 

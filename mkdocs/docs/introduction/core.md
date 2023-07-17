@@ -1,40 +1,83 @@
 # Core
 
-## REA (Resource, Event, Agent)
+## Flows of value
 
-The vocabulary has a core that would fit many different kinds of economic formations  - value networks, supply chains, joint ventures, business collaboration network, distributed cooperatives, multi-stakeholder cooperatives.... as well as more traditional enterprises.
+![networks of networks picture](../assets/network-of-networks.png)
 
-The core is based on the REA (Resource, Event, Agent) ontology. You can find all the details by following the [links here](../appendix/rea.md).
+Networks of value flows are created when processes are linked together through flows of resources.
 
-These are the main concepts in the REA ontology, as pictured in this [document](../linked-docs/The+Ontological+Foundations+of+REA+Enterprise+Information+Systems_2000.pdf):
+This forms an economic network, where resources flow from agent to agent to agent via events. These resource flow networks do not care about company or national boundaries.
 
-![REA event](../assets/REA_event.png)
+## The patterns used in Valueflows
 
-Economic events are the movers and shakers.  They say what is happening to economic resources, and what economic agents are involved along the way.  They create the "value flows".
+There are two basic patterns used in Valueflows:
 
-A key concept in REA is Duality, which means that each event wants one or more balancing events: in other words, some kind of reciprocity.  REA uses an abstract word for this relationship in order to make the meaning configurable. The reciprocity does not need to happen at the same time, or in the same transaction.  And it can have any logic that a network wants: payment in money, swap, earn credits, earn reputation points, share with the commons, from each according to ability and to each according to need, etc.
+* Resources, Events, and Agents (REA)
 
-## Independent vs Dependent views
+* Input-Process-Output Resource Flows (IPO)
 
-![independent vs dependent](../assets/REAviews.png)
+## REA (Resources, Events, Agents)
 
-Conventional accounting always takes the view of an individual agent: often a company. REA, and Valueflows, take an independent view, sometimes called a “collaboration space” or economic network or supply chain view.  At the same time, derived from the independent view, REA and Valueflows support each agent's own accounting view.
+The core is based on the REA (Resource, Event, Agent) ontology.  You can find all the details by following the [links here](../appendix/rea.md).
 
-For example, from one agent's viewpoint, the exchange may be a "purchase", from the other agent's viewpoint, it might be a "sale". From the neutral viewpoint, it is an exchange of resources, with usually at least two flows of resources, from different directions.
+**Agents** are individual persons or organizations or ecological agents, who perform Economic Events affecting Economic Resources.
 
-For the individual agent’s accounting systems, assuming an Exchange of goods for money, when the goods are transferred from the seller to the purchaser, the purchaser’s Accounts Payable are increased (credited) and the seller’s Accounts Receivable are increased (debited). The independent view sees a transfer of goods from one agent to another.
+An **Economic Event** can take actions like produce, modify, consume, or use Economic Resources, or transfer them from one Agent to another, or transport them from one location to another.
 
-While conventional accounting uses the individual agent view, larger-scale economic analyses and planning, like for networks, communities, and bioregions, use the independent view. See [Value Flow Algorithms](../algorithms/overview.md).
+**Economic Resources** would typically be useful goods and services, but could also be money, credits, energy, knowledge, designs, skills, CO2, methane, air, water, or almost anything else that some Agents can agree should be accounted for in their economic networks.
 
+![REA](../assets/R-E-A.png)
+
+## IPO (Input-Process-Output)
+
+The IPO pattern is used to enhance the ability of REA to represent complex flows of value.  The flows are IPOs...
+
+...Input-Process-Output resource chains, where one **Economic Resource** is the output of one **Process** and then becomes an input to another, thus connecting the processes into a flow. The **Agents** involved in each Process in the chain need to coordinate with the previous and next Processes about the quantity, quality, and timing of resource flows between them.
+
+![IPO schematic](../assets/process-resource.png)
+
+## Putting them together
+
+In general, how they fit together: Agents perform Economic Events that provide Inputs to Processes and take Outputs from Processes and move Resources from one Process to another.  This forms a directed graph of value flows.
+
+![REA-IPO-VF](../assets/REA-IPO-VF.png)
+
+For example: a food network
+
+...might include farmers, food processors, restaurants and bakeries, grocery stores, families to eat the food. And vehicles to move everything from place to place. Coordination might be needed between each of those stages: seeds and other inputs for planting crops, workers etc for harvesting crops. when are the crops ready for processing, when is the grain ready for milling and then for baking and then for people to eat, when is the fruit ready for pies, etc.
+
+## Flows without processes
+
+Some flows do not involve processing, i.e. there is no transformation of Economic Resources.  These flows simply transfer Economic Resources between Agents or move them between locations. One common example is an exchange of one Economic Resource for another Economic Resource between two Agents, as below, with two reciprocal flows based on an Agreement.
+
+![exchange](../assets/exchange.png)
+
+It can also be simpler, such as a gift, or more complex, involving many Agents.  Also, these flows can mix in with Process-based flows.
+
+For example: in that food network above
+
+...food processors might purchase the harvested food from farmers, sell processed food to restaurants and stores... or families might provide land and labor for a farm and receive harvested food each week in return.  That becomes part of the coordination.
+
+## Traversing value flows
+
+Value flows can be traversed forwards ("tracking") or backwards ("tracing").  Often people use the term "provenance" when looking backwards towards the source of some resource, sometimes when a problem emerges (as in a disease outbreak from food), sometimes to know the quality of the resource (as in wanting local humanely produced food with lower ecological impact).
+
+The data structures of ValueFlows provide the ability to trace or track any value flow, no matter how long or complex, see [Track and Trace](../algorithms/track.md).
 
 ## Levels of the ontology
 
-All the levels of the REA ontology are similarly flexible and configurable:
+Valueflows uses the layers of ontology documented by REA.  Each of the layers follows the core patterns above.
 
 ![REA layers](../assets/layers.png)
 
-* The Knowledge level represents classification, policies, procedures, rules and patterns. This is where each network or community can configure the core concepts to fit their desires.
-* The Plan level represents offers, requests, schedules and promises.
+* The Knowledge level represents classification, policies, procedures, rules and patterns. This is where each network or community can configure the core concepts to fit their needs.
+* The Plan level represents offers and requests, schedules and promises.
 * The Observation level represents what really happened.
 
-The core Valueflows vocabulary includes some concepts for which we use other rdf-based vocabularies. There may also be terms that applications will need that are not part of the Valueflows economic model. This means that it expects people developing those applications to use VF together with other vocabularies / web ontologies. This documentation will define other vocabularies and specific terms from them that will be needed in common scenarios that VF aims to address.
+Here is a simplified view of how they connect.
+
+![process resource flow](../assets/process-layer.png)
+
+Here is a specific example of the simplified view:
+
+![salsa flow](../assets/salsa-layer.png)
