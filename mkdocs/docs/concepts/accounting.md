@@ -10,6 +10,17 @@ All of the views can emerge from subsets of the same data.  Any standard (or non
 
 Or potentially, views for a global value system economy (really).
 
+## Accounting views: independent vs dependent
+
+![independent vs dependent](../assets/REAviews.png)
+
+Conventional accounting always takes the view of an individual agent: often a company. REA, and Valueflows, take an independent view, sometimes called a “collaboration space” or economic network or supply chain view.  At the same time, derived from the independent view, REA and Valueflows support each agent's own accounting view.
+
+For example, from one agent's viewpoint, the exchange may be a "purchase", from the other agent's viewpoint, it might be a "sale". From the neutral viewpoint, it is an exchange of resources, with usually at least two flows of resources, from different directions.
+
+For the individual agent’s accounting systems, assuming an Exchange of goods for money, when the goods are transferred from the seller to the purchaser, the purchaser’s Accounts Payable are increased (credited) and the seller’s Accounts Receivable are increased (debited). The independent view sees a transfer of goods from one agent to another.
+
+While conventional accounting uses the individual agent view, larger-scale economic analyses and planning, like for networks, communities, and bioregions, use the independent view. See [Value Flow Algorithms](../algorithms/overview.md).
 
 ## Accounting as in Accountability...
 

@@ -5,21 +5,31 @@ hide:
 ---
 
 ![Value Flows](assets/VF-logo-heading.jpg)
-# *A vocabulary for the distributed economic networks of the next economy*
+## *Valueflows (VF) is a vocabulary for the distributed economic networks of the next economy, to coordinate the creation, distribution, and exchange of economic resources.*
 
-**Valueflows (VF) is a standard vocabulary (ontology) to coordinate the creation, distribution, and exchange of economic resources.**
+<hr/>
 
-The vocabulary will work for any kind of economic activity, but the focus is to facilitate groups experimenting with solidarity / cooperative / collaborative / small business ecosystem / commons based peer production / any transitional economies.  We want to enable internetworking among many different software projects for resource planning and accounting within fractal networks of people and groups.  Specifically, we want to support resource flows connecting many software applications. 
+Here are some suggestions to help you find your way into this documentation, depending on your specific interest and level of prior understanding.
 
-Or, with less buzzwords, **"let's help a lot of alternative economic software projects that are solving different pieces of the same puzzle be able to interoperate"**.
+* **For a high level understanding of what Valueflows is and what it is for**, please start with this [**introductory summary**](introduction/introduction.md).  You could also check into what other groups are doing with Valueflows in the [**reference implementations**](appendix/usedfor.md), or take a peek at the [**algorithms overview**](algorithms/overview.md) for more possibilities.
 
-The vocabulary is presented in several ways, as Linked Open Data using the Resource Description Framework (RDF) family of languages, as well as a GraphQL reference and a UML model. We want to support RDF based and non-RDF based uses of the vocabulary, basically any way that people want to use software and data on the internet to help create economic networks.  We will add formats as requested.
+* **To learn about the vocabulary itself**, you could start with the [**high-level description of the core model**](introduction/core.md), and then continue as you like in these directions...
 
-If this document seems too much to start with, or you just want a more friendly overview, you can start here with a [**Valueflows Story**](assets/ValueFlows-Story.pdf) about apple pie (yum!).
+      * For the more visually oriented or people who like diagrams, head to the [**UML diagram**](specification/uml/).
+
+      * Whether or not you look at the diagram, see below the diagram for class and relationship [**explanations by subject area**](specification/uml/#subject-area-overviews), which also point to the related [**concepts sections**](concepts/concepts-overview.md).  Or just go straight to the [**concepts**](concepts/concepts-overview.md).
+
+      * For even more gory details, check the rest of the [**specification pages**](specification/overview.md), and/or [**examples**](examples/ex-overview/).
+
+* **Or if you want a more fun and friendly way to understand the vocabulary**, you can start here with a [**Valueflows story about apple pie **](assets/ValueFlows-Story.pdf)(yum!).
+
+* **To lookup specific details**, you can use the *Search* function above.  Definitions and relationships by data element (class, property, etc.) are linked on the first [**formatted spec here**](specification/vfspec/); and are textually [**described by subject area here**](specification/uml/#subject-area-overviews).  The [**concepts**](concepts/concepts-overview.md) and [**examples**](examples/ex-overview.md) also might be helpful to lookup developer level information.
+
+<hr/>
 
 You can find us here on [**gitlab**](https://lab.allmende.io/valueflows), also mirrored on [**github**](https://github.com/valueflows).  
 
-Or come on over and say hello, ask questions, or request gitlab permissions in [**gitter**](https://gitter.im/valueflows/welcome) or [**matrix element**](https://matrix.to/#/#valueflows:matrix.org). 
+Or come on over and say hello, ask questions, or request gitlab permissions in [**matrix element**](https://matrix.to/#/#valueflows:matrix.org). 
 
 <hr/>
 

@@ -4,13 +4,13 @@ Most applications using VF will need terms defined in various other vocabularies
 
 ## SKOS
 
-https://www.w3.org/TR/skos-reference/
+[https://www.w3.org/TR/skos-reference/](https://www.w3.org/TR/skos-reference/)
 
 * [`skos:note`](https://www.w3.org/TR/skos-reference/#note)
 
 ## OM2
 
-http://www.ontology-of-units-of-measure.org/resource/om-2/
+[http://www.ontology-of-units-of-measure.org/resource/om-2/](http://www.ontology-of-units-of-measure.org/resource/om-2/)
 
 * [`om2:Measure`](http://www.ontology-of-units-of-measure.org/resource/om-2/Measure)
 * [`om2:hasUnit`](http://www.ontology-of-units-of-measure.org/resource/om-2/hasUnit)
@@ -23,13 +23,13 @@ http://www.ontology-of-units-of-measure.org/resource/om-2/
 
 ## DTYPE
 
-http://www.linkedmodel.org/schema/dtype#
+[http://www.linkedmodel.org/schema/dtype#](http://www.linkedmodel.org/schema/dtype#)
 
 * [`dtype:numericUnion`](http://www.linkedmodel.org/schema/dtype#numericUnion)
 
 ## TIME
 
-https://www.w3.org/TR/owl-time
+[https://www.w3.org/TR/owl-time](https://www.w3.org/TR/owl-time)
 
 Some useful constructs, others here: https://www.w3.org/TR/owl-time/#topology, see the Interval Relations.
 
@@ -44,7 +44,7 @@ of [Alignment of PROV-O with OWL-Time](https://www.w3.org/TR/owl-time/#time-prov
 
 ## GEO
 
-https://www.w3.org/2003/01/geo/wgs84_pos#
+[https://www.w3.org/2003/01/geo/wgs84_pos#](https://www.w3.org/2003/01/geo/wgs84_pos#)
 
 * [`geo:lat`](https://www.w3.org/2003/01/geo/wgs84_pos#lat)
 * [`geo:long`](https://www.w3.org/2003/01/geo/wgs84_pos#long)
@@ -52,7 +52,7 @@ https://www.w3.org/2003/01/geo/wgs84_pos#
 
 ## DFC
 
-http://www.virtual-assembly.org/DataFoodConsortium/BusinessOntology#
+[http://www.virtual-assembly.org/DataFoodConsortium/BusinessOntology#](http://www.virtual-assembly.org/DataFoodConsortium/BusinessOntology#)
 
 * [`dfc:ProductBatch`](http://www.virtual-assembly.org/DataFoodConsortium/BusinessOntology#ProductBatch)
 * [`dfc:batchNumber`](http://www.virtual-assembly.org/DataFoodConsortium/BusinessOntology#batchNumber)
@@ -61,6 +61,6 @@ http://www.virtual-assembly.org/DataFoodConsortium/BusinessOntology#
 
 ## DCTERMS
 
-http://purl.org/dc/terms/
+[http://purl.org/dc/terms/](http://purl.org/dc/terms/)
 
 * [`dcterms:created`](http://purl.org/dc/terms/created)

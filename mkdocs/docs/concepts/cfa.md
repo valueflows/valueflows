@@ -1,5 +1,7 @@
 # Conversation for Action
 
+*Note:* The conversation for action concepts are not part of Valueflows yet, but are provided here as input to implementing something like this.
+
 Exchanges may use any of several technical protocols, but the main human-level protocol has been in use for many years. It may be called [Offer-Acceptance](https://en.wikipedia.org/wiki/Offer_and_acceptance) or [Conversation for Action](http://conversationsforaction.com/cfa-playground). It may include several preparation stages for agents who have never exchanged anything before, or it may be really simple if they exchange resources all the time.
 
 [ISO 15944-1](https://standards.iso.org/ittf/PubliclyAvailableStandards/c055289_ISO_IEC_15944-1_2011.zip) lists 5 phases:

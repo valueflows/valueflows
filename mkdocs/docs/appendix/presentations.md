@@ -43,5 +43,5 @@ All of the following presentations can also be found in [this directory](https:/
 
 [Deep dive into VF for devs, 2019](https://www.youtube.com/watch?v=N4M0hmq3GEc) (2 hours, model slightly out of date)
 
-Dave Darby interviews about VF, [part 1](https://www.lowimpact.org/value-flows-model-lynn-foster-mikorizal-part-1/) amd [part 2](https://www.lowimpact.org/value-flows-model-lynn-foster-mikorizal-part-2/)
+Dave Darby interviews Lynn about VF, 2019, [part 1](https://www.lowimpact.org/value-flows-model-lynn-foster-mikorizal-part-1/) amd [part 2](https://www.lowimpact.org/value-flows-model-lynn-foster-mikorizal-part-2/)
 
