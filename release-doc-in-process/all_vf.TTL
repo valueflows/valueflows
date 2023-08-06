@@ -170,17 +170,17 @@ vf:Proposal  a              owl:Class ;
         rdfs:comment        "Published requests or offers, sometimes with what is expected in return."@en ;
         .
 
-vf:ProposedIntent  a        owl:Class ;
-        rdfs:label          "Proposed Intent"@en ;
-        vs:term_status      "testing" ;
-        rdfs:comment        "Represents many-to-many relationships between Proposals and Intents, supporting including intents in multiple proposals, as well as a proposal including multiple intents."@en ;
-        .
+# vf:ProposedIntent  a        owl:Class ;
+#        rdfs:label          "Proposed Intent"@en ;
+#        vs:term_status      "testing" ;
+#        rdfs:comment        "Represents many-to-many relationships between Proposals and Intents, supporting including intents in multiple proposals, as well as a proposal including multiple intents."@en ;
+#        .
 
-vf:ProposedTo  a            owl:Class ;
-        rdfs:label          "Proposed To"@en ;
-        vs:term_status      "unstable" ;
-        rdfs:comment        "An agent to which the proposal is to be published."@en ;
-        .
+# vf:ProposedTo  a            owl:Class ;
+#        rdfs:label          "Proposed To"@en ;
+#        vs:term_status      "unstable" ;
+#        rdfs:comment        "An agent to which the proposal is to be published."@en ;
+#        .
 
 vf:Commitment  a            owl:Class ;
         rdfs:label          "Commitment"@en ;
@@ -885,46 +885,28 @@ vf:satisfiedBy
 vf:publishes
         a                   owl:ObjectProperty ;
         rdfs:label          "publishes"@en ;
-        rdfs:domain         vf:ProposedIntent ;
+        rdfs:domain         vf:Proposal ;
         rdfs:range          vf:Intent ;
         vs:term_status      "unstable" ;
-        rdfs:comment        "The intent which is part of this published proposal."@en ;
+        rdfs:comment        "The primary intent(s) of this published proposal. Would be used in intent matching."@en ;
         .
 
-vf:publishedIn
+vf:reciprocal
         a                   owl:ObjectProperty ;
-        rdfs:label          "published in"@en ;
-        rdfs:domain         vf:ProposedIntent ;
-        rdfs:range          vf:Proposal ;
+        rdfs:label          "reciprocal"@en ;
+        rdfs:domain         vf:Proposal ;
+        rdfs:range          vf:Intent ;
         vs:term_status      "unstable" ;
-        rdfs:comment        "The published proposal which this intent is part of."@en ;
-        .
-
-vf:proposed
-        a                   owl:ObjectProperty ;
-        rdfs:label          "proposed"@en ;
-        rdfs:domain         vf:ProposedTo ;
-        rdfs:range          vf:Proposal ;
-        vs:term_status      "unstable" ;
-        rdfs:comment        "The proposal that is published to a specific agent."@en ;
+        rdfs:comment        "The reciprocal intent(s) of this published proposal. Not meant to be used for intent matching."@en ;
         .
 
 vf:proposedTo
         a                   owl:ObjectProperty ;
         rdfs:label          "proposed to"@en ;
-        rdfs:domain         vf:ProposedTo ;
+        rdfs:domain         vf:Proposal ;
         rdfs:range          vf:Agent ;
         vs:term_status      "unstable" ;
-        rdfs:comment        "The agent to which the proposal is published."@en ;
-        .
-
-vf:reciprocal
-        a                   owl:DatatypeProperty ;
-        rdfs:label          "reciprocal"@en ;
-        rdfs:domain         vf:ProposedIntent ;
-        rdfs:range          xsd:boolean ;
-        vs:term_status      "unstable" ;
-        rdfs:comment        "This is a reciprocal intent of this proposal, not primary. Not meant to be used for intent matching."@en ;
+        rdfs:comment        "The agent(s) to which the proposal is published."@en ;
         .
 
 vf:finished  a              owl:DatatypeProperty ;
