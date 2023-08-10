@@ -48,63 +48,63 @@ vf:Action  a                owl:Class ;
         .
 
 vf:InputOutput a            owl:Class ;
-        rdfs:comment        "The action is an input or output of a process, or not related to a process."@en ;
         rdfs:label          "Input/Output"@en ;
         vs:term_status      "testing" ;
+        rdfs:comment        "The action is an input or output of a process, or not related to a process."@en ;
         .
 
 vf:CreateResource a         owl:Class ;
-        rdfs:comment        "The action can create an economic resource."@en ;
         rdfs:label          "Create Resource"@en ;
         vs:term_status      "testing" ;
+        rdfs:comment        "The action can create an economic resource."@en ;
         .
 
 vf:EventQuantity a          owl:Class ;
-        rdfs:comment        "The action involves the event resource quantity, event quantity, or both."@en ;
         rdfs:label          "Event Quantity"@en ;
         vs:term_status      "testing" ;
+        rdfs:comment        "The action involves the event resource quantity, event quantity, or both."@en ;
         .
 
 vf:AccountingEffect a        owl:Class ;
-        rdfs:comment        "The action has this effect on an inventoried resource accounting quantity."@en ;
         rdfs:label          "Accounting Effect"@en ;
         vs:term_status      "testing" ;
+        rdfs:comment        "The action has this effect on an inventoried resource accounting quantity."@en ;
         .
 
 vf:OnhandEffect a           owl:Class ;
-        rdfs:comment        "The action has this effect on an inventoried resource onhand quantity."@en ;
         rdfs:label          "Onhand Effect"@en ;
         vs:term_status      "testing" ;
+        rdfs:comment        "The action has this effect on an inventoried resource onhand quantity."@en ;
         .
 
 vf:LocationEffect a         owl:Class ;
-        rdfs:comment        "The action has this effect on an inventoried resource current location."@en ;
         rdfs:label          "Location Effect"@en ;
         vs:term_status      "testing" ;
+        rdfs:comment        "The action has this effect on an inventoried resource current location."@en ;
         .
 
 vf:ContainedEffect a        owl:Class ;
-        rdfs:comment        "The action has this effect on an inventoried resource contained in resource."@en ;
         rdfs:label          "Contained Effect"@en ;
         vs:term_status      "testing" ;
+        rdfs:comment        "The action has this effect on an inventoried resource contained in resource."@en ;
         .
 
 vf:AccountableEffect a      owl:Class ;
-        rdfs:comment        "The action has this effect on an inventoried resource primary accountable agent."@en ;
         rdfs:label          "Accountable Effect"@en ;
         vs:term_status      "testing" ;
+        rdfs:comment        "The action has this effect on an inventoried resource primary accountable agent."@en ;
         .
 
 vf:StageEffect a            owl:Class ;
-        rdfs:comment        "The action has this effect on an inventoried resource stage."@en ;
         rdfs:label          "Stage Effect"@en ;
         vs:term_status      "testing" ;
+        rdfs:comment        "The action has this effect on an inventoried resource stage."@en ;
         .
 
 vf:StateEffect a            owl:Class ;
-        rdfs:comment        "The action has this effect on an inventoried resource state."@en ;
         rdfs:label          "State Effect"@en ;
         vs:term_status      "unstable" ;
+        rdfs:comment        "The action has this effect on an inventoried resource state."@en ;
         .
 
 vf:AgentRelationshipRole  a  owl:Class ;
@@ -115,7 +115,7 @@ vf:AgentRelationshipRole  a  owl:Class ;
 
 vf:RoleBehavior  a           owl:Class ;
         rdfs:label           "Role Behavior"@en ;
-        vs:term_status       "unstable" ;
+        vs:term_status       "testing" ;
         rdfs:comment         "The general shape or behavior grouping of an agent relationship role."@en ;
         .
 
@@ -307,7 +307,7 @@ vf:inputOf
         rdfs:comment        "Relates an input flow to its process."@en ;
         .
 
-vf:inputs
+vf:hasInput
         a                   owl:ObjectProperty ;
         owl:inverseOf       vf:inputOf ;
         rdfs:label          "inputs"@en ;
@@ -326,7 +326,7 @@ vf:outputOf
         rdfs:comment        "Relates an output flow to its process."@en ;
         .
 
-vf:outputs
+vf:hasOutput
         a                   owl:ObjectProperty ;
         owl:inverseOf       vf:outputOf ;
         rdfs:label          "outputs"@en ;
@@ -383,7 +383,7 @@ vf:recipeClauseOf
         rdfs:comment        "Relates a flow to its exchange agreement in a recipe."@en ;
         .
 
-vf:recipeClauses
+vf:recipeStipulates
         a                   owl:ObjectProperty ;
         owl:inverseOf       vf:recipeClauseOf ;
         rdfs:label          "recipe clauses"@en ;
@@ -505,7 +505,7 @@ vf:inScopeOf  a             owl:ObjectProperty ;
         rdfs:comment        "In the context of an agent, a grouping generally used for accounting, reporting."@en ;
         .
 
-vf:scope  a                 owl:ObjectProperty ;
+vf:scopes  a                owl:ObjectProperty ;
         owl:inverseOf       vf:inScopeOf ;
         rdfs:domain         vf:Agent ;
         rdfs:label          "scope"@en ;
@@ -562,7 +562,7 @@ vf:containedIn a            owl:ObjectProperty ;
         rdfs:comment        "Used when a stock economic resource contains units also defined as economic resources."@en ;
         .
 
-vf:primaryAccountable a      owl:ObjectProperty ;
+vf:primaryAccountable a     owl:ObjectProperty ;
         rdfs:label          "primary accountable"@en ;
         rdfs:domain         vf:EconomicResource ;
         rdfs:range          vf:Agent ;
@@ -757,7 +757,9 @@ vf:image a                  owl:DatatypeProperty ;
                                 vf:EconomicResource
                                 vf:Intent
                                 vf:RecipeResource
-                                vf:ResourceSpecification) ] ;
+                                vf:ResourceSpecification
+                                vf:ProcessSpecification
+                                vf:RecipeProcess) ] ;
         rdfs:range          xsd:anyURI ;
         rdfs:comment        "The uri to an image relevant to the entity, such as a logo, avatar, photo, diagram, etc."@en ;
         .
@@ -770,7 +772,7 @@ vf:imageList a              owl:DatatypeProperty ;
                                 vf:Intent
                                 vf:ResourceSpecification) ] ;
         rdfs:range          xsd:anyURI ;
-        rdfs:comment        "A comma separated list uri addresses to images relevant to the resource."@en ;
+        rdfs:comment        "A comma separated list of uri addresses to images relevant to the resource."@en ;
         .
 
 vf:uri a                    owl:DatatypeProperty ;
@@ -866,7 +868,7 @@ vf:fulfills  a              owl:ObjectProperty ;
 
 vf:satisfies
         a                   owl:ObjectProperty ;
-        rdfs:label         "satisfies"@en ;
+        rdfs:label          "satisfies"@en ;
         rdfs:domain         vf:Satisfaction ;
         rdfs:range          vf:Intent ;
         vs:term_status      "unstable" ;
@@ -875,7 +877,7 @@ vf:satisfies
 
 vf:satisfiedBy
         a                   owl:ObjectProperty ;
-        rdfs:label         "satisfied by"@en ;
+        rdfs:label          "satisfied by"@en ;
         rdfs:domain         vf:Satisfaction ;
         rdfs:range          [ owl:unionOf (vf:Commitment vf:EconomicEvent ) ] ;
         vs:term_status      "unstable" ;
@@ -1082,7 +1084,7 @@ vf:clauseOf a               owl:ObjectProperty ;
         rdfs:comment        "This commitment is part of the agreement."@en ;
         .
 
-vf:clauses a                owl:ObjectProperty ;
+vf:stipulates a             owl:ObjectProperty ;
         owl:inverseOf       vf:clauseOf ;
         rdfs:label          "clauses"@en ;
         rdfs:domain         vf:Agreement ;
@@ -1099,7 +1101,7 @@ vf:realizationOf a          owl:ObjectProperty ;
         rdfs:comment        "This economic event occurs as part of this agreement."@en ;
         .
 
-vf:realizations a           owl:ObjectProperty ;
+vf:realizes a               owl:ObjectProperty ;
         owl:inverseOf       vf:realizationOf ;
         rdfs:label          "realizations"@en ;
         rdfs:domain         vf:Agreement ;
