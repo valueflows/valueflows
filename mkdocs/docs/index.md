@@ -19,7 +19,7 @@ Here are some suggestions to help you find your way into this documentation, dep
 
       * Whether or not you look at the diagram, see below the diagram for class and relationship [**explanations by subject area**](specification/uml/#subject-area-overviews), which also point to the related [**concepts sections**](concepts/concepts-overview.md).  Or just go straight to the [**concepts**](concepts/concepts-overview.md).
 
-      * For even more gory details, check the rest of the [**specification pages**](specification/overview.md), and/or [**examples**](examples/ex-overview/).
+      * For even more gory details, check the rest of the [**specification pages**](specification/spec-overview.md), and/or [**examples**](examples/ex-overview/).
 
 * **Or if you want a more fun and friendly way to understand the vocabulary**, you can start here with a [**Valueflows story about apple pie **](assets/ValueFlows-Story.pdf)(yum!).
 

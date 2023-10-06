@@ -182,6 +182,12 @@ vf:Proposal  a              owl:Class ;
 #        rdfs:comment        "An agent to which the proposal is to be published."@en ;
 #        .
 
+vf:ProposalDirection a      owl:Class ;
+        rdfs:label          "Proposal Direction"@en ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "The type of proposal, an offer or request (others may be added)."@en ;
+        .
+
 vf:Commitment  a            owl:Class ;
         rdfs:label          "Commitment"@en ;
         vs:term_status      "stable" ;
@@ -310,7 +316,7 @@ vf:inputOf
 vf:hasInput
         a                   owl:ObjectProperty ;
         owl:inverseOf       vf:inputOf ;
-        rdfs:label          "inputs"@en ;
+        rdfs:label          "has input"@en ;
         rdfs:domain         vf:Process ;
         rdfs:range          [ owl:unionOf (vf:EconomicEvent vf:Commitment vf:Intent) ] ;
         vs:term_status      "unstable" ;
@@ -329,7 +335,7 @@ vf:outputOf
 vf:hasOutput
         a                   owl:ObjectProperty ;
         owl:inverseOf       vf:outputOf ;
-        rdfs:label          "outputs"@en ;
+        rdfs:label          "has output"@en ;
         rdfs:domain         vf:Process ;
         rdfs:range          [ owl:unionOf (vf:EconomicEvent vf:Commitment vf:Intent) ] ;
         vs:term_status      "unstable" ;
@@ -345,10 +351,10 @@ vf:recipeInputOf
         rdfs:comment        "Relates an input flow to its process in a recipe."@en ;
         .
 
-vf:recipeInputs
+vf:hasRecipeInput
         a                   owl:ObjectProperty ;
         owl:inverseOf       vf:recipeInputOf ;
-        rdfs:label          "recipe inputs"@en ;
+        rdfs:label          "has recipe input"@en ;
         rdfs:domain         vf:RecipeProcess ;
         rdfs:range          vf:RecipeFlow ;
         vs:term_status      "unstable" ;
@@ -364,10 +370,10 @@ vf:recipeOutputOf
         rdfs:comment        "Relates an output flow to its process in a recipe."@en ;
         .
 
-vf:recipeOutputs
+vf:hasRecipeOutput
         a                   owl:ObjectProperty ;
         owl:inverseOf       vf:recipeOutputOf ;
-        rdfs:label          "recipe outputs"@en ;
+        rdfs:label          "has recipe output"@en ;
         rdfs:domain         vf:RecipeProcess ;
         rdfs:range          vf:RecipeFlow ;
         vs:term_status      "unstable" ;
@@ -386,7 +392,7 @@ vf:recipeClauseOf
 vf:recipeStipulates
         a                   owl:ObjectProperty ;
         owl:inverseOf       vf:recipeClauseOf ;
-        rdfs:label          "recipe clauses"@en ;
+        rdfs:label          "recipe stipulates"@en ;
         rdfs:domain         vf:RecipeExchange ;
         rdfs:range          vf:RecipeFlow ;
         vs:term_status      "unstable" ;
@@ -405,7 +411,7 @@ vf:plannedWithin
 vf:planIncludes
         a                   owl:ObjectProperty ;
         owl:inverseOf       vf:plannedWithin ;
-        rdfs:label          "processes"@en ;
+        rdfs:label          "plan includes"@en ;
         rdfs:domain         vf:Plan ;
         rdfs:range          [ owl:unionOf (vf:Process vf:Commitment vf:Intent) ] ;
         vs:term_status      "unstable" ;
@@ -508,7 +514,7 @@ vf:inScopeOf  a             owl:ObjectProperty ;
 vf:scopes  a                owl:ObjectProperty ;
         owl:inverseOf       vf:inScopeOf ;
         rdfs:domain         vf:Agent ;
-        rdfs:label          "scope"@en ;
+        rdfs:label          "scopes"@en ;
         rdfs:range          [ owl:unionOf (vf:Claim vf:Commitment vf:EconomicEvent vf:Proposal vf:Intent vf:Scenario vf:Process vf:AgentRelationship) ] ;
         vs:term_status      "unstable" ;
         rdfs:comment        "The agent data needed for accounting, reporting."@en ;
@@ -672,6 +678,14 @@ vf:availableQuantity a      owl:ObjectProperty ;
         rdfs:comment        "The quantity of the offered resource currently available."@en ;
         .
 
+vf:minimumQuantity a        owl:ObjectProperty ;
+        rdfs:label          "minimum quantity"@en ;
+        rdfs:domain         vf:Intent ;
+        rdfs:range          om2:Measure ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "The minimum required order quantity of the offered resource."@en ;
+        .
+
 om2:hasNumericalValue
         rdfs:range          dtype:numericUnion ;
         .
@@ -682,6 +696,14 @@ vf:unitBased  a             owl:DatatypeProperty ;
         rdfs:range          xsd:boolean ;
         vs:term_status      "unstable" ;
         rdfs:comment        "This proposal contains unit based quantities, which can be multipied to create commitments; commonly seen in a price list or e-commerce."@en ;
+        .
+
+vf:direction  a             owl:ObjectProperty ;
+        rdfs:label          "direction"@en ;
+        rdfs:domain         vf:Proposal ;
+        rdfs:range          vf:ProposalDirection ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "The type of proposal, offer or request."@en ;
         .
 
 dcterms:created
@@ -1086,7 +1108,7 @@ vf:clauseOf a               owl:ObjectProperty ;
 
 vf:stipulates a             owl:ObjectProperty ;
         owl:inverseOf       vf:clauseOf ;
-        rdfs:label          "clauses"@en ;
+        rdfs:label          "stipulates"@en ;
         rdfs:domain         vf:Agreement ;
         rdfs:range          vf:Commitment ;
         vs:term_status      "unstable" ;
@@ -1103,14 +1125,14 @@ vf:realizationOf a          owl:ObjectProperty ;
 
 vf:realizes a               owl:ObjectProperty ;
         owl:inverseOf       vf:realizationOf ;
-        rdfs:label          "realizations"@en ;
+        rdfs:label          "realizes"@en ;
         rdfs:domain         vf:Agreement ;
         rdfs:range          vf:EconomicEvent ;
         vs:term_status      "unstable" ;
         rdfs:comment        "All the uncommitted economic events that realize the agreement."@en ;
         .
 
-vf:mappableAddress a        owl:ObjectProperty ;
+vf:mappableAddress a        owl:DatatypeProperty ;
         rdfs:label          "mappable address"@en ;
         rdfs:domain         geo:SpatialThing ;
         rdfs:range          xsd:string ;
@@ -1723,5 +1745,21 @@ vf:peer a                   owl:NamedIndividual ,
                             vf:RoleBehavior ;
         rdfs:comment        "The role is a peer type role in relation to an agent. Examples are trading partners or mentors."@en ;
         rdfs:label          "peer"@en ;
+        vs:term_status      "unstable" ;
+        .
+
+# Proposal Direction choices
+
+vf:offer a                  owl:NamedIndividual ,
+                            vf:ProposalDirection ;
+        rdfs:comment        "The proposal is an offer."@en ;
+        rdfs:label          "offer"@en ;
+        vs:term_status      "unstable" ;
+        .
+
+vf:request a                owl:NamedIndividual ,
+                            vf:ProposalDirection ;
+        rdfs:comment        "The proposal is a published request, need, want."@en ;
+        rdfs:label          "request"@en ;
         vs:term_status      "unstable" ;
         .
