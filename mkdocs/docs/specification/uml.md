@@ -10,24 +10,35 @@ A textual explanation of everything on this diagram is on the [next page](model-
 
 ## Diagram conventions
 
-The diagram basically supports relational data models.  The arrows point towards a single instance of the class at the end of the arrow, like relational foreign keys.  So each arrow represents an additional property in the class at the beginning of the arrow.
+Each arrow represents an additional property in the class at the beginning of the arrow.  If there is an * at the arrowhead end, then many instances are supported (like a collection in object oriented modeling).  If there is no *, then it should be assumed that one instance is supported (like a foreign key in a relational model).
 
 ### Relationships not shown
 
-In some cases, there were just too many lines!  The subordinate classes in the gray section at the bottom are not connected with arrows, so the viewer should assume that every property ending in "Quantity" is a `om2:Measure`; every property ending in "Duration" is a `time:Duration`, and every property ending in "Location" is a `geo:SpatialThing`.
+In some cases, there were just too many lines!  The subordinate classes in the gray section at the bottom are not connected with arrows, so the viewer should assume that:
 
-Also, `vf:inScopeOf` points to a `vf:Agent`.
+* every property ending in "Quantity" is a `om2:Measure`;
+* every property ending in "Duration" is a `time:Duration`;
+* every property ending in "Location" is a `geo:SpatialThing`;
+* `vf:inScopeOf` references a `vf:Agent`.
 
 ### Inverse terms
 
-To support cleaner representation in JSON-LD / RDF, as well as object oriented collections, we included some inverse terms, using `owl:inverseOf` in the source turtle file.  These are noted with a * (meaning "many") at the "other" end of a relationship.  For example, here a Process or a Commitment can be `plannedWithin` a Plan; and a Plan `planIncludes` either or both Processes and Commitments.
+To support cleaner representation in JSON / JSON-LD / RDF, as well as object oriented collections, in addition to the initial relational representation, we include some inverse terms, using `owl:inverseOf` in the source turtle file.  If there is a name on each end of the line, and an end on both sides of the arrow, there is an inverse defined.  For example, here a Commitment `isInput` or `isOutput` of a Process; and a Process `hasInput`(one or more) and/or `hasOutput`(one or more).  Both directions are specified as part of the formal vocabulary, so can be used in the direction preferred by the application.
 
 ![inverse pic](../assets/inverse.png)
 
 ### Many-to-many relationships
 
-Instead of the typical relational resolution of a many-to-many relationship of including an "associative" class or table between them, we are specifying a direct one-to-many relationship, which more cleanly supports JSON-LD / RDF / OO structures.  To get to the other less-used "many", in this case an Intent can be `publishedIn` many Proposals, a query would be needed.
+Instead of the typical relational resolution of a many-to-many relationship of including an "associative" class or table between them, when possible we are specifying a direct one-to-many relationship, which more cleanly supports JSON / JSON-LD / RDF / OO structures.  To get to the other less-used "many" without the "associative" entity, for the case on the left for example, to find all the Proposals an Intent is `publishedIn`, a query would be needed.  In this case, `publishedIn` is a recommended standard query name, but not formally part of the specification.
 
-Although not included in the formal RDF-based spec, the intermediate class is also shown with dotted lines, for projects who want a relational database representation.  In this case, a Proposal `publishes` a primary Intent or a `reciprocal` Intent.  The "many" is accomplished with many ProposedIntent records.
+Although not included in the formal RDF-based spec, the suggested intermediate "associative" class for the two cases where there are no intermediate properties is shown below with dotted lines, for projects that want to implement a relational database under the covers.
 
-![1-m pic](../assets/m-m.png)
+![m-m pic](../assets/m-m.png)
+
+### Many-to-many relationships with properties
+
+When a many-to-many relationship involves an "associative" entity that has necessary properties (is "reified"), we have kept the intermediate class, and added an inverse term as above to the relationship involved to make saving a flow with its intermediate data easier in JSON / JSON-LD / RDF / OO.  The original relationship direction was kept for applications that prefer to use the relational method.  To traverse in the other direction where there is no inverse, for example from Intent to Satisfaction, a query is required. The diagram below shows the situations with many-to-many relationships where the properties are needed.
+
+![m-m pic](../assets/m-m-assoc.png)
+
+**Note**: For use cases where the properties in the intermediate class are not needed (i.e. where there will never be a case that needs the many-to-many relationship, such as always only one event fulfills a commitment and vice versa), the application can simplify the situation, and just derive the intermediate values as needed to emit VF standard api data.

@@ -182,8 +182,8 @@ vf:Proposal  a              owl:Class ;
 #        rdfs:comment        "An agent to which the proposal is to be published."@en ;
 #        .
 
-vf:ProposalDirection a      owl:Class ;
-        rdfs:label          "Proposal Direction"@en ;
+vf:ProposalPurpose a        owl:Class ;
+        rdfs:label          "Proposal Purpose"@en ;
         vs:term_status      "unstable" ;
         rdfs:comment        "The type of proposal, an offer or request (others may be added)."@en ;
         .
@@ -420,11 +420,21 @@ vf:planIncludes
 
 vf:independentDemandOf
         a                   owl:ObjectProperty ;
-        rdfs:label         "independent demand of"@en ;
+        rdfs:label          "independent demand of"@en ;
         rdfs:range          vf:Plan ;
         rdfs:domain         vf:Commitment ;
         vs:term_status      "testing" ;
         rdfs:comment        "Represents a desired deliverable expected from this plan."@en ;
+        .
+
+vf:hasIndependentDemand
+        a                   owl:ObjectProperty ;
+        owl:inverseOf       vf:independentDemandOf ;
+        rdfs:label          "has independent demand"@en ;
+        rdfs:range          vf:Commitment ;
+        rdfs:domain         vf:Plan ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "The independent commitments for which this plan was created."@en ;
         .
 
 vf:resourceInventoriedAs
@@ -509,23 +519,6 @@ vf:inScopeOf  a             owl:ObjectProperty ;
         rdfs:range          vf:Agent ;
         vs:term_status      "unstable" ;
         rdfs:comment        "In the context of an agent, a grouping generally used for accounting, reporting."@en ;
-        .
-
-vf:scopes  a                owl:ObjectProperty ;
-        owl:inverseOf       vf:inScopeOf ;
-        rdfs:domain         vf:Agent ;
-        rdfs:label          "scopes"@en ;
-        rdfs:range          [ owl:unionOf (vf:Claim vf:Commitment vf:EconomicEvent vf:Proposal vf:Intent vf:Scenario vf:Process vf:AgentRelationship) ] ;
-        vs:term_status      "unstable" ;
-        rdfs:comment        "The agent data needed for accounting, reporting."@en ;
-        .
-
-vf:agreedIn  a              owl:ObjectProperty ;
-        rdfs:domain         [ owl:unionOf (vf:EconomicEvent vf:Commitment vf:Intent vf:Claim) ] ;
-        rdfs:label          "agreed in"@en ;
-        rdfs:range          owl:Thing ;
-        vs:term_status      "unstable" ;
-        rdfs:comment        "Reference to an agreement between agents which specifies the rules, terms, policies, calculations, etc. which govern this flow."@en ;
         .
 
 vf:triggeredBy  a           owl:ObjectProperty ;
@@ -698,10 +691,10 @@ vf:unitBased  a             owl:DatatypeProperty ;
         rdfs:comment        "This proposal contains unit based quantities, which can be multipied to create commitments; commonly seen in a price list or e-commerce."@en ;
         .
 
-vf:direction  a             owl:ObjectProperty ;
-        rdfs:label          "direction"@en ;
+vf:purpose  a               owl:ObjectProperty ;
+        rdfs:label          "purpose"@en ;
         rdfs:domain         vf:Proposal ;
-        rdfs:range          vf:ProposalDirection ;
+        rdfs:range          vf:ProposalPurpose ;
         vs:term_status      "unstable" ;
         rdfs:comment        "The type of proposal, offer or request."@en ;
         .
@@ -1129,7 +1122,7 @@ vf:realizes a               owl:ObjectProperty ;
         rdfs:domain         vf:Agreement ;
         rdfs:range          vf:EconomicEvent ;
         vs:term_status      "unstable" ;
-        rdfs:comment        "All the uncommitted economic events that realize the agreement."@en ;
+        rdfs:comment        "All the economic events (with or without commitments) that realize the agreement."@en ;
         .
 
 vf:mappableAddress a        owl:DatatypeProperty ;
@@ -1748,17 +1741,17 @@ vf:peer a                   owl:NamedIndividual ,
         vs:term_status      "unstable" ;
         .
 
-# Proposal Direction choices
+# Proposal Purpose choices
 
 vf:offer a                  owl:NamedIndividual ,
-                            vf:ProposalDirection ;
+                            vf:ProposalPurpose ;
         rdfs:comment        "The proposal is an offer."@en ;
         rdfs:label          "offer"@en ;
         vs:term_status      "unstable" ;
         .
 
 vf:request a                owl:NamedIndividual ,
-                            vf:ProposalDirection ;
+                            vf:ProposalPurpose ;
         rdfs:comment        "The proposal is a published request, need, want."@en ;
         rdfs:label          "request"@en ;
         vs:term_status      "unstable" ;

@@ -46,7 +46,7 @@ ProductBatch is a lot or batch associated with an EconomicResource.  It has its 
 
 ### Putting flows into motion...
 
-First, some necessary pieces. More flow info at [Flows concepts](../concepts/flows.md), [Actions concepts](../concepts/actions.md), [Processes concepts](../concepts/processes.md), [Transfers concepts](../concepts/transfers.md), [Exchanges concepts](../concepts/exchanges.md).
+More flow info at [Flows concepts](../concepts/flows.md), [Actions concepts](../concepts/actions.md), [Processes concepts](../concepts/processes.md), [Transfers concepts](../concepts/transfers.md), [Exchanges concepts](../concepts/exchanges.md).  First, some necessary pieces.
 
 #### vf:Action
 
@@ -96,11 +96,11 @@ Planning can be done with or without recipes.  And planning is not always done, 
 
 #### vf:Plan
 
-A Plan is a collection of one or more operational Processes and/or non-process Commitments in the input-output-process graph pattern.  Plans can also reference a Commitment that creates the independent demand(s) that provide the reason for and final output of the Plan. If the use case calls for it, Plans can be nested in Scenarios to give higher level views that drill down to operational Plans, or reference a Scenario that was done as a pre-planning effort.
+A Plan is a collection of one or more operational Processes and/or non-process Commitments (such as transfers) in the input-output-process graph pattern.  Plans can also reference one or more Commitments that create the independent demand that provides the reason for, and final output of, the Plan. If the use case calls for it, Plans can be nested in Scenarios to give higher level views that drill down to operational Plans, or reference a Scenario that was done as a pre-planning effort.
 
 #### vf:Process
 
-This section talks about operational processes, see below for higher level processes.  Process can exist both in the Plan and Observation Layers, or either one.  If it is planned, then observed as an actual process, it remains the same Process.  So it can have input or output Commitments, and/or input or output EconomicEvents.  It can also have input or output Intents, if all or some of its flows are not committed, but are intended to happen.  Processes are usually (but not required to be) planned within a Plan.  A Process can be based on a ProcessSpecification or not.
+This section talks about operational processes, see below for higher level processes.  A Process can exist both in the Plan and Observation Layers, or either one.  If it is planned, then observed as an actual process, it remains the same Process.  So it can have input and/or output Commitments, and/or input and/or output EconomicEvents.  It can also have input or output Intents, if all or some of its flows are not committed, but are intended to happen.  Processes are usually (but not required to be) planned within a Plan.  A Process can be based on a ProcessSpecification or not.
 
 #### vf:ProcessSpecification
 
@@ -129,16 +129,11 @@ Offers and requests are published primarily to look for a reciprocal match, alth
 
 #### vf:Proposal
 
-A Proposal is a container of related Intents, and is an offer or a request, determined by the whether the provider or receiver Agent is undefined in the non-reciprocal Intent. Proposals often have more than one Intent, either because there is a reciprocal Intent, or because more than one resource is being offered or requested together.  An Intent can be re-used in more than one Proposal.  A Proposal can be proposed to one or more specific Agents, or just be part of a scope where Proposals are published.
+A Proposal is a container of related Intents, and is an offer or a request, determined by the purpose.  This also corresponds to whether the provider or receiver Agent is undefined in the primary published Intent. Proposals often have more than one Intent, either because there is a reciprocal Intent, or because more than one resource is being offered or requested together.  An Intent can be re-used in more than one Proposal.  A Proposal can be proposed to one or more specific individual or group Agents, or just be part of a scope where Proposals are published.
 
 #### vf:Intent
 
-Intents that are part of Proposals can be more loosely defined than if they are part of a Plan, although planned Intents can also be part of one or more Proposals.  For example, the note is often used to explain some of the defined fields when the offers/needs application mostly supports just text.  But all Intents need an Action, and either a provider or receiver Agent.
-
-#### vf:ProposedIntent
-
-Since a Proposal can publish more than one Intent, and an Intent can be published in more than one Proposal, in this type of model, an intermediate entity is needed to make that association.  Reciprocal ProposedIntents are not meant to show up in Proposal search or filter.
-
+Intents that are part of Proposals can be more loosely defined than if they are part of a Plan, although planned Intents can also be part of one or more Proposals.  For example, the note is often used to explain some of the defined fields when the offers/needs application mostly supports just text.  But all Intents should have an Action, and either a provider or receiver Agent.
 
 ### Flows in motion: Observation
 
@@ -150,7 +145,7 @@ See the operational Process defined in the Planning subject area.  Operational P
 
 #### vf:EconomicEvent
 
-An EconomicEvent is the "real" flow.  Its behavior is governed by its Action.  It actually affects an EconomicResource if one is defined as inventoried in the EconomicEvent, possibly including quantities, location, primary accountable, stage, state, containment.  EconomicEvent always has a provider and receiver Agent, and can be input or output of a Process, and/or part of an Agreement.  An EconomicEvent knows its resource, either an EconomicResource or a ResourceSpecification.  In some actions, for example transfers and moves, there can also be another EconomicResource on the receiver side.  EconomicEvents can fulfill Commitments or satisfy Intents (where there is no Commitment) or settle Claims.  An EconomicEvent can be triggered by another EconomicEvent, for example a transfer of accountability triggered by a receipt of a resource.  An EconomicEvent can correct a previous EconomicEvent, or reverse it completely.
+An EconomicEvent is the "real" flow, one that actually happened.  Its behavior is governed by its Action.  It actually affects an EconomicResource if one is defined as inventoried in the EconomicEvent, possibly including quantities, location, primary accountable, stage, state, containment.  EconomicEvent always has a provider and receiver Agent, and can be input or output of a Process, and/or part of an Agreement.  An EconomicEvent knows its resource, either an EconomicResource or a ResourceSpecification.  In some actions, for example transfers and moves, there can also be another EconomicResource on the receiver side.  EconomicEvents can fulfill Commitments or satisfy Intents (where there is no Commitment) or settle Claims.  An EconomicEvent can be triggered by another EconomicEvent, for example a transfer of accountability triggered by a receipt of a resource.  An EconomicEvent can correct a previous EconomicEvent, or reverse it completely.
 
 #### vf:Fulfillment
 
