@@ -553,6 +553,15 @@ vf:settledBy  a             owl:ObjectProperty ;
         rdfs:comment        "References an economic event that fully or partially settles the claim."@en ;
         .
 
+vf:settlement  a            owl:ObjectProperty ;
+        owl:inverseOf       vf:settledBy ;
+        rdfs:label          "settlement"@en ;
+        rdfs:domain         vf:EconomicEvent ;
+        rdfs:range          vf:Settlement ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "The claim settlement(s) for this economic event."@en ;
+        .
+
 vf:containedIn a            owl:ObjectProperty ;
         rdfs:label          "contained in"@en ;
         rdfs:domain         vf:EconomicResource ;
@@ -873,6 +882,15 @@ vf:fulfilledBy a            owl:ObjectProperty ;
         rdfs:comment        "The economic event which completely or partially fulfills a commitment."@en ;
         .
 
+vf:fulfillment  a           owl:ObjectProperty ;
+        owl:inverseOf       vf:fulfilledBy ;
+        rdfs:label          "fulfillment"@en ;
+        rdfs:domain         vf:EconomicEvent ;
+        rdfs:range          vf:Fulfillment ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "The commitment fulfillment(s) for this economic event."@en ;
+        .
+
 vf:fulfills  a              owl:ObjectProperty ;
         rdfs:label          "fulfills"@en ;
         rdfs:range          vf:Commitment ;
@@ -897,6 +915,15 @@ vf:satisfiedBy
         rdfs:range          [ owl:unionOf (vf:Commitment vf:EconomicEvent ) ] ;
         vs:term_status      "unstable" ;
         rdfs:comment        "A commitment or economic event fully or partially satisfying an intent"@en ;
+        .
+
+vf:satisfaction  a          owl:ObjectProperty ;
+        owl:inverseOf       vf:satisfiedBy ;
+        rdfs:label          "satisfaction"@en ;
+        rdfs:domain         [ owl:unionOf (vf:Commitment vf:EconomicEvent ) ] ;
+        rdfs:range          vf:Satisfaction ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "The intent satisfaction(s) for this commitment or economic event."@en ;
         .
 
 vf:publishes
