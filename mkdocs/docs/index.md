@@ -17,13 +17,13 @@ Here are some suggestions to help you find your way into this documentation, dep
 
       * For the more visually oriented or people who like diagrams, head to the [**UML diagram**](specification/uml/).
 
-      * Whether or not you look at the diagram, see below the diagram for class and relationship [**explanations by subject area**](specification/uml/#subject-area-overviews), which also point to the related [**concepts sections**](concepts/concepts-overview.md).  Or just go straight to the [**concepts**](concepts/concepts-overview.md).
+      * Whether or not you look at the diagram, see below the diagram for class and relationship [**explanations by subject area**](specification/model-text.md), which also point to the related [**concepts sections**](concepts/concepts-overview.md).  Or just go straight to the [**concepts**](concepts/concepts-overview.md).
 
-      * For even more gory details, check the rest of the [**specification pages**](specification/overview.md), and/or [**examples**](examples/ex-overview/).
+      * For even more gory details, check the rest of the [**specification pages**](specification/spec-overview.md), and/or [**examples**](examples/ex-overview/).
 
 * **Or if you want a more fun and friendly way to understand the vocabulary**, you can start here with a [**Valueflows story about apple pie **](assets/ValueFlows-Story.pdf)(yum!).
 
-* **To lookup specific details**, you can use the *Search* function above.  Definitions and relationships by data element (class, property, etc.) are linked on the first [**formatted spec here**](specification/vfspec/); and are textually [**described by subject area here**](specification/uml/#subject-area-overviews).  The [**concepts**](concepts/concepts-overview.md) and [**examples**](examples/ex-overview.md) also might be helpful to lookup developer level information.
+* **To lookup specific details**, you can use the *Search* function above.  Definitions and relationships by data element (class, property, etc.) are linked on the first [**formatted spec here**](specification/vfspec/); and are textually [**described by subject area here**](specification/model-text.md).  The [**concepts**](concepts/concepts-overview.md) and [**examples**](examples/ex-overview.md) also might be helpful to lookup developer level information.
 
 <hr/>
 

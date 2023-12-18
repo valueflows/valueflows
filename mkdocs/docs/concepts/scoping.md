@@ -2,9 +2,9 @@
 
 Scope can be thought of as a boundary for analysis and accounting, mostly used for sets of economic events, commitments, and intents.
 
-The scope is where work is done, where processes live, where value is created and exchanged. Economic events, commitments and intents can reference an organization (an agent) as an entity that defines their scope. It may be a formal or informal organization, and will include the network(s) themselves.  Or economic events, commitments and intents can reference a geographic area (a city, a bio-region, etc.), or a community, or a loose network, or a less formal shorter lived project, or plan, or any other bounded concept that is useful for accounting for economic events.
+The scope is where work is done, where processes live, where value is created and exchanged. Economic events, commitments and intents can reference an organization, person, or ecological agent as an entity that defines their scope.
 
-An economic event, commitment or intent can reference any number of entities which scope it. It is not required that events, commitments, or intents designate a scope.  In fact, sometimes the scope is the same as the provider or recipient agent.  Or sometimes there is no useful scope.
+It is not required that events, commitments, or intents designate a scope.  In fact, sometimes the scope is the same as the provider or recipient agent.  Or sometimes there is no useful scope.
 
 For functions that require traversing value flows, often the value flow will cross from one scope to another.  For example, perhaps another network or organization makes a component that you consume when making your product.  When this happens, there are some options.
 
@@ -13,7 +13,7 @@ For functions that require traversing value flows, often the value flow will cro
 
 ## Accounting
 
-Accounting is usually done for an agent or other bounded scope. Where a computer system supports one enterprise, this is simple.  When a computer system supports many organizations or there is a distributed network of economic activity, it is useful to be able to segregate the accounting using scope.  It basically enables multi-party accounting in a networked scenario.
+Accounting is usually done for a bounded scope. Where a computer system supports one enterprise, this is simple.  When a computer system supports many organizations or there is a distributed network of economic activity, it is useful to be able to segregate the accounting using scope.  It basically enables multi-party accounting in a networked scenario.
 
 ## Planning
 
