@@ -114,6 +114,10 @@ A Commitment is a planned flow.  It can be input or output of an operational Pro
 
 An Agreement is a purposefully abstract term, so that it can represent many existing (or not-yet-invented) kinds of agreements, e.g. exchanges or income distributions.  Its main purpose is to contain related Commitments in planning, usually reciprocal commitments.  It can also be used to contain reciprocal EconomicEvents in cases where there has been no planning, such as point of sale.
 
+#### vf:AgreementBundle
+
+An AgreementBundle contains all the agreements bundled together for user purposes, for example multiple line items in an order.
+
 #### vf:Intent
 
 Intent is defined here as part of operational planning, but can also be key as part of a Proposal or part of a Scenario, see below for those uses of Intent.  An Intent has a provider or a receiver Agent, but not both. As part of planning, Intents can be entered directly or generated from recipe, as inputs or outputs to a Process, or as non-process flows, when there is no known Agent assumed to be the missing provider or receiver.  An Intent can be satisfied by one or more Commitments, and/or one or more EconomicEvents if the Commitment does not exist.  And as a flow, an Intent will have an Action. In operational planning, it will also reference a ResourceSpecification or EconomicResource.
@@ -130,6 +134,10 @@ Offers and requests are published primarily to look for a reciprocal match, alth
 #### vf:Proposal
 
 A Proposal is a container of related Intents, and is an offer or a request, determined by the purpose.  This also corresponds to whether the provider or receiver Agent is undefined in the primary published Intent. Proposals often have more than one Intent, either because there is a reciprocal Intent, or because more than one resource is being offered or requested together.  An Intent can be re-used in more than one Proposal.  A Proposal can be proposed to one or more specific individual or group Agents, or just be part of a scope where Proposals are published.
+
+#### vf:ProposalBundle
+
+A ProposalBundle contains all the proposals in a user-defined list, for example a price list.
 
 #### vf:Intent
 

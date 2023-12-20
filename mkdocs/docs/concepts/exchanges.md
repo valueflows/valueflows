@@ -25,6 +25,8 @@ Various kinds of agreements between agents often define the rights and responsib
 
 Agreements can be of any kind and scope, from an order to a value equation to a larger blanket agreement.
 
+Agreements can be combined into an Agreement Bundle.  This can be useful for example when each "line item" in an "order" needs to have a line item reciprocal commitment (like a "price"), instead of one combined reciprocal commitment for several primary commitments.
+
 Valueflows does not define the detailed internal vocabulary for agreements, but defines optional references to an agreement when it could be useful.
 
 

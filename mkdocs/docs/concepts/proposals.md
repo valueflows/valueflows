@@ -2,6 +2,8 @@
 
 Proposals are published requests or offers, sometimes with what is expected in return. Agreements, which are committed to by agents, can evolve from proposals, or be entered into without proposals.
 
+Proposals can be grouped into Proposal Bundles, for example for price lists.
+
 Proposals are everywhere in advertising.  But we see many groups posting proposals that are different from commercial advertisements or e-commerce offers.
 
 Proposals can stay directed to broad or specific *audience*. In the broadest case, they stay available for anyone (public proposals). In the most narrow case, the stay available only for specific agent. In between those two extremes a whole spectrum exists.  For example two distinct proposals can exist on providing particular product or service - one for club members and one for general public etc.
