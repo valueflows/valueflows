@@ -2,7 +2,7 @@
 
 Proposals are published requests or offers, sometimes with what is expected in return. Agreements, which are committed to by agents, can evolve from proposals, or be entered into without proposals.
 
-Proposals can be grouped into Proposal Bundles, for example for price lists.
+Proposals can be grouped into Proposal Lists, for example for price lists.
 
 Proposals are everywhere in advertising.  But we see many groups posting proposals that are different from commercial advertisements or e-commerce offers.
 

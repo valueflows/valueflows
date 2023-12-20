@@ -978,18 +978,18 @@ vf:proposedTo
 vf:listedIn a               owl:ObjectProperty ;
         rdfs:label          "listed in"@en ;
         rdfs:domain         vf:Proposal ;
-        rdfs:range          vf:ProposalBundle ;
+        rdfs:range          vf:ProposalList ;
         vs:term_status      "unstable" ;
-        rdfs:comment        "This proposal is bundled with other proposals."@en ;
+        rdfs:comment        "This proposal is part of a list of proposals."@en ;
         .
 
 vf:lists a                  owl:ObjectProperty ;
         owl:inverseOf       vf:listedIn ;
         rdfs:label          "lists"@en ;
-        rdfs:domain         vf:ProposalBundle ;
+        rdfs:domain         vf:ProposalList ;
         rdfs:range          vf:Proposal ;
         vs:term_status      "unstable" ;
-        rdfs:comment        "All the proposals included in this proposal bundle."@en ;
+        rdfs:comment        "All the proposals included in this proposal list."@en ;
         .
 
 vf:finished  a              owl:DatatypeProperty ;

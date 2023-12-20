@@ -135,9 +135,9 @@ Offers and requests are published primarily to look for a reciprocal match, alth
 
 A Proposal is a container of related Intents, and is an offer or a request, determined by the purpose.  This also corresponds to whether the provider or receiver Agent is undefined in the primary published Intent. Proposals often have more than one Intent, either because there is a reciprocal Intent, or because more than one resource is being offered or requested together.  An Intent can be re-used in more than one Proposal.  A Proposal can be proposed to one or more specific individual or group Agents, or just be part of a scope where Proposals are published.
 
-#### vf:ProposalBundle
+#### vf:ProposalList
 
-A ProposalBundle contains all the proposals in a user-defined list, for example a price list.
+A ProposalList contains all the proposals in a user-defined grouping, for example a price list.
 
 #### vf:Intent
 
