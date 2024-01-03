@@ -54,7 +54,7 @@ The behaviors that are included on the tables below are also defined as Action p
 
 **inputOutput** - An event with this action can be `input` of a process, or `output` of a process, or should not be related to a process.  The event with the special case `outputInput` is basically an output of a process, but can sometimes also be an input to another recorded process, at the same time as it is an output.  This is because services imply delivery as they are created.
 
-**pairsWith** - These pairings indicate that events with these actions usually will be part of the same flow, either input and output of the same process, or different connected processes.
+**pairsWith** - These pairings indicate that events with these actions will be input and output of the same process, and imply reference to the same economic resource.
 
 **createResource** - An event with this action generally should support the options to create a new resource or to increment an existing "stock" resource. This will be a choice the user (or possibly specific application rules) must make, there are no rules defined in the vocabulary or data, and it depends on what actually is done operationally, and how agents choose to identify and manage their resources. It is also possible that neither will occur, if the agent does not inventory this particular resource for whatever reason.  If a resource is created by the actions with `optional`, it is the `resourceInventoriedAs`; if with `optionalTo`, it is the `toResourceInventoriedAs`.  
 
@@ -86,9 +86,9 @@ Note: The actions `use` and `work` are time-based actions, either with or withou
 
 *To make the diagram bigger, you can right click and select 'View Image' or 'Open Image in New Tab' or a similar command in your browser.*
 
-![VF uml picture](../assets/vf-actions.png)
+![VF actions table](../assets/vf-actions.png)
 
-*In the above chart, the `notApplicable` values are not included, for easier overall viewing.  For the complete list of behavior values by action as defined in the rdf vocabulary, see the [turtle file starting here](https://lab.allmende.io/valueflows/valueflows/-/blob/master/release-doc-in-process/all_vf.TTL#L1260).
+*In the above chart, the `notApplicable` values are not included, for easier overall viewing.  For the complete list of behavior values by action as defined in the rdf vocabulary, see the [turtle file starting here](https://lab.allmende.io/valueflows/valueflows/-/blob/master/release-doc-in-process/all_vf.TTL#L1344).
 
 ### Saving Breadcrumbs for Track and Trace
 
