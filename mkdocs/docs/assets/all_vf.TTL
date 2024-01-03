@@ -1364,7 +1364,7 @@ vf:accept a                 owl:NamedIndividual ,
 vf:combine a                owl:NamedIndividual ,
                             vf:Action ;
         vf:inputOutput      vf:input ;
-        vf:pairsWith        vf:separate ;
+        vf:pairsWith        vf:notApplicable ;
         vf:createResource   vf:notApplicable ;
         vf:eventQuantity    vf:resource ;
         vf:accountingEffect vf:notApplicable ;
@@ -1580,7 +1580,7 @@ vf:raise a                  owl:NamedIndividual ,
 vf:separate a               owl:NamedIndividual ,
                             vf:Action ;
         vf:inputOutput      vf:output ;
-        vf:pairsWith        vf:combine ;
+        vf:pairsWith        vf:notApplicable ;
         vf:createResource   vf:notApplicable ;
         vf:eventQuantity    vf:resource ;
         vf:accountingEffect vf:notApplicable ;
