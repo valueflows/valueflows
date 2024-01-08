@@ -14,9 +14,9 @@ Some specific links of interest for devs:
 * [Procedures for moving changes to the website](https://lab.allmende.io/valueflows/valueflows/-/wikis/Website-publishing-procedure).
 
 
-If you would like to be part of the Valueflows conversation, please [raise an issue here](https://lab.allmende.io/valueflows/valueflows/-/issues), or fork this or any of the related repositories and issue pull requests.  You can also pop into our [welcome gitter chat](https://gitter.im/valueflows/welcome) to make comments, ask questions, or introduce yourself!  
+If you would like to be part of the Valueflows conversation, please [raise an issue here](https://lab.allmende.io/valueflows/valueflows/-/issues), or fork this or any of the related repositories and issue pull requests.  You can also pop into our [welcome matrix chat](https://matrix.to/#/#valueflows:matrix.org) to make comments, ask questions, or introduce yourself!  
 
-And please visit the gitter chat if you have difficulty accessing the gitlab repositories!  There have been closures due to spam that may affect your ability to register.
+Also please visit the matrix chat if you have difficulty accessing the gitlab repositories!  There have been closures due to spam that may affect your ability to register.
 
 ## License
 
