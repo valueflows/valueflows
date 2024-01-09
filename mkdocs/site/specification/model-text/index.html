@@ -9,17 +9,17 @@
       
       
       
-        <link rel="prev" href="../units/">
+        <link rel="prev" href="../uml/">
       
       
-        <link rel="next" href="../graphql/">
+        <link rel="next" href="../vfspec/">
       
       <link rel="icon" href="../../assets/favicon.ico">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.6">
     
     
       
-        <title>Query Naming - Valueflows</title>
+        <title>Diagram Explanations - Valueflows</title>
       
     
     
@@ -69,7 +69,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#query-and-filter-naming" class="md-skip">
+        <a href="#diagram-explanations" class="md-skip">
           Skip to content
         </a>
       
@@ -103,7 +103,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Query Naming
+              Diagram Explanations
             
           </span>
         </div>
@@ -530,11 +530,403 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../model-text/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Diagram Explanations
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Diagram Explanations
       </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#agent" class="md-nav__link">
+    Agent
+  </a>
+  
+    <nav class="md-nav" aria-label="Agent">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vfagent" class="md-nav__link">
+    vf:Agent
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vfagentrelationship" class="md-nav__link">
+    vf:AgentRelationship
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vfagentrelationshiprole" class="md-nav__link">
+    vf:AgentRelationshipRole
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vfrolebehavior" class="md-nav__link">
+    vf:RoleBehavior
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resource" class="md-nav__link">
+    Resource
+  </a>
+  
+    <nav class="md-nav" aria-label="Resource">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vfresourcespecification" class="md-nav__link">
+    vf:ResourceSpecification
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vfeconomicresource" class="md-nav__link">
+    vf:EconomicResource
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dfcproductbatch" class="md-nav__link">
+    dfc:ProductBatch
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#putting-flows-into-motion" class="md-nav__link">
+    Putting flows into motion...
+  </a>
+  
+    <nav class="md-nav" aria-label="Putting flows into motion...">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vfaction" class="md-nav__link">
+    vf:Action
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#geospatialthing" class="md-nav__link">
+    geo:SpatialThing
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#om2measure" class="md-nav__link">
+    om2:Measure
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#om2unit" class="md-nav__link">
+    om2:Unit
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flows-in-motion-recipe" class="md-nav__link">
+    Flows in motion: Recipe
+  </a>
+  
+    <nav class="md-nav" aria-label="Flows in motion: Recipe">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vfreciperesource" class="md-nav__link">
+    vf:RecipeResource
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vfrecipeprocess" class="md-nav__link">
+    vf:RecipeProcess
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#timeduration" class="md-nav__link">
+    time:Duration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vfrecipeexchange" class="md-nav__link">
+    vf:RecipeExchange
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vfrecipeflow" class="md-nav__link">
+    vf:RecipeFlow
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flows-in-motion-planning" class="md-nav__link">
+    Flows in motion: Planning
+  </a>
+  
+    <nav class="md-nav" aria-label="Flows in motion: Planning">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vfplan" class="md-nav__link">
+    vf:Plan
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vfprocess" class="md-nav__link">
+    vf:Process
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vfprocessspecification" class="md-nav__link">
+    vf:ProcessSpecification
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vfcommitment" class="md-nav__link">
+    vf:Commitment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vfagreement" class="md-nav__link">
+    vf:Agreement
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vfagreementbundle" class="md-nav__link">
+    vf:AgreementBundle
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vfintent" class="md-nav__link">
+    vf:Intent
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vfsatisfaction" class="md-nav__link">
+    vf:Satisfaction
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flows-in-motion-offers-and-requests" class="md-nav__link">
+    Flows in motion: Offers and Requests
+  </a>
+  
+    <nav class="md-nav" aria-label="Flows in motion: Offers and Requests">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vfproposal" class="md-nav__link">
+    vf:Proposal
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vfproposallist" class="md-nav__link">
+    vf:ProposalList
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vfintent_1" class="md-nav__link">
+    vf:Intent
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flows-in-motion-observation" class="md-nav__link">
+    Flows in motion: Observation
+  </a>
+  
+    <nav class="md-nav" aria-label="Flows in motion: Observation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vfprocess_1" class="md-nav__link">
+    vf:Process
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vfeconomicevent" class="md-nav__link">
+    vf:EconomicEvent
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vffulfillment" class="md-nav__link">
+    vf:Fulfillment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vfclaim" class="md-nav__link">
+    vf:Claim
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vfappreciation" class="md-nav__link">
+    vf:Appreciation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#analysis-pre-planning-aggregation" class="md-nav__link">
+    Analysis, Pre-planning, Aggregation
+  </a>
+  
+    <nav class="md-nav" aria-label="Analysis, Pre-planning, Aggregation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vfscenario" class="md-nav__link">
+    vf:Scenario
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vfplan_1" class="md-nav__link">
+    vf:Plan
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vfprocess-vfintent-vfeconomicevent" class="md-nav__link">
+    vf:Process, vf:Intent, vf:EconomicEvent
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#accounting-reporting" class="md-nav__link">
+    Accounting &amp; Reporting
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -586,282 +978,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Query Naming
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../inverses/" class="md-nav__link">
         Query Naming
       </a>
-      
-        
-
-  
-
-<nav class="md-nav md-nav--secondary" aria-label="On this page">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      On this page
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#introduction" class="md-nav__link">
-    Introduction
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#observation-layer" class="md-nav__link">
-    Observation layer
-  </a>
-  
-    <nav class="md-nav" aria-label="Observation layer">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#agent-also-subclasses-person-organization-ecologicalagent" class="md-nav__link">
-    Agent (also subclasses Person, Organization, EcologicalAgent)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#agentrelationship" class="md-nav__link">
-    AgentRelationship
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#process" class="md-nav__link">
-    Process
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#economicevent" class="md-nav__link">
-    EconomicEvent
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#economicresource" class="md-nav__link">
-    EconomicResource
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#fulfillment" class="md-nav__link">
-    Fulfillment
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#appreciation" class="md-nav__link">
-    Appreciation
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#plan-layer" class="md-nav__link">
-    Plan layer
-  </a>
-  
-    <nav class="md-nav" aria-label="Plan layer">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#proposal" class="md-nav__link">
-    Proposal
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#intent" class="md-nav__link">
-    Intent
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#proposedintent" class="md-nav__link">
-    ProposedIntent
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#agreement" class="md-nav__link">
-    Agreement
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#commitment" class="md-nav__link">
-    Commitment
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#satisfaction" class="md-nav__link">
-    Satisfaction
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#claim" class="md-nav__link">
-    Claim
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#settlement" class="md-nav__link">
-    Settlement
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#plan" class="md-nav__link">
-    Plan
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#scenario" class="md-nav__link">
-    Scenario
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#knowledge-layer" class="md-nav__link">
-    Knowledge layer
-  </a>
-  
-    <nav class="md-nav" aria-label="Knowledge layer">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#resourcespecification" class="md-nav__link">
-    ResourceSpecification
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#processspecification" class="md-nav__link">
-    ProcessSpecification
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#reciperesource" class="md-nav__link">
-    RecipeResource
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#recipeflow" class="md-nav__link">
-    RecipeFlow
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#recipeexchange" class="md-nav__link">
-    RecipeExchange
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#recipeprocess" class="md-nav__link">
-    RecipeProcess
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#scenariodefinition" class="md-nav__link">
-    ScenarioDefinition
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#action" class="md-nav__link">
-    Action
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#agentrelationshiprole" class="md-nav__link">
-    AgentRelationshipRole
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#rolebehavior" class="md-nav__link">
-    RoleBehavior
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1693,65 +1814,37 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#introduction" class="md-nav__link">
-    Introduction
+  <a href="#agent" class="md-nav__link">
+    Agent
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#observation-layer" class="md-nav__link">
-    Observation layer
-  </a>
-  
-    <nav class="md-nav" aria-label="Observation layer">
+    <nav class="md-nav" aria-label="Agent">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#agent-also-subclasses-person-organization-ecologicalagent" class="md-nav__link">
-    Agent (also subclasses Person, Organization, EcologicalAgent)
+  <a href="#vfagent" class="md-nav__link">
+    vf:Agent
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#agentrelationship" class="md-nav__link">
-    AgentRelationship
+  <a href="#vfagentrelationship" class="md-nav__link">
+    vf:AgentRelationship
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#process" class="md-nav__link">
-    Process
+  <a href="#vfagentrelationshiprole" class="md-nav__link">
+    vf:AgentRelationshipRole
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#economicevent" class="md-nav__link">
-    EconomicEvent
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#economicresource" class="md-nav__link">
-    EconomicResource
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#fulfillment" class="md-nav__link">
-    Fulfillment
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#appreciation" class="md-nav__link">
-    Appreciation
+  <a href="#vfrolebehavior" class="md-nav__link">
+    vf:RoleBehavior
   </a>
   
 </li>
@@ -1762,79 +1855,30 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#plan-layer" class="md-nav__link">
-    Plan layer
+  <a href="#resource" class="md-nav__link">
+    Resource
   </a>
   
-    <nav class="md-nav" aria-label="Plan layer">
+    <nav class="md-nav" aria-label="Resource">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#proposal" class="md-nav__link">
-    Proposal
+  <a href="#vfresourcespecification" class="md-nav__link">
+    vf:ResourceSpecification
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#intent" class="md-nav__link">
-    Intent
+  <a href="#vfeconomicresource" class="md-nav__link">
+    vf:EconomicResource
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#proposedintent" class="md-nav__link">
-    ProposedIntent
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#agreement" class="md-nav__link">
-    Agreement
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#commitment" class="md-nav__link">
-    Commitment
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#satisfaction" class="md-nav__link">
-    Satisfaction
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#claim" class="md-nav__link">
-    Claim
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#settlement" class="md-nav__link">
-    Settlement
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#plan" class="md-nav__link">
-    Plan
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#scenario" class="md-nav__link">
-    Scenario
+  <a href="#dfcproductbatch" class="md-nav__link">
+    dfc:ProductBatch
   </a>
   
 </li>
@@ -1845,85 +1889,283 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#knowledge-layer" class="md-nav__link">
-    Knowledge layer
+  <a href="#putting-flows-into-motion" class="md-nav__link">
+    Putting flows into motion...
   </a>
   
-    <nav class="md-nav" aria-label="Knowledge layer">
+    <nav class="md-nav" aria-label="Putting flows into motion...">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#resourcespecification" class="md-nav__link">
-    ResourceSpecification
+  <a href="#vfaction" class="md-nav__link">
+    vf:Action
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#processspecification" class="md-nav__link">
-    ProcessSpecification
+  <a href="#geospatialthing" class="md-nav__link">
+    geo:SpatialThing
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#reciperesource" class="md-nav__link">
-    RecipeResource
+  <a href="#om2measure" class="md-nav__link">
+    om2:Measure
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#recipeflow" class="md-nav__link">
-    RecipeFlow
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#recipeexchange" class="md-nav__link">
-    RecipeExchange
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#recipeprocess" class="md-nav__link">
-    RecipeProcess
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#scenariodefinition" class="md-nav__link">
-    ScenarioDefinition
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#action" class="md-nav__link">
-    Action
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#agentrelationshiprole" class="md-nav__link">
-    AgentRelationshipRole
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#rolebehavior" class="md-nav__link">
-    RoleBehavior
+  <a href="#om2unit" class="md-nav__link">
+    om2:Unit
   </a>
   
 </li>
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flows-in-motion-recipe" class="md-nav__link">
+    Flows in motion: Recipe
+  </a>
+  
+    <nav class="md-nav" aria-label="Flows in motion: Recipe">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vfreciperesource" class="md-nav__link">
+    vf:RecipeResource
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vfrecipeprocess" class="md-nav__link">
+    vf:RecipeProcess
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#timeduration" class="md-nav__link">
+    time:Duration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vfrecipeexchange" class="md-nav__link">
+    vf:RecipeExchange
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vfrecipeflow" class="md-nav__link">
+    vf:RecipeFlow
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flows-in-motion-planning" class="md-nav__link">
+    Flows in motion: Planning
+  </a>
+  
+    <nav class="md-nav" aria-label="Flows in motion: Planning">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vfplan" class="md-nav__link">
+    vf:Plan
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vfprocess" class="md-nav__link">
+    vf:Process
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vfprocessspecification" class="md-nav__link">
+    vf:ProcessSpecification
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vfcommitment" class="md-nav__link">
+    vf:Commitment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vfagreement" class="md-nav__link">
+    vf:Agreement
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vfagreementbundle" class="md-nav__link">
+    vf:AgreementBundle
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vfintent" class="md-nav__link">
+    vf:Intent
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vfsatisfaction" class="md-nav__link">
+    vf:Satisfaction
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flows-in-motion-offers-and-requests" class="md-nav__link">
+    Flows in motion: Offers and Requests
+  </a>
+  
+    <nav class="md-nav" aria-label="Flows in motion: Offers and Requests">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vfproposal" class="md-nav__link">
+    vf:Proposal
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vfproposallist" class="md-nav__link">
+    vf:ProposalList
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vfintent_1" class="md-nav__link">
+    vf:Intent
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flows-in-motion-observation" class="md-nav__link">
+    Flows in motion: Observation
+  </a>
+  
+    <nav class="md-nav" aria-label="Flows in motion: Observation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vfprocess_1" class="md-nav__link">
+    vf:Process
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vfeconomicevent" class="md-nav__link">
+    vf:EconomicEvent
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vffulfillment" class="md-nav__link">
+    vf:Fulfillment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vfclaim" class="md-nav__link">
+    vf:Claim
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vfappreciation" class="md-nav__link">
+    vf:Appreciation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#analysis-pre-planning-aggregation" class="md-nav__link">
+    Analysis, Pre-planning, Aggregation
+  </a>
+  
+    <nav class="md-nav" aria-label="Analysis, Pre-planning, Aggregation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vfscenario" class="md-nav__link">
+    vf:Scenario
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vfplan_1" class="md-nav__link">
+    vf:Plan
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vfprocess-vfintent-vfeconomicevent" class="md-nav__link">
+    vf:Process, vf:Intent, vf:EconomicEvent
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#accounting-reporting" class="md-nav__link">
+    Accounting &amp; Reporting
+  </a>
   
 </li>
       
@@ -1943,386 +2185,100 @@
 
 
 
-<h1 id="query-and-filter-naming">Query and Filter Naming</h1>
-<h2 id="introduction">Introduction</h2>
-<p>Although queries and query filters are not specified in the RDF core, this set of guidelines should be used, to facilitate standard api naming.  It is possible that at some point they will be included in the formal VF namespace.</p>
-<p>This document is not meant to imply that all of these named queries and filters should be implemented in any particular application api.</p>
-<p><em>Note:</em> Filters can be applicable to any query that can return more than one of the class.  For example all processes, processes in scope of an agent, processes in a plan, could each use the process filters.</p>
-<p><em>Status:</em> Not all of these queries and filters are tested, and there will certainly be other useful queries and filters. If anyone has recommended changes or additions, please start an issue or merge request, or just let us know in the Welcome chat (links on the home page).</p>
-<h2 id="observation-layer">Observation layer</h2>
-<h3 id="agent-also-subclasses-person-organization-ecologicalagent">Agent (also subclasses Person, Organization, EcologicalAgent)</h3>
-<p><em>main queries:</em></p>
-<ul>
-<li>agent</li>
-<li>agents</li>
-<li>myAgent</li>
-<li>person</li>
-<li>people</li>
-<li>organization</li>
-<li>organizations</li>
-</ul>
-<p><em>filters:</em> classifiedAs (Organizations only), withinLocation (some geographic boundary, city, region, etc.)</p>
-<p><em>inverse queries:</em></p>
-<ul>
-<li>processes (Process.inScopeOf)</li>
-<li>inventoriedEconomicResources (EconomicResource.primaryAccountable)</li>
-<li>commitmentsAsProvider (Commitment.provider)</li>
-<li>commitmentsAsReceiver (Commitment.receiver)</li>
-<li>commitmentsInScope (Commitment.inScopeOf)</li>
-<li>economicEventsAsProvider (EconomicEvent.provider)</li>
-<li>economicEventsAsReceiver (EconomicEvent.receiver)</li>
-<li>economicEventsInScope (EconomicEvent.inScopeOf)</li>
-<li>intentsAsProvider (Intent.provider)</li>
-<li>intentsAsReceiver (Intent.receiver)</li>
-<li>intentsInScope (Intent.inScopeOf)</li>
-<li>claimsAsProvider (Claim.provider)</li>
-<li>claimsAsReceiver (Claim.receiver)</li>
-<li>claimsInScope (Claim.inScopeOf)</li>
-<li>proposalsInScope (Proposal.inScopeOf)</li>
-<li>scenariosInScope (Scenario.inScopeOf)</li>
-<li>relationshipsAsSubject (Relationship.subject)</li>
-<li>relationshipsAsObject (Relationship.object)</li>
-</ul>
-<p><em>other queries:</em></p>
-<ul>
-<li>plans (if there is any Process.inScopeOf in the Plan)</li>
-<li>economicEvents (EconomicEvent.provider or .receiver or .inScopeOf)</li>
-<li>commitments (Commitment.provider or .receiver or .inScopeOf)</li>
-<li>intents (Intent.provider or .receiver or .inScopeOf)</li>
-<li>claims (Claim.provider or .receiver or .inScopeOf)</li>
-<li>proposals (Proposal.inScopeOf, or a related Intent.provider or Intent.receiver)</li>
-<li>proposalsTo (Proposals.proposed where ProposedTo.proposedTo is the Agent)</li>
-<li>relationships (Relationship.object or .subject or .inScopeOf)</li>
-<li>roles (AgentRelationshipRoles that are AgentRelationship.relationship where the .subject or .object or .inScopeOf is the Agent)</li>
-</ul>
-<h3 id="agentrelationship">AgentRelationship</h3>
-<p><em>main queries:</em></p>
-<ul>
-<li>agentRelationship</li>
-<li>agentRelationships</li>
-</ul>
-<p><em>filters:</em> subject, object, role, inScopeOf</p>
-<h3 id="process">Process</h3>
-<p><em>main queries:</em></p>
-<ul>
-<li>process</li>
-<li>processes</li>
-</ul>
-<p><em>filters:</em> searchString, finished, classifiedAs, inScopeOf, startDate, endDate (include any process that overlaps the start date to end date range inclusive; missing start date is from the beginning, missing end date is to the end)</p>
-<p><em>inverse queries:</em></p>
-<ul>
-<li>observedInputs (EconomicEvent.inputOf)</li>
-<li>observedOutputs (EconomicEvent.outputOf) </li>
-<li>committedInputs (Commitment.inputOf)</li>
-<li>committedOutputs (Commitment.outputOf)</li>
-<li>intendedInputs (Intent.inputOf)</li>
-<li>intendedOutputs (Intent.outputOf)</li>
-</ul>
-<p><em>other queries:</em></p>
-<ul>
-<li>economicEvents (EconomicEvent.inputOf or .outputOf)</li>
-<li>commitments (Commitment.inputOf or .outputOf)</li>
-<li>intents (Intent.inputOf or .outputOf)</li>
-<li>inputs (EconomicEvent or Commitment or Intent .inputOf)</li>
-<li>outputs (EconomicEvent or Commitment or Intent .outputOf)</li>
-<li>unplannedEconomicEvents (any EconomicEvent.inputOf or .outputOf that don't fulfill a Commitment)</li>
-<li>unplannedInputs (any EconomicEvent.inputOf that doesn't fulfill a Commitment)</li>
-<li>unplannedOutputs (any EconomicEvent.outputOf that doesn't fulfill a Commitment)</li>
-<li>involvedAgents (any .provider or .receivers or .inScopeOf on Commitments or EconomicEvents or Intents, and self.inScopeOf)</li>
-<li>workingAgents (any EconomicEvent.provider on an input EconomicEvent with action equal to work)</li>
-<li>nextProcesses (Processes where .inputOf references the same .resourceInventoriedAs as self.outputOf references)</li>
-<li>previousProcesses (Processes where .outputOf references the same .resourceInventoriedAs as self.inputOf references)</li>
-<li>previous (EconomicEvent.inputOf, same as observedInputs)</li>
-<li>next (EconomicEvent.outputOf, same as observedOutputs)</li>
-</ul>
-<h3 id="economicevent">EconomicEvent</h3>
-<p><em>main queries:</em></p>
-<ul>
-<li>economicEvent</li>
-<li>economicEvents</li>
-</ul>
-<p><em>filters:</em> searchString, action, provider, receiver, resourceClassifiedAs, startDate, endDate (include any EconomicEvent that overlaps the start date to end date range inclusive; missing start date is from the beginning, missing end date is to the end) </p>
-<p><em>inverse queries:</em></p>
-<ul>
-<li>settles (Settlement.settledBy)</li>
-<li>fulfills (Fulfillment.fulfilledBy)</li>
-<li>satisfies (Satisfaction.satisfiedBy)</li>
-<li>appreciationOf (Appreciation.appreciationWith)</li>
-<li>appreciationWith (Appreciation.appreciationOf)</li>
-<li>triggers (EconomicEvent.triggeredBy)</li>
-</ul>
-<p><em>other queries:</em></p>
-<ul>
-<li>reciprocalEvents (EconomicEvents.realizationOf the same Agreement with opposite provider, receiver)</li>
-<li>previous (Process, EconomicEvent, EconomicResource, see <a href="../../algorithms/track/">Track and Trace</a> for logic)</li>
-<li>next (Process, EconomicEvent, EconomicResource, see <a href="../../algorithms/track/">Track and Trace</a> for logic)</li>
-<li>trace (ordered incoming value flows, see <a href="../../algorithms/track/">Track and Trace</a> for logic)</li>
-<li>track (ordered outgoing value flows, see <a href="../../algorithms/track/">Track and Trace</a> for logic)</li>
-</ul>
-<h3 id="economicresource">EconomicResource</h3>
-<p><em>main queries:</em></p>
-<ul>
-<li>economicResource</li>
-<li>economicResources</li>
-</ul>
-<p><em>filters:</em> searchString, accountableAgent, currentLocation, withinLocation (some geographic boundary, city, region, etc.),  excludeZeroQuantities (boolean), classifiedAs, state, trackingIdentifier</p>
-<p><em>inverse queries:</em></p>
-<ul>
-<li>contains (EconomicResource.containedIn)</li>
-<li>intents (Intent.resourceInventoriedAs)</li>
-<li>commitments (Commitment.resourceInventoriedAs)</li>
-<li>economicEventsInOutFrom (All economic events with the economic resource in the EconomicEvent.resourceInventoriedAs, which includes all process related events, the provider resource in transfers/moves, and raise/lower)</li>
-<li>economicEventsTo (All economic events with the economic Resource in the EconomicEvent.toResourceInventoriedAs, which is the receiver resource in transfers and moves)</li>
-</ul>
-<p><em>other queries:</em></p>
-<ul>
-<li>economicEvents (either EconomicEvent.resourceInventoriedAs or .toResourceInventoriedAs)</li>
-<li>previous (EconomicEvent, see <a href="../../algorithms/track/">Track and Trace</a> for logic)</li>
-<li>next (EconomicEvent, see <a href="../../algorithms/track/">Track and Trace</a> for logic)</li>
-<li>trace (ordered incoming value flows, see <a href="../../algorithms/track/">Track and Trace</a> for logic)</li>
-<li>track (ordered outgoing value flows, see <a href="../../algorithms/track/">Track and Trace</a> for logic)</li>
-</ul>
-<h3 id="fulfillment">Fulfillment</h3>
-<p><em>main queries:</em></p>
-<ul>
-<li>fulfillment</li>
-<li>fulfillments</li>
-</ul>
-<h3 id="appreciation">Appreciation</h3>
-<p><em>main queries:</em></p>
-<ul>
-<li>appreciation</li>
-<li>appreciations</li>
-</ul>
-<h2 id="plan-layer">Plan layer</h2>
-<h3 id="proposal">Proposal</h3>
-<p><em>main queries:</em></p>
-<ul>
-<li>proposal</li>
-<li>proposals</li>
-<li>offers (Proposals where a .publishedIn ProposedIntent.reciprocal is false and the ProposedIntent.publishes Intent has a .provider)</li>
-<li>requests (Proposals where a .publishedIn ProposedIntent.reciprocal is false and the ProposedIntent.publishes Intent has a .receiver)</li>
-</ul>
-<p><em>filters:</em> inScopeOf, withinLocation (the proposed intents are withinLocation), active (boolean, the current date is within the hasBeginning and hasEnd, inclusive), isOffer (boolean, the non-reciprocal intents have provider), isRequest (boolean, the non-reciprocal intents have receiver)</p>
-<p><em>inverse queries:</em></p>
-<ul>
-<li>publishes (ProposedIntent.publishedIn)</li>
-<li>proposedTo (ProposedTo.proposed)</li>
-</ul>
-<p><em>other queries:</em></p>
-<ul>
-<li>isOffer (boolean, true if a .publishedIn ProposedIntent.reciprocal is false and the ProposedIntent.publishes Intent has a .provider)</li>
-<li>isRequest (boolean, true if a .publishedIn ProposedIntent.reciprocal is false and the ProposedIntent.publishes Intent has a .receiver)</li>
-<li>primaryIntents (.publishes Intents where the self.publishedIn ProposedIntent.reciprocal is false)</li>
-<li>reciprocalIntents (.publishes Intents where the self.publishedIn ProposedIntent.reciprocal is true)</li>
-</ul>
-<h3 id="intent">Intent</h3>
-<p><em>main queries:</em></p>
-<ul>
-<li>intent</li>
-<li>intents</li>
-</ul>
-<p><em>filters:</em> searchString, action, provider, receiver, resourceClassifiedAs, resourceConformsTo, finished, startDate, endDate, inScopeOf, withinLocation (some geographic boundary, city, region, etc.)</p>
-<p><em>inverse queries:</em></p>
-<ul>
-<li>publishedIn (ProposedIntent.publishes)</li>
-<li>satisfiedBy (Satisfaction.satisfies)</li>
-<li>(probably some location based queries, TBD)</li>
-</ul>
-<h3 id="proposedintent">ProposedIntent</h3>
-<p><em>filters:</em> reciprocal</p>
-<p><em>main queries:</em></p>
-<ul>
-<li>proposedIntent</li>
-<li>proposedIntents</li>
-</ul>
-<h3 id="agreement">Agreement</h3>
-<p><em>main queries:</em></p>
-<ul>
-<li>agreement</li>
-<li>agreements</li>
-</ul>
-<p><em>inverse queries:</em></p>
-<ul>
-<li>commitments (Commitment.clauseOf)</li>
-<li>unplannedEconomicEvents (EconomicEvent.realizationOf)</li>
-</ul>
-<p><em>other queries:</em></p>
-<ul>
-<li>involvedAgents (any .provider, .receiver, .inScopeOf on commitments or economicEvents)</li>
-<li>economicEvents (EconomicEvent.realizationOf, and any EconomicEvents that fulfill Commitments that are .clauseOf the Agreement)</li>
-</ul>
-<h3 id="commitment">Commitment</h3>
-<p><em>main queries:</em></p>
-<ul>
-<li>commitment</li>
-<li>commitments</li>
-</ul>
-<p><em>filters:</em> searchString, action, provider, receiver, resourceClassifiedAs, resourceConformsTo, finished, startDate, endDate (include any Commitment that overlaps the start date to end date range inclusive; missing start date is from the beginning, missing end date is to the end), withinLocation (some geographic boundary, city, region, etc.)</p>
-<p><em>inverse queries:</em></p>
-<ul>
-<li>fulfilledBy: (Fulfillment.fulfills)</li>
-<li>satisfies (Satisfaction.satisfiedBy)</li>
-</ul>
-<p><em>other queries:</em></p>
-<ul>
-<li>involvedAgents (Commitment.provider, .receiver, .inScopeOf if agent)</li>
-<li>(possibly some location based queries, TBD)</li>
-</ul>
-<h3 id="satisfaction">Satisfaction</h3>
-<p><em>main queries:</em></p>
-<ul>
-<li>satisfaction</li>
-<li>satisfactions</li>
-</ul>
-<h3 id="claim">Claim</h3>
-<p><em>main queries:</em></p>
-<ul>
-<li>claim</li>
-<li>claims</li>
-</ul>
-<p><em>filters:</em> action, provider, receiver, resourceClassifiedAs, resourceConformsTo, finished, startDate, endDate (include any Claim where due overlaps the start date to end date range inclusive; missing start date is from the beginning, missing end date is to the end)</p>
-<p><em>inverse queries:</em></p>
-<ul>
-<li>settledBy (Settlement.settles)</li>
-</ul>
-<h3 id="settlement">Settlement</h3>
-<p><em>main queries:</em></p>
-<ul>
-<li>settlement</li>
-<li>settlements</li>
-</ul>
-<h3 id="plan">Plan</h3>
-<p><em>main queries:</em></p>
-<ul>
-<li>plan</li>
-<li>plans</li>
-</ul>
-<p><em>filters:</em> searchString, finished (true means all the processes that are part of the Plan are finished), TBD possibly some date related logic</p>
-<p><em>inverse queries:</em></p>
-<ul>
-<li>processes (Process.plannedWithin)</li>
-<li>nonProcessCommitments (Commitment.plannedWithin)</li>
-<li>independentDemands (Commitment.independentDemandOf)</li>
-</ul>
-<p><em>other queries:</em></p>
-<ul>
-<li>inScopeOf (all the .plannedWithin Process.inScopeOf)</li>
-<li>involvedAgents (all the .plannedWithin Process.involvedAgents)</li>
-<li>startDate (earliest .plannedWithin Process.hasBeginning)</li>
-<li>endDate (latest .plannedWithin Process.hasEnd)</li>
-<li>finished (all the .plannedWithin Process.finished are true)</li>
-</ul>
-<h3 id="scenario">Scenario</h3>
-<p><em>main queries:</em></p>
-<ul>
-<li>scenario</li>
-<li>scenarios</li>
-</ul>
-<p><em>filters:</em> searchString, (TBD date logic)</p>
-<p><em>inverse queries:</em></p>
-<ul>
-<li>plans (Plan.refinementOf)</li>
-<li>refinements (Scenario.refinementOf))</li>
-<li>processes (Process.nestedIn)</li>
-<li>startDate TBD</li>
-<li>endDate TBD</li>
-</ul>
-<h2 id="knowledge-layer">Knowledge layer</h2>
-<h3 id="resourcespecification">ResourceSpecification</h3>
-<p><em>main queries:</em></p>
-<ul>
-<li>resourceSpecification</li>
-<li>resourceSpecifications</li>
-</ul>
-<p><em>filters:</em> searchString, resourceClassifiedAs</p>
-<p><em>inverse queries:</em></p>
-<ul>
-<li>conformingResources (EconomicResource.conformsTo)</li>
-<li>economicEvents (EconomicEvent.resourceConformsTo)</li>
-<li>commitments (Commitment.resourceConformsTo)</li>
-<li>intents (Intent.resourceConformsTo)</li>
-<li>claims (Claim.resourceConformsTo)</li>
-<li>recipes TBD</li>
-</ul>
-<h3 id="processspecification">ProcessSpecification</h3>
-<p><em>main queries:</em></p>
-<ul>
-<li>processSpecification</li>
-<li>processSpecifications</li>
-</ul>
-<p><em>inverse queries:</em></p>
-<ul>
-<li>conformingProcesses (Process.basedOn)</li>
-<li>conformingRecipeProcesses (RecipeProcess.processConformsTo)</li>
-<li>commitmentsRequiringStage (Commitment.stage)</li>
-<li>resourcesCurrentlyAtStage (EconomicResource.stage)</li>
-<li>recipeFlowsRequiringStage (RecipeFlow.stage)</li>
-</ul>
-<h3 id="reciperesource">RecipeResource</h3>
-<p><em>main queries:</em></p>
-<ul>
-<li>recipeResource</li>
-<li>recipeResources</li>
-</ul>
-<p>TBD</p>
-<h3 id="recipeflow">RecipeFlow</h3>
-<p><em>main queries:</em></p>
-<ul>
-<li>recipeFlow</li>
-<li>reciprFlows</li>
-</ul>
-<p>TBD</p>
-<h3 id="recipeexchange">RecipeExchange</h3>
-<p><em>main queries:</em></p>
-<ul>
-<li>recipeExchange</li>
-<li>recipeExchanges</li>
-</ul>
-<p>TBD</p>
-<h3 id="recipeprocess">RecipeProcess</h3>
-<p><em>main queries:</em></p>
-<ul>
-<li>recipeProcess</li>
-<li>recipeProcesses</li>
-</ul>
-<p>TBD</p>
-<h3 id="scenariodefinition">ScenarioDefinition</h3>
-<p><em>main queries:</em></p>
-<ul>
-<li>scenarioDefinition</li>
-<li>scenarioDefinitions</li>
-</ul>
-<p><em>inverse queries:</em></p>
-<ul>
-<li>scenarios (Scenario.definedAs)</li>
-</ul>
-<h3 id="action">Action</h3>
-<p><em>main queries:</em></p>
-<ul>
-<li>action</li>
-<li>actions</li>
-</ul>
-<h3 id="agentrelationshiprole">AgentRelationshipRole</h3>
-<p><em>main queries:</em></p>
-<ul>
-<li>agentRelationshipRole</li>
-<li>agentRelationshipRoles</li>
-</ul>
-<p><em>inverse queries:</em></p>
-<ul>
-<li>agentRelationships (AgentRelationship.relationship)</li>
-</ul>
-<h3 id="rolebehavior">RoleBehavior</h3>
-<p><em>main queries:</em></p>
-<ul>
-<li>roleBehavior</li>
-<li>roleBehaviors</li>
-</ul>
-<p><em>inverse Queries:</em></p>
-<ul>
-<li>agentRelationshipRoles (agentRelationshipRole.roleBehavior)</li>
-</ul>
+<h1 id="diagram-explanations">Diagram Explanations</h1>
+<p>These textual explanations refer back to the UML diagram on the previous page, but can be used without the diagram.  The explanations are organized by class within subject area of the model.</p>
+<h3 id="agent">Agent</h3>
+<p>The Agent subject area defines roles in the Knowledge Layer and defines agents and their relationships in the Observation Layer.  More info at <a href="../../concepts/agents/">Agent concepts</a>.</p>
+<h4 id="vfagent">vf:Agent</h4>
+<p>The Valueflows view of Agent is fairly broad, including people, organizations (formal or informal), and ecological agents such as non-human beings and ecosystems.  But all of these have economic or governance agency of some sort.</p>
+<p>Agents are key to the overall ontology, particularly the flows in Planning and Observation: Intents, Commitments, EconomicEvents, Claims, where each can reference a provider and receiver Agent. Proposals can be published to Agent(s), and Agents can have many AgentRelationships with other Agents of any type.</p>
+<p>There are 3 subclasses of Agent: <strong>vf:Person</strong>, <strong>vf:Organization</strong>, and <strong>vf:EcologicalAgent</strong>.</p>
+<h4 id="vfagentrelationship">vf:AgentRelationship</h4>
+<p>The subject and object of an AgentRelationship are Agents.  Their role the subject plays in relation to the object is represented by the AgentRelationshipRole.  Agents can have multiple relationships and multiple kinds of relationships in the same network.</p>
+<h4 id="vfagentrelationshiprole">vf:AgentRelationshipRole</h4>
+<p>Agent relationship roles define the roles or types of agent relationships within a network, completely defined by the network itself.  Each role has a RoleBehavior.  Roles can be a good base to define user account permissions.</p>
+<h4 id="vfrolebehavior">vf:RoleBehavior</h4>
+<p>Role behaviors, on the other hand, are defined in Valueflows, so that there are standard types of AgentRelationshipRole (and therefore AgentRelationship) that can govern behavior in and across applications.  Examples are "member" or "sub-organization".</p>
+<h3 id="resource">Resource</h3>
+<p>Resources are defined in different ways, depending on their need and ability to be accounted for specifically.  Every flow of any kind will reference a resource, represented either by ResourceSpecification or EconomicResource. Resource classifications also assist in understanding or finding a resource. More info at <a href="../../concepts/resources/">Resource concepts</a>, <a href="../../concepts/classification/">Classification concepts</a>.</p>
+<h4 id="vfresourcespecification">vf:ResourceSpecification</h4>
+<p>This specifies the kind of resource, to the most specific level needed.  It also fills the space for the resource when it is not yet, or never will be, an actual resource.  It can be used in and across networks to communicate the resource type needed.  EconomicResource and RecipeResource, as well as the resource concept referenced in flows (EconomicEvent, Intent, Commitment, Claim), conform to a ResourceSpecification.</p>
+<h4 id="vfeconomicresource">vf:EconomicResource</h4>
+<p>An actual EconomicResource is created only by EconomicEvents.  It is also updated only by EconomicEvents for all its accounting related properties.  It becomes involved in a Process by being referenced by an EconomicEvent. It can appear on a Commitment or Intent if recording of a specific resource is needed.  It must have a ResourceSpecification.  It can have a stage and/or a state.  It knows its primary accountable Agent at any point in time.  It can be contained in another EconomicResource.</p>
+<h4 id="dfcproductbatch">dfc:ProductBatch</h4>
+<p>ProductBatch is a lot or batch associated with an EconomicResource.  It has its own identity because many EconomicResources can be part of the same lot/batch, and it has other useful information as a lot.</p>
+<h3 id="putting-flows-into-motion">Putting flows into motion...</h3>
+<p>More flow info at <a href="../../concepts/flows/">Flows concepts</a>, <a href="../../concepts/actions/">Actions concepts</a>, <a href="../../concepts/processes/">Processes concepts</a>, <a href="../../concepts/transfers/">Transfers concepts</a>, <a href="../../concepts/exchanges/">Exchanges concepts</a>.  First, some necessary pieces.</p>
+<h4 id="vfaction">vf:Action</h4>
+<p>An Action specifies the type of flow and what the flow will do or has done. EconomicEvent, Commitment, Intent, Claim, RecipeFlow have an Action.  Actions are specified in Valueflows to cover the various ways flows affect resources.  Actions have properties defined that can drive the code logic to create or change EconomicResources when EconomicEvents are recorded, if desired.</p>
+<h4 id="geospatialthing">geo:SpatialThing</h4>
+<p>Location, represented by SpatialThing, is not used by itself in Valueflows, although it can stand on its own if needed. It is primarily used for mapping. Although the relationships are not shown in the above diagram, the following are a SpatialThing: in EconomicResource, currentLocation; in Agent, primaryLocation; in EconomicEvent, Commitment, Intent, atLocation; and in EconomicEvent, toLocation.</p>
+<h4 id="om2measure">om2:Measure</h4>
+<p>Measure does not ever live on its own, it is a way to unify how quantities are represented in Valueflows.  Although the relationships are not shown in the above diagram, the following are Measures: in EconomicResource, accountingQuantity and onhandQuantity; in EconomicEvent, Commitment, Intent, RecipeFlow, resourceQuantity, effortQuantity.  Measure is a numerical value plus a Unit.</p>
+<h4 id="om2unit">om2:Unit</h4>
+<p>It is very helpful for interoperaability that the same units of measure are used as networks communicate.  OM2 has a long list of recommended Units, extracted <a href="https://lab.allmende.io/valueflows/valueflows/-/blob/master/units/units-en-useful.csv">here</a>.</p>
+<h3 id="flows-in-motion-recipe">Flows in motion: Recipe</h3>
+<p>This set of Knowledge Layer entities together make a recipe for creating a Resource conforming to this ResourceSpecification. It can be used to automate generating a plan in the Plan Layer, since they follow the same basic input-process-output graph pattern. The recipe model will probably be made more complete in the future, to support forking, versioning, and variants.  It currently supports multiple recipes for the same ResourceSpecification.  More info at <a href="../../concepts/recipes/">Recipes concepts</a>.</p>
+<h4 id="vfreciperesource">vf:RecipeResource</h4>
+<p>This is the resource portion of a recipe, and conforms to, but can override data from, the ResourceSpecification.  It can be thought of as part of the RecipeFlow, or as a node in the recipe graph.</p>
+<h4 id="vfrecipeprocess">vf:RecipeProcess</h4>
+<p>This defines a process node in the recipe graph.  A recipe can contain as many RecipeProcesses as it needs to produce the resource defined in the final ResourceSpecification. It can optionally conform to a ProcessSpecification.  It will have at least one input or output RecipeFlow.</p>
+<h4 id="timeduration">time:Duration</h4>
+<p>A RecipeProcess has a Duration, used in planning.</p>
+<h4 id="vfrecipeexchange">vf:RecipeExchange</h4>
+<p>RecipeExchange corresponds to the Agreement in the Plan Layer.  It enables generation of plans that include agreements.  It can contain as many RecipeFlows as needed.</p>
+<h4 id="vfrecipeflow">vf:RecipeFlow</h4>
+<p>A RecipeFlow defines either an input or output to a RecipeProcess, and/or a clause of a RecipeExchange.  RecipeProcesses and RecipeExchanges can be combined into one recipe if desired.  A RecipeFlow through its Action defines how it will affect its RecipeResource.  If it defines a ProcessSpecification stage, then the flow expects a resource at that stage of production.</p>
+<h3 id="flows-in-motion-planning">Flows in motion: Planning</h3>
+<p>Planning can be done with or without recipes.  And planning is not always done, sometimes the economic activity is only observed, depending on the use case.  This section is about operational planning, proesses and agreements that are intended to be executed in this lowest level of detail.  More info at <a href="../../concepts/plan/">Planning concepts</a>.</p>
+<h4 id="vfplan">vf:Plan</h4>
+<p>A Plan is a collection of one or more operational Processes and/or non-process Commitments (such as transfers) in the input-output-process graph pattern.  Plans can also reference one or more Commitments that create the independent demand that provides the reason for, and final output of, the Plan. If the use case calls for it, Plans can be nested in Scenarios to give higher level views that drill down to operational Plans, or reference a Scenario that was done as a pre-planning effort.</p>
+<h4 id="vfprocess">vf:Process</h4>
+<p>This section talks about operational processes, see below for higher level processes.  A Process can exist both in the Plan and Observation Layers, or either one.  If it is planned, then observed as an actual process, it remains the same Process.  So it can have input and/or output Commitments, and/or input and/or output EconomicEvents.  It can also have input or output Intents, if all or some of its flows are not committed, but are intended to happen.  Processes are usually (but not required to be) planned within a Plan.  A Process can be based on a ProcessSpecification or not.</p>
+<h4 id="vfprocessspecification">vf:ProcessSpecification</h4>
+<p>This specifies the kind of Process, to the most specific level needed.  Processes can be based on a ProcessSpecification.  It is also used as the stage of an EconomicResource that is created in stages, and is part of the logical identifier in those cases.  RecipeFlow and Commitment can have a ProcessSpecification stage specified to indicate that the resource they expect is at a particular stage, for example "tested" or "edited".</p>
+<h4 id="vfcommitment">vf:Commitment</h4>
+<p>A Commitment is a planned flow.  It can be input or output of an operational Process or planned directly in a Plan if it is a non-process flow. It also can be defined as an independent demand of a Plan, meaning it is creating what the plan is for.  It can be a clause of an Agreement, even if also an input or output of a Process.  It references something to define a current or future resource, often a ResourceSpecification, but sometimes an existing EconomicResource if that exists and is important, usually because it is one-of-a-kind. Like all flows, it references an Action that defines its effects on the resource.  It can satisfy one or more Intents or be fulfilled by one or more EconomicEvents.  A Commitment references both a provider Agent and a receiver Agent, although it can be planned temporarily without both provider and receiver if there is a committed Agent assumed or immediately expected as part of planning.</p>
+<h4 id="vfagreement">vf:Agreement</h4>
+<p>An Agreement is a purposefully abstract term, so that it can represent many existing (or not-yet-invented) kinds of agreements, e.g. exchanges or income distributions.  Its main purpose is to contain related Commitments in planning, usually reciprocal commitments.  It can also be used to contain reciprocal EconomicEvents in cases where there has been no planning, such as point of sale.</p>
+<h4 id="vfagreementbundle">vf:AgreementBundle</h4>
+<p>An AgreementBundle contains all the agreements bundled together for user purposes, for example multiple line items in an order.</p>
+<h4 id="vfintent">vf:Intent</h4>
+<p>Intent is defined here as part of operational planning, but can also be key as part of a Proposal or part of a Scenario, see below for those uses of Intent.  An Intent has a provider or a receiver Agent, but not both. As part of planning, Intents can be entered directly or generated from recipe, as inputs or outputs to a Process, or as non-process flows, when there is no known Agent assumed to be the missing provider or receiver.  An Intent can be satisfied by one or more Commitments, and/or one or more EconomicEvents if the Commitment does not exist.  And as a flow, an Intent will have an Action. In operational planning, it will also reference a ResourceSpecification or EconomicResource.</p>
+<h4 id="vfsatisfaction">vf:Satisfaction</h4>
+<p>Since a Commitment (or EconomicEvent) can satisfy more than one Intent, or an Intent can be satisfied by more than one Commitment (or EconomicEvent), Satisfaction is needed, along with the quantity satisfied.</p>
+<h3 id="flows-in-motion-offers-and-requests">Flows in motion: Offers and Requests</h3>
+<p>Offers and requests are published primarily to look for a reciprocal match, although they can also be gift offers or requests. Common use cases are e-commerce, timebanks, mutual aid, price lists, publication of help needed for planned work in a network.  More info at <a href="../../concepts/proposals/">Proposals concepts</a>.</p>
+<h4 id="vfproposal">vf:Proposal</h4>
+<p>A Proposal is a container of related Intents, and is an offer or a request, determined by the purpose.  This also corresponds to whether the provider or receiver Agent is undefined in the primary published Intent. Proposals often have more than one Intent, either because there is a reciprocal Intent, or because more than one resource is being offered or requested together.  An Intent can be re-used in more than one Proposal.  A Proposal can be proposed to one or more specific individual or group Agents, or just be part of a scope where Proposals are published.</p>
+<h4 id="vfproposallist">vf:ProposalList</h4>
+<p>A ProposalList contains all the proposals in a user-defined grouping, for example a price list.</p>
+<h4 id="vfintent_1">vf:Intent</h4>
+<p>Intents that are part of Proposals can be more loosely defined than if they are part of a Plan, although planned Intents can also be part of one or more Proposals.  For example, the note is often used to explain some of the defined fields when the offers/needs application mostly supports just text.  But all Intents should have an Action, and either a provider or receiver Agent.</p>
+<h3 id="flows-in-motion-observation">Flows in motion: Observation</h3>
+<p>The Observation subject area is where economic activity actually happens.  The basic input-process-output graph pattern is again the same as for recipes and planning. More info at <a href="../../concepts/flows/">Flows concepts</a>.</p>
+<h4 id="vfprocess_1">vf:Process</h4>
+<p>See the operational Process defined in the Planning subject area.  Operational Processes are carried down to the Observation layer as they are executed, or can be directly defined for Observation if planning is not done.</p>
+<h4 id="vfeconomicevent">vf:EconomicEvent</h4>
+<p>An EconomicEvent is the "real" flow, one that actually happened.  Its behavior is governed by its Action.  It actually affects an EconomicResource if one is defined as inventoried in the EconomicEvent, possibly including quantities, location, primary accountable, stage, state, containment.  EconomicEvent always has a provider and receiver Agent, and can be input or output of a Process, and/or part of an Agreement.  An EconomicEvent knows its resource, either an EconomicResource or a ResourceSpecification.  In some actions, for example transfers and moves, there can also be another EconomicResource on the receiver side.  EconomicEvents can fulfill Commitments or satisfy Intents (where there is no Commitment) or settle Claims.  An EconomicEvent can be triggered by another EconomicEvent, for example a transfer of accountability triggered by a receipt of a resource.  An EconomicEvent can correct a previous EconomicEvent, or reverse it completely.</p>
+<h4 id="vffulfillment">vf:Fulfillment</h4>
+<p>Since a  EconomicEvent can fulfill more than one Commitment, or a Commitment can be fulfilled by more than one EconomicEvent, this is needed, along with the quantity fulfilled.</p>
+<h4 id="vfclaim">vf:Claim</h4>
+<p>A Claim on another Agent is triggered by an EconomicEvent, according to rules agreed to elsewhere, although most EconomicEvents do not trigger a Claim, and if there is already a Commitment, a Claim is not needed.  The Claim then can be settled by other EconomicEvent(s).  As a flow, a Claim has an Action, provider and receiver Agent, and reference to a ResourceSpecification.</p>
+<h4 id="vfappreciation">vf:Appreciation</h4>
+<p>An EconomicEvent can be recorded in appreciation for a prior EconomicEvent, with no prior Commitment or Intent, in support of gift economies.</p>
+<h3 id="analysis-pre-planning-aggregation">Analysis, Pre-planning, Aggregation</h3>
+<p>More info at <a href="../../concepts/estimates/">Budgeting and Analysis concepts</a>.</p>
+<h4 id="vfscenario">vf:Scenario</h4>
+<p>A Scenario is used as a grouping mechanism for flows.  It is a loose concept, and can support many situations.  It can be defined by a ScenarioDefinition.  It can contain Plans, Processes, Intents, aggregated EconomicEvents.  A Scenario can also be nested in itself, to support continued zooming out to less detail.  The uses below are some but probably not all of the possibilities.</p>
+<h4 id="vfplan_1">vf:Plan</h4>
+<p>When Plans (which are operational) are nested in a Scenario, the Scenario can be used to zoom out for less detail in a UX.  When a Plan is a refinement of a Scenario, the Scenario was an earlier estimate or pre-plan.</p>
+<h4 id="vfprocess-vfintent-vfeconomicevent">vf:Process, vf:Intent, vf:EconomicEvent</h4>
+<p>When Processes are nested in a Scenario, they are generally higher level processes for aggregated as-is or to-be resource flows, for analysis or persuasion. Non-process Intents or EconomicEvents could also be part of these Process higher level flows.</p>
+<p>Processes and/or Intents could also be nested when they are part of a budget, forecast, or other higher level pre-plan. Or with-list Intents might be listed, say for large many-agent barter, or when saved for future Proposals.</p>
+<h3 id="accounting-reporting">Accounting &amp; Reporting</h3>
+<p>More info at <a href="../../concepts/accounting/">Accounting concepts</a>.</p>
+<p>Wherever an entity is recorded as in scope of an Agent, the entity can be part of the formal accounting of that Agent.  This usually applies to EconomicEvent, Process (can be used to get in-scope EconomicEvents), Commitment, Claim.  Also, in general, these and other entities can be in scope of an Agent in order to gather the right data for display and processing.</p>
 
 
 
