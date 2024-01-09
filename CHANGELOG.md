@@ -1,3 +1,17 @@
+## 0.8 (January 2024)
+
+- Documentation improvements to intro, added faq
+- Add inverses to better support json, json-ld structures
+- ProposedIntent and ProposedTo eliminated to better support non-relational (breaking)
+- Remove agreedIn (breaking)
+- Move ttl file to later fix w3id references
+- Remove RecipeResource, moved substitutable into ResourceSpecification (breaking)
+- Add ProposalList
+- Add AgreementBundle
+- Add recipeReciprocalClauseOf and reciprocalClauseOf and their inverses
+- Add Agreement.rules
+- Fix combine/separate pairsWith
+
 ## 0.7 (March 2023)
 
 - Many documentation improvements
