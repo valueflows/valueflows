@@ -1,5 +1,7 @@
 # Query and Filter Naming
 
+**This page is being updated.  If you need something, please contact us in [the VF Welcome chat](https://matrix.to/#/#valueflows:matrix.org).**
+
 ## Introduction
 
 Although queries and query filters are not specified in the RDF core, this set of guidelines should be used, to facilitate standard api naming.  It is possible that at some point they will be included in the formal VF namespace.
