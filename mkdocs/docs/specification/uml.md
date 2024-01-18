@@ -16,29 +16,35 @@ Each arrow represents an additional property in the class at the beginning of th
 
 In some cases, there were just too many lines!  The subordinate classes in the gray section at the bottom are not connected with arrows, so the viewer should assume that:
 
-* every property ending in "Quantity" is a `om2:Measure`;
-* every property ending in "Duration" is a `time:Duration`;
+* every property ending in "Quantity" is a `om2:Measure` (does not live on its own) ;
+* every property ending in "Duration" is a `time:Duration` (does not live on its own) ;
 * every property ending in "Location" is a `geo:SpatialThing`;
 * `vf:inScopeOf` references a `vf:Agent`.
 
 ### Inverse terms
 
-To support cleaner representation in JSON / JSON-LD / RDF, as well as object oriented collections, in addition to the initial relational representation, we include some inverse terms, using `owl:inverseOf` in the source turtle file.  If there is a name on each end of the line, and an end on both sides of the arrow, there is an inverse defined.  For example, here a Commitment `isInput` or `isOutput` of a Process; and a Process `hasInput`(one or more) and/or `hasOutput`(one or more).  Both directions are specified as part of the formal vocabulary, so can be used in the direction preferred by the application.
+To support cleaner representation in JSON / JSON-LD / RDF, as well as object oriented collections, in addition to the initial relational representation, we include some inverse terms, using `owl:inverseOf` in the source turtle file.  If there is a name on each end of the line, and an end on both sides of the arrow, there is an inverse defined.
+
+For example, here a Commitment `isInput` or `isOutput` of a Process; and a Process `hasInput`(zero or more) and/or `hasOutput`(zero or more).  Both directions are specified as part of the formal vocabulary, so can be used in the direction preferred by the application.
 
 ![inverse pic](../assets/inverse.png)
 
 ### Many-to-many relationships
 
-Instead of the typical relational resolution of a many-to-many relationship of including an "associative" class or table between them, when possible we are specifying a direct one-to-many relationship, which more cleanly supports JSON / JSON-LD / RDF / OO structures.  To get to the other less-used "many" without the "associative" entity, for the case on the left for example, to find all the Proposals an Intent is `publishedIn`, a query would be needed.  In this case, `publishedIn` is a recommended standard query name, but not formally part of the specification.
+Instead of the typical relational resolution of a many-to-many relationship of including an "associative" class or table between them, we are specifying a direct one-to-many relationship, which more cleanly supports JSON / JSON-LD / RDF / OO structures.  To get to the other less-used "many" without the "associative" entity, a query would be needed.  The suggested query names are included in [Query Naming](../inverses).
 
-Although not included in the formal RDF-based spec, the suggested intermediate "associative" class for the two cases where there are no intermediate properties is shown below with dotted lines, for projects that want to implement a relational database under the covers.
+Below are the places in Valueflows where there is a logical many-to-many.
 
-![m-m pic](../assets/m-m.png)
+#### published, proposedTo
 
-### Many-to-many relationships with properties
+Although not included in the formal RDF-based spec, the suggested intermediate "associative" class for the two cases where there are no intermediate properties is shown below with dotted lines, for projects that want to implement a relational database under the covers, for example.
 
-When a many-to-many relationship involves an "associative" entity that has necessary properties (is "reified"), we have kept the intermediate class, and added an inverse term as above to the relationship involved to make saving a flow with its intermediate data easier in JSON / JSON-LD / RDF / OO.  The original relationship direction was kept for applications that prefer to use the relational method.  To traverse in the other direction where there is no inverse, for example from Intent to Satisfaction, a query is required. The diagram below shows the situations with many-to-many relationships where the properties are needed.
+![proposal m:m relationships](../assets/m-m.png)
 
-![m-m pic](../assets/m-m-assoc.png)
+#### fulfills, satisfies, settles
 
-**Note**: For use cases where the properties in the intermediate class are not needed (i.e. where there will never be a case that needs the many-to-many relationship, such as always only one event fulfills a commitment and vice versa), the application can simplify the situation, and just derive the intermediate values as needed to emit VF standard api data.
+These cases have possible properties in the "associative" class. For example, between Commitment and EconomicEvent, a Commitment for 40 hours of work might be fulfilled by 5 EconomicEvents of 8 hours.  Or an EconomicEvent might pay for a statement or invoice that includes multiple Commitments for deliveries.  The model we have settled on supports the former, but not the latter.  The latter is one of a few cases that we believe will be a small minority of edge cases where the quantities in the "associative" entity might be appreciated.  For that case, an application could just divide the payment into multiple EconomicEvents and connect them with the trackingIdentifier.
+
+We believe that it is more important to simplify the model and the concepts for the majority of use cases, than to have complete support of all use cases.
+
+![flow m:m relationships](../assets/fulfill-satisfy-rel.png)
