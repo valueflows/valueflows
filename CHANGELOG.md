@@ -1,3 +1,7 @@
+## 0.9 (January 2024)
+
+- Remove Fulfillment, Satisfaction, Settlement M:Ms (breaking)
+
 ## 0.8 (January 2024)
 
 - Documentation improvements to intro, added faq
