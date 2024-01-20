@@ -1,0 +1,7280 @@
+[
+  {
+    "@id": "http://www.w3.org/2006/time#hasDuration",
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:na70be97673d04fcd9f91fa8481208c34b81"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has duration"
+      }
+    ]
+  },
+  {
+    "@id": "_:na70be97673d04fcd9f91fa8481208c34b81",
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://w3id.org/valueflows#RecipeProcess"
+          },
+          {
+            "@id": "https://w3id.org/valueflows#ScenarioDefinition"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/2003/01/geo/wgs84_pos#lat",
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#double"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#defaultUnitOfEffort",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The default unit used for use or work."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/valueflows#ResourceSpecification"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "default unit of effort"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.ontology-of-units-of-measure.org/resource/om-2/Unit"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "unstable"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#uri",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The web address relevant to the entity."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "uri"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#anyURI"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "unstable"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#processClassifiedAs",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "References a concept in a common taxonomy or other classification scheme for purposes of categorization or grouping."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/valueflows#RecipeProcess"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "process classified as"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2002/07/owl#Thing"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "unstable"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#Plan",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A logical collection of processes that constitute a body of scheduled work with defined deliverable(s)."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Plan"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "testing"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#eventQuantity",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The event quantity applicable is resource quantity, effort quantity, or both."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/valueflows#Action"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "event quantity"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/valueflows#EventQuantity"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "unstable"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#finished",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The commitment or intent or process is complete or not.  This is irrespective of if the original goal has been met, and indicates that no more will be done."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:na70be97673d04fcd9f91fa8481208c34b164"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "finished"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#boolean"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "testing"
+      }
+    ]
+  },
+  {
+    "@id": "_:na70be97673d04fcd9f91fa8481208c34b164",
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://w3id.org/valueflows#Commitment"
+          },
+          {
+            "@id": "https://w3id.org/valueflows#Process"
+          },
+          {
+            "@id": "https://w3id.org/valueflows#Intent"
+          },
+          {
+            "@id": "https://w3id.org/valueflows#Claim"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#pickup",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
+      "https://w3id.org/valueflows#Action"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Transported resource or person enters the process; the same resource will appear in the output."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "pickup"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "unstable"
+      }
+    ],
+    "https://w3id.org/valueflows#accountableEffect": [
+      {
+        "@id": "https://w3id.org/valueflows#notApplicable"
+      }
+    ],
+    "https://w3id.org/valueflows#accountingEffect": [
+      {
+        "@id": "https://w3id.org/valueflows#notApplicable"
+      }
+    ],
+    "https://w3id.org/valueflows#containedEffect": [
+      {
+        "@id": "https://w3id.org/valueflows#notApplicable"
+      }
+    ],
+    "https://w3id.org/valueflows#createResource": [
+      {
+        "@id": "https://w3id.org/valueflows#notApplicable"
+      }
+    ],
+    "https://w3id.org/valueflows#eventQuantity": [
+      {
+        "@id": "https://w3id.org/valueflows#resource"
+      }
+    ],
+    "https://w3id.org/valueflows#inputOutput": [
+      {
+        "@id": "https://w3id.org/valueflows#input"
+      }
+    ],
+    "https://w3id.org/valueflows#locationEffect": [
+      {
+        "@id": "https://w3id.org/valueflows#update"
+      }
+    ],
+    "https://w3id.org/valueflows#onhandEffect": [
+      {
+        "@id": "https://w3id.org/valueflows#notApplicable"
+      }
+    ],
+    "https://w3id.org/valueflows#pairsWith": [
+      {
+        "@id": "https://w3id.org/valueflows#dropoff"
+      }
+    ],
+    "https://w3id.org/valueflows#stageEffect": [
+      {
+        "@id": "https://w3id.org/valueflows#notApplicable"
+      }
+    ],
+    "https://w3id.org/valueflows#stateEffect": [
+      {
+        "@id": "https://w3id.org/valueflows#update"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#atLocation",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The place where an intent, commitment, or economic event occurs.  Usually mappable."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:na70be97673d04fcd9f91fa8481208c34b108"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "at location"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "unstable"
+      }
+    ]
+  },
+  {
+    "@id": "_:na70be97673d04fcd9f91fa8481208c34b108",
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://w3id.org/valueflows#EconomicEvent"
+          },
+          {
+            "@id": "https://w3id.org/valueflows#Commitment"
+          },
+          {
+            "@id": "https://w3id.org/valueflows#Intent"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#proposedTo",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The agent(s) to which the proposal is published."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/valueflows#Proposal"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "proposed to"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/valueflows#Agent"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "unstable"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#availableQuantity",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The quantity of the offered resource currently available."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/valueflows#Intent"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "available quantity"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.ontology-of-units-of-measure.org/resource/om-2/Measure"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "unstable"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#both",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
+      "https://w3id.org/valueflows#EventQuantity"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "This event can use resourceQuantity and effortQuantity."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "both"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "unstable"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#effort",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
+      "https://w3id.org/valueflows#EventQuantity"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "This event uses effortQuantity."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "effort"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "unstable"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/dc/terms/created",
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:na70be97673d04fcd9f91fa8481208c34b101"
+      }
+    ]
+  },
+  {
+    "@id": "_:na70be97673d04fcd9f91fa8481208c34b101",
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://w3id.org/valueflows#Agreement"
+          },
+          {
+            "@id": "https://w3id.org/valueflows#Claim"
+          },
+          {
+            "@id": "https://w3id.org/valueflows#Commitment"
+          },
+          {
+            "@id": "https://w3id.org/valueflows#Plan"
+          },
+          {
+            "@id": "https://w3id.org/valueflows#Proposal"
+          },
+          {
+            "@id": "https://w3id.org/valueflows#EconomicEvent"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#Scenario",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "An estimated or analytical logical collection of higher level processes used for budgeting, analysis, plan refinement, etc."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Scenario"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "unstable"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#inputOutput",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Denotes if a process input or output, or not related to a process."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/valueflows#Action"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "input/output"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/valueflows#InputOutput"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "unstable"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#update",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
+      "https://w3id.org/valueflows#ContainedEffect",
+      "https://w3id.org/valueflows#LocationEffect"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The effect is to update the resource in the specified property."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "update"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "unstable"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#consume",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
+      "https://w3id.org/valueflows#Action"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "For example an ingredient or component composed into the output, after the process the ingredient is gone."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "consume"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "testing"
+      }
+    ],
+    "https://w3id.org/valueflows#accountableEffect": [
+      {
+        "@id": "https://w3id.org/valueflows#notApplicable"
+      }
+    ],
+    "https://w3id.org/valueflows#accountingEffect": [
+      {
+        "@id": "https://w3id.org/valueflows#decrement"
+      }
+    ],
+    "https://w3id.org/valueflows#containedEffect": [
+      {
+        "@id": "https://w3id.org/valueflows#notApplicable"
+      }
+    ],
+    "https://w3id.org/valueflows#createResource": [
+      {
+        "@id": "https://w3id.org/valueflows#notApplicable"
+      }
+    ],
+    "https://w3id.org/valueflows#eventQuantity": [
+      {
+        "@id": "https://w3id.org/valueflows#resource"
+      }
+    ],
+    "https://w3id.org/valueflows#inputOutput": [
+      {
+        "@id": "https://w3id.org/valueflows#input"
+      }
+    ],
+    "https://w3id.org/valueflows#locationEffect": [
+      {
+        "@id": "https://w3id.org/valueflows#notApplicable"
+      }
+    ],
+    "https://w3id.org/valueflows#onhandEffect": [
+      {
+        "@id": "https://w3id.org/valueflows#decrement"
+      }
+    ],
+    "https://w3id.org/valueflows#pairsWith": [
+      {
+        "@id": "https://w3id.org/valueflows#notApplicable"
+      }
+    ],
+    "https://w3id.org/valueflows#stageEffect": [
+      {
+        "@id": "https://w3id.org/valueflows#notApplicable"
+      }
+    ],
+    "https://w3id.org/valueflows#stateEffect": [
+      {
+        "@id": "https://w3id.org/valueflows#update"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#unitBased",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "This proposal contains unit based quantities, which can be multipied to create commitments; commonly seen in a price list or e-commerce."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/valueflows#Proposal"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "unit based"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#boolean"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "unstable"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#independentDemandOf",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Represents a desired deliverable expected from this plan."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/valueflows#Commitment"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "independent demand of"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/valueflows#Plan"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "testing"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#decrement",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
+      "https://w3id.org/valueflows#AccountingEffect",
+      "https://w3id.org/valueflows#OnhandEffect"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The effect is to subtract from the inventoried resource accounting or onhand quantity."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "decrement"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "unstable"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#receiver",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The economic agent whom the intended, committed, or actual economic event is for."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:na70be97673d04fcd9f91fa8481208c34b40"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "receiver"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/valueflows#Agent"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "testing"
+      }
+    ]
+  },
+  {
+    "@id": "_:na70be97673d04fcd9f91fa8481208c34b40",
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://w3id.org/valueflows#EconomicEvent"
+          },
+          {
+            "@id": "https://w3id.org/valueflows#Commitment"
+          },
+          {
+            "@id": "https://w3id.org/valueflows#Intent"
+          },
+          {
+            "@id": "https://w3id.org/valueflows#Claim"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#produce",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
+      "https://w3id.org/valueflows#Action"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "New resource was created in that process or an existing stock resource was added to."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "produce"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "testing"
+      }
+    ],
+    "https://w3id.org/valueflows#accountableEffect": [
+      {
+        "@id": "https://w3id.org/valueflows#new"
+      }
+    ],
+    "https://w3id.org/valueflows#accountingEffect": [
+      {
+        "@id": "https://w3id.org/valueflows#increment"
+      }
+    ],
+    "https://w3id.org/valueflows#containedEffect": [
+      {
+        "@id": "https://w3id.org/valueflows#notApplicable"
+      }
+    ],
+    "https://w3id.org/valueflows#createResource": [
+      {
+        "@id": "https://w3id.org/valueflows#optional"
+      }
+    ],
+    "https://w3id.org/valueflows#eventQuantity": [
+      {
+        "@id": "https://w3id.org/valueflows#resource"
+      }
+    ],
+    "https://w3id.org/valueflows#inputOutput": [
+      {
+        "@id": "https://w3id.org/valueflows#output"
+      }
+    ],
+    "https://w3id.org/valueflows#locationEffect": [
+      {
+        "@id": "https://w3id.org/valueflows#new"
+      }
+    ],
+    "https://w3id.org/valueflows#onhandEffect": [
+      {
+        "@id": "https://w3id.org/valueflows#increment"
+      }
+    ],
+    "https://w3id.org/valueflows#pairsWith": [
+      {
+        "@id": "https://w3id.org/valueflows#notApplicable"
+      }
+    ],
+    "https://w3id.org/valueflows#stageEffect": [
+      {
+        "@id": "https://w3id.org/valueflows#update"
+      }
+    ],
+    "https://w3id.org/valueflows#stateEffect": [
+      {
+        "@id": "https://w3id.org/valueflows#update"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#StageEffect",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The action has this effect on an inventoried resource stage."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Stage Effect"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "testing"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#RecipeExchange",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Specifies an exchange type agreement as part of a recipe."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Recipe Exchange"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "unstable"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#locationEffect",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "This action can update the current location of an inventoried resource."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/valueflows#Action"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "location effect"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/valueflows#LocationEffect"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "unstable"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#onhandQuantity",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The current amount and unit of the economic resource which is under direct control of the agent.  It may be more or less than the accounting quantity. This can be either stored or derived from economic events affecting the resource."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/valueflows#EconomicResource"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "onhand quantity"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.ontology-of-units-of-measure.org/resource/om-2/Measure"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "unstable"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#InputOutput",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The action is an input or output of a process, or not related to a process."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Input/Output"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "testing"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#onhandEffect",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The increment and/or decrement effect the action will have on the onhand quantity of an inventoried resource."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/valueflows#Action"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "onhand effect"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/valueflows#OnhandEffect"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "unstable"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#accept",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
+      "https://w3id.org/valueflows#Action"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "In processes like repair or modification or testing, the same resource will appear in the output."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "accept"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "testing"
+      }
+    ],
+    "https://w3id.org/valueflows#accountableEffect": [
+      {
+        "@id": "https://w3id.org/valueflows#notApplicable"
+      }
+    ],
+    "https://w3id.org/valueflows#accountingEffect": [
+      {
+        "@id": "https://w3id.org/valueflows#notApplicable"
+      }
+    ],
+    "https://w3id.org/valueflows#containedEffect": [
+      {
+        "@id": "https://w3id.org/valueflows#notApplicable"
+      }
+    ],
+    "https://w3id.org/valueflows#createResource": [
+      {
+        "@id": "https://w3id.org/valueflows#notApplicable"
+      }
+    ],
+    "https://w3id.org/valueflows#eventQuantity": [
+      {
+        "@id": "https://w3id.org/valueflows#resource"
+      }
+    ],
+    "https://w3id.org/valueflows#inputOutput": [
+      {
+        "@id": "https://w3id.org/valueflows#input"
+      }
+    ],
+    "https://w3id.org/valueflows#locationEffect": [
+      {
+        "@id": "https://w3id.org/valueflows#update"
+      }
+    ],
+    "https://w3id.org/valueflows#onhandEffect": [
+      {
+        "@id": "https://w3id.org/valueflows#decrement"
+      }
+    ],
+    "https://w3id.org/valueflows#pairsWith": [
+      {
+        "@id": "https://w3id.org/valueflows#modify"
+      }
+    ],
+    "https://w3id.org/valueflows#stageEffect": [
+      {
+        "@id": "https://w3id.org/valueflows#notApplicable"
+      }
+    ],
+    "https://w3id.org/valueflows#stateEffect": [
+      {
+        "@id": "https://w3id.org/valueflows#update"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#transferAllRights",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
+      "https://w3id.org/valueflows#Action"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Give full (in the human realm) rights and responsibilities to another agent, without transferring physical custody."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "transfer all rights"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "unstable"
+      }
+    ],
+    "https://w3id.org/valueflows#accountableEffect": [
+      {
+        "@id": "https://w3id.org/valueflows#updateTo"
+      }
+    ],
+    "https://w3id.org/valueflows#accountingEffect": [
+      {
+        "@id": "https://w3id.org/valueflows#decrementIncrement"
+      }
+    ],
+    "https://w3id.org/valueflows#containedEffect": [
+      {
+        "@id": "https://w3id.org/valueflows#notApplicable"
+      }
+    ],
+    "https://w3id.org/valueflows#createResource": [
+      {
+        "@id": "https://w3id.org/valueflows#optionalTo"
+      }
+    ],
+    "https://w3id.org/valueflows#eventQuantity": [
+      {
+        "@id": "https://w3id.org/valueflows#resource"
+      }
+    ],
+    "https://w3id.org/valueflows#inputOutput": [
+      {
+        "@id": "https://w3id.org/valueflows#notApplicable"
+      }
+    ],
+    "https://w3id.org/valueflows#locationEffect": [
+      {
+        "@id": "https://w3id.org/valueflows#notApplicable"
+      }
+    ],
+    "https://w3id.org/valueflows#onhandEffect": [
+      {
+        "@id": "https://w3id.org/valueflows#notApplicable"
+      }
+    ],
+    "https://w3id.org/valueflows#pairsWith": [
+      {
+        "@id": "https://w3id.org/valueflows#notApplicable"
+      }
+    ],
+    "https://w3id.org/valueflows#stageEffect": [
+      {
+        "@id": "https://w3id.org/valueflows#notApplicable"
+      }
+    ],
+    "https://w3id.org/valueflows#stateEffect": [
+      {
+        "@id": "https://w3id.org/valueflows#updateTo"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#ScenarioDefinition",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The type definition of one or more scenarios."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Scenario Definition"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "unstable"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#trackingIdentifier",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Sometimes called serial number, used when each item must have a trackable identifier (like a computer). Could also be used for other unique tracking identifiers needed for resources."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/valueflows#EconomicResource"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "tracking identifier"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "unstable"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#OnhandEffect",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The action has this effect on an inventoried resource onhand quantity."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Onhand Effect"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "testing"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#EconomicEvent",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "An observed economic flow, as opposed to a flow planned to happen in the future. This could reflect a change in the quantity of an economic resource. It is also defined by its behavior in relation to the economic resource (see vf:action)"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Economic Event"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "stable"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#optional",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
+      "https://w3id.org/valueflows#CreateResource"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "This kind of flow gives the user the option to create a new resource using resourceInventoriedAs."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "optional"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "unstable"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#refinementOf",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "This scenario or plan refines another scenario, often as time moves closer or for more detail."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:na70be97673d04fcd9f91fa8481208c34b196"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "refinement of"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/valueflows#Scenario"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "unstable"
+      }
+    ]
+  },
+  {
+    "@id": "_:na70be97673d04fcd9f91fa8481208c34b196",
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://w3id.org/valueflows#Scenario"
+          },
+          {
+            "@id": "https://w3id.org/valueflows#Plan"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#raise",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
+      "https://w3id.org/valueflows#Action"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Adjusts a quantity up based on a beginning balance or inventory count."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "raise"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "unstable"
+      }
+    ],
+    "https://w3id.org/valueflows#accountableEffect": [
+      {
+        "@id": "https://w3id.org/valueflows#new"
+      }
+    ],
+    "https://w3id.org/valueflows#accountingEffect": [
+      {
+        "@id": "https://w3id.org/valueflows#increment"
+      }
+    ],
+    "https://w3id.org/valueflows#containedEffect": [
+      {
+        "@id": "https://w3id.org/valueflows#notApplicable"
+      }
+    ],
+    "https://w3id.org/valueflows#createResource": [
+      {
+        "@id": "https://w3id.org/valueflows#optional"
+      }
+    ],
+    "https://w3id.org/valueflows#eventQuantity": [
+      {
+        "@id": "https://w3id.org/valueflows#resource"
+      }
+    ],
+    "https://w3id.org/valueflows#inputOutput": [
+      {
+        "@id": "https://w3id.org/valueflows#notApplicable"
+      }
+    ],
+    "https://w3id.org/valueflows#locationEffect": [
+      {
+        "@id": "https://w3id.org/valueflows#notApplicable"
+      }
+    ],
+    "https://w3id.org/valueflows#onhandEffect": [
+      {
+        "@id": "https://w3id.org/valueflows#increment"
+      }
+    ],
+    "https://w3id.org/valueflows#pairsWith": [
+      {
+        "@id": "https://w3id.org/valueflows#notApplicable"
+      }
+    ],
+    "https://w3id.org/valueflows#stageEffect": [
+      {
+        "@id": "https://w3id.org/valueflows#notApplicable"
+      }
+    ],
+    "https://w3id.org/valueflows#stateEffect": [
+      {
+        "@id": "https://w3id.org/valueflows#update"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#name",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "An informal or formal textual identifier for an object. Does not imply uniqueness."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:na70be97673d04fcd9f91fa8481208c34b124"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "name"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "testing"
+      }
+    ]
+  },
+  {
+    "@id": "_:na70be97673d04fcd9f91fa8481208c34b124",
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"
+          },
+          {
+            "@id": "https://w3id.org/valueflows#Agent"
+          },
+          {
+            "@id": "https://w3id.org/valueflows#Agreement"
+          },
+          {
+            "@id": "https://w3id.org/valueflows#EconomicResource"
+          },
+          {
+            "@id": "https://w3id.org/valueflows#Plan"
+          },
+          {
+            "@id": "https://w3id.org/valueflows#Process"
+          },
+          {
+            "@id": "https://w3id.org/valueflows#ProcessSpecification"
+          },
+          {
+            "@id": "https://w3id.org/valueflows#Proposal"
+          },
+          {
+            "@id": "https://w3id.org/valueflows#RecipeProcess"
+          },
+          {
+            "@id": "https://w3id.org/valueflows#ResourceSpecification"
+          },
+          {
+            "@id": "https://w3id.org/valueflows#RoleBehavior"
+          },
+          {
+            "@id": "https://w3id.org/valueflows#Scenario"
+          },
+          {
+            "@id": "https://w3id.org/valueflows#ScenarioDefinition"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#classifiedAs",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "References one or more concepts in a common taxonomy or other classification scheme for purposes of categorization or grouping."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:na70be97673d04fcd9f91fa8481208c34b169"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "classified as"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2002/07/owl#Thing"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "unstable"
+      }
+    ]
+  },
+  {
+    "@id": "_:na70be97673d04fcd9f91fa8481208c34b169",
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://w3id.org/valueflows#Process"
+          },
+          {
+            "@id": "https://w3id.org/valueflows#EconomicResource"
+          },
+          {
+            "@id": "https://w3id.org/valueflows#Organization"
+          },
+          {
+            "@id": "https://w3id.org/valueflows#EcologicalAgent"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#outputOf",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Relates an output flow to its process."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:na70be97673d04fcd9f91fa8481208c34b15"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "output of"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/valueflows#Process"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "stable"
+      }
+    ]
+  },
+  {
+    "@id": "_:na70be97673d04fcd9f91fa8481208c34b15",
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://w3id.org/valueflows#EconomicEvent"
+          },
+          {
+            "@id": "https://w3id.org/valueflows#Commitment"
+          },
+          {
+            "@id": "https://w3id.org/valueflows#Intent"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/2003/01/geo/wgs84_pos#alt",
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#double"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#due",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The time something is expected to be complete."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:na70be97673d04fcd9f91fa8481208c34b84"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "due"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#dateTimeStamp"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "unstable"
+      }
+    ]
+  },
+  {
+    "@id": "_:na70be97673d04fcd9f91fa8481208c34b84",
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://w3id.org/valueflows#Plan"
+          },
+          {
+            "@id": "https://w3id.org/valueflows#Commitment"
+          },
+          {
+            "@id": "https://w3id.org/valueflows#Claim"
+          },
+          {
+            "@id": "https://w3id.org/valueflows#Intent"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#separate",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
+      "https://w3id.org/valueflows#Action"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A resource is removed from a container resource."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "unpack"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "unstable"
+      }
+    ],
+    "https://w3id.org/valueflows#accountableEffect": [
+      {
+        "@id": "https://w3id.org/valueflows#notApplicable"
+      }
+    ],
+    "https://w3id.org/valueflows#accountingEffect": [
+      {
+        "@id": "https://w3id.org/valueflows#notApplicable"
+      }
+    ],
+    "https://w3id.org/valueflows#containedEffect": [
+      {
+        "@id": "https://w3id.org/valueflows#remove"
+      }
+    ],
+    "https://w3id.org/valueflows#createResource": [
+      {
+        "@id": "https://w3id.org/valueflows#notApplicable"
+      }
+    ],
+    "https://w3id.org/valueflows#eventQuantity": [
+      {
+        "@id": "https://w3id.org/valueflows#resource"
+      }
+    ],
+    "https://w3id.org/valueflows#inputOutput": [
+      {
+        "@id": "https://w3id.org/valueflows#output"
+      }
+    ],
+    "https://w3id.org/valueflows#locationEffect": [
+      {
+        "@id": "https://w3id.org/valueflows#notApplicable"
+      }
+    ],
+    "https://w3id.org/valueflows#onhandEffect": [
+      {
+        "@id": "https://w3id.org/valueflows#increment"
+      }
+    ],
+    "https://w3id.org/valueflows#pairsWith": [
+      {
+        "@id": "https://w3id.org/valueflows#notApplicable"
+      }
+    ],
+    "https://w3id.org/valueflows#stageEffect": [
+      {
+        "@id": "https://w3id.org/valueflows#update"
+      }
+    ],
+    "https://w3id.org/valueflows#stateEffect": [
+      {
+        "@id": "https://w3id.org/valueflows#update"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#AgentRelationship",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "An ongoing voluntary association between 2 agents of any kind."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Agent Relationship"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "stable"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#currentVirtualLocation",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The current virtual place an electronic economic resource is located."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/valueflows#EconomicResource"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "current virtual location"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#anyURI"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "unstable"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#recipeOutputOf",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Relates an output flow to its process in a recipe."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/valueflows#RecipeFlow"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "recipe output of"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/valueflows#RecipeProcess"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "unstable"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#defaultUnitOfResource",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The default unit used for the resource itself."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/valueflows#ResourceSpecification"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "default unit of resource"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.ontology-of-units-of-measure.org/resource/om-2/Unit"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "unstable"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#planIncludes",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The processes and and non-process commitments/intents that constitute the plan."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/valueflows#Plan"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "plan includes"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "_:na70be97673d04fcd9f91fa8481208c34b27"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "https://w3id.org/valueflows#plannedWithin"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "unstable"
+      }
+    ]
+  },
+  {
+    "@id": "_:na70be97673d04fcd9f91fa8481208c34b27",
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://w3id.org/valueflows#Process"
+          },
+          {
+            "@id": "https://w3id.org/valueflows#Commitment"
+          },
+          {
+            "@id": "https://w3id.org/valueflows#Intent"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#ContainedEffect",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The action has this effect on an inventoried resource contained in resource."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Contained Effect"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "testing"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#containedEffect",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The contained in resource should be updated or removed."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/valueflows#Action"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "contained effect"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/valueflows#ContainedEffect"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "unstable"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#corrects",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Used when an event was entered incorrectly and needs to be backed out or corrected. (The initial event cannot be changed.)"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/valueflows#EconomicEvent"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "corrects"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/valueflows#EconomicEvent"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "unstable"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#resourceQuantity",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The amount and unit of the economic resource counted or inventoried."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:na70be97673d04fcd9f91fa8481208c34b89"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "resource quantity"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.ontology-of-units-of-measure.org/resource/om-2/Measure"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "unstable"
+      }
+    ]
+  },
+  {
+    "@id": "_:na70be97673d04fcd9f91fa8481208c34b89",
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://w3id.org/valueflows#EconomicEvent"
+          },
+          {
+            "@id": "https://w3id.org/valueflows#Commitment"
+          },
+          {
+            "@id": "https://w3id.org/valueflows#Intent"
+          },
+          {
+            "@id": "https://w3id.org/valueflows#RecipeFlow"
+          },
+          {
+            "@id": "https://w3id.org/valueflows#Claim"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#lists",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "All the proposals included in this proposal list."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/valueflows#ProposalList"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "lists"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/valueflows#Proposal"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "https://w3id.org/valueflows#listedIn"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "unstable"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.ontology-of-units-of-measure.org/resource/om-2/hasNumericalValue",
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.linkedmodel.org/schema/dtype#numericUnion"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#recipeStipulates",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "All the primary clauses of a recipe exchange."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/valueflows#RecipeExchange"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "recipe stipulates"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/valueflows#RecipeFlow"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "https://w3id.org/valueflows#recipeClauseOf"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "unstable"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#satisfies",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "An intent satisfied fully or partially by an economic event or commitment."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:na70be97673d04fcd9f91fa8481208c34b161"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "satisfies"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/valueflows#Intent"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "unstable"
+      }
+    ]
+  },
+  {
+    "@id": "_:na70be97673d04fcd9f91fa8481208c34b161",
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://w3id.org/valueflows#Commitment"
+          },
+          {
+            "@id": "https://w3id.org/valueflows#EconomicEvent"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#optionalTo",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
+      "https://w3id.org/valueflows#CreateResource"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "This kind of flow gives the user the option to create a new resource using toResourceInventoriedAs."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "optional to"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "unstable"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#relationship",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The role of an economic relationship that exists between 2 agents, such as member, trading partner."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/valueflows#AgentRelationship"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "relationship"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/valueflows#AgentRelationshipRole"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "testing"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#offer",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
+      "https://w3id.org/valueflows#ProposalPurpose"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The proposal is an offer."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "offer"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "unstable"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#stateEffect",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The state of the from or to inventoried resource should be updated, or not."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/valueflows#Action"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "state effect"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/valueflows#StateEffect"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "unstable"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#Proposal",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Published requests or offers, sometimes with what is expected in return."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Proposal"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "testing"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#state",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The state of the desired economic resource, after coming out of a test or review process."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:na70be97673d04fcd9f91fa8481208c34b191"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "state"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "unstable"
+      }
+    ]
+  },
+  {
+    "@id": "_:na70be97673d04fcd9f91fa8481208c34b191",
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://w3id.org/valueflows#EconomicResource"
+          },
+          {
+            "@id": "https://w3id.org/valueflows#EconomicEvent"
+          },
+          {
+            "@id": "https://w3id.org/valueflows#RecipeFlow"
+          },
+          {
+            "@id": "https://w3id.org/valueflows#Commitment"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#hasRecipeInput",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "All the inputs of a recipe process."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/valueflows#RecipeProcess"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has recipe input"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/valueflows#RecipeFlow"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "https://w3id.org/valueflows#recipeInputOf"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "unstable"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#stageEffect",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The stage of the inventoried resource should be updated, or not."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/valueflows#Action"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "stage effect"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/valueflows#StageEffect"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "unstable"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#work",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
+      "https://w3id.org/valueflows#Action"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Labor power applied to a process."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "work"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "testing"
+      }
+    ],
+    "https://w3id.org/valueflows#accountableEffect": [
+      {
+        "@id": "https://w3id.org/valueflows#notApplicable"
+      }
+    ],
+    "https://w3id.org/valueflows#accountingEffect": [
+      {
+        "@id": "https://w3id.org/valueflows#notApplicable"
+      }
+    ],
+    "https://w3id.org/valueflows#containedEffect": [
+      {
+        "@id": "https://w3id.org/valueflows#notApplicable"
+      }
+    ],
+    "https://w3id.org/valueflows#createResource": [
+      {
+        "@id": "https://w3id.org/valueflows#notApplicable"
+      }
+    ],
+    "https://w3id.org/valueflows#eventQuantity": [
+      {
+        "@id": "https://w3id.org/valueflows#effort"
+      }
+    ],
+    "https://w3id.org/valueflows#inputOutput": [
+      {
+        "@id": "https://w3id.org/valueflows#input"
+      }
+    ],
+    "https://w3id.org/valueflows#locationEffect": [
+      {
+        "@id": "https://w3id.org/valueflows#notApplicable"
+      }
+    ],
+    "https://w3id.org/valueflows#onhandEffect": [
+      {
+        "@id": "https://w3id.org/valueflows#notApplicable"
+      }
+    ],
+    "https://w3id.org/valueflows#pairsWith": [
+      {
+        "@id": "https://w3id.org/valueflows#notApplicable"
+      }
+    ],
+    "https://w3id.org/valueflows#stageEffect": [
+      {
+        "@id": "https://w3id.org/valueflows#notApplicable"
+      }
+    ],
+    "https://w3id.org/valueflows#stateEffect": [
+      {
+        "@id": "https://w3id.org/valueflows#notApplicable"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#EcologicalAgent",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A non-human being; or a functional group of non-human beings; or an ecosystem of living beings that includes non-humans."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Ecological Agent"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/valueflows#Agent"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "testing"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#outputInput",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
+      "https://w3id.org/valueflows#InputOutput"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "This kind of flow can be an output to a process, and at the same time an input to another process."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "output input"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "unstable"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#subject",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The subject of a relationship between 2 agents.  For example, if Mary is a member of a group, then Mary is the subject."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/valueflows#AgentRelationship"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "subject"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/valueflows#Agent"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "testing"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#createResource",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The action can create an economic resource."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/valueflows#Action"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "can create resource"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/valueflows#CreateResource"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "unstable"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#peer",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
+      "https://w3id.org/valueflows#RoleBehavior"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The role is a peer type role in relation to an agent. Examples are trading partners or mentors."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "peer"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "unstable"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#object",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The object of a relationship between 2 agents.  For example, if Mary is a member of a group, then the group is the object."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/valueflows#AgentRelationship"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "object"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/valueflows#Agent"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "testing"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#AccountableEffect",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The action has this effect on an inventoried resource primary accountable agent."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Accountable Effect"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "testing"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#move",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
+      "https://w3id.org/valueflows#Action"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Change location and possibly identifier, if location is part of the identification, of a resource with no change of agent rights or possession."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "move"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "unstable"
+      }
+    ],
+    "https://w3id.org/valueflows#accountableEffect": [
+      {
+        "@id": "https://w3id.org/valueflows#notApplicable"
+      }
+    ],
+    "https://w3id.org/valueflows#accountingEffect": [
+      {
+        "@id": "https://w3id.org/valueflows#decrementIncrement"
+      }
+    ],
+    "https://w3id.org/valueflows#containedEffect": [
+      {
+        "@id": "https://w3id.org/valueflows#notApplicable"
+      }
+    ],
+    "https://w3id.org/valueflows#createResource": [
+      {
+        "@id": "https://w3id.org/valueflows#optionalTo"
+      }
+    ],
+    "https://w3id.org/valueflows#eventQuantity": [
+      {
+        "@id": "https://w3id.org/valueflows#resource"
+      }
+    ],
+    "https://w3id.org/valueflows#inputOutput": [
+      {
+        "@id": "https://w3id.org/valueflows#notApplicable"
+      }
+    ],
+    "https://w3id.org/valueflows#locationEffect": [
+      {
+        "@id": "https://w3id.org/valueflows#updateTo"
+      }
+    ],
+    "https://w3id.org/valueflows#onhandEffect": [
+      {
+        "@id": "https://w3id.org/valueflows#decrementIncrement"
+      }
+    ],
+    "https://w3id.org/valueflows#pairsWith": [
+      {
+        "@id": "https://w3id.org/valueflows#notApplicable"
+      }
+    ],
+    "https://w3id.org/valueflows#stageEffect": [
+      {
+        "@id": "https://w3id.org/valueflows#notApplicable"
+      }
+    ],
+    "https://w3id.org/valueflows#stateEffect": [
+      {
+        "@id": "https://w3id.org/valueflows#updateTo"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#accountableEffect",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The primaryAccountable should be updated to the event receiver, or not."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/valueflows#Action"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "accountable effect"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/valueflows#AccountableEffect"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "unstable"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#pairsWith",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The action that usually affects the same resource as a complement in the same flow."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/valueflows#Action"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "pairs with"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/valueflows#Action"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "unstable"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#recipeReciprocalClauseOf",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Relates a reciprocal flow to its exchange agreement in a recipe."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/valueflows#RecipeFlow"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "recipe reciprocal clause of"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/valueflows#RecipeExchange"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "unstable"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#Person",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A human being. All people are considered agents."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Person"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/valueflows#Agent"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "stable"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#use",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
+      "https://w3id.org/valueflows#Action"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "For example a tool used in process; after the process, the tool still exists."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "use"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "testing"
+      }
+    ],
+    "https://w3id.org/valueflows#accountableEffect": [
+      {
+        "@id": "https://w3id.org/valueflows#notApplicable"
+      }
+    ],
+    "https://w3id.org/valueflows#accountingEffect": [
+      {
+        "@id": "https://w3id.org/valueflows#notApplicable"
+      }
+    ],
+    "https://w3id.org/valueflows#containedEffect": [
+      {
+        "@id": "https://w3id.org/valueflows#notApplicable"
+      }
+    ],
+    "https://w3id.org/valueflows#createResource": [
+      {
+        "@id": "https://w3id.org/valueflows#notApplicable"
+      }
+    ],
+    "https://w3id.org/valueflows#eventQuantity": [
+      {
+        "@id": "https://w3id.org/valueflows#both"
+      }
+    ],
+    "https://w3id.org/valueflows#inputOutput": [
+      {
+        "@id": "https://w3id.org/valueflows#input"
+      }
+    ],
+    "https://w3id.org/valueflows#locationEffect": [
+      {
+        "@id": "https://w3id.org/valueflows#notApplicable"
+      }
+    ],
+    "https://w3id.org/valueflows#onhandEffect": [
+      {
+        "@id": "https://w3id.org/valueflows#notApplicable"
+      }
+    ],
+    "https://w3id.org/valueflows#pairsWith": [
+      {
+        "@id": "https://w3id.org/valueflows#notApplicable"
+      }
+    ],
+    "https://w3id.org/valueflows#stageEffect": [
+      {
+        "@id": "https://w3id.org/valueflows#notApplicable"
+      }
+    ],
+    "https://w3id.org/valueflows#stateEffect": [
+      {
+        "@id": "https://w3id.org/valueflows#update"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#deliverService",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
+      "https://w3id.org/valueflows#Action"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "New service produced and delivered (a service implies that an agent actively receives the service)."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "deliver service"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "unstable"
+      }
+    ],
+    "https://w3id.org/valueflows#accountableEffect": [
+      {
+        "@id": "https://w3id.org/valueflows#notApplicable"
+      }
+    ],
+    "https://w3id.org/valueflows#accountingEffect": [
+      {
+        "@id": "https://w3id.org/valueflows#notApplicable"
+      }
+    ],
+    "https://w3id.org/valueflows#containedEffect": [
+      {
+        "@id": "https://w3id.org/valueflows#notApplicable"
+      }
+    ],
+    "https://w3id.org/valueflows#createResource": [
+      {
+        "@id": "https://w3id.org/valueflows#notApplicable"
+      }
+    ],
+    "https://w3id.org/valueflows#eventQuantity": [
+      {
+        "@id": "https://w3id.org/valueflows#resource"
+      }
+    ],
+    "https://w3id.org/valueflows#inputOutput": [
+      {
+        "@id": "https://w3id.org/valueflows#outputInput"
+      }
+    ],
+    "https://w3id.org/valueflows#locationEffect": [
+      {
+        "@id": "https://w3id.org/valueflows#notApplicable"
+      }
+    ],
+    "https://w3id.org/valueflows#onhandEffect": [
+      {
+        "@id": "https://w3id.org/valueflows#notApplicable"
+      }
+    ],
+    "https://w3id.org/valueflows#pairsWith": [
+      {
+        "@id": "https://w3id.org/valueflows#notApplicable"
+      }
+    ],
+    "https://w3id.org/valueflows#stageEffect": [
+      {
+        "@id": "https://w3id.org/valueflows#notApplicable"
+      }
+    ],
+    "https://w3id.org/valueflows#stateEffect": [
+      {
+        "@id": "https://w3id.org/valueflows#update"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#StateEffect",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The action has this effect on an inventoried resource state."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "State Effect"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "unstable"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#settles",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "References a claim that is fully or partially settled by the economic event."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/valueflows#EconomicEvent"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "settles"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/valueflows#Claim"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "unstable"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#member",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
+      "https://w3id.org/valueflows#RoleBehavior"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The role is a member type role in relation to an organization.  An agent can be a member of many organizations."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "member"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "testing"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#EconomicResource",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Economic or environmental inputs to or outputs from processes."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Economic Resource"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "stable"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#effortQuantity",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The amount and unit of the work or use or citation effort-based action. This is often a time duration, but also could be cycle counts or other measures of effort or usefulness."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:na70be97673d04fcd9f91fa8481208c34b95"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "effort quantity"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.ontology-of-units-of-measure.org/resource/om-2/Measure"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "unstable"
+      }
+    ]
+  },
+  {
+    "@id": "_:na70be97673d04fcd9f91fa8481208c34b95",
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://w3id.org/valueflows#EconomicEvent"
+          },
+          {
+            "@id": "https://w3id.org/valueflows#Commitment"
+          },
+          {
+            "@id": "https://w3id.org/valueflows#Intent"
+          },
+          {
+            "@id": "https://w3id.org/valueflows#RecipeFlow"
+          },
+          {
+            "@id": "https://w3id.org/valueflows#Claim"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#nestedIn",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The process with its inputs and outputs is part of the scenario."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/valueflows#Process"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "nested in"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/valueflows#Scenario"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "unstable"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#bundledIn",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "This agreement is bundled with other agreements."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/valueflows#Agreement"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "bundled in"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/valueflows#AgreementBundle"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "unstable"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#recipeInputOf",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Relates an input flow to its process in a recipe."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/valueflows#RecipeFlow"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "recipe input of"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/valueflows#RecipeProcess"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "unstable"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#LocationEffect",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The action has this effect on an inventoried resource current location."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Location Effect"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "testing"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#hasInput",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "All the input flows of a process."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/valueflows#Process"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has input"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "_:na70be97673d04fcd9f91fa8481208c34b11"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "https://w3id.org/valueflows#inputOf"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "unstable"
+      }
+    ]
+  },
+  {
+    "@id": "_:na70be97673d04fcd9f91fa8481208c34b11",
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://w3id.org/valueflows#EconomicEvent"
+          },
+          {
+            "@id": "https://w3id.org/valueflows#Commitment"
+          },
+          {
+            "@id": "https://w3id.org/valueflows#Intent"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#lower",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
+      "https://w3id.org/valueflows#Action"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Adjusts a quantity down based on a beginning balance or inventory count."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "lower"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "unstable"
+      }
+    ],
+    "https://w3id.org/valueflows#accountableEffect": [
+      {
+        "@id": "https://w3id.org/valueflows#new"
+      }
+    ],
+    "https://w3id.org/valueflows#accountingEffect": [
+      {
+        "@id": "https://w3id.org/valueflows#decrement"
+      }
+    ],
+    "https://w3id.org/valueflows#containedEffect": [
+      {
+        "@id": "https://w3id.org/valueflows#notApplicable"
+      }
+    ],
+    "https://w3id.org/valueflows#createResource": [
+      {
+        "@id": "https://w3id.org/valueflows#optional"
+      }
+    ],
+    "https://w3id.org/valueflows#eventQuantity": [
+      {
+        "@id": "https://w3id.org/valueflows#resource"
+      }
+    ],
+    "https://w3id.org/valueflows#inputOutput": [
+      {
+        "@id": "https://w3id.org/valueflows#notApplicable"
+      }
+    ],
+    "https://w3id.org/valueflows#locationEffect": [
+      {
+        "@id": "https://w3id.org/valueflows#notApplicable"
+      }
+    ],
+    "https://w3id.org/valueflows#onhandEffect": [
+      {
+        "@id": "https://w3id.org/valueflows#decrement"
+      }
+    ],
+    "https://w3id.org/valueflows#pairsWith": [
+      {
+        "@id": "https://w3id.org/valueflows#notApplicable"
+      }
+    ],
+    "https://w3id.org/valueflows#stageEffect": [
+      {
+        "@id": "https://w3id.org/valueflows#notApplicable"
+      }
+    ],
+    "https://w3id.org/valueflows#stateEffect": [
+      {
+        "@id": "https://w3id.org/valueflows#update"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#AgreementBundle",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A grouping of agreements to bundle detailed line item reciprocity."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Agreement Bundle"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "unstable"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#realizes",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "All the economic events (with or without commitments) that realize the agreement."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/valueflows#Agreement"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "realizes"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/valueflows#EconomicEvent"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "https://w3id.org/valueflows#realizationOf"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "unstable"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#toResourceInventoriedAs",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Additional economic resource on the economic event when needed by the receiver. Used when a transfer or move, or sometimes other actions, requires explicitly identifying an economic resource on the receiving side."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/valueflows#EconomicEvent"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "to resource inventoried as"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/valueflows#EconomicResource"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "unstable"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#imageList",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A comma separated list of uri addresses to images relevant to the resource."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:na70be97673d04fcd9f91fa8481208c34b120"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "image list"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#anyURI"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "unstable"
+      }
+    ]
+  },
+  {
+    "@id": "_:na70be97673d04fcd9f91fa8481208c34b120",
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://w3id.org/valueflows#EconomicResource"
+          },
+          {
+            "@id": "https://w3id.org/valueflows#Intent"
+          },
+          {
+            "@id": "https://w3id.org/valueflows#ResourceSpecification"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#roleLabel",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The human readable name of the role, inverse from the object to the subject. For example, 'is member of'."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/valueflows#AgentRelationshipRole"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "role label"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "unstable"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#ProcessSpecification",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Specifies the kind of process."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Process Specification"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "testing"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#fulfills",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The commitment which is completely or partially fulfilled by an economic event."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/valueflows#EconomicEvent"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "fulfills"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/valueflows#Commitment"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "unstable"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#transfer",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
+      "https://w3id.org/valueflows#Action"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Give full rights and responsibilities plus physical custody."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "transfer"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "testing"
+      }
+    ],
+    "https://w3id.org/valueflows#accountableEffect": [
+      {
+        "@id": "https://w3id.org/valueflows#updateTo"
+      }
+    ],
+    "https://w3id.org/valueflows#accountingEffect": [
+      {
+        "@id": "https://w3id.org/valueflows#decrementIncrement"
+      }
+    ],
+    "https://w3id.org/valueflows#containedEffect": [
+      {
+        "@id": "https://w3id.org/valueflows#notApplicable"
+      }
+    ],
+    "https://w3id.org/valueflows#createResource": [
+      {
+        "@id": "https://w3id.org/valueflows#optionalTo"
+      }
+    ],
+    "https://w3id.org/valueflows#eventQuantity": [
+      {
+        "@id": "https://w3id.org/valueflows#resource"
+      }
+    ],
+    "https://w3id.org/valueflows#inputOutput": [
+      {
+        "@id": "https://w3id.org/valueflows#notApplicable"
+      }
+    ],
+    "https://w3id.org/valueflows#locationEffect": [
+      {
+        "@id": "https://w3id.org/valueflows#updateTo"
+      }
+    ],
+    "https://w3id.org/valueflows#onhandEffect": [
+      {
+        "@id": "https://w3id.org/valueflows#decrementIncrement"
+      }
+    ],
+    "https://w3id.org/valueflows#pairsWith": [
+      {
+        "@id": "https://w3id.org/valueflows#notApplicable"
+      }
+    ],
+    "https://w3id.org/valueflows#stageEffect": [
+      {
+        "@id": "https://w3id.org/valueflows#notApplicable"
+      }
+    ],
+    "https://w3id.org/valueflows#stateEffect": [
+      {
+        "@id": "https://w3id.org/valueflows#updateTo"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#output",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
+      "https://w3id.org/valueflows#InputOutput"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "This kind of flow can be an output to a process."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "output"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "testing"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#containedIn",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Used when a stock economic resource contains units also defined as economic resources."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/valueflows#EconomicResource"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "contained in"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/valueflows#EconomicResource"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "unstable"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#resourceConformsTo",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The primary resource specification or definition of an existing or potential economic resource. A resource will have only one, as this specifies exactly what the resource is."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:na70be97673d04fcd9f91fa8481208c34b181"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "resource conforms to"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/valueflows#ResourceSpecification"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "unstable"
+      }
+    ]
+  },
+  {
+    "@id": "_:na70be97673d04fcd9f91fa8481208c34b181",
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://w3id.org/valueflows#Commitment"
+          },
+          {
+            "@id": "https://w3id.org/valueflows#Intent"
+          },
+          {
+            "@id": "https://w3id.org/valueflows#EconomicEvent"
+          },
+          {
+            "@id": "https://w3id.org/valueflows#Claim"
+          },
+          {
+            "@id": "https://w3id.org/valueflows#RecipeFlow"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#hasIndependentDemand",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The independent commitments for which this plan was created."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/valueflows#Plan"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has independent demand"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/valueflows#Commitment"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "https://w3id.org/valueflows#independentDemandOf"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "unstable"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#dropoff",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
+      "https://w3id.org/valueflows#Action"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Transported resource or person leaves the process; the same resource or person appeared in the input."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "dropoff"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "unstable"
+      }
+    ],
+    "https://w3id.org/valueflows#accountableEffect": [
+      {
+        "@id": "https://w3id.org/valueflows#notApplicable"
+      }
+    ],
+    "https://w3id.org/valueflows#accountingEffect": [
+      {
+        "@id": "https://w3id.org/valueflows#notApplicable"
+      }
+    ],
+    "https://w3id.org/valueflows#containedEffect": [
+      {
+        "@id": "https://w3id.org/valueflows#notApplicable"
+      }
+    ],
+    "https://w3id.org/valueflows#createResource": [
+      {
+        "@id": "https://w3id.org/valueflows#notApplicable"
+      }
+    ],
+    "https://w3id.org/valueflows#eventQuantity": [
+      {
+        "@id": "https://w3id.org/valueflows#resource"
+      }
+    ],
+    "https://w3id.org/valueflows#inputOutput": [
+      {
+        "@id": "https://w3id.org/valueflows#output"
+      }
+    ],
+    "https://w3id.org/valueflows#locationEffect": [
+      {
+        "@id": "https://w3id.org/valueflows#update"
+      }
+    ],
+    "https://w3id.org/valueflows#onhandEffect": [
+      {
+        "@id": "https://w3id.org/valueflows#notApplicable"
+      }
+    ],
+    "https://w3id.org/valueflows#pairsWith": [
+      {
+        "@id": "https://w3id.org/valueflows#pickup"
+      }
+    ],
+    "https://w3id.org/valueflows#stageEffect": [
+      {
+        "@id": "https://w3id.org/valueflows#update"
+      }
+    ],
+    "https://w3id.org/valueflows#stateEffect": [
+      {
+        "@id": "https://w3id.org/valueflows#update"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#Action",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "An action verb defining the kind of flow and its behavior."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Action"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "stable"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#ResourceSpecification",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Specifies the kind of resource, even if the resource is not instantiated as an EconomicResource. Could define a material item, service, digital item, currency account, skill or type of work, etc."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Resource Specification"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "stable"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#EventQuantity",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The action involves the event resource quantity, event quantity, or both."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Event Quantity"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "testing"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#subOrganization",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
+      "https://w3id.org/valueflows#RoleBehavior"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The role is a sub-organization type role in relation to an organization. An agent can be a sub-organization of no more than one organization."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "sub-organization"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "testing"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#minimumQuantity",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The minimum required order quantity of the offered resource."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/valueflows#Intent"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "minimum quantity"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.ontology-of-units-of-measure.org/resource/om-2/Measure"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "unstable"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#Agreement",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Any type of agreement among economic agents."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Agreement"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "testing"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#listedIn",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "This proposal is part of a list of proposals."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/valueflows#Proposal"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "listed in"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/valueflows#ProposalList"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "unstable"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#Claim",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A claim for a future economic event(s) in reciprocity for an economic event that already occurred. For example, a claim for payment for goods received."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Claim"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "unstable"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#processConformsTo",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The standard specification or definition of a process."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/valueflows#RecipeProcess"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "process conforms to"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/valueflows#ProcessSpecification"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "unstable"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Ontology"
+    ],
+    "http://purl.org/dc/terms/status": [
+      {
+        "@id": "http://purl.org/adms/status/UnderDevelopment"
+      }
+    ],
+    "http://purl.org/dc/terms/title": [
+      {
+        "@value": "Valueflows Ontology"
+      }
+    ],
+    "http://purl.org/dc/terms/type": [
+      {
+        "@id": "http://purl.org/adms/assettype/Ontology"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#versionIRI": [
+      {
+        "@id": "https://w3id.org/0.9/"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#reciprocal",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The reciprocal intent(s) of this published proposal. Not meant to be used for intent matching."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/valueflows#Proposal"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "reciprocal"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/valueflows#Intent"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "unstable"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#accountingQuantity",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The current amount and unit of the economic resource for which the agent has primary rights and responsibilities, sometimes thought of as ownership. This can be either stored or derived from economic events affecting the resource."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/valueflows#EconomicResource"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "accounting quantity"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.ontology-of-units-of-measure.org/resource/om-2/Measure"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "unstable"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#toLocation",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The new location of the receiver resource."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/valueflows#EconomicEvent"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "to location"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "unstable"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#Process",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "An activity that changes inputs into outputs, by transforming or transporting economic resource(s)."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Process"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "stable"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#purpose",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The type of proposal, offer or request."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/valueflows#Proposal"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "purpose"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/valueflows#ProposalPurpose"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "unstable"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#inverseRoleLabel",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The human readable name of the role, inverse from the object to the subject. For example, 'has member'."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/valueflows#AgentRelationshipRole"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "inverse role label"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "unstable"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#definedAs",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The scenario definition for this scenario, for example yearly budget."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/valueflows#Scenario"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "defined as"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/valueflows#ScenarioDefinition"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "unstable"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#RoleBehavior",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The general shape or behavior grouping of an agent relationship role."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Role Behavior"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "testing"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#appreciationOf",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The economic event being appreciated (gift economy)."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/valueflows#Appreciation"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "appreciation of"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/valueflows#EconomicEvent"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "unstable"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#recipeClauseOf",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Relates a flow to its exchange agreement in a recipe."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/valueflows#RecipeFlow"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "recipe clause of"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/valueflows#RecipeExchange"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "unstable"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#mappableAddress",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A textual address that can be mapped using mapping software."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "mappable address"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "unstable"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#increment",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
+      "https://w3id.org/valueflows#AccountingEffect",
+      "https://w3id.org/valueflows#OnhandEffect"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The effect is to add to the inventoried resource accounting or onhand quantity."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "increment"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "unstable"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#request",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
+      "https://w3id.org/valueflows#ProposalPurpose"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The proposal is a published request, need, want."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "request"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "unstable"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#ProposalList",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A grouping of proposals, for publishing as a list."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Proposal List"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "unstable"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#decrementIncrement",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
+      "https://w3id.org/valueflows#AccountingEffect",
+      "https://w3id.org/valueflows#OnhandEffect"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The effect is to subtract from the 'from' inventoried resource, and add to the 'to' inventoried resource, accounting or onhand quantity."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "decrement/increment"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "unstable"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#hasOutput",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "All the output flows of a process."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/valueflows#Process"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has output"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "_:na70be97673d04fcd9f91fa8481208c34b19"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "https://w3id.org/valueflows#outputOf"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "unstable"
+      }
+    ]
+  },
+  {
+    "@id": "_:na70be97673d04fcd9f91fa8481208c34b19",
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://w3id.org/valueflows#EconomicEvent"
+          },
+          {
+            "@id": "https://w3id.org/valueflows#Commitment"
+          },
+          {
+            "@id": "https://w3id.org/valueflows#Intent"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#RecipeProcess",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Specifies a process in a recipe for use in planning from recipe."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Recipe Process"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "testing"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#cite",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
+      "https://w3id.org/valueflows#Action"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "For example a design file, neither used nor consumed, the file remains available at all times."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "cite"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "testing"
+      }
+    ],
+    "https://w3id.org/valueflows#accountableEffect": [
+      {
+        "@id": "https://w3id.org/valueflows#notApplicable"
+      }
+    ],
+    "https://w3id.org/valueflows#accountingEffect": [
+      {
+        "@id": "https://w3id.org/valueflows#notApplicable"
+      }
+    ],
+    "https://w3id.org/valueflows#containedEffect": [
+      {
+        "@id": "https://w3id.org/valueflows#notApplicable"
+      }
+    ],
+    "https://w3id.org/valueflows#createResource": [
+      {
+        "@id": "https://w3id.org/valueflows#notApplicable"
+      }
+    ],
+    "https://w3id.org/valueflows#eventQuantity": [
+      {
+        "@id": "https://w3id.org/valueflows#resource"
+      }
+    ],
+    "https://w3id.org/valueflows#inputOutput": [
+      {
+        "@id": "https://w3id.org/valueflows#input"
+      }
+    ],
+    "https://w3id.org/valueflows#locationEffect": [
+      {
+        "@id": "https://w3id.org/valueflows#notApplicable"
+      }
+    ],
+    "https://w3id.org/valueflows#onhandEffect": [
+      {
+        "@id": "https://w3id.org/valueflows#notApplicable"
+      }
+    ],
+    "https://w3id.org/valueflows#pairsWith": [
+      {
+        "@id": "https://w3id.org/valueflows#notApplicable"
+      }
+    ],
+    "https://w3id.org/valueflows#stageEffect": [
+      {
+        "@id": "https://w3id.org/valueflows#notApplicable"
+      }
+    ],
+    "https://w3id.org/valueflows#stateEffect": [
+      {
+        "@id": "https://w3id.org/valueflows#update"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#incrementTo",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
+      "https://w3id.org/valueflows#AccountingEffect",
+      "https://w3id.org/valueflows#OnhandEffect"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The effect is to add to the to (receiver) inventoried resource accounting or onhand quantity."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "increment to"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "unstable"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#Appreciation",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A way to tie an economic event that is given in loose fulfilment for another economic event, without commitments or expectations. Supports the gift economy."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Appreciation"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "unstable"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#eligibleLocation",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Location or area where the proposal is valid."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/valueflows#Proposal"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "eligible location"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "unstable"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#action",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Defines the kind of flow, such as consume, produce, work, transfer, etc."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:na70be97673d04fcd9f91fa8481208c34b1"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "action"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/valueflows#Action"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "stable"
+      }
+    ]
+  },
+  {
+    "@id": "_:na70be97673d04fcd9f91fa8481208c34b1",
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://w3id.org/valueflows#EconomicEvent"
+          },
+          {
+            "@id": "https://w3id.org/valueflows#Commitment"
+          },
+          {
+            "@id": "https://w3id.org/valueflows#Intent"
+          },
+          {
+            "@id": "https://w3id.org/valueflows#RecipeFlow"
+          },
+          {
+            "@id": "https://w3id.org/valueflows#Claim"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#appreciationWith",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The economic event implemented in appreciation (gift economy)."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/valueflows#Appreciation"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "appreciation with"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/valueflows#EconomicEvent"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "unstable"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#hasPointInTime",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The planned or actual time of a flow; can be used instead of hasBeginning and hasEnd, if so, hasBeginning and hasEnd should be able to be returned with this value."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://www.w3.org/2006/time#Instant"
+      },
+      {
+        "@id": "_:na70be97673d04fcd9f91fa8481208c34b75"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has point in time"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#dateTimeStamp"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#propertyChainAxiom": [
+      {
+        "@list": [
+          {
+            "@id": "http://www.w3.org/2006/time#hasEnd"
+          },
+          {
+            "@id": "http://www.w3.org/2006/time#inXSDDateTimeStamp"
+          }
+        ]
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "unstable"
+      }
+    ]
+  },
+  {
+    "@id": "_:na70be97673d04fcd9f91fa8481208c34b75",
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://w3id.org/valueflows#Commitment"
+          },
+          {
+            "@id": "https://w3id.org/valueflows#EconomicEvent"
+          },
+          {
+            "@id": "https://w3id.org/valueflows#Intent"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#copy",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
+      "https://w3id.org/valueflows#Action"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Create a new version of the resource, without any change to the original."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "copy"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "unstable"
+      }
+    ],
+    "https://w3id.org/valueflows#accountableEffect": [
+      {
+        "@id": "https://w3id.org/valueflows#new"
+      }
+    ],
+    "https://w3id.org/valueflows#accountingEffect": [
+      {
+        "@id": "https://w3id.org/valueflows#incrementTo"
+      }
+    ],
+    "https://w3id.org/valueflows#containedEffect": [
+      {
+        "@id": "https://w3id.org/valueflows#notApplicable"
+      }
+    ],
+    "https://w3id.org/valueflows#createResource": [
+      {
+        "@id": "https://w3id.org/valueflows#optionalTo"
+      }
+    ],
+    "https://w3id.org/valueflows#eventQuantity": [
+      {
+        "@id": "https://w3id.org/valueflows#resource"
+      }
+    ],
+    "https://w3id.org/valueflows#inputOutput": [
+      {
+        "@id": "https://w3id.org/valueflows#notApplicable"
+      }
+    ],
+    "https://w3id.org/valueflows#locationEffect": [
+      {
+        "@id": "https://w3id.org/valueflows#new"
+      }
+    ],
+    "https://w3id.org/valueflows#onhandEffect": [
+      {
+        "@id": "https://w3id.org/valueflows#incrementTo"
+      }
+    ],
+    "https://w3id.org/valueflows#pairsWith": [
+      {
+        "@id": "https://w3id.org/valueflows#notApplicable"
+      }
+    ],
+    "https://w3id.org/valueflows#stageEffect": [
+      {
+        "@id": "https://w3id.org/valueflows#notApplicable"
+      }
+    ],
+    "https://w3id.org/valueflows#stateEffect": [
+      {
+        "@id": "https://w3id.org/valueflows#updateTo"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#clauseOf",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "This commitment is a primary part of the agreement."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/valueflows#Commitment"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "clause of"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/valueflows#Agreement"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "testing"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#hasRecipeOutput",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "All the outputs of a recipe process."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/valueflows#RecipeProcess"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has recipe output"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/valueflows#RecipeFlow"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "https://w3id.org/valueflows#recipeOutputOf"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "unstable"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#input",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
+      "https://w3id.org/valueflows#InputOutput"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "This kind of flow can be an input to a process."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "input"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "testing"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#accountingEffect",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The increment and/or decrement effect the action will have on the accounting quantity of an inventoried resource."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/valueflows#Action"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "accounting effect"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/valueflows#AccountingEffect"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "unstable"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#plannedWithin",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The non-process commitment/intent or process with its inputs and outputs is part of the plan."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:na70be97673d04fcd9f91fa8481208c34b23"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "planned within"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/valueflows#Plan"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "testing"
+      }
+    ]
+  },
+  {
+    "@id": "_:na70be97673d04fcd9f91fa8481208c34b23",
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://w3id.org/valueflows#Process"
+          },
+          {
+            "@id": "https://w3id.org/valueflows#Commitment"
+          },
+          {
+            "@id": "https://w3id.org/valueflows#Intent"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#combine",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
+      "https://w3id.org/valueflows#Action"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A resource is combined with other resources into a container resource."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "combine"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "unstable"
+      }
+    ],
+    "https://w3id.org/valueflows#accountableEffect": [
+      {
+        "@id": "https://w3id.org/valueflows#notApplicable"
+      }
+    ],
+    "https://w3id.org/valueflows#accountingEffect": [
+      {
+        "@id": "https://w3id.org/valueflows#notApplicable"
+      }
+    ],
+    "https://w3id.org/valueflows#containedEffect": [
+      {
+        "@id": "https://w3id.org/valueflows#update"
+      }
+    ],
+    "https://w3id.org/valueflows#createResource": [
+      {
+        "@id": "https://w3id.org/valueflows#notApplicable"
+      }
+    ],
+    "https://w3id.org/valueflows#eventQuantity": [
+      {
+        "@id": "https://w3id.org/valueflows#resource"
+      }
+    ],
+    "https://w3id.org/valueflows#inputOutput": [
+      {
+        "@id": "https://w3id.org/valueflows#input"
+      }
+    ],
+    "https://w3id.org/valueflows#locationEffect": [
+      {
+        "@id": "https://w3id.org/valueflows#notApplicable"
+      }
+    ],
+    "https://w3id.org/valueflows#onhandEffect": [
+      {
+        "@id": "https://w3id.org/valueflows#decrement"
+      }
+    ],
+    "https://w3id.org/valueflows#pairsWith": [
+      {
+        "@id": "https://w3id.org/valueflows#notApplicable"
+      }
+    ],
+    "https://w3id.org/valueflows#stageEffect": [
+      {
+        "@id": "https://w3id.org/valueflows#notApplicable"
+      }
+    ],
+    "https://w3id.org/valueflows#stateEffect": [
+      {
+        "@id": "https://w3id.org/valueflows#update"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#Organization",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A functional structure, formal or informal, which can include people and/or other organizations, and has its own agency.  Something called a group is an Organization in Valueflows if it has its own agency."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Organization"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/valueflows#Agent"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "stable"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#remove",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
+      "https://w3id.org/valueflows#ContainedEffect"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The effect is to remove or nullify the specified property from the resource."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "remove"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "unstable"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#rules",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DataTypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The rules or contract that govern this agreement."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/valueflows#Agreement"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "rules"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#anyURI"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "unstable"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#notApplicable",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
+      "https://w3id.org/valueflows#InputOutput",
+      "https://w3id.org/valueflows#PairsWith",
+      "https://w3id.org/valueflows#LocationEffect",
+      "https://w3id.org/valueflows#CreateResource",
+      "https://w3id.org/valueflows#ContainedEffect"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "This property is not applicable to this kind of flow."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "not applicable"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "unstable"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#primaryLocation",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The main place an agent is located, often an address where activities occur and mail can be sent. This is usually a mappable geographic location.  It also could be a website address, as in the case of agents who have no physical location."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/valueflows#Agent"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "primary location"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "unstable"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#resourceClassifiedAs",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "References a concept in a common taxonomy or other classification scheme for purposes of categorization or grouping."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:na70be97673d04fcd9f91fa8481208c34b174"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "resource classified as"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2002/07/owl#Thing"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "unstable"
+      }
+    ]
+  },
+  {
+    "@id": "_:na70be97673d04fcd9f91fa8481208c34b174",
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://w3id.org/valueflows#ResourceSpecification"
+          },
+          {
+            "@id": "https://w3id.org/valueflows#RecipeFlow"
+          },
+          {
+            "@id": "https://w3id.org/valueflows#Intent"
+          },
+          {
+            "@id": "https://w3id.org/valueflows#Commitment"
+          },
+          {
+            "@id": "https://w3id.org/valueflows#EconomicEvent"
+          },
+          {
+            "@id": "https://w3id.org/valueflows#Claim"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#inputOf",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Relates an input flow to its process."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:na70be97673d04fcd9f91fa8481208c34b7"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "input of"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/valueflows#Process"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "stable"
+      }
+    ]
+  },
+  {
+    "@id": "_:na70be97673d04fcd9f91fa8481208c34b7",
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://w3id.org/valueflows#EconomicEvent"
+          },
+          {
+            "@id": "https://w3id.org/valueflows#Commitment"
+          },
+          {
+            "@id": "https://w3id.org/valueflows#Intent"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#resource",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
+      "https://w3id.org/valueflows#EventQuantity"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "This event uses resourceQuantity."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "resource"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "unstable"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#provider",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The economic agent from whom the intended, committed, or actual economic event is initiated."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:na70be97673d04fcd9f91fa8481208c34b35"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "provider"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/valueflows#Agent"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "testing"
+      }
+    ]
+  },
+  {
+    "@id": "_:na70be97673d04fcd9f91fa8481208c34b35",
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://w3id.org/valueflows#EconomicEvent"
+          },
+          {
+            "@id": "https://w3id.org/valueflows#Commitment"
+          },
+          {
+            "@id": "https://w3id.org/valueflows#Intent"
+          },
+          {
+            "@id": "https://w3id.org/valueflows#Claim"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#transferCustody",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
+      "https://w3id.org/valueflows#Action"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Give physical custody and control of a resource, without full accounting or ownership rights."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "transfer custody"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "unstable"
+      }
+    ],
+    "https://w3id.org/valueflows#accountableEffect": [
+      {
+        "@id": "https://w3id.org/valueflows#notApplicable"
+      }
+    ],
+    "https://w3id.org/valueflows#accountingEffect": [
+      {
+        "@id": "https://w3id.org/valueflows#notApplicable"
+      }
+    ],
+    "https://w3id.org/valueflows#containedEffect": [
+      {
+        "@id": "https://w3id.org/valueflows#notApplicable"
+      }
+    ],
+    "https://w3id.org/valueflows#createResource": [
+      {
+        "@id": "https://w3id.org/valueflows#optionalTo"
+      }
+    ],
+    "https://w3id.org/valueflows#eventQuantity": [
+      {
+        "@id": "https://w3id.org/valueflows#resource"
+      }
+    ],
+    "https://w3id.org/valueflows#inputOutput": [
+      {
+        "@id": "https://w3id.org/valueflows#notApplicable"
+      }
+    ],
+    "https://w3id.org/valueflows#locationEffect": [
+      {
+        "@id": "https://w3id.org/valueflows#updateTo"
+      }
+    ],
+    "https://w3id.org/valueflows#onhandEffect": [
+      {
+        "@id": "https://w3id.org/valueflows#decrementIncrement"
+      }
+    ],
+    "https://w3id.org/valueflows#pairsWith": [
+      {
+        "@id": "https://w3id.org/valueflows#notApplicable"
+      }
+    ],
+    "https://w3id.org/valueflows#stageEffect": [
+      {
+        "@id": "https://w3id.org/valueflows#notApplicable"
+      }
+    ],
+    "https://w3id.org/valueflows#stateEffect": [
+      {
+        "@id": "https://w3id.org/valueflows#updateTo"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#ProposalPurpose",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The type of proposal, an offer or request (others may be added)."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Proposal Purpose"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "unstable"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#bundles",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "All the agreements included in this agreement bundle."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/valueflows#AgreementBundle"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "realizes"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/valueflows#Agreement"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "https://w3id.org/valueflows#bundles"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "unstable"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#substitutable",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Defines if any resource of that type can be freely substituted for any other resource of that type when used, consumed, traded, etc."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/valueflows#ResourceSpecification"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "substitutable"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#boolean"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "testing"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/2004/02/skos/core#note",
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:na70be97673d04fcd9f91fa8481208c34b138"
+      }
+    ]
+  },
+  {
+    "@id": "_:na70be97673d04fcd9f91fa8481208c34b138",
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"
+          },
+          {
+            "@id": "https://w3id.org/valueflows#Agent"
+          },
+          {
+            "@id": "https://w3id.org/valueflows#AgentRelationship"
+          },
+          {
+            "@id": "https://w3id.org/valueflows#AgentRelationshipRole"
+          },
+          {
+            "@id": "https://w3id.org/valueflows#Agreement"
+          },
+          {
+            "@id": "https://w3id.org/valueflows#Appreciation"
+          },
+          {
+            "@id": "https://w3id.org/valueflows#Claim"
+          },
+          {
+            "@id": "https://w3id.org/valueflows#Commitment"
+          },
+          {
+            "@id": "https://w3id.org/valueflows#EconomicEvent"
+          },
+          {
+            "@id": "https://w3id.org/valueflows#EconomicResource"
+          },
+          {
+            "@id": "https://w3id.org/valueflows#ExternalLink"
+          },
+          {
+            "@id": "https://w3id.org/valueflows#Intent"
+          },
+          {
+            "@id": "https://w3id.org/valueflows#Plan"
+          },
+          {
+            "@id": "https://w3id.org/valueflows#Process"
+          },
+          {
+            "@id": "https://w3id.org/valueflows#ProcessSpecification"
+          },
+          {
+            "@id": "https://w3id.org/valueflows#Proposal"
+          },
+          {
+            "@id": "https://w3id.org/valueflows#RecipeFlow"
+          },
+          {
+            "@id": "https://w3id.org/valueflows#RecipeProcess"
+          },
+          {
+            "@id": "https://w3id.org/valueflows#ResourceSpecification"
+          },
+          {
+            "@id": "https://w3id.org/valueflows#RoleBehavior"
+          },
+          {
+            "@id": "https://w3id.org/valueflows#Scenario"
+          },
+          {
+            "@id": "https://w3id.org/valueflows#ScenarioDefinition"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#realizationOf",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "This economic event occurs as part of this agreement."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/valueflows#EconomicEvent"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "realization of"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/valueflows#Agreement"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "unstable"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#stipulates",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "All the primary commitments that constitute the agreement."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/valueflows#Agreement"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "stipulates"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/valueflows#Commitment"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "https://w3id.org/valueflows#clauseOf"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "unstable"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#triggeredBy",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "References an economic event that implied the claim or event, often based on a prior agreement."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:na70be97673d04fcd9f91fa8481208c34b54"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "triggered by"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/valueflows#EconomicEvent"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "unstable"
+      }
+    ]
+  },
+  {
+    "@id": "_:na70be97673d04fcd9f91fa8481208c34b54",
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://w3id.org/valueflows#EconomicEvent"
+          },
+          {
+            "@id": "https://w3id.org/valueflows#Claim"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#basedOn",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The definition or standard specification for a process."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/valueflows#Process"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "based on"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/valueflows#ProcessSpecification"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "unstable"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#unitOfEffort",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The unit used for use or work or sometimes cite actions."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/valueflows#EconomicResource"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "unit of effort"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.ontology-of-units-of-measure.org/resource/om-2/Unit"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "unstable"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#inScopeOf",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "In the context of an agent, a grouping generally used for accounting, reporting."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:na70be97673d04fcd9f91fa8481208c34b45"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "in scope of"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/valueflows#Agent"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "unstable"
+      }
+    ]
+  },
+  {
+    "@id": "_:na70be97673d04fcd9f91fa8481208c34b45",
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://w3id.org/valueflows#Claim"
+          },
+          {
+            "@id": "https://w3id.org/valueflows#Commitment"
+          },
+          {
+            "@id": "https://w3id.org/valueflows#EconomicEvent"
+          },
+          {
+            "@id": "https://w3id.org/valueflows#Proposal"
+          },
+          {
+            "@id": "https://w3id.org/valueflows#Intent"
+          },
+          {
+            "@id": "https://w3id.org/valueflows#Scenario"
+          },
+          {
+            "@id": "https://w3id.org/valueflows#Process"
+          },
+          {
+            "@id": "https://w3id.org/valueflows#AgentRelationship"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#roleBehavior",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The generalized behavior of this agent relationship role."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/valueflows#AgentRelationshipRole"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "role behavior"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/valueflows#RoleBehavior"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "unstable"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#Intent",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A proposed or planned or estimated economic flow, prior to a commitment or agreement, which can lead to commitments and/or economic events."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Intent"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "testing"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#hasEnd",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The planned or actual end of a flow or process."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://www.w3.org/2006/time#TemporalEntity"
+      },
+      {
+        "@id": "_:na70be97673d04fcd9f91fa8481208c34b66"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has end"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#dateTimeStamp"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#propertyChainAxiom": [
+      {
+        "@list": [
+          {
+            "@id": "http://www.w3.org/2006/time#hasEnd"
+          },
+          {
+            "@id": "http://www.w3.org/2006/time#inXSDDateTimeStamp"
+          }
+        ]
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "unstable"
+      }
+    ]
+  },
+  {
+    "@id": "_:na70be97673d04fcd9f91fa8481208c34b66",
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://w3id.org/valueflows#Commitment"
+          },
+          {
+            "@id": "https://w3id.org/valueflows#EconomicEvent"
+          },
+          {
+            "@id": "https://w3id.org/valueflows#Intent"
+          },
+          {
+            "@id": "https://w3id.org/valueflows#Proposal"
+          },
+          {
+            "@id": "https://w3id.org/valueflows#Scenario"
+          },
+          {
+            "@id": "https://w3id.org/valueflows#Process"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#recipeStipulatesReciprocal",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "All the reciprocal clauses of a recipe exchange."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/valueflows#RecipeExchange"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "recipe stipulates reciprocal"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/valueflows#RecipeFlow"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "https://w3id.org/valueflows#recipeReciprocalClauseOf"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "unstable"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#publishes",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The primary intent(s) of this published proposal. Would be used in intent matching."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/valueflows#Proposal"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "publishes"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/valueflows#Intent"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "unstable"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#currentLocation",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The current place an economic resource is located.  Could be at any level of granularity, from a town to an address to a warehouse location.  Usually mappable."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/valueflows#EconomicResource"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "current location"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "unstable"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#modify",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
+      "https://w3id.org/valueflows#Action"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "In processes like repair or modification, the same resource will appear in the input."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "modify"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "testing"
+      }
+    ],
+    "https://w3id.org/valueflows#accountableEffect": [
+      {
+        "@id": "https://w3id.org/valueflows#update"
+      }
+    ],
+    "https://w3id.org/valueflows#accountingEffect": [
+      {
+        "@id": "https://w3id.org/valueflows#notApplicable"
+      }
+    ],
+    "https://w3id.org/valueflows#containedEffect": [
+      {
+        "@id": "https://w3id.org/valueflows#notApplicable"
+      }
+    ],
+    "https://w3id.org/valueflows#createResource": [
+      {
+        "@id": "https://w3id.org/valueflows#notApplicable"
+      }
+    ],
+    "https://w3id.org/valueflows#eventQuantity": [
+      {
+        "@id": "https://w3id.org/valueflows#resource"
+      }
+    ],
+    "https://w3id.org/valueflows#inputOutput": [
+      {
+        "@id": "https://w3id.org/valueflows#output"
+      }
+    ],
+    "https://w3id.org/valueflows#locationEffect": [
+      {
+        "@id": "https://w3id.org/valueflows#update"
+      }
+    ],
+    "https://w3id.org/valueflows#onhandEffect": [
+      {
+        "@id": "https://w3id.org/valueflows#increment"
+      }
+    ],
+    "https://w3id.org/valueflows#pairsWith": [
+      {
+        "@id": "https://w3id.org/valueflows#accept"
+      }
+    ],
+    "https://w3id.org/valueflows#stageEffect": [
+      {
+        "@id": "https://w3id.org/valueflows#notApplicable"
+      }
+    ],
+    "https://w3id.org/valueflows#stateEffect": [
+      {
+        "@id": "https://w3id.org/valueflows#update"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#primaryAccountable",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The agent currently with primary rights and responsibilites for the economic resource. It is the agent that is associated with the accountingQuantity of the economic resource."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/valueflows#EconomicResource"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "primary accountable"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/valueflows#Agent"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "unstable"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#conformsTo",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The primary resource knowledge specification or definition of an existing or potential resource."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/valueflows#EconomicResource"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "conforms to"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/valueflows#ResourceSpecification"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "unstable"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#Agent",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "An entity that can commit to and/or perform economic and/or ecological activity under its own power or authority."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Agent"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "stable"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#image",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The uri to an image relevant to the entity, such as a logo, avatar, photo, diagram, etc."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:na70be97673d04fcd9f91fa8481208c34b112"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "image"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#anyURI"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "unstable"
+      }
+    ]
+  },
+  {
+    "@id": "_:na70be97673d04fcd9f91fa8481208c34b112",
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://w3id.org/valueflows#Agent"
+          },
+          {
+            "@id": "https://w3id.org/valueflows#EconomicEvent"
+          },
+          {
+            "@id": "https://w3id.org/valueflows#EconomicResource"
+          },
+          {
+            "@id": "https://w3id.org/valueflows#Intent"
+          },
+          {
+            "@id": "https://w3id.org/valueflows#ResourceSpecification"
+          },
+          {
+            "@id": "https://w3id.org/valueflows#ProcessSpecification"
+          },
+          {
+            "@id": "https://w3id.org/valueflows#RecipeProcess"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#reciprocalClauseOf",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "This commitment is a reciprocal part of the agreement."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/valueflows#Commitment"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "reciprocal clause of"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/valueflows#Agreement"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "unstable"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#stage",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "References the ProcessSpecification of the last process the economic resource went through. Stage is used when the last process is important for finding proper resources, such as where the publishing process wants only documents that have gone through the editing process."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:na70be97673d04fcd9f91fa8481208c34b187"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "stage"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/valueflows#ProcessSpecification"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "unstable"
+      }
+    ]
+  },
+  {
+    "@id": "_:na70be97673d04fcd9f91fa8481208c34b187",
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://w3id.org/valueflows#EconomicResource"
+          },
+          {
+            "@id": "https://w3id.org/valueflows#Commitment"
+          },
+          {
+            "@id": "https://w3id.org/valueflows#RecipeFlow"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#AgentRelationshipRole",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A relationship role defining the kind of association one agent can have with another."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Agent Relationship Role"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "testing"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#hasBeginning",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The planned or actual beginning of a flow or process."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://www.w3.org/2006/time#TemporalEntity"
+      },
+      {
+        "@id": "_:na70be97673d04fcd9f91fa8481208c34b57"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has beginning"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#dateTimeStamp"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#propertyChainAxiom": [
+      {
+        "@list": [
+          {
+            "@id": "http://www.w3.org/2006/time#hasBeginning"
+          },
+          {
+            "@id": "http://www.w3.org/2006/time#inXSDDateTimeStamp"
+          }
+        ]
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "unstable"
+      }
+    ]
+  },
+  {
+    "@id": "_:na70be97673d04fcd9f91fa8481208c34b57",
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://w3id.org/valueflows#Commitment"
+          },
+          {
+            "@id": "https://w3id.org/valueflows#EconomicEvent"
+          },
+          {
+            "@id": "https://w3id.org/valueflows#Intent"
+          },
+          {
+            "@id": "https://w3id.org/valueflows#Proposal"
+          },
+          {
+            "@id": "https://w3id.org/valueflows#Scenario"
+          },
+          {
+            "@id": "https://w3id.org/valueflows#Process"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#RecipeFlow",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The specification of a resource inflow to, or outflow from, a recipe process."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Recipe Flow"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "testing"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#lot",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Lot or batch of an economic resource, used to track forward or backwards to all occurrences of resources of that lot."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/valueflows#EconomicResource"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "lot"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.virtual-assembly.org/DataFoodConsortium/BusinessOntology#ProductBatch"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "unstable"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#stipulatesReciprocal",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "All the reciprocal commitments that constitute the agreement."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/valueflows#Agreement"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "stipulates reciprocal"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/valueflows#Commitment"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "https://w3id.org/valueflows#reciprocalClauseOf"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "unstable"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#CreateResource",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The action can create an economic resource."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Create Resource"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "testing"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#Commitment",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A planned economic flow that has been promised by an agent to another agent."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Commitment"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "stable"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/2003/01/geo/wgs84_pos#long",
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#double"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#AccountingEffect",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The action has this effect on an inventoried resource accounting quantity."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Accounting Effect"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "testing"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/valueflows#resourceInventoriedAs",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Economic resource involved in the flow."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:na70be97673d04fcd9f91fa8481208c34b31"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "resource inventoried as"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/valueflows#EconomicResource"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@value": "testing"
+      }
+    ]
+  },
+  {
+    "@id": "_:na70be97673d04fcd9f91fa8481208c34b31",
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://w3id.org/valueflows#Commitment"
+          },
+          {
+            "@id": "https://w3id.org/valueflows#Intent"
+          },
+          {
+            "@id": "https://w3id.org/valueflows#EconomicEvent"
+          }
+        ]
+      }
+    ]
+  }
+]
