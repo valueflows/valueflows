@@ -14,14 +14,14 @@ Use case:
 
 #### Resources before
 ``` yaml
-'@context': https://w3id.org/valueflows/v1
+'@context': https://w3id.org/valueflows/ont/1.0/vf
 '@id': https://fruitfarm.example/apples
 '@type': vf:EconomicResource
 'vf:resourceCategory': https://www.wikidata.org/wiki/Q89#apple-category
 'skos:note': This only has a resource category, the fruitfarm does not keep inventory records on its apples.
 ```
 ``` yaml
-'@context': https://w3id.org/valueflows/v1
+'@context': https://w3id.org/valueflows/ont/1.0/vf
 '@id': https://bakery.example/apples
 '@type': vf:EconomicResource
 'vf:resourceCategory': https://www.wikidata.org/wiki/Q89#apple-category
@@ -31,7 +31,7 @@ Use case:
   'qudt:numericValue': .5
 ```
 ``` yaml
-'@context': https://w3id.org/valueflows/v1
+'@context': https://w3id.org/valueflows/ont/1.0/vf
 '@id': https://chain.fair-coin.org/address/fVRdLE87ywagHTLkWf7B4y2f3DU1K59nFE/#
 '@type': vf:EconomicResource
 'vf:resourceCategory': https://www.wikidata.org/wiki/Q8142#currency
@@ -43,7 +43,7 @@ Use case:
 'skos:note': the bakery faircoin address (account)
 ```
 ``` yaml
-'@context': https://w3id.org/valueflows/v1
+'@context': https://w3id.org/valueflows/ont/1.0/vf
 '@id': https://chain.fair-coin.org/address/fFdw8QyWwJjHVPnjkWkYAYbQ1GxmT5JA7w/#
 '@type': vf:EconomicResource
 'vf:resourceCategory': https://www.wikidata.org/wiki/Q8142#currency
@@ -56,7 +56,7 @@ Use case:
 ```
 #### The bakery orders apples from the fruit farm
 ``` yaml
-'@context': https://w3id.org/valueflows/v1
+'@context': https://w3id.org/valueflows/ont/1.0/vf
 '@id': https://fruitfarm.example/rf789f7f#exchange
 '@type': vf:ExchangeAgreement
 'skos:note': bakery orders apples in exchange for Faircoin
@@ -84,7 +84,7 @@ Use case:
 ```
 #### Fruit Farm delivers some of the apples
 ``` yaml
-'@context': https://w3id.org/valueflows/v1
+'@context': https://w3id.org/valueflows/ont/1.0/vf
 '@id': https://fruitfarm.example/rf782334df#process
 '@type': vf:Transportation
 'vf:input':
@@ -120,7 +120,7 @@ Use case:
     'vf:receiver': https://bakery.example/#agent
 ```
 ``` yaml
-'@context': https://w3id.org/valueflows/v1
+'@context': https://w3id.org/valueflows/ont/1.0/vf
 '@id': https://fruitfarm.example/rf78233ccc#fulfillment
 '@type': vf:TransferFulfillment
 'vf:fulfillsTransfer': https://fruitfarm.example/rf789f7f#unload-1   #commitment
@@ -133,7 +133,7 @@ Use case:
 
 #### Fruit Farm plans and harvests more apples
 ``` yaml
-'@context': https://w3id.org/valueflows/v1
+'@context': https://w3id.org/valueflows/ont/1.0/vf
 '@id': https://fruitfarm.example/rf78234uj8#process
 '@type': vf:Transformation
 'skos:note': harvest apples
@@ -182,7 +182,7 @@ Use case:
 ```
 #### The bakery decides to order some more apples as long as they are still due a delivery
 ``` yaml
-'@context': https://w3id.org/valueflows/v1
+'@context': https://w3id.org/valueflows/ont/1.0/vf
 '@id': https://fruitfarm.example/rf78as88#exchange
 '@type': vf:ExchangeAgreement
 'skos:note': bakery ordersapples in exchange for Faircoin
@@ -211,7 +211,7 @@ Use case:
 
 #### Fruit farm plans and delivers the rest of the apples 
 ``` yaml
-'@context': https://w3id.org/valueflows/v1
+'@context': https://w3id.org/valueflows/ont/1.0/vf
 '@id': https://fruitfarm.example/rf782334df#process
 '@type': vf:Transportation
 'vf:input':
@@ -260,7 +260,7 @@ Use case:
     'vf:fulfills': https://fruitfarm.example/rf782334df#commitment-2
 ```
 ``` yaml
-'@context': https://w3id.org/valueflows/v1
+'@context': https://w3id.org/valueflows/ont/1.0/vf
 '@id': https://fruitfarm.example/rfdfs7789d#fulfillment
 '@type': vf:TransferFulfillment
 'vf:fulfillsTransfer': https://fruitfarm.example/rf789f7f#unload-1   #commitment
@@ -271,7 +271,7 @@ Use case:
   'qudt:numericValue': .5
 ```
 ``` yaml
-'@context': https://w3id.org/valueflows/v1
+'@context': https://w3id.org/valueflows/ont/1.0/vf
 '@id': https://fruitfarm.example/rfdfs778ww#fulfillment
 '@type': vf:TransferFulfillment
 'vf:fulfillsTransfer': https://fruitfarm.example/rf78as88#unload-1   #commitment
@@ -283,7 +283,7 @@ Use case:
 ```
 #### The bakery pays for all the apples
 ``` yaml
-'@context': https://w3id.org/valueflows/v1
+'@context': https://w3id.org/valueflows/ont/1.0/vf
 '@id': https://bakery.example/erw890e8r#transfer
 '@type': vf:Transfer #???? one event? two events? do like issue/receive?
 'vf:affectedQuantity':
@@ -304,7 +304,7 @@ Use case:
     'vf:affects': '@id': https://chain.fair-coin.org/address/fFdw8QyWwJjHVPnjkWkYAYbQ1GxmT5JA7w/#
 ```
 ``` yaml
-'@context': https://w3id.org/valueflows/v1
+'@context': https://w3id.org/valueflows/ont/1.0/vf
 '@id': https://fruitfarm.example/rfdfwerw3#fulfillment
 '@type': vf:TransferFulfillment
 'vf:fulfillsTransfer': https://fruitfarm.example/rf789f7f#receive-3   #commitment
@@ -315,7 +315,7 @@ Use case:
   'qudt:numericValue': 1000
 ```
 ``` yaml
-'@context': https://w3id.org/valueflows/v1
+'@context': https://w3id.org/valueflows/ont/1.0/vf
 '@id': https://fruitfarm.example/rfdfwerw4#fulfillment
 '@type': vf:TransferFulfillment
 'vf:fulfillsTransfer': https://fruitfarm.example/rf78as88#receive-3   #commitment
@@ -328,14 +328,14 @@ Use case:
 
 #### Resources after
 ``` yaml
-'@context': https://w3id.org/valueflows/v1
+'@context': https://w3id.org/valueflows/ont/1.0/vf
 '@id': https://fruitfarm.example/apples
 '@type': vf:EconomicResource
 'vf:resourceCategory': https://www.wikidata.org/wiki/Q89#apple-category
 'skos:note': This only has a resource category, the fruitfarm does not keep inventory records on its apples.
 ```
 ``` yaml
-'@context': https://w3id.org/valueflows/v1
+'@context': https://w3id.org/valueflows/ont/1.0/vf
 '@id': https://bakery.example/apples
 '@type': vf:EconomicResource
 'vf:resourceCategory': https://www.wikidata.org/wiki/Q89#apple-category
@@ -345,7 +345,7 @@ Use case:
   'qudt:numericValue': 3
 ```
 ``` yaml
-'@context': https://w3id.org/valueflows/v1
+'@context': https://w3id.org/valueflows/ont/1.0/vf
 '@id': https://chain.fair-coin.org/address/fVRdLE87ywagHTLkWf7B4y2f3DU1K59nFE/#
 '@type': vf:EconomicResource
 'vf:resourceCategory': https://www.wikidata.org/wiki/Q8142#currency
@@ -356,7 +356,7 @@ Use case:
   'qudt:numericValue': 19183
 'skos:note': the bakery faircoin address (account)
 ``` yaml
-'@context': https://w3id.org/valueflows/v1
+'@context': https://w3id.org/valueflows/ont/1.0/vf
 '@id': https://chain.fair-coin.org/address/fFdw8QyWwJjHVPnjkWkYAYbQ1GxmT5JA7w/#
 '@type': vf:EconomicResource
 'vf:resourceCategory': https://www.wikidata.org/wiki/Q8142#currency

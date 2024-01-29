@@ -19,10 +19,10 @@
       {
         "@list": [
           {
-            "@id": "https://w3id.org/valueflows#RecipeProcess"
+            "@id": "https://w3id.org/valueflows/ont/vf#RecipeProcess"
           },
           {
-            "@id": "https://w3id.org/valueflows#ScenarioDefinition"
+            "@id": "https://w3id.org/valueflows/ont/vf#ScenarioDefinition"
           }
         ]
       }
@@ -37,7 +37,7 @@
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#defaultUnitOfEffort",
+    "@id": "https://w3id.org/valueflows/ont/vf#defaultUnitOfEffort",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
@@ -49,7 +49,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "https://w3id.org/valueflows#ResourceSpecification"
+        "@id": "https://w3id.org/valueflows/ont/vf#ResourceSpecification"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -70,7 +70,7 @@
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#uri",
+    "@id": "https://w3id.org/valueflows/ont/vf#uri",
     "@type": [
       "http://www.w3.org/2002/07/owl#DatatypeProperty"
     ],
@@ -98,7 +98,7 @@
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#processClassifiedAs",
+    "@id": "https://w3id.org/valueflows/ont/vf#processClassifiedAs",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
@@ -110,7 +110,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "https://w3id.org/valueflows#RecipeProcess"
+        "@id": "https://w3id.org/valueflows/ont/vf#RecipeProcess"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -131,7 +131,7 @@
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#Plan",
+    "@id": "https://w3id.org/valueflows/ont/vf#Plan",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -154,7 +154,7 @@
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#eventQuantity",
+    "@id": "https://w3id.org/valueflows/ont/vf#eventQuantity",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
@@ -166,7 +166,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "https://w3id.org/valueflows#Action"
+        "@id": "https://w3id.org/valueflows/ont/vf#Action"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -177,7 +177,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "https://w3id.org/valueflows#EventQuantity"
+        "@id": "https://w3id.org/valueflows/ont/vf#EventQuantity"
       }
     ],
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
@@ -187,7 +187,7 @@
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#finished",
+    "@id": "https://w3id.org/valueflows/ont/vf#finished",
     "@type": [
       "http://www.w3.org/2002/07/owl#DatatypeProperty"
     ],
@@ -225,26 +225,26 @@
       {
         "@list": [
           {
-            "@id": "https://w3id.org/valueflows#Commitment"
+            "@id": "https://w3id.org/valueflows/ont/vf#Commitment"
           },
           {
-            "@id": "https://w3id.org/valueflows#Process"
+            "@id": "https://w3id.org/valueflows/ont/vf#Process"
           },
           {
-            "@id": "https://w3id.org/valueflows#Intent"
+            "@id": "https://w3id.org/valueflows/ont/vf#Intent"
           },
           {
-            "@id": "https://w3id.org/valueflows#Claim"
+            "@id": "https://w3id.org/valueflows/ont/vf#Claim"
           }
         ]
       }
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#pickup",
+    "@id": "https://w3id.org/valueflows/ont/vf#pickup",
     "@type": [
       "http://www.w3.org/2002/07/owl#NamedIndividual",
-      "https://w3id.org/valueflows#Action"
+      "https://w3id.org/valueflows/ont/vf#Action"
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
@@ -263,64 +263,64 @@
         "@value": "unstable"
       }
     ],
-    "https://w3id.org/valueflows#accountableEffect": [
+    "https://w3id.org/valueflows/ont/vf#accountableEffect": [
       {
-        "@id": "https://w3id.org/valueflows#notApplicable"
+        "@id": "https://w3id.org/valueflows/ont/vf#notApplicable"
       }
     ],
-    "https://w3id.org/valueflows#accountingEffect": [
+    "https://w3id.org/valueflows/ont/vf#accountingEffect": [
       {
-        "@id": "https://w3id.org/valueflows#notApplicable"
+        "@id": "https://w3id.org/valueflows/ont/vf#notApplicable"
       }
     ],
-    "https://w3id.org/valueflows#containedEffect": [
+    "https://w3id.org/valueflows/ont/vf#containedEffect": [
       {
-        "@id": "https://w3id.org/valueflows#notApplicable"
+        "@id": "https://w3id.org/valueflows/ont/vf#notApplicable"
       }
     ],
-    "https://w3id.org/valueflows#createResource": [
+    "https://w3id.org/valueflows/ont/vf#createResource": [
       {
-        "@id": "https://w3id.org/valueflows#notApplicable"
+        "@id": "https://w3id.org/valueflows/ont/vf#notApplicable"
       }
     ],
-    "https://w3id.org/valueflows#eventQuantity": [
+    "https://w3id.org/valueflows/ont/vf#eventQuantity": [
       {
-        "@id": "https://w3id.org/valueflows#resource"
+        "@id": "https://w3id.org/valueflows/ont/vf#resource"
       }
     ],
-    "https://w3id.org/valueflows#inputOutput": [
+    "https://w3id.org/valueflows/ont/vf#inputOutput": [
       {
-        "@id": "https://w3id.org/valueflows#input"
+        "@id": "https://w3id.org/valueflows/ont/vf#input"
       }
     ],
-    "https://w3id.org/valueflows#locationEffect": [
+    "https://w3id.org/valueflows/ont/vf#locationEffect": [
       {
-        "@id": "https://w3id.org/valueflows#update"
+        "@id": "https://w3id.org/valueflows/ont/vf#update"
       }
     ],
-    "https://w3id.org/valueflows#onhandEffect": [
+    "https://w3id.org/valueflows/ont/vf#onhandEffect": [
       {
-        "@id": "https://w3id.org/valueflows#notApplicable"
+        "@id": "https://w3id.org/valueflows/ont/vf#notApplicable"
       }
     ],
-    "https://w3id.org/valueflows#pairsWith": [
+    "https://w3id.org/valueflows/ont/vf#pairsWith": [
       {
-        "@id": "https://w3id.org/valueflows#dropoff"
+        "@id": "https://w3id.org/valueflows/ont/vf#dropoff"
       }
     ],
-    "https://w3id.org/valueflows#stageEffect": [
+    "https://w3id.org/valueflows/ont/vf#stageEffect": [
       {
-        "@id": "https://w3id.org/valueflows#notApplicable"
+        "@id": "https://w3id.org/valueflows/ont/vf#notApplicable"
       }
     ],
-    "https://w3id.org/valueflows#stateEffect": [
+    "https://w3id.org/valueflows/ont/vf#stateEffect": [
       {
-        "@id": "https://w3id.org/valueflows#update"
+        "@id": "https://w3id.org/valueflows/ont/vf#update"
       }
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#atLocation",
+    "@id": "https://w3id.org/valueflows/ont/vf#atLocation",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
@@ -358,20 +358,20 @@
       {
         "@list": [
           {
-            "@id": "https://w3id.org/valueflows#EconomicEvent"
+            "@id": "https://w3id.org/valueflows/ont/vf#EconomicEvent"
           },
           {
-            "@id": "https://w3id.org/valueflows#Commitment"
+            "@id": "https://w3id.org/valueflows/ont/vf#Commitment"
           },
           {
-            "@id": "https://w3id.org/valueflows#Intent"
+            "@id": "https://w3id.org/valueflows/ont/vf#Intent"
           }
         ]
       }
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#proposedTo",
+    "@id": "https://w3id.org/valueflows/ont/vf#proposedTo",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
@@ -383,7 +383,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "https://w3id.org/valueflows#Proposal"
+        "@id": "https://w3id.org/valueflows/ont/vf#Proposal"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -394,7 +394,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "https://w3id.org/valueflows#Agent"
+        "@id": "https://w3id.org/valueflows/ont/vf#Agent"
       }
     ],
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
@@ -404,7 +404,7 @@
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#availableQuantity",
+    "@id": "https://w3id.org/valueflows/ont/vf#availableQuantity",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
@@ -416,7 +416,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "https://w3id.org/valueflows#Intent"
+        "@id": "https://w3id.org/valueflows/ont/vf#Intent"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -437,10 +437,10 @@
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#both",
+    "@id": "https://w3id.org/valueflows/ont/vf#both",
     "@type": [
       "http://www.w3.org/2002/07/owl#NamedIndividual",
-      "https://w3id.org/valueflows#EventQuantity"
+      "https://w3id.org/valueflows/ont/vf#EventQuantity"
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
@@ -461,10 +461,10 @@
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#effort",
+    "@id": "https://w3id.org/valueflows/ont/vf#effort",
     "@type": [
       "http://www.w3.org/2002/07/owl#NamedIndividual",
-      "https://w3id.org/valueflows#EventQuantity"
+      "https://w3id.org/valueflows/ont/vf#EventQuantity"
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
@@ -498,29 +498,29 @@
       {
         "@list": [
           {
-            "@id": "https://w3id.org/valueflows#Agreement"
+            "@id": "https://w3id.org/valueflows/ont/vf#Agreement"
           },
           {
-            "@id": "https://w3id.org/valueflows#Claim"
+            "@id": "https://w3id.org/valueflows/ont/vf#Claim"
           },
           {
-            "@id": "https://w3id.org/valueflows#Commitment"
+            "@id": "https://w3id.org/valueflows/ont/vf#Commitment"
           },
           {
-            "@id": "https://w3id.org/valueflows#Plan"
+            "@id": "https://w3id.org/valueflows/ont/vf#Plan"
           },
           {
-            "@id": "https://w3id.org/valueflows#Proposal"
+            "@id": "https://w3id.org/valueflows/ont/vf#Proposal"
           },
           {
-            "@id": "https://w3id.org/valueflows#EconomicEvent"
+            "@id": "https://w3id.org/valueflows/ont/vf#EconomicEvent"
           }
         ]
       }
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#Scenario",
+    "@id": "https://w3id.org/valueflows/ont/vf#Scenario",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -543,7 +543,7 @@
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#inputOutput",
+    "@id": "https://w3id.org/valueflows/ont/vf#inputOutput",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
@@ -555,7 +555,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "https://w3id.org/valueflows#Action"
+        "@id": "https://w3id.org/valueflows/ont/vf#Action"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -566,7 +566,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "https://w3id.org/valueflows#InputOutput"
+        "@id": "https://w3id.org/valueflows/ont/vf#InputOutput"
       }
     ],
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
@@ -576,11 +576,11 @@
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#update",
+    "@id": "https://w3id.org/valueflows/ont/vf#update",
     "@type": [
       "http://www.w3.org/2002/07/owl#NamedIndividual",
-      "https://w3id.org/valueflows#ContainedEffect",
-      "https://w3id.org/valueflows#LocationEffect"
+      "https://w3id.org/valueflows/ont/vf#ContainedEffect",
+      "https://w3id.org/valueflows/ont/vf#LocationEffect"
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
@@ -601,10 +601,10 @@
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#consume",
+    "@id": "https://w3id.org/valueflows/ont/vf#consume",
     "@type": [
       "http://www.w3.org/2002/07/owl#NamedIndividual",
-      "https://w3id.org/valueflows#Action"
+      "https://w3id.org/valueflows/ont/vf#Action"
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
@@ -623,64 +623,64 @@
         "@value": "testing"
       }
     ],
-    "https://w3id.org/valueflows#accountableEffect": [
+    "https://w3id.org/valueflows/ont/vf#accountableEffect": [
       {
-        "@id": "https://w3id.org/valueflows#notApplicable"
+        "@id": "https://w3id.org/valueflows/ont/vf#notApplicable"
       }
     ],
-    "https://w3id.org/valueflows#accountingEffect": [
+    "https://w3id.org/valueflows/ont/vf#accountingEffect": [
       {
-        "@id": "https://w3id.org/valueflows#decrement"
+        "@id": "https://w3id.org/valueflows/ont/vf#decrement"
       }
     ],
-    "https://w3id.org/valueflows#containedEffect": [
+    "https://w3id.org/valueflows/ont/vf#containedEffect": [
       {
-        "@id": "https://w3id.org/valueflows#notApplicable"
+        "@id": "https://w3id.org/valueflows/ont/vf#notApplicable"
       }
     ],
-    "https://w3id.org/valueflows#createResource": [
+    "https://w3id.org/valueflows/ont/vf#createResource": [
       {
-        "@id": "https://w3id.org/valueflows#notApplicable"
+        "@id": "https://w3id.org/valueflows/ont/vf#notApplicable"
       }
     ],
-    "https://w3id.org/valueflows#eventQuantity": [
+    "https://w3id.org/valueflows/ont/vf#eventQuantity": [
       {
-        "@id": "https://w3id.org/valueflows#resource"
+        "@id": "https://w3id.org/valueflows/ont/vf#resource"
       }
     ],
-    "https://w3id.org/valueflows#inputOutput": [
+    "https://w3id.org/valueflows/ont/vf#inputOutput": [
       {
-        "@id": "https://w3id.org/valueflows#input"
+        "@id": "https://w3id.org/valueflows/ont/vf#input"
       }
     ],
-    "https://w3id.org/valueflows#locationEffect": [
+    "https://w3id.org/valueflows/ont/vf#locationEffect": [
       {
-        "@id": "https://w3id.org/valueflows#notApplicable"
+        "@id": "https://w3id.org/valueflows/ont/vf#notApplicable"
       }
     ],
-    "https://w3id.org/valueflows#onhandEffect": [
+    "https://w3id.org/valueflows/ont/vf#onhandEffect": [
       {
-        "@id": "https://w3id.org/valueflows#decrement"
+        "@id": "https://w3id.org/valueflows/ont/vf#decrement"
       }
     ],
-    "https://w3id.org/valueflows#pairsWith": [
+    "https://w3id.org/valueflows/ont/vf#pairsWith": [
       {
-        "@id": "https://w3id.org/valueflows#notApplicable"
+        "@id": "https://w3id.org/valueflows/ont/vf#notApplicable"
       }
     ],
-    "https://w3id.org/valueflows#stageEffect": [
+    "https://w3id.org/valueflows/ont/vf#stageEffect": [
       {
-        "@id": "https://w3id.org/valueflows#notApplicable"
+        "@id": "https://w3id.org/valueflows/ont/vf#notApplicable"
       }
     ],
-    "https://w3id.org/valueflows#stateEffect": [
+    "https://w3id.org/valueflows/ont/vf#stateEffect": [
       {
-        "@id": "https://w3id.org/valueflows#update"
+        "@id": "https://w3id.org/valueflows/ont/vf#update"
       }
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#unitBased",
+    "@id": "https://w3id.org/valueflows/ont/vf#unitBased",
     "@type": [
       "http://www.w3.org/2002/07/owl#DatatypeProperty"
     ],
@@ -692,7 +692,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "https://w3id.org/valueflows#Proposal"
+        "@id": "https://w3id.org/valueflows/ont/vf#Proposal"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -713,7 +713,7 @@
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#independentDemandOf",
+    "@id": "https://w3id.org/valueflows/ont/vf#independentDemandOf",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
@@ -725,7 +725,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "https://w3id.org/valueflows#Commitment"
+        "@id": "https://w3id.org/valueflows/ont/vf#Commitment"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -736,7 +736,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "https://w3id.org/valueflows#Plan"
+        "@id": "https://w3id.org/valueflows/ont/vf#Plan"
       }
     ],
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
@@ -746,11 +746,11 @@
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#decrement",
+    "@id": "https://w3id.org/valueflows/ont/vf#decrement",
     "@type": [
       "http://www.w3.org/2002/07/owl#NamedIndividual",
-      "https://w3id.org/valueflows#AccountingEffect",
-      "https://w3id.org/valueflows#OnhandEffect"
+      "https://w3id.org/valueflows/ont/vf#AccountingEffect",
+      "https://w3id.org/valueflows/ont/vf#OnhandEffect"
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
@@ -771,7 +771,7 @@
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#receiver",
+    "@id": "https://w3id.org/valueflows/ont/vf#receiver",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
@@ -794,7 +794,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "https://w3id.org/valueflows#Agent"
+        "@id": "https://w3id.org/valueflows/ont/vf#Agent"
       }
     ],
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
@@ -809,26 +809,26 @@
       {
         "@list": [
           {
-            "@id": "https://w3id.org/valueflows#EconomicEvent"
+            "@id": "https://w3id.org/valueflows/ont/vf#EconomicEvent"
           },
           {
-            "@id": "https://w3id.org/valueflows#Commitment"
+            "@id": "https://w3id.org/valueflows/ont/vf#Commitment"
           },
           {
-            "@id": "https://w3id.org/valueflows#Intent"
+            "@id": "https://w3id.org/valueflows/ont/vf#Intent"
           },
           {
-            "@id": "https://w3id.org/valueflows#Claim"
+            "@id": "https://w3id.org/valueflows/ont/vf#Claim"
           }
         ]
       }
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#produce",
+    "@id": "https://w3id.org/valueflows/ont/vf#produce",
     "@type": [
       "http://www.w3.org/2002/07/owl#NamedIndividual",
-      "https://w3id.org/valueflows#Action"
+      "https://w3id.org/valueflows/ont/vf#Action"
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
@@ -847,64 +847,64 @@
         "@value": "testing"
       }
     ],
-    "https://w3id.org/valueflows#accountableEffect": [
+    "https://w3id.org/valueflows/ont/vf#accountableEffect": [
       {
-        "@id": "https://w3id.org/valueflows#new"
+        "@id": "https://w3id.org/valueflows/ont/vf#new"
       }
     ],
-    "https://w3id.org/valueflows#accountingEffect": [
+    "https://w3id.org/valueflows/ont/vf#accountingEffect": [
       {
-        "@id": "https://w3id.org/valueflows#increment"
+        "@id": "https://w3id.org/valueflows/ont/vf#increment"
       }
     ],
-    "https://w3id.org/valueflows#containedEffect": [
+    "https://w3id.org/valueflows/ont/vf#containedEffect": [
       {
-        "@id": "https://w3id.org/valueflows#notApplicable"
+        "@id": "https://w3id.org/valueflows/ont/vf#notApplicable"
       }
     ],
-    "https://w3id.org/valueflows#createResource": [
+    "https://w3id.org/valueflows/ont/vf#createResource": [
       {
-        "@id": "https://w3id.org/valueflows#optional"
+        "@id": "https://w3id.org/valueflows/ont/vf#optional"
       }
     ],
-    "https://w3id.org/valueflows#eventQuantity": [
+    "https://w3id.org/valueflows/ont/vf#eventQuantity": [
       {
-        "@id": "https://w3id.org/valueflows#resource"
+        "@id": "https://w3id.org/valueflows/ont/vf#resource"
       }
     ],
-    "https://w3id.org/valueflows#inputOutput": [
+    "https://w3id.org/valueflows/ont/vf#inputOutput": [
       {
-        "@id": "https://w3id.org/valueflows#output"
+        "@id": "https://w3id.org/valueflows/ont/vf#output"
       }
     ],
-    "https://w3id.org/valueflows#locationEffect": [
+    "https://w3id.org/valueflows/ont/vf#locationEffect": [
       {
-        "@id": "https://w3id.org/valueflows#new"
+        "@id": "https://w3id.org/valueflows/ont/vf#new"
       }
     ],
-    "https://w3id.org/valueflows#onhandEffect": [
+    "https://w3id.org/valueflows/ont/vf#onhandEffect": [
       {
-        "@id": "https://w3id.org/valueflows#increment"
+        "@id": "https://w3id.org/valueflows/ont/vf#increment"
       }
     ],
-    "https://w3id.org/valueflows#pairsWith": [
+    "https://w3id.org/valueflows/ont/vf#pairsWith": [
       {
-        "@id": "https://w3id.org/valueflows#notApplicable"
+        "@id": "https://w3id.org/valueflows/ont/vf#notApplicable"
       }
     ],
-    "https://w3id.org/valueflows#stageEffect": [
+    "https://w3id.org/valueflows/ont/vf#stageEffect": [
       {
-        "@id": "https://w3id.org/valueflows#update"
+        "@id": "https://w3id.org/valueflows/ont/vf#update"
       }
     ],
-    "https://w3id.org/valueflows#stateEffect": [
+    "https://w3id.org/valueflows/ont/vf#stateEffect": [
       {
-        "@id": "https://w3id.org/valueflows#update"
+        "@id": "https://w3id.org/valueflows/ont/vf#update"
       }
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#StageEffect",
+    "@id": "https://w3id.org/valueflows/ont/vf#StageEffect",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -927,7 +927,7 @@
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#RecipeExchange",
+    "@id": "https://w3id.org/valueflows/ont/vf#RecipeExchange",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -950,7 +950,7 @@
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#locationEffect",
+    "@id": "https://w3id.org/valueflows/ont/vf#locationEffect",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
@@ -962,7 +962,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "https://w3id.org/valueflows#Action"
+        "@id": "https://w3id.org/valueflows/ont/vf#Action"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -973,7 +973,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "https://w3id.org/valueflows#LocationEffect"
+        "@id": "https://w3id.org/valueflows/ont/vf#LocationEffect"
       }
     ],
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
@@ -983,7 +983,7 @@
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#onhandQuantity",
+    "@id": "https://w3id.org/valueflows/ont/vf#onhandQuantity",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
@@ -995,7 +995,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "https://w3id.org/valueflows#EconomicResource"
+        "@id": "https://w3id.org/valueflows/ont/vf#EconomicResource"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -1016,7 +1016,7 @@
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#InputOutput",
+    "@id": "https://w3id.org/valueflows/ont/vf#InputOutput",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -1039,7 +1039,7 @@
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#onhandEffect",
+    "@id": "https://w3id.org/valueflows/ont/vf#onhandEffect",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
@@ -1051,7 +1051,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "https://w3id.org/valueflows#Action"
+        "@id": "https://w3id.org/valueflows/ont/vf#Action"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -1062,7 +1062,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "https://w3id.org/valueflows#OnhandEffect"
+        "@id": "https://w3id.org/valueflows/ont/vf#OnhandEffect"
       }
     ],
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
@@ -1072,10 +1072,10 @@
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#accept",
+    "@id": "https://w3id.org/valueflows/ont/vf#accept",
     "@type": [
       "http://www.w3.org/2002/07/owl#NamedIndividual",
-      "https://w3id.org/valueflows#Action"
+      "https://w3id.org/valueflows/ont/vf#Action"
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
@@ -1094,67 +1094,67 @@
         "@value": "testing"
       }
     ],
-    "https://w3id.org/valueflows#accountableEffect": [
+    "https://w3id.org/valueflows/ont/vf#accountableEffect": [
       {
-        "@id": "https://w3id.org/valueflows#notApplicable"
+        "@id": "https://w3id.org/valueflows/ont/vf#notApplicable"
       }
     ],
-    "https://w3id.org/valueflows#accountingEffect": [
+    "https://w3id.org/valueflows/ont/vf#accountingEffect": [
       {
-        "@id": "https://w3id.org/valueflows#notApplicable"
+        "@id": "https://w3id.org/valueflows/ont/vf#notApplicable"
       }
     ],
-    "https://w3id.org/valueflows#containedEffect": [
+    "https://w3id.org/valueflows/ont/vf#containedEffect": [
       {
-        "@id": "https://w3id.org/valueflows#notApplicable"
+        "@id": "https://w3id.org/valueflows/ont/vf#notApplicable"
       }
     ],
-    "https://w3id.org/valueflows#createResource": [
+    "https://w3id.org/valueflows/ont/vf#createResource": [
       {
-        "@id": "https://w3id.org/valueflows#notApplicable"
+        "@id": "https://w3id.org/valueflows/ont/vf#notApplicable"
       }
     ],
-    "https://w3id.org/valueflows#eventQuantity": [
+    "https://w3id.org/valueflows/ont/vf#eventQuantity": [
       {
-        "@id": "https://w3id.org/valueflows#resource"
+        "@id": "https://w3id.org/valueflows/ont/vf#resource"
       }
     ],
-    "https://w3id.org/valueflows#inputOutput": [
+    "https://w3id.org/valueflows/ont/vf#inputOutput": [
       {
-        "@id": "https://w3id.org/valueflows#input"
+        "@id": "https://w3id.org/valueflows/ont/vf#input"
       }
     ],
-    "https://w3id.org/valueflows#locationEffect": [
+    "https://w3id.org/valueflows/ont/vf#locationEffect": [
       {
-        "@id": "https://w3id.org/valueflows#update"
+        "@id": "https://w3id.org/valueflows/ont/vf#update"
       }
     ],
-    "https://w3id.org/valueflows#onhandEffect": [
+    "https://w3id.org/valueflows/ont/vf#onhandEffect": [
       {
-        "@id": "https://w3id.org/valueflows#decrement"
+        "@id": "https://w3id.org/valueflows/ont/vf#decrement"
       }
     ],
-    "https://w3id.org/valueflows#pairsWith": [
+    "https://w3id.org/valueflows/ont/vf#pairsWith": [
       {
-        "@id": "https://w3id.org/valueflows#modify"
+        "@id": "https://w3id.org/valueflows/ont/vf#modify"
       }
     ],
-    "https://w3id.org/valueflows#stageEffect": [
+    "https://w3id.org/valueflows/ont/vf#stageEffect": [
       {
-        "@id": "https://w3id.org/valueflows#notApplicable"
+        "@id": "https://w3id.org/valueflows/ont/vf#notApplicable"
       }
     ],
-    "https://w3id.org/valueflows#stateEffect": [
+    "https://w3id.org/valueflows/ont/vf#stateEffect": [
       {
-        "@id": "https://w3id.org/valueflows#update"
+        "@id": "https://w3id.org/valueflows/ont/vf#update"
       }
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#transferAllRights",
+    "@id": "https://w3id.org/valueflows/ont/vf#transferAllRights",
     "@type": [
       "http://www.w3.org/2002/07/owl#NamedIndividual",
-      "https://w3id.org/valueflows#Action"
+      "https://w3id.org/valueflows/ont/vf#Action"
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
@@ -1173,64 +1173,64 @@
         "@value": "unstable"
       }
     ],
-    "https://w3id.org/valueflows#accountableEffect": [
+    "https://w3id.org/valueflows/ont/vf#accountableEffect": [
       {
-        "@id": "https://w3id.org/valueflows#updateTo"
+        "@id": "https://w3id.org/valueflows/ont/vf#updateTo"
       }
     ],
-    "https://w3id.org/valueflows#accountingEffect": [
+    "https://w3id.org/valueflows/ont/vf#accountingEffect": [
       {
-        "@id": "https://w3id.org/valueflows#decrementIncrement"
+        "@id": "https://w3id.org/valueflows/ont/vf#decrementIncrement"
       }
     ],
-    "https://w3id.org/valueflows#containedEffect": [
+    "https://w3id.org/valueflows/ont/vf#containedEffect": [
       {
-        "@id": "https://w3id.org/valueflows#notApplicable"
+        "@id": "https://w3id.org/valueflows/ont/vf#notApplicable"
       }
     ],
-    "https://w3id.org/valueflows#createResource": [
+    "https://w3id.org/valueflows/ont/vf#createResource": [
       {
-        "@id": "https://w3id.org/valueflows#optionalTo"
+        "@id": "https://w3id.org/valueflows/ont/vf#optionalTo"
       }
     ],
-    "https://w3id.org/valueflows#eventQuantity": [
+    "https://w3id.org/valueflows/ont/vf#eventQuantity": [
       {
-        "@id": "https://w3id.org/valueflows#resource"
+        "@id": "https://w3id.org/valueflows/ont/vf#resource"
       }
     ],
-    "https://w3id.org/valueflows#inputOutput": [
+    "https://w3id.org/valueflows/ont/vf#inputOutput": [
       {
-        "@id": "https://w3id.org/valueflows#notApplicable"
+        "@id": "https://w3id.org/valueflows/ont/vf#notApplicable"
       }
     ],
-    "https://w3id.org/valueflows#locationEffect": [
+    "https://w3id.org/valueflows/ont/vf#locationEffect": [
       {
-        "@id": "https://w3id.org/valueflows#notApplicable"
+        "@id": "https://w3id.org/valueflows/ont/vf#notApplicable"
       }
     ],
-    "https://w3id.org/valueflows#onhandEffect": [
+    "https://w3id.org/valueflows/ont/vf#onhandEffect": [
       {
-        "@id": "https://w3id.org/valueflows#notApplicable"
+        "@id": "https://w3id.org/valueflows/ont/vf#notApplicable"
       }
     ],
-    "https://w3id.org/valueflows#pairsWith": [
+    "https://w3id.org/valueflows/ont/vf#pairsWith": [
       {
-        "@id": "https://w3id.org/valueflows#notApplicable"
+        "@id": "https://w3id.org/valueflows/ont/vf#notApplicable"
       }
     ],
-    "https://w3id.org/valueflows#stageEffect": [
+    "https://w3id.org/valueflows/ont/vf#stageEffect": [
       {
-        "@id": "https://w3id.org/valueflows#notApplicable"
+        "@id": "https://w3id.org/valueflows/ont/vf#notApplicable"
       }
     ],
-    "https://w3id.org/valueflows#stateEffect": [
+    "https://w3id.org/valueflows/ont/vf#stateEffect": [
       {
-        "@id": "https://w3id.org/valueflows#updateTo"
+        "@id": "https://w3id.org/valueflows/ont/vf#updateTo"
       }
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#ScenarioDefinition",
+    "@id": "https://w3id.org/valueflows/ont/vf#ScenarioDefinition",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -1253,7 +1253,7 @@
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#trackingIdentifier",
+    "@id": "https://w3id.org/valueflows/ont/vf#trackingIdentifier",
     "@type": [
       "http://www.w3.org/2002/07/owl#DatatypeProperty"
     ],
@@ -1265,7 +1265,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "https://w3id.org/valueflows#EconomicResource"
+        "@id": "https://w3id.org/valueflows/ont/vf#EconomicResource"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -1286,7 +1286,7 @@
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#OnhandEffect",
+    "@id": "https://w3id.org/valueflows/ont/vf#OnhandEffect",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -1309,7 +1309,7 @@
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#EconomicEvent",
+    "@id": "https://w3id.org/valueflows/ont/vf#EconomicEvent",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -1332,10 +1332,10 @@
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#optional",
+    "@id": "https://w3id.org/valueflows/ont/vf#optional",
     "@type": [
       "http://www.w3.org/2002/07/owl#NamedIndividual",
-      "https://w3id.org/valueflows#CreateResource"
+      "https://w3id.org/valueflows/ont/vf#CreateResource"
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
@@ -1356,7 +1356,7 @@
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#refinementOf",
+    "@id": "https://w3id.org/valueflows/ont/vf#refinementOf",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
@@ -1379,7 +1379,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "https://w3id.org/valueflows#Scenario"
+        "@id": "https://w3id.org/valueflows/ont/vf#Scenario"
       }
     ],
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
@@ -1394,20 +1394,20 @@
       {
         "@list": [
           {
-            "@id": "https://w3id.org/valueflows#Scenario"
+            "@id": "https://w3id.org/valueflows/ont/vf#Scenario"
           },
           {
-            "@id": "https://w3id.org/valueflows#Plan"
+            "@id": "https://w3id.org/valueflows/ont/vf#Plan"
           }
         ]
       }
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#raise",
+    "@id": "https://w3id.org/valueflows/ont/vf#raise",
     "@type": [
       "http://www.w3.org/2002/07/owl#NamedIndividual",
-      "https://w3id.org/valueflows#Action"
+      "https://w3id.org/valueflows/ont/vf#Action"
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
@@ -1426,64 +1426,64 @@
         "@value": "unstable"
       }
     ],
-    "https://w3id.org/valueflows#accountableEffect": [
+    "https://w3id.org/valueflows/ont/vf#accountableEffect": [
       {
-        "@id": "https://w3id.org/valueflows#new"
+        "@id": "https://w3id.org/valueflows/ont/vf#new"
       }
     ],
-    "https://w3id.org/valueflows#accountingEffect": [
+    "https://w3id.org/valueflows/ont/vf#accountingEffect": [
       {
-        "@id": "https://w3id.org/valueflows#increment"
+        "@id": "https://w3id.org/valueflows/ont/vf#increment"
       }
     ],
-    "https://w3id.org/valueflows#containedEffect": [
+    "https://w3id.org/valueflows/ont/vf#containedEffect": [
       {
-        "@id": "https://w3id.org/valueflows#notApplicable"
+        "@id": "https://w3id.org/valueflows/ont/vf#notApplicable"
       }
     ],
-    "https://w3id.org/valueflows#createResource": [
+    "https://w3id.org/valueflows/ont/vf#createResource": [
       {
-        "@id": "https://w3id.org/valueflows#optional"
+        "@id": "https://w3id.org/valueflows/ont/vf#optional"
       }
     ],
-    "https://w3id.org/valueflows#eventQuantity": [
+    "https://w3id.org/valueflows/ont/vf#eventQuantity": [
       {
-        "@id": "https://w3id.org/valueflows#resource"
+        "@id": "https://w3id.org/valueflows/ont/vf#resource"
       }
     ],
-    "https://w3id.org/valueflows#inputOutput": [
+    "https://w3id.org/valueflows/ont/vf#inputOutput": [
       {
-        "@id": "https://w3id.org/valueflows#notApplicable"
+        "@id": "https://w3id.org/valueflows/ont/vf#notApplicable"
       }
     ],
-    "https://w3id.org/valueflows#locationEffect": [
+    "https://w3id.org/valueflows/ont/vf#locationEffect": [
       {
-        "@id": "https://w3id.org/valueflows#notApplicable"
+        "@id": "https://w3id.org/valueflows/ont/vf#notApplicable"
       }
     ],
-    "https://w3id.org/valueflows#onhandEffect": [
+    "https://w3id.org/valueflows/ont/vf#onhandEffect": [
       {
-        "@id": "https://w3id.org/valueflows#increment"
+        "@id": "https://w3id.org/valueflows/ont/vf#increment"
       }
     ],
-    "https://w3id.org/valueflows#pairsWith": [
+    "https://w3id.org/valueflows/ont/vf#pairsWith": [
       {
-        "@id": "https://w3id.org/valueflows#notApplicable"
+        "@id": "https://w3id.org/valueflows/ont/vf#notApplicable"
       }
     ],
-    "https://w3id.org/valueflows#stageEffect": [
+    "https://w3id.org/valueflows/ont/vf#stageEffect": [
       {
-        "@id": "https://w3id.org/valueflows#notApplicable"
+        "@id": "https://w3id.org/valueflows/ont/vf#notApplicable"
       }
     ],
-    "https://w3id.org/valueflows#stateEffect": [
+    "https://w3id.org/valueflows/ont/vf#stateEffect": [
       {
-        "@id": "https://w3id.org/valueflows#update"
+        "@id": "https://w3id.org/valueflows/ont/vf#update"
       }
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#name",
+    "@id": "https://w3id.org/valueflows/ont/vf#name",
     "@type": [
       "http://www.w3.org/2002/07/owl#DatatypeProperty"
     ],
@@ -1524,47 +1524,47 @@
             "@id": "http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"
           },
           {
-            "@id": "https://w3id.org/valueflows#Agent"
+            "@id": "https://w3id.org/valueflows/ont/vf#Agent"
           },
           {
-            "@id": "https://w3id.org/valueflows#Agreement"
+            "@id": "https://w3id.org/valueflows/ont/vf#Agreement"
           },
           {
-            "@id": "https://w3id.org/valueflows#EconomicResource"
+            "@id": "https://w3id.org/valueflows/ont/vf#EconomicResource"
           },
           {
-            "@id": "https://w3id.org/valueflows#Plan"
+            "@id": "https://w3id.org/valueflows/ont/vf#Plan"
           },
           {
-            "@id": "https://w3id.org/valueflows#Process"
+            "@id": "https://w3id.org/valueflows/ont/vf#Process"
           },
           {
-            "@id": "https://w3id.org/valueflows#ProcessSpecification"
+            "@id": "https://w3id.org/valueflows/ont/vf#ProcessSpecification"
           },
           {
-            "@id": "https://w3id.org/valueflows#Proposal"
+            "@id": "https://w3id.org/valueflows/ont/vf#Proposal"
           },
           {
-            "@id": "https://w3id.org/valueflows#RecipeProcess"
+            "@id": "https://w3id.org/valueflows/ont/vf#RecipeProcess"
           },
           {
-            "@id": "https://w3id.org/valueflows#ResourceSpecification"
+            "@id": "https://w3id.org/valueflows/ont/vf#ResourceSpecification"
           },
           {
-            "@id": "https://w3id.org/valueflows#RoleBehavior"
+            "@id": "https://w3id.org/valueflows/ont/vf#RoleBehavior"
           },
           {
-            "@id": "https://w3id.org/valueflows#Scenario"
+            "@id": "https://w3id.org/valueflows/ont/vf#Scenario"
           },
           {
-            "@id": "https://w3id.org/valueflows#ScenarioDefinition"
+            "@id": "https://w3id.org/valueflows/ont/vf#ScenarioDefinition"
           }
         ]
       }
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#classifiedAs",
+    "@id": "https://w3id.org/valueflows/ont/vf#classifiedAs",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
@@ -1602,23 +1602,23 @@
       {
         "@list": [
           {
-            "@id": "https://w3id.org/valueflows#Process"
+            "@id": "https://w3id.org/valueflows/ont/vf#Process"
           },
           {
-            "@id": "https://w3id.org/valueflows#EconomicResource"
+            "@id": "https://w3id.org/valueflows/ont/vf#EconomicResource"
           },
           {
-            "@id": "https://w3id.org/valueflows#Organization"
+            "@id": "https://w3id.org/valueflows/ont/vf#Organization"
           },
           {
-            "@id": "https://w3id.org/valueflows#EcologicalAgent"
+            "@id": "https://w3id.org/valueflows/ont/vf#EcologicalAgent"
           }
         ]
       }
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#outputOf",
+    "@id": "https://w3id.org/valueflows/ont/vf#outputOf",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
@@ -1641,7 +1641,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "https://w3id.org/valueflows#Process"
+        "@id": "https://w3id.org/valueflows/ont/vf#Process"
       }
     ],
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
@@ -1656,13 +1656,13 @@
       {
         "@list": [
           {
-            "@id": "https://w3id.org/valueflows#EconomicEvent"
+            "@id": "https://w3id.org/valueflows/ont/vf#EconomicEvent"
           },
           {
-            "@id": "https://w3id.org/valueflows#Commitment"
+            "@id": "https://w3id.org/valueflows/ont/vf#Commitment"
           },
           {
-            "@id": "https://w3id.org/valueflows#Intent"
+            "@id": "https://w3id.org/valueflows/ont/vf#Intent"
           }
         ]
       }
@@ -1677,7 +1677,7 @@
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#due",
+    "@id": "https://w3id.org/valueflows/ont/vf#due",
     "@type": [
       "http://www.w3.org/2002/07/owl#DatatypeProperty"
     ],
@@ -1715,26 +1715,26 @@
       {
         "@list": [
           {
-            "@id": "https://w3id.org/valueflows#Plan"
+            "@id": "https://w3id.org/valueflows/ont/vf#Plan"
           },
           {
-            "@id": "https://w3id.org/valueflows#Commitment"
+            "@id": "https://w3id.org/valueflows/ont/vf#Commitment"
           },
           {
-            "@id": "https://w3id.org/valueflows#Claim"
+            "@id": "https://w3id.org/valueflows/ont/vf#Claim"
           },
           {
-            "@id": "https://w3id.org/valueflows#Intent"
+            "@id": "https://w3id.org/valueflows/ont/vf#Intent"
           }
         ]
       }
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#separate",
+    "@id": "https://w3id.org/valueflows/ont/vf#separate",
     "@type": [
       "http://www.w3.org/2002/07/owl#NamedIndividual",
-      "https://w3id.org/valueflows#Action"
+      "https://w3id.org/valueflows/ont/vf#Action"
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
@@ -1753,64 +1753,64 @@
         "@value": "unstable"
       }
     ],
-    "https://w3id.org/valueflows#accountableEffect": [
+    "https://w3id.org/valueflows/ont/vf#accountableEffect": [
       {
-        "@id": "https://w3id.org/valueflows#notApplicable"
+        "@id": "https://w3id.org/valueflows/ont/vf#notApplicable"
       }
     ],
-    "https://w3id.org/valueflows#accountingEffect": [
+    "https://w3id.org/valueflows/ont/vf#accountingEffect": [
       {
-        "@id": "https://w3id.org/valueflows#notApplicable"
+        "@id": "https://w3id.org/valueflows/ont/vf#notApplicable"
       }
     ],
-    "https://w3id.org/valueflows#containedEffect": [
+    "https://w3id.org/valueflows/ont/vf#containedEffect": [
       {
-        "@id": "https://w3id.org/valueflows#remove"
+        "@id": "https://w3id.org/valueflows/ont/vf#remove"
       }
     ],
-    "https://w3id.org/valueflows#createResource": [
+    "https://w3id.org/valueflows/ont/vf#createResource": [
       {
-        "@id": "https://w3id.org/valueflows#notApplicable"
+        "@id": "https://w3id.org/valueflows/ont/vf#notApplicable"
       }
     ],
-    "https://w3id.org/valueflows#eventQuantity": [
+    "https://w3id.org/valueflows/ont/vf#eventQuantity": [
       {
-        "@id": "https://w3id.org/valueflows#resource"
+        "@id": "https://w3id.org/valueflows/ont/vf#resource"
       }
     ],
-    "https://w3id.org/valueflows#inputOutput": [
+    "https://w3id.org/valueflows/ont/vf#inputOutput": [
       {
-        "@id": "https://w3id.org/valueflows#output"
+        "@id": "https://w3id.org/valueflows/ont/vf#output"
       }
     ],
-    "https://w3id.org/valueflows#locationEffect": [
+    "https://w3id.org/valueflows/ont/vf#locationEffect": [
       {
-        "@id": "https://w3id.org/valueflows#notApplicable"
+        "@id": "https://w3id.org/valueflows/ont/vf#notApplicable"
       }
     ],
-    "https://w3id.org/valueflows#onhandEffect": [
+    "https://w3id.org/valueflows/ont/vf#onhandEffect": [
       {
-        "@id": "https://w3id.org/valueflows#increment"
+        "@id": "https://w3id.org/valueflows/ont/vf#increment"
       }
     ],
-    "https://w3id.org/valueflows#pairsWith": [
+    "https://w3id.org/valueflows/ont/vf#pairsWith": [
       {
-        "@id": "https://w3id.org/valueflows#notApplicable"
+        "@id": "https://w3id.org/valueflows/ont/vf#notApplicable"
       }
     ],
-    "https://w3id.org/valueflows#stageEffect": [
+    "https://w3id.org/valueflows/ont/vf#stageEffect": [
       {
-        "@id": "https://w3id.org/valueflows#update"
+        "@id": "https://w3id.org/valueflows/ont/vf#update"
       }
     ],
-    "https://w3id.org/valueflows#stateEffect": [
+    "https://w3id.org/valueflows/ont/vf#stateEffect": [
       {
-        "@id": "https://w3id.org/valueflows#update"
+        "@id": "https://w3id.org/valueflows/ont/vf#update"
       }
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#AgentRelationship",
+    "@id": "https://w3id.org/valueflows/ont/vf#AgentRelationship",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -1833,7 +1833,7 @@
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#currentVirtualLocation",
+    "@id": "https://w3id.org/valueflows/ont/vf#currentVirtualLocation",
     "@type": [
       "http://www.w3.org/2002/07/owl#DatatypeProperty"
     ],
@@ -1845,7 +1845,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "https://w3id.org/valueflows#EconomicResource"
+        "@id": "https://w3id.org/valueflows/ont/vf#EconomicResource"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -1866,7 +1866,7 @@
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#recipeOutputOf",
+    "@id": "https://w3id.org/valueflows/ont/vf#recipeOutputOf",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
@@ -1878,7 +1878,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "https://w3id.org/valueflows#RecipeFlow"
+        "@id": "https://w3id.org/valueflows/ont/vf#RecipeFlow"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -1889,7 +1889,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "https://w3id.org/valueflows#RecipeProcess"
+        "@id": "https://w3id.org/valueflows/ont/vf#RecipeProcess"
       }
     ],
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
@@ -1899,7 +1899,7 @@
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#defaultUnitOfResource",
+    "@id": "https://w3id.org/valueflows/ont/vf#defaultUnitOfResource",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
@@ -1911,7 +1911,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "https://w3id.org/valueflows#ResourceSpecification"
+        "@id": "https://w3id.org/valueflows/ont/vf#ResourceSpecification"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -1932,7 +1932,7 @@
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#planIncludes",
+    "@id": "https://w3id.org/valueflows/ont/vf#planIncludes",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
@@ -1944,7 +1944,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "https://w3id.org/valueflows#Plan"
+        "@id": "https://w3id.org/valueflows/ont/vf#Plan"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -1960,7 +1960,7 @@
     ],
     "http://www.w3.org/2002/07/owl#inverseOf": [
       {
-        "@id": "https://w3id.org/valueflows#plannedWithin"
+        "@id": "https://w3id.org/valueflows/ont/vf#plannedWithin"
       }
     ],
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
@@ -1975,20 +1975,20 @@
       {
         "@list": [
           {
-            "@id": "https://w3id.org/valueflows#Process"
+            "@id": "https://w3id.org/valueflows/ont/vf#Process"
           },
           {
-            "@id": "https://w3id.org/valueflows#Commitment"
+            "@id": "https://w3id.org/valueflows/ont/vf#Commitment"
           },
           {
-            "@id": "https://w3id.org/valueflows#Intent"
+            "@id": "https://w3id.org/valueflows/ont/vf#Intent"
           }
         ]
       }
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#ContainedEffect",
+    "@id": "https://w3id.org/valueflows/ont/vf#ContainedEffect",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -2011,7 +2011,7 @@
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#containedEffect",
+    "@id": "https://w3id.org/valueflows/ont/vf#containedEffect",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
@@ -2023,7 +2023,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "https://w3id.org/valueflows#Action"
+        "@id": "https://w3id.org/valueflows/ont/vf#Action"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -2034,7 +2034,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "https://w3id.org/valueflows#ContainedEffect"
+        "@id": "https://w3id.org/valueflows/ont/vf#ContainedEffect"
       }
     ],
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
@@ -2044,7 +2044,7 @@
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#corrects",
+    "@id": "https://w3id.org/valueflows/ont/vf#corrects",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
@@ -2056,7 +2056,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "https://w3id.org/valueflows#EconomicEvent"
+        "@id": "https://w3id.org/valueflows/ont/vf#EconomicEvent"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -2067,7 +2067,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "https://w3id.org/valueflows#EconomicEvent"
+        "@id": "https://w3id.org/valueflows/ont/vf#EconomicEvent"
       }
     ],
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
@@ -2077,7 +2077,7 @@
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#resourceQuantity",
+    "@id": "https://w3id.org/valueflows/ont/vf#resourceQuantity",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
@@ -2115,26 +2115,26 @@
       {
         "@list": [
           {
-            "@id": "https://w3id.org/valueflows#EconomicEvent"
+            "@id": "https://w3id.org/valueflows/ont/vf#EconomicEvent"
           },
           {
-            "@id": "https://w3id.org/valueflows#Commitment"
+            "@id": "https://w3id.org/valueflows/ont/vf#Commitment"
           },
           {
-            "@id": "https://w3id.org/valueflows#Intent"
+            "@id": "https://w3id.org/valueflows/ont/vf#Intent"
           },
           {
-            "@id": "https://w3id.org/valueflows#RecipeFlow"
+            "@id": "https://w3id.org/valueflows/ont/vf#RecipeFlow"
           },
           {
-            "@id": "https://w3id.org/valueflows#Claim"
+            "@id": "https://w3id.org/valueflows/ont/vf#Claim"
           }
         ]
       }
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#lists",
+    "@id": "https://w3id.org/valueflows/ont/vf#lists",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
@@ -2146,7 +2146,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "https://w3id.org/valueflows#ProposalList"
+        "@id": "https://w3id.org/valueflows/ont/vf#ProposalList"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -2157,12 +2157,12 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "https://w3id.org/valueflows#Proposal"
+        "@id": "https://w3id.org/valueflows/ont/vf#Proposal"
       }
     ],
     "http://www.w3.org/2002/07/owl#inverseOf": [
       {
-        "@id": "https://w3id.org/valueflows#listedIn"
+        "@id": "https://w3id.org/valueflows/ont/vf#listedIn"
       }
     ],
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
@@ -2180,7 +2180,7 @@
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#recipeStipulates",
+    "@id": "https://w3id.org/valueflows/ont/vf#recipeStipulates",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
@@ -2192,7 +2192,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "https://w3id.org/valueflows#RecipeExchange"
+        "@id": "https://w3id.org/valueflows/ont/vf#RecipeExchange"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -2203,12 +2203,12 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "https://w3id.org/valueflows#RecipeFlow"
+        "@id": "https://w3id.org/valueflows/ont/vf#RecipeFlow"
       }
     ],
     "http://www.w3.org/2002/07/owl#inverseOf": [
       {
-        "@id": "https://w3id.org/valueflows#recipeClauseOf"
+        "@id": "https://w3id.org/valueflows/ont/vf#recipeClauseOf"
       }
     ],
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
@@ -2218,7 +2218,7 @@
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#satisfies",
+    "@id": "https://w3id.org/valueflows/ont/vf#satisfies",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
@@ -2241,7 +2241,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "https://w3id.org/valueflows#Intent"
+        "@id": "https://w3id.org/valueflows/ont/vf#Intent"
       }
     ],
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
@@ -2256,20 +2256,20 @@
       {
         "@list": [
           {
-            "@id": "https://w3id.org/valueflows#Commitment"
+            "@id": "https://w3id.org/valueflows/ont/vf#Commitment"
           },
           {
-            "@id": "https://w3id.org/valueflows#EconomicEvent"
+            "@id": "https://w3id.org/valueflows/ont/vf#EconomicEvent"
           }
         ]
       }
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#optionalTo",
+    "@id": "https://w3id.org/valueflows/ont/vf#optionalTo",
     "@type": [
       "http://www.w3.org/2002/07/owl#NamedIndividual",
-      "https://w3id.org/valueflows#CreateResource"
+      "https://w3id.org/valueflows/ont/vf#CreateResource"
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
@@ -2290,7 +2290,7 @@
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#relationship",
+    "@id": "https://w3id.org/valueflows/ont/vf#relationship",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
@@ -2302,7 +2302,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "https://w3id.org/valueflows#AgentRelationship"
+        "@id": "https://w3id.org/valueflows/ont/vf#AgentRelationship"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -2313,7 +2313,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "https://w3id.org/valueflows#AgentRelationshipRole"
+        "@id": "https://w3id.org/valueflows/ont/vf#AgentRelationshipRole"
       }
     ],
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
@@ -2323,10 +2323,10 @@
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#offer",
+    "@id": "https://w3id.org/valueflows/ont/vf#offer",
     "@type": [
       "http://www.w3.org/2002/07/owl#NamedIndividual",
-      "https://w3id.org/valueflows#ProposalPurpose"
+      "https://w3id.org/valueflows/ont/vf#ProposalPurpose"
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
@@ -2347,7 +2347,7 @@
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#stateEffect",
+    "@id": "https://w3id.org/valueflows/ont/vf#stateEffect",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
@@ -2359,7 +2359,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "https://w3id.org/valueflows#Action"
+        "@id": "https://w3id.org/valueflows/ont/vf#Action"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -2370,7 +2370,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "https://w3id.org/valueflows#StateEffect"
+        "@id": "https://w3id.org/valueflows/ont/vf#StateEffect"
       }
     ],
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
@@ -2380,7 +2380,7 @@
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#Proposal",
+    "@id": "https://w3id.org/valueflows/ont/vf#Proposal",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -2403,7 +2403,7 @@
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#state",
+    "@id": "https://w3id.org/valueflows/ont/vf#state",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
@@ -2441,23 +2441,23 @@
       {
         "@list": [
           {
-            "@id": "https://w3id.org/valueflows#EconomicResource"
+            "@id": "https://w3id.org/valueflows/ont/vf#EconomicResource"
           },
           {
-            "@id": "https://w3id.org/valueflows#EconomicEvent"
+            "@id": "https://w3id.org/valueflows/ont/vf#EconomicEvent"
           },
           {
-            "@id": "https://w3id.org/valueflows#RecipeFlow"
+            "@id": "https://w3id.org/valueflows/ont/vf#RecipeFlow"
           },
           {
-            "@id": "https://w3id.org/valueflows#Commitment"
+            "@id": "https://w3id.org/valueflows/ont/vf#Commitment"
           }
         ]
       }
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#hasRecipeInput",
+    "@id": "https://w3id.org/valueflows/ont/vf#hasRecipeInput",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
@@ -2469,7 +2469,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "https://w3id.org/valueflows#RecipeProcess"
+        "@id": "https://w3id.org/valueflows/ont/vf#RecipeProcess"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -2480,12 +2480,12 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "https://w3id.org/valueflows#RecipeFlow"
+        "@id": "https://w3id.org/valueflows/ont/vf#RecipeFlow"
       }
     ],
     "http://www.w3.org/2002/07/owl#inverseOf": [
       {
-        "@id": "https://w3id.org/valueflows#recipeInputOf"
+        "@id": "https://w3id.org/valueflows/ont/vf#recipeInputOf"
       }
     ],
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
@@ -2495,7 +2495,7 @@
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#stageEffect",
+    "@id": "https://w3id.org/valueflows/ont/vf#stageEffect",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
@@ -2507,7 +2507,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "https://w3id.org/valueflows#Action"
+        "@id": "https://w3id.org/valueflows/ont/vf#Action"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -2518,7 +2518,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "https://w3id.org/valueflows#StageEffect"
+        "@id": "https://w3id.org/valueflows/ont/vf#StageEffect"
       }
     ],
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
@@ -2528,10 +2528,10 @@
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#work",
+    "@id": "https://w3id.org/valueflows/ont/vf#work",
     "@type": [
       "http://www.w3.org/2002/07/owl#NamedIndividual",
-      "https://w3id.org/valueflows#Action"
+      "https://w3id.org/valueflows/ont/vf#Action"
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
@@ -2550,64 +2550,64 @@
         "@value": "testing"
       }
     ],
-    "https://w3id.org/valueflows#accountableEffect": [
+    "https://w3id.org/valueflows/ont/vf#accountableEffect": [
       {
-        "@id": "https://w3id.org/valueflows#notApplicable"
+        "@id": "https://w3id.org/valueflows/ont/vf#notApplicable"
       }
     ],
-    "https://w3id.org/valueflows#accountingEffect": [
+    "https://w3id.org/valueflows/ont/vf#accountingEffect": [
       {
-        "@id": "https://w3id.org/valueflows#notApplicable"
+        "@id": "https://w3id.org/valueflows/ont/vf#notApplicable"
       }
     ],
-    "https://w3id.org/valueflows#containedEffect": [
+    "https://w3id.org/valueflows/ont/vf#containedEffect": [
       {
-        "@id": "https://w3id.org/valueflows#notApplicable"
+        "@id": "https://w3id.org/valueflows/ont/vf#notApplicable"
       }
     ],
-    "https://w3id.org/valueflows#createResource": [
+    "https://w3id.org/valueflows/ont/vf#createResource": [
       {
-        "@id": "https://w3id.org/valueflows#notApplicable"
+        "@id": "https://w3id.org/valueflows/ont/vf#notApplicable"
       }
     ],
-    "https://w3id.org/valueflows#eventQuantity": [
+    "https://w3id.org/valueflows/ont/vf#eventQuantity": [
       {
-        "@id": "https://w3id.org/valueflows#effort"
+        "@id": "https://w3id.org/valueflows/ont/vf#effort"
       }
     ],
-    "https://w3id.org/valueflows#inputOutput": [
+    "https://w3id.org/valueflows/ont/vf#inputOutput": [
       {
-        "@id": "https://w3id.org/valueflows#input"
+        "@id": "https://w3id.org/valueflows/ont/vf#input"
       }
     ],
-    "https://w3id.org/valueflows#locationEffect": [
+    "https://w3id.org/valueflows/ont/vf#locationEffect": [
       {
-        "@id": "https://w3id.org/valueflows#notApplicable"
+        "@id": "https://w3id.org/valueflows/ont/vf#notApplicable"
       }
     ],
-    "https://w3id.org/valueflows#onhandEffect": [
+    "https://w3id.org/valueflows/ont/vf#onhandEffect": [
       {
-        "@id": "https://w3id.org/valueflows#notApplicable"
+        "@id": "https://w3id.org/valueflows/ont/vf#notApplicable"
       }
     ],
-    "https://w3id.org/valueflows#pairsWith": [
+    "https://w3id.org/valueflows/ont/vf#pairsWith": [
       {
-        "@id": "https://w3id.org/valueflows#notApplicable"
+        "@id": "https://w3id.org/valueflows/ont/vf#notApplicable"
       }
     ],
-    "https://w3id.org/valueflows#stageEffect": [
+    "https://w3id.org/valueflows/ont/vf#stageEffect": [
       {
-        "@id": "https://w3id.org/valueflows#notApplicable"
+        "@id": "https://w3id.org/valueflows/ont/vf#notApplicable"
       }
     ],
-    "https://w3id.org/valueflows#stateEffect": [
+    "https://w3id.org/valueflows/ont/vf#stateEffect": [
       {
-        "@id": "https://w3id.org/valueflows#notApplicable"
+        "@id": "https://w3id.org/valueflows/ont/vf#notApplicable"
       }
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#EcologicalAgent",
+    "@id": "https://w3id.org/valueflows/ont/vf#EcologicalAgent",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -2625,7 +2625,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
-        "@id": "https://w3id.org/valueflows#Agent"
+        "@id": "https://w3id.org/valueflows/ont/vf#Agent"
       }
     ],
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
@@ -2635,10 +2635,10 @@
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#outputInput",
+    "@id": "https://w3id.org/valueflows/ont/vf#outputInput",
     "@type": [
       "http://www.w3.org/2002/07/owl#NamedIndividual",
-      "https://w3id.org/valueflows#InputOutput"
+      "https://w3id.org/valueflows/ont/vf#InputOutput"
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
@@ -2659,7 +2659,7 @@
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#subject",
+    "@id": "https://w3id.org/valueflows/ont/vf#subject",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
@@ -2671,7 +2671,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "https://w3id.org/valueflows#AgentRelationship"
+        "@id": "https://w3id.org/valueflows/ont/vf#AgentRelationship"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -2682,7 +2682,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "https://w3id.org/valueflows#Agent"
+        "@id": "https://w3id.org/valueflows/ont/vf#Agent"
       }
     ],
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
@@ -2692,7 +2692,7 @@
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#createResource",
+    "@id": "https://w3id.org/valueflows/ont/vf#createResource",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
@@ -2704,7 +2704,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "https://w3id.org/valueflows#Action"
+        "@id": "https://w3id.org/valueflows/ont/vf#Action"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -2715,7 +2715,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "https://w3id.org/valueflows#CreateResource"
+        "@id": "https://w3id.org/valueflows/ont/vf#CreateResource"
       }
     ],
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
@@ -2725,10 +2725,10 @@
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#peer",
+    "@id": "https://w3id.org/valueflows/ont/vf#peer",
     "@type": [
       "http://www.w3.org/2002/07/owl#NamedIndividual",
-      "https://w3id.org/valueflows#RoleBehavior"
+      "https://w3id.org/valueflows/ont/vf#RoleBehavior"
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
@@ -2749,7 +2749,7 @@
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#object",
+    "@id": "https://w3id.org/valueflows/ont/vf#object",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
@@ -2761,7 +2761,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "https://w3id.org/valueflows#AgentRelationship"
+        "@id": "https://w3id.org/valueflows/ont/vf#AgentRelationship"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -2772,7 +2772,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "https://w3id.org/valueflows#Agent"
+        "@id": "https://w3id.org/valueflows/ont/vf#Agent"
       }
     ],
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
@@ -2782,7 +2782,7 @@
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#AccountableEffect",
+    "@id": "https://w3id.org/valueflows/ont/vf#AccountableEffect",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -2805,10 +2805,10 @@
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#move",
+    "@id": "https://w3id.org/valueflows/ont/vf#move",
     "@type": [
       "http://www.w3.org/2002/07/owl#NamedIndividual",
-      "https://w3id.org/valueflows#Action"
+      "https://w3id.org/valueflows/ont/vf#Action"
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
@@ -2827,64 +2827,64 @@
         "@value": "unstable"
       }
     ],
-    "https://w3id.org/valueflows#accountableEffect": [
+    "https://w3id.org/valueflows/ont/vf#accountableEffect": [
       {
-        "@id": "https://w3id.org/valueflows#notApplicable"
+        "@id": "https://w3id.org/valueflows/ont/vf#notApplicable"
       }
     ],
-    "https://w3id.org/valueflows#accountingEffect": [
+    "https://w3id.org/valueflows/ont/vf#accountingEffect": [
       {
-        "@id": "https://w3id.org/valueflows#decrementIncrement"
+        "@id": "https://w3id.org/valueflows/ont/vf#decrementIncrement"
       }
     ],
-    "https://w3id.org/valueflows#containedEffect": [
+    "https://w3id.org/valueflows/ont/vf#containedEffect": [
       {
-        "@id": "https://w3id.org/valueflows#notApplicable"
+        "@id": "https://w3id.org/valueflows/ont/vf#notApplicable"
       }
     ],
-    "https://w3id.org/valueflows#createResource": [
+    "https://w3id.org/valueflows/ont/vf#createResource": [
       {
-        "@id": "https://w3id.org/valueflows#optionalTo"
+        "@id": "https://w3id.org/valueflows/ont/vf#optionalTo"
       }
     ],
-    "https://w3id.org/valueflows#eventQuantity": [
+    "https://w3id.org/valueflows/ont/vf#eventQuantity": [
       {
-        "@id": "https://w3id.org/valueflows#resource"
+        "@id": "https://w3id.org/valueflows/ont/vf#resource"
       }
     ],
-    "https://w3id.org/valueflows#inputOutput": [
+    "https://w3id.org/valueflows/ont/vf#inputOutput": [
       {
-        "@id": "https://w3id.org/valueflows#notApplicable"
+        "@id": "https://w3id.org/valueflows/ont/vf#notApplicable"
       }
     ],
-    "https://w3id.org/valueflows#locationEffect": [
+    "https://w3id.org/valueflows/ont/vf#locationEffect": [
       {
-        "@id": "https://w3id.org/valueflows#updateTo"
+        "@id": "https://w3id.org/valueflows/ont/vf#updateTo"
       }
     ],
-    "https://w3id.org/valueflows#onhandEffect": [
+    "https://w3id.org/valueflows/ont/vf#onhandEffect": [
       {
-        "@id": "https://w3id.org/valueflows#decrementIncrement"
+        "@id": "https://w3id.org/valueflows/ont/vf#decrementIncrement"
       }
     ],
-    "https://w3id.org/valueflows#pairsWith": [
+    "https://w3id.org/valueflows/ont/vf#pairsWith": [
       {
-        "@id": "https://w3id.org/valueflows#notApplicable"
+        "@id": "https://w3id.org/valueflows/ont/vf#notApplicable"
       }
     ],
-    "https://w3id.org/valueflows#stageEffect": [
+    "https://w3id.org/valueflows/ont/vf#stageEffect": [
       {
-        "@id": "https://w3id.org/valueflows#notApplicable"
+        "@id": "https://w3id.org/valueflows/ont/vf#notApplicable"
       }
     ],
-    "https://w3id.org/valueflows#stateEffect": [
+    "https://w3id.org/valueflows/ont/vf#stateEffect": [
       {
-        "@id": "https://w3id.org/valueflows#updateTo"
+        "@id": "https://w3id.org/valueflows/ont/vf#updateTo"
       }
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#accountableEffect",
+    "@id": "https://w3id.org/valueflows/ont/vf#accountableEffect",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
@@ -2896,7 +2896,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "https://w3id.org/valueflows#Action"
+        "@id": "https://w3id.org/valueflows/ont/vf#Action"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -2907,7 +2907,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "https://w3id.org/valueflows#AccountableEffect"
+        "@id": "https://w3id.org/valueflows/ont/vf#AccountableEffect"
       }
     ],
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
@@ -2917,7 +2917,7 @@
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#pairsWith",
+    "@id": "https://w3id.org/valueflows/ont/vf#pairsWith",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
@@ -2929,7 +2929,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "https://w3id.org/valueflows#Action"
+        "@id": "https://w3id.org/valueflows/ont/vf#Action"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -2940,7 +2940,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "https://w3id.org/valueflows#Action"
+        "@id": "https://w3id.org/valueflows/ont/vf#Action"
       }
     ],
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
@@ -2950,7 +2950,7 @@
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#recipeReciprocalClauseOf",
+    "@id": "https://w3id.org/valueflows/ont/vf#recipeReciprocalClauseOf",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
@@ -2962,7 +2962,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "https://w3id.org/valueflows#RecipeFlow"
+        "@id": "https://w3id.org/valueflows/ont/vf#RecipeFlow"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -2973,7 +2973,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "https://w3id.org/valueflows#RecipeExchange"
+        "@id": "https://w3id.org/valueflows/ont/vf#RecipeExchange"
       }
     ],
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
@@ -2983,7 +2983,7 @@
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#Person",
+    "@id": "https://w3id.org/valueflows/ont/vf#Person",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -3001,7 +3001,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
-        "@id": "https://w3id.org/valueflows#Agent"
+        "@id": "https://w3id.org/valueflows/ont/vf#Agent"
       }
     ],
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
@@ -3011,10 +3011,10 @@
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#use",
+    "@id": "https://w3id.org/valueflows/ont/vf#use",
     "@type": [
       "http://www.w3.org/2002/07/owl#NamedIndividual",
-      "https://w3id.org/valueflows#Action"
+      "https://w3id.org/valueflows/ont/vf#Action"
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
@@ -3033,67 +3033,67 @@
         "@value": "testing"
       }
     ],
-    "https://w3id.org/valueflows#accountableEffect": [
+    "https://w3id.org/valueflows/ont/vf#accountableEffect": [
       {
-        "@id": "https://w3id.org/valueflows#notApplicable"
+        "@id": "https://w3id.org/valueflows/ont/vf#notApplicable"
       }
     ],
-    "https://w3id.org/valueflows#accountingEffect": [
+    "https://w3id.org/valueflows/ont/vf#accountingEffect": [
       {
-        "@id": "https://w3id.org/valueflows#notApplicable"
+        "@id": "https://w3id.org/valueflows/ont/vf#notApplicable"
       }
     ],
-    "https://w3id.org/valueflows#containedEffect": [
+    "https://w3id.org/valueflows/ont/vf#containedEffect": [
       {
-        "@id": "https://w3id.org/valueflows#notApplicable"
+        "@id": "https://w3id.org/valueflows/ont/vf#notApplicable"
       }
     ],
-    "https://w3id.org/valueflows#createResource": [
+    "https://w3id.org/valueflows/ont/vf#createResource": [
       {
-        "@id": "https://w3id.org/valueflows#notApplicable"
+        "@id": "https://w3id.org/valueflows/ont/vf#notApplicable"
       }
     ],
-    "https://w3id.org/valueflows#eventQuantity": [
+    "https://w3id.org/valueflows/ont/vf#eventQuantity": [
       {
-        "@id": "https://w3id.org/valueflows#both"
+        "@id": "https://w3id.org/valueflows/ont/vf#both"
       }
     ],
-    "https://w3id.org/valueflows#inputOutput": [
+    "https://w3id.org/valueflows/ont/vf#inputOutput": [
       {
-        "@id": "https://w3id.org/valueflows#input"
+        "@id": "https://w3id.org/valueflows/ont/vf#input"
       }
     ],
-    "https://w3id.org/valueflows#locationEffect": [
+    "https://w3id.org/valueflows/ont/vf#locationEffect": [
       {
-        "@id": "https://w3id.org/valueflows#notApplicable"
+        "@id": "https://w3id.org/valueflows/ont/vf#notApplicable"
       }
     ],
-    "https://w3id.org/valueflows#onhandEffect": [
+    "https://w3id.org/valueflows/ont/vf#onhandEffect": [
       {
-        "@id": "https://w3id.org/valueflows#notApplicable"
+        "@id": "https://w3id.org/valueflows/ont/vf#notApplicable"
       }
     ],
-    "https://w3id.org/valueflows#pairsWith": [
+    "https://w3id.org/valueflows/ont/vf#pairsWith": [
       {
-        "@id": "https://w3id.org/valueflows#notApplicable"
+        "@id": "https://w3id.org/valueflows/ont/vf#notApplicable"
       }
     ],
-    "https://w3id.org/valueflows#stageEffect": [
+    "https://w3id.org/valueflows/ont/vf#stageEffect": [
       {
-        "@id": "https://w3id.org/valueflows#notApplicable"
+        "@id": "https://w3id.org/valueflows/ont/vf#notApplicable"
       }
     ],
-    "https://w3id.org/valueflows#stateEffect": [
+    "https://w3id.org/valueflows/ont/vf#stateEffect": [
       {
-        "@id": "https://w3id.org/valueflows#update"
+        "@id": "https://w3id.org/valueflows/ont/vf#update"
       }
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#deliverService",
+    "@id": "https://w3id.org/valueflows/ont/vf#deliverService",
     "@type": [
       "http://www.w3.org/2002/07/owl#NamedIndividual",
-      "https://w3id.org/valueflows#Action"
+      "https://w3id.org/valueflows/ont/vf#Action"
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
@@ -3112,64 +3112,64 @@
         "@value": "unstable"
       }
     ],
-    "https://w3id.org/valueflows#accountableEffect": [
+    "https://w3id.org/valueflows/ont/vf#accountableEffect": [
       {
-        "@id": "https://w3id.org/valueflows#notApplicable"
+        "@id": "https://w3id.org/valueflows/ont/vf#notApplicable"
       }
     ],
-    "https://w3id.org/valueflows#accountingEffect": [
+    "https://w3id.org/valueflows/ont/vf#accountingEffect": [
       {
-        "@id": "https://w3id.org/valueflows#notApplicable"
+        "@id": "https://w3id.org/valueflows/ont/vf#notApplicable"
       }
     ],
-    "https://w3id.org/valueflows#containedEffect": [
+    "https://w3id.org/valueflows/ont/vf#containedEffect": [
       {
-        "@id": "https://w3id.org/valueflows#notApplicable"
+        "@id": "https://w3id.org/valueflows/ont/vf#notApplicable"
       }
     ],
-    "https://w3id.org/valueflows#createResource": [
+    "https://w3id.org/valueflows/ont/vf#createResource": [
       {
-        "@id": "https://w3id.org/valueflows#notApplicable"
+        "@id": "https://w3id.org/valueflows/ont/vf#notApplicable"
       }
     ],
-    "https://w3id.org/valueflows#eventQuantity": [
+    "https://w3id.org/valueflows/ont/vf#eventQuantity": [
       {
-        "@id": "https://w3id.org/valueflows#resource"
+        "@id": "https://w3id.org/valueflows/ont/vf#resource"
       }
     ],
-    "https://w3id.org/valueflows#inputOutput": [
+    "https://w3id.org/valueflows/ont/vf#inputOutput": [
       {
-        "@id": "https://w3id.org/valueflows#outputInput"
+        "@id": "https://w3id.org/valueflows/ont/vf#outputInput"
       }
     ],
-    "https://w3id.org/valueflows#locationEffect": [
+    "https://w3id.org/valueflows/ont/vf#locationEffect": [
       {
-        "@id": "https://w3id.org/valueflows#notApplicable"
+        "@id": "https://w3id.org/valueflows/ont/vf#notApplicable"
       }
     ],
-    "https://w3id.org/valueflows#onhandEffect": [
+    "https://w3id.org/valueflows/ont/vf#onhandEffect": [
       {
-        "@id": "https://w3id.org/valueflows#notApplicable"
+        "@id": "https://w3id.org/valueflows/ont/vf#notApplicable"
       }
     ],
-    "https://w3id.org/valueflows#pairsWith": [
+    "https://w3id.org/valueflows/ont/vf#pairsWith": [
       {
-        "@id": "https://w3id.org/valueflows#notApplicable"
+        "@id": "https://w3id.org/valueflows/ont/vf#notApplicable"
       }
     ],
-    "https://w3id.org/valueflows#stageEffect": [
+    "https://w3id.org/valueflows/ont/vf#stageEffect": [
       {
-        "@id": "https://w3id.org/valueflows#notApplicable"
+        "@id": "https://w3id.org/valueflows/ont/vf#notApplicable"
       }
     ],
-    "https://w3id.org/valueflows#stateEffect": [
+    "https://w3id.org/valueflows/ont/vf#stateEffect": [
       {
-        "@id": "https://w3id.org/valueflows#update"
+        "@id": "https://w3id.org/valueflows/ont/vf#update"
       }
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#StateEffect",
+    "@id": "https://w3id.org/valueflows/ont/vf#StateEffect",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -3192,7 +3192,7 @@
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#settles",
+    "@id": "https://w3id.org/valueflows/ont/vf#settles",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
@@ -3204,7 +3204,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "https://w3id.org/valueflows#EconomicEvent"
+        "@id": "https://w3id.org/valueflows/ont/vf#EconomicEvent"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -3215,7 +3215,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "https://w3id.org/valueflows#Claim"
+        "@id": "https://w3id.org/valueflows/ont/vf#Claim"
       }
     ],
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
@@ -3225,10 +3225,10 @@
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#member",
+    "@id": "https://w3id.org/valueflows/ont/vf#member",
     "@type": [
       "http://www.w3.org/2002/07/owl#NamedIndividual",
-      "https://w3id.org/valueflows#RoleBehavior"
+      "https://w3id.org/valueflows/ont/vf#RoleBehavior"
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
@@ -3249,7 +3249,7 @@
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#EconomicResource",
+    "@id": "https://w3id.org/valueflows/ont/vf#EconomicResource",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -3272,7 +3272,7 @@
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#effortQuantity",
+    "@id": "https://w3id.org/valueflows/ont/vf#effortQuantity",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
@@ -3310,26 +3310,26 @@
       {
         "@list": [
           {
-            "@id": "https://w3id.org/valueflows#EconomicEvent"
+            "@id": "https://w3id.org/valueflows/ont/vf#EconomicEvent"
           },
           {
-            "@id": "https://w3id.org/valueflows#Commitment"
+            "@id": "https://w3id.org/valueflows/ont/vf#Commitment"
           },
           {
-            "@id": "https://w3id.org/valueflows#Intent"
+            "@id": "https://w3id.org/valueflows/ont/vf#Intent"
           },
           {
-            "@id": "https://w3id.org/valueflows#RecipeFlow"
+            "@id": "https://w3id.org/valueflows/ont/vf#RecipeFlow"
           },
           {
-            "@id": "https://w3id.org/valueflows#Claim"
+            "@id": "https://w3id.org/valueflows/ont/vf#Claim"
           }
         ]
       }
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#nestedIn",
+    "@id": "https://w3id.org/valueflows/ont/vf#nestedIn",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
@@ -3341,7 +3341,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "https://w3id.org/valueflows#Process"
+        "@id": "https://w3id.org/valueflows/ont/vf#Process"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -3352,7 +3352,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "https://w3id.org/valueflows#Scenario"
+        "@id": "https://w3id.org/valueflows/ont/vf#Scenario"
       }
     ],
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
@@ -3362,7 +3362,7 @@
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#bundledIn",
+    "@id": "https://w3id.org/valueflows/ont/vf#bundledIn",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
@@ -3374,7 +3374,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "https://w3id.org/valueflows#Agreement"
+        "@id": "https://w3id.org/valueflows/ont/vf#Agreement"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -3385,7 +3385,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "https://w3id.org/valueflows#AgreementBundle"
+        "@id": "https://w3id.org/valueflows/ont/vf#AgreementBundle"
       }
     ],
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
@@ -3395,7 +3395,7 @@
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#recipeInputOf",
+    "@id": "https://w3id.org/valueflows/ont/vf#recipeInputOf",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
@@ -3407,7 +3407,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "https://w3id.org/valueflows#RecipeFlow"
+        "@id": "https://w3id.org/valueflows/ont/vf#RecipeFlow"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -3418,7 +3418,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "https://w3id.org/valueflows#RecipeProcess"
+        "@id": "https://w3id.org/valueflows/ont/vf#RecipeProcess"
       }
     ],
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
@@ -3428,7 +3428,7 @@
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#LocationEffect",
+    "@id": "https://w3id.org/valueflows/ont/vf#LocationEffect",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -3451,7 +3451,7 @@
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#hasInput",
+    "@id": "https://w3id.org/valueflows/ont/vf#hasInput",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
@@ -3463,7 +3463,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "https://w3id.org/valueflows#Process"
+        "@id": "https://w3id.org/valueflows/ont/vf#Process"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -3479,7 +3479,7 @@
     ],
     "http://www.w3.org/2002/07/owl#inverseOf": [
       {
-        "@id": "https://w3id.org/valueflows#inputOf"
+        "@id": "https://w3id.org/valueflows/ont/vf#inputOf"
       }
     ],
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
@@ -3494,23 +3494,23 @@
       {
         "@list": [
           {
-            "@id": "https://w3id.org/valueflows#EconomicEvent"
+            "@id": "https://w3id.org/valueflows/ont/vf#EconomicEvent"
           },
           {
-            "@id": "https://w3id.org/valueflows#Commitment"
+            "@id": "https://w3id.org/valueflows/ont/vf#Commitment"
           },
           {
-            "@id": "https://w3id.org/valueflows#Intent"
+            "@id": "https://w3id.org/valueflows/ont/vf#Intent"
           }
         ]
       }
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#lower",
+    "@id": "https://w3id.org/valueflows/ont/vf#lower",
     "@type": [
       "http://www.w3.org/2002/07/owl#NamedIndividual",
-      "https://w3id.org/valueflows#Action"
+      "https://w3id.org/valueflows/ont/vf#Action"
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
@@ -3529,64 +3529,64 @@
         "@value": "unstable"
       }
     ],
-    "https://w3id.org/valueflows#accountableEffect": [
+    "https://w3id.org/valueflows/ont/vf#accountableEffect": [
       {
-        "@id": "https://w3id.org/valueflows#new"
+        "@id": "https://w3id.org/valueflows/ont/vf#new"
       }
     ],
-    "https://w3id.org/valueflows#accountingEffect": [
+    "https://w3id.org/valueflows/ont/vf#accountingEffect": [
       {
-        "@id": "https://w3id.org/valueflows#decrement"
+        "@id": "https://w3id.org/valueflows/ont/vf#decrement"
       }
     ],
-    "https://w3id.org/valueflows#containedEffect": [
+    "https://w3id.org/valueflows/ont/vf#containedEffect": [
       {
-        "@id": "https://w3id.org/valueflows#notApplicable"
+        "@id": "https://w3id.org/valueflows/ont/vf#notApplicable"
       }
     ],
-    "https://w3id.org/valueflows#createResource": [
+    "https://w3id.org/valueflows/ont/vf#createResource": [
       {
-        "@id": "https://w3id.org/valueflows#optional"
+        "@id": "https://w3id.org/valueflows/ont/vf#optional"
       }
     ],
-    "https://w3id.org/valueflows#eventQuantity": [
+    "https://w3id.org/valueflows/ont/vf#eventQuantity": [
       {
-        "@id": "https://w3id.org/valueflows#resource"
+        "@id": "https://w3id.org/valueflows/ont/vf#resource"
       }
     ],
-    "https://w3id.org/valueflows#inputOutput": [
+    "https://w3id.org/valueflows/ont/vf#inputOutput": [
       {
-        "@id": "https://w3id.org/valueflows#notApplicable"
+        "@id": "https://w3id.org/valueflows/ont/vf#notApplicable"
       }
     ],
-    "https://w3id.org/valueflows#locationEffect": [
+    "https://w3id.org/valueflows/ont/vf#locationEffect": [
       {
-        "@id": "https://w3id.org/valueflows#notApplicable"
+        "@id": "https://w3id.org/valueflows/ont/vf#notApplicable"
       }
     ],
-    "https://w3id.org/valueflows#onhandEffect": [
+    "https://w3id.org/valueflows/ont/vf#onhandEffect": [
       {
-        "@id": "https://w3id.org/valueflows#decrement"
+        "@id": "https://w3id.org/valueflows/ont/vf#decrement"
       }
     ],
-    "https://w3id.org/valueflows#pairsWith": [
+    "https://w3id.org/valueflows/ont/vf#pairsWith": [
       {
-        "@id": "https://w3id.org/valueflows#notApplicable"
+        "@id": "https://w3id.org/valueflows/ont/vf#notApplicable"
       }
     ],
-    "https://w3id.org/valueflows#stageEffect": [
+    "https://w3id.org/valueflows/ont/vf#stageEffect": [
       {
-        "@id": "https://w3id.org/valueflows#notApplicable"
+        "@id": "https://w3id.org/valueflows/ont/vf#notApplicable"
       }
     ],
-    "https://w3id.org/valueflows#stateEffect": [
+    "https://w3id.org/valueflows/ont/vf#stateEffect": [
       {
-        "@id": "https://w3id.org/valueflows#update"
+        "@id": "https://w3id.org/valueflows/ont/vf#update"
       }
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#AgreementBundle",
+    "@id": "https://w3id.org/valueflows/ont/vf#AgreementBundle",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -3609,7 +3609,7 @@
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#realizes",
+    "@id": "https://w3id.org/valueflows/ont/vf#realizes",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
@@ -3621,7 +3621,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "https://w3id.org/valueflows#Agreement"
+        "@id": "https://w3id.org/valueflows/ont/vf#Agreement"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -3632,12 +3632,12 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "https://w3id.org/valueflows#EconomicEvent"
+        "@id": "https://w3id.org/valueflows/ont/vf#EconomicEvent"
       }
     ],
     "http://www.w3.org/2002/07/owl#inverseOf": [
       {
-        "@id": "https://w3id.org/valueflows#realizationOf"
+        "@id": "https://w3id.org/valueflows/ont/vf#realizationOf"
       }
     ],
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
@@ -3647,7 +3647,7 @@
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#toResourceInventoriedAs",
+    "@id": "https://w3id.org/valueflows/ont/vf#toResourceInventoriedAs",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
@@ -3659,7 +3659,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "https://w3id.org/valueflows#EconomicEvent"
+        "@id": "https://w3id.org/valueflows/ont/vf#EconomicEvent"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -3670,7 +3670,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "https://w3id.org/valueflows#EconomicResource"
+        "@id": "https://w3id.org/valueflows/ont/vf#EconomicResource"
       }
     ],
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
@@ -3680,7 +3680,7 @@
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#imageList",
+    "@id": "https://w3id.org/valueflows/ont/vf#imageList",
     "@type": [
       "http://www.w3.org/2002/07/owl#DatatypeProperty"
     ],
@@ -3718,20 +3718,20 @@
       {
         "@list": [
           {
-            "@id": "https://w3id.org/valueflows#EconomicResource"
+            "@id": "https://w3id.org/valueflows/ont/vf#EconomicResource"
           },
           {
-            "@id": "https://w3id.org/valueflows#Intent"
+            "@id": "https://w3id.org/valueflows/ont/vf#Intent"
           },
           {
-            "@id": "https://w3id.org/valueflows#ResourceSpecification"
+            "@id": "https://w3id.org/valueflows/ont/vf#ResourceSpecification"
           }
         ]
       }
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#roleLabel",
+    "@id": "https://w3id.org/valueflows/ont/vf#roleLabel",
     "@type": [
       "http://www.w3.org/2002/07/owl#DatatypeProperty"
     ],
@@ -3743,7 +3743,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "https://w3id.org/valueflows#AgentRelationshipRole"
+        "@id": "https://w3id.org/valueflows/ont/vf#AgentRelationshipRole"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -3764,7 +3764,7 @@
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#ProcessSpecification",
+    "@id": "https://w3id.org/valueflows/ont/vf#ProcessSpecification",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -3787,7 +3787,7 @@
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#fulfills",
+    "@id": "https://w3id.org/valueflows/ont/vf#fulfills",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
@@ -3799,7 +3799,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "https://w3id.org/valueflows#EconomicEvent"
+        "@id": "https://w3id.org/valueflows/ont/vf#EconomicEvent"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -3810,7 +3810,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "https://w3id.org/valueflows#Commitment"
+        "@id": "https://w3id.org/valueflows/ont/vf#Commitment"
       }
     ],
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
@@ -3820,10 +3820,10 @@
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#transfer",
+    "@id": "https://w3id.org/valueflows/ont/vf#transfer",
     "@type": [
       "http://www.w3.org/2002/07/owl#NamedIndividual",
-      "https://w3id.org/valueflows#Action"
+      "https://w3id.org/valueflows/ont/vf#Action"
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
@@ -3842,67 +3842,67 @@
         "@value": "testing"
       }
     ],
-    "https://w3id.org/valueflows#accountableEffect": [
+    "https://w3id.org/valueflows/ont/vf#accountableEffect": [
       {
-        "@id": "https://w3id.org/valueflows#updateTo"
+        "@id": "https://w3id.org/valueflows/ont/vf#updateTo"
       }
     ],
-    "https://w3id.org/valueflows#accountingEffect": [
+    "https://w3id.org/valueflows/ont/vf#accountingEffect": [
       {
-        "@id": "https://w3id.org/valueflows#decrementIncrement"
+        "@id": "https://w3id.org/valueflows/ont/vf#decrementIncrement"
       }
     ],
-    "https://w3id.org/valueflows#containedEffect": [
+    "https://w3id.org/valueflows/ont/vf#containedEffect": [
       {
-        "@id": "https://w3id.org/valueflows#notApplicable"
+        "@id": "https://w3id.org/valueflows/ont/vf#notApplicable"
       }
     ],
-    "https://w3id.org/valueflows#createResource": [
+    "https://w3id.org/valueflows/ont/vf#createResource": [
       {
-        "@id": "https://w3id.org/valueflows#optionalTo"
+        "@id": "https://w3id.org/valueflows/ont/vf#optionalTo"
       }
     ],
-    "https://w3id.org/valueflows#eventQuantity": [
+    "https://w3id.org/valueflows/ont/vf#eventQuantity": [
       {
-        "@id": "https://w3id.org/valueflows#resource"
+        "@id": "https://w3id.org/valueflows/ont/vf#resource"
       }
     ],
-    "https://w3id.org/valueflows#inputOutput": [
+    "https://w3id.org/valueflows/ont/vf#inputOutput": [
       {
-        "@id": "https://w3id.org/valueflows#notApplicable"
+        "@id": "https://w3id.org/valueflows/ont/vf#notApplicable"
       }
     ],
-    "https://w3id.org/valueflows#locationEffect": [
+    "https://w3id.org/valueflows/ont/vf#locationEffect": [
       {
-        "@id": "https://w3id.org/valueflows#updateTo"
+        "@id": "https://w3id.org/valueflows/ont/vf#updateTo"
       }
     ],
-    "https://w3id.org/valueflows#onhandEffect": [
+    "https://w3id.org/valueflows/ont/vf#onhandEffect": [
       {
-        "@id": "https://w3id.org/valueflows#decrementIncrement"
+        "@id": "https://w3id.org/valueflows/ont/vf#decrementIncrement"
       }
     ],
-    "https://w3id.org/valueflows#pairsWith": [
+    "https://w3id.org/valueflows/ont/vf#pairsWith": [
       {
-        "@id": "https://w3id.org/valueflows#notApplicable"
+        "@id": "https://w3id.org/valueflows/ont/vf#notApplicable"
       }
     ],
-    "https://w3id.org/valueflows#stageEffect": [
+    "https://w3id.org/valueflows/ont/vf#stageEffect": [
       {
-        "@id": "https://w3id.org/valueflows#notApplicable"
+        "@id": "https://w3id.org/valueflows/ont/vf#notApplicable"
       }
     ],
-    "https://w3id.org/valueflows#stateEffect": [
+    "https://w3id.org/valueflows/ont/vf#stateEffect": [
       {
-        "@id": "https://w3id.org/valueflows#updateTo"
+        "@id": "https://w3id.org/valueflows/ont/vf#updateTo"
       }
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#output",
+    "@id": "https://w3id.org/valueflows/ont/vf#output",
     "@type": [
       "http://www.w3.org/2002/07/owl#NamedIndividual",
-      "https://w3id.org/valueflows#InputOutput"
+      "https://w3id.org/valueflows/ont/vf#InputOutput"
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
@@ -3923,7 +3923,7 @@
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#containedIn",
+    "@id": "https://w3id.org/valueflows/ont/vf#containedIn",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
@@ -3935,7 +3935,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "https://w3id.org/valueflows#EconomicResource"
+        "@id": "https://w3id.org/valueflows/ont/vf#EconomicResource"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -3946,7 +3946,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "https://w3id.org/valueflows#EconomicResource"
+        "@id": "https://w3id.org/valueflows/ont/vf#EconomicResource"
       }
     ],
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
@@ -3956,7 +3956,7 @@
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#resourceConformsTo",
+    "@id": "https://w3id.org/valueflows/ont/vf#resourceConformsTo",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
@@ -3979,7 +3979,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "https://w3id.org/valueflows#ResourceSpecification"
+        "@id": "https://w3id.org/valueflows/ont/vf#ResourceSpecification"
       }
     ],
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
@@ -3994,26 +3994,26 @@
       {
         "@list": [
           {
-            "@id": "https://w3id.org/valueflows#Commitment"
+            "@id": "https://w3id.org/valueflows/ont/vf#Commitment"
           },
           {
-            "@id": "https://w3id.org/valueflows#Intent"
+            "@id": "https://w3id.org/valueflows/ont/vf#Intent"
           },
           {
-            "@id": "https://w3id.org/valueflows#EconomicEvent"
+            "@id": "https://w3id.org/valueflows/ont/vf#EconomicEvent"
           },
           {
-            "@id": "https://w3id.org/valueflows#Claim"
+            "@id": "https://w3id.org/valueflows/ont/vf#Claim"
           },
           {
-            "@id": "https://w3id.org/valueflows#RecipeFlow"
+            "@id": "https://w3id.org/valueflows/ont/vf#RecipeFlow"
           }
         ]
       }
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#hasIndependentDemand",
+    "@id": "https://w3id.org/valueflows/ont/vf#hasIndependentDemand",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
@@ -4025,7 +4025,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "https://w3id.org/valueflows#Plan"
+        "@id": "https://w3id.org/valueflows/ont/vf#Plan"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -4036,12 +4036,12 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "https://w3id.org/valueflows#Commitment"
+        "@id": "https://w3id.org/valueflows/ont/vf#Commitment"
       }
     ],
     "http://www.w3.org/2002/07/owl#inverseOf": [
       {
-        "@id": "https://w3id.org/valueflows#independentDemandOf"
+        "@id": "https://w3id.org/valueflows/ont/vf#independentDemandOf"
       }
     ],
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
@@ -4051,10 +4051,10 @@
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#dropoff",
+    "@id": "https://w3id.org/valueflows/ont/vf#dropoff",
     "@type": [
       "http://www.w3.org/2002/07/owl#NamedIndividual",
-      "https://w3id.org/valueflows#Action"
+      "https://w3id.org/valueflows/ont/vf#Action"
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
@@ -4073,64 +4073,64 @@
         "@value": "unstable"
       }
     ],
-    "https://w3id.org/valueflows#accountableEffect": [
+    "https://w3id.org/valueflows/ont/vf#accountableEffect": [
       {
-        "@id": "https://w3id.org/valueflows#notApplicable"
+        "@id": "https://w3id.org/valueflows/ont/vf#notApplicable"
       }
     ],
-    "https://w3id.org/valueflows#accountingEffect": [
+    "https://w3id.org/valueflows/ont/vf#accountingEffect": [
       {
-        "@id": "https://w3id.org/valueflows#notApplicable"
+        "@id": "https://w3id.org/valueflows/ont/vf#notApplicable"
       }
     ],
-    "https://w3id.org/valueflows#containedEffect": [
+    "https://w3id.org/valueflows/ont/vf#containedEffect": [
       {
-        "@id": "https://w3id.org/valueflows#notApplicable"
+        "@id": "https://w3id.org/valueflows/ont/vf#notApplicable"
       }
     ],
-    "https://w3id.org/valueflows#createResource": [
+    "https://w3id.org/valueflows/ont/vf#createResource": [
       {
-        "@id": "https://w3id.org/valueflows#notApplicable"
+        "@id": "https://w3id.org/valueflows/ont/vf#notApplicable"
       }
     ],
-    "https://w3id.org/valueflows#eventQuantity": [
+    "https://w3id.org/valueflows/ont/vf#eventQuantity": [
       {
-        "@id": "https://w3id.org/valueflows#resource"
+        "@id": "https://w3id.org/valueflows/ont/vf#resource"
       }
     ],
-    "https://w3id.org/valueflows#inputOutput": [
+    "https://w3id.org/valueflows/ont/vf#inputOutput": [
       {
-        "@id": "https://w3id.org/valueflows#output"
+        "@id": "https://w3id.org/valueflows/ont/vf#output"
       }
     ],
-    "https://w3id.org/valueflows#locationEffect": [
+    "https://w3id.org/valueflows/ont/vf#locationEffect": [
       {
-        "@id": "https://w3id.org/valueflows#update"
+        "@id": "https://w3id.org/valueflows/ont/vf#update"
       }
     ],
-    "https://w3id.org/valueflows#onhandEffect": [
+    "https://w3id.org/valueflows/ont/vf#onhandEffect": [
       {
-        "@id": "https://w3id.org/valueflows#notApplicable"
+        "@id": "https://w3id.org/valueflows/ont/vf#notApplicable"
       }
     ],
-    "https://w3id.org/valueflows#pairsWith": [
+    "https://w3id.org/valueflows/ont/vf#pairsWith": [
       {
-        "@id": "https://w3id.org/valueflows#pickup"
+        "@id": "https://w3id.org/valueflows/ont/vf#pickup"
       }
     ],
-    "https://w3id.org/valueflows#stageEffect": [
+    "https://w3id.org/valueflows/ont/vf#stageEffect": [
       {
-        "@id": "https://w3id.org/valueflows#update"
+        "@id": "https://w3id.org/valueflows/ont/vf#update"
       }
     ],
-    "https://w3id.org/valueflows#stateEffect": [
+    "https://w3id.org/valueflows/ont/vf#stateEffect": [
       {
-        "@id": "https://w3id.org/valueflows#update"
+        "@id": "https://w3id.org/valueflows/ont/vf#update"
       }
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#Action",
+    "@id": "https://w3id.org/valueflows/ont/vf#Action",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -4153,7 +4153,7 @@
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#ResourceSpecification",
+    "@id": "https://w3id.org/valueflows/ont/vf#ResourceSpecification",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -4176,7 +4176,7 @@
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#EventQuantity",
+    "@id": "https://w3id.org/valueflows/ont/vf#EventQuantity",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -4199,10 +4199,10 @@
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#subOrganization",
+    "@id": "https://w3id.org/valueflows/ont/vf#subOrganization",
     "@type": [
       "http://www.w3.org/2002/07/owl#NamedIndividual",
-      "https://w3id.org/valueflows#RoleBehavior"
+      "https://w3id.org/valueflows/ont/vf#RoleBehavior"
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
@@ -4223,7 +4223,7 @@
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#minimumQuantity",
+    "@id": "https://w3id.org/valueflows/ont/vf#minimumQuantity",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
@@ -4235,7 +4235,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "https://w3id.org/valueflows#Intent"
+        "@id": "https://w3id.org/valueflows/ont/vf#Intent"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -4256,7 +4256,7 @@
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#Agreement",
+    "@id": "https://w3id.org/valueflows/ont/vf#Agreement",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -4279,7 +4279,7 @@
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#listedIn",
+    "@id": "https://w3id.org/valueflows/ont/vf#listedIn",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
@@ -4291,7 +4291,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "https://w3id.org/valueflows#Proposal"
+        "@id": "https://w3id.org/valueflows/ont/vf#Proposal"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -4302,7 +4302,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "https://w3id.org/valueflows#ProposalList"
+        "@id": "https://w3id.org/valueflows/ont/vf#ProposalList"
       }
     ],
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
@@ -4312,7 +4312,7 @@
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#Claim",
+    "@id": "https://w3id.org/valueflows/ont/vf#Claim",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -4335,7 +4335,7 @@
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#processConformsTo",
+    "@id": "https://w3id.org/valueflows/ont/vf#processConformsTo",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
@@ -4347,7 +4347,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "https://w3id.org/valueflows#RecipeProcess"
+        "@id": "https://w3id.org/valueflows/ont/vf#RecipeProcess"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -4358,7 +4358,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "https://w3id.org/valueflows#ProcessSpecification"
+        "@id": "https://w3id.org/valueflows/ont/vf#ProcessSpecification"
       }
     ],
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
@@ -4368,7 +4368,7 @@
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows",
+    "@id": "https://w3id.org/valueflows/ont/vf",
     "@type": [
       "http://www.w3.org/2002/07/owl#Ontology"
     ],
@@ -4394,7 +4394,7 @@
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#reciprocal",
+    "@id": "https://w3id.org/valueflows/ont/vf#reciprocal",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
@@ -4406,7 +4406,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "https://w3id.org/valueflows#Proposal"
+        "@id": "https://w3id.org/valueflows/ont/vf#Proposal"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -4417,7 +4417,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "https://w3id.org/valueflows#Intent"
+        "@id": "https://w3id.org/valueflows/ont/vf#Intent"
       }
     ],
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
@@ -4427,7 +4427,7 @@
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#accountingQuantity",
+    "@id": "https://w3id.org/valueflows/ont/vf#accountingQuantity",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
@@ -4439,7 +4439,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "https://w3id.org/valueflows#EconomicResource"
+        "@id": "https://w3id.org/valueflows/ont/vf#EconomicResource"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -4460,7 +4460,7 @@
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#toLocation",
+    "@id": "https://w3id.org/valueflows/ont/vf#toLocation",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
@@ -4472,7 +4472,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "https://w3id.org/valueflows#EconomicEvent"
+        "@id": "https://w3id.org/valueflows/ont/vf#EconomicEvent"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -4493,7 +4493,7 @@
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#Process",
+    "@id": "https://w3id.org/valueflows/ont/vf#Process",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -4516,7 +4516,7 @@
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#purpose",
+    "@id": "https://w3id.org/valueflows/ont/vf#purpose",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
@@ -4528,7 +4528,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "https://w3id.org/valueflows#Proposal"
+        "@id": "https://w3id.org/valueflows/ont/vf#Proposal"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -4539,7 +4539,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "https://w3id.org/valueflows#ProposalPurpose"
+        "@id": "https://w3id.org/valueflows/ont/vf#ProposalPurpose"
       }
     ],
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
@@ -4549,7 +4549,7 @@
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#inverseRoleLabel",
+    "@id": "https://w3id.org/valueflows/ont/vf#inverseRoleLabel",
     "@type": [
       "http://www.w3.org/2002/07/owl#DatatypeProperty"
     ],
@@ -4561,7 +4561,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "https://w3id.org/valueflows#AgentRelationshipRole"
+        "@id": "https://w3id.org/valueflows/ont/vf#AgentRelationshipRole"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -4582,7 +4582,7 @@
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#definedAs",
+    "@id": "https://w3id.org/valueflows/ont/vf#definedAs",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
@@ -4594,7 +4594,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "https://w3id.org/valueflows#Scenario"
+        "@id": "https://w3id.org/valueflows/ont/vf#Scenario"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -4605,7 +4605,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "https://w3id.org/valueflows#ScenarioDefinition"
+        "@id": "https://w3id.org/valueflows/ont/vf#ScenarioDefinition"
       }
     ],
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
@@ -4615,7 +4615,7 @@
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#RoleBehavior",
+    "@id": "https://w3id.org/valueflows/ont/vf#RoleBehavior",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -4638,7 +4638,7 @@
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#appreciationOf",
+    "@id": "https://w3id.org/valueflows/ont/vf#appreciationOf",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
@@ -4650,7 +4650,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "https://w3id.org/valueflows#Appreciation"
+        "@id": "https://w3id.org/valueflows/ont/vf#Appreciation"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -4661,7 +4661,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "https://w3id.org/valueflows#EconomicEvent"
+        "@id": "https://w3id.org/valueflows/ont/vf#EconomicEvent"
       }
     ],
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
@@ -4671,7 +4671,7 @@
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#recipeClauseOf",
+    "@id": "https://w3id.org/valueflows/ont/vf#recipeClauseOf",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
@@ -4683,7 +4683,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "https://w3id.org/valueflows#RecipeFlow"
+        "@id": "https://w3id.org/valueflows/ont/vf#RecipeFlow"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -4694,7 +4694,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "https://w3id.org/valueflows#RecipeExchange"
+        "@id": "https://w3id.org/valueflows/ont/vf#RecipeExchange"
       }
     ],
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
@@ -4704,7 +4704,7 @@
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#mappableAddress",
+    "@id": "https://w3id.org/valueflows/ont/vf#mappableAddress",
     "@type": [
       "http://www.w3.org/2002/07/owl#DatatypeProperty"
     ],
@@ -4737,11 +4737,11 @@
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#increment",
+    "@id": "https://w3id.org/valueflows/ont/vf#increment",
     "@type": [
       "http://www.w3.org/2002/07/owl#NamedIndividual",
-      "https://w3id.org/valueflows#AccountingEffect",
-      "https://w3id.org/valueflows#OnhandEffect"
+      "https://w3id.org/valueflows/ont/vf#AccountingEffect",
+      "https://w3id.org/valueflows/ont/vf#OnhandEffect"
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
@@ -4762,10 +4762,10 @@
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#request",
+    "@id": "https://w3id.org/valueflows/ont/vf#request",
     "@type": [
       "http://www.w3.org/2002/07/owl#NamedIndividual",
-      "https://w3id.org/valueflows#ProposalPurpose"
+      "https://w3id.org/valueflows/ont/vf#ProposalPurpose"
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
@@ -4786,7 +4786,7 @@
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#ProposalList",
+    "@id": "https://w3id.org/valueflows/ont/vf#ProposalList",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -4809,11 +4809,11 @@
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#decrementIncrement",
+    "@id": "https://w3id.org/valueflows/ont/vf#decrementIncrement",
     "@type": [
       "http://www.w3.org/2002/07/owl#NamedIndividual",
-      "https://w3id.org/valueflows#AccountingEffect",
-      "https://w3id.org/valueflows#OnhandEffect"
+      "https://w3id.org/valueflows/ont/vf#AccountingEffect",
+      "https://w3id.org/valueflows/ont/vf#OnhandEffect"
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
@@ -4834,7 +4834,7 @@
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#hasOutput",
+    "@id": "https://w3id.org/valueflows/ont/vf#hasOutput",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
@@ -4846,7 +4846,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "https://w3id.org/valueflows#Process"
+        "@id": "https://w3id.org/valueflows/ont/vf#Process"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -4862,7 +4862,7 @@
     ],
     "http://www.w3.org/2002/07/owl#inverseOf": [
       {
-        "@id": "https://w3id.org/valueflows#outputOf"
+        "@id": "https://w3id.org/valueflows/ont/vf#outputOf"
       }
     ],
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
@@ -4877,20 +4877,20 @@
       {
         "@list": [
           {
-            "@id": "https://w3id.org/valueflows#EconomicEvent"
+            "@id": "https://w3id.org/valueflows/ont/vf#EconomicEvent"
           },
           {
-            "@id": "https://w3id.org/valueflows#Commitment"
+            "@id": "https://w3id.org/valueflows/ont/vf#Commitment"
           },
           {
-            "@id": "https://w3id.org/valueflows#Intent"
+            "@id": "https://w3id.org/valueflows/ont/vf#Intent"
           }
         ]
       }
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#RecipeProcess",
+    "@id": "https://w3id.org/valueflows/ont/vf#RecipeProcess",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -4913,10 +4913,10 @@
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#cite",
+    "@id": "https://w3id.org/valueflows/ont/vf#cite",
     "@type": [
       "http://www.w3.org/2002/07/owl#NamedIndividual",
-      "https://w3id.org/valueflows#Action"
+      "https://w3id.org/valueflows/ont/vf#Action"
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
@@ -4935,68 +4935,68 @@
         "@value": "testing"
       }
     ],
-    "https://w3id.org/valueflows#accountableEffect": [
+    "https://w3id.org/valueflows/ont/vf#accountableEffect": [
       {
-        "@id": "https://w3id.org/valueflows#notApplicable"
+        "@id": "https://w3id.org/valueflows/ont/vf#notApplicable"
       }
     ],
-    "https://w3id.org/valueflows#accountingEffect": [
+    "https://w3id.org/valueflows/ont/vf#accountingEffect": [
       {
-        "@id": "https://w3id.org/valueflows#notApplicable"
+        "@id": "https://w3id.org/valueflows/ont/vf#notApplicable"
       }
     ],
-    "https://w3id.org/valueflows#containedEffect": [
+    "https://w3id.org/valueflows/ont/vf#containedEffect": [
       {
-        "@id": "https://w3id.org/valueflows#notApplicable"
+        "@id": "https://w3id.org/valueflows/ont/vf#notApplicable"
       }
     ],
-    "https://w3id.org/valueflows#createResource": [
+    "https://w3id.org/valueflows/ont/vf#createResource": [
       {
-        "@id": "https://w3id.org/valueflows#notApplicable"
+        "@id": "https://w3id.org/valueflows/ont/vf#notApplicable"
       }
     ],
-    "https://w3id.org/valueflows#eventQuantity": [
+    "https://w3id.org/valueflows/ont/vf#eventQuantity": [
       {
-        "@id": "https://w3id.org/valueflows#resource"
+        "@id": "https://w3id.org/valueflows/ont/vf#resource"
       }
     ],
-    "https://w3id.org/valueflows#inputOutput": [
+    "https://w3id.org/valueflows/ont/vf#inputOutput": [
       {
-        "@id": "https://w3id.org/valueflows#input"
+        "@id": "https://w3id.org/valueflows/ont/vf#input"
       }
     ],
-    "https://w3id.org/valueflows#locationEffect": [
+    "https://w3id.org/valueflows/ont/vf#locationEffect": [
       {
-        "@id": "https://w3id.org/valueflows#notApplicable"
+        "@id": "https://w3id.org/valueflows/ont/vf#notApplicable"
       }
     ],
-    "https://w3id.org/valueflows#onhandEffect": [
+    "https://w3id.org/valueflows/ont/vf#onhandEffect": [
       {
-        "@id": "https://w3id.org/valueflows#notApplicable"
+        "@id": "https://w3id.org/valueflows/ont/vf#notApplicable"
       }
     ],
-    "https://w3id.org/valueflows#pairsWith": [
+    "https://w3id.org/valueflows/ont/vf#pairsWith": [
       {
-        "@id": "https://w3id.org/valueflows#notApplicable"
+        "@id": "https://w3id.org/valueflows/ont/vf#notApplicable"
       }
     ],
-    "https://w3id.org/valueflows#stageEffect": [
+    "https://w3id.org/valueflows/ont/vf#stageEffect": [
       {
-        "@id": "https://w3id.org/valueflows#notApplicable"
+        "@id": "https://w3id.org/valueflows/ont/vf#notApplicable"
       }
     ],
-    "https://w3id.org/valueflows#stateEffect": [
+    "https://w3id.org/valueflows/ont/vf#stateEffect": [
       {
-        "@id": "https://w3id.org/valueflows#update"
+        "@id": "https://w3id.org/valueflows/ont/vf#update"
       }
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#incrementTo",
+    "@id": "https://w3id.org/valueflows/ont/vf#incrementTo",
     "@type": [
       "http://www.w3.org/2002/07/owl#NamedIndividual",
-      "https://w3id.org/valueflows#AccountingEffect",
-      "https://w3id.org/valueflows#OnhandEffect"
+      "https://w3id.org/valueflows/ont/vf#AccountingEffect",
+      "https://w3id.org/valueflows/ont/vf#OnhandEffect"
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
@@ -5017,7 +5017,7 @@
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#Appreciation",
+    "@id": "https://w3id.org/valueflows/ont/vf#Appreciation",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -5040,7 +5040,7 @@
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#eligibleLocation",
+    "@id": "https://w3id.org/valueflows/ont/vf#eligibleLocation",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
@@ -5052,7 +5052,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "https://w3id.org/valueflows#Proposal"
+        "@id": "https://w3id.org/valueflows/ont/vf#Proposal"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -5073,7 +5073,7 @@
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#action",
+    "@id": "https://w3id.org/valueflows/ont/vf#action",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
@@ -5096,7 +5096,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "https://w3id.org/valueflows#Action"
+        "@id": "https://w3id.org/valueflows/ont/vf#Action"
       }
     ],
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
@@ -5111,26 +5111,26 @@
       {
         "@list": [
           {
-            "@id": "https://w3id.org/valueflows#EconomicEvent"
+            "@id": "https://w3id.org/valueflows/ont/vf#EconomicEvent"
           },
           {
-            "@id": "https://w3id.org/valueflows#Commitment"
+            "@id": "https://w3id.org/valueflows/ont/vf#Commitment"
           },
           {
-            "@id": "https://w3id.org/valueflows#Intent"
+            "@id": "https://w3id.org/valueflows/ont/vf#Intent"
           },
           {
-            "@id": "https://w3id.org/valueflows#RecipeFlow"
+            "@id": "https://w3id.org/valueflows/ont/vf#RecipeFlow"
           },
           {
-            "@id": "https://w3id.org/valueflows#Claim"
+            "@id": "https://w3id.org/valueflows/ont/vf#Claim"
           }
         ]
       }
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#appreciationWith",
+    "@id": "https://w3id.org/valueflows/ont/vf#appreciationWith",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
@@ -5142,7 +5142,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "https://w3id.org/valueflows#Appreciation"
+        "@id": "https://w3id.org/valueflows/ont/vf#Appreciation"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -5153,7 +5153,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "https://w3id.org/valueflows#EconomicEvent"
+        "@id": "https://w3id.org/valueflows/ont/vf#EconomicEvent"
       }
     ],
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
@@ -5163,7 +5163,7 @@
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#hasPointInTime",
+    "@id": "https://w3id.org/valueflows/ont/vf#hasPointInTime",
     "@type": [
       "http://www.w3.org/2002/07/owl#DatatypeProperty"
     ],
@@ -5216,23 +5216,23 @@
       {
         "@list": [
           {
-            "@id": "https://w3id.org/valueflows#Commitment"
+            "@id": "https://w3id.org/valueflows/ont/vf#Commitment"
           },
           {
-            "@id": "https://w3id.org/valueflows#EconomicEvent"
+            "@id": "https://w3id.org/valueflows/ont/vf#EconomicEvent"
           },
           {
-            "@id": "https://w3id.org/valueflows#Intent"
+            "@id": "https://w3id.org/valueflows/ont/vf#Intent"
           }
         ]
       }
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#copy",
+    "@id": "https://w3id.org/valueflows/ont/vf#copy",
     "@type": [
       "http://www.w3.org/2002/07/owl#NamedIndividual",
-      "https://w3id.org/valueflows#Action"
+      "https://w3id.org/valueflows/ont/vf#Action"
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
@@ -5251,64 +5251,64 @@
         "@value": "unstable"
       }
     ],
-    "https://w3id.org/valueflows#accountableEffect": [
+    "https://w3id.org/valueflows/ont/vf#accountableEffect": [
       {
-        "@id": "https://w3id.org/valueflows#new"
+        "@id": "https://w3id.org/valueflows/ont/vf#new"
       }
     ],
-    "https://w3id.org/valueflows#accountingEffect": [
+    "https://w3id.org/valueflows/ont/vf#accountingEffect": [
       {
-        "@id": "https://w3id.org/valueflows#incrementTo"
+        "@id": "https://w3id.org/valueflows/ont/vf#incrementTo"
       }
     ],
-    "https://w3id.org/valueflows#containedEffect": [
+    "https://w3id.org/valueflows/ont/vf#containedEffect": [
       {
-        "@id": "https://w3id.org/valueflows#notApplicable"
+        "@id": "https://w3id.org/valueflows/ont/vf#notApplicable"
       }
     ],
-    "https://w3id.org/valueflows#createResource": [
+    "https://w3id.org/valueflows/ont/vf#createResource": [
       {
-        "@id": "https://w3id.org/valueflows#optionalTo"
+        "@id": "https://w3id.org/valueflows/ont/vf#optionalTo"
       }
     ],
-    "https://w3id.org/valueflows#eventQuantity": [
+    "https://w3id.org/valueflows/ont/vf#eventQuantity": [
       {
-        "@id": "https://w3id.org/valueflows#resource"
+        "@id": "https://w3id.org/valueflows/ont/vf#resource"
       }
     ],
-    "https://w3id.org/valueflows#inputOutput": [
+    "https://w3id.org/valueflows/ont/vf#inputOutput": [
       {
-        "@id": "https://w3id.org/valueflows#notApplicable"
+        "@id": "https://w3id.org/valueflows/ont/vf#notApplicable"
       }
     ],
-    "https://w3id.org/valueflows#locationEffect": [
+    "https://w3id.org/valueflows/ont/vf#locationEffect": [
       {
-        "@id": "https://w3id.org/valueflows#new"
+        "@id": "https://w3id.org/valueflows/ont/vf#new"
       }
     ],
-    "https://w3id.org/valueflows#onhandEffect": [
+    "https://w3id.org/valueflows/ont/vf#onhandEffect": [
       {
-        "@id": "https://w3id.org/valueflows#incrementTo"
+        "@id": "https://w3id.org/valueflows/ont/vf#incrementTo"
       }
     ],
-    "https://w3id.org/valueflows#pairsWith": [
+    "https://w3id.org/valueflows/ont/vf#pairsWith": [
       {
-        "@id": "https://w3id.org/valueflows#notApplicable"
+        "@id": "https://w3id.org/valueflows/ont/vf#notApplicable"
       }
     ],
-    "https://w3id.org/valueflows#stageEffect": [
+    "https://w3id.org/valueflows/ont/vf#stageEffect": [
       {
-        "@id": "https://w3id.org/valueflows#notApplicable"
+        "@id": "https://w3id.org/valueflows/ont/vf#notApplicable"
       }
     ],
-    "https://w3id.org/valueflows#stateEffect": [
+    "https://w3id.org/valueflows/ont/vf#stateEffect": [
       {
-        "@id": "https://w3id.org/valueflows#updateTo"
+        "@id": "https://w3id.org/valueflows/ont/vf#updateTo"
       }
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#clauseOf",
+    "@id": "https://w3id.org/valueflows/ont/vf#clauseOf",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
@@ -5320,7 +5320,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "https://w3id.org/valueflows#Commitment"
+        "@id": "https://w3id.org/valueflows/ont/vf#Commitment"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -5331,7 +5331,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "https://w3id.org/valueflows#Agreement"
+        "@id": "https://w3id.org/valueflows/ont/vf#Agreement"
       }
     ],
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
@@ -5341,7 +5341,7 @@
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#hasRecipeOutput",
+    "@id": "https://w3id.org/valueflows/ont/vf#hasRecipeOutput",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
@@ -5353,7 +5353,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "https://w3id.org/valueflows#RecipeProcess"
+        "@id": "https://w3id.org/valueflows/ont/vf#RecipeProcess"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -5364,12 +5364,12 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "https://w3id.org/valueflows#RecipeFlow"
+        "@id": "https://w3id.org/valueflows/ont/vf#RecipeFlow"
       }
     ],
     "http://www.w3.org/2002/07/owl#inverseOf": [
       {
-        "@id": "https://w3id.org/valueflows#recipeOutputOf"
+        "@id": "https://w3id.org/valueflows/ont/vf#recipeOutputOf"
       }
     ],
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
@@ -5379,10 +5379,10 @@
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#input",
+    "@id": "https://w3id.org/valueflows/ont/vf#input",
     "@type": [
       "http://www.w3.org/2002/07/owl#NamedIndividual",
-      "https://w3id.org/valueflows#InputOutput"
+      "https://w3id.org/valueflows/ont/vf#InputOutput"
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
@@ -5403,7 +5403,7 @@
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#accountingEffect",
+    "@id": "https://w3id.org/valueflows/ont/vf#accountingEffect",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
@@ -5415,7 +5415,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "https://w3id.org/valueflows#Action"
+        "@id": "https://w3id.org/valueflows/ont/vf#Action"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -5426,7 +5426,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "https://w3id.org/valueflows#AccountingEffect"
+        "@id": "https://w3id.org/valueflows/ont/vf#AccountingEffect"
       }
     ],
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
@@ -5436,7 +5436,7 @@
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#plannedWithin",
+    "@id": "https://w3id.org/valueflows/ont/vf#plannedWithin",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
@@ -5459,7 +5459,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "https://w3id.org/valueflows#Plan"
+        "@id": "https://w3id.org/valueflows/ont/vf#Plan"
       }
     ],
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
@@ -5474,23 +5474,23 @@
       {
         "@list": [
           {
-            "@id": "https://w3id.org/valueflows#Process"
+            "@id": "https://w3id.org/valueflows/ont/vf#Process"
           },
           {
-            "@id": "https://w3id.org/valueflows#Commitment"
+            "@id": "https://w3id.org/valueflows/ont/vf#Commitment"
           },
           {
-            "@id": "https://w3id.org/valueflows#Intent"
+            "@id": "https://w3id.org/valueflows/ont/vf#Intent"
           }
         ]
       }
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#combine",
+    "@id": "https://w3id.org/valueflows/ont/vf#combine",
     "@type": [
       "http://www.w3.org/2002/07/owl#NamedIndividual",
-      "https://w3id.org/valueflows#Action"
+      "https://w3id.org/valueflows/ont/vf#Action"
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
@@ -5509,64 +5509,64 @@
         "@value": "unstable"
       }
     ],
-    "https://w3id.org/valueflows#accountableEffect": [
+    "https://w3id.org/valueflows/ont/vf#accountableEffect": [
       {
-        "@id": "https://w3id.org/valueflows#notApplicable"
+        "@id": "https://w3id.org/valueflows/ont/vf#notApplicable"
       }
     ],
-    "https://w3id.org/valueflows#accountingEffect": [
+    "https://w3id.org/valueflows/ont/vf#accountingEffect": [
       {
-        "@id": "https://w3id.org/valueflows#notApplicable"
+        "@id": "https://w3id.org/valueflows/ont/vf#notApplicable"
       }
     ],
-    "https://w3id.org/valueflows#containedEffect": [
+    "https://w3id.org/valueflows/ont/vf#containedEffect": [
       {
-        "@id": "https://w3id.org/valueflows#update"
+        "@id": "https://w3id.org/valueflows/ont/vf#update"
       }
     ],
-    "https://w3id.org/valueflows#createResource": [
+    "https://w3id.org/valueflows/ont/vf#createResource": [
       {
-        "@id": "https://w3id.org/valueflows#notApplicable"
+        "@id": "https://w3id.org/valueflows/ont/vf#notApplicable"
       }
     ],
-    "https://w3id.org/valueflows#eventQuantity": [
+    "https://w3id.org/valueflows/ont/vf#eventQuantity": [
       {
-        "@id": "https://w3id.org/valueflows#resource"
+        "@id": "https://w3id.org/valueflows/ont/vf#resource"
       }
     ],
-    "https://w3id.org/valueflows#inputOutput": [
+    "https://w3id.org/valueflows/ont/vf#inputOutput": [
       {
-        "@id": "https://w3id.org/valueflows#input"
+        "@id": "https://w3id.org/valueflows/ont/vf#input"
       }
     ],
-    "https://w3id.org/valueflows#locationEffect": [
+    "https://w3id.org/valueflows/ont/vf#locationEffect": [
       {
-        "@id": "https://w3id.org/valueflows#notApplicable"
+        "@id": "https://w3id.org/valueflows/ont/vf#notApplicable"
       }
     ],
-    "https://w3id.org/valueflows#onhandEffect": [
+    "https://w3id.org/valueflows/ont/vf#onhandEffect": [
       {
-        "@id": "https://w3id.org/valueflows#decrement"
+        "@id": "https://w3id.org/valueflows/ont/vf#decrement"
       }
     ],
-    "https://w3id.org/valueflows#pairsWith": [
+    "https://w3id.org/valueflows/ont/vf#pairsWith": [
       {
-        "@id": "https://w3id.org/valueflows#notApplicable"
+        "@id": "https://w3id.org/valueflows/ont/vf#notApplicable"
       }
     ],
-    "https://w3id.org/valueflows#stageEffect": [
+    "https://w3id.org/valueflows/ont/vf#stageEffect": [
       {
-        "@id": "https://w3id.org/valueflows#notApplicable"
+        "@id": "https://w3id.org/valueflows/ont/vf#notApplicable"
       }
     ],
-    "https://w3id.org/valueflows#stateEffect": [
+    "https://w3id.org/valueflows/ont/vf#stateEffect": [
       {
-        "@id": "https://w3id.org/valueflows#update"
+        "@id": "https://w3id.org/valueflows/ont/vf#update"
       }
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#Organization",
+    "@id": "https://w3id.org/valueflows/ont/vf#Organization",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -5584,7 +5584,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
-        "@id": "https://w3id.org/valueflows#Agent"
+        "@id": "https://w3id.org/valueflows/ont/vf#Agent"
       }
     ],
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
@@ -5594,10 +5594,10 @@
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#remove",
+    "@id": "https://w3id.org/valueflows/ont/vf#remove",
     "@type": [
       "http://www.w3.org/2002/07/owl#NamedIndividual",
-      "https://w3id.org/valueflows#ContainedEffect"
+      "https://w3id.org/valueflows/ont/vf#ContainedEffect"
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
@@ -5618,7 +5618,7 @@
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#rules",
+    "@id": "https://w3id.org/valueflows/ont/vf#rules",
     "@type": [
       "http://www.w3.org/2002/07/owl#DataTypeProperty"
     ],
@@ -5630,7 +5630,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "https://w3id.org/valueflows#Agreement"
+        "@id": "https://w3id.org/valueflows/ont/vf#Agreement"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -5651,14 +5651,14 @@
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#notApplicable",
+    "@id": "https://w3id.org/valueflows/ont/vf#notApplicable",
     "@type": [
       "http://www.w3.org/2002/07/owl#NamedIndividual",
-      "https://w3id.org/valueflows#InputOutput",
-      "https://w3id.org/valueflows#PairsWith",
-      "https://w3id.org/valueflows#LocationEffect",
-      "https://w3id.org/valueflows#CreateResource",
-      "https://w3id.org/valueflows#ContainedEffect"
+      "https://w3id.org/valueflows/ont/vf#InputOutput",
+      "https://w3id.org/valueflows/ont/vf#PairsWith",
+      "https://w3id.org/valueflows/ont/vf#LocationEffect",
+      "https://w3id.org/valueflows/ont/vf#CreateResource",
+      "https://w3id.org/valueflows/ont/vf#ContainedEffect"
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
@@ -5679,7 +5679,7 @@
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#primaryLocation",
+    "@id": "https://w3id.org/valueflows/ont/vf#primaryLocation",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
@@ -5691,7 +5691,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "https://w3id.org/valueflows#Agent"
+        "@id": "https://w3id.org/valueflows/ont/vf#Agent"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -5712,7 +5712,7 @@
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#resourceClassifiedAs",
+    "@id": "https://w3id.org/valueflows/ont/vf#resourceClassifiedAs",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
@@ -5750,29 +5750,29 @@
       {
         "@list": [
           {
-            "@id": "https://w3id.org/valueflows#ResourceSpecification"
+            "@id": "https://w3id.org/valueflows/ont/vf#ResourceSpecification"
           },
           {
-            "@id": "https://w3id.org/valueflows#RecipeFlow"
+            "@id": "https://w3id.org/valueflows/ont/vf#RecipeFlow"
           },
           {
-            "@id": "https://w3id.org/valueflows#Intent"
+            "@id": "https://w3id.org/valueflows/ont/vf#Intent"
           },
           {
-            "@id": "https://w3id.org/valueflows#Commitment"
+            "@id": "https://w3id.org/valueflows/ont/vf#Commitment"
           },
           {
-            "@id": "https://w3id.org/valueflows#EconomicEvent"
+            "@id": "https://w3id.org/valueflows/ont/vf#EconomicEvent"
           },
           {
-            "@id": "https://w3id.org/valueflows#Claim"
+            "@id": "https://w3id.org/valueflows/ont/vf#Claim"
           }
         ]
       }
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#inputOf",
+    "@id": "https://w3id.org/valueflows/ont/vf#inputOf",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
@@ -5795,7 +5795,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "https://w3id.org/valueflows#Process"
+        "@id": "https://w3id.org/valueflows/ont/vf#Process"
       }
     ],
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
@@ -5810,23 +5810,23 @@
       {
         "@list": [
           {
-            "@id": "https://w3id.org/valueflows#EconomicEvent"
+            "@id": "https://w3id.org/valueflows/ont/vf#EconomicEvent"
           },
           {
-            "@id": "https://w3id.org/valueflows#Commitment"
+            "@id": "https://w3id.org/valueflows/ont/vf#Commitment"
           },
           {
-            "@id": "https://w3id.org/valueflows#Intent"
+            "@id": "https://w3id.org/valueflows/ont/vf#Intent"
           }
         ]
       }
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#resource",
+    "@id": "https://w3id.org/valueflows/ont/vf#resource",
     "@type": [
       "http://www.w3.org/2002/07/owl#NamedIndividual",
-      "https://w3id.org/valueflows#EventQuantity"
+      "https://w3id.org/valueflows/ont/vf#EventQuantity"
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
@@ -5847,7 +5847,7 @@
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#provider",
+    "@id": "https://w3id.org/valueflows/ont/vf#provider",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
@@ -5870,7 +5870,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "https://w3id.org/valueflows#Agent"
+        "@id": "https://w3id.org/valueflows/ont/vf#Agent"
       }
     ],
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
@@ -5885,26 +5885,26 @@
       {
         "@list": [
           {
-            "@id": "https://w3id.org/valueflows#EconomicEvent"
+            "@id": "https://w3id.org/valueflows/ont/vf#EconomicEvent"
           },
           {
-            "@id": "https://w3id.org/valueflows#Commitment"
+            "@id": "https://w3id.org/valueflows/ont/vf#Commitment"
           },
           {
-            "@id": "https://w3id.org/valueflows#Intent"
+            "@id": "https://w3id.org/valueflows/ont/vf#Intent"
           },
           {
-            "@id": "https://w3id.org/valueflows#Claim"
+            "@id": "https://w3id.org/valueflows/ont/vf#Claim"
           }
         ]
       }
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#transferCustody",
+    "@id": "https://w3id.org/valueflows/ont/vf#transferCustody",
     "@type": [
       "http://www.w3.org/2002/07/owl#NamedIndividual",
-      "https://w3id.org/valueflows#Action"
+      "https://w3id.org/valueflows/ont/vf#Action"
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
@@ -5923,64 +5923,64 @@
         "@value": "unstable"
       }
     ],
-    "https://w3id.org/valueflows#accountableEffect": [
+    "https://w3id.org/valueflows/ont/vf#accountableEffect": [
       {
-        "@id": "https://w3id.org/valueflows#notApplicable"
+        "@id": "https://w3id.org/valueflows/ont/vf#notApplicable"
       }
     ],
-    "https://w3id.org/valueflows#accountingEffect": [
+    "https://w3id.org/valueflows/ont/vf#accountingEffect": [
       {
-        "@id": "https://w3id.org/valueflows#notApplicable"
+        "@id": "https://w3id.org/valueflows/ont/vf#notApplicable"
       }
     ],
-    "https://w3id.org/valueflows#containedEffect": [
+    "https://w3id.org/valueflows/ont/vf#containedEffect": [
       {
-        "@id": "https://w3id.org/valueflows#notApplicable"
+        "@id": "https://w3id.org/valueflows/ont/vf#notApplicable"
       }
     ],
-    "https://w3id.org/valueflows#createResource": [
+    "https://w3id.org/valueflows/ont/vf#createResource": [
       {
-        "@id": "https://w3id.org/valueflows#optionalTo"
+        "@id": "https://w3id.org/valueflows/ont/vf#optionalTo"
       }
     ],
-    "https://w3id.org/valueflows#eventQuantity": [
+    "https://w3id.org/valueflows/ont/vf#eventQuantity": [
       {
-        "@id": "https://w3id.org/valueflows#resource"
+        "@id": "https://w3id.org/valueflows/ont/vf#resource"
       }
     ],
-    "https://w3id.org/valueflows#inputOutput": [
+    "https://w3id.org/valueflows/ont/vf#inputOutput": [
       {
-        "@id": "https://w3id.org/valueflows#notApplicable"
+        "@id": "https://w3id.org/valueflows/ont/vf#notApplicable"
       }
     ],
-    "https://w3id.org/valueflows#locationEffect": [
+    "https://w3id.org/valueflows/ont/vf#locationEffect": [
       {
-        "@id": "https://w3id.org/valueflows#updateTo"
+        "@id": "https://w3id.org/valueflows/ont/vf#updateTo"
       }
     ],
-    "https://w3id.org/valueflows#onhandEffect": [
+    "https://w3id.org/valueflows/ont/vf#onhandEffect": [
       {
-        "@id": "https://w3id.org/valueflows#decrementIncrement"
+        "@id": "https://w3id.org/valueflows/ont/vf#decrementIncrement"
       }
     ],
-    "https://w3id.org/valueflows#pairsWith": [
+    "https://w3id.org/valueflows/ont/vf#pairsWith": [
       {
-        "@id": "https://w3id.org/valueflows#notApplicable"
+        "@id": "https://w3id.org/valueflows/ont/vf#notApplicable"
       }
     ],
-    "https://w3id.org/valueflows#stageEffect": [
+    "https://w3id.org/valueflows/ont/vf#stageEffect": [
       {
-        "@id": "https://w3id.org/valueflows#notApplicable"
+        "@id": "https://w3id.org/valueflows/ont/vf#notApplicable"
       }
     ],
-    "https://w3id.org/valueflows#stateEffect": [
+    "https://w3id.org/valueflows/ont/vf#stateEffect": [
       {
-        "@id": "https://w3id.org/valueflows#updateTo"
+        "@id": "https://w3id.org/valueflows/ont/vf#updateTo"
       }
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#ProposalPurpose",
+    "@id": "https://w3id.org/valueflows/ont/vf#ProposalPurpose",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -6003,7 +6003,7 @@
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#bundles",
+    "@id": "https://w3id.org/valueflows/ont/vf#bundles",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
@@ -6015,7 +6015,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "https://w3id.org/valueflows#AgreementBundle"
+        "@id": "https://w3id.org/valueflows/ont/vf#AgreementBundle"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -6026,12 +6026,12 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "https://w3id.org/valueflows#Agreement"
+        "@id": "https://w3id.org/valueflows/ont/vf#Agreement"
       }
     ],
     "http://www.w3.org/2002/07/owl#inverseOf": [
       {
-        "@id": "https://w3id.org/valueflows#bundles"
+        "@id": "https://w3id.org/valueflows/ont/vf#bundles"
       }
     ],
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
@@ -6041,7 +6041,7 @@
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#substitutable",
+    "@id": "https://w3id.org/valueflows/ont/vf#substitutable",
     "@type": [
       "http://www.w3.org/2002/07/owl#DatatypeProperty"
     ],
@@ -6053,7 +6053,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "https://w3id.org/valueflows#ResourceSpecification"
+        "@id": "https://w3id.org/valueflows/ont/vf#ResourceSpecification"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -6090,74 +6090,74 @@
             "@id": "http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"
           },
           {
-            "@id": "https://w3id.org/valueflows#Agent"
+            "@id": "https://w3id.org/valueflows/ont/vf#Agent"
           },
           {
-            "@id": "https://w3id.org/valueflows#AgentRelationship"
+            "@id": "https://w3id.org/valueflows/ont/vf#AgentRelationship"
           },
           {
-            "@id": "https://w3id.org/valueflows#AgentRelationshipRole"
+            "@id": "https://w3id.org/valueflows/ont/vf#AgentRelationshipRole"
           },
           {
-            "@id": "https://w3id.org/valueflows#Agreement"
+            "@id": "https://w3id.org/valueflows/ont/vf#Agreement"
           },
           {
-            "@id": "https://w3id.org/valueflows#Appreciation"
+            "@id": "https://w3id.org/valueflows/ont/vf#Appreciation"
           },
           {
-            "@id": "https://w3id.org/valueflows#Claim"
+            "@id": "https://w3id.org/valueflows/ont/vf#Claim"
           },
           {
-            "@id": "https://w3id.org/valueflows#Commitment"
+            "@id": "https://w3id.org/valueflows/ont/vf#Commitment"
           },
           {
-            "@id": "https://w3id.org/valueflows#EconomicEvent"
+            "@id": "https://w3id.org/valueflows/ont/vf#EconomicEvent"
           },
           {
-            "@id": "https://w3id.org/valueflows#EconomicResource"
+            "@id": "https://w3id.org/valueflows/ont/vf#EconomicResource"
           },
           {
-            "@id": "https://w3id.org/valueflows#ExternalLink"
+            "@id": "https://w3id.org/valueflows/ont/vf#ExternalLink"
           },
           {
-            "@id": "https://w3id.org/valueflows#Intent"
+            "@id": "https://w3id.org/valueflows/ont/vf#Intent"
           },
           {
-            "@id": "https://w3id.org/valueflows#Plan"
+            "@id": "https://w3id.org/valueflows/ont/vf#Plan"
           },
           {
-            "@id": "https://w3id.org/valueflows#Process"
+            "@id": "https://w3id.org/valueflows/ont/vf#Process"
           },
           {
-            "@id": "https://w3id.org/valueflows#ProcessSpecification"
+            "@id": "https://w3id.org/valueflows/ont/vf#ProcessSpecification"
           },
           {
-            "@id": "https://w3id.org/valueflows#Proposal"
+            "@id": "https://w3id.org/valueflows/ont/vf#Proposal"
           },
           {
-            "@id": "https://w3id.org/valueflows#RecipeFlow"
+            "@id": "https://w3id.org/valueflows/ont/vf#RecipeFlow"
           },
           {
-            "@id": "https://w3id.org/valueflows#RecipeProcess"
+            "@id": "https://w3id.org/valueflows/ont/vf#RecipeProcess"
           },
           {
-            "@id": "https://w3id.org/valueflows#ResourceSpecification"
+            "@id": "https://w3id.org/valueflows/ont/vf#ResourceSpecification"
           },
           {
-            "@id": "https://w3id.org/valueflows#RoleBehavior"
+            "@id": "https://w3id.org/valueflows/ont/vf#RoleBehavior"
           },
           {
-            "@id": "https://w3id.org/valueflows#Scenario"
+            "@id": "https://w3id.org/valueflows/ont/vf#Scenario"
           },
           {
-            "@id": "https://w3id.org/valueflows#ScenarioDefinition"
+            "@id": "https://w3id.org/valueflows/ont/vf#ScenarioDefinition"
           }
         ]
       }
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#realizationOf",
+    "@id": "https://w3id.org/valueflows/ont/vf#realizationOf",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
@@ -6169,7 +6169,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "https://w3id.org/valueflows#EconomicEvent"
+        "@id": "https://w3id.org/valueflows/ont/vf#EconomicEvent"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -6180,7 +6180,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "https://w3id.org/valueflows#Agreement"
+        "@id": "https://w3id.org/valueflows/ont/vf#Agreement"
       }
     ],
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
@@ -6190,7 +6190,7 @@
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#stipulates",
+    "@id": "https://w3id.org/valueflows/ont/vf#stipulates",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
@@ -6202,7 +6202,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "https://w3id.org/valueflows#Agreement"
+        "@id": "https://w3id.org/valueflows/ont/vf#Agreement"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -6213,12 +6213,12 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "https://w3id.org/valueflows#Commitment"
+        "@id": "https://w3id.org/valueflows/ont/vf#Commitment"
       }
     ],
     "http://www.w3.org/2002/07/owl#inverseOf": [
       {
-        "@id": "https://w3id.org/valueflows#clauseOf"
+        "@id": "https://w3id.org/valueflows/ont/vf#clauseOf"
       }
     ],
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
@@ -6228,7 +6228,7 @@
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#triggeredBy",
+    "@id": "https://w3id.org/valueflows/ont/vf#triggeredBy",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
@@ -6251,7 +6251,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "https://w3id.org/valueflows#EconomicEvent"
+        "@id": "https://w3id.org/valueflows/ont/vf#EconomicEvent"
       }
     ],
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
@@ -6266,17 +6266,17 @@
       {
         "@list": [
           {
-            "@id": "https://w3id.org/valueflows#EconomicEvent"
+            "@id": "https://w3id.org/valueflows/ont/vf#EconomicEvent"
           },
           {
-            "@id": "https://w3id.org/valueflows#Claim"
+            "@id": "https://w3id.org/valueflows/ont/vf#Claim"
           }
         ]
       }
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#basedOn",
+    "@id": "https://w3id.org/valueflows/ont/vf#basedOn",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
@@ -6288,7 +6288,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "https://w3id.org/valueflows#Process"
+        "@id": "https://w3id.org/valueflows/ont/vf#Process"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -6299,7 +6299,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "https://w3id.org/valueflows#ProcessSpecification"
+        "@id": "https://w3id.org/valueflows/ont/vf#ProcessSpecification"
       }
     ],
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
@@ -6309,7 +6309,7 @@
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#unitOfEffort",
+    "@id": "https://w3id.org/valueflows/ont/vf#unitOfEffort",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
@@ -6321,7 +6321,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "https://w3id.org/valueflows#EconomicResource"
+        "@id": "https://w3id.org/valueflows/ont/vf#EconomicResource"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -6342,7 +6342,7 @@
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#inScopeOf",
+    "@id": "https://w3id.org/valueflows/ont/vf#inScopeOf",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
@@ -6365,7 +6365,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "https://w3id.org/valueflows#Agent"
+        "@id": "https://w3id.org/valueflows/ont/vf#Agent"
       }
     ],
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
@@ -6380,35 +6380,35 @@
       {
         "@list": [
           {
-            "@id": "https://w3id.org/valueflows#Claim"
+            "@id": "https://w3id.org/valueflows/ont/vf#Claim"
           },
           {
-            "@id": "https://w3id.org/valueflows#Commitment"
+            "@id": "https://w3id.org/valueflows/ont/vf#Commitment"
           },
           {
-            "@id": "https://w3id.org/valueflows#EconomicEvent"
+            "@id": "https://w3id.org/valueflows/ont/vf#EconomicEvent"
           },
           {
-            "@id": "https://w3id.org/valueflows#Proposal"
+            "@id": "https://w3id.org/valueflows/ont/vf#Proposal"
           },
           {
-            "@id": "https://w3id.org/valueflows#Intent"
+            "@id": "https://w3id.org/valueflows/ont/vf#Intent"
           },
           {
-            "@id": "https://w3id.org/valueflows#Scenario"
+            "@id": "https://w3id.org/valueflows/ont/vf#Scenario"
           },
           {
-            "@id": "https://w3id.org/valueflows#Process"
+            "@id": "https://w3id.org/valueflows/ont/vf#Process"
           },
           {
-            "@id": "https://w3id.org/valueflows#AgentRelationship"
+            "@id": "https://w3id.org/valueflows/ont/vf#AgentRelationship"
           }
         ]
       }
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#roleBehavior",
+    "@id": "https://w3id.org/valueflows/ont/vf#roleBehavior",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
@@ -6420,7 +6420,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "https://w3id.org/valueflows#AgentRelationshipRole"
+        "@id": "https://w3id.org/valueflows/ont/vf#AgentRelationshipRole"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -6431,7 +6431,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "https://w3id.org/valueflows#RoleBehavior"
+        "@id": "https://w3id.org/valueflows/ont/vf#RoleBehavior"
       }
     ],
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
@@ -6441,7 +6441,7 @@
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#Intent",
+    "@id": "https://w3id.org/valueflows/ont/vf#Intent",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -6464,7 +6464,7 @@
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#hasEnd",
+    "@id": "https://w3id.org/valueflows/ont/vf#hasEnd",
     "@type": [
       "http://www.w3.org/2002/07/owl#DatatypeProperty"
     ],
@@ -6517,29 +6517,29 @@
       {
         "@list": [
           {
-            "@id": "https://w3id.org/valueflows#Commitment"
+            "@id": "https://w3id.org/valueflows/ont/vf#Commitment"
           },
           {
-            "@id": "https://w3id.org/valueflows#EconomicEvent"
+            "@id": "https://w3id.org/valueflows/ont/vf#EconomicEvent"
           },
           {
-            "@id": "https://w3id.org/valueflows#Intent"
+            "@id": "https://w3id.org/valueflows/ont/vf#Intent"
           },
           {
-            "@id": "https://w3id.org/valueflows#Proposal"
+            "@id": "https://w3id.org/valueflows/ont/vf#Proposal"
           },
           {
-            "@id": "https://w3id.org/valueflows#Scenario"
+            "@id": "https://w3id.org/valueflows/ont/vf#Scenario"
           },
           {
-            "@id": "https://w3id.org/valueflows#Process"
+            "@id": "https://w3id.org/valueflows/ont/vf#Process"
           }
         ]
       }
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#recipeStipulatesReciprocal",
+    "@id": "https://w3id.org/valueflows/ont/vf#recipeStipulatesReciprocal",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
@@ -6551,7 +6551,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "https://w3id.org/valueflows#RecipeExchange"
+        "@id": "https://w3id.org/valueflows/ont/vf#RecipeExchange"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -6562,12 +6562,12 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "https://w3id.org/valueflows#RecipeFlow"
+        "@id": "https://w3id.org/valueflows/ont/vf#RecipeFlow"
       }
     ],
     "http://www.w3.org/2002/07/owl#inverseOf": [
       {
-        "@id": "https://w3id.org/valueflows#recipeReciprocalClauseOf"
+        "@id": "https://w3id.org/valueflows/ont/vf#recipeReciprocalClauseOf"
       }
     ],
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
@@ -6577,7 +6577,7 @@
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#publishes",
+    "@id": "https://w3id.org/valueflows/ont/vf#publishes",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
@@ -6589,7 +6589,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "https://w3id.org/valueflows#Proposal"
+        "@id": "https://w3id.org/valueflows/ont/vf#Proposal"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -6600,7 +6600,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "https://w3id.org/valueflows#Intent"
+        "@id": "https://w3id.org/valueflows/ont/vf#Intent"
       }
     ],
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
@@ -6610,7 +6610,7 @@
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#currentLocation",
+    "@id": "https://w3id.org/valueflows/ont/vf#currentLocation",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
@@ -6622,7 +6622,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "https://w3id.org/valueflows#EconomicResource"
+        "@id": "https://w3id.org/valueflows/ont/vf#EconomicResource"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -6643,10 +6643,10 @@
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#modify",
+    "@id": "https://w3id.org/valueflows/ont/vf#modify",
     "@type": [
       "http://www.w3.org/2002/07/owl#NamedIndividual",
-      "https://w3id.org/valueflows#Action"
+      "https://w3id.org/valueflows/ont/vf#Action"
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
@@ -6665,64 +6665,64 @@
         "@value": "testing"
       }
     ],
-    "https://w3id.org/valueflows#accountableEffect": [
+    "https://w3id.org/valueflows/ont/vf#accountableEffect": [
       {
-        "@id": "https://w3id.org/valueflows#update"
+        "@id": "https://w3id.org/valueflows/ont/vf#update"
       }
     ],
-    "https://w3id.org/valueflows#accountingEffect": [
+    "https://w3id.org/valueflows/ont/vf#accountingEffect": [
       {
-        "@id": "https://w3id.org/valueflows#notApplicable"
+        "@id": "https://w3id.org/valueflows/ont/vf#notApplicable"
       }
     ],
-    "https://w3id.org/valueflows#containedEffect": [
+    "https://w3id.org/valueflows/ont/vf#containedEffect": [
       {
-        "@id": "https://w3id.org/valueflows#notApplicable"
+        "@id": "https://w3id.org/valueflows/ont/vf#notApplicable"
       }
     ],
-    "https://w3id.org/valueflows#createResource": [
+    "https://w3id.org/valueflows/ont/vf#createResource": [
       {
-        "@id": "https://w3id.org/valueflows#notApplicable"
+        "@id": "https://w3id.org/valueflows/ont/vf#notApplicable"
       }
     ],
-    "https://w3id.org/valueflows#eventQuantity": [
+    "https://w3id.org/valueflows/ont/vf#eventQuantity": [
       {
-        "@id": "https://w3id.org/valueflows#resource"
+        "@id": "https://w3id.org/valueflows/ont/vf#resource"
       }
     ],
-    "https://w3id.org/valueflows#inputOutput": [
+    "https://w3id.org/valueflows/ont/vf#inputOutput": [
       {
-        "@id": "https://w3id.org/valueflows#output"
+        "@id": "https://w3id.org/valueflows/ont/vf#output"
       }
     ],
-    "https://w3id.org/valueflows#locationEffect": [
+    "https://w3id.org/valueflows/ont/vf#locationEffect": [
       {
-        "@id": "https://w3id.org/valueflows#update"
+        "@id": "https://w3id.org/valueflows/ont/vf#update"
       }
     ],
-    "https://w3id.org/valueflows#onhandEffect": [
+    "https://w3id.org/valueflows/ont/vf#onhandEffect": [
       {
-        "@id": "https://w3id.org/valueflows#increment"
+        "@id": "https://w3id.org/valueflows/ont/vf#increment"
       }
     ],
-    "https://w3id.org/valueflows#pairsWith": [
+    "https://w3id.org/valueflows/ont/vf#pairsWith": [
       {
-        "@id": "https://w3id.org/valueflows#accept"
+        "@id": "https://w3id.org/valueflows/ont/vf#accept"
       }
     ],
-    "https://w3id.org/valueflows#stageEffect": [
+    "https://w3id.org/valueflows/ont/vf#stageEffect": [
       {
-        "@id": "https://w3id.org/valueflows#notApplicable"
+        "@id": "https://w3id.org/valueflows/ont/vf#notApplicable"
       }
     ],
-    "https://w3id.org/valueflows#stateEffect": [
+    "https://w3id.org/valueflows/ont/vf#stateEffect": [
       {
-        "@id": "https://w3id.org/valueflows#update"
+        "@id": "https://w3id.org/valueflows/ont/vf#update"
       }
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#primaryAccountable",
+    "@id": "https://w3id.org/valueflows/ont/vf#primaryAccountable",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
@@ -6734,7 +6734,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "https://w3id.org/valueflows#EconomicResource"
+        "@id": "https://w3id.org/valueflows/ont/vf#EconomicResource"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -6745,7 +6745,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "https://w3id.org/valueflows#Agent"
+        "@id": "https://w3id.org/valueflows/ont/vf#Agent"
       }
     ],
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
@@ -6755,7 +6755,7 @@
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#conformsTo",
+    "@id": "https://w3id.org/valueflows/ont/vf#conformsTo",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
@@ -6767,7 +6767,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "https://w3id.org/valueflows#EconomicResource"
+        "@id": "https://w3id.org/valueflows/ont/vf#EconomicResource"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -6778,7 +6778,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "https://w3id.org/valueflows#ResourceSpecification"
+        "@id": "https://w3id.org/valueflows/ont/vf#ResourceSpecification"
       }
     ],
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
@@ -6788,7 +6788,7 @@
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#Agent",
+    "@id": "https://w3id.org/valueflows/ont/vf#Agent",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -6811,7 +6811,7 @@
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#image",
+    "@id": "https://w3id.org/valueflows/ont/vf#image",
     "@type": [
       "http://www.w3.org/2002/07/owl#DatatypeProperty"
     ],
@@ -6849,32 +6849,32 @@
       {
         "@list": [
           {
-            "@id": "https://w3id.org/valueflows#Agent"
+            "@id": "https://w3id.org/valueflows/ont/vf#Agent"
           },
           {
-            "@id": "https://w3id.org/valueflows#EconomicEvent"
+            "@id": "https://w3id.org/valueflows/ont/vf#EconomicEvent"
           },
           {
-            "@id": "https://w3id.org/valueflows#EconomicResource"
+            "@id": "https://w3id.org/valueflows/ont/vf#EconomicResource"
           },
           {
-            "@id": "https://w3id.org/valueflows#Intent"
+            "@id": "https://w3id.org/valueflows/ont/vf#Intent"
           },
           {
-            "@id": "https://w3id.org/valueflows#ResourceSpecification"
+            "@id": "https://w3id.org/valueflows/ont/vf#ResourceSpecification"
           },
           {
-            "@id": "https://w3id.org/valueflows#ProcessSpecification"
+            "@id": "https://w3id.org/valueflows/ont/vf#ProcessSpecification"
           },
           {
-            "@id": "https://w3id.org/valueflows#RecipeProcess"
+            "@id": "https://w3id.org/valueflows/ont/vf#RecipeProcess"
           }
         ]
       }
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#reciprocalClauseOf",
+    "@id": "https://w3id.org/valueflows/ont/vf#reciprocalClauseOf",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
@@ -6886,7 +6886,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "https://w3id.org/valueflows#Commitment"
+        "@id": "https://w3id.org/valueflows/ont/vf#Commitment"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -6897,7 +6897,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "https://w3id.org/valueflows#Agreement"
+        "@id": "https://w3id.org/valueflows/ont/vf#Agreement"
       }
     ],
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
@@ -6907,7 +6907,7 @@
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#stage",
+    "@id": "https://w3id.org/valueflows/ont/vf#stage",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
@@ -6930,7 +6930,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "https://w3id.org/valueflows#ProcessSpecification"
+        "@id": "https://w3id.org/valueflows/ont/vf#ProcessSpecification"
       }
     ],
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
@@ -6945,20 +6945,20 @@
       {
         "@list": [
           {
-            "@id": "https://w3id.org/valueflows#EconomicResource"
+            "@id": "https://w3id.org/valueflows/ont/vf#EconomicResource"
           },
           {
-            "@id": "https://w3id.org/valueflows#Commitment"
+            "@id": "https://w3id.org/valueflows/ont/vf#Commitment"
           },
           {
-            "@id": "https://w3id.org/valueflows#RecipeFlow"
+            "@id": "https://w3id.org/valueflows/ont/vf#RecipeFlow"
           }
         ]
       }
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#AgentRelationshipRole",
+    "@id": "https://w3id.org/valueflows/ont/vf#AgentRelationshipRole",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -6981,7 +6981,7 @@
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#hasBeginning",
+    "@id": "https://w3id.org/valueflows/ont/vf#hasBeginning",
     "@type": [
       "http://www.w3.org/2002/07/owl#DatatypeProperty"
     ],
@@ -7034,29 +7034,29 @@
       {
         "@list": [
           {
-            "@id": "https://w3id.org/valueflows#Commitment"
+            "@id": "https://w3id.org/valueflows/ont/vf#Commitment"
           },
           {
-            "@id": "https://w3id.org/valueflows#EconomicEvent"
+            "@id": "https://w3id.org/valueflows/ont/vf#EconomicEvent"
           },
           {
-            "@id": "https://w3id.org/valueflows#Intent"
+            "@id": "https://w3id.org/valueflows/ont/vf#Intent"
           },
           {
-            "@id": "https://w3id.org/valueflows#Proposal"
+            "@id": "https://w3id.org/valueflows/ont/vf#Proposal"
           },
           {
-            "@id": "https://w3id.org/valueflows#Scenario"
+            "@id": "https://w3id.org/valueflows/ont/vf#Scenario"
           },
           {
-            "@id": "https://w3id.org/valueflows#Process"
+            "@id": "https://w3id.org/valueflows/ont/vf#Process"
           }
         ]
       }
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#RecipeFlow",
+    "@id": "https://w3id.org/valueflows/ont/vf#RecipeFlow",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -7079,7 +7079,7 @@
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#lot",
+    "@id": "https://w3id.org/valueflows/ont/vf#lot",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
@@ -7091,7 +7091,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "https://w3id.org/valueflows#EconomicResource"
+        "@id": "https://w3id.org/valueflows/ont/vf#EconomicResource"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -7112,7 +7112,7 @@
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#stipulatesReciprocal",
+    "@id": "https://w3id.org/valueflows/ont/vf#stipulatesReciprocal",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
@@ -7124,7 +7124,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "https://w3id.org/valueflows#Agreement"
+        "@id": "https://w3id.org/valueflows/ont/vf#Agreement"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -7135,12 +7135,12 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "https://w3id.org/valueflows#Commitment"
+        "@id": "https://w3id.org/valueflows/ont/vf#Commitment"
       }
     ],
     "http://www.w3.org/2002/07/owl#inverseOf": [
       {
-        "@id": "https://w3id.org/valueflows#reciprocalClauseOf"
+        "@id": "https://w3id.org/valueflows/ont/vf#reciprocalClauseOf"
       }
     ],
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
@@ -7150,7 +7150,7 @@
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#CreateResource",
+    "@id": "https://w3id.org/valueflows/ont/vf#CreateResource",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -7173,7 +7173,7 @@
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#Commitment",
+    "@id": "https://w3id.org/valueflows/ont/vf#Commitment",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -7204,7 +7204,7 @@
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#AccountingEffect",
+    "@id": "https://w3id.org/valueflows/ont/vf#AccountingEffect",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -7227,7 +7227,7 @@
     ]
   },
   {
-    "@id": "https://w3id.org/valueflows#resourceInventoriedAs",
+    "@id": "https://w3id.org/valueflows/ont/vf#resourceInventoriedAs",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
@@ -7250,7 +7250,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "https://w3id.org/valueflows#EconomicResource"
+        "@id": "https://w3id.org/valueflows/ont/vf#EconomicResource"
       }
     ],
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
@@ -7265,13 +7265,13 @@
       {
         "@list": [
           {
-            "@id": "https://w3id.org/valueflows#Commitment"
+            "@id": "https://w3id.org/valueflows/ont/vf#Commitment"
           },
           {
-            "@id": "https://w3id.org/valueflows#Intent"
+            "@id": "https://w3id.org/valueflows/ont/vf#Intent"
           },
           {
-            "@id": "https://w3id.org/valueflows#EconomicEvent"
+            "@id": "https://w3id.org/valueflows/ont/vf#EconomicEvent"
           }
         ]
       }

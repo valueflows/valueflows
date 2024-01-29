@@ -1,6 +1,6 @@
 {
   "@graph" : [ {
-    "@id" : "https://w3id.org/valueflows/",
+    "@id" : "https://w3id.org/valueflows/ont/vf#",
     "@type" : "owl:Ontology",
     "status" : "http://purl.org/adms/status/UnderDevelopment",
     "title" : "Value Flows Ontology",
@@ -366,7 +366,7 @@
     "title" : {
       "@id" : "http://purl.org/dc/terms/title"
     },
-    "vf" : "https://w3id.org/valueflows/",
+    "vf" : "https://w3id.org/valueflows/ont/vf#",
     "schema" : "http://schema.org/",
     "owl" : "http://www.w3.org/2002/07/owl#",
     "rdf" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
