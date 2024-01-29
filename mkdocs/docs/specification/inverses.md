@@ -1,12 +1,10 @@
 # Query and Filter Naming
 
-**This page is being updated.  If you need something, please contact us in [the VF Welcome chat](https://matrix.to/#/#valueflows:matrix.org).**
-
 ## Introduction
 
-Although queries and query filters are not specified in the RDF core, this set of guidelines should be used, to facilitate standard api naming.  It is possible that at some point they will be included in the formal VF namespace.
+Some key inverses are specified in the VF core, for flexibility of different technical implementations.  Many are not.  This section is to provide guidance on naming for those that are not explicitly specified, to facilitate standard api naming.
 
-This document is not meant to imply that all of these named queries and filters should be implemented in any particular application api.
+This document is not meant to imply that all of these named queries and filters should be implemented in any particular application api!  Most implementations will want to use only a fraction of these.
 
 *Note:* Filters can be applicable to any query that can return more than one of the class.  For example all processes, processes in scope of an agent, processes in a plan, could each use the process filters.
 
@@ -81,25 +79,16 @@ This document is not meant to imply that all of these named queries and filters 
 
 *inverse queries:*
 
-   * observedInputs (EconomicEvent.inputOf)
-   * observedOutputs (EconomicEvent.outputOf) 
-   * committedInputs (Commitment.inputOf)
-   * committedOutputs (Commitment.outputOf)
-   * intendedInputs (Intent.inputOf)
-   * intendedOutputs (Intent.outputOf)
-
 *other queries:*
 
    * economicEvents (EconomicEvent.inputOf or .outputOf)
    * commitments (Commitment.inputOf or .outputOf)
    * intents (Intent.inputOf or .outputOf)
-   * inputs (EconomicEvent or Commitment or Intent .inputOf)
-   * outputs (EconomicEvent or Commitment or Intent .outputOf)
-   * unplannedEconomicEvents (any EconomicEvent.inputOf or .outputOf that don't fulfill a Commitment)
-   * unplannedInputs (any EconomicEvent.inputOf that doesn't fulfill a Commitment)
-   * unplannedOutputs (any EconomicEvent.outputOf that doesn't fulfill a Commitment)
-   * involvedAgents (any .provider or .receivers or .inScopeOf on Commitments or EconomicEvents or Intents, and self.inScopeOf)
-   * workingAgents (any EconomicEvent.provider on an input EconomicEvent with action equal to work)
+   * unplannedEconomicEvents (all EconomicEvent.inputOf or .outputOf that doesn't fulfill a Commitment)
+   * unplannedInputs (all EconomicEvent.inputOf that doesn't fulfill a Commitment)
+   * unplannedOutputs (all EconomicEvent.outputOf that doesn't fulfill a Commitment)
+   * involvedAgents (all .provider or .receivers or .inScopeOf on Commitments or EconomicEvents or Intents, and self.inScopeOf)
+   * workingAgents (all EconomicEvent.provider on an input EconomicEvent with action equal to work)
    * nextProcesses (Processes where .inputOf references the same .resourceInventoriedAs as self.outputOf references)
    * previousProcesses (Processes where .outputOf references the same .resourceInventoriedAs as self.inputOf references)
    * previous (EconomicEvent.inputOf, same as observedInputs)
@@ -116,9 +105,6 @@ This document is not meant to imply that all of these named queries and filters 
 
 *inverse queries:*
 
-   * settles (Settlement.settledBy)
-   * fulfills (Fulfillment.fulfilledBy)
-   * satisfies (Satisfaction.satisfiedBy)
    * appreciationOf (Appreciation.appreciationWith)
    * appreciationWith (Appreciation.appreciationOf)
    * triggers (EconomicEvent.triggeredBy)
@@ -156,13 +142,6 @@ This document is not meant to imply that all of these named queries and filters 
    * trace (ordered incoming value flows, see [Track and Trace](../algorithms/track.md) for logic)
    * track (ordered outgoing value flows, see [Track and Trace](../algorithms/track.md) for logic)
 
-### Fulfillment
-
-*main queries:*
-
-   * fulfillment
-   * fulfillments
-
 ### Appreciation
 
 *main queries:*
@@ -178,23 +157,16 @@ This document is not meant to imply that all of these named queries and filters 
 
    * proposal
    * proposals
-   * offers (Proposals where a .publishedIn ProposedIntent.reciprocal is false and the ProposedIntent.publishes Intent has a .provider)
-   * requests (Proposals where a .publishedIn ProposedIntent.reciprocal is false and the ProposedIntent.publishes Intent has a .receiver)
+   * offers (Proposals where .purpose is offer; or where .publishes has an Intent.provider)
+   * requests (Proposals where .purpose is request; or where .reciprocal has an Intent.receiver)
 
 
-*filters:* inScopeOf, withinLocation (the proposed intents are withinLocation), active (boolean, the current date is within the hasBeginning and hasEnd, inclusive), isOffer (boolean, the non-reciprocal intents have provider), isRequest (boolean, the non-reciprocal intents have receiver)
-
-*inverse queries:*
-
-   * publishes (ProposedIntent.publishedIn)
-   * proposedTo (ProposedTo.proposed)
+*filters:* inScopeOf, withinLocation (the proposed intents are withinLocation), active (boolean, the current date is within the hasBeginning and hasEnd, inclusive), isOffer (boolean), isRequest (boolean)
 
 *other queries:*
 
-   * isOffer (boolean, true if a .publishedIn ProposedIntent.reciprocal is false and the ProposedIntent.publishes Intent has a .provider)
-   * isRequest (boolean, true if a .publishedIn ProposedIntent.reciprocal is false and the ProposedIntent.publishes Intent has a .receiver)
-   * primaryIntents (.publishes Intents where the self.publishedIn ProposedIntent.reciprocal is false)
-   * reciprocalIntents (.publishes Intents where the self.publishedIn ProposedIntent.reciprocal is true)
+   * isOffer (boolean, true if .purpose is offer; or if a .publishes has a .provider)
+   * isRequest (boolean, true if .purpose is request; or if a .publishes has a .receiver)
 
 ### Intent
 
@@ -207,18 +179,7 @@ This document is not meant to imply that all of these named queries and filters 
 
 *inverse queries:*
 
-   * publishedIn (ProposedIntent.publishes)
-   * satisfiedBy (Satisfaction.satisfies)
    * (probably some location based queries, TBD)
-
-### ProposedIntent
-
-*filters:* reciprocal
-
-*main queries:*
-
-   * proposedIntent
-   * proposedIntents
 
 ### Agreement
 
@@ -229,13 +190,12 @@ This document is not meant to imply that all of these named queries and filters 
 
 *inverse queries:*
 
-   * commitments (Commitment.clauseOf)
    * unplannedEconomicEvents (EconomicEvent.realizationOf)
 
 *other queries:*
 
    * involvedAgents (any .provider, .receiver, .inScopeOf on commitments or economicEvents)
-   * economicEvents (EconomicEvent.realizationOf, and any EconomicEvents that fulfill Commitments that are .clauseOf the Agreement)
+   * economicEvents (EconomicEvent.realizationOf, and any EconomicEvents that fulfill Commitments that are .clauseOf or .reciprocalClauseOf the Agreement)
 
 ### Commitment
 
@@ -248,20 +208,10 @@ This document is not meant to imply that all of these named queries and filters 
 
 *inverse queries:*
 
-   * fulfilledBy: (Fulfillment.fulfills)
-   * satisfies (Satisfaction.satisfiedBy)
-
 *other queries:*
 
    * involvedAgents (Commitment.provider, .receiver, .inScopeOf if agent)
    * (possibly some location based queries, TBD)
-
-### Satisfaction
-
-*main queries:*
-
-   * satisfaction
-   * satisfactions
 
 ### Claim
 
@@ -274,15 +224,6 @@ This document is not meant to imply that all of these named queries and filters 
 
 *inverse queries:*
 
-   * settledBy (Settlement.settles)
-
-### Settlement
-
-*main queries:*
-
-   * settlement
-   * settlements
-
 ### Plan
 
 *main queries:*
@@ -293,10 +234,6 @@ This document is not meant to imply that all of these named queries and filters 
 *filters:* searchString, finished (true means all the processes that are part of the Plan are finished), TBD possibly some date related logic
 
 *inverse queries:*
-
-   * processes (Process.plannedWithin)
-   * nonProcessCommitments (Commitment.plannedWithin)
-   * independentDemands (Commitment.independentDemandOf)
 
 *other queries:*
 
@@ -337,11 +274,11 @@ This document is not meant to imply that all of these named queries and filters 
 *inverse queries:*
 
    * conformingResources (EconomicResource.conformsTo)
-   * economicEvents (EconomicEvent.resourceConformsTo)
-   * commitments (Commitment.resourceConformsTo)
-   * intents (Intent.resourceConformsTo)
-   * claims (Claim.resourceConformsTo)
-   * recipes TBD
+   * conformingEconomicEvents (EconomicEvent.resourceConformsTo)
+   * conformingCommitments (Commitment.resourceConformsTo)
+   * conformingIntents (Intent.resourceConformsTo)
+   * conformingClaims (Claim.resourceConformsTo)
+   * conformingRecipeFlows (RecipeFlow.resourceConformsTo)
 
 ### ProcessSpecification
 
@@ -358,23 +295,12 @@ This document is not meant to imply that all of these named queries and filters 
    * resourcesCurrentlyAtStage (EconomicResource.stage)
    * recipeFlowsRequiringStage (RecipeFlow.stage)
 
-### RecipeResource
-
-*main queries:*
-
-   * recipeResource
-   * recipeResources
-
-TBD
-
 ### RecipeFlow
 
 *main queries:*
 
    * recipeFlow
    * reciprFlows
-
-TBD
 
 ### RecipeExchange
 
@@ -383,16 +309,12 @@ TBD
    * recipeExchange
    * recipeExchanges
 
-TBD
-
 ### RecipeProcess
 
 *main queries:*
 
    * recipeProcess
    * recipeProcesses
-
-TBD
 
 ### ScenarioDefinition
 

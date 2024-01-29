@@ -674,13 +674,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#fulfillment" class="md-nav__link">
-    Fulfillment
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#appreciation" class="md-nav__link">
     Appreciation
   </a>
@@ -715,13 +708,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#proposedintent" class="md-nav__link">
-    ProposedIntent
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#agreement" class="md-nav__link">
     Agreement
   </a>
@@ -736,22 +722,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#satisfaction" class="md-nav__link">
-    Satisfaction
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#claim" class="md-nav__link">
     Claim
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#settlement" class="md-nav__link">
-    Settlement
   </a>
   
 </li>
@@ -793,13 +765,6 @@
           <li class="md-nav__item">
   <a href="#processspecification" class="md-nav__link">
     ProcessSpecification
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#reciperesource" class="md-nav__link">
-    RecipeResource
   </a>
   
 </li>
@@ -1743,13 +1708,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#fulfillment" class="md-nav__link">
-    Fulfillment
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#appreciation" class="md-nav__link">
     Appreciation
   </a>
@@ -1784,13 +1742,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#proposedintent" class="md-nav__link">
-    ProposedIntent
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#agreement" class="md-nav__link">
     Agreement
   </a>
@@ -1805,22 +1756,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#satisfaction" class="md-nav__link">
-    Satisfaction
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#claim" class="md-nav__link">
     Claim
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#settlement" class="md-nav__link">
-    Settlement
   </a>
   
 </li>
@@ -1862,13 +1799,6 @@
           <li class="md-nav__item">
   <a href="#processspecification" class="md-nav__link">
     ProcessSpecification
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#reciperesource" class="md-nav__link">
-    RecipeResource
   </a>
   
 </li>
@@ -1944,10 +1874,9 @@
 
 
 <h1 id="query-and-filter-naming">Query and Filter Naming</h1>
-<p><strong>This page is being updated.  If you need something, please contact us in <a href="https://matrix.to/#/#valueflows:matrix.org">the VF Welcome chat</a>.</strong></p>
 <h2 id="introduction">Introduction</h2>
-<p>Although queries and query filters are not specified in the RDF core, this set of guidelines should be used, to facilitate standard api naming.  It is possible that at some point they will be included in the formal VF namespace.</p>
-<p>This document is not meant to imply that all of these named queries and filters should be implemented in any particular application api.</p>
+<p>Some key inverses are specified in the VF core, for flexibility of different technical implementations.  Many are not.  This section is to provide guidance on naming for those that are not explicitly specified, to facilitate standard api naming.</p>
+<p>This document is not meant to imply that all of these named queries and filters should be implemented in any particular application api!  Most implementations will want to use only a fraction of these.</p>
 <p><em>Note:</em> Filters can be applicable to any query that can return more than one of the class.  For example all processes, processes in scope of an agent, processes in a plan, could each use the process filters.</p>
 <p><em>Status:</em> Not all of these queries and filters are tested, and there will certainly be other useful queries and filters. If anyone has recommended changes or additions, please start an issue or merge request, or just let us know in the Welcome chat (links on the home page).</p>
 <h2 id="observation-layer">Observation layer</h2>
@@ -2011,26 +1940,16 @@
 </ul>
 <p><em>filters:</em> searchString, finished, classifiedAs, inScopeOf, startDate, endDate (include any process that overlaps the start date to end date range inclusive; missing start date is from the beginning, missing end date is to the end)</p>
 <p><em>inverse queries:</em></p>
-<ul>
-<li>observedInputs (EconomicEvent.inputOf)</li>
-<li>observedOutputs (EconomicEvent.outputOf) </li>
-<li>committedInputs (Commitment.inputOf)</li>
-<li>committedOutputs (Commitment.outputOf)</li>
-<li>intendedInputs (Intent.inputOf)</li>
-<li>intendedOutputs (Intent.outputOf)</li>
-</ul>
 <p><em>other queries:</em></p>
 <ul>
 <li>economicEvents (EconomicEvent.inputOf or .outputOf)</li>
 <li>commitments (Commitment.inputOf or .outputOf)</li>
 <li>intents (Intent.inputOf or .outputOf)</li>
-<li>inputs (EconomicEvent or Commitment or Intent .inputOf)</li>
-<li>outputs (EconomicEvent or Commitment or Intent .outputOf)</li>
-<li>unplannedEconomicEvents (any EconomicEvent.inputOf or .outputOf that don't fulfill a Commitment)</li>
-<li>unplannedInputs (any EconomicEvent.inputOf that doesn't fulfill a Commitment)</li>
-<li>unplannedOutputs (any EconomicEvent.outputOf that doesn't fulfill a Commitment)</li>
-<li>involvedAgents (any .provider or .receivers or .inScopeOf on Commitments or EconomicEvents or Intents, and self.inScopeOf)</li>
-<li>workingAgents (any EconomicEvent.provider on an input EconomicEvent with action equal to work)</li>
+<li>unplannedEconomicEvents (all EconomicEvent.inputOf or .outputOf that doesn't fulfill a Commitment)</li>
+<li>unplannedInputs (all EconomicEvent.inputOf that doesn't fulfill a Commitment)</li>
+<li>unplannedOutputs (all EconomicEvent.outputOf that doesn't fulfill a Commitment)</li>
+<li>involvedAgents (all .provider or .receivers or .inScopeOf on Commitments or EconomicEvents or Intents, and self.inScopeOf)</li>
+<li>workingAgents (all EconomicEvent.provider on an input EconomicEvent with action equal to work)</li>
 <li>nextProcesses (Processes where .inputOf references the same .resourceInventoriedAs as self.outputOf references)</li>
 <li>previousProcesses (Processes where .outputOf references the same .resourceInventoriedAs as self.inputOf references)</li>
 <li>previous (EconomicEvent.inputOf, same as observedInputs)</li>
@@ -2045,9 +1964,6 @@
 <p><em>filters:</em> searchString, action, provider, receiver, resourceClassifiedAs, startDate, endDate (include any EconomicEvent that overlaps the start date to end date range inclusive; missing start date is from the beginning, missing end date is to the end) </p>
 <p><em>inverse queries:</em></p>
 <ul>
-<li>settles (Settlement.settledBy)</li>
-<li>fulfills (Fulfillment.fulfilledBy)</li>
-<li>satisfies (Satisfaction.satisfiedBy)</li>
 <li>appreciationOf (Appreciation.appreciationWith)</li>
 <li>appreciationWith (Appreciation.appreciationOf)</li>
 <li>triggers (EconomicEvent.triggeredBy)</li>
@@ -2083,12 +1999,6 @@
 <li>trace (ordered incoming value flows, see <a href="../../algorithms/track/">Track and Trace</a> for logic)</li>
 <li>track (ordered outgoing value flows, see <a href="../../algorithms/track/">Track and Trace</a> for logic)</li>
 </ul>
-<h3 id="fulfillment">Fulfillment</h3>
-<p><em>main queries:</em></p>
-<ul>
-<li>fulfillment</li>
-<li>fulfillments</li>
-</ul>
 <h3 id="appreciation">Appreciation</h3>
 <p><em>main queries:</em></p>
 <ul>
@@ -2101,21 +2011,14 @@
 <ul>
 <li>proposal</li>
 <li>proposals</li>
-<li>offers (Proposals where a .publishedIn ProposedIntent.reciprocal is false and the ProposedIntent.publishes Intent has a .provider)</li>
-<li>requests (Proposals where a .publishedIn ProposedIntent.reciprocal is false and the ProposedIntent.publishes Intent has a .receiver)</li>
+<li>offers (Proposals where .purpose is offer; or where .publishes has an Intent.provider)</li>
+<li>requests (Proposals where .purpose is request; or where .reciprocal has an Intent.receiver)</li>
 </ul>
-<p><em>filters:</em> inScopeOf, withinLocation (the proposed intents are withinLocation), active (boolean, the current date is within the hasBeginning and hasEnd, inclusive), isOffer (boolean, the non-reciprocal intents have provider), isRequest (boolean, the non-reciprocal intents have receiver)</p>
-<p><em>inverse queries:</em></p>
-<ul>
-<li>publishes (ProposedIntent.publishedIn)</li>
-<li>proposedTo (ProposedTo.proposed)</li>
-</ul>
+<p><em>filters:</em> inScopeOf, withinLocation (the proposed intents are withinLocation), active (boolean, the current date is within the hasBeginning and hasEnd, inclusive), isOffer (boolean), isRequest (boolean)</p>
 <p><em>other queries:</em></p>
 <ul>
-<li>isOffer (boolean, true if a .publishedIn ProposedIntent.reciprocal is false and the ProposedIntent.publishes Intent has a .provider)</li>
-<li>isRequest (boolean, true if a .publishedIn ProposedIntent.reciprocal is false and the ProposedIntent.publishes Intent has a .receiver)</li>
-<li>primaryIntents (.publishes Intents where the self.publishedIn ProposedIntent.reciprocal is false)</li>
-<li>reciprocalIntents (.publishes Intents where the self.publishedIn ProposedIntent.reciprocal is true)</li>
+<li>isOffer (boolean, true if .purpose is offer; or if a .publishes has a .provider)</li>
+<li>isRequest (boolean, true if .purpose is request; or if a .publishes has a .receiver)</li>
 </ul>
 <h3 id="intent">Intent</h3>
 <p><em>main queries:</em></p>
@@ -2126,16 +2029,7 @@
 <p><em>filters:</em> searchString, action, provider, receiver, resourceClassifiedAs, resourceConformsTo, finished, startDate, endDate, inScopeOf, withinLocation (some geographic boundary, city, region, etc.)</p>
 <p><em>inverse queries:</em></p>
 <ul>
-<li>publishedIn (ProposedIntent.publishes)</li>
-<li>satisfiedBy (Satisfaction.satisfies)</li>
 <li>(probably some location based queries, TBD)</li>
-</ul>
-<h3 id="proposedintent">ProposedIntent</h3>
-<p><em>filters:</em> reciprocal</p>
-<p><em>main queries:</em></p>
-<ul>
-<li>proposedIntent</li>
-<li>proposedIntents</li>
 </ul>
 <h3 id="agreement">Agreement</h3>
 <p><em>main queries:</em></p>
@@ -2145,13 +2039,12 @@
 </ul>
 <p><em>inverse queries:</em></p>
 <ul>
-<li>commitments (Commitment.clauseOf)</li>
 <li>unplannedEconomicEvents (EconomicEvent.realizationOf)</li>
 </ul>
 <p><em>other queries:</em></p>
 <ul>
 <li>involvedAgents (any .provider, .receiver, .inScopeOf on commitments or economicEvents)</li>
-<li>economicEvents (EconomicEvent.realizationOf, and any EconomicEvents that fulfill Commitments that are .clauseOf the Agreement)</li>
+<li>economicEvents (EconomicEvent.realizationOf, and any EconomicEvents that fulfill Commitments that are .clauseOf or .reciprocalClauseOf the Agreement)</li>
 </ul>
 <h3 id="commitment">Commitment</h3>
 <p><em>main queries:</em></p>
@@ -2161,20 +2054,10 @@
 </ul>
 <p><em>filters:</em> searchString, action, provider, receiver, resourceClassifiedAs, resourceConformsTo, finished, startDate, endDate (include any Commitment that overlaps the start date to end date range inclusive; missing start date is from the beginning, missing end date is to the end), withinLocation (some geographic boundary, city, region, etc.)</p>
 <p><em>inverse queries:</em></p>
-<ul>
-<li>fulfilledBy: (Fulfillment.fulfills)</li>
-<li>satisfies (Satisfaction.satisfiedBy)</li>
-</ul>
 <p><em>other queries:</em></p>
 <ul>
 <li>involvedAgents (Commitment.provider, .receiver, .inScopeOf if agent)</li>
 <li>(possibly some location based queries, TBD)</li>
-</ul>
-<h3 id="satisfaction">Satisfaction</h3>
-<p><em>main queries:</em></p>
-<ul>
-<li>satisfaction</li>
-<li>satisfactions</li>
 </ul>
 <h3 id="claim">Claim</h3>
 <p><em>main queries:</em></p>
@@ -2184,15 +2067,6 @@
 </ul>
 <p><em>filters:</em> action, provider, receiver, resourceClassifiedAs, resourceConformsTo, finished, startDate, endDate (include any Claim where due overlaps the start date to end date range inclusive; missing start date is from the beginning, missing end date is to the end)</p>
 <p><em>inverse queries:</em></p>
-<ul>
-<li>settledBy (Settlement.settles)</li>
-</ul>
-<h3 id="settlement">Settlement</h3>
-<p><em>main queries:</em></p>
-<ul>
-<li>settlement</li>
-<li>settlements</li>
-</ul>
 <h3 id="plan">Plan</h3>
 <p><em>main queries:</em></p>
 <ul>
@@ -2201,11 +2075,6 @@
 </ul>
 <p><em>filters:</em> searchString, finished (true means all the processes that are part of the Plan are finished), TBD possibly some date related logic</p>
 <p><em>inverse queries:</em></p>
-<ul>
-<li>processes (Process.plannedWithin)</li>
-<li>nonProcessCommitments (Commitment.plannedWithin)</li>
-<li>independentDemands (Commitment.independentDemandOf)</li>
-</ul>
 <p><em>other queries:</em></p>
 <ul>
 <li>inScopeOf (all the .plannedWithin Process.inScopeOf)</li>
@@ -2240,11 +2109,11 @@
 <p><em>inverse queries:</em></p>
 <ul>
 <li>conformingResources (EconomicResource.conformsTo)</li>
-<li>economicEvents (EconomicEvent.resourceConformsTo)</li>
-<li>commitments (Commitment.resourceConformsTo)</li>
-<li>intents (Intent.resourceConformsTo)</li>
-<li>claims (Claim.resourceConformsTo)</li>
-<li>recipes TBD</li>
+<li>conformingEconomicEvents (EconomicEvent.resourceConformsTo)</li>
+<li>conformingCommitments (Commitment.resourceConformsTo)</li>
+<li>conformingIntents (Intent.resourceConformsTo)</li>
+<li>conformingClaims (Claim.resourceConformsTo)</li>
+<li>conformingRecipeFlows (RecipeFlow.resourceConformsTo)</li>
 </ul>
 <h3 id="processspecification">ProcessSpecification</h3>
 <p><em>main queries:</em></p>
@@ -2260,34 +2129,24 @@
 <li>resourcesCurrentlyAtStage (EconomicResource.stage)</li>
 <li>recipeFlowsRequiringStage (RecipeFlow.stage)</li>
 </ul>
-<h3 id="reciperesource">RecipeResource</h3>
-<p><em>main queries:</em></p>
-<ul>
-<li>recipeResource</li>
-<li>recipeResources</li>
-</ul>
-<p>TBD</p>
 <h3 id="recipeflow">RecipeFlow</h3>
 <p><em>main queries:</em></p>
 <ul>
 <li>recipeFlow</li>
 <li>reciprFlows</li>
 </ul>
-<p>TBD</p>
 <h3 id="recipeexchange">RecipeExchange</h3>
 <p><em>main queries:</em></p>
 <ul>
 <li>recipeExchange</li>
 <li>recipeExchanges</li>
 </ul>
-<p>TBD</p>
 <h3 id="recipeprocess">RecipeProcess</h3>
 <p><em>main queries:</em></p>
 <ul>
 <li>recipeProcess</li>
 <li>recipeProcesses</li>
 </ul>
-<p>TBD</p>
 <h3 id="scenariodefinition">ScenarioDefinition</h3>
 <p><em>main queries:</em></p>
 <ul>
