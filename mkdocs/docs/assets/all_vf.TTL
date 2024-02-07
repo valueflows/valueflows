@@ -12,7 +12,6 @@
 @prefix geo:   <http://www.w3.org/2003/01/geo/wgs84_pos#> .
 @prefix vs:    <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
 @prefix dtype: <http://www.linkedmodel.org/schema/dtype#> .
-@prefix dfc:   <http://www.virtual-assembly.org/DataFoodConsortium/BusinessOntology#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
 
 
@@ -835,15 +834,15 @@ vf:trackingIdentifier a     owl:DatatypeProperty ;
         rdfs:domain         vf:EconomicResource ;
         rdfs:range          xsd:string ;
         vs:term_status      "unstable" ;
-        rdfs:comment        "Sometimes called serial number, used when each item must have a trackable identifier (like a computer). Could also be used for other unique tracking identifiers needed for resources."@en ;
+        rdfs:comment        "Any identifier used to track the resource, such as a serial number or VIN or lot/batch identifier."@en ;
         .
 
-vf:lot a                    owl:ObjectProperty ;
-        rdfs:label          "lot"@en ;
+vf:expiresOn a              owl:DatatypeProperty ;
+        rdfs:label          "expires on"@en ;
         rdfs:domain         vf:EconomicResource ;
-        rdfs:range          dfc:ProductBatch ;
+        rdfs:range          xsd:dateTimeStamp ;
         vs:term_status      "unstable" ;
-        rdfs:comment        "Lot or batch of an economic resource, used to track forward or backwards to all occurrences of resources of that lot."@en ;
+        rdfs:comment        "If the resource is being tracked as a lot or batch, this is the date the batch expires, after which it is not recommended to use/consume."@en ;
         .
 
 vf:fulfills  a              owl:ObjectProperty ;

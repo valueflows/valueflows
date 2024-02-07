@@ -50,15 +50,6 @@ of [Alignment of PROV-O with OWL-Time](https://www.w3.org/TR/owl-time/#time-prov
 * [`geo:long`](https://www.w3.org/2003/01/geo/wgs84_pos#long)
 * [`geo:alt`](https://www.w3.org/2003/01/geo/wgs84_pos#alt)
 
-## DFC
-
-[http://www.virtual-assembly.org/DataFoodConsortium/BusinessOntology#](http://www.virtual-assembly.org/DataFoodConsortium/BusinessOntology#)
-
-* [`dfc:ProductBatch`](http://www.virtual-assembly.org/DataFoodConsortium/BusinessOntology#ProductBatch)
-* [`dfc:batchNumber`](http://www.virtual-assembly.org/DataFoodConsortium/BusinessOntology#batchNumber)
-* [`dfc:expiryDate`](http://www.virtual-assembly.org/DataFoodConsortium/BusinessOntology#expiryDate)
-* [`dfc:productionDate`](http://www.virtual-assembly.org/DataFoodConsortium/BusinessOntology#productionDate)
-
 ## DCTERMS
 
 [http://purl.org/dc/terms/](http://purl.org/dc/terms/)
