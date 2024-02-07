@@ -1094,7 +1094,7 @@ vf:realizationOf a          owl:ObjectProperty ;
         rdfs:domain         vf:EconomicEvent ;
         rdfs:range          vf:Agreement ;
         vs:term_status      "unstable" ;
-        rdfs:comment        "This economic event occurs as part of this agreement."@en ;
+        rdfs:comment        "This non-reciprocal economic event occurs as part of this agreement."@en ;
         .
 
 vf:realizes a               owl:ObjectProperty ;
@@ -1103,7 +1103,24 @@ vf:realizes a               owl:ObjectProperty ;
         rdfs:domain         vf:Agreement ;
         rdfs:range          vf:EconomicEvent ;
         vs:term_status      "unstable" ;
-        rdfs:comment        "All the economic events (with or without commitments) that realize the agreement."@en ;
+        rdfs:comment        "All the non-reciprocal economic events (with or without commitments) that realize the agreement."@en ;
+        .
+
+vf:reciprocalRealizationOf a owl:ObjectProperty ;
+        rdfs:label          "reciprocal realization of"@en ;
+        rdfs:domain         vf:EconomicEvent ;
+        rdfs:range          vf:Agreement ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "This reciprocal economic event occurs as part of this agreement."@en ;
+        .
+
+vf:realizesReciprocal a     owl:ObjectProperty ;
+        owl:inverseOf       vf:reciprocalRealizationOf ;
+        rdfs:label          "realizes reciprocal"@en ;
+        rdfs:domain         vf:Agreement ;
+        rdfs:range          vf:EconomicEvent ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "All the reciprocal economic events (with or without commitments) that realize the agreement."@en ;
         .
 
 vf:bundledIn a              owl:ObjectProperty ;
