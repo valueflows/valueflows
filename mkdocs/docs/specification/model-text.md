@@ -39,11 +39,6 @@ This specifies the kind of resource, to the most specific level needed.  It also
 
 An actual EconomicResource is created only by EconomicEvents.  It is also updated only by EconomicEvents for all its accounting related properties.  It becomes involved in a Process by being referenced by an EconomicEvent. It can appear on a Commitment or Intent if recording of a specific resource is needed.  It must have a ResourceSpecification.  It can have a stage and/or a state.  It knows its primary accountable Agent at any point in time.  It can be contained in another EconomicResource.
 
-#### dfc:ProductBatch
-
-ProductBatch is a lot or batch associated with an EconomicResource.  It has its own identity because many EconomicResources can be part of the same lot/batch, and it has other useful information as a lot.
-
-
 ### Putting flows into motion...
 
 More flow info at [Flows concepts](../concepts/flows.md), [Actions concepts](../concepts/actions.md), [Processes concepts](../concepts/processes.md), [Transfers concepts](../concepts/transfers.md), [Exchanges concepts](../concepts/exchanges.md).  First, some necessary pieces.
