@@ -617,6 +617,22 @@ vf:due a                    owl:DatatypeProperty ;
         rdfs:comment        "The time something is expected to be complete."@en ;
         .
 
+vf:localLabel a             owl:DatatypeProperty ;
+        rdfs:label          "unit local label"@en ;
+        rdfs:domain         om2:Unit ;
+        rdfs:range          xsd:string ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "An override label to optionally display for units of measure."@en ;
+        .
+
+vf:localSymbol a            owl:DatatypeProperty ;
+        rdfs:label          "unit local symbol"@en ;
+        rdfs:domain         om2:Unit ;
+        rdfs:range          xsd:string ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "An override symbol to optionally display for units of measure."@en ;
+        .
+
 vf:accountingQuantity a     owl:ObjectProperty ;
         rdfs:label          "accounting quantity"@en ;
         rdfs:domain         vf:EconomicResource ;
