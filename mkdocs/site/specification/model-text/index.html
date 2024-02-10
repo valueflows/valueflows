@@ -630,13 +630,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#dfcproductbatch" class="md-nav__link">
-    dfc:ProductBatch
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -1862,13 +1855,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#dfcproductbatch" class="md-nav__link">
-    dfc:ProductBatch
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -2177,8 +2163,6 @@
 <p>This specifies the kind of resource, to the most specific level needed.  It also fills the space for the resource when it is not yet, or never will be, an actual resource.  It can be used in and across networks to communicate the resource type needed.  EconomicResource and RecipeResource, as well as the resource concept referenced in flows (EconomicEvent, Intent, Commitment, Claim), conform to a ResourceSpecification.</p>
 <h4 id="vfeconomicresource">vf:EconomicResource</h4>
 <p>An actual EconomicResource is created only by EconomicEvents.  It is also updated only by EconomicEvents for all its accounting related properties.  It becomes involved in a Process by being referenced by an EconomicEvent. It can appear on a Commitment or Intent if recording of a specific resource is needed.  It must have a ResourceSpecification.  It can have a stage and/or a state.  It knows its primary accountable Agent at any point in time.  It can be contained in another EconomicResource.</p>
-<h4 id="dfcproductbatch">dfc:ProductBatch</h4>
-<p>ProductBatch is a lot or batch associated with an EconomicResource.  It has its own identity because many EconomicResources can be part of the same lot/batch, and it has other useful information as a lot.</p>
 <h3 id="putting-flows-into-motion">Putting flows into motion...</h3>
 <p>More flow info at <a href="../../concepts/flows/">Flows concepts</a>, <a href="../../concepts/actions/">Actions concepts</a>, <a href="../../concepts/processes/">Processes concepts</a>, <a href="../../concepts/transfers/">Transfers concepts</a>, <a href="../../concepts/exchanges/">Exchanges concepts</a>.  First, some necessary pieces.</p>
 <h4 id="vfaction">vf:Action</h4>

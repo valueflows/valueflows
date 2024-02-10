@@ -18,7 +18,7 @@
 <> a owl:Ontology;
     dcterms:title "Valueflows Ontology";
     dcterms:type <http://purl.org/adms/assettype/Ontology>;
-    owl:versionIRI </0.9/> ;
+    owl:versionIRI </0.10/> ;
     dcterms:status <http://purl.org/adms/status/UnderDevelopment>.
 
 
@@ -615,6 +615,22 @@ vf:due a                    owl:DatatypeProperty ;
         rdfs:range          xsd:dateTimeStamp ;
         vs:term_status      "unstable" ;
         rdfs:comment        "The time something is expected to be complete."@en ;
+        .
+
+vf:localLabel a             owl:DatatypeProperty ;
+        rdfs:label          "unit local label"@en ;
+        rdfs:domain         om2:Unit ;
+        rdfs:range          xsd:string ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "An override label to optionally display for units of measure."@en ;
+        .
+
+vf:localSymbol a            owl:DatatypeProperty ;
+        rdfs:label          "unit local symbol"@en ;
+        rdfs:domain         om2:Unit ;
+        rdfs:range          xsd:string ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "An override symbol to optionally display for units of measure."@en ;
         .
 
 vf:accountingQuantity a     owl:ObjectProperty ;
