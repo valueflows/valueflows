@@ -2,7 +2,7 @@
 
 This example includes economic resources, with their resource specifications.  One resource has a lot identifier.
 
-![resource diagram](../assets/examples/resource-spec.png)
+![resource diagram reflecting the yaml below](../assets/examples/resource-spec.png)
 
 ``` yaml
 # Example: Resources

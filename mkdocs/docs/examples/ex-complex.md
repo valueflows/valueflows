@@ -4,7 +4,7 @@
 
 Bob purchases 30kg of apples from Alice and Claudia transports them (FOB destination).  The receipt of the apples triggers the transfer of ownership.
 
-![transport diagram](../assets/examples/transport-transfer.png)
+![transport diagram reflecting the yaml below](../assets/examples/transport-transfer.png)
 
 ``` yaml
 # Transportation with transfer
@@ -287,7 +287,7 @@ The QT needs the stage and state of the input component resource, because QT wou
 
 This example includes recipe, plan, and actuals.
 
-![stage-state diagram](../assets/examples/stage-state.png)
+![stage-state diagram reflecting the yaml below](../assets/examples/stage-state.png)
 
 ``` yaml
 # Example: Workflow recipe, plan, execution, including stage and state usage

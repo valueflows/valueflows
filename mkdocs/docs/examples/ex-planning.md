@@ -4,7 +4,7 @@
 
 A plan for creating two different resources needed for one campaign.  The first resource requires two chained processes.
 
-![plan diagram](../assets/examples/simple-plan.png)
+![plan diagram reflecting the yaml below](../assets/examples/simple-plan.png)
 
 ``` yaml
 # Example: Simple operational plan
@@ -122,7 +122,7 @@ A plan for creating two different resources needed for one campaign.  The first 
 
 A plan generated from a recipe, for making a component.
 
-![plan from recipe diagram](../assets/examples/plan-recipe.png)
+![plan from recipe diagram reflecting the yaml below](../assets/examples/plan-recipe.png)
 
 ``` yaml
 # Example: Simple plan from recipe
@@ -238,7 +238,7 @@ A plan generated from a recipe, for making a component.
 
 Commitments satisfying intents, and economic events fulfilling commitments.
 
-![fulfillment diagram](../assets/examples/ful-sat.png)
+![fulfillment diagram reflecting the yaml below](../assets/examples/ful-sat.png)
 
 ``` yaml
 # Example: Intent - satisfied by - Commitment - fulfilled by - EconomicEvent
@@ -334,7 +334,7 @@ Commitments satisfying intents, and economic events fulfilling commitments.
 
 A simple proposal with reciprocity expected, then another one to give the item away.
 
-![sell give diagram](../assets/examples/prop-sell-give.png)
+![sell give diagram reflecting the yaml below](../assets/examples/prop-sell-give.png)
 
 ``` yaml
 # Example: Simple proposals based on one intent
@@ -405,7 +405,7 @@ A simple proposal with reciprocity expected, then another one to give the item a
 
 A simple proposal for a timebank.  The reciprocity is assumed based on the timebank policies.
 
-![timebank diagram](../assets/examples/prop-timebank.png)
+![timebank diagram reflecting the yaml below](../assets/examples/prop-timebank.png)
 
 ``` yaml
 # Example: Simple proposal in a timebank
@@ -446,7 +446,7 @@ A simple proposal for a timebank.  The reciprocity is assumed based on the timeb
 
 A simple proposal for barter.
 
-![barter diagram](../assets/examples/prop-barter.png)
+![barter diagram reflecting the yaml below](../assets/examples/prop-barter.png)
 
 ``` yaml
 # Example: Simple proposal for barter
@@ -504,7 +504,7 @@ A simple proposal for barter.
 
 A simple proposal requesting help for work on a planned production process.  The reciprocal intent (payment) is governed by a previous agreement, and based on the actual hours that will be worked.
 
-![proposal work diagram](../assets/examples/prop-work.png)
+![proposal work diagram reflecting the yaml below](../assets/examples/prop-work.png)
 
 ``` yaml
 # Example: Simple proposal for commitment to an intent on a planned process
@@ -572,7 +572,7 @@ A simple proposal requesting help for work on a planned production process.  The
 
 A simple set of proposals that make up a price list.
 
-![price list diagram](../assets/examples/prop-list.png)
+![price list diagram reflecting the yaml below](../assets/examples/prop-list.png)
 
 ``` yaml
 # Example: Simple price list

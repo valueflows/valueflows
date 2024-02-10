@@ -4,7 +4,7 @@
 
 Simple one-process manufacturing with typical inputs and outputs.
 
-![manufacturing diagram](../assets/examples/proc-mfg.png)
+![manufacturing diagram reflecting the yaml below](../assets/examples/proc-mfg.png)
 
 ``` yaml
 # Example: Simple manufacturing process
@@ -145,7 +145,7 @@ Simple one-process manufacturing with typical inputs and outputs.
 
 Simple delivery of a service with typical inputs and outputs.
 
-![service diagram](../assets/examples/proc-svc.png)
+![service diagram reflecting the yaml below](../assets/examples/proc-svc.png)
 
 ``` yaml
 # Example: Simple service process
@@ -269,7 +269,7 @@ Simple delivery of a service with typical inputs and outputs.
 
 Simple repair process with typical inputs and outputs.  The same economic resource goes into and out of the process(es).
 
-![workflow diagram](../assets/examples/proc-workflow.png)
+![workflow diagram reflecting the yaml below](../assets/examples/proc-workflow.png)
 
 ``` yaml
 # Example: Simple workflow process
@@ -336,7 +336,7 @@ Simple repair process with typical inputs and outputs.  The same economic resour
 
 Simple pack and unpack of resources into and out of a container resource, using `combine` and `separate`.
 
-![pack unpack diagram](../assets/examples/pack-unpack.png)
+![pack unpack diagram reflecting the yaml below](../assets/examples/pack-unpack.png)
 
 ``` yaml
 # Example: Simple pack and unpack processes
@@ -614,7 +614,7 @@ Simple pack and unpack of resources into and out of a container resource, using 
 
 Simple assembly and testing showing use of stage and state.
 
-![stage state diagram](../assets/examples/stage-state-simple.png)
+![stage state diagram reflecting the yaml below](../assets/examples/stage-state-simple.png)
 
 ``` yaml
 # Example: Process using stage and state
@@ -769,7 +769,7 @@ Simple one-process manufacturing with corrections.
 
 Note that the diagram below shows the actual data in the flow.  If a use case calls for it, the events can be combined on a user interface so that a "corrected" event would be displayed, for example just "work 6 hours machining" and "consume 5 plywood sheets" as the two inputs to this process. In that case, you could show all of events, including the correcting events, in another view.
 
-![correction diagram](../assets/examples/correction.png)
+![correction diagram reflecting the yaml below](../assets/examples/correction.png)
 
 ``` yaml
 # Example: Correcting an error

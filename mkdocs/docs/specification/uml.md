@@ -2,11 +2,11 @@
 
 This diagram includes all elements necessary for a complete REA-based core economic vocabulary, so includes elements that we re-use from other vocabularies.  All namespaces are documented by the prefix to each element.
 
-A textual explanation of everything on this diagram is on the [next page](model-text.md).
+A textual explanation of everything on this diagram is on the [Diagram Explanations page](model-text.md).
 
 *To make the diagram bigger, you can right click and select 'View Image' or 'Open Image in New Tab' or a similar command in your browser.*
 
-![VF uml picture](../assets/ValueFlowsUML.png)
+![UML diagram of the whole VF model](../assets/ValueFlowsUML.png)
 
 ## Diagram conventions
 
@@ -27,7 +27,7 @@ To support cleaner representation in JSON / JSON-LD / RDF, as well as object ori
 
 For example, here a Commitment `isInput` or `isOutput` of a Process; and a Process `hasInput`(zero or more) and/or `hasOutput`(zero or more).  Both directions are specified as part of the formal vocabulary, so can be used in the direction preferred by the application.
 
-![inverse pic](../assets/inverse.png)
+![inverse example model with Process, Commitment, relationships pointing both ways](../assets/inverse.png)
 
 ### Many-to-many relationships
 
@@ -39,7 +39,7 @@ Below are the places in Valueflows where there is a logical many-to-many.
 
 Although not included in the formal RDF-based spec, the suggested intermediate "associative" class for the two cases where there are no intermediate properties is shown below with dotted lines, for projects that want to implement a relational database under the covers, for example.
 
-![proposal m:m relationships](../assets/m-m.png)
+![model with Proposal and Intent adn Agent m:m instantiated relationships](../assets/m-m.png)
 
 #### fulfills, satisfies, settles
 
@@ -47,4 +47,4 @@ These cases have possible properties in the "associative" class. For example, be
 
 We believe that it is more important to simplify the model and the concepts for the majority of use cases, than to have complete support of all use cases.
 
-![flow m:m relationships](../assets/fulfill-satisfy-rel.png)
+![model with Event Commitment Intent Claim m:m instantiated relationships](../assets/fulfill-satisfy-rel.png)

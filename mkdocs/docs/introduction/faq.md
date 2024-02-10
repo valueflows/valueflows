@@ -43,7 +43,7 @@ Other economic vocabularies are focused on conventional capitalit enterprise ope
 
 ### Where can I read more about REA?
 
-Here are [some links](../appendix/rea.md).
+Here are [a lot of REA links](../appendix/rea.md).
 
 ### What formats is Valueflows available in?
 

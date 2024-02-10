@@ -4,7 +4,7 @@
 
 An exchange agreement with commitments.
 
-![agreement diagram](../assets/examples/exch-commit.png)
+![agreement diagram reflecting the yaml below](../assets/examples/exch-commit.png)
 
 ``` yaml
 # Example: Simple exchange agreement
@@ -50,7 +50,7 @@ An exchange agreement with commitments.
 
 An exchange without prior commitments.  Note we are still using the Agreement to tie together the reciprocal events, even there were no commitments ahead of time.
 
-![retail diagram](../assets/examples/exch-pos.png)
+![retail diagram reflecting the yaml below](../assets/examples/exch-pos.png)
 
 ``` yaml
 # Example: Simple retail exchange without commitments
@@ -95,7 +95,7 @@ An exchange without prior commitments.  Note we are still using the Agreement to
 
 A simple transfer of a currency from one agent to another.
 
-![crypto transfer diagram](../assets/examples/xfer-crypto.png)
+![crypto transfer diagram reflecting the yaml below](../assets/examples/xfer-crypto.png)
 
 ``` yaml
 # Transfer of crypto-currency, ignoring the fee, but to record time involved in the transfer validation process
@@ -165,7 +165,7 @@ A simple transfer of a currency from one agent to another.
 
 A simple move of a currency from one account to another by one agent.
 
-![crypto move diagram](../assets/examples/move-crypto.png)
+![crypto move diagram reflecting the yaml below](../assets/examples/move-crypto.png)
 
 ``` yaml
 # Move of crypto-currency for one agent, ignoring the fee
@@ -234,7 +234,7 @@ A simple move of a currency from one account to another by one agent.
 
 Checking out and checking back in a library book (a loan).
 
-![checkout diagram](../assets/examples/book.png)
+![checkout diagram reflecting the yaml below](../assets/examples/book.png)
 
 ``` yaml
 # Checking out a book
@@ -340,7 +340,7 @@ Checking out and checking back in a library book (a loan).
 
 Logged work triggers a claim for future income distribution for that work.
 
-![claim diagram](../assets/examples/claim.png)
+![claim diagram reflecting the yaml below](../assets/examples/claim.png)
 
 ``` yaml
 # Example: Claim (simple)
@@ -409,7 +409,7 @@ Logged work triggers a claim for future income distribution for that work.
 
 This shows a simple recipe that includes both a process and the exchange of work that is input to the process for currency.
 
-![process-exchange diagram](../assets/examples/process-exchange.png)
+![process-exchange diagram reflecting the yaml below](../assets/examples/process-exchange.png)
 
 ``` yaml
 # Example: Simple recipe with both process and exchange

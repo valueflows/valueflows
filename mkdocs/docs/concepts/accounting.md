@@ -12,7 +12,7 @@ Or potentially, views for a global value system economy (really).
 
 ## Accounting views: independent vs dependent
 
-![independent vs dependent](../assets/REAviews.png)
+![diagram of independent vs dependent views and naming](../assets/REAviews.png)
 
 Conventional accounting always takes the view of an individual agent: often a company. REA, and Valueflows, take an independent view, sometimes called a “collaboration space” or economic network or supply chain view.  At the same time, derived from the independent view, REA and Valueflows support each agent's own accounting view.
 
@@ -38,7 +38,7 @@ Accounting isn't always just counting beans.  It will be important for community
 
 The standard set of accounting reports are needed by many organizations. A standard General Ledger, Balance Sheet, and Income Statement can be generated automatically from Valueflows data. No need to create a Chart of Accounts or post double-entries, those can all be created by a computer program on request.
 
-![GL](../assets/std-accounting.png)
+![A typical general ledger hierarchy of accounts](../assets/std-accounting.png)
 
 Moreover, General Ledgers and accounting reports can be created automatically for each agent in an economic network using the VF vocabulary.  The accounting views use the Dependent or Individual Agent view of ValueFlows.
 

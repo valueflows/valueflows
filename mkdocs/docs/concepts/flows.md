@@ -31,25 +31,25 @@ Claims resemble Commitments, but are initiated by the receiver, not the provider
 
 The figure below shows that Economic Events have to be observed and for that reason only appear as records of the past. Future plans get represented with Intents and Commitments.
 
-![flows](../assets/flows.png)
+![diagram of Intents, Commitments, Events in past, present, future, showing how the flows change through time](../assets/flows.png)
 
 ## Matching Intents
 
 Often agents will start their plans independently and record their initial intents. Later once they make a Commitment with another agent, it will represent a specific shared part of their plans. For that reason any Commitment can result in Satisfaction of the providing agent's Intent as well as Satisfaction of the receiving agent's Intent.
 
 
-![matching](../assets/matched.png)
+![diagram showing matching of 2 Intents from different agents, satisfied by 1 Commitment, fulfilled by an Event](../assets/matched.png)
 
 ## Granularity
 
 Intents, Commitments, and Economic Events can occur at any granularity that is needed or for which data can be obtained.  So they primarily are used for all operational needs, but can also be used at higher levels for budgeting for organizations, analytical and high level planning needs for communities or regions, etc.
 
-![Intent-Commitment-Event](../assets/i-c-e.png)
+![diagram of Intent-Commitment-Event and their relationships plus their same properties](../assets/i-c-e.png)
 
 
 ## Actions
 
-All types of flows use the same set of actions, which define what the flow does and how it behaves in relation to resources.  You can find detailed documentation on actions [in the next section](actions.md).
+All types of flows use the same set of actions, which define what the flow does and how it behaves in relation to resources.  You can find detailed documentation on actions [in the Actions section](actions.md).
 
 ## Quantities and Times
 
@@ -76,7 +76,7 @@ Sometimes a quantity is expressed in time-based units, like "I worked 6 hours", 
 
 Sometimes a situation may call for a "compound quantity", like "Number-per-Year".
 
-Display note: The OM2 ontology defines a Unit called `one` that is used for one-dimensional units.  This is confusing for many economic applications, where something like `each` would be used, or nothing at all.  We recommend that user interfaces handle this by not displaying the unit `one` where it would be confusing, or substituting a more applicable name.
+See also [the Units page](../specification/units.md).
 
 ## Correcting Events
 
