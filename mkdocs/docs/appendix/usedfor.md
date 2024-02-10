@@ -12,7 +12,7 @@ Some of the UI/UX apps being built on hREA are
 
 * Code A, an international group of university professors working on climate change issues, wants to create an application for classes to use as they do practical work to learn about methods for micro to macro climate accounting, and how to coordinate among themselves and with their communities.  Code is on [github](https://github.com/lightningrodlabs/rea-playspace).  This is the first real visualization based core UI for Valueflows, and we think will be useful for other apps. (In process.)
 
-* [New York Textile Lab](https://www.newyorktextilelab.com/) is a supply chain network that connects designers to fiber producers and mills to help grow an economically diverse textile supply ecosystem. They are featured on this Holochain Ecosystem [video](https://www.youtube.com/watch?v=D7xDZaaQOpM). (In process.)
+* [Carbon Farm Network, organized by New York Textile Lab](https://www.newyorktextilelab.com/) is a supply chain network that connects designers to fiber producers and mills to help grow an economically diverse textile supply ecosystem. They are featured on this Holochain Ecosystem [video](https://www.youtube.com/watch?v=D7xDZaaQOpM). (In process.)
  
 * [Sensorica](https://www.sensorica.co/), an open value network in Montreal, is just starting design on a new version of their NRP software, which was used as one input for Valueflows. (In process.)
 
@@ -20,7 +20,7 @@ A post called [Economy as Ecosystem](https://blog.holochain.org/economy-as-ecosy
 
 ### Fediverse ecosystem
 
-The [Fediverse](https://fediverse.party/en/fediverse/) is a collection of networking applications that federate with each other using the [ActivityPub](https://activitypub.rocks/) social networking protocol as the core.
+The [Fediverse](https://fediverse.party/en/fediverse/) is a collection of networking applications that federate with each other using the [ActivityPub (AP)](https://activitypub.rocks/) social networking protocol as the core.
 
 * Bonfire kicked the federation direction off by supporting Valueflows as an extension of ActivityPub, and including the same [graphql api](https://lab.allmende.io/valueflows/vf-schemas/vf-graphql) as hREA. This supports a user-friendly integration of social and economic networking, which we think is an important direction. Information is at their [website](https://bonfirenetworks.org/), the Valueflows extension is on [gitlab](https://gitlab.com/bonfire-networks/bonfire_valueflows). (In process.)
 
@@ -31,6 +31,8 @@ The [Fediverse](https://fediverse.party/en/fediverse/) is a collection of networ
 * [Dyne](https://www.dyne.org/) has done the Valueflows related development on Reflow and Interfacer, including developing the EU  "[Digital Product Passport](https://www.circularise.com/blog/digital-product-passports-dpp-what-how-and-why)", webinar [here](https://www.youtube.com/playlist?list=PLmwl0nkG0dPFI8bAS736myioL45oBEoeU), based on Valueflows resource tracing. (Complete.)
 
 * [LearnDeep](https://learndeep.org/), initially created by students at [MSOE](https://www.msoe.edu/), supports a network of high school fablabs in Milwaukee that receive contributions of materials from the community and share these with each other. Their code has been merged upstream and is being completed as a Bonfire flavour by the Bonfire team on [gitlab](https://gitlab.com/bonfire-networks/bonfire_upcycle). (In process.)
+
+* We are in process of proposing VF extensions for AP using their Fediverse Enhancement Proposal (FEP) process.  Proposals thus far are [Federated Marketplace](https://codeberg.org/fediverse/fep/src/branch/main/fep/0837/fep-0837.md), [Federated Work Coordination](https://codeberg.org/fediverse/fep/src/branch/main/fep/3264/fep-3264.md), [To-do's](https://codeberg.org/fediverse/fep/src/branch/main/fep/c5a1/fep-c5a1.md).
 
 
 ### Other applications

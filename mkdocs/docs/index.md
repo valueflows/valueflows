@@ -17,7 +17,7 @@ Here are some suggestions to help you find your way into this documentation, dep
 
       * For the more visually oriented or people who like diagrams, head to the [**UML diagram**](specification/uml/).
 
-      * Whether or not you look at the diagram, see below the diagram for class and relationship [**explanations by subject area**](specification/model-text.md), which also point to the related [**concepts sections**](concepts/concepts-overview.md).  Or just go straight to the [**concepts**](concepts/concepts-overview.md).
+      * Whether or not you look at the diagram, see these [**class and relationship explanations by subject area**](specification/model-text.md), which also point to the related [**concepts sections**](concepts/concepts-overview.md).  Or just go straight to the [**concepts**](concepts/concepts-overview.md).
 
       * For even more gory details, check the rest of the [**specification pages**](specification/spec-overview.md), and/or [**examples**](examples/ex-overview/).
 

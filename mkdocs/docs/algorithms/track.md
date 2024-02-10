@@ -208,12 +208,10 @@ track-depth-first-search (parameters: "flows", "visited", "contains", "modifies"
     return "flows"
 ```
 
-## Tracking identifier and lot
+## Tracking identifier
 
 Currently, often companies' internal flow information is not public, although in many countries they are required to be able to provide input and output information when needed in a medical emergency, without connecting all the dots internally.  Also any organization can be missing resource flow data so that there are gaps in the flows, no matter the level of transparency.
 
-For these reasons, tracking identifier (often a serial number) and a standard lot identifier are currently used when food or medical tracing and tracking is required.  And in VF, they can be used whenever there is missing resource flow information for any reason; or when many resources go in and out of one process, such as might happen in transportation.
+For these reasons, tracking identifier (such as a serial number or a lot identifier) is currently used when food or medical tracing and tracking is required.  And in VF, they can be used whenever there is missing resource flow information for any reason; or when many resources go in and out of one process, such as might happen in transportation.
 
-Note that in VF, for simplicity, besides `lot`, a lot identifier can be stored in the `trackingIdentifier` property.
-
-Also note that lots get "spread out" into splits of a resource or different types of resources.  For example, one cow could have a lot identifier, which when the cow goes through a butchering process will be included in all the cuts of beef from that cow.  Or one production batch of a medicine that contains many packages of the same medicine would have a lot identifier, which stays attached to the individual packages wherever they go.
+Also note that lots get "spread out" into splits of a resource or different types of resources.  For example, one recent product recall was of fungus medicine ingredient that was tainted with benzene. The producer needed to identify all of the products that the tainted ingredient went into, and then all of the many packages of the same medicine that have the same lot identifier, which stays attached to the individual packages wherever they go. All of those packages will need to be found and destroyed and the recipients can be reimbursed by the producer.

@@ -583,9 +583,49 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Units of Measure
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         Units of Measure
       </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#application-units-of-measure" class="md-nav__link">
+    Application units of measure
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#overriding-the-om2-label-or-symbol" class="md-nav__link">
+    Overriding the OM2 label or symbol
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1425,6 +1465,28 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#application-units-of-measure" class="md-nav__link">
+    Application units of measure
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#overriding-the-om2-label-or-symbol" class="md-nav__link">
+    Overriding the OM2 label or symbol
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1440,20 +1502,23 @@
 
 
 <h1 id="units-of-measure">Units of Measure</h1>
-<p>Valueflows uses the units of measure from <a href="https://github.com/HajoRijgersberg/OM">OM2</a>, listed in the Other Namespaces page in this section.  Using agreed upon standard units will facilitate network interoperability into the future.  </p>
-<p>As of now, a file of units has been extracted to make it easier for user groups to choose their set of standard units.</p>
-<p>The complete rdf reference for OM2 can be found <a href="https://raw.githubusercontent.com/HajoRijgersberg/OM/master/om-2.0.rdf">here</a>.</p>
-<p>A csv file derived from that can be found <a href="https://lab.allmende.io/valueflows/valueflows/-/blob/master/units/units-en-useful.csv">here</a>.  This file includes units from OM2 as of 2022/06. It includes only the English version for now.  The currencies have been removed, since we recommend these be set up as Resource Specifications instead, semantically, and specifically given the proliferation of alternate currencies.  We have added classifications (partially complete) to facilitate search for needed units. The columns in this file are, left to right:</p>
+<p>Using agreed upon standard units will facilitate network interoperability into the future.  Valueflows uses the units of measure from <a href="https://github.com/HajoRijgersberg/OM">the OM2 vocabulary</a>, also listed in the Other Namespaces page in this section.  Here is the <a href="https://raw.githubusercontent.com/HajoRijgersberg/OM/master/om-2.0.rdf">complete and up-to-date rdf reference for OM2</a>.</p>
+<h2 id="application-units-of-measure">Application units of measure</h2>
+<p>We expect that user applications will choose a much smaller subset of these standard units, and probably maintain them separately.</p>
+<p>To facilitate this, a <a href="https://lab.allmende.io/valueflows/valueflows/-/blob/master/units/units-en-useful.csv">csv file of units</a> has been extracted from OM2 to make it easier for user groups to choose their set of standard units.  Since OM2 is in active development, this file will gradually become out of date, but we expect added units to be newer scientific units not usually used in economic applications.</p>
+<p>This file includes only the English version for now, although some additional languages can be found in OM2.  The currencies have been removed, since we recommend these be set up as Resource Specifications instead, semantically, and specifically given the proliferation of alternate currencies.  We have added classifications (partially complete) to facilitate search for needed units. The columns in this file are, left to right:</p>
 <ul>
 <li>OM2 owl Class.  When a Unit belonged to multiple classes, those were consolidated to one row, under "Unit".</li>
-<li>Identifier in OM2.  These can be prefixed with "http://www.ontology-of-units-of-measure.org/resource/om-2/" for direct access.</li>
-<li>Label from OM2 for the unit, to be used in Valueflows.</li>
-<li>Symbol from OM2 for the unit, to be used in Valueflows.</li>
+<li>Unique identifier in OM2.  These can be prefixed with "http://www.ontology-of-units-of-measure.org/resource/om-2/" for direct access; but also used as-is internally to an application as a readable unique identity.</li>
+<li>Label from OM2 for the unit.</li>
+<li>Symbol from OM2 for the unit.</li>
 <li>Description from OM2.</li>
-<li>Classification(s), added by us (not from OM), to facilitate search in the csv file, or ifn an application (if one is created) for groups to choose their units.  This column is incomplete, possibly not the best granularity, and in some places possibly wrong.  Updates are welcome!</li>
+<li>Classification(s), added by us (not from OM), to facilitate search in the csv file, or in an application (if one is created) for groups to choose their units.  This column is incomplete, possibly not the best granularity, and in some places possibly wrong.  Updates are welcome!</li>
 </ul>
-<p>A special note on the unit <code>one</code>.  This indicates a generic one dimensional unit from the scientific perspective, which in business is often called "each", "pieces", "count", or similar. OM2 does have a unit called <code>piece</code>, which can be used instead of <code>one</code> if desired for user clarity; or the user interface could leave off the label if it is "one".</p>
-<p>See <a href="https://lab.allmende.io/valueflows/valueflows/-/tree/master/units/">this directory</a> for other potentially useful artifacts. </p>
+<h2 id="overriding-the-om2-label-or-symbol">Overriding the OM2 label or symbol</h2>
+<p>We have added 2 properties in VF as optional additions to the OM2 unit, <code>localLabel</code> and <code>localSymbol</code>.  These are meant for applications to assign themselves, when the normal display usage for their set of users is different than the OM2.  For example, an application might want to use <code>pound</code> instead of <code>pound (avoirdupois)</code>, or <code>gallon</code> instead of <code>gallon (US)</code> or <code>gallon (imperial)</code>.</p>
+<p>Perhaps the most frequent use of the override is the unit <code>one</code>.  This indicates a generic one dimensional unit from the scientific perspective, which in an economic application might be called <code>each</code>, <code>piece</code>, <code>count</code>, <code>number</code> or similar, or just left off of a user interface or report.  Some applications might even want to use more than one of these local labels. But for interoperability, any of these overrides should reference back to OM2:one.</p>
+<p>See <a href="https://lab.allmende.io/valueflows/valueflows/-/tree/master/units/">this directory about units</a> for other potentially useful artifacts.</p>
 
 
 
