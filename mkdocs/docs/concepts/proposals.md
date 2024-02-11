@@ -12,6 +12,6 @@ Proposals may be specific or more general, often not commercial at all, expresse
 
 When they find their match, those with the matching offer and request enter into a conversation which might result in an agreement.
 
-A proposal to do something might enter into conversation for action which might result in commitments for a process.  This may lead to more and better cycles of engagement:
+A proposal to do something might enter into conversation for action which might result in commitments for a process or exchange.  This may lead to more and better cycles of engagement.  Valueflows does not at this time define the pattern of this kind of conversation, but intends to integrate with different social networking vocabularies for this purpose.  We do think that social and economic networking are naturally intertwined in human behavior.
 
 ![funnel diagram Intent>Match>Agree>Commit>Fulfill>Respond, cycling back to each stage](../assets/funnel.png)
