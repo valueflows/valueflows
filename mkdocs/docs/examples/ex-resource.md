@@ -12,7 +12,6 @@ This example includes economic resources, with their resource specifications.  O
   - farm: https://farm.example/
     ose: https://www.opensourceecology.org/
 
-'@id': rgh:valueflows/valueflows/master/examples/resource.yaml
 '@graph':
 
   - '@id': ose:822b6baf-d66f-45a0-98f2-57450e2aec23
@@ -20,7 +19,8 @@ This example includes economic resources, with their resource specifications.  O
     name: Tractor - LifeTrac 6
     uri: https://www.opensourceecology.org/portfolio/tractor/
     image: https://www.opensourceecology.org/wp-content/uploads/2014/02/Tractor_gray.png
-    defaultUnit: unit:Number
+    defaultUnitOfResource: om2:one
+    defaultUnitOfEffort: om2:hour
     substitutable: true
     resourceClassifiedAs: https://www.wikidata.org/wiki/Q39495
     skos:note: A versatile, 4-wheel drive, hydraulically-driven tractor with 18 to 200 horsepower capacity for agriculture, construction and other utility duties.
@@ -37,7 +37,7 @@ This example includes economic resources, with their resource specifications.  O
   - '@id': farm:8baa8ff7-9c1e-4586-ae7b-79d620a3cac9
     '@type': ResourceSpecification
     name: Carrots organic
-    defaultUnit: unit:Kilogram
+    defaultUnitOfResource: om2:kilogram
     substitutable: true
     resourceClassifiedAs: https://www.wikidata.org/wiki/Q39495
     skos:note: Organic loose carrots without tops. 
@@ -45,21 +45,17 @@ This example includes economic resources, with their resource specifications.  O
   - '@id': farm:07819789-dd51-44c3-b35c-9210165bc832
     '@type': EconomicResource
     name: Loose organic carrots
-    lot: farm:fd399b37-0740-4a68-a184-1e655021ca21 # the lot number assigned by the farm
+    trackingIdentifier: car20230901 # the lot number assigned by the farm
     conformsTo: farm:8baa8ff7-9c1e-4586-ae7b-79d620a3cac9
     accountingQuantity:
       om2:hasUnit: om2:kilogram
       om2:hasNumericalValue: 650
     skos:note: Medium size, clean, harvested after the first frost, will store well.
 
-  - '@id': farm:fd399b37-0740-4a68-a184-1e655021ca21
-    '@type': dfc:ProductBatch
-    dfc:batchNumber: 3409888
-
   - '@id': farm:68cabaf3-deb8-4bd5-a439-798263abe35a
     '@type': ResourceSpecification
     name: Farm documentation
-    defaultUnit: unit:Number
+    defaultUnitOfResource: om2:one
     substitutable: false
     resourceClassifiedAs: https://www.wikidata.org/wiki/Q49848 # document
     skos:note: Any of the documentation produced and/or used by the farm.

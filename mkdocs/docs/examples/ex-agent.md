@@ -14,7 +14,6 @@ This example include agents (people and organizations) and their relationships.
     fablab: https://fablab.example/
     coop: https://coop.example/
 
-'@id': rgh:valueflows/valueflows/master/examples/agent.yaml
 '@graph':
 
   # Agents

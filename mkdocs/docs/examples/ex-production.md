@@ -14,21 +14,20 @@ Simple one-process manufacturing with typical inputs and outputs.
   - alice: https://alice.example/
     mfg: https://manufacturing.example/
 
-'@id': rgh:valueflows/valueflows/master/examples/process-manufacturing.yaml
 '@graph':
 
   # Economic resources before
 
   - '@id': mfg:e1721a61-cd47-4556-84b9-8b1b81da15bf
     '@type': EconomicResource
-    resourceConformsTo: https://www.opendesk.cc/lean/desk # desk
+    conformsTo: https://www.opendesk.cc/lean/desk # desk
     accountingQuantity:
       om2:hasUnit: om2:one
       om2:hasNumericalValue: 8
 
   - '@id': mfg:3129ca8b-fcda-45be-bbda-294dc924d3b9
     '@type': EconomicResource
-    classifiedAs: https://www.wikidata.org/wiki/Q219803 # plywood
+    conformsTo: https://www.wikidata.org/wiki/Q219803 # plywood
     accountingQuantity:
       om2:hasUnit: om2:one
       om2:hasNumericalValue: 130
@@ -36,14 +35,14 @@ Simple one-process manufacturing with typical inputs and outputs.
 
   - '@id': mfg:6b97b1be-8e07-44ac-82e5-214f1b2aaf33
     '@type': EconomicResource
-    classifiedAs: https://www.wikidata.org/wiki/Q2101564 # desk design specification
+    conformsTo: https://www.wikidata.org/wiki/Q2101564 # desk design specification
     accountingQuantity:
       om2:hasUnit: om2:one
       om2:hasNumericalValue: 1
 
   - '@id': mfg:52f0e212-3c4f-4d27-b345-5e964c135824
     '@type': EconomicResource
-    classifiedAs: https://www.wikidata.org/wiki/Q13231055 # CNC machine
+    conformsTo: https://www.wikidata.org/wiki/Q13231055 # CNC machine
     accountingQuantity:
       om2:hasUnit: om2:one
       om2:hasNumericalValue: 1
@@ -93,7 +92,7 @@ Simple one-process manufacturing with typical inputs and outputs.
     action: work
     provider: https://alice.example/
     receiver: https://manufacturing.example/
-    resourceClassifiedAs: https://www.wikidata.org/wiki/Q192047 # machining
+    resourceConformsTo: https://www.wikidata.org/wiki/Q192047 # machining
     effortQuantity:
       om2:hasUnit: om2:hour
       om2:hasNumericalValue: 7
@@ -120,7 +119,7 @@ Simple one-process manufacturing with typical inputs and outputs.
 
   - '@id': mfg:3129ca8b-fcda-45be-bbda-294dc924d3b9
     '@type': EconomicResource
-    classifiedAs: https://www.wikidata.org/wiki/Q219803 # plywood
+    conformsTo: https://www.wikidata.org/wiki/Q219803 # plywood
     accountingQuantity:
       om2:hasUnit: om2:one
       om2:hasNumericalValue: 127
@@ -128,14 +127,14 @@ Simple one-process manufacturing with typical inputs and outputs.
 
   - '@id': mfg:6b97b1be-8e07-44ac-82e5-214f1b2aaf33
     '@type': EconomicResource
-    classifiedAs: https://www.wikidata.org/wiki/Q2101564 # desk design specification
+    conformsTo: https://www.wikidata.org/wiki/Q2101564 # desk design specification
     accountingQuantity:
       om2:hasUnit: om2:one
       om2:hasNumericalValue: 1
 
   - '@id': mfg:52f0e212-3c4f-4d27-b345-5e964c135824
     '@type': EconomicResource
-    classifiedAs: https://www.wikidata.org/wiki/Q13231055 # CNC machine
+    conformsTo: https://www.wikidata.org/wiki/Q13231055 # CNC machine
     accountingQuantity:
       om2:hasUnit: om2:one
       om2:hasNumericalValue: 1
