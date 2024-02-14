@@ -26,7 +26,7 @@ An **Economic Event** can take actions like produce, modify, consume, or use Eco
 
 **Economic Resources** would typically be useful goods and services, but could also be money, credits, energy, knowledge, designs, skills, CO2, methane, air, water, or almost anything else that some Agents can agree should be accounted for in their economic networks.
 
-![REA](../assets/R-E-A.png)
+![Resource-Event-Agent data model](../assets/R-E-A.png)
 
 ## IPO (Input-Process-Output)
 
@@ -34,13 +34,13 @@ The IPO pattern is used to enhance the ability of REA to represent complex flows
 
 ...Input-Process-Output resource chains, where one **Economic Resource** is the output of one **Process** and then becomes an input to another, thus connecting the processes into a flow. The **Agents** involved in each Process in the chain need to coordinate with the previous and next Processes about the quantity, quality, and timing of resource flows between them.
 
-![IPO schematic](../assets/process-resource.png)
+![Input-Process-Ooutput schematic](../assets/process-resource.png)
 
 ## Putting them together
 
 In general, how they fit together: Agents perform Economic Events that provide Inputs to Processes and take Outputs from Processes and move Resources from one Process to another.  This forms a directed graph of value flows.
 
-![REA-IPO-VF](../assets/REA-IPO-VF.png)
+![diagram with a Process, Economic Events input and output, each with Agents and Economic Resource](../assets/REA-IPO-VF.png)
 
 For example: a food network
 
@@ -50,7 +50,7 @@ For example: a food network
 
 Some flows do not involve processing, i.e. there is no transformation of Economic Resources.  These flows simply transfer Economic Resources between Agents or move them between locations. One common example is an exchange of one Economic Resource for another Economic Resource between two Agents, as below, with two reciprocal flows based on an Agreement.
 
-![exchange](../assets/exchange.png)
+![diagram of an exchange with an Agreement of Economic Events with Economic Resources from and to Agents](../assets/exchange.png)
 
 It can also be simpler, such as a gift, or more complex, involving many Agents.  Also, these flows can mix in with Process-based flows.
 
@@ -68,7 +68,7 @@ The data structures of Valueflows provide the ability to trace or track any valu
 
 Valueflows uses the layers of ontology documented by REA.  Each of the layers follows the core patterns above.
 
-![REA layers](../assets/layers.png)
+![REA layers: Knowledge, Plan, Observation simplified](../assets/layers.png)
 
 * The Knowledge level represents classification, policies, procedures, rules and patterns. This is where each network or community can configure the core concepts to fit their needs.
 * The Plan level represents offers and requests, schedules and promises.
@@ -76,8 +76,8 @@ Valueflows uses the layers of ontology documented by REA.  Each of the layers fo
 
 Here is a simplified view of how they connect.
 
-![process resource flow](../assets/process-layer.png)
+![a generalized process resource flow with the 3 layers](../assets/process-layer.png)
 
 Here is a specific example of the simplified view:
 
-![salsa flow](../assets/salsa-layer.png)
+![a specific salsa example process resource flow with the 3 layers](../assets/salsa-layer.png)

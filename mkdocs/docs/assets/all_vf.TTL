@@ -1147,8 +1147,8 @@ vf:bundledIn a              owl:ObjectProperty ;
         .
 
 vf:bundles a                owl:ObjectProperty ;
-        owl:inverseOf       vf:bundles ;
-        rdfs:label          "realizes"@en ;
+        owl:inverseOf       vf:bundledIn ;
+        rdfs:label          "bundles"@en ;
         rdfs:domain         vf:AgreementBundle ;
         rdfs:range          vf:Agreement ;
         vs:term_status      "unstable" ;

@@ -16,7 +16,7 @@ The Valueflows input-process-output resource flow model works very well for ecol
 
 This diagram shows some of the flows for solar panel production.  Silica dust is an output of the mining process, which gives mine workers silicosis.  There are many additional flows here which could be detailed to go into and out of ecological ecosystems, affecting them and also humans.
 
-![solar panel production](../assets/SolarPanelProduction.png)
+![flow diagram of solar panel production including externalities](../assets/SolarPanelProduction.png)
 
 ### Economic Resources
 

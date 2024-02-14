@@ -6,6 +6,6 @@ Cash inflows and outflows are plotted on a timeline, sometimes weekly, sometimes
 
 Here's [an article about cash flows for farming](https://www.extension.iastate.edu/agdm/wholefarm/html/c3-14.html). And a sample report from that article:
 
-![cash flow](../assets/c3-14fig1.gif)
+![sample cash flow report](../assets/c3-14fig1.gif)
 
 Cash flows could be budgeted (future estimated cash flows), or actual past cash flows, often compared to the estimates.

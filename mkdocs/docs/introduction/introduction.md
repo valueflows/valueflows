@@ -81,4 +81,4 @@ Here's a (big but not all-inclusive) list of possible applications that can be b
 
 We think these kinds of applications can also be building blocks to create whole economic ecosystems. Valueflows-based protocols could facilite that, as resources flow from one application to another.
 
-![economic ecosystem diagram](../assets/ecosystem-flow.png)
+![economic ecosystem diagram with planning, production, provisioning, and ecology](../assets/ecosystem-flow.png)

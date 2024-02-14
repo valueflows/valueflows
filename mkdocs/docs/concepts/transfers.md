@@ -10,7 +10,7 @@ We think that now, and more so in the future, there will be more gradations of r
 
 ## Explicit and implied transfers
 
-In Valueflows, several actions can involve the transfer concepts.  (For more detailed information, see the [Actions section](actions.md).
+In Valueflows, several actions can involve the transfer concepts.  (For more detailed information, see the [Actions page](actions.md).)
 
 The explicitly denoted transfers are:
 

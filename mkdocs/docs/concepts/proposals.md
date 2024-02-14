@@ -10,8 +10,8 @@ Proposals can stay directed to broad or specific *audience*. In the broadest cas
 
 Proposals may be specific or more general, often not commercial at all, expressed not in identified products but in classifications and text.  But they want to find each other. The offers want to find the matching requests. The requests want to find the matching offers.
 
-When they find their match, those with the matching offer and request enter into a [conversation for action](cfa.md) which might result in an agreement.
+When they find their match, those with the matching offer and request enter into a conversation which might result in an agreement.
 
-A proposal to do something might enter into conversation for action which might result in commitments for a process.  This may lead to more and better cycles of engagement:
+A proposal to do something might enter into conversation for action which might result in commitments for a process or exchange.  This may lead to more and better cycles of engagement.  Valueflows does not at this time define the pattern of this kind of conversation, but intends to integrate with different social networking vocabularies for this purpose.  We do think that social and economic networking are naturally intertwined in human behavior.
 
-![funnel](../assets/funnel.png)
+![funnel diagram Intent>Match>Agree>Commit>Fulfill>Respond, cycling back to each stage](../assets/funnel.png)

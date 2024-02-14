@@ -7,7 +7,7 @@ This section is about what computer programs (or humans with pencil and paper an
 * **Dependent Demand** constructs schedules for operational economic networks from recipes
     * Many other scheduling algorithms can be used over the same recipes. 
     * [Gantt charts](https://en.wikipedia.org/wiki/Gantt_chart) are a popular network schedule visualization.
-    ![gantt](../assets/fw16-2.gif)
+    ![gantt chart example](../assets/fw16-2.gif)
     * **Critical Path** is another scheduling algorithm that analyzes a network of processes to figure out the bottlenecks, the processes that need special attention.
 * **Value Rollups** summarize the total value of all inputs to the resulting output from a recipe.
 * **Value Equations** determine how income should be distributed according to contributions to a deliverable item.
@@ -22,7 +22,7 @@ This section is about what computer programs (or humans with pencil and paper an
     * [Environmentally Extended IPO Analysis](https://en.wikipedia.org/wiki/Environmentally_extended_input-output_analysis)
     * [Life Cycle Analysis](http://www.openlca.org/project/graphic-modeling/)
     * [Material Flow Analysis](https://en.wikipedia.org/wiki/Material_flow_analysis)
-    ![material flows](https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/MFASystem_3.png/1024px-MFASystem_3.png)
+    ![material flow analysis diagram](https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/MFASystem_3.png/1024px-MFASystem_3.png)
     
 * **Network Flows** is a general name for all of those algorithms and many many more. See [Flow Networks](https://en.wikipedia.org/wiki/Flow_network) on Wikipedia and elsewhere.
 
@@ -35,7 +35,7 @@ There are similarities and differences among the algorithms:
 * The Economic and Ecosystem algorithms use [Input-Process-Output Models](https://en.wikipedia.org/wiki/IPO_model)
 * All of those algorithms work on flow networks, otherwise known as directed graphs, composed of nodes and links between them.
 
-![flow network](https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Max_flow.svg/330px-Max_flow.svg.png)
+![flow network diagram](https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Max_flow.svg/330px-Max_flow.svg.png)
 
 ## Agent-based algorithms
 

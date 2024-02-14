@@ -2,7 +2,7 @@
 
 This example include agents (people and organizations) and their relationships.
 
-![agent diagram](../assets/examples/agent-rel.png)
+![agent diagram reflecting the yaml below](../assets/examples/agent-rel.png)
 
 ``` yaml
 # Example: Agents and Agent Relationships
@@ -14,7 +14,6 @@ This example include agents (people and organizations) and their relationships.
     fablab: https://fablab.example/
     coop: https://coop.example/
 
-'@id': rgh:valueflows/valueflows/master/examples/agent.yaml
 '@graph':
 
   # Agents

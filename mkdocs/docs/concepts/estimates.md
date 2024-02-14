@@ -26,4 +26,4 @@ Scenarios can be refinements of other scenarios.  For example, a group might do 
 
 If other requirements arise, we are happy to add connections as needed to the vocabulary.
 
-![recipe plan process](../assets/plan-process-oper.png)
+![diagram with an analysis containing recipe and scenario connecting to full operational planning with recipe, plan, observation](../assets/plan-process-oper.png)

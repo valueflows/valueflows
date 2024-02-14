@@ -4,7 +4,7 @@
 
 Bob purchases 30kg of apples from Alice and Claudia transports them (FOB destination).  The receipt of the apples triggers the transfer of ownership.
 
-![transport diagram](../assets/examples/transport-transfer.png)
+![transport diagram reflecting the yaml below](../assets/examples/transport-transfer.png)
 
 ``` yaml
 # Transportation with transfer
@@ -15,18 +15,18 @@ Bob purchases 30kg of apples from Alice and Claudia transports them (FOB destina
     bob: https://bob.example/
     claudia: https://claudia.example/
 
-'@id': rgh:valueflows/valueflows/master/examples/transport-with-transfer.yaml
 '@graph':
 
 # Bob purchases 30kg of apples from Alice and Claudia transports them (FOB destination)
 
-  # resources before
+  # Alice's resource before
 
   - '@id': alice:21f361a6-2375-46bb-b192-c21b5ba833bf
     '@type': EconomicResource
-    classifiedAs: wd:Q41777871 # haralson apples
+    conformsTo: wd:Q41777871 # haralson apples
     trackingIdentifier: lot-alice-apples-2018-10-11
     locatedAt: geo:70ee3034-0d15-4471-8ee3-91c60bb1a9c9
+    primaryAccountable: https://alice.example
     accountingQuantity:
       om2:hasUnit: om2:kilogram
       om2:hasNumericalValue: 230
@@ -39,7 +39,7 @@ Bob purchases 30kg of apples from Alice and Claudia transports them (FOB destina
   - '@id': urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10f1f86
     '@type': Commitment
     action: transfer
-    resourceClassifiedAs: wd:Q41777871 # haralson apples
+    resourceConformsTo: wd:Q41777871 # haralson apples
     provider: https://alice.example/
     receiver: https://bob.example/
     resourceQuantity:
@@ -51,29 +51,27 @@ Bob purchases 30kg of apples from Alice and Claudia transports them (FOB destina
   - '@id': urn:uuid:f325a950-5737-488d-b122-8f21114d0eb0
     '@type': Agreement
     skos:note: exchange transportation service for currency
-
-  - '@id': urn:uuid:33e8933b-ff73-4a01-964a-ca7a98893083
-    '@type': Commitment
-    action: transfer
-    resourceClassifedAs: wd:Q4917 # US Dollar
-    provider: https://alice.example/
-    receiver: https://claudia.example/
-    resourceQuantity:
-      om2:hasUnit: om2:one
-      om2:hasNumericalValue: 10
-    clauseOf: urn:uuid:f325a950-5737-488d-b122-8f21114d0eb0 # transportation agreement
-
-  - '@id': urn:uuid:c7897c39-7f05-4a5d-a487-80e130a2414a
-    '@type': Commitment
-    skos:note: Transportation of alice's apples from alice's location to bob's location
-    action: deliverService
-    resourceClassifiedAs: wd:Q7590 # transportation service
-    provider: https://claudia.example/
-    receiver: https://alice.example/
-    resourceQuantity:
-      om2:hasUnit: om2:one
-      om2:hasNumericalValue: 1
-    clauseOf: urn:uuid:f325a950-5737-488d-b122-8f21114d0eb0 # transportation agreement
+    stipulates:
+    - '@id': urn:uuid:c7897c39-7f05-4a5d-a487-80e130a2414a
+      '@type': Commitment
+      skos:note: Transportation of alice's apples from alice's location to bob's location
+      action: deliverService
+      resourceClassifiedAs: wd:Q7590 # transportation service
+      provider: https://claudia.example/
+      receiver: https://alice.example/
+      resourceQuantity:
+        om2:hasUnit: om2:one
+        om2:hasNumericalValue: 1
+    stipulatesReciprocal:
+    - '@id': urn:uuid:33e8933b-ff73-4a01-964a-ca7a98893083
+      '@type': Commitment
+      action: transfer
+      resourceConformsTo: wd:Q4917 # US Dollar
+      provider: https://alice.example/
+      receiver: https://claudia.example/
+      resourceQuantity:
+        om2:hasUnit: om2:one
+        om2:hasNumericalValue: 10
 
   # alice transfers custody of the apples to claudia for transportation
 
@@ -97,6 +95,7 @@ Bob purchases 30kg of apples from Alice and Claudia transports them (FOB destina
     classifiedAs: wd:Q41777871 # haralson apples
     trackingIdentifier: lot-alice-apples-2018-10-11
     locatedAt: geo:70ee3034-0d15-4471-8ee3-91c60bb1a9c9
+    primaryAccountable: https://alice.example
     accountingQuantity:
       om2:hasUnit: om2:kilogram
       om2:hasNumericalValue: 230
@@ -117,81 +116,68 @@ Bob purchases 30kg of apples from Alice and Claudia transports them (FOB destina
   - '@id': claudia:633f6e56-6c7d-4a5b-b9c9-1a8adafd8960
     '@type': Process
     skos:note: Claudia transports the apples
-
-  - '@id': claudia:fd399b37-0740-4a68-a184-1e655021ca21
-    '@type': EconomicEvent
-    inputOf: claudia:633f6e56-6c7d-4a5b-b9c9-1a8adafd8960
-    action: pickup
-    resourceInventoriedAs: claudia:27be5cab-d740-4194-9298-1661a69d9d95 
-    provider: https://claudia.example/
-    receiver: https://claudia.example/
-    resourceQuantity:
-      om2:hasUnit: om2:kilogram
-      om2:hasNumericalValue: 30
-
-  - '@id': claudia:57f1c1d0-432e-4bfa-9d32-002b8955a708
-    '@type': EconomicEvent
-    outputOf: claudia:633f6e56-6c7d-4a5b-b9c9-1a8adafd8960
-    action: dropoff
-    resourceInventoriedAs: claudia:27be5cab-d740-4194-9298-1661a69d9d95
-    provider: https://claudia.example/
-    receiver: https://claudia.example/
-    resourceQuantity:
-      om2:hasUnit: om2:kilogram
-      om2:hasNumericalValue: 30
+    hasInput:
+    - '@id': claudia:fd399b37-0740-4a68-a184-1e655021ca21
+      '@type': EconomicEvent
+      action: pickup
+      resourceInventoriedAs: claudia:27be5cab-d740-4194-9298-1661a69d9d95
+      provider: https://claudia.example/
+      receiver: https://claudia.example/
+      resourceQuantity:
+        om2:hasUnit: om2:kilogram
+        om2:hasNumericalValue: 30
+    hasOutput:
+    - '@id': claudia:57f1c1d0-432e-4bfa-9d32-002b8955a708
+      '@type': EconomicEvent
+      action: dropoff
+      resourceInventoriedAs: claudia:27be5cab-d740-4194-9298-1661a69d9d95
+      provider: https://claudia.example/
+      receiver: https://claudia.example/
+      resourceQuantity:
+        om2:hasUnit: om2:kilogram
+        om2:hasNumericalValue: 30
 
   - '@id': claudia:c404cff5-19c7-453d-b0d8-d8e96055bd0c
     '@type': Process
     skos:note: Claudia transports the apples
-
-  - '@id': claudia:856c43b1-0a63-445f-a56f-707b257f086e
-    '@type': EconomicEvent
-    inputOf: claudia:c404cff5-19c7-453d-b0d8-d8e96055bd0c
-    action: pickup
-    resourceInventoriedAs: claudia:27be5cab-d740-4194-9298-1661a69d9d95 
-    provider: https://claudia.example/
-    receiver: https://claudia.example/
-    resourceQuantity:
-      om2:hasUnit: om2:kilogram
-      om2:hasNumericalValue: 30
-
-  - '@id': claudia:9cb4944b-d26d-4774-a530-d18f2747c0d8
-    '@type': EconomicEvent
-    outputOf: claudia:c404cff5-19c7-453d-b0d8-d8e96055bd0c
-    action: dropoff
-    resourceInventoriedAs: claudia:27be5cab-d740-4194-9298-1661a69d9d95
-    provider: https://claudia.example/
-    receiver: https://claudia.example/
-    resourceQuantity:
-      om2:hasUnit: om2:kilogram
-      om2:hasNumericalValue: 30
-
-  - '@id': urn:uuid:68cabaf3-deb8-4bd5-a439-798263abe35a
-    '@type': EconomicEvent
-    skos:note: Transportation of alice's apples from alice's location to bob's location
-    outputOf: claudia:c404cff5-19c7-453d-b0d8-d8e96055bd0c
-    action: deliverService
-    resourceClassifiedAs: wd:Q7590 # transportation service
-    provider: https://claudia.example/
-    receiver: https://alice.example/
-    resourceQuantity:
-      om2:hasUnit: om2:one
-      om2:hasNumericalValue: 1
-
-  - '@id': urn:uuid:d4d2fd71-34f2-41c3-b1c5-19ad5ed2da58
-    '@type': Fulfillment
-    fulfills: urn:uuid:c7897c39-7f05-4a5d-a487-80e130a2414a # the commitment
-    fulfilledBy: urn:uuid:68cabaf3-deb8-4bd5-a439-798263abe35a # the economic event
-    resourceQuantity:
-      om2:hasUnit: om2:one
-      om2:hasNumericalValue: 1
+    hasInput:
+    - '@id': claudia:856c43b1-0a63-445f-a56f-707b257f086e
+      '@type': EconomicEvent
+      action: pickup
+      resourceInventoriedAs: claudia:27be5cab-d740-4194-9298-1661a69d9d95
+      provider: https://claudia.example/
+      receiver: https://claudia.example/
+      resourceQuantity:
+        om2:hasUnit: om2:kilogram
+        om2:hasNumericalValue: 30
+    hasOutput:
+    - '@id': claudia:9cb4944b-d26d-4774-a530-d18f2747c0d8
+      '@type': EconomicEvent
+      action: dropoff
+      resourceInventoriedAs: claudia:27be5cab-d740-4194-9298-1661a69d9d95
+      provider: https://claudia.example/
+      receiver: https://claudia.example/
+      resourceQuantity:
+        om2:hasUnit: om2:kilogram
+        om2:hasNumericalValue: 30
+    - '@id': urn:uuid:68cabaf3-deb8-4bd5-a439-798263abe35a
+      '@type': EconomicEvent
+      skos:note: Transportation of alice's apples from alice's location to bob's location
+      action: deliverService
+      resourceConformsTo: wd:Q7590 # transportation service
+      provider: https://claudia.example/
+      receiver: https://alice.example/
+      resourceQuantity:
+        om2:hasUnit: om2:one
+        om2:hasNumericalValue: 1
+      fulfills: urn:uuid:c7897c39-7f05-4a5d-a487-80e130a2414a # the commitment
 
   # bob receives the apples
 
   - '@id': urn:uuid:7a63ea10-b1c3-441a-9a08-fb8630c02614
     '@type': EconomicEvent
     action: transferCustody
-    resourceClassifiedAs: wd:Q41777871 # haralson apples
+    resourceConformsTo: wd:Q41777871 # haralson apples
     trackingIdentifier: lot-alice-apples-2018-10-11
     resourceInventoriedAs: claudia:27be5cab-d740-4194-9298-1661a69d9d95
     toResourceInventoriedAs: bob:9bd19194-a36d-4a1f-896b-8082887962cb
@@ -214,22 +200,16 @@ Bob purchases 30kg of apples from Alice and Claudia transports them (FOB destina
       om2:hasUnit: om2:kilogram
       om2:hasNumericalValue: 30
     triggeredBy: urn:uuid:7a63ea10-b1c3-441a-9a08-fb8630c02614
-
-  - '@id': urn:uuid:6f438393-7f87-4914-806c-e23a4fd15e89
-    '@type': Fulfillment
     fulfills: urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10f1f86 # the commitment
-    fulfilledBy: urn:uuid:ad56a7ed-be3c-4937-a3fb-0f156bcd2c47 # the economic event
-    resourceQuantity:
-      om2:hasUnit: om2:kilogram
-      om2:hasNumericalValue: 30
 
   # resources snapshot
 
   - '@id': alice:21f361a6-2375-46bb-b192-c21b5ba833bf
     '@type': EconomicResource
-    classifiedAs: wd:Q41777871 # haralson apples
+    conformsTo: wd:Q41777871 # haralson apples
     trackingIdentifier: lot-alice-apples-2018-10-11
     locatedAt: geo:70ee3034-0d15-4471-8ee3-91c60bb1a9c9 # only the possessed amount
+    primaryAccountable: https://alice.example
     accountingQuantity:
       om2:hasUnit: om2:kilogram
       om2:hasNumericalValue: 200
@@ -239,9 +219,10 @@ Bob purchases 30kg of apples from Alice and Claudia transports them (FOB destina
 
   - '@id': bob:9bd19194-a36d-4a1f-896b-8082887962cb
     '@type': EconomicResource
-    classifiedAs: wd:Q41777871 # haralson apples
+    conformsTo: wd:Q41777871 # haralson apples
     trackingIdentifier: lot-alice-apples-2018-10-11
     locatedAt: geo:b52a5815-fae9-43bf-be95-833b95dc0ada # only the possessed amount
+    primaryAccountable: https://bob.example
     accountingQuantity:
       om2:hasUnit: om2:kilogram
       om2:hasNumericalValue: 30
@@ -251,7 +232,7 @@ Bob purchases 30kg of apples from Alice and Claudia transports them (FOB destina
 
   - '@id': claudia:27be5cab-d740-4194-9298-1661a69d9d95 # claudia's bill of lading on the truck
     '@type': EconomicResource
-    classifiedAs: wd:Q41777871 # haralson apples
+    conformsTo: wd:Q41777871 # haralson apples
     onhandQuantity:
       om2:hasUnit: om2:kilogram
       om2:hasNumericalValue: 0
@@ -261,7 +242,7 @@ Bob purchases 30kg of apples from Alice and Claudia transports them (FOB destina
   - '@id': urn:uuid:8baa8ff7-9c1e-4586-ae7b-79d620a3cac9
     '@type': EconomicEvent
     action: transfer
-    resourceClassifedAs: wd:Q4917 # US Dollar
+    resourceConformsTo: wd:Q4917 # US Dollar
     resourceInventoriedAs: alice:daa2ec3b-2c1a-4eb1-839f-8dcec1a1f93a # alice's bank account
     toResourceInventoriedAs: claudia:bd5806d6-4a36-45b9-b3b6-3e7d361a5a14 # claudia's bank account
     provider: https://alice.example/
@@ -269,14 +250,7 @@ Bob purchases 30kg of apples from Alice and Claudia transports them (FOB destina
     resourceQuantity:
       om2:hasUnit: om2:one
       om2:hasNumericalValue: 10
-
-  - '@id': urn:uuid:fbff9852-36ca-4364-a943-bc0b49e1cab5
-    '@type': Fulfillment
     fulfills: urn:uuid:33e8933b-ff73-4a01-964a-ca7a98893083 # the commitment
-    fulfilledBy: urn:uuid:8baa8ff7-9c1e-4586-ae7b-79d620a3cac9 # the economic event
-    resourceQuantity:
-      om2:hasUnit: om2:one
-      om2:hasNumericalValue: 10
 ```
 
 #### Manufacturing and workflow
@@ -287,7 +261,7 @@ The QT needs the stage and state of the input component resource, because QT wou
 
 This example includes recipe, plan, and actuals.
 
-![stage-state diagram](../assets/examples/stage-state.png)
+![stage-state recipe-plan-observations diagram reflecting the yaml below](../assets/examples/stage-state.png)
 
 ``` yaml
 # Example: Workflow recipe, plan, execution, including stage and state usage
@@ -296,7 +270,6 @@ This example includes recipe, plan, and actuals.
   - https://git.io/vf-examples-jsonld-context
   - mfg: https://manufacturing.example/
 
-'@id': rgh:valueflows/valueflows/master/examples/workflow-stage-state.yaml
 '@graph':
 
   # specifications
@@ -304,20 +277,20 @@ This example includes recipe, plan, and actuals.
   - '@id': urn:uuid:3be5259d-10f0-431c-9fec-9c0c15a461d3
     '@type': ResourceSpecification
     name: Bucket white 5 gallon
-    unitOfResource: om2:one
+    defaultUnitOfResource: om2:one
     substitutable: true
 
   - '@id': urn:uuid:d4d2fd71-34f2-41c3-b1c5-19ad5ed2da58
     '@type': ResourceSpecification
     name: Thermoplastic polymer white
-    unitOfResource: om2:kilogram
+    DefaultUnitOfResource: om2:kilogram
     substitutable: true
 
   - '@id': urn:uuid:c7897c39-7f05-4a5d-a487-80e130a2414a
     '@type': ResourceSpecification
     name: Injection molding machine
-    unitOfResource: om2:one
-    unitOfEffort: om2:hour
+    defaultUnitOfResource: om2:one
+    defaultUnitOfEffort: om2:hour
     substitutable: true
 
   - '@id': mfg:27be5cab-d740-4194-9298-1661a69d9d95
@@ -333,7 +306,7 @@ This example includes recipe, plan, and actuals.
   - '@id': mfg:3129ca8b-fcda-45be-bbda-294dc924d3b9
     '@type': EconomicResource
     name: Bucket white 5 gallon
-    resourceConformsTo: urn:uuid:3be5259d-10f0-431c-9fec-9c0c15a461d3
+    conformsTo: urn:uuid:3be5259d-10f0-431c-9fec-9c0c15a461d3
     accountingQuantity:
       om2:hasUnit: om2:one
       om2:hasNumericalValue: 320
@@ -343,7 +316,7 @@ This example includes recipe, plan, and actuals.
   - '@id': mfg:6b5bc786-b9ed-4189-b34f-5ef7d10f1f86
     '@type': EconomicResource
     name: Thermoplastic polymer white
-    resourceConformsTo: urn:uuid:d4d2fd71-34f2-41c3-b1c5-19ad5ed2da58
+    conformsTo: urn:uuid:d4d2fd71-34f2-41c3-b1c5-19ad5ed2da58
     accountingQuantity:
       om2:hasUnit: om2:kilogram
       om2:hasNumericalValue: 2455
@@ -351,7 +324,7 @@ This example includes recipe, plan, and actuals.
   - '@id': mfg:23799c14-c368-4653-a584-83bf9ae8b82a
     '@type': EconomicResource
     name: Injection molding maching
-    resourceConformsTo: urn:uuid:c7897c39-7f05-4a5d-a487-80e130a2414a
+    conformsTo: urn:uuid:c7897c39-7f05-4a5d-a487-80e130a2414a
     trackingIdentifier: DDE098989099911
     accountingQuantity:
       om2:hasUnit: om2:one
@@ -360,29 +333,21 @@ This example includes recipe, plan, and actuals.
 
   # the recipe (here the recipe runs "backwards" from the final product, similar to a BOM)
 
-  - '@id': mfg:ac9ec98d-db80-44dc-97be-7aa149b2fe5d
-    '@type': RecipeResource
-    resourceConformsTo: urn:uuid:3be5259d-10f0-431c-9fec-9c0c15a461d3 # bucket
-
   - '@id': mfg:33e8933b-ff73-4a01-964a-ca7a98893083
     '@type': RecipeFlow
     recipeOutputOf: mfg:a8356625-bf64-4c16-9099-28aa1b718c4b
     action: modify
     state: pass
-    recipeFlowResource: mfg:ac9ec98d-db80-44dc-97be-7aa149b2fe5d
+    resourceConformsTo: urn:uuid:3be5259d-10f0-431c-9fec-9c0c15a461d3 # bucket
     resourceQuantity:
       om2:hasUnit: om2:one
       om2:hasNumericalValue: 500
-
-  - '@id': mfg:a3be5259d-10f0-431c-9fec-9c0c15a461d3
-    '@type': RecipeResource
-    resourceConformsTo: urn:uuid:d4d2fd71-34f2-41c3-b1c5-19ad5ed2da58 # polymer
 
   - '@id': mfg:54b814ee-62dc-40c1-bb96-f8582aa4f771
     '@type': RecipeFlow
     recipeOutputOf: mfg:a8356625-bf64-4c16-9099-28aa1b718c4b
     action: produce # fail
-    recipeFlowResource: mfg:a3be5259d-10f0-431c-9fec-9c0c15a461d3
+    resourceConformsTo: urn:uuid:d4d2fd71-34f2-41c3-b1c5-19ad5ed2da58 # polymer
     resourceQuantity:
       om2:hasUnit: om2:kilogram
       om2:hasNumericalValue: 0
@@ -399,21 +364,17 @@ This example includes recipe, plan, and actuals.
     '@type': RecipeFlow
     recipeInputOf: mfg:a8356625-bf64-4c16-9099-28aa1b718c4b
     action: accept
-    recipeFlowResource: mfg:b75d8f6a-e2df-4e52-b36d-1a22a66f4ead
+    resourceConformsTo: urn:uuid:3be5259d-10f0-431c-9fec-9c0c15a461d3 # bucket
     stage: mfg:27be5cab-d740-4194-9298-1661a69d9d95 # 'make' process specification
     resourceQuantity:
       om2:hasUnit: om2:one
       om2:hasNumericalValue: 500
 
-  - '@id': mfg:b75d8f6a-e2df-4e52-b36d-1a22a66f4ead
-    '@type': RecipeResource
-    resourceConformsTo: urn:uuid:3be5259d-10f0-431c-9fec-9c0c15a461d3 # bucket
-
   - '@id': mfg:33e8933b-ff73-4a01-964a-ca7a98893083
     '@type': RecipeFlow
     recipeOutputOf: mfg:e1721a61-cd47-4556-84b9-8b1b81da15bf
     action: produce
-    recipeFlowResource: mfg:b75d8f6a-e2df-4e52-b36d-1a22a66f4ead
+    resourceConformsTo: urn:uuid:3be5259d-10f0-431c-9fec-9c0c15a461d3 # bucket
     resourceQuantity:
       om2:hasUnit: om2:one
       om2:hasNumericalValue: 500
@@ -430,27 +391,19 @@ This example includes recipe, plan, and actuals.
     '@type': RecipeFlow
     recipeInputOf: mfg:e1721a61-cd47-4556-84b9-8b1b81da15bf
     action: consume
-    recipeFlowResource: mfg:6405b8ad-0ac2-4d58-abdb-0808903c78ad
+    resourceConformsTo: urn:uuid:d4d2fd71-34f2-41c3-b1c5-19ad5ed2da58 # polymer
     resourceQuantity:
       om2:hasUnit: om2:kilogram
       om2:hasNumericalValue: 450
-
-  - '@id': mfg:6405b8ad-0ac2-4d58-abdb-0808903c78ad
-    '@type': RecipeResource
-    resourceConformsTo: urn:uuid:d4d2fd71-34f2-41c3-b1c5-19ad5ed2da58 # polymer
 
   - '@id': mfg:60f4204e-b8d2-4026-8577-102c3f82c0af
     '@type': RecipeFlow
     recipeInputOf: mfg:e1721a61-cd47-4556-84b9-8b1b81da15bf
     action: use
-    recipeFlowResource: mfg:e02e3f6b-420a-4ba8-89b0-909d7363ce07
+    resourceConformsTo: urn:uuid:c7897c39-7f05-4a5d-a487-80e130a2414a # injection molding machine
     effortQuantity:
       om2:hasUnit: om2:hour
       om2:hasNumericalValue: 5.5
-
-  - '@id': mfg:e02e3f6b-420a-4ba8-89b0-909d7363ce07
-    '@type': RecipeResource
-    resourceConformsTo: urn:uuid:c7897c39-7f05-4a5d-a487-80e130a2414a # injection molding machine
 
   # the plan (shown running "forwards")
 
@@ -620,7 +573,7 @@ This example includes recipe, plan, and actuals.
   - '@id': mfg:3129ca8b-fcda-45be-bbda-294dc924d3b9
     '@type': EconomicResource
     name: Bucket white 5 gallon
-    resourceConformsTo: urn:uuid:3be5259d-10f0-431c-9fec-9c0c15a461d3
+    conformsTo: urn:uuid:3be5259d-10f0-431c-9fec-9c0c15a461d3
     accountingQuantity:
       om2:hasUnit: om2:one
       om2:hasNumericalValue: 1318
@@ -630,7 +583,7 @@ This example includes recipe, plan, and actuals.
   - '@id': mfg:6b5bc786-b9ed-4189-b34f-5ef7d10f1f86
     '@type': EconomicResource
     name: Thermoplastic polymer white
-    resourceConformsTo: urn:uuid:d4d2fd71-34f2-41c3-b1c5-19ad5ed2da58
+    conformsTo: urn:uuid:d4d2fd71-34f2-41c3-b1c5-19ad5ed2da58
     accountingQuantity:
       om2:hasUnit: om2:kilogram
       om2:hasNumericalValue: 1531.8
@@ -638,7 +591,7 @@ This example includes recipe, plan, and actuals.
   - '@id': mfg:23799c14-c368-4653-a584-83bf9ae8b82a
     '@type': EconomicResource
     name: Injection molding maching
-    resourceConformsTo: urn:uuid:c7897c39-7f05-4a5d-a487-80e130a2414a
+    conformsTo: urn:uuid:c7897c39-7f05-4a5d-a487-80e130a2414a
     trackingIdentifier: DDE098989099911
     accountingQuantity:
       om2:hasUnit: om2:one

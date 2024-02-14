@@ -7,7 +7,7 @@ Here is a long description of [Dependent Demand](../linked-docs/dependent_demand
 Basically, you traverse a graph of Recipe Processes backwards from the last Recipe Output, connecting Recipe Inputs with Recipe Outputs that have matching Resource Categories, and backscheduling all the processes and resource requirements based on estimated process durations.   See [Graph search algorithms](http://jasonpark.me/AlgorithmVisualizer/).
 
 This description refers to this diagram:
-![process resource flow](../assets/process-layer.png)
+![VF 3 layer diagram showing process flows on each level with connections](../assets/process-layer.png)
 Take each request for quantities of Recipe Resource as a demand and start the traversal.
 
 **Start:**
