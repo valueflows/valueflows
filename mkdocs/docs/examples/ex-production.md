@@ -27,7 +27,7 @@ Simple one-process manufacturing with typical inputs and outputs.
 
   - '@id': mfg:3129ca8b-fcda-45be-bbda-294dc924d3b9
     '@type': EconomicResource
-    conformsTo: https://www.wikidata.org/wiki/Q219803 # plywood
+    conformsTo: wd:Q219803 # plywood
     accountingQuantity:
       om2:hasUnit: om2:one
       om2:hasNumericalValue: 130
@@ -35,17 +35,114 @@ Simple one-process manufacturing with typical inputs and outputs.
 
   - '@id': mfg:6b97b1be-8e07-44ac-82e5-214f1b2aaf33
     '@type': EconomicResource
-    conformsTo: https://www.wikidata.org/wiki/Q2101564 # desk design specification
+    conformsTo: wd:Q2101564 # desk design specification
     accountingQuantity:
       om2:hasUnit: om2:one
       om2:hasNumericalValue: 1
 
   - '@id': mfg:52f0e212-3c4f-4d27-b345-5e964c135824
     '@type': EconomicResource
-    conformsTo: https://www.wikidata.org/wiki/Q13231055 # CNC machine
+    conformsTo: wd:Q13231055 # CNC machine
     accountingQuantity:
       om2:hasUnit: om2:one
       om2:hasNumericalValue: 1
+
+  # Production
+
+  - '@id': mfg:02b39a30-3e04-4305-9656-7f261aa63c84
+    '@type': Process
+    name: Make the lean desk
+
+  - '@id': mfg:b52a5815-fae9-43bf-be95-833b95dc0adb
+    '@type': EconomicEvent
+    inputOf: mfg:02b39a30-3e04-4305-9656-7f261aa63c84
+    action: consume
+    provider: https://manufacturing.example/
+    receiver: https://manufacturing.example/
+    resourceInventoriedAs: mfg:3129ca8b-fcda-45be-bbda-294dc924d3b9 # plywood sheets
+    resourceQuantity:
+      om2:hasUnit: om2:one
+      om2:hasNumericalValue: 3
+    hasInput:
+    - '@id': mfg:b90b0b77-09a2-42e2-8bd4-e9ae2c1c6172
+      '@type': EconomicEvent
+      action: use
+      provider: https://manufacturing.example/
+      receiver: https://manufacturing.example/
+      resourceInventoriedAs: mfg:52f0e212-3c4f-4d27-b345-5e964c135824 # CNC machine
+      effortQuantity:
+        om2:hasUnit: om2:hour
+        om2:hasNumericalValue: 3.5
+    - '@id': mfg:a8236bbb-81e0-422d-9861-56d2417db0fb
+      '@type': EconomicEvent
+      action: cite
+      provider: https://makezine.com/
+      receiver: https://manufacturing.example/
+      resourceInventoriedAs: mfg:6b97b1be-8e07-44ac-82e5-214f1b2aaf33 # desk design specification
+      resourceQuantity:
+        om2:hasUnit: om2:one
+        om2:hasNumericalValue: 1
+    - '@id': mfg:6f438393-7f87-4914-806c-e23a4fd15e89
+      '@type': EconomicEvent
+      action: work
+      provider: https://alice.example/
+      receiver: https://manufacturing.example/
+      resourceConformsTo: wd:Q192047 # machining
+      effortQuantity:
+        om2:hasUnit: om2:hour
+        om2:hasNumericalValue: 7
+    hasOutput:
+    - '@id': mfg:d4d2fd71-34f2-41c3-b1c5-19ad5ed2da59
+      '@type': EconomicEvent
+      action: produce
+      provider: https://manufacturing.example/
+      receiver: https://manufacturing.example/
+      resourceInventoriedAs: mfg:e1721a61-cd47-4556-84b9-8b1b81da15bf # desk
+      resourceQuantity:
+        om2:hasUnit: om2:one
+        om2:hasNumericalValue: 1
+
+  # Economic resources after
+
+  - '@id': mfg:e1721a61-cd47-4556-84b9-8b1b81da15bf
+    '@type': EconomicResource
+    resourceConformsTo: https://www.opendesk.cc/lean/desk # desk
+    accountingQuantity:
+      om2:hasUnit: om2:one
+      om2:hasNumericalValue: 9
+
+  - '@id': mfg:3129ca8b-fcda-45be-bbda-294dc924d3b9
+    '@type': EconomicResource
+    conformsTo: wd:Q219803 # plywood
+    accountingQuantity:
+      om2:hasUnit: om2:one
+      om2:hasNumericalValue: 127
+    note: 4 x 8 sheet of 1/2 inch plywood
+
+  - '@id': mfg:6b97b1be-8e07-44ac-82e5-214f1b2aaf33
+    '@type': EconomicResource
+    conformsTo: wd:Q2101564 # desk design specification
+    accountingQuantity:
+      om2:hasUnit: om2:one
+      om2:hasNumericalValue: 1
+
+  - '@id': mfg:52f0e212-3c4f-4d27-b345-5e964c135824
+    '@type': EconomicResource
+    conformsTo: wd:Q13231055 # CNC machine
+    accountingQuantity:
+      om2:hasUnit: om2:one
+      om2:hasNumericalValue: 1
+```
+Alternate view of this manufacturing example, using the relational directionality between Process and EconomicEvent.
+``` yaml
+# Example: Simple manufacturing process
+
+'@context':
+  - https://git.io/vf-examples-jsonld-context
+  - alice: https://alice.example/
+    mfg: https://manufacturing.example/
+
+'@graph':
 
   # Production
 
@@ -92,7 +189,7 @@ Simple one-process manufacturing with typical inputs and outputs.
     action: work
     provider: https://alice.example/
     receiver: https://manufacturing.example/
-    resourceConformsTo: https://www.wikidata.org/wiki/Q192047 # machining
+    resourceConformsTo: wd:Q192047 # machining
     effortQuantity:
       om2:hasUnit: om2:hour
       om2:hasNumericalValue: 7
@@ -105,37 +202,6 @@ Simple one-process manufacturing with typical inputs and outputs.
     receiver: https://manufacturing.example/
     resourceInventoriedAs: mfg:e1721a61-cd47-4556-84b9-8b1b81da15bf # desk
     resourceQuantity:
-      om2:hasUnit: om2:one
-      om2:hasNumericalValue: 1
-
-  # Economic resources after
-
-  - '@id': mfg:e1721a61-cd47-4556-84b9-8b1b81da15bf
-    '@type': EconomicResource
-    resourceConformsTo: https://www.opendesk.cc/lean/desk # desk
-    accountingQuantity:
-      om2:hasUnit: om2:one
-      om2:hasNumericalValue: 9
-
-  - '@id': mfg:3129ca8b-fcda-45be-bbda-294dc924d3b9
-    '@type': EconomicResource
-    conformsTo: https://www.wikidata.org/wiki/Q219803 # plywood
-    accountingQuantity:
-      om2:hasUnit: om2:one
-      om2:hasNumericalValue: 127
-    note: 4 x 8 sheet of 1/2 inch plywood
-
-  - '@id': mfg:6b97b1be-8e07-44ac-82e5-214f1b2aaf33
-    '@type': EconomicResource
-    conformsTo: https://www.wikidata.org/wiki/Q2101564 # desk design specification
-    accountingQuantity:
-      om2:hasUnit: om2:one
-      om2:hasNumericalValue: 1
-
-  - '@id': mfg:52f0e212-3c4f-4d27-b345-5e964c135824
-    '@type': EconomicResource
-    conformsTo: https://www.wikidata.org/wiki/Q13231055 # CNC machine
-    accountingQuantity:
       om2:hasUnit: om2:one
       om2:hasNumericalValue: 1
 ```
@@ -156,7 +222,6 @@ Simple delivery of a service with typical inputs and outputs.
     carol: https://carol.example/
     training: https://training.example/
 
-'@id': rgh:valueflows/valueflows/master/examples/process-service.yaml
 '@graph':
 
   # Economic resources and specifications
@@ -164,7 +229,7 @@ Simple delivery of a service with typical inputs and outputs.
   - '@id': training:3129ca8b-fcda-45be-bbda-294dc924d3b9
     '@type': ResourceSpecification
     name: 3D printing 1 day hands-on workshop
-    classifiedAs: [ https://www.wikidata.org/wiki/Q27556165, https://www.wikidata.org/wiki/Q229367 ] # workshop, 3d printing
+    classifiedAs: [ wd:Q27556165, wd:Q229367 ] # workshop, 3d printing
 
   - '@id': training:52f0e212-3c4f-4d27-b345-5e964c135824
     '@type': ResourceSpecification
@@ -178,9 +243,8 @@ Simple delivery of a service with typical inputs and outputs.
 
   - '@id': training:e1721a61-cd47-4556-84b9-8b1b81da15bf
     '@type': EconomicResource
-    classifiedAs: https://www.wikidata.org/wiki/Q53953506 # 3D printer
+    conformsTo: wd:Q53953506 # 3D printer
     accountingQuantity:
-      qudt:unit: unit:Number
       om2:hasUnit: om2:one
       om2:hasNumericalValue: 1
 
@@ -196,6 +260,80 @@ Simple delivery of a service with typical inputs and outputs.
   - '@id': training:02b39a30-3e04-4305-9656-7f261aa63c84
     '@type': Process
     name: Give the 3D printing workshop
+    hasInput:
+    - '@id': training:b90b0b77-09a2-42e2-8bd4-e9ae2c1c617
+      '@type': EconomicEvent
+      action: consume
+      provider: https://training.example/
+      receiver: https://training.example/
+      resourceInventoriedAs: training:6b97b1be-8e07-44ac-82e5-214f1b2aaf33 # workshop handout
+      resourceQuantity:
+        om2:hasUnit: om2:one
+        om2:hasNumericalValue: 3
+    - '@id': training:b52a5815-fae9-43bf-be95-833b95dc0adb
+      '@type': EconomicEvent
+      action: use
+      provider: https://training.example/
+      receiver: https://training.example/
+      resourceInventoriedAs: training:e1721a61-cd47-4556-84b9-8b1b81da15bf # 3D printer
+      effortQuantity:
+        om2:hasUnit: om2:hour
+        om2:hasNumericalValue: 8
+    - '@id': training:a8236bbb-81e0-422d-9861-56d2417db0fb
+      '@type': EconomicEvent
+      action: work
+      provider: https://training.example/
+      receiver: https://training.example/
+      resourceConformsTo: training:f438393-7f87-4914-806c-e23a4fd15e89 # 3D printer training
+      effortQuantity:
+        om2:hasUnit: om2:hour
+        om2:hasNumericalValue: 8
+    hasOutput:
+    - '@id': training:d4d2fd71-34f2-41c3-b1c5-19ad5ed2da59
+      '@type': EconomicEvent
+      action: deliverService
+      provider: https://training.example/
+      receiver: https://alice.example/
+      resourceConformsTo: training:3129ca8b-fcda-45be-bbda-294dc924d3b9 # one day 3D printing workshop
+      resourceQuantity:
+        om2:hasUnit: om2:one
+        om2:hasNumericalValue: 1
+    - '@id': training:583e83d9-a46d-44ff-bd71-88513a1d83c0
+      '@type': EconomicEvent
+      action: deliverService
+      provider: https://training.example/
+      receiver: https://bob.example/
+      resourceConformsTo: training:3129ca8b-fcda-45be-bbda-294dc924d3b9 # one day 3D printing workshop
+      resourceQuantity:
+        om2:hasUnit: om2:one
+        om2:hasNumericalValue: 1
+    - '@id': training:e4783bef-9006-490c-9c03-389272c7444d
+      '@type': EconomicEvent
+      action: deliverService
+      provider: https://training.example/
+      receiver: https://carol.example/
+      resourceConformsTo: training:3129ca8b-fcda-45be-bbda-294dc924d3b9 # one day 3D printing workshop
+      resourceQuantity:
+        om2:hasUnit: om2:one
+        om2:hasNumericalValue: 1
+```
+Alternate view of this service example, using the relational directionality between Process and EconomicEvent.
+``` yaml
+# Example: Simple service process
+
+'@context':
+  - https://git.io/vf-examples-jsonld-context
+  - alice: https://alice.example/
+    bob: https://bob.example/
+    carol: https://carol.example/
+    training: https://training.example/
+
+'@graph':
+  # Service delivery
+
+  - '@id': training:02b39a30-3e04-4305-9656-7f261aa63c84
+    '@type': Process
+    name: Give the 3D printing workshop
 
   - '@id': training:b90b0b77-09a2-42e2-8bd4-e9ae2c1c617
     '@type': EconomicEvent
@@ -203,7 +341,7 @@ Simple delivery of a service with typical inputs and outputs.
     action: consume
     provider: https://training.example/
     receiver: https://training.example/
-    involves: training:6b97b1be-8e07-44ac-82e5-214f1b2aaf33 # workshop handout
+    resourceInventoriedAs: training:6b97b1be-8e07-44ac-82e5-214f1b2aaf33 # workshop handout
     resourceQuantity:
       om2:hasUnit: om2:one
       om2:hasNumericalValue: 3
@@ -214,7 +352,7 @@ Simple delivery of a service with typical inputs and outputs.
     action: use
     provider: https://training.example/
     receiver: https://training.example/
-    involves: training:e1721a61-cd47-4556-84b9-8b1b81da15bf # 3D printer
+    resourceInventoriedAs: training:e1721a61-cd47-4556-84b9-8b1b81da15bf # 3D printer
     effortQuantity:
       om2:hasUnit: om2:hour
       om2:hasNumericalValue: 8
@@ -263,7 +401,6 @@ Simple delivery of a service with typical inputs and outputs.
       om2:hasUnit: om2:one
       om2:hasNumericalValue: 1
 ```
-
 #### Workflow production
 
 Simple repair process with typical inputs and outputs.  The same economic resource goes into and out of the process(es).
@@ -278,7 +415,6 @@ Simple repair process with typical inputs and outputs.  The same economic resour
   - alice: https://alice.example/
     repair: https://auto-repair.example/
 
-'@id': rgh:valueflows/valueflows/master/examples/process-workflow.yaml
 '@graph':
 
   # Economic resource before
@@ -290,6 +426,54 @@ Simple repair process with typical inputs and outputs.  The same economic resour
     accountingQuantity:
       om2:hasUnit: om2:one
       om2:hasNumericalValue: 1
+
+  # Repair process
+
+  - '@id': repair:02b39a30-3e04-4305-9656-7f261aa63c84
+    '@type': Process
+    name: Oil change JHMCD38698S061469
+    skos:note: Check over car, change oil (standard quantity).
+    hasInput:
+    - '@id': repair:a8236bbb-81e0-422d-9861-56d2417db0fb
+      '@type': EconomicEvent
+      action: accept
+      provider: https://alice.example/
+      receiver: https://auto-repair.example/
+      resourceInventoriedAs: alice:e1721a61-cd47-4556-84b9-8b1b81da15bf
+      resourceQuantity:
+        om2:hasUnit: om2:one
+        om2:hasNumericalValue: 1
+    hasOutput:
+    - '@id': repair:52f0e212-3c4f-4d27-b345-5e964c135824
+      '@type': EconomicEvent
+      action: modify
+      provider: https://auto-repair.example/
+      receiver: https://alice.example/
+      resourceInventoriedAs: alice:e1721a61-cd47-4556-84b9-8b1b81da15bf
+      resourceQuantity:
+        om2:hasUnit: om2:one
+        om2:hasNumericalValue: 1
+
+  # Economic resource after
+
+  - '@id': alice:e1721a61-cd47-4556-84b9-8b1b81da15bf
+    '@type': EconomicResource
+    resourceConformsTo: http://opensourceecology.org/wiki/Wikispeed_SGT01 # car
+    trackingIdentifier: JHMCD38698S061469
+    accountingQuantity:
+      om2:hasUnit: om2:one
+      om2:hasNumericalValue: 1
+```
+Alternate view of this workflow process, using the more relational directionality option.
+``` yaml
+# Example: Simple workflow process
+
+'@context':
+  - https://git.io/vf-examples-jsonld-context
+  - alice: https://alice.example/
+    repair: https://auto-repair.example/
+
+'@graph':
 
   # Repair process
 
@@ -319,18 +503,7 @@ Simple repair process with typical inputs and outputs.  The same economic resour
     resourceQuantity:
       om2:hasUnit: om2:one
       om2:hasNumericalValue: 1
-
-  # Economic resource after
-
-  - '@id': alice:e1721a61-cd47-4556-84b9-8b1b81da15bf
-    '@type': EconomicResource
-    resourceConformsTo: http://opensourceecology.org/wiki/Wikispeed_SGT01 # car
-    trackingIdentifier: JHMCD38698S061469
-    accountingQuantity:
-      om2:hasUnit: om2:one
-      om2:hasNumericalValue: 1
 ```
-
 #### Pack unpack
 
 Simple pack and unpack of resources into and out of a container resource, using `combine` and `separate`.
@@ -345,14 +518,13 @@ Simple pack and unpack of resources into and out of a container resource, using 
   - med: https://medical.example/
     wash: https://laundry.example/
 
-'@id': rgh:valueflows/valueflows/master/examples/process-pack-unpack.yaml
 '@graph':
 
   # Economic resources before
 
   - '@id': med:e1721a61-cd47-4556-84b9-8b1b81da15bf
     '@type': EconomicResource
-    conformsTo: https://www.wikidata.org/wiki/Q987767 # container
+    conformsTo: wd:Q987767 # container
     trackingIdentifier: cont234
     accountingQuantity:
       om2:hasUnit: om2:one
@@ -361,7 +533,7 @@ Simple pack and unpack of resources into and out of a container resource, using 
 
   - '@id': med:3129ca8b-fcda-45be-bbda-294dc924d3b9
     '@type': EconomicResource
-    conformsTo: https://www.wikidata.org/wiki/Q89990310 # medical gown
+    conformsTo: wd:Q89990310 # medical gown
     trackingIdentifier: gown789
     accountingQuantity:
       om2:hasUnit: om2:one
@@ -370,7 +542,7 @@ Simple pack and unpack of resources into and out of a container resource, using 
 
   - '@id': med:3129ca8b-fcda-45be-bbda-294dc924d3b0
     '@type': EconomicResource
-    conformsTo: https://www.wikidata.org/wiki/Q89990310 # medical gown
+    conformsTo: wd:Q89990310 # medical gown
     trackingIdentifier: gown734
     accountingQuantity:
       om2:hasUnit: om2:one
@@ -379,12 +551,229 @@ Simple pack and unpack of resources into and out of a container resource, using 
 
   - '@id': med:3129ca8b-fcda-45be-bbda-294dc924d3b1
     '@type': EconomicResource
-    conformsTo: https://www.wikidata.org/wiki/Q89990310 # medical gown
+    conformsTo: wd:Q89990310 # medical gown
     trackingIdentifier: gown698
     accountingQuantity:
       om2:hasUnit: om2:one
       om2:hasNumericalValue: 1
     containedIn: 
+
+  # Packing process
+
+  - '@id': med:02b39a30-3e04-4305-9656-7f261aa63c84
+    '@type': Process
+    name: Pack medical gowns
+    note: Each gown is scanned for tracking identifier as packed
+    hasInput:
+    - '@id': med:b52a5815-fae9-43bf-be95-833b95dc0adb
+      '@type': EconomicEvent
+      action: combine
+      provider: https://medical.example/
+      receiver: https://medical.example/
+      resourceInventoriedAs: med:e1721a61-cd47-4556-84b9-8b1b81da15bf # a container
+      resourceQuantity:
+        om2:hasUnit: om2:one
+        om2:hasNumericalValue: 1
+      note: Container is empty at this point.
+    - '@id': med:b90b0b77-09a2-42e2-8bd4-e9ae2c1c6172
+      '@type': EconomicEvent
+      action: combine
+      provider: https://medical.example/
+      receiver: https://medical.example/
+      resourceInventoriedAs: med:3129ca8b-fcda-45be-bbda-294dc924d3b9 # a medical gown
+      resourceQuantity:
+        om2:hasUnit: om2:one
+        om2:hasNumericalValue: 1
+    - '@id': med:a8236bbb-81e0-422d-9861-56d2417db0fb
+      '@type': EconomicEvent
+      action: combine
+      provider: https://medical.example/
+      receiver: https://medical.example/
+      resourceInventoriedAs: med:3129ca8b-fcda-45be-bbda-294dc924d3b0 # a medical gown
+      resourceQuantity:
+        om2:hasUnit: om2:one
+        om2:hasNumericalValue: 1
+    - '@id': med:6f438393-7f87-4914-806c-e23a4fd15e89
+      '@type': EconomicEvent
+      action: combine
+      provider: https://medical.example/
+      receiver: https://medical.example/
+      resourceInventoriedAs: med:3129ca8b-fcda-45be-bbda-294dc924d3b1 # a medical gown
+      resourceQuantity:
+        om2:hasUnit: om2:one
+        om2:hasNumericalValue: 1
+    hasOutput:
+    - '@id': med:b52a5815-fae9-43bf-be95-833b95dc0456
+      '@type': EconomicEvent
+      action: produce
+      provider: https://medical.example/
+      receiver: https://medical.example/
+      resourceConformsTo: wd:Q2127468 # packaging unit
+      resourceQuantity:
+        om2:hasUnit: om2:one
+        om2:hasNumericalValue: 1
+      note: This is a new resource, a package containing all inputs.
+
+  # Economic resources after packing
+
+  - '@id': med:e1721a61-cd47-4556-84b9-8b1b81da15bf
+    '@type': EconomicResource
+    conformsTo: wd:Q987767 # container
+    trackingIdentifier: cont234
+    accountingQuantity:
+      om2:hasUnit: om2:one
+      om2:hasNumericalValue: 1
+    containedIn: med:e1721a61-cd47-4556-84b9-8b1b81da564h
+
+  - '@id': med:3129ca8b-fcda-45be-bbda-294dc924d3b9
+    '@type': EconomicResource
+    conformsTo: wd:Q89990310 # medical gown
+    trackingIdentifier: gown789
+    accountingQuantity:
+      om2:hasUnit: om2:one
+      om2:hasNumericalValue: 1
+    containedIn: med:e1721a61-cd47-4556-84b9-8b1b81da564h
+
+  - '@id': med:3129ca8b-fcda-45be-bbda-294dc924d3b0
+    '@type': EconomicResource
+    conformsTo: wd:Q89990310 # medical gown
+    trackingIdentifier: gown734
+    accountingQuantity:
+      om2:hasUnit: om2:one
+      om2:hasNumericalValue: 1
+    containedIn: med:e1721a61-cd47-4556-84b9-8b1b81da564h
+
+  - '@id': med:3129ca8b-fcda-45be-bbda-294dc924d3b1
+    '@type': EconomicResource
+    conformsTo: wd:Q89990310 # medical gown
+    trackingIdentifier: gown698
+    accountingQuantity:
+      om2:hasUnit: om2:one
+      om2:hasNumericalValue: 1
+    containedIn: med:e1721a61-cd47-4556-84b9-8b1b81da564h
+
+  - '@id': med:e1721a61-cd47-4556-84b9-8b1b81da564h
+    '@type': EconomicResource
+    conformsTo: wd:Q2127468 # packaging unit
+    trackingIdentifier: pack6789
+    accountingQuantity:
+      om2:hasUnit: om2:one
+      om2:hasNumericalValue: 1
+
+  # The package is transferred to the laundry
+
+  - '@id': med:b52a5815-fae9-43bf-be95-833berqojdasf7
+    '@type': EconomicEvent
+    action: transferCustody
+    provider: https://medical.example/
+    receiver: https://laundry.example/
+    resourceInventoriedAs: med:e1721a61-cd47-4556-84b9-8b1b81da564h # the package
+    resourceQuantity:
+      om2:hasUnit: om2:one
+      om2:hasNumericalValue: 1
+    note: Contains gowns and container.
+
+  # The package is unpacked at the laundry
+  
+  - '@id': wash:33e8933b-ff73-4a01-964a-ca7a98893083
+    '@type': Process
+    name: Unpack medical gowns
+    note: Each gown is scanned for tracking identifier as unpacked
+    hasInput:
+    - '@id': wash:33e8933b-ff73-4a01-964a-ca7a98893
+      '@type': EconomicEvent
+      action: consume
+      provider: https://laundry.example/
+      receiver: https://laundry.example/
+      resourceInventoriedAs: med:e1721a61-cd47-4556-84b9-8b1b81da564h # the package
+      resourceQuantity:
+        om2:hasUnit: om2:one
+        om2:hasNumericalValue: 1
+    hasOutput:
+    - '@id': wash:60f4204e-b8d2-4026-8577-102c3f82c0af
+      '@type': EconomicEvent
+      action: separate
+      provider: https://laundry.example/
+      receiver: https://laundry.example/
+      resourceInventoriedAs: med:e1721a61-cd47-4556-84b9-8b1b81da15bf # a container
+      resourceQuantity:
+        om2:hasUnit: om2:one
+        om2:hasNumericalValue: 1
+    - '@id': wash:60f4204e-b8d2-4026-8577-102c3fkm98g1
+      '@type': EconomicEvent
+      action: separate
+      provider: https://laundry.example/
+      receiver: https://laundry.example/
+      resourceInventoriedAs: med:3129ca8b-fcda-45be-bbda-294dc924d3b9 # a medical gown
+      resourceQuantity:
+        om2:hasUnit: om2:one
+        om2:hasNumericalValue: 1
+    - '@id': wash:60f4204e-b8d2-4026-8577-102c3fsd89cv
+      '@type': EconomicEvent
+      action: separate
+      provider: https://laundry.example/
+      receiver: https://laundry.example/
+      resourceInventoriedAs: med:3129ca8b-fcda-45be-bbda-294dc924d3b0 # a medical gown
+      resourceQuantity:
+        om2:hasUnit: om2:one
+        om2:hasNumericalValue: 1
+    - '@id': wash:60f4204e-b8d2-4026-8577-102c3fd9kjre
+      '@type': EconomicEvent
+      action: separate
+      provider: https://laundry.example/
+      receiver: https://laundry.example/
+      resourceInventoriedAs: med:3129ca8b-fcda-45be-bbda-294dc924d3b1 # a medical gown
+      resourceQuantity:
+        om2:hasUnit: om2:one
+        om2:hasNumericalValue: 1
+
+  # Economic resources after unpacking
+
+  - '@id': med:e1721a61-cd47-4556-84b9-8b1b81da15bf
+    '@type': EconomicResource
+    conformsTo: wd:Q987767 # container
+    trackingIdentifier: cont234
+    accountingQuantity:
+      om2:hasUnit: om2:one
+      om2:hasNumericalValue: 1
+
+  - '@id': med:3129ca8b-fcda-45be-bbda-294dc924d3b9
+    '@type': EconomicResource
+    conformsTo: wd:Q89990310 # medical gown
+    trackingIdentifier: gown789
+    accountingQuantity:
+      om2:hasUnit: om2:one
+      om2:hasNumericalValue: 1
+    containedIn: 
+
+  - '@id': med:3129ca8b-fcda-45be-bbda-294dc924d3b0
+    '@type': EconomicResource
+    conformsTo: wd:Q89990310 # medical gown
+    trackingIdentifier: gown734
+    accountingQuantity:
+      om2:hasUnit: om2:one
+      om2:hasNumericalValue: 1
+    containedIn:
+
+  - '@id': med:3129ca8b-fcda-45be-bbda-294dc924d3b1
+    '@type': EconomicResource
+    conformsTo: wd:Q89990310 # medical gown
+    trackingIdentifier: gown698
+    accountingQuantity:
+      om2:hasUnit: om2:one
+      om2:hasNumericalValue: 1
+    containedIn: 
+```
+Alternate view of these pack-unpack processes, using the more relational directionality option.
+``` yaml
+# Example: Simple pack and unpack processes
+
+'@context':
+  - https://git.io/vf-examples-jsonld-context
+  - med: https://medical.example/
+    wash: https://laundry.example/
+
+'@graph':
 
   # Packing process
 
@@ -438,79 +827,20 @@ Simple pack and unpack of resources into and out of a container resource, using 
       om2:hasUnit: om2:one
       om2:hasNumericalValue: 1
 
-  - '@id': med:b52a5815-fae9-43bf-be95-833b95dc0adb
+  - '@id': med:b52a5815-fae9-43bf-be95-833b95dc0456
     '@type': EconomicEvent
     outputOf: med:02b39a30-3e04-4305-9656-7f261aa63c84
     action: produce
     provider: https://medical.example/
     receiver: https://medical.example/
-    resourceConformsTo: https://www.wikidata.org/wiki/Q2127468 # packaging unit
+    resourceConformsTo: wd:Q2127468 # packaging unit
     resourceQuantity:
       om2:hasUnit: om2:one
       om2:hasNumericalValue: 1
     note: This is a new resource, a package containing all inputs.
 
-  # Economic resources after packing
-
-  - '@id': med:e1721a61-cd47-4556-84b9-8b1b81da15bf
-    '@type': EconomicResource
-    conformsTo: https://www.wikidata.org/wiki/Q987767 # container
-    trackingIdentifier: cont234
-    accountingQuantity:
-      om2:hasUnit: om2:one
-      om2:hasNumericalValue: 1
-    containedIn: med:e1721a61-cd47-4556-84b9-8b1b81da564h
-
-  - '@id': med:3129ca8b-fcda-45be-bbda-294dc924d3b9
-    '@type': EconomicResource
-    conformsTo: https://www.wikidata.org/wiki/Q89990310 # medical gown
-    trackingIdentifier: gown789
-    accountingQuantity:
-      om2:hasUnit: om2:one
-      om2:hasNumericalValue: 1
-    containedIn: med:e1721a61-cd47-4556-84b9-8b1b81da564h
-
-  - '@id': med:3129ca8b-fcda-45be-bbda-294dc924d3b0
-    '@type': EconomicResource
-    conformsTo: https://www.wikidata.org/wiki/Q89990310 # medical gown
-    trackingIdentifier: gown734
-    accountingQuantity:
-      om2:hasUnit: om2:one
-      om2:hasNumericalValue: 1
-    containedIn: med:e1721a61-cd47-4556-84b9-8b1b81da564h
-
-  - '@id': med:3129ca8b-fcda-45be-bbda-294dc924d3b1
-    '@type': EconomicResource
-    conformsTo: https://www.wikidata.org/wiki/Q89990310 # medical gown
-    trackingIdentifier: gown698
-    accountingQuantity:
-      om2:hasUnit: om2:one
-      om2:hasNumericalValue: 1
-    containedIn: med:e1721a61-cd47-4556-84b9-8b1b81da564h
-
-  - '@id': med:e1721a61-cd47-4556-84b9-8b1b81da564h
-    '@type': EconomicResource
-    conformsTo: https://www.wikidata.org/wiki/Q2127468 # packaging unit
-    trackingIdentifier: pack6789
-    accountingQuantity:
-      om2:hasUnit: om2:one
-      om2:hasNumericalValue: 1
-
-  # The package is transferred to the laundry
-
-  - '@id': med:b52a5815-fae9-43bf-be95-833berqojdasf7
-    '@type': EconomicEvent
-    action: transferCustody
-    provider: https://medical.example/
-    receiver: https://laundry.example/
-    resourceInventoriedAs: med:e1721a61-cd47-4556-84b9-8b1b81da564h # the package
-    resourceQuantity:
-      om2:hasUnit: om2:one
-      om2:hasNumericalValue: 1
-    note: Contains gowns and container.
-
   # The package is unpacked at the laundry
-  
+
   - '@id': wash:33e8933b-ff73-4a01-964a-ca7a98893083
     '@type': Process
     name: Unpack medical gowns
@@ -570,45 +900,7 @@ Simple pack and unpack of resources into and out of a container resource, using 
     resourceQuantity:
       om2:hasUnit: om2:one
       om2:hasNumericalValue: 1
-
-  # Economic resources after unpacking
-
-  - '@id': med:e1721a61-cd47-4556-84b9-8b1b81da15bf
-    '@type': EconomicResource
-    conformsTo: https://www.wikidata.org/wiki/Q987767 # container
-    trackingIdentifier: cont234
-    accountingQuantity:
-      om2:hasUnit: om2:one
-      om2:hasNumericalValue: 1
-
-  - '@id': med:3129ca8b-fcda-45be-bbda-294dc924d3b9
-    '@type': EconomicResource
-    conformsTo: https://www.wikidata.org/wiki/Q89990310 # medical gown
-    trackingIdentifier: gown789
-    accountingQuantity:
-      om2:hasUnit: om2:one
-      om2:hasNumericalValue: 1
-    containedIn: 
-
-  - '@id': med:3129ca8b-fcda-45be-bbda-294dc924d3b0
-    '@type': EconomicResource
-    conformsTo: https://www.wikidata.org/wiki/Q89990310 # medical gown
-    trackingIdentifier: gown734
-    accountingQuantity:
-      om2:hasUnit: om2:one
-      om2:hasNumericalValue: 1
-    containedIn:
-
-  - '@id': med:3129ca8b-fcda-45be-bbda-294dc924d3b1
-    '@type': EconomicResource
-    conformsTo: https://www.wikidata.org/wiki/Q89990310 # medical gown
-    trackingIdentifier: gown698
-    accountingQuantity:
-      om2:hasUnit: om2:one
-      om2:hasNumericalValue: 1
-    containedIn: 
 ```
-
 #### Stage and state
 
 Simple assembly and testing showing use of stage and state.
@@ -623,7 +915,6 @@ Simple assembly and testing showing use of stage and state.
   - https://git.io/vf-examples-jsonld-context
   - mfg: https://manufacturing.example/
 
-'@id': rgh:valueflows/valueflows/master/examples/process-stage-state.yaml
 '@graph':
 
   # Process Specifications
@@ -662,51 +953,45 @@ Simple assembly and testing showing use of stage and state.
     '@type': Process
     name: Attach the air filter (step 33)
     basedOn: mfg:3be5259d-10f0-431c-9fec-9c0c15a461d3 # process specification: attach air filter
-
-  - '@id': mfg:a8236bbb-81e0-422d-9861-56d2417db0fb
-    '@type': EconomicEvent
-    inputOf: mfg:02b39a30-3e04-4305-9656-7f261aa63c84
-    action: accept
-    provider: https://manufacturing.example/
-    receiver: https://manufacturing.example/
-    resourceInventoriedAs: mfg:e1721a61-cd47-4556-84b9-8b1b81da15bf # a laser cutter
-    resourceQuantity:
-      om2:hasUnit: om2:one
-      om2:hasNumericalValue: 1
-    stage: mfg:3be5259d-10f0-431c-9fec-9c0c15a461e4 # attach air compressor
-
-  - '@id': mfg:a8236bbb-81e0-422d-9861-56d2417db0ss
-    '@type': EconomicEvent
-    inputOf: mfg:02b39a30-3e04-4305-9656-7f261aa63c84
-    action: consume
-    provider: https://manufacturing.example/
-    receiver: https://manufacturing.example/
-    resourceInventoriedAs: mfg:e1721a61-cd47-4556-84b9-8b1b81dlk4d0 # an air filter
-    resourceQuantity:
-      om2:hasUnit: om2:one
-      om2:hasNumericalValue: 1
-
-  - '@id': mfg:a8236bbb-81e0-422d-9861-56d2417db0st
-    '@type': EconomicEvent
-    inputOf: mfg:02b39a30-3e04-4305-9656-7f261aa63c84
-    action: consume
-    provider: https://manufacturing.example/
-    receiver: https://manufacturing.example/
-    resourceInventoriedAs: mfg:e1721a61-cd47-4556-84b9-8b1b81dlcvgk # a hose clamp
-    resourceQuantity:
-      om2:hasUnit: om2:one
-      om2:hasNumericalValue: 1
-
-  - '@id': mfg:52f0e212-3c4f-4d27-b345-5e964c135824
-    '@type': EconomicEvent
-    outputOf: mfg:02b39a30-3e04-4305-9656-7f261aa63c84
-    action: modify
-    provider: https://manufacturing.example/
-    receiver: https://manufacturing.example/
-    resourceInventoriedAs: mfg:e1721a61-cd47-4556-84b9-8b1b81da15bf # a laser cutter
-    resourceQuantity:
-      om2:hasUnit: om2:one
-      om2:hasNumericalValue: 1
+    hasInput:
+    - '@id': mfg:a8236bbb-81e0-422d-9861-56d2417db0fb
+      '@type': EconomicEvent
+      action: accept
+      provider: https://manufacturing.example/
+      receiver: https://manufacturing.example/
+      resourceInventoriedAs: mfg:e1721a61-cd47-4556-84b9-8b1b81da15bf # a laser cutter
+      resourceQuantity:
+        om2:hasUnit: om2:one
+        om2:hasNumericalValue: 1
+      stage: mfg:3be5259d-10f0-431c-9fec-9c0c15a461e4 # attach air compressor
+    - '@id': mfg:a8236bbb-81e0-422d-9861-56d2417db0ss
+      '@type': EconomicEvent
+      action: consume
+      provider: https://manufacturing.example/
+      receiver: https://manufacturing.example/
+      resourceInventoriedAs: mfg:e1721a61-cd47-4556-84b9-8b1b81dlk4d0 # an air filter
+      resourceQuantity:
+        om2:hasUnit: om2:one
+        om2:hasNumericalValue: 1
+    - '@id': mfg:a8236bbb-81e0-422d-9861-56d2417db0st
+      '@type': EconomicEvent
+      action: consume
+      provider: https://manufacturing.example/
+      receiver: https://manufacturing.example/
+      resourceInventoriedAs: mfg:e1721a61-cd47-4556-84b9-8b1b81dlcvgk # a hose clamp
+      resourceQuantity:
+        om2:hasUnit: om2:one
+        om2:hasNumericalValue: 1
+    hasOutput:
+    - '@id': mfg:52f0e212-3c4f-4d27-b345-5e964c135824
+      '@type': EconomicEvent
+      action: modify
+      provider: https://manufacturing.example/
+      receiver: https://manufacturing.example/
+      resourceInventoriedAs: mfg:e1721a61-cd47-4556-84b9-8b1b81da15bf # a laser cutter
+      resourceQuantity:
+        om2:hasUnit: om2:one
+        om2:hasNumericalValue: 1
 
   # Economic resource after attach air filter process
 
@@ -761,6 +1046,100 @@ Simple assembly and testing showing use of stage and state.
     state: pass
 
 ```
+Alternate view of these stage-state processes, using the more relational directionality option.
+``` yaml
+# Example: Process using stage and state
+# credit Fabulaser-Mini, https://github.com/fab-machines/Fabulaser-Mini/blob/main/manual/Fabulaser%20manual%20L2M2.pdf
+
+'@context':
+  - https://git.io/vf-examples-jsonld-context
+  - mfg: https://manufacturing.example/
+
+'@graph':
+
+  # Assembly process
+
+  - '@id': mfg:02b39a30-3e04-4305-9656-7f261aa63c84
+    '@type': Process
+    name: Attach the air filter (step 33)
+    basedOn: mfg:3be5259d-10f0-431c-9fec-9c0c15a461d3 # process specification: attach air filter
+
+  - '@id': mfg:a8236bbb-81e0-422d-9861-56d2417db0fb
+    '@type': EconomicEvent
+    inputOf: mfg:02b39a30-3e04-4305-9656-7f261aa63c84
+    action: accept
+    provider: https://manufacturing.example/
+    receiver: https://manufacturing.example/
+    resourceInventoriedAs: mfg:e1721a61-cd47-4556-84b9-8b1b81da15bf # a laser cutter
+    resourceQuantity:
+      om2:hasUnit: om2:one
+      om2:hasNumericalValue: 1
+    stage: mfg:3be5259d-10f0-431c-9fec-9c0c15a461e4 # attach air compressor
+
+  - '@id': mfg:a8236bbb-81e0-422d-9861-56d2417db0ss
+    '@type': EconomicEvent
+    inputOf: mfg:02b39a30-3e04-4305-9656-7f261aa63c84
+    action: consume
+    provider: https://manufacturing.example/
+    receiver: https://manufacturing.example/
+    resourceInventoriedAs: mfg:e1721a61-cd47-4556-84b9-8b1b81dlk4d0 # an air filter
+    resourceQuantity:
+      om2:hasUnit: om2:one
+      om2:hasNumericalValue: 1
+
+  - '@id': mfg:a8236bbb-81e0-422d-9861-56d2417db0st
+    '@type': EconomicEvent
+    inputOf: mfg:02b39a30-3e04-4305-9656-7f261aa63c84
+    action: consume
+    provider: https://manufacturing.example/
+    receiver: https://manufacturing.example/
+    resourceInventoriedAs: mfg:e1721a61-cd47-4556-84b9-8b1b81dlcvgk # a hose clamp
+    resourceQuantity:
+      om2:hasUnit: om2:one
+      om2:hasNumericalValue: 1
+
+  - '@id': mfg:52f0e212-3c4f-4d27-b345-5e964c135824
+    '@type': EconomicEvent
+    outputOf: mfg:02b39a30-3e04-4305-9656-7f261aa63c84
+    action: modify
+    provider: https://manufacturing.example/
+    receiver: https://manufacturing.example/
+    resourceInventoriedAs: mfg:e1721a61-cd47-4556-84b9-8b1b81da15bf # a laser cutter
+    resourceQuantity:
+      om2:hasUnit: om2:one
+      om2:hasNumericalValue: 1
+
+  # Testing process
+
+  - '@id': mfg:02b39a30-3e04-4305-9656-7f261aa63c98
+    '@type': Process
+    name: Test the laser cutter
+    basedOn: mfg:3be5259d-10f0-431c-9fec-9c0c15a461d3 # final test after all assembly
+
+  - '@id': mfg:a8236bbb-81e0-422d-9861-56d2417db0fb
+    '@type': EconomicEvent
+    inputOf: mfg:02b39a30-3e04-4305-9656-7f261aa63c98
+    action: accept
+    provider: https://manufacturing.example/
+    receiver: https://manufacturing.example/
+    resourceInventoriedAs: mfg:e1721a61-cd47-4556-84b9-8b1b81da15bf # a laser cutter
+    resourceQuantity:
+      om2:hasUnit: om2:one
+      om2:hasNumericalValue: 1
+    stage: mfg:02b39a30-3e04-4305-9656-7f261aa63c84 #attach air filter
+
+  - '@id': mfg:52f0e212-3c4f-4d27-b345-5e964c135824
+    '@type': EconomicEvent
+    outputOf: mfg:02b39a30-3e04-4305-9656-7f261aa63c98
+    action: modify
+    state: pass
+    provider: https://manufacturing.example/
+    receiver: https://manufacturing.example/
+    resourceInventoriedAs: mfg:e1721a61-cd47-4556-84b9-8b1b81da15bf # a laser cutter
+    resourceQuantity:
+      om2:hasUnit: om2:one
+      om2:hasNumericalValue: 1
+```
 
 #### Correcting errors
 
@@ -768,17 +1147,16 @@ Simple one-process manufacturing with corrections.
 
 Note that the diagram below shows the actual data in the flow.  If a use case calls for it, the events can be combined on a user interface so that a "corrected" event would be displayed, for example just "work 6 hours machining" and "consume 5 plywood sheets" as the two inputs to this process. In that case, you could show all of events, including the correcting events, in another view.
 
-![correction diagram reflecting the yaml below](../assets/examples/correction.png)
+![event correction diagram reflecting the yaml below](../assets/examples/correction.png)
 
 ``` yaml
-# Example: Correcting an error
+# Example: Correcting a data recording error in an event
 
 '@context':
   - https://git.io/vf-examples-jsonld-context
   - alice: https://alice.example/
     mfg: https://manufacturing.example/
 
-'@id': rgh:valueflows/valueflows/master/examples/correction.yaml
 '@graph':
 
   # Before corrections
@@ -806,7 +1184,7 @@ Note that the diagram below shows the actual data in the flow.  If a use case ca
     action: work
     provider: https://alice.example/
     receiver: https://manufacturing.example/
-    resourceClassifiedAs: https://www.wikidata.org/wiki/Q192047 # machining
+    resourceConformsTo: wd:Q192047 # machining
     effortQuantity:
       om2:hasUnit: om2:hour
       om2:hasNumericalValue: 7
@@ -885,7 +1263,7 @@ Note that the diagram below shows the actual data in the flow.  If a use case ca
     action: work
     provider: https://alice.example/
     receiver: https://manufacturing.example/
-    resourceClassifiedAs: https://www.wikidata.org/wiki/Q192047 # machining
+    resourceConformsTo: wd:Q192047 # machining
     effortQuantity:
       om2:hasUnit: om2:hour
       om2:hasNumericalValue: 7
@@ -901,7 +1279,7 @@ Note that the diagram below shows the actual data in the flow.  If a use case ca
     action: work
     provider: https://alice.example/
     receiver: https://manufacturing.example/
-    resourceClassifiedAs: https://www.wikidata.org/wiki/Q192047 # machining
+    resourceConformsTo: wd:Q192047 # machining
     effortQuantity:
       om2:hasUnit: om2:hour
       om2:hasNumericalValue: -1

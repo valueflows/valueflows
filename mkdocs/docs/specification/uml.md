@@ -29,6 +29,8 @@ For example, here a Commitment `isInput` or `isOutput` of a Process; and a Proce
 
 ![inverse example model with Process, Commitment, relationships pointing both ways](../assets/inverse.png)
 
+The first several examples on [the Examples-Production page](../examples/ex-production.md) show both options as yaml.
+
 ### Many-to-many relationships
 
 Instead of the typical relational resolution of a many-to-many relationship of including an "associative" class or table between them, we are specifying a direct one-to-many relationship, which more cleanly supports JSON / JSON-LD / RDF / OO structures.  To get to the other less-used "many" without the "associative" entity, a query would be needed.  The suggested query names are included in [Query Naming](../inverses).
@@ -43,7 +45,7 @@ Although not included in the formal RDF-based spec, the suggested intermediate "
 
 #### fulfills, satisfies, settles
 
-These cases have possible properties in the "associative" class. For example, between Commitment and EconomicEvent, a Commitment for 40 hours of work might be fulfilled by 5 EconomicEvents of 8 hours.  Or an EconomicEvent might pay for a statement or invoice that includes multiple Commitments for deliveries.  The model we have settled on supports the former, but not the latter.  The latter is one of a few cases that we believe will be a small minority of edge cases where the quantities in the "associative" entity might be appreciated.  For that case, an application could just divide the payment into multiple EconomicEvents and connect them with the trackingIdentifier.
+These cases have possible properties in the "associative" class. For example, between Commitment and EconomicEvent, a Commitment for 40 hours of work might be fulfilled by 5 EconomicEvents of 8 hours.  Or an EconomicEvent might pay for a statement or invoice that includes multiple Commitments for deliveries.  The model we have settled on supports the former, but not the latter.  The latter is one of a few cases that we believe will be a small minority of edge cases where the quantities in the "associative" entity might be appreciated.  For that case, an application could possibly divide the payment into multiple EconomicEvents and connect them with the trackingIdentifier.  Or it could extend the vocabulary to include the quantity fulfilled/satisfied/settled, and over time the VF community can re-consider the best trade-off for handling this situation.
 
 We believe that it is more important to simplify the model and the concepts for the majority of use cases, than to have complete support of all use cases.
 
