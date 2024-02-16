@@ -663,8 +663,6 @@
         
           
         
-          
-        
       
       
         <label class="md-nav__link" for="__nav_4" tabindex="0" aria-expanded="false">
@@ -881,20 +879,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../concepts/cfa/" class="md-nav__link">
-        Conversations
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../concepts/accounting/" class="md-nav__link">
         Accounting
       </a>
@@ -939,6 +923,8 @@
       <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
       
       
+        
+          
         
           
         
@@ -1046,6 +1032,20 @@
     <li class="md-nav__item">
       <a href="../../examples/ex-planning/" class="md-nav__link">
         Planning
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/ex-proposals/" class="md-nav__link">
+        Offers/Requests
       </a>
     </li>
   
@@ -1559,14 +1559,14 @@
 <h2 id="reference-applications">Reference applications</h2>
 <p>Listed here are some of the developer teams and user groups who have implemented or are implementing Valueflows in open source projects.  Please let us know if we have missed you and you would like to be listed. </p>
 <h3 id="holochain-ecosystem">Holochain ecosystem</h3>
-<p>A generic Valueflows backend is being developed in <a href="https://www.holochain.org/">Holochain</a>, called hREA.  Information can be found on the <a href="https://hrea.io/">website</a>, on <a href="https://github.com/h-REA">github</a>, chat in <a href="https://discord.gg/rZkhBJ5QsP">discord</a>. hREA exposes the <a href="https://lab.allmende.io/valueflows/vf-schemas/vf-graphql">graphql api</a> for UI/UX apps to build on.  Blog entry <a href="https://blog.holochain.org/happs-spotlight-hrea/">here</a>. (The core is stable for use, but it is missing a few features.)</p>
+<p>A generic Valueflows backend is being developed in <a href="https://www.holochain.org/">Holochain</a>, called hREA.  Information can be found on the <a href="https://hrea.io/">hREA website</a>, on <a href="https://github.com/h-REA">hREA github</a>, chat in <a href="https://discord.gg/rZkhBJ5QsP">discord</a>. hREA exposes the <a href="https://lab.allmende.io/valueflows/vf-schemas/vf-graphql">Valueflows graphql api</a> for UI/UX apps to build on.  <a href="https://blog.holochain.org/happs-spotlight-hrea/">Blog entry here</a>. (The core is stable for beta use, but it is missing a few features.)</p>
 <p>Some of the UI/UX apps being built on hREA are </p>
 <ul>
 <li>
-<p>Code A, an international group of university professors working on climate change issues, wants to create an application for classes to use as they do practical work to learn about methods for micro to macro climate accounting, and how to coordinate among themselves and with their communities.  Code is on <a href="https://github.com/lightningrodlabs/rea-playspace">github</a>.  This is the first real visualization based core UI for Valueflows, and we think will be useful for other apps. (In process.)</p>
+<p>Code A, an international group of university professors working on climate change issues, wants to create an application for classes to use as they do practical work to learn about methods for micro to macro climate accounting, and how to coordinate among themselves and with their communities.  Code is on <a href="https://github.com/lightningrodlabs/rea-playspace">REA-Playspace github</a>.  This is the first real visualization based core UI for Valueflows, and we think will be useful for other apps. (In process.)</p>
 </li>
 <li>
-<p><a href="https://www.newyorktextilelab.com/">Carbon Farm Network, organized by New York Textile Lab</a> is a supply chain network that connects designers to fiber producers and mills to help grow an economically diverse textile supply ecosystem. They are featured on this Holochain Ecosystem <a href="https://www.youtube.com/watch?v=D7xDZaaQOpM">video</a>. (In process.)</p>
+<p><a href="https://www.newyorktextilelab.com/">Carbon Farm Network, organized by New York Textile Lab</a> is a supply chain network that connects designers to fiber producers and mills to help grow an economically diverse textile supply ecosystem. They are featured on this <a href="https://www.youtube.com/watch?v=D7xDZaaQOpM">Holochain Ecosystem video</a>. (In process.)</p>
 </li>
 <li>
 <p><a href="https://www.sensorica.co/">Sensorica</a>, an open value network in Montreal, is just starting design on a new version of their NRP software, which was used as one input for Valueflows. (In process.)</p>
@@ -1577,16 +1577,16 @@
 <p>The <a href="https://fediverse.party/en/fediverse/">Fediverse</a> is a collection of networking applications that federate with each other using the <a href="https://activitypub.rocks/">ActivityPub (AP)</a> social networking protocol as the core.</p>
 <ul>
 <li>
-<p>Bonfire kicked the federation direction off by supporting Valueflows as an extension of ActivityPub, and including the same <a href="https://lab.allmende.io/valueflows/vf-schemas/vf-graphql">graphql api</a> as hREA. This supports a user-friendly integration of social and economic networking, which we think is an important direction. Information is at their <a href="https://bonfirenetworks.org/">website</a>, the Valueflows extension is on <a href="https://gitlab.com/bonfire-networks/bonfire_valueflows">gitlab</a>. (In process.)</p>
+<p>Bonfire kicked the federation direction off by supporting Valueflows as an extension of ActivityPub, and including the same <a href="https://lab.allmende.io/valueflows/vf-schemas/vf-graphql">Valueflows graphql api</a> as hREA. This supports a user-friendly integration of social and economic networking, which we think is an important direction. Information is at the <a href="https://bonfirenetworks.org/">Bonfire website</a>, the Valueflows extension is on <a href="https://gitlab.com/bonfire-networks/bonfire_valueflows">gitlab</a>. (In process.)</p>
 </li>
 <li>
 <p><a href="https://reflowproject.eu/">Reflow</a> was an EU funded project that seeks to understand and transform urban material flows, co-create and test regenerative solutions at business, governance, and citizen levels to create a resilient circular economy.  The ReflowOS backend was developed by Dyne (see below), built on the Bonfire application. (Complete.)</p>
 </li>
 <li>
-<p><a href="https://www.interfacerproject.eu/">Interfacer</a>, a collaboration between <a href="https://fabcity.hamburg/en/">FabCity Hamburg</a> and Dyne (see below), will build on Reflow to support a global network of <a href="https://fab.city/">Fab Cities</a> that proposes a new urban, economic, social and industrial model that relocalises production to the city and its bioregional context, while building a digital infrastructure enabling ecological, economic and social sustainability.  Git repositories are listed <a href="https://www.interfacerproject.eu/git-repositories/">here</a>. You can try it <a href="https://interfacer.dyne.org/">here</a>, webinar <a href="https://interfacerproject.dyne.org/webinar-interfacer/">here</a>, demo <a href="https://diode.zone/w/anjXTju5gvAJc7V1QoBXWK">here</a>. (Complete for single installations, federation not complete.)</p>
+<p><a href="https://www.interfacerproject.eu/">Interfacer</a>, a collaboration between <a href="https://fabcity.hamburg/en/">FabCity Hamburg</a> and Dyne (see below), will build on Reflow to support a global network of <a href="https://fab.city/">Fab Cities</a> that proposes a new urban, economic, social and industrial model that relocalises production to the city and its bioregional context, while building a digital infrastructure enabling ecological, economic and social sustainability.  Here is a list of <a href="https://www.interfacerproject.eu/git-repositories/">git repositories</a>. You can <a href="https://interfacer.dyne.org/">try it here</a>, <a href="https://interfacerproject.dyne.org/webinar-interfacer/">webinar here</a>, <a href="https://diode.zone/w/anjXTju5gvAJc7V1QoBXWK">demo here</a>. (Complete for single installations, federation not complete.)</p>
 </li>
 <li>
-<p><a href="https://www.dyne.org/">Dyne</a> has done the Valueflows related development on Reflow and Interfacer, including developing the EU  "<a href="https://www.circularise.com/blog/digital-product-passports-dpp-what-how-and-why">Digital Product Passport</a>", webinar <a href="https://www.youtube.com/playlist?list=PLmwl0nkG0dPFI8bAS736myioL45oBEoeU">here</a>, based on Valueflows resource tracing. (Complete.)</p>
+<p><a href="https://www.dyne.org/">Dyne</a> has done the Valueflows related development on Reflow and Interfacer, including developing the EU  "<a href="https://www.circularise.com/blog/digital-product-passports-dpp-what-how-and-why">Digital Product Passport</a>", <a href="https://www.youtube.com/playlist?list=PLmwl0nkG0dPFI8bAS736myioL45oBEoeU">webinar here</a>, based on Valueflows resource tracing. (Complete.)</p>
 </li>
 <li>
 <p><a href="https://learndeep.org/">LearnDeep</a>, initially created by students at <a href="https://www.msoe.edu/">MSOE</a>, supports a network of high school fablabs in Milwaukee that receive contributions of materials from the community and share these with each other. Their code has been merged upstream and is being completed as a Bonfire flavour by the Bonfire team on <a href="https://gitlab.com/bonfire-networks/bonfire_upcycle">gitlab</a>. (In process.)</p>

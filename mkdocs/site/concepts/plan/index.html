@@ -665,8 +665,6 @@
         
           
         
-          
-        
       
       
         <label class="md-nav__link" for="__nav_4" tabindex="0" aria-expanded="true">
@@ -936,20 +934,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../cfa/" class="md-nav__link">
-        Conversations
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../accounting/" class="md-nav__link">
         Accounting
       </a>
@@ -994,6 +978,8 @@
       <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
       
       
+        
+          
         
           
         
@@ -1101,6 +1087,20 @@
     <li class="md-nav__item">
       <a href="../../examples/ex-planning/" class="md-nav__link">
         Planning
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/ex-proposals/" class="md-nav__link">
+        Offers/Requests
       </a>
     </li>
   
@@ -1533,7 +1533,7 @@
 </ul>
 <h2 id="processes-nested-in-a-plan">Processes nested in a Plan</h2>
 <p>When processes are "nested", it is not random, nor based on a taxonomy. It is based on what processes are actually part of the plan. And not all the inputs and outputs of nested processes are considered inputs and outputs of the plan, since some are both produced and consumed within the plan.  In the following simplified example, the flows between plant/weed and weed/harvest start and end inside the nest, and so are not inputs to, or outputs of, the plan.</p>
-<p><img alt="process nesting" src="../../assets/nesting.jpg" /></p>
+<p><img alt="diagram of nested process, with some inputs going to inside processes, some to containing process" src="../../assets/nesting.jpg" /></p>
 <ul>
 <li>There are some common situations for nested processes that will not be as simple as the above diagram.  Thes include:<ul>
 <li>Action makes a difference.  When a piece of equipment or tool is "used", it is not gone at the end of the nesting process.  But if it is managed as a time-based resource with a calendar, some calendar duration is in fact consumed.  Or if a citable resource is created and then cited inside, it is also still there at the end of the nesting process.</li>
@@ -1543,7 +1543,7 @@
 </ul>
 <h2 id="planning-from-a-recipe">Planning from a Recipe</h2>
 <p>Plans can be generated from a recipe by scaling the recipe according to the demanded quantity of the end outputs.  This is called a "demand explosion".  The generation might take into account current inventories, batch sizes, etc., so it is not necessarily a "pure" reflection of the recipe.  In addition, often plans are tweaked after generation from a recipe, depending on how firm and exact the recipe is.  A manufacturing recipe might be more exact than a recipe for a more general business process.  For these reasons, a plans is decoupled from the recipe that generated it in the vocabulary.  It maintains only the references to the resource and process specifications that were supplied from the recipe.</p>
-<p><img alt="recipe plan" src="../../assets/plan-process.png" /></p>
+<p><img alt="operational planning diagram, with recipe on one layer, the plan below it" src="../../assets/plan-process.png" /></p>
 
 
 

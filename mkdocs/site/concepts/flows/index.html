@@ -665,8 +665,6 @@
         
           
         
-          
-        
       
       
         <label class="md-nav__link" for="__nav_4" tabindex="0" aria-expanded="true">
@@ -779,6 +777,19 @@
   <a href="#commitment" class="md-nav__link">
     Commitment
   </a>
+  
+    <nav class="md-nav" aria-label="Commitment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#possible-gray-area-between-intent-and-commitment" class="md-nav__link">
+    Possible gray area between Intent and Commitment
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -1005,20 +1016,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../cfa/" class="md-nav__link">
-        Conversations
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../accounting/" class="md-nav__link">
         Accounting
       </a>
@@ -1063,6 +1060,8 @@
       <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
       
       
+        
+          
         
           
         
@@ -1170,6 +1169,20 @@
     <li class="md-nav__item">
       <a href="../../examples/ex-planning/" class="md-nav__link">
         Planning
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/ex-proposals/" class="md-nav__link">
+        Offers/Requests
       </a>
     </li>
   
@@ -1561,6 +1574,19 @@
     Commitment
   </a>
   
+    <nav class="md-nav" aria-label="Commitment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#possible-gray-area-between-intent-and-commitment" class="md-nav__link">
+    Possible gray area between Intent and Commitment
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -1656,9 +1682,11 @@
 <li>Commitments which can lead to Economic Events (or Intents can lead directly to Economic Events)</li>
 </ol>
 <h3 id="intent">Intent</h3>
-<p>Intents describe potential future events which have not been agreed to by other agents, such as offers and requests. Intents are often used for discovering another agent to participate in a desired event. On the process side, for example, planned work could be an Intent, but planned work that some agent committed to is a Commitment.</p>
+<p>Intents describe potential future events which have not been agreed to by other agents, such as offers and requests. Intents are often used for discovering another agent to participate in a desired event. On the process side, for example, planned work could be an Intent, but planned work that some agent committed to do is a Commitment.</p>
 <h3 id="commitment">Commitment</h3>
-<p>Commitments describe potential future events which the involved agents have already agreed to pursue. Commitments can be considered contractual promises from one agent to another.  Commitments can be thought of as plans for Economic Events, and Economic Events can fulfill Commitments.  Commitments can satisfy Intents. </p>
+<p>Commitments describe potential future events which the involved agents have already agreed to pursue. Commitments can be considered contractual promises from one agent to another.  Commitments can be thought of as plans for Economic Events, and Economic Events can fulfill Commitments.  Commitments can satisfy Intents.</p>
+<h4 id="possible-gray-area-between-intent-and-commitment">Possible gray area between Intent and Commitment</h4>
+<p>When making an operational plan, where there isn't really a question of some agent stepping up to commit or being assigned, and no published Intent is needed, then Commitments can be used, even though there may not be an agent committed yet. The criterion can be thought of as firmness of plan, not commitments of agents.  Basically, sometimes making a plan takes some time, so during that activity, if Commitments are not assigned, it is OK, better than adding unnecessarily to the machinery needed to make a plan by using Intents.  On the other hand if publication of the flow is needed to find an Agent to commit, then an Intent is better, as it can become part of a Proposal.</p>
 <h3 id="economic-event">Economic Event</h3>
 <p>Economic Events describe past events, something observed, never some potential future event.  They can fulfill Commitments or satisfy Intents (when there is no Commitment).</p>
 <h3 id="claim">Claim</h3>
@@ -1667,15 +1695,15 @@
 <p><a href="../recipes/">Recipes</a> are used to create plans, and the Recipe Flow can create a corresponding Intent or a Commitment in a Plan, depending on if all the agents are known and the level of certainty of the planning.</p>
 <h2 id="timeline-plans-and-observations">Timeline, plans and observations</h2>
 <p>The figure below shows that Economic Events have to be observed and for that reason only appear as records of the past. Future plans get represented with Intents and Commitments.</p>
-<p><img alt="flows" src="../../assets/flows.png" /></p>
+<p><img alt="diagram of Intents, Commitments, Events in past, present, future, showing how the flows change through time" src="../../assets/flows.png" /></p>
 <h2 id="matching-intents">Matching Intents</h2>
 <p>Often agents will start their plans independently and record their initial intents. Later once they make a Commitment with another agent, it will represent a specific shared part of their plans. For that reason any Commitment can result in Satisfaction of the providing agent's Intent as well as Satisfaction of the receiving agent's Intent.</p>
-<p><img alt="matching" src="../../assets/matched.png" /></p>
+<p><img alt="diagram showing matching of 2 Intents from different agents, satisfied by 1 Commitment, fulfilled by an Event" src="../../assets/matched.png" /></p>
 <h2 id="granularity">Granularity</h2>
 <p>Intents, Commitments, and Economic Events can occur at any granularity that is needed or for which data can be obtained.  So they primarily are used for all operational needs, but can also be used at higher levels for budgeting for organizations, analytical and high level planning needs for communities or regions, etc.</p>
-<p><img alt="Intent-Commitment-Event" src="../../assets/i-c-e.png" /></p>
+<p><img alt="diagram of Intent-Commitment-Event and their relationships plus their same properties" src="../../assets/i-c-e.png" /></p>
 <h2 id="actions">Actions</h2>
-<p>All types of flows use the same set of actions, which define what the flow does and how it behaves in relation to resources.  You can find detailed documentation on actions <a href="../actions/">in the next section</a>.</p>
+<p>All types of flows use the same set of actions, which define what the flow does and how it behaves in relation to resources.  You can find detailed documentation on actions on the <a href="../actions/">Actions page</a>.</p>
 <h2 id="quantities-and-times">Quantities and Times</h2>
 <p>Quantities are used for counting, such as:</p>
 <ul>
@@ -1692,11 +1720,11 @@
 <ul>
 <li>Accounting totals (quantity) within accounting period (time)</li>
 </ul>
-<p>Quantities can be any needed unit of measure, including counts, volumes, weights, etc.  Time can be a beginning/end time (an interval), or a point in time, or a due date.  The flows require at least one of those.  If a point in time is recorded, an application should return that time as the beginning and end time.</p>
+<p>Quantities can be any needed unit of measure, including counts, volumes, weights, etc.  Time can be a beginning/end time (an interval), or a point in time, or a due date.  The flows require at least one of those.  If a point in time is recorded, an application should return that time as the beginning and end time if asked.</p>
 <p>Note that recipes may need to scale both quantities and calendar times when used to create a plan.</p>
 <p>Sometimes a quantity is expressed in time-based units, like "I worked 6 hours", or "we used this machine for 8 hours".  These flows also will have a related time, like "I worked from 10am to 4pm", or "we used this machine from 8am to 4pm". In these examples, the quantity is used for accounting figures, exchange, recipes.  The time is used to schedule and coordinate the work or machine usage.</p>
 <p>Sometimes a situation may call for a "compound quantity", like "Number-per-Year".</p>
-<p>Display note: The OM2 ontology defines a Unit called <code>one</code> that is used for one-dimensional units.  This is confusing for many economic applications, where something like <code>each</code> would be used, or nothing at all.  We recommend that user interfaces handle this by not displaying the unit <code>one</code> where it would be confusing, or substituting a more applicable name.</p>
+<p>See also <a href="../../specification/units/">the Units page</a>.</p>
 <h2 id="correcting-events">Correcting Events</h2>
 <p>Economic events are immutable in accounting practice, since at any time they could have been reported formally.  Do correct an economic event, you need another economic event, which can be related to the first one with the relationship <code>corrects</code>.  The correcting event can have a negative number.  It can either completely back out the original event or adjust it.</p>
 
