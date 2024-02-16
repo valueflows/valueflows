@@ -1,3 +1,11 @@
+## 0.10 (February 2024)
+
+- Remove dfc:ProductBatch, pulled info back to EconomicResource (breaking)
+- Add reciprocal realization and inverse for economic events
+- Add unit local overrides for label, symbol
+- w3id fixed
+- Documentation: remove Conversations for Action, update Examples
+
 ## 0.9 (January 2024)
 
 - Remove Fulfillment, Satisfaction, Settlement M:Ms (breaking)
