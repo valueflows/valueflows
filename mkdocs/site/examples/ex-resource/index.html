@@ -663,8 +663,6 @@
         
           
         
-          
-        
       
       
         <label class="md-nav__link" for="__nav_4" tabindex="0" aria-expanded="false">
@@ -881,20 +879,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../concepts/cfa/" class="md-nav__link">
-        Conversations
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../concepts/accounting/" class="md-nav__link">
         Accounting
       </a>
@@ -941,6 +925,8 @@
       <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
       
       
+        
+          
         
           
         
@@ -1058,6 +1044,20 @@
     <li class="md-nav__item">
       <a href="../ex-planning/" class="md-nav__link">
         Planning
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ex-proposals/" class="md-nav__link">
+        Offers/Requests
       </a>
     </li>
   
@@ -1441,7 +1441,7 @@
 
 <h1 id="economic-resource-examples">Economic Resource Examples</h1>
 <p>This example includes economic resources, with their resource specifications.  One resource has a lot identifier.</p>
-<p><img alt="resource diagram" src="../../assets/examples/resource-spec.png" /></p>
+<p><img alt="resource diagram reflecting the yaml below" src="../../assets/examples/resource-spec.png" /></p>
 <div class="highlight"><pre><span></span><code><span class="c1"># Example: Resources</span>
 
 <span class="s">&#39;@context&#39;</span><span class="p p-Indicator">:</span>
@@ -1449,7 +1449,6 @@
 <span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">farm</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://farm.example/</span>
 <span class="w">    </span><span class="nt">ose</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://www.opensourceecology.org/</span>
 
-<span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rgh:valueflows/valueflows/master/examples/resource.yaml</span>
 <span class="s">&#39;@graph&#39;</span><span class="p p-Indicator">:</span>
 
 <span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ose:822b6baf-d66f-45a0-98f2-57450e2aec23</span>
@@ -1457,9 +1456,10 @@
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Tractor - LifeTrac 6</span>
 <span class="w">    </span><span class="nt">uri</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://www.opensourceecology.org/portfolio/tractor/</span>
 <span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://www.opensourceecology.org/wp-content/uploads/2014/02/Tractor_gray.png</span>
-<span class="w">    </span><span class="nt">defaultUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">unit:Number</span>
+<span class="w">    </span><span class="nt">defaultUnitOfResource</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">om2:one</span>
+<span class="w">    </span><span class="nt">defaultUnitOfEffort</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">om2:hour</span>
 <span class="w">    </span><span class="nt">substitutable</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
-<span class="w">    </span><span class="nt">resourceClassifiedAs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://www.wikidata.org/wiki/Q39495</span>
+<span class="w">    </span><span class="nt">resourceConformsTo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">wd:Q39495</span>
 <span class="w">    </span><span class="nt">skos:note</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A versatile, 4-wheel drive, hydraulically-driven tractor with 18 to 200 horsepower capacity for agriculture, construction and other utility duties.</span>
 
 <span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">farm:fbff9852-36ca-4364-a943-bc0b49e1cab5</span>
@@ -1474,31 +1474,27 @@
 <span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">farm:8baa8ff7-9c1e-4586-ae7b-79d620a3cac9</span>
 <span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ResourceSpecification</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Carrots organic</span>
-<span class="w">    </span><span class="nt">defaultUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">unit:Kilogram</span>
+<span class="w">    </span><span class="nt">defaultUnitOfResource</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">om2:kilogram</span>
 <span class="w">    </span><span class="nt">substitutable</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
-<span class="w">    </span><span class="nt">resourceClassifiedAs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://www.wikidata.org/wiki/Q39495</span>
+<span class="w">    </span><span class="nt">resourceConformsTo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">wd:Q39495</span>
 <span class="w">    </span><span class="nt">skos:note</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Organic loose carrots without tops.</span><span class="w"> </span>
 
 <span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">farm:07819789-dd51-44c3-b35c-9210165bc832</span>
 <span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EconomicResource</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Loose organic carrots</span>
-<span class="w">    </span><span class="nt">lot</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">farm:fd399b37-0740-4a68-a184-1e655021ca21</span><span class="w"> </span><span class="c1"># the lot number assigned by the farm</span>
+<span class="w">    </span><span class="nt">trackingIdentifier</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">car20230901</span><span class="w"> </span><span class="c1"># the lot number assigned by the farm</span>
 <span class="w">    </span><span class="nt">conformsTo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">farm:8baa8ff7-9c1e-4586-ae7b-79d620a3cac9</span>
 <span class="w">    </span><span class="nt">accountingQuantity</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">om2:hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">om2:kilogram</span>
 <span class="w">      </span><span class="nt">om2:hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">650</span>
 <span class="w">    </span><span class="nt">skos:note</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Medium size, clean, harvested after the first frost, will store well.</span>
 
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">farm:fd399b37-0740-4a68-a184-1e655021ca21</span>
-<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dfc:ProductBatch</span>
-<span class="w">    </span><span class="nt">dfc:batchNumber</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3409888</span>
-
 <span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">farm:68cabaf3-deb8-4bd5-a439-798263abe35a</span>
 <span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ResourceSpecification</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Farm documentation</span>
-<span class="w">    </span><span class="nt">defaultUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">unit:Number</span>
+<span class="w">    </span><span class="nt">defaultUnitOfResource</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">om2:one</span>
 <span class="w">    </span><span class="nt">substitutable</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
-<span class="w">    </span><span class="nt">resourceClassifiedAs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://www.wikidata.org/wiki/Q49848</span><span class="w"> </span><span class="c1"># document</span>
+<span class="w">    </span><span class="nt">resourceConformsTo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">wd:Q49848</span><span class="w"> </span><span class="c1"># document</span>
 <span class="w">    </span><span class="nt">skos:note</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Any of the documentation produced and/or used by the farm.</span>
 
 <span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">farm:a7e94dde-2997-451e-a7e1-8d364d5e6dee</span>

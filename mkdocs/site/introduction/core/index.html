@@ -757,8 +757,6 @@
         
           
         
-          
-        
       
       
         <label class="md-nav__link" for="__nav_4" tabindex="0" aria-expanded="false">
@@ -975,20 +973,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../concepts/cfa/" class="md-nav__link">
-        Conversations
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../concepts/accounting/" class="md-nav__link">
         Accounting
       </a>
@@ -1033,6 +1017,8 @@
       <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
       
       
+        
+          
         
           
         
@@ -1140,6 +1126,20 @@
     <li class="md-nav__item">
       <a href="../../examples/ex-planning/" class="md-nav__link">
         Planning
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/ex-proposals/" class="md-nav__link">
+        Offers/Requests
       </a>
     </li>
   
@@ -1605,19 +1605,19 @@
 <p><strong>Agents</strong> are individual persons or organizations or ecological agents, who perform Economic Events affecting Economic Resources.</p>
 <p>An <strong>Economic Event</strong> can take actions like produce, modify, consume, or use Economic Resources, or transfer them from one Agent to another, or transport them from one location to another.</p>
 <p><strong>Economic Resources</strong> would typically be useful goods and services, but could also be money, credits, energy, knowledge, designs, skills, CO2, methane, air, water, or almost anything else that some Agents can agree should be accounted for in their economic networks.</p>
-<p><img alt="REA" src="../../assets/R-E-A.png" /></p>
+<p><img alt="Resource-Event-Agent data model" src="../../assets/R-E-A.png" /></p>
 <h2 id="ipo-input-process-output">IPO (Input-Process-Output)</h2>
 <p>The IPO pattern is used to enhance the ability of REA to represent complex flows of value.  The flows are IPOs...</p>
 <p>...Input-Process-Output resource chains, where one <strong>Economic Resource</strong> is the output of one <strong>Process</strong> and then becomes an input to another, thus connecting the processes into a flow. The <strong>Agents</strong> involved in each Process in the chain need to coordinate with the previous and next Processes about the quantity, quality, and timing of resource flows between them.</p>
-<p><img alt="IPO schematic" src="../../assets/process-resource.png" /></p>
+<p><img alt="Input-Process-Ooutput schematic" src="../../assets/process-resource.png" /></p>
 <h2 id="putting-them-together">Putting them together</h2>
 <p>In general, how they fit together: Agents perform Economic Events that provide Inputs to Processes and take Outputs from Processes and move Resources from one Process to another.  This forms a directed graph of value flows.</p>
-<p><img alt="REA-IPO-VF" src="../../assets/REA-IPO-VF.png" /></p>
+<p><img alt="diagram with a Process, Economic Events input and output, each with Agents and Economic Resource" src="../../assets/REA-IPO-VF.png" /></p>
 <p>For example: a food network</p>
 <p>...might include farmers, food processors, restaurants and bakeries, grocery stores, families to eat the food. And vehicles to move everything from place to place. Coordination might be needed between each of those stages: seeds and other inputs for planting crops, workers etc for harvesting crops. when are the crops ready for processing, when is the grain ready for milling and then for baking and then for people to eat, when is the fruit ready for pies, etc.</p>
 <h2 id="flows-without-processes">Flows without processes</h2>
 <p>Some flows do not involve processing, i.e. there is no transformation of Economic Resources.  These flows simply transfer Economic Resources between Agents or move them between locations. One common example is an exchange of one Economic Resource for another Economic Resource between two Agents, as below, with two reciprocal flows based on an Agreement.</p>
-<p><img alt="exchange" src="../../assets/exchange.png" /></p>
+<p><img alt="diagram of an exchange with an Agreement of Economic Events with Economic Resources from and to Agents" src="../../assets/exchange.png" /></p>
 <p>It can also be simpler, such as a gift, or more complex, involving many Agents.  Also, these flows can mix in with Process-based flows.</p>
 <p>For example: in that food network above</p>
 <p>...food processors might purchase the harvested food from farmers, sell processed food to restaurants and stores... or families might provide land and labor for a farm and receive harvested food each week in return.  That becomes part of the coordination.</p>
@@ -1626,16 +1626,16 @@
 <p>The data structures of Valueflows provide the ability to trace or track any value flow, no matter how long or complex, see <a href="../../algorithms/track/">Track and Trace</a>.</p>
 <h2 id="levels-of-the-ontology">Levels of the ontology</h2>
 <p>Valueflows uses the layers of ontology documented by REA.  Each of the layers follows the core patterns above.</p>
-<p><img alt="REA layers" src="../../assets/layers.png" /></p>
+<p><img alt="REA layers: Knowledge, Plan, Observation simplified" src="../../assets/layers.png" /></p>
 <ul>
 <li>The Knowledge level represents classification, policies, procedures, rules and patterns. This is where each network or community can configure the core concepts to fit their needs.</li>
 <li>The Plan level represents offers and requests, schedules and promises.</li>
 <li>The Observation level represents what really happened.</li>
 </ul>
 <p>Here is a simplified view of how they connect.</p>
-<p><img alt="process resource flow" src="../../assets/process-layer.png" /></p>
+<p><img alt="a generalized process resource flow with the 3 layers" src="../../assets/process-layer.png" /></p>
 <p>Here is a specific example of the simplified view:</p>
-<p><img alt="salsa flow" src="../../assets/salsa-layer.png" /></p>
+<p><img alt="a specific salsa example process resource flow with the 3 layers" src="../../assets/salsa-layer.png" /></p>
 
 
 

@@ -758,8 +758,6 @@
         
           
         
-          
-        
       
       
         <label class="md-nav__link" for="__nav_4" tabindex="0" aria-expanded="false">
@@ -976,20 +974,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../concepts/cfa/" class="md-nav__link">
-        Conversations
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../concepts/accounting/" class="md-nav__link">
         Accounting
       </a>
@@ -1034,6 +1018,8 @@
       <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
       
       
+        
+          
         
           
         
@@ -1141,6 +1127,20 @@
     <li class="md-nav__item">
       <a href="../../examples/ex-planning/" class="md-nav__link">
         Planning
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/ex-proposals/" class="md-nav__link">
+        Offers/Requests
       </a>
     </li>
   
@@ -1593,9 +1593,9 @@
 
 <h2 id="uml-diagram">UML diagram</h2>
 <p>This diagram includes all elements necessary for a complete REA-based core economic vocabulary, so includes elements that we re-use from other vocabularies.  All namespaces are documented by the prefix to each element.</p>
-<p>A textual explanation of everything on this diagram is on the <a href="../model-text/">next page</a>.</p>
+<p>A textual explanation of everything on this diagram is on the <a href="../model-text/">Diagram Explanations page</a>.</p>
 <p><em>To make the diagram bigger, you can right click and select 'View Image' or 'Open Image in New Tab' or a similar command in your browser.</em></p>
-<p><img alt="VF uml picture" src="../../assets/ValueFlowsUML.png" /></p>
+<p><img alt="UML diagram of the whole VF model" src="../../assets/ValueFlowsUML.png" /></p>
 <h2 id="diagram-conventions">Diagram conventions</h2>
 <p>Each arrow represents an additional property in the class at the beginning of the arrow.  If there is an * at the arrowhead end, then many instances are supported (like a collection in object oriented modeling).  If there is no *, then it should be assumed that one instance is supported (like a foreign key in a relational model).</p>
 <h3 id="relationships-not-shown">Relationships not shown</h3>
@@ -1609,17 +1609,18 @@
 <h3 id="inverse-terms">Inverse terms</h3>
 <p>To support cleaner representation in JSON / JSON-LD / RDF, as well as object oriented collections, in addition to the initial relational representation, we include some inverse terms, using <code>owl:inverseOf</code> in the source turtle file.  If there is a name on each end of the line, and an end on both sides of the arrow, there is an inverse defined.</p>
 <p>For example, here a Commitment <code>isInput</code> or <code>isOutput</code> of a Process; and a Process <code>hasInput</code>(zero or more) and/or <code>hasOutput</code>(zero or more).  Both directions are specified as part of the formal vocabulary, so can be used in the direction preferred by the application.</p>
-<p><img alt="inverse pic" src="../../assets/inverse.png" /></p>
+<p><img alt="inverse example model with Process, Commitment, relationships pointing both ways" src="../../assets/inverse.png" /></p>
+<p>The first several examples on <a href="../../examples/ex-production/">the Examples-Production page</a> show both options as yaml.</p>
 <h3 id="many-to-many-relationships">Many-to-many relationships</h3>
 <p>Instead of the typical relational resolution of a many-to-many relationship of including an "associative" class or table between them, we are specifying a direct one-to-many relationship, which more cleanly supports JSON / JSON-LD / RDF / OO structures.  To get to the other less-used "many" without the "associative" entity, a query would be needed.  The suggested query names are included in <a href="../inverses">Query Naming</a>.</p>
 <p>Below are the places in Valueflows where there is a logical many-to-many.</p>
 <h4 id="published-proposedto">published, proposedTo</h4>
 <p>Although not included in the formal RDF-based spec, the suggested intermediate "associative" class for the two cases where there are no intermediate properties is shown below with dotted lines, for projects that want to implement a relational database under the covers, for example.</p>
-<p><img alt="proposal m:m relationships" src="../../assets/m-m.png" /></p>
+<p><img alt="model with Proposal and Intent adn Agent m:m instantiated relationships" src="../../assets/m-m.png" /></p>
 <h4 id="fulfills-satisfies-settles">fulfills, satisfies, settles</h4>
-<p>These cases have possible properties in the "associative" class. For example, between Commitment and EconomicEvent, a Commitment for 40 hours of work might be fulfilled by 5 EconomicEvents of 8 hours.  Or an EconomicEvent might pay for a statement or invoice that includes multiple Commitments for deliveries.  The model we have settled on supports the former, but not the latter.  The latter is one of a few cases that we believe will be a small minority of edge cases where the quantities in the "associative" entity might be appreciated.  For that case, an application could just divide the payment into multiple EconomicEvents and connect them with the trackingIdentifier.</p>
+<p>These cases have possible properties in the "associative" class. For example, between Commitment and EconomicEvent, a Commitment for 40 hours of work might be fulfilled by 5 EconomicEvents of 8 hours.  Or an EconomicEvent might pay for a statement or invoice that includes multiple Commitments for deliveries.  The model we have settled on supports the former, but not the latter.  The latter is one of a few cases that we believe will be a small minority of edge cases where the quantities in the "associative" entity might be appreciated.  For that case, an application could possibly divide the payment into multiple EconomicEvents and connect them with the trackingIdentifier.  Or it could extend the vocabulary to include the quantity fulfilled/satisfied/settled, and over time the VF community can re-consider the best trade-off for handling this situation.</p>
 <p>We believe that it is more important to simplify the model and the concepts for the majority of use cases, than to have complete support of all use cases.</p>
-<p><img alt="flow m:m relationships" src="../../assets/fulfill-satisfy-rel.png" /></p>
+<p><img alt="model with Event Commitment Intent Claim m:m instantiated relationships" src="../../assets/fulfill-satisfy-rel.png" /></p>
 
 
 

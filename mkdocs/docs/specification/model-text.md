@@ -33,7 +33,7 @@ Resources are defined in different ways, depending on their need and ability to 
 
 #### vf:ResourceSpecification
 
-This specifies the kind of resource, to the most specific level needed.  It also fills the space for the resource when it is not yet, or never will be, an actual resource.  It can be used in and across networks to communicate the resource type needed.  EconomicResource and RecipeResource, as well as the resource concept referenced in flows (EconomicEvent, Intent, Commitment, Claim), conform to a ResourceSpecification.
+This specifies the kind of resource, to the most specific level needed.  It also fills the space for the resource when it is not yet, or never will be, an actual resource.  It can be used in and across networks to communicate the resource type needed.  EconomicResource, as well as the resource concept referenced in flows (EconomicEvent, Intent, Commitment, Claim, RecipeFlow), conform to a ResourceSpecification.
 
 #### vf:EconomicResource
 
@@ -64,10 +64,6 @@ It is very helpful for interoperaability that the same units of measure are used
 
 This set of Knowledge Layer entities together make a recipe for creating a Resource conforming to this ResourceSpecification. It can be used to automate generating a plan in the Plan Layer, since they follow the same basic input-process-output graph pattern. The recipe model will probably be made more complete in the future, to support forking, versioning, and variants.  It currently supports multiple recipes for the same ResourceSpecification.  More info at [Recipes concepts](../concepts/recipes.md).
 
-#### vf:RecipeResource
-
-This is the resource portion of a recipe, and conforms to, but can override data from, the ResourceSpecification.  It can be thought of as part of the RecipeFlow, or as a node in the recipe graph.
-
 #### vf:RecipeProcess
 
 This defines a process node in the recipe graph.  A recipe can contain as many RecipeProcesses as it needs to produce the resource defined in the final ResourceSpecification. It can optionally conform to a ProcessSpecification.  It will have at least one input or output RecipeFlow.
@@ -82,7 +78,7 @@ RecipeExchange corresponds to the Agreement in the Plan Layer.  It enables gener
 
 #### vf:RecipeFlow
 
-A RecipeFlow defines either an input or output to a RecipeProcess, and/or a clause of a RecipeExchange.  RecipeProcesses and RecipeExchanges can be combined into one recipe if desired.  A RecipeFlow through its Action defines how it will affect its RecipeResource.  If it defines a ProcessSpecification stage, then the flow expects a resource at that stage of production.
+A RecipeFlow defines either an input or output to a RecipeProcess, and/or a clause of a RecipeExchange.  RecipeProcesses and RecipeExchanges can be combined into one recipe if desired.  A RecipeFlow through its Action defines how it will affect the (resource of the) ResourceSpecification.  If it defines a ProcessSpecification stage, then the flow expects a resource at that stage of production.
 
 
 ### Flows in motion: Planning
