@@ -11,7 +11,7 @@ Valueflows is a vocabulary and model (an ontology) that is intended to cover any
 
 ### Does Valueflows include an application that I can run or fork?
 
-No, Valueflows is only the vocabulary and documentation.  There are some applications that have been and are being created using Valueflows and/or exposing Valueflows as an api [here](../appendix/usedfor.md).  They are all open source.
+No, Valueflows is only the vocabulary and documentation.  There are [some applications that have been and are being created](../appendix/usedfor.md) using Valueflows internally and/or exposing Valueflows as an api. They are all open source.
 
 ### How do we think of the "economy"?
 
