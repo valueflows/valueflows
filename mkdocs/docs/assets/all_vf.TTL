@@ -16,7 +16,7 @@
 <> a owl:Ontology;
     dcterms:title "Valueflows Ontology";
     dcterms:type <http://purl.org/adms/assettype/Ontology>;
-    owl:versionIRI </0.10/> ;
+    owl:versionIRI <https://w3id.org/valueflows/ont/0.11/vf> ;
     dcterms:status <http://purl.org/adms/status/UnderDevelopment>.
 
 
@@ -1666,8 +1666,20 @@ vf:incrementTo a            owl:NamedIndividual ,
 
 vf:update a                 owl:NamedIndividual ,
                             vf:ContainedEffect ,
+                            vf:StageEffect ,
+                            vf:StateEffect ,
                             vf:LocationEffect ;
         rdfs:comment        "The effect is to update the resource in the specified property."@en ;
+        rdfs:label          "update"@en ;
+        vs:term_status      "unstable" ;
+        .
+
+vf:updateTo a               owl:NamedIndividual ,
+                            vf:ContainedEffect ,
+                            vf:StateEffect ,
+                            vf:AccountableEffect ,
+                            vf:LocationEffect ;
+        rdfs:comment        "The effect is to update the to resource in the specified property."@en ;
         rdfs:label          "update"@en ;
         vs:term_status      "unstable" ;
         .
@@ -1675,6 +1687,14 @@ vf:update a                 owl:NamedIndividual ,
 vf:remove a                 owl:NamedIndividual ,
                             vf:ContainedEffect ;
         rdfs:comment        "The effect is to remove or nullify the specified property from the resource."@en ;
+        rdfs:label          "remove"@en ;
+        vs:term_status      "unstable" ;
+        .
+
+vf:new a                    owl:NamedIndividual ,
+                            vf:AccountableEffect ,
+                            vf:LocationEffect ;
+        rdfs:comment        "The effect applies for a new resource created by the event."@en ;
         rdfs:label          "remove"@en ;
         vs:term_status      "unstable" ;
         .
