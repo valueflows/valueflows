@@ -1390,7 +1390,7 @@ vf:deliverService a        owl:NamedIndividual ,
         vf:containedEffect  vf:notApplicable ;
         vf:accountableEffect vf:notApplicable ;
         vf:stageEffect      vf:notApplicable ;
-        vf:stateEffect      vf:update ;
+        vf:stateEffect      vf:notApplicable ;
         rdfs:comment        "New service produced and delivered (a service implies that an agent actively receives the service)."@en ;
         rdfs:label          "deliver service"@en ;
         vs:term_status      "unstable" ;
@@ -1442,8 +1442,8 @@ vf:modify a                 owl:NamedIndividual ,
         vf:onhandEffect     vf:increment ;
         vf:locationEffect   vf:update ;
         vf:containedEffect  vf:notApplicable ;
-        vf:accountableEffect vf:update ;
-        vf:stageEffect      vf:notApplicable ;
+        vf:accountableEffect vf:notApplicable ;
+        vf:stageEffect      vf:update ;
         vf:stateEffect      vf:update ;
         rdfs:comment        "In processes like repair or modification, the same resource will appear in the input."@en ;
         rdfs:label          "modify"@en ;

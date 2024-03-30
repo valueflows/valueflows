@@ -88,7 +88,7 @@ Note: The actions `use` and `work` are time-based actions, either with or withou
 
 ![VF actions table with action behaviors](../assets/vf-actions.png)
 
-*In the above chart, the `notApplicable` values are not included, for easier overall viewing.  For the complete list of behavior values by action as defined in the rdf vocabulary, see the [turtle file starting at the Actions section](https://lab.allmende.io/valueflows/valueflows/-/blob/master/release-doc-in-process/all_vf.TTL#L1259).
+*In the above chart, the `notApplicable` values are not included, for easier overall viewing.  For the complete list of behavior values by action as defined in the rdf vocabulary, see the [turtle file starting at the Actions section](https://codeberg.org/valueflows/pages/src/branch/main/assets/all_vf.TTL#L1289).
 
 ### Saving Breadcrumbs for Track and Trace
 
