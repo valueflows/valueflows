@@ -789,13 +789,6 @@ vf:imageList a              owl:DatatypeProperty ;
         rdfs:comment        "A comma separated list of uri addresses to images relevant to the resource."@en ;
         .
 
-vf:uri a                    owl:DatatypeProperty ;
-        vs:term_status      "unstable" ;
-        rdfs:range          xsd:anyURI ;
-        rdfs:label          "uri"@en ;
-        rdfs:comment        "The web address relevant to the entity."@en ;
-        .
-
 vf:name a                   owl:DatatypeProperty ;
         rdfs:label          "name"@en ;
         rdfs:range          xsd:string ;
