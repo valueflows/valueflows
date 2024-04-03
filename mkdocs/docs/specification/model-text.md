@@ -62,7 +62,7 @@ It is very helpful for interoperaability that the same units of measure are used
 
 ### Flows in motion: Recipe
 
-This set of Knowledge Layer entities together make a recipe for creating a Resource conforming to this ResourceSpecification. It can be used to automate generating a plan in the Plan Layer, since they follow the same basic input-process-output graph pattern. The recipe model will probably be made more complete in the future, to support forking, versioning, and variants.  It currently supports multiple recipes for the same ResourceSpecification.  More info at [Recipes concepts](../concepts/recipes.md).
+This set of Knowledge Layer entities together make a recipe for creating a Resource conforming to a ResourceSpecification. It can be used to automate generating a plan in the Plan Layer, since they follow the same basic input-process-output graph pattern. The recipe model may be made more complete in the future, to support forking, versioning, and variants.  It currently supports multiple recipes for the same ResourceSpecification.  It also supports a Recipe for more than one RecipeProcess in a flow graph, and RecipeGroup for creating a plan that includes more than one output from different Recipes.  More info at [Recipes concepts](../concepts/recipes.md).
 
 #### vf:RecipeProcess
 
@@ -80,10 +80,17 @@ RecipeExchange corresponds to the Agreement in the Plan Layer.  It enables gener
 
 A RecipeFlow defines either an input or output to a RecipeProcess, and/or a clause of a RecipeExchange.  RecipeProcesses and RecipeExchanges can be combined into one recipe if desired.  A RecipeFlow through its Action defines how it will affect the (resource of the) ResourceSpecification.  If it defines a ProcessSpecification stage, then the flow expects a resource at that stage of production.
 
+#### vf:Recipe
+
+A Recipe defines a way to easily tie all the RecipeProcesses needed to create an output.  If your Recipes have only one RecipeProcess, you may not need Recipe.
+
+#### vf:RecipeGroup
+
+A RecipeGroup makes it easy to include more than one output from more than Recipe in one Plan.
 
 ### Flows in motion: Planning
 
-Planning can be done with or without recipes.  And planning is not always done, sometimes the economic activity is only observed, depending on the use case.  This section is about operational planning, proesses and agreements that are intended to be executed in this lowest level of detail.  More info at [Planning concepts](../concepts/plan.md).
+Planning can be done with or without recipes.  And planning is not always done, sometimes the economic activity is only observed, depending on the use case.  This section is about operational planning, proesses and agreements that are intended to be executed in this lowest level of detail.  More info at [Planning concepts](../concepts/plan.md) and [Generation of Plans](../../concepts/recipes#generation-of-plans).
 
 #### vf:Plan
 
