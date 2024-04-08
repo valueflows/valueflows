@@ -24,7 +24,8 @@ When processes are "nested", it is not random, nor based on a taxonomy. It is ba
 
 ![diagram of nested process, with some inputs going to inside processes, some to containing process](../assets/nesting.jpg)
 
-* There are some common situations for nested processes that will not be as simple as the above diagram.  Thes include:
+* There are some common situations for nested processes that will not be as simple as the above diagram.  These include:
+
     * Action makes a difference.  When a piece of equipment or tool is "used", it is not gone at the end of the nesting process.  But if it is managed as a time-based resource with a calendar, some calendar duration is in fact consumed.  Or if a citable resource is created and then cited inside, it is also still there at the end of the nesting process.
     * Batch or lot size makes a difference. Suppose you have a requirement for 5 of some assembled item, and 4 of some input component are needed to make each item, 20 components in all. But the minimum batch size for the component is 100. Then 80 of the components will be left in inventory at the end of the nesting process, and that 80 will also an output of the outer process.
 

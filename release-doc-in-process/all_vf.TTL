@@ -453,19 +453,19 @@ vf:independentDemandOf
         a                   owl:ObjectProperty ;
         rdfs:label          "independent demand of"@en ;
         rdfs:range          vf:Plan ;
-        rdfs:domain         vf:Commitment ;
+        rdfs:domain         [ owl:unionOf (vf:Commitment vf:Intent) ] ;
         vs:term_status      "testing" ;
-        rdfs:comment        "This plan is the way this commitment will be fulfilled."@en ;
+        rdfs:comment        "This plan is the way this commitment or intent will be realized."@en ;
         .
 
 vf:hasIndependentDemand
         a                   owl:ObjectProperty ;
         owl:inverseOf       vf:independentDemandOf ;
         rdfs:label          "has independent demand"@en ;
-        rdfs:range          vf:Commitment ;
+        rdfs:range          [ owl:unionOf (vf:Commitment vf:Intent) ]  ;
         rdfs:domain         vf:Plan ;
         vs:term_status      "testing" ;
-        rdfs:comment        "The independent commitments which this plan was created to deliver."@en ;
+        rdfs:comment        "The commitments and/or intents which this plan was created to deliver."@en ;
         .
 
 vf:resourceInventoriedAs

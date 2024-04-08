@@ -1,9 +1,10 @@
 ## 0.11 (April 2024)
 
+- Add Intents as Plan independent demand
 - Add Recipe and RecipeGroup
 - Fixes to action effects
 - Remove vf:uri (breaking)
-- Misc. documentation improvements
+- Documentation improvements
 
 ## 0.10 (February 2024)
 
