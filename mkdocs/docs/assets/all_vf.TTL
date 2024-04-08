@@ -116,6 +116,18 @@ vf:RoleBehavior  a           owl:Class ;
         rdfs:comment         "The general shape or behavior grouping of an agent relationship role."@en ;
         .
 
+vf:Recipe a                 owl:Class ;
+        rdfs:label          "Recipe"@en ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "Optional instance of a recipe which directly specifies the recipe processes included."@en ;
+        .
+
+vf:RecipeGroup a            owl:Class ;
+        rdfs:label          "Recipe Group"@en ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "A grouping of recipes to facilitate planning them together."@en ;
+        .
+
 vf:RecipeProcess a          owl:Class ;
         rdfs:label          "Recipe Process"@en ;
         vs:term_status      "stable" ;
@@ -391,6 +403,33 @@ vf:recipeStipulatesReciprocal
         rdfs:comment        "All the reciprocal clauses of a recipe exchange."@en ;
         .
 
+vf:plannedTogether
+        a                   owl:ObjectProperty ;
+        rdfs:label          "planned together"@en ;
+        rdfs:domain         vf:RecipeGroup ;
+        rdfs:range          vf:Recipe ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "A collection of recipes that can be planned together."@en ;
+        .
+
+vf:primaryOutput
+        a                   owl:ObjectProperty ;
+        rdfs:label          "primary output"@en ;
+        rdfs:domain         vf:Recipe ;
+        rdfs:range          vf:ResourceSpecification ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "The main output the recipe is intended to produce or deliver."@en ;
+        .
+
+vf:recipeIncludes
+        a                   owl:ObjectProperty ;
+        rdfs:label          "recipe includes"@en ;
+        rdfs:domain         vf:Recipe ;
+        rdfs:range          vf:RecipeProcess ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "The collection of processes needed for this recipe."@en ;
+        .
+
 vf:plannedWithin
         a                   owl:ObjectProperty ;
         rdfs:label          "planned within"@en ;
@@ -414,19 +453,19 @@ vf:independentDemandOf
         a                   owl:ObjectProperty ;
         rdfs:label          "independent demand of"@en ;
         rdfs:range          vf:Plan ;
-        rdfs:domain         vf:Commitment ;
+        rdfs:domain         [ owl:unionOf (vf:Commitment vf:Intent) ] ;
         vs:term_status      "testing" ;
-        rdfs:comment        "This plan is the way this commitment will be fulfilled."@en ;
+        rdfs:comment        "This plan is the way this commitment or intent will be realized."@en ;
         .
 
 vf:hasIndependentDemand
         a                   owl:ObjectProperty ;
         owl:inverseOf       vf:independentDemandOf ;
         rdfs:label          "has independent demand"@en ;
-        rdfs:range          vf:Commitment ;
+        rdfs:range          [ owl:unionOf (vf:Commitment vf:Intent) ]  ;
         rdfs:domain         vf:Plan ;
         vs:term_status      "testing" ;
-        rdfs:comment        "The independent commitments which this plan was created to deliver."@en ;
+        rdfs:comment        "The commitments and/or intents which this plan was created to deliver."@en ;
         .
 
 vf:resourceInventoriedAs
@@ -801,6 +840,8 @@ vf:name a                   owl:DatatypeProperty ;
                                 vf:Process
                                 vf:ProcessSpecification
                                 vf:Proposal
+                                vf:Recipe
+                                vf:RecipeGroup
                                 vf:RecipeProcess
                                 vf:ResourceSpecification
                                 vf:RoleBehavior
@@ -828,7 +869,9 @@ skos:note
                                 vf:Process
                                 vf:ProcessSpecification
                                 vf:Proposal
+                                vf:Recipe
                                 vf:RecipeFlow
+                                vf:RecipeGroup
                                 vf:RecipeProcess
                                 vf:ResourceSpecification
                                 vf:RoleBehavior

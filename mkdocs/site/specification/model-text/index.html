@@ -712,6 +712,20 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#vfrecipe" class="md-nav__link">
+    vf:Recipe
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vfrecipegroup" class="md-nav__link">
+    vf:RecipeGroup
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1930,6 +1944,20 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#vfrecipe" class="md-nav__link">
+    vf:Recipe
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vfrecipegroup" class="md-nav__link">
+    vf:RecipeGroup
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2160,7 +2188,7 @@
 <h4 id="om2unit">om2:Unit</h4>
 <p>It is very helpful for interoperaability that the same units of measure are used as networks communicate.  OM2 has a long list of recommended Units, extracted <a href="https://lab.allmende.io/valueflows/valueflows/-/blob/master/units/units-en-useful.csv">here</a>.</p>
 <h3 id="flows-in-motion-recipe">Flows in motion: Recipe</h3>
-<p>This set of Knowledge Layer entities together make a recipe for creating a Resource conforming to this ResourceSpecification. It can be used to automate generating a plan in the Plan Layer, since they follow the same basic input-process-output graph pattern. The recipe model will probably be made more complete in the future, to support forking, versioning, and variants.  It currently supports multiple recipes for the same ResourceSpecification.  More info at <a href="../../concepts/recipes/">Recipes concepts</a>.</p>
+<p>This set of Knowledge Layer entities together make a recipe for creating a Resource conforming to a ResourceSpecification. It can be used to automate generating a plan in the Plan Layer, since they follow the same basic input-process-output graph pattern. The recipe model may be made more complete in the future, to support forking, versioning, and variants.  It currently supports multiple recipes for the same ResourceSpecification.  It also supports a Recipe for more than one RecipeProcess in a flow graph, and RecipeGroup for creating a plan that includes more than one output from different Recipes.  More info at <a href="../../concepts/recipes/">Recipes concepts</a>.</p>
 <h4 id="vfrecipeprocess">vf:RecipeProcess</h4>
 <p>This defines a process node in the recipe graph.  A recipe can contain as many RecipeProcesses as it needs to produce the resource defined in the final ResourceSpecification. It can optionally conform to a ProcessSpecification.  It will have at least one input or output RecipeFlow.</p>
 <h4 id="timeduration">time:Duration</h4>
@@ -2169,8 +2197,12 @@
 <p>RecipeExchange corresponds to the Agreement in the Plan Layer.  It enables generation of plans that include agreements.  It can contain as many RecipeFlows as needed.</p>
 <h4 id="vfrecipeflow">vf:RecipeFlow</h4>
 <p>A RecipeFlow defines either an input or output to a RecipeProcess, and/or a clause of a RecipeExchange.  RecipeProcesses and RecipeExchanges can be combined into one recipe if desired.  A RecipeFlow through its Action defines how it will affect the (resource of the) ResourceSpecification.  If it defines a ProcessSpecification stage, then the flow expects a resource at that stage of production.</p>
+<h4 id="vfrecipe">vf:Recipe</h4>
+<p>A Recipe defines a way to easily tie all the RecipeProcesses needed to create an output.  If your Recipes have only one RecipeProcess, you may not need Recipe.</p>
+<h4 id="vfrecipegroup">vf:RecipeGroup</h4>
+<p>A RecipeGroup makes it easy to include more than one output from more than Recipe in one Plan.</p>
 <h3 id="flows-in-motion-planning">Flows in motion: Planning</h3>
-<p>Planning can be done with or without recipes.  And planning is not always done, sometimes the economic activity is only observed, depending on the use case.  This section is about operational planning, proesses and agreements that are intended to be executed in this lowest level of detail.  More info at <a href="../../concepts/plan/">Planning concepts</a>.</p>
+<p>Planning can be done with or without recipes.  And planning is not always done, sometimes the economic activity is only observed, depending on the use case.  This section is about operational planning, proesses and agreements that are intended to be executed in this lowest level of detail.  More info at <a href="../../concepts/plan/">Planning concepts</a> and <a href="../../concepts/recipes#generation-of-plans">Generation of Plans</a>.</p>
 <h4 id="vfplan">vf:Plan</h4>
 <p>A Plan is a collection of one or more operational Processes and/or non-process Commitments (such as transfers) in the input-output-process graph pattern.  Plans can also reference one or more Commitments that create the independent demand that provides the reason for, and final output of, the Plan. If the use case calls for it, Plans can be nested in Scenarios to give higher level views that drill down to operational Plans, or reference a Scenario that was done as a pre-planning effort.</p>
 <h4 id="vfprocess">vf:Process</h4>

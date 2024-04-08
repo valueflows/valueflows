@@ -1,3 +1,11 @@
+## 0.11 (April 2024)
+
+- Add Intents as Plan independent demand
+- Add Recipe and RecipeGroup
+- Fixes to action effects
+- Remove vf:uri (breaking)
+- Documentation improvements
+
 ## 0.10 (February 2024)
 
 - Remove dfc:ProductBatch, pulled info back to EconomicResource (breaking)

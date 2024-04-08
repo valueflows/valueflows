@@ -31,8 +31,19 @@ A workflow recipe tends to be more like a linear flow.
 
 The examples above have to do with producing specific goods or services.  Recipes can also be used to document more general business processes that an organization uses to produce more generally defined kinds of outputs.  For example, an R&D process might be hard to document in detail, but it does have general steps like researching existing technology, concept generation, experimentation, concept selection, refinement, testing, documenting the design. 
 
+## Recipe and Recipe Group
+
+These are optional constructs.  You might want a Recipe when you include more than one process in one recipe, and especially if different recipes can create the same Resource Specification output in different ways.  It is also useful when certain processes are included in multiple recipes.
+
+A Recipe Group is for when your plans regularly produce more than one output which can be produced separately.  For example, a campaign might produce one or more events, various brochures, a website, etc.
+
+### Byproducts and Coproducts
+
+A Recipe knows its primary output, i.e what is created by this Recipe.  As of now, it does not directly know its byproducts and coproducts, but this information can be added for specific use cases, outside of Valueflows, if needed. It can also be found by interrogating the contents of the recipe input-process-output graph. This choice favors simplicity at this stage.
 
 ## Generation of plans
+
+Plans can be generated from a Recipe, a Recipe Group, or directly from a Recipe Process, which will find predescessor Recipe Processes as needed.
 
 <b>Back-scheduling a plan from a Recipe</b>:
 Start with end items and a due date, generate the plan from the end item to its inputs, to the outputs leading the inputs, to their inputs, etc.
@@ -41,6 +52,7 @@ Start with end items and a due date, generate the plan from the end item to its 
 Start with the inputs with no predecessors and a start date, generate the plan from the inputs to their outputs, to the inputs that want the outputs, etc.
 
 <b>Forward-scheduling from a Resource</b>:
-Start with a Resource and generate the plan based on its recipe.  Examples: 
-    Translation: start with a source document
-    Auto repair: start with an auto that needs repair.
+Start with a Resource and generate the plan based on its recipe.  Examples:
+
+* Translation: start with a source document
+* Auto repair: start with an auto that needs repair.
