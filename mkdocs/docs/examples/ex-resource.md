@@ -8,9 +8,11 @@ This example includes economic resources, with their resource specifications.  O
 # Example: Resources
 
 '@context':
-  - https://git.io/vf-examples-jsonld-context
+  - '@vocab': http://w3id.org/valueflows/ont/vf#
   - farm: https://farm.example/
     ose: https://www.opensourceecology.org/
+    skos: http://www.w3.org/2004/02/skos/core#
+    om2: http://www.ontology-of-units-of-measure.org/resource/om-2/
 
 '@graph':
 

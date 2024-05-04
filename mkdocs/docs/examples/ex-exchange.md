@@ -10,9 +10,11 @@ An exchange agreement with commitments.
 # Example: Simple exchange agreement
 
 '@context':
-  - https://git.io/vf-examples-jsonld-context
+  - '@vocab': http://w3id.org/valueflows/ont/vf#
   - alice: https://alice.example/
     bob: https://bob.example/
+    skos: http://www.w3.org/2004/02/skos/core#
+    om2: http://www.ontology-of-units-of-measure.org/resource/om-2/
 
 '@graph':
 
@@ -55,9 +57,11 @@ An exchange without prior commitments.  Note we are still using the Agreement to
 # Example: Simple retail exchange without commitments
 
 '@context':
-  - https://git.io/vf-examples-jsonld-context
+  - '@vocab': http://w3id.org/valueflows/ont/vf#
   - carol: https://carol.example/
     store: https://store.example/
+    skos: http://www.w3.org/2004/02/skos/core#
+    om2: http://www.ontology-of-units-of-measure.org/resource/om-2/
 
 '@graph':
 
@@ -99,10 +103,12 @@ A simple transfer of a currency from one agent to another.
 # Transfer of crypto-currency, ignoring the fee, but to record time involved in the transfer validation process
 
 '@context':
-  - https://git.io/vf-examples-jsonld-context
+  - '@vocab': http://w3id.org/valueflows/ont/vf#
   - bob: https://bob.example/
     alice: https://alice.example/
     fair: https://faircoin.example/
+    skos: http://www.w3.org/2004/02/skos/core#
+    om2: http://www.ontology-of-units-of-measure.org/resource/om-2/
 
 '@graph':
 
@@ -168,9 +174,11 @@ A simple move of a currency from one account to another by one agent.
 # Move of crypto-currency for one agent, ignoring the fee
 
 '@context':
-  - https://git.io/vf-examples-jsonld-context
+  - '@vocab': http://w3id.org/valueflows/ont/vf#
   - bob: https://bob.example/
     fair: https://faircoin.example/
+    skos: http://www.w3.org/2004/02/skos/core#
+    om2: http://www.ontology-of-units-of-measure.org/resource/om-2/
 
 '@graph':
 
@@ -236,9 +244,11 @@ Checking out and checking back in a library book (a loan).
 # Checking out a book
 
 '@context':
-  - https://git.io/vf-examples-jsonld-context
+  - '@vocab': http://w3id.org/valueflows/ont/vf#
   - library: https://library.example/
     bob: https://bob.example/
+    skos: http://www.w3.org/2004/02/skos/core#
+    om2: http://www.ontology-of-units-of-measure.org/resource/om-2/
 
 '@graph':
 
@@ -334,9 +344,11 @@ Logged work triggers a claim for future income distribution for that work.
 # Example: Claim (simple)
 
 '@context':
-  - https://git.io/vf-examples-jsonld-context
+  - '@vocab': http://w3id.org/valueflows/ont/vf#
   - bob: https://bob.example/
     mfg: https://manufacturer.example/
+    skos: http://www.w3.org/2004/02/skos/core#
+    om2: http://www.ontology-of-units-of-measure.org/resource/om-2/
 
 '@graph':
 
@@ -395,9 +407,11 @@ This shows a simple recipe that includes both a process and the exchange of work
 # Example: Simple recipe with both process and exchange
 
 '@context':
-  - https://git.io/vf-examples-jsonld-context
+  - '@vocab': http://w3id.org/valueflows/ont/vf#
   - alice: https://alice.example/
     doc: https://documenters.example
+    skos: http://www.w3.org/2004/02/skos/core#
+    om2: http://www.ontology-of-units-of-measure.org/resource/om-2/
 
 '@graph':
 

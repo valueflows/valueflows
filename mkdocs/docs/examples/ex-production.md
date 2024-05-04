@@ -10,9 +10,11 @@ Simple one-process manufacturing with typical inputs and outputs.
 # Example: Simple manufacturing process
 
 '@context':
-  - https://git.io/vf-examples-jsonld-context
+  - '@vocab': http://w3id.org/valueflows/ont/vf#
   - alice: https://alice.example/
     mfg: https://manufacturing.example/
+    skos: http://www.w3.org/2004/02/skos/core#
+    om2: http://www.ontology-of-units-of-measure.org/resource/om-2/
 
 '@graph':
 
@@ -138,9 +140,11 @@ Alternate view of this manufacturing example, using the relational directionalit
 # Example: Simple manufacturing process
 
 '@context':
-  - https://git.io/vf-examples-jsonld-context
+  - '@vocab': http://w3id.org/valueflows/ont/vf#
   - alice: https://alice.example/
     mfg: https://manufacturing.example/
+    skos: http://www.w3.org/2004/02/skos/core#
+    om2: http://www.ontology-of-units-of-measure.org/resource/om-2/
 
 '@graph':
 
@@ -216,11 +220,13 @@ Simple delivery of a service with typical inputs and outputs.
 # Example: Simple service process
 
 '@context':
-  - https://git.io/vf-examples-jsonld-context
+  - '@vocab': http://w3id.org/valueflows/ont/vf#
   - alice: https://alice.example/
     bob: https://bob.example/
     carol: https://carol.example/
     training: https://training.example/
+    skos: http://www.w3.org/2004/02/skos/core#
+    om2: http://www.ontology-of-units-of-measure.org/resource/om-2/
 
 '@graph':
 
@@ -322,11 +328,13 @@ Alternate view of this service example, using the relational directionality betw
 # Example: Simple service process
 
 '@context':
-  - https://git.io/vf-examples-jsonld-context
+  - h'@vocab': http://w3id.org/valueflows/ont/vf#
   - alice: https://alice.example/
     bob: https://bob.example/
     carol: https://carol.example/
     training: https://training.example/
+    skos: http://www.w3.org/2004/02/skos/core#
+    om2: http://www.ontology-of-units-of-measure.org/resource/om-2/
 
 '@graph':
   # Service delivery
@@ -411,9 +419,11 @@ Simple repair process with typical inputs and outputs.  The same economic resour
 # Example: Simple workflow process
 
 '@context':
-  - https://git.io/vf-examples-jsonld-context
+  - '@vocab': http://w3id.org/valueflows/ont/vf#
   - alice: https://alice.example/
     repair: https://auto-repair.example/
+    skos: http://www.w3.org/2004/02/skos/core#
+    om2: http://www.ontology-of-units-of-measure.org/resource/om-2/
 
 '@graph':
 
@@ -469,9 +479,11 @@ Alternate view of this workflow process, using the more relational directionalit
 # Example: Simple workflow process
 
 '@context':
-  - https://git.io/vf-examples-jsonld-context
+  - '@vocab': http://w3id.org/valueflows/ont/vf#
   - alice: https://alice.example/
     repair: https://auto-repair.example/
+    skos: http://www.w3.org/2004/02/skos/core#
+    om2: http://www.ontology-of-units-of-measure.org/resource/om-2/
 
 '@graph':
 
@@ -514,9 +526,11 @@ Simple pack and unpack of resources into and out of a container resource, using 
 # Example: Simple pack and unpack processes
 
 '@context':
-  - https://git.io/vf-examples-jsonld-context
+  - '@vocab': http://w3id.org/valueflows/ont/vf#
   - med: https://medical.example/
     wash: https://laundry.example/
+    skos: http://www.w3.org/2004/02/skos/core#
+    om2: http://www.ontology-of-units-of-measure.org/resource/om-2/
 
 '@graph':
 
@@ -769,9 +783,11 @@ Alternate view of these pack-unpack processes, using the more relational directi
 # Example: Simple pack and unpack processes
 
 '@context':
-  - https://git.io/vf-examples-jsonld-context
+  - '@vocab': http://w3id.org/valueflows/ont/vf#
   - med: https://medical.example/
     wash: https://laundry.example/
+    skos: http://www.w3.org/2004/02/skos/core#
+    om2: http://www.ontology-of-units-of-measure.org/resource/om-2/
 
 '@graph':
 
@@ -912,8 +928,10 @@ Simple assembly and testing showing use of stage and state.
 # credit Fabulaser-Mini, https://github.com/fab-machines/Fabulaser-Mini/blob/main/manual/Fabulaser%20manual%20L2M2.pdf
 
 '@context':
-  - https://git.io/vf-examples-jsonld-context
+  - '@vocab': http://w3id.org/valueflows/ont/vf#
   - mfg: https://manufacturing.example/
+    skos: http://www.w3.org/2004/02/skos/core#
+    om2: http://www.ontology-of-units-of-measure.org/resource/om-2/
 
 '@graph':
 
@@ -1052,8 +1070,10 @@ Alternate view of these stage-state processes, using the more relational directi
 # credit Fabulaser-Mini, https://github.com/fab-machines/Fabulaser-Mini/blob/main/manual/Fabulaser%20manual%20L2M2.pdf
 
 '@context':
-  - https://git.io/vf-examples-jsonld-context
+  - '@vocab': http://w3id.org/valueflows/ont/vf#
   - mfg: https://manufacturing.example/
+    skos: http://www.w3.org/2004/02/skos/core#
+    om2: http://www.ontology-of-units-of-measure.org/resource/om-2/
 
 '@graph':
 
@@ -1153,9 +1173,11 @@ Note that the diagram below shows the actual data in the flow.  If a use case ca
 # Example: Correcting a data recording error in an event
 
 '@context':
-  - https://git.io/vf-examples-jsonld-context
+  - '@vocab': http://w3id.org/valueflows/ont/vf#
   - alice: https://alice.example/
     mfg: https://manufacturing.example/
+    skos: http://www.w3.org/2004/02/skos/core#
+    om2: http://www.ontology-of-units-of-measure.org/resource/om-2/
 
 '@graph':
 

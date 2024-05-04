@@ -1564,9 +1564,11 @@
 <p><div class="highlight"><pre><span></span><code><span class="c1"># Example: Simple manufacturing process</span>
 
 <span class="s">&#39;@context&#39;</span><span class="p p-Indicator">:</span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://git.io/vf-examples-jsonld-context</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@vocab&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://w3id.org/valueflows/ont/vf#</span>
 <span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">alice</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://alice.example/</span>
 <span class="w">    </span><span class="nt">mfg</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
+<span class="w">    </span><span class="nt">skos</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://www.w3.org/2004/02/skos/core#</span>
+<span class="w">    </span><span class="nt">om2</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://www.ontology-of-units-of-measure.org/resource/om-2/</span>
 
 <span class="s">&#39;@graph&#39;</span><span class="p p-Indicator">:</span>
 
@@ -1691,9 +1693,11 @@ Alternate view of this manufacturing example, using the relational directionalit
 <div class="highlight"><pre><span></span><code><span class="c1"># Example: Simple manufacturing process</span>
 
 <span class="s">&#39;@context&#39;</span><span class="p p-Indicator">:</span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://git.io/vf-examples-jsonld-context</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@vocab&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://w3id.org/valueflows/ont/vf#</span>
 <span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">alice</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://alice.example/</span>
 <span class="w">    </span><span class="nt">mfg</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
+<span class="w">    </span><span class="nt">skos</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://www.w3.org/2004/02/skos/core#</span>
+<span class="w">    </span><span class="nt">om2</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://www.ontology-of-units-of-measure.org/resource/om-2/</span>
 
 <span class="s">&#39;@graph&#39;</span><span class="p p-Indicator">:</span>
 
@@ -1764,11 +1768,13 @@ Alternate view of this manufacturing example, using the relational directionalit
 <p><div class="highlight"><pre><span></span><code><span class="c1"># Example: Simple service process</span>
 
 <span class="s">&#39;@context&#39;</span><span class="p p-Indicator">:</span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://git.io/vf-examples-jsonld-context</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@vocab&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://w3id.org/valueflows/ont/vf#</span>
 <span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">alice</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://alice.example/</span>
 <span class="w">    </span><span class="nt">bob</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://bob.example/</span>
 <span class="w">    </span><span class="nt">carol</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://carol.example/</span>
 <span class="w">    </span><span class="nt">training</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://training.example/</span>
+<span class="w">    </span><span class="nt">skos</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://www.w3.org/2004/02/skos/core#</span>
+<span class="w">    </span><span class="nt">om2</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://www.ontology-of-units-of-measure.org/resource/om-2/</span>
 
 <span class="s">&#39;@graph&#39;</span><span class="p p-Indicator">:</span>
 
@@ -1869,11 +1875,13 @@ Alternate view of this service example, using the relational directionality betw
 <div class="highlight"><pre><span></span><code><span class="c1"># Example: Simple service process</span>
 
 <span class="s">&#39;@context&#39;</span><span class="p p-Indicator">:</span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://git.io/vf-examples-jsonld-context</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">h&#39;@vocab&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://w3id.org/valueflows/ont/vf#</span>
 <span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">alice</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://alice.example/</span>
 <span class="w">    </span><span class="nt">bob</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://bob.example/</span>
 <span class="w">    </span><span class="nt">carol</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://carol.example/</span>
 <span class="w">    </span><span class="nt">training</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://training.example/</span>
+<span class="w">    </span><span class="nt">skos</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://www.w3.org/2004/02/skos/core#</span>
+<span class="w">    </span><span class="nt">om2</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://www.ontology-of-units-of-measure.org/resource/om-2/</span>
 
 <span class="s">&#39;@graph&#39;</span><span class="p p-Indicator">:</span>
 <span class="w">  </span><span class="c1"># Service delivery</span>
@@ -1954,9 +1962,11 @@ Alternate view of this service example, using the relational directionality betw
 <p><div class="highlight"><pre><span></span><code><span class="c1"># Example: Simple workflow process</span>
 
 <span class="s">&#39;@context&#39;</span><span class="p p-Indicator">:</span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://git.io/vf-examples-jsonld-context</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@vocab&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://w3id.org/valueflows/ont/vf#</span>
 <span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">alice</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://alice.example/</span>
 <span class="w">    </span><span class="nt">repair</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://auto-repair.example/</span>
+<span class="w">    </span><span class="nt">skos</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://www.w3.org/2004/02/skos/core#</span>
+<span class="w">    </span><span class="nt">om2</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://www.ontology-of-units-of-measure.org/resource/om-2/</span>
 
 <span class="s">&#39;@graph&#39;</span><span class="p p-Indicator">:</span>
 
@@ -2011,9 +2021,11 @@ Alternate view of this workflow process, using the more relational directionalit
 <div class="highlight"><pre><span></span><code><span class="c1"># Example: Simple workflow process</span>
 
 <span class="s">&#39;@context&#39;</span><span class="p p-Indicator">:</span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://git.io/vf-examples-jsonld-context</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@vocab&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://w3id.org/valueflows/ont/vf#</span>
 <span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">alice</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://alice.example/</span>
 <span class="w">    </span><span class="nt">repair</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://auto-repair.example/</span>
+<span class="w">    </span><span class="nt">skos</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://www.w3.org/2004/02/skos/core#</span>
+<span class="w">    </span><span class="nt">om2</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://www.ontology-of-units-of-measure.org/resource/om-2/</span>
 
 <span class="s">&#39;@graph&#39;</span><span class="p p-Indicator">:</span>
 
@@ -2052,9 +2064,11 @@ Alternate view of this workflow process, using the more relational directionalit
 <p><div class="highlight"><pre><span></span><code><span class="c1"># Example: Simple pack and unpack processes</span>
 
 <span class="s">&#39;@context&#39;</span><span class="p p-Indicator">:</span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://git.io/vf-examples-jsonld-context</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@vocab&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://w3id.org/valueflows/ont/vf#</span>
 <span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">med</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://medical.example/</span>
 <span class="w">    </span><span class="nt">wash</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://laundry.example/</span>
+<span class="w">    </span><span class="nt">skos</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://www.w3.org/2004/02/skos/core#</span>
+<span class="w">    </span><span class="nt">om2</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://www.ontology-of-units-of-measure.org/resource/om-2/</span>
 
 <span class="s">&#39;@graph&#39;</span><span class="p p-Indicator">:</span>
 
@@ -2306,9 +2320,11 @@ Alternate view of these pack-unpack processes, using the more relational directi
 <div class="highlight"><pre><span></span><code><span class="c1"># Example: Simple pack and unpack processes</span>
 
 <span class="s">&#39;@context&#39;</span><span class="p p-Indicator">:</span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://git.io/vf-examples-jsonld-context</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@vocab&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://w3id.org/valueflows/ont/vf#</span>
 <span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">med</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://medical.example/</span>
 <span class="w">    </span><span class="nt">wash</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://laundry.example/</span>
+<span class="w">    </span><span class="nt">skos</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://www.w3.org/2004/02/skos/core#</span>
+<span class="w">    </span><span class="nt">om2</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://www.ontology-of-units-of-measure.org/resource/om-2/</span>
 
 <span class="s">&#39;@graph&#39;</span><span class="p p-Indicator">:</span>
 
@@ -2445,8 +2461,10 @@ Alternate view of these pack-unpack processes, using the more relational directi
 <span class="c1"># credit Fabulaser-Mini, https://github.com/fab-machines/Fabulaser-Mini/blob/main/manual/Fabulaser%20manual%20L2M2.pdf</span>
 
 <span class="s">&#39;@context&#39;</span><span class="p p-Indicator">:</span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://git.io/vf-examples-jsonld-context</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@vocab&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://w3id.org/valueflows/ont/vf#</span>
 <span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">mfg</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
+<span class="w">    </span><span class="nt">skos</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://www.w3.org/2004/02/skos/core#</span>
+<span class="w">    </span><span class="nt">om2</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://www.ontology-of-units-of-measure.org/resource/om-2/</span>
 
 <span class="s">&#39;@graph&#39;</span><span class="p p-Indicator">:</span>
 
@@ -2583,8 +2601,10 @@ Alternate view of these stage-state processes, using the more relational directi
 <span class="c1"># credit Fabulaser-Mini, https://github.com/fab-machines/Fabulaser-Mini/blob/main/manual/Fabulaser%20manual%20L2M2.pdf</span>
 
 <span class="s">&#39;@context&#39;</span><span class="p p-Indicator">:</span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://git.io/vf-examples-jsonld-context</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@vocab&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://w3id.org/valueflows/ont/vf#</span>
 <span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">mfg</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
+<span class="w">    </span><span class="nt">skos</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://www.w3.org/2004/02/skos/core#</span>
+<span class="w">    </span><span class="nt">om2</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://www.ontology-of-units-of-measure.org/resource/om-2/</span>
 
 <span class="s">&#39;@graph&#39;</span><span class="p p-Indicator">:</span>
 
@@ -2678,9 +2698,11 @@ Alternate view of these stage-state processes, using the more relational directi
 <div class="highlight"><pre><span></span><code><span class="c1"># Example: Correcting a data recording error in an event</span>
 
 <span class="s">&#39;@context&#39;</span><span class="p p-Indicator">:</span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://git.io/vf-examples-jsonld-context</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@vocab&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://w3id.org/valueflows/ont/vf#</span>
 <span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">alice</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://alice.example/</span>
 <span class="w">    </span><span class="nt">mfg</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
+<span class="w">    </span><span class="nt">skos</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://www.w3.org/2004/02/skos/core#</span>
+<span class="w">    </span><span class="nt">om2</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://www.ontology-of-units-of-measure.org/resource/om-2/</span>
 
 <span class="s">&#39;@graph&#39;</span><span class="p p-Indicator">:</span>
 

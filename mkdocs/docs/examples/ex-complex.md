@@ -10,10 +10,12 @@ Bob purchases 30kg of apples from Alice and Claudia transports them (FOB destina
 # Transportation with transfer
 
 '@context':
-  - https://git.io/vf-examples-jsonld-context
+  - '@vocab': http://w3id.org/valueflows/ont/vf#
   - alice: https://alice.example/
     bob: https://bob.example/
     claudia: https://claudia.example/
+    skos: http://www.w3.org/2004/02/skos/core#
+    om2: http://www.ontology-of-units-of-measure.org/resource/om-2/
 
 '@graph':
 
@@ -267,8 +269,10 @@ This example includes recipe, plan, and actuals.
 # Example: Workflow recipe, plan, execution, including stage and state usage
 
 '@context':
-  - https://git.io/vf-examples-jsonld-context
+  - '@vocab': http://w3id.org/valueflows/ont/vf#
   - mfg: https://manufacturing.example/
+    skos: http://www.w3.org/2004/02/skos/core#
+    om2: http://www.ontology-of-units-of-measure.org/resource/om-2/
 
 '@graph':
 
