@@ -1578,9 +1578,11 @@
 <div class="highlight"><pre><span></span><code><span class="c1"># Example: Simple exchange agreement</span>
 
 <span class="s">&#39;@context&#39;</span><span class="p p-Indicator">:</span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://git.io/vf-examples-jsonld-context</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@vocab&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://w3id.org/valueflows/ont/vf#</span>
 <span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">alice</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://alice.example/</span>
 <span class="w">    </span><span class="nt">bob</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://bob.example/</span>
+<span class="w">    </span><span class="nt">skos</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://www.w3.org/2004/02/skos/core#</span>
+<span class="w">    </span><span class="nt">om2</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://www.ontology-of-units-of-measure.org/resource/om-2/</span>
 
 <span class="s">&#39;@graph&#39;</span><span class="p p-Indicator">:</span>
 
@@ -1618,9 +1620,11 @@
 <div class="highlight"><pre><span></span><code><span class="c1"># Example: Simple retail exchange without commitments</span>
 
 <span class="s">&#39;@context&#39;</span><span class="p p-Indicator">:</span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://git.io/vf-examples-jsonld-context</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@vocab&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://w3id.org/valueflows/ont/vf#</span>
 <span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">carol</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://carol.example/</span>
 <span class="w">    </span><span class="nt">store</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://store.example/</span>
+<span class="w">    </span><span class="nt">skos</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://www.w3.org/2004/02/skos/core#</span>
+<span class="w">    </span><span class="nt">om2</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://www.ontology-of-units-of-measure.org/resource/om-2/</span>
 
 <span class="s">&#39;@graph&#39;</span><span class="p p-Indicator">:</span>
 
@@ -1657,10 +1661,12 @@
 <div class="highlight"><pre><span></span><code><span class="c1"># Transfer of crypto-currency, ignoring the fee, but to record time involved in the transfer validation process</span>
 
 <span class="s">&#39;@context&#39;</span><span class="p p-Indicator">:</span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://git.io/vf-examples-jsonld-context</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@vocab&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://w3id.org/valueflows/ont/vf#</span>
 <span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">bob</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://bob.example/</span>
 <span class="w">    </span><span class="nt">alice</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://alice.example/</span>
 <span class="w">    </span><span class="nt">fair</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://faircoin.example/</span>
+<span class="w">    </span><span class="nt">skos</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://www.w3.org/2004/02/skos/core#</span>
+<span class="w">    </span><span class="nt">om2</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://www.ontology-of-units-of-measure.org/resource/om-2/</span>
 
 <span class="s">&#39;@graph&#39;</span><span class="p p-Indicator">:</span>
 
@@ -1721,9 +1727,11 @@
 <div class="highlight"><pre><span></span><code><span class="c1"># Move of crypto-currency for one agent, ignoring the fee</span>
 
 <span class="s">&#39;@context&#39;</span><span class="p p-Indicator">:</span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://git.io/vf-examples-jsonld-context</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@vocab&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://w3id.org/valueflows/ont/vf#</span>
 <span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">bob</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://bob.example/</span>
 <span class="w">    </span><span class="nt">fair</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://faircoin.example/</span>
+<span class="w">    </span><span class="nt">skos</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://www.w3.org/2004/02/skos/core#</span>
+<span class="w">    </span><span class="nt">om2</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://www.ontology-of-units-of-measure.org/resource/om-2/</span>
 
 <span class="s">&#39;@graph&#39;</span><span class="p p-Indicator">:</span>
 
@@ -1784,9 +1792,11 @@
 <div class="highlight"><pre><span></span><code><span class="c1"># Checking out a book</span>
 
 <span class="s">&#39;@context&#39;</span><span class="p p-Indicator">:</span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://git.io/vf-examples-jsonld-context</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@vocab&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://w3id.org/valueflows/ont/vf#</span>
 <span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">library</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://library.example/</span>
 <span class="w">    </span><span class="nt">bob</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://bob.example/</span>
+<span class="w">    </span><span class="nt">skos</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://www.w3.org/2004/02/skos/core#</span>
+<span class="w">    </span><span class="nt">om2</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://www.ontology-of-units-of-measure.org/resource/om-2/</span>
 
 <span class="s">&#39;@graph&#39;</span><span class="p p-Indicator">:</span>
 
@@ -1877,9 +1887,11 @@
 <div class="highlight"><pre><span></span><code><span class="c1"># Example: Claim (simple)</span>
 
 <span class="s">&#39;@context&#39;</span><span class="p p-Indicator">:</span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://git.io/vf-examples-jsonld-context</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@vocab&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://w3id.org/valueflows/ont/vf#</span>
 <span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">bob</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://bob.example/</span>
 <span class="w">    </span><span class="nt">mfg</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://manufacturer.example/</span>
+<span class="w">    </span><span class="nt">skos</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://www.w3.org/2004/02/skos/core#</span>
+<span class="w">    </span><span class="nt">om2</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://www.ontology-of-units-of-measure.org/resource/om-2/</span>
 
 <span class="s">&#39;@graph&#39;</span><span class="p p-Indicator">:</span>
 
@@ -1931,9 +1943,11 @@
 <div class="highlight"><pre><span></span><code><span class="c1"># Example: Simple recipe with both process and exchange</span>
 
 <span class="s">&#39;@context&#39;</span><span class="p p-Indicator">:</span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://git.io/vf-examples-jsonld-context</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@vocab&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://w3id.org/valueflows/ont/vf#</span>
 <span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">alice</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://alice.example/</span>
 <span class="w">    </span><span class="nt">doc</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://documenters.example</span>
+<span class="w">    </span><span class="nt">skos</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://www.w3.org/2004/02/skos/core#</span>
+<span class="w">    </span><span class="nt">om2</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://www.ontology-of-units-of-measure.org/resource/om-2/</span>
 
 <span class="s">&#39;@graph&#39;</span><span class="p p-Indicator">:</span>
 

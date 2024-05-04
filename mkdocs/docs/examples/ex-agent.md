@@ -8,11 +8,12 @@ This example include agents (people and organizations) and their relationships.
 # Example: Agents and Agent Relationships
 
 '@context':
-  - https://git.io/vf-examples-jsonld-context
+  - '@vocab': http://w3id.org/valueflows/ont/vf#
   - alice: https://alice.example/
     bob: https://bob.example/
     fablab: https://fablab.example/
     coop: https://coop.example/
+    skos: http://www.w3.org/2004/02/skos/core#
 
 '@graph':
 

@@ -10,8 +10,10 @@ A plan for creating two different resources needed for one campaign.  The first 
 # Example: Simple operational plan
 
 '@context':
-  - https://git.io/vf-examples-jsonld-context
+  - '@vocab': http://w3id.org/valueflows/ont/vf#
   - printer: https://printer.example/
+    skos: http://www.w3.org/2004/02/skos/core#
+    om2: http://www.ontology-of-units-of-measure.org/resource/om-2/
 
 '@graph':
 
@@ -127,10 +129,12 @@ A plan generated from a recipe, for making a component.
 # Example: Simple plan from recipe
 
 '@context':
-  - https://git.io/vf-examples-jsonld-context
+  - '@vocab': http://w3id.org/valueflows/ont/vf#
   - alice: https://alice.example/
     sensor: https://sensorica.example/
     open: https://openhardware.example
+    skos: http://www.w3.org/2004/02/skos/core#
+    om2: http://www.ontology-of-units-of-measure.org/resource/om-2/
 
 '@graph':
 
@@ -235,9 +239,11 @@ Commitments satisfying intents, and economic events fulfilling commitments.
 # Example: Intent - satisfied by - Commitment - fulfilled by - EconomicEvent
 
 '@context':
-  - https://git.io/vf-examples-jsonld-context
+  - '@vocab': http://w3id.org/valueflows/ont/vf#
   - bob: https://bob.example/
     mfg: https://manufacturer.example/
+    skos: http://www.w3.org/2004/02/skos/core#
+    om2: http://www.ontology-of-units-of-measure.org/resource/om-2/
 
 '@graph':
 

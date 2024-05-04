@@ -10,9 +10,11 @@ A simple proposal with reciprocity expected, then another one to give the item a
 # Example: Simple proposals based on one intent
 
 '@context':
-  - https://git.io/vf-examples-jsonld-context
+  - '@vocab': http://w3id.org/valueflows/ont/vf#
   - alice: https://alice.example/
     map: https://mapping.service/
+    skos: http://www.w3.org/2004/02/skos/core#
+    om2: http://www.ontology-of-units-of-measure.org/resource/om-2/
 
 '@graph':
 
@@ -67,9 +69,11 @@ A simple proposal for a timebank.  The reciprocity is assumed based on the timeb
 # Example: Simple proposal in a timebank
 
 '@context':
-  - https://git.io/vf-examples-jsonld-context
+  - '@vocab': http://w3id.org/valueflows/ont/vf#
   - bob: https://bob.example/
     timebank: https://timebank.example/
+    skos: http://www.w3.org/2004/02/skos/core#
+    om2: http://www.ontology-of-units-of-measure.org/resource/om-2/
 
 '@graph':
 
@@ -101,9 +105,11 @@ A simple proposal for barter.
 ``` yaml
 # Example: Simple proposal for barter
 '@context':
-  - https://git.io/vf-examples-jsonld-context
+  - '@vocab': http://w3id.org/valueflows/ont/vf#
   - carol: https://carol.example/
     map: https://mapping.service/
+    skos: http://www.w3.org/2004/02/skos/core#
+    om2: http://www.ontology-of-units-of-measure.org/resource/om-2/
 
 '@graph':
 
@@ -148,9 +154,11 @@ A simple proposal requesting help for work on a planned production process.  The
 # Example: Simple proposal for commitment to an intent on a planned process
 
 '@context':
-  - https://git.io/vf-examples-jsonld-context
+  - '@vocab': http://w3id.org/valueflows/ont/vf#
   - fablab: https://fablab.example/
     map: https://mapping.service/
+    skos: http://www.w3.org/2004/02/skos/core#
+    om2: http://www.ontology-of-units-of-measure.org/resource/om-2/
 
 '@graph':
 
@@ -211,9 +219,11 @@ A simple set of proposals that make up a price list.
 # Example: Simple price list
 
 '@context':
-  - https://git.io/vf-examples-jsonld-context
+  - '@vocab': http://w3id.org/valueflows/ont/vf#
   - farm: https://farm.example/
     map: https://mapping.service/
+    skos: http://www.w3.org/2004/02/skos/core#
+    om2: http://www.ontology-of-units-of-measure.org/resource/om-2/
 
 '@graph':
 
