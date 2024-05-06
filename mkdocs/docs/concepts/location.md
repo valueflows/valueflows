@@ -1,26 +1,21 @@
-data about things that are implicitly or explicitly located relative to the Earth
-Anything with spatial extent, i.e. size, shape, or position. e.g. people, places, bowling balls, as well as abstract areas like cubes
+# Location
 
-A Spatial Thing may move. We must take care not to oversimplify our concept of Spatial Thing by assuming that it is equivalent to definitions such as Location (from [DCTERMS]) or Place (from [SCHEMA-ORG]), which are respectively described as “A spatial region or named place” and "Entities that have a somewhat fixed, physical extension".
+## Spatial Location
 
-Furthermore, these geometries may be subject to change due to, say, a resurvey of the lighthouse. In such a situation, the geometry object would be updated — but the Spatial Thing that we are talking about is still Eddystone Lighthouse.
+Perhaps the original concept of location is a physical place.  This could be a point, or some other geometry, from simple to complex.  The main requirement in VF for a physical location tends to be for geographic mapping, which is usually a point on a map, but could be an area.  It also could be used for things like locations of resources, many of which could be in one building.  Managing space in a warehouse could be automated.
 
-me: often more like a geometry, doesn't account for frequent movement given what it is used for in vf, only for earth, do we account for spatialthings separate from the calling entity? i think so
+In VF, location tends to be on the edge of the model, thus is not modeled deeply.  An agent can have a primary location, an economic resource can have a current location, and the flows can happen at a location.  Certain economic events can also change the location of an economic resource. Our experience is this covers most of the economic needs for locations.  Some implementations will want more than this, which can be added per implementation.
 
-some use decimal degrees while others use degrees, minutes and seconds (dms)
+The location data itself is also fairly basic.  The core is the latitude, longitude, and altitude, subclassed from the [Basic Geo Vocabulary (WGS84)](https://www.w3.org/2003/01/geo/wgs84_pos#).  We have included some other descriptive information for human understanding.  None of the information is meant to be globally unique identification of a spatial location, and the accuracy of the geometry should be what is needed by your application. Our definition is also more limited, since we focus on somewhat fixed locations. We also assume locations are specified relative to the Earth.
 
-Where your geospatial data has geometries defined as points, lines, and polygons (i.e. vector data), publishing in the World Geodetic System 1984 (WGS 84) Coordinate Reference System will help people to integrate data with mass-market Web applications, tools and libraries, thereby increasing the usefulness of that data for a large community of potential users. Also, since WGS 84 is also used by the GPS system, it's handy for all those mobile Apps!
+To accommodate needs for more complex spatial location definitions, we include a data reference to the extensive Geography information of the [GEOSPARQL Specification](https://docs.ogc.org/is/22-047r1/22-047r1.html#_b3644674-c6c7-4971-b600-a24d2bda0e01), which can then be used for purposes not supported in the core VF.
 
+For more information on the current state of specification of spatial data, one reference is the [Spatial Data on the Web Best Practices](https://www.w3.org/TR/sdw-bp/).
 
+## Virtual Location
 
-Within this document, we include examples that use RDF and related technologies such as triple stores and SPARQL [SPARQL11-OVERVIEW] because we see evidence of its use in real world applications that support Linked Data. However, we must make clear to readers that there is no requirement for all publishers of spatial data on the Web to embrace the wider suite of technologies associated with the Semantic Web; we recognize that in many cases, a Web developer has little or no interest in the toolchains associated with Semantic Web due to its addition of complexity to any Web-centric solution.
+We support two kinds of virtual locations for economic resources, and more can be added as needs arise.
 
-Although we think that Linked Data need not necessarily require the use of RDF, it is probably the most common representation. We note that [JSON-LD] provides a bridge between those worlds by defining a data format that is compatible with RDF but relies on standard JSON tooling.
+One is a URI location for economic resources that are electronic, such as documents, code or designs.  The other is a currency location for economic resources that are located in an account, crypto wallet, etc.  The latter should be formatted according to the specific requirements of the type of currency.
 
-Furthermore, as the examples in this document illustrate, we often see a ‘hybrid’ approach being used in real-world applications; using RDF to work with graphs of information that interlink resources, while relying for performance reasons on other technologies to query and process the spatial aspects of that information.
-
-
-note the long lat alt are as specific as needed for the application, not meaning to imply any identity of a location
-
-use of float
-
+For agents that do not have a physical location, implementations can use website or other agent information from other vocabularies (see [Agents](../agents)).
