@@ -8,6 +8,7 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 @prefix time:  <http://www.w3.org/2006/time#> .
 @prefix geo:   <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix geosparql: <http://www.opengis.net/ont/geosparql#> .
 @prefix vs:    <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
 @prefix dtype: <http://www.linkedmodel.org/schema/dtype#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
@@ -273,6 +274,13 @@ vf:Appreciation  a          owl:Class ;
         rdfs:label          "Appreciation"@en ;
         vs:term_status      "unstable" ;
         rdfs:comment        "A way to tie an economic event that is given in loose fulfilment for another economic event, without commitments or expectations. Supports the gift economy."@en ;
+        .
+
+vf:SpatialThing a           owl:Class ;
+        rdfs:subClassOf     geo:SpatialThing ;
+        rdfs:label          "Spatial Thing"@en ;
+        vs:term_status      "testing" ;
+        rdfs:comment        "Data that locates something relative to the Earth, usually a somewhat fixed location."@en ;
         .
 
 
@@ -738,28 +746,44 @@ vf:purpose  a               owl:ObjectProperty ;
         rdfs:comment        "The type of proposal, offer or request."@en ;
         .
 
-dcterms:created
+vf:created a                owl:DatatypeProperty ;
+        rdfs:label          "created"@en ;
         rdfs:domain         [ owl:unionOf ( vf:Agreement vf:Claim vf:Commitment vf:Plan vf:Proposal vf:EconomicEvent ) ] ;
+        rdfs:range          xsd:dateTimeStamp ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "The date, and time if desired, the information was recorded."@en ;
         .
 
-geo:long
-        rdfs:range          xsd:double ;
+vf:long a                   owl:DatatypeProperty ;
+        rdfs:subPropertyOf  geo:long ;
+        rdfs:range          xsd:float ;
+        rdfs:domain         vf:SpatialThing ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "The WGS84 longitude of a spatial thing (decimal degrees)." ;
         .
 
-geo:lat
-        rdfs:range          xsd:double ;
+vf:lat a                    owl:DatatypeProperty ;
+        rdfs:subPropertyOf  geo:lat ;
+        rdfs:range          xsd:float ;
+        rdfs:domain         vf:SpatialThing ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "The WGS84 latitude of a spatial thing (decimal degrees)." ;
         .
 
-geo:alt
-        rdfs:range          xsd:double ;
+vf:alt a                    owl:DatatypeProperty ;
+        rdfs:subPropertyOf  geo:alt ;
+        rdfs:range          xsd:float ;
+        rdfs:domain         vf:SpatialThing ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "The WGS84 altitude of a spatial thing (decimal meters above the local reference ellipsoid)" ;
         .
 
 vf:currentLocation a        owl:ObjectProperty ;
         rdfs:label          "current location"@en ;
         rdfs:domain         vf:EconomicResource ;
-        rdfs:range          geo:SpatialThing ;
+        rdfs:range          vf:SpatialThing ;
         vs:term_status      "unstable" ;
-        rdfs:comment        "The current place an economic resource is located.  Could be at any level of granularity, from a town to an address to a warehouse location.  Usually mappable."@en ;
+        rdfs:comment        "The current physical location of an economic resource.  Could be at any level of granularity, from a town to an address to a warehouse location.  Usually mappable."@en ;
         .
 
 vf:currentVirtualLocation a owl:DatatypeProperty ;
@@ -767,13 +791,21 @@ vf:currentVirtualLocation a owl:DatatypeProperty ;
         rdfs:domain         vf:EconomicResource ;
         rdfs:range          xsd:anyURI ;
         vs:term_status      "unstable" ;
-        rdfs:comment        "The current virtual place an electronic economic resource is located."@en ;
+        rdfs:comment        "The current virtual place an electronic economic resource is located. Usually used for documents, code, or other electronic resource."@en ;
+        .
+
+vf:currencyAddress a        owl:DatatypeProperty ;
+        rdfs:label          "currency address"@en ;
+        rdfs:domain         vf:EconomicResource ;
+        rdfs:range          xsd:string ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "The current virtual place a currency economic resource is located, for example the identifier for a bank account, crypto wallet, etc., in a domain standard format."@en ;
         .
 
 vf:primaryLocation a        owl:ObjectProperty ;
         rdfs:label          "primary location"@en ;
         rdfs:domain         vf:Agent ;
-        rdfs:range          geo:SpatialThing ;
+        rdfs:range          vf:SpatialThing ;
         vs:term_status      "unstable" ;
         rdfs:comment        "The main place an agent is located, often an address where activities occur and mail can be sent. This is usually a mappable geographic location.  It also could be a website address, as in the case of agents who have no physical location."@en ;
         .
@@ -781,7 +813,7 @@ vf:primaryLocation a        owl:ObjectProperty ;
 vf:eligibleLocation a       owl:ObjectProperty ;
         rdfs:label          "eligible location"@en ;
         rdfs:domain         vf:Proposal ;
-        rdfs:range          geo:SpatialThing ;
+        rdfs:range          vf:SpatialThing ;
         vs:term_status      "unstable" ;
         rdfs:comment        "Location or area where the proposal is valid."@en ;
         .
@@ -789,7 +821,7 @@ vf:eligibleLocation a       owl:ObjectProperty ;
 vf:atLocation a             owl:ObjectProperty ;
         rdfs:label          "at location"@en ;
         rdfs:domain         [ owl:unionOf (vf:EconomicEvent vf:Commitment vf:Intent) ] ;
-        rdfs:range          geo:SpatialThing ;
+        rdfs:range          vf:SpatialThing ;
         vs:term_status      "unstable" ;
         rdfs:comment        "The place where an intent, commitment, or economic event occurs.  Usually mappable."@en ;
         .
@@ -797,7 +829,7 @@ vf:atLocation a             owl:ObjectProperty ;
 vf:toLocation a             owl:ObjectProperty ;
         rdfs:label          "to location"@en ;
         rdfs:domain         vf:EconomicEvent ;
-        rdfs:range          geo:SpatialThing ;
+        rdfs:range          vf:SpatialThing ;
         vs:term_status      "unstable" ;
         rdfs:comment        "The new location of the receiver resource."@en ;
         .
@@ -832,7 +864,7 @@ vf:name a                   owl:DatatypeProperty ;
         rdfs:label          "name"@en ;
         rdfs:range          xsd:string ;
         rdfs:domain         [ owl:unionOf (
-                                geo:SpatialThing
+                                vf:SpatialThing
                                 vf:Agent
                                 vf:Agreement
                                 vf:EconomicResource
@@ -851,9 +883,11 @@ vf:name a                   owl:DatatypeProperty ;
         rdfs:comment        "An informal or formal textual identifier for an object. Does not imply uniqueness."@en ;
         .
 
-skos:note
+vf:note a                   owl:AnnotationProperty ;
+        rdfs:subPropertyOf  skos:note ;
+        rdfs:label          "note"@en ;
         rdfs:domain         [ owl:unionOf (
-                                geo:SpatialThing
+                                vf:SpatialThing
                                 vf:Agent
                                 vf:AgentRelationship
                                 vf:AgentRelationshipRole
@@ -877,6 +911,9 @@ skos:note
                                 vf:RoleBehavior
                                 vf:Scenario
                                 vf:ScenarioDefinition) ] ;
+        rdfs:range          xsd:string ;
+        vs:term_status      "testing" ;
+        rdfs:comment        "."@en ;
         .
 
 vf:trackingIdentifier a     owl:DatatypeProperty ;
@@ -1199,10 +1236,18 @@ vf:rules a                  owl:DataTypeProperty ;
 
 vf:mappableAddress a        owl:DatatypeProperty ;
         rdfs:label          "mappable address"@en ;
-        rdfs:domain         geo:SpatialThing ;
+        rdfs:domain         vf:SpatialThing ;
         rdfs:range          xsd:string ;
         vs:term_status      "unstable" ;
         rdfs:comment        "A textual address that can be mapped using mapping software."@en ;
+        .
+
+vf:hasDetailedGeometry a    owl:ObjectProperty ;
+        rdfs:label          "currency address"@en ;
+        rdfs:domain         vf:Location ;
+        rdfs:range          geosparql:Geometry ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "A spatial geometry of any complexity and tooling supported by geosparql."@en ;
         .
 
 vf:roleLabel a              owl:DatatypeProperty ;

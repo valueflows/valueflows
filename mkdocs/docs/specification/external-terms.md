@@ -2,11 +2,6 @@
 
 Most applications using VF will need terms defined in various other vocabularies.  In fact, we consider these to be essential to a complete value flows core vocabulary.  Below are the elements we are re-using from well established vocabularies (web ontologies).
 
-## SKOS
-
-[https://www.w3.org/TR/skos-reference/](https://www.w3.org/TR/skos-reference/)
-
-* [`skos:note`](https://www.w3.org/TR/skos-reference/#note)
 
 ## OM2
 
@@ -21,11 +16,6 @@ Most applications using VF will need terms defined in various other vocabularies
     * See the page also in this section called Units of Measure.
     * VF will use (at least) `rdfs:label` and `om2:symbol` as properties of Unit.
 
-## DTYPE
-
-[http://www.linkedmodel.org/schema/dtype#](http://www.linkedmodel.org/schema/dtype#)
-
-* [`dtype:numericUnion`](http://www.linkedmodel.org/schema/dtype#numericUnion)
 
 ## TIME
 
@@ -50,8 +40,4 @@ of [Alignment of PROV-O with OWL-Time](https://www.w3.org/TR/owl-time/#time-prov
 * [`geo:long`](https://www.w3.org/2003/01/geo/wgs84_pos#long)
 * [`geo:alt`](https://www.w3.org/2003/01/geo/wgs84_pos#alt)
 
-## DCTERMS
 
-[http://purl.org/dc/terms/](http://purl.org/dc/terms/)
-
-* [`dcterms:created`](http://purl.org/dc/terms/created)
