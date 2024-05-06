@@ -1,24 +1,36 @@
-@base          <https://w3id.org/valueflows/ont/vf> .
-@prefix vf:    <#> .
-@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
-@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix om2:   <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
-@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
-@prefix time:  <http://www.w3.org/2006/time#> .
-@prefix geo:   <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@base              <https://w3id.org/valueflows/ont/vf> .
+@prefix vf:        <#> .
+@prefix cc:        <http://creativecommons.org/ns#> .
+@prefix rdf:       <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl:       <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs:      <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dcterms:   <http://purl.org/dc/terms/> .
+@prefix om2:       <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+@prefix xsd:       <http://www.w3.org/2001/XMLSchema#> .
+@prefix time:      <http://www.w3.org/2006/time#> .
+@prefix geo:       <http://www.w3.org/2003/01/geo/wgs84_pos#> .
 @prefix geosparql: <http://www.opengis.net/ont/geosparql#> .
-@prefix vs:    <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
-@prefix dtype: <http://www.linkedmodel.org/schema/dtype#> .
-@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vs:        <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix dtype:     <http://www.linkedmodel.org/schema/dtype#> .
+@prefix skos:      <http://www.w3.org/2004/02/skos/core#> .
+@prefix spdxt:     <http://spdx.org/rdf/terms#> .
+@prefix vann:      <http://purl.org/vocab/vann/> .
 
 
-<> a owl:Ontology;
-    dcterms:title "Valueflows Ontology";
-    dcterms:type <http://purl.org/adms/assettype/Ontology>;
+
+<> a owl:Ontology ;
+    dcterms:title "Valueflows Ontology" ;
+    dcterms:description "A vocabulary for the distributed economic networks of the next economy, to coordinate the creation, distribution, and exchange of economic resources" ;
+    dcterms:type <http://purl.org/adms/assettype/Ontology> ;
+    vann:preferredNamespacePrefix "vf" ;
+    vann:preferredNamespaceUri "https://w3id.org/valueflows/ont/vf#" ;
+    owl:versionInfo "0.11" ;
     owl:versionIRI <https://w3id.org/valueflows/ont/0.11/vf> ;
-    dcterms:status <http://purl.org/adms/status/UnderDevelopment>.
+    dcterms:status <http://purl.org/adms/status/UnderDevelopment> ;
+    dcterms:license <https://creativecommons.org/licenses/by-sa/4.0/> ;
+    cc:license <https://creativecommons.org/licenses/by-sa/4.0/> ;
+    spdxt:ListedLicense "CC-BY-SA-4.0" ;
+    .
 
 
 #################################################################
