@@ -16,6 +16,7 @@ For more information on the current state of specification of spatial data, one 
 
 We support two kinds of virtual locations for economic resources, and more can be added as needs arise.
 
-One is a URI location for economic resources that are electronic, such as documents, code or designs.  The other is a currency location for economic resources that are located in an account, crypto wallet, etc.  The latter should be formatted according to the specific requirements of the type of currency.
+* One is a URI location for economic resources that are electronic, such as documents, code or designs.
+* The other is a currency location for economic resources that are located in an account, crypto wallet, etc.  The latter should be formatted according to the specific requirements of the type of currency.
 
 For agents that do not have a physical location, implementations can use website or other agent information from other vocabularies (see [Agents](../agents)).

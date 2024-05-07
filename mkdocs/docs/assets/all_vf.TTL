@@ -5,7 +5,7 @@
 @prefix owl:       <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs:      <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix dcterms:   <http://purl.org/dc/terms/> .
-@prefix om2:       <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+@prefix om:        <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
 @prefix xsd:       <http://www.w3.org/2001/XMLSchema#> .
 @prefix time:      <http://www.w3.org/2006/time#> .
 @prefix geo:       <http://www.w3.org/2003/01/geo/wgs84_pos#> .
@@ -288,6 +288,8 @@ vf:Appreciation  a          owl:Class ;
         rdfs:comment        "A way to tie an economic event that is given in loose fulfilment for another economic event, without commitments or expectations. Supports the gift economy."@en ;
         .
 
+# UTILITY CLASSES
+
 vf:SpatialThing a           owl:Class ;
         rdfs:subClassOf     geo:SpatialThing ;
         rdfs:label          "Spatial Thing"@en ;
@@ -295,6 +297,33 @@ vf:SpatialThing a           owl:Class ;
         rdfs:comment        "Data that locates something relative to the Earth, usually a somewhat fixed location."@en ;
         .
 
+vf:Measure a                owl:Class ;
+        rdfs:subClassOf     om:Measure ;
+        rdfs:label          "Measure"@en ;
+        vs:term_status      "testing" ;
+        rdfs:comment        "A quantity expressed as a numeric value with a unit of measure."@en ;
+        .
+
+vf:Unit a                   owl:Class ;
+        rdfs:subClassOf     om:Unit ;
+        rdfs:label          "Unit"@en ;
+        vs:term_status      "testing" ;
+        rdfs:comment        "A standard unit of measure, defined and adopted by convention or by law."@en ;
+        .
+
+vf:Duration a               owl:Class ;
+        rdfs:subClassOf     time:Duration ;
+        rdfs:label          "Duration"@en ;
+        vs:term_status      "testing" ;
+        rdfs:comment        "Time duration expressed as a decimal number scaled by a temporal unit."@en ;
+        .
+
+# vf:TemporalUnit a           owl:Class ;
+#        rdfs:subClassOf     time:TemporalUnit ;
+#        rdfs:label          "Temporal Unit"@en ;
+#        vs:term_status      "unstable" ;
+#        rdfs:comment        "A standard unit of measure for a time duration."@en ;
+#        .
 
 #################################################################
 #    Properties
@@ -613,8 +642,8 @@ vf:primaryAccountable a     owl:ObjectProperty ;
         .
 
 vf:hasBeginning a           owl:DatatypeProperty ;
+        rdfs:subPropertyOf  time:hasBeginning ;
         rdfs:label          "has beginning"@en ;
-        rdfs:domain         time:TemporalEntity ;
         rdfs:domain         [ owl:unionOf (
                                 vf:Commitment
                                 vf:EconomicEvent
@@ -624,13 +653,12 @@ vf:hasBeginning a           owl:DatatypeProperty ;
                                 vf:Process) ] ;
         rdfs:range          xsd:dateTimeStamp ;
         vs:term_status      "testing" ;
-        owl:propertyChainAxiom (time:hasBeginning time:inXSDDateTimeStamp) ;
         rdfs:comment        "The planned or actual beginning of a flow or process."@en ;
         .
 
 vf:hasEnd a                 owl:DatatypeProperty ;
+        rdfs:subPropertyOf  time:hasEnd ;
         rdfs:label          "has end"@en ;
-        rdfs:domain         time:TemporalEntity ;
         rdfs:domain         [ owl:unionOf (
                                 vf:Commitment
                                 vf:EconomicEvent
@@ -640,26 +668,29 @@ vf:hasEnd a                 owl:DatatypeProperty ;
                                 vf:Process) ] ;
         rdfs:range          xsd:dateTimeStamp ;
         vs:term_status      "testing" ;
-        owl:propertyChainAxiom (time:hasEnd time:inXSDDateTimeStamp) ;
         rdfs:comment        "The planned or actual end of a flow or process."@en ;
         .
 
 vf:hasPointInTime a         owl:DatatypeProperty ;
+        rdfs:subPropertyOf  time:inXSDDateTimeStamp ;
         rdfs:label          "has point in time"@en ;
-        rdfs:domain         time:Instant ;
         rdfs:domain         [ owl:unionOf (
                                 vf:Commitment
                                 vf:EconomicEvent
                                 vf:Intent) ] ;
         rdfs:range          xsd:dateTimeStamp ;
         vs:term_status      "testing" ;
-        owl:propertyChainAxiom (time:hasEnd time:inXSDDateTimeStamp) ;
         rdfs:comment        "The planned or actual time of a flow; can be used instead of hasBeginning and hasEnd, if so, hasBeginning and hasEnd should be able to be returned with this value."@en ;
         .
 
-time:hasDuration
+vf:hasDuration a            owl:ObjectProperty ;
         rdfs:label          "has duration"@en ;
-        rdfs:domain         [ owl:unionOf (vf:RecipeProcess vf:ScenarioDefinition) ] ;
+        rdfs:domain         [ owl:unionOf (
+                                vf:RecipeProcess
+                                vf:ScenarioDefinition) ] ;
+        rdfs:range          vf:Duration ;
+        vs:term_status      "testing" ;
+        rdfs:comment        "The temporal extent of the process or scenario."@en ;
         .
 
 vf:due a                    owl:DatatypeProperty ;
@@ -674,26 +705,88 @@ vf:due a                    owl:DatatypeProperty ;
         rdfs:comment        "The time something is expected to be complete."@en ;
         .
 
-vf:localLabel a             owl:DatatypeProperty ;
-        rdfs:label          "unit local label"@en ;
-        rdfs:domain         om2:Unit ;
-        rdfs:range          xsd:string ;
-        vs:term_status      "unstable" ;
-        rdfs:comment        "An override label to optionally display for units of measure."@en ;
+vf:hasNumericalValue a      owl:DatatypeProperty ;
+        rdfs:subPropertyOf  om:hasNumericalValue ;
+        rdfs:label          "has numerical value"@en ;
+        rdfs:domain         vf:Unit ;
+        rdfs:range          dtype:numericUnion ;
+        vs:term_status      "testing" ;
+        rdfs:comment        "A numeric amount."@en ;
         .
 
-vf:localSymbol a            owl:DatatypeProperty ;
-        rdfs:label          "unit local symbol"@en ;
-        rdfs:domain         om2:Unit ;
+vf:hasUnit a                owl:ObjectProperty ;
+        rdfs:subPropertyOf  om:hasUnit ;
+        rdfs:label          "has unit"@en ;
+        rdfs:domain         vf:Measure ;
+        rdfs:range          vf:Unit ;
+        vs:term_status      "testing" ;
+        rdfs:comment        "A standard unit of measure."@en ;
+        .
+
+vf:numericDuration a        owl:DatatypeProperty ;
+        rdfs:subPropertyOf  time:numericDuration ;
+        rdfs:label          "numeric duration"@en ;
+        rdfs:domain         vf:Duration ;
+        rdfs:range          xsd:decimal ;
+        vs:term_status      "testing" ;
+        rdfs:comment        "A numeric length of time."@en ;
+        .
+
+vf:unitType a               owl:ObjectProperty ;
+        rdfs:subPropertyOf  time:unitType ;
+        rdfs:label          "unit type"@en ;
+        rdfs:domain         vf:Duration ;
+        rdfs:range          time:TemporalUnit ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "A standard unit of measure of time."@en ;
+        .
+
+vf:omUnitIdentifier a       owl:DataTypeProperty ;
+        rdfs:label          "om unit identifier"@en ;
+        rdfs:domain         vf:Unit ;
+        rdfs:range          xsd:anyURI ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "The unique identifier of the om unit of measure, for standardization across networks."@en ;
+        .
+
+vf:omLabel a                owl:DataTypeProperty ;
+        rdfs:subPropertyOf  rdfs:label ;
+        rdfs:label          "om label"@en ;
+        rdfs:domain         vf:Unit ;
         rdfs:range          xsd:string ;
         vs:term_status      "unstable" ;
-        rdfs:comment        "An override symbol to optionally display for units of measure."@en ;
+        rdfs:comment        "The display label defined in om for the unit of measure."@en ;
+        .
+
+vf:omSymbol a               owl:DataTypeProperty ;
+        rdfs:subPropertyOf  om:symbol ;
+        rdfs:label          "om symbol"@en ;
+        rdfs:domain         vf:Unit ;
+        rdfs:range          xsd:string ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "The display symbol defined in om for the unit of measure."@en ;
+        .
+
+vf:overrideLabel a          owl:DataTypeProperty ;
+        rdfs:label          "override label"@en ;
+        rdfs:domain         vf:Unit ;
+        rdfs:range          xsd:string ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "An override label to display for units of measure if the original is not appropriate."@en ;
+        .
+
+vf:overrideSymbol a         owl:DataTypeProperty ;
+        rdfs:label          "override symbol"@en ;
+        rdfs:domain         vf:Unit ;
+        rdfs:range          xsd:string ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "An override symbol to display for units of measure if the original is not appropriate."@en ;
         .
 
 vf:accountingQuantity a     owl:ObjectProperty ;
         rdfs:label          "accounting quantity"@en ;
         rdfs:domain         vf:EconomicResource ;
-        rdfs:range          om2:Measure ;
+        rdfs:range          vf:Measure ;
         vs:term_status      "testing" ;
         rdfs:comment        "The current amount and unit of the economic resource for which the agent has primary rights and responsibilities, sometimes thought of as ownership. This can be either stored or derived from economic events affecting the resource."@en ;
         .
@@ -701,7 +794,7 @@ vf:accountingQuantity a     owl:ObjectProperty ;
 vf:onhandQuantity a         owl:ObjectProperty ;
         rdfs:label          "onhand quantity"@en ;
         rdfs:domain         vf:EconomicResource ;
-        rdfs:range          om2:Measure ;
+        rdfs:range          vf:Measure ;
         vs:term_status      "testing" ;
         rdfs:comment        "The current amount and unit of the economic resource which is under direct control of the agent.  It may be more or less than the accounting quantity. This can be either stored or derived from economic events affecting the resource."@en ;
         .
@@ -709,7 +802,7 @@ vf:onhandQuantity a         owl:ObjectProperty ;
 vf:resourceQuantity a       owl:ObjectProperty ;
         rdfs:label          "resource quantity"@en ;
         rdfs:domain         [ owl:unionOf (vf:EconomicEvent vf:Commitment vf:Intent vf:RecipeFlow vf:Claim) ] ;
-        rdfs:range          om2:Measure ;
+        rdfs:range          vf:Measure ;
         vs:term_status      "stable" ;
         rdfs:comment        "The amount and unit of the economic resource counted or inventoried."@en ;
         .
@@ -717,29 +810,25 @@ vf:resourceQuantity a       owl:ObjectProperty ;
 vf:effortQuantity a         owl:ObjectProperty ;
         rdfs:label          "effort quantity"@en ;
         rdfs:domain         [ owl:unionOf (vf:EconomicEvent vf:Commitment vf:Intent vf:RecipeFlow vf:Claim) ] ;
-        rdfs:range          om2:Measure ;
+        rdfs:range          vf:Measure ;
         vs:term_status      "testing" ;
-        rdfs:comment        "The amount and unit of the work or use or citation effort-based action. This is often a time duration, but also could be cycle counts or other measures of effort or usefulness."@en ;
+        rdfs:comment        "The amount and unit of the work or use or citation effort-based action. This is often expressed with a time unit, but also could be cycle counts or other measures of effort or usefulness."@en ;
         .
 
 vf:availableQuantity a      owl:ObjectProperty ;
         rdfs:label          "available quantity"@en ;
         rdfs:domain         vf:Intent ;
-        rdfs:range          om2:Measure ;
+        rdfs:range          vf:Measure ;
         vs:term_status      "testing" ;
-        rdfs:comment        "The quantity of the offered resource currently available."@en ;
+        rdfs:comment        "The amount and unit of the offered resource currently available."@en ;
         .
 
 vf:minimumQuantity a        owl:ObjectProperty ;
         rdfs:label          "minimum quantity"@en ;
         rdfs:domain         vf:Intent ;
-        rdfs:range          om2:Measure ;
+        rdfs:range          vf:Measure ;
         vs:term_status      "testing" ;
-        rdfs:comment        "The minimum required order quantity of the offered resource."@en ;
-        .
-
-om2:hasNumericalValue
-        rdfs:range          dtype:numericUnion ;
+        rdfs:comment        "The minimum required order amount and unit of the offered resource."@en ;
         .
 
 vf:unitBased  a             owl:DatatypeProperty ;
@@ -895,11 +984,10 @@ vf:name a                   owl:DatatypeProperty ;
         rdfs:comment        "An informal or formal textual identifier for an object. Does not imply uniqueness."@en ;
         .
 
-vf:note a                   owl:AnnotationProperty ;
+vf:note a                   owl:DataTypeProperty ;
         rdfs:subPropertyOf  skos:note ;
         rdfs:label          "note"@en ;
         rdfs:domain         [ owl:unionOf (
-                                vf:SpatialThing
                                 vf:Agent
                                 vf:AgentRelationship
                                 vf:AgentRelationshipRole
@@ -922,10 +1010,11 @@ vf:note a                   owl:AnnotationProperty ;
                                 vf:ResourceSpecification
                                 vf:RoleBehavior
                                 vf:Scenario
-                                vf:ScenarioDefinition) ] ;
+                                vf:ScenarioDefinition
+                                vf:SpatialThing) ] ;
         rdfs:range          xsd:string ;
         vs:term_status      "testing" ;
-        rdfs:comment        "."@en ;
+        rdfs:comment        "Any useful textual information related to the item."@en ;
         .
 
 vf:trackingIdentifier a     owl:DatatypeProperty ;
@@ -1024,7 +1113,7 @@ vf:substitutable a          owl:DatatypeProperty ;
 vf:unitOfEffort a           owl:ObjectProperty ;
         rdfs:label          "unit of effort"@en ;
         rdfs:domain         vf:EconomicResource ;
-        rdfs:range          om2:Unit ;
+        rdfs:range          vf:Unit ;
         vs:term_status      "unstable" ;
         rdfs:comment        "The unit used for use or work or sometimes cite actions."@en ;
         .
@@ -1032,7 +1121,7 @@ vf:unitOfEffort a           owl:ObjectProperty ;
 vf:defaultUnitOfEffort a    owl:ObjectProperty ;
         rdfs:label          "default unit of effort"@en ;
         rdfs:domain         vf:ResourceSpecification ;
-        rdfs:range          om2:Unit ;
+        rdfs:range          vf:Unit ;
         vs:term_status      "testing" ;
         rdfs:comment        "The default unit used for use or work."@en ;
         .
@@ -1040,7 +1129,7 @@ vf:defaultUnitOfEffort a    owl:ObjectProperty ;
 vf:defaultUnitOfResource a  owl:ObjectProperty ;
         rdfs:label          "default unit of resource"@en ;
         rdfs:domain         vf:ResourceSpecification ;
-        rdfs:range          om2:Unit ;
+        rdfs:range          vf:Unit ;
         vs:term_status      "testing" ;
         rdfs:comment        "The default unit used for the resource itself."@en ;
         .
@@ -1256,7 +1345,7 @@ vf:mappableAddress a        owl:DatatypeProperty ;
 
 vf:hasDetailedGeometry a    owl:ObjectProperty ;
         rdfs:label          "currency address"@en ;
-        rdfs:domain         vf:Location ;
+        rdfs:domain         vf:SpatialThing ;
         rdfs:range          geosparql:Geometry ;
         vs:term_status      "unstable" ;
         rdfs:comment        "A spatial geometry of any complexity and tooling supported by geosparql."@en ;
