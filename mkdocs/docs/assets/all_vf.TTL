@@ -15,7 +15,9 @@
 @prefix skos:      <http://www.w3.org/2004/02/skos/core#> .
 @prefix spdxt:     <http://spdx.org/rdf/terms#> .
 @prefix vann:      <http://purl.org/vocab/vann/> .
-
+@prefix foaf:      <http://xmlns.com/foaf/0.1/> .
+@prefix org:       <http://www.w3.org/ns/org#> .
+@prefix as:        <https://www.w3.org/ns/activitystreams#> .
 
 
 <> a owl:Ontology ;
@@ -226,12 +228,14 @@ vf:Scenario  a              owl:Class ;
 # OBSERVATION LAYER CLASSES
 
 vf:Agent  a                 owl:Class ;
+        rdfs:seeAlso        foaf:Agent ;
         rdfs:label          "Agent"@en ;
         vs:term_status      "stable" ;
         rdfs:comment        "An entity that can commit to and/or perform economic and/or ecological activity under its own power or authority."@en ;
         .
 
 vf:Person  a                owl:Class ;
+        rdfs:seeAlso        foaf:Person ;
         rdfs:label          "Person"@en ;
         rdfs:subClassOf     vf:Agent ;
         vs:term_status      "stable" ;
@@ -239,6 +243,7 @@ vf:Person  a                owl:Class ;
         .
 
 vf:Organization  a          owl:Class ;
+        rdfs:seeAlso        org:Organization ;
         rdfs:label          "Organization"@en ;
         rdfs:subClassOf     vf:Agent ;
         vs:term_status      "stable" ;
@@ -271,6 +276,7 @@ vf:EconomicEvent  a         owl:Class ;
         .
 
 vf:AgentRelationship  a     owl:Class ;
+        rdfs:seeAlso        as:Relationship ;
         rdfs:label          "Agent Relationship"@en ;
         vs:term_status      "stable" ;
         rdfs:comment        "An ongoing voluntary association between 2 agents of any kind."@en ;
@@ -311,19 +317,6 @@ vf:Unit a                   owl:Class ;
         rdfs:comment        "A standard unit of measure, defined and adopted by convention or by law."@en ;
         .
 
-vf:Duration a               owl:Class ;
-        rdfs:subClassOf     time:Duration ;
-        rdfs:label          "Duration"@en ;
-        vs:term_status      "testing" ;
-        rdfs:comment        "Time duration expressed as a decimal number scaled by a temporal unit."@en ;
-        .
-
-# vf:TemporalUnit a           owl:Class ;
-#        rdfs:subClassOf     time:TemporalUnit ;
-#        rdfs:label          "Temporal Unit"@en ;
-#        vs:term_status      "unstable" ;
-#        rdfs:comment        "A standard unit of measure for a time duration."@en ;
-#        .
 
 #################################################################
 #    Properties
@@ -536,6 +529,7 @@ vf:toResourceInventoriedAs
         .
 
 vf:relationship  a          owl:ObjectProperty ;
+        rdfs:seeAlso        as:relationship ;
         rdfs:label          "relationship"@en ;
         rdfs:domain         vf:AgentRelationship ;
         rdfs:range          vf:AgentRelationshipRole ;
@@ -578,6 +572,7 @@ vf:receiver  a              owl:ObjectProperty ;
         .
 
 vf:subject  a               owl:ObjectProperty ;
+        rdfs:seeAlso        as:subject ;
         rdfs:domain         vf:AgentRelationship ;
         rdfs:label          "subject"@en ;
         rdfs:range          vf:Agent ;
@@ -586,6 +581,7 @@ vf:subject  a               owl:ObjectProperty ;
         .
 
 vf:object  a                owl:ObjectProperty ;
+        rdfs:seeAlso        as:object ;
         rdfs:domain         vf:AgentRelationship ;
         rdfs:label          "object"@en ;
         rdfs:range          vf:Agent ;
@@ -688,8 +684,9 @@ vf:hasDuration a            owl:ObjectProperty ;
         rdfs:domain         [ owl:unionOf (
                                 vf:RecipeProcess
                                 vf:ScenarioDefinition) ] ;
-        rdfs:range          vf:Duration ;
-        vs:term_status      "testing" ;
+        rdfs:range          vf:Measure ;
+        rdfs:seeAlso        time:hasDuration ;
+        vs:term_status      "unstable" ;
         rdfs:comment        "The temporal extent of the process or scenario."@en ;
         .
 
@@ -723,24 +720,6 @@ vf:hasUnit a                owl:ObjectProperty ;
         rdfs:comment        "A standard unit of measure."@en ;
         .
 
-vf:numericDuration a        owl:DatatypeProperty ;
-        rdfs:subPropertyOf  time:numericDuration ;
-        rdfs:label          "numeric duration"@en ;
-        rdfs:domain         vf:Duration ;
-        rdfs:range          xsd:decimal ;
-        vs:term_status      "testing" ;
-        rdfs:comment        "A numeric length of time."@en ;
-        .
-
-vf:unitType a               owl:ObjectProperty ;
-        rdfs:subPropertyOf  time:unitType ;
-        rdfs:label          "unit type"@en ;
-        rdfs:domain         vf:Duration ;
-        rdfs:range          time:TemporalUnit ;
-        vs:term_status      "unstable" ;
-        rdfs:comment        "A standard unit of measure of time."@en ;
-        .
-
 vf:omUnitIdentifier a       owl:DataTypeProperty ;
         rdfs:label          "om unit identifier"@en ;
         rdfs:domain         vf:Unit ;
@@ -749,18 +728,20 @@ vf:omUnitIdentifier a       owl:DataTypeProperty ;
         rdfs:comment        "The unique identifier of the om unit of measure, for standardization across networks."@en ;
         .
 
-vf:omLabel a                owl:DataTypeProperty ;
+vf:label a                  owl:DataTypeProperty ;
         rdfs:subPropertyOf  rdfs:label ;
-        rdfs:label          "om label"@en ;
-        rdfs:domain         vf:Unit ;
+        rdfs:label          "label"@en ;
+        rdfs:domain         [ owl:unionOf (
+                                vf:Unit
+                                vf:Action) ] ;
         rdfs:range          xsd:string ;
         vs:term_status      "unstable" ;
         rdfs:comment        "The display label defined in om for the unit of measure."@en ;
         .
 
-vf:omSymbol a               owl:DataTypeProperty ;
+vf:symbol a                 owl:DataTypeProperty ;
         rdfs:subPropertyOf  om:symbol ;
-        rdfs:label          "om symbol"@en ;
+        rdfs:label          "symbol"@en ;
         rdfs:domain         vf:Unit ;
         rdfs:range          xsd:string ;
         vs:term_status      "unstable" ;
@@ -772,7 +753,7 @@ vf:overrideLabel a          owl:DataTypeProperty ;
         rdfs:domain         vf:Unit ;
         rdfs:range          xsd:string ;
         vs:term_status      "unstable" ;
-        rdfs:comment        "An override label to display for units of measure if the original is not appropriate."@en ;
+        rdfs:comment        "An optional network override label to display for units of measure if the original is less appropriate."@en ;
         .
 
 vf:overrideSymbol a         owl:DataTypeProperty ;
@@ -780,7 +761,7 @@ vf:overrideSymbol a         owl:DataTypeProperty ;
         rdfs:domain         vf:Unit ;
         rdfs:range          xsd:string ;
         vs:term_status      "unstable" ;
-        rdfs:comment        "An override symbol to display for units of measure if the original is not appropriate."@en ;
+        rdfs:comment        "An optional network override symbol to display for units of measure if the original is less appropriate."@en ;
         .
 
 vf:accountingQuantity a     owl:ObjectProperty ;
@@ -849,15 +830,21 @@ vf:purpose  a               owl:ObjectProperty ;
 
 vf:created a                owl:DatatypeProperty ;
         rdfs:label          "created"@en ;
-        rdfs:domain         [ owl:unionOf ( vf:Agreement vf:Claim vf:Commitment vf:Plan vf:Proposal vf:EconomicEvent ) ] ;
+        rdfs:domain         [ owl:unionOf (
+                                vf:Agreement
+                                vf:Claim
+                                vf:Commitment
+                                vf:Plan
+                                vf:Proposal
+                                vf:EconomicEvent ) ] ;
         rdfs:range          xsd:dateTimeStamp ;
         vs:term_status      "unstable" ;
-        rdfs:comment        "The date, and time if desired, the information was recorded."@en ;
+        rdfs:comment        "The date, and time if desired, the information was agreed to or recorded."@en ;
         .
 
 vf:long a                   owl:DatatypeProperty ;
         rdfs:subPropertyOf  geo:long ;
-        rdfs:range          xsd:float ;
+        rdfs:range          dtype:numericUnion ;
         rdfs:domain         vf:SpatialThing ;
         vs:term_status      "unstable" ;
         rdfs:comment        "The WGS84 longitude of a spatial thing (decimal degrees)." ;
@@ -865,7 +852,7 @@ vf:long a                   owl:DatatypeProperty ;
 
 vf:lat a                    owl:DatatypeProperty ;
         rdfs:subPropertyOf  geo:lat ;
-        rdfs:range          xsd:float ;
+        rdfs:range          dtype:numericUnion ;
         rdfs:domain         vf:SpatialThing ;
         vs:term_status      "unstable" ;
         rdfs:comment        "The WGS84 latitude of a spatial thing (decimal degrees)." ;
@@ -873,10 +860,26 @@ vf:lat a                    owl:DatatypeProperty ;
 
 vf:alt a                    owl:DatatypeProperty ;
         rdfs:subPropertyOf  geo:alt ;
-        rdfs:range          xsd:float ;
+        rdfs:range          dtype:numericUnion ;
         rdfs:domain         vf:SpatialThing ;
         vs:term_status      "unstable" ;
         rdfs:comment        "The WGS84 altitude of a spatial thing (decimal meters above the local reference ellipsoid)" ;
+        .
+
+vf:mappableAddress a        owl:DatatypeProperty ;
+        rdfs:label          "mappable address"@en ;
+        rdfs:domain         vf:SpatialThing ;
+        rdfs:range          xsd:string ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "A textual address that can be mapped using mapping software."@en ;
+        .
+
+vf:hasDetailedGeometry a    owl:ObjectProperty ;
+        rdfs:label          "currency address"@en ;
+        rdfs:domain         vf:SpatialThing ;
+        rdfs:range          geosparql:Geometry ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "A spatial geometry of any complexity and tooling supported by geosparql."@en ;
         .
 
 vf:currentLocation a        owl:ObjectProperty ;
@@ -892,15 +895,15 @@ vf:currentVirtualLocation a owl:DatatypeProperty ;
         rdfs:domain         vf:EconomicResource ;
         rdfs:range          xsd:anyURI ;
         vs:term_status      "unstable" ;
-        rdfs:comment        "The current virtual place an electronic economic resource is located. Usually used for documents, code, or other electronic resource."@en ;
+        rdfs:comment        "The current virtual place a digital economic resource is located. Usually used for documents, code, or other electronic resource."@en ;
         .
 
-vf:currencyAddress a        owl:DatatypeProperty ;
-        rdfs:label          "currency address"@en ;
+vf:currentCurrencyLocation a owl:DatatypeProperty ;
+        rdfs:label          "current currency location"@en ;
         rdfs:domain         vf:EconomicResource ;
         rdfs:range          xsd:string ;
         vs:term_status      "unstable" ;
-        rdfs:comment        "The current virtual place a currency economic resource is located, for example the identifier for a bank account, crypto wallet, etc., in a domain standard format."@en ;
+        rdfs:comment        "The current virtual place a currency economic resource is located, for example the address for a bank account, crypto wallet, etc., in a domain standard format."@en ;
         .
 
 vf:primaryLocation a        owl:ObjectProperty ;
@@ -1335,22 +1338,6 @@ vf:rules a                  owl:DataTypeProperty ;
         rdfs:comment        "The rules or contract that govern this agreement."@en ;
         .
 
-vf:mappableAddress a        owl:DatatypeProperty ;
-        rdfs:label          "mappable address"@en ;
-        rdfs:domain         vf:SpatialThing ;
-        rdfs:range          xsd:string ;
-        vs:term_status      "unstable" ;
-        rdfs:comment        "A textual address that can be mapped using mapping software."@en ;
-        .
-
-vf:hasDetailedGeometry a    owl:ObjectProperty ;
-        rdfs:label          "currency address"@en ;
-        rdfs:domain         vf:SpatialThing ;
-        rdfs:range          geosparql:Geometry ;
-        vs:term_status      "unstable" ;
-        rdfs:comment        "A spatial geometry of any complexity and tooling supported by geosparql."@en ;
-        .
-
 vf:roleLabel a              owl:DatatypeProperty ;
         rdfs:label          "role label"@en ;
         rdfs:domain         vf:AgentRelationshipRole ;
@@ -1560,7 +1547,7 @@ vf:copy a                   owl:NamedIndividual ,
         vs:term_status      "unstable" ;
         .
 
-vf:deliverService a        owl:NamedIndividual ,
+vf:deliverService a         owl:NamedIndividual ,
                             vf:Action ;
         vf:inputOutput      vf:outputInput ;
         vf:pairsWith        vf:notApplicable ;
