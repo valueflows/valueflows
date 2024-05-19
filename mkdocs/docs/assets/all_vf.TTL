@@ -528,15 +528,6 @@ vf:toResourceInventoriedAs
         rdfs:comment        "Additional economic resource on the economic event when needed by the receiver. Used when a transfer or move, or sometimes other actions, requires explicitly identifying an economic resource on the receiving side."@en ;
         .
 
-vf:relationship  a          owl:ObjectProperty ;
-        rdfs:seeAlso        as:relationship ;
-        rdfs:label          "relationship"@en ;
-        rdfs:domain         vf:AgentRelationship ;
-        rdfs:range          vf:AgentRelationshipRole ;
-        vs:term_status      "stable" ;
-        rdfs:comment        "The role of an economic relationship that exists between 2 agents, such as member, trading partner."@en ;
-        .
-
 vf:appreciationOf
         a                   owl:ObjectProperty ;
         rdfs:label          "appreciation of"@en ;
@@ -587,6 +578,15 @@ vf:object  a                owl:ObjectProperty ;
         rdfs:range          vf:Agent ;
         vs:term_status      "stable" ;
         rdfs:comment        "The object of a relationship between 2 agents.  For example, if Mary is a member of a group, then the group is the object."@en ;
+        .
+
+vf:relationship  a          owl:ObjectProperty ;
+        rdfs:seeAlso        as:relationship ;
+        rdfs:label          "relationship"@en ;
+        rdfs:domain         vf:AgentRelationship ;
+        rdfs:range          vf:AgentRelationshipRole ;
+        vs:term_status      "stable" ;
+        rdfs:comment        "The role of an economic relationship that exists between 2 agents, such as member, trading partner."@en ;
         .
 
 vf:inScopeOf  a             owl:ObjectProperty ;
@@ -680,12 +680,12 @@ vf:hasPointInTime a         owl:DatatypeProperty ;
         .
 
 vf:hasDuration a            owl:ObjectProperty ;
+        rdfs:seeAlso        time:hasDuration ;
         rdfs:label          "has duration"@en ;
         rdfs:domain         [ owl:unionOf (
                                 vf:RecipeProcess
                                 vf:ScenarioDefinition) ] ;
         rdfs:range          vf:Measure ;
-        rdfs:seeAlso        time:hasDuration ;
         vs:term_status      "unstable" ;
         rdfs:comment        "The temporal extent of the process or scenario."@en ;
         .
@@ -768,7 +768,7 @@ vf:accountingQuantity a     owl:ObjectProperty ;
         rdfs:label          "accounting quantity"@en ;
         rdfs:domain         vf:EconomicResource ;
         rdfs:range          vf:Measure ;
-        vs:term_status      "testing" ;
+        vs:term_status      "stable" ;
         rdfs:comment        "The current amount and unit of the economic resource for which the agent has primary rights and responsibilities, sometimes thought of as ownership. This can be either stored or derived from economic events affecting the resource."@en ;
         .
 
@@ -829,6 +829,7 @@ vf:purpose  a               owl:ObjectProperty ;
         .
 
 vf:created a                owl:DatatypeProperty ;
+        rdfs:seeAlso        dcterms:created ;
         rdfs:label          "created"@en ;
         rdfs:domain         [ owl:unionOf (
                                 vf:Agreement
@@ -890,7 +891,8 @@ vf:currentLocation a        owl:ObjectProperty ;
         rdfs:comment        "The current physical location of an economic resource.  Could be at any level of granularity, from a town to an address to a warehouse location.  Usually mappable."@en ;
         .
 
-vf:currentVirtualLocation a owl:DatatypeProperty ;
+vf:currentVirtualLocation
+        a                   owl:DatatypeProperty ;
         rdfs:label          "current virtual location"@en ;
         rdfs:domain         vf:EconomicResource ;
         rdfs:range          xsd:anyURI ;
@@ -898,7 +900,8 @@ vf:currentVirtualLocation a owl:DatatypeProperty ;
         rdfs:comment        "The current virtual place a digital economic resource is located. Usually used for documents, code, or other electronic resource."@en ;
         .
 
-vf:currentCurrencyLocation a owl:DatatypeProperty ;
+vf:currentCurrencyLocation
+        a                   owl:DatatypeProperty ;
         rdfs:label          "current currency location"@en ;
         rdfs:domain         vf:EconomicResource ;
         rdfs:range          xsd:string ;
@@ -911,7 +914,7 @@ vf:primaryLocation a        owl:ObjectProperty ;
         rdfs:domain         vf:Agent ;
         rdfs:range          vf:SpatialThing ;
         vs:term_status      "unstable" ;
-        rdfs:comment        "The main place an agent is located, often an address where activities occur and mail can be sent. This is usually a mappable geographic location.  It also could be a website address, as in the case of agents who have no physical location."@en ;
+        rdfs:comment        "The main place an agent is located, often an address where activities occur and mail can be sent. This is usually a mappable geographic location."@en ;
         .
 
 vf:eligibleLocation a       owl:ObjectProperty ;
@@ -1296,7 +1299,8 @@ vf:realizes a               owl:ObjectProperty ;
         rdfs:comment        "All the non-reciprocal economic events (with or without commitments) that realize the agreement."@en ;
         .
 
-vf:reciprocalRealizationOf a owl:ObjectProperty ;
+vf:reciprocalRealizationOf
+        a                   owl:ObjectProperty ;
         rdfs:label          "reciprocal realization of"@en ;
         rdfs:domain         vf:EconomicEvent ;
         rdfs:range          vf:Agreement ;
@@ -1709,7 +1713,7 @@ vf:separate a               owl:NamedIndividual ,
         vs:term_status      "unstable" ;
         .
 
-vf:transferAllRights a    owl:NamedIndividual ,
+vf:transferAllRights a      owl:NamedIndividual ,
                             vf:Action ;
         vf:inputOutput      vf:notApplicable ;
         vf:pairsWith        vf:notApplicable ;
@@ -1745,7 +1749,7 @@ vf:transfer a               owl:NamedIndividual ,
         vs:term_status      "testing" ;
         .
 
-vf:transferCustody a       owl:NamedIndividual ,
+vf:transferCustody a        owl:NamedIndividual ,
                             vf:Action ;
         vf:inputOutput      vf:notApplicable ;
         vf:pairsWith        vf:notApplicable ;
