@@ -6,4 +6,4 @@ Follow these links for:
 
 **[a json-ld version of the turtle file](/specification/all_vf.jsonld)**.
 
-*Note*: Because of the way the semantic web works, all of these represent only the Valueflows namespace.  See [Other Namespaces](external-terms.md) for details on the non-Valueflows namespace elements. For complete representations for what is needed for a Valueflows based core economic vocabulary, see [Complete Diagram](uml.md) or [GraphQL Reference](graphql.md).
+

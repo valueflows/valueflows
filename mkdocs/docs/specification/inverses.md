@@ -2,6 +2,8 @@
 
 ## Introduction
 
+**UNDER CONSTRUCTION**
+
 Some key inverses are specified in the VF core, for flexibility of different technical implementations.  Many are not.  This section is to provide guidance on naming for those that are not explicitly specified, to facilitate standard api naming.
 
 This document is not meant to imply that all of these named queries and filters should be implemented in any particular application api!  Most implementations will want to use only a fraction of these.

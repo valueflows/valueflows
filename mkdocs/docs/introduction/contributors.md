@@ -11,6 +11,7 @@
 * pospi (Sam Pospischil)
 * Jef Vanbockryck
 * Robin Vobruba
+* Jillian Ada Burrows
 
 ### Use cases, tools, and helpful discussion... and let's not forget the logo!
 

@@ -1,12 +1,31 @@
 # Units of Measure
 
-Using agreed upon standard units will facilitate network interoperability into the future.  Valueflows uses the units of measure from [the OM2 vocabulary](https://github.com/HajoRijgersberg/OM), also listed in the Other Namespaces page in this section.  Here is the [complete and up-to-date rdf reference for OM2](https://raw.githubusercontent.com/HajoRijgersberg/OM/master/om-2.0.rdf).
+Using agreed upon standard units will facilitate network interoperability into the future.  Valueflows uses the units of measure from [the OM2 vocabulary](https://github.com/HajoRijgersberg/OM).  Here is the [complete rdf reference for OM2](https://raw.githubusercontent.com/HajoRijgersberg/OM/master/om-2.0.rdf), which undergoes occasional update by the maintainers.  Here is the [same reference with a user interface](http://www.ontology-of-units-of-measure.org/resource/om-2/Unit).
+
+The OM2 vocabulary contains thousands of units of measure.  This scientific background seems to be the usual case for the unit of measure vocabularies.
+
+
+## Quantities and Units
+
+
+[http://www.ontology-of-units-of-measure.org/resource/om-2/](http://www.ontology-of-units-of-measure.org/resource/om-2/)
+
+* [`om2:Measure`](http://www.ontology-of-units-of-measure.org/resource/om-2/Measure)
+* [`om2:hasUnit`](http://www.ontology-of-units-of-measure.org/resource/om-2/hasUnit)
+* [`om2:hasNumericalValue`](http://www.ontology-of-units-of-measure.org/resource/om-2/hasNumericalValue)
+
+
+* [`om2:Unit`](http://www.ontology-of-units-of-measure.org/resource/om-2/Unit)
+    * See the page also in this section called Units of Measure.
+    * VF will use (at least) `rdfs:label` and `om2:symbol` as properties of Unit.
+
+
 
 ## Application units of measure
 
 We expect that user applications will choose a much smaller subset of these standard units, and probably maintain them separately.
 
-To facilitate this, a [csv file of units](https://lab.allmende.io/valueflows/valueflows/-/blob/master/units/units-en-useful.csv) has been extracted from OM2 to make it easier for user groups to choose their set of standard units.  Since OM2 is in active development, this file will gradually become out of date, but we expect added units to be newer scientific units not usually used in economic applications.
+To facilitate this, a [csv file of units](https://lab.allmende.io/valueflows/valueflows/-/blob/master/units/units-en-useful.csv) has been extracted from OM2 to make it easier for user groups to choose their set of standard units.  Since OM2 is still in active development, this file will gradually become out of date, but we expect added units to be newer scientific units not usually used in economic applications.
 
 This file includes only the English version for now, although some additional languages can be found in OM2.  The currencies have been removed, since we recommend these be set up as Resource Specifications instead, semantically, and specifically given the proliferation of alternate currencies.  We have added classifications (partially complete) to facilitate search for needed units. The columns in this file are, left to right:
 
@@ -17,7 +36,7 @@ This file includes only the English version for now, although some additional la
 * Description from OM2.
 * Classification(s), added by us (not from OM), to facilitate search in the csv file, or in an application (if one is created) for groups to choose their units.  This column is incomplete, possibly not the best granularity, and in some places possibly wrong.  Updates are welcome!
 
-## Overriding the OM2 label or symbol
+## Overriding the OM label or symbol
 
 We have added 2 properties in VF as optional additions to the OM2 unit, `localLabel` and `localSymbol`.  These are meant for applications to assign themselves, when the normal display usage for their set of users is different than the OM2.  For example, an application might want to use `pound` instead of `pound (avoirdupois)`, or `gallon` instead of `gallon (US)` or `gallon (imperial)`.
 

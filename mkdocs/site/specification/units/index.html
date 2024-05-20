@@ -9,10 +9,6 @@
       
       
       
-        <link rel="prev" href="../external-terms/">
-      
-      
-        <link rel="next" href="../inverses/">
       
       <link rel="icon" href="../../assets/favicon.ico">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.6">
@@ -185,15 +181,13 @@
         
   
   
-    
-  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../spec-overview/" class="md-tabs__link md-tabs__link--active">
+      <a href="../spec-overview/" class="md-tabs__link">
         Specification
       </a>
     </li>
@@ -455,16 +449,14 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
       
       
         
@@ -480,13 +472,9 @@
         
           
         
-          
-        
-          
-        
       
       
-        <label class="md-nav__link" for="__nav_3" tabindex="0" aria-expanded="true">
+        <label class="md-nav__link" for="__nav_3" tabindex="0" aria-expanded="false">
           Specification
           <span class="md-nav__icon md-icon"></span>
         </label>
@@ -506,6 +494,20 @@
     <li class="md-nav__item">
       <a href="../spec-overview/" class="md-nav__link">
         Specification Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../all_vf.html" class="md-nav__link">
+        RDF-based Specification
       </a>
     </li>
   
@@ -546,87 +548,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../vfspec/" class="md-nav__link">
-        RDF Specification
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../external-terms/" class="md-nav__link">
-        Other Namespaces
+        Unit, Quantity, Time, Location
       </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-    
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Units of Measure
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        Units of Measure
-      </a>
-      
-        
-
-  
-
-<nav class="md-nav md-nav--secondary" aria-label="On this page">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      On this page
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#application-units-of-measure" class="md-nav__link">
-    Application units of measure
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#overriding-the-om2-label-or-symbol" class="md-nav__link">
-    Overriding the OM2 label or symbol
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -640,20 +564,6 @@
     <li class="md-nav__item">
       <a href="../inverses/" class="md-nav__link">
         Query Naming
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../graphql/" class="md-nav__link">
-        GraphQL Reference
       </a>
     </li>
   
@@ -682,6 +592,8 @@
       <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
       
       
+        
+          
         
           
         
@@ -919,6 +831,20 @@
     <li class="md-nav__item">
       <a href="../../concepts/scoping/" class="md-nav__link">
         Scoping
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/location/" class="md-nav__link">
+        Location
       </a>
     </li>
   
@@ -1472,6 +1398,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#quantities-and-units" class="md-nav__link">
+    Quantities and Units
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#application-units-of-measure" class="md-nav__link">
     Application units of measure
   </a>
@@ -1479,8 +1412,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#overriding-the-om2-label-or-symbol" class="md-nav__link">
-    Overriding the OM2 label or symbol
+  <a href="#overriding-the-om-label-or-symbol" class="md-nav__link">
+    Overriding the OM label or symbol
   </a>
   
 </li>
@@ -1502,10 +1435,27 @@
 
 
 <h1 id="units-of-measure">Units of Measure</h1>
-<p>Using agreed upon standard units will facilitate network interoperability into the future.  Valueflows uses the units of measure from <a href="https://github.com/HajoRijgersberg/OM">the OM2 vocabulary</a>, also listed in the Other Namespaces page in this section.  Here is the <a href="https://raw.githubusercontent.com/HajoRijgersberg/OM/master/om-2.0.rdf">complete and up-to-date rdf reference for OM2</a>.</p>
+<p>Using agreed upon standard units will facilitate network interoperability into the future.  Valueflows uses the units of measure from <a href="https://github.com/HajoRijgersberg/OM">the OM2 vocabulary</a>.  Here is the <a href="https://raw.githubusercontent.com/HajoRijgersberg/OM/master/om-2.0.rdf">complete rdf reference for OM2</a>, which undergoes occasional update by the maintainers.  Here is the <a href="http://www.ontology-of-units-of-measure.org/resource/om-2/Unit">same reference with a user interface</a>.</p>
+<p>The OM2 vocabulary contains thousands of units of measure.  This scientific background seems to be the usual case for the unit of measure vocabularies.</p>
+<h2 id="quantities-and-units">Quantities and Units</h2>
+<p><a href="http://www.ontology-of-units-of-measure.org/resource/om-2/">http://www.ontology-of-units-of-measure.org/resource/om-2/</a></p>
+<ul>
+<li><a href="http://www.ontology-of-units-of-measure.org/resource/om-2/Measure"><code>om2:Measure</code></a></li>
+<li><a href="http://www.ontology-of-units-of-measure.org/resource/om-2/hasUnit"><code>om2:hasUnit</code></a></li>
+<li>
+<p><a href="http://www.ontology-of-units-of-measure.org/resource/om-2/hasNumericalValue"><code>om2:hasNumericalValue</code></a></p>
+</li>
+<li>
+<p><a href="http://www.ontology-of-units-of-measure.org/resource/om-2/Unit"><code>om2:Unit</code></a></p>
+<ul>
+<li>See the page also in this section called Units of Measure.</li>
+<li>VF will use (at least) <code>rdfs:label</code> and <code>om2:symbol</code> as properties of Unit.</li>
+</ul>
+</li>
+</ul>
 <h2 id="application-units-of-measure">Application units of measure</h2>
 <p>We expect that user applications will choose a much smaller subset of these standard units, and probably maintain them separately.</p>
-<p>To facilitate this, a <a href="https://lab.allmende.io/valueflows/valueflows/-/blob/master/units/units-en-useful.csv">csv file of units</a> has been extracted from OM2 to make it easier for user groups to choose their set of standard units.  Since OM2 is in active development, this file will gradually become out of date, but we expect added units to be newer scientific units not usually used in economic applications.</p>
+<p>To facilitate this, a <a href="https://lab.allmende.io/valueflows/valueflows/-/blob/master/units/units-en-useful.csv">csv file of units</a> has been extracted from OM2 to make it easier for user groups to choose their set of standard units.  Since OM2 is still in active development, this file will gradually become out of date, but we expect added units to be newer scientific units not usually used in economic applications.</p>
 <p>This file includes only the English version for now, although some additional languages can be found in OM2.  The currencies have been removed, since we recommend these be set up as Resource Specifications instead, semantically, and specifically given the proliferation of alternate currencies.  We have added classifications (partially complete) to facilitate search for needed units. The columns in this file are, left to right:</p>
 <ul>
 <li>OM2 owl Class.  When a Unit belonged to multiple classes, those were consolidated to one row, under "Unit".</li>
@@ -1515,7 +1465,7 @@
 <li>Description from OM2.</li>
 <li>Classification(s), added by us (not from OM), to facilitate search in the csv file, or in an application (if one is created) for groups to choose their units.  This column is incomplete, possibly not the best granularity, and in some places possibly wrong.  Updates are welcome!</li>
 </ul>
-<h2 id="overriding-the-om2-label-or-symbol">Overriding the OM2 label or symbol</h2>
+<h2 id="overriding-the-om-label-or-symbol">Overriding the OM label or symbol</h2>
 <p>We have added 2 properties in VF as optional additions to the OM2 unit, <code>localLabel</code> and <code>localSymbol</code>.  These are meant for applications to assign themselves, when the normal display usage for their set of users is different than the OM2.  For example, an application might want to use <code>pound</code> instead of <code>pound (avoirdupois)</code>, or <code>gallon</code> instead of <code>gallon (US)</code> or <code>gallon (imperial)</code>.</p>
 <p>Perhaps the most frequent use of the override is the unit <code>one</code>.  This indicates a generic one dimensional unit from the scientific perspective, which in an economic application might be called <code>each</code>, <code>piece</code>, <code>count</code>, <code>number</code> or similar, or just left off of a user interface or report.  Some applications might even want to use more than one of these local labels. But for interoperability, any of these overrides should reference back to OM2:one.</p>
 <p>See <a href="https://lab.allmende.io/valueflows/valueflows/-/tree/master/units/">this directory about units</a> for other potentially useful artifacts.</p>

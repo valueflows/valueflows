@@ -1,5 +1,7 @@
 # Diagram Explanations
 
+**UNDER CONSTRUCTION**
+
 These textual explanations refer back to the UML diagram on the previous page, but can be used without the diagram.  The explanations are organized by class within subject area of the model.
 
 ### Agent
