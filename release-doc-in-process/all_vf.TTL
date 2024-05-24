@@ -1152,28 +1152,28 @@ vf:basedOn
 vf:classifiedAs
         a                   owl:ObjectProperty ;
         rdfs:label          "classified as"@en ;
-        rdfs:domain         [ owl:unionOf (vf:Process vf:EconomicResource vf:Organization vf:EcologicalAgent) ] ;
-        rdfs:range          owl:Thing ;
+        rdfs:domain         [ owl:unionOf (vf:Process vf:EconomicResource vf:Organization vf:EcologicalAgent vf:Unit) ] ;
+        rdfs:range          xsd:string ;
         vs:term_status      "unstable" ;
-        rdfs:comment        "References one or more concepts in a common taxonomy or other classification scheme for purposes of categorization or grouping."@en ;
+        rdfs:comment        "References one or more uri's for a concept in a common taxonomy or other classification scheme for purposes of categorization or grouping; or can be one or more string classifications."@en ;
         .
 
 vf:resourceClassifiedAs
         a                   owl:ObjectProperty ;
         rdfs:label          "resource classified as"@en ;
         rdfs:domain         [ owl:unionOf (vf:ResourceSpecification vf:RecipeFlow vf:Intent vf:Commitment vf:EconomicEvent vf:Claim) ] ;
-        rdfs:range          owl:Thing ;
+        rdfs:range          xsd:string ;
         vs:term_status      "unstable" ;
-        rdfs:comment        "References a concept in a common taxonomy or other classification scheme for purposes of categorization or grouping."@en ;
+        rdfs:comment        "References one or more uri's for a concept in a common taxonomy or other classification scheme for purposes of categorization or grouping; or can be one or more string classifications."@en ;
         .
 
 vf:processClassifiedAs
         a                   owl:ObjectProperty ;
         rdfs:label          "process classified as"@en ;
         rdfs:domain         vf:RecipeProcess ;
-        rdfs:range          owl:Thing ;
+        rdfs:range          xsd:string ;
         vs:term_status      "unstable" ;
-        rdfs:comment        "References a concept in a common taxonomy or other classification scheme for purposes of categorization or grouping."@en ;
+        rdfs:comment        "References one or more uri's for a concept in a common taxonomy or other classification scheme for purposes of categorization or grouping; or can be one or more string classifications."@en ;
         .
 
 vf:processConformsTo

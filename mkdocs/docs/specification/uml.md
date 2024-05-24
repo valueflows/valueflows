@@ -1,6 +1,6 @@
 ## UML diagram
 
-This diagram includes all elements necessary for a complete REA-based core economic vocabulary, so includes elements that we re-use from other vocabularies.  All namespaces are documented by the prefix to each element.
+This diagram includes all elements defined in the system of record turtle file, for visual understanding of relationships.
 
 A textual explanation of everything on this diagram is on the [Diagram Explanations page](model-text.md).
 
@@ -16,9 +16,8 @@ Each arrow represents an additional property in the class at the beginning of th
 
 In some cases, there were just too many lines!  The subordinate classes in the gray section at the bottom are not connected with arrows, so the viewer should assume that:
 
-* every property ending in "Quantity" is a `om2:Measure` (does not live on its own) ;
-* every property ending in "Duration" is a `time:Duration` (does not live on its own) ;
-* every property ending in "Location" is a `geo:SpatialThing`;
+* every property ending in "Quantity" or "Duration" is a `vf:Measure` (does not live on its own) ;
+* most properties ending in "Location" are a `vf:SpatialThing` , used for physical locations ;
 * `vf:inScopeOf` references a `vf:Agent`.
 
 ### Inverse terms
@@ -50,3 +49,11 @@ These cases have possible properties in the "associative" class. For example, be
 We believe that it is more important to simplify the model and the concepts for the majority of use cases, than to have complete support of all use cases.
 
 ![model with Event Commitment Intent Claim m:m instantiated relationships](../assets/fulfill-satisfy-rel.png)
+
+### Denormalization
+
+Note there are a few place where VF is more normalized than might be wanted for a database design behind the scenes. However, for data provided for interoperability, it is expected that apps will adhere to the normalized version.
+
+For example, we have used a separate structure for quantities, including the numeric amount and unit of measure.  These never stand on their own, i.e. one wouldn't expect to change "4 liters" in an event and have it change wherever else "4 liters" appears.  So these can be safely denormalized behind the scenes.
+
+This also could apply to simple uses of location data, although in that case, locations can stand on their own, so it depends on the application.  But for example, some apps might move `SpatialThing`'s `long` and `lat` into the record having the location.

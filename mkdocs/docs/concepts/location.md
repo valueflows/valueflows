@@ -10,7 +10,7 @@ The location data itself is also fairly basic.  The core is the latitude, longit
 
 To accommodate needs for more complex spatial location definitions, we include a data reference to the extensive Geography information of the [GEOSPARQL Specification](https://docs.ogc.org/is/22-047r1/22-047r1.html#_b3644674-c6c7-4971-b600-a24d2bda0e01), which can then be used for purposes not supported in the core VF.
 
-For more information on the current state of specification of spatial data, one reference is the [Spatial Data on the Web Best Practices](https://www.w3.org/TR/sdw-bp/).
+See also [Specification location information](../../specification/external-terms/#locations).
 
 ## Virtual Location
 

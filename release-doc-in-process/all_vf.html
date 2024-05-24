@@ -5,8 +5,8 @@
     <style>
         #pylode {
             position: fixed;
-            top: 15em;
-            left: -13em;
+            top: 205px;
+            left: -150px;
             font-size: small;
             transform: rotate(-90deg);
             color: grey;
@@ -229,7 +229,7 @@
     padding: 10px;
     border: solid 1px navy;
     font-size: small;
-    width: 15%;
+    width: 180px;
 }
 #toc h3 {
     margin-top: 5px;
@@ -250,7 +250,7 @@
 }
 
 #content {
-    width: 86%;
+    width: calc(100% - 150px);
 }
 
 .hover_property {
@@ -287,6 +287,16 @@ td {
     "@type": [
       "https://schema.org/DefinedTermSet"
     ],
+    "https://schema.org/description": [
+      {
+        "@value": "A vocabulary for the distributed economic networks of the next economy, to coordinate the creation, distribution, and exchange of economic resources"
+      }
+    ],
+    "https://schema.org/license": [
+      {
+        "@id": "https://creativecommons.org/licenses/by-sa/4.0/"
+      }
+    ],
     "https://schema.org/name": [
       {
         "@value": "Valueflows Ontology"
@@ -318,11 +328,45 @@ td {
           </div>
           <div>
             <dt>
+              <a class="hover_property" href="http://purl.org/dc/terms/license" title="A legal document giving official permission to do something with the resource. Defined in DCMI Metadata Terms">License</a>
+            </dt>
+            <dd>
+              <a href="https://creativecommons.org/licenses/by-sa/4.0/">https://creativecommons.org/licenses/by-sa/4.0/</a>
+            </dd>
+          </div>
+          <div>
+            <dt>
               <a class="hover_property" href="http://www.w3.org/2002/07/owl#versionIRI" title="The property that identifies the version IRI of an ontology. Defined in The OWL 2 Schema vocabulary (OWL 2)">Version Iri</a>
             </dt>
             <dd>
               <a href="https://w3id.org/valueflows/ont/0.11/vf">https://w3id.org/valueflows/ont/0.11/vf</a>
             </dd>
+          </div>
+          <div>
+            <dt>
+              <a class="hover_property" href="http://www.w3.org/2002/07/owl#versionInfo" title="The annotation property that provides version information for an ontology or another OWL construct. Defined in The OWL 2 Schema vocabulary (OWL 2)">Version Info</a>
+            </dt>
+            <dd><p>0.11</p></dd>
+          </div>
+          <div>
+            <dt>
+              <a class="hover_property" href="http://purl.org/vocab/vann/preferredNamespacePrefix" title="None. Defined in None">Preferred Namespace Prefix</a>
+            </dt>
+            <dd><p>vf</p></dd>
+          </div>
+          <div>
+            <dt>
+              <a class="hover_property" href="http://purl.org/vocab/vann/preferredNamespaceUri" title="None. Defined in None">Preferred Namespace Uri</a>
+            </dt>
+            <dd>
+              <a href="https://w3id.org/valueflows/ont/vf#">https://w3id.org/valueflows/ont/vf#</a>
+            </dd>
+          </div>
+          <div>
+            <dt>
+              <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
+            </dt>
+            <dd><p>A vocabulary for the distributed economic networks of the next economy, to coordinate the creation, distribution, and exchange of economic resources</p></dd>
           </div>
         </dl>
       </div>
@@ -956,12 +1000,6 @@ td {
                   </li>
                   <li>
                     <span>
-                      <a href="#independentDemandOf">independent demand of</a>
-                      <sup class="sup-op" title="OWL Object Property">op</sup>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
                       <a href="#reciprocalClauseOf">reciprocal clause of</a>
                       <sup class="sup-op" title="OWL Object Property">op</sup>
                     </span>
@@ -978,12 +1016,6 @@ td {
                   <li>
                     <span>
                       <a href="#fulfills">fulfills</a>
-                      <sup class="sup-op" title="OWL Object Property">op</sup>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <a href="#hasIndependentDemand">has independent demand</a>
                       <sup class="sup-op" title="OWL Object Property">op</sup>
                     </span>
                   </li>
@@ -1252,6 +1284,12 @@ td {
                   </li>
                   <li>
                     <span>
+                      <a href="#currentCurrencyLocation">current currency location</a>
+                      <sup class="sup-dp" title="OWL Datatype Property">dp</sup>
+                    </span>
+                  </li>
+                  <li>
+                    <span>
                       <a href="#currentLocation">current location</a>
                       <sup class="sup-op" title="OWL Object Property">op</sup>
                     </span>
@@ -1477,6 +1515,95 @@ td {
                   <a href="#locationEffect">location effect</a>
                   <sup class="sup-op" title="OWL Object Property">op</sup>
                 </span>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="Measure">
+          <h3>Measure
+            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://w3id.org/valueflows/ont/vf#Measure</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
+              </th>
+              <td><p>A quantity expressed as a numeric value with a unit of measure.</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="The subject is a subclass of a class. Defined in The RDF Schema vocabulary (RDFS)">Sub Class Of</a>
+              </th>
+              <td>
+                <a href="http://www.ontology-of-units-of-measure.org/resource/om-2/Measure">http://www.ontology-of-units-of-measure.org/resource/om-2/Measure</a>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="https://w3id.org/profile/ontdoc/inDomainOf" title="Inverse of rdfs:domain. Defined in Ontology Documentation Profile">In Domain Of</a>
+              </th>
+              <td>
+                <span>
+                  <a href="#hasUnit">has unit</a>
+                  <sup class="sup-op" title="OWL Object Property">op</sup>
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="https://w3id.org/profile/ontdoc/inRangeOf" title="Inverse of rdfs:range. Defined in Ontology Documentation Profile">In Range Of</a>
+              </th>
+              <td>
+                <ul>
+                  <li>
+                    <span>
+                      <a href="#accountingQuantity">accounting quantity</a>
+                      <sup class="sup-op" title="OWL Object Property">op</sup>
+                    </span>
+                  </li>
+                  <li>
+                    <span>
+                      <a href="#availableQuantity">available quantity</a>
+                      <sup class="sup-op" title="OWL Object Property">op</sup>
+                    </span>
+                  </li>
+                  <li>
+                    <span>
+                      <a href="#effortQuantity">effort quantity</a>
+                      <sup class="sup-op" title="OWL Object Property">op</sup>
+                    </span>
+                  </li>
+                  <li>
+                    <span>
+                      <a href="#hasDuration">has duration</a>
+                      <sup class="sup-op" title="OWL Object Property">op</sup>
+                    </span>
+                  </li>
+                  <li>
+                    <span>
+                      <a href="#minimumQuantity">minimum quantity</a>
+                      <sup class="sup-op" title="OWL Object Property">op</sup>
+                    </span>
+                  </li>
+                  <li>
+                    <span>
+                      <a href="#onhandQuantity">onhand quantity</a>
+                      <sup class="sup-op" title="OWL Object Property">op</sup>
+                    </span>
+                  </li>
+                  <li>
+                    <span>
+                      <a href="#resourceQuantity">resource quantity</a>
+                      <sup class="sup-op" title="OWL Object Property">op</sup>
+                    </span>
+                  </li>
+                </ul>
               </td>
             </tr>
           </table>
@@ -1903,6 +2030,57 @@ td {
             </tr>
           </table>
         </div>
+        <div class="property entity" id="Recipe">
+          <h3>Recipe
+            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://w3id.org/valueflows/ont/vf#Recipe</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
+              </th>
+              <td><p>Optional instance of a recipe which directly specifies the recipe processes included.</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="https://w3id.org/profile/ontdoc/inDomainOf" title="Inverse of rdfs:domain. Defined in Ontology Documentation Profile">In Domain Of</a>
+              </th>
+              <td>
+                <ul>
+                  <li>
+                    <span>
+                      <a href="#primaryOutput">primary output</a>
+                      <sup class="sup-op" title="OWL Object Property">op</sup>
+                    </span>
+                  </li>
+                  <li>
+                    <span>
+                      <a href="#recipeIncludes">recipe includes</a>
+                      <sup class="sup-op" title="OWL Object Property">op</sup>
+                    </span>
+                  </li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="https://w3id.org/profile/ontdoc/inRangeOf" title="Inverse of rdfs:range. Defined in Ontology Documentation Profile">In Range Of</a>
+              </th>
+              <td>
+                <span>
+                  <a href="#plannedTogether">planned together</a>
+                  <sup class="sup-op" title="OWL Object Property">op</sup>
+                </span>
+              </td>
+            </tr>
+          </table>
+        </div>
         <div class="property entity" id="RecipeExchange">
           <h3>Recipe Exchange
             <sup class="sup-c" title="OWL/RDFS Class">c</sup>
@@ -2049,6 +2227,36 @@ td {
             </tr>
           </table>
         </div>
+        <div class="property entity" id="RecipeGroup">
+          <h3>Recipe Group
+            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://w3id.org/valueflows/ont/vf#RecipeGroup</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
+              </th>
+              <td><p>A grouping of recipes to facilitate planning them together.</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="https://w3id.org/profile/ontdoc/inDomainOf" title="Inverse of rdfs:domain. Defined in Ontology Documentation Profile">In Domain Of</a>
+              </th>
+              <td>
+                <span>
+                  <a href="#plannedTogether">planned together</a>
+                  <sup class="sup-op" title="OWL Object Property">op</sup>
+                </span>
+              </td>
+            </tr>
+          </table>
+        </div>
         <div class="property entity" id="RecipeProcess">
           <h3>Recipe Process
             <sup class="sup-c" title="OWL/RDFS Class">c</sup>
@@ -2105,6 +2313,12 @@ td {
               </th>
               <td>
                 <ul>
+                  <li>
+                    <span>
+                      <a href="#recipeIncludes">recipe includes</a>
+                      <sup class="sup-op" title="OWL Object Property">op</sup>
+                    </span>
+                  </li>
                   <li>
                     <span>
                       <a href="#recipeInputOf">recipe input of</a>
@@ -2175,6 +2389,12 @@ td {
                   <li>
                     <span>
                       <a href="#conformsTo">conforms to</a>
+                      <sup class="sup-op" title="OWL Object Property">op</sup>
+                    </span>
+                  </li>
+                  <li>
+                    <span>
+                      <a href="#primaryOutput">primary output</a>
                       <sup class="sup-op" title="OWL Object Property">op</sup>
                     </span>
                   </li>
@@ -2300,6 +2520,111 @@ td {
             </tr>
           </table>
         </div>
+        <div class="property entity" id="SpatialThing">
+          <h3>Spatial Thing
+            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://w3id.org/valueflows/ont/vf#SpatialThing</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
+              </th>
+              <td><p>Data that locates something relative to the Earth, usually a somewhat fixed location.</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="The subject is a subclass of a class. Defined in The RDF Schema vocabulary (RDFS)">Sub Class Of</a>
+              </th>
+              <td>
+                <a href="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing">http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing</a>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="https://w3id.org/profile/ontdoc/inDomainOf" title="Inverse of rdfs:domain. Defined in Ontology Documentation Profile">In Domain Of</a>
+              </th>
+              <td>
+                <ul>
+                  <li>
+                    <span>
+                      <a href="#alt">https://w3id.org/valueflows/ont/vf#alt</a>
+                      <sup class="sup-dp" title="OWL Datatype Property">dp</sup>
+                    </span>
+                  </li>
+                  <li>
+                    <span>
+                      <a href="#hasDetailedGeometry">currency address</a>
+                      <sup class="sup-op" title="OWL Object Property">op</sup>
+                    </span>
+                  </li>
+                  <li>
+                    <span>
+                      <a href="#lat">https://w3id.org/valueflows/ont/vf#lat</a>
+                      <sup class="sup-dp" title="OWL Datatype Property">dp</sup>
+                    </span>
+                  </li>
+                  <li>
+                    <span>
+                      <a href="#long">https://w3id.org/valueflows/ont/vf#long</a>
+                      <sup class="sup-dp" title="OWL Datatype Property">dp</sup>
+                    </span>
+                  </li>
+                  <li>
+                    <span>
+                      <a href="#mappableAddress">mappable address</a>
+                      <sup class="sup-dp" title="OWL Datatype Property">dp</sup>
+                    </span>
+                  </li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="https://w3id.org/profile/ontdoc/inRangeOf" title="Inverse of rdfs:range. Defined in Ontology Documentation Profile">In Range Of</a>
+              </th>
+              <td>
+                <ul>
+                  <li>
+                    <span>
+                      <a href="#atLocation">at location</a>
+                      <sup class="sup-op" title="OWL Object Property">op</sup>
+                    </span>
+                  </li>
+                  <li>
+                    <span>
+                      <a href="#currentLocation">current location</a>
+                      <sup class="sup-op" title="OWL Object Property">op</sup>
+                    </span>
+                  </li>
+                  <li>
+                    <span>
+                      <a href="#eligibleLocation">eligible location</a>
+                      <sup class="sup-op" title="OWL Object Property">op</sup>
+                    </span>
+                  </li>
+                  <li>
+                    <span>
+                      <a href="#primaryLocation">primary location</a>
+                      <sup class="sup-op" title="OWL Object Property">op</sup>
+                    </span>
+                  </li>
+                  <li>
+                    <span>
+                      <a href="#toLocation">to location</a>
+                      <sup class="sup-op" title="OWL Object Property">op</sup>
+                    </span>
+                  </li>
+                </ul>
+              </td>
+            </tr>
+          </table>
+        </div>
         <div class="property entity" id="StageEffect">
           <h3>Stage Effect
             <sup class="sup-c" title="OWL/RDFS Class">c</sup>
@@ -2356,6 +2681,93 @@ td {
                   <a href="#stateEffect">state effect</a>
                   <sup class="sup-op" title="OWL Object Property">op</sup>
                 </span>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="Unit">
+          <h3>Unit
+            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://w3id.org/valueflows/ont/vf#Unit</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
+              </th>
+              <td><p>A standard unit of measure, defined and adopted by convention or by law.</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="The subject is a subclass of a class. Defined in The RDF Schema vocabulary (RDFS)">Sub Class Of</a>
+              </th>
+              <td>
+                <a href="http://www.ontology-of-units-of-measure.org/resource/om-2/Unit">http://www.ontology-of-units-of-measure.org/resource/om-2/Unit</a>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="https://w3id.org/profile/ontdoc/inDomainOf" title="Inverse of rdfs:domain. Defined in Ontology Documentation Profile">In Domain Of</a>
+              </th>
+              <td>
+                <ul>
+                  <li>
+                    <span>
+                      <a href="#hasNumericalValue">has numerical value</a>
+                      <sup class="sup-dp" title="OWL Datatype Property">dp</sup>
+                    </span>
+                  </li>
+                  <li>
+                    <a href="#omUnitIdentifier">om unit identifier</a>
+                  </li>
+                  <li>
+                    <a href="#overrideLabel">override label</a>
+                  </li>
+                  <li>
+                    <a href="#overrideSymbol">override symbol</a>
+                  </li>
+                  <li>
+                    <a href="#symbol">symbol</a>
+                  </li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="https://w3id.org/profile/ontdoc/inRangeOf" title="Inverse of rdfs:range. Defined in Ontology Documentation Profile">In Range Of</a>
+              </th>
+              <td>
+                <ul>
+                  <li>
+                    <span>
+                      <a href="#defaultUnitOfEffort">default unit of effort</a>
+                      <sup class="sup-op" title="OWL Object Property">op</sup>
+                    </span>
+                  </li>
+                  <li>
+                    <span>
+                      <a href="#defaultUnitOfResource">default unit of resource</a>
+                      <sup class="sup-op" title="OWL Object Property">op</sup>
+                    </span>
+                  </li>
+                  <li>
+                    <span>
+                      <a href="#hasUnit">has unit</a>
+                      <sup class="sup-op" title="OWL Object Property">op</sup>
+                    </span>
+                  </li>
+                  <li>
+                    <span>
+                      <a href="#unitOfEffort">unit of effort</a>
+                      <sup class="sup-op" title="OWL Object Property">op</sup>
+                    </span>
+                  </li>
+                </ul>
               </td>
             </tr>
           </table>
@@ -2478,7 +2890,10 @@ td {
                 <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range" title="A range of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Range</a>
               </th>
               <td>
-                <a href="http://www.ontology-of-units-of-measure.org/resource/om-2/Measure">http://www.ontology-of-units-of-measure.org/resource/om-2/Measure</a>
+                <span>
+                  <a href="#Measure">Measure</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
               </td>
             </tr>
           </table>
@@ -2505,16 +2920,16 @@ td {
                 <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Domain</a>
               </th>
               <td><span>
-  <a href="#Commitment">Commitment</a>
+  <a href="#Intent">Intent</a>
   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
 </span> <span class="cardinality">or</span> <span>
-  <a href="#EconomicEvent">Economic Event</a>
+  <a href="#Commitment">Commitment</a>
   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
 </span> <span class="cardinality">or</span> <span>
   <a href="#Claim">Claim</a>
   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
 </span> <span class="cardinality">or</span> <span>
-  <a href="#Intent">Intent</a>
+  <a href="#EconomicEvent">Economic Event</a>
   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
 </span> <span class="cardinality">or</span> <span>
   <a href="#RecipeFlow">Recipe Flow</a>
@@ -2616,7 +3031,7 @@ td {
             </tr>
           </table>
         </div>
-        <div class="property entity" id="atlocation">
+        <div class="property entity" id="atLocation">
           <h3>at location
             <sup class="sup-op" title="OWL Object Property">op</sup>
           </h3>
@@ -2638,13 +3053,13 @@ td {
                 <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Domain</a>
               </th>
               <td><span>
+  <a href="#EconomicEvent">Economic Event</a>
+  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+</span> <span class="cardinality">or</span> <span>
   <a href="#Intent">Intent</a>
   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
 </span> <span class="cardinality">or</span> <span>
   <a href="#Commitment">Commitment</a>
-  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-</span> <span class="cardinality">or</span> <span>
-  <a href="#EconomicEvent">Economic Event</a>
   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
 </span></td>
             </tr>
@@ -2653,7 +3068,10 @@ td {
                 <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range" title="A range of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Range</a>
               </th>
               <td>
-                <a href="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing">http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing</a>
+                <span>
+                  <a href="#SpatialThing">Spatial Thing</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
               </td>
             </tr>
           </table>
@@ -2673,7 +3091,7 @@ td {
               <th>
                 <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
               </th>
-              <td><p>The quantity of the offered resource currently available.</p></td>
+              <td><p>The amount and unit of the offered resource currently available.</p></td>
             </tr>
             <tr>
               <th>
@@ -2691,7 +3109,10 @@ td {
                 <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range" title="A range of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Range</a>
               </th>
               <td>
-                <a href="http://www.ontology-of-units-of-measure.org/resource/om-2/Measure">http://www.ontology-of-units-of-measure.org/resource/om-2/Measure</a>
+                <span>
+                  <a href="#Measure">Measure</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
               </td>
             </tr>
           </table>
@@ -2844,13 +3265,13 @@ td {
   <a href="#Process">Process</a>
   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
 </span> <span class="cardinality">or</span> <span>
-  <a href="#EcologicalAgent">Ecological Agent</a>
+  <a href="#Organization">Organization</a>
   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
 </span> <span class="cardinality">or</span> <span>
   <a href="#EconomicResource">Economic Resource</a>
   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
 </span> <span class="cardinality">or</span> <span>
-  <a href="#Organization">Organization</a>
+  <a href="#EcologicalAgent">Ecological Agent</a>
   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
 </span></td>
             </tr>
@@ -3128,7 +3549,7 @@ td {
               <th>
                 <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
               </th>
-              <td><p>The current place an economic resource is located.  Could be at any level of granularity, from a town to an address to a warehouse location.  Usually mappable.</p></td>
+              <td><p>The current physical location of an economic resource.  Could be at any level of granularity, from a town to an address to a warehouse location.  Usually mappable.</p></td>
             </tr>
             <tr>
               <th>
@@ -3146,7 +3567,10 @@ td {
                 <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range" title="A range of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Range</a>
               </th>
               <td>
-                <a href="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing">http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing</a>
+                <span>
+                  <a href="#SpatialThing">Spatial Thing</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
               </td>
             </tr>
           </table>
@@ -3184,7 +3608,10 @@ td {
                 <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range" title="A range of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Range</a>
               </th>
               <td>
-                <a href="http://www.ontology-of-units-of-measure.org/resource/om-2/Unit">http://www.ontology-of-units-of-measure.org/resource/om-2/Unit</a>
+                <span>
+                  <a href="#Unit">Unit</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
               </td>
             </tr>
           </table>
@@ -3222,7 +3649,10 @@ td {
                 <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range" title="A range of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Range</a>
               </th>
               <td>
-                <a href="http://www.ontology-of-units-of-measure.org/resource/om-2/Unit">http://www.ontology-of-units-of-measure.org/resource/om-2/Unit</a>
+                <span>
+                  <a href="#Unit">Unit</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
               </td>
             </tr>
           </table>
@@ -3268,7 +3698,7 @@ td {
             </tr>
           </table>
         </div>
-        <div class="property entity" id="effortquantity">
+        <div class="property entity" id="effortQuantity">
           <h3>effort quantity
             <sup class="sup-op" title="OWL Object Property">op</sup>
           </h3>
@@ -3283,14 +3713,14 @@ td {
               <th>
                 <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
               </th>
-              <td><p>The amount and unit of the work or use or citation effort-based action. This is often a time duration, but also could be cycle counts or other measures of effort or usefulness.</p></td>
+              <td><p>The amount and unit of the work or use or citation effort-based action. This is often expressed with a time unit, but also could be cycle counts or other measures of effort or usefulness.</p></td>
             </tr>
             <tr>
               <th>
                 <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Domain</a>
               </th>
               <td><span>
-  <a href="#RecipeFlow">Recipe Flow</a>
+  <a href="#Commitment">Commitment</a>
   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
 </span> <span class="cardinality">or</span> <span>
   <a href="#Intent">Intent</a>
@@ -3299,7 +3729,7 @@ td {
   <a href="#Claim">Claim</a>
   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
 </span> <span class="cardinality">or</span> <span>
-  <a href="#Commitment">Commitment</a>
+  <a href="#RecipeFlow">Recipe Flow</a>
   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
 </span> <span class="cardinality">or</span> <span>
   <a href="#EconomicEvent">Economic Event</a>
@@ -3311,7 +3741,10 @@ td {
                 <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range" title="A range of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Range</a>
               </th>
               <td>
-                <a href="http://www.ontology-of-units-of-measure.org/resource/om-2/Measure">http://www.ontology-of-units-of-measure.org/resource/om-2/Measure</a>
+                <span>
+                  <a href="#Measure">Measure</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
               </td>
             </tr>
           </table>
@@ -3349,7 +3782,10 @@ td {
                 <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range" title="A range of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Range</a>
               </th>
               <td>
-                <a href="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing">http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing</a>
+                <span>
+                  <a href="#SpatialThing">Spatial Thing</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
               </td>
             </tr>
           </table>
@@ -3436,6 +3872,86 @@ td {
             </tr>
           </table>
         </div>
+        <div class="property entity" id="hasDetailedGeometry">
+          <h3>currency address
+            <sup class="sup-op" title="OWL Object Property">op</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://w3id.org/valueflows/ont/vf#hasDetailedGeometry</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
+              </th>
+              <td><p>A spatial geometry of any complexity and tooling supported by geosparql.</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Domain</a>
+              </th>
+              <td>
+                <span>
+                  <a href="#SpatialThing">Spatial Thing</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range" title="A range of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Range</a>
+              </th>
+              <td>
+                <a href="http://www.opengis.net/ont/geosparql#Geometry">geo:Geometry</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="hasDuration">
+          <h3>has duration
+            <sup class="sup-op" title="OWL Object Property">op</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://w3id.org/valueflows/ont/vf#hasDuration</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
+              </th>
+              <td><p>The temporal extent of the process or scenario.</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Domain</a>
+              </th>
+              <td><span>
+  <a href="#RecipeProcess">Recipe Process</a>
+  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+</span> <span class="cardinality">or</span> <span>
+  <a href="#ScenarioDefinition">Scenario Definition</a>
+  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+</span></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range" title="A range of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Range</a>
+              </th>
+              <td>
+                <span>
+                  <a href="#Measure">Measure</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
+            </tr>
+          </table>
+        </div>
         <div class="property entity" id="hasIndependentDemand">
           <h3>has independent demand
             <sup class="sup-op" title="OWL Object Property">op</sup>
@@ -3451,7 +3967,7 @@ td {
               <th>
                 <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
               </th>
-              <td><p>The independent commitments for which this plan was created.</p></td>
+              <td><p>The commitments and/or intents which this plan was created to deliver.</p></td>
             </tr>
             <tr>
               <th>
@@ -3468,12 +3984,13 @@ td {
               <th>
                 <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range" title="A range of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Range</a>
               </th>
-              <td>
-                <span>
-                  <a href="#Commitment">Commitment</a>
-                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                </span>
-              </td>
+              <td><span>
+  <a href="#Commitment">Commitment</a>
+  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+</span> <span class="cardinality">or</span> <span>
+  <a href="#Intent">Intent</a>
+  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+</span></td>
             </tr>
           </table>
         </div>
@@ -3555,13 +4072,13 @@ td {
                 <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range" title="A range of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Range</a>
               </th>
               <td><span>
-  <a href="#EconomicEvent">Economic Event</a>
-  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-</span> <span class="cardinality">or</span> <span>
   <a href="#Commitment">Commitment</a>
   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
 </span> <span class="cardinality">or</span> <span>
   <a href="#Intent">Intent</a>
+  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+</span> <span class="cardinality">or</span> <span>
+  <a href="#EconomicEvent">Economic Event</a>
   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
 </span></td>
             </tr>
@@ -3649,6 +4166,55 @@ td {
             </tr>
           </table>
         </div>
+        <div class="property entity" id="hasUnit">
+          <h3>has unit
+            <sup class="sup-op" title="OWL Object Property">op</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://w3id.org/valueflows/ont/vf#hasUnit</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
+              </th>
+              <td><p>A standard unit of measure.</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subPropertyOf" title="The subject is a subproperty of a property. Defined in The RDF Schema vocabulary (RDFS)">Sub Property Of</a>
+              </th>
+              <td>
+                <a href="http://www.ontology-of-units-of-measure.org/resource/om-2/hasUnit">http://www.ontology-of-units-of-measure.org/resource/om-2/hasUnit</a>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Domain</a>
+              </th>
+              <td>
+                <span>
+                  <a href="#Measure">Measure</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range" title="A range of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Range</a>
+              </th>
+              <td>
+                <span>
+                  <a href="#Unit">Unit</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
+            </tr>
+          </table>
+        </div>
         <div class="property entity" id="inScopeOf">
           <h3>in scope of
             <sup class="sup-op" title="OWL Object Property">op</sup>
@@ -3671,28 +4237,28 @@ td {
                 <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Domain</a>
               </th>
               <td><span>
-  <a href="#Proposal">Proposal</a>
-  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-</span> <span class="cardinality">or</span> <span>
-  <a href="#AgentRelationship">Agent Relationship</a>
-  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-</span> <span class="cardinality">or</span> <span>
-  <a href="#Scenario">Scenario</a>
-  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-</span> <span class="cardinality">or</span> <span>
   <a href="#Commitment">Commitment</a>
-  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-</span> <span class="cardinality">or</span> <span>
-  <a href="#Process">Process</a>
   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
 </span> <span class="cardinality">or</span> <span>
   <a href="#Claim">Claim</a>
   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
 </span> <span class="cardinality">or</span> <span>
+  <a href="#Scenario">Scenario</a>
+  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+</span> <span class="cardinality">or</span> <span>
   <a href="#Intent">Intent</a>
   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
 </span> <span class="cardinality">or</span> <span>
+  <a href="#Process">Process</a>
+  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+</span> <span class="cardinality">or</span> <span>
+  <a href="#AgentRelationship">Agent Relationship</a>
+  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+</span> <span class="cardinality">or</span> <span>
   <a href="#EconomicEvent">Economic Event</a>
+  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+</span> <span class="cardinality">or</span> <span>
+  <a href="#Proposal">Proposal</a>
   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
 </span></td>
             </tr>
@@ -3724,18 +4290,19 @@ td {
               <th>
                 <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
               </th>
-              <td><p>Represents a desired deliverable expected from this plan.</p></td>
+              <td><p>This plan is the way this commitment or intent will be realized.</p></td>
             </tr>
             <tr>
               <th>
                 <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Domain</a>
               </th>
-              <td>
-                <span>
-                  <a href="#Commitment">Commitment</a>
-                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                </span>
-              </td>
+              <td><span>
+  <a href="#Commitment">Commitment</a>
+  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+</span> <span class="cardinality">or</span> <span>
+  <a href="#Intent">Intent</a>
+  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+</span></td>
             </tr>
             <tr>
               <th>
@@ -3772,13 +4339,13 @@ td {
                 <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Domain</a>
               </th>
               <td><span>
-  <a href="#EconomicEvent">Economic Event</a>
+  <a href="#Commitment">Commitment</a>
   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
 </span> <span class="cardinality">or</span> <span>
   <a href="#Intent">Intent</a>
   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
 </span> <span class="cardinality">or</span> <span>
-  <a href="#Commitment">Commitment</a>
+  <a href="#EconomicEvent">Economic Event</a>
   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
 </span></td>
             </tr>
@@ -3974,7 +4541,7 @@ td {
               <th>
                 <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
               </th>
-              <td><p>The minimum required order quantity of the offered resource.</p></td>
+              <td><p>The minimum required order amount and unit of the offered resource.</p></td>
             </tr>
             <tr>
               <th>
@@ -3992,7 +4559,10 @@ td {
                 <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range" title="A range of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Range</a>
               </th>
               <td>
-                <a href="http://www.ontology-of-units-of-measure.org/resource/om-2/Measure">http://www.ontology-of-units-of-measure.org/resource/om-2/Measure</a>
+                <span>
+                  <a href="#Measure">Measure</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
               </td>
             </tr>
           </table>
@@ -4153,7 +4723,10 @@ td {
                 <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range" title="A range of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Range</a>
               </th>
               <td>
-                <a href="http://www.ontology-of-units-of-measure.org/resource/om-2/Measure">http://www.ontology-of-units-of-measure.org/resource/om-2/Measure</a>
+                <span>
+                  <a href="#Measure">Measure</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
               </td>
             </tr>
           </table>
@@ -4280,12 +4853,53 @@ td {
   <a href="#Process">Process</a>
   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
 </span> <span class="cardinality">or</span> <span>
-  <a href="#Intent">Intent</a>
-  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-</span> <span class="cardinality">or</span> <span>
   <a href="#Commitment">Commitment</a>
   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+</span> <span class="cardinality">or</span> <span>
+  <a href="#Intent">Intent</a>
+  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
 </span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="plannedTogether">
+          <h3>planned together
+            <sup class="sup-op" title="OWL Object Property">op</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://w3id.org/valueflows/ont/vf#plannedTogether</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
+              </th>
+              <td><p>A collection of recipes that can be planned together.</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Domain</a>
+              </th>
+              <td>
+                <span>
+                  <a href="#RecipeGroup">Recipe Group</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range" title="A range of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Range</a>
+              </th>
+              <td>
+                <span>
+                  <a href="#Recipe">Recipe</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
             </tr>
           </table>
         </div>
@@ -4311,13 +4925,13 @@ td {
                 <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Domain</a>
               </th>
               <td><span>
-  <a href="#Process">Process</a>
+  <a href="#Commitment">Commitment</a>
   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
 </span> <span class="cardinality">or</span> <span>
   <a href="#Intent">Intent</a>
   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
 </span> <span class="cardinality">or</span> <span>
-  <a href="#Commitment">Commitment</a>
+  <a href="#Process">Process</a>
   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
 </span></td>
             </tr>
@@ -4390,7 +5004,7 @@ td {
               <th>
                 <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
               </th>
-              <td><p>The main place an agent is located, often an address where activities occur and mail can be sent. This is usually a mappable geographic location.  It also could be a website address, as in the case of agents who have no physical location.</p></td>
+              <td><p>The main place an agent is located, often an address where activities occur and mail can be sent. This is usually a mappable geographic location.</p></td>
             </tr>
             <tr>
               <th>
@@ -4408,7 +5022,51 @@ td {
                 <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range" title="A range of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Range</a>
               </th>
               <td>
-                <a href="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing">http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing</a>
+                <span>
+                  <a href="#SpatialThing">Spatial Thing</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="primaryOutput">
+          <h3>primary output
+            <sup class="sup-op" title="OWL Object Property">op</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://w3id.org/valueflows/ont/vf#primaryOutput</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
+              </th>
+              <td><p>The main output the recipe is intended to produce or deliver.</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Domain</a>
+              </th>
+              <td>
+                <span>
+                  <a href="#Recipe">Recipe</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range" title="A range of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Range</a>
+              </th>
+              <td>
+                <span>
+                  <a href="#ResourceSpecification">Resource Specification</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
               </td>
             </tr>
           </table>
@@ -4564,10 +5222,10 @@ td {
   <a href="#Intent">Intent</a>
   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
 </span> <span class="cardinality">or</span> <span>
-  <a href="#Claim">Claim</a>
+  <a href="#EconomicEvent">Economic Event</a>
   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
 </span> <span class="cardinality">or</span> <span>
-  <a href="#EconomicEvent">Economic Event</a>
+  <a href="#Claim">Claim</a>
   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
 </span></td>
             </tr>
@@ -4811,10 +5469,10 @@ td {
                 <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Domain</a>
               </th>
               <td><span>
-  <a href="#Claim">Claim</a>
+  <a href="#EconomicEvent">Economic Event</a>
   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
 </span> <span class="cardinality">or</span> <span>
-  <a href="#EconomicEvent">Economic Event</a>
+  <a href="#Claim">Claim</a>
   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
 </span> <span class="cardinality">or</span> <span>
   <a href="#Intent">Intent</a>
@@ -4872,6 +5530,47 @@ td {
               <td>
                 <span>
                   <a href="#RecipeExchange">Recipe Exchange</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="recipeIncludes">
+          <h3>recipe includes
+            <sup class="sup-op" title="OWL Object Property">op</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://w3id.org/valueflows/ont/vf#recipeIncludes</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
+              </th>
+              <td><p>The collection of processes needed for this recipe.</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Domain</a>
+              </th>
+              <td>
+                <span>
+                  <a href="#Recipe">Recipe</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range" title="A range of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Range</a>
+              </th>
+              <td>
+                <span>
+                  <a href="#RecipeProcess">Recipe Process</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
               </td>
@@ -5311,22 +6010,22 @@ td {
                 <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Domain</a>
               </th>
               <td><span>
-  <a href="#Claim">Claim</a>
-  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-</span> <span class="cardinality">or</span> <span>
-  <a href="#EconomicEvent">Economic Event</a>
-  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-</span> <span class="cardinality">or</span> <span>
-  <a href="#RecipeFlow">Recipe Flow</a>
+  <a href="#Intent">Intent</a>
   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
 </span> <span class="cardinality">or</span> <span>
   <a href="#Commitment">Commitment</a>
   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
 </span> <span class="cardinality">or</span> <span>
-  <a href="#Intent">Intent</a>
+  <a href="#EconomicEvent">Economic Event</a>
+  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+</span> <span class="cardinality">or</span> <span>
+  <a href="#Claim">Claim</a>
   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
 </span> <span class="cardinality">or</span> <span>
   <a href="#ResourceSpecification">Resource Specification</a>
+  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+</span> <span class="cardinality">or</span> <span>
+  <a href="#RecipeFlow">Recipe Flow</a>
   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
 </span></td>
             </tr>
@@ -5365,19 +6064,19 @@ td {
                 <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Domain</a>
               </th>
               <td><span>
-  <a href="#Intent">Intent</a>
+  <a href="#RecipeFlow">Recipe Flow</a>
   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
 </span> <span class="cardinality">or</span> <span>
-  <a href="#RecipeFlow">Recipe Flow</a>
+  <a href="#EconomicEvent">Economic Event</a>
+  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+</span> <span class="cardinality">or</span> <span>
+  <a href="#Intent">Intent</a>
   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
 </span> <span class="cardinality">or</span> <span>
   <a href="#Commitment">Commitment</a>
   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
 </span> <span class="cardinality">or</span> <span>
   <a href="#Claim">Claim</a>
-  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-</span> <span class="cardinality">or</span> <span>
-  <a href="#EconomicEvent">Economic Event</a>
   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
 </span></td>
             </tr>
@@ -5416,13 +6115,13 @@ td {
                 <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Domain</a>
               </th>
               <td><span>
-  <a href="#Intent">Intent</a>
-  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-</span> <span class="cardinality">or</span> <span>
   <a href="#Commitment">Commitment</a>
   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
 </span> <span class="cardinality">or</span> <span>
   <a href="#EconomicEvent">Economic Event</a>
+  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+</span> <span class="cardinality">or</span> <span>
+  <a href="#Intent">Intent</a>
   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
 </span></td>
             </tr>
@@ -5439,7 +6138,7 @@ td {
             </tr>
           </table>
         </div>
-        <div class="property entity" id="resourcequantity">
+        <div class="property entity" id="resourceQuantity">
           <h3>resource quantity
             <sup class="sup-op" title="OWL Object Property">op</sup>
           </h3>
@@ -5461,19 +6160,19 @@ td {
                 <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Domain</a>
               </th>
               <td><span>
-  <a href="#Claim">Claim</a>
+  <a href="#Intent">Intent</a>
   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
 </span> <span class="cardinality">or</span> <span>
   <a href="#RecipeFlow">Recipe Flow</a>
   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
 </span> <span class="cardinality">or</span> <span>
-  <a href="#Intent">Intent</a>
-  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-</span> <span class="cardinality">or</span> <span>
-  <a href="#EconomicEvent">Economic Event</a>
+  <a href="#Claim">Claim</a>
   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
 </span> <span class="cardinality">or</span> <span>
   <a href="#Commitment">Commitment</a>
+  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+</span> <span class="cardinality">or</span> <span>
+  <a href="#EconomicEvent">Economic Event</a>
   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
 </span></td>
             </tr>
@@ -5482,7 +6181,10 @@ td {
                 <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range" title="A range of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Range</a>
               </th>
               <td>
-                <a href="http://www.ontology-of-units-of-measure.org/resource/om-2/Measure">http://www.ontology-of-units-of-measure.org/resource/om-2/Measure</a>
+                <span>
+                  <a href="#Measure">Measure</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
               </td>
             </tr>
           </table>
@@ -5636,10 +6338,10 @@ td {
   <a href="#EconomicResource">Economic Resource</a>
   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
 </span> <span class="cardinality">or</span> <span>
-  <a href="#Commitment">Commitment</a>
+  <a href="#RecipeFlow">Recipe Flow</a>
   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
 </span> <span class="cardinality">or</span> <span>
-  <a href="#RecipeFlow">Recipe Flow</a>
+  <a href="#Commitment">Commitment</a>
   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
 </span></td>
             </tr>
@@ -5722,10 +6424,10 @@ td {
   <a href="#EconomicEvent">Economic Event</a>
   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
 </span> <span class="cardinality">or</span> <span>
-  <a href="#RecipeFlow">Recipe Flow</a>
+  <a href="#EconomicResource">Economic Resource</a>
   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
 </span> <span class="cardinality">or</span> <span>
-  <a href="#EconomicResource">Economic Resource</a>
+  <a href="#RecipeFlow">Recipe Flow</a>
   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
 </span> <span class="cardinality">or</span> <span>
   <a href="#Commitment">Commitment</a>
@@ -5939,7 +6641,10 @@ td {
                 <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range" title="A range of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Range</a>
               </th>
               <td>
-                <a href="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing">http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing</a>
+                <span>
+                  <a href="#SpatialThing">Spatial Thing</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
               </td>
             </tr>
           </table>
@@ -6007,10 +6712,10 @@ td {
                 <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Domain</a>
               </th>
               <td><span>
-  <a href="#Claim">Claim</a>
+  <a href="#EconomicEvent">Economic Event</a>
   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
 </span> <span class="cardinality">or</span> <span>
-  <a href="#EconomicEvent">Economic Event</a>
+  <a href="#Claim">Claim</a>
   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
 </span></td>
             </tr>
@@ -6060,7 +6765,10 @@ td {
                 <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range" title="A range of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Range</a>
               </th>
               <td>
-                <a href="http://www.ontology-of-units-of-measure.org/resource/om-2/Unit">http://www.ontology-of-units-of-measure.org/resource/om-2/Unit</a>
+                <span>
+                  <a href="#Unit">Unit</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
               </td>
             </tr>
           </table>
@@ -6135,6 +6843,22 @@ td {
         <sup class="sup-c" title="OWL/RDFS Class">c</sup>
       </span>
       <span>
+        <a href="#RecipeProcess">Recipe Process</a>
+        <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+      </span>
+      <span>
+        <a href="#ScenarioDefinition">Scenario Definition</a>
+        <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+      </span>
+      <span>
+        <a href="#Commitment">Commitment</a>
+        <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+      </span>
+      <span>
+        <a href="#Intent">Intent</a>
+        <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+      </span>
+      <span>
         <a href="#EconomicEvent">Economic Event</a>
         <sup class="sup-c" title="OWL/RDFS Class">c</sup>
       </span>
@@ -6188,6 +6912,14 @@ td {
       </span>
       <span>
         <a href="#AgentRelationship">Agent Relationship</a>
+        <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+      </span>
+      <span>
+        <a href="#Commitment">Commitment</a>
+        <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+      </span>
+      <span>
+        <a href="#Intent">Intent</a>
         <sup class="sup-c" title="OWL/RDFS Class">c</sup>
       </span>
       <span>
@@ -6400,6 +7132,141 @@ td {
       </span>
       <div class="section" id="datatypeproperties">
         <h2>Datatype Properties</h2>
+        <div class="property entity" id="alt">
+          <h3>alt
+            <sup class="sup-dp" title="OWL Datatype Property">dp</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://w3id.org/valueflows/ont/vf#alt</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
+              </th>
+              <td><p>The WGS84 altitude of a spatial thing (decimal meters above the local reference ellipsoid)</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subPropertyOf" title="The subject is a subproperty of a property. Defined in The RDF Schema vocabulary (RDFS)">Sub Property Of</a>
+              </th>
+              <td>
+                <a href="http://www.w3.org/2003/01/geo/wgs84_pos#alt">http://www.w3.org/2003/01/geo/wgs84_pos#alt</a>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Domain</a>
+              </th>
+              <td>
+                <span>
+                  <a href="#SpatialThing">Spatial Thing</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range" title="A range of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Range</a>
+              </th>
+              <td>
+                <a href="http://www.linkedmodel.org/schema/dtype#numericUnion">http://www.linkedmodel.org/schema/dtype#numericUnion</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="created">
+          <h3>created
+            <sup class="sup-dp" title="OWL Datatype Property">dp</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://w3id.org/valueflows/ont/vf#created</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
+              </th>
+              <td><p>The date, and time if desired, the information was agreed to or recorded.</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Domain</a>
+              </th>
+              <td><span>
+  <a href="#EconomicEvent">Economic Event</a>
+  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+</span> <span class="cardinality">or</span> <span>
+  <a href="#Plan">Plan</a>
+  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+</span> <span class="cardinality">or</span> <span>
+  <a href="#Proposal">Proposal</a>
+  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+</span> <span class="cardinality">or</span> <span>
+  <a href="#Claim">Claim</a>
+  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+</span> <span class="cardinality">or</span> <span>
+  <a href="#Commitment">Commitment</a>
+  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+</span> <span class="cardinality">or</span> <span>
+  <a href="#Agreement">Agreement</a>
+  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+</span></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range" title="A range of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Range</a>
+              </th>
+              <td>
+                <a href="http://www.w3.org/2001/XMLSchema#dateTimeStamp">xsd:dateTimeStamp</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="currentCurrencyLocation">
+          <h3>current currency location
+            <sup class="sup-dp" title="OWL Datatype Property">dp</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://w3id.org/valueflows/ont/vf#currentCurrencyLocation</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
+              </th>
+              <td><p>The current virtual place a currency economic resource is located, for example the address for a bank account, crypto wallet, etc., in a domain standard format.</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Domain</a>
+              </th>
+              <td>
+                <span>
+                  <a href="#EconomicResource">Economic Resource</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range" title="A range of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Range</a>
+              </th>
+              <td>
+                <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a>
+              </td>
+            </tr>
+          </table>
+        </div>
         <div class="property entity" id="currentVirtualLocation">
           <h3>current virtual location
             <sup class="sup-dp" title="OWL Datatype Property">dp</sup>
@@ -6415,7 +7282,7 @@ td {
               <th>
                 <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
               </th>
-              <td><p>The current virtual place an electronic economic resource is located.</p></td>
+              <td><p>The current virtual place a digital economic resource is located. Usually used for documents, code, or other electronic resource.</p></td>
             </tr>
             <tr>
               <th>
@@ -6460,10 +7327,10 @@ td {
                 <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Domain</a>
               </th>
               <td><span>
-  <a href="#Commitment">Commitment</a>
+  <a href="#Intent">Intent</a>
   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
 </span> <span class="cardinality">or</span> <span>
-  <a href="#Intent">Intent</a>
+  <a href="#Commitment">Commitment</a>
   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
 </span> <span class="cardinality">or</span> <span>
   <a href="#Plan">Plan</a>
@@ -6543,13 +7410,13 @@ td {
                 <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Domain</a>
               </th>
               <td><span>
-  <a href="#Process">Process</a>
+  <a href="#Commitment">Commitment</a>
   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
 </span> <span class="cardinality">or</span> <span>
   <a href="#Claim">Claim</a>
   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
 </span> <span class="cardinality">or</span> <span>
-  <a href="#Commitment">Commitment</a>
+  <a href="#Process">Process</a>
   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
 </span> <span class="cardinality">or</span> <span>
   <a href="#Intent">Intent</a>
@@ -6585,34 +7452,35 @@ td {
             </tr>
             <tr>
               <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Domain</a>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subPropertyOf" title="The subject is a subproperty of a property. Defined in The RDF Schema vocabulary (RDFS)">Sub Property Of</a>
               </th>
               <td>
-                <ul>
-                  <li><span>
-  <a href="#Scenario">Scenario</a>
-  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-</span> <span class="cardinality">or</span> <span>
+                <a href="http://www.w3.org/2006/time#hasBeginning">time:hasBeginning</a>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Domain</a>
+              </th>
+              <td><span>
   <a href="#Intent">Intent</a>
-  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-</span> <span class="cardinality">or</span> <span>
-  <a href="#EconomicEvent">Economic Event</a>
-  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-</span> <span class="cardinality">or</span> <span>
-  <a href="#Proposal">Proposal</a>
   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
 </span> <span class="cardinality">or</span> <span>
   <a href="#Process">Process</a>
   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
 </span> <span class="cardinality">or</span> <span>
+  <a href="#Proposal">Proposal</a>
+  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+</span> <span class="cardinality">or</span> <span>
+  <a href="#EconomicEvent">Economic Event</a>
+  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+</span> <span class="cardinality">or</span> <span>
+  <a href="#Scenario">Scenario</a>
+  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+</span> <span class="cardinality">or</span> <span>
   <a href="#Commitment">Commitment</a>
   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-</span></li>
-                  <li>
-                    <a href="http://www.w3.org/2006/time#TemporalEntity">time:TemporalEntity</a>
-                  </li>
-                </ul>
-              </td>
+</span></td>
             </tr>
             <tr>
               <th>
@@ -6643,34 +7511,35 @@ td {
             </tr>
             <tr>
               <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Domain</a>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subPropertyOf" title="The subject is a subproperty of a property. Defined in The RDF Schema vocabulary (RDFS)">Sub Property Of</a>
               </th>
               <td>
-                <ul>
-                  <li><span>
-  <a href="#Scenario">Scenario</a>
-  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-</span> <span class="cardinality">or</span> <span>
+                <a href="http://www.w3.org/2006/time#hasEnd">time:hasEnd</a>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Domain</a>
+              </th>
+              <td><span>
   <a href="#Intent">Intent</a>
-  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-</span> <span class="cardinality">or</span> <span>
-  <a href="#Proposal">Proposal</a>
   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
 </span> <span class="cardinality">or</span> <span>
   <a href="#Process">Process</a>
   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
 </span> <span class="cardinality">or</span> <span>
+  <a href="#Scenario">Scenario</a>
+  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+</span> <span class="cardinality">or</span> <span>
   <a href="#Commitment">Commitment</a>
+  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+</span> <span class="cardinality">or</span> <span>
+  <a href="#Proposal">Proposal</a>
   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
 </span> <span class="cardinality">or</span> <span>
   <a href="#EconomicEvent">Economic Event</a>
   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-</span></li>
-                  <li>
-                    <a href="http://www.w3.org/2006/time#TemporalEntity">time:TemporalEntity</a>
-                  </li>
-                </ul>
-              </td>
+</span></td>
             </tr>
             <tr>
               <th>
@@ -6678,6 +7547,52 @@ td {
               </th>
               <td>
                 <a href="http://www.w3.org/2001/XMLSchema#dateTimeStamp">xsd:dateTimeStamp</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="hasNumericalValue">
+          <h3>has numerical value
+            <sup class="sup-dp" title="OWL Datatype Property">dp</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://w3id.org/valueflows/ont/vf#hasNumericalValue</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
+              </th>
+              <td><p>A numeric amount.</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subPropertyOf" title="The subject is a subproperty of a property. Defined in The RDF Schema vocabulary (RDFS)">Sub Property Of</a>
+              </th>
+              <td>
+                <a href="http://www.ontology-of-units-of-measure.org/resource/om-2/hasNumericalValue">http://www.ontology-of-units-of-measure.org/resource/om-2/hasNumericalValue</a>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Domain</a>
+              </th>
+              <td>
+                <span>
+                  <a href="#Unit">Unit</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range" title="A range of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Range</a>
+              </th>
+              <td>
+                <a href="http://www.linkedmodel.org/schema/dtype#numericUnion">http://www.linkedmodel.org/schema/dtype#numericUnion</a>
               </td>
             </tr>
           </table>
@@ -6701,25 +7616,26 @@ td {
             </tr>
             <tr>
               <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Domain</a>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subPropertyOf" title="The subject is a subproperty of a property. Defined in The RDF Schema vocabulary (RDFS)">Sub Property Of</a>
               </th>
               <td>
-                <ul>
-                  <li><span>
-  <a href="#EconomicEvent">Economic Event</a>
+                <a href="http://www.w3.org/2006/time#inXSDDateTimeStamp">time:inXSDDateTimeStamp</a>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Domain</a>
+              </th>
+              <td><span>
+  <a href="#Commitment">Commitment</a>
   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
 </span> <span class="cardinality">or</span> <span>
   <a href="#Intent">Intent</a>
   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
 </span> <span class="cardinality">or</span> <span>
-  <a href="#Commitment">Commitment</a>
+  <a href="#EconomicEvent">Economic Event</a>
   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-</span></li>
-                  <li>
-                    <a href="http://www.w3.org/2006/time#Instant">time:Instant</a>
-                  </li>
-                </ul>
-              </td>
+</span></td>
             </tr>
             <tr>
               <th>
@@ -6753,25 +7669,25 @@ td {
                 <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Domain</a>
               </th>
               <td><span>
-  <a href="#ResourceSpecification">Resource Specification</a>
-  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-</span> <span class="cardinality">or</span> <span>
   <a href="#ProcessSpecification">Process Specification</a>
-  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-</span> <span class="cardinality">or</span> <span>
-  <a href="#EconomicEvent">Economic Event</a>
-  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-</span> <span class="cardinality">or</span> <span>
-  <a href="#Agent">Agent</a>
-  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-</span> <span class="cardinality">or</span> <span>
-  <a href="#RecipeProcess">Recipe Process</a>
   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
 </span> <span class="cardinality">or</span> <span>
   <a href="#EconomicResource">Economic Resource</a>
   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
 </span> <span class="cardinality">or</span> <span>
+  <a href="#ResourceSpecification">Resource Specification</a>
+  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+</span> <span class="cardinality">or</span> <span>
+  <a href="#EconomicEvent">Economic Event</a>
+  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+</span> <span class="cardinality">or</span> <span>
   <a href="#Intent">Intent</a>
+  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+</span> <span class="cardinality">or</span> <span>
+  <a href="#RecipeProcess">Recipe Process</a>
+  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+</span> <span class="cardinality">or</span> <span>
+  <a href="#Agent">Agent</a>
   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
 </span></td>
             </tr>
@@ -6807,10 +7723,10 @@ td {
                 <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Domain</a>
               </th>
               <td><span>
-  <a href="#EconomicResource">Economic Resource</a>
+  <a href="#ResourceSpecification">Resource Specification</a>
   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
 </span> <span class="cardinality">or</span> <span>
-  <a href="#ResourceSpecification">Resource Specification</a>
+  <a href="#EconomicResource">Economic Resource</a>
   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
 </span> <span class="cardinality">or</span> <span>
   <a href="#Intent">Intent</a>
@@ -6865,29 +7781,40 @@ td {
             </tr>
           </table>
         </div>
-        <div class="property entity" id="unitlocallabel">
-          <h3>unit local label
+        <div class="property entity" id="lat">
+          <h3>lat
             <sup class="sup-dp" title="OWL Datatype Property">dp</sup>
           </h3>
           <table>
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#localLabel</code>
+                <code>https://w3id.org/valueflows/ont/vf#lat</code>
               </td>
             </tr>
             <tr>
               <th>
                 <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
               </th>
-              <td><p>An override label to optionally display for units of measure.</p></td>
+              <td><p>The WGS84 latitude of a spatial thing (decimal degrees).</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subPropertyOf" title="The subject is a subproperty of a property. Defined in The RDF Schema vocabulary (RDFS)">Sub Property Of</a>
+              </th>
+              <td>
+                <a href="http://www.w3.org/2003/01/geo/wgs84_pos#lat">http://www.w3.org/2003/01/geo/wgs84_pos#lat</a>
+              </td>
             </tr>
             <tr>
               <th>
                 <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Domain</a>
               </th>
               <td>
-                <a href="http://www.ontology-of-units-of-measure.org/resource/om-2/Unit">http://www.ontology-of-units-of-measure.org/resource/om-2/Unit</a>
+                <span>
+                  <a href="#SpatialThing">Spatial Thing</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
               </td>
             </tr>
             <tr>
@@ -6895,34 +7822,45 @@ td {
                 <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range" title="A range of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Range</a>
               </th>
               <td>
-                <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a>
+                <a href="http://www.linkedmodel.org/schema/dtype#numericUnion">http://www.linkedmodel.org/schema/dtype#numericUnion</a>
               </td>
             </tr>
           </table>
         </div>
-        <div class="property entity" id="unitlocalsymbol">
-          <h3>unit local symbol
+        <div class="property entity" id="long">
+          <h3>long
             <sup class="sup-dp" title="OWL Datatype Property">dp</sup>
           </h3>
           <table>
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#localSymbol</code>
+                <code>https://w3id.org/valueflows/ont/vf#long</code>
               </td>
             </tr>
             <tr>
               <th>
                 <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
               </th>
-              <td><p>An override symbol to optionally display for units of measure.</p></td>
+              <td><p>The WGS84 longitude of a spatial thing (decimal degrees).</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subPropertyOf" title="The subject is a subproperty of a property. Defined in The RDF Schema vocabulary (RDFS)">Sub Property Of</a>
+              </th>
+              <td>
+                <a href="http://www.w3.org/2003/01/geo/wgs84_pos#long">http://www.w3.org/2003/01/geo/wgs84_pos#long</a>
+              </td>
             </tr>
             <tr>
               <th>
                 <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Domain</a>
               </th>
               <td>
-                <a href="http://www.ontology-of-units-of-measure.org/resource/om-2/Unit">http://www.ontology-of-units-of-measure.org/resource/om-2/Unit</a>
+                <span>
+                  <a href="#SpatialThing">Spatial Thing</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
               </td>
             </tr>
             <tr>
@@ -6930,12 +7868,12 @@ td {
                 <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range" title="A range of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Range</a>
               </th>
               <td>
-                <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a>
+                <a href="http://www.linkedmodel.org/schema/dtype#numericUnion">http://www.linkedmodel.org/schema/dtype#numericUnion</a>
               </td>
             </tr>
           </table>
         </div>
-        <div class="property entity" id="mappableaddress">
+        <div class="property entity" id="mappableAddress">
           <h3>mappable address
             <sup class="sup-dp" title="OWL Datatype Property">dp</sup>
           </h3>
@@ -6957,7 +7895,10 @@ td {
                 <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Domain</a>
               </th>
               <td>
-                <a href="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing">http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing</a>
+                <span>
+                  <a href="#SpatialThing">Spatial Thing</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
               </td>
             </tr>
             <tr>
@@ -6992,22 +7933,16 @@ td {
                 <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Domain</a>
               </th>
               <td><span>
-  <a href="#Agreement">Agreement</a>
+  <a href="#Proposal">Proposal</a>
   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
 </span> <span class="cardinality">or</span> <span>
-  <a href="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing">http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing</a>
-  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-</span> <span class="cardinality">or</span> <span>
-  <a href="#EconomicResource">Economic Resource</a>
-  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-</span> <span class="cardinality">or</span> <span>
-  <a href="#Agent">Agent</a>
+  <a href="#RecipeGroup">Recipe Group</a>
   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
 </span> <span class="cardinality">or</span> <span>
   <a href="#Process">Process</a>
   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
 </span> <span class="cardinality">or</span> <span>
-  <a href="#ResourceSpecification">Resource Specification</a>
+  <a href="#RecipeProcess">Recipe Process</a>
   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
 </span> <span class="cardinality">or</span> <span>
   <a href="#RoleBehavior">Role Behavior</a>
@@ -7016,19 +7951,31 @@ td {
   <a href="#Scenario">Scenario</a>
   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
 </span> <span class="cardinality">or</span> <span>
-  <a href="#ProcessSpecification">Process Specification</a>
-  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-</span> <span class="cardinality">or</span> <span>
-  <a href="#Proposal">Proposal</a>
-  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-</span> <span class="cardinality">or</span> <span>
-  <a href="#RecipeProcess">Recipe Process</a>
+  <a href="#Agent">Agent</a>
   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
 </span> <span class="cardinality">or</span> <span>
   <a href="#ScenarioDefinition">Scenario Definition</a>
   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
 </span> <span class="cardinality">or</span> <span>
+  <a href="#Agreement">Agreement</a>
+  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+</span> <span class="cardinality">or</span> <span>
+  <a href="#SpatialThing">Spatial Thing</a>
+  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+</span> <span class="cardinality">or</span> <span>
   <a href="#Plan">Plan</a>
+  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+</span> <span class="cardinality">or</span> <span>
+  <a href="#Recipe">Recipe</a>
+  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+</span> <span class="cardinality">or</span> <span>
+  <a href="#ProcessSpecification">Process Specification</a>
+  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+</span> <span class="cardinality">or</span> <span>
+  <a href="#ResourceSpecification">Resource Specification</a>
+  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+</span> <span class="cardinality">or</span> <span>
+  <a href="#EconomicResource">Economic Resource</a>
   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
 </span></td>
             </tr>
@@ -7194,34 +8141,31 @@ td {
             </tr>
           </table>
         </div>
-        <div class="property entity" id="uri">
-          <h3>uri
-            <sup class="sup-dp" title="OWL Datatype Property">dp</sup>
-          </h3>
-          <table>
-            <tr>
-              <th>IRI</th>
-              <td>
-                <code>https://w3id.org/valueflows/ont/vf#uri</code>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
-              </th>
-              <td><p>The web address relevant to the entity.</p></td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range" title="A range of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Range</a>
-              </th>
-              <td>
-                <a href="http://www.w3.org/2001/XMLSchema#anyURI">xsd:anyURI</a>
-              </td>
-            </tr>
-          </table>
-        </div>
       </div>
+      <span>
+        <a href="#Agreement">Agreement</a>
+        <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+      </span>
+      <span>
+        <a href="#Claim">Claim</a>
+        <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+      </span>
+      <span>
+        <a href="#Commitment">Commitment</a>
+        <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+      </span>
+      <span>
+        <a href="#Plan">Plan</a>
+        <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+      </span>
+      <span>
+        <a href="#Proposal">Proposal</a>
+        <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+      </span>
+      <span>
+        <a href="#EconomicEvent">Economic Event</a>
+        <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+      </span>
       <span>
         <a href="#Plan">Plan</a>
         <sup class="sup-c" title="OWL/RDFS Class">c</sup>
@@ -7355,7 +8299,7 @@ td {
         <sup class="sup-c" title="OWL/RDFS Class">c</sup>
       </span>
       <span>
-        <a href="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing">http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing</a>
+        <a href="#SpatialThing">Spatial Thing</a>
         <sup class="sup-c" title="OWL/RDFS Class">c</sup>
       </span>
       <span>
@@ -7387,6 +8331,14 @@ td {
         <sup class="sup-c" title="OWL/RDFS Class">c</sup>
       </span>
       <span>
+        <a href="#Recipe">Recipe</a>
+        <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+      </span>
+      <span>
+        <a href="#RecipeGroup">Recipe Group</a>
+        <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+      </span>
+      <span>
         <a href="#RecipeProcess">Recipe Process</a>
         <sup class="sup-c" title="OWL/RDFS Class">c</sup>
       </span>
@@ -7413,9 +8365,17 @@ td {
           <dd>
             <code>http://purl.org/dc/terms/</code>
           </dd>
-          <dt id="ns1">ns1</dt>
+          <dt id="foaf">foaf</dt>
           <dd>
-            <code>https://w3id.org/valueflows/ont/</code>
+            <code>http://xmlns.com/foaf/0.1/</code>
+          </dd>
+          <dt id="geo">geo</dt>
+          <dd>
+            <code>http://www.opengis.net/ont/geosparql#</code>
+          </dd>
+          <dt id="org">org</dt>
+          <dd>
+            <code>http://www.w3.org/ns/org#</code>
           </dd>
           <dt id="owl">owl</dt>
           <dd>
@@ -7436,6 +8396,10 @@ td {
           <dt id="time">time</dt>
           <dd>
             <code>http://www.w3.org/2006/time#</code>
+          </dd>
+          <dt id="vann">vann</dt>
+          <dd>
+            <code>http://purl.org/vocab/vann/</code>
           </dd>
           <dt id="xsd">xsd</dt>
           <dd>
@@ -7474,7 +8438,7 @@ td {
           <span id="y">y</span>
           <span>LODE</span>
         </a>
-        <a href="https://github.com/rdflib/pyLODE/release/3.0.6a" id="version">3.0.6a</a>
+        <a href="https://github.com/rdflib/pyLODE/release/3.1.4" id="version">3.1.4</a>
         <span> with the </span>
         <a href="https://w3id.org/profile/ontpub" id="profile">OntPub</a>
         <span>profile</span>
@@ -7554,6 +8518,9 @@ td {
               <a href="#LocationEffect">Location Effect</a>
             </li>
             <li>
+              <a href="#Measure">Measure</a>
+            </li>
+            <li>
               <a href="#OnhandEffect">Onhand Effect</a>
             </li>
             <li>
@@ -7581,10 +8548,16 @@ td {
               <a href="#ProposalPurpose">Proposal Purpose</a>
             </li>
             <li>
+              <a href="#Recipe">Recipe</a>
+            </li>
+            <li>
               <a href="#RecipeExchange">Recipe Exchange</a>
             </li>
             <li>
               <a href="#RecipeFlow">Recipe Flow</a>
+            </li>
+            <li>
+              <a href="#RecipeGroup">Recipe Group</a>
             </li>
             <li>
               <a href="#RecipeProcess">Recipe Process</a>
@@ -7602,10 +8575,16 @@ td {
               <a href="#ScenarioDefinition">Scenario Definition</a>
             </li>
             <li>
+              <a href="#SpatialThing">Spatial Thing</a>
+            </li>
+            <li>
               <a href="#StageEffect">Stage Effect</a>
             </li>
             <li>
               <a href="#StateEffect">State Effect</a>
+            </li>
+            <li>
+              <a href="#Unit">Unit</a>
             </li>
           </ul>
         </li>
@@ -7633,7 +8612,7 @@ td {
               <a href="#appreciationWith">appreciation with</a>
             </li>
             <li>
-              <a href="#atlocation">at location</a>
+              <a href="#atLocation">at location</a>
             </li>
             <li>
               <a href="#availableQuantity">available quantity</a>
@@ -7681,7 +8660,7 @@ td {
               <a href="#definedAs">defined as</a>
             </li>
             <li>
-              <a href="#effortquantity">effort quantity</a>
+              <a href="#effortQuantity">effort quantity</a>
             </li>
             <li>
               <a href="#eligibleLocation">eligible location</a>
@@ -7691,6 +8670,12 @@ td {
             </li>
             <li>
               <a href="#fulfills">fulfills</a>
+            </li>
+            <li>
+              <a href="#hasDetailedGeometry">currency address</a>
+            </li>
+            <li>
+              <a href="#hasDuration">has duration</a>
             </li>
             <li>
               <a href="#hasIndependentDemand">has independent demand</a>
@@ -7706,6 +8691,9 @@ td {
             </li>
             <li>
               <a href="#hasRecipeOutput">has recipe output</a>
+            </li>
+            <li>
+              <a href="#hasUnit">has unit</a>
             </li>
             <li>
               <a href="#inScopeOf">in scope of</a>
@@ -7753,6 +8741,9 @@ td {
               <a href="#planIncludes">plan includes</a>
             </li>
             <li>
+              <a href="#plannedTogether">planned together</a>
+            </li>
+            <li>
               <a href="#plannedWithin">planned within</a>
             </li>
             <li>
@@ -7760,6 +8751,9 @@ td {
             </li>
             <li>
               <a href="#primaryLocation">primary location</a>
+            </li>
+            <li>
+              <a href="#primaryOutput">primary output</a>
             </li>
             <li>
               <a href="#processClassifiedAs">process classified as</a>
@@ -7793,6 +8787,9 @@ td {
             </li>
             <li>
               <a href="#recipeClauseOf">recipe clause of</a>
+            </li>
+            <li>
+              <a href="#recipeIncludes">recipe includes</a>
             </li>
             <li>
               <a href="#recipeInputOf">recipe input of</a>
@@ -7834,7 +8831,7 @@ td {
               <a href="#resourceInventoriedAs">resource inventoried as</a>
             </li>
             <li>
-              <a href="#resourcequantity">resource quantity</a>
+              <a href="#resourceQuantity">resource quantity</a>
             </li>
             <li>
               <a href="#roleBehavior">role behavior</a>
@@ -7886,6 +8883,15 @@ td {
           </h4>
           <ul class="second">
             <li>
+              <a href="#alt">alt</a>
+            </li>
+            <li>
+              <a href="#created">created</a>
+            </li>
+            <li>
+              <a href="#currentCurrencyLocation">current currency location</a>
+            </li>
+            <li>
               <a href="#currentVirtualLocation">current virtual location</a>
             </li>
             <li>
@@ -7904,6 +8910,9 @@ td {
               <a href="#hasend">has end</a>
             </li>
             <li>
+              <a href="#hasNumericalValue">has numerical value</a>
+            </li>
+            <li>
               <a href="#haspointintime">has point in time</a>
             </li>
             <li>
@@ -7916,13 +8925,13 @@ td {
               <a href="#inverseRoleLabel">inverse role label</a>
             </li>
             <li>
-              <a href="#unitlocallabel">unit local label</a>
+              <a href="#lat">lat</a>
             </li>
             <li>
-              <a href="#unitlocalsymbol">unit local symbol</a>
+              <a href="#long">long</a>
             </li>
             <li>
-              <a href="#mappableaddress">mappable address</a>
+              <a href="#mappableAddress">mappable address</a>
             </li>
             <li>
               <a href="#name">name</a>
@@ -7939,9 +8948,6 @@ td {
             <li>
               <a href="#unitBased">unit based</a>
             </li>
-            <li>
-              <a href="#uri">uri</a>
-            </li>
           </ul>
         </li>
         <li>
@@ -7953,7 +8959,13 @@ td {
               <a href="#dcterms">dcterms</a>
             </li>
             <li>
-              <a href="#ns1">ns1</a>
+              <a href="#foaf">foaf</a>
+            </li>
+            <li>
+              <a href="#geo">geo</a>
+            </li>
+            <li>
+              <a href="#org">org</a>
             </li>
             <li>
               <a href="#owl">owl</a>
@@ -7969,6 +8981,9 @@ td {
             </li>
             <li>
               <a href="#time">time</a>
+            </li>
+            <li>
+              <a href="#vann">vann</a>
             </li>
             <li>
               <a href="#xsd">xsd</a>

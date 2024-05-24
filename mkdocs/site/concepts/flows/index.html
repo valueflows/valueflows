@@ -555,7 +555,7 @@
   
     <li class="md-nav__item">
       <a href="../../specification/external-terms/" class="md-nav__link">
-        Unit, Quantity, Time, Location
+        Use of Other Vocabularies
       </a>
     </li>
   
@@ -1706,9 +1706,9 @@
 </ul>
 <p>Quantities can be any needed unit of measure, including counts, volumes, weights, etc.  Time can be a beginning/end time (an interval), or a point in time, or a due date.  The flows require at least one of those.  If a point in time is recorded, an application should return that time as the beginning and end time if asked.</p>
 <p>Note that recipes may need to scale both quantities and calendar times when used to create a plan.</p>
-<p>Sometimes a quantity is expressed in time-based units, like "I worked 6 hours", or "we used this machine for 8 hours".  These flows also will have a related time, like "I worked from 10am to 4pm", or "we used this machine from 8am to 4pm". In these examples, the quantity is used for accounting figures, exchange, recipes.  The time is used to schedule and coordinate the work or machine usage.</p>
+<p>Sometimes a quantity is expressed in time-based units, like "I worked 6 hours", or "we used this machine for 8 hours".  These flows also may have a related time, like "I worked from 10am to 4pm", or "we used this machine from 8am to 4pm". In these examples, the quantity is used for accounting figures, exchange, recipes.  The time is used to schedule and coordinate the work or machine usage.</p>
 <p>Sometimes a situation may call for a "compound quantity", like "Number-per-Year".</p>
-<p>See also <a href="../../specification/units/">the Units page</a>.</p>
+<p>See also at <a href="../../specification/external-terms/">Use of Other Vocabularies</a>.</p>
 <h2 id="correcting-events">Correcting Events</h2>
 <p>Economic events are immutable in accounting practice, since at any time they could have been reported formally.  Do correct an economic event, you need another economic event, which can be related to the first one with the relationship <code>corrects</code>.  The correcting event can have a negative number.  It can either completely back out the original event or adjust it.</p>
 

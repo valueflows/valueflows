@@ -19,7 +19,7 @@
     
     
       
-        <title>Unit, Quantity, Time, Location - Valueflows</title>
+        <title>Use of Other Vocabularies - Valueflows</title>
       
     
     
@@ -69,7 +69,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#relations-to-other-namespaces" class="md-skip">
+        <a href="#use-of-other-vocabularies" class="md-skip">
           Skip to content
         </a>
       
@@ -103,7 +103,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Unit, Quantity, Time, Location
+              Use of Other Vocabularies
             
           </span>
         </div>
@@ -566,12 +566,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Unit, Quantity, Time, Location
+          Use of Other Vocabularies
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Unit, Quantity, Time, Location
+        Use of Other Vocabularies
       </a>
       
         
@@ -626,8 +626,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#quantities" class="md-nav__link">
-    Quantities
+  <a href="#quantities-and-durations" class="md-nav__link">
+    Quantities and Durations
   </a>
   
 </li>
@@ -647,8 +647,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#additional-elements" class="md-nav__link">
-    Additional elements
+  <a href="#elements-not-included-in-vf" class="md-nav__link">
+    Elements not included in VF
   </a>
   
 </li>
@@ -1538,8 +1538,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#quantities" class="md-nav__link">
-    Quantities
+  <a href="#quantities-and-durations" class="md-nav__link">
+    Quantities and Durations
   </a>
   
 </li>
@@ -1559,8 +1559,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#additional-elements" class="md-nav__link">
-    Additional elements
+  <a href="#elements-not-included-in-vf" class="md-nav__link">
+    Elements not included in VF
   </a>
   
 </li>
@@ -1581,27 +1581,24 @@
 
 
 
-<h1 id="relations-to-other-namespaces">Relations to Other Namespaces</h1>
-<p><strong>UNDER CONSTRUCTION</strong></p>
+<h1 id="use-of-other-vocabularies">Use of Other Vocabularies</h1>
 <h2 id="units-of-measure">Units of Measure</h2>
 <p>Using agreed upon standard units will facilitate network interoperability into the future.  Valueflows uses the units of measure from <a href="https://github.com/HajoRijgersberg/OM">the OM2 vocabulary</a>.  Here is the <a href="https://raw.githubusercontent.com/HajoRijgersberg/OM/master/om-2.0.rdf">complete rdf reference for OM2</a>, which undergoes occasional update by the maintainers.  Here is the <a href="http://www.ontology-of-units-of-measure.org/resource/om-2/Unit">same reference with a user interface</a>.</p>
-<p>The OM2 vocabulary contains thousands of units of measure.  This scientific background seems to be the usual case for the unit of measure vocabularies.</p>
+<p>The OM2 vocabulary contains thousands of units of measure.  It includes all the commonly used units of measure for business use, as well as scientific units, both common and obscure.</p>
 <h3 id="quantities-and-units">Quantities and units</h3>
+<p>OM2 also has a quantity called Measure, including both the numeric amount and the unit of measure.</p>
 <p><a href="http://www.ontology-of-units-of-measure.org/resource/om-2/">http://www.ontology-of-units-of-measure.org/resource/om-2/</a></p>
 <ul>
-<li><a href="http://www.ontology-of-units-of-measure.org/resource/om-2/Measure"><code>om2:Measure</code></a></li>
-<li><a href="http://www.ontology-of-units-of-measure.org/resource/om-2/hasUnit"><code>om2:hasUnit</code></a></li>
-<li>
-<p><a href="http://www.ontology-of-units-of-measure.org/resource/om-2/hasNumericalValue"><code>om2:hasNumericalValue</code></a></p>
+<li><a href="http://www.ontology-of-units-of-measure.org/resource/om-2/Measure"><code>om:Measure</code></a><ul>
+<li><a href="http://www.ontology-of-units-of-measure.org/resource/om-2/hasUnit"><code>om:hasUnit</code></a><ul>
+<li><a href="http://www.ontology-of-units-of-measure.org/resource/om-2/Unit"><code>om:Unit</code></a></li>
+</ul>
 </li>
-<li>
-<p><a href="http://www.ontology-of-units-of-measure.org/resource/om-2/Unit"><code>om2:Unit</code></a></p>
-<ul>
-<li>See the page also in this section called Units of Measure.</li>
-<li>VF will use (at least) <code>rdfs:label</code> and <code>om2:symbol</code> as properties of Unit.</li>
+<li><a href="http://www.ontology-of-units-of-measure.org/resource/om-2/hasNumericalValue"><code>om:hasNumericalValue</code></a></li>
 </ul>
 </li>
 </ul>
+<p>Valueflows has created this same structure within our namespace, and added some additional properties for flexible labeling for business users.  VF's Unit also has a OM unit identifier, referencing back to OM for cross-network unique identification of the units.</p>
 <h3 id="application-units-of-measure">Application units of measure</h3>
 <p>We expect that user applications will choose a much smaller subset of these standard units, and probably maintain them separately.</p>
 <p>To facilitate this, a <a href="https://lab.allmende.io/valueflows/valueflows/-/blob/master/units/units-en-useful.csv">csv file of units</a> has been extracted from OM2 to make it easier for user groups to choose their set of standard units.  Since OM2 is still in active development, this file will gradually become out of date, but we expect added units to be newer scientific units not usually used in economic applications.</p>
@@ -1612,32 +1609,30 @@
 <li>Label from OM2 for the unit.</li>
 <li>Symbol from OM2 for the unit.</li>
 <li>Description from OM2.</li>
-<li>Classification(s), added by us (not from OM), to facilitate search in the csv file, or in an application (if one is created) for groups to choose their units.  This column is incomplete, possibly not the best granularity, and in some places possibly wrong.  Updates are welcome!</li>
+<li>Classification(s), added by us (not from OM), to facilitate search in the csv file, or in an application (if one is created) for groups to choose their units.  This column is incomplete, possibly not the best granularity, and in some places possibly wrong.  It is experimental, updates are welcome!</li>
 </ul>
 <h3 id="overriding-the-om-label-or-symbol">Overriding the OM label or symbol</h3>
-<p>We have added 2 properties in VF as optional additions to the OM2 unit, <code>localLabel</code> and <code>localSymbol</code>.  These are meant for applications to assign themselves, when the normal display usage for their set of users is different than the OM2.  For example, an application might want to use <code>pound</code> instead of <code>pound (avoirdupois)</code>, or <code>gallon</code> instead of <code>gallon (US)</code> or <code>gallon (imperial)</code>.</p>
+<p>We have added 2 properties in VF as optional additions to the OM2 unit, <code>overrideLabel</code> and <code>overrideSymbol</code>.  These are meant for applications to assign for themselves, when the normal display usage for their set of users is different than the OM2.  For example, an application might want to use <code>pound</code> instead of <code>pound (avoirdupois)</code>, or <code>gallon</code> instead of <code>gallon (US)</code> or <code>gallon (imperial)</code>.</p>
 <p>Perhaps the most frequent use of the override is the unit <code>one</code>.  This indicates a generic one dimensional unit from the scientific perspective, which in an economic application might be called <code>each</code>, <code>piece</code>, <code>count</code>, <code>number</code> or similar, or just left off of a user interface or report.  Some applications might even want to use more than one of these local labels. But for interoperability, any of these overrides should reference back to OM2:one.</p>
 <p>See <a href="https://lab.allmende.io/valueflows/valueflows/-/tree/master/units/">this directory about units</a> for other potentially useful artifacts.</p>
-<h2 id="quantities">Quantities</h2>
+<h2 id="quantities-and-durations">Quantities and Durations</h2>
+<p>As noted above, we are using <code>vf:Measure</code>, subclass of <code>om:Measure</code>, for the quantity properties in VF.</p>
+<p>We decided to also use <code>vf:Measure</code> for durations, since OM2 has the time-based units needed for durations, as well as a Duration subclass of Unit.  The thinking is that simplicity and consistent naming are more important than the ability to map directly to the owl:time vocabulary for durations.</p>
 <h2 id="times">Times</h2>
-<p>https://www.w3.org/TR/owl-time/#time:TemporalUnit</p>
-<p>Ten individual members of :TemporalUnit are included in the ontology, corresponding to the elements of the standard calendar-clock: :unitYear, :unitMonth, :unitWeek, :unitDay, :unitHour, :unitMinute and :unitSecond, as well as :unitDecade, :unitCentury and :unitMillenium to support historical and archeological applications.</p>
-<p><a href="https://www.w3.org/TR/owl-time">https://www.w3.org/TR/owl-time</a></p>
-<p>Some useful constructs, others here: https://www.w3.org/TR/owl-time/#topology, see the Interval Relations.</p>
-<ul>
-<li><a href="https://www.w3.org/TR/owl-time/#time:inXSDDateTimeStamp"><code>time:inXSDDateTimeStamp</code></a></li>
-<li><a href="https://www.w3.org/TR/owl-time/#time:hasDuration"><code>time:hasDuration</code></a></li>
-<li><a href="https://www.w3.org/TR/owl-time/#time:before"><code>time:before</code></a></li>
-<li><a href="https://www.w3.org/TR/owl-time/#time:after"><code>time:after</code></a></li>
-<li><a href="https://www.w3.org/TR/owl-time/#time:intervalDuring"><code>time:intervalDuring</code></a></li>
-</ul>
-<p><code>vf</code> defines property chain axioms for <code>vf:hasBeginning</code> , <code>vf:hasEnd</code>, and <code>vf:hasPointInTime</code> as slight variant
-of <a href="https://www.w3.org/TR/owl-time/#time-prov">Alignment of PROV-O with OWL-Time</a>.</p>
+<p>See also <a href="../../concepts/flows/#quantities-and-times">Flows Concepts: Quantities and Times</a>.</p>
+<p>VF times are inspired by <a href="https://www.w3.org/TR/owl-time">the owl:time ontology</a>, but we have much more limited needs.  We decided to pull them into the VF namespace, rather than directly referencing owl:time.  Specifically we decided not to <a href="https://www.w3.org/TR/owl-time/#time-prov">map them as is done for the PROV-O ontology</a>. But owl:time does support many time constructs and comparisons that may be useful for people, such as below.</p>
+<p><img alt="diagram of owl:time interval relations" src="../../assets/IntervalRelations.png" /></p>
+<p>In terms of durations, although owl:time includes the duration concept, we are using OM, as noted above.</p>
 <h2 id="locations">Locations</h2>
-<p><a href="https://www.w3.org/2003/01/geo/wgs84_pos#">https://www.w3.org/2003/01/geo/wgs84_pos#</a></p>
-<h2 id="additional-elements">Additional elements</h2>
-<p>Note also that for specific global identifiers such as GTIN, we recommend using properties of the <a href="http://www.heppnetz.de/ontologies/goodrelations/v1.html#ProductOrServiceModel">GoodRelations ProductOrServiceModel</a>.</p>
-<p>org:Organization</p>
+<p>See also <a href="../../concepts/location">Location Concepts</a>.</p>
+<p>Currently there is not a unified standard location vocabulary, due to the varied historical development of these standards.</p>
+<p>Our location data is a compromise between basic needs (latitude, longitude, and altitude), subclassed from the <a href="https://www.w3.org/2003/01/geo/wgs84_pos#">Basic Geo Vocabulary (WGS84)</a>, and more complex needs, for which we include a data reference to the extensive Geography information of the <a href="https://docs.ogc.org/is/22-047r1/22-047r1.html#_b3644674-c6c7-4971-b600-a24d2bda0e01">GEOSPARQL Specification</a>.</p>
+<p>For more information on the current state of specification of spatial data, one reference is the <a href="https://www.w3.org/TR/sdw-bp/">Spatial Data on the Web Best Practices</a>.</p>
+<h2 id="elements-not-included-in-vf">Elements not included in VF</h2>
+<p>Valueflows is a generic vocabulary, and does not contain many domain-specific properties beyond those needed for coordinating economic value flows.  So it will be normal to use additional elements, hopefully from another standard.</p>
+<p>For example, there are no food or bicycle specific elements.  Much of this can be handled by the user-definable ResourceSpecification and ProcessSpecificaion. Applications might also want to consider using a faceted classification structure for this purpose.</p>
+<p>There are also only minimal properties for classes that are on the "edge" of the vocabulary, and which have other more complete sets of properties elsewhere.  For example, <code>Agent</code> is very sparse, and some applications might want more contact information, etc.  <code>EconomicResource</code> has many identifiers that are industry specific (like GTIN) which applications might want to include.  We are using <code>rdfs:seeAlso</code> to provide helpful sources for those kinds of elements.  In addition, anything that is a <code>rdfs:subClassOf</code> a class from another vocabulary can inherit its properties.</p>
+<p>We also welcome proposed additions!  See the <a href="../..">Home page</a> for how to request additions and changes.</p>
 
 
 
