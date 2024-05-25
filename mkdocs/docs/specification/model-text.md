@@ -47,17 +47,19 @@ More flow info at [Flows concepts](../concepts/flows.md), [Actions concepts](../
 
 An Action specifies the type of flow and what the flow will do or has done. EconomicEvent, Commitment, Intent, Claim, RecipeFlow have an Action.  Actions are specified in Valueflows to cover the various ways flows affect resources.  Actions have properties defined that can drive the code logic to create or change EconomicResources when EconomicEvents are recorded, if desired.
 
-#### geo:SpatialThing
+#### vf:SpatialThing
 
-Location, represented by SpatialThing, is not used by itself in Valueflows, although it can stand on its own if needed. It is primarily used for mapping. Although the relationships are not shown in the above diagram, the following are a SpatialThing: in EconomicResource, currentLocation; in Agent, primaryLocation; in EconomicEvent, Commitment, Intent, atLocation; and in EconomicEvent, toLocation.
+Physical location, represented by SpatialThing, is mostly used as part of the information about agents, resources, and flows, although it can stand on its own if needed. It is primarily used for mapping. Although the relationships are not shown in the above diagram, the following are a SpatialThing: in EconomicResource, currentLocation; in Agent, primaryLocation; in EconomicEvent, Commitment, Intent, atLocation; and in EconomicEvent, toLocation.  When something has a non-physical location, it will use a different property. More info at [Use of Other Vocabularies](/specification/external-terms/#locations).
 
-#### om2:Measure
 
-Measure does not ever live on its own, it is a way to unify how quantities are represented in Valueflows.  Although the relationships are not shown in the above diagram, the following are Measures: in EconomicResource, accountingQuantity and onhandQuantity; in EconomicEvent, Commitment, Intent, RecipeFlow, resourceQuantity, effortQuantity.  Measure is a numerical value plus a Unit.
+#### vf:Measure
 
-#### om2:Unit
+Measure does not ever live on its own, it is a way to unify how quantities are represented in Valueflows.  Although the relationships are not shown in the diagram, the following are Measures: in EconomicResource, accountingQuantity and onhandQuantity; in EconomicEvent, Commitment, Intent, RecipeFlow, resourceQuantity, effortQuantity.  Measure is a numerical value plus a Unit. More info at [Use of Other Vocabularies](/specification/external-terms/#quantities-and-units).
 
-It is very helpful for interoperaability that the same units of measure are used as networks communicate.  OM2 has a long list of recommended Units, extracted [here](https://lab.allmende.io/valueflows/valueflows/-/blob/master/units/units-en-useful.csv).
+
+#### vf:Unit
+
+It is very helpful for interoperaability that the same units of measure are used as networks communicate.  VF uses units defined by OM2, with some additional properties. More info at [Use of Other Vocabularies](/specification/external-terms/#units-of-measure).
 
 
 ### Flows in motion: Recipe
@@ -67,10 +69,6 @@ This set of Knowledge Layer entities together make a recipe for creating a Resou
 #### vf:RecipeProcess
 
 This defines a process node in the recipe graph.  A recipe can contain as many RecipeProcesses as it needs to produce the resource defined in the final ResourceSpecification. It can optionally conform to a ProcessSpecification.  It will have at least one input or output RecipeFlow.
-
-#### time:Duration
-
-A RecipeProcess has a Duration, used in planning.
 
 #### vf:RecipeExchange
 
@@ -146,7 +144,7 @@ See the operational Process defined in the Planning subject area.  Operational P
 
 #### vf:EconomicEvent
 
-An EconomicEvent is the "real" flow, one that actually happened.  Its behavior is governed by its Action.  It actually affects an EconomicResource if one is defined as inventoried in the EconomicEvent, possibly including quantities, location, primary accountable, stage, state, containment.  EconomicEvent always has a provider and receiver Agent, and can be input or output of a Process, and/or part of an Agreement.  An EconomicEvent knows its resource, either an EconomicResource or a ResourceSpecification.  In some actions, for example transfers and moves, there can also be another EconomicResource on the receiver side.  EconomicEvents can fulfill a Commitment or satisfy an Intent (where there is no Commitment) or settle a Claim.  An EconomicEvent can be triggered by another EconomicEvent, for example a transfer of accountability triggered by a receipt of a resource.  An EconomicEvent can correct a previous EconomicEvent, or reverse it completely.
+An EconomicEvent is the "real" flow, one that actually happened.  Its behavior is governed by its [Action](../concepts/actions.md).  It actually affects an EconomicResource if one is defined as inventoried and referenced in the EconomicEvent, possibly including quantities, location, primary accountable, stage, state, containment.  EconomicEvent always has a provider and receiver Agent, and can be input or output of a Process, and/or part of an Agreement.  An EconomicEvent knows its resource, either an EconomicResource or a ResourceSpecification.  In some actions, for example transfers and moves, there can also be another EconomicResource on the receiver side.  EconomicEvents can fulfill a Commitment or satisfy an Intent (where there is no Commitment) or settle a Claim.  An EconomicEvent can be triggered by another EconomicEvent, for example a transfer of accountability triggered by a receipt of a resource.  An EconomicEvent can correct a previous EconomicEvent, or reverse it completely.
 
 #### vf:Claim
 

@@ -1,13 +1,23 @@
 # Specification Overview
 
+## Goals and compromises
+
+We have tried to make this vocabulary as technology-agnostic as possible, as it represents a domain ontology for economic activity that we believe can be useful well into the future.  We know from the past that technology moves relatively quickly.  This includes technical protocols and formats for interoperability, and also bleeds into data modeling techniques, no matter how much we in the industry try to create universal modeling methods.  We have tried to balance full use case support with simplicity and clarity in various protocol, with some compromises made along the way.  We represent the vocabulary in various ways, and plan to add formats and protocols as new needs arise.
+
 ## Source definitions and protocols
 
-The vocabulary is presented in several ways, as Linked Open Data using the Resource Description Framework (RDF) family of languages, as well as a GraphQL reference and a UML model. We want to support RDF based and non-RDF based uses of the vocabulary, basically any way that people want to use software and data on the internet to help create economic networks.  This has led to some blending of modeling/diagramming techniques to try to make this as clean as possible for different technical needs.
+* The "system of record" (authoritative data source) is a linked open data **[turtle (ttl) file representation](../../assets/all_vf.TTL)**
 
-We will add formats and protocols as requested.
+* A more readable **[formatted version of the vocabulary](/specification/all_vf.html)**, which is generated from the turtle file
 
-## Valueflows and other vocabularies
+* The linked open data namespace base URI is **[https://w3id.org/valueflows/ont/vf#](https://w3id.org/valueflows/ont/vf#)**, supporting (TODO), with preferred namespace prefix being "vf"
 
-The core Valueflows vocabulary includes some concepts for which we use other RDF-based vocabularies. This means that it expects people developing those applications to use VF together with other vocabularies / web ontologies. Each specification format in this section will say what it includes and what it doesn't. These appear in the [UML Diagram](uml.md), with specific details in the [Other Namespace](external-terms.md) page.  They do not appear in the source turtle file or the reports derived from that, on the [REF Specification](vfspec.md) page.
+* A **[UML diagram of the ontology](/specification/uml.md)**, with some explanation of compromises made between rdf-based / json-based / relational / object oriented methods
 
-In the future, we will also add selected explicit mappings between Valueflows and other RDF-based vocabularies, as needs appear.
+* A **[GraphQL api source](https://lab.allmende.io/valueflows/vf-schemas/vf-graphql/-/tree/sprout/lib/schemas)**, which stays more or less in sync with the vocabulary
+
+* A **[json-ld context file]()** (TODO)
+
+* A **[json-schema representation]()** (TODO)
+
+* A **[SHACL representation]()** and a **[ShEx representation]()**  (TODO)

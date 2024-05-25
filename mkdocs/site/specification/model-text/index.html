@@ -12,7 +12,7 @@
         <link rel="prev" href="../uml/">
       
       
-        <link rel="next" href="../vfspec/">
+        <link rel="next" href="../external-terms/">
       
       <link rel="icon" href="../../assets/favicon.ico">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.6">
@@ -480,10 +480,6 @@
         
           
         
-          
-        
-          
-        
       
       
         <label class="md-nav__link" for="__nav_3" tabindex="0" aria-expanded="true">
@@ -506,6 +502,20 @@
     <li class="md-nav__item">
       <a href="../spec-overview/" class="md-nav__link">
         Specification Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../all_vf.html" class="md-nav__link">
+        RDF-based Specification
       </a>
     </li>
   
@@ -651,22 +661,22 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#geospatialthing" class="md-nav__link">
-    geo:SpatialThing
+  <a href="#vfspatialthing" class="md-nav__link">
+    vf:SpatialThing
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#om2measure" class="md-nav__link">
-    om2:Measure
+  <a href="#vfmeasure" class="md-nav__link">
+    vf:Measure
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#om2unit" class="md-nav__link">
-    om2:Unit
+  <a href="#vfunit" class="md-nav__link">
+    vf:Unit
   </a>
   
 </li>
@@ -687,13 +697,6 @@
           <li class="md-nav__item">
   <a href="#vfrecipeprocess" class="md-nav__link">
     vf:RecipeProcess
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#timeduration" class="md-nav__link">
-    time:Duration
   </a>
   
 </li>
@@ -924,36 +927,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../vfspec/" class="md-nav__link">
-        RDF Specification
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../external-terms/" class="md-nav__link">
-        Other Namespaces
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../units/" class="md-nav__link">
-        Units of Measure
+        Use of Other Vocabularies
       </a>
     </li>
   
@@ -968,20 +943,6 @@
     <li class="md-nav__item">
       <a href="../inverses/" class="md-nav__link">
         Query Naming
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../graphql/" class="md-nav__link">
-        GraphQL Reference
       </a>
     </li>
   
@@ -1010,6 +971,8 @@
       <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
       
       
+        
+          
         
           
         
@@ -1247,6 +1210,20 @@
     <li class="md-nav__item">
       <a href="../../concepts/scoping/" class="md-nav__link">
         Scoping
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/location/" class="md-nav__link">
+        Location
       </a>
     </li>
   
@@ -1883,22 +1860,22 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#geospatialthing" class="md-nav__link">
-    geo:SpatialThing
+  <a href="#vfspatialthing" class="md-nav__link">
+    vf:SpatialThing
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#om2measure" class="md-nav__link">
-    om2:Measure
+  <a href="#vfmeasure" class="md-nav__link">
+    vf:Measure
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#om2unit" class="md-nav__link">
-    om2:Unit
+  <a href="#vfunit" class="md-nav__link">
+    vf:Unit
   </a>
   
 </li>
@@ -1919,13 +1896,6 @@
           <li class="md-nav__item">
   <a href="#vfrecipeprocess" class="md-nav__link">
     vf:RecipeProcess
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#timeduration" class="md-nav__link">
-    time:Duration
   </a>
   
 </li>
@@ -2181,18 +2151,16 @@
 <p>More flow info at <a href="../../concepts/flows/">Flows concepts</a>, <a href="../../concepts/actions/">Actions concepts</a>, <a href="../../concepts/processes/">Processes concepts</a>, <a href="../../concepts/transfers/">Transfers concepts</a>, <a href="../../concepts/exchanges/">Exchanges concepts</a>.  First, some necessary pieces.</p>
 <h4 id="vfaction">vf:Action</h4>
 <p>An Action specifies the type of flow and what the flow will do or has done. EconomicEvent, Commitment, Intent, Claim, RecipeFlow have an Action.  Actions are specified in Valueflows to cover the various ways flows affect resources.  Actions have properties defined that can drive the code logic to create or change EconomicResources when EconomicEvents are recorded, if desired.</p>
-<h4 id="geospatialthing">geo:SpatialThing</h4>
-<p>Location, represented by SpatialThing, is not used by itself in Valueflows, although it can stand on its own if needed. It is primarily used for mapping. Although the relationships are not shown in the above diagram, the following are a SpatialThing: in EconomicResource, currentLocation; in Agent, primaryLocation; in EconomicEvent, Commitment, Intent, atLocation; and in EconomicEvent, toLocation.</p>
-<h4 id="om2measure">om2:Measure</h4>
-<p>Measure does not ever live on its own, it is a way to unify how quantities are represented in Valueflows.  Although the relationships are not shown in the above diagram, the following are Measures: in EconomicResource, accountingQuantity and onhandQuantity; in EconomicEvent, Commitment, Intent, RecipeFlow, resourceQuantity, effortQuantity.  Measure is a numerical value plus a Unit.</p>
-<h4 id="om2unit">om2:Unit</h4>
-<p>It is very helpful for interoperaability that the same units of measure are used as networks communicate.  OM2 has a long list of recommended Units, extracted <a href="https://lab.allmende.io/valueflows/valueflows/-/blob/master/units/units-en-useful.csv">here</a>.</p>
+<h4 id="vfspatialthing">vf:SpatialThing</h4>
+<p>Physical location, represented by SpatialThing, is mostly used as part of the information about agents, resources, and flows, although it can stand on its own if needed. It is primarily used for mapping. Although the relationships are not shown in the above diagram, the following are a SpatialThing: in EconomicResource, currentLocation; in Agent, primaryLocation; in EconomicEvent, Commitment, Intent, atLocation; and in EconomicEvent, toLocation.  When something has a non-physical location, it will use a different property. More info at <a href="/specification/external-terms/#locations">Use of Other Vocabularies</a>.</p>
+<h4 id="vfmeasure">vf:Measure</h4>
+<p>Measure does not ever live on its own, it is a way to unify how quantities are represented in Valueflows.  Although the relationships are not shown in the diagram, the following are Measures: in EconomicResource, accountingQuantity and onhandQuantity; in EconomicEvent, Commitment, Intent, RecipeFlow, resourceQuantity, effortQuantity.  Measure is a numerical value plus a Unit. More info at <a href="/specification/external-terms/#quantities-and-units">Use of Other Vocabularies</a>.</p>
+<h4 id="vfunit">vf:Unit</h4>
+<p>It is very helpful for interoperaability that the same units of measure are used as networks communicate.  VF uses units defined by OM2, with some additional properties. More info at <a href="/specification/external-terms/#units-of-measure">Use of Other Vocabularies</a>.</p>
 <h3 id="flows-in-motion-recipe">Flows in motion: Recipe</h3>
 <p>This set of Knowledge Layer entities together make a recipe for creating a Resource conforming to a ResourceSpecification. It can be used to automate generating a plan in the Plan Layer, since they follow the same basic input-process-output graph pattern. The recipe model may be made more complete in the future, to support forking, versioning, and variants.  It currently supports multiple recipes for the same ResourceSpecification.  It also supports a Recipe for more than one RecipeProcess in a flow graph, and RecipeGroup for creating a plan that includes more than one output from different Recipes.  More info at <a href="../../concepts/recipes/">Recipes concepts</a>.</p>
 <h4 id="vfrecipeprocess">vf:RecipeProcess</h4>
 <p>This defines a process node in the recipe graph.  A recipe can contain as many RecipeProcesses as it needs to produce the resource defined in the final ResourceSpecification. It can optionally conform to a ProcessSpecification.  It will have at least one input or output RecipeFlow.</p>
-<h4 id="timeduration">time:Duration</h4>
-<p>A RecipeProcess has a Duration, used in planning.</p>
 <h4 id="vfrecipeexchange">vf:RecipeExchange</h4>
 <p>RecipeExchange corresponds to the Agreement in the Plan Layer.  It enables generation of plans that include agreements.  It can contain as many RecipeFlows as needed.</p>
 <h4 id="vfrecipeflow">vf:RecipeFlow</h4>
@@ -2230,7 +2198,7 @@
 <h4 id="vfprocess_1">vf:Process</h4>
 <p>See the operational Process defined in the Planning subject area.  Operational Processes are carried down to the Observation layer as they are executed, or can be directly defined for Observation if planning is not done.</p>
 <h4 id="vfeconomicevent">vf:EconomicEvent</h4>
-<p>An EconomicEvent is the "real" flow, one that actually happened.  Its behavior is governed by its Action.  It actually affects an EconomicResource if one is defined as inventoried in the EconomicEvent, possibly including quantities, location, primary accountable, stage, state, containment.  EconomicEvent always has a provider and receiver Agent, and can be input or output of a Process, and/or part of an Agreement.  An EconomicEvent knows its resource, either an EconomicResource or a ResourceSpecification.  In some actions, for example transfers and moves, there can also be another EconomicResource on the receiver side.  EconomicEvents can fulfill a Commitment or satisfy an Intent (where there is no Commitment) or settle a Claim.  An EconomicEvent can be triggered by another EconomicEvent, for example a transfer of accountability triggered by a receipt of a resource.  An EconomicEvent can correct a previous EconomicEvent, or reverse it completely.</p>
+<p>An EconomicEvent is the "real" flow, one that actually happened.  Its behavior is governed by its <a href="../../concepts/actions/">Action</a>.  It actually affects an EconomicResource if one is defined as inventoried and referenced in the EconomicEvent, possibly including quantities, location, primary accountable, stage, state, containment.  EconomicEvent always has a provider and receiver Agent, and can be input or output of a Process, and/or part of an Agreement.  An EconomicEvent knows its resource, either an EconomicResource or a ResourceSpecification.  In some actions, for example transfers and moves, there can also be another EconomicResource on the receiver side.  EconomicEvents can fulfill a Commitment or satisfy an Intent (where there is no Commitment) or settle a Claim.  An EconomicEvent can be triggered by another EconomicEvent, for example a transfer of accountability triggered by a receipt of a resource.  An EconomicEvent can correct a previous EconomicEvent, or reverse it completely.</p>
 <h4 id="vfclaim">vf:Claim</h4>
 <p>A Claim on another Agent is triggered by an EconomicEvent, according to rules agreed to elsewhere, although most EconomicEvents do not trigger a Claim, and if there is already a Commitment, a Claim is not needed.  The Claim then can be settled by other EconomicEvent(s).  As a flow, a Claim has an Action, provider and receiver Agent, and reference to a ResourceSpecification.</p>
 <h4 id="vfappreciation">vf:Appreciation</h4>

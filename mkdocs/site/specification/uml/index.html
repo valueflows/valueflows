@@ -9,7 +9,7 @@
       
       
       
-        <link rel="prev" href="../spec-overview/">
+        <link rel="prev" href="../all_vf.html">
       
       
         <link rel="next" href="../model-text/">
@@ -480,10 +480,6 @@
         
           
         
-          
-        
-          
-        
       
       
         <label class="md-nav__link" for="__nav_3" tabindex="0" aria-expanded="true">
@@ -506,6 +502,20 @@
     <li class="md-nav__item">
       <a href="../spec-overview/" class="md-nav__link">
         Specification Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../all_vf.html" class="md-nav__link">
+        RDF-based Specification
       </a>
     </li>
   
@@ -605,6 +615,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#denormalization" class="md-nav__link">
+    Denormalization
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -639,36 +656,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../vfspec/" class="md-nav__link">
-        RDF Specification
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../external-terms/" class="md-nav__link">
-        Other Namespaces
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../units/" class="md-nav__link">
-        Units of Measure
+        Use of Other Vocabularies
       </a>
     </li>
   
@@ -683,20 +672,6 @@
     <li class="md-nav__item">
       <a href="../inverses/" class="md-nav__link">
         Query Naming
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../graphql/" class="md-nav__link">
-        GraphQL Reference
       </a>
     </li>
   
@@ -725,6 +700,8 @@
       <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
       
       
+        
+          
         
           
         
@@ -962,6 +939,20 @@
     <li class="md-nav__item">
       <a href="../../concepts/scoping/" class="md-nav__link">
         Scoping
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/location/" class="md-nav__link">
+        Location
       </a>
     </li>
   
@@ -1568,6 +1559,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#denormalization" class="md-nav__link">
+    Denormalization
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1592,7 +1590,7 @@
   <h1>UML Diagram</h1>
 
 <h2 id="uml-diagram">UML diagram</h2>
-<p>This diagram includes all elements necessary for a complete REA-based core economic vocabulary, so includes elements that we re-use from other vocabularies.  All namespaces are documented by the prefix to each element.</p>
+<p>This diagram includes all elements defined in the system of record turtle file, for visual understanding of relationships.</p>
 <p>A textual explanation of everything on this diagram is on the <a href="../model-text/">Diagram Explanations page</a>.</p>
 <p><em>To make the diagram bigger, you can right click and select 'View Image' or 'Open Image in New Tab' or a similar command in your browser.</em></p>
 <p><img alt="UML diagram of the whole VF model" src="../../assets/ValueFlowsUML.png" /></p>
@@ -1601,9 +1599,8 @@
 <h3 id="relationships-not-shown">Relationships not shown</h3>
 <p>In some cases, there were just too many lines!  The subordinate classes in the gray section at the bottom are not connected with arrows, so the viewer should assume that:</p>
 <ul>
-<li>every property ending in "Quantity" is a <code>om2:Measure</code> (does not live on its own) ;</li>
-<li>every property ending in "Duration" is a <code>time:Duration</code> (does not live on its own) ;</li>
-<li>every property ending in "Location" is a <code>geo:SpatialThing</code>;</li>
+<li>every property ending in "Quantity" or "Duration" is a <code>vf:Measure</code> (does not live on its own) ;</li>
+<li>most properties ending in "Location" are a <code>vf:SpatialThing</code> , used for physical locations ;</li>
 <li><code>vf:inScopeOf</code> references a <code>vf:Agent</code>.</li>
 </ul>
 <h3 id="inverse-terms">Inverse terms</h3>
@@ -1621,6 +1618,10 @@
 <p>These cases have possible properties in the "associative" class. For example, between Commitment and EconomicEvent, a Commitment for 40 hours of work might be fulfilled by 5 EconomicEvents of 8 hours.  Or an EconomicEvent might pay for a statement or invoice that includes multiple Commitments for deliveries.  The model we have settled on supports the former, but not the latter.  The latter is one of a few cases that we believe will be a small minority of edge cases where the quantities in the "associative" entity might be appreciated.  For that case, an application could possibly divide the payment into multiple EconomicEvents and connect them with the trackingIdentifier.  Or it could extend the vocabulary to include the quantity fulfilled/satisfied/settled, and over time the VF community can re-consider the best trade-off for handling this situation.</p>
 <p>We believe that it is more important to simplify the model and the concepts for the majority of use cases, than to have complete support of all use cases.</p>
 <p><img alt="model with Event Commitment Intent Claim m:m instantiated relationships" src="../../assets/fulfill-satisfy-rel.png" /></p>
+<h3 id="denormalization">Denormalization</h3>
+<p>Note there are a few place where VF is more normalized than might be wanted for a database design behind the scenes. However, for data provided for interoperability, it is expected that apps will adhere to the normalized version.</p>
+<p>For example, we have used a separate structure for quantities, including the numeric amount and unit of measure.  These never stand on their own, i.e. one wouldn't expect to change "4 liters" in an event and have it change wherever else "4 liters" appears.  So these can be safely denormalized behind the scenes.</p>
+<p>This also could apply to simple uses of location data, although in that case, locations can stand on their own, so it depends on the application.  But for example, some apps might move <code>SpatialThing</code>'s <code>long</code> and <code>lat</code> into the record having the location.</p>
 
 
 
