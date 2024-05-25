@@ -6,13 +6,13 @@ We have tried to make this vocabulary as technology-agnostic as possible, as it 
 
 ## Source definitions and protocols
 
-* The "system of record" (authoritative data source) is a linked open data **[turtle (ttl) file representation](../../assets/all_vf.TTL)**
+* The "system of record" (authoritative data source) is a linked open data **[turtle (ttl) file representation](https://codeberg.org/valueflows/pages/raw/branch/main/assets/all_vf.TTL)**, located **[here in the repository](https://codeberg.org/valueflows/pages/src/branch/main/assets/all_vf.TTL)**.
 
 * A more readable **[formatted version of the vocabulary](/specification/all_vf.html)**, which is generated from the turtle file
 
-* The linked open data namespace base URI is **[https://w3id.org/valueflows/ont/vf#](https://w3id.org/valueflows/ont/vf#)**, supporting (TODO), with preferred namespace prefix being "vf"
+* A **[UML diagram of the ontology](../uml)**, with some explanation of compromises made between rdf-based / json-based / relational / object oriented methods
 
-* A **[UML diagram of the ontology](/specification/uml.md)**, with some explanation of compromises made between rdf-based / json-based / relational / object oriented methods
+* The linked open data namespace base URI is `https://w3id.org/valueflows/ont/vf#`, supporting TTL, JSON-LD and HTML, with preferred namespace prefix being "vf"
 
 * A **[GraphQL api source](https://lab.allmende.io/valueflows/vf-schemas/vf-graphql/-/tree/sprout/lib/schemas)**, which stays more or less in sync with the vocabulary
 
