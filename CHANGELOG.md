@@ -1,3 +1,10 @@
+## 0.12 (May 2024)
+
+- Pull external elements into VF namespace
+- Use Measure for hasDuration (breaking)
+- Add geometry and currency location information
+- Add unit information
+
 ## 0.11 (April 2024)
 
 - Add Intents as Plan independent demand
