@@ -20,11 +20,7 @@ The subject and object of an AgentRelationship are Agents.  Their role the subje
 
 #### vf:AgentRelationshipRole
 
-Agent relationship roles define the roles or types of agent relationships within a network, completely defined by the network itself.  Each role has a RoleBehavior.  Roles can be a good base to define user account permissions.
-
-#### vf:RoleBehavior
-
-Role behaviors, on the other hand, are defined in Valueflows, so that there are standard types of AgentRelationshipRole (and therefore AgentRelationship) that can govern behavior in and across applications.  Examples are "member" or "sub-organization".
+Agent relationship roles define the roles or types of agent relationships within a network, completely defined by the network itself.  Roles can be a good base to define user account permissions.
 
 
 ### Resource

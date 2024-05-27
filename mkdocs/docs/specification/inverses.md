@@ -346,14 +346,3 @@ This document is not meant to imply that all of these named queries and filters 
 *inverse queries:*
 
    * agentRelationships (AgentRelationship.relationship)
-
-### RoleBehavior
-
-*main queries:*
-
-   * roleBehavior
-   * roleBehaviors
-
-*inverse Queries:*
-
-   * agentRelationshipRoles (agentRelationshipRole.roleBehavior)
