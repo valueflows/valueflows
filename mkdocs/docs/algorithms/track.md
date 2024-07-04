@@ -54,8 +54,6 @@ Process "previous":
 EconomicEvent "previous":
     if the event is output of a process
         return the process
-    else if the event is triggeredBy another event
-        return the triggeredBy event
     else if the event action is raise or lower, and the event's previousEvent is null
         return empty list
     else if resourceInventoriedAs of the event exists
@@ -137,8 +135,6 @@ Process "next":
 EconomicEvent "next":
     if the event is input of a process
         return the process
-    if there are any events that are triggeredBy this event
-        return them
     if the event is output of a process
         return the resourceInventoriedAs
     if the toResourceInventoriedAs of the event exists
