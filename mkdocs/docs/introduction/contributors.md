@@ -1,10 +1,13 @@
 # Contributors
 
-### Committers
+### Main Authors
 
 * Lynn Foster
 * elf Pavlik
 * Bob Haugen
+
+### Other Committers
+
 * Michael Williams
 * Paul Mackey
 * Kalin Maldzhanski
@@ -28,7 +31,7 @@
 * Johannes Winter
 * Elio Qoshi
 
-### REA assistance
+### REA assistance and inspiration
 
 * Bill McCarthy
 * Wim Laurier
