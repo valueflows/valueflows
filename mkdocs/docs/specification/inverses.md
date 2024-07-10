@@ -143,13 +143,6 @@ This document is not meant to imply that all of these named queries and filters 
    * trace (ordered incoming value flows, see [Track and Trace](../algorithms/track.md) for logic)
    * track (ordered outgoing value flows, see [Track and Trace](../algorithms/track.md) for logic)
 
-### Appreciation
-
-*main queries:*
-
-   * appreciation
-   * appreciations
-
 ## Plan layer
 
 ### Proposal
