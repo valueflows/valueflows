@@ -283,12 +283,6 @@ vf:Claim  a                 owl:Class ;
         rdfs:comment        "A claim for a future economic event(s) in reciprocity for an economic event that already occurred. For example, a claim for payment for goods received."@en ;
         .
 
-vf:Appreciation  a          owl:Class ;
-        rdfs:label          "Appreciation"@en ;
-        vs:term_status      "unstable" ;
-        rdfs:comment        "A way to tie an economic event that is given in loose fulfilment for another economic event, without commitments or expectations. Supports the gift economy."@en ;
-        .
-
 # UTILITY CLASSES
 
 vf:SpatialThing a           owl:Class ;
@@ -533,24 +527,6 @@ vf:toResourceInventoriedAs
         owl:maxCardinality  1 ;
         vs:term_status      "stable" ;
         rdfs:comment        "Additional economic resource on the economic event when needed by the receiver. Used when a transfer or move, or sometimes other actions, requires explicitly identifying an economic resource on the receiving side."@en ;
-        .
-
-vf:appreciationOf
-        a                   owl:ObjectProperty ;
-        rdfs:label          "appreciation of"@en ;
-        rdfs:domain         vf:Appreciation ;
-        rdfs:range          vf:EconomicEvent ;
-        vs:term_status      "unstable" ;
-        rdfs:comment        "The economic event being appreciated (gift economy)."@en ;
-        .
-
-vf:appreciationWith
-        a                   owl:ObjectProperty ;
-        rdfs:label          "appreciation with"@en ;
-        rdfs:domain         vf:Appreciation ;
-        rdfs:range          vf:EconomicEvent ;
-        vs:term_status      "unstable" ;
-        rdfs:comment        "The economic event implemented in appreciation (gift economy)."@en ;
         .
 
 vf:provider  a              owl:ObjectProperty ;
@@ -1048,7 +1024,6 @@ vf:note a                   owl:DataTypeProperty ;
                                 vf:AgentRelationship
                                 vf:AgentRelationshipRole
                                 vf:Agreement
-                                vf:Appreciation
                                 vf:Claim
                                 vf:Commitment
                                 vf:EconomicEvent
