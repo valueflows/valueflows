@@ -606,13 +606,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#vfrolebehavior" class="md-nav__link">
-    vf:RoleBehavior
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -1805,13 +1798,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#vfrolebehavior" class="md-nav__link">
-    vf:RoleBehavior
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -2138,9 +2124,7 @@
 <h4 id="vfagentrelationship">vf:AgentRelationship</h4>
 <p>The subject and object of an AgentRelationship are Agents.  Their role the subject plays in relation to the object is represented by the AgentRelationshipRole.  Agents can have multiple relationships and multiple kinds of relationships in the same network.</p>
 <h4 id="vfagentrelationshiprole">vf:AgentRelationshipRole</h4>
-<p>Agent relationship roles define the roles or types of agent relationships within a network, completely defined by the network itself.  Each role has a RoleBehavior.  Roles can be a good base to define user account permissions.</p>
-<h4 id="vfrolebehavior">vf:RoleBehavior</h4>
-<p>Role behaviors, on the other hand, are defined in Valueflows, so that there are standard types of AgentRelationshipRole (and therefore AgentRelationship) that can govern behavior in and across applications.  Examples are "member" or "sub-organization".</p>
+<p>Agent relationship roles define the roles or types of agent relationships within a network, completely defined by the network itself.  Roles can be a good base to define user account permissions.</p>
 <h3 id="resource">Resource</h3>
 <p>Resources are defined in different ways, depending on their need and ability to be accounted for specifically.  Every flow of any kind will reference a resource, represented either by ResourceSpecification or EconomicResource. Resource classifications also assist in understanding or finding a resource. More info at <a href="../../concepts/resources/">Resource concepts</a>, <a href="../../concepts/classification/">Classification concepts</a>.</p>
 <h4 id="vfresourcespecification">vf:ResourceSpecification</h4>
@@ -2198,7 +2182,7 @@
 <h4 id="vfprocess_1">vf:Process</h4>
 <p>See the operational Process defined in the Planning subject area.  Operational Processes are carried down to the Observation layer as they are executed, or can be directly defined for Observation if planning is not done.</p>
 <h4 id="vfeconomicevent">vf:EconomicEvent</h4>
-<p>An EconomicEvent is the "real" flow, one that actually happened.  Its behavior is governed by its <a href="../../concepts/actions/">Action</a>.  It actually affects an EconomicResource if one is defined as inventoried and referenced in the EconomicEvent, possibly including quantities, location, primary accountable, stage, state, containment.  EconomicEvent always has a provider and receiver Agent, and can be input or output of a Process, and/or part of an Agreement.  An EconomicEvent knows its resource, either an EconomicResource or a ResourceSpecification.  In some actions, for example transfers and moves, there can also be another EconomicResource on the receiver side.  EconomicEvents can fulfill a Commitment or satisfy an Intent (where there is no Commitment) or settle a Claim.  An EconomicEvent can be triggered by another EconomicEvent, for example a transfer of accountability triggered by a receipt of a resource.  An EconomicEvent can correct a previous EconomicEvent, or reverse it completely.</p>
+<p>An EconomicEvent is the "real" flow, one that actually happened.  Its behavior is governed by its <a href="../../concepts/actions/">Action</a>.  It actually affects an EconomicResource if one is defined as inventoried and referenced in the EconomicEvent, possibly including quantities, location, primary accountable, stage, state, containment.  EconomicEvent always has a provider and receiver Agent, and can be input or output of a Process, and/or part of an Agreement.  An EconomicEvent knows its resource, either an EconomicResource or a ResourceSpecification.  In some actions, for example transfers and moves, there can also be another EconomicResource on the receiver side.  EconomicEvents can fulfill a Commitment or satisfy an Intent (where there is no Commitment) or settle a Claim.  An EconomicEvent can correct a previous EconomicEvent, or reverse it completely.</p>
 <h4 id="vfclaim">vf:Claim</h4>
 <p>A Claim on another Agent is triggered by an EconomicEvent, according to rules agreed to elsewhere, although most EconomicEvents do not trigger a Claim, and if there is already a Commitment, a Claim is not needed.  The Claim then can be settled by other EconomicEvent(s).  As a flow, a Claim has an Action, provider and receiver Agent, and reference to a ResourceSpecification.</p>
 <h4 id="vfappreciation">vf:Appreciation</h4>

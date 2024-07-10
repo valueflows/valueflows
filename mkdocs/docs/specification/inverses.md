@@ -109,7 +109,6 @@ This document is not meant to imply that all of these named queries and filters 
 
    * appreciationOf (Appreciation.appreciationWith)
    * appreciationWith (Appreciation.appreciationOf)
-   * triggers (EconomicEvent.triggeredBy)
 
 *other queries:*
 

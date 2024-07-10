@@ -1,6 +1,6 @@
-<mxfile modified="2024-05-24T18:55:06.023Z" host="app.diagrams.net" agent="Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:126.0) Gecko/20100101 Firefox/126.0" etag="_4RF3vYTdmAQ5ueFsg2s" version="24.4.4" type="device">
+<mxfile modified="2024-07-04T18:11:42.156Z" host="app.diagrams.net" agent="Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:127.0) Gecko/20100101 Firefox/127.0" etag="Kbf79lzqm0-IkmFzmJXW" version="24.6.4" type="device">
   <diagram id="fbe6a5e9-5b10-23b0-562a-0cf294ecc85a" name="Page-1">
-    <mxGraphModel dx="1846" dy="2629" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="2000" math="0" shadow="0">
+    <mxGraphModel dx="1597" dy="2440" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="2000" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -401,18 +401,6 @@
         <mxCell id="QHsRYAhEHgMgAU8Zw86L-19" value="&lt;p style=&quot;margin: 0px ; margin-top: 4px ; text-align: center ; text-decoration: underline&quot;&gt;&lt;font style=&quot;font-size: 13px&quot;&gt;&lt;b&gt;vf:SpatialThing&lt;/b&gt;&lt;br&gt;&lt;/font&gt;&lt;/p&gt;&lt;hr&gt;&lt;p style=&quot;margin: 0px ; margin-left: 8px&quot;&gt;vf:lat&lt;/p&gt;&lt;p style=&quot;margin: 0px ; margin-left: 8px&quot;&gt;vf:long&lt;/p&gt;&lt;p style=&quot;margin: 0px ; margin-left: 8px&quot;&gt;vf:alt&lt;/p&gt;&lt;p style=&quot;margin: 0px ; margin-left: 8px&quot;&gt;vf:mappableAddress&lt;/p&gt;&lt;p style=&quot;margin: 0px ; margin-left: 8px&quot;&gt;vf:note&lt;/p&gt;&lt;p style=&quot;margin: 0px ; margin-left: 8px&quot;&gt;vf:name&lt;/p&gt;&lt;p style=&quot;margin: 0px ; margin-left: 8px&quot;&gt;vf:hasDetailedGeometry&lt;br&gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;fillColor=#ffffff;strokeColor=#000000;" parent="1" vertex="1">
           <mxGeometry x="429" y="1160" width="170" height="140" as="geometry" />
         </mxCell>
-        <mxCell id="WgYd2YjfuSUQQR85dr-W-22" value="vf:triggeredBy" style="endArrow=classic;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=1.007;entryY=0.855;entryDx=0;entryDy=0;entryPerimeter=0;rounded=0;labelBackgroundColor=#D5E8D4;" parent="1" source="2028f4c0cddd94fa-16" target="2028f4c0cddd94fa-16" edge="1">
-          <mxGeometry x="-0.2985" y="-1" width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="1738" y="1119" as="sourcePoint" />
-            <mxPoint x="1788" y="1069" as="targetPoint" />
-            <Array as="points">
-              <mxPoint x="1599" y="1110" />
-              <mxPoint x="1738" y="1109" />
-              <mxPoint x="1738" y="1046" />
-            </Array>
-            <mxPoint as="offset" />
-          </mxGeometry>
-        </mxCell>
         <mxCell id="WgYd2YjfuSUQQR85dr-W-24" value="&lt;p style=&quot;margin: 0px ; margin-top: 4px ; text-align: center ; text-decoration: underline&quot;&gt;&lt;font style=&quot;font-size: 13px&quot;&gt;&lt;b&gt;vf:RecipeProcess&lt;/b&gt;&lt;br&gt;&lt;/font&gt;&lt;/p&gt;&lt;hr&gt;&lt;p style=&quot;margin: 0px ; margin-left: 8px&quot;&gt;vf:name&lt;/p&gt;&lt;p style=&quot;margin: 0px ; margin-left: 8px&quot;&gt;vf:image&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;margin: 0px ; margin-left: 8px&quot;&gt;vf:note&lt;/p&gt;&lt;p style=&quot;margin: 0px ; margin-left: 8px&quot;&gt;vf:hasDuration&lt;/p&gt;&lt;p style=&quot;margin: 0px ; margin-left: 8px&quot;&gt;vf:processClassifiedAs&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;fillColor=#ffffff;strokeColor=#000000;" parent="1" vertex="1">
           <mxGeometry x="850" y="-367" width="151" height="109" as="geometry" />
         </mxCell>
@@ -492,15 +480,6 @@
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="90" y="1277" as="sourcePoint" />
             <mxPoint x="140" y="1227" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="JMIMv5UyacKKHOuOI9At-18" value="&lt;p style=&quot;margin: 0px ; margin-top: 4px ; text-align: center ; text-decoration: underline&quot;&gt;&lt;font style=&quot;font-size: 13px&quot;&gt;&lt;b&gt;vf:RoleBehavior&lt;/b&gt;&lt;br&gt;&lt;/font&gt;&lt;/p&gt;&lt;hr&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;&amp;nbsp; vf:name&lt;br&gt;&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;&amp;nbsp; vf:note&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;&lt;br&gt;&lt;/font&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;fillColor=#ffffff;strokeColor=#000000;" parent="1" vertex="1">
-          <mxGeometry x="2020" y="-81" width="150" height="81" as="geometry" />
-        </mxCell>
-        <mxCell id="JMIMv5UyacKKHOuOI9At-19" value="vf:roleBehavior" style="endArrow=classic;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;labelBackgroundColor=#FFF2CC;" parent="1" source="1abf9e2170aed3bf-1" target="JMIMv5UyacKKHOuOI9At-18" edge="1">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="2210" y="-130" as="sourcePoint" />
-            <mxPoint x="2260" y="-180" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="hRt-NTqFf37Yz-E321nP-18" value="vf:primaryAccountable" style="endArrow=classic;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.25;entryY=1;entryDx=0;entryDy=0;labelBackgroundColor=#D5E8D4;" parent="1" source="2b1bba910c18a604-13" edge="1">

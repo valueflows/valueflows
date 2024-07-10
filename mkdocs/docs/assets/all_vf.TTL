@@ -611,11 +611,11 @@ vf:inScopeOf  a             owl:ObjectProperty ;
 
 vf:triggeredBy  a           owl:ObjectProperty ;
         rdfs:label          "triggered by"@en ;
-        rdfs:domain         [ owl:unionOf (vf:EconomicEvent vf:Claim) ] ;
+        rdfs:domain         vf:Claim ;
         rdfs:range          vf:EconomicEvent ;
         owl:maxCardinality  1 ;
         vs:term_status      "unstable" ;
-        rdfs:comment        "References an economic event that implied the claim or event, often based on a prior agreement."@en ;
+        rdfs:comment        "References an economic event that implied the claim, often based on a prior agreement."@en ;
         .
 
 vf:corrects  a              owl:ObjectProperty ;
