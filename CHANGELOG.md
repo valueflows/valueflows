@@ -1,3 +1,13 @@
+## 0.13 (July 2024)
+
+- Remove RoleBehavior (breaking)
+- Add cardenalities to ttl file
+- Correct implied transfer logic and documentation
+- Remove triggeredBy (breaking)
+- Remove expiresOn (breaking)
+- Remove Appreciation (breaking)
+- Add ProposalList.proposedTo
+
 ## 0.12 (May 2024)
 
 - Pull external elements into VF namespace
