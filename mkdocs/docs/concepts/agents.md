@@ -14,7 +14,7 @@ In Valueflows, we are talking about economic agents, agents who can create or mo
 
 If people want to define types of organizations (like cooperative, corporation, network, community, etc.) we provide a classification property which people can define as they wish.  We do the same for EcologicalAgent (like ecosystem, forest, etc.).
 
-We have defined the properties of Agents fairly minimally. There are a number of useful properties in existing vocabularies, such as [foaf](http://xmlns.com/foaf/spec/), [vcard](https://www.w3.org/TR/vcard-rdf/), [schema.org](https://schema.org/) and others that can be used. Or people can create their own as needed.
+We have defined the properties of Agents very minimally. There are a number of useful properties in existing vocabularies, such as [foaf](http://xmlns.com/foaf/spec/), [vcard](https://www.w3.org/TR/vcard-rdf/), [schema.org](https://schema.org/) and others that can be used. Or people can create their own as needed.
 
 ## Agent Relationships
 
@@ -29,6 +29,10 @@ Relationships have direction: For example, in "Michael is a member of Enspiral",
 Relationships can be in a [scope](scoping.md) (or not): For example, "Kathy is mentor of Sam, in the scope of Enspiral."
 
 EcologicalAgents and Organizations both need human Agents to act on their behalf and represent their agency in the world of people. This can be defined as various roles.
+
+## Scoping Agents
+
+Scoping is used to group economic activity or definitions, based on some overall responsibility to define or keep track of the activity.  Often the scope can be determined by already recorded agents, such as provider, receiver, subject, object.  But in some cases, for example when an organization is keeping track of activity between members, a scoping agent is needed.
 
 ## Agent Philosophies
 

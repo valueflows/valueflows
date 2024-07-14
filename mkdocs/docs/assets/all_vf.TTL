@@ -578,7 +578,7 @@ vf:relationship  a          owl:ObjectProperty ;
         .
 
 vf:inScopeOf  a             owl:ObjectProperty ;
-        rdfs:domain         [ owl:unionOf (vf:Claim vf:Commitment vf:EconomicEvent vf:Proposal vf:Intent vf:Scenario vf:Process vf:AgentRelationship) ] ;
+        rdfs:domain         [ owl:unionOf (vf:Claim vf:Commitment vf:EconomicEvent vf:Intent vf:Scenario vf:Process vf:AgentRelationship) ] ;
         rdfs:label          "in scope of"@en ;
         rdfs:range          vf:Agent ;
         owl:maxCardinality  1 ;
@@ -948,21 +948,12 @@ vf:eligibleLocation a       owl:ObjectProperty ;
         rdfs:comment        "Location or area where the proposal is valid."@en ;
         .
 
-vf:atLocation a             owl:ObjectProperty ;
-        rdfs:label          "at location"@en ;
-        rdfs:domain         [ owl:unionOf (vf:EconomicEvent vf:Commitment vf:Intent) ] ;
-        rdfs:range          vf:SpatialThing ;
-        owl:maxCardinality  1 ;
-        vs:term_status      "unstable" ;
-        rdfs:comment        "The place where an intent, commitment, or economic event occurs.  Usually mappable."@en ;
-        .
-
 vf:toLocation a             owl:ObjectProperty ;
         rdfs:label          "to location"@en ;
         rdfs:domain         vf:EconomicEvent ;
         rdfs:range          vf:SpatialThing ;
         owl:maxCardinality  1 ;
-        vs:term_status      "unstable" ;
+        vs:term_status      "testing" ;
         rdfs:comment        "The new location of the receiver resource."@en ;
         .
 
@@ -1114,7 +1105,7 @@ vf:lists a                  owl:ObjectProperty ;
         rdfs:label          "lists"@en ;
         rdfs:domain         vf:ProposalList ;
         rdfs:range          vf:Proposal ;
-        vs:term_status      "unstable" ;
+        vs:term_status      "testing" ;
         rdfs:comment        "All the proposals included in this proposal list."@en ;
         .
 
