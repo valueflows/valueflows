@@ -1,10 +1,12 @@
 # Diagram Explanations
 
-These textual explanations refer back to the UML diagram on the previous page, but can be used without the diagram.  The explanations are organized by class within subject area of the model.
+These textual explanations are a break-down of the UML diagram on the previous page.  The explanations are organized by class within subject area of the model.
 
 ### Agent
 
-The Agent subject area defines roles in the Knowledge Layer and defines agents and their relationships in the Observation Layer.  More info at [Agent concepts](../concepts/agents.md).
+The Agent subject area defines roles in the Knowledge Layer and defines agents and their relationships in the Observation Layer.  More info at [Agent concepts](../concepts/agents.md) and [Ecological Agents](../concepts/ecology.md#agents).
+
+![agent model](../assets/agent-mdl.png)
 
 #### vf:Agent
 
@@ -27,6 +29,8 @@ Agent relationship roles define the roles or types of agent relationships within
 
 Resources are defined in different ways, depending on their need and ability to be accounted for specifically.  Every flow of any kind will reference a resource, represented either by ResourceSpecification or EconomicResource. Resource classifications also assist in understanding or finding a resource. More info at [Resource concepts](../concepts/resources.md), [Classification concepts](../concepts/classification.md).
 
+![resource model](../assets/resource-mdl.png)
+
 #### vf:ResourceSpecification
 
 This specifies the kind of resource, to the most specific level needed.  It also fills the space for the resource when it is not yet, or never will be, an actual resource.  It can be used in and across networks to communicate the resource type needed.  EconomicResource, as well as the resource concept referenced in flows (EconomicEvent, Intent, Commitment, Claim, RecipeFlow), conform to a ResourceSpecification.
@@ -39,6 +43,8 @@ An actual EconomicResource is created only by EconomicEvents.  It is also update
 
 More flow info at [Flows concepts](../concepts/flows.md), [Actions concepts](../concepts/actions.md), [Processes concepts](../concepts/processes.md), [Transfers concepts](../concepts/transfers.md), [Exchanges concepts](../concepts/exchanges.md).  First, some necessary pieces.
 
+![flow extras model](../assets/misc-mdl.png)
+
 #### vf:Action
 
 An Action specifies the type of flow and what the flow will do or has done. EconomicEvent, Commitment, Intent, Claim, RecipeFlow have an Action.  Actions are specified in Valueflows to cover the various ways flows affect resources.  Actions have properties defined that can drive the code logic to create or change EconomicResources when EconomicEvents are recorded, if desired.
@@ -47,11 +53,9 @@ An Action specifies the type of flow and what the flow will do or has done. Econ
 
 Physical location, represented by SpatialThing, is mostly used as part of the information about agents, resources, and flows, although it can stand on its own if needed. It is primarily used for mapping. Although the relationships are not shown in the above diagram, the following are a SpatialThing: in EconomicResource, currentLocation; in Agent, primaryLocation; in EconomicEvent, Commitment, Intent, atLocation; and in EconomicEvent, toLocation.  When something has a non-physical location, it will use a different property. More info at [Use of Other Vocabularies](/specification/external-terms/#locations).
 
-
 #### vf:Measure
 
 Measure does not ever live on its own, it is a way to unify how quantities are represented in Valueflows.  Although the relationships are not shown in the diagram, the following are Measures: in EconomicResource, accountingQuantity and onhandQuantity; in EconomicEvent, Commitment, Intent, RecipeFlow, resourceQuantity, effortQuantity.  Measure is a numerical value plus a Unit. More info at [Use of Other Vocabularies](/specification/external-terms/#quantities-and-units).
-
 
 #### vf:Unit
 
@@ -61,6 +65,8 @@ It is very helpful for interoperaability that the same units of measure are used
 ### Flows in motion: Recipe
 
 This set of Knowledge Layer entities together make a recipe for creating a Resource conforming to a ResourceSpecification. It can be used to automate generating a plan in the Plan Layer, since they follow the same basic input-process-output graph pattern. The recipe model may be made more complete in the future, to support forking, versioning, and variants.  It currently supports multiple recipes for the same ResourceSpecification.  It also supports a Recipe for more than one RecipeProcess in a flow graph, and RecipeGroup for creating a plan that includes more than one output from different Recipes.  More info at [Recipes concepts](../concepts/recipes.md).
+
+![recipe model](../assets/recipe-mdl.png)
 
 #### vf:RecipeProcess
 
@@ -85,6 +91,8 @@ A RecipeGroup makes it easy to include more than one output from more than Recip
 ### Flows in motion: Planning
 
 Planning can be done with or without recipes.  And planning is not always done, sometimes the economic activity is only observed, depending on the use case.  This section is about operational planning, proesses and agreements that are intended to be executed in this lowest level of detail.  More info at [Planning concepts](../concepts/plan.md) and [Generation of Plans](../../concepts/recipes#generation-of-plans).
+
+![planning model](../assets/planning-mdl.png)
 
 #### vf:Plan
 
@@ -114,9 +122,12 @@ An AgreementBundle contains all the agreements bundled together for user purpose
 
 Intent is defined here as part of operational planning, but can also be key as part of a Proposal or part of a Scenario, see below for those uses of Intent.  An Intent has a provider or a receiver Agent, but not both. As part of planning, Intents can be entered directly or generated from recipe, as inputs or outputs to a Process, or as non-process flows, when there is no known Agent assumed to be the missing provider or receiver.  An Intent can be satisfied by one or more Commitments, and/or one or more EconomicEvents if the Commitment does not exist.  And as a flow, an Intent will have an Action. In operational planning, it will also reference a ResourceSpecification or EconomicResource.
 
+
 ### Flows in motion: Offers and Requests
 
 Offers and requests are published primarily to look for a reciprocal match, although they can also be gift offers or requests. Common use cases are e-commerce, timebanks, mutual aid, price lists, publication of help needed for planned work in a network.  More info at [Proposals concepts](../concepts/proposals.md).
+
+![offers and requests model](../assets/proposal-mdl.png)
 
 #### vf:Proposal
 
@@ -130,9 +141,12 @@ A ProposalList contains all the proposals in a user-defined grouping, for exampl
 
 Intents that are part of Proposals can be more loosely defined than if they are part of a Plan, although planned Intents can also be part of one or more Proposals.  For example, the note is often used to explain some of the defined fields when the offers/needs application mostly supports just text.  But all Intents should have an Action, and either a provider or receiver Agent.
 
+
 ### Flows in motion: Observation
 
 The Observation subject area is where economic activity actually happens.  The basic input-process-output graph pattern is again the same as for recipes and planning. More info at [Flows concepts](../concepts/flows.md).
+
+![observation model](../assets/observation-mdl.png)
 
 #### vf:Process
 
@@ -146,9 +160,12 @@ An EconomicEvent is the "real" flow, one that actually happened.  Its behavior i
 
 A Claim on another Agent is triggered by an EconomicEvent, according to rules agreed to elsewhere, although most EconomicEvents do not trigger a Claim, and if there is already a Commitment, a Claim is not needed.  The Claim then can be settled by other EconomicEvent(s).  As a flow, a Claim has an Action, provider and receiver Agent, and reference to a ResourceSpecification.
 
+
 ### Analysis, Pre-planning, Aggregation
 
 More info at [Budgeting and Analysis concepts](../concepts/estimates.md).
+
+![scenario model](../assets/scenario-mdl.png)
 
 #### vf:Scenario
 
@@ -163,9 +180,3 @@ When Plans (which are operational) are nested in a Scenario, the Scenario can be
 When Processes are nested in a Scenario, they are generally higher level processes for aggregated as-is or to-be resource flows, for analysis or persuasion. Non-process Intents or EconomicEvents could also be part of these Process higher level flows.
 
 Processes and/or Intents could also be nested when they are part of a budget, forecast, or other higher level pre-plan. Or with-list Intents might be listed, say for large many-agent barter, or when saved for future Proposals.
-
-### Accounting & Reporting
-
-More info at [Accounting concepts](../concepts/accounting.md).
-
-Wherever an entity is recorded as in scope of an Agent, the entity can be part of the formal accounting of that Agent.  This usually applies to EconomicEvent, Process (can be used to get in-scope EconomicEvents), Commitment, Claim.  Also, in general, these and other entities can be in scope of an Agent in order to gather the right data for display and processing.

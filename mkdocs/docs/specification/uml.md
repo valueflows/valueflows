@@ -17,7 +17,7 @@ Each arrow represents an additional property in the class at the beginning of th
 In some cases, there were just too many lines!  The subordinate classes in the gray section at the bottom are not connected with arrows, so the viewer should assume that:
 
 * every property ending in "Quantity" or "Duration" is a `vf:Measure` (does not live on its own) ;
-* most properties ending in "Location" are a `vf:SpatialThing` , used for physical locations ;
+* properties ending in "Location" that are physical locations are a `vf:SpatialThing` ;
 * `vf:inScopeOf` references a `vf:Agent`.
 
 ### Inverse terms
@@ -40,7 +40,7 @@ Below are the places in Valueflows where there is a logical many-to-many.
 
 Although not included in the formal RDF-based spec, the suggested intermediate "associative" class for the two cases where there are no intermediate properties is shown below with dotted lines, for projects that want to implement a relational database under the covers, for example.
 
-![model with Proposal and Intent adn Agent m:m instantiated relationships](../assets/m-m.png)
+![model with Proposal, ProposedList, Intent and Agent m:m instantiated relationships](../assets/m-m.png)
 
 #### fulfills, satisfies, settles
 

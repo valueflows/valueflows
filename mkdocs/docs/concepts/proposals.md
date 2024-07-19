@@ -1,4 +1,4 @@
-# Proposals
+# Offers and Requests (Proposals)
 
 Proposals are published requests or offers, sometimes with what is expected in return. Agreements, which are committed to by agents, can evolve from proposals, or be entered into without proposals.
 

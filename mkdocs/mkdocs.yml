@@ -78,8 +78,7 @@ markdown_extensions:
   - pymdownx.highlight
   - pymdownx.inlinehilite
   - pymdownx.superfences
-  - toc:
-      title: On this page
+  - attr_list
 
 extra_css:
   - stylesheets/extra.css

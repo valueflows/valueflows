@@ -1,4 +1,10 @@
-## Definition
+## Model
+
+The resource vocabulary describes resources and types of resources, defined broadly.  They can include useful goods and services, digital documents and representations, code, money, tokens, credits, energy, work, skills, CO2, methane, heat, air, water, soil microbiota....
+
+See also [Resource in the Diagram Explanations](../specification/model-text.md#resource).
+
+## More definition
 
 Traditionally, an economic resource is defined by its utility, but also by its scarcity and its control by an economic agent. That definition is based on accounting for private ownership, and we believe is too limited.
 
@@ -30,7 +36,7 @@ So, for example, Herb might be the parent classification of Anise Hyssop, Golden
 
 People can use the multitude of existing taxonomies for resource classifications, or can also create their own as needed.
 
-Resource classifications can also use other schemes, like facets or tags.
+Resource classifications can also use other schemes, like facets or tags.  It is left vague in order to be flexible.
 
 The references to resource classifications are uri's, and not otherwise defined inside Valueflows.
 
@@ -48,7 +54,9 @@ Moreover, identification of resources will depend on scope and purpose. We want 
 
 And then in the "independent view", for larger-scale analysis of resource flows, or for example for lot tracking for public health issues like mad cow disease, different combinations of properties might be needed.
 
-*Substitutability*: This defines if any resources of that specification can be freely substituted for any other resource of that same specification when used, consumed, traded, etc.  For example, one container of "B9R-1-red DLP resin photopolymer" is probably substitutable for another container of the same photopolymer.  While each resource for a resource specification called "English-Spanish translation" is probably not substitutable because each will be a different document.
+### Substitutability
+
+This defines if any resources of that specification can be freely substituted for any other resource of that same specification when used, consumed, traded, etc.  For example, one container of "B9R-1-red DLP resin photopolymer" is probably substitutable for another container of the same photopolymer.  While each resource for a resource specification called "English-Spanish translation" is probably not substitutable because each will be a different document.
 
 ### Unique identifiers for resources
 
@@ -65,7 +73,7 @@ Note in the last case, a transfer of rights means a different resource. This is 
 
 Sometimes part of the logical identification of a resource includes:
 
-* *stage*: the ProcessSpecification of the most recent process the resource was output from, with the `modify` action
+* *stage*: the ProcessSpecification of the most recent process the resource was output from, such as "test"
 * *state*: the state of the resource on output from a process, such as "failed"
 
 Stage is used when the same identified resource passes through multiple processes in its lifetime, and that information is needed by the next process to determine which resources can be valid inputs.  For example, in creating a translation, you might have one translated document pass through translation, editing, proofreading, and formatting stages. You don't want to bring that resource into the formatting stage until it has been proofread, for example. Or you might have a testing stage for a component or product, in which case you don't want to consume or transfer the resource until it both has been through the testing stage, and had a `pass` output state.
@@ -105,7 +113,7 @@ We define two current quantities on the economic resource for these two concepts
 
 For example, in vendor-managed inventory, the vendor owns the inventory so they see it in their accounting; but the store sees it in their onhand quantities. Or for inventory being shipped FOB source, the intended receiver owns the inventory and sees it in their accounting, but the goods are actually onhand in a truck.
 
-## How resources related to each other
+## How resources relate to each other
 
 If one resource contains other resources, the contained resources are part of, or make up the larger resource.
 

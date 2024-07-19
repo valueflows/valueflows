@@ -24,3 +24,7 @@ Sometimes a generic recipe will cross scope boundaries for particular agents. Fo
 Some organizations distribute income backwards on value flows, based on people's contributions to the resources that generated the income.  When traversing the value chain, it is useful to know when the traversal has crossed a scope boundary, because it is possible that the rules for distributing the incoming resources will change for a different scope.  If the rules change or the rules are unknown, the income can be passed on to the other scope for them to distribute.
 
 Note that income does not need to be money and can include distributing the output of a process to the contributors, like when a community farm distributes food to its contributors.
+
+## Scoping Agents
+
+Often the scope can be determined by already recorded agents, such as provider, receiver, subject, object.  But in other cases, for example when an organization is keeping track of activity or relationships between members, an explicit scoping agent is needed.  Implementations that use the scope concept may want to always record the scope of relevant entities, even when they can be implied.

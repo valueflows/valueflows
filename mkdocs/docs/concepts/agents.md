@@ -1,4 +1,7 @@
+
 The agent vocabulary describes networks of people, organizations, and ecological agents, constructed using a simple but powerful model of agents and their relationships.
+
+See also [Agents in the Diagram Explanations](../specification/model-text.md#agent).
 
 ## Types of Agents
 
@@ -29,10 +32,6 @@ Relationships have direction: For example, in "Michael is a member of Enspiral",
 Relationships can be in a [scope](scoping.md) (or not): For example, "Kathy is mentor of Sam, in the scope of Enspiral."
 
 EcologicalAgents and Organizations both need human Agents to act on their behalf and represent their agency in the world of people. This can be defined as various roles.
-
-## Scoping Agents
-
-Scoping is used to group economic activity or definitions, based on some overall responsibility to define or keep track of the activity.  Often the scope can be determined by already recorded agents, such as provider, receiver, subject, object.  But in some cases, for example when an organization is keeping track of activity between members, a scoping agent is needed.
 
 ## Agent Philosophies
 

@@ -1092,6 +1092,15 @@ vf:proposedTo
         rdfs:comment        "The agent(s) to which the proposal or proposal list is published."@en ;
         .
 
+vf:publishedTo
+        a                   owl:ObjectProperty ;
+        rdfs:label          "published to"@en ;
+        rdfs:domain         vf:Scenario  ;
+        rdfs:range          vf:Agent ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "The agent(s) to which the scenario is published."@en ;
+        .
+
 vf:listedIn a               owl:ObjectProperty ;
         rdfs:label          "listed in"@en ;
         rdfs:domain         vf:Proposal ;
@@ -1253,10 +1262,10 @@ vf:refinementOf
 vf:nestedIn
         a                   owl:ObjectProperty ;
         rdfs:label          "nested in"@en ;
-        rdfs:domain         vf:Process ;
+        rdfs:domain         [ owl:unionOf (vf:Process vf:Intent vf:EconomicEvent) ] ;
         rdfs:range          vf:Scenario ;
         vs:term_status      "unstable" ;
-        rdfs:comment        "The process with its inputs and outputs is part of the scenario."@en ;
+        rdfs:comment        "The process with its inputs and outputs, or intent, is part of the scenario."@en ;
         .
 
 vf:definedAs

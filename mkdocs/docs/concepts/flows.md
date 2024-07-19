@@ -1,9 +1,6 @@
 ## Kinds of Flows
 
-Flows are a fundamental construct in the Valueflows ontology. The types of flows form a progression from potential to scheduled to realized:
-
-1. Intents which can lead to Commitments
-2. Commitments which can lead to Economic Events (or Intents can lead directly to Economic Events)
+Flows are a fundamental construct in the Valueflows ontology. The types of flows form a progression from defined to  potential to scheduled to realized.
 
 ### Intent
 
@@ -45,9 +42,6 @@ Often agents will start their plans independently and record their initial inten
 ## Granularity
 
 Intents, Commitments, and Economic Events can occur at any granularity that is needed or for which data can be obtained.  So they primarily are used for all operational needs, but can also be used at higher levels for budgeting for organizations, analytical and high level planning needs for communities or regions, etc.
-
-![diagram of Intent-Commitment-Event and their relationships plus their same properties](../assets/i-c-e.png)
-
 
 ## Actions
 

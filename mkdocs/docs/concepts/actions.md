@@ -1,10 +1,17 @@
+## Model
+
+![action model](../assets/action-mdl.png){ align=left }
+
 All flows (Economic Event, Commitment, Intent, Claim, Recipe Flow) use an action property to designate what the flow is doing and how it will affect or has affected an economic resource (or not).
 
-See also [Economic Resources](https://www.valueflo.ws/concepts/resources/).
+See also [Flows](../flows) and [Economic Resources](../resources/).
 
-We have defined a core set of actions, but expect that this will be extended with some others. If extended, we recommend that they be defined as part of this or another formal vocabulary so that all can use them and assume the same meaning.
+The actions contain data that defines how they will behave relative to a user interface, and relative to the effects on economic resources.  This enables the behavior to be data-driven if desired.
+
 
 ## Action Definitions
+
+We have defined a core set of actions, but expect that this will be extended with some others. If extended, we recommend that they be defined as part of this or another formal vocabulary so that all can use them and assume the same meaning.
 
 **produce** - A new resource is created in the process, or an addition to an existing stock resource of the same type is incremented.  `produce` is used in manufacturing of goods, but also in any kind of creation of a material or digital or energy resource.
 
