@@ -1237,7 +1237,7 @@ vf:stage
         rdfs:range          vf:ProcessSpecification ;
         owl:maxCardinality  1 ;
         vs:term_status      "stable" ;
-        rdfs:comment        "References the ProcessSpecification of the last process the economic resource went through. Stage is used when the last process is important for finding proper resources, such as where the publishing process wants only documents that have gone through the editing process."@en ;
+        rdfs:comment        "The required stage of the desired input economic resource. References the ProcessSpecification of the last process the economic resource went through."@en ;
         .
 
 vf:state
@@ -1247,7 +1247,7 @@ vf:state
         rdfs:range          xsd:string ;
         owl:maxCardinality  1 ;
         vs:term_status      "testing" ;
-        rdfs:comment        "The state of the desired economic resource, after coming out of a test or review process."@en ;
+        rdfs:comment        "The required state of the desired input economic resource, after coming out of a test or review process."@en ;
         .
 
 vf:refinementOf

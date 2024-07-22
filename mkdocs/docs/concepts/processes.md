@@ -1,10 +1,6 @@
 # Processes
 
-## Model
-
-By Process, we mean an activity that transforms inputs into outputs. The outputs might then become inputs to other processes, forming networks and chains. Those chains may be circular, where an output from one process becomes an input to another process that occurred previously in the same chain.
-
-![process model](../assets/process-mdl.png)
+By Process, we mean an activity that transforms inputs into outputs. The outputs might then become inputs to other processes, forming networks and chains. Those chains may be circular, where an output from one process becomes an input to another process that occurred previously in the same chain, supporting circular economies.
 
 Process spans the Plan and Observation layers.  I.e. intents, commitments, and economic events can all be connected to the same process as it moves through planning and observation.
 
@@ -23,4 +19,14 @@ See also [Input-Process-Output in the introduction](../introduction/core.md#ipo-
 
 Connected processes enable us to see cause and effect, if we want.
 
+## Process structures
+
+Process-based flows can create "directed graphs" in infinite combinations.
+
+![process flows](../assets/dir-graph.png)
+
 ## Co-products and by-products
+
+Usually processes have one output, but not always.  Sometimes there are co-products that have somewhat equal value.  Sometimes there are co-products that provide something useful, such as plastic shavings being put back into the melting pot for continued production as input.  Sometimes there are unintended by-products, resources that are known but not useful or are harmful.
+
+Valueflows does not distinguish between "good" and "bad" resources created by processes, as that is conditional and can be subjective. On the other hand, this pattern gives the opportunity to [record and understand harmful "externalities"](ecology.md) from producing and transporting resources.

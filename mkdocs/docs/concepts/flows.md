@@ -2,6 +2,10 @@
 
 Flows are a fundamental construct in the Valueflows ontology. The types of flows form a progression from defined to  potential to scheduled to realized.
 
+### Recipe Flow
+
+[Recipes](recipes.md) are used to create plans, and the Recipe Flow can create a corresponding Intent or a Commitment in a Plan, depending on if all the agents are known and the level of certainty of the planning.
+
 ### Intent
 
 Intents describe potential future events which have not been agreed to by other agents, such as offers and requests. Intents are often used for discovering another agent to participate in a desired event. On the process side, for example, planned work could be an Intent, but planned work that some agent committed to do is a Commitment.
@@ -22,10 +26,6 @@ Economic Events describe past events, something observed, never some potential f
 
 Claims resemble Commitments, but are initiated by the receiver, not the provider.  An Economic Event can trigger a reciprocal Claim.  Claims sometimes do not have to actually be saved, often they can be implied from an Economic Event and an Agreement.  For example, if Alice has agreed to sell Bob some carrots for $2, then if Alice delivers the carrots to Bob, she has an implicit claim for $2 from Bob.
 
-### Recipe Flow
-
-[Recipes](recipes.md) are used to create plans, and the Recipe Flow can create a corresponding Intent or a Commitment in a Plan, depending on if all the agents are known and the level of certainty of the planning.
-
 ## Timeline, plans and observations
 
 The figure below shows that Economic Events have to be observed and for that reason only appear as records of the past. Future plans get represented with Intents and Commitments.
@@ -42,6 +42,8 @@ Often agents will start their plans independently and record their initial inten
 ## Granularity
 
 Intents, Commitments, and Economic Events can occur at any granularity that is needed or for which data can be obtained.  So they primarily are used for all operational needs, but can also be used at higher levels for budgeting for organizations, analytical and high level planning needs for communities or regions, etc.
+
+Any flows that are part of a [Plan](plan.md) are operational, defined at the lowest level.  Flows that are part of a [Scenario](estimates.md) are not operational.  They could have many uses, from pre-planning to higher level analysis, but are not considered part of any scheduled planning for what will actually occur.
 
 ## Actions
 
@@ -76,4 +78,4 @@ See also at [Use of Other Vocabularies](../specification/external-terms.md).
 
 ## Correcting Events
 
-Economic events are immutable in accounting practice, since at any time they could have been reported formally.  Do correct an economic event, you need another economic event, which can be related to the first one with the relationship `corrects`.  The correcting event can have a negative number.  It can either completely back out the original event or adjust it.
+Economic events are immutable in accounting practice, since at any time they could have been reported formally.  Do correct an economic event, you need another economic event, which can be related to the first one with the relationship `corrects`.  The correcting event can have a negative number.  It can either completely back out the original event or adjust it.  See also [Making Corrections](../accounting/#making-corrections) on the Accounting page.

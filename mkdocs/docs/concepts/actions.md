@@ -1,7 +1,3 @@
-## Model
-
-![action model](../assets/action-mdl.png){ align=left }
-
 All flows (Economic Event, Commitment, Intent, Claim, Recipe Flow) use an action property to designate what the flow is doing and how it will affect or has affected an economic resource (or not).
 
 See also [Flows](../flows) and [Economic Resources](../resources/).
