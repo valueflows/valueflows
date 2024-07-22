@@ -1233,7 +1233,7 @@ vf:conformsTo
 vf:stage
         a                   owl:ObjectProperty ;
         rdfs:label          "stage"@en ;
-        rdfs:domain         [ owl:unionOf (vf:EconomicResource vf:Commitment vf:RecipeFlow) ] ;
+        rdfs:domain         [ owl:unionOf (vf:EconomicResource vf:Commitment vf:Intent vf:RecipeFlow) ] ;
         rdfs:range          vf:ProcessSpecification ;
         owl:maxCardinality  1 ;
         vs:term_status      "stable" ;
@@ -1243,7 +1243,7 @@ vf:stage
 vf:state
         a                   owl:ObjectProperty ;
         rdfs:label          "state"@en ;
-        rdfs:domain         [ owl:unionOf (vf:EconomicResource vf:EconomicEvent vf:RecipeFlow vf:Commitment) ] ;
+        rdfs:domain         [ owl:unionOf (vf:EconomicResource vf:EconomicEvent vf:RecipeFlow vf:Commitment vf:Intent) ] ;
         rdfs:range          xsd:string ;
         owl:maxCardinality  1 ;
         vs:term_status      "testing" ;
