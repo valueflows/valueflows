@@ -34,7 +34,7 @@ The IPO pattern is used to enhance the ability of REA to represent complex flows
 
 ...Input-Process-Output resource chains, where one **Economic Resource** is the output of one **Process** and then becomes an input to another, thus connecting the processes into a flow. The **Agents** involved in each Process in the chain need to coordinate with the previous and next Processes about the quantity, quality, and timing of resource flows between them.
 
-![Input-Process-Ooutput schematic](../assets/process-resource.png)
+![Input-Process-Output schematic](../assets/process-resource.png)
 
 ## Putting them together
 
