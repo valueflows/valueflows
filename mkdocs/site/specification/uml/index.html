@@ -546,16 +546,14 @@
       
         
 
-  
-
-<nav class="md-nav md-nav--secondary" aria-label="On this page">
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
   
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      On this page
+      Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
@@ -1026,6 +1024,8 @@
         
           
         
+          
+        
       
       
         <label class="md-nav__link" for="__nav_5" tabindex="0" aria-expanded="false">
@@ -1132,6 +1132,20 @@
     <li class="md-nav__item">
       <a href="../../examples/ex-proposals/" class="md-nav__link">
         Offers/Requests
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/ex-scenario/" class="md-nav__link">
+        Scenarios
       </a>
     </li>
   
@@ -1490,16 +1504,14 @@
                   <div class="md-sidebar__inner">
                     
 
-  
-
-<nav class="md-nav md-nav--secondary" aria-label="On this page">
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
   
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      On this page
+      Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
@@ -1600,7 +1612,7 @@
 <p>In some cases, there were just too many lines!  The subordinate classes in the gray section at the bottom are not connected with arrows, so the viewer should assume that:</p>
 <ul>
 <li>every property ending in "Quantity" or "Duration" is a <code>vf:Measure</code> (does not live on its own) ;</li>
-<li>most properties ending in "Location" are a <code>vf:SpatialThing</code> , used for physical locations ;</li>
+<li>properties ending in "Location" that are physical locations are a <code>vf:SpatialThing</code> ;</li>
 <li><code>vf:inScopeOf</code> references a <code>vf:Agent</code>.</li>
 </ul>
 <h3 id="inverse-terms">Inverse terms</h3>
@@ -1613,7 +1625,7 @@
 <p>Below are the places in Valueflows where there is a logical many-to-many.</p>
 <h4 id="published-proposedto">published, proposedTo</h4>
 <p>Although not included in the formal RDF-based spec, the suggested intermediate "associative" class for the two cases where there are no intermediate properties is shown below with dotted lines, for projects that want to implement a relational database under the covers, for example.</p>
-<p><img alt="model with Proposal and Intent adn Agent m:m instantiated relationships" src="../../assets/m-m.png" /></p>
+<p><img alt="model with Proposal, ProposedList, Intent and Agent m:m instantiated relationships" src="../../assets/m-m.png" /></p>
 <h4 id="fulfills-satisfies-settles">fulfills, satisfies, settles</h4>
 <p>These cases have possible properties in the "associative" class. For example, between Commitment and EconomicEvent, a Commitment for 40 hours of work might be fulfilled by 5 EconomicEvents of 8 hours.  Or an EconomicEvent might pay for a statement or invoice that includes multiple Commitments for deliveries.  The model we have settled on supports the former, but not the latter.  The latter is one of a few cases that we believe will be a small minority of edge cases where the quantities in the "associative" entity might be appreciated.  For that case, an application could possibly divide the payment into multiple EconomicEvents and connect them with the trackingIdentifier.  Or it could extend the vocabulary to include the quantity fulfilled/satisfied/settled, and over time the VF community can re-consider the best trade-off for handling this situation.</p>
 <p>We believe that it is more important to simplify the model and the concepts for the majority of use cases, than to have complete support of all use cases.</p>

@@ -14,6 +14,7 @@ A plan for creating two different resources needed for one campaign.  The first 
   - printer: https://printer.example/
     skos: http://www.w3.org/2004/02/skos/core#
     om2: http://www.ontology-of-units-of-measure.org/resource/om-2/
+    dcterms: http://purl.org/dc/terms/
 
 '@graph':
 
@@ -135,6 +136,7 @@ A plan generated from a recipe, for making a component.
     open: https://openhardware.example
     skos: http://www.w3.org/2004/02/skos/core#
     om2: http://www.ontology-of-units-of-measure.org/resource/om-2/
+    dcterms: http://purl.org/dc/terms/
 
 '@graph':
 

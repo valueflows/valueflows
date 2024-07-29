@@ -729,16 +729,14 @@
       
         
 
-  
-
-<nav class="md-nav md-nav--secondary" aria-label="On this page">
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
   
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      On this page
+      Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
@@ -1006,6 +1004,8 @@
         
           
         
+          
+        
       
       
         <label class="md-nav__link" for="__nav_5" tabindex="0" aria-expanded="false">
@@ -1112,6 +1112,20 @@
     <li class="md-nav__item">
       <a href="../../examples/ex-proposals/" class="md-nav__link">
         Offers/Requests
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/ex-scenario/" class="md-nav__link">
+        Scenarios
       </a>
     </li>
   
@@ -1470,16 +1484,14 @@
                   <div class="md-sidebar__inner">
                     
 
-  
-
-<nav class="md-nav md-nav--secondary" aria-label="On this page">
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
   
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      On this page
+      Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
@@ -1550,9 +1562,10 @@
   <h1>Actions</h1>
 
 <p>All flows (Economic Event, Commitment, Intent, Claim, Recipe Flow) use an action property to designate what the flow is doing and how it will affect or has affected an economic resource (or not).</p>
-<p>See also <a href="https://www.valueflo.ws/concepts/resources/">Economic Resources</a>.</p>
-<p>We have defined a core set of actions, but expect that this will be extended with some others. If extended, we recommend that they be defined as part of this or another formal vocabulary so that all can use them and assume the same meaning.</p>
+<p>See also <a href="../flows">Flows</a> and <a href="../resources/">Economic Resources</a>.</p>
+<p>The actions contain data that defines how they will behave relative to a user interface, and relative to the effects on economic resources.  This enables the behavior to be data-driven if desired.</p>
 <h2 id="action-definitions">Action Definitions</h2>
+<p>We have defined a core set of actions, but expect that this will be extended with some others. If extended, we recommend that they be defined as part of this or another formal vocabulary so that all can use them and assume the same meaning.</p>
 <p><strong>produce</strong> - A new resource is created in the process, or an addition to an existing stock resource of the same type is incremented.  <code>produce</code> is used in manufacturing of goods, but also in any kind of creation of a material or digital or energy resource.</p>
 <p><strong>use</strong> - Most often <code>use</code> is employed for equipment or tools that are used in a process, but not consumed.  After the process, the piece of equipment of tool still exists, but during the process, it is unavailable. The unavailability can be useful to know if the resource must be scheduled, or if one needs to know how much the resource is used.</p>
 <p><strong>consume</strong> - Most often, an ingredient or component is transformed  into the output(s) of the process. Or the input resource can be used up during the process, like energy. After the process the specified quantity of the consumed input is gone.</p>

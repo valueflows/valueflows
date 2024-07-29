@@ -15,6 +15,7 @@ An exchange agreement with commitments.
     bob: https://bob.example/
     skos: http://www.w3.org/2004/02/skos/core#
     om2: http://www.ontology-of-units-of-measure.org/resource/om-2/
+    dcterms: http://purl.org/dc/terms/
 
 '@graph':
 
@@ -349,6 +350,7 @@ Logged work triggers a claim for future income distribution for that work.
     mfg: https://manufacturer.example/
     skos: http://www.w3.org/2004/02/skos/core#
     om2: http://www.ontology-of-units-of-measure.org/resource/om-2/
+    dcterms: http://purl.org/dc/terms/
 
 '@graph':
 
@@ -412,6 +414,7 @@ This shows a simple recipe that includes both a process and the exchange of work
     doc: https://documenters.example
     skos: http://www.w3.org/2004/02/skos/core#
     om2: http://www.ontology-of-units-of-measure.org/resource/om-2/
+    dcterms: http://purl.org/dc/terms/
 
 '@graph':
 

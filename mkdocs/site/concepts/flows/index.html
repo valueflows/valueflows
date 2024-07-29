@@ -715,16 +715,14 @@
       
         
 
-  
-
-<nav class="md-nav md-nav--secondary" aria-label="On this page">
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
   
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      On this page
+      Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
@@ -735,6 +733,13 @@
   
     <nav class="md-nav" aria-label="Kinds of Flows">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#recipe-flow" class="md-nav__link">
+    Recipe Flow
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#intent" class="md-nav__link">
@@ -773,13 +778,6 @@
           <li class="md-nav__item">
   <a href="#claim" class="md-nav__link">
     Claim
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#recipe-flow" class="md-nav__link">
-    Recipe Flow
   </a>
   
 </li>
@@ -1061,6 +1059,8 @@
         
           
         
+          
+        
       
       
         <label class="md-nav__link" for="__nav_5" tabindex="0" aria-expanded="false">
@@ -1167,6 +1167,20 @@
     <li class="md-nav__item">
       <a href="../../examples/ex-proposals/" class="md-nav__link">
         Offers/Requests
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/ex-scenario/" class="md-nav__link">
+        Scenarios
       </a>
     </li>
   
@@ -1525,16 +1539,14 @@
                   <div class="md-sidebar__inner">
                     
 
-  
-
-<nav class="md-nav md-nav--secondary" aria-label="On this page">
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
   
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      On this page
+      Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
@@ -1545,6 +1557,13 @@
   
     <nav class="md-nav" aria-label="Kinds of Flows">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#recipe-flow" class="md-nav__link">
+    Recipe Flow
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#intent" class="md-nav__link">
@@ -1583,13 +1602,6 @@
           <li class="md-nav__item">
   <a href="#claim" class="md-nav__link">
     Claim
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#recipe-flow" class="md-nav__link">
-    Recipe Flow
   </a>
   
 </li>
@@ -1660,11 +1672,9 @@
   <h1>Flows</h1>
 
 <h2 id="kinds-of-flows">Kinds of Flows</h2>
-<p>Flows are a fundamental construct in the Valueflows ontology. The types of flows form a progression from potential to scheduled to realized:</p>
-<ol>
-<li>Intents which can lead to Commitments</li>
-<li>Commitments which can lead to Economic Events (or Intents can lead directly to Economic Events)</li>
-</ol>
+<p>Flows are a fundamental construct in the Valueflows ontology. The types of flows form a progression from defined to  potential to scheduled to realized.</p>
+<h3 id="recipe-flow">Recipe Flow</h3>
+<p><a href="../recipes/">Recipes</a> are used to create plans, and the Recipe Flow can create a corresponding Intent or a Commitment in a Plan, depending on if all the agents are known and the level of certainty of the planning.</p>
 <h3 id="intent">Intent</h3>
 <p>Intents describe potential future events which have not been agreed to by other agents, such as offers and requests. Intents are often used for discovering another agent to participate in a desired event. On the process side, for example, planned work could be an Intent, but planned work that some agent committed to do is a Commitment.</p>
 <h3 id="commitment">Commitment</h3>
@@ -1675,8 +1685,6 @@
 <p>Economic Events describe past events, something observed, never some potential future event.  They can fulfill Commitments or satisfy Intents (when there is no Commitment).</p>
 <h3 id="claim">Claim</h3>
 <p>Claims resemble Commitments, but are initiated by the receiver, not the provider.  An Economic Event can trigger a reciprocal Claim.  Claims sometimes do not have to actually be saved, often they can be implied from an Economic Event and an Agreement.  For example, if Alice has agreed to sell Bob some carrots for $2, then if Alice delivers the carrots to Bob, she has an implicit claim for $2 from Bob.</p>
-<h3 id="recipe-flow">Recipe Flow</h3>
-<p><a href="../recipes/">Recipes</a> are used to create plans, and the Recipe Flow can create a corresponding Intent or a Commitment in a Plan, depending on if all the agents are known and the level of certainty of the planning.</p>
 <h2 id="timeline-plans-and-observations">Timeline, plans and observations</h2>
 <p>The figure below shows that Economic Events have to be observed and for that reason only appear as records of the past. Future plans get represented with Intents and Commitments.</p>
 <p><img alt="diagram of Intents, Commitments, Events in past, present, future, showing how the flows change through time" src="../../assets/flows.png" /></p>
@@ -1685,7 +1693,7 @@
 <p><img alt="diagram showing matching of 2 Intents from different agents, satisfied by 1 Commitment, fulfilled by an Event" src="../../assets/matched.png" /></p>
 <h2 id="granularity">Granularity</h2>
 <p>Intents, Commitments, and Economic Events can occur at any granularity that is needed or for which data can be obtained.  So they primarily are used for all operational needs, but can also be used at higher levels for budgeting for organizations, analytical and high level planning needs for communities or regions, etc.</p>
-<p><img alt="diagram of Intent-Commitment-Event and their relationships plus their same properties" src="../../assets/i-c-e.png" /></p>
+<p>Any flows that are part of a <a href="../plan/">Plan</a> are operational, defined at the lowest level.  Flows that are part of a <a href="../estimates/">Scenario</a> are not operational.  They could have many uses, from pre-planning to higher level analysis, but are not considered part of any scheduled planning for what will actually occur.</p>
 <h2 id="actions">Actions</h2>
 <p>All types of flows use the same set of actions, which define what the flow does and how it behaves in relation to resources.  You can find detailed documentation on actions on the <a href="../actions/">Actions page</a>.</p>
 <h2 id="quantities-and-times">Quantities and Times</h2>
@@ -1710,7 +1718,7 @@
 <p>Sometimes a situation may call for a "compound quantity", like "Number-per-Year".</p>
 <p>See also at <a href="../../specification/external-terms/">Use of Other Vocabularies</a>.</p>
 <h2 id="correcting-events">Correcting Events</h2>
-<p>Economic events are immutable in accounting practice, since at any time they could have been reported formally.  Do correct an economic event, you need another economic event, which can be related to the first one with the relationship <code>corrects</code>.  The correcting event can have a negative number.  It can either completely back out the original event or adjust it.</p>
+<p>Economic events are immutable in accounting practice, since at any time they could have been reported formally.  Do correct an economic event, you need another economic event, which can be related to the first one with the relationship <code>corrects</code>.  The correcting event can have a negative number.  It can either completely back out the original event or adjust it.  See also <a href="../accounting/#making-corrections">Making Corrections</a> on the Accounting page.</p>
 
 
 

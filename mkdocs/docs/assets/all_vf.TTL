@@ -255,7 +255,7 @@ vf:EcologicalAgent  a       owl:Class ;
 vf:EconomicResource  a      owl:Class ;
         rdfs:label          "Economic Resource"@en ;
         vs:term_status      "stable" ;
-        rdfs:comment        "Economic or environmental inputs to or outputs from processes."@en ;
+        rdfs:comment        "Observable economic or environmental inputs to or outputs from processes, which agents agree should be accounted for."@en ;
         .
 
 vf:Process  a               owl:Class ;
@@ -578,7 +578,7 @@ vf:relationship  a          owl:ObjectProperty ;
         .
 
 vf:inScopeOf  a             owl:ObjectProperty ;
-        rdfs:domain         [ owl:unionOf (vf:Claim vf:Commitment vf:EconomicEvent vf:Proposal vf:Intent vf:Scenario vf:Process vf:AgentRelationship) ] ;
+        rdfs:domain         [ owl:unionOf (vf:Claim vf:Commitment vf:EconomicEvent vf:Intent vf:Scenario vf:Process vf:AgentRelationship) ] ;
         rdfs:label          "in scope of"@en ;
         rdfs:range          vf:Agent ;
         owl:maxCardinality  1 ;
@@ -948,21 +948,12 @@ vf:eligibleLocation a       owl:ObjectProperty ;
         rdfs:comment        "Location or area where the proposal is valid."@en ;
         .
 
-vf:atLocation a             owl:ObjectProperty ;
-        rdfs:label          "at location"@en ;
-        rdfs:domain         [ owl:unionOf (vf:EconomicEvent vf:Commitment vf:Intent) ] ;
-        rdfs:range          vf:SpatialThing ;
-        owl:maxCardinality  1 ;
-        vs:term_status      "unstable" ;
-        rdfs:comment        "The place where an intent, commitment, or economic event occurs.  Usually mappable."@en ;
-        .
-
 vf:toLocation a             owl:ObjectProperty ;
         rdfs:label          "to location"@en ;
         rdfs:domain         vf:EconomicEvent ;
         rdfs:range          vf:SpatialThing ;
         owl:maxCardinality  1 ;
-        vs:term_status      "unstable" ;
+        vs:term_status      "testing" ;
         rdfs:comment        "The new location of the receiver resource."@en ;
         .
 
@@ -1101,6 +1092,15 @@ vf:proposedTo
         rdfs:comment        "The agent(s) to which the proposal or proposal list is published."@en ;
         .
 
+vf:publishedTo
+        a                   owl:ObjectProperty ;
+        rdfs:label          "published to"@en ;
+        rdfs:domain         vf:Scenario  ;
+        rdfs:range          vf:Agent ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "The agent(s) to which the scenario is published."@en ;
+        .
+
 vf:listedIn a               owl:ObjectProperty ;
         rdfs:label          "listed in"@en ;
         rdfs:domain         vf:Proposal ;
@@ -1114,7 +1114,7 @@ vf:lists a                  owl:ObjectProperty ;
         rdfs:label          "lists"@en ;
         rdfs:domain         vf:ProposalList ;
         rdfs:range          vf:Proposal ;
-        vs:term_status      "unstable" ;
+        vs:term_status      "testing" ;
         rdfs:comment        "All the proposals included in this proposal list."@en ;
         .
 
@@ -1233,21 +1233,21 @@ vf:conformsTo
 vf:stage
         a                   owl:ObjectProperty ;
         rdfs:label          "stage"@en ;
-        rdfs:domain         [ owl:unionOf (vf:EconomicResource vf:Commitment vf:RecipeFlow) ] ;
+        rdfs:domain         [ owl:unionOf (vf:EconomicResource vf:Commitment vf:Intent vf:RecipeFlow) ] ;
         rdfs:range          vf:ProcessSpecification ;
         owl:maxCardinality  1 ;
         vs:term_status      "stable" ;
-        rdfs:comment        "References the ProcessSpecification of the last process the economic resource went through. Stage is used when the last process is important for finding proper resources, such as where the publishing process wants only documents that have gone through the editing process."@en ;
+        rdfs:comment        "The required stage of the desired input economic resource. References the ProcessSpecification of the last process the economic resource went through."@en ;
         .
 
 vf:state
         a                   owl:ObjectProperty ;
         rdfs:label          "state"@en ;
-        rdfs:domain         [ owl:unionOf (vf:EconomicResource vf:EconomicEvent vf:RecipeFlow vf:Commitment) ] ;
+        rdfs:domain         [ owl:unionOf (vf:EconomicResource vf:EconomicEvent vf:RecipeFlow vf:Commitment vf:Intent) ] ;
         rdfs:range          xsd:string ;
         owl:maxCardinality  1 ;
         vs:term_status      "testing" ;
-        rdfs:comment        "The state of the desired economic resource, after coming out of a test or review process."@en ;
+        rdfs:comment        "The required state of the desired input economic resource, after coming out of a test or review process."@en ;
         .
 
 vf:refinementOf
@@ -1262,10 +1262,10 @@ vf:refinementOf
 vf:nestedIn
         a                   owl:ObjectProperty ;
         rdfs:label          "nested in"@en ;
-        rdfs:domain         vf:Process ;
+        rdfs:domain         [ owl:unionOf (vf:Process vf:Intent vf:EconomicEvent) ] ;
         rdfs:range          vf:Scenario ;
         vs:term_status      "unstable" ;
-        rdfs:comment        "The process with its inputs and outputs is part of the scenario."@en ;
+        rdfs:comment        "The process with its inputs and outputs, or intent, is part of the scenario."@en ;
         .
 
 vf:definedAs

@@ -701,16 +701,14 @@
       
         
 
-  
-
-<nav class="md-nav md-nav--secondary" aria-label="On this page">
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
   
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      On this page
+      Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
@@ -748,6 +746,13 @@
   
     <nav class="md-nav" aria-label="Identification and Behaviors of Resources">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#substitutability" class="md-nav__link">
+    Substitutability
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#unique-identifiers-for-resources" class="md-nav__link">
@@ -790,8 +795,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#how-resources-related-to-each-other" class="md-nav__link">
-    How resources related to each other
+  <a href="#how-resources-relate-to-each-other" class="md-nav__link">
+    How resources relate to each other
   </a>
   
 </li>
@@ -1040,6 +1045,8 @@
         
           
         
+          
+        
       
       
         <label class="md-nav__link" for="__nav_5" tabindex="0" aria-expanded="false">
@@ -1146,6 +1153,20 @@
     <li class="md-nav__item">
       <a href="../../examples/ex-proposals/" class="md-nav__link">
         Offers/Requests
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/ex-scenario/" class="md-nav__link">
+        Scenarios
       </a>
     </li>
   
@@ -1504,16 +1525,14 @@
                   <div class="md-sidebar__inner">
                     
 
-  
-
-<nav class="md-nav md-nav--secondary" aria-label="On this page">
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
   
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      On this page
+      Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
@@ -1551,6 +1570,13 @@
   
     <nav class="md-nav" aria-label="Identification and Behaviors of Resources">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#substitutability" class="md-nav__link">
+    Substitutability
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#unique-identifiers-for-resources" class="md-nav__link">
@@ -1593,8 +1619,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#how-resources-related-to-each-other" class="md-nav__link">
-    How resources related to each other
+  <a href="#how-resources-relate-to-each-other" class="md-nav__link">
+    How resources relate to each other
   </a>
   
 </li>
@@ -1617,6 +1643,8 @@
 
   <h1>Economic Resources</h1>
 
+<p>The resource vocabulary describes resources and types of resources, defined broadly.  They can include useful goods and services, digital documents and representations, code, money, tokens, credits, energy, work, skills, CO2, methane, heat, air, water, soil microbiota....</p>
+<p>See also <a href="../../specification/model-text/#resource">Resource in the Diagram Explanations</a>.</p>
 <h2 id="definition">Definition</h2>
 <p>Traditionally, an economic resource is defined by its utility, but also by its scarcity and its control by an economic agent. That definition is based on accounting for private ownership, and we believe is too limited.</p>
 <ul>
@@ -1636,7 +1664,7 @@ is a specification. Your library may have two copies that you can check out. Tho
 <p>An economic resource or a flow can have any number of <em>resource classifications</em>.  They are used to filter, match, or group economic resources.  Resource classifications can be part of a taxonomy. That means they can be defined very broadly and generally and maybe vaguely, or they can be defined very narrowly, but fit into broader classifications.</p>
 <p>So, for example, Herb might be the parent classification of Anise Hyssop, Goldenrod, Nettles, Red Clover, etc.  Besides its usefulness in understanding taxonomies of resource types, this can be useful when one can define a general recipe that will work for many more specific kinds of resources.</p>
 <p>People can use the multitude of existing taxonomies for resource classifications, or can also create their own as needed.</p>
-<p>Resource classifications can also use other schemes, like facets or tags.</p>
+<p>Resource classifications can also use other schemes, like facets or tags.  It is left vague in order to be flexible.</p>
 <p>The references to resource classifications are uri's, and not otherwise defined inside Valueflows.</p>
 <h2 id="identification-and-behaviors-of-resources">Identification and Behaviors of Resources</h2>
 <p>Here are three different kinds of resources from the viewpoint of identification:</p>
@@ -1648,7 +1676,8 @@ is a specification. Your library may have two copies that you can check out. Tho
 <p>Serialized resources would fit the direct identification pattern. Lots can be split up, so the identification of a subset of a lot would require some other properties, such as location. Stock resources can only be described indirectly, by means of some combination of properties, such as specification and location. (Location is a complex ontology of its own: for example, in warehousing, a location is often composed of warehouse:room:aisle:row:tier.)  The tracking identifier is used for serial numbers.</p>
 <p>Moreover, identification of resources will depend on scope and purpose. We want to allow each scope or context to define resources that they have relationships with, according to the combination of properties that works best for them, which might include which agent has which relationship with a resource.</p>
 <p>And then in the "independent view", for larger-scale analysis of resource flows, or for example for lot tracking for public health issues like mad cow disease, different combinations of properties might be needed.</p>
-<p><em>Substitutability</em>: This defines if any resources of that specification can be freely substituted for any other resource of that same specification when used, consumed, traded, etc.  For example, one container of "B9R-1-red DLP resin photopolymer" is probably substitutable for another container of the same photopolymer.  While each resource for a resource specification called "English-Spanish translation" is probably not substitutable because each will be a different document.</p>
+<h3 id="substitutability">Substitutability</h3>
+<p>This defines if any resources of that specification can be freely substituted for any other resource of that same specification when used, consumed, traded, etc.  For example, one container of "B9R-1-red DLP resin photopolymer" is probably substitutable for another container of the same photopolymer.  While each resource for a resource specification called "English-Spanish translation" is probably not substitutable because each will be a different document.</p>
 <h3 id="unique-identifiers-for-resources">Unique identifiers for resources</h3>
 <p>This can vary.  And people can be allowed within some boundaries of agreement to specify which combination of other properties would constitute identifiers.</p>
 <p>Here are some examples from manufacturing situations:</p>
@@ -1660,11 +1689,12 @@ is a specification. Your library may have two copies that you can check out. Tho
 <h3 id="stage-and-state">Stage and state</h3>
 <p>Sometimes part of the logical identification of a resource includes:</p>
 <ul>
-<li><em>stage</em>: the ProcessSpecification of the most recent process the resource was output from, with the <code>modify</code> action</li>
+<li><em>stage</em>: the ProcessSpecification of the most recent process the resource was output from, such as "test"</li>
 <li><em>state</em>: the state of the resource on output from a process, such as "failed"</li>
 </ul>
 <p>Stage is used when the same identified resource passes through multiple processes in its lifetime, and that information is needed by the next process to determine which resources can be valid inputs.  For example, in creating a translation, you might have one translated document pass through translation, editing, proofreading, and formatting stages. You don't want to bring that resource into the formatting stage until it has been proofread, for example. Or you might have a testing stage for a component or product, in which case you don't want to consume or transfer the resource until it both has been through the testing stage, and had a <code>pass</code> output state.</p>
-<p>These can be defined on the recipe or the plan, showing where an input flow expects a certain stage and/or state of a resource. In that case, <a href="../../algorithms/dependent-demand/">Dependent demand planning</a> will select only those resources that fit the specified stage and state.  In user-interface forms for adding EconomicEvents, the input event form should query EconomicResources for required stage and state when offering selections of possible input resources.  The stage and state of an EconomicResource can be derived or stored, as preferred.</p>
+<p>These can be defined on the recipe or the plan, showing where an input flow expects a certain stage and/or state of a resource. In that case, <a href="../../algorithms/dependent-demand/">Dependent demand planning</a> will select only those resources that fit the specified stage and state.  In user-interface forms for adding process input EconomicEvents, if the use case uses stages, the input event form should query EconomicResources for required stage and state when offering selections of possible input resources.</p>
+<p>An alternative to using staged resources is to have different resource specifications, and therefore different identified resources at each stage.  This eliminates the extra complexity of the stage model, but also means you can't tell that the same resource is passing through stages.</p>
 <h3 id="inventory">Inventory</h3>
 <p>Economic Resources can be inventoried, not inventoried but could be, or it doesn't make sense to think about inventory.  If a resource is not inventoried, it is generally not instantiated in the software, but defined using resource specification and other properties, such as the accountable agent or location.</p>
 <ul>
@@ -1687,7 +1717,7 @@ is a specification. Your library may have two copies that you can check out. Tho
 </ul>
 <p>We define two current quantities on the economic resource for these two concepts, <em>accounting quantity</em> for the first and <em>onhand quantity</em> for the second.</p>
 <p>For example, in vendor-managed inventory, the vendor owns the inventory so they see it in their accounting; but the store sees it in their onhand quantities. Or for inventory being shipped FOB source, the intended receiver owns the inventory and sees it in their accounting, but the goods are actually onhand in a truck.</p>
-<h2 id="how-resources-related-to-each-other">How resources related to each other</h2>
+<h2 id="how-resources-relate-to-each-other">How resources relate to each other</h2>
 <p>If one resource contains other resources, the contained resources are part of, or make up the larger resource.</p>
 <p>For example, a bank account might contain a number of "virtual accounts" that a group manages itself, outside the bank's knowledge.  Or, a makerspace network might share packages of resources for projects, where the package moves as a whole, but the resources inside are what the project used. Or, a bike shed resource might contain 10 bikes, which are identified and tracked by their serial numbers as individual resources.</p>
 
