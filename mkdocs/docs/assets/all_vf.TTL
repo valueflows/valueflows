@@ -255,7 +255,7 @@ vf:EcologicalAgent  a       owl:Class ;
 vf:EconomicResource  a      owl:Class ;
         rdfs:label          "Economic Resource"@en ;
         vs:term_status      "stable" ;
-        rdfs:comment        "Economic or environmental inputs to or outputs from processes."@en ;
+        rdfs:comment        "Observable economic or environmental inputs to or outputs from processes, which agents agree should be accounted for."@en ;
         .
 
 vf:Process  a               owl:Class ;

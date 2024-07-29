@@ -415,9 +415,7 @@
       
         
 
-  
-
-<nav class="md-nav md-nav--secondary" aria-label="On this page">
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
   
@@ -426,7 +424,7 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      On this page
+      Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
@@ -468,6 +466,13 @@
         <li class="md-nav__item">
   <a href="#flows-without-processes" class="md-nav__link">
     Flows without processes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#types-of-flows" class="md-nav__link">
+    Types of flows
   </a>
   
 </li>
@@ -1018,6 +1023,8 @@
         
           
         
+          
+        
       
       
         <label class="md-nav__link" for="__nav_5" tabindex="0" aria-expanded="false">
@@ -1124,6 +1131,20 @@
     <li class="md-nav__item">
       <a href="../../examples/ex-proposals/" class="md-nav__link">
         Offers/Requests
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/ex-scenario/" class="md-nav__link">
+        Scenarios
       </a>
     </li>
   
@@ -1482,9 +1503,7 @@
                   <div class="md-sidebar__inner">
                     
 
-  
-
-<nav class="md-nav md-nav--secondary" aria-label="On this page">
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
   
@@ -1493,7 +1512,7 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      On this page
+      Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
@@ -1535,6 +1554,13 @@
         <li class="md-nav__item">
   <a href="#flows-without-processes" class="md-nav__link">
     Flows without processes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#types-of-flows" class="md-nav__link">
+    Types of flows
   </a>
   
 </li>
@@ -1593,18 +1619,21 @@
 <h2 id="ipo-input-process-output">IPO (Input-Process-Output)</h2>
 <p>The IPO pattern is used to enhance the ability of REA to represent complex flows of value.  The flows are IPOs...</p>
 <p>...Input-Process-Output resource chains, where one <strong>Economic Resource</strong> is the output of one <strong>Process</strong> and then becomes an input to another, thus connecting the processes into a flow. The <strong>Agents</strong> involved in each Process in the chain need to coordinate with the previous and next Processes about the quantity, quality, and timing of resource flows between them.</p>
-<p><img alt="Input-Process-Ooutput schematic" src="../../assets/process-resource.png" /></p>
+<p><img alt="Input-Process-Output schematic" src="../../assets/process-resource.png" /></p>
 <h2 id="putting-them-together">Putting them together</h2>
 <p>In general, how they fit together: Agents perform Economic Events that provide Inputs to Processes and take Outputs from Processes and move Resources from one Process to another.  This forms a directed graph of value flows.</p>
 <p><img alt="diagram with a Process, Economic Events input and output, each with Agents and Economic Resource" src="../../assets/REA-IPO-VF.png" /></p>
 <p>For example: a food network</p>
 <p>...might include farmers, food processors, restaurants and bakeries, grocery stores, families to eat the food. And vehicles to move everything from place to place. Coordination might be needed between each of those stages: seeds and other inputs for planting crops, workers etc for harvesting crops. when are the crops ready for processing, when is the grain ready for milling and then for baking and then for people to eat, when is the fruit ready for pies, etc.</p>
 <h2 id="flows-without-processes">Flows without processes</h2>
-<p>Some flows do not involve processing, i.e. there is no transformation of Economic Resources.  These flows simply transfer Economic Resources between Agents or move them between locations. One common example is an exchange of one Economic Resource for another Economic Resource between two Agents, as below, with two reciprocal flows based on an Agreement.</p>
+<p>Some flows do not involve processing, i.e. there is no transformation or transportation of Economic Resources.  These flows simply transfer Economic Resources between Agents. One common example is an exchange of one Economic Resource for another Economic Resource between two Agents, as below, with two reciprocal flows based on an Agreement.</p>
 <p><img alt="diagram of an exchange with an Agreement of Economic Events with Economic Resources from and to Agents" src="../../assets/exchange.png" /></p>
 <p>It can also be simpler, such as a gift, or more complex, involving many Agents.  Also, these flows can mix in with Process-based flows.</p>
 <p>For example: in that food network above</p>
 <p>...food processors might purchase the harvested food from farmers, sell processed food to restaurants and stores... or families might provide land and labor for a farm and receive harvested food each week in return.  That becomes part of the coordination.</p>
+<h2 id="types-of-flows">Types of flows</h2>
+<p>These are the main types of flows and how they relate as stages of value flows.  They have basically the same core data structure, with differences related to their stage.  Any of these types can be input or output to a process, or reciprocally related, as above.</p>
+<p><img alt="diagram of Intent-Commitment-Event and their relationships plus their same properties" src="../../assets/i-c-e.png" /></p>
 <h2 id="traversing-value-flows">Traversing value flows</h2>
 <p>Value flows can be traversed forwards ("tracking") or backwards ("tracing").  Often people use the term "provenance" when looking backwards towards the source of some resource, sometimes when a problem emerges (as in a disease outbreak from food), sometimes to know the quality of the resource (as in wanting local humanely produced food with lower ecological impact).</p>
 <p>The data structures of Valueflows provide the ability to trace or track any value flow, no matter how long or complex, see <a href="../../algorithms/track/">Track and Trace</a>.</p>
@@ -1618,7 +1647,7 @@
 </ul>
 <p>Here is a simplified view of how they connect.</p>
 <p><img alt="a generalized process resource flow with the 3 layers" src="../../assets/process-layer.png" /></p>
-<p>Here is a specific example of the simplified view:</p>
+<p>Here is a specific simplified example:</p>
 <p><img alt="a specific salsa example process resource flow with the 3 layers" src="../../assets/salsa-layer.png" /></p>
 
 
