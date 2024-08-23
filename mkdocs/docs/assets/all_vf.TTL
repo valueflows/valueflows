@@ -703,7 +703,7 @@ vf:due a                    owl:DatatypeProperty ;
 vf:hasNumericalValue a      owl:DatatypeProperty ;
         rdfs:subPropertyOf  om:hasNumericalValue ;
         rdfs:label          "has numerical value"@en ;
-        rdfs:domain         vf:Unit ;
+        rdfs:domain         vf:Measure ;
         rdfs:range          dtype:numericUnion ;
         owl:maxCardinality  1 ;
         vs:term_status      "stable" ;
@@ -850,6 +850,7 @@ vf:created a                owl:DatatypeProperty ;
                                 vf:Commitment
                                 vf:Plan
                                 vf:Proposal
+                                vf:Scenario
                                 vf:EconomicEvent ) ] ;
         rdfs:range          xsd:dateTimeStamp ;
         owl:maxCardinality  1 ;
@@ -1092,6 +1093,15 @@ vf:reciprocal
         rdfs:comment        "The reciprocal intent(s) of this published proposal. Not meant to be used for intent matching."@en ;
         .
 
+vf:publishedTo
+        a                   owl:ObjectProperty ;
+        rdfs:label          "published to"@en ;
+        rdfs:domain         vf:Scenario  ;
+        rdfs:range          vf:Agent ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "The agent(s) to which the scenario is published."@en ;
+        .
+
 vf:proposedTo
         a                   owl:ObjectProperty ;
         rdfs:label          "proposed to"@en ;
@@ -1266,6 +1276,16 @@ vf:nestedIn
         rdfs:range          vf:Scenario ;
         vs:term_status      "unstable" ;
         rdfs:comment        "The process with its inputs and outputs is part of the scenario."@en ;
+        .
+
+vf:scenarioIncludes
+        a                   owl:ObjectProperty ;
+        owl:inverseOf       vf:nestedIn ;
+        rdfs:label          "scenario includes"@en ;
+        rdfs:domain         vf:Scenario ;
+        rdfs:range          [ owl:unionOf (vf:Process vf:Intent) ] ;
+        vs:term_status      "testing" ;
+        rdfs:comment        "The processes and and/or intents that constitute the plan."@en ;
         .
 
 vf:definedAs

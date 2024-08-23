@@ -492,7 +492,7 @@ This example includes recipe, plan, and actuals.
       om2:hasUnit: om2:one
       om2:hasNumericalValue: 1000
 
-  - '@id': mfg:21f361a6-2375-46bb-b192-c21b5ba833bf
+  - '@id': mfg:21f361a6-2375-46bb-b192-c21b5ba833bg
     '@type': Commitment
     outputOf: mfg:8baa8ff7-9c1e-4586-ae7b-79d620a3cac9
     action: produce

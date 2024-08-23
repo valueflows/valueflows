@@ -12,7 +12,7 @@ One of the most-often used traces is to find the origins of health problems like
 
 It is also used when the provenance is useful for other information, like to determine the sustainability of the creation of a resource (like fossil fuel inputs, potential carbon implications, etc.), how healthy the inputs are, how local is the production and distribution, etc.  Or when an agent is interested in what happens to a resource they created, for example what is the effect of their recycling efforts or material donations to an educational program.
 
-Also, this logic is used in other features, like "contribution economy" calculations, where all contributions of various kinds over time can be found be tracing backwards from an end resource.
+Also, this logic is used in other features, like "contribution economy" calculations, where all contributions of various kinds over time can be found by tracing backwards from an end resource.
 
 ## Valueflows query terminology
 
