@@ -1,5 +1,7 @@
 # Transfers
 
+See also [Flows without processes](../../introduction/core/#flows-without-processes) in the Core, [How resources relate to transfers](../../concepts/resources/#how-resources-relate-to-transfers), and a lot of the [Transfer and exchange examples](../../examples/ex-exchange/).
+
 ## Transfer concepts
 
 One concept of transfer is an activity that re-assigns rights and responsibilities for an economic resource from one agent to another.  A second concept is an activity that operationally changes physical custody or possession of an economic resource from one agent to another, without affecting rights.

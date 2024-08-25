@@ -1,7 +1,7 @@
 
 The agent vocabulary describes networks of people, organizations, and ecological agents, constructed using a simple but powerful model of agents and their relationships.
 
-See also [Agents in the Diagram Explanations](../specification/model-text.md#agent).
+See also [Agents in the Diagram Explanations](../specification/model-text.md#agent) and [Agent examples](../../examples/ex-agent/).
 
 ## Types of Agents
 

@@ -1,6 +1,6 @@
 # Ecological Accounting
 
-### Why ecological accounting
+## Why ecological accounting
 
 There is increasing desire to account for "externalities" from human production and transportation processes, and certainly the need has always been there. Related, there are also more efforts to do "climate accounting" on a global level, to provide knowledge in the efforts to improve the situation, which is spiraling out of control on many levels - climate chaos, soil and biodiversity loss, uncontrolled emission of substances on the land and in the water toxic to life, etc.
 
@@ -10,7 +10,9 @@ As always, our goal is to give Valueflows the latitude to support both conventio
 
 So, understanding there will be much more learned going forward in practice, we want to make Valueflows broadly supportive of these efforts.  In general, this can be a step forward in being able to broaden our ability to do the accounting we need to do to confront the current climate and biodiversity challenges.
 
-### REA I-P-O resource flows
+See also [Accounting](accounting.md).
+
+## REA I-P-O resource flows
 
 The Valueflows input-process-output resource flow model works very well for ecological accounting, with some broadening of our thinking about agents and resources, and what "economic" entails.  If we think of "economic" as broader than human activity, which has tentacles into most if not all of the other ecosystems on earth, it becomes easier to consider "accounting" in light of flows to and from those ecosystems, all of which eventually affect human economies.
 
@@ -18,11 +20,11 @@ This diagram shows some of the flows for solar panel production.  Silica dust is
 
 ![flow diagram of solar panel production including externalities](../assets/SolarPanelProduction.png)
 
-### Economic Resources
+## Economic Resources
 
 We have thought of economic resources as having use value (and sometimes exchange value) to humans and ecosystems.  If we broaden that to include "bad" as well as "good" resources, we can model more completely and accurately the resource flows that impact ecosystems including humans.  It is also not very helpful to even think in terms of "bad" and "good", since that is conditional.  For example, CO2 is "good" for plants in a greenhouse, but "bad" pumped into the atmosphere, and some of the CO2 in the greenhouse will leak out, making it "bad"... yet it is the same substance.
 
-### Agents
+## Agents
 
 We have defined Agents as people and organizations (formal or informal).  If we go beyond human-centric thinking, we could conceive of Agents as other living things, and also as groups of other living things, or whole ecosystems.  Those ecosystems could be of any size or complexity, and all types of agents could have various relationships between each other and their ecosystems.
 
