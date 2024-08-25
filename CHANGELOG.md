@@ -1,3 +1,9 @@
+## 0.14 (August 2024)
+
+- Add Scenario.inScopeOf, .publishedTo, .created, .scenarioIncludes
+- Add Scenario examples
+- Improve Concepts documentation
+
 ## 0.13 (July 2024)
 
 - Remove RoleBehavior (breaking)
