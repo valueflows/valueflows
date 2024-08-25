@@ -1,6 +1,8 @@
-## Types
+## Kinds of classification
 
-Classification creates references to categories and other classifications of the economic resources and processes, and exchanges.  The classifications can be a part of a taxonomy, flat list, tag set, faceted classification scheme, and any other structure desired.  Valueflows will not include the structures that the classifications are part of, and assume that is handled outside the VF scope.
+Classification creates references to categories and other classifications of the economic resources and processes, and exchanges.  The classifications can be a part of a taxonomy, flat list, tag set, faceted classification scheme, and any other structure desired.  This is left loose for now, and can be tightened up between groups, or as part of the vocabulary as we get more experience.
+
+Valueflows will not include the structures that the classifications are part of, and assume that is handled outside the VF scope.
 
 Classifications can be created by user groups for themselves, or can be existing semantic structures, such as wikidata.
 
@@ -22,4 +24,3 @@ Classifications can be created by user groups for themselves, or can be existing
     Trade - https://www.wikidata.org/wiki/Q601401
     Barter - https://www.wikidata.org/wiki/Q484830
     Gift - https://www.wikidata.org/wiki/Q184303
-

@@ -1,6 +1,6 @@
 ## Boundary for analysis and accounting
 
-Scope can be thought of as a boundary for analysis and accounting, mostly used for sets of economic events, commitments, and intents.  A scope is an agent of some kind.
+Scope can be thought of as a boundary for analysis and accounting, mostly used for sets of economic events, commitments, and intents.  A scope is an agent of some kind.  See also [Agent concepts](agents.md).
 
 The scope is where work is done, where processes live, where value is created and exchanged. Economic events, commitments and intents can reference an organization, person, or ecological agent as an entity that defines their scope.
 

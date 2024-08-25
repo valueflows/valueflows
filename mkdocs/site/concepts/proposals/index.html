@@ -69,7 +69,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#offers-and-requests-proposals" class="md-skip">
+        <a href="#offers-and-requests-proposals-and-intents" class="md-skip">
           Skip to content
         </a>
       
@@ -776,9 +776,47 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Offers and Requests
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         Offers and Requests
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#how-proposals-work" class="md-nav__link">
+    How proposals work
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#matching-offers-and-requests" class="md-nav__link">
+    Matching offers and requests
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1057,7 +1095,7 @@
   
     <li class="md-nav__item">
       <a href="../../examples/ex-scenario/" class="md-nav__link">
-        Scenarios
+        Estimates and Analysis
       </a>
     </li>
   
@@ -1423,6 +1461,28 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#how-proposals-work" class="md-nav__link">
+    How proposals work
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#matching-offers-and-requests" class="md-nav__link">
+    Matching offers and requests
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1437,14 +1497,19 @@
 
 
 
-<h1 id="offers-and-requests-proposals">Offers and Requests (Proposals)</h1>
-<p>Proposals are published requests or offers, sometimes with what is expected in return. Agreements, which are committed to by agents, can evolve from proposals, or be entered into without proposals.</p>
+<h1 id="offers-and-requests-proposals-and-intents">Offers and Requests (Proposals and Intents)</h1>
+<p>Proposals are published requests or offers, sometimes with what is expected in return.</p>
+<p>See also <a href="../../concepts/flows/#intent">Intents</a> and <a href="../../concepts/flows/#matching-intents">Matching Intents</a> in the Flows concept page, <a href="../../specification/model-text/#flows-in-motion-offers-and-requests">Flows in motion: Offers and Requests</a> in the Diagram Explanations, and <a href="../../examples/ex-proposals/">Offers and Requests examples</a>.</p>
+<h2 id="how-proposals-work">How proposals work</h2>
+<p>Proposals are everywhere in advertising.  But we see many groups posting proposals that are different from commercial advertisements, such as timebanks, mutual aid groups, commitment pools, people working together on a project and looking for help, groups looking for donations, supply chains seeking specific offers from suppliers in their network.  All of these are supported, including commercial advertisements.</p>
+<p>A Proposal has one or more primary Intents, and optionally one or more reciprocal Intents. The proposal has to do with the publishing of the intents, which have the actual content.  An intent can be published in more than one proposal, for example over time, or with different reciprocal intents like wholesale and retail price lists.  Multiple primary or reciprocal intents on one proposal imply an "and", like a Community Supported Agriculture (CSA) group might offer weekly veggie boxes, and in exchange want some money plus some work contribution on the farm.</p>
 <p>Proposals can be grouped into Proposal Lists, for example for price lists.</p>
-<p>Proposals are everywhere in advertising.  But we see many groups posting proposals that are different from commercial advertisements or e-commerce offers.</p>
-<p>Proposals can stay directed to broad or specific <em>audience</em>. In the broadest case, they stay available for anyone (public proposals). In the most narrow case, the stay available only for specific agent. In between those two extremes a whole spectrum exists.  For example two distinct proposals can exist on providing particular product or service - one for club members and one for general public etc.</p>
+<p>Proposals can stay directed to a broad or specific <em>audience</em>. In the broadest case, they stay available for anyone (public proposals). In the most narrow case, the stay available only for specific agent. In between those two extremes a whole spectrum exists.  For example two distinct proposals can exist on providing particular product or service - one for club members and one for general public etc.</p>
+<h2 id="matching-offers-and-requests">Matching offers and requests</h2>
 <p>Proposals may be specific or more general, often not commercial at all, expressed not in identified products but in classifications and text.  But they want to find each other. The offers want to find the matching requests. The requests want to find the matching offers.</p>
-<p>When they find their match, those with the matching offer and request enter into a conversation which might result in an agreement.</p>
-<p>A proposal to do something might enter into conversation for action which might result in commitments for a process or exchange.  This may lead to more and better cycles of engagement.  Valueflows does not at this time define the pattern of this kind of conversation, but intends to integrate with different social networking vocabularies for this purpose.  We do think that social and economic networking are naturally intertwined in human behavior.</p>
+<p>When they find their match, those with the matching offer and request enter into a conversation which might result in an agreement, starting a cycle that ends with observed transfer or exchange.</p>
+<p>Agreements, which are committed to by agents, can evolve from proposals directly, or conversations about proposals, or be entered into without proposals.  Besides agreements, a proposal to do something might trigger a conversation which could result in commitment for an input(s) to a process, with or without an associated exchange agreement.</p>
+<p>These types of conversations may lead to more and better cycles of engagement.  Valueflows does not at this time define the pattern of this kind of conversation, but intends to integrate with different social networking vocabularies for this purpose.  We do think that social and economic networking are naturally intertwined in human behavior.</p>
 <p><img alt="funnel diagram Intent&gt;Match&gt;Agree&gt;Commit&gt;Fulfill&gt;Respond, cycling back to each stage" src="../../assets/funnel.png" /></p>
 
 

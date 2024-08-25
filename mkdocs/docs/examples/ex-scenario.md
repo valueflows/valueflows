@@ -1,10 +1,10 @@
-# Scenario Examples
+# Estimates and Analysis (Scenarios)
 
-Scenarios are used for all pre-operational planning, such as estimates for other agents, group offers/requests, forecasting and budgeting, aggregated analysis.
+Scenarios are used for all pre-operational planning, such as estimates for other agents, group offers/requests, forecasting and budgeting.  They are also used for post-operational aggregated analysis, especially where only the aggregated data is available.
 
 #### Community planning
 
-This snippet maps potential yearly inputs and outputs for community members, in order to discover opportunities to connect more in the network, and start organizations to fill gaps.  In the following diagram, the dotted arrows indicate where opportunities for output-to-input matches can occur.
+This snippet maps potential yearly inputs and outputs for community members, in order to discover opportunities to connect more in the network, and start organizations or projects to fill gaps.  In the following diagram, the dotted arrows indicate where opportunities for output-to-input matches can occur.
 
 ![community mapping diagram reflecting the yaml below](../assets/examples/community-map.png)
 

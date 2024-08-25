@@ -1,3 +1,5 @@
+See also [an Exchange diagram](../../introduction/core/#flows-without-processes) in Core, [Flows in motion: Recipe](../../specification/model-text/#flows-in-motion-recipe), [Flows in motion: Planning](../../specification/model-text/#flows-in-motion-planning), [Flows in motion: Observation](../../specification/model-text/#flows-in-motion-observation), also [the Exchange examples](../../examples/ex-exchange/).
+
 ## The independent viewpoint
 
 Here we look at exchanges of resources from an independent or neutral viewpoint (not the viewpoint of one of the Agents in the exchange). For example, from one Agent's viewpoint, the exchange may be a Purchase, from the other Agent's viewpoint, it might be a Sale. From the neutral viewpoint, it is an exchange of resources, with usually at least two flows of resources, from different directions. So for example, the seller might give some goods to the buyer, and the buyer might give some money to the seller. Or in a barter exchange, one agent might give the other some books, and the other agent might compensate with some cookies.
@@ -8,10 +10,9 @@ Valueflows enables multilateral exchange agreements as well. Any number of agent
 
 We also support non-reciprocal one-way transfers, such as in a gift economy.  However, an exchange implies at least two transfers with reciprocity.
 
-
 ## Exchanges and flows
 
-Exchanges as modeled in VF actually relate to flows within agreements, not resources directly.  Flows involved in transfers of rights and responsibilities are more obvious.  Other types of flows can also imply a transfer, and can thus be used as part of an exchange, for details see [Explicit and implied transfers](transfers.md#explicit-and-implied-transfers).
+Exchanges as modeled in VF actually are reciprocal flows, not resources directly.  Flows involved in transfers of rights and responsibilities are more obvious.  Other types of flows can also imply a transfer, and can thus be used as part of an exchange, for details see [Explicit and implied transfers](transfers.md#explicit-and-implied-transfers).
 
 * For example, most timebanks exchange work for credits.  The work event can be part of a process that produces something for some other agent.  It is also part of an exchange in the timebank.  The transfer of credits on the other hand, is not part of any process that creates or transports something, it is merely the timebank recording that one account was decremented and another account was incremented.
 
@@ -21,6 +22,8 @@ Exchanges as modeled in VF actually relate to flows within agreements, not resou
 
 ## Agreements
 
+An Agreement can encompass a promised exchange, or an observed exchange without the promise.
+
 Various kinds of agreements between agents often define the rights and responsibilities for economic resources that are transferred. Agreements can reflect any economic paradigm, so make it possible for the Exchange and Transfer vocabulary to work equally well for capitalist businesses, transitional economic interactions, and next economy interactions.
 
 Agreements can be of any kind and scope, from an order to a value equation to a larger blanket agreement.
@@ -29,4 +32,6 @@ Agreements can be combined into an Agreement Bundle.  This can be useful for exa
 
 Valueflows does not define the detailed internal vocabulary for agreements, but defines optional references to an agreement when it could be useful.
 
+##  Recipe exchanges
 
+Recipes can include patterns for exchange, as well as production.  The Recipe Exchange is used to generate an agreement(s) and reciprocal commitments when a plan in created from the recipe.

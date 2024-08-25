@@ -1,6 +1,6 @@
 # Status of the vocabulary
 
-This documentation is for release 0.13. Change log can be found [here](https://lab.allmende.io/valueflows/valueflows/-/blob/master/CHANGELOG.md).
+This documentation is for release 0.14. Change log can be found [here](https://lab.allmende.io/valueflows/valueflows/-/blob/master/CHANGELOG.md).
 
 This vocabulary is based on decades of work in academia and several implementations in the field.  The mixed stability of the model reflects this history.  The core model is fairly stable.  However, there are many edge cases and possibly not-so-edge cases where the model will need to be adjusted for the reality in the field based on further experience. Also, this model represents something new, something that we want to be able to support the next economy, with all the unknowns that will bring.
 
@@ -19,14 +19,4 @@ Other consolidated parts of the vocabulary include:
 * Intents and Proposals
 * Core Recipe model
 
-Less stable are: 
-
-* Budgeting and Analysis
-* Claims
-
-Coming in future releases or extensions are:
-
-* Forking/versioning of Recipes
-* Conversations for Action
-* Quantitative and qualitative measurements, with SOSA
-* One or more extensions for value calculation, distribution algorithms
+Please refer to the status for each element [in the source turtle file](https://codeberg.org/valueflows/pages/raw/branch/main/assets/all_vf.TTL) for details on relative stability of various elements of the vocabularity, based on implementations by user groups.

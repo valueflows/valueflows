@@ -10,6 +10,8 @@ All of the views can emerge from subsets of the same data.  Any standard (or non
 
 Or potentially, views for a global value system economy (really).
 
+See also [Ecological Accounting](ecology.md).
+
 ## Accounting views: independent vs dependent
 
 ![diagram of independent vs dependent views and naming](../assets/REAviews.png)

@@ -1,6 +1,9 @@
-## Coordinating work
 
-An operational plan is a schedule of related operational processes, that constitute a body of scheduled work with defined deliverable(s).  A plan normally contains one or more process resource flows, one for each deliverable.
+An operational plan is a schedule of related operational processes, that constitute a body of scheduled work with defined deliverable(s).  A plan normally contains one or more process resource flows, one for each deliverable.  It can also contain the reciprocal agreements expected for different involved agents involved in the flows.
+
+See also [Flows in motion: Planning](../../specification/model-text/#flows-in-motion-planning) in the Diagram Explanations, [Generating plans from recipes](../../concepts/recipes/#generation-of-plans), and the [Planning examples](../../examples/ex-planning/).
+
+## Coordinating work
 
 A plan can cover more than one [scope](scoping.md), if the different scopes are tightly coordinated with pre-agreed rules, for example sub-organizations of a main organization, or an ongoing supply chain.  If not, or if the agents prefer, then requirements from one scope could become deliverables for another scope's plan.  Different batch sizes could trigger a new plan for inputs to the main deliverable too.  But all of this does not affect the vocabulary or model.  Plans can relate to each other through resource flows just like processes.
 

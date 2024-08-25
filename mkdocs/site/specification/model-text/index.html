@@ -856,11 +856,11 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#analysis-pre-planning-aggregation" class="md-nav__link">
-    Analysis, Pre-planning, Aggregation
+  <a href="#estimation-and-analysis" class="md-nav__link">
+    Estimation and Analysis
   </a>
   
-    <nav class="md-nav" aria-label="Analysis, Pre-planning, Aggregation">
+    <nav class="md-nav" aria-label="Estimation and Analysis">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1395,7 +1395,7 @@
   
     <li class="md-nav__item">
       <a href="../../examples/ex-scenario/" class="md-nav__link">
-        Scenarios
+        Estimates and Analysis
       </a>
     </li>
   
@@ -2048,11 +2048,11 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#analysis-pre-planning-aggregation" class="md-nav__link">
-    Analysis, Pre-planning, Aggregation
+  <a href="#estimation-and-analysis" class="md-nav__link">
+    Estimation and Analysis
   </a>
   
-    <nav class="md-nav" aria-label="Analysis, Pre-planning, Aggregation">
+    <nav class="md-nav" aria-label="Estimation and Analysis">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -2176,8 +2176,8 @@
 <p>An EconomicEvent is the "real" flow, one that actually happened.  Its behavior is governed by its <a href="../../concepts/actions/">Action</a>.  It actually affects an EconomicResource if one is defined as inventoried and referenced in the EconomicEvent, possibly including quantities, location, primary accountable, stage, state, containment.  EconomicEvent has a provider and receiver Agent, and can be input or output of a Process, and/or part of an Agreement.  An EconomicEvent knows its resource, either an EconomicResource or a ResourceSpecification.  In some actions, for example transfers and moves, there can also be another EconomicResource on the receiver side.  EconomicEvents can fulfill a Commitment or satisfy an Intent (where there is no Commitment) or settle a Claim.  An EconomicEvent can correct a previous EconomicEvent, or reverse it completely.</p>
 <h4 id="vfclaim">vf:Claim</h4>
 <p>A Claim on another Agent is triggered by an EconomicEvent, according to rules agreed to elsewhere, although most EconomicEvents do not trigger a Claim, and if there is already a Commitment, a Claim is not needed.  The Claim then can be settled by other EconomicEvent(s).  As a flow, a Claim has an Action, provider and receiver Agent, and reference to a ResourceSpecification.</p>
-<h3 id="analysis-pre-planning-aggregation">Analysis, Pre-planning, Aggregation</h3>
-<p>More info at <a href="../../concepts/estimates/">Budgeting and Analysis concepts</a>.</p>
+<h3 id="estimation-and-analysis">Estimation and Analysis</h3>
+<p>More info at <a href="../../concepts/estimates/">Estimates and Analysis concepts</a>.</p>
 <p><img alt="scenario model" src="../../assets/scenario-mdl.png" /></p>
 <h4 id="vfscenario">vf:Scenario</h4>
 <p>A Scenario is used as a grouping mechanism for flows.  It is a loose concept, and can support many situations.  It can be defined by a ScenarioDefinition.  It can contain Plans, Processes, Intents, aggregated EconomicEvents.  A Scenario can also be nested in itself, to support continued zooming out to less detail.  The uses below are some but probably not all of the possibilities.</p>

@@ -161,9 +161,9 @@ An EconomicEvent is the "real" flow, one that actually happened.  Its behavior i
 A Claim on another Agent is triggered by an EconomicEvent, according to rules agreed to elsewhere, although most EconomicEvents do not trigger a Claim, and if there is already a Commitment, a Claim is not needed.  The Claim then can be settled by other EconomicEvent(s).  As a flow, a Claim has an Action, provider and receiver Agent, and reference to a ResourceSpecification.
 
 
-### Analysis, Pre-planning, Aggregation
+### Estimation and Analysis
 
-More info at [Budgeting and Analysis concepts](../concepts/estimates.md).
+More info at [Estimates and Analysis concepts](../concepts/estimates.md).
 
 ![scenario model](../assets/scenario-mdl.png)
 
