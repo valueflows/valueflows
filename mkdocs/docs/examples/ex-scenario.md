@@ -364,6 +364,8 @@ Here a farm is publishing a seasonal estimate of resources they intend to produc
     hasBeginning: 2020-08-01-01T00:00:00-5:00
     hasEnd: 2021-08-31T23:59:59-5:00
     created: 2020-07-20-T00:00:00-5:00
+    inScopeOf: https://farm.example/
+    publishedTo: https://farmstand-retailer.example/
     scenarioIncludes:
 
       - '@id': farm:a8236bbb-81e0-422d-9861-56d2417db0fb
@@ -392,6 +394,8 @@ Here a farm is publishing a seasonal estimate of resources they intend to produc
     hasBeginning: 2020-09-01-01T00:00:00-5:00
     hasEnd: 2021-09-30T23:59:59-5:00
     created: 2020-08-20-T00:00:00-5:00
+    inScopeOf: https://farm.example/
+    publishedTo: https://farmstand-retailer.example/
     scenarioIncludes:
 
       - '@id': farm:b90b0b77-09a2-42e2-8bd4-e9ae2c1c6172
@@ -420,6 +424,8 @@ Here a farm is publishing a seasonal estimate of resources they intend to produc
     hasBeginning: 2020-10-01-01T00:00:00-5:00
     hasEnd: 2021-10-31T23:59:59-5:00
     created: 2020-09-20-T00:00:00-5:00
+    inScopeOf: https://farm.example/
+    publishedTo: https://farmstand-retailer.example/
     scenarioIncludes:
 
       - '@id': farm:d4d2fd71-34f2-41c3-b1c5-19ad5ed2da59
@@ -439,4 +445,5 @@ Here a farm is publishing a seasonal estimate of resources they intend to produc
         resourceQuantity:
           hasUnit: one
           hasNumericalValue: 90
+
 ```
