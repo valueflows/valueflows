@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:129.0) Gecko/20100101 Firefox/129.0" version="24.7.7">
+  <diagram name="Page-1" id="-jAirmJsZztY6MbO6gWX">
+    <mxGraphModel dx="2344" dy="944" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="2" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=none;align=left;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="-88" y="5720" width="1028" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="3" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fad9d5;strokeColor=none;align=left;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="-88" y="5810" width="1028" height="310" as="geometry" />
+        </mxCell>
+        <mxCell id="4" value="&lt;div&gt;2020 potato&amp;nbsp;&lt;/div&gt;&lt;div&gt;availability estimate&lt;/div&gt;" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-1.75" y="5860" width="125" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="5" value="intent to transfer 300 cases all blue potatoes" style="shape=delay;whiteSpace=wrap;html=1;rounded=0;glass=1;comic=0;" vertex="1" parent="1">
+          <mxGeometry x="70.75" y="5918.5" width="125.25" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="6" value="intent to transfer 300 cases all red potatoes" style="shape=delay;whiteSpace=wrap;html=1;rounded=0;glass=1;comic=0;" vertex="1" parent="1">
+          <mxGeometry x="-78.75" y="5918.5" width="123" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="7" value="" style="endArrow=none;html=1;entryX=0;entryY=0.75;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" source="6" target="4" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-188.75" y="5906" as="sourcePoint" />
+            <mxPoint x="-138.75" y="5856" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8" value="" style="endArrow=none;html=1;entryX=1;entryY=0.75;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" source="5" target="4" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="231.25" y="5946" as="sourcePoint" />
+            <mxPoint x="281.25" y="5896" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9" value="&lt;div&gt;August potato&amp;nbsp;&lt;/div&gt;&lt;div&gt;availability estimate&lt;/div&gt;" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="142.25" y="6001" width="125" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="10" value="intent to transfer 95 cases all blue potatoes" style="shape=delay;whiteSpace=wrap;html=1;rounded=0;glass=1;comic=0;" vertex="1" parent="1">
+          <mxGeometry x="214.75" y="6059.5" width="131.25" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="11" value="intent to transfer 80 cases all red potatoes" style="shape=delay;whiteSpace=wrap;html=1;rounded=0;glass=1;comic=0;" vertex="1" parent="1">
+          <mxGeometry x="65.25" y="6059.5" width="123" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="12" value="" style="endArrow=none;html=1;entryX=0;entryY=0.75;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" source="11" target="9" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-44.75" y="6047" as="sourcePoint" />
+            <mxPoint x="5.25" y="5997" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="13" value="" style="endArrow=none;html=1;entryX=1;entryY=0.75;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" source="10" target="9" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="375.25" y="6087" as="sourcePoint" />
+            <mxPoint x="425.25" y="6037" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="14" value="&lt;div&gt;September potato&amp;nbsp;&lt;/div&gt;&lt;div&gt;availability estimate&lt;/div&gt;" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="432.75" y="6001" width="125" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="15" value="intent to transfer 110 cases all blue potatoes" style="shape=delay;whiteSpace=wrap;html=1;rounded=0;glass=1;comic=0;" vertex="1" parent="1">
+          <mxGeometry x="505.25" y="6059.5" width="130.75" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="16" value="intent to transfer 110 cases all red potatoes" style="shape=delay;whiteSpace=wrap;html=1;rounded=0;glass=1;comic=0;" vertex="1" parent="1">
+          <mxGeometry x="355.75" y="6059.5" width="123" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="17" value="" style="endArrow=none;html=1;entryX=0;entryY=0.75;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" source="16" target="14" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="245.75" y="6047" as="sourcePoint" />
+            <mxPoint x="295.75" y="5997" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="18" value="" style="endArrow=none;html=1;entryX=1;entryY=0.75;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" source="15" target="14" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="665.75" y="6087" as="sourcePoint" />
+            <mxPoint x="715.75" y="6037" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="19" value="&lt;div&gt;October potato&amp;nbsp;&lt;/div&gt;&lt;div&gt;availability estimate&lt;/div&gt;" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="723.75" y="6001" width="125" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="20" value="intent to transfer 90 cases all blue potatoes" style="shape=delay;whiteSpace=wrap;html=1;rounded=0;glass=1;comic=0;" vertex="1" parent="1">
+          <mxGeometry x="796.25" y="6059.5" width="129.75" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="21" value="intent to transfer 105 cases all red potatoes" style="shape=delay;whiteSpace=wrap;html=1;rounded=0;glass=1;comic=0;" vertex="1" parent="1">
+          <mxGeometry x="646.75" y="6059.5" width="123" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="22" value="" style="endArrow=none;html=1;entryX=0;entryY=0.75;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" source="21" target="19" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="536.75" y="6047" as="sourcePoint" />
+            <mxPoint x="586.75" y="5997" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="23" value="" style="endArrow=none;html=1;entryX=1;entryY=0.75;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" source="20" target="19" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="956.75" y="6087" as="sourcePoint" />
+            <mxPoint x="1006.75" y="6037" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="24" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.375;exitY=0;exitDx=0;exitDy=0;" edge="1" source="4" target="31" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="107" y="6060" as="sourcePoint" />
+            <mxPoint x="45.5" y="5786" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="25" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;rounded=0;entryX=0.375;entryY=1;entryDx=0;entryDy=0;exitX=0.625;exitY=0;exitDx=0;exitDy=0;" edge="1" source="9" target="32" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="440" y="6050" as="sourcePoint" />
+            <mxPoint x="796.75" y="5786" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="26" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.625;exitY=0;exitDx=0;exitDy=0;" edge="1" source="14" target="32" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="520" y="6040" as="sourcePoint" />
+            <mxPoint x="819.5" y="5786" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="27" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;rounded=0;entryX=0.625;entryY=1;entryDx=0;entryDy=0;exitX=0.625;exitY=0;exitDx=0;exitDy=0;" edge="1" source="19" target="32" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="740" y="6070" as="sourcePoint" />
+            <mxPoint x="842.25" y="5786" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="28" value="refinement of" style="endArrow=none;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.625;exitY=0;exitDx=0;exitDy=0;labelBackgroundColor=none;" edge="1" source="4" target="9" parent="1">
+          <mxGeometry x="-0.4896" width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="100" y="6210" as="sourcePoint" />
+            <mxPoint x="150" y="6160" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="76" y="5850" />
+              <mxPoint x="205" y="5850" />
+            </Array>
+            <mxPoint x="-1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="29" value="refinement of" style="endArrow=none;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.571;exitY=0.01;exitDx=0;exitDy=0;exitPerimeter=0;labelBackgroundColor=none;" edge="1" source="4" target="14" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="77" y="5860" as="sourcePoint" />
+            <mxPoint x="206" y="6001" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="70" y="5840" />
+              <mxPoint x="495" y="5840" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="30" value="&lt;span style=&quot;&quot;&gt;refinement&lt;/span&gt; of" style="endArrow=none;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;labelBackgroundColor=none;" edge="1" source="4" target="19" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="80" y="5870" as="sourcePoint" />
+            <mxPoint x="505" y="6011" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="60" y="5830" />
+              <mxPoint x="786" y="5830" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="31" value="&lt;div&gt;Seasonal &lt;br&gt;&lt;/div&gt;&lt;div&gt;availability estimate&lt;/div&gt;" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-18" y="5738" width="125" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="32" value="Monthly &lt;br&gt;&lt;div&gt;availability estimate&lt;/div&gt;" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="752" y="5738" width="125" height="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
