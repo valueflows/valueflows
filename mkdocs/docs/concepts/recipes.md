@@ -14,12 +14,12 @@ If you encounter the same planning pattern more than once, and your software all
 
 These are two basic shapes of recipes. These recipe patterns can be used alone, or mixed and matched in the same recipe:
 
-* <b>Manufacturing pattern</b>: assemble or transform input resources into different output resources. This combines bills of material, processing instructions (routings), other inputs like labor and equipment requirements, and possible suppliers for the inputs.  They are structured like an upside down tree. The manufacturing pattern creates recursive structures. In other words, if an input component has a recipe itself, that recipe will be incorporated into its parent, so you can view a processing tree from parents through children unto many generations.  For example:
+* <b>Manufacturing pattern</b>: assemble or transform input resources into different output resource(s). This combines bills of material, processing instructions (routings), other inputs like labor and equipment requirements, and possible suppliers for the inputs. The manufacturing pattern creates recursive structures. In other words, if an input component has a recipe itself, that recipe will be incorporated into its parent, so you can view a processing tree from parents through children unto many generations.  For example:
 
     * Assemble a robot from metal, wires, computer chips, software, etc.
     * Bake bread from flour, yeast, water, etc., using an oven.
     
-A manufacturing recipe is shaped like a tree, where the top of the tree produces the resource to be assembled, and the roots are all the components.
+A manufacturing recipe can be thought of like a tree shape, where the top of the tree produces the resource to be assembled, and the roots are all the components.
     
 * <b>Workflow pattern</b>: change the same resource into a different stage of the same resource. This describes a sequence of processes used to complete work on one resource.  They create a series of stages that one resource will go through until it is finished. For example:
 

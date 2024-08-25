@@ -34,7 +34,7 @@ The IPO pattern is used to enhance the ability of REA to represent complex flows
 
 ...Input-Process-Output resource chains, where one **Economic Resource** is the output of one **Process** and then becomes an input to another, thus connecting the processes into a flow. The **Agents** involved in each Process in the chain need to coordinate with the previous and next Processes about the quantity, quality, and timing of resource flows between them.
 
-![Input-Process-Ooutput schematic](../assets/process-resource.png)
+![Input-Process-Output schematic](../assets/process-resource.png)
 
 ## Putting them together
 
@@ -48,7 +48,7 @@ For example: a food network
 
 ## Flows without processes
 
-Some flows do not involve processing, i.e. there is no transformation of Economic Resources.  These flows simply transfer Economic Resources between Agents or move them between locations. One common example is an exchange of one Economic Resource for another Economic Resource between two Agents, as below, with two reciprocal flows based on an Agreement.
+Some flows do not involve processing, i.e. there is no transformation or transportation of Economic Resources.  These flows simply transfer Economic Resources between Agents. One common example is an exchange of one Economic Resource for another Economic Resource between two Agents, as below, with two reciprocal flows based on an Agreement.
 
 ![diagram of an exchange with an Agreement of Economic Events with Economic Resources from and to Agents](../assets/exchange.png)
 
@@ -57,6 +57,12 @@ It can also be simpler, such as a gift, or more complex, involving many Agents. 
 For example: in that food network above
 
 ...food processors might purchase the harvested food from farmers, sell processed food to restaurants and stores... or families might provide land and labor for a farm and receive harvested food each week in return.  That becomes part of the coordination.
+
+## Types of flows
+
+These are the main types of flows and how they relate as stages of value flows.  They have basically the same core data structure, with differences related to their stage.  Any of these types can be input or output to a process, or reciprocally related, as above.
+
+![diagram of Intent-Commitment-Event and their relationships plus their same properties](../assets/i-c-e.png)
 
 ## Traversing value flows
 
@@ -78,6 +84,6 @@ Here is a simplified view of how they connect.
 
 ![a generalized process resource flow with the 3 layers](../assets/process-layer.png)
 
-Here is a specific example of the simplified view:
+Here is a specific simplified example:
 
 ![a specific salsa example process resource flow with the 3 layers](../assets/salsa-layer.png)

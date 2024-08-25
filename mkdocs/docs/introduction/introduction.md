@@ -30,7 +30,7 @@ The Valueflows model is designed to support:
 
 * coordination of economic activity both inside and between organizations, an enterprise is not assumed;
 * reciprocity with or without money, money is not assumed;
-* ecological agents as part of the network; externalities as resources.
+* ecological agents as part of the network; externalities as resources that need to be managed.
 
 ## Example uses for Valueflows
 

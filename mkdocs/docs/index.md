@@ -23,7 +23,7 @@ Here are some suggestions to help you find your way into this documentation, dep
 
 * **Or if you want a more fun and friendly way to understand the vocabulary**, you can start here with a [**Valueflows story about apple pie **](assets/ValueFlows-Story.pdf)(yum!).
 
-* **To lookup specific details**, you can use the *Search* function above.  Definitions and relationships by data element (class, property, etc.) are linked on the first [**formatted spec here**](specification/vfspec/); and are textually [**described by subject area here**](specification/model-text.md).  The [**concepts section**](concepts/concepts-overview.md) and [**examples section**](examples/ex-overview.md) also might be helpful to lookup developer level information.
+* **To lookup specific details**, you can use the *Search* function above.  Definitions and relationships by data element (class, property, etc.) are linked on the first [**formatted spec here**](specification/all_vf.html); and are textually [**described by subject area here**](specification/model-text.md).  The [**concepts section**](concepts/concepts-overview.md) and [**examples section**](examples/ex-overview.md) also might be helpful to lookup developer level information.
 
 <hr/>
 
