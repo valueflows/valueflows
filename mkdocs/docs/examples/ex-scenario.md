@@ -6,10 +6,6 @@ Scenarios are used for all pre-operational planning, such as estimates for other
 
 This snippet maps potential yearly inputs and outputs for community members, in order to discover opportunities to connect more in the network, and start organizations to fill gaps.  In the following diagram, the dotted arrows indicate where opportunities for output-to-input matches can occur.
 
-#### Map Community Consumption/Production
-
-This use case maps potential yearly consumption and production for community members, in order to discover gaps and opportunities to connect more in the network, and start organizations to fill gaps.
-
 ![community mapping diagram reflecting the yaml below](../assets/examples/community-map.png)
 
 ``` yaml
