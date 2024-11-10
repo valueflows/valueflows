@@ -13,7 +13,6 @@ This example include agents (people and organizations) and their relationships.
     bob: https://bob.example/
     fablab: https://fablab.example/
     coop: https://coop.example/
-    skos: http://www.w3.org/2004/02/skos/core#
 
 '@graph':
 
@@ -24,7 +23,7 @@ This example include agents (people and organizations) and their relationships.
     name: Alice
     image: https://alice.example/avatar.png
     primaryLocation: https://somelocation.example
-    skos:note: Alice is a mechanical engineer who likes to work in the fablab.
+    note: Alice is a mechanical engineer who likes to work in the fablab.
 
   - '@id': https://bob.example/
     '@type': vf:Person
@@ -44,7 +43,7 @@ This example include agents (people and organizations) and their relationships.
     '@type': AgentRelationshipRole
     roleLabel: is member of
     inverseRoleLabel: has member
-    skos:note: Both persons and organizations can be members of this fablab.
+    note: Both persons and organizations can be members of this fablab.
 
   - '@id': fablab:02b39a30-3e04-4305-9656-7f261aa63c84
     '@type': AgentRelationshipRole
@@ -69,7 +68,7 @@ This example include agents (people and organizations) and their relationships.
     subject: https://coop.example/
     relationship: fablab:02b39a30-3e04-4305-9656-7f261aa63c84 # trading partner
     object: https://fablab.example/
-    skos:note: The coop is a supplier of tools for the fablab.
+    note: The coop is a supplier of tools for the fablab.
 
   - '@id': fablab:6f438393-7f87-4914-806c-e23a4fd15e89
     '@type': AgentRelationship
@@ -77,5 +76,5 @@ This example include agents (people and organizations) and their relationships.
     relationship: fablab:a25500e0-0106-43cd-8cbb-e74779488835 # mentor
     object: https://bob.example/
     inScopeOf: https://fablab.example/
-    skos:note: Alice mentors Bob at the fablab.
+    note: Alice mentors Bob at the fablab.
 ```

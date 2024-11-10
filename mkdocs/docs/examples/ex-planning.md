@@ -12,18 +12,15 @@ A plan for creating two different resources needed for one campaign.  The first 
 '@context':
   - '@vocab': http://w3id.org/valueflows/ont/vf#
   - printer: https://printer.example/
-    skos: http://www.w3.org/2004/02/skos/core#
-    om2: http://www.ontology-of-units-of-measure.org/resource/om-2/
-    dcterms: http://purl.org/dc/terms/
 
 '@graph':
 
   - '@id': printer:8e5fe80d-a769-4bd5-89e5-2136d33eab9f
     '@type': Plan
     name: Anti climate-change campaign materials
-    skos:note: A set of printed materials for the campaign by Students for Peace and Justice
+    note: A set of printed materials for the campaign by Students for Peace and Justice
     due: 2019-04-08T17:00:00-5:00
-    dcterms:created: 2019-04-01T10:35:00-5:00
+    created: 2019-04-01T10:35:00-5:00
 
   - '@id': printer:02b39a30-3e04-4305-9656-7f261aa63c84
     '@type': Process
@@ -39,8 +36,8 @@ A plan for creating two different resources needed for one campaign.  The first 
     receiver: https://printer.example/
     resourceInventoriedAs: printer:6b97b1be-8e07-44ac-82e5-214f1b2aaf33 # specific brochures
     resourceQuantity:
-      om2:hasUnit: om2:one
-      om2:hasNumericalValue: 1000
+      hasUnit: one
+      hasNumericalValue: 1000
 
   - '@id': printer:b52a5815-fae9-43bf-be95-833b95dc0adb
     '@type': Commitment
@@ -50,8 +47,8 @@ A plan for creating two different resources needed for one campaign.  The first 
     receiver: https://printer.example/
     resourceConformsTo: printer:3129ca8b-fcda-45be-bbda-294dc924d3b9 # paper
     resourceQuantity:
-      om2:hasUnit: om2:one
-      om2:hasNumericalValue: 1020
+      hasUnit: one
+      hasNumericalValue: 1020
 
   - '@id': printer:9bd19194-a36d-4a1f-896b-8082887962cb
     '@type': Process
@@ -67,8 +64,8 @@ A plan for creating two different resources needed for one campaign.  The first 
     receiver: https://printer.example/
     resourceInventoriedAs: printer:6078f30a-b15b-4b1c-8e77-797abae11378 # specific posters
     resourceQuantity:
-      om2:hasUnit: om2:one
-      om2:hasNumericalValue: 35
+      hasUnit: one
+      hasNumericalValue: 35
 
   - '@id': printer:60f4204e-b8d2-4026-8577-102c3f82c0af
     '@type': Commitment
@@ -78,8 +75,8 @@ A plan for creating two different resources needed for one campaign.  The first 
     receiver: https://printer.example/
     resourceConformsTo: printer:e56fd654-7b94-4d96-8e60-de39e08329a7 # paper
     resourceQuantity:
-      om2:hasUnit: om2:one
-      om2:hasNumericalValue: 35
+      hasUnit: one
+      hasNumericalValue: 35
 
   - '@id': printer:b90b0b77-09a2-42e2-8bd4-e9ae2c1c6172
     '@type': Commitment
@@ -89,8 +86,8 @@ A plan for creating two different resources needed for one campaign.  The first 
     receiver: https://printer.example/
     resourceConformsTo: printer:e4783bef-9006-490c-9c03-389272c7444d # printing plate for the specific posters
     effortQuantity:
-      om2:hasUnit: om2:hour
-      om2:hasNumericalValue: 1.5
+      hasUnit: hour
+      hasNumericalValue: 1.5
 
   - '@id': printer:d4d2fd71-34f2-41c3-b1c5-19ad5ed2da59b
     '@type': Process
@@ -105,8 +102,8 @@ A plan for creating two different resources needed for one campaign.  The first 
     receiver: https://printer.example/
     resourceConformsTo: printer:e4783bef-9006-490c-9c03-389272c7444d # printing plate for the specific posters
     resourceQuantity:
-      om2:hasUnit: om2:one
-      om2:hasNumericalValue: 1
+      hasUnit: one
+      hasNumericalValue: 1
 
   - '@id': printer:ad56a7ed-be3c-4937-a3fb-0f156bcd2c47
     '@type': Commitment
@@ -116,8 +113,8 @@ A plan for creating two different resources needed for one campaign.  The first 
     receiver: https://printer.example/
     resourceInventoriedAs: printer:86ad6e22-7640-4b93-972a-db7177ab2616 # blank printing plate
     resourceQuantity:
-      om2:hasUnit: om2:one
-      om2:hasNumericalValue: 1
+      hasUnit: one
+      hasNumericalValue: 1
 ```
 
 #### Simple plan from recipe
@@ -134,9 +131,6 @@ A plan generated from a recipe, for making a component.
   - alice: https://alice.example/
     sensor: https://sensorica.example/
     open: https://openhardware.example
-    skos: http://www.w3.org/2004/02/skos/core#
-    om2: http://www.ontology-of-units-of-measure.org/resource/om-2/
-    dcterms: http://purl.org/dc/terms/
 
 '@graph':
 
@@ -145,7 +139,7 @@ A plan generated from a recipe, for making a component.
   - '@id': urn:uuid:3be5259d-10f0-431c-9fec-9c0c15a461d3
     '@type': ResourceSpecification
     name: Delivery fiber
-    skos:note: Optical fiber that connects 2 devices.
+    note: Optical fiber that connects 2 devices.
 
   - '@id': urn:uuid:33e8933b-ff73-4a01-964a-ca7a98893083
     '@type': RecipeFlow
@@ -153,13 +147,13 @@ A plan generated from a recipe, for making a component.
     action: produce
     resourceConformsTo: urn:uuid:3be5259d-10f0-431c-9fec-9c0c15a461d3 # the delivery fiber spec
     resourceQuantity:
-      om2:hasUnit: om2:metre
-      om2:hasNumericalValue: .5
+      hasUnit: metre
+      hasNumericalValue: .5
 
   - '@id': urn:uuid:e1721a61-cd47-4556-84b9-8b1b81da15bf
     '@type': RecipeProcess
     name: Make delivery fiber component
-    skos:note: The delivery fiber makes the optical connection between an optical transducer and the sensor [electro-photonics device]. Requires cutting a piece of optical fiber and connectorizing it
+    note: The delivery fiber makes the optical connection between an optical transducer and the sensor [electro-photonics device]. Requires cutting a piece of optical fiber and connectorizing it
 
   - '@id': urn:uuid:9bd19194-a36d-4a1f-896b-8082887962cb
     '@type': RecipeFlow
@@ -167,9 +161,9 @@ A plan generated from a recipe, for making a component.
     action: consume
     resourceConformsTo: wd:Q162 # optical fiber
     resourceQuantity:
-      om2:hasUnit: om2:metre
-      om2:hasNumericalValue: .5
-    skos:note: Optical guide, can be of glass of polymer. Usually it comes in a cylindrical shape. Can be MM (multimode) or SM (single mode)
+      hasUnit: metre
+      hasNumericalValue: .5
+    note: Optical guide, can be of glass of polymer. Usually it comes in a cylindrical shape. Can be MM (multimode) or SM (single mode)
 
   - '@id': urn:uuid:60f4204e-b8d2-4026-8577-102c3f82c0af
     '@type': RecipeFlow
@@ -177,17 +171,17 @@ A plan generated from a recipe, for making a component.
     action: work
     resourceConformsTo: wd:Q640621 # optical engineering
     effortQuantity:
-      om2:hasUnit: om2:hour
-      om2:hasNumericalValue: 2
+      hasUnit: hour
+      hasNumericalValue: 2
 
   # the plan
 
   - '@id': sensor:8e5fe80d-a769-4bd5-89e5-2136d33eab9f
     '@type': Plan
     name: Delivery fiber
-    skos:note: Make the optical fiber that makes the connection between the device and the transducer. 
+    note: Make the optical fiber that makes the connection between the device and the transducer.
     due: 2019-04-08T17:00:00-5:00
-    dcterms:created: 2019-04-01T10:35:00-5:00
+    created: 2019-04-01T10:35:00-5:00
 
   - '@id': sensor:a8236bbb-81e0-422d-9861-56d2417db0fb
     '@type': Commitment
@@ -198,14 +192,14 @@ A plan generated from a recipe, for making a component.
     receiver: https://sensorica.example/
     resourceConformsTo: urn:uuid:b90b0b77-09a2-42e2-8bd4-e9ae2c1c6172 # delivery fiber
     resourceQuantity:
-      om2:hasUnit: om2:metre
-      om2:hasNumericalValue: .5
+      hasUnit: metre
+      hasNumericalValue: .5
 
   - '@id': sensor:02b39a30-3e04-4305-9656-7f261aa63c84
     '@type': Process
     name: Make optical fiber component
     plannedWithin: sensor:8e5fe80d-a769-4bd5-89e5-2136d33eab9f
-    skos:note: The delivery fiber makes the optical connection between an optical transducer and the sensor [electro-photonics device]. Requires cutting a piece of optical fiber and connectorizing it.
+    note: The delivery fiber makes the optical connection between an optical transducer and the sensor [electro-photonics device]. Requires cutting a piece of optical fiber and connectorizing it.
 
   - '@id': sensor:b52a5815-fae9-43bf-be95-833b95dc0adb
     '@type': Commitment
@@ -215,9 +209,9 @@ A plan generated from a recipe, for making a component.
     receiver: https://sensorica.example/
     resourceConformsTo: wd:Q162 # optical fiber
     resourceQuantity:
-      om2:hasUnit: om2:metre
-      om2:hasNumericalValue: .5
-    skos:note: Optical guide, can be of glass of polymer. Usually it comes in a cylindrical shape. Can be MM (multimode) or SM (single mode).
+      hasUnit: metre
+      hasNumericalValue: .5
+    note: Optical guide, can be of glass of polymer. Usually it comes in a cylindrical shape. Can be MM (multimode) or SM (single mode).
 
   - '@id': sensor:52f0e212-3c4f-4d27-b345-5e964c135824
     '@type': Commitment
@@ -227,8 +221,8 @@ A plan generated from a recipe, for making a component.
     receiver: https://sensorica.example/
     resourceConformsTo: wd:Q640621 # optical engineering
     effortQuantity:
-      om2:hasUnit: om2:hour
-      om2:hasNumericalValue: 2
+      hasUnit: hour
+      hasNumericalValue: 2
 ```
 
 #### Fulfillment and satisfaction
@@ -244,8 +238,6 @@ Commitments satisfying intents, and economic events fulfilling commitments.
   - '@vocab': http://w3id.org/valueflows/ont/vf#
   - bob: https://bob.example/
     mfg: https://manufacturer.example/
-    skos: http://www.w3.org/2004/02/skos/core#
-    om2: http://www.ontology-of-units-of-measure.org/resource/om-2/
 
 '@graph':
 
@@ -258,8 +250,8 @@ Commitments satisfying intents, and economic events fulfilling commitments.
     receiver: https://manufacturing.example/
     resourceConformsTo: wd:/Q192047 # machining
     effortQuantity:
-      om2:hasUnit: om2:hour
-      om2:hasNumericalValue: 8
+      hasUnit: hour
+      hasNumericalValue: 8
     hasBeginning: 2018-10-14T8:00:00-0:00
     hasEnd: 2018-10-15T18:00:00-0:00
 
@@ -272,8 +264,8 @@ Commitments satisfying intents, and economic events fulfilling commitments.
     receiver: https://manufacturing.example/
     resourceConformsTo: wd:Q192047 # machining
     effortQuantity:
-      om2:hasUnit: om2:hour
-      om2:hasNumericalValue: 8
+      hasUnit: hour
+      hasNumericalValue: 8
     hasBeginning: 2018-10-14T8:00:00-0:00
     hasEnd: 2018-10-14T17:00:00-0:00
     satisfies: mfg:e1721a61-cd47-4556-84b9-8b1b81da15bf # the intent
@@ -287,8 +279,8 @@ Commitments satisfying intents, and economic events fulfilling commitments.
     receiver: https://manufacturing.example/
     resourceConforms: wd:Q192047 # machining
     effortQuantity:
-      om2:hasUnit: om2:hour
-      om2:hasNumericalValue: 4
+      hasUnit: hour
+      hasNumericalValue: 4
     hasBeginning: 2018-10-14T8:00:00-0:00
     hasEnd: 2018-10-14T12:00:00-0:00
     fulfills: mfg:02b39a30-3e04-4305-9656-7f261aa63c84 # the commitment
@@ -300,8 +292,8 @@ Commitments satisfying intents, and economic events fulfilling commitments.
     receiver: https://manufacturing.example/
     resourceConformsTo: wd:Q192047 # machining
     effortQuantity:
-      om2:hasUnit: om2:hour
-      om2:hasNumericalValue: 4
+      hasUnit: hour
+      hasNumericalValue: 4
     hasBeginning: 2018-10-14T13:00:00-0:00
     hasEnd: 2018-10-14T17:00:00-0:00
     fulfills: mfg:02b39a30-3e04-4305-9656-7f261aa63c84 # the commitment

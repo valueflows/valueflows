@@ -13,8 +13,6 @@ Simple one-process manufacturing with typical inputs and outputs.
   - '@vocab': http://w3id.org/valueflows/ont/vf#
   - alice: https://alice.example/
     mfg: https://manufacturing.example/
-    skos: http://www.w3.org/2004/02/skos/core#
-    om2: http://www.ontology-of-units-of-measure.org/resource/om-2/
 
 '@graph':
 
@@ -24,30 +22,30 @@ Simple one-process manufacturing with typical inputs and outputs.
     '@type': EconomicResource
     conformsTo: https://www.opendesk.cc/lean/desk # desk
     accountingQuantity:
-      om2:hasUnit: om2:one
-      om2:hasNumericalValue: 8
+      hasUnit: one
+      hasNumericalValue: 8
 
   - '@id': mfg:3129ca8b-fcda-45be-bbda-294dc924d3b9
     '@type': EconomicResource
     conformsTo: wd:Q219803 # plywood
     accountingQuantity:
-      om2:hasUnit: om2:one
-      om2:hasNumericalValue: 130
-    skos:note: 4 x 8 sheet of 1/2 inch plywood
+      hasUnit: one
+      hasNumericalValue: 130
+    note: 4 x 8 sheet of 1/2 inch plywood
 
   - '@id': mfg:6b97b1be-8e07-44ac-82e5-214f1b2aaf33
     '@type': EconomicResource
     conformsTo: wd:Q2101564 # desk design specification
     accountingQuantity:
-      om2:hasUnit: om2:one
-      om2:hasNumericalValue: 1
+      hasUnit: one
+      hasNumericalValue: 1
 
   - '@id': mfg:52f0e212-3c4f-4d27-b345-5e964c135824
     '@type': EconomicResource
     conformsTo: wd:Q13231055 # CNC machine
     accountingQuantity:
-      om2:hasUnit: om2:one
-      om2:hasNumericalValue: 1
+      hasUnit: one
+      hasNumericalValue: 1
 
   # Production
 
@@ -63,9 +61,10 @@ Simple one-process manufacturing with typical inputs and outputs.
     receiver: https://manufacturing.example/
     resourceInventoriedAs: mfg:3129ca8b-fcda-45be-bbda-294dc924d3b9 # plywood sheets
     resourceQuantity:
-      om2:hasUnit: om2:one
-      om2:hasNumericalValue: 3
+      hasUnit: one
+      hasNumericalValue: 3
     hasInput:
+
     - '@id': mfg:b90b0b77-09a2-42e2-8bd4-e9ae2c1c6172
       '@type': EconomicEvent
       action: use
@@ -73,8 +72,9 @@ Simple one-process manufacturing with typical inputs and outputs.
       receiver: https://manufacturing.example/
       resourceInventoriedAs: mfg:52f0e212-3c4f-4d27-b345-5e964c135824 # CNC machine
       effortQuantity:
-        om2:hasUnit: om2:hour
-        om2:hasNumericalValue: 3.5
+        hasUnit: hour
+        hasNumericalValue: 3.5
+
     - '@id': mfg:a8236bbb-81e0-422d-9861-56d2417db0fb
       '@type': EconomicEvent
       action: cite
@@ -82,8 +82,9 @@ Simple one-process manufacturing with typical inputs and outputs.
       receiver: https://manufacturing.example/
       resourceInventoriedAs: mfg:6b97b1be-8e07-44ac-82e5-214f1b2aaf33 # desk design specification
       resourceQuantity:
-        om2:hasUnit: om2:one
-        om2:hasNumericalValue: 1
+        hasUnit: one
+        hasNumericalValue: 1
+
     - '@id': mfg:6f438393-7f87-4914-806c-e23a4fd15e89
       '@type': EconomicEvent
       action: work
@@ -91,9 +92,11 @@ Simple one-process manufacturing with typical inputs and outputs.
       receiver: https://manufacturing.example/
       resourceConformsTo: wd:Q192047 # machining
       effortQuantity:
-        om2:hasUnit: om2:hour
-        om2:hasNumericalValue: 7
+        hasUnit: hour
+        hasNumericalValue: 7
+
     hasOutput:
+
     - '@id': mfg:d4d2fd71-34f2-41c3-b1c5-19ad5ed2da59
       '@type': EconomicEvent
       action: produce
@@ -101,8 +104,8 @@ Simple one-process manufacturing with typical inputs and outputs.
       receiver: https://manufacturing.example/
       resourceInventoriedAs: mfg:e1721a61-cd47-4556-84b9-8b1b81da15bf # desk
       resourceQuantity:
-        om2:hasUnit: om2:one
-        om2:hasNumericalValue: 1
+        hasUnit: one
+        hasNumericalValue: 1
 
   # Economic resources after
 
@@ -110,30 +113,30 @@ Simple one-process manufacturing with typical inputs and outputs.
     '@type': EconomicResource
     resourceConformsTo: https://www.opendesk.cc/lean/desk # desk
     accountingQuantity:
-      om2:hasUnit: om2:one
-      om2:hasNumericalValue: 9
+      hasUnit: one
+      hasNumericalValue: 9
 
   - '@id': mfg:3129ca8b-fcda-45be-bbda-294dc924d3b9
     '@type': EconomicResource
     conformsTo: wd:Q219803 # plywood
     accountingQuantity:
-      om2:hasUnit: om2:one
-      om2:hasNumericalValue: 127
+      hasUnit: one
+      hasNumericalValue: 127
     note: 4 x 8 sheet of 1/2 inch plywood
 
   - '@id': mfg:6b97b1be-8e07-44ac-82e5-214f1b2aaf33
     '@type': EconomicResource
     conformsTo: wd:Q2101564 # desk design specification
     accountingQuantity:
-      om2:hasUnit: om2:one
-      om2:hasNumericalValue: 1
+      hasUnit: one
+      hasNumericalValue: 1
 
   - '@id': mfg:52f0e212-3c4f-4d27-b345-5e964c135824
     '@type': EconomicResource
     conformsTo: wd:Q13231055 # CNC machine
     accountingQuantity:
-      om2:hasUnit: om2:one
-      om2:hasNumericalValue: 1
+      hasUnit: one
+      hasNumericalValue: 1
 ```
 Alternate view of this manufacturing example, using the relational directionality between Process and EconomicEvent.
 ``` yaml
@@ -143,8 +146,6 @@ Alternate view of this manufacturing example, using the relational directionalit
   - '@vocab': http://w3id.org/valueflows/ont/vf#
   - alice: https://alice.example/
     mfg: https://manufacturing.example/
-    skos: http://www.w3.org/2004/02/skos/core#
-    om2: http://www.ontology-of-units-of-measure.org/resource/om-2/
 
 '@graph':
 
@@ -162,8 +163,8 @@ Alternate view of this manufacturing example, using the relational directionalit
     receiver: https://manufacturing.example/
     resourceInventoriedAs: mfg:3129ca8b-fcda-45be-bbda-294dc924d3b9 # plywood sheets
     resourceQuantity:
-      om2:hasUnit: om2:one
-      om2:hasNumericalValue: 3
+      hasUnit: one
+      hasNumericalValue: 3
 
   - '@id': mfg:b90b0b77-09a2-42e2-8bd4-e9ae2c1c6172
     '@type': EconomicEvent
@@ -173,8 +174,8 @@ Alternate view of this manufacturing example, using the relational directionalit
     receiver: https://manufacturing.example/
     resourceInventoriedAs: mfg:52f0e212-3c4f-4d27-b345-5e964c135824 # CNC machine
     effortQuantity:
-      om2:hasUnit: om2:hour
-      om2:hasNumericalValue: 3.5
+      hasUnit: hour
+      hasNumericalValue: 3.5
 
   - '@id': mfg:a8236bbb-81e0-422d-9861-56d2417db0fb
     '@type': EconomicEvent
@@ -184,8 +185,8 @@ Alternate view of this manufacturing example, using the relational directionalit
     receiver: https://manufacturing.example/
     resourceInventoriedAs: mfg:6b97b1be-8e07-44ac-82e5-214f1b2aaf33 # desk design specification
     resourceQuantity:
-      om2:hasUnit: om2:one
-      om2:hasNumericalValue: 1
+      hasUnit: one
+      hasNumericalValue: 1
 
   - '@id': mfg:6f438393-7f87-4914-806c-e23a4fd15e89
     '@type': EconomicEvent
@@ -195,8 +196,8 @@ Alternate view of this manufacturing example, using the relational directionalit
     receiver: https://manufacturing.example/
     resourceConformsTo: wd:Q192047 # machining
     effortQuantity:
-      om2:hasUnit: om2:hour
-      om2:hasNumericalValue: 7
+      hasUnit: hour
+      hasNumericalValue: 7
 
   - '@id': mfg:d4d2fd71-34f2-41c3-b1c5-19ad5ed2da59
     '@type': EconomicEvent
@@ -206,8 +207,8 @@ Alternate view of this manufacturing example, using the relational directionalit
     receiver: https://manufacturing.example/
     resourceInventoriedAs: mfg:e1721a61-cd47-4556-84b9-8b1b81da15bf # desk
     resourceQuantity:
-      om2:hasUnit: om2:one
-      om2:hasNumericalValue: 1
+      hasUnit: one
+      hasNumericalValue: 1
 ```
 
 #### Service
@@ -225,8 +226,6 @@ Simple delivery of a service with typical inputs and outputs.
     bob: https://bob.example/
     carol: https://carol.example/
     training: https://training.example/
-    skos: http://www.w3.org/2004/02/skos/core#
-    om2: http://www.ontology-of-units-of-measure.org/resource/om-2/
 
 '@graph':
 
@@ -240,26 +239,26 @@ Simple delivery of a service with typical inputs and outputs.
   - '@id': training:52f0e212-3c4f-4d27-b345-5e964c135824
     '@type': ResourceSpecification
     name: 3D printing workshop handout
-    skos:note: 3D printing class handout for the one day hands-on class, including exercises and review
+    note: 3D printing class handout for the one day hands-on class, including exercises and review
 
   - '@id': training:f438393-7f87-4914-806c-e23a4fd15e89
     '@type': ResourceSpecification
     name: 3D printing training
-    skos:note: In-house certified training on 3D printing
+    note: In-house certified training on 3D printing
 
   - '@id': training:e1721a61-cd47-4556-84b9-8b1b81da15bf
     '@type': EconomicResource
     conformsTo: wd:Q53953506 # 3D printer
     accountingQuantity:
-      om2:hasUnit: om2:one
-      om2:hasNumericalValue: 1
+      hasUnit: one
+      hasNumericalValue: 1
 
   - '@id': training:6b97b1be-8e07-44ac-82e5-214f1b2aaf33
     '@type': EconomicResource
     conformsTo: training:52f0e212-3c4f-4d27-b345-5e964c135824 # 3D printing class handout
     accountingQuantity:
-      om2:hasUnit: om2:one
-      om2:hasNumericalValue: 100
+      hasUnit: one
+      hasNumericalValue: 100
 
   # Service delivery
 
@@ -267,6 +266,7 @@ Simple delivery of a service with typical inputs and outputs.
     '@type': Process
     name: Give the 3D printing workshop
     hasInput:
+
     - '@id': training:b90b0b77-09a2-42e2-8bd4-e9ae2c1c617
       '@type': EconomicEvent
       action: consume
@@ -274,8 +274,9 @@ Simple delivery of a service with typical inputs and outputs.
       receiver: https://training.example/
       resourceInventoriedAs: training:6b97b1be-8e07-44ac-82e5-214f1b2aaf33 # workshop handout
       resourceQuantity:
-        om2:hasUnit: om2:one
-        om2:hasNumericalValue: 3
+        hasUnit: one
+        hasNumericalValue: 3
+
     - '@id': training:b52a5815-fae9-43bf-be95-833b95dc0adb
       '@type': EconomicEvent
       action: use
@@ -283,8 +284,9 @@ Simple delivery of a service with typical inputs and outputs.
       receiver: https://training.example/
       resourceInventoriedAs: training:e1721a61-cd47-4556-84b9-8b1b81da15bf # 3D printer
       effortQuantity:
-        om2:hasUnit: om2:hour
-        om2:hasNumericalValue: 8
+        hasUnit: hour
+        hasNumericalValue: 8
+
     - '@id': training:a8236bbb-81e0-422d-9861-56d2417db0fb
       '@type': EconomicEvent
       action: work
@@ -292,9 +294,11 @@ Simple delivery of a service with typical inputs and outputs.
       receiver: https://training.example/
       resourceConformsTo: training:f438393-7f87-4914-806c-e23a4fd15e89 # 3D printer training
       effortQuantity:
-        om2:hasUnit: om2:hour
-        om2:hasNumericalValue: 8
+        hasUnit: hour
+        hasNumericalValue: 8
+
     hasOutput:
+
     - '@id': training:d4d2fd71-34f2-41c3-b1c5-19ad5ed2da59
       '@type': EconomicEvent
       action: deliverService
@@ -302,8 +306,9 @@ Simple delivery of a service with typical inputs and outputs.
       receiver: https://alice.example/
       resourceConformsTo: training:3129ca8b-fcda-45be-bbda-294dc924d3b9 # one day 3D printing workshop
       resourceQuantity:
-        om2:hasUnit: om2:one
-        om2:hasNumericalValue: 1
+        hasUnit: one
+        hasNumericalValue: 1
+
     - '@id': training:583e83d9-a46d-44ff-bd71-88513a1d83c0
       '@type': EconomicEvent
       action: deliverService
@@ -311,8 +316,9 @@ Simple delivery of a service with typical inputs and outputs.
       receiver: https://bob.example/
       resourceConformsTo: training:3129ca8b-fcda-45be-bbda-294dc924d3b9 # one day 3D printing workshop
       resourceQuantity:
-        om2:hasUnit: om2:one
-        om2:hasNumericalValue: 1
+        hasUnit: one
+        hasNumericalValue: 1
+
     - '@id': training:e4783bef-9006-490c-9c03-389272c7444d
       '@type': EconomicEvent
       action: deliverService
@@ -320,8 +326,8 @@ Simple delivery of a service with typical inputs and outputs.
       receiver: https://carol.example/
       resourceConformsTo: training:3129ca8b-fcda-45be-bbda-294dc924d3b9 # one day 3D printing workshop
       resourceQuantity:
-        om2:hasUnit: om2:one
-        om2:hasNumericalValue: 1
+        hasUnit: one
+        hasNumericalValue: 1
 ```
 Alternate view of this service example, using the relational directionality between Process and EconomicEvent.
 ``` yaml
@@ -333,8 +339,6 @@ Alternate view of this service example, using the relational directionality betw
     bob: https://bob.example/
     carol: https://carol.example/
     training: https://training.example/
-    skos: http://www.w3.org/2004/02/skos/core#
-    om2: http://www.ontology-of-units-of-measure.org/resource/om-2/
 
 '@graph':
   # Service delivery
@@ -351,8 +355,8 @@ Alternate view of this service example, using the relational directionality betw
     receiver: https://training.example/
     resourceInventoriedAs: training:6b97b1be-8e07-44ac-82e5-214f1b2aaf33 # workshop handout
     resourceQuantity:
-      om2:hasUnit: om2:one
-      om2:hasNumericalValue: 3
+      hasUnit: one
+      hasNumericalValue: 3
 
   - '@id': training:b52a5815-fae9-43bf-be95-833b95dc0adb
     '@type': EconomicEvent
@@ -362,8 +366,8 @@ Alternate view of this service example, using the relational directionality betw
     receiver: https://training.example/
     resourceInventoriedAs: training:e1721a61-cd47-4556-84b9-8b1b81da15bf # 3D printer
     effortQuantity:
-      om2:hasUnit: om2:hour
-      om2:hasNumericalValue: 8
+      hasUnit: hour
+      hasNumericalValue: 8
 
   - '@id': training:a8236bbb-81e0-422d-9861-56d2417db0fb
     '@type': EconomicEvent
@@ -373,8 +377,8 @@ Alternate view of this service example, using the relational directionality betw
     receiver: https://training.example/
     resourceConformsTo: training:f438393-7f87-4914-806c-e23a4fd15e89 # 3D printer training
     effortQuantity:
-      om2:hasUnit: om2:hour
-      om2:hasNumericalValue: 8
+      hasUnit: hour
+      hasNumericalValue: 8
 
   - '@id': training:d4d2fd71-34f2-41c3-b1c5-19ad5ed2da59
     '@type': EconomicEvent
@@ -384,8 +388,8 @@ Alternate view of this service example, using the relational directionality betw
     receiver: https://alice.example/
     resourceConformsTo: training:3129ca8b-fcda-45be-bbda-294dc924d3b9 # one day 3D printing workshop
     resourceQuantity:
-      om2:hasUnit: om2:one
-      om2:hasNumericalValue: 1
+      hasUnit: one
+      hasNumericalValue: 1
 
   - '@id': training:583e83d9-a46d-44ff-bd71-88513a1d83c0
     '@type': EconomicEvent
@@ -395,8 +399,8 @@ Alternate view of this service example, using the relational directionality betw
     receiver: https://bob.example/
     resourceConformsTo: training:3129ca8b-fcda-45be-bbda-294dc924d3b9 # one day 3D printing workshop
     resourceQuantity:
-      om2:hasUnit: om2:one
-      om2:hasNumericalValue: 1
+      hasUnit: one
+      hasNumericalValue: 1
 
   - '@id': training:e4783bef-9006-490c-9c03-389272c7444d
     '@type': EconomicEvent
@@ -406,8 +410,8 @@ Alternate view of this service example, using the relational directionality betw
     receiver: https://carol.example/
     resourceConformsTo: training:3129ca8b-fcda-45be-bbda-294dc924d3b9 # one day 3D printing workshop
     resourceQuantity:
-      om2:hasUnit: om2:one
-      om2:hasNumericalValue: 1
+      hasUnit: one
+      hasNumericalValue: 1
 ```
 #### Workflow production
 
@@ -422,8 +426,6 @@ Simple repair process with typical inputs and outputs.  The same economic resour
   - '@vocab': http://w3id.org/valueflows/ont/vf#
   - alice: https://alice.example/
     repair: https://auto-repair.example/
-    skos: http://www.w3.org/2004/02/skos/core#
-    om2: http://www.ontology-of-units-of-measure.org/resource/om-2/
 
 '@graph':
 
@@ -434,16 +436,17 @@ Simple repair process with typical inputs and outputs.  The same economic resour
     resourceConformsTo: http://opensourceecology.org/wiki/Wikispeed_SGT01 # car
     trackingIdentifier: JHMCD38698S061469
     accountingQuantity:
-      om2:hasUnit: om2:one
-      om2:hasNumericalValue: 1
+      hasUnit: one
+      hasNumericalValue: 1
 
   # Repair process
 
   - '@id': repair:02b39a30-3e04-4305-9656-7f261aa63c84
     '@type': Process
     name: Oil change JHMCD38698S061469
-    skos:note: Check over car, change oil (standard quantity).
+    note: Check over car, change oil (standard quantity).
     hasInput:
+
     - '@id': repair:a8236bbb-81e0-422d-9861-56d2417db0fb
       '@type': EconomicEvent
       action: accept
@@ -451,9 +454,11 @@ Simple repair process with typical inputs and outputs.  The same economic resour
       receiver: https://auto-repair.example/
       resourceInventoriedAs: alice:e1721a61-cd47-4556-84b9-8b1b81da15bf
       resourceQuantity:
-        om2:hasUnit: om2:one
-        om2:hasNumericalValue: 1
+        hasUnit: one
+        hasNumericalValue: 1
+
     hasOutput:
+
     - '@id': repair:52f0e212-3c4f-4d27-b345-5e964c135824
       '@type': EconomicEvent
       action: modify
@@ -461,8 +466,8 @@ Simple repair process with typical inputs and outputs.  The same economic resour
       receiver: https://alice.example/
       resourceInventoriedAs: alice:e1721a61-cd47-4556-84b9-8b1b81da15bf
       resourceQuantity:
-        om2:hasUnit: om2:one
-        om2:hasNumericalValue: 1
+        hasUnit: one
+        hasNumericalValue: 1
 
   # Economic resource after
 
@@ -471,8 +476,8 @@ Simple repair process with typical inputs and outputs.  The same economic resour
     resourceConformsTo: http://opensourceecology.org/wiki/Wikispeed_SGT01 # car
     trackingIdentifier: JHMCD38698S061469
     accountingQuantity:
-      om2:hasUnit: om2:one
-      om2:hasNumericalValue: 1
+      hasUnit: one
+      hasNumericalValue: 1
 ```
 Alternate view of this workflow process, using the more relational directionality option.
 ``` yaml
@@ -482,8 +487,6 @@ Alternate view of this workflow process, using the more relational directionalit
   - '@vocab': http://w3id.org/valueflows/ont/vf#
   - alice: https://alice.example/
     repair: https://auto-repair.example/
-    skos: http://www.w3.org/2004/02/skos/core#
-    om2: http://www.ontology-of-units-of-measure.org/resource/om-2/
 
 '@graph':
 
@@ -492,7 +495,7 @@ Alternate view of this workflow process, using the more relational directionalit
   - '@id': repair:02b39a30-3e04-4305-9656-7f261aa63c84
     '@type': Process
     name: Oil change JHMCD38698S061469
-    skos:note: Check over car, change oil (standard quantity).
+    note: Check over car, change oil (standard quantity).
 
   - '@id': repair:a8236bbb-81e0-422d-9861-56d2417db0fb
     '@type': EconomicEvent
@@ -502,8 +505,8 @@ Alternate view of this workflow process, using the more relational directionalit
     receiver: https://auto-repair.example/
     resourceInventoriedAs: alice:e1721a61-cd47-4556-84b9-8b1b81da15bf
     resourceQuantity:
-      om2:hasUnit: om2:one
-      om2:hasNumericalValue: 1
+      hasUnit: one
+      hasNumericalValue: 1
 
   - '@id': repair:52f0e212-3c4f-4d27-b345-5e964c135824
     '@type': EconomicEvent
@@ -513,10 +516,10 @@ Alternate view of this workflow process, using the more relational directionalit
     receiver: https://alice.example/
     resourceInventoriedAs: alice:e1721a61-cd47-4556-84b9-8b1b81da15bf
     resourceQuantity:
-      om2:hasUnit: om2:one
-      om2:hasNumericalValue: 1
+      hasUnit: one
+      hasNumericalValue: 1
 ```
-#### Pack unpack
+#### Combine and separate
 
 Simple pack and unpack of resources into and out of a container resource, using `combine` and `separate`.
 
@@ -529,8 +532,6 @@ Simple pack and unpack of resources into and out of a container resource, using 
   - '@vocab': http://w3id.org/valueflows/ont/vf#
   - med: https://medical.example/
     wash: https://laundry.example/
-    skos: http://www.w3.org/2004/02/skos/core#
-    om2: http://www.ontology-of-units-of-measure.org/resource/om-2/
 
 '@graph':
 
@@ -541,8 +542,8 @@ Simple pack and unpack of resources into and out of a container resource, using 
     conformsTo: wd:Q987767 # container
     trackingIdentifier: cont234
     accountingQuantity:
-      om2:hasUnit: om2:one
-      om2:hasNumericalValue: 1
+      hasUnit: one
+      hasNumericalValue: 1
     containedIn:
 
   - '@id': med:3129ca8b-fcda-45be-bbda-294dc924d3b9
@@ -550,8 +551,8 @@ Simple pack and unpack of resources into and out of a container resource, using 
     conformsTo: wd:Q89990310 # medical gown
     trackingIdentifier: gown789
     accountingQuantity:
-      om2:hasUnit: om2:one
-      om2:hasNumericalValue: 1
+      hasUnit: one
+      hasNumericalValue: 1
     containedIn: 
 
   - '@id': med:3129ca8b-fcda-45be-bbda-294dc924d3b0
@@ -559,8 +560,8 @@ Simple pack and unpack of resources into and out of a container resource, using 
     conformsTo: wd:Q89990310 # medical gown
     trackingIdentifier: gown734
     accountingQuantity:
-      om2:hasUnit: om2:one
-      om2:hasNumericalValue: 1
+      hasUnit: one
+      hasNumericalValue: 1
     containedIn: 
 
   - '@id': med:3129ca8b-fcda-45be-bbda-294dc924d3b1
@@ -568,8 +569,8 @@ Simple pack and unpack of resources into and out of a container resource, using 
     conformsTo: wd:Q89990310 # medical gown
     trackingIdentifier: gown698
     accountingQuantity:
-      om2:hasUnit: om2:one
-      om2:hasNumericalValue: 1
+      hasUnit: one
+      hasNumericalValue: 1
     containedIn: 
 
   # Packing process
@@ -579,6 +580,7 @@ Simple pack and unpack of resources into and out of a container resource, using 
     name: Pack medical gowns
     note: Each gown is scanned for tracking identifier as packed
     hasInput:
+
     - '@id': med:b52a5815-fae9-43bf-be95-833b95dc0adb
       '@type': EconomicEvent
       action: combine
@@ -586,9 +588,10 @@ Simple pack and unpack of resources into and out of a container resource, using 
       receiver: https://medical.example/
       resourceInventoriedAs: med:e1721a61-cd47-4556-84b9-8b1b81da15bf # a container
       resourceQuantity:
-        om2:hasUnit: om2:one
-        om2:hasNumericalValue: 1
+        hasUnit: one
+        hasNumericalValue: 1
       note: Container is empty at this point.
+
     - '@id': med:b90b0b77-09a2-42e2-8bd4-e9ae2c1c6172
       '@type': EconomicEvent
       action: combine
@@ -596,8 +599,9 @@ Simple pack and unpack of resources into and out of a container resource, using 
       receiver: https://medical.example/
       resourceInventoriedAs: med:3129ca8b-fcda-45be-bbda-294dc924d3b9 # a medical gown
       resourceQuantity:
-        om2:hasUnit: om2:one
-        om2:hasNumericalValue: 1
+        hasUnit: one
+        hasNumericalValue: 1
+
     - '@id': med:a8236bbb-81e0-422d-9861-56d2417db0fb
       '@type': EconomicEvent
       action: combine
@@ -605,8 +609,9 @@ Simple pack and unpack of resources into and out of a container resource, using 
       receiver: https://medical.example/
       resourceInventoriedAs: med:3129ca8b-fcda-45be-bbda-294dc924d3b0 # a medical gown
       resourceQuantity:
-        om2:hasUnit: om2:one
-        om2:hasNumericalValue: 1
+        hasUnit: one
+        hasNumericalValue: 1
+
     - '@id': med:6f438393-7f87-4914-806c-e23a4fd15e89
       '@type': EconomicEvent
       action: combine
@@ -614,9 +619,11 @@ Simple pack and unpack of resources into and out of a container resource, using 
       receiver: https://medical.example/
       resourceInventoriedAs: med:3129ca8b-fcda-45be-bbda-294dc924d3b1 # a medical gown
       resourceQuantity:
-        om2:hasUnit: om2:one
-        om2:hasNumericalValue: 1
+        hasUnit: one
+        hasNumericalValue: 1
+
     hasOutput:
+
     - '@id': med:b52a5815-fae9-43bf-be95-833b95dc0456
       '@type': EconomicEvent
       action: produce
@@ -624,8 +631,8 @@ Simple pack and unpack of resources into and out of a container resource, using 
       receiver: https://medical.example/
       resourceConformsTo: wd:Q2127468 # packaging unit
       resourceQuantity:
-        om2:hasUnit: om2:one
-        om2:hasNumericalValue: 1
+        hasUnit: one
+        hasNumericalValue: 1
       note: This is a new resource, a package containing all inputs.
 
   # Economic resources after packing
@@ -635,8 +642,8 @@ Simple pack and unpack of resources into and out of a container resource, using 
     conformsTo: wd:Q987767 # container
     trackingIdentifier: cont234
     accountingQuantity:
-      om2:hasUnit: om2:one
-      om2:hasNumericalValue: 1
+      hasUnit: one
+      hasNumericalValue: 1
     containedIn: med:e1721a61-cd47-4556-84b9-8b1b81da564h
 
   - '@id': med:3129ca8b-fcda-45be-bbda-294dc924d3b9
@@ -644,8 +651,8 @@ Simple pack and unpack of resources into and out of a container resource, using 
     conformsTo: wd:Q89990310 # medical gown
     trackingIdentifier: gown789
     accountingQuantity:
-      om2:hasUnit: om2:one
-      om2:hasNumericalValue: 1
+      hasUnit: one
+      hasNumericalValue: 1
     containedIn: med:e1721a61-cd47-4556-84b9-8b1b81da564h
 
   - '@id': med:3129ca8b-fcda-45be-bbda-294dc924d3b0
@@ -653,8 +660,8 @@ Simple pack and unpack of resources into and out of a container resource, using 
     conformsTo: wd:Q89990310 # medical gown
     trackingIdentifier: gown734
     accountingQuantity:
-      om2:hasUnit: om2:one
-      om2:hasNumericalValue: 1
+      hasUnit: one
+      hasNumericalValue: 1
     containedIn: med:e1721a61-cd47-4556-84b9-8b1b81da564h
 
   - '@id': med:3129ca8b-fcda-45be-bbda-294dc924d3b1
@@ -662,8 +669,8 @@ Simple pack and unpack of resources into and out of a container resource, using 
     conformsTo: wd:Q89990310 # medical gown
     trackingIdentifier: gown698
     accountingQuantity:
-      om2:hasUnit: om2:one
-      om2:hasNumericalValue: 1
+      hasUnit: one
+      hasNumericalValue: 1
     containedIn: med:e1721a61-cd47-4556-84b9-8b1b81da564h
 
   - '@id': med:e1721a61-cd47-4556-84b9-8b1b81da564h
@@ -671,8 +678,8 @@ Simple pack and unpack of resources into and out of a container resource, using 
     conformsTo: wd:Q2127468 # packaging unit
     trackingIdentifier: pack6789
     accountingQuantity:
-      om2:hasUnit: om2:one
-      om2:hasNumericalValue: 1
+      hasUnit: one
+      hasNumericalValue: 1
 
   # The package is transferred to the laundry
 
@@ -683,8 +690,8 @@ Simple pack and unpack of resources into and out of a container resource, using 
     receiver: https://laundry.example/
     resourceInventoriedAs: med:e1721a61-cd47-4556-84b9-8b1b81da564h # the package
     resourceQuantity:
-      om2:hasUnit: om2:one
-      om2:hasNumericalValue: 1
+      hasUnit: one
+      hasNumericalValue: 1
     note: Contains gowns and container.
 
   # The package is unpacked at the laundry
@@ -694,6 +701,7 @@ Simple pack and unpack of resources into and out of a container resource, using 
     name: Unpack medical gowns
     note: Each gown is scanned for tracking identifier as unpacked
     hasInput:
+
     - '@id': wash:33e8933b-ff73-4a01-964a-ca7a98893
       '@type': EconomicEvent
       action: consume
@@ -701,9 +709,11 @@ Simple pack and unpack of resources into and out of a container resource, using 
       receiver: https://laundry.example/
       resourceInventoriedAs: med:e1721a61-cd47-4556-84b9-8b1b81da564h # the package
       resourceQuantity:
-        om2:hasUnit: om2:one
-        om2:hasNumericalValue: 1
+        hasUnit: one
+        hasNumericalValue: 1
+
     hasOutput:
+
     - '@id': wash:60f4204e-b8d2-4026-8577-102c3f82c0af
       '@type': EconomicEvent
       action: separate
@@ -711,8 +721,9 @@ Simple pack and unpack of resources into and out of a container resource, using 
       receiver: https://laundry.example/
       resourceInventoriedAs: med:e1721a61-cd47-4556-84b9-8b1b81da15bf # a container
       resourceQuantity:
-        om2:hasUnit: om2:one
-        om2:hasNumericalValue: 1
+        hasUnit: one
+        hasNumericalValue: 1
+
     - '@id': wash:60f4204e-b8d2-4026-8577-102c3fkm98g1
       '@type': EconomicEvent
       action: separate
@@ -720,8 +731,9 @@ Simple pack and unpack of resources into and out of a container resource, using 
       receiver: https://laundry.example/
       resourceInventoriedAs: med:3129ca8b-fcda-45be-bbda-294dc924d3b9 # a medical gown
       resourceQuantity:
-        om2:hasUnit: om2:one
-        om2:hasNumericalValue: 1
+        hasUnit: one
+        hasNumericalValue: 1
+
     - '@id': wash:60f4204e-b8d2-4026-8577-102c3fsd89cv
       '@type': EconomicEvent
       action: separate
@@ -729,8 +741,9 @@ Simple pack and unpack of resources into and out of a container resource, using 
       receiver: https://laundry.example/
       resourceInventoriedAs: med:3129ca8b-fcda-45be-bbda-294dc924d3b0 # a medical gown
       resourceQuantity:
-        om2:hasUnit: om2:one
-        om2:hasNumericalValue: 1
+        hasUnit: one
+        hasNumericalValue: 1
+
     - '@id': wash:60f4204e-b8d2-4026-8577-102c3fd9kjre
       '@type': EconomicEvent
       action: separate
@@ -738,8 +751,8 @@ Simple pack and unpack of resources into and out of a container resource, using 
       receiver: https://laundry.example/
       resourceInventoriedAs: med:3129ca8b-fcda-45be-bbda-294dc924d3b1 # a medical gown
       resourceQuantity:
-        om2:hasUnit: om2:one
-        om2:hasNumericalValue: 1
+        hasUnit: one
+        hasNumericalValue: 1
 
   # Economic resources after unpacking
 
@@ -748,16 +761,16 @@ Simple pack and unpack of resources into and out of a container resource, using 
     conformsTo: wd:Q987767 # container
     trackingIdentifier: cont234
     accountingQuantity:
-      om2:hasUnit: om2:one
-      om2:hasNumericalValue: 1
+      hasUnit: one
+      hasNumericalValue: 1
 
   - '@id': med:3129ca8b-fcda-45be-bbda-294dc924d3b9
     '@type': EconomicResource
     conformsTo: wd:Q89990310 # medical gown
     trackingIdentifier: gown789
     accountingQuantity:
-      om2:hasUnit: om2:one
-      om2:hasNumericalValue: 1
+      hasUnit: one
+      hasNumericalValue: 1
     containedIn: 
 
   - '@id': med:3129ca8b-fcda-45be-bbda-294dc924d3b0
@@ -765,8 +778,8 @@ Simple pack and unpack of resources into and out of a container resource, using 
     conformsTo: wd:Q89990310 # medical gown
     trackingIdentifier: gown734
     accountingQuantity:
-      om2:hasUnit: om2:one
-      om2:hasNumericalValue: 1
+      hasUnit: one
+      hasNumericalValue: 1
     containedIn:
 
   - '@id': med:3129ca8b-fcda-45be-bbda-294dc924d3b1
@@ -774,8 +787,8 @@ Simple pack and unpack of resources into and out of a container resource, using 
     conformsTo: wd:Q89990310 # medical gown
     trackingIdentifier: gown698
     accountingQuantity:
-      om2:hasUnit: om2:one
-      om2:hasNumericalValue: 1
+      hasUnit: one
+      hasNumericalValue: 1
     containedIn: 
 ```
 Alternate view of these pack-unpack processes, using the more relational directionality option.
@@ -786,8 +799,6 @@ Alternate view of these pack-unpack processes, using the more relational directi
   - '@vocab': http://w3id.org/valueflows/ont/vf#
   - med: https://medical.example/
     wash: https://laundry.example/
-    skos: http://www.w3.org/2004/02/skos/core#
-    om2: http://www.ontology-of-units-of-measure.org/resource/om-2/
 
 '@graph':
 
@@ -806,8 +817,8 @@ Alternate view of these pack-unpack processes, using the more relational directi
     receiver: https://medical.example/
     resourceInventoriedAs: med:e1721a61-cd47-4556-84b9-8b1b81da15bf # a container
     resourceQuantity:
-      om2:hasUnit: om2:one
-      om2:hasNumericalValue: 1
+      hasUnit: one
+      hasNumericalValue: 1
     note: Container is empty at this point.
 
   - '@id': med:b90b0b77-09a2-42e2-8bd4-e9ae2c1c6172
@@ -818,8 +829,8 @@ Alternate view of these pack-unpack processes, using the more relational directi
     receiver: https://medical.example/
     resourceInventoriedAs: med:3129ca8b-fcda-45be-bbda-294dc924d3b9 # a medical gown
     resourceQuantity:
-      om2:hasUnit: om2:one
-      om2:hasNumericalValue: 1
+      hasUnit: one
+      hasNumericalValue: 1
 
   - '@id': med:a8236bbb-81e0-422d-9861-56d2417db0fb
     '@type': EconomicEvent
@@ -829,8 +840,8 @@ Alternate view of these pack-unpack processes, using the more relational directi
     receiver: https://medical.example/
     resourceInventoriedAs: med:3129ca8b-fcda-45be-bbda-294dc924d3b0 # a medical gown
     resourceQuantity:
-      om2:hasUnit: om2:one
-      om2:hasNumericalValue: 1
+      hasUnit: one
+      hasNumericalValue: 1
 
   - '@id': med:6f438393-7f87-4914-806c-e23a4fd15e89
     '@type': EconomicEvent
@@ -840,8 +851,8 @@ Alternate view of these pack-unpack processes, using the more relational directi
     receiver: https://medical.example/
     resourceInventoriedAs: med:3129ca8b-fcda-45be-bbda-294dc924d3b1 # a medical gown
     resourceQuantity:
-      om2:hasUnit: om2:one
-      om2:hasNumericalValue: 1
+      hasUnit: one
+      hasNumericalValue: 1
 
   - '@id': med:b52a5815-fae9-43bf-be95-833b95dc0456
     '@type': EconomicEvent
@@ -851,8 +862,8 @@ Alternate view of these pack-unpack processes, using the more relational directi
     receiver: https://medical.example/
     resourceConformsTo: wd:Q2127468 # packaging unit
     resourceQuantity:
-      om2:hasUnit: om2:one
-      om2:hasNumericalValue: 1
+      hasUnit: one
+      hasNumericalValue: 1
     note: This is a new resource, a package containing all inputs.
 
   # The package is unpacked at the laundry
@@ -870,8 +881,8 @@ Alternate view of these pack-unpack processes, using the more relational directi
     receiver: https://laundry.example/
     resourceInventoriedAs: med:e1721a61-cd47-4556-84b9-8b1b81da564h # the package
     resourceQuantity:
-      om2:hasUnit: om2:one
-      om2:hasNumericalValue: 1
+      hasUnit: one
+      hasNumericalValue: 1
 
   - '@id': wash:60f4204e-b8d2-4026-8577-102c3f82c0af
     '@type': EconomicEvent
@@ -881,8 +892,8 @@ Alternate view of these pack-unpack processes, using the more relational directi
     receiver: https://laundry.example/
     resourceInventoriedAs: med:e1721a61-cd47-4556-84b9-8b1b81da15bf # a container
     resourceQuantity:
-      om2:hasUnit: om2:one
-      om2:hasNumericalValue: 1
+      hasUnit: one
+      hasNumericalValue: 1
 
   - '@id': wash:60f4204e-b8d2-4026-8577-102c3fkm98g1
     '@type': EconomicEvent
@@ -892,8 +903,8 @@ Alternate view of these pack-unpack processes, using the more relational directi
     receiver: https://laundry.example/
     resourceInventoriedAs: med:3129ca8b-fcda-45be-bbda-294dc924d3b9 # a medical gown
     resourceQuantity:
-      om2:hasUnit: om2:one
-      om2:hasNumericalValue: 1
+      hasUnit: one
+      hasNumericalValue: 1
 
   - '@id': wash:60f4204e-b8d2-4026-8577-102c3fsd89cv
     '@type': EconomicEvent
@@ -903,8 +914,8 @@ Alternate view of these pack-unpack processes, using the more relational directi
     receiver: https://laundry.example/
     resourceInventoriedAs: med:3129ca8b-fcda-45be-bbda-294dc924d3b0 # a medical gown
     resourceQuantity:
-      om2:hasUnit: om2:one
-      om2:hasNumericalValue: 1
+      hasUnit: one
+      hasNumericalValue: 1
 
   - '@id': wash:60f4204e-b8d2-4026-8577-102c3fd9kjre
     '@type': EconomicEvent
@@ -914,8 +925,8 @@ Alternate view of these pack-unpack processes, using the more relational directi
     receiver: https://laundry.example/
     resourceInventoriedAs: med:3129ca8b-fcda-45be-bbda-294dc924d3b1 # a medical gown
     resourceQuantity:
-      om2:hasUnit: om2:one
-      om2:hasNumericalValue: 1
+      hasUnit: one
+      hasNumericalValue: 1
 ```
 #### Stage and state
 
@@ -930,8 +941,6 @@ Simple assembly and testing showing use of stage and state.
 '@context':
   - '@vocab': http://w3id.org/valueflows/ont/vf#
   - mfg: https://manufacturing.example/
-    skos: http://www.w3.org/2004/02/skos/core#
-    om2: http://www.ontology-of-units-of-measure.org/resource/om-2/
 
 '@graph':
 
@@ -961,8 +970,8 @@ Simple assembly and testing showing use of stage and state.
     '@type': EconomicResource
     resourceConformsTo: mfg:3be525ee-10f0-431c-9fec-9c0c15a4dv97 # Fabulaser
     accountingQuantity:
-      om2:hasUnit: om2:one
-      om2:hasNumericalValue: 1
+      hasUnit: one
+      hasNumericalValue: 1
     stage: mfg:3be5259d-10f0-431c-9fec-9c0c15a461e4 # attach air compressor
 
   # Assembly process
@@ -972,6 +981,7 @@ Simple assembly and testing showing use of stage and state.
     name: Attach the air filter (step 33)
     basedOn: mfg:3be5259d-10f0-431c-9fec-9c0c15a461d3 # process specification: attach air filter
     hasInput:
+
     - '@id': mfg:a8236bbb-81e0-422d-9861-56d2417db0fb
       '@type': EconomicEvent
       action: accept
@@ -979,9 +989,10 @@ Simple assembly and testing showing use of stage and state.
       receiver: https://manufacturing.example/
       resourceInventoriedAs: mfg:e1721a61-cd47-4556-84b9-8b1b81da15bf # a laser cutter
       resourceQuantity:
-        om2:hasUnit: om2:one
-        om2:hasNumericalValue: 1
+        hasUnit: one
+        hasNumericalValue: 1
       stage: mfg:3be5259d-10f0-431c-9fec-9c0c15a461e4 # attach air compressor
+
     - '@id': mfg:a8236bbb-81e0-422d-9861-56d2417db0ss
       '@type': EconomicEvent
       action: consume
@@ -989,8 +1000,9 @@ Simple assembly and testing showing use of stage and state.
       receiver: https://manufacturing.example/
       resourceInventoriedAs: mfg:e1721a61-cd47-4556-84b9-8b1b81dlk4d0 # an air filter
       resourceQuantity:
-        om2:hasUnit: om2:one
-        om2:hasNumericalValue: 1
+        hasUnit: one
+        hasNumericalValue: 1
+
     - '@id': mfg:a8236bbb-81e0-422d-9861-56d2417db0st
       '@type': EconomicEvent
       action: consume
@@ -998,9 +1010,11 @@ Simple assembly and testing showing use of stage and state.
       receiver: https://manufacturing.example/
       resourceInventoriedAs: mfg:e1721a61-cd47-4556-84b9-8b1b81dlcvgk # a hose clamp
       resourceQuantity:
-        om2:hasUnit: om2:one
-        om2:hasNumericalValue: 1
+        hasUnit: one
+        hasNumericalValue: 1
+
     hasOutput:
+
     - '@id': mfg:52f0e212-3c4f-4d27-b345-5e964c135824
       '@type': EconomicEvent
       action: modify
@@ -1008,8 +1022,8 @@ Simple assembly and testing showing use of stage and state.
       receiver: https://manufacturing.example/
       resourceInventoriedAs: mfg:e1721a61-cd47-4556-84b9-8b1b81da15bf # a laser cutter
       resourceQuantity:
-        om2:hasUnit: om2:one
-        om2:hasNumericalValue: 1
+        hasUnit: one
+        hasNumericalValue: 1
 
   # Economic resource after attach air filter process
 
@@ -1017,8 +1031,8 @@ Simple assembly and testing showing use of stage and state.
     '@type': EconomicResource
     resourceConformsTo: mfg:3be525ee-10f0-431c-9fec-9c0c15a4dv97 # Fabulaser
     accountingQuantity:
-      om2:hasUnit: om2:one
-      om2:hasNumericalValue: 1
+      hasUnit: one
+      hasNumericalValue: 1
     stage: mfg:3be5259d-10f0-431c-9fec-9c0c15a461d3 # attach air filter
 
   # Testing process
@@ -1036,8 +1050,8 @@ Simple assembly and testing showing use of stage and state.
     receiver: https://manufacturing.example/
     resourceInventoriedAs: mfg:e1721a61-cd47-4556-84b9-8b1b81da15bf # a laser cutter
     resourceQuantity:
-      om2:hasUnit: om2:one
-      om2:hasNumericalValue: 1
+      hasUnit: one
+      hasNumericalValue: 1
     stage: mfg:02b39a30-3e04-4305-9656-7f261aa63c84 #attach air filter
 
   - '@id': mfg:52f0e212-3c4f-4d27-b345-5e964c135824
@@ -1049,8 +1063,8 @@ Simple assembly and testing showing use of stage and state.
     receiver: https://manufacturing.example/
     resourceInventoriedAs: mfg:e1721a61-cd47-4556-84b9-8b1b81da15bf # a laser cutter
     resourceQuantity:
-      om2:hasUnit: om2:one
-      om2:hasNumericalValue: 1
+      hasUnit: one
+      hasNumericalValue: 1
 
   # Economic resource after testing
 
@@ -1058,8 +1072,8 @@ Simple assembly and testing showing use of stage and state.
     '@type': EconomicResource
     resourceConformsTo: mfg:3be525ee-10f0-431c-9fec-9c0c15a4dv97 # Fabulaser
     accountingQuantity:
-      om2:hasUnit: om2:one
-      om2:hasNumericalValue: 1
+      hasUnit: one
+      hasNumericalValue: 1
     stage: mfg:02b39a30-3e04-4305-9656-7f261aa63c98 # test machine
     state: pass
 
@@ -1072,8 +1086,6 @@ Alternate view of these stage-state processes, using the more relational directi
 '@context':
   - '@vocab': http://w3id.org/valueflows/ont/vf#
   - mfg: https://manufacturing.example/
-    skos: http://www.w3.org/2004/02/skos/core#
-    om2: http://www.ontology-of-units-of-measure.org/resource/om-2/
 
 '@graph':
 
@@ -1092,8 +1104,8 @@ Alternate view of these stage-state processes, using the more relational directi
     receiver: https://manufacturing.example/
     resourceInventoriedAs: mfg:e1721a61-cd47-4556-84b9-8b1b81da15bf # a laser cutter
     resourceQuantity:
-      om2:hasUnit: om2:one
-      om2:hasNumericalValue: 1
+      hasUnit: one
+      hasNumericalValue: 1
     stage: mfg:3be5259d-10f0-431c-9fec-9c0c15a461e4 # attach air compressor
 
   - '@id': mfg:a8236bbb-81e0-422d-9861-56d2417db0ss
@@ -1104,8 +1116,8 @@ Alternate view of these stage-state processes, using the more relational directi
     receiver: https://manufacturing.example/
     resourceInventoriedAs: mfg:e1721a61-cd47-4556-84b9-8b1b81dlk4d0 # an air filter
     resourceQuantity:
-      om2:hasUnit: om2:one
-      om2:hasNumericalValue: 1
+      hasUnit: one
+      hasNumericalValue: 1
 
   - '@id': mfg:a8236bbb-81e0-422d-9861-56d2417db0st
     '@type': EconomicEvent
@@ -1115,8 +1127,8 @@ Alternate view of these stage-state processes, using the more relational directi
     receiver: https://manufacturing.example/
     resourceInventoriedAs: mfg:e1721a61-cd47-4556-84b9-8b1b81dlcvgk # a hose clamp
     resourceQuantity:
-      om2:hasUnit: om2:one
-      om2:hasNumericalValue: 1
+      hasUnit: one
+      hasNumericalValue: 1
 
   - '@id': mfg:52f0e212-3c4f-4d27-b345-5e964c135824
     '@type': EconomicEvent
@@ -1126,8 +1138,8 @@ Alternate view of these stage-state processes, using the more relational directi
     receiver: https://manufacturing.example/
     resourceInventoriedAs: mfg:e1721a61-cd47-4556-84b9-8b1b81da15bf # a laser cutter
     resourceQuantity:
-      om2:hasUnit: om2:one
-      om2:hasNumericalValue: 1
+      hasUnit: one
+      hasNumericalValue: 1
 
   # Testing process
 
@@ -1144,8 +1156,8 @@ Alternate view of these stage-state processes, using the more relational directi
     receiver: https://manufacturing.example/
     resourceInventoriedAs: mfg:e1721a61-cd47-4556-84b9-8b1b81da15bf # a laser cutter
     resourceQuantity:
-      om2:hasUnit: om2:one
-      om2:hasNumericalValue: 1
+      hasUnit: one
+      hasNumericalValue: 1
     stage: mfg:02b39a30-3e04-4305-9656-7f261aa63c84 #attach air filter
 
   - '@id': mfg:52f0e212-3c4f-4d27-b345-5e964c135824
@@ -1157,8 +1169,8 @@ Alternate view of these stage-state processes, using the more relational directi
     receiver: https://manufacturing.example/
     resourceInventoriedAs: mfg:e1721a61-cd47-4556-84b9-8b1b81da15bf # a laser cutter
     resourceQuantity:
-      om2:hasUnit: om2:one
-      om2:hasNumericalValue: 1
+      hasUnit: one
+      hasNumericalValue: 1
 ```
 
 #### Correcting errors
@@ -1176,8 +1188,6 @@ Note that the diagram below shows the actual data in the flow.  If a use case ca
   - '@vocab': http://w3id.org/valueflows/ont/vf#
   - alice: https://alice.example/
     mfg: https://manufacturing.example/
-    skos: http://www.w3.org/2004/02/skos/core#
-    om2: http://www.ontology-of-units-of-measure.org/resource/om-2/
 
 '@graph':
 
@@ -1195,8 +1205,8 @@ Note that the diagram below shows the actual data in the flow.  If a use case ca
     receiver: https://manufacturing.example/
     resourceInventoriedAs: mfg:3129ca8b-fcda-45be-bbda-294dc924d3b9 # plywood sheets
     resourceQuantity:
-      om2:hasUnit: om2:one
-      om2:hasNumericalValue: 3
+      hasUnit: one
+      hasNumericalValue: 3
     hasPointInTime: 2019-04-08T10:00:00-5:00
     created: 2019-04-08T18:00:00-5:00
 
@@ -1208,8 +1218,8 @@ Note that the diagram below shows the actual data in the flow.  If a use case ca
     receiver: https://manufacturing.example/
     resourceConformsTo: wd:Q192047 # machining
     effortQuantity:
-      om2:hasUnit: om2:hour
-      om2:hasNumericalValue: 7
+      hasUnit: hour
+      hasNumericalValue: 7
     hasBeginning: 2019-04-08T10:30:00-5:00
     hasEnd: 2019-04-08T16:30:00-5:00
     created: 2019-04-08T18:00:00-5:00
@@ -1222,8 +1232,8 @@ Note that the diagram below shows the actual data in the flow.  If a use case ca
     receiver: https://manufacturing.example/
     resourceInventoriedAs: mfg:e1721a61-cd47-4556-84b9-8b1b81da15bf # desk
     resourceQuantity:
-      om2:hasUnit: om2:one
-      om2:hasNumericalValue: 1
+      hasUnit: one
+      hasNumericalValue: 1
     hasPointInTime: 2019-04-08T17:30:00-5:00
     created: 2019-04-08T18:02:00-5:00
 
@@ -1243,8 +1253,8 @@ Note that the diagram below shows the actual data in the flow.  If a use case ca
     receiver: https://manufacturing.example/
     resourceInventoriedAs: mfg:3129ca8b-fcda-45be-bbda-294dc924d3b9 # plywood sheets
     resourceQuantity:
-      om2:hasUnit: om2:one
-      om2:hasNumericalValue: 3
+      hasUnit: one
+      hasNumericalValue: 3
     hasPointInTime: 2019-04-08T10:00:00-5:00
     created: 2019-04-08T18:00:00-5:00
 
@@ -1258,8 +1268,8 @@ Note that the diagram below shows the actual data in the flow.  If a use case ca
     receiver: https://manufacturing.example/
     resourceInventoriedAs: mfg:3129ca8b-fcda-45be-bbda-294dc924d3b9 # plywood sheets
     resourceQuantity:
-      om2:hasUnit: om2:one
-      om2:hasNumericalValue: -3
+      hasUnit: one
+      hasNumericalValue: -3
     hasPointInTime: 2019-04-08T18:00:00-5:00
     created: 2019-04-08T18:00:00-5:00
     corrects: mfg:b52a5815-fae9-43bf-be95-833b95dc0adb
@@ -1272,8 +1282,8 @@ Note that the diagram below shows the actual data in the flow.  If a use case ca
     receiver: https://manufacturing.example/
     resourceInventoriedAs: mfg:3129ca8b-fcda-45be-bbda-294dc924d3b9 # plywood sheets
     resourceQuantity:
-      om2:hasUnit: om2:one
-      om2:hasNumericalValue: 5
+      hasUnit: one
+      hasNumericalValue: 5
     hasPointInTime: 2019-04-08T10:00:00-5:00
     created: 2019-04-08T18:01:00-5:00
 
@@ -1287,8 +1297,8 @@ Note that the diagram below shows the actual data in the flow.  If a use case ca
     receiver: https://manufacturing.example/
     resourceConformsTo: wd:Q192047 # machining
     effortQuantity:
-      om2:hasUnit: om2:hour
-      om2:hasNumericalValue: 7
+      hasUnit: hour
+      hasNumericalValue: 7
     hasBeginning: 2019-04-08T10:30:00-5:00
     hasEnd: 2019-04-08T16:30:00-5:00
     created: 2019-04-08T18:00:00-5:00
@@ -1303,8 +1313,8 @@ Note that the diagram below shows the actual data in the flow.  If a use case ca
     receiver: https://manufacturing.example/
     resourceConformsTo: wd:Q192047 # machining
     effortQuantity:
-      om2:hasUnit: om2:hour
-      om2:hasNumericalValue: -1
+      hasUnit: hour
+      hasNumericalValue: -1
     hasBeginning: 2019-04-08T10:30:00-5:00
     hasEnd: 2019-04-08T16:30:00-5:00
     created: 2019-04-08T18:00:00-5:00
@@ -1320,10 +1330,9 @@ Note that the diagram below shows the actual data in the flow.  If a use case ca
     receiver: https://manufacturing.example/
     resourceInventoriedAs: mfg:e1721a61-cd47-4556-84b9-8b1b81da15bf # desk
     resourceQuantity:
-      om2:hasUnit: om2:one
-      om2:hasNumericalValue: 1
+      hasUnit: one
+      hasNumericalValue: 1
     hasPointInTime: 2019-04-08T17:30:00-5:00
     created: 2019-04-08T18:02:00-5:00
-
 ```
 
