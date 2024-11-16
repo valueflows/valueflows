@@ -45,7 +45,7 @@ This example includes economic resources, with their resource specifications.  O
   - '@id': farm:07819789-dd51-44c3-b35c-9210165bc832
     '@type': EconomicResource
     name: Loose organic carrots
-    trackingIdentifier: car20230901 # the lot number assigned by the farm
+    trackingIdentifier: 3409888 # the lot number assigned by the farm
     conformsTo: farm:8baa8ff7-9c1e-4586-ae7b-79d620a3cac9
     accountingQuantity:
       hasUnit: kilogram

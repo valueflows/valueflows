@@ -28,7 +28,7 @@ Economic Events describe past events, something observed, never some potential f
 
 ### Claim
 
-Claims resemble Commitments, but are initiated by the receiver, not the provider.  An Economic Event can trigger a reciprocal Claim.  Claims sometimes do not have to actually be saved, often they can be implied from an Economic Event and an Agreement.  For example, if Alice has agreed to sell Bob some carrots for $2, then if Alice delivers the carrots to Bob, she has an implicit claim for $2 from Bob.  See also [Flows in motion: Observation](../../specification/model-text/#flows-in-motion-observation), [Claim example](../../examples/ex-exchange/#claim).
+Claims resemble Commitments, but are initiated by the receiver, not the provider.  If there is not an existing Commitment, an Economic Event can trigger a reciprocal Claim, based on an agreement.  Even then, Claims sometimes do not have to actually be instantiated, often they can be implied from an Economic Event and an agreement.  For example, if Alice has agreed to sell Bob some carrots for $2, then if Alice delivers the carrots to Bob, she has an implicit claim for $2 from Bob.  See also [Flows in motion: Observation](../../specification/model-text/#flows-in-motion-observation), [Claim example](../../examples/ex-exchange/#claim).
 
 ## Timeline, plans and observations
 

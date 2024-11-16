@@ -519,6 +519,259 @@ Alternate view of this workflow process, using the more relational directionalit
       hasUnit: one
       hasNumericalValue: 1
 ```
+
+#### Transportation with transfer
+
+Bob purchases 30kg of apples from Alice and Claudia transports them (FOB destination).  This illustrates an implied transfer of custody, to keep the flow simpler.
+
+![transport diagram reflecting the yaml below](../assets/examples/transport-transfer-implied.png)
+
+It is also valid to do this with an explicit transfer of custody, as below:
+
+![transport diagram reflecting the yaml below](../assets/examples/transport-transfer.png)
+
+``` yaml
+# Transportation with transfer
+
+'@context':
+  - '@vocab': http://w3id.org/valueflows/ont/vf#
+  - alice: https://alice.example/
+    bob: https://bob.example/
+    claudia: https://claudia.example/
+
+'@graph':
+
+# Bob purchases 30kg of apples from Alice and Claudia transports them (FOB destination)
+
+  # Alice's resource before
+
+  - '@id': alice:21f361a6-2375-46bb-b192-c21b5ba833bf
+    '@type': EconomicResource
+    conformsTo: wd:Q41777871 # haralson apples
+    trackingIdentifier: lot-alice-apples-2018-10-11
+    locatedAt: geo:70ee3034-0d15-4471-8ee3-91c60bb1a9c9
+    primaryAccountable: https://alice.example
+    accountingQuantity:
+      hasUnit: kilogram
+      hasNumericalValue: 230
+    onhandQuantity:
+      hasUnit: kilogram
+      hasNumericalValue: 230
+
+  # alice commits to transfer some apples to bob
+
+  - '@id': urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10f1f86
+    '@type': Commitment
+    action: transfer
+    resourceConformsTo: wd:Q41777871 # haralson apples
+    provider: https://alice.example/
+    receiver: https://bob.example/
+    resourceQuantity:
+      hasUnit: kilogram
+      hasNumericalValue: 30
+
+  # alice and claudia agree on transportation of the apples
+
+  - '@id': urn:uuid:f325a950-5737-488d-b122-8f21114d0eb0
+    '@type': Agreement
+    note: exchange transportation service for currency
+    stipulates:
+
+    - '@id': urn:uuid:c7897c39-7f05-4a5d-a487-80e130a2414a
+      '@type': Commitment
+      note: Transportation of alice's apples from alice's location to bob's location
+      action: deliverService
+      resourceClassifiedAs: wd:Q7590 # transportation service
+      provider: https://claudia.example/
+      receiver: https://alice.example/
+      resourceQuantity:
+        hasUnit: one
+        hasNumericalValue: 1
+
+    stipulatesReciprocal:
+
+    - '@id': urn:uuid:33e8933b-ff73-4a01-964a-ca7a98893083
+      '@type': Commitment
+      action: transfer
+      resourceConformsTo: wd:Q4917 # US Dollar
+      provider: https://alice.example/
+      receiver: https://claudia.example/
+      resourceQuantity:
+        hasUnit: one
+        hasNumericalValue: 10
+
+  # alice transfers custody of the apples to claudia for transportation
+
+  - '@id': urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10f1f87
+    '@type': EconomicEvent
+    action: transferCustody
+    resourceClassifiedAs: wd:Q41777871 # haralson apples
+    trackingIdentifier: lot-alice-apples-2018-10-11
+    provider: https://alice.example/
+    receiver: https://claudia.example/
+    resourceInventoriedAs: alice:21f361a6-2375-46bb-b192-c21b5ba833bf # alice's apples
+    toResourceInventoriedAs: claudia:27be5cab-d740-4194-9298-1661a69d9d95 # claudia's bill of lading on the truck
+    resourceQuantity:
+      hasUnit: kilogram
+      hasNumericalValue: 30
+
+  # resources snapshot
+
+  - '@id': alice:21f361a6-2375-46bb-b192-c21b5ba833bf
+    '@type': EconomicResource
+    classifiedAs: wd:Q41777871 # haralson apples
+    trackingIdentifier: lot-alice-apples-2018-10-11
+    locatedAt: geo:70ee3034-0d15-4471-8ee3-91c60bb1a9c9
+    primaryAccountable: https://alice.example
+    accountingQuantity:
+      hasUnit: kilogram
+      hasNumericalValue: 230
+    onhandQuantity:
+      hasUnit: kilogram
+      hasNumericalValue: 200
+
+  - '@id': claudia:27be5cab-d740-4194-9298-1661a69d9d95
+    '@type': EconomicResource
+    classifiedAs: wd:Q41777871 # haralson apples
+    trackingIdentifier: lot-alice-apples-2018-10-11
+    onhandQuantity:
+      hasUnit: kilogram
+      hasNumericalValue: 30
+
+  # claudia transports the apples in two hops
+
+  - '@id': claudia:633f6e56-6c7d-4a5b-b9c9-1a8adafd8960
+    '@type': Process
+    note: Claudia transports the apples
+    hasInput:
+
+    - '@id': claudia:fd399b37-0740-4a68-a184-1e655021ca21
+      '@type': EconomicEvent
+      action: pickup
+      resourceInventoriedAs: claudia:27be5cab-d740-4194-9298-1661a69d9d95
+      provider: https://alice.example/
+      receiver: https://claudia.example/
+      resourceQuantity:
+        hasUnit: kilogram
+        hasNumericalValue: 30
+
+    hasOutput:
+
+    - '@id': claudia:57f1c1d0-432e-4bfa-9d32-002b8955a708
+      '@type': EconomicEvent
+      action: dropoff
+      resourceInventoriedAs: claudia:27be5cab-d740-4194-9298-1661a69d9d95
+      provider: https://claudia.example/
+      receiver: https://claudia.example/
+      resourceQuantity:
+        hasUnit: kilogram
+        hasNumericalValue: 30
+
+  - '@id': claudia:c404cff5-19c7-453d-b0d8-d8e96055bd0c
+    '@type': Process
+    note: Claudia transports the apples
+    hasInput:
+
+    - '@id': claudia:856c43b1-0a63-445f-a56f-707b257f086e
+      '@type': EconomicEvent
+      action: pickup
+      resourceInventoriedAs: claudia:27be5cab-d740-4194-9298-1661a69d9d95
+      provider: https://claudia.example/
+      receiver: https://claudia.example/
+      resourceQuantity:
+        hasUnit: kilogram
+        hasNumericalValue: 30
+
+    hasOutput:
+
+    - '@id': claudia:9cb4944b-d26d-4774-a530-d18f2747c0d8
+      '@type': EconomicEvent
+      action: dropoff
+      resourceInventoriedAs: claudia:27be5cab-d740-4194-9298-1661a69d9d95
+      toResourceInventoriedAs: bob:9bd19194-a36d-4a1f-896b-8082887962cb
+      provider: https://claudia.example/
+      receiver: https://bob.example/
+      resourceQuantity:
+        hasUnit: kilogram
+        hasNumericalValue: 30
+
+    - '@id': urn:uuid:68cabaf3-deb8-4bd5-a439-798263abe35a
+      '@type': EconomicEvent
+      note: Transportation of alice's apples from alice's location to bob's location
+      action: deliverService
+      resourceConformsTo: wd:Q7590 # transportation service
+      provider: https://claudia.example/
+      receiver: https://alice.example/
+      resourceQuantity:
+        hasUnit: one
+        hasNumericalValue: 1
+      fulfills: urn:uuid:c7897c39-7f05-4a5d-a487-80e130a2414a # the commitment
+
+  # receipt of the apples triggers finalizing the transfer of ownership
+
+  - '@id': urn:uuid:ad56a7ed-be3c-4937-a3fb-0f156bcd2c47
+    '@type': EconomicEvent
+    action: transferAllRights
+    resourceClassifiedAs: wd:Q41777871 # haralson apples
+    trackingIdentifier: lot-alice-apples-2018-10-11
+    provider: https://alice.example/
+    receiver: https://bob.example/
+    resourceQuantity:
+      hasUnit: kilogram
+      hasNumericalValue: 30
+    fulfills: urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10f1f86 # the commitment
+
+  # resources snapshot
+
+  - '@id': alice:21f361a6-2375-46bb-b192-c21b5ba833bf
+    '@type': EconomicResource
+    conformsTo: wd:Q41777871 # haralson apples
+    trackingIdentifier: lot-alice-apples-2018-10-11
+    locatedAt: geo:70ee3034-0d15-4471-8ee3-91c60bb1a9c9 # only the possessed amount
+    primaryAccountable: https://alice.example
+    accountingQuantity:
+      hasUnit: kilogram
+      hasNumericalValue: 200
+    onhandQuantity:
+      hasUnit: kilogram
+      hasNumericalValue: 200
+
+  - '@id': bob:9bd19194-a36d-4a1f-896b-8082887962cb
+    '@type': EconomicResource
+    conformsTo: wd:Q41777871 # haralson apples
+    trackingIdentifier: lot-alice-apples-2018-10-11
+    locatedAt: geo:b52a5815-fae9-43bf-be95-833b95dc0ada # only the possessed amount
+    primaryAccountable: https://bob.example
+    accountingQuantity:
+      hasUnit: kilogram
+      hasNumericalValue: 30
+    onhandQuantity:
+      hasUnit: kilogram
+      hasNumericalValue: 30
+
+  - '@id': claudia:27be5cab-d740-4194-9298-1661a69d9d95 # claudia's bill of lading on the truck
+    '@type': EconomicResource
+    conformsTo: wd:Q41777871 # haralson apples
+    onhandQuantity:
+      hasUnit: kilogram
+      hasNumericalValue: 0
+
+  # alice pays claudia for the transportation service
+
+  - '@id': urn:uuid:8baa8ff7-9c1e-4586-ae7b-79d620a3cac9
+    '@type': EconomicEvent
+    action: transfer
+    resourceConformsTo: wd:Q4917 # US Dollar
+    resourceInventoriedAs: alice:daa2ec3b-2c1a-4eb1-839f-8dcec1a1f93a # alice's bank account
+    toResourceInventoriedAs: claudia:bd5806d6-4a36-45b9-b3b6-3e7d361a5a14 # claudia's bank account
+    provider: https://alice.example/
+    receiver: https://claudia.example/
+    resourceQuantity:
+      hasUnit: one
+      hasNumericalValue: 10
+    fulfills: urn:uuid:33e8933b-ff73-4a01-964a-ca7a98893083 # the commitment
+```
+
 #### Combine and separate
 
 Simple pack and unpack of resources into and out of a container resource, using `combine` and `separate`.

@@ -35,6 +35,7 @@
 
 * Bill McCarthy
 * Wim Laurier
+* Jesper Kiehn
 * Christian Scheller
 * Anders Hessellund
 * Pavel Hruby
@@ -43,4 +44,3 @@
 * Todd Sedbrook
 * Cheryl Dunn
 * Dave McComb
-* Jesper Kiehn

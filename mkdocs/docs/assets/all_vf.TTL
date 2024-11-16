@@ -1636,7 +1636,7 @@ vf:dropoff a                owl:NamedIndividual ,
         vf:inputOutput      vf:output ;
         vf:pairsWith        vf:pickup ;
         vf:accountingEffect vf:notApplicable ;
-        vf:onhandEffect     vf:notApplicable ;
+        vf:onhandEffect     vf:increment ;
         vf:locationEffect   vf:update ;
         vf:containedEffect  vf:notApplicable ;
         vf:accountableEffect vf:notApplicable ;
@@ -1708,7 +1708,7 @@ vf:pickup a                 owl:NamedIndividual ,
         vf:createResource   vf:notApplicable ;
         vf:eventQuantity    vf:resource ;
         vf:accountingEffect vf:notApplicable ;
-        vf:onhandEffect     vf:notApplicable ;
+        vf:onhandEffect     vf:decrement ;
         vf:locationEffect   vf:update ;
         vf:containedEffect  vf:notApplicable ;
         vf:accountableEffect vf:notApplicable ;
