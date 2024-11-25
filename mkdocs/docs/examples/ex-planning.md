@@ -227,7 +227,7 @@ A plan generated from a recipe, for making a component.
 
 #### Fulfillment and satisfaction
 
-Commitments satisfying intents, and economic events fulfilling commitments.
+Commitments satisfying intents, and economic events fulfilling commitments.  (Note that economic events can also satisfy intents if there is no commitment, although it is not shown in this example.)
 
 ![fulfillment diagram reflecting the yaml below](../assets/examples/ful-sat.png)
 

@@ -57,6 +57,14 @@ We will add formats and protocols as requested.
 
 The current release and status can be found in [Introduction/Release and Status](../introduction/status.md).
 
+### There is a lot here, do I need to implement the whole vocabulary?
+
+While the base model is quite simple and elegant, or perhaps because of this in contrast to the many possible use cases, there are indeed quite a few options coming from experience with different use cases, and the desire to support future experiments which we don't know about.  We want to emphasize that projects will need to pick and choose what is useful for any specific application or use case.  For that reason, we have kept most things optional, and don't want to make assumptions about how the vocabulary will be used.  We also hope that the [examples](../examples/ex-overview.md) and [links to existing open source implementations](../appendix/usedfor.md) will help.
+
+### What can I do to simplify the data entry needed for Valueflows applications?
+
+One thing to note is that the base model appears in all three layers in similar ways.  This gives applications a way to pre-fill many properties.  For example, a recipe can create many plans, where each may only need tweaking.  A commitment can pre-fill many properties from an intent that it will satisfy.  An economic event can pre-fill many properties from a commitment that it will fulfill.  There may also be application-specific opportunities, like using a hardware design to create a recipe for planning the production of the design.
+
 ### Where are the rules for economic events effects on economic resources?
 
 You can find those under [Concepts/Actions](../concepts/actions.md).
