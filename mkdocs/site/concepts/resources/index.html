@@ -1151,6 +1151,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../examples/ex-complex/" class="md-nav__link">
+        Plan-Produce-Exchange
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../examples/ex-proposals/" class="md-nav__link">
         Offers/Requests
       </a>
@@ -1167,20 +1181,6 @@
     <li class="md-nav__item">
       <a href="../../examples/ex-scenario/" class="md-nav__link">
         Estimates and Analysis
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../examples/ex-complex/" class="md-nav__link">
-        More Complex
       </a>
     </li>
   
@@ -1707,7 +1707,7 @@ is a specification. Your library may have two copies that you can check out. Tho
 <p>Some people use the terms "stock" and "stock flow".  A stock is a resource; a stock flow is an event. (The term stock is too limiting, since a resource could be digital, like a document or media file.)</p>
 <p>An event can trigger incrementing or decrementing a resource.  Sometimes it does neither, as in the case of using a piece of equipment or citing a document.  But in any case, the quantity of a resource related to the event is not a resource itself, it is just a property of the event.  For example a resource could be 100 widgets on a pallet, lot number 1234.  If 10 of those widgets are consumed in a process that makes something out of them, that is an event: consumption of 10 widgets of lot number 1234.  The 10 widgets are not a resource in their own right.  The event triggers the decrement of the original resource of 100 widgets, which now has quantity of 90.</p>
 <p>For serialized or uniquely identified resources, if the logical and technical unique identifiers are not changed by an event, such as moving a vehicle to another location without any changes to its accountable agent (and assuming location is not part of the logical identifier), the resource does not behave like a stock and is not decremented or incremented.</p>
-<p>All economic information in an Economic Resource must be put there by an Economic Event.  Non-economic information (note, image, etc.) can be updated on the Economic Resource directly. Economic information is anything that might affect periodic accounting or financial reporting.  In this way, there is always an immutable detailed time-based record of information that affected such reporting.  And there are not excessive (non-economic) events for only non-economic updates.</p>
+<p>All economic information in an Economic Resource must be put there by an Economic Event.  Non-economic information (note, image, etc.) can be updated on the Economic Resource directly. Economic information is anything that might affect periodic accounting or financial reporting.  In this way, there is always an immutable detailed time-based record of information that affected such reporting.  And there are not excessive economic events for only non-economic updates.</p>
 <p>Note that the economic information is therefore derived information, and could be re-calculated as needed by iterating through the Economic Events. But that could have performance issues, so isn't generally recommended.</p>
 <h2 id="how-resources-relate-to-transfers">How resources relate to transfers</h2>
 <p>Two different kinds of "inventorying" of resources are affected by transfers.</p>
@@ -1717,9 +1717,10 @@ is a specification. Your library may have two copies that you can check out. Tho
 </ul>
 <p>We define two current quantities on the economic resource for these two concepts, <em>accounting quantity</em> for the first and <em>onhand quantity</em> for the second.</p>
 <p>For example, in vendor-managed inventory, the vendor owns the inventory so they see it in their accounting; but the store sees it in their onhand quantities. Or for inventory being shipped FOB source, the intended receiver owns the inventory and sees it in their accounting, but the goods are actually onhand in a truck.</p>
+<p>See also the <a href="../transfers/">Transfers concepts</a>.</p>
 <h2 id="how-resources-relate-to-each-other">How resources relate to each other</h2>
 <p>If one resource contains other resources, the contained resources are part of, or make up the larger resource.</p>
-<p>For example, a bank account might contain a number of "virtual accounts" that a group manages itself, outside the bank's knowledge.  Or, a makerspace network might share packages of resources for projects, where the package moves as a whole, but the resources inside are what the project used. Or, a bike shed resource might contain 10 bikes, which are identified and tracked by their serial numbers as individual resources.</p>
+<p>For example, a bank account might contain a number of "virtual accounts" that a group manages itself, outside the bank's knowledge.  Or, a tool maker might make several different kinds of tools, which they treat as separate resources; but they might package some of those into a tool kit, also a resource.</p>
 
 
 

@@ -13,9 +13,6 @@ An exchange agreement with commitments.
   - '@vocab': http://w3id.org/valueflows/ont/vf#
   - alice: https://alice.example/
     bob: https://bob.example/
-    skos: http://www.w3.org/2004/02/skos/core#
-    om2: http://www.ontology-of-units-of-measure.org/resource/om-2/
-    dcterms: http://purl.org/dc/terms/
 
 '@graph':
 
@@ -23,7 +20,7 @@ An exchange agreement with commitments.
 
   - '@id': alice:57f1c1d0-432e-4bfa-9d32-002b8955a708
     '@type': Agreement
-    skos:note: Alice commits to giving Bob 50 kg of apples in exchange for 10 liters of apple cider.
+    note: Alice commits to giving Bob 50 kg of apples in exchange for 10 liters of apple cider.
 
   - '@id': alice:2342d456-5d6f-46d5-a7ed-3ac7bfd5a86c
     '@type': Commitment
@@ -33,8 +30,8 @@ An exchange agreement with commitments.
     receiver: https://bob.example/
     resourceConformsTo: wd:Q89 # apples
     resourceQuantity:
-      om2:hasUnit: om2:kilogram
-      om2:hasNumericalValue: 50
+      hasUnit: kilogram
+      hasNumericalValue: 50
 
   - '@id': bob:fd399b37-0740-4a68-a184-1e655021ca21
     '@type': Commitment
@@ -44,8 +41,8 @@ An exchange agreement with commitments.
     receiver: https://alice.example/
     resourceConformsTo: wd:Q5977438 # soft apple cider
     resourceQuantity:
-      om2:hasUnit: om2:litre
-      om2:hasNumericalValue: 10
+      hasUnit: litre
+      hasNumericalValue: 10
 ```
 
 #### Retail exchange
@@ -61,14 +58,12 @@ An exchange without prior commitments.  Note we are still using the Agreement to
   - '@vocab': http://w3id.org/valueflows/ont/vf#
   - carol: https://carol.example/
     store: https://store.example/
-    skos: http://www.w3.org/2004/02/skos/core#
-    om2: http://www.ontology-of-units-of-measure.org/resource/om-2/
 
 '@graph':
 
   - '@id': store:ac9ec98d-db80-44dc-97be-7aa149b2fe5d
     '@type': Agreement
-    skos:note: Carol purchased a new bucket at the hardware store and paid 5 dollars for it.
+    note: Carol purchased a new bucket at the hardware store and paid 5 dollars for it.
 
   - '@id': store:a8356625-bf64-4c16-9099-28aa1b718c4b
     '@type': EconomicEvent
@@ -78,8 +73,8 @@ An exchange without prior commitments.  Note we are still using the Agreement to
     receiver: https://carol.example/
     resourceConformsTo: wd:Q47107 # bucket
     resourceQuantity:
-      om2:hasUnit: om2:one
-      om2:hasNumericalValue: 1
+      hasUnit: one
+      hasNumericalValue: 1
 
   - '@id': store:2342d456-5d6f-46d5-a7ed-3ac7bfd5a86c
     '@type': EconomicEvent
@@ -90,8 +85,8 @@ An exchange without prior commitments.  Note we are still using the Agreement to
     resourceConformsTo: wd:Q4917 # US dollar
     resourceInventoriedAs: carol:e56fd654-7b94-4d96-8e60-de39e08329a7 # Carol's bank account
     resourceQuantity:
-      om2:hasUnit: om2:one
-      om2:hasNumericalValue: 5
+      hasUnit: one
+      hasNumericalValue: 5
 ```
 
 #### Crypto-currency transfer
@@ -108,8 +103,6 @@ A simple transfer of a currency from one agent to another.
   - bob: https://bob.example/
     alice: https://alice.example/
     fair: https://faircoin.example/
-    skos: http://www.w3.org/2004/02/skos/core#
-    om2: http://www.ontology-of-units-of-measure.org/resource/om-2/
 
 '@graph':
 
@@ -117,19 +110,19 @@ A simple transfer of a currency from one agent to another.
 
   - '@id': fair:b75d8f6a-e2df-4e52-b36d-1a22a66f4ead
     '@type': EconomicResource
-    skos:note: Alice's wallet address
+    note: Alice's wallet address
     conformsTo: wd:Q21002847 # FairCoin
     accountingQuantity:
-      om2:hasUnit: om2:one
-      om2:hasNumericalValue: 540
+      hasUnit: one
+      hasNumericalValue: 540
 
   - '@id': fair:3be5259d-10f0-431c-9fec-9c0c15a461d3
     '@type': EconomicResource
-    skos:note: Bob's wallet address 
+    note: Bob's wallet address
     conformsTo: wd:Q21002847 # FairCoin
     accountingQuantity:
-      om2:hasUnit: om2:one
-      om2:hasNumericalValue: 480
+      hasUnit: one
+      hasNumericalValue: 480
 
   # transfer from Alice to Bob
 
@@ -142,27 +135,27 @@ A simple transfer of a currency from one agent to another.
     provider: https://alice.example
     receiver: https://bob.example
     resourceQuantity:
-      om2:hasUnit: om2:one
-      om2:hasNumericalValue: 100
+      hasUnit: one
+      hasNumericalValue: 100
     hasPointInTime: 2019-04-18T8:30:08-5:00
 
   # accounts after
 
   - '@id': fair:b75d8f6a-e2df-4e52-b36d-1a22a66f4ead
     '@type': EconomicResource
-    skos:note: Alice's wallet address 
+    note: Alice's wallet address
     conformsTo: wd:Q21002847 # FairCoin
     accountingQuantity:
-      om2:hasUnit: om2:one
-      om2:hasNumericalValue: 440
+      hasUnit: one
+      hasNumericalValue: 440
 
   - '@id': fair:3be5259d-10f0-431c-9fec-9c0c15a461d3
     '@type': EconomicResource
-    skos:note: Bob's wallet address 
+    note: Bob's wallet address
     conformsTo: wd:Q21002847 # FairCoin
     accountingQuantity:
-      om2:hasUnit: om2:one
-      om2:hasNumericalValue: 580
+      hasUnit: one
+      hasNumericalValue: 580
 ```
 
 #### Moving crypto-currency
@@ -178,8 +171,6 @@ A simple move of a currency from one account to another by one agent.
   - '@vocab': http://w3id.org/valueflows/ont/vf#
   - bob: https://bob.example/
     fair: https://faircoin.example/
-    skos: http://www.w3.org/2004/02/skos/core#
-    om2: http://www.ontology-of-units-of-measure.org/resource/om-2/
 
 '@graph':
 
@@ -187,19 +178,19 @@ A simple move of a currency from one account to another by one agent.
 
   - '@id': fair:6fb358a3-2859-4d6a-a4fa-431603ee70f5
     '@type': EconomicResource
-    skos:note: Bob's first wallet address
+    note: Bob's first wallet address
     conformsTo: wd:Q21002847 # FairCoin
     accountingQuantity:
-      om2:hasUnit: om2:one
-      om2:hasNumericalValue: 540
+      hasUnit: one
+      hasNumericalValue: 540
 
   - '@id': fair:3be5259d-10f0-431c-9fec-9c0c15a461d3
     '@type': EconomicResource
-    skos:note: Bob's second wallet address 
+    note: Bob's second wallet address
     conformsTo: wd:Q21002847 # FairCoin
     accountingQuantity:
-      om2:hasUnit: om2:one
-      om2:hasNumericalValue: 480
+      hasUnit: one
+      hasNumericalValue: 480
 
   # move between Bob's accounts
 
@@ -212,27 +203,27 @@ A simple move of a currency from one account to another by one agent.
     provider: https://bob.example
     receiver: https://bob.example
     resourceQuantity:
-      om2:hasUnit: om2:one
-      om2:hasNumericalValue: 100
+      hasUnit: one
+      hasNumericalValue: 100
     hasPointInTime: 2019-04-18T8:30:08-5:00
 
   # accounts after
 
   - '@id': fair:b6fb358a3-2859-4d6a-a4fa-431603ee70f5
     '@type': EconomicResource
-    skos:note: Bob's first wallet address 
+    note: Bob's first wallet address
     conformsTo: wd:Q21002847 # FairCoin
     accountingQuantity:
-      om2:hasUnit: om2:one
-      om2:hasNumericalValue: 440
+      hasUnit: one
+      hasNumericalValue: 440
 
   - '@id': fair:3be5259d-10f0-431c-9fec-9c0c15a461d3
     '@type': EconomicResource
-    skos:note: Bob's second wallet address 
+    note: Bob's second wallet address
     conformsTo: wd:Q21002847 # FairCoin
     accountingQuantity:
-      om2:hasUnit: om2:one
-      om2:hasNumericalValue: 580
+      hasUnit: one
+      hasNumericalValue: 580
 ```
 
 #### Checkout book
@@ -248,8 +239,6 @@ Checking out and checking back in a library book (a loan).
   - '@vocab': http://w3id.org/valueflows/ont/vf#
   - library: https://library.example/
     bob: https://bob.example/
-    skos: http://www.w3.org/2004/02/skos/core#
-    om2: http://www.ontology-of-units-of-measure.org/resource/om-2/
 
 '@graph':
 
@@ -257,19 +246,19 @@ Checking out and checking back in a library book (a loan).
 
   - '@id': library:2402b57c-1c45-423a-acb2-f50961c97d65
     '@type': EconomicResource
-    skos:note: Valueflows cookbook ISBN:1234 copy 2
+    note: Valueflows cookbook ISBN:1234 copy 2
     accountingQuantity:
-      om2:hasUnit: om2:one
-      om2:hasNumericalValue: 1
+      hasUnit: one
+      hasNumericalValue: 1
     onhandQuantity:
-      om2:hasUnit: om2:one
-      om2:hasNumericalValue: 1
+      hasUnit: one
+      hasNumericalValue: 1
 
   # check out
 
   - '@id': library:f47064eb-7120-4b31-b882-770165901fe6
     '@type': Agreement
-    skos:note: loaning Valueflows cookbook to Bob
+    note: loaning Valueflows cookbook to Bob
 
   - '@id': urn:uuid:54b814ee-62dc-40c1-bb96-f8582aa4f771
     '@type': EconomicEvent
@@ -280,8 +269,8 @@ Checking out and checking back in a library book (a loan).
     provider: https://library.example/
     receiver: https://bob.example/
     resourceQuantity: 
-      om2:hasUnit: om2:one
-      om2:hasNumericalValue: 1
+      hasUnit: one
+      hasNumericalValue: 1
 
   - '@id': urn:uuid:98c2bfeb-9c70-4801-896c-4646b975a7d9
     '@type': Commitment
@@ -291,21 +280,21 @@ Checking out and checking back in a library book (a loan).
     provider: https://bob.example/
     receiver: https://library.example/
     resourceQuantity:
-      om2:hasUnit: om2:one
-      om2:hasNumericalValue: 1
+      hasUnit: one
+      hasNumericalValue: 1
     due: 2019-05-17T18:00:00-5:00
 
   # resource after check out
 
   - '@id': library:2402b57c-1c45-423a-acb2-f50961c97d65
     '@type': EconomicResource
-    skos:note: Valueflows cookbook ISBN:1234 copy 2
+    note: Valueflows cookbook ISBN:1234 copy 2
     accountingQuantity:
-      om2:hasUnit: om2:one
-      om2:hasNumericalValue: 1
+      hasUnit: one
+      hasNumericalValue: 1
     onhandQuantity:
-      om2:hasUnit: om2:one
-      om2:hasNumericalValue: 0
+      hasUnit: one
+      hasNumericalValue: 0
 
   # return
 
@@ -317,8 +306,8 @@ Checking out and checking back in a library book (a loan).
     provider: https://bob.example/
     receiver: https://library.example/
     resourceQuantity:
-      om2:hasUnit: om2:one
-      om2:hasNumericalValue: 1
+      hasUnit: one
+      hasNumericalValue: 1
     hasPointInTime: 2019-05-14T10:20:00-5:00
     fulfills: urn:uuid:98c2bfeb-9c70-4801-896c-4646b975a7d9 # the commitment
 
@@ -326,16 +315,16 @@ Checking out and checking back in a library book (a loan).
 
   - '@id': library:2402b57c-1c45-423a-acb2-f50961c97d65
     '@type': EconomicResource
-    skos:note: Valueflows cookbook ISBN:1234 copy 2
+    note: Valueflows cookbook ISBN:1234 copy 2
     accountingQuantity:
-      om2:hasUnit: om2:one
-      om2:hasNumericalValue: 1
+      hasUnit: one
+      hasNumericalValue: 1
     onhandQuantity:
-      om2:hasUnit: om2:one
-      om2:hasNumericalValue: 1
+      hasUnit: one
+      hasNumericalValue: 1
 ```
 
-#### Claim
+#### Claim for income
 
 Logged work triggers a claim for future income distribution for that work.
 
@@ -348,9 +337,6 @@ Logged work triggers a claim for future income distribution for that work.
   - '@vocab': http://w3id.org/valueflows/ont/vf#
   - bob: https://bob.example/
     mfg: https://manufacturer.example/
-    skos: http://www.w3.org/2004/02/skos/core#
-    om2: http://www.ontology-of-units-of-measure.org/resource/om-2/
-    dcterms: http://purl.org/dc/terms/
 
 '@graph':
 
@@ -363,8 +349,8 @@ Logged work triggers a claim for future income distribution for that work.
     receiver: https://manufacturing.example/
     resourceConformsTo: wd:Q192047 # machining
     effortQuantity:
-      om2:hasUnit: om2:hour
-      om2:hasNumericalValue: 7
+      hasUnit: hour
+      hasNumericalValue: 7
     hasBeginning: 2018-10-14T8:00:00-0:00
     hasEnd: 2018-10-14T15:00:00-0:00
 
@@ -377,9 +363,9 @@ Logged work triggers a claim for future income distribution for that work.
     receiver: https://bob.example/
     resourceConformsTo: wd:Q1104069 # Canadian dollar
     resourceQuantity:
-      om2:hasUnit: om2:one
-      om2:hasNumericalValue: 140
-    dcterms:created: 2018-10-14T15:30:00-0:00
+      hasUnit: one
+      hasNumericalValue: 140
+    created: 2018-10-14T15:30:00-0:00
     triggeredBy: mfg:02b39a30-3e04-4305-9656-7f261aa63c83
 
   # half of the manufactured product is sold, and income is distributed
@@ -391,130 +377,10 @@ Logged work triggers a claim for future income distribution for that work.
     receiver: https://bob.example/
     resourceConformsTo: wd:Q1104069 # Canadian dollar
     resourceQuantity:
-      om2:hasUnit: om2:one
-      om2:hasNumericalValue: 70 # partially settles the claim
+      hasUnit: one
+      hasNumericalValue: 70 # partially settles the claim
     hasPointInTime: 2018-10-25T09:30:00-0:00
     settles: mfg:d4d2fd71-34f2-41c3-b1c5-19ad5ed2da58 # the claim
 
 ```
 
-
-#### Plan from recipe with production and exchange
-
-This shows a simple recipe that includes both a process and the exchange of work that is input to the process for currency.
-
-![process-exchange diagram reflecting the yaml below](../assets/examples/process-exchange.png)
-
-``` yaml
-# Example: Simple recipe with both process and exchange
-
-'@context':
-  - '@vocab': http://w3id.org/valueflows/ont/vf#
-  - alice: https://alice.example/
-    doc: https://documenters.example
-    skos: http://www.w3.org/2004/02/skos/core#
-    om2: http://www.ontology-of-units-of-measure.org/resource/om-2/
-    dcterms: http://purl.org/dc/terms/
-
-'@graph':
-
-  # the recipe
-
-  - '@id': urn:uuid:3be5259d-10f0-431c-9fec-9c0c15a461d3
-    '@type': ResourceSpecification
-    name: Training handout
-    substitutable: false
-
-  - '@id': urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10f1f86
-    '@type': ResourceSpecification
-    name: Technical writing # a skill
-
-  - '@id': urn:uuid:33e8933b-ff73-4a01-964a-ca7a98893083
-    '@type': RecipeFlow
-    recipeOutputOf: urn:uuid:e1721a61-cd47-4556-84b9-8b1b81da15bf
-    action: produce
-    resourceConformsTo: urn:uuid:3be5259d-10f0-431c-9fec-9c0c15a461d3 # the handout spec
-    resourceQuantity:
-      om2:hasUnit: one
-      om2:hasNumericalValue: 1
-
-  - '@id': urn:uuid:e1721a61-cd47-4556-84b9-8b1b81da15bf
-    '@type': RecipeProcess
-    name: Write and format training handout
-
-  - '@id': urn:uuid:60f4204e-b8d2-4026-8577-102c3f82c0af
-    '@type': RecipeFlow
-    recipeInputOf: urn:uuid:e1721a61-cd47-4556-84b9-8b1b81da15bf # the recipe process
-    recipeClauseOf: urn:uuid:9bd19194-a36d-4a1f-896b-8082887962cb # the recipe exchange
-    action: work
-    resourceConformsTo: urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10f1f86 # technical writing
-    effortQuantity:
-      om2:hasUnit: om2:hour
-      om2:hasNumericalValue: 15
-
-  - '@id': urn:uuid:9bd19194-a36d-4a1f-896b-8082887962cb
-    '@type': RecipeExchange
-    name: Exchange documentation work for FairCoin
-
-  - '@id': urn:uuid:3129ca8b-fcda-45be-bbda-294dc924d3b9
-    '@type': RecipeFlow
-    recipeReciprocalClauseOf: urn:uuid:9bd19194-a36d-4a1f-896b-8082887962cb # the recipe exchange
-    action: transfer
-    resourceConformsTo: wd:Q21002847 # FairCoin
-    resourceQuantity:
-      om2:hasUnit: om2:one
-      om2:hasNumericalValue: 300
-
-  # the plan
-
-  - '@id': doc:8e5fe80d-a769-4bd5-89e5-2136d33eab9f
-    '@type': Plan
-    name: X Training Handout and Payment
-    skos:note: Write and format the training handout, payment for writing work.
-    due: 2019-04-08T17:00:00-5:00
-    dcterms:created: 2019-04-01T10:35:00-5:00
-
-  - '@id': doc:a8236bbb-81e0-422d-9861-56d2417db0fb
-    '@type': Commitment
-    independentDemandOf: doc:8e5fe80d-a769-4bd5-89e5-2136d33eab9f
-    outputOf: doc:02b39a30-3e04-4305-9656-7f261aa63c84
-    action: produce
-    provider: https://documenters.example/
-    receiver: https://documenters.example/
-    resourceConformsTo: urn:uuid:3be5259d-10f0-431c-9fec-9c0c15a461d3 # training handout
-    resourceQuantity:
-      om2:hasUnit: om2:one
-      om2:hasNumericalValue: 1
-
-  - '@id': doc:02b39a30-3e04-4305-9656-7f261aa63c84
-    '@type': Process
-    name: Write and format X training handout
-    plannedWithin: doc:8e5fe80d-a769-4bd5-89e5-2136d33eab9f
-
-  - '@id': doc:52f0e212-3c4f-4d27-b345-5e964c135824
-    '@type': Commitment
-    inputOf: doc:02b39a30-3e04-4305-9656-7f261aa63c84
-    clauseOf: urn:uuid:583e83d9-a46d-44ff-bd71-88513a1d83c0
-    action: work
-    provider: https://alice.example/
-    receiver: https://documenters.example/
-    resourceConformsTo: urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10f1f86
-    effortQuantity:
-      om2:hasUnit: om2:hour
-      om2:hasNumericalValue: 20 # the estimate for this particular work is higher than the generic recipe
-
-  - '@id': urn:uuid:583e83d9-a46d-44ff-bd71-88513a1d83c0
-    '@type': Agreement
-    name: Exchange technical documentation work for FairCoin
-
-  - '@id': doc:b52a5815-fae9-43bf-be95-833b95dc0adb
-    '@type': Commitment
-    reciprocalClauseOf: doc:02b39a30-3e04-4305-9656-7f261aa63c84
-    action: transfer
-    provider: https://documenters.example/
-    receiver: https://alice.example/
-    resourceConformsTo: wd:Q21002847 # FairCoin
-    resourceQuantity:
-      om2:hasUnit: om2:one
-      om2:hasNumericalValue: 400 # the plan payment is adjusted from the generic recipe
-```

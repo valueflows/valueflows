@@ -780,15 +780,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#explicit-and-implied-transfers" class="md-nav__link">
-    Explicit and implied transfers
+  <a href="#transfer-examples" class="md-nav__link">
+    Transfer examples
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#transfer-examples" class="md-nav__link">
-    Transfer examples
+  <a href="#explicit-and-implied-transfers" class="md-nav__link">
+    Explicit and implied transfers
   </a>
   
 </li>
@@ -1087,6 +1087,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../examples/ex-complex/" class="md-nav__link">
+        Plan-Produce-Exchange
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../examples/ex-proposals/" class="md-nav__link">
         Offers/Requests
       </a>
@@ -1103,20 +1117,6 @@
     <li class="md-nav__item">
       <a href="../../examples/ex-scenario/" class="md-nav__link">
         Estimates and Analysis
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../examples/ex-complex/" class="md-nav__link">
-        More Complex
       </a>
     </li>
   
@@ -1482,15 +1482,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#explicit-and-implied-transfers" class="md-nav__link">
-    Explicit and implied transfers
+  <a href="#transfer-examples" class="md-nav__link">
+    Transfer examples
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#transfer-examples" class="md-nav__link">
-    Transfer examples
+  <a href="#explicit-and-implied-transfers" class="md-nav__link">
+    Explicit and implied transfers
   </a>
   
 </li>
@@ -1512,46 +1512,52 @@
 
 
 <h1 id="transfers">Transfers</h1>
-<p>See also <a href="../../introduction/core/#flows-without-processes">Flows without processes</a> in the Core, <a href="../../concepts/resources/#how-resources-relate-to-transfers">How resources relate to transfers</a>, and a lot of the <a href="../../examples/ex-exchange/">Transfer and exchange examples</a>.</p>
+<p>See also <a href="../../introduction/core/#flows-without-processes">Flows without processes</a> in the Core, <a href="../../concepts/resources/#how-resources-relate-to-transfers">How resources relate to transfers</a>, and the <a href="../../examples/ex-exchange/">Transfer and exchange examples</a>.</p>
 <h2 id="transfer-concepts">Transfer concepts</h2>
 <p>One concept of transfer is an activity that re-assigns rights and responsibilities for an economic resource from one agent to another.  A second concept is an activity that operationally changes physical custody or possession of an economic resource from one agent to another, without affecting rights.</p>
 <p>Note that a transfer is a one-way activity.  Two or more reciprocal transfers form an <a href="../exchanges/">exchange</a>, and are connected in Valueflows by an Agreement.</p>
-<p>We think that now, and more so in the future, there will be more gradations of rights and responsibilities for resources than are sometimes considered now.  For example, as a society we may decide that we should take more responsibility for recycling or upcycling resources at the end of their useful life for us, or not wasting them.  The concept of "ownership" may transition more into "stewardship" in a concept of the world that does not put humans in a position of controlling the world's resources or abdicating responsibilities to the ecosystem in the name of ownership.  So, we are for the most part avoiding talking about ownership in this vocabulary, as we work towards more of an ecosystemic perspective.</p>
-<h2 id="explicit-and-implied-transfers">Explicit and implied transfers</h2>
-<p>In Valueflows, several actions can involve the transfer concepts.  (For more detailed information, see the <a href="../actions/">Actions page</a>.)  It is possible that more will be discovered and documented, as the vocabulary is used for further use cases.</p>
-<p>The explicitly denoted transfers are:</p>
-<ul>
-<li>transfer all rights</li>
-<li>transfer custody</li>
-<li>transfer (shorthand for both rights and custody)</li>
-</ul>
-<p>Other actions that can imply a transfer when the receiver agent is different than the provider agent are:</p>
-<ul>
-<li>produce (the resource being produced has to be new or already have the receiver agent as the primary accountable agent)</li>
-<li>consume (no resource is being created because it is consumed by the process)</li>
-<li>use (no resource is being created, just the usage is implicitly transferred)</li>
-<li>work (no resource is being created, just the work is implicitly transferred)</li>
-<li>deliver service (almost always will imply a transfer by its nature, but no resource is created since it is a service)</li>
-<li>pickup (sometimes it is helpful to do the transfer as part of the pickup)</li>
-<li>dropoff (sometimes it is helpful to do the transfer as part of the dropoff)</li>
-<li>accept (sometimes it is helpful to do the transfer as part of the accept)</li>
-<li>modify (sometimes it is helpful to do the transfer as part of the modify)</li>
-<li>copy (almost always there will be a new resource created, if inventoried)</li>
-</ul>
-<p>When an implied transfer occurs, one or both economic resources could be affected, if inventoried, just like with an explicit transfer.  If the provider's resource is affected, that should be referenced in the <code>resourceInventoriedAs</code>.  If the receiver is different than the provider, and the receiver's resource is affected, that should be referenced in the <code>toResourceInventoriedAs</code>.</p>
+<p>We think that now, and more so in the future, there will be more gradations of rights and responsibilities for resources than are sometimes considered now.  For example, as a society we may decide that we should take more responsibility for recycling or upcycling resources at the end of their useful life for us, or not wasting them.  The concept of "ownership" may transition more into "stewardship" in a concept of the world that does not put humans in a position of controlling the world's resources or abdicating responsibilities to the ecosystem in the name of ownership.  So, we are for the most part avoiding talking about ownership in this vocabulary, or any of the possible gradations and combinations of rights and responsibilities, leaving the concept of rights flexible.</p>
 <h2 id="transfer-examples">Transfer examples</h2>
 <ul>
 <li>
-<p>For example, perhaps some agent has many apple trees, and plans on pressing apple cider. Another agent has an apple press and agrees to transfer use of the press (a resource) in exchange for a reciprocal transfer of a portion of the apple cider.  The use of the press involves some rights (to use the press for some period of time) and responsibilities (to not run it beyond its capacity and to clean it up before returning it).</p>
+<p>For example, perhaps some agent has many apple trees, and plans on pressing apple cider. Another agent has an apple press and agrees to transfer use of the press (a resource).  The agent with the trees might transfer a portion of the apple cider to the agent with the press.  The use of the press involves some rights (to use the press for some period of time) and responsibilities (to not run it beyond its capacity and to clean it up before returning it).</p>
 </li>
 <li>
 <p>Or in a library, a book can be checked out, a transfer of custody from the library to the reader.  The agent who checks it out can read it and is responsible for caring for it and returning it on time, another transfer of custody.</p>
 </li>
 <li>
-<p>Or let's say that a community has farmland and equipment held in common.  The community transfers responsibility for the land and equipment to some farmers to use and take care of.  The community also transfers seeds every year to the farmers, enough to grow the food the community needs.  During the year, the harvests are distributed (transferred) to the community members for their consumption.  In reciprocity, the community provides for other needs of the farmers.</p>
+<p>Or let's say that a community has farmland and equipment held in common.  The community transfers custody for the land and equipment to some farmers to use and take care of.  The community also transfers seeds every year to the farmers, enough to grow the food the community needs.  During the year, the harvests are distributed (transferred) to the community members for their consumption.  In reciprocity, the community provides for other needs of the farmers (transfers resources).</p>
 </li>
 </ul>
 <p><em>Implementation note</em>: Different networks may choose to handle namespaces and identifiers at different granularity.  This also may depend on the technology used.  So one network may have separate namespaces for the nodes in the network; another may have one namespace for the whole network.  In the latter case, an implication on transfers is that the provider agent and the receiver agent may use the same resource identifier for <code>resourceInventoriedAs</code> and <code>toResourceInventoriedAs</code>, even though the primary accountable has changed.</p>
+<h2 id="explicit-and-implied-transfers">Explicit and implied transfers</h2>
+<p>In Valueflows, several actions can also involve the transfer concepts and behavior.  (For more detailed information, see the <a href="../actions/">Actions page</a>, especially the Behaviors by Action.)</p>
+<p>The explicitly denoted transfers are:</p>
+<ul>
+<li>transfer all rights (primary accountability: ownership, stewardship, etc.)</li>
+<li>transfer custody (only the physical custody or possession)</li>
+<li>transfer (shorthand for both rights and custody, since they often go together)</li>
+</ul>
+<p>Some other actions can imply a transfer of all rights, a transfer of custody, or both.  This shortens and sometimes simplifies the flows.  But it is not at all required, it is fine to have separate transfer flows if that makes the use case more understandable.  The <a href="../../examples/ex-complex/#transportation-with-transfer">Transport with Transfer example</a> illustrates this.</p>
+<p>The way to imply a transfer is to designate a different provider and receiver.</p>
+<p>The following actions imply a full transfer of all rights and custody, when there is a different provider and receiver.   The implication is that any behavior rules of the primary action plus the transfer action are implemented.  And also the flow can be included in an agreement, for example paying for consuming a resource provided by a different agent in the receiver's process.</p>
+<ul>
+<li>consume, produce</li>
+<li>combine, separate</li>
+<li>copy</li>
+</ul>
+<p>The following actions imply a transfer of all rights, when there is a different provider and receiver.  There aren't any behavioral additions since there is no inventoried resource being transferred.  But it does mean that the flow can be included in an agreement, for example providing work in exchange for a payment.</p>
+<ul>
+<li>deliverService (almost always has a different provider and receiver)</li>
+<li>work (transfer of the work itself)</li>
+<li>use (transfer of the usage, not the resource itself)</li>
+</ul>
+<p>The following actions imply transfer of custody only, when there is a different provider and receiver.  Since the implied transfer is only custody, this would normally not be used as part of an agreement.  But the behavior rules of the primary action plus the transfer of custody would be implemented.</p>
+<ul>
+<li>pickup, dropoff</li>
+<li>accept, modify</li>
+</ul>
+<p>These examples that might help provide clarity: <a href="../../examples/ex-complex/#transportation-with-transfer">Transportation with Transfer</a>, <a href="../../examples/ex-exchange/#checkout-book">Checkout book</a>, <a href="../../examples/ex-exchange/#claim-for-income">Claim for income</a>.</p>
 
 
 

@@ -13,8 +13,6 @@ A simple proposal with reciprocity expected, then another one to give the item a
   - '@vocab': http://w3id.org/valueflows/ont/vf#
   - alice: https://alice.example/
     map: https://mapping.service/
-    skos: http://www.w3.org/2004/02/skos/core#
-    om2: http://www.ontology-of-units-of-measure.org/resource/om-2/
 
 '@graph':
 
@@ -28,14 +26,17 @@ A simple proposal with reciprocity expected, then another one to give the item a
     hasEnd: 2019-03-31T00:00:00-5:00
     eligibleLocation: map:566a2c01-96f8-4b3c-adcf-f197eced3092 # Madison, WI
     publishes:
+
     - '@id': alice:02b39a30-3e04-4305-9656-7f261aa63c84
       '@type': Intent
       name: Old adult Schwinn one speed bike
-      skos:note: Pedals fine, not good for hills, has basket, brakes are a bit dodgy
+      note: Pedals fine, not good for hills, has basket, brakes are a bit dodgy
       action: transfer
       provider: https://alice.example/
       resourceConformsTo: wd:Q11442 # bicycle
+
     reciprocal:
+
     - '@id': alice:e72f7d1d-4f0a-4518-a44c-96658cafda95
       '@type': Intent
       name: Payment
@@ -43,8 +44,8 @@ A simple proposal with reciprocity expected, then another one to give the item a
       receiver: https://alice.example/
       resourceConformsTo: wd:Q4917 # US Dollar
       resourceQuantity:
-        om2:hasUnit: om2:one
-        om2:hasNumericalValue: 15
+        hasUnit: one
+        hasNumericalValue: 15
 
   # Alice did not get any responses to her proposal above, so decided to offer the bike for free
 
@@ -56,6 +57,7 @@ A simple proposal with reciprocity expected, then another one to give the item a
     hasEnd: 2019-05-01T00:00:00-5:00
     eligibleLocation: map:566a2c01-96f8-4b3c-adcf-f197eced3092 # Madison, WI
     publishes:
+
     - '@id': alice:02b39a30-3e04-4305-9656-7f261aa63c84 # the intent (this is the same intent alice originally published)
 ```
 
@@ -72,8 +74,6 @@ A simple proposal for a timebank.  The reciprocity is assumed based on the timeb
   - '@vocab': http://w3id.org/valueflows/ont/vf#
   - bob: https://bob.example/
     timebank: https://timebank.example/
-    skos: http://www.w3.org/2004/02/skos/core#
-    om2: http://www.ontology-of-units-of-measure.org/resource/om-2/
 
 '@graph':
 
@@ -87,10 +87,11 @@ A simple proposal for a timebank.  The reciprocity is assumed based on the timeb
     hasEnd: 2019-04-05T00:00:00-5:00
     inScopeOf: https://timebank.example/
     publishes:
+
     - '@id': bob:e18c808c-929a-450d-9d0d-3b3f531bc126
       '@type': Intent
       name: Plumbing help please
-      skos:note: Need someone with plumbing skills to fix leaky faucet and plugged drain asap
+      note: Need someone with plumbing skills to fix leaky faucet and plugged drain asap
       action: work
       receiver: https://bob.example/
       resourceConformsTo: wd:Q252924 # plumber
@@ -108,8 +109,6 @@ A simple proposal for barter.
   - '@vocab': http://w3id.org/valueflows/ont/vf#
   - carol: https://carol.example/
     map: https://mapping.service/
-    skos: http://www.w3.org/2004/02/skos/core#
-    om2: http://www.ontology-of-units-of-measure.org/resource/om-2/
 
 '@graph':
 
@@ -121,27 +120,30 @@ A simple proposal for barter.
     hasEnd: 2018-10-15T00:00:00-5:00
     eligibleLocation: map:566a2c01-96f8-4b3c-adcf-f197eced3092 # Madison, WI
     publishes:
+
     - '@id': carol:e02e3f6b-420a-4ba8-89b0-909d7363ce07
       '@type': Intent
       name: Cider press
-      skos:note: I can pick up or come to your place, will clean up.
+      note: I can pick up or come to your place, will clean up.
       action: use
       receiver: https://carol.example/
       resourceConformsTo: wd:Q1111 # cider press (fictional)
       effortQuantity:
-        om2:hasUnit: om2:hour
-        om2:hasNumericalValue: 6
+        hasUnit: hour
+        hasNumericalValue: 6
+
     reciprocal:
+
     - '@id': carol:b52a5815-fae9-43bf-be95-833b95dc0adb
       '@type': Intent
       name: Cider
-      skos:note: Fresh cider from the pressing
+      note: Fresh cider from the pressing
       action: transfer
       provider: https://carol.example/
       resourceConformsTo: wd:Q5977438 # apple cider
       resourceQuantity:
-        om2:hasUnit: om2:gallon-US
-        om2:hasNumericalValue: 3
+        hasUnit: gallon-US
+        hasNumericalValue: 3
 ```
 
 #### Proposal for work commitment
@@ -157,8 +159,6 @@ A simple proposal requesting help for work on a planned production process.  The
   - '@vocab': http://w3id.org/valueflows/ont/vf#
   - fablab: https://fablab.example/
     map: https://mapping.service/
-    skos: http://www.w3.org/2004/02/skos/core#
-    om2: http://www.ontology-of-units-of-measure.org/resource/om-2/
 
 '@graph':
 
@@ -170,22 +170,24 @@ A simple proposal requesting help for work on a planned production process.  The
     unitBased: true
     inScopeOf: https://fablab.example/
     hasInput:
+
     - '@id': fablab:60f4204e-b8d2-4026-8577-102c3f82c0af
       '@type': Intent
       inputOf: fablab:ad56a7ed-be3c-4937-a3fb-0f156bcd2c47
       name: Help with R&D for the sensor
-      skos:note: Will need to be at the lab all day both days. It possibly could extend to a third day.
+      note: Will need to be at the lab all day both days. It possibly could extend to a third day.
       action: work
       receiver: https://fablab.example/
       resourceConformsTo: wd:Q2474620 # electrochemical engineering
       effortQuantity:
-        om2:hasUnit: om2:hour
-        om2:hasNumericalValue: 1
+        hasUnit: hour
+        hasNumericalValue: 1
       minimumQuantity:
-        om2:hasUnit: om2:hour
-        om2:hasNumericalValue: 16
+        hasUnit: hour
+        hasNumericalValue: 16
       hasBeginning: 2019-04-12T08:00:00-5:00
       hasEnd: 2019-04-13T17:00:00-5:00
+
     # other planned inputs here
 
     - '@id': fablab:33e8933b-ff73-4a01-964a-ca7a98893083
@@ -194,19 +196,22 @@ A simple proposal requesting help for work on a planned production process.  The
     hasBeginning: 2019-04-01T08:00:00-5:00
     hasEnd: 2019-04-11T17:00:00-5:00
     eligibleLocation: map:566a2c01-96f8-4b3c-adcf-f197eced3092 # Madison, WI
-    published:
+    publishes:
+
     - '@id': fablab:60f4204e-b8d2-4026-8577-102c3f82c0af # the Intent that was planned
+
     reciprocal:
+
     - '@id': fablab:583e83d9-a46d-44ff-bd71-88513a1d83c0
       '@type': Intent
       name: Payment
-      skos:note: Payment when the unit is manufactured and sold
+      note: Payment when the unit is manufactured and sold
       action: transfer
       provider: https://fablab.example/
       resourceConformsTo: wd:Q4917 # US Dollar
       resourceQuantity:
-        om2:hasUnit: om2:one
-        om2:hasNumericalValue: 30
+        hasUnit: one
+        hasNumericalValue: 30
 ```
 
 #### Proposals for price list
@@ -222,8 +227,6 @@ A simple set of proposals that make up a price list.
   - '@vocab': http://w3id.org/valueflows/ont/vf#
   - farm: https://farm.example/
     map: https://mapping.service/
-    skos: http://www.w3.org/2004/02/skos/core#
-    om2: http://www.ontology-of-units-of-measure.org/resource/om-2/
 
 '@graph':
 
@@ -232,6 +235,7 @@ A simple set of proposals that make up a price list.
     '@type': ProposalList
     name: Price List for Week of March 1
     lists:
+
     - '@id': farm:da7bfa38-a1b2-4f6f-a896-b9bf1ec8807a
       '@type': Proposal
       hasBeginning: 2019-03-01T00:00:00-5:00
@@ -239,6 +243,7 @@ A simple set of proposals that make up a price list.
       eligibleLocation: map:566a2c01-96f8-4b3c-adcf-f197eced3092 # Madison, WI
       unitBased: true # often currently called 'unit pricing'
       publishes:
+
       - '@id': farm:c7897c39-7f05-4a5d-a487-80e130a24345
         '@type': Intent
         name: Carrots case 25#
@@ -247,9 +252,11 @@ A simple set of proposals that make up a price list.
         resourceClassifiedAs: wd:Q81 # carrot
         resourceSpecifiedAs: farm:2402b57c-1c45-423a-acb2-f50961c97d65 # 25 pound case organic carrots seconds
         resourceQuantity:
-          om2:hasUnit: om2:one
-          om2:hasNumericalValue: 1
+          hasUnit: one
+          hasNumericalValue: 1
+
       reciprocal:
+
       - '@id': farm:0f563083-7f05-4a5d-a487-80e130a24345
         '@type': Intent
         name: Payment
@@ -257,8 +264,9 @@ A simple set of proposals that make up a price list.
         receiver: https://farm.example/
         resourceConformsTo: wd:Q4917 # US Dollar
         resourceQuantity:
-          om2:hasUnit: om2:one
-          om2:hasNumericalValue: 18
+          hasUnit: one
+          hasNumericalValue: 18
+
     - '@id': farm:f47064eb-7120-4b31-b882-770165901fe6
       '@type': Proposal
       hasBeginning: 2019-03-01T00:00:00-5:00
@@ -266,6 +274,7 @@ A simple set of proposals that make up a price list.
       eligibleLocation: map:566a2c01-96f8-4b3c-adcf-f197eced3092 # Madison, WI
       unitBased: true
       publishes:
+
       - '@id': farm:54b814ee-62dc-40c1-bb96-f8582aa4f771
         '@type': Intent
         name: Beets case 25#
@@ -274,9 +283,11 @@ A simple set of proposals that make up a price list.
         resourceClassifiedAs: wd:Q165437 # beet root
         resourceConformsTo: farm:8baa8ff7-9c1e-4586-ae7b-79d620a3cac9 # 25 pound case organic beets
         resourceQuantity:
-          om2:hasUnit: om2:one
-          om2:hasNumericalValue: 1
+          hasUnit: one
+          hasNumericalValue: 1
+
       reciprocal:
+
       - '@id': farm:21f361a6-2375-46bb-b192-c21b5ba833bf
         '@type': Intent
         name: Payment
@@ -284,6 +295,6 @@ A simple set of proposals that make up a price list.
         receiver: https://farm.example/
         resourceConformsTo: https://www.wikidata.org/wiki/Q4917 # US Dollar
         resourceQuantity:
-          om2:hasUnit: om2:one
-          om2:hasNumericalValue: 32
+          hasUnit: one
+          hasNumericalValue: 32
 ```
