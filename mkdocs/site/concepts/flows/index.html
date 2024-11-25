@@ -1165,6 +1165,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../examples/ex-complex/" class="md-nav__link">
+        Plan-Produce-Exchange
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../examples/ex-proposals/" class="md-nav__link">
         Offers/Requests
       </a>
@@ -1181,20 +1195,6 @@
     <li class="md-nav__item">
       <a href="../../examples/ex-scenario/" class="md-nav__link">
         Estimates and Analysis
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../examples/ex-complex/" class="md-nav__link">
-        More Complex
       </a>
     </li>
   
@@ -1686,7 +1686,7 @@
 <h3 id="economic-event">Economic Event</h3>
 <p>Economic Events describe past events, something observed, never some potential future event.  They can fulfill Commitments or satisfy Intents (when there is no Commitment).  See also <a href="../../concepts/resources/#how-resources-relate-to-events">How Resources Relate to Events</a>, <a href="../../specification/model-text/#flows-in-motion-observation">Flows in motion: Observation</a>, <a href="../../examples/ex-production/">Production examples</a>, some of the <a href="../../examples/ex-exchange/">Transfer and Exchange examples</a>.</p>
 <h3 id="claim">Claim</h3>
-<p>Claims resemble Commitments, but are initiated by the receiver, not the provider.  An Economic Event can trigger a reciprocal Claim.  Claims sometimes do not have to actually be saved, often they can be implied from an Economic Event and an Agreement.  For example, if Alice has agreed to sell Bob some carrots for $2, then if Alice delivers the carrots to Bob, she has an implicit claim for $2 from Bob.  See also <a href="../../specification/model-text/#flows-in-motion-observation">Flows in motion: Observation</a>, <a href="../../examples/ex-exchange/#claim">Claim example</a>.</p>
+<p>Claims resemble Commitments, but are initiated by the receiver, not the provider.  If there is not an existing Commitment, an Economic Event can trigger a reciprocal Claim, based on an agreement.  Even then, Claims sometimes do not have to actually be instantiated, often they can be implied from an Economic Event and an agreement.  For example, if Alice has agreed to sell Bob some carrots for $2, then if Alice delivers the carrots to Bob, she has an implicit claim for $2 from Bob.  See also <a href="../../specification/model-text/#flows-in-motion-observation">Flows in motion: Observation</a>, <a href="../../examples/ex-exchange/#claim">Claim example</a>.</p>
 <h2 id="timeline-plans-and-observations">Timeline, plans and observations</h2>
 <p>The figure below shows that Economic Events have to be observed and for that reason only appear as records of the past. Future plans get represented with Intents and Commitments.</p>
 <p><img alt="diagram of Intents, Commitments, Events in past, present, future, showing how the flows change through time" src="../../assets/flows.png" /></p>

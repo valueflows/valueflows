@@ -204,7 +204,7 @@ vf:Commitment  a            owl:Class ;
 vf:Agreement  a             owl:Class ;
         rdfs:label          "Agreement"@en ;
         vs:term_status      "stable" ;
-        rdfs:comment        "Any type of agreement among economic agents."@en ;
+        rdfs:comment        "Reciprocal relations among economic agents."@en ;
         .
 
 vf:AgreementBundle  a       owl:Class ;
@@ -825,11 +825,11 @@ vf:minimumQuantity a        owl:ObjectProperty ;
 
 vf:unitBased  a             owl:DatatypeProperty ;
         rdfs:label          "unit based"@en ;
-        rdfs:domain         vf:Proposal ;
+        rdfs:domain         [ owl:unionOf ( vf:Proposal vf:Agreenent ) ] ;
         rdfs:range          xsd:boolean ;
         owl:maxCardinality  1 ;
-        vs:term_status      "stable" ;
-        rdfs:comment        "This proposal contains unit based quantities, which can be multipied to create commitments; commonly seen in a price list or e-commerce. Default false."@en ;
+        vs:term_status      "testing" ;
+        rdfs:comment        "This group of commitments contains unit based quantities, which can be multipied to create commitments; commonly seen in a price list or e-commerce. Default false."@en ;
         .
 
 vf:purpose  a               owl:ObjectProperty ;
@@ -1636,7 +1636,7 @@ vf:dropoff a                owl:NamedIndividual ,
         vf:inputOutput      vf:output ;
         vf:pairsWith        vf:pickup ;
         vf:accountingEffect vf:notApplicable ;
-        vf:onhandEffect     vf:notApplicable ;
+        vf:onhandEffect     vf:increment ;
         vf:locationEffect   vf:update ;
         vf:containedEffect  vf:notApplicable ;
         vf:accountableEffect vf:notApplicable ;
@@ -1708,7 +1708,7 @@ vf:pickup a                 owl:NamedIndividual ,
         vf:createResource   vf:notApplicable ;
         vf:eventQuantity    vf:resource ;
         vf:accountingEffect vf:notApplicable ;
-        vf:onhandEffect     vf:notApplicable ;
+        vf:onhandEffect     vf:decrement ;
         vf:locationEffect   vf:update ;
         vf:containedEffect  vf:notApplicable ;
         vf:accountableEffect vf:notApplicable ;
