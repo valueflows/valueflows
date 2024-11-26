@@ -1528,7 +1528,7 @@
 <p>Valueflows enables multilateral exchange agreements as well. Any number of agents can commit to flows where they provide something and flows where they receive something. This way creating a reciprocal cycle in the flows graph. So for example, Alice can provide apples from her orchard to Bob, who can provide accommodation to Claire, who can provide tutoring to Alice's children. Such exchanges can happen in infinite number of possible ways, as long as all agents participating agree on specific reciprocal cycle in the flows graph.</p>
 <p>We also support non-reciprocal one-way transfers, such as in a gift economy.  However, an exchange implies at least two transfers with reciprocity.</p>
 <h2 id="exchanges-and-flows">Exchanges and flows</h2>
-<p>Exchanges as modeled in VF actually are reciprocal flows, not resources directly.  Flows involved in transfers of rights and responsibilities are more obvious.  Other types of flows can also imply a transfer, and can thus be used as part of an exchange, for details see <a href="../transfers/#explicit-and-implied-transfers">Explicit and implied transfers</a>.</p>
+<p>Exchanges as modeled in VF actually are reciprocal flows, not resources directly.</p>
 <ul>
 <li>
 <p>For example, most timebanks exchange work for credits.  The work event can be part of a process that produces something for some other agent.  It is also part of an exchange in the timebank.  The transfer of credits on the other hand, is not part of any process that creates or transports something, it is merely the timebank recording that one account was decremented and another account was incremented.</p>
@@ -1540,12 +1540,13 @@
 <p>Another example is when a service is created as an output of a process, where that service delivery event can be considered an implied transfer, and exchanged for some other resource.</p>
 </li>
 </ul>
+<p>To be included in an exchange, a flow must have a different provider agent and receiver agent.  Flows involved in transfers of rights to an inventoried resource are most obvious.  Other types of flows can also imply transfer behavior, and can thus be used as part of an exchange, such as consume and produce.  And yet other types of flows do not involve an inventoried resource, but still can be included in an exchange, such as work, delivering a service, or usage of some equipment.  Some types of flows don't make sense to include in an exchange, because there is only a transfer of custody involved, such as pickup and dropoff, or accept and modify. For more details see <a href="../transfers/#explicit-and-implied-transfers">Explicit and implied transfers</a>.</p>
 <h2 id="agreements">Agreements</h2>
 <p>An Agreement can encompass a promised exchange, or an observed exchange without the promise.</p>
 <p>Various kinds of agreements between agents often define the rights and responsibilities for economic resources that are transferred. Agreements can reflect any economic paradigm, so make it possible for the Exchange and Transfer vocabulary to work equally well for capitalist businesses, transitional economic interactions, and next economy interactions.</p>
-<p>Agreements can be of any kind and scope, from an order to a value equation to a larger blanket agreement.</p>
+<p>Agreements can be of any kind and scope, from an order to an agreement in a contribution-based economy to a larger blanket agreement.</p>
 <p>Agreements can be combined into an Agreement Bundle.  This can be useful for example when each "line item" in an "order" needs to have a line item reciprocal commitment (like a "price"), instead of one combined reciprocal commitment for several primary commitments.</p>
-<p>Valueflows does not define the detailed internal vocabulary for agreements, but defines optional references to an agreement when it could be useful.</p>
+<p>Valueflows does not define the detailed internal vocabulary for agreements.</p>
 <h2 id="recipe-exchanges">Recipe exchanges</h2>
 <p>Recipes can include patterns for exchange, as well as production.  The Recipe Exchange is used to generate an agreement(s) and reciprocal commitments when a plan in created from the recipe.</p>
 
