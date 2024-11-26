@@ -12,7 +12,7 @@ We also support non-reciprocal one-way transfers, such as in a gift economy.  Ho
 
 ## Exchanges and flows
 
-Exchanges as modeled in VF actually are reciprocal flows, not resources directly.  Flows involved in transfers of rights and responsibilities are more obvious.  Other types of flows can also imply a transfer, and can thus be used as part of an exchange, for details see [Explicit and implied transfers](transfers.md#explicit-and-implied-transfers).
+Exchanges as modeled in VF actually are reciprocal flows, not resources directly.
 
 * For example, most timebanks exchange work for credits.  The work event can be part of a process that produces something for some other agent.  It is also part of an exchange in the timebank.  The transfer of credits on the other hand, is not part of any process that creates or transports something, it is merely the timebank recording that one account was decremented and another account was incremented.
 
@@ -20,17 +20,19 @@ Exchanges as modeled in VF actually are reciprocal flows, not resources directly
 
 * Another example is when a service is created as an output of a process, where that service delivery event can be considered an implied transfer, and exchanged for some other resource.
 
+To be included in an exchange, a flow must have a different provider agent and receiver agent.  Flows involved in transfers of rights to an inventoried resource are most obvious.  Other types of flows can also imply transfer behavior, and can thus be used as part of an exchange, such as consume and produce.  And yet other types of flows do not involve an inventoried resource, but still can be included in an exchange, such as work, delivering a service, or usage of some equipment.  Some types of flows don't make sense to include in an exchange, because there is only a transfer of custody involved, such as pickup and dropoff, or accept and modify. For more details see [Explicit and implied transfers](transfers.md#explicit-and-implied-transfers).
+
 ## Agreements
 
 An Agreement can encompass a promised exchange, or an observed exchange without the promise.
 
 Various kinds of agreements between agents often define the rights and responsibilities for economic resources that are transferred. Agreements can reflect any economic paradigm, so make it possible for the Exchange and Transfer vocabulary to work equally well for capitalist businesses, transitional economic interactions, and next economy interactions.
 
-Agreements can be of any kind and scope, from an order to a value equation to a larger blanket agreement.
+Agreements can be of any kind and scope, from an order to an agreement in a contribution-based economy to a larger blanket agreement.
 
 Agreements can be combined into an Agreement Bundle.  This can be useful for example when each "line item" in an "order" needs to have a line item reciprocal commitment (like a "price"), instead of one combined reciprocal commitment for several primary commitments.
 
-Valueflows does not define the detailed internal vocabulary for agreements, but defines optional references to an agreement when it could be useful.
+Valueflows does not define the detailed internal vocabulary for agreements.
 
 ##  Recipe exchanges
 

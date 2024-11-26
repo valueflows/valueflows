@@ -4,7 +4,7 @@ See also [Flows without processes](../../introduction/core/#flows-without-proces
 
 ## Transfer concepts
 
-One concept of transfer is an activity that re-assigns rights and responsibilities for an economic resource from one agent to another.  A second concept is an activity that operationally changes physical custody or possession of an economic resource from one agent to another, without affecting rights.
+One concept of transfer is an activity that re-assigns rights for an economic resource from one agent to another.  A second concept is an activity that operationally changes physical custody or possession of an economic resource from one agent to another, without affecting rights.
 
 Note that a transfer is a one-way activity.  Two or more reciprocal transfers form an [exchange](exchanges.md), and are connected in Valueflows by an Agreement.
 
@@ -22,7 +22,7 @@ We think that now, and more so in the future, there will be more gradations of r
 
 ## Explicit and implied transfers
 
-In Valueflows, several actions can also involve the transfer concepts and behavior.  (For more detailed information, see the [Actions page](actions.md), especially the Behaviors by Action.)
+In Valueflows, several actions can involve the transfer concepts and behavior.  (For more detailed information, see the [Actions page](actions.md), especially the Behaviors by Action.)
 
 The explicitly denoted transfers are:
 
@@ -32,19 +32,11 @@ The explicitly denoted transfers are:
 
 Some other actions can imply a transfer of all rights, a transfer of custody, or both.  This shortens and sometimes simplifies the flows.  But it is not at all required, it is fine to have separate transfer flows if that makes the use case more understandable.  The [Transport with Transfer example](../../examples/ex-complex/#transportation-with-transfer) illustrates this.
 
-The way to imply a transfer is to designate a different provider and receiver.
+The way to imply a transfer is to designate a different provider and receiver.  It is not always true the other way though, a different provider and receiver does not necessary imply transfer behavior, usually because there is not an inventoried resource.  See also [Exchanges and flows](../../concepts/exchanges/#exchanges-and-flows).
 
 The following actions imply a full transfer of all rights and custody, when there is a different provider and receiver.   The implication is that any behavior rules of the primary action plus the transfer action are implemented.  And also the flow can be included in an agreement, for example paying for consuming a resource provided by a different agent in the receiver's process.
 
 * consume, produce
-* combine, separate
-* copy
-
-The following actions imply a transfer of all rights, when there is a different provider and receiver.  There aren't any behavioral additions since there is no inventoried resource being transferred.  But it does mean that the flow can be included in an agreement, for example providing work in exchange for a payment.
-
-* deliverService (almost always has a different provider and receiver)
-* work (transfer of the work itself)
-* use (transfer of the usage, not the resource itself)
 
 The following actions imply transfer of custody only, when there is a different provider and receiver.  Since the implied transfer is only custody, this would normally not be used as part of an agreement.  But the behavior rules of the primary action plus the transfer of custody would be implemented.
 
