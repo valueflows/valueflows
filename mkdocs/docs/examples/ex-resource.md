@@ -22,7 +22,6 @@ This example includes economic resources, with their resource specifications.  O
     defaultUnitOfResource: one
     defaultUnitOfEffort: hour
     substitutable: true
-    resourceConformsTo: wd:Q39495
     note: A versatile, 4-wheel drive, hydraulically-driven tractor with 18 to 200 horsepower capacity for agriculture, construction and other utility duties.
 
   - '@id': farm:fbff9852-36ca-4364-a943-bc0b49e1cab5
@@ -39,7 +38,6 @@ This example includes economic resources, with their resource specifications.  O
     name: Carrots organic
     defaultUnitOfResource: kilogram
     substitutable: true
-    resourceConformsTo: wd:Q39495
     note: Organic loose carrots without tops.
 
   - '@id': farm:07819789-dd51-44c3-b35c-9210165bc832
@@ -57,7 +55,6 @@ This example includes economic resources, with their resource specifications.  O
     name: Farm documentation
     defaultUnitOfResource: one
     substitutable: false
-    resourceConformsTo: wd:Q49848 # document
     note: Any of the documentation produced and/or used by the farm.
 
   - '@id': farm:a7e94dde-2997-451e-a7e1-8d364d5e6dee
