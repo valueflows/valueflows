@@ -167,7 +167,6 @@ A simple proposal requesting help for work on a planned production process.  The
   - '@id': fablab:ad56a7ed-be3c-4937-a3fb-0f156bcd2c47
     '@type': Process
     name: Develop soil moisture sensor
-    unitBased: true
     inScopeOf: https://fablab.example/
     hasInput:
 
@@ -188,14 +187,15 @@ A simple proposal requesting help for work on a planned production process.  The
       hasBeginning: 2019-04-12T08:00:00-5:00
       hasEnd: 2019-04-13T17:00:00-5:00
 
-    # other planned inputs here
+  # Proposal to find worker
 
-    - '@id': fablab:33e8933b-ff73-4a01-964a-ca7a98893083
+  - '@id': fablab:33e8933b-ff73-4a01-964a-ca7a98893083
     '@type': Proposal
     name: Electrochemical engineering skills
     hasBeginning: 2019-04-01T08:00:00-5:00
     hasEnd: 2019-04-11T17:00:00-5:00
     eligibleLocation: map:566a2c01-96f8-4b3c-adcf-f197eced3092 # Madison, WI
+    unitBased: true
     publishes:
 
     - '@id': fablab:60f4204e-b8d2-4026-8577-102c3f82c0af # the Intent that was planned
