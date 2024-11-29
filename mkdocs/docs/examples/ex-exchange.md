@@ -384,3 +384,146 @@ Logged work triggers a claim for future income distribution for that work.
 
 ```
 
+#### Car Rental
+
+Renting a car as a service, with transfer of custody.
+
+![car rental diagram reflecting the yaml below](../assets/examples/car-rental.png)
+
+``` yaml
+# Example: Car rental
+
+'@context':
+  - '@vocab': http://w3id.org/valueflows/ont/vf#
+  - ahmed: https://ahmed.example/
+    car: https://car-rental.example/
+
+'@graph':
+
+  # Ahmed rents a car for a week
+
+  # resource before
+
+  - '@id': car:2402b57c-1c45-423a-acb2-f50961c9df89
+    '@type': EconomicResource
+    trackingIdentifier: VIN 43187 # a specific car
+    classifiedAs: midsize
+    accountingQuantity:
+      hasUnit: one
+      hasNumericalValue: 1
+    onhandQuantity:
+      hasUnit: one
+      hasNumericalValue: 1
+
+  # schedule rental
+
+  - '@id': car:f47064eb-7120-4b31-b882-770165901fe6
+    '@type': Agreement
+    note: renting midsize car for a week
+
+  - '@id': car:3129ca8b-fcda-45be-bbda-294dc924r8f8
+    '@type': Commitment
+    clauseOf: car:f47064eb-7120-4b31-b882-770165901fe6
+    action: deliverService
+    resourceConformsTo: http://www.wikidata.org/entity/Q110464531 # short term rental
+    hasBeginning: 2019-04-18T8:00:00-5:00
+    hasEnd: 2019-04-25T9:00:00-5:00
+    provider: https://car-rental.example/
+    receiver: https://ahmed.example/
+    resourceQuantity:
+      hasUnit: one
+      hasNumericalValue: 1
+
+  - '@id': car:3129ca8b-fcda-45be-bbda-294dc924r8f8
+    '@type': Commitment
+    reciprocalClauseOf: car:f47064eb-7120-4b31-b882-770165901fe6
+    action: transfer
+    resourceConformsTo: http://www.wikidata.org/entity/Q4917 # US dollar
+    hasPointInTime: 2019-04-18T8:00:00-5:00
+    provider: https://ahmed.example/
+    receiver: https://car-rental.example/
+    resourceQuantity:
+      hasUnit: one
+      hasNumericalValue: 300
+
+  # pick up car
+
+  - '@id': car:3129ca8b-fcda-45be-bbda-294dc924kj87
+    '@type': EconomicEvent
+    fulfills: car:3129ca8b-fcda-45be-bbda-294dc924r8f8
+    reciprocalRealizationOf: car:f47064eb-7120-4b31-b882-770165901fe6
+    action: transfer
+    resourceConformsTo: http://www.wikidata.org/entity/Q4917 # US dollar
+    hasPointInTime: 2019-04-18T8:30:00-5:00
+    provider: https://ahmed.example/
+    receiver: https://car-rental.example/
+    resourceQuantity:
+      hasUnit: one
+      hasNumericalValue: 300
+
+  - '@id': urn:uuid:54b814ee-62dc-40c1-bb96-f8582aa4f771
+    '@type': EconomicEvent
+    realizationOf: car:f47064eb-7120-4b31-b882-770165901fe6
+    action: transferCustody
+    resourceInventoriedAs: car:2402b57c-1c45-423a-acb2-f50961c97d65
+    hasPointInTime: 2019-04-18T9:00:00-5:00
+    provider: https://car-rental.example/
+    receiver: https://ahmed.example/
+    resourceQuantity:
+      hasUnit: one
+      hasNumericalValue: 1
+
+  - '@id': urn:uuid:98c2bfeb-9c70-4801-896c-4646b975a7d9
+    '@type': Commitment
+    clauseOf: car:f47064eb-7120-4b31-b882-770165901fe6
+    action: transferCustody
+    resourceInventoriedAs: car:2402b57c-1c45-423a-acb2-f50961c97d65
+    provider: https://ahmed.example/
+    receiver: https://car-rental.example/
+    resourceQuantity:
+      hasUnit: one
+      hasNumericalValue: 1
+    due: 2019-04-25T9:00:00-5:00
+
+  # resource after pick up
+
+  - '@id': car:2402b57c-1c45-423a-acb2-f50961c9df89
+    '@type': EconomicResource
+    trackingIdentifier: VIN 43187 # a specific car
+    classifiedAs: midsize
+    accountingQuantity:
+      hasUnit: one
+      hasNumericalValue: 1
+    onhandQuantity:
+      hasUnit: one
+      hasNumericalValue: 0
+
+  # return
+
+  - '@id': urn:uuid:d4d2fd71-34f2-41c3-b1c5-19ad5ed2da59
+    '@type': EconomicEvent
+    realizationOf: car:f47064eb-7120-4b31-b882-770165901fe6
+    action: transferCustody
+    resourceInventoriedAs: car:2402b57c-1c45-423a-acb2-f50961c9df89
+    provider: https://ahmed.example/
+    receiver: https://car-rental.example/
+    resourceQuantity:
+      hasUnit: one
+      hasNumericalValue: 1
+    hasPointInTime: 2019-04-25T07:20:00-5:00
+    fulfills: urn:uuid:98c2bfeb-9c70-4801-896c-4646b975a7d9 # the commitment
+
+  # resource after return
+
+  - '@id': car:2402b57c-1c45-423a-acb2-f50961c9df89
+    '@type': EconomicResource
+    trackingIdentifier: VIN 43187 # a specific car
+    classifiedAs: midsize
+    accountingQuantity:
+      hasUnit: one
+      hasNumericalValue: 1
+    onhandQuantity:
+      hasUnit: one
+      hasNumericalValue: 1
+
+```
