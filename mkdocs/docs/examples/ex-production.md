@@ -27,7 +27,7 @@ Simple one-process manufacturing with typical inputs and outputs.
 
   - '@id': mfg:3129ca8b-fcda-45be-bbda-294dc924d3b9
     '@type': EconomicResource
-    conformsTo: wd:Q219803 # plywood
+    conformsTo: http://www.wikidata.org/entity/Q219803 # plywood
     accountingQuantity:
       hasUnit: one
       hasNumericalValue: 130
@@ -35,14 +35,14 @@ Simple one-process manufacturing with typical inputs and outputs.
 
   - '@id': mfg:6b97b1be-8e07-44ac-82e5-214f1b2aaf33
     '@type': EconomicResource
-    conformsTo: wd:Q2101564 # desk design specification
+    conformsTo: http://www.wikidata.org/entity/Q2101564 # desk design specification
     accountingQuantity:
       hasUnit: one
       hasNumericalValue: 1
 
   - '@id': mfg:52f0e212-3c4f-4d27-b345-5e964c135824
     '@type': EconomicResource
-    conformsTo: wd:Q13231055 # CNC machine
+    conformsTo: http://www.wikidata.org/entity/Q13231055 # CNC machine
     accountingQuantity:
       hasUnit: one
       hasNumericalValue: 1
@@ -90,7 +90,7 @@ Simple one-process manufacturing with typical inputs and outputs.
       action: work
       provider: https://alice.example/
       receiver: https://manufacturing.example/
-      resourceConformsTo: wd:Q192047 # machining
+      resourceConformsTo: http://www.wikidata.org/entity/Q192047 # machining
       effortQuantity:
         hasUnit: hour
         hasNumericalValue: 7
@@ -118,7 +118,7 @@ Simple one-process manufacturing with typical inputs and outputs.
 
   - '@id': mfg:3129ca8b-fcda-45be-bbda-294dc924d3b9
     '@type': EconomicResource
-    conformsTo: wd:Q219803 # plywood
+    conformsTo: http://www.wikidata.org/entity/Q219803 # plywood
     accountingQuantity:
       hasUnit: one
       hasNumericalValue: 127
@@ -126,14 +126,14 @@ Simple one-process manufacturing with typical inputs and outputs.
 
   - '@id': mfg:6b97b1be-8e07-44ac-82e5-214f1b2aaf33
     '@type': EconomicResource
-    conformsTo: wd:Q2101564 # desk design specification
+    conformsTo: http://www.wikidata.org/entity/Q2101564 # desk design specification
     accountingQuantity:
       hasUnit: one
       hasNumericalValue: 1
 
   - '@id': mfg:52f0e212-3c4f-4d27-b345-5e964c135824
     '@type': EconomicResource
-    conformsTo: wd:Q13231055 # CNC machine
+    conformsTo: http://www.wikidata.org/entity/Q13231055 # CNC machine
     accountingQuantity:
       hasUnit: one
       hasNumericalValue: 1
@@ -194,7 +194,7 @@ Alternate view of this manufacturing example, using the relational directionalit
     action: work
     provider: https://alice.example/
     receiver: https://manufacturing.example/
-    resourceConformsTo: wd:Q192047 # machining
+    resourceConformsTo: http://www.wikidata.org/entity/Q192047 # machining
     effortQuantity:
       hasUnit: hour
       hasNumericalValue: 7
@@ -234,7 +234,7 @@ Simple delivery of a service with typical inputs and outputs.
   - '@id': training:3129ca8b-fcda-45be-bbda-294dc924d3b9
     '@type': ResourceSpecification
     name: 3D printing 1 day hands-on workshop
-    classifiedAs: [ wd:Q27556165, wd:Q229367 ] # workshop, 3d printing
+    classifiedAs: [ http://www.wikidata.org/entity/Q27556165, http://www.wikidata.org/entity/Q229367 ] # workshop, 3d printing
 
   - '@id': training:52f0e212-3c4f-4d27-b345-5e964c135824
     '@type': ResourceSpecification
@@ -248,7 +248,7 @@ Simple delivery of a service with typical inputs and outputs.
 
   - '@id': training:e1721a61-cd47-4556-84b9-8b1b81da15bf
     '@type': EconomicResource
-    conformsTo: wd:Q53953506 # 3D printer
+    conformsTo: http://www.wikidata.org/entity/Q53953506 # 3D printer
     accountingQuantity:
       hasUnit: one
       hasNumericalValue: 1
@@ -542,7 +542,7 @@ Simple pack and unpack of resources into and out of a container resource, using 
 
   - '@id': med:e1721a61-cd47-4556-84b9-8b1b81da15bf
     '@type': EconomicResource
-    conformsTo: wd:Q987767 # container
+    conformsTo: http://www.wikidata.org/entity/Q987767 # container
     trackingIdentifier: cont234
     accountingQuantity:
       hasUnit: one
@@ -551,7 +551,7 @@ Simple pack and unpack of resources into and out of a container resource, using 
 
   - '@id': med:3129ca8b-fcda-45be-bbda-294dc924d3b9
     '@type': EconomicResource
-    conformsTo: wd:Q89990310 # medical gown
+    conformsTo: http://www.wikidata.org/entity/Q89990310 # medical gown
     trackingIdentifier: gown789
     accountingQuantity:
       hasUnit: one
@@ -560,7 +560,7 @@ Simple pack and unpack of resources into and out of a container resource, using 
 
   - '@id': med:3129ca8b-fcda-45be-bbda-294dc924d3b0
     '@type': EconomicResource
-    conformsTo: wd:Q89990310 # medical gown
+    conformsTo: http://www.wikidata.org/entity/Q89990310 # medical gown
     trackingIdentifier: gown734
     accountingQuantity:
       hasUnit: one
@@ -569,7 +569,7 @@ Simple pack and unpack of resources into and out of a container resource, using 
 
   - '@id': med:3129ca8b-fcda-45be-bbda-294dc924d3b1
     '@type': EconomicResource
-    conformsTo: wd:Q89990310 # medical gown
+    conformsTo: http://www.wikidata.org/entity/Q89990310 # medical gown
     trackingIdentifier: gown698
     accountingQuantity:
       hasUnit: one
@@ -632,7 +632,7 @@ Simple pack and unpack of resources into and out of a container resource, using 
       action: produce
       provider: https://medical.example/
       receiver: https://medical.example/
-      resourceConformsTo: wd:Q2127468 # packaging unit
+      resourceConformsTo: http://www.wikidata.org/entity/Q2127468 # packaging unit
       resourceQuantity:
         hasUnit: one
         hasNumericalValue: 1
@@ -642,7 +642,7 @@ Simple pack and unpack of resources into and out of a container resource, using 
 
   - '@id': med:e1721a61-cd47-4556-84b9-8b1b81da15bf
     '@type': EconomicResource
-    conformsTo: wd:Q987767 # container
+    conformsTo: http://www.wikidata.org/entity/Q987767 # container
     trackingIdentifier: cont234
     accountingQuantity:
       hasUnit: one
@@ -651,7 +651,7 @@ Simple pack and unpack of resources into and out of a container resource, using 
 
   - '@id': med:3129ca8b-fcda-45be-bbda-294dc924d3b9
     '@type': EconomicResource
-    conformsTo: wd:Q89990310 # medical gown
+    conformsTo: http://www.wikidata.org/entity/Q89990310 # medical gown
     trackingIdentifier: gown789
     accountingQuantity:
       hasUnit: one
@@ -660,7 +660,7 @@ Simple pack and unpack of resources into and out of a container resource, using 
 
   - '@id': med:3129ca8b-fcda-45be-bbda-294dc924d3b0
     '@type': EconomicResource
-    conformsTo: wd:Q89990310 # medical gown
+    conformsTo: http://www.wikidata.org/entity/Q89990310 # medical gown
     trackingIdentifier: gown734
     accountingQuantity:
       hasUnit: one
@@ -669,7 +669,7 @@ Simple pack and unpack of resources into and out of a container resource, using 
 
   - '@id': med:3129ca8b-fcda-45be-bbda-294dc924d3b1
     '@type': EconomicResource
-    conformsTo: wd:Q89990310 # medical gown
+    conformsTo: http://www.wikidata.org/entity/Q89990310 # medical gown
     trackingIdentifier: gown698
     accountingQuantity:
       hasUnit: one
@@ -678,7 +678,7 @@ Simple pack and unpack of resources into and out of a container resource, using 
 
   - '@id': med:e1721a61-cd47-4556-84b9-8b1b81da564h
     '@type': EconomicResource
-    conformsTo: wd:Q2127468 # packaging unit
+    conformsTo: http://www.wikidata.org/entity/Q2127468 # packaging unit
     trackingIdentifier: pack6789
     accountingQuantity:
       hasUnit: one
@@ -761,7 +761,7 @@ Simple pack and unpack of resources into and out of a container resource, using 
 
   - '@id': med:e1721a61-cd47-4556-84b9-8b1b81da15bf
     '@type': EconomicResource
-    conformsTo: wd:Q987767 # container
+    conformsTo: http://www.wikidata.org/entity/Q987767 # container
     trackingIdentifier: cont234
     accountingQuantity:
       hasUnit: one
@@ -769,7 +769,7 @@ Simple pack and unpack of resources into and out of a container resource, using 
 
   - '@id': med:3129ca8b-fcda-45be-bbda-294dc924d3b9
     '@type': EconomicResource
-    conformsTo: wd:Q89990310 # medical gown
+    conformsTo: http://www.wikidata.org/entity/Q89990310 # medical gown
     trackingIdentifier: gown789
     accountingQuantity:
       hasUnit: one
@@ -778,7 +778,7 @@ Simple pack and unpack of resources into and out of a container resource, using 
 
   - '@id': med:3129ca8b-fcda-45be-bbda-294dc924d3b0
     '@type': EconomicResource
-    conformsTo: wd:Q89990310 # medical gown
+    conformsTo: http://www.wikidata.org/entity/Q89990310 # medical gown
     trackingIdentifier: gown734
     accountingQuantity:
       hasUnit: one
@@ -787,7 +787,7 @@ Simple pack and unpack of resources into and out of a container resource, using 
 
   - '@id': med:3129ca8b-fcda-45be-bbda-294dc924d3b1
     '@type': EconomicResource
-    conformsTo: wd:Q89990310 # medical gown
+    conformsTo: http://www.wikidata.org/entity/Q89990310 # medical gown
     trackingIdentifier: gown698
     accountingQuantity:
       hasUnit: one
@@ -863,7 +863,7 @@ Alternate view of these pack-unpack processes, using the more relational directi
     action: produce
     provider: https://medical.example/
     receiver: https://medical.example/
-    resourceConformsTo: wd:Q2127468 # packaging unit
+    resourceConformsTo: http://www.wikidata.org/entity/Q2127468 # packaging unit
     resourceQuantity:
       hasUnit: one
       hasNumericalValue: 1
@@ -1219,7 +1219,7 @@ Note that the diagram below shows the actual data in the flow.  If a use case ca
     action: work
     provider: https://alice.example/
     receiver: https://manufacturing.example/
-    resourceConformsTo: wd:Q192047 # machining
+    resourceConformsTo: http://www.wikidata.org/entity/Q192047 # machining
     effortQuantity:
       hasUnit: hour
       hasNumericalValue: 7
@@ -1298,7 +1298,7 @@ Note that the diagram below shows the actual data in the flow.  If a use case ca
     action: work
     provider: https://alice.example/
     receiver: https://manufacturing.example/
-    resourceConformsTo: wd:Q192047 # machining
+    resourceConformsTo: http://www.wikidata.org/entity/Q192047 # machining
     effortQuantity:
       hasUnit: hour
       hasNumericalValue: 7
@@ -1314,7 +1314,7 @@ Note that the diagram below shows the actual data in the flow.  If a use case ca
     action: work
     provider: https://alice.example/
     receiver: https://manufacturing.example/
-    resourceConformsTo: wd:Q192047 # machining
+    resourceConformsTo: http://www.wikidata.org/entity/Q192047 # machining
     effortQuantity:
       hasUnit: hour
       hasNumericalValue: -1

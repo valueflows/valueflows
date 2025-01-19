@@ -159,7 +159,7 @@ A plan generated from a recipe, for making a component.
     '@type': RecipeFlow
     recipeInputOf: urn:uuid:e1721a61-cd47-4556-84b9-8b1b81da15bf
     action: consume
-    resourceConformsTo: wd:Q162 # optical fiber
+    resourceConformsTo: http://www.wikidata.org/entity/Q162 # optical fiber
     resourceQuantity:
       hasUnit: metre
       hasNumericalValue: .5
@@ -169,7 +169,7 @@ A plan generated from a recipe, for making a component.
     '@type': RecipeFlow
     recipeInputOf: urn:uuid:e1721a61-cd47-4556-84b9-8b1b81da15bf
     action: work
-    resourceConformsTo: wd:Q640621 # optical engineering
+    resourceConformsTo: http://www.wikidata.org/entity/Q640621 # optical engineering
     effortQuantity:
       hasUnit: hour
       hasNumericalValue: 2
@@ -207,7 +207,7 @@ A plan generated from a recipe, for making a component.
     action: consume
     provider: https://sensorica.example/
     receiver: https://sensorica.example/
-    resourceConformsTo: wd:Q162 # optical fiber
+    resourceConformsTo: http://www.wikidata.org/entity/Q162 # optical fiber
     resourceQuantity:
       hasUnit: metre
       hasNumericalValue: .5
@@ -219,7 +219,7 @@ A plan generated from a recipe, for making a component.
     action: work
     provider: https://alice.example/
     receiver: https://sensorica.example/
-    resourceConformsTo: wd:Q640621 # optical engineering
+    resourceConformsTo: http://www.wikidata.org/entity/Q640621 # optical engineering
     effortQuantity:
       hasUnit: hour
       hasNumericalValue: 2
@@ -248,7 +248,7 @@ Commitments satisfying intents, and economic events fulfilling commitments.  (No
     '@type': Intent
     action: work
     receiver: https://manufacturing.example/
-    resourceConformsTo: wd:/Q192047 # machining
+    resourceConformsTo: http://www.wikidata.org/entity//Q192047 # machining
     effortQuantity:
       hasUnit: hour
       hasNumericalValue: 8
@@ -262,7 +262,7 @@ Commitments satisfying intents, and economic events fulfilling commitments.  (No
     action: work
     provider: https://bob.example/
     receiver: https://manufacturing.example/
-    resourceConformsTo: wd:Q192047 # machining
+    resourceConformsTo: http://www.wikidata.org/entity/Q192047 # machining
     effortQuantity:
       hasUnit: hour
       hasNumericalValue: 8
@@ -277,7 +277,7 @@ Commitments satisfying intents, and economic events fulfilling commitments.  (No
     action: work
     provider: https://bob.example/
     receiver: https://manufacturing.example/
-    resourceConforms: wd:Q192047 # machining
+    resourceConforms: http://www.wikidata.org/entity/Q192047 # machining
     effortQuantity:
       hasUnit: hour
       hasNumericalValue: 4
@@ -290,7 +290,7 @@ Commitments satisfying intents, and economic events fulfilling commitments.  (No
     action: work
     provider: https://bob.example/
     receiver: https://manufacturing.example/
-    resourceConformsTo: wd:Q192047 # machining
+    resourceConformsTo: http://www.wikidata.org/entity/Q192047 # machining
     effortQuantity:
       hasUnit: hour
       hasNumericalValue: 4

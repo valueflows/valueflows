@@ -59,7 +59,7 @@ This shows a simple recipe that includes both a process and the exchange of work
     '@type': RecipeFlow
     recipeReciprocalClauseOf: urn:uuid:9bd19194-a36d-4a1f-896b-8082887962cb # the recipe exchange
     action: transfer
-    resourceConformsTo: wd:Q21002847 # FairCoin
+    resourceConformsTo: http://www.wikidata.org/entity/Q21002847 # FairCoin
     resourceQuantity:
       hasUnit: one
       hasNumericalValue: 300
@@ -113,7 +113,7 @@ This shows a simple recipe that includes both a process and the exchange of work
     action: transfer
     provider: https://documenters.example/
     receiver: https://alice.example/
-    resourceConformsTo: wd:Q21002847 # FairCoin
+    resourceConformsTo: http://www.wikidata.org/entity/Q21002847 # FairCoin
     resourceQuantity:
       hasUnit: one
       hasNumericalValue: 400 # the plan payment is adjusted from the generic recipe
@@ -133,6 +133,7 @@ Bob purchases 30kg of apples from Alice and Claudia transports them (FOB destina
   - alice: https://alice.example/
     bob: https://bob.example/
     claudia: https://claudia.example/
+    geo: https://location.example/
 
 '@graph':
 
@@ -142,7 +143,7 @@ Bob purchases 30kg of apples from Alice and Claudia transports them (FOB destina
 
   - '@id': alice:21f361a6-2375-46bb-b192-c21b5ba833bf
     '@type': EconomicResource
-    conformsTo: wd:Q41777871 # haralson apples
+    conformsTo: http://www.wikidata.org/entity/Q41777871 # haralson apples
     trackingIdentifier: lot-alice-apples-2018-10-11
     locatedAt: geo:70ee3034-0d15-4471-8ee3-91c60bb1a9c9
     primaryAccountable: https://alice.example
@@ -158,7 +159,7 @@ Bob purchases 30kg of apples from Alice and Claudia transports them (FOB destina
   - '@id': urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10f1f86
     '@type': Commitment
     action: transfer
-    resourceConformsTo: wd:Q41777871 # haralson apples
+    resourceConformsTo: http://www.wikidata.org/entity/Q41777871Q41777871 # haralson apples
     provider: https://alice.example/
     receiver: https://bob.example/
     resourceQuantity:
@@ -176,7 +177,7 @@ Bob purchases 30kg of apples from Alice and Claudia transports them (FOB destina
       '@type': Commitment
       note: Transportation of alice's apples from alice's location to bob's location
       action: deliverService
-      resourceClassifiedAs: wd:Q7590 # transportation service
+      resourceClassifiedAs: http://www.wikidata.org/entity/Q7590 # transportation service
       provider: https://claudia.example/
       receiver: https://alice.example/
       resourceQuantity:
@@ -188,7 +189,7 @@ Bob purchases 30kg of apples from Alice and Claudia transports them (FOB destina
     - '@id': urn:uuid:33e8933b-ff73-4a01-964a-ca7a98893083
       '@type': Commitment
       action: transfer
-      resourceConformsTo: wd:Q4917 # US Dollar
+      resourceConformsTo: http://www.wikidata.org/entity/Q4917 # US Dollar
       provider: https://alice.example/
       receiver: https://claudia.example/
       resourceQuantity:
@@ -257,7 +258,7 @@ Bob purchases 30kg of apples from Alice and Claudia transports them (FOB destina
       '@type': EconomicEvent
       note: Transportation of alice's apples to bob's location
       action: deliverService
-      resourceConformsTo: wd:Q7590 # transportation service
+      resourceConformsTo: http://www.wikidata.org/entity/Q7590 # transportation service
       provider: https://claudia.example/
       receiver: https://alice.example/
       resourceQuantity:
@@ -270,7 +271,7 @@ Bob purchases 30kg of apples from Alice and Claudia transports them (FOB destina
   - '@id': urn:uuid:ad56a7ed-be3c-4937-a3fb-0f156bcd2c47
     '@type': EconomicEvent
     action: transferAllRights
-    resourceClassifiedAs: wd:Q41777871 # haralson apples
+    resourceClassifiedAs: http://www.wikidata.org/entity/Q41777871 # haralson apples
     trackingIdentifier: lot-alice-apples-2018-10-11
     provider: https://alice.example/
     receiver: https://bob.example/
@@ -283,7 +284,7 @@ Bob purchases 30kg of apples from Alice and Claudia transports them (FOB destina
 
   - '@id': alice:21f361a6-2375-46bb-b192-c21b5ba833bf
     '@type': EconomicResource
-    conformsTo: wd:Q41777871 # haralson apples
+    conformsTo: http://www.wikidata.org/entity/Q41777871 # haralson apples
     trackingIdentifier: lot-alice-apples-2018-10-11
     locatedAt: geo:70ee3034-0d15-4471-8ee3-91c60bb1a9c9
     primaryAccountable: https://alice.example
@@ -296,7 +297,7 @@ Bob purchases 30kg of apples from Alice and Claudia transports them (FOB destina
 
   - '@id': bob:9bd19194-a36d-4a1f-896b-8082887962cb
     '@type': EconomicResource
-    conformsTo: wd:Q41777871 # haralson apples
+    conformsTo: http://www.wikidata.org/entity/Q41777871 # haralson apples
     trackingIdentifier: lot-alice-apples-2018-10-11
     locatedAt: geo:b52a5815-fae9-43bf-be95-833b95dc0ada
     primaryAccountable: https://bob.example
@@ -309,7 +310,7 @@ Bob purchases 30kg of apples from Alice and Claudia transports them (FOB destina
 
   - '@id': claudia:27be5cab-d740-4194-9298-1661a69d9d95 # record of claudia's bill of lading on the truck
     '@type': EconomicResource
-    conformsTo: wd:Q41777871 # haralson apples
+    conformsTo: http://www.wikidata.org/entity/Q41777871 # haralson apples
     onhandQuantity:
       hasUnit: kilogram
       hasNumericalValue: 0
@@ -319,7 +320,7 @@ Bob purchases 30kg of apples from Alice and Claudia transports them (FOB destina
   - '@id': urn:uuid:8baa8ff7-9c1e-4586-ae7b-79d620a3cac9
     '@type': EconomicEvent
     action: transfer
-    resourceConformsTo: wd:Q4917 # US Dollar
+    resourceConformsTo: http://www.wikidata.org/entity/Q4917 # US Dollar
     resourceInventoriedAs: alice:daa2ec3b-2c1a-4eb1-839f-8dcec1a1f93a # alice's bank account
     toResourceInventoriedAs: claudia:bd5806d6-4a36-45b9-b3b6-3e7d361a5a14 # claudia's bank account
     provider: https://alice.example/
@@ -392,7 +393,7 @@ The following shows a snippet alternative for the transport, where claudia uses 
       '@type': EconomicEvent
       note: Transportation of alice's apples from alice's location to bob's location
       action: deliverService
-      resourceConformsTo: wd:Q7590 # transportation service
+      resourceConformsTo: http://www.wikidata.org/entity/Q7590 # transportation service
       provider: https://claudia.example/
       receiver: https://alice.example/
       resourceQuantity:
@@ -421,7 +422,7 @@ It is also valid to do this with an explicit transfer of custody, as below:
 
   - '@id': alice:21f361a6-2375-46bb-b192-c21b5ba833bf
     '@type': EconomicResource
-    conformsTo: wd:Q41777871 # haralson apples
+    conformsTo: http://www.wikidata.org/entity/Q41777871 # haralson apples
     trackingIdentifier: lot-alice-apples-2018-10-11
     locatedAt: geo:70ee3034-0d15-4471-8ee3-91c60bb1a9c9
     primaryAccountable: https://alice.example
@@ -437,7 +438,7 @@ It is also valid to do this with an explicit transfer of custody, as below:
   - '@id': urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10f1f86
     '@type': Commitment
     action: transfer
-    resourceConformsTo: wd:Q41777871 # haralson apples
+    resourceConformsTo: http://www.wikidata.org/entity/Q41777871 # haralson apples
     provider: https://alice.example/
     receiver: https://bob.example/
     resourceQuantity:
@@ -455,7 +456,7 @@ It is also valid to do this with an explicit transfer of custody, as below:
       '@type': Commitment
       skos:note: Transportation of alice's apples from alice's location to bob's location
       action: deliverService
-      resourceClassifiedAs: wd:Q7590 # transportation service
+      resourceClassifiedAs: http://www.wikidata.org/entity/Q7590 # transportation service
       provider: https://claudia.example/
       receiver: https://alice.example/
       resourceQuantity:
@@ -466,7 +467,7 @@ It is also valid to do this with an explicit transfer of custody, as below:
     - '@id': urn:uuid:33e8933b-ff73-4a01-964a-ca7a98893083
       '@type': Commitment
       action: transfer
-      resourceConformsTo: wd:Q4917 # US Dollar
+      resourceConformsTo: http://www.wikidata.org/entity/Q4917 # US Dollar
       provider: https://alice.example/
       receiver: https://claudia.example/
       resourceQuantity:
@@ -478,7 +479,7 @@ It is also valid to do this with an explicit transfer of custody, as below:
   - '@id': urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10f1f87
     '@type': EconomicEvent
     action: transferCustody # this is an event that was implied in the first example
-    resourceClassifiedAs: wd:Q41777871 # haralson apples
+    resourceClassifiedAs: http://www.wikidata.org/entity/Q41777871 # haralson apples
     trackingIdentifier: lot-alice-apples-2018-10-11
     provider: https://alice.example/
     receiver: https://claudia.example/
@@ -492,7 +493,7 @@ It is also valid to do this with an explicit transfer of custody, as below:
 
   - '@id': alice:21f361a6-2375-46bb-b192-c21b5ba833bf
     '@type': EconomicResource
-    classifiedAs: wd:Q41777871 # haralson apples
+    classifiedAs: http://www.wikidata.org/entity/Q41777871 # haralson apples
     trackingIdentifier: lot-alice-apples-2018-10-11
     locatedAt: geo:70ee3034-0d15-4471-8ee3-91c60bb1a9c9
     primaryAccountable: https://alice.example
@@ -505,7 +506,7 @@ It is also valid to do this with an explicit transfer of custody, as below:
 
   - '@id': claudia:27be5cab-d740-4194-9298-1661a69d9d95
     '@type': EconomicResource
-    classifiedAs: wd:Q41777871 # haralson apples
+    classifiedAs: http://www.wikidata.org/entity/Q41777871 # haralson apples
     trackingIdentifier: lot-alice-apples-2018-10-11
     onhandQuantity:
       om2:hasUnit: om2:kilogram
@@ -571,7 +572,7 @@ It is also valid to do this with an explicit transfer of custody, as below:
       '@type': EconomicEvent
       skos:note: Transportation of alice's apples to bob's location
       action: deliverService
-      resourceConformsTo: wd:Q7590 # transportation service
+      resourceConformsTo: http://www.wikidata.org/entity/Q7590 # transportation service
       provider: https://claudia.example/
       receiver: https://alice.example/
       resourceQuantity:
@@ -584,7 +585,7 @@ It is also valid to do this with an explicit transfer of custody, as below:
   - '@id': urn:uuid:7a63ea10-b1c3-441a-9a08-fb8630c02614
     '@type': EconomicEvent
     action: transferCustody # this is the event that was implied in the first example
-    resourceConformsTo: wd:Q41777871 # haralson apples
+    resourceConformsTo: http://www.wikidata.org/entity/Q41777871 # haralson apples
     trackingIdentifier: lot-alice-apples-2018-10-11
     resourceInventoriedAs: claudia:27be5cab-d740-4194-9298-1661a69d9d95
     toResourceInventoriedAs: bob:9bd19194-a36d-4a1f-896b-8082887962cb
@@ -599,7 +600,7 @@ It is also valid to do this with an explicit transfer of custody, as below:
   - '@id': urn:uuid:ad56a7ed-be3c-4937-a3fb-0f156bcd2c47
     '@type': EconomicEvent
     action: transferAllRights
-    resourceClassifiedAs: wd:Q41777871 # haralson apples
+    resourceClassifiedAs: http://www.wikidata.org/entity/Q41777871 # haralson apples
     trackingIdentifier: lot-alice-apples-2018-10-11
     provider: https://alice.example/
     receiver: https://bob.example/
@@ -612,7 +613,7 @@ It is also valid to do this with an explicit transfer of custody, as below:
 
   - '@id': alice:21f361a6-2375-46bb-b192-c21b5ba833bf
     '@type': EconomicResource
-    conformsTo: wd:Q41777871 # haralson apples
+    conformsTo: http://www.wikidata.org/entity/Q41777871 # haralson apples
     trackingIdentifier: lot-alice-apples-2018-10-11
     locatedAt: geo:70ee3034-0d15-4471-8ee3-91c60bb1a9c9 # only the possessed amount
     primaryAccountable: https://alice.example
@@ -625,7 +626,7 @@ It is also valid to do this with an explicit transfer of custody, as below:
 
   - '@id': bob:9bd19194-a36d-4a1f-896b-8082887962cb
     '@type': EconomicResource
-    conformsTo: wd:Q41777871 # haralson apples
+    conformsTo: http://www.wikidata.org/entity/Q41777871 # haralson apples
     trackingIdentifier: lot-alice-apples-2018-10-11
     locatedAt: geo:b52a5815-fae9-43bf-be95-833b95dc0ada # only the possessed amount
     primaryAccountable: https://bob.example
@@ -638,7 +639,7 @@ It is also valid to do this with an explicit transfer of custody, as below:
 
   - '@id': claudia:27be5cab-d740-4194-9298-1661a69d9d95 # claudia's bill of lading on the truck
     '@type': EconomicResource
-    conformsTo: wd:Q41777871 # haralson apples
+    conformsTo: http://www.wikidata.org/entity/Q41777871 # haralson apples
     onhandQuantity:
       om2:hasUnit: om2:kilogram
       om2:hasNumericalValue: 0
@@ -648,7 +649,7 @@ It is also valid to do this with an explicit transfer of custody, as below:
   - '@id': urn:uuid:8baa8ff7-9c1e-4586-ae7b-79d620a3cac9
     '@type': EconomicEvent
     action: transfer
-    resourceConformsTo: wd:Q4917 # US Dollar
+    resourceConformsTo: http://www.wikidata.org/entity/Q4917 # US Dollar
     resourceInventoriedAs: alice:daa2ec3b-2c1a-4eb1-839f-8dcec1a1f93a # alice's bank account
     toResourceInventoriedAs: claudia:bd5806d6-4a36-45b9-b3b6-3e7d361a5a14 # claudia's bank account
     provider: https://alice.example/

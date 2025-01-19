@@ -28,7 +28,7 @@ An exchange agreement with commitments.
     action: transfer
     provider: https://alice.example/
     receiver: https://bob.example/
-    resourceConformsTo: wd:Q89 # apples
+    resourceConformsTo: http://www.wikidata.org/entity/Q89 # apples
     resourceQuantity:
       hasUnit: kilogram
       hasNumericalValue: 50
@@ -39,7 +39,7 @@ An exchange agreement with commitments.
     action: transfer
     provider: https://bob.example/
     receiver: https://alice.example/
-    resourceConformsTo: wd:Q5977438 # soft apple cider
+    resourceConformsTo: http://www.wikidata.org/entity/Q5977438 # soft apple cider
     resourceQuantity:
       hasUnit: litre
       hasNumericalValue: 10
@@ -71,7 +71,7 @@ An exchange without prior commitments.  Note we are still using the Agreement to
     action: transfer
     provider: https://store.example/
     receiver: https://carol.example/
-    resourceConformsTo: wd:Q47107 # bucket
+    resourceConformsTo: http://www.wikidata.org/entity/Q47107 # bucket
     resourceQuantity:
       hasUnit: one
       hasNumericalValue: 1
@@ -82,7 +82,7 @@ An exchange without prior commitments.  Note we are still using the Agreement to
     action: transfer
     provider: https://carol.example/
     receiver: https://store.example/
-    resourceConformsTo: wd:Q4917 # US dollar
+    resourceConformsTo: http://www.wikidata.org/entity/Q4917 # US dollar
     resourceInventoriedAs: carol:e56fd654-7b94-4d96-8e60-de39e08329a7 # Carol's bank account
     resourceQuantity:
       hasUnit: one
@@ -111,7 +111,7 @@ A simple transfer of a currency from one agent to another.
   - '@id': fair:b75d8f6a-e2df-4e52-b36d-1a22a66f4ead
     '@type': EconomicResource
     note: Alice's wallet address
-    conformsTo: wd:Q21002847 # FairCoin
+    conformsTo: http://www.wikidata.org/entity/Q21002847 # FairCoin
     accountingQuantity:
       hasUnit: one
       hasNumericalValue: 540
@@ -119,7 +119,7 @@ A simple transfer of a currency from one agent to another.
   - '@id': fair:3be5259d-10f0-431c-9fec-9c0c15a461d3
     '@type': EconomicResource
     note: Bob's wallet address
-    conformsTo: wd:Q21002847 # FairCoin
+    conformsTo: http://www.wikidata.org/entity/Q21002847 # FairCoin
     accountingQuantity:
       hasUnit: one
       hasNumericalValue: 480
@@ -129,7 +129,7 @@ A simple transfer of a currency from one agent to another.
   - '@id': urn:uuid:e5afaa28-1080-4912-835b-46883efb83e6
     '@type': EconomicEvent
     action: transfer
-    resourceConformsTo: wd:Q21002847 # FairCoin
+    resourceConformsTo: http://www.wikidata.org/entity/Q21002847 # FairCoin
     resourceInventoriedAs: fair:b75d8f6a-e2df-4e52-b36d-1a22a66f4ead # Alice's wallet address
     toResourceInventoriedAs: fair:3be5259d-10f0-431c-9fec-9c0c15a461d3 # Bob's wallet address
     provider: https://alice.example
@@ -144,7 +144,7 @@ A simple transfer of a currency from one agent to another.
   - '@id': fair:b75d8f6a-e2df-4e52-b36d-1a22a66f4ead
     '@type': EconomicResource
     note: Alice's wallet address
-    conformsTo: wd:Q21002847 # FairCoin
+    conformsTo: http://www.wikidata.org/entity/Q21002847 # FairCoin
     accountingQuantity:
       hasUnit: one
       hasNumericalValue: 440
@@ -152,7 +152,7 @@ A simple transfer of a currency from one agent to another.
   - '@id': fair:3be5259d-10f0-431c-9fec-9c0c15a461d3
     '@type': EconomicResource
     note: Bob's wallet address
-    conformsTo: wd:Q21002847 # FairCoin
+    conformsTo: http://www.wikidata.org/entity/Q21002847 # FairCoin
     accountingQuantity:
       hasUnit: one
       hasNumericalValue: 580
@@ -179,7 +179,7 @@ A simple move of a currency from one account to another by one agent.
   - '@id': fair:6fb358a3-2859-4d6a-a4fa-431603ee70f5
     '@type': EconomicResource
     note: Bob's first wallet address
-    conformsTo: wd:Q21002847 # FairCoin
+    conformsTo: http://www.wikidata.org/entity/Q21002847 # FairCoin
     accountingQuantity:
       hasUnit: one
       hasNumericalValue: 540
@@ -187,7 +187,7 @@ A simple move of a currency from one account to another by one agent.
   - '@id': fair:3be5259d-10f0-431c-9fec-9c0c15a461d3
     '@type': EconomicResource
     note: Bob's second wallet address
-    conformsTo: wd:Q21002847 # FairCoin
+    conformsTo: http://www.wikidata.org/entity/Q21002847 # FairCoin
     accountingQuantity:
       hasUnit: one
       hasNumericalValue: 480
@@ -197,7 +197,7 @@ A simple move of a currency from one account to another by one agent.
   - '@id': urn:uuid:e5afaa28-1080-4912-835b-46883efb83e6
     '@type': EconomicEvent
     action: move
-    resourceconformsTo: wd:Q21002847 # FairCoin
+    resourceconformsTo: http://www.wikidata.org/entity/Q21002847 # FairCoin
     resourceInventoriedAs: fair:6fb358a3-2859-4d6a-a4fa-431603ee70f5 # Bob's first wallet address
     toResourceInventoriedAs: fair:3be5259d-10f0-431c-9fec-9c0c15a461d3 # Bob's second wallet address
     provider: https://bob.example
@@ -212,7 +212,7 @@ A simple move of a currency from one account to another by one agent.
   - '@id': fair:b6fb358a3-2859-4d6a-a4fa-431603ee70f5
     '@type': EconomicResource
     note: Bob's first wallet address
-    conformsTo: wd:Q21002847 # FairCoin
+    conformsTo: http://www.wikidata.org/entity/Q21002847 # FairCoin
     accountingQuantity:
       hasUnit: one
       hasNumericalValue: 440
@@ -220,7 +220,7 @@ A simple move of a currency from one account to another by one agent.
   - '@id': fair:3be5259d-10f0-431c-9fec-9c0c15a461d3
     '@type': EconomicResource
     note: Bob's second wallet address
-    conformsTo: wd:Q21002847 # FairCoin
+    conformsTo: http://www.wikidata.org/entity/Q21002847 # FairCoin
     accountingQuantity:
       hasUnit: one
       hasNumericalValue: 580
@@ -347,7 +347,7 @@ Logged work triggers a claim for future income distribution for that work.
     action: work
     provider: https://bob.example/
     receiver: https://manufacturing.example/
-    resourceConformsTo: wd:Q192047 # machining
+    resourceConformsTo: http://www.wikidata.org/entity/Q192047 # machining
     effortQuantity:
       hasUnit: hour
       hasNumericalValue: 7
@@ -361,7 +361,7 @@ Logged work triggers a claim for future income distribution for that work.
     action: transfer
     provider: https://manufacturing.example/
     receiver: https://bob.example/
-    resourceConformsTo: wd:Q1104069 # Canadian dollar
+    resourceConformsTo: http://www.wikidata.org/entity/Q1104069 # Canadian dollar
     resourceQuantity:
       hasUnit: one
       hasNumericalValue: 140
@@ -375,7 +375,7 @@ Logged work triggers a claim for future income distribution for that work.
     action: transfer
     provider: https://manufacturing.example/
     receiver: https://bob.example/
-    resourceConformsTo: wd:Q1104069 # Canadian dollar
+    resourceConformsTo: http://www.wikidata.org/entity/Q1104069 # Canadian dollar
     resourceQuantity:
       hasUnit: one
       hasNumericalValue: 70 # partially settles the claim
@@ -384,3 +384,146 @@ Logged work triggers a claim for future income distribution for that work.
 
 ```
 
+#### Car Rental
+
+Renting a car as a service, with transfer of custody.
+
+![car rental diagram reflecting the yaml below](../assets/examples/car-rental.png)
+
+``` yaml
+# Example: Car rental
+
+'@context':
+  - '@vocab': http://w3id.org/valueflows/ont/vf#
+  - ahmed: https://ahmed.example/
+    car: https://car-rental.example/
+
+'@graph':
+
+  # Ahmed rents a car for a week
+
+  # resource before
+
+  - '@id': car:2402b57c-1c45-423a-acb2-f50961c9df89
+    '@type': EconomicResource
+    trackingIdentifier: VIN 43187 # a specific car
+    classifiedAs: midsize
+    accountingQuantity:
+      hasUnit: one
+      hasNumericalValue: 1
+    onhandQuantity:
+      hasUnit: one
+      hasNumericalValue: 1
+
+  # schedule rental
+
+  - '@id': car:f47064eb-7120-4b31-b882-770165901fe6
+    '@type': Agreement
+    note: renting midsize car for a week
+
+  - '@id': car:3129ca8b-fcda-45be-bbda-294dc924r8f8
+    '@type': Commitment
+    clauseOf: car:f47064eb-7120-4b31-b882-770165901fe6
+    action: deliverService
+    resourceConformsTo: http://www.wikidata.org/entity/Q110464531 # short term rental
+    hasBeginning: 2019-04-18T8:00:00-5:00
+    hasEnd: 2019-04-25T9:00:00-5:00
+    provider: https://car-rental.example/
+    receiver: https://ahmed.example/
+    resourceQuantity:
+      hasUnit: one
+      hasNumericalValue: 1
+
+  - '@id': car:3129ca8b-fcda-45be-bbda-294dc924r8f8
+    '@type': Commitment
+    reciprocalClauseOf: car:f47064eb-7120-4b31-b882-770165901fe6
+    action: transfer
+    resourceConformsTo: http://www.wikidata.org/entity/Q4917 # US dollar
+    hasPointInTime: 2019-04-18T8:00:00-5:00
+    provider: https://ahmed.example/
+    receiver: https://car-rental.example/
+    resourceQuantity:
+      hasUnit: one
+      hasNumericalValue: 300
+
+  # pick up car
+
+  - '@id': car:3129ca8b-fcda-45be-bbda-294dc924kj87
+    '@type': EconomicEvent
+    fulfills: car:3129ca8b-fcda-45be-bbda-294dc924r8f8
+    reciprocalRealizationOf: car:f47064eb-7120-4b31-b882-770165901fe6
+    action: transfer
+    resourceConformsTo: http://www.wikidata.org/entity/Q4917 # US dollar
+    hasPointInTime: 2019-04-18T8:30:00-5:00
+    provider: https://ahmed.example/
+    receiver: https://car-rental.example/
+    resourceQuantity:
+      hasUnit: one
+      hasNumericalValue: 300
+
+  - '@id': urn:uuid:54b814ee-62dc-40c1-bb96-f8582aa4f771
+    '@type': EconomicEvent
+    realizationOf: car:f47064eb-7120-4b31-b882-770165901fe6
+    action: transferCustody
+    resourceInventoriedAs: car:2402b57c-1c45-423a-acb2-f50961c97d65
+    hasPointInTime: 2019-04-18T9:00:00-5:00
+    provider: https://car-rental.example/
+    receiver: https://ahmed.example/
+    resourceQuantity:
+      hasUnit: one
+      hasNumericalValue: 1
+
+  - '@id': urn:uuid:98c2bfeb-9c70-4801-896c-4646b975a7d9
+    '@type': Commitment
+    clauseOf: car:f47064eb-7120-4b31-b882-770165901fe6
+    action: transferCustody
+    resourceInventoriedAs: car:2402b57c-1c45-423a-acb2-f50961c97d65
+    provider: https://ahmed.example/
+    receiver: https://car-rental.example/
+    resourceQuantity:
+      hasUnit: one
+      hasNumericalValue: 1
+    due: 2019-04-25T9:00:00-5:00
+
+  # resource after pick up
+
+  - '@id': car:2402b57c-1c45-423a-acb2-f50961c9df89
+    '@type': EconomicResource
+    trackingIdentifier: VIN 43187 # a specific car
+    classifiedAs: midsize
+    accountingQuantity:
+      hasUnit: one
+      hasNumericalValue: 1
+    onhandQuantity:
+      hasUnit: one
+      hasNumericalValue: 0
+
+  # return
+
+  - '@id': urn:uuid:d4d2fd71-34f2-41c3-b1c5-19ad5ed2da59
+    '@type': EconomicEvent
+    realizationOf: car:f47064eb-7120-4b31-b882-770165901fe6
+    action: transferCustody
+    resourceInventoriedAs: car:2402b57c-1c45-423a-acb2-f50961c9df89
+    provider: https://ahmed.example/
+    receiver: https://car-rental.example/
+    resourceQuantity:
+      hasUnit: one
+      hasNumericalValue: 1
+    hasPointInTime: 2019-04-25T07:20:00-5:00
+    fulfills: urn:uuid:98c2bfeb-9c70-4801-896c-4646b975a7d9 # the commitment
+
+  # resource after return
+
+  - '@id': car:2402b57c-1c45-423a-acb2-f50961c9df89
+    '@type': EconomicResource
+    trackingIdentifier: VIN 43187 # a specific car
+    classifiedAs: midsize
+    accountingQuantity:
+      hasUnit: one
+      hasNumericalValue: 1
+    onhandQuantity:
+      hasUnit: one
+      hasNumericalValue: 1
+
+```

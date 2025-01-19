@@ -33,7 +33,7 @@ A simple proposal with reciprocity expected, then another one to give the item a
       note: Pedals fine, not good for hills, has basket, brakes are a bit dodgy
       action: transfer
       provider: https://alice.example/
-      resourceConformsTo: wd:Q11442 # bicycle
+      resourceConformsTo: http://www.wikidata.org/entity/Q11442 # bicycle
 
     reciprocal:
 
@@ -42,7 +42,7 @@ A simple proposal with reciprocity expected, then another one to give the item a
       name: Payment
       action: transfer
       receiver: https://alice.example/
-      resourceConformsTo: wd:Q4917 # US Dollar
+      resourceConformsTo: http://www.wikidata.org/entity/Q4917 # US Dollar
       resourceQuantity:
         hasUnit: one
         hasNumericalValue: 15
@@ -94,7 +94,7 @@ A simple proposal for a timebank.  The reciprocity is assumed based on the timeb
       note: Need someone with plumbing skills to fix leaky faucet and plugged drain asap
       action: work
       receiver: https://bob.example/
-      resourceConformsTo: wd:Q252924 # plumber
+      resourceConformsTo: http://www.wikidata.org/entity/Q252924 # plumber
 ```
 
 #### Proposal for barter
@@ -127,7 +127,7 @@ A simple proposal for barter.
       note: I can pick up or come to your place, will clean up.
       action: use
       receiver: https://carol.example/
-      resourceConformsTo: wd:Q1111 # cider press (fictional)
+      resourceConformsTo: http://www.wikidata.org/entity/Q1111 # cider press (fictional)
       effortQuantity:
         hasUnit: hour
         hasNumericalValue: 6
@@ -140,7 +140,7 @@ A simple proposal for barter.
       note: Fresh cider from the pressing
       action: transfer
       provider: https://carol.example/
-      resourceConformsTo: wd:Q5977438 # apple cider
+      resourceConformsTo: http://www.wikidata.org/entity/Q5977438 # apple cider
       resourceQuantity:
         hasUnit: gallon-US
         hasNumericalValue: 3
@@ -167,7 +167,6 @@ A simple proposal requesting help for work on a planned production process.  The
   - '@id': fablab:ad56a7ed-be3c-4937-a3fb-0f156bcd2c47
     '@type': Process
     name: Develop soil moisture sensor
-    unitBased: true
     inScopeOf: https://fablab.example/
     hasInput:
 
@@ -178,7 +177,7 @@ A simple proposal requesting help for work on a planned production process.  The
       note: Will need to be at the lab all day both days. It possibly could extend to a third day.
       action: work
       receiver: https://fablab.example/
-      resourceConformsTo: wd:Q2474620 # electrochemical engineering
+      resourceConformsTo: http://www.wikidata.org/entity/Q2474620 # electrochemical engineering
       effortQuantity:
         hasUnit: hour
         hasNumericalValue: 1
@@ -188,14 +187,15 @@ A simple proposal requesting help for work on a planned production process.  The
       hasBeginning: 2019-04-12T08:00:00-5:00
       hasEnd: 2019-04-13T17:00:00-5:00
 
-    # other planned inputs here
+  # Proposal to find worker
 
-    - '@id': fablab:33e8933b-ff73-4a01-964a-ca7a98893083
+  - '@id': fablab:33e8933b-ff73-4a01-964a-ca7a98893083
     '@type': Proposal
     name: Electrochemical engineering skills
     hasBeginning: 2019-04-01T08:00:00-5:00
     hasEnd: 2019-04-11T17:00:00-5:00
     eligibleLocation: map:566a2c01-96f8-4b3c-adcf-f197eced3092 # Madison, WI
+    unitBased: true
     publishes:
 
     - '@id': fablab:60f4204e-b8d2-4026-8577-102c3f82c0af # the Intent that was planned
@@ -208,7 +208,7 @@ A simple proposal requesting help for work on a planned production process.  The
       note: Payment when the unit is manufactured and sold
       action: transfer
       provider: https://fablab.example/
-      resourceConformsTo: wd:Q4917 # US Dollar
+      resourceConformsTo: http://www.wikidata.org/entity/Q4917 # US Dollar
       resourceQuantity:
         hasUnit: one
         hasNumericalValue: 30
@@ -249,7 +249,7 @@ A simple set of proposals that make up a price list.
         name: Carrots case 25#
         action: transfer
         provider: https://farm.example/
-        resourceClassifiedAs: wd:Q81 # carrot
+        resourceClassifiedAs: http://www.wikidata.org/entity/Q81 # carrot
         resourceSpecifiedAs: farm:2402b57c-1c45-423a-acb2-f50961c97d65 # 25 pound case organic carrots seconds
         resourceQuantity:
           hasUnit: one
@@ -262,7 +262,7 @@ A simple set of proposals that make up a price list.
         name: Payment
         action: transfer
         receiver: https://farm.example/
-        resourceConformsTo: wd:Q4917 # US Dollar
+        resourceConformsTo: http://www.wikidata.org/entity/Q4917 # US Dollar
         resourceQuantity:
           hasUnit: one
           hasNumericalValue: 18
@@ -280,7 +280,7 @@ A simple set of proposals that make up a price list.
         name: Beets case 25#
         action: transfer
         provider: https://farm.example/
-        resourceClassifiedAs: wd:Q165437 # beet root
+        resourceClassifiedAs: http://www.wikidata.org/entity/Q165437 # beet root
         resourceConformsTo: farm:8baa8ff7-9c1e-4586-ae7b-79d620a3cac9 # 25 pound case organic beets
         resourceQuantity:
           hasUnit: one
