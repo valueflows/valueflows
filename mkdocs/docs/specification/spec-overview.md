@@ -8,9 +8,9 @@ We have tried to make this vocabulary as technology-agnostic as possible, as it 
 
 * The "system of record" (authoritative data source) is a linked open data **[turtle (ttl) file representation](https://codeberg.org/valueflows/pages/raw/branch/main/assets/all_vf.TTL)**, located **[here in the repository](https://codeberg.org/valueflows/pages/src/branch/main/assets/all_vf.TTL)**.
 
-* A more readable **[formatted version of the vocabulary](/specification/all_vf.html)**, which is generated from the turtle file
+* A more readable **[formatted version of the vocabulary](all_vf.html)**, which is generated from the turtle file
 
-* A **[UML diagram of the ontology](../uml)**, with some explanation of compromises made between rdf-based / json-based / relational / object oriented methods
+* A **[UML diagram of the ontology](uml.md)**, with some explanation of compromises made between rdf-based / json-based / relational / object oriented methods
 
 * The linked open data namespace base URI is `https://w3id.org/valueflows/ont/vf#`, supporting TTL, JSON-LD and HTML, with preferred namespace prefix being "vf"
 
@@ -18,6 +18,6 @@ We have tried to make this vocabulary as technology-agnostic as possible, as it 
 
 * A **[json-ld context file]()** (TODO)
 
-* A **[json-schema representation]()** (TODO)
+* A **[json-schema representation](json-schemas.md)**
 
 * A **[SHACL representation]()** and a **[ShEx representation]()**  (TODO)

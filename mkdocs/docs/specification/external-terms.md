@@ -50,7 +50,7 @@ We decided to also use `vf:Measure` for durations, since OM2 has the time-based 
 
 ## Times
 
-See also [Flows Concepts: Quantities and Times](../../concepts/flows/#quantities-and-times).
+See also [Flows Concepts: Quantities and Times](../concepts/flows.md/#quantities-and-times).
 
 VF times are inspired by [the owl:time ontology](https://www.w3.org/TR/owl-time), but we have much more limited needs.  We decided to pull them into the VF namespace, rather than directly referencing owl:time.  Specifically we decided not to [map them as is done for the PROV-O ontology](https://www.w3.org/TR/owl-time/#time-prov). But owl:time does support many time constructs and comparisons that may be useful for people, such as below.
 
@@ -60,7 +60,7 @@ In terms of durations, although owl:time includes the duration concept, we are u
 
 ## Locations
 
-See also [Location Concepts](../../concepts/location).
+See also [Location Concepts](../concepts/location.md).
 
 Currently there is not a unified standard location vocabulary, due to the varied historical development of these standards.
 
@@ -76,4 +76,4 @@ For example, there are no food or bicycle specific elements.  Much of this can b
 
 There are also only minimal properties for classes that are on the "edge" of the vocabulary, and which have other more complete sets of properties elsewhere.  For example, `Agent` is very sparse, and some applications might want more contact information, etc.  `EconomicResource` has many identifiers that are industry specific (like GTIN) which applications might want to include.  We are using `rdfs:seeAlso` to provide helpful sources for those kinds of elements.  In addition, anything that is a `rdfs:subClassOf` a class from another vocabulary can inherit its properties.
 
-We also welcome proposed additions!  See the [Home page](../..) for how to request additions and changes.
+We also welcome proposed additions!  See the [Home page](../index.md) for how to request additions and changes.

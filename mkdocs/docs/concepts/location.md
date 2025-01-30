@@ -10,7 +10,7 @@ The location data itself is also fairly basic.  The core is the latitude, longit
 
 To accommodate needs for more complex spatial location definitions, we include a data reference to the extensive Geography information of the [GEOSPARQL Specification](https://docs.ogc.org/is/22-047r1/22-047r1.html#_b3644674-c6c7-4971-b600-a24d2bda0e01), which can then be used for purposes not supported in the core VF.
 
-See also [Specification location information](../../specification/external-terms/#locations).
+See also [Specification location information](../specification/external-terms.md/#locations).
 
 ## Virtual Location
 
@@ -19,4 +19,4 @@ We support two kinds of virtual locations for economic resources, and more can b
 * One is a URI location for economic resources that are electronic, such as documents, code or designs.
 * The other is a currency location for economic resources that are located in an account, crypto wallet, etc.  The latter should be formatted according to the specific requirements of the type of currency.
 
-For agents that do not have a physical location, implementations can use website or other agent information from other vocabularies (see [Agents](../agents)).
+For agents that do not have a physical location, implementations can use website or other agent information from other vocabularies (see [Agents](agents.md)).

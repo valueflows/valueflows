@@ -1,0 +1,30 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/AgentRelationship.json",
+    "title": "AgentRelationship-DEPRECATED",
+    "description": "An ongoing voluntary association between 2 Agents of any kind.",
+    "type": "object",
+    "properties": {
+        "subject": {
+            "description": "The subject of a relationship between 2 agents.  For example, if Mary is a member of a group, then Mary is the subject.",
+            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Agent.json"
+        },
+        "relationship": {
+            "description": "A kind of relationship that exists between 2 agents.",
+            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/AgentRelationshipRole.json"
+        },
+        "object": {
+            "description": "The object of a relationship between 2 agents. For example, if Mary is a member of a group, then the group is the object.",
+            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Agent.json"
+        },
+        "inScopeOf": {
+            "description": "Grouping around something to create a boundary or context.",
+            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Agent.json"
+        },
+        "note": {
+            "description": "A textual comment or description.",
+            "type": "string"
+        }
+    },
+    "required": ["subject", "relationship", "object"]
+}

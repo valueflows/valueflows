@@ -1,4 +1,4 @@
-See also [an Exchange diagram](../../introduction/core/#flows-without-processes) in Core, [Flows in motion: Recipe](../../specification/model-text/#flows-in-motion-recipe), [Flows in motion: Planning](../../specification/model-text/#flows-in-motion-planning), [Flows in motion: Observation](../../specification/model-text/#flows-in-motion-observation), also [the Exchange examples](../../examples/ex-exchange/).
+See also [an Exchange diagram](../introduction/core.md/#flows-without-processes) in Core, [Flows in motion: Recipe](../specification/model-text.md/#flows-in-motion-recipe), [Flows in motion: Planning](../specification/model-text.md/#flows-in-motion-planning), [Flows in motion: Observation](../specification/model-text.md/#flows-in-motion-observation), also [the Exchange examples](../examples/ex-exchange.md).
 
 ## The independent viewpoint
 

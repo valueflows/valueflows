@@ -1,6 +1,6 @@
 The resource vocabulary describes resources and types of resources, defined broadly.  They can include useful goods and services, digital documents and representations, code, money, tokens, credits, energy, work, skills, CO2, methane, heat, air, water, soil microbiota....
 
-See also [Resources in the Diagram Explanations](../specification/model-text.md#resource), [Actions](actions.md), and [Resource examples](../../examples/ex-resource/).
+See also [Resources in the Diagram Explanations](../specification/model-text.md#resource), [Actions](actions.md), and [Resource examples](../examples/ex-resource.md).
 
 ## Definition
 

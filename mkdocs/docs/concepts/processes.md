@@ -4,7 +4,7 @@ By Process, we mean an activity that transforms inputs into outputs. The outputs
 
 Process spans the Plan and Observation layers.  I.e. intents, commitments, and economic events can all be connected to the same process as it moves through planning and observation.
 
-See also [Input-Process-Output](../introduction/core.md#ipo-input-process-output) in the introduction, [Flows in Motion: Planning](../specification/model-text.md#flows-in-motion-planning) and [Flows in Motion: Observation](../specification/model-text.md#flows-in-motion-observation) in the Diagram Explanations, [Production examples](../../examples/ex-production/), [Planning examples](../../examples/ex-planning), and [Community planning and Regional analysis](../../examples/ex-scenario/) in the Scenario examples.
+See also [Input-Process-Output](../introduction/core.md#ipo-input-process-output) in the introduction, [Flows in Motion: Planning](../specification/model-text.md#flows-in-motion-planning) and [Flows in Motion: Observation](../specification/model-text.md#flows-in-motion-observation) in the Diagram Explanations, [Production examples](../examples/ex-production.md), [Planning examples](../examples/ex-planning.md), and [Community planning and Regional analysis](../examples/ex-scenario.md) in the Scenario examples.
 
 
 ## For example...

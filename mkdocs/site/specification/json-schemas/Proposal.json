@@ -1,0 +1,55 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Proposal.json",
+    "title": "Proposal",
+    "description": "Published requests or offers, sometimes with what is expected in return.",
+    "type": "object",
+    "properties": {
+        "name": {
+            "description": "An informal or formal textual identifier for the proposal. Does not imply uniqueness.",
+            "type": "string"
+        },
+        "purpose": {
+            "description": "The type of proposal, offer or request.",
+            "type": "string",
+            "enum": ["offer", "request"]
+        },
+        "hasBeginning": {
+            "description": "The beginning date/time of proposal publication.",
+            "type": "string",
+            "format": "date-time"
+        },
+        "hasEnd": {
+            "description": "The end date/time of proposal publication.",
+            "type": "string",
+            "format": "date-time"
+        },
+        "eligibleLocation": {
+            "description": "Location or area where the proposal is valid.",
+            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/SpatialThing.json"
+        },
+        "created": {
+            "description": "The date and time the proposal was created.",
+            "type": "string",
+            "format": "date-time"
+        },
+        "unitBased": {
+            "description": "This proposal contains unit based quantities, which can be multipied to create commitments; commonly seen in a price list or e-commerce.",
+            "type": "boolean"
+        },
+        "note": {
+            "description": "A textual comment or description.",
+            "type": "string"
+        },
+        "publishes": {
+            "description": "The primary intent(s) of this published proposal. Would be used in intent matching.",
+            "type": "array",
+            "items": { "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Intent.json" }
+        },
+        "reciprocal": {
+            "description": "The reciprocal intent(s) of this published proposal. Not meant to be used for intent matching.",
+            "type": "array",
+            "items": { "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Intent.json" }
+        }
+    }
+}

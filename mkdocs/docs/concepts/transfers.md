@@ -1,6 +1,6 @@
 # Transfers
 
-See also [Flows without processes](../../introduction/core/#flows-without-processes) in the Core, [How resources relate to transfers](../../concepts/resources/#how-resources-relate-to-transfers), and the [Transfer and exchange examples](../../examples/ex-exchange/).
+See also [Flows without processes](../introduction/core.md/#flows-without-processes) in the Core, [How resources relate to transfers](../concepts/resources.md/#how-resources-relate-to-transfers), and the [Transfer and exchange examples](../examples/ex-exchange.md/).
 
 ## Transfer concepts
 
@@ -30,9 +30,9 @@ The explicitly denoted transfers are:
 * transfer custody (only the physical custody or possession)
 * transfer (shorthand for both rights and custody, since they often go together)
 
-Some other actions can imply a transfer of all rights, a transfer of custody, or both.  This shortens and sometimes simplifies the flows.  But it is not at all required, it is fine to have separate transfer flows if that makes the use case more understandable.  The [Transport with Transfer example](../../examples/ex-complex/#transportation-with-transfer) illustrates this.
+Some other actions can imply a transfer of all rights, a transfer of custody, or both.  This shortens and sometimes simplifies the flows.  But it is not at all required, it is fine to have separate transfer flows if that makes the use case more understandable.  The [Transport with Transfer example](../examples/ex-complex.md/#transportation-with-transfer) illustrates this.
 
-The way to imply a transfer is to designate a different provider and receiver.  It is not always true the other way though, a different provider and receiver does not necessary imply transfer behavior, usually because there is not an inventoried resource.  See also [Exchanges and flows](../../concepts/exchanges/#exchanges-and-flows).
+The way to imply a transfer is to designate a different provider and receiver.  It is not always true the other way though, a different provider and receiver does not necessary imply transfer behavior, usually because there is not an inventoried resource.  See also [Exchanges and flows](../concepts/exchanges.md/#exchanges-and-flows).
 
 The following actions imply a full transfer of all rights and custody, when there is a different provider and receiver.   The implication is that any behavior rules of the primary action plus the transfer action are implemented.  And also the flow can be included in an agreement, for example paying for consuming a resource provided by a different agent in the receiver's process.
 
@@ -43,4 +43,4 @@ The following actions imply transfer of custody only, when there is a different 
 * pickup, dropoff
 * accept, modify
 
-These examples that might help provide clarity: [Transportation with Transfer](../../examples/ex-complex/#transportation-with-transfer), [Checkout book](../../examples/ex-exchange/#checkout-book), [Claim for income](../../examples/ex-exchange/#claim-for-income).
+These examples that might help provide clarity: [Transportation with Transfer](../examples/ex-complex.md/#transportation-with-transfer), [Checkout book](../examples/ex-exchange.md/#checkout-book), [Claim for income](../examples/ex-exchange.md/#claim-for-income).

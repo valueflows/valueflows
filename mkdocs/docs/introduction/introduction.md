@@ -2,8 +2,6 @@
 
 ## What is Valueflows?
 
-Value means useful economic resources. Flows means how people create, combine, move, and exchange them. Flow-oriented systems can coordinate whole networks as easily as one company.
-
 Valueflows is a vocabulary (ontology) that is intended to cover any economic activity, focused on the distributed economic networks of the "next economy", but also supporting conventional businesses and supply chains. Specifically, we want to support resource flows connecting many agents (people, organizations, ecological agents), creating fractal networks of people and organizations.
 
 On a more technical level, its purpose is to facilitate interoperability among many different software projects. Although the Valueflows core model has also been used to design economic software,  Valueflows itself is not a software application.

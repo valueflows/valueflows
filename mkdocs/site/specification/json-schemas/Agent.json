@@ -1,0 +1,27 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Agent.json",
+    "title": "Agent",
+    "description": "A person or organization or ecological agent with economic agency.",
+    "type": "object",
+    "properties": {
+        "name": {
+            "description": "An informal or formal textual identifier for an agent. Does not imply uniqueness.",
+            "type": "string"
+        },
+        "image": {
+            "description": "The uri to an image relevant to the agent, such as a logo, avatar, photo, etc.",
+            "type": "string", 
+            "format": "uri"
+        },
+        "primaryLocation": {
+            "description": "The main place an agent is located, often an address where activities occur and mail can be sent. This is usually a mappable geographic location.  It also could be a website address, as in the case of agents who have no physical location.",
+            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/SpatialThing.json"
+        },
+        "note": {
+            "description": "A textual comment or description.",
+            "type": "string"
+        }
+    },
+    "required": ["name"]
+}

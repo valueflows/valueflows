@@ -1,4 +1,4 @@
-See also [Flows in Motion: Recipes](../../specification/model-text/#flows-in-motion-recipe) on the Diagram Explanation, [Planning from a Recipe](../../concepts/plan/#planning-from-a-recipe) on the Operational Planning page, and the [Simple plan from recipe example](../../examples/ex-planning/#simple-plan-from-recipe).
+See also [Flows in Motion: Recipes](../specification/model-text.md/#flows-in-motion-recipe) on the Diagram Explanation, [Planning from a Recipe](../concepts/plan.md/#planning-from-a-recipe) on the Operational Planning page, and the [Simple plan from recipe example](../examples/ex-planning.md/#simple-plan-from-recipe).
 
 ## Not just for cooking...
 

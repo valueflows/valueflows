@@ -36,6 +36,7 @@
 * Bill McCarthy
 * Wim Laurier
 * Jesper Kiehn
+* Julie Smith David
 * Christian Scheller
 * Anders Hessellund
 * Pavel Hruby

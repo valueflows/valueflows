@@ -15,11 +15,11 @@ Here are some suggestions to help you find your way into this documentation, dep
 
 * **To learn about the vocabulary itself**, you could start with the [**high-level description of the core model**](introduction/core.md), and then continue as you like in these directions...
 
-      * For the more visually oriented or people who like diagrams, head to the [**UML diagram**](specification/uml/).
+      * For the more visually oriented or people who like diagrams, head to the [**UML diagram**](specification/uml.md).
 
       * Whether or not you look at the diagram, see these [**class and relationship explanations by subject area**](specification/model-text.md), which also point to the related [**concepts pages**](concepts/concepts-overview.md).  Or just go straight to the [**concepts section**](concepts/concepts-overview.md).
 
-      * For even more gory details, check the rest of the [**specification pages**](specification/spec-overview.md), and/or [**examples section**](examples/ex-overview/).
+      * For even more gory details, check the rest of the [**specification pages**](specification/spec-overview.md), and/or [**examples section**](examples/ex-overview.md).
 
 * **Or if you want a more fun and friendly way to understand the vocabulary**, you can start here with a [**Valueflows story about apple pie **](assets/ValueFlows-Story.pdf)(yum!).
 

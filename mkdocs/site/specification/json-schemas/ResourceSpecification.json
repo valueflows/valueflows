@@ -1,0 +1,35 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/ResourceSpecification.json",
+    "title": "ResourceSpecification",
+    "description": "Specifies the kind of resource, even if the resource is not instantiated as an EconomicResource. Could define a material item, service, digital item, currency account, skill or type of work, etc.",
+    "type": "object",
+    "properties": {
+        "name": {
+            "description": "An informal or formal textual identifier for the item. Does not imply uniqueness.",
+            "type": "string"
+        },
+        "image": {
+            "description": "The uri to an image relevant to the item, such as a photo, diagram, etc.",
+            "type": "string", 
+            "format": "uri"
+        },
+        "substitutable": {
+            "description": "Defines if any resource of that type can be freely substituted for any other resource of that type when used, consumed, traded, etc.",
+            "type": "boolean"
+        },
+        "defaultUnitOfResource": {
+            "description": "The default unit used for the resource itself.",
+            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Unit.json"
+        },
+        "defaultUnitOfEffort": {
+            "description": "The default unit used for use or work.",
+            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Unit.json"
+        },
+        "note": {
+            "description": "A textual comment or description.",
+            "type": "string"
+        }
+    },
+    "required": ["name"]
+}

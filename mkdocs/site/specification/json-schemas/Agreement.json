@@ -1,0 +1,43 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Agreement.json",
+    "title": "Agreement",
+    "description": "Any type of agreement among economic agents.",
+    "type": "object",
+    "properties": {
+        "name": {
+            "description": "An informal or formal textual identifier for the item. Does not imply uniqueness.",
+            "type": "string"
+        },
+        "created": {
+            "description": "The date/time the agreement was created.",
+            "type": "string",
+            "format": "date-time"
+        },
+        "note": {
+            "description": "A textual comment or description.",
+            "type": "string"
+        },
+        "stipulates": {
+            "description": "All the primary commitments that constitute the agreement.",
+            "type": "array",
+            "items": { "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Commitment.json" }
+        },
+        "stipulatesReciprocal": {
+            "description": "All the reciprocal commitments that constitute the agreement.",
+            "type": "array",
+            "items": { "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Commitment.json" }
+        },
+        "realizes": {
+            "description": "All the primary commitments that constitute the agreement.",
+            "type": "array",
+            "items": { "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Commitment.json" }
+        },
+        "realizesReciprocal": {
+            "description": "All the reciprocal commitments that constitute the agreement.",
+            "type": "array",
+            "items": { "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Commitment.json" }
+        }
+    },
+    "required": ["name", "created"]
+}

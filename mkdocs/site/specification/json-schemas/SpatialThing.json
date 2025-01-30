@@ -1,0 +1,33 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/SpatialThing.json",
+    "title": "SpatialThing",
+    "description": "Data that locates something relative to the Earth, usually a somewhat fixed location.",
+    "type": "object",
+    "properties": {
+        "lat": {
+            "description": "Latitude.",
+            "type": "number"
+        },
+        "long": {
+            "description": "Longitude.",
+            "type": "number"
+        },
+        "alt": {
+            "description": "Altitude.",
+            "type": "number"
+        },
+        "mappableAddress": {
+            "description": "A textual address that can be mapped by standard mapping software.",
+            "type": "string"
+        },
+        "name": {
+            "description": "An informal or formal textual identifier for a location. Does not imply uniqueness.",
+            "type": "string"
+        },
+        "note": {
+            "description": "A textual comment or description.",
+            "type": "string"
+        }
+    }
+}
