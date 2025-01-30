@@ -1,6 +1,6 @@
 All flows (Economic Event, Commitment, Intent, Claim, Recipe Flow) use an action property to designate what the flow is doing and how it will affect or has affected an economic resource (or not).
 
-See also [Flows](../flows) and [Economic Resources](../resources/).
+See also [Flows](flows.md) and [Economic Resources](resources.md).
 
 The actions contain data that defines how they will behave relative to a user interface, and relative to the effects on economic resources.  This enables the behavior to be data-driven if desired.
 
@@ -95,8 +95,8 @@ Note: The actions `use` and `work` are time-based actions, either with or withou
 
 ### Implied Transfers
 
-Implied transfers can happen when the provider and receiver agent are different.  The transfer (or transferCustody or transferAllRights) behaviors and implications should be applied in addition to the behaviors and implications documented for the non-transfer action. See [Implied Transfers in Concepts](../transfers/#explicit-and-implied-transfers) for details.
+Implied transfers can happen when the provider and receiver agent are different.  The transfer (or transferCustody or transferAllRights) behaviors and implications should be applied in addition to the behaviors and implications documented for the non-transfer action. See [Implied Transfers in Concepts](transfers.md/#explicit-and-implied-transfers) for details.
 
 ### Saving Breadcrumbs for Track and Trace
 
-If you will be using the track or trace algorithms to find the connected value flows forwards or backwards when there might be repeated processes, an additional field is needed when saving an event.  See [Breadcrumbs in the Track and Trace algorithm](../../algorithms/track#adding-breadcrumbs-on-initial-save) for the procedure.
+If you will be using the track or trace algorithms to find the connected value flows forwards or backwards when there might be repeated processes, an additional field is needed when saving an event.  See [Breadcrumbs in the Track and Trace algorithm](../algorithms/track.md#adding-breadcrumbs-on-initial-save) for the procedure.

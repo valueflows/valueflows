@@ -1,0 +1,49 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Plan.json",
+    "title": "Plan",
+    "description": "A logical collection of processes and/or agreements that constitute a body of planned work with defined deliverable(s).",
+    "type": "object",
+    "properties": {
+        "name": {
+            "description": "An informal or formal textual identifier for the item. Does not imply uniqueness.",
+            "type": "string"
+        },
+        "created": {
+            "description": "The date/time the plan was made.",
+            "type": "string",
+            "format": "date-time"
+        },
+        "due": {
+            "description": "The due date/time of the plan.",
+            "type": "string",
+            "format": "date-time"
+        },
+        "note": {
+            "description": "A textual comment or description.",
+            "type": "string"
+        },
+        "hasIndependentDemand": {
+            "description": "The commitments and/or intents which this plan was created to deliver.",
+            "type": "array",
+            "items": {
+                "anyOf": [
+                    { "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Commitment.json" },
+                    { "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Intent.json" }
+                ]
+            }
+        },,
+        "planIncludes": {
+            "description": "The processes and and non-process commitments/intents that constitute the plan.",
+            "type": "array",
+            "items": {
+                "anyOf": [
+                    { "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Commitment.json" },
+                    { "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Intent.json" },
+                    { "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Process.json" }
+                ]
+            }
+        }
+    },
+    "required": ["name", "created"]
+}

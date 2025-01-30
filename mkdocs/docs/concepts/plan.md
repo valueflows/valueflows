@@ -1,7 +1,7 @@
 
 An operational plan is a schedule of related operational processes, that constitute a body of scheduled work with defined deliverable(s).  A plan normally contains one or more process resource flows, one for each deliverable.  It can also contain the reciprocal agreements expected for different involved agents involved in the flows.
 
-See also [Flows in motion: Planning](../../specification/model-text/#flows-in-motion-planning) in the Diagram Explanations, [Generating plans from recipes](../../concepts/recipes/#generation-of-plans), and the [Planning examples](../../examples/ex-planning/).
+See also [Flows in motion: Planning](../specification/model-text.md/#flows-in-motion-planning) in the Diagram Explanations, [Generating plans from recipes](../concepts/recipes.md/#generation-of-plans), and the [Planning examples](../examples/ex-planning.md).
 
 ## Coordinating work
 

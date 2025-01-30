@@ -1,0 +1,72 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/EconomicResource.json",
+    "title": "EconomicResource",
+    "description": "Observable economic or environmental inputs to or outputs from processes, which agents agree should be accounted for.",
+    "type": "object",
+    "properties": {
+        "name": {
+            "description": "An informal or formal textual identifier for an object. Does not imply uniqueness.",
+            "type": "string"
+        },
+        "accountingQuantity": {
+            "description": "The current amount and unit of the economic resource for which the agent has primary rights and responsibilities, sometimes thought of as ownership. This can be either stored or derived from economic events affecting the resource.",
+            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Measure.json"
+        },
+        "onhandQuantity": {
+            "description": "The current amount and unit of the economic resource which is under direct control of the agent.  It may be more or less than the accounting quantity. This can be either stored or derived from economic events affecting the resource.",
+            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Measure.json"
+        },
+        "conformsTo": {
+            "description": "The primary resource knowledge specification or definition of an existing or potential resource.",
+            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/ResourceSpecification.json"
+        },
+        "unitOfEffort": {
+            "description": "The unit used for use action on this resource or work or cite action in the recipe.",
+            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Unit.json"
+        },
+        "trackingIdentifier": {
+            "description": "Any identifier used to track the resource, such as a serial number or VIN or lot/batch identifier.",
+            "type": "string"
+        },
+        "stage": {
+            "description": "References the ProcessSpecification of the last process the desired economic resource went through. Stage is used when the last process is important for finding proper resources, such as where the publishing process wants only documents that have gone through the editing process.",
+            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/ProcessSpecification.json"
+        },
+        "state": {
+            "description": "The state of the desired economic resource (pass or fail), after coming out of a test or review process. Can be derived from the last event if a pass or fail event.",
+            "type": "string"
+        },
+        "currentLocation": {
+            "description": "The current place an economic resource is located.  Could be at any level of granularity, from a town to an address to a warehouse location.  Should be mappable.",
+            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/SpatialThing.json"
+        },
+        "currentVirtualLocation": {
+            "description": "The current virtual place a digital economic resource is located. Usually used for documents, code, or other electronic resource.",
+            "type": "string",
+            "format": "uri"
+        },
+        "currentCurrencyLocation": {
+            "description": "The current virtual place a currency economic resource is located, for example the address for a bank account, crypto wallet, etc., in a domain standard format.",
+            "type": "string"
+        },
+        "primaryAccountable": {
+            "description": "The agent currently with primary rights and responsibilites for the economic resource. It is the agent that is associated with the accountingQuantity of the economic resource.",
+            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Agent.json"
+        },
+        "image": {
+            "description": "The uri to an image relevant to the item, such as a photo, diagram, etc.",
+            "type": "string", 
+            "format": "uri"
+        },
+        "note": {
+            "description": "A textual comment or description.",
+            "type": "string"
+        },
+        "containedIn": {
+            "description": "Used when a stock economic resource contains items also defined as economic resources.",
+            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/EconomicResource.json"
+        }
+    },
+    "required": ["resourceConformsTo"]
+}

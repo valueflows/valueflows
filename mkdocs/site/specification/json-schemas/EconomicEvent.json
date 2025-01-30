@@ -1,0 +1,86 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/EconomicEvent.json",
+    "title": "EconomicEvent",
+    "description": "An observed economic flow, as opposed to a flow planned to happen in the future. This could reflect a change in the quantity of an economic resource. It is also defined by its behavior in relation to the economic resource.",
+    "type": "object",
+    "properties": {
+        "action": {
+            "description": "Relates an economic event to a verb, such as consume, produce, work, transfer, etc.",
+            "type": "string"
+        },
+        "resourceQuantity": {
+            "description": "The amount and unit of the economic resource counted or inventoried. This is the quantity that could be used to increment or decrement a resource, depending on the type of resource and resource effect of action.",
+            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Measure.json"
+        },
+        "effortQuantity": {
+            "description": "The amount and unit of the work or use or citation effort-based action. This is often a time duration, but also could be cycle counts or other measures of effort or usefulness.",
+            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Measure.json"
+        },
+        "resourceInventoriedAs": {
+            "description": "Economic resource involved in the economic event.",
+            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/EconomicResource.json"
+        },
+        "toResourceInventoriedAs": {
+            "description": "Additional economic resource on the economic event when needed by the receiver. Used when a transfer or move, or sometimes other actions, requires explicitly identifying an economic resource on the receiving side.",
+            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/EconomicResource.json"
+        },
+        "resourceConformsTo": {
+            "description": "The primary resource specification or definition of an existing or potential economic resource. A resource will have only one, as this specifies exactly what the resource is.",
+            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/ResourceSpecification.json"
+        },
+        "provider": {
+            "description": "The economic agent from whom the economic event is initiated.",
+            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Agent.json"
+        },
+        "receiver": {
+            "description": "The economic agent whom the economic event is for.",
+            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Agent.json"
+        },
+        "hasBeginning": {
+            "description": "The beginning of the economic event.",
+            "type": "string",
+            "format": "date-time"
+        },
+        "hasEnd": {
+            "description": "The end of the economic event.",
+            "type": "string",
+            "format": "date-time"
+        },
+        "hasPointInTime": {
+            "description": "The date/time at which the economic event occurred. Can be used instead of beginning and end.",
+            "type": "string",
+            "format": "date-time"
+        },
+        "toLocation": {
+            "description": "The new location of the receiver resource.",
+            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/SpatialThing.json"
+        },
+        "image": {
+            "description": "The uri to an image relevant to the item, such as a photo, diagram, etc.",
+            "type": "string",
+            "format": "uri"
+        },
+        "state": {
+            "description": "The required state of the desired input economic resource, after coming out of a test or review process.",
+            "type": "string"
+        },
+        "fulfills": {
+            "description": "The commitment which is completely or partially fulfilled by an economic event.",
+            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Commitment.json"
+        },
+        "satisfies": {
+            "description": "An intent satisfied fully or partially by the economic event, if there is no commitment.",
+            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Intent.json"
+        },
+        "corrects": {
+            "description": "Used when an event was entered incorrectly and needs to be backed out or corrected. (The economic information on the initial event cannot be changed.)",
+            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/EconomicEvent.json"
+        },
+        "note": {
+            "description": "A textual comment or description.",
+            "type": "string"
+        }
+    },
+    "required": ["action"]
+}

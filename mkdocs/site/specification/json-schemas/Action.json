@@ -1,0 +1,15 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Action.json",
+    "title": "Action",
+    "description": "Defines the kind of flow, such as consume, produce, work, transfer, etc.",
+    "type": "object",
+    "properties": {
+        "label": {
+            "description": "A unique verb which defines the action.",
+            "type": "string",
+            "enum": ["consume", "use", "work", "cite", "produce", "dropoff", "pickup", "accept", "modify", "combine", "separate", "deliverService", "transferAllRights", "transferCustody", "transfer", "move", "copy", "raise", "lower"]
+        }
+    },
+    "required": ["name", "resourceEffect"]
+}

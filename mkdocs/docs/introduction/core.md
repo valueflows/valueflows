@@ -4,9 +4,11 @@
 
 ![networks of networks picture](../assets/network-of-networks.png)
 
-Networks of value flows are created when processes are linked together through flows of resources.
+Value means useful economic resources. Flows means how people create, combine, move, and exchange them.
 
-This forms an economic network, where resources flow from agent to agent to agent via events. These resource flow networks do not care about company or national boundaries.
+Networks of value flows are created when processes and transfers are linked together through flows of resources.
+
+Flow-oriented systems can coordinate whole networks as easily as one company.
 
 ## The patterns used in Valueflows
 

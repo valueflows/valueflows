@@ -1,0 +1,22 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Unit.json",
+    "title": "Unit",
+    "description": "A unit of measure.",
+    "type": "object",
+    "properties": {
+        "omUnitIdentifier": {
+            "description": "The unique identifier of the om unit of measure, for standardization across networks.",
+            "type": "string"
+        },
+        "label": {
+            "description": "The label used by the network for the unit of measure.",
+            "type": "string"
+        },
+        "symbol": {
+            "description": "The symbol used by the network of the unit of measure.",
+            "type": "string"
+        }
+    },
+    "required": ["label"]
+}

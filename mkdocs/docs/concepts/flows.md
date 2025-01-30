@@ -1,6 +1,6 @@
 Value flows (you could also call them resource flows) are a fundamental construct in the Valueflows ontology. They put the economic activity into motion.
 
-See also [Actions](actions.md), [Core Concepts](../../introduction/core/), [Processes](processes.md), [Transfers](transfers.md).
+See also [Actions](actions.md), [Core Concepts](../introduction/core.md), [Processes](processes.md), [Transfers](transfers.md).
 
 ## Kinds of Flows
 
@@ -8,15 +8,15 @@ The types of flows form a progression from defined to  potential to scheduled to
 
 ### Recipe Flow
 
-Recipes are used to create plans, and the Recipe Flow can create a corresponding Intent or a Commitment in a Plan, depending on if all the agents are known and the level of certainty of the planning.  See also [Recipes](recipes.md), [Planning from Recipe](../plan/#planning-from-a-recipe), [Flows in motion: Recipe](../../specification/model-text/#flows-in-motion-recipe), [Planning from Recipe example](../../examples/ex-planning/#simple-plan-from-recipe).
+Recipes are used to create plans, and the Recipe Flow can create a corresponding Intent or a Commitment in a Plan, depending on if all the agents are known and the level of certainty of the planning.  See also [Recipes](recipes.md), [Planning from Recipe](plan.md/#planning-from-a-recipe), [Flows in motion: Recipe](../specification/model-text.md/#flows-in-motion-recipe), [Planning from Recipe example](../examples/ex-planning.md/#simple-plan-from-recipe).
 
 ### Intent
 
-Intents describe potential future events which have not been agreed to by other agents, such as offers and requests. Intents are often used for discovering another agent to participate in a desired event. On the process side, for example, planned work could be an Intent, but planned work that some agent committed to do is a Commitment.  See also [Offers and Requests](proposals.md), [Flows in motion: Offers and Requests](../../specification/model-text/#flows-in-motion-offers-and-requests), [Offers and Requests examples](../../examples/ex-proposals).
+Intents describe potential future events which have not been agreed to by other agents, such as offers and requests. Intents are often used for discovering another agent to participate in a desired event. On the process side, for example, planned work could be an Intent, but planned work that some agent committed to do is a Commitment.  See also [Offers and Requests](proposals.md), [Flows in motion: Offers and Requests](../specification/model-text.md/#flows-in-motion-offers-and-requests), [Offers and Requests examples](../examples/ex-proposals.md).
 
 ### Commitment
 
-Commitments describe potential future events which the involved agents have already agreed to pursue. Commitments can be considered contractual promises from one agent to another.  Commitments can be thought of as plans for Economic Events, and Economic Events can fulfill Commitments.  Commitments can satisfy Intents.  See also [Operational Planning](plan.md), [Flows in motion: Planning](../../specification/model-text/#flows-in-motion-planning), [Planning examples](../examples/ex-planning.md).
+Commitments describe potential future events which the involved agents have already agreed to pursue. Commitments can be considered contractual promises from one agent to another.  Commitments can be thought of as plans for Economic Events, and Economic Events can fulfill Commitments.  Commitments can satisfy Intents.  See also [Operational Planning](plan.md), [Flows in motion: Planning](../specification/model-text.md/#flows-in-motion-planning), [Planning examples](../examples/ex-planning.md).
 
 #### Possible gray area between Intent and Commitment
 
@@ -24,11 +24,11 @@ When making an operational plan, where there isn't really a question of some age
 
 ### Economic Event
 
-Economic Events describe past events, something observed, never some potential future event.  They can fulfill Commitments or satisfy Intents (when there is no Commitment).  See also [How Resources Relate to Events](../../concepts/resources/#how-resources-relate-to-events), [Flows in motion: Observation](../../specification/model-text/#flows-in-motion-observation), [Production examples](../../examples/ex-production/), some of the [Transfer and Exchange examples](../../examples/ex-exchange/).
+Economic Events describe past events, something observed, never some potential future event.  They can fulfill Commitments or satisfy Intents (when there is no Commitment).  See also [How Resources Relate to Events](../concepts/resources.md/#how-resources-relate-to-events), [Flows in motion: Observation](../specification/model-text.md/#flows-in-motion-observation), [Production examples](../examples/ex-production.md), some of the [Transfer and Exchange examples](../examples/ex-exchange.md).
 
 ### Claim
 
-Claims resemble Commitments, but are initiated by the receiver, not the provider.  If there is not an existing Commitment, an Economic Event can trigger a reciprocal Claim, based on an agreement.  Even then, Claims sometimes do not have to actually be instantiated, often they can be implied from an Economic Event and an agreement.  For example, if Alice has agreed to sell Bob some carrots for $2, then if Alice delivers the carrots to Bob, she has an implicit claim for $2 from Bob.  See also [Flows in motion: Observation](../../specification/model-text/#flows-in-motion-observation), [Claim example](../../examples/ex-exchange/#claim).
+Claims resemble Commitments, but are initiated by the receiver, not the provider.  If there is not an existing Commitment, an Economic Event can trigger a reciprocal Claim, based on an agreement.  Even then, Claims sometimes do not have to actually be instantiated, often they can be implied from an Economic Event and an agreement.  For example, if Alice has agreed to sell Bob some carrots for $2, then if Alice delivers the carrots to Bob, she has an implicit claim for $2 from Bob.  See also [Flows in motion: Observation](../specification/model-text.md/#flows-in-motion-observation), [Claim example](../examples/ex-exchange.md/#claim-for-income).
 
 ## Timeline, plans and observations
 
@@ -82,4 +82,4 @@ See also at [Use of Other Vocabularies](../specification/external-terms.md).
 
 ## Correcting Events
 
-Economic events are immutable in accounting practice, since at any time they could have been reported formally.  To correct economic implications of an economic event, you need another economic event, which can be related to the first one with the relationship `corrects`.  The correcting event can have a negative number.  It can either completely back out the original event or adjust it.  See also [Making Corrections](../accounting/#making-corrections) on the Accounting page, the [Correcting Errors example](../../examples/ex-production/#correcting-errors).
+Economic events are immutable in accounting practice, since at any time they could have been reported formally.  To correct economic implications of an economic event, you need another economic event, which can be related to the first one with the relationship `corrects`.  The correcting event can have a negative number.  It can either completely back out the original event or adjust it.  See also [Making Corrections](accounting.md/#making-corrections) on the Accounting page, the [Correcting Errors example](../examples/ex-production.md/#correcting-errors).

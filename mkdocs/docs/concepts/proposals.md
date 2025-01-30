@@ -2,7 +2,7 @@
 
 Proposals are published requests or offers, sometimes with what is expected in return.
 
-See also [Intents](../../concepts/flows/#intent) and [Matching Intents](../../concepts/flows/#matching-intents) in the Flows concept page, [Flows in motion: Offers and Requests](../../specification/model-text/#flows-in-motion-offers-and-requests) in the Diagram Explanations, and [Offers and Requests examples](../../examples/ex-proposals/).
+See also [Intents](../concepts/flows.md/#intent) and [Matching Intents](../concepts/flows.md/#matching-intents) in the Flows concept page, [Flows in motion: Offers and Requests](../specification/model-text.md/#flows-in-motion-offers-and-requests) in the Diagram Explanations, and [Offers and Requests examples](../examples/ex-proposals.md).
 
 ##  How proposals work
 

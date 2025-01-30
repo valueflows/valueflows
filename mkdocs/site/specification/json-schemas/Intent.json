@@ -1,0 +1,91 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Intent.json",
+    "title": "Intent",
+    "description": "A proposed or planned or estimated economic flow, prior to a commitment or agreement, which can lead to commitments and/or economic events.",
+    "type": "object",
+    "properties": {
+        "name": {
+            "description": "An informal or formal textual identifier for the intent. Does not imply uniqueness.",
+            "type": "string"
+        },
+        "action": {
+            "description": "Relates an intent to a verb, such as transfer, work, etc.",
+            "type": "string"
+        },
+        "resourceQuantity": {
+            "description": "The amount and unit of the economic resource counted or inventoried.",
+            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Measure.json"
+        },
+        "effortQuantity": {
+            "description": "The amount and unit of the work or use or citation effort-based action. This is often a time duration, but also could be cycle counts or other measures of effort or usefulness.",
+            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Measure.json"
+        },
+        "availableQuantity": {
+            "description": "The total quantity of the offered resource available.",
+            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Measure.json"
+        },
+        "minimumQuantity": {
+            "description": "The minimum required order amount and unit of the offered resource.",
+            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Measure.json"
+        },
+        "resourceInventoriedAs": {
+            "description": "Economic resource involved in the intent.",
+            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/EconomicResource.json"
+        },
+        "resourceConformsTo": {
+            "description": "The primary resource specification or definition of an existing or potential economic resource. A resource will have only one, as this specifies exactly what the resource is.",
+            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/ResourceSpecification.json"
+        },
+        "provider": {
+            "description": "The economic agent from whom the intent is initiated. This implies that the intent is an offer.",
+            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Agent.json"
+        },
+        "receiver": {
+            "description": "The economic agent whom the intent is for.  This implies that the intent is a request.",
+            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Agent.json"
+        },
+        "hasBeginning": {
+            "description": "The planned beginning of the intent.",
+            "type": "string",
+            "format": "date-time"
+        },
+        "hasEnd": {
+            "description": "The planned end of the intent.",
+            "type": "string",
+            "format": "date-time"
+        },
+        "hasPointInTime": {
+            "description": "The planned date/time for the intent. Can be used instead of beginning and end.",
+            "type": "string",
+            "format": "date-time"
+        },
+        "due": {
+            "description": "The due date/time of the intent.",
+            "type": "string",
+            "format": "date-time"
+        },
+        "finished": {
+            "description": "The intent is complete or not.  This is irrespective of if the original goal has been met, and indicates that no more will be done.",
+            "type": "boolean"
+        },
+        "image": {
+            "description": "The uri to an image relevant to the item, such as a photo, diagram, etc.",
+            "type": "string", 
+            "format": "uri"
+        },
+        "stage": {
+            "description": "The required stage of the desired input economic resource. References the ProcessSpecification of the last process the economic resource went through.",
+            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/ProcessSpecification.json"
+        },
+        "state": {
+            "description": "The required state of the desired input economic resource, after coming out of a test or review process.",
+            "type": "string"
+        },
+        "note": {
+            "description": "A textual comment or description.",
+            "type": "string"
+        }
+    },
+    "required": ["action"]
+}

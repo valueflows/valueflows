@@ -1,0 +1,18 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Measure.json",
+    "title": "Measure",
+    "description": "A numeric value with its unit of measure.",
+    "type": "object",
+    "properties": {
+        "hasNumericalValue": {
+            "description": "A numeric value.",
+            "type": "number"
+        },
+        "hasUnit": {
+            "description": "A unit of measure.",
+            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Unit.json"
+        }
+    },
+    "required": ["hasNumericalValue", "hasUnit"]
+}

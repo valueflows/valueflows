@@ -1,0 +1,73 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Claim.json",
+    "title": "Claim-DEPRECATED",
+    "description": "A claim for a future economic event(s) in reciprocity for an economic event that already occurred. For example, a claim for payment for goods received.",
+    "type": "object",
+    "properties": {
+        "action": {
+            "description": "Relates a claim to a verb, such as consume, produce, work, improve, etc.",
+            "type": "string"
+        },
+        "resourceQuantity": {
+            "description": "The amount and unit of the economic resource counted or inventoried.",
+            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Measure.json"
+        },
+        "effortQuantity": {
+            "description": "The amount and unit of the work or use or citation effort-based action. This is often a time duration, but also could be cycle counts or other measures of effort or usefulness.",
+            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Measure.json"
+        },
+        "resourceClassifiedAs": {
+            "description": "References a concept in a common taxonomy or other classification scheme for purposes of categorization or grouping.",
+            "type": "array",
+                "items": {
+                    "type": "string",
+                    "format": "uri"
+                }
+        },
+        "resourceConformsTo": {
+            "description": "The primary resource specification or definition of an existing or potential economic resource. A resource will have only one, as this specifies exactly what the resource is.",
+            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/ResourceSpecification.json"
+        },
+        "provider": {
+            "description": "The economic agent from whom the claim is initiated.",
+            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Agent.json"
+        },
+        "receiver": {
+            "description": "The economic agent whom the claim is for.",
+            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Agent.json"
+        },
+        "inScopeOf": {
+            "description": "Grouping around something to create a boundary or context, used for documenting, accounting, planning.",
+            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Agent.json"
+        },
+        "due": {
+            "description": "The due date/time of the claim.",
+            "type": "string",
+            "format": "date-time"
+        },
+        "created": {
+            "description": "The date on which the claim was made.",
+            "type": "string",
+            "format": "date-time"
+        },
+        "finished": {
+            "description": "The claim is complete or not.  This is irrespective of if the original goal has been met, and indicates that no more will be done.",
+            "type": "boolean"
+        },
+        "note": {
+            "description": "A textual comment or description.",
+            "type": "string"
+        },
+        "triggeredBy": {
+            "description": "References an economic event that implied the claim, often based on a prior agreement.",
+            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/EconomicEvent.json"
+        },
+        "agreedIn": {
+            "description": "Reference to an agreement between agents which specifies the rules or policies or calculations which govern this claim.",
+            "type": "string",
+            "format": "uri"
+        }
+    },
+    "required": ["action"]
+}

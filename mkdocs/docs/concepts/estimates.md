@@ -1,12 +1,12 @@
 Scenarios define high-level strategies. They contain Processes and Transfers.
 
-See also [Flows in motion: Estimation and Analysis](specification/model-text/#estimation-and-analysis) on the Diagrams Explanation, and [Estimate and Analysis examples](examples/ex-scenario/).
+See also [Flows in motion: Estimation and Analysis](../specification/model-text.md/#estimation-and-analysis) on the Diagrams Explanation, and [Estimate and Analysis examples](../examples/ex-scenario.md).
 
 ## Scenarios
 
 The [Processes section](processes.md) explains processes at their basic level, starting with operational observable processes. The [Transfers section](transfers.md) explains non-process flows.  The [Operational Planning section](plan.md) explains how to group those processes and transfers into a scheduled plan at an operational level. This section explains how to use the same process, transfer, and plan pattern to represent higher level requirements, those that are not (yet) actually scheduled, or already aggregated data.  We are calling that admittedly broad category Scenarios.
 
-Processes and transfers can be composed into scenarios at any level.  Like scheduled plans, these scenarios can be created from recipes.  Like scheduled plans, they use the same [input-output-process pattern](../../introduction/core/#putting-them-together) and [non-process-flow pattern](../../introduction/core/#flows-without-processes). The flows in a scenario are usually intents, but sometimes sumarized economic events.
+Processes and transfers can be composed into scenarios at any level.  Like scheduled plans, these scenarios can be created from recipes.  Like scheduled plans, they use the same [input-output-process pattern](../introduction/core.md/#putting-them-together) and [non-process-flow pattern](../introduction/core.md/#flows-without-processes). The flows in a scenario are usually intents, but sometimes sumarized economic events.
 
 Some examples we have seen:
 

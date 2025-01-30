@@ -1,0 +1,22 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/AgentRelationshipRole.json",
+    "title": "AgentRelationshipRole-DEPRECATED",
+    "description": "A relationship role defining the kind of association one agent can have with another.",
+    "type": "object",
+    "properties": {
+        "roleLabel": {
+            "description": "The human readable name of the role, from the subject to the object.  For example, 'is member of'.",
+            "type": "string"
+        },
+        "inverseRoleLabel": {
+            "description": "The human readable name of the role, from the object to the subject. For example, 'has member'.",
+            "type": "string"
+        },
+        "note": {
+            "description": "A textual comment or description.",
+            "type": "string"
+        }
+    },
+    "required": ["label"]
+}

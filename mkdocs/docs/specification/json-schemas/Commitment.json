@@ -1,0 +1,83 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Commitment.json",
+    "title": "Commitment",
+    "description": "A planned economic flow that has been promised by an agent to another agent.",
+    "type": "object",
+    "properties": {
+        "action": {
+            "description": "Relates a commitment to a verb, such as consume, produce, work, transfer, etc.",
+            "type": "string"
+        },
+        "resourceQuantity": {
+            "description": "The amount and unit of the economic resource counted or inventoried. This is the quantity that could be used to increment or decrement a resource, depending on the type of resource and resource effect of action.",
+            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Measure.json"
+        },
+        "effortQuantity": {
+            "description": "The amount and unit of the work or use or citation effort-based action. This is often a time duration, but also could be cycle counts or other measures of effort or usefulness.",
+            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Measure.json"
+        },
+        "resourceInventoriedAs": {
+            "description": "Economic resource involved in the commitment.",
+            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/EconomicResource.json"
+        },
+        "resourceConformsTo": {
+            "description": "The primary resource specification or definition of an existing or potential economic resource. A resource will have only one, as this specifies exactly what the resource is.",
+            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/ResourceSpecification.json"
+        },
+        "provider": {
+            "description": "The economic agent from whom the commitment is initiated.",
+            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Agent.json"
+        },
+        "receiver": {
+            "description": "The economic agent whom the commitment is for.",
+            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Agent.json"
+        },
+        "hasBeginning": {
+            "description": "The planned beginning of the commitment.",
+            "type": "string",
+            "format": "date-time"
+        },
+        "hasEnd": {
+            "description": "The planned end of the commitment.",
+            "type": "string",
+            "format": "date-time"
+        },
+        "hasPointInTime": {
+            "description": "The planned date/time for the commitment. Can be used instead of beginning and end.",
+            "type": "string",
+            "format": "date-time"
+        },
+        "due": {
+            "description": "The due date/time of the commitment.",
+            "type": "string",
+            "format": "date-time"
+        },
+        "created": {
+            "description": "The creation time of the commitment.",
+            "type": "string",
+            "format": "date-time"
+        },
+        "finished": {
+            "description": "The commitment is complete or not.  This is irrespective of if the original goal has been met, and indicates that no more will be done.",
+            "type": "boolean"
+        },
+        "stage": {
+            "description": "The required stage of the desired input economic resource. References the ProcessSpecification of the last process the economic resource went through.",
+            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/ProcessSpecification.json"
+        },
+        "state": {
+            "description": "The required state of the desired input economic resource, after coming out of a test or review process.",
+            "type": "string"
+        },
+        "satisfies": {
+            "description": "An intent satisfied fully or partially by the commitment.",
+            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Intent.json"
+        },
+        "note": {
+            "description": "A textual comment or description.",
+            "type": "string"
+        }
+    },
+    "required": ["action"]
+}

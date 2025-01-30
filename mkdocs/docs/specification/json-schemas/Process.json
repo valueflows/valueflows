@@ -1,0 +1,62 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Process.json",
+    "title": "Process",
+    "description": "An activity that changes inputs into outputs.  It could transform or transport economic resource(s).",
+    "type": "object",
+    "properties": {
+        "name": {
+            "description": "An informal or formal textual identifier for an object. Does not imply uniqueness.",
+            "type": "string"
+        },
+        "hasBeginning": {
+            "description": "The planned beginning of the process.",
+            "type": "string",
+            "format": "date-time"
+        },
+        "hasEnd": {
+            "description": "The planned end of the process.",
+            "type": "string",
+            "format": "date-time"
+        },
+        "basedOn": {
+            "description": "The general definition or specification for a process.",
+            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/ProcessSpecification.json"
+        },
+        "plannedWithin": {
+            "description": "The process with its inputs and outputs is part of the plan.",
+            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Plan.json"
+        },
+        "finished": {
+            "description": "The process is complete or not. This is irrespective of if the original goal has been met, and indicates that no more will be done.",
+            "type": "boolean"
+        },
+        "note": {
+            "description": "A textual comment or description.",
+            "type": "string"
+        },
+        "hasInput": {
+            "description": "All the input flows of a process.",
+            "type": "array",
+            "items": {
+                "anyOf": [
+                    { "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Commitment.json" },
+                    { "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Intent.json" },
+                    { "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/EconomicEvent.json" }
+                ]
+            }
+        },
+        "hasOutput": {
+            "description": "All the output flows of a process.",
+            "type": "array",
+            "items": {
+                "anyOf": [
+                    { "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Commitment.json" },
+                    { "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Intent.json" },
+                    { "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/EconomicEvent.json" }
+                ]
+            }
+        }
+    },
+    "required": ["name"]
+}
