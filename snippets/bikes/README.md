@@ -1,6 +1,0 @@
-1. [assemble-process.yaml](https://github.com/valueflows/valueflows/blob/master/snippets/bikes/assemble-process.yaml)
-2. [bikes-after-assemble.yaml](https://github.com/valueflows/valueflows/blob/master/snippets/bikes/bikes-after-assemble.yaml)
-3. [transport-process.yaml](https://github.com/valueflows/valueflows/blob/master/snippets/bikes/transport-process.yaml)
-4. [bikes-after-transport.yaml](https://github.com/valueflows/valueflows/blob/master/snippets/bikes/bikes-after-transport.yaml)
-5. [disassemble-process.yaml](https://github.com/valueflows/valueflows/blob/master/snippets/bikes/disassemble-process.yaml)
-6. [bikes-after-disassemble.yaml](https://github.com/valueflows/valueflows/blob/master/snippets/bikes/bikes-after-disassemble.yaml)
