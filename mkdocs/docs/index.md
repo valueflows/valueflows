@@ -21,15 +21,15 @@ Here are some suggestions to help you find your way into this documentation, dep
 
       * For even more gory details, check the rest of the [**specification pages**](specification/spec-overview.md), and/or [**examples section**](examples/ex-overview.md).
 
-* **Or if you want a more fun and friendly way to understand the vocabulary**, you can start here with a [**Valueflows story about apple pie **](assets/ValueFlows-Story.pdf)(yum!).
+* **Or if you want a more fun and friendly way to understand the vocabulary**, you can start here with a [**Valueflows story about apple pie, yum!**](assets/ValueFlows-Story.pdf).
 
 * **To lookup specific details**, you can use the *Search* function above.  Definitions and relationships by data element (class, property, etc.) are linked on the first [**formatted spec here**](specification/all_vf.html); and are textually [**described by subject area here**](specification/model-text.md).  The [**concepts section**](concepts/concepts-overview.md) and [**examples section**](examples/ex-overview.md) also might be helpful to lookup developer level information.
 
 <hr/>
 
-You can find us here on [**gitlab**](https://lab.allmende.io/valueflows), also mirrored on [**github**](https://github.com/valueflows).  
+You can find the repository here on [**codeberg**](https://codeberg.org/valueflows/valueflows), also mirrored on [**github**](https://github.com/valueflows/valueflows).
 
-Or come on over and say hello, ask questions, or request gitlab permissions in [**matrix element**](https://matrix.to/#/#valueflows:matrix.org). 
+Or come on over and say hello or ask questions in [**matrix element**](https://matrix.to/#/#valueflows:matrix.org).
 
 <hr/>
 

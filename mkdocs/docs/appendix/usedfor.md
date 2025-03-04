@@ -47,9 +47,4 @@ The [Fediverse](https://fediverse.party/en/fediverse/) is a collection of networ
 
 Valueflows philosophically seeks to develop in collaboration with user groups on the ground. This round of projects is providing valuable input to the Valueflows vocabulary. We can expect some additions and extensions.
 
-As more implementations are becoming distributed, a particularly interesting direction is composing systems out of VF-enabled apps or modules, or using them to interact with each other. Two possible patterns:
-
-* Composing bigger apps from many smaller apps
-* Networks of apps interacting with one another
-
-Following this direction, we will need to figure out the sweet spots for component size and shape for Valueflows Open Apps. If we do that well, many people should be able to create variations on any of the components, and they might be able to work together with any of the other variations. (Depending on devils in details...)
+However, Valueflows is working towards a stable version 1.0 of the core model that people will be able to count on for a reasonable time period.  We are close.
