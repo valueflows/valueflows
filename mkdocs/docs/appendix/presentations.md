@@ -6,12 +6,12 @@ We are occasionally asked for other documentation and visuals for Valueflows.  W
 
 Most of the graphics on these VF website pages are available in xml (for drawing tools) and as images here:
 
-* [images in the main documentation](https://lab.allmende.io/valueflows/valueflows/-/tree/master/mkdocs/docs/assets)
-* [images on the example pages](https://lab.allmende.io/valueflows/valueflows/-/tree/master/mkdocs/docs/assets/examples)
+* [images in the main documentation](https://codeberg.org/valueflows/valueflows/src/branch/master/mkdocs/docs/assets)
+* [images on the example pages](https://codeberg.org/valueflows/valueflows/src/branch/master/mkdocs/docs/assets/examples)
 
 ## Presentations
 
-All of the following presentations can also be found in [this directory](https://lab.allmende.io/valueflows/valueflows/-/tree/master/presentations), with editable versions where we have them.
+All of the following can also be found in [this presentations directory](https://codeberg.org/valueflows/valueflows/src/branch/master/mkdocs/docs/assets/presentations), with editable versions where we have them.
 
 [A basic VF presentation, 2021](http://mikorizal.org/VF-Basic-Presentation.pdf)
 
@@ -39,7 +39,7 @@ All of the following presentations can also be found in [this directory](https:/
 
 [Holochain Ecosystem Session with New York Textile Lab, 2021](https://www.youtube.com/watch?v=D7xDZaaQOpM) (52 minutes, very interesting supply chain coordination use case)
 
-[Tom Miller walks through the VF story about pie, 2020](https://www.youtube.com/watch?v=SWvPM9Uza_w) (45 minutes, slides available [here](https://lab.allmende.io/valueflows/valueflows/-/blob/master/release-doc-in-process/ValueFlows-Story.pdf))
+[Tom Miller walks through the VF story about pie, 2020](https://www.youtube.com/watch?v=SWvPM9Uza_w) (45 minutes, slides available [here](https://codeberg.org/valueflows/valueflows/src/branch/master/mkdocs/docs/assets/ValueFlows-Story.pdf))
 
 [Deep dive into VF for devs, 2019](https://www.youtube.com/watch?v=N4M0hmq3GEc) (2 hours, model slightly out of date)
 

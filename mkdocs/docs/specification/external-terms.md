@@ -23,7 +23,7 @@ Valueflows has created this same structure within our namespace, and added some 
 
 We expect that user applications will choose a much smaller subset of these standard units, and probably maintain them separately.
 
-To facilitate this, a [csv file of units](https://lab.allmende.io/valueflows/valueflows/-/blob/master/units/units-en-useful.csv) has been extracted from OM2 to make it easier for user groups to choose their set of standard units.  Since OM2 is still in active development, this file will gradually become out of date, but we expect added units to be newer scientific units not usually used in economic applications.
+To facilitate this, a [csv file of units](https://codeberg.org/valueflows/valueflows/src/branch/master/units/units-en-useful.csv) has been extracted from OM2 to make it easier for user groups to choose their set of standard units.  Since OM2 is still in active development, this file will gradually become out of date, but we expect added units to be newer scientific units not usually used in economic applications.
 
 This file includes only the English version for now, although some additional languages can be found in OM2.  The currencies have been removed, since we recommend these be set up as Resource Specifications instead, semantically, and specifically given the proliferation of alternate currencies.  We have added classifications (partially complete) to facilitate search for needed units. The columns in this file are, left to right:
 
@@ -40,7 +40,7 @@ We have added 2 properties in VF as optional additions to the OM2 unit, `overrid
 
 Perhaps the most frequent use of the override is the unit `one`.  This indicates a generic one dimensional unit from the scientific perspective, which in an economic application might be called `each`, `piece`, `count`, `number` or similar, or just left off of a user interface or report.  Some applications might even want to use more than one of these local labels. But for interoperability, any of these overrides should reference back to OM2:one.
 
-See [this directory about units](https://lab.allmende.io/valueflows/valueflows/-/tree/master/units/) for other potentially useful artifacts.
+See [this directory about units](https://codeberg.org/valueflows/valueflows/src/branch/master/units) for other potentially useful artifacts.
 
 ## Quantities and Durations
 
