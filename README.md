@@ -11,7 +11,7 @@ Some specific links of interest for devs:
 * [RDF Reference](https://codeberg.org/valueflows/pages/src/branch/main/assets/all_vf.TTL)  This is the "turtle" file that is the system of record source for the specification.
 * [GraphQL Reference](https://lab.allmende.io/valueflows/vf-schemas/vf-graphql/-/tree/sprout/lib/schemas).  This is maintained mostly by the projects using it.  It is currently somewhat our of sync.
 * [JSON-schema Reference](https://www.valueflo.ws/specification/json-schemas/).  This is not complete, but contains the core of VF.  It will be worked on further as needed.
-* [Procedures for moving changes to the website](https://codeberg.org/valueflows/valueflows/Website-publishing-procedure.md).
+* [Procedures for moving changes to the website](https://codeberg.org/valueflows/valueflows/src/branch/master/Website-publishing-instructions.md).
 
 If you would like to be part of the Valueflows conversation, please [raise an issue here](https://codeberg.org/valueflows/valueflows/issues), or fork this or any of the related repositories and issue pull requests.  You can also pop into our [welcome matrix chat](https://matrix.to/#/#valueflows:matrix.org) to make comments, ask questions, or introduce yourself!
 
