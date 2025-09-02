@@ -1,0 +1,729 @@
+# ValueFlows - Comprehensive LLM.txt
+
+ValueFlows (VF) is a comprehensive open-source vocabulary for distributed economic networks designed to coordinate the creation, distribution, and exchange of economic resources. This document provides extensive technical information for AI language models about the ValueFlows ontology, implementation patterns, and ecosystem.
+
+## Project Overview
+
+**Purpose**: ValueFlows is "a vocabulary for the distributed economic networks of the next economy, to coordinate the creation, distribution, and exchange of economic resources."
+
+**Mission**: Enable internetworking among different software projects for resource planning and accounting within fractal networks of people and groups. The focus is on facilitating groups experimenting with solidarity, cooperative, collaborative, commons-based peer production, and transitional economies.
+
+**Website**: https://www.valueflo.ws/
+**License**: Creative Commons Attribution-ShareAlike 4.0 International License
+**Current Version**: 0.11
+**Repositories**: 
+- Primary: https://codeberg.org/valueflows/
+- Mirror: https://github.com/valueflows/
+- Community Chat: Matrix/Element #valueflo_ws:matrix.org
+
+## Philosophy and Core Principles
+
+### Fractal Economic Networks
+ValueFlows supports fractal network structures where economic activities can be nested and coordinated at multiple scales - from individual transactions to large organizational networks. This enables:
+- **Multi-scale coordination**: Individual, group, organizational, and network-level economic planning
+- **Flexible boundaries**: Economic activities can cross traditional organizational boundaries
+- **Emergent organization**: Bottom-up coordination through shared vocabularies
+
+### Technology Agnostic Design
+The vocabulary is designed to work across different technical platforms:
+- **RDF/Linked Data**: Primary specification format with semantic web integration
+- **GraphQL**: Query-focused API design with type safety
+- **JSON**: Lightweight implementation for web applications
+- **SQL/NoSQL**: Database-agnostic storage patterns
+- **Blockchain**: Distributed ledger implementations (experimental)
+
+### Economic Model Independence
+ValueFlows doesn't prescribe specific economic models but provides vocabulary for:
+- **Market economies**: Traditional buyer/seller relationships
+- **Gift economies**: One-way flows without direct reciprocity
+- **Commons-based**: Shared resource management and stewardship
+- **Cooperative**: Member-owned and democratically controlled organizations
+- **Hybrid models**: Combinations of different economic logics
+
+## Technical Foundation
+
+**Ontology Base**: Built on the REA (Resources, Events, Agents) ontology, first defined by Professor William McCarthy of Michigan State University in 1982. Extended with concepts from:
+- **ISO 15944-4**: Business transaction patterns
+- **UN/CEFACT**: Supply chain and trade facilitation
+- **Schema.org**: Web-compatible vocabulary patterns
+- **FOAF**: Social network vocabularies for agents
+
+**Technical Specifications**:
+- **Namespace**: `https://w3id.org/valueflows/ont/vf#` (preferred prefix: `vf`)
+- **Formats**: TTL (Turtle), JSON-LD, HTML, GraphQL Schema, JSON Schema
+- **System of Record**: Turtle (.ttl) file with formal ontology definitions
+- **Version Control**: Git-based development with semantic versioning
+- **Testing**: Automated validation with ontology reasoners and example data
+
+**Quality Assurance**:
+- Ontology validation using HermiT and Pellet reasoners
+- Example data validation against schemas
+- Cross-format consistency checking
+- Community review process for changes
+
+## Complete Core Ontology
+
+### Agent Classes
+
+**Agent** (`vf:Agent`) - Base class for all economic actors
+- **Person** (`vf:Person`) - Individual human agents
+- **Organization** (`vf:Organization`) - Formal organizations (businesses, nonprofits, etc.)
+- **AgentGroup** (`vf:AgentGroup`) - Informal groups or collectives
+- **Properties**:
+  - `vf:name` (required) - Display name for the agent
+  - `vf:note` - Free text description or notes
+  - `vf:primaryLocation` - Geographic location
+  - `vf:image` - Profile image or logo URL
+
+### Resource and Flow Classes
+
+**EconomicResource** (`vf:EconomicResource`) - Trackable economic resources
+- **Properties**:
+  - `vf:resourceClassifiedAs` - Links to classification systems (e.g., UN/SPSC)
+  - `vf:resourceSpecification` - Links to resource specifications/templates
+  - `vf:accountingQuantity` - Current quantity for accounting purposes
+  - `vf:onhandQuantity` - Physical quantity currently available
+  - `vf:currentLocation` - Geographic location of resource
+  - `vf:unitOfResource` - Default unit of measure
+  - `vf:state` - Current state (available, committed, consumed, etc.)
+  - `vf:stage` - Production stage or lifecycle phase
+  - `vf:lot` - Batch or lot identifier for traceability
+  - `vf:containedIn` - Physical or logical container
+
+**ResourceSpecification** (`vf:ResourceSpecification`) - Templates for resource types
+- **Properties**:
+  - `vf:name` (required) - Name of the resource specification
+  - `vf:resourceClassifiedAs` - Classification links
+  - `vf:defaultUnitOfResource` - Standard unit of measure
+  - `vf:note` - Description and usage notes
+
+### Event Classes
+
+**EconomicEvent** (`vf:EconomicEvent`) - Completed economic flows
+- **Properties**:
+  - `vf:action` (required) - The action performed (from action vocabulary)
+  - `vf:provider` - Agent providing/giving in the flow
+  - `vf:receiver` - Agent receiving in the flow
+  - `vf:inputOf` - Process this event provides input to
+  - `vf:outputOf` - Process this event provides output from
+  - `vf:resourceInventoriedAs` - Specific resource instance affected
+  - `vf:resourceQuantity` - Quantity and unit of the flow
+  - `vf:effortQuantity` - Work effort applied
+  - `vf:hasPointInTime` - Timestamp for instant events
+  - `vf:hasBeginning` - Start time for duration events
+  - `vf:hasEnd` - End time for duration events
+  - `vf:atLocation` - Geographic location where event occurred
+  - `vf:note` - Additional context and notes
+  - `vf:realizationOf` - Links to agreement or commitment
+
+### Planning Classes
+
+**Intent** (`vf:Intent`) - Declared wants, needs, or offers
+- **Properties**: Same structure as EconomicEvent but future-oriented
+- **publishedIn** - Link to proposal or planning document
+- **satisfiedBy** - Links to commitments or events that satisfy this intent
+
+**Commitment** (`vf:Commitment`) - Promises to perform future economic events
+- **Properties**: Same structure as EconomicEvent but promissory
+- **independentDemandOf** - Links to customer-driven demands
+- **clauseOf** - Links to agreements that contain this commitment
+- **satisfies** - Links to intents this commitment addresses
+- **finishedBy** - Completion condition or trigger
+
+**Agreement** (`vf:Agreement`) - Formal or informal agreements between agents
+- **Properties**:
+  - `vf:name` - Agreement title or identifier
+  - `vf:note` - Terms, conditions, and description
+  - `vf:created` - Agreement creation date
+  - `vf:involvedAgents` - All parties to the agreement
+
+### Process Classes
+
+**Process** (`vf:Process`) - Activities that transform or transport resources
+- **Properties**:
+  - `vf:name` (required) - Process name or identifier
+  - `vf:hasBeginning` - Planned or actual start time
+  - `vf:hasEnd` - Planned or actual end time
+  - `vf:finished` - Boolean completion status
+  - `vf:note` - Process description and context
+  - `vf:plannedWithin` - Links to plans or scenarios
+  - `vf:basedOn` - Links to process specifications/templates
+  - `vf:classifiedAs` - Process type classifications
+
+**ProcessSpecification** (`vf:ProcessSpecification`) - Templates for processes
+- **Properties**:
+  - `vf:name` (required) - Specification name
+  - `vf:note` - Description of the process type
+  - `vf:processClassifiedAs` - Process classification links
+
+### Relationship Classes
+
+**Fulfillment** (`vf:Fulfillment`) - Links events to commitments they fulfill
+- **Properties**:
+  - `vf:fulfills` (required) - The commitment being fulfilled
+  - `vf:fulfilledBy` (required) - The event that fulfills
+  - `vf:resourceQuantity` - Quantity fulfilled (partial fulfillments)
+  - `vf:effortQuantity` - Effort quantity fulfilled
+  - `vf:note` - Context about the fulfillment
+
+**Satisfaction** (`vf:Satisfaction`) - Links intents to what satisfies them
+- **Properties**:
+  - `vf:satisfies` (required) - The intent being satisfied
+  - `vf:satisfiedBy` (required) - Commitment or event that satisfies
+  - `vf:resourceQuantity` - Quantity satisfied
+  - `vf:effortQuantity` - Effort satisfied
+  - `vf:note` - Satisfaction context
+
+**Claim** (`vf:Claim`) - Claims for compensation or recognition
+- **Properties**:
+  - `vf:action` - Type of claim (see claim actions)
+  - `vf:provider` - Agent making the claim
+  - `vf:receiver` - Agent the claim is against
+  - `vf:resourceQuantity` - Quantity being claimed
+  - `vf:effortQuantity` - Effort being claimed
+  - `vf:triggeredBy` - Event that triggered the claim
+  - `vf:due` - When the claim is due
+  - `vf:note` - Claim justification and context
+
+### Measurement Classes
+
+**Measure** (`om2:Measure`) - Quantities with units (from OM2 ontology)
+- **Properties**:
+  - `om2:hasNumericalValue` - The numeric amount
+  - `om2:hasUnit` - Unit of measure (links to OM2 units)
+
+**SpatialThing** (`vf:SpatialThing`) - Geographic locations
+- **Properties**:
+  - `vf:name` - Location name
+  - `vf:note` - Location description
+  - `vf:lat` - Latitude coordinate
+  - `vf:long` - Longitude coordinate
+  - `vf:alt` - Altitude
+  - `vf:mappableAddress` - Human-readable address
+
+## Complete Action Vocabulary
+
+ValueFlows defines 20+ standardized actions organized into semantic categories:
+
+### Production Actions
+- **produce** - Create new economic resources through transformation
+- **use** - Apply a resource without depleting it (tools, equipment, facilities)
+- **consume** - Deplete a resource by using it up (materials, energy)
+- **cite** - Reference information or intellectual resources without consuming
+- **work** - Apply labor or services to a process
+
+### Transfer Actions
+- **transfer-all-rights** - Complete transfer of ownership and custody
+- **transfer-custody** - Transfer possession while retaining ownership
+- **transfer** - Generic transfer (context determines specifics)
+- **move** - Change location without changing ownership
+- **give** - One-way transfer without expecting reciprocation
+- **receive** - Accept something given or transferred
+
+### Allocation Actions
+- **raise** - Increase resource quantities (corrections, discoveries)
+- **lower** - Decrease resource quantities (corrections, shrinkage, spoilage)
+
+### Exchange Actions (Reciprocal Pairs)
+- **take** / **give** - Voluntary resource transfer pair
+- **deliver-service** / **receive-service** - Service provision pair
+
+### Claim Actions
+- **claim** - Assert a right to resources based on contribution or agreement
+- **settle** - Resolve a claim through compensation or recognition
+
+### Financial Actions
+- **pay** - Transfer money or monetary instruments
+- **accept** - Receive payment or settle obligations
+
+### Observation Actions
+- **observe** - Record the state or quantity of resources without changing them
+
+### Action Properties
+Each action has semantic properties that define its behavior:
+- **resource-effect**: How the action affects resource quantities (+, -, 0, ±)
+- **input-output**: Whether resources flow into or out of processes
+- **pairs-with**: Reciprocal actions that typically occur together
+
+## Advanced Implementation Patterns
+
+### Recipe-Based Planning
+
+ValueFlows supports recipe systems for repeatable processes:
+
+```yaml
+# Process Specification Example
+ProcessSpecification:
+  name: "Bread Baking"
+  processClassifiedAs: "http://example.org/processes/Baking"
+  note: "Standard recipe for whole wheat bread"
+
+# Resource Specifications
+ResourceSpecifications:
+  - name: "Whole Wheat Flour"
+    defaultUnit: "kilogram"
+    resourceClassifiedAs: "http://example.org/ingredients/flour"
+  - name: "Fresh Bread Loaf"
+    defaultUnit: "loaf"
+    resourceClassifiedAs: "http://example.org/products/bread"
+
+# Recipe as Process with typical flows
+RecipeFlows:
+  inputs:
+    - resourceSpec: "Whole Wheat Flour"
+      action: "consume"
+      resourceQuantity: { numericValue: 0.5, unit: "kilogram" }
+    - resourceSpec: "Baker Labor"
+      action: "work"
+      effortQuantity: { numericValue: 2, unit: "hour" }
+  outputs:
+    - resourceSpec: "Fresh Bread Loaf"
+      action: "produce"
+      resourceQuantity: { numericValue: 1, unit: "loaf" }
+```
+
+### Multi-Party Exchange Patterns
+
+Complex exchanges involving multiple parties and resources:
+
+```yaml
+# Agreement between bakery cooperative members
+Agreement:
+  name: "Weekly Bread Share Agreement"
+  involvedAgents: ["Alice", "Bob", "Charlie", "Bakery Coop"]
+
+# Commitments from agreement
+Commitments:
+  # Members provide ingredients
+  - provider: "Alice"
+    receiver: "Bakery Coop"
+    action: "give"
+    resourceSpec: "Wheat Flour"
+    resourceQuantity: { numericValue: 2, unit: "kilogram" }
+    due: "2024-01-15T08:00:00Z"
+  
+  # Coop provides finished bread
+  - provider: "Bakery Coop"
+    receiver: "Alice"
+    action: "give"
+    resourceSpec: "Fresh Bread"
+    resourceQuantity: { numericValue: 3, unit: "loaf" }
+    due: "2024-01-15T18:00:00Z"
+```
+
+### Supply Chain Traceability
+
+Track resources through complex supply chains:
+
+```yaml
+# Original harvested grain
+EconomicResource:
+  id: "grain-batch-2024-001"
+  resourceSpecification: "Organic Wheat"
+  accountingQuantity: { numericValue: 1000, unit: "kilogram" }
+  lot: "Field-A-Spring-2024"
+  currentLocation: "Sunny Acres Farm"
+
+# Milling process
+Process:
+  name: "Grain Milling - Batch 001"
+  hasBeginning: "2024-01-10T09:00:00Z"
+  hasEnd: "2024-01-10T11:00:00Z"
+
+# Input event (consume grain)
+EconomicEvent:
+  action: "consume"
+  inputOf: "Grain Milling - Batch 001"
+  resourceInventoriedAs: "grain-batch-2024-001"
+  resourceQuantity: { numericValue: 1000, unit: "kilogram" }
+  provider: "Sunny Acres Farm"
+  receiver: "Valley Mill Coop"
+
+# Output event (produce flour)
+EconomicEvent:
+  action: "produce"
+  outputOf: "Grain Milling - Batch 001"
+  resourceQuantity: { numericValue: 800, unit: "kilogram" }
+  provider: "Valley Mill Coop"
+  receiver: "Valley Mill Coop"
+  # New resource created with traceability link
+  resourceInventoriedAs: "flour-batch-2024-001"
+```
+
+### Commons Resource Management
+
+Model shared resource pools and stewardship:
+
+```yaml
+# Shared tool library
+EconomicResource:
+  resourceSpecification: "Power Drill Set"
+  accountingQuantity: { numericValue: 1, unit: "set" }
+  containedIn: "Community Tool Library"
+  currentLocation: "Neighborhood Center"
+
+# Usage by community member
+EconomicEvent:
+  action: "use"
+  provider: "Tool Library Commons"
+  receiver: "Bob (member)"
+  resourceQuantity: { numericValue: 1, unit: "set" }
+  hasBeginning: "2024-01-15T10:00:00Z"
+  hasEnd: "2024-01-15T16:00:00Z"
+  note: "Building raised garden bed"
+
+# Return after use
+EconomicEvent:
+  action: "give"
+  provider: "Bob (member)"
+  receiver: "Tool Library Commons"
+  resourceQuantity: { numericValue: 1, unit: "set" }
+  hasPointInTime: "2024-01-15T16:30:00Z"
+```
+
+### Time Banking and Mutual Aid
+
+Model time-based exchanges and mutual aid networks:
+
+```yaml
+# Time bank system
+ResourceSpecification:
+  name: "Community Hour"
+  defaultUnit: "hour"
+  note: "One hour of community service time"
+
+# Alice provides tutoring
+EconomicEvent:
+  action: "work"
+  provider: "Alice"
+  receiver: "Community Time Bank"
+  resourceSpecification: "Tutoring Service"
+  effortQuantity: { numericValue: 2, unit: "hour" }
+  note: "Math tutoring for middle school students"
+
+# Alice receives gardening help
+EconomicEvent:
+  action: "receive-service"
+  provider: "Community Time Bank"
+  receiver: "Alice"
+  resourceSpecification: "Gardening Service"
+  effortQuantity: { numericValue: 2, unit: "hour" }
+  note: "Vegetable garden setup and planting"
+```
+
+## Computational Algorithms
+
+ValueFlows supports sophisticated economic calculations and analysis:
+
+### 1. Dependent Demand Calculation
+Calculate resource requirements across supply networks:
+- **Forward calculation**: From customer demand to supplier requirements
+- **Backward calculation**: From available resources to possible outputs
+- **Multi-level explosion**: Complex bill-of-materials expansion
+- **Lead time consideration**: Time-phased requirements planning
+
+### 2. Critical Path Analysis
+Identify bottlenecks and critical resources in economic networks:
+- **Process dependencies**: Sequential and parallel process flows
+- **Resource constraints**: Limited availability impacts
+- **Agent capacity**: Labor and facility limitations
+- **Time optimization**: Shortest path through process networks
+
+### 3. Network Flow Optimization
+Optimize resource flows across distributed networks:
+- **Minimum cost flows**: Optimize transportation and transformation costs
+- **Maximum flow**: Find capacity limits in supply networks
+- **Multi-commodity flows**: Handle multiple resource types simultaneously
+- **Dynamic optimization**: Time-varying network conditions
+
+### 4. Economic Value Calculation
+Multiple methods for calculating and distributing value:
+- **Labor-based**: Value proportional to labor contribution
+- **Resource-based**: Value based on resource contribution
+- **Risk-adjusted**: Include risk factors in value calculations
+- **Multi-criteria**: Combine multiple value factors
+
+### 5. Inventory Management
+Sophisticated inventory tracking and optimization:
+- **Stock level optimization**: Minimize holding costs while avoiding stockouts
+- **Lot tracking**: Trace specific batches through transformation processes
+- **Expiration management**: Handle perishable goods and time-sensitive resources
+- **Location optimization**: Multi-warehouse inventory management
+
+### 6. Capacity Planning
+Plan and optimize productive capacity:
+- **Demand forecasting**: Predict future resource requirements
+- **Capacity utilization**: Optimize use of productive assets
+- **Investment planning**: When and where to expand capacity
+- **Skill matching**: Match agent skills to process requirements
+
+### 7. Performance Analytics
+Measure and analyze economic network performance:
+- **Throughput analysis**: Measure flow rates and bottlenecks
+- **Efficiency metrics**: Resource utilization and waste reduction
+- **Quality tracking**: Defect rates and improvement trends
+- **Sustainability metrics**: Environmental and social impact measurement
+
+### 8. Matching and Coordination
+Facilitate coordination in distributed networks:
+- **Intent matching**: Connect complementary needs and offers
+- **Agent discovery**: Find agents with specific capabilities
+- **Trust scoring**: Reputation and reliability metrics
+- **Conflict resolution**: Handle competing demands for scarce resources
+
+## Data Formats and Serialization
+
+### RDF/Turtle Format
+```turtle
+@prefix vf: <https://w3id.org/valueflows/ont/vf#> .
+@prefix om2: <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+
+:alice a vf:Person ;
+    vf:name "Alice Johnson" ;
+    vf:note "Community baker and organizer" .
+
+:bread-process a vf:Process ;
+    vf:name "Daily Bread Baking" ;
+    vf:hasBeginning "2024-01-15T06:00:00Z" ;
+    vf:hasEnd "2024-01-15T10:00:00Z" .
+
+:flour-consumption a vf:EconomicEvent ;
+    vf:action "consume" ;
+    vf:inputOf :bread-process ;
+    vf:provider :alice ;
+    vf:receiver :alice ;
+    vf:resourceQuantity [
+        om2:hasNumericalValue 5.0 ;
+        om2:hasUnit "kilogram"
+    ] .
+```
+
+### JSON-LD Format
+```json
+{
+  "@context": "https://w3id.org/valueflows/ont/vf.jsonld",
+  "@type": "EconomicEvent",
+  "action": "produce",
+  "provider": {"@id": "#alice", "name": "Alice Johnson"},
+  "outputOf": {"@id": "#bread-process"},
+  "resourceQuantity": {
+    "@type": "Measure",
+    "hasNumericalValue": 12,
+    "hasUnit": "loaf"
+  },
+  "hasPointInTime": "2024-01-15T10:00:00Z"
+}
+```
+
+### GraphQL Schema Extract
+```graphql
+type Agent {
+  id: ID!
+  name: String!
+  note: String
+  primaryLocation: SpatialThing
+  economicEvents: [EconomicEvent!]
+  commitments: [Commitment!]
+  intents: [Intent!]
+}
+
+type EconomicEvent {
+  id: ID!
+  action: Action!
+  provider: Agent
+  receiver: Agent
+  resourceQuantity: Measure
+  effortQuantity: Measure
+  hasPointInTime: DateTime
+  inputOf: Process
+  outputOf: Process
+  note: String
+}
+
+enum Action {
+  produce
+  use
+  consume
+  cite
+  work
+  transfer
+  give
+  receive
+  take
+  raise
+  lower
+  move
+}
+```
+
+## Advanced Use Cases and Implementations
+
+### Circular Economy Platforms
+- **ReflowOS**: Operating system for circular economy with ValueFlows integration
+- **Material flow tracking**: Follow materials through reuse, repair, and recycling
+- **Waste stream optimization**: Minimize waste through better coordination
+- **Product lifecycle management**: From design through end-of-life
+
+### Cooperative Business Networks
+- **Platform cooperatives**: Multi-stakeholder digital platforms
+- **Supply chain cooperation**: Collaborative procurement and distribution
+- **Shared services**: Administrative, technical, and marketing services
+- **Profit sharing**: Transparent distribution based on contributions
+
+### Community Resource Sharing
+- **Tool libraries**: Shared community tool and equipment access
+- **Skill sharing networks**: Exchange services and knowledge
+- **Community gardens**: Shared growing spaces and harvest distribution
+- **Maker spaces**: Shared manufacturing and creative facilities
+
+### Humanitarian and Development Aid
+- **Supply chain transparency**: Track aid from donors to beneficiaries
+- **Local procurement**: Support local economies in aid distribution
+- **Capacity building**: Document skills transfer and training
+- **Impact measurement**: Track outcomes and long-term development
+
+### Research and Open Source
+- **Knowledge commons**: Track contribution to and use of open knowledge
+- **Research collaboration**: Coordinate resources across institutions
+- **Open source sustainability**: Track and reward open source contributions
+- **Academic resource sharing**: Equipment, data, and facility sharing
+
+## Technical Integration Patterns
+
+### RESTful API Design
+```yaml
+# Resource endpoints
+GET /api/agents/{id}
+POST /api/agents
+PUT /api/agents/{id}
+
+GET /api/economic-events
+POST /api/economic-events
+GET /api/economic-events/{id}
+
+GET /api/processes/{id}/inputs
+GET /api/processes/{id}/outputs
+POST /api/processes/{id}/events
+
+# Query endpoints
+GET /api/agents/{id}/events?action=give&after=2024-01-01
+GET /api/resources/search?classifiedAs=tools&available=true
+GET /api/intents/match?action=give&resourceSpec=flour
+```
+
+### Event Sourcing Patterns
+```yaml
+# Event store for complete audit trail
+EventStream:
+  - EventType: "EconomicEvent"
+    Timestamp: "2024-01-15T10:00:00Z"
+    Data:
+      action: "produce"
+      provider: "alice"
+      resourceQuantity: { value: 5, unit: "loaf" }
+  - EventType: "ResourceUpdate"
+    Timestamp: "2024-01-15T10:00:01Z"
+    Data:
+      resourceId: "bread-inventory-001"
+      newQuantity: { value: 5, unit: "loaf" }
+      reason: "production-event"
+
+# Projection for current state
+ResourceProjection:
+  id: "bread-inventory-001"
+  currentQuantity: { value: 5, unit: "loaf" }
+  lastUpdated: "2024-01-15T10:00:01Z"
+  events: ["event-uuid-1", "event-uuid-2"]
+```
+
+### Blockchain Integration Patterns
+```yaml
+# Smart contract integration
+ContractEvent:
+  transactionHash: "0x123...789"
+  blockNumber: 12345
+  economicEvent:
+    action: "transfer-all-rights"
+    provider: "0xabc...def"
+    receiver: "0x456...123"
+    resourceQuantity: { value: 1, unit: "token" }
+
+# IPFS content addressing
+ResourceMetadata:
+  ipfsHash: "QmX...Y"
+  content:
+    resourceSpecification: "Digital Art NFT"
+    creator: "artist-123"
+    license: "CC BY-SA 4.0"
+```
+
+## Quality Assurance and Testing
+
+### Ontology Validation
+- **Logical consistency**: No contradictory class definitions
+- **Property domain/range**: Correct property usage patterns  
+- **Completeness**: All necessary concepts represented
+- **Minimality**: No redundant or unnecessary concepts
+
+### Example Data Validation
+- **Schema compliance**: All examples validate against ontology
+- **Use case coverage**: Examples cover all major use patterns
+- **Edge case handling**: Complex scenarios properly modeled
+- **Cross-format consistency**: Same semantics across formats
+
+### Community Testing Process
+- **Review periods**: Public comment periods for major changes
+- **Implementation testing**: Testing with actual software implementations
+- **Use case validation**: Testing with real economic scenarios
+- **Performance testing**: Scalability and efficiency validation
+
+## Ecosystem and Community
+
+### Active Implementations
+- **Bonfire Networks**: Decentralized social networking with economic features
+- **Sensorica**: Open source hardware development network
+- **FreedomCoop**: European cooperative ecosystem
+- **CoopCycle**: Cooperative logistics platform for local commerce
+- **Open Source Ecology**: Open source appropriate technology
+- **Mutual Aid Networks**: Community support and resource sharing
+
+### Development Community
+- **Core maintainers**: 8-12 active contributors
+- **Governance**: Consensus-based decision making
+- **Release cycle**: Major releases annually, minor releases quarterly
+- **Communication**: Matrix chat, monthly community calls, annual face-to-face
+- **Documentation**: Collaborative editing, version controlled
+
+### Academic Connections
+- **Research partnerships**: Multiple universities studying economic coordination
+- **Publications**: Academic papers on distributed economic modeling
+- **Student projects**: Thesis and research projects using ValueFlows
+- **Conferences**: Presentations at academic and practitioner conferences
+
+### Industry Adoption
+- **Pilot projects**: Several organizations testing ValueFlows implementations  
+- **Standards integration**: Work with ISO, UN/CEFACT, and W3C standards bodies
+- **Platform integration**: APIs and connectors for existing business systems
+- **Consulting ecosystem**: Growing community of implementation consultants
+
+## Future Roadmap and Development
+
+### Version 1.0 Goals
+- **Stability**: Semantic stability for production implementations
+- **Completeness**: Full coverage of identified use cases
+- **Performance**: Optimization for large-scale implementations  
+- **Tooling**: Complete development and implementation tools
+
+### Long-term Vision  
+- **Universal adoption**: Standard vocabulary for economic coordination
+- **Interoperability**: Seamless data exchange between economic platforms
+- **Innovation**: Enable new forms of economic organization
+- **Sustainability**: Support for regenerative and sustainable economics
+
+### Technical Evolution
+- **AI integration**: Machine learning for economic optimization
+- **Real-time systems**: Support for streaming and real-time coordination
+- **Mobile-first**: Optimized patterns for mobile and offline-first applications
+- **Blockchain native**: Deep integration with distributed ledger technologies
+
+This comprehensive vocabulary represents a foundational step toward creating truly interoperable systems for distributed economic coordination, supporting the emergence of more collaborative, sustainable, and equitable economic networks.
