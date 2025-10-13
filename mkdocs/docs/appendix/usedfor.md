@@ -16,7 +16,7 @@ Some of the UI/UX apps being built on hREA are
 
 * [Sensorica](https://www.sensorica.co/), an open value network in Montreal, is designing a new version of their Network Resouce Planning (NRP) software, which was used as one input for Valueflows. [A proof-of-concept](https://github.com/Sensorica/true_commons) has been started. (In process.)
 
-* Code A, an international group of university professors working on climate change issues, wants to create an application for classes to use as they do practical work to learn about methods for micro to macro climate accounting, and how to coordinate among themselves and with their communities.  Code is on [REA-Playspace github](https://github.com/lightningrodlabs/rea-playspace).  This is the first real visualization based core UI for Valueflows, and we think will be useful for other apps. (In process.)
+* The REA Playspace was started by [Lightningrodlabs](https://lightningrodlabs.org/) for Code A, an international group of university professors working on teaching about climate change issues in practical coordinated student work.  The code is on [REA-Playspace github](https://github.com/lightningrodlabs/rea-playspace).  This is the first real visualization based core UI for Valueflows, and we think will be useful for other apps. (Incomplete, but useful to fork.)
 
 A post called [Economy as Ecosystem](https://blog.holochain.org/economy-as-ecosystem/) highlights some of these.
 
@@ -34,7 +34,7 @@ The [Fediverse](https://fediverse.party/en/fediverse/) is a collection of networ
 
 ### Zenflows ecosystem
 
-* [Reflow](https://reflowproject.eu/) was an EU funded project that seeks to understand and transform urban material flows, co-create and test regenerative solutions at business, governance, and citizen levels to create a resilient circular economy.  The ReflowOS backend was developed by Dyne (see below), initially forked from the first iteration of the Bonfire application. Here's a [ReflowOS video](https://www.youtube.com/watch?v=BIMyOM5msgA) including some municipal pilots. (Complete.)
+* [Reflow](https://reflowproject.eu/) was an EU funded project that seeks to understand and transform urban material flows, co-create and test regenerative solutions at business, governance, and citizen levels to create a resilient circular economy.  The ReflowOS backend was developed by Dyne (see below), initially forked from an early iteration of the Bonfire application. Here's a [ReflowOS video](https://www.youtube.com/watch?v=BIMyOM5msgA) including some municipal pilots. (Complete.)
 
 * [Interfacer](https://www.interfacerproject.eu/), a collaboration between [FabCity Hamburg](https://fabcity.hamburg/en/) and Dyne (see below), built on Reflow to support a global network of [Fab Cities](https://fab.city/) that proposes a new urban, economic, social and industrial model that relocalises production to the city and its bioregional context, while building a digital infrastructure enabling ecological, economic and social sustainability.  Here is a list of [git repositories](https://www.interfacerproject.eu/git-repositories/). You can [try it here](https://interfacer.dyne.org/), [webinar here](https://interfacerproject.dyne.org/webinar-interfacer/), [demo here](https://diode.zone/w/anjXTju5gvAJc7V1QoBXWK). (Complete.)
 
@@ -43,11 +43,11 @@ The [Fediverse](https://fediverse.party/en/fediverse/) is a collection of networ
 
 ### Other applications
 
-* [GrowGood](https://growgood.org.au/en/) empowers farmers to track their operations from seed to sale, creating a verifiable, auditable record of their entire production process. Besides base farm operations, it includes ecological flows from sensor data, shared recipes, and proposes JSON-LD interops with other applications, to build economic networks around it.  The code and documentation is at [GrowGood gitlab](https://gitlab.com/growgood/). (In process.)
+* [GrowGood](https://growgood.org.au/en/) empowers farmers to track their operations from seed to sale, creating a verifiable, auditable record of their entire production process. Besides base farm operations, it includes ecological flows from sensor data, shared recipes, and proposes JSON-LD interops with other applications, to seed and support economic networking around it.  The code and documentation is at [GrowGood gitlab](https://gitlab.com/growgood/). (In process.)
 
-* [Web of Needs](https://matchat.org/). The goal is to do automated matching of intents with attached actors/resources on the one side and interaction patterns on the other, such that meaningful interactions can be automatically suggested to users. The code is on [github](https://github.com/researchstudio-sat/webofneeds). (In process.)
+* [Basis Project](https://basisproject.net/) is a protocol for scalable, ecological production.  It's using an auto-generated (from the owl file) Valueflows class structure in Rust to drive a reference implementation.  The [Basis code lives on github](https://github.com/basisproject/). (Complete.)
 
-* [Basis Project](https://basisproject.net/) is a protocol for scalable, ecological production.  It's using an auto-generated (from the owl file) Valueflows class structure in Rust to drive a reference implementation.  The code lives on [github](https://github.com/basisproject/). (Complete.)
+* [Web of Needs](https://matchat.org/). The goal is to do automated matching of intents with attached actors/resources on the one side and interaction patterns on the other, such that meaningful interactions can be automatically suggested to users. The [WoN code is on github](https://github.com/researchstudio-sat/webofneeds). (In process.)
 
 * [The Weather Makers](https://theweathermakers.nl/) are using Valueflows to model their ecosystem planning, engineering and management strategy for restoring water cycles as the key to achieving overall biosphere restoration. [Green the Sinai](https://www.greenthesinai.com/) is one ambitious potential project. (In process.)
 
@@ -55,4 +55,4 @@ The [Fediverse](https://fediverse.party/en/fediverse/) is a collection of networ
 
 Valueflows philosophically seeks to develop in collaboration with user groups on the ground. This round of projects is providing valuable input to the Valueflows vocabulary. We can expect some additions and extensions.
 
-However, Valueflows is working towards a stable version 1.0 of the core model that people will be able to count on for a reasonable time period.  We are close.
+However, Valueflows is also working towards a stable version 1.0 of the core model that people will be able to count on for a reasonable time period.  We are close.
