@@ -6,40 +6,48 @@ Listed here are some of the developer teams and user groups who have implemented
 
 ### Holochain ecosystem
 
-A generic Valueflows backend is being developed in [Holochain](https://www.holochain.org/), called hREA.  Information can be found on the [hREA website](https://hrea.io/), on [hREA github](https://github.com/h-REA), chat in [discord](https://discord.gg/rZkhBJ5QsP). hREA exposes the [Valueflows graphql api](https://lab.allmende.io/valueflows/vf-schemas/vf-graphql) for UI/UX apps to build on.  [Blog entry here](https://blog.holochain.org/happs-spotlight-hrea/). (The core is stable for beta use, but it is missing a few features.)
+A generic Valueflows backend is being developed in [Holochain](https://www.holochain.org/), called hREA.  Information can be found on the [hREA website](https://hrea.io/), on [hREA github](https://github.com/h-REA), chat in [discord](https://discord.gg/rZkhBJ5QsP). hREA exposes the [Valueflows graphql api](https://lab.allmende.io/valueflows/vf-schemas/vf-graphql) for UI/UX apps to build on.  [Blog entry here](https://blog.holochain.org/happs-spotlight-hrea/), [hAppenings newsletter here](https://happeningscommunity.substack.com/p/from-rea-to-hrea-a-journey-into-decentralized?r=e6jau&utm_campaign=post&utm_medium=web&triedRedirect=true). (The core is stable for beta use, but it is missing a few features on the edges.)
 
 Some of the UI/UX apps being built on hREA are 
 
-* Code A, an international group of university professors working on climate change issues, wants to create an application for classes to use as they do practical work to learn about methods for micro to macro climate accounting, and how to coordinate among themselves and with their communities.  Code is on [REA-Playspace github](https://github.com/lightningrodlabs/rea-playspace).  This is the first real visualization based core UI for Valueflows, and we think will be useful for other apps. (In process.)
-
 * [Carbon Farm Network, organized by New York Textile Lab](https://www.nycfnhub.com/) is a supply chain network that connects designers to fiber producers and mills to help grow an economically diverse textile supply ecosystem. They are featured on this older [Holochain Ecosystem video](https://www.youtube.com/watch?v=D7xDZaaQOpM). This [Plan from Recipes feature video](https://www.youtube.com/watch?v=DlnaWGtIsBQ) gives a detailed look at the progress headed into the 2025 season. (In process.)
- 
-* [Sensorica](https://www.sensorica.co/), an open value network in Montreal, is just starting design on a new version of their NRP software, which was used as one input for Valueflows. (In process.)
 
-A post called [Economy as Ecosystem](https://blog.holochain.org/economy-as-ecosystem/) highlights these user groups.
+* Requests & Offers HC/MVP, from [hAppenings Community C.I.C.](https://www.happenings.community/) will facilitate exchange within the Holochain ecosystem.  It will also provide a starting point for more generic offers and requests applications in the future.  The code is on [the hAppenings github](https://github.com/happenings-community/requests-and-offers).  (In process.)
+
+* [Sensorica](https://www.sensorica.co/), an open value network in Montreal, is designing a new version of their Network Resouce Planning (NRP) software, which was used as one input for Valueflows. [A proof-of-concept](https://github.com/Sensorica/true_commons) has been started. (In process.)
+
+* The REA Playspace was started by [Lightningrodlabs](https://lightningrodlabs.org/) for Code A, an international group of university professors working on teaching about climate change issues in practical coordinated student work.  The code is on [REA-Playspace github](https://github.com/lightningrodlabs/rea-playspace).  This is the first real visualization based core UI for Valueflows, and we think will be useful for other apps. (Incomplete, but useful to fork.)
+
+A post called [Economy as Ecosystem](https://blog.holochain.org/economy-as-ecosystem/) highlights some of these.
+
 
 ### Fediverse ecosystem
 
 The [Fediverse](https://fediverse.party/en/fediverse/) is a collection of networking applications that federate with each other using the [ActivityPub (AP)](https://activitypub.rocks/) social networking protocol as the core.
 
-* Bonfire kicked the federation direction off by supporting Valueflows as an extension of ActivityPub, and including the same [Valueflows graphql api](https://lab.allmende.io/valueflows/vf-schemas/vf-graphql) as hREA. This supports a user-friendly integration of social and economic networking, which we think is an important direction. Information is at the [Bonfire website](https://bonfirenetworks.org/), the Valueflows extension is on [gitlab](https://gitlab.com/bonfire-networks/bonfire_valueflows). (In process.)
+* Bonfire kicked the federation direction off by supporting Valueflows as an extension of ActivityPub, and including the same [Valueflows graphql api](https://lab.allmende.io/valueflows/vf-schemas/vf-graphql) as hREA. This supports a user-friendly integration of social and economic networking, which we think is an important direction. Information is at the [Bonfire website](https://bonfirenetworks.org/), the Valueflows extension is on [gitlab](https://gitlab.com/bonfire-networks/bonfire_valueflows). (In process.)  As Bonfire releases its 1.0 version in 2025, it plans on addressing specific VF use cases with community involvement.
 
-* [Reflow](https://reflowproject.eu/) was an EU funded project that seeks to understand and transform urban material flows, co-create and test regenerative solutions at business, governance, and citizen levels to create a resilient circular economy.  The ReflowOS backend was developed by Dyne (see below), built on the Bonfire application. (Complete.)
+* [LearnDeep](https://learndeep.org/), initially created by students at [MSOE](https://www.msoe.edu/), supports a network of high school fablabs in Milwaukee that receive contributions of materials from the community and share these with each other. Their code has been merged upstream and is being completed as a Bonfire flavour by the Bonfire team on [gitlab](https://gitlab.com/bonfire-networks/bonfire_upcycle). (In process.)
+
+* We are in process of proposing VF extensions for AP using their Fediverse Enhancement Proposal (FEP) process.  Proposals thus far are [Federated Marketplace](https://codeberg.org/fediverse/fep/src/branch/main/fep/0837/fep-0837.md), [Federated Work Coordination](https://codeberg.org/fediverse/fep/src/branch/main/fep/3264/fep-3264.md), [To-do's](https://codeberg.org/fediverse/fep/src/branch/main/fep/c5a1/fep-c5a1.md).  Some implementations are just kicking off.
+
+
+### Zenflows ecosystem
+
+* [Reflow](https://reflowproject.eu/) was an EU funded project that seeks to understand and transform urban material flows, co-create and test regenerative solutions at business, governance, and citizen levels to create a resilient circular economy.  The ReflowOS backend was developed by Dyne (see below), initially forked from an early iteration of the Bonfire application. Here's a [ReflowOS video](https://www.youtube.com/watch?v=BIMyOM5msgA) including some municipal pilots. (Complete.)
 
 * [Interfacer](https://www.interfacerproject.eu/), a collaboration between [FabCity Hamburg](https://fabcity.hamburg/en/) and Dyne (see below), built on Reflow to support a global network of [Fab Cities](https://fab.city/) that proposes a new urban, economic, social and industrial model that relocalises production to the city and its bioregional context, while building a digital infrastructure enabling ecological, economic and social sustainability.  Here is a list of [git repositories](https://www.interfacerproject.eu/git-repositories/). You can [try it here](https://interfacer.dyne.org/), [webinar here](https://interfacerproject.dyne.org/webinar-interfacer/), [demo here](https://diode.zone/w/anjXTju5gvAJc7V1QoBXWK). (Complete.)
 
 * [Dyne](https://www.dyne.org/) has done the Valueflows related development on Reflow and Interfacer, including developing the EU  "[Digital Product Passport](https://www.circularise.com/blog/digital-product-passports-dpp-what-how-and-why)", [webinar here](https://www.youtube.com/playlist?list=PLmwl0nkG0dPFI8bAS736myioL45oBEoeU), based on Valueflows resource tracing. (Complete.)
 
-* [LearnDeep](https://learndeep.org/), initially created by students at [MSOE](https://www.msoe.edu/), supports a network of high school fablabs in Milwaukee that receive contributions of materials from the community and share these with each other. Their code has been merged upstream and is being completed as a Bonfire flavour by the Bonfire team on [gitlab](https://gitlab.com/bonfire-networks/bonfire_upcycle). (In process.)
-
-* We are in process of proposing VF extensions for AP using their Fediverse Enhancement Proposal (FEP) process.  Proposals thus far are [Federated Marketplace](https://codeberg.org/fediverse/fep/src/branch/main/fep/0837/fep-0837.md), [Federated Work Coordination](https://codeberg.org/fediverse/fep/src/branch/main/fep/3264/fep-3264.md), [To-do's](https://codeberg.org/fediverse/fep/src/branch/main/fep/c5a1/fep-c5a1.md).
-
 
 ### Other applications
 
-* [Web of Needs](https://matchat.org/). The goal is to do automated matching of intents with attached actors/resources on the one side and interaction patterns on the other, such that meaningful interactions can be automatically suggested to users. The code is on [github](https://github.com/researchstudio-sat/webofneeds). (In process.)
+* [GrowGood](https://growgood.org.au/en/) empowers farmers to track their operations from seed to sale, creating a verifiable, auditable record of their entire production process. Besides base farm operations, it includes ecological flows from sensor data, shared recipes, and proposes JSON-LD interops with other applications, to seed and support economic networking around it.  The code and documentation is at [GrowGood gitlab](https://gitlab.com/growgood/). (In process.)
 
-* [Basis Project](https://basisproject.net/) is a protocol for scalable, ecological production.  It's using an auto-generated (from the owl file) Valueflows class structure in Rust to drive a reference implementation.  The code lives on [github](https://github.com/basisproject/). (Complete.)
+* [Basis Project](https://basisproject.net/) is a protocol for scalable, ecological production.  It's using an auto-generated (from the owl file) Valueflows class structure in Rust to drive a reference implementation.  The [Basis code lives on github](https://github.com/basisproject/). (Complete.)
+
+* [Web of Needs](https://matchat.org/). The goal is to do automated matching of intents with attached actors/resources on the one side and interaction patterns on the other, such that meaningful interactions can be automatically suggested to users. The [WoN code is on github](https://github.com/researchstudio-sat/webofneeds). (In process.)
 
 * [The Weather Makers](https://theweathermakers.nl/) are using Valueflows to model their ecosystem planning, engineering and management strategy for restoring water cycles as the key to achieving overall biosphere restoration. [Green the Sinai](https://www.greenthesinai.com/) is one ambitious potential project. (In process.)
 
@@ -47,4 +55,4 @@ The [Fediverse](https://fediverse.party/en/fediverse/) is a collection of networ
 
 Valueflows philosophically seeks to develop in collaboration with user groups on the ground. This round of projects is providing valuable input to the Valueflows vocabulary. We can expect some additions and extensions.
 
-However, Valueflows is working towards a stable version 1.0 of the core model that people will be able to count on for a reasonable time period.  We are close.
+However, Valueflows is also working towards a stable version 1.0 of the core model that people will be able to count on for a reasonable time period.  We are close.
