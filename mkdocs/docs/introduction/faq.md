@@ -7,7 +7,7 @@ hide:
 
 ### What is Valueflows?
 
-Valueflows is a vocabulary and model (an ontology) that is intended to cover any economic activity, focused on the economic networks of the "next economy", but also supporting conventional businesses and supply chains.  It's purpose is to facilitate interoperability between various economic software.
+Valueflows is a vocabulary and model (an ontology) that is intended to cover any economic activity, focused on the economic networks of the "next economy", but also supporting conventional businesses and supply chains.  It's main purpose is to facilitate interoperability between various economic software. It can also be used as an internal model for a Valueflows "native" application.
 
 ### Does Valueflows include an application that I can run or fork?
 
@@ -39,7 +39,7 @@ The Valueflows model is designed to support:
 * reciprocity with or without money, money is not assumed;
 * ecological agents as part of the network; externalities as resources.
 
-Other economic vocabularies are focused on conventional capitalit enterprise operational and accounting needs.
+Other economic vocabularies are focused on conventional capitalist enterprise operational and accounting needs.
 
 ### Where can I read more about REA?
 
@@ -63,7 +63,7 @@ While the base model is quite simple and elegant, or perhaps because of this in 
 
 ### What can I do to simplify the data entry needed for Valueflows applications?
 
-One thing to note is that the base model appears in all three layers in similar ways.  This gives applications a way to pre-fill many properties.  For example, a recipe can create many plans, where each may only need tweaking.  A commitment can pre-fill many properties from an intent that it will satisfy.  An economic event can pre-fill many properties from a commitment that it will fulfill.  There may also be application-specific opportunities, like using a hardware design to create a recipe for planning the production of the design.
+One thing to note is that the base model appears in all three layers in similar ways.  This gives applications a way to pre-fill many properties.  For example, a recipe can create many plans, where each may only need tweaking.  A commitment can pre-fill many properties from an intent that it will satisfy.  An economic event can pre-fill many properties from a commitment that it will fulfill.  There may also be application-specific opportunities, like using a hardware design to create a recipe for planning the production of the design, or creating groups of recipes by agent function for pre-populating the knowledge layer.
 
 ### Where are the rules for economic events effects on economic resources?
 
@@ -71,4 +71,4 @@ You can find those under [Concepts/Actions](../concepts/actions.md).
 
 ### Where can I find the logic for track and trace?
 
-You can find that under [Algorithms/Track and Trace](../algorithms/track.md).
+You can find some suggestions under [Algorithms/Track and Trace](../algorithms/track.md).
