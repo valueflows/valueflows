@@ -290,19 +290,6 @@
       }
     },
     {
-      "@id": "vf:ScenarioDefinition",
-      "@type": "owl:Class",
-      "rdfs:label": {
-        "@value": "Scenario Definition",
-        "@language": "en"
-      },
-      "vs:term_status": "unstable",
-      "rdfs:comment": {
-        "@value": "The type definition of one or more scenarios.",
-        "@language": "en"
-      }
-    },
-    {
       "@id": "vf:Plan",
       "@type": "owl:Class",
       "rdfs:label": {
@@ -403,19 +390,6 @@
       "vs:term_status": "unstable",
       "rdfs:comment": {
         "@value": "A grouping of agreements to bundle detailed line item reciprocity.",
-        "@language": "en"
-      }
-    },
-    {
-      "@id": "vf:Scenario",
-      "@type": "owl:Class",
-      "rdfs:label": {
-        "@value": "Scenario",
-        "@language": "en"
-      },
-      "vs:term_status": "unstable",
-      "rdfs:comment": {
-        "@value": "An estimated or analytical logical collection of higher level processes used for budgeting, analysis, plan refinement, etc.",
         "@language": "en"
       }
     },
@@ -1305,9 +1279,6 @@
               "@id": "vf:Intent"
             },
             {
-              "@id": "vf:Scenario"
-            },
-            {
               "@id": "vf:Process"
             },
             {
@@ -1460,9 +1431,6 @@
                 "@id": "vf:Proposal"
               },
               {
-                "@id": "vf:Scenario"
-              },
-              {
                 "@id": "vf:Process"
               }
             ]
@@ -1513,9 +1481,6 @@
               },
               {
                 "@id": "vf:Proposal"
-              },
-              {
-                "@id": "vf:Scenario"
               },
               {
                 "@id": "vf:Process"
@@ -1600,9 +1565,6 @@
           "@list": [
             {
               "@id": "vf:RecipeProcess"
-            },
-            {
-              "@id": "vf:ScenarioDefinition"
             }
           ]
         }
@@ -2167,15 +2129,6 @@
             },
             {
               "@id": "vf:ResourceSpecification"
-            },
-            {
-              "@id": "vf:RoleBehavior"
-            },
-            {
-              "@id": "vf:Scenario"
-            },
-            {
-              "@id": "vf:ScenarioDefinition"
             }
           ]
         }
@@ -2253,15 +2206,6 @@
             },
             {
               "@id": "vf:ResourceSpecification"
-            },
-            {
-              "@id": "vf:RoleBehavior"
-            },
-            {
-              "@id": "vf:Scenario"
-            },
-            {
-              "@id": "vf:ScenarioDefinition"
             }
           ]
         }
@@ -2809,72 +2753,6 @@
       "vs:term_status": "unstable",
       "rdfs:comment": {
         "@value": "The state of the desired economic resource, after coming out of a test or review process.",
-        "@language": "en"
-      }
-    },
-    {
-      "@id": "vf:refinementOf",
-      "@type": "owl:ObjectProperty",
-      "rdfs:label": {
-        "@value": "refinement of",
-        "@language": "en"
-      },
-      "rdfs:domain": {
-        "owl:unionOf": {
-          "@list": [
-            {
-              "@id": "vf:Scenario"
-            },
-            {
-              "@id": "vf:Plan"
-            }
-          ]
-        }
-      },
-      "rdfs:range": {
-        "@id": "vf:Scenario"
-      },
-      "vs:term_status": "unstable",
-      "rdfs:comment": {
-        "@value": "This scenario or plan refines another scenario, often as time moves closer or for more detail.",
-        "@language": "en"
-      }
-    },
-    {
-      "@id": "vf:nestedIn",
-      "@type": "owl:ObjectProperty",
-      "rdfs:label": {
-        "@value": "nested in",
-        "@language": "en"
-      },
-      "rdfs:domain": {
-        "@id": "vf:Process"
-      },
-      "rdfs:range": {
-        "@id": "vf:Scenario"
-      },
-      "vs:term_status": "unstable",
-      "rdfs:comment": {
-        "@value": "The process with its inputs and outputs is part of the scenario.",
-        "@language": "en"
-      }
-    },
-    {
-      "@id": "vf:definedAs",
-      "@type": "owl:ObjectProperty",
-      "rdfs:label": {
-        "@value": "defined as",
-        "@language": "en"
-      },
-      "rdfs:domain": {
-        "@id": "vf:Scenario"
-      },
-      "rdfs:range": {
-        "@id": "vf:ScenarioDefinition"
-      },
-      "vs:term_status": "unstable",
-      "rdfs:comment": {
-        "@value": "The scenario definition for this scenario, for example yearly budget.",
         "@language": "en"
       }
     },

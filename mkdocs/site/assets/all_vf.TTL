@@ -56,7 +56,7 @@ vf:knowledge a              owl:NamedIndividual ,
         vs:term_status      "unstable" ;
         .
 
-vf:plan a                   owl:NamedIndividual ,
+vf:planning a               owl:NamedIndividual ,
                             vf:ConceptLayer ;
         rdfs:comment        "The middle layer of the ontology, including offers and requests, schedules and promises, agreements."@en ;
         rdfs:label          "Plan Layer"@en ;
@@ -182,13 +182,6 @@ vf:Recipe a                 owl:Class ;
         rdfs:comment        "Optional instance of a recipe which directly specifies the recipe processes included."@en ;
         .
 
-vf:RecipeGroup a            owl:Class ;
-        rdfs:label          "Recipe Group"@en ;
-        vf:layer            vf:knowledge ;
-        vs:term_status      "testing" ;
-        rdfs:comment        "A grouping of recipes to facilitate planning them together."@en ;
-        .
-
 vf:RecipeProcess a          owl:Class ;
         rdfs:label          "Recipe Process"@en ;
         vf:layer            vf:knowledge ;
@@ -210,74 +203,60 @@ vf:RecipeExchange a         owl:Class ;
         rdfs:comment        "Specifies an exchange type agreement as part of a recipe."@en ;
         .
 
-vf:ScenarioDefinition a     owl:Class ;
-        rdfs:label          "Scenario Definition"@en ;
-        vf:layer            vf:knowledge ;
-        vs:term_status      "unstable" ;
-        rdfs:comment        "The type definition of one or more scenarios."@en ;
-        .
-
 vf:Plan  a                  owl:Class ;
         rdfs:label          "Plan"@en ;
-        vf:layer            vf:plan ;
+        vf:layer            vf:planning ;
         vs:term_status      "stable" ;
         rdfs:comment        "A logical collection of processes that constitute a body of scheduled work with defined deliverable(s)."@en ;
         .
 
 vf:Intent  a                owl:Class ;
         rdfs:label          "Intent"@en ;
-        vf:layer            vf:plan ;
+        vf:layer            vf:planning ;
         vs:term_status      "stable" ;
         rdfs:comment        "A proposed or planned or estimated economic flow, which could become a commitment and/or economic event."@en ;
         .
 
 vf:Proposal  a              owl:Class ;
         rdfs:label          "Proposal"@en ;
-        vf:layer            vf:plan ;
+        vf:layer            vf:planning ;
         vs:term_status      "stable" ;
         rdfs:comment        "Published requests or offers, sometimes with what is expected in return."@en ;
         .
 
 vf:ProposalList  a          owl:Class ;
         rdfs:label          "Proposal List"@en ;
-        vf:layer            vf:plan ;
+        vf:layer            vf:planning ;
         vs:term_status      "unstable" ;
         rdfs:comment        "A grouping of proposals, for publishing as a list."@en ;
         .
 
 vf:ProposalPurpose a        owl:Class ;
         rdfs:label          "Proposal Purpose"@en ;
-        vf:layer            vf:plan ;
+        vf:layer            vf:planning ;
         vs:term_status      "testing" ;
         rdfs:comment        "The type of proposal: offer or request (other types may be added)."@en ;
         .
 
 vf:Commitment  a            owl:Class ;
         rdfs:label          "Commitment"@en ;
-        vf:layer            vf:plan ;
+        vf:layer            vf:planning ;
         vs:term_status      "stable" ;
         rdfs:comment        "A planned economic flow that has been promised by an agent to another agent."@en ;
         .
 
 vf:Agreement  a             owl:Class ;
         rdfs:label          "Agreement"@en ;
-        vf:layer            vf:plan ;
+        vf:layer            vf:planning ;
         vs:term_status      "stable" ;
         rdfs:comment        "Reciprocal relations among economic agents."@en ;
         .
 
 vf:AgreementBundle  a       owl:Class ;
         rdfs:label          "Agreement Bundle"@en ;
-        vf:layer            vf:plan ;
+        vf:layer            vf:planning ;
         vs:term_status      "unstable" ;
         rdfs:comment        "A grouping of agreements to bundle detailed line item reciprocity."@en ;
-        .
-
-vf:Scenario  a              owl:Class ;
-        rdfs:label          "Scenario"@en ;
-        vf:layer            vf:plan ;
-        vs:term_status      "unstable" ;
-        rdfs:comment        "An estimated or analytical logical collection of higher level processes used for budgeting, analysis, plan refinement, etc."@en ;
         .
 
 vf:Agent  a                 owl:Class ;
@@ -504,15 +483,6 @@ vf:recipeStipulatesReciprocal
         rdfs:comment        "All the reciprocal clauses of a recipe exchange."@en ;
         .
 
-vf:plannedTogether
-        a                   owl:ObjectProperty ;
-        rdfs:label          "planned together"@en ;
-        rdfs:domain         vf:RecipeGroup ;
-        rdfs:range          vf:Recipe ;
-        vs:term_status      "unstable" ;
-        rdfs:comment        "A collection of recipes that can be planned together."@en ;
-        .
-
 vf:primaryOutput
         a                   owl:ObjectProperty ;
         rdfs:label          "primary output"@en ;
@@ -556,7 +526,7 @@ vf:independentDemandOf
         a                   owl:ObjectProperty ;
         rdfs:label          "independent demand of"@en ;
         rdfs:range          vf:Plan ;
-        rdfs:domain         [ owl:unionOf (vf:Commitment vf:Intent) ] ;
+        rdfs:domain         vf:Commitment ;
         owl:maxCardinality  1 ;
         vs:term_status      "testing" ;
         rdfs:comment        "This plan is the way this commitment or intent will be realized."@en ;
@@ -566,7 +536,7 @@ vf:hasIndependentDemand
         a                   owl:ObjectProperty ;
         owl:inverseOf       vf:independentDemandOf ;
         rdfs:label          "has independent demand"@en ;
-        rdfs:range          [ owl:unionOf (vf:Commitment vf:Intent) ]  ;
+        rdfs:range          vf:Commitment  ;
         rdfs:domain         vf:Plan ;
         vs:term_status      "testing" ;
         rdfs:comment        "The commitments and/or intents which this plan was created to deliver."@en ;
@@ -641,7 +611,7 @@ vf:relationship  a          owl:ObjectProperty ;
         .
 
 vf:inScopeOf  a             owl:ObjectProperty ;
-        rdfs:domain         [ owl:unionOf (vf:Claim vf:Commitment vf:EconomicEvent vf:Intent vf:Scenario vf:Process vf:AgentRelationship) ] ;
+        rdfs:domain         [ owl:unionOf (vf:Claim vf:Commitment vf:EconomicEvent vf:Intent vf:Process vf:AgentRelationship) ] ;
         rdfs:label          "in scope of"@en ;
         rdfs:range          vf:Agent ;
         owl:maxCardinality  1 ;
@@ -684,6 +654,15 @@ vf:containedIn a            owl:ObjectProperty ;
         rdfs:comment        "Used when an economic resource contains units also defined as separate economic resources, for example a tool kit or a package of resources for shipping."@en ;
         .
 
+vf:contains a               owl:ObjectProperty ;
+        owl:inverseOf       vf:containedIn ;
+        rdfs:label          "contains"@en ;
+        rdfs:domain         vf:EconomicResource ;
+        rdfs:range          vf:EconomicResource ;
+        vs:term_status      "unstable" ;
+        rdfs:comment        "An economic resource contains at least one other economic resource, for example a tool kit or package of resources for shipping."@en ;
+        .
+
 vf:primaryAccountable a     owl:ObjectProperty ;
         rdfs:label          "primary accountable"@en ;
         rdfs:domain         vf:EconomicResource ;
@@ -701,7 +680,6 @@ vf:hasBeginning a           owl:DatatypeProperty ;
                                 vf:EconomicEvent
                                 vf:Intent
                                 vf:Proposal
-                                vf:Scenario
                                 vf:Process) ] ;
         rdfs:range          xsd:dateTimeStamp ;
         owl:maxCardinality  1 ;
@@ -717,7 +695,6 @@ vf:hasEnd a                 owl:DatatypeProperty ;
                                 vf:EconomicEvent
                                 vf:Intent
                                 vf:Proposal
-                                vf:Scenario
                                 vf:Process) ] ;
         rdfs:range          xsd:dateTimeStamp ;
         owl:maxCardinality  1 ;
@@ -742,8 +719,7 @@ vf:hasDuration a            owl:ObjectProperty ;
         rdfs:seeAlso        time:hasDuration ;
         rdfs:label          "has duration"@en ;
         rdfs:domain         [ owl:unionOf (
-                                vf:RecipeProcess
-                                vf:ScenarioDefinition) ] ;
+                                vf:RecipeProcess) ] ;
         rdfs:range          vf:Measure ;
         owl:maxCardinality  1 ;
         vs:term_status      "testing" ;
@@ -801,7 +777,7 @@ vf:label a                  owl:DataTypeProperty ;
         rdfs:range          xsd:string ;
         owl:cardinality     1 ;
         vs:term_status      "stable" ;
-        rdfs:comment        "The display label defined in om for the unit of measure."@en ;
+        rdfs:comment        "The display label defined for the network for the unit of measure, overrides om."@en ;
         .
 
 vf:symbol a                 owl:DataTypeProperty ;
@@ -811,25 +787,7 @@ vf:symbol a                 owl:DataTypeProperty ;
         rdfs:range          xsd:string ;
         owl:maxCardinality  1 ;
         vs:term_status      "testing" ;
-        rdfs:comment        "The display symbol defined in om for the unit of measure."@en ;
-        .
-
-vf:overrideLabel a          owl:DataTypeProperty ;
-        rdfs:label          "override label"@en ;
-        rdfs:domain         vf:Unit ;
-        rdfs:range          xsd:string ;
-        owl:maxCardinality  1 ;
-        vs:term_status      "testing" ;
-        rdfs:comment        "An optional network override label to display for units of measure if the original is less appropriate."@en ;
-        .
-
-vf:overrideSymbol a         owl:DataTypeProperty ;
-        rdfs:label          "override symbol"@en ;
-        rdfs:domain         vf:Unit ;
-        rdfs:range          xsd:string ;
-        owl:maxCardinality  1 ;
-        vs:term_status      "testing" ;
-        rdfs:comment        "An optional network override symbol to display for units of measure if the original is less appropriate."@en ;
+        rdfs:comment        "The display symbol defined for the network for the unit of measure, overrides om."@en ;
         .
 
 vf:accountingQuantity a     owl:ObjectProperty ;
@@ -913,7 +871,6 @@ vf:created a                owl:DatatypeProperty ;
                                 vf:Commitment
                                 vf:Plan
                                 vf:Proposal
-                                vf:Scenario
                                 vf:EconomicEvent ) ] ;
         rdfs:range          xsd:dateTimeStamp ;
         owl:maxCardinality  1 ;
@@ -1061,11 +1018,8 @@ vf:name a                   owl:DatatypeProperty ;
                                 vf:ProcessSpecification
                                 vf:Proposal
                                 vf:Recipe
-                                vf:RecipeGroup
                                 vf:RecipeProcess
-                                vf:ResourceSpecification
-                                vf:Scenario
-                                vf:ScenarioDefinition) ] ;
+                                vf:ResourceSpecification) ] ;
         owl:maxCardinality  1 ;
         vs:term_status      "stable" ;
         rdfs:comment        "An informal or formal textual identifier for an object. Does not imply uniqueness."@en ;
@@ -1091,11 +1045,8 @@ vf:note a                   owl:DataTypeProperty ;
                                 vf:Proposal
                                 vf:Recipe
                                 vf:RecipeFlow
-                                vf:RecipeGroup
                                 vf:RecipeProcess
                                 vf:ResourceSpecification
-                                vf:Scenario
-                                vf:ScenarioDefinition
                                 vf:SpatialThing) ] ;
         rdfs:range          xsd:string ;
         owl:maxCardinality  1 ;
@@ -1145,15 +1096,6 @@ vf:reciprocal
         rdfs:range          vf:Intent ;
         vs:term_status      "testing" ;
         rdfs:comment        "The reciprocal intent(s) of this published proposal. Not meant to be used for intent matching."@en ;
-        .
-
-vf:publishedTo
-        a                   owl:ObjectProperty ;
-        rdfs:label          "published to"@en ;
-        rdfs:domain         vf:Scenario  ;
-        rdfs:range          vf:Agent ;
-        vs:term_status      "unstable" ;
-        rdfs:comment        "The agent(s) to which the scenario is published."@en ;
         .
 
 vf:proposedTo
@@ -1314,44 +1256,6 @@ vf:state
         rdfs:comment        "The required state of the desired input economic resource, after coming out of a test or review process."@en ;
         .
 
-vf:refinementOf
-        a                   owl:ObjectProperty ;
-        rdfs:label          "refinement of"@en ;
-        rdfs:domain         [ owl:unionOf (vf:Scenario vf:Plan) ] ;
-        rdfs:range          vf:Scenario ;
-        vs:term_status      "unstable" ;
-        rdfs:comment        "This scenario or plan refines another scenario, often as time moves closer or for more detail."@en ;
-        .
-
-vf:nestedIn
-        a                   owl:ObjectProperty ;
-        rdfs:label          "nested in"@en ;
-        rdfs:domain         [ owl:unionOf (vf:Process vf:Intent vf:EconomicEvent) ] ;
-        rdfs:range          vf:Scenario ;
-        vs:term_status      "unstable" ;
-        rdfs:comment        "The process with its inputs and outputs, or intent, is part of the scenario."@en ;
-        .
-
-vf:scenarioIncludes
-        a                   owl:ObjectProperty ;
-        owl:inverseOf       vf:nestedIn ;
-        rdfs:label          "scenario includes"@en ;
-        rdfs:domain         vf:Scenario ;
-        rdfs:range          [ owl:unionOf (vf:Process vf:Intent) ] ;
-        vs:term_status      "testing" ;
-        rdfs:comment        "The processes and and/or intents that constitute the plan."@en ;
-        .
-
-vf:definedAs
-        a                   owl:ObjectProperty ;
-        rdfs:label          "defined as"@en ;
-        rdfs:domain         vf:Scenario ;
-        rdfs:range          vf:ScenarioDefinition ;
-        owl:maxCardinality  1 ;
-        vs:term_status      "unstable" ;
-        rdfs:comment        "The scenario definition for this scenario, for example yearly budget."@en ;
-        .
-
 vf:clauseOf a               owl:ObjectProperty ;
         rdfs:label          "clause of"@en ;
         rdfs:domain         vf:Commitment ;
@@ -1441,14 +1345,6 @@ vf:bundles a                owl:ObjectProperty ;
         rdfs:range          vf:Agreement ;
         vs:term_status      "testing" ;
         rdfs:comment        "All the agreements included in this agreement bundle."@en ;
-        .
-
-vf:rules a                  owl:DataTypeProperty ;
-        rdfs:label          "rules"@en ;
-        rdfs:domain         vf:Agreement ;
-        rdfs:range          xsd:anyURI ;
-        vs:term_status      "unstable" ;
-        rdfs:comment        "The rules or contract that govern this agreement."@en ;
         .
 
 vf:roleLabel a              owl:DatatypeProperty ;

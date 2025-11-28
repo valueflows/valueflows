@@ -45,7 +45,6 @@ This document is not meant to imply that all of these named queries and filters 
    * claimsAsReceiver (Claim.receiver)
    * claimsInScope (Claim.inScopeOf)
    * proposalsInScope (Proposal.inScopeOf)
-   * scenariosInScope (Scenario.inScopeOf)
    * relationshipsAsSubject (Relationship.subject)
    * relationshipsAsObject (Relationship.object)
 
@@ -237,23 +236,6 @@ This document is not meant to imply that all of these named queries and filters 
    * endDate (latest .plannedWithin Process.hasEnd)
    * finished (all the .plannedWithin Process.finished are true)
 
-### Scenario
-
-*main queries:*
-
-   * scenario
-   * scenarios
-
-*filters:* searchString, (TBD date logic)
-
-*inverse queries:*
-
-   * plans (Plan.refinementOf)
-   * refinements (Scenario.refinementOf))
-   * processes (Process.nestedIn)
-   * startDate TBD
-   * endDate TBD
-
 ## Knowledge layer
 
 ### ResourceSpecification
@@ -309,17 +291,6 @@ This document is not meant to imply that all of these named queries and filters 
 
    * recipeProcess
    * recipeProcesses
-
-### ScenarioDefinition
-
-*main queries:*
-
-   * scenarioDefinition
-   * scenarioDefinitions
-
-*inverse queries:*
-
-   * scenarios (Scenario.definedAs)
 
 ### Action
 

@@ -895,15 +895,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#scenario" class="md-nav__link">
-    <span class="md-ellipsis">
-      Scenario
-    </span>
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -965,15 +956,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#scenariodefinition" class="md-nav__link">
-    <span class="md-ellipsis">
-      ScenarioDefinition
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#action" class="md-nav__link">
     <span class="md-ellipsis">
       Action
@@ -1020,8 +1002,6 @@
   
     
     
-      
-        
       
         
       
@@ -1305,27 +1285,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../concepts/estimates/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Estimates and Analysis
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../concepts/recipes/" class="md-nav__link">
         
   
@@ -1460,8 +1419,6 @@
   
     
     
-      
-        
       
         
       
@@ -1671,27 +1628,6 @@
   
   <span class="md-ellipsis">
     Offers/Requests
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../examples/ex-scenario/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Estimates and Analysis
   </span>
   
 
@@ -2313,15 +2249,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#scenario" class="md-nav__link">
-    <span class="md-ellipsis">
-      Scenario
-    </span>
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -2377,15 +2304,6 @@
   <a href="#recipeprocess" class="md-nav__link">
     <span class="md-ellipsis">
       RecipeProcess
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#scenariodefinition" class="md-nav__link">
-    <span class="md-ellipsis">
-      ScenarioDefinition
     </span>
   </a>
   
@@ -2466,7 +2384,6 @@
 <li>claimsAsReceiver (Claim.receiver)</li>
 <li>claimsInScope (Claim.inScopeOf)</li>
 <li>proposalsInScope (Proposal.inScopeOf)</li>
-<li>scenariosInScope (Scenario.inScopeOf)</li>
 <li>relationshipsAsSubject (Relationship.subject)</li>
 <li>relationshipsAsObject (Relationship.object)</li>
 </ul>
@@ -2633,21 +2550,6 @@
 <li>endDate (latest .plannedWithin Process.hasEnd)</li>
 <li>finished (all the .plannedWithin Process.finished are true)</li>
 </ul>
-<h3 id="scenario">Scenario</h3>
-<p><em>main queries:</em></p>
-<ul>
-<li>scenario</li>
-<li>scenarios</li>
-</ul>
-<p><em>filters:</em> searchString, (TBD date logic)</p>
-<p><em>inverse queries:</em></p>
-<ul>
-<li>plans (Plan.refinementOf)</li>
-<li>refinements (Scenario.refinementOf))</li>
-<li>processes (Process.nestedIn)</li>
-<li>startDate TBD</li>
-<li>endDate TBD</li>
-</ul>
 <h2 id="knowledge-layer">Knowledge layer</h2>
 <h3 id="resourcespecification">ResourceSpecification</h3>
 <p><em>main queries:</em></p>
@@ -2696,16 +2598,6 @@
 <ul>
 <li>recipeProcess</li>
 <li>recipeProcesses</li>
-</ul>
-<h3 id="scenariodefinition">ScenarioDefinition</h3>
-<p><em>main queries:</em></p>
-<ul>
-<li>scenarioDefinition</li>
-<li>scenarioDefinitions</li>
-</ul>
-<p><em>inverse queries:</em></p>
-<ul>
-<li>scenarios (Scenario.definedAs)</li>
 </ul>
 <h3 id="action">Action</h3>
 <p><em>main queries:</em></p>
