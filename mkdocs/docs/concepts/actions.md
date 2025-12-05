@@ -53,7 +53,7 @@ The behaviors that are included on the tables below are also defined as Action p
 
 ### Event Effects
 
-**eventQuantity** - Either only `resourceQuantity` or only `effortQuantity` or both make sense on an economic event with this action.  The action `use` provides for both because there can be a requirement for use of some number of a resource (or resource specification) for some time or other effort unit.
+**eventQuantity** - Either only `resourceQuantity` or only `effortQuantity` or both make sense on an economic event with this action.  The action `use` provides for both because there can be a requirement for use of some number of a resource (or resource specification) for some time or other effort unit.  Also `work` when more than one person is involved in the effort quantity. (We don't consider the person a resource in this case, it is a person's skills or available labor power for the work.)
 
 **inputOutput** - An event with this action can be `input` of a process, or `output` of a process, or should not be related to a process.  The event with the special case `outputInput` is basically an output of a process, but can sometimes also be an input to another recorded process, at the same time as it is an output.  This is because services imply delivery as they are created.
 

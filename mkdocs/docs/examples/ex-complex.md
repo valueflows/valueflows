@@ -1005,3 +1005,611 @@ This example includes recipe, plan, and actuals.
       hasNumericalValue: 1
     unitOfEffort: hour
 ```
+
+#### Building recipes
+
+This shows a partial set of recipes used together for one economic function (dairy farming). The RecipeProcess is re-used in more than one Recipe.
+
+![recipes diagram reflecting the yaml below](../assets/examples/recipes.png)
+
+``` yaml
+# Example: Complex set of recipes with re-use of recipe process.
+
+'@context':
+  - '@vocab': http://w3id.org/valueflows/ont/vf#
+
+'@graph':
+
+  - '@id': urn:uuid:3be5259d-10f0-431c-9fec-9c0c15a41234
+    '@type': ResourceSpecification
+    name: Milking herd
+
+  - '@id': urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10f5679
+    '@type': ResourceSpecification
+    name: Cow
+
+  - '@id': urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10fasdf
+    '@type': ResourceSpecification
+    name: ATV
+
+  - '@id': urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10fqer8
+    '@type': ResourceSpecification
+    name: Milking shed
+
+  - '@id': urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10fgt98
+    '@type': ResourceSpecification
+    name: Paddock
+
+  - '@id': urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10fgt99
+    '@type': ResourceSpecification
+    name: Milker pellets summer
+
+  - '@id': urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10fgt90
+    '@type': ResourceSpecification
+    name: Milker pellets winter
+
+  - '@id': urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10fio33
+    '@type': ResourceSpecification
+    name: Vat milk
+
+  - '@id': urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10ftg7y
+    '@type': ResourceSpecification
+    name: Antibiotic milk
+
+  - '@id': urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10fse43
+    '@type': ResourceSpecification
+    name: Fresh cow milk
+
+  - '@id': urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10fio99
+    '@type': ResourceSpecification
+    name: Refrigerated milk
+
+  - '@id': urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10fvb90
+    '@type': ResourceSpecification
+    name: Pasture cropping
+
+  - '@id': urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10fkki9
+    '@type': ResourceSpecification
+    name: Herd management
+
+  - '@id': urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10fdfre
+    '@type': ResourceSpecification
+    name: Milking
+
+  - '@id': urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10f4599
+    '@type': ResourceSpecification
+    name: Effluent
+
+  - '@id': urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10fbmk9
+    '@type': ResourceSpecification
+    name: Semen straw
+
+  - '@id': urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10fer45
+    '@type': ResourceSpecification
+    name: Yogurt quart
+
+  - '@id': urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10fo9u8
+    '@type': ResourceSpecification
+    name: Yogurt maker
+
+  - '@id': urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10fjkio
+    '@type': ResourceSpecification
+    name: Pasteurized milk
+
+  - '@id': urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10fleos
+    '@type': ResourceSpecification
+    name: Pasteurized cream
+
+  - '@id': urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10f8923
+    '@type': ResourceSpecification
+    name: Yogurt
+
+  - '@id': urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10fdo83
+    '@type': ResourceSpecification
+    name: Quart jar
+
+  - '@id': urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10fxs34
+    '@type': ProcessSpecification
+    name: Milk cows
+
+  - '@id': urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10ffr7n
+    '@type': ProcessSpecification
+    name: Setup fencing
+
+  - '@id': urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10fdfp9
+    '@type': ProcessSpecification
+    name: Treat mastitis
+
+  - '@id': urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10fde34
+    '@type': ProcessSpecification
+    name: Treat hoofs
+
+  - '@id': urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10fgtml
+    '@type': ProcessSpecification
+    name: Collect cows
+
+  - '@id': urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10f56jn
+    '@type': ProcessSpecification
+    name: Return cows
+
+  - '@id': urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10fqd9m
+    '@type': ProcessSpecification
+    name: Setup milking shed
+
+  - '@id': urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10fdeh0
+    '@type': ProcessSpecification
+    name: Refrigerate milk
+
+  - '@id': urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10flynn
+    '@type': ProcessSpecification
+    name: Make yogurt
+
+  - '@id': urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10fx8cr
+    '@type': ProcessSpecification
+    name: Inseminate cow
+
+  - '@id': urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10fasl5
+    '@type': ProcessSpecification
+    name: Pump effluent
+
+  - '@id': urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10f9s87
+    '@type': ProcessSpecification
+    name: Clean milking shed
+
+  - '@id': urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10fd3kj
+    '@type': ProcessSpecification
+    name:
+
+
+  - '@id': urn:uuid:33e8933b-ff73-4a01-964a-ca7a98893083
+    '@type': RecipeFlow
+    recipeOutputOf: urn:uuid:e1721a61-cd47-4556-84b9-8b1b81da15bf # collect
+    action: modify
+    resourceConformsTo: urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10fgt98 # the paddock
+    resourceQuantity:
+      hasUnit: one
+      hasNumericalValue: 1
+
+  - '@id': urn:uuid:33e8933b-ff73-4a01-964a-ca7a98893084
+    '@type': RecipeFlow
+    recipeOutputOf: urn:uuid:e1721a61-cd47-4556-84b9-8b1b81da15bf # collect
+    action: modify
+    resourceConformsTo: urn:uuid:3be5259d-10f0-431c-9fec-9c0c15a41234 # the milking herd
+    resourceQuantity:
+      hasUnit: one
+      hasNumericalValue: 1
+
+  - '@id': urn:uuid:e1721a61-cd47-4556-84b9-8b1b81da15bf
+    '@type': RecipeProcess
+    name: Collect cows from paddock
+    basedOn: urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10fgtml
+    hasDuration:
+      hasUnit: hour
+      hasNumericalValue: .5
+    note: Milker gets quad (ATV) from Machine Shed and goes to collect cows (2.30am).  Round them up and Move Cows calmly from their paddock along the laneway to the dairy.  At the dairy yard, cows stand on the backing gate and flow into the dairy at their own pace.  Note which cows are lame or have saw feet
+
+  - '@id': urn:uuid:60f4204e-b8d2-4026-8577-102c3f82c0ah
+    '@type': RecipeFlow
+    recipeInputOf: urn:uuid:e1721a61-cd47-4556-84b9-8b1b81da15bf # collect
+    action: work
+    resourceConformsTo: urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10fdfre # milking
+    effortQuantity:
+      hasUnit: hour
+      hasNumericalValue: .5
+
+  - '@id': urn:uuid:60f4204e-b8d2-4026-8577-102c3f82c0ai
+    '@type': RecipeFlow
+    recipeInputOf: urn:uuid:e1721a61-cd47-4556-84b9-8b1b81da15bf # collect
+    action: use
+    resourceConformsTo: urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10fasdf # ATV
+    effortQuantity:
+      hasUnit: hour
+      hasNumericalValue: .5
+
+  - '@id': urn:uuid:33e8933b-ff73-4a01-964a-ca7a988930aj
+    '@type': RecipeFlow
+    recipeInputOf: urn:uuid:e1721a61-cd47-4556-84b9-8b1b81da15bf # collect
+    action: modify
+    resourceConformsTo: urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10fgt98 # the paddock
+    resourceQuantity:
+      hasUnit: one
+      hasNumericalValue: 1
+
+  - '@id': urn:uuid:33e8933b-ff73-4a01-964a-ca7a988930ak
+    '@type': RecipeFlow
+    recipeInputOf: urn:uuid:e1721a61-cd47-4556-84b9-8b1b81da15bf # collect
+    action: modify
+    resourceConformsTo: urn:uuid:3be5259d-10f0-431c-9fec-9c0c15a41234 # the milking herd
+    resourceQuantity:
+      hasUnit: one
+      hasNumericalValue: 1
+
+
+  - '@id': urn:uuid:33e8933b-ff73-4a01-964a-ca7a9889fg89
+    '@type': RecipeFlow
+    recipeOutputOf: urn:uuid:e1721a61-cd47-4556-84b9-8b1b81da45bd # setup
+    action: modify
+    resourceConformsTo: urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10fqer8 # the milking shed
+    resourceQuantity:
+      hasUnit: one
+      hasNumericalValue: 1
+
+  - '@id': urn:uuid:e1721a61-cd47-4556-84b9-8b1b81dakofd
+    '@type': RecipeProcess
+    name: Setup the milking shed
+    basedOn: urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10fqd9m
+    hasDuration:
+      hasUnit: hour
+      hasNumericalValue: .5
+
+  - '@id': urn:uuid:60f4204e-b8d2-4026-8577-102c3f82fg78
+    '@type': RecipeFlow
+    recipeInputOf: urn:uuid:e1721a61-cd47-4556-84b9-8b1b81da45bd # setup
+    action: accept
+    resourceConformsTo: urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10fqer8 # the milking shed
+    effortQuantity:
+      hasUnit: one
+      hasNumericalValue: 1
+
+  - '@id': urn:uuid:60f4204e-b8d2-4026-8577-102c3f82cv8k
+    '@type': RecipeFlow
+    recipeInputOf: urn:uuid:e1721a61-cd47-4556-84b9-8b1b81da45bd # setup
+    action: work
+    resourceConformsTo: urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10fdfre # milking
+    effortQuantity:
+      hasUnit: hour
+      hasNumericalValue: .5
+
+
+  - '@id': urn:uuid:33e8933b-ff73-4a01-964a-ca7a9889dfi9
+    '@type': RecipeFlow
+    recipeOutputOf: urn:uuid:e1721a61-cd47-4556-84b9-8b1b81da45bz # milk
+    action: produce
+    resourceConformsTo: urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10ftg7y # antibiotic milk
+    resourceQuantity:
+      hasUnit: liter
+      hasNumericalValue: 30
+
+  - '@id': urn:uuid:33e8933b-ff73-4a01-964a-ca7a9889ggf0
+    '@type': RecipeFlow
+    recipeOutputOf: urn:uuid:e1721a61-cd47-4556-84b9-8b1b81da45bz # milk
+    action: produce
+    resourceConformsTo: urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10fse43 # fresh cow milk
+    resourceQuantity:
+      hasUnit: liter
+      hasNumericalValue: 200
+
+  - '@id': urn:uuid:33e8933b-ff73-4a01-964a-ca7a9889vbmk
+    '@type': RecipeFlow
+    recipeOutputOf: urn:uuid:e1721a61-cd47-4556-84b9-8b1b81da45bz # milk
+    action: produce
+    resourceConformsTo: urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10fio33 # vat milk
+    resourceQuantity:
+      hasUnit: liter
+      hasNumericalValue: 5000
+
+  - '@id': urn:uuid:33e8933b-ff73-4a01-964a-ca7a9889dfi9
+    '@type': RecipeFlow
+    recipeOutputOf: urn:uuid:e1721a61-cd47-4556-84b9-8b1b81da45bz # milk
+    action: modify
+    resourceConformsTo: urn:uuid:3be5259d-10f0-431c-9fec-9c0c15a41234 # the milking herd
+    resourceQuantity:
+      hasUnit: one
+      hasNumericalValue: 1
+
+  - '@id': urn:uuid:33e8933b-ff73-4a01-964a-ca7a9889dfi9
+    '@type': RecipeFlow
+    recipeoutputOf: urn:uuid:e1721a61-cd47-4556-84b9-8b1b81da45bz # milk
+    action: modify
+    resourceConformsTo: urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10fqer8 # the milking shed
+    effortQuantity:
+      hasUnit: one
+      hasNumericalValue: 1
+
+  - '@id': urn:uuid:e1721a61-cd47-4556-84b9-8b1b81da45bz
+    '@type': RecipeProcess
+    name: Milk and dip the cows winter
+    basedOn: urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10fxs34
+    hasDuration:
+      hasUnit: hour
+      hasNumericalValue: 1
+
+  - '@id': urn:uuid:60f4204e-b8d2-4026-8577-102c3f82vb87
+    '@type': RecipeFlow
+    recipeInputOf: urn:uuid:e1721a61-cd47-4556-84b9-8b1b81da45bz # milk
+    action: accept
+    resourceConformsTo: urn:uuid:3be5259d-10f0-431c-9fec-9c0c15a41234 # the milking herd
+    resourceQuantity:
+      hasUnit: one
+      hasNumericalValue: 1
+
+  - '@id': urn:uuid:60f4204e-b8d2-4026-8577-102c3f82zss8
+    '@type': RecipeFlow
+    recipeInputOf: urn:uuid:e1721a61-cd47-4556-84b9-8b1b81da45bz # milk
+    action: work
+    resourceConformsTo: urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10fdfre # milking
+    effortQuantity:
+      hasUnit: hour
+      hasNumericalValue: 1.5
+    resourceQuantity:
+      hasUnit: one
+      hasNumericalValue: 2
+
+  - '@id': urn:uuid:33e8933b-ff73-4a01-964a-ca7a9889dfi9
+    '@type': RecipeFlow
+    recipeInputOf: urn:uuid:e1721a61-cd47-4556-84b9-8b1b81da45bz # milk
+    action: accept
+    resourceConformsTo: urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10fqer8 # the milking shed
+    stage: urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10fqd9m # the shed must be at stage setup
+    effortQuantity:
+      hasUnit: one
+      hasNumericalValue: 1
+
+  - '@id': urn:uuid:60f4204e-b8d2-4026-8577-102c3f82ft77
+    '@type': RecipeFlow
+    recipeInputOf: urn:uuid:e1721a61-cd47-4556-84b9-8b1b81da45bz # milk
+    action: consume
+    resourceConformsTo: urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10fgt90 # milker pellets winter
+    resourceQuantity:
+      hasUnit: kilogram
+      hasNumericalValue: 500
+
+
+  - '@id': urn:uuid:33e8933b-ff73-4a01-964a-ca7a9889dfi9
+    '@type': RecipeFlow
+    recipeOutputOf: urn:uuid:e1721a61-cd47-4556-84b9-8b1b81da45bq # milk
+    action: produce
+    resourceConformsTo: urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10ftg7y # antibiotic milk
+    resourceQuantity:
+      hasUnit: kilogram
+      hasNumericalValue: 30
+
+  - '@id': urn:uuid:33e8933b-ff73-4a01-964a-ca7a9889ggf0
+    '@type': RecipeFlow
+    recipeOutputOf: urn:uuid:e1721a61-cd47-4556-84b9-8b1b81da45bq # milk
+    action: produce
+    resourceConformsTo: urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10fse43 # fresh cow milk
+    resourceQuantity:
+      hasUnit: kilogram
+      hasNumericalValue: 200
+
+  - '@id': urn:uuid:33e8933b-ff73-4a01-964a-ca7a9889vbmk
+    '@type': RecipeFlow
+    recipeOutputOf: urn:uuid:e1721a61-cd47-4556-84b9-8b1b81da45bq # milk
+    action: produce
+    resourceConformsTo: urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10fio33 # vat milk
+    resourceQuantity:
+      hasUnit: kilogram
+      hasNumericalValue: 1000
+
+  - '@id': urn:uuid:33e8933b-ff73-4a01-964a-ca7a9889dfi9
+    '@type': RecipeFlow
+    recipeOutputOf: urn:uuid:e1721a61-cd47-4556-84b9-8b1b81da45bq # milk
+    action: modify
+    resourceConformsTo: urn:uuid:3be5259d-10f0-431c-9fec-9c0c15a41234 # the milking herd
+    resourceQuantity:
+      hasUnit: one
+      hasNumericalValue: 1
+
+  - '@id': urn:uuid:33e8933b-ff73-4a01-964a-ca7a9889dfi9
+    '@type': RecipeFlow
+    recipeoutputOf: urn:uuid:e1721a61-cd47-4556-84b9-8b1b81da45bq # milk
+    action: modify
+    resourceConformsTo: urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10fqer8 # the milking shed
+    effortQuantity:
+      hasUnit: one
+      hasNumericalValue: 1
+
+  - '@id': urn:uuid:e1721a61-cd47-4556-84b9-8b1b81da45bq
+    '@type': RecipeProcess
+    name: Milk and dip the cows summer
+    basedOn: urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10fxs34
+    hasDuration:
+      hasUnit: hour
+      hasNumericalValue: 1
+
+  - '@id': urn:uuid:60f4204e-b8d2-4026-8577-102c3f82vb87
+    '@type': RecipeFlow
+    recipeInputOf: urn:uuid:e1721a61-cd47-4556-84b9-8b1b81da45bq # milk
+    action: accept
+    resourceConformsTo: urn:uuid:3be5259d-10f0-431c-9fec-9c0c15a41234 # the milking herd
+    stage: urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10fgtml # the herd must be at stage collect (already collected)
+    resourceQuantity:
+      hasUnit: one
+      hasNumericalValue: 1
+
+  - '@id': urn:uuid:60f4204e-b8d2-4026-8577-102c3f82zss8
+    '@type': RecipeFlow
+    recipeInputOf: urn:uuid:e1721a61-cd47-4556-84b9-8b1b81da45bq # milk
+    action: work
+    resourceConformsTo: urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10fdfre # milking
+    effortQuantity:
+      hasUnit: hour
+      hasNumericalValue: 1.5
+    resourceQuantity:
+      hasUnit: one
+      hasNumericalValue: 2 # 2 skillsets (2 people for 1.5 hours each)
+
+  - '@id': urn:uuid:33e8933b-ff73-4a01-964a-ca7a9889dfi9
+    '@type': RecipeFlow
+    recipeInputOf: urn:uuid:e1721a61-cd47-4556-84b9-8b1b81da45bq # milk
+    action: accept
+    resourceConformsTo: urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10fqer8 # the milking shed
+    stage: urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10fqd9m # the shed must be at stage setup
+    effortQuantity:
+      hasUnit: one
+      hasNumericalValue: 1
+
+  - '@id': urn:uuid:60f4204e-b8d2-4026-8577-102c3f82ft77
+    '@type': RecipeFlow
+    recipeInputOf: urn:uuid:e1721a61-cd47-4556-84b9-8b1b81da45bq # milk
+    action: consume
+    resourceConformsTo: urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10fgt99 # milker pellets summer
+    resourceQuantity:
+      hasUnit: kilogram
+      hasNumericalValue: 1000
+
+
+  - '@id': urn:uuid:33e8933b-ff73-4a01-964a-ca7a9889lopi
+    '@type': RecipeFlow
+    recipeOutputOf: urn:uuid:e1721a61-cd47-4556-84b9-8b1b81da45sd # return cows
+    action: modify
+    resourceConformsTo: urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10fgt98 # the paddock
+    resourceQuantity:
+      hasUnit: one
+      hasNumericalValue: 1
+
+  - '@id': urn:uuid:33e8933b-ff73-4a01-964a-ca7a9889cvbb
+    '@type': RecipeFlow
+    recipeOutputOf: urn:uuid:e1721a61-cd47-4556-84b9-8b1b81da45sd # return cows
+    action: modify
+    resourceConformsTo: urn:uuid:3be5259d-10f0-431c-9fec-9c0c15a41234 # the milking herd
+    resourceQuantity:
+      hasUnit: one
+      hasNumericalValue: 1
+
+  - '@id': urn:uuid:e1721a61-cd47-4556-84b9-8b1b81da45sd
+    '@type': RecipeProcess
+    name: Return the cows
+    basedOn: urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10f56jn
+    hasDuration:
+      hasUnit: hour
+      hasNumericalValue: .5
+    note: Milker uses Quad (ATV) to chase stranglers and herd to new paddock. Ensure fences are set up for morning collection. Check feed in paddock and pasture strip size. Check water troughs.
+
+  - '@id': urn:uuid:60f4204e-b8d2-4026-8577-102c3f82gt90
+    '@type': RecipeFlow
+    recipeInputOf: urn:uuid:e1721a61-cd47-4556-84b9-8b1b81da45sd # return cows
+    action: accept
+    resourceConformsTo: urn:uuid:3be5259d-10f0-431c-9fec-9c0c15a41234 # the milking herd
+    stage: urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10fxs34 # resource must be at stage milk (have been milked)
+    resourceQuantity:
+      hasUnit: one
+      hasNumericalValue: 1
+
+  - '@id': urn:uuid:33e8933b-ff73-4a01-964a-ca7a98895tgf
+    '@type': RecipeFlow
+    recipeInputOf: urn:uuid:e1721a61-cd47-4556-84b9-8b1b81da45sd # return cows
+    action: accept
+    resourceConformsTo: urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10fgt98 # the paddock
+    stage:   # paddock must be at stage fence setup before returning
+    resourceQuantity:
+      hasUnit: one
+      hasNumericalValue: 1
+
+  - '@id': urn:uuid:60f4204e-b8d2-4026-8577-102c3f82rflm
+    '@type': RecipeFlow
+    recipeInputOf: urn:uuid:e1721a61-cd47-4556-84b9-8b1b81da45sd # return cows
+    action: use
+    resourceConformsTo: urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10fasdf # ATV
+    effortQuantity:
+      hasUnit: hour
+      hasNumericalValue: .5
+
+
+  - '@id': urn:uuid:33e8933b-ff73-4a01-964a-ca7a9889sfll
+    '@type': RecipeFlow
+    recipeOutputOf: urn:uuid:e1721a61-cd47-4556-84b9-8b1b81daer4r # setup fencing
+    action: modify
+    resourceConformsTo: urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10fgt98 # the paddock
+    resourceQuantity:
+      hasUnit: one
+      hasNumericalValue: 1
+
+  - '@id': urn:uuid:e1721a61-cd47-4556-84b9-8b1b81daer4r
+    '@type': RecipeProcess
+    name: Setup fencing for strip grazing
+    basedOn: urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10ffr7n
+    hasDuration:
+      hasUnit: hour
+      hasNumericalValue: .5
+    note: Set up fencing for next herd feeding cow feed.  Assess grass supply (was it over eaten, under eaten, do we have to change) for optimal strip grazing.
+
+  - '@id': urn:uuid:33e8933b-ff73-4a01-964a-ca7a9889cv99
+    '@type': RecipeFlow
+    recipeInputOf: urn:uuid:e1721a61-cd47-4556-84b9-8b1b81daer4r # setup fencing
+    action: accept
+    resourceConformsTo: urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10fgt98 # the paddock
+    stage: urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10fgtml # cows must have been collected from the paddock
+    resourceQuantity:
+      hasUnit: one
+      hasNumericalValue: 1
+
+  - '@id': urn:uuid:33e8933b-ff73-4a01-964a-ca7a9889ki88
+    '@type': RecipeFlow
+    recipeInputOf: urn:uuid:e1721a61-cd47-4556-84b9-8b1b81daer4r # setup fencing
+    action: work
+    resourceConformsTo: urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10fvb90 # pasture cropping
+    effortQuantity:
+      hasUnit: hour
+      hasNumericalValue: .5
+
+
+  - '@id': urn:uuid:33e8933b-ff73-4a01-964a-ca7a9889dcdc
+    '@type': RecipeFlow
+    recipeOutputOf: urn:uuid:e1721a61-cd47-4556-84b9-8b1b81davgf1 # cleanup
+    action: modify
+    resourceConformsTo: urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10fqer8 # the milking shed
+    resourceQuantity:
+      hasUnit: one
+      hasNumericalValue: 1
+
+  - '@id': urn:uuid:33e8933b-ff73-4a01-964a-ca7a9889oi88
+    '@type': RecipeFlow
+    recipeOutputOf: urn:uuid:e1721a61-cd47-4556-84b9-8b1b81davgf1 # cleanup
+    action: produce
+    resourceConformsTo: urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10f4599 # effluent
+    resourceQuantity:
+      hasUnit: liter # ??
+      hasNumericalValue: 1000 # ??
+
+  - '@id': urn:uuid:e1721a61-cd47-4556-84b9-8b1b81davgf1
+    '@type': RecipeProcess
+    name: Cleanup the milking shed
+    basedOn: urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10fasl5
+    hasDuration:
+      hasUnit: hour
+      hasNumericalValue: .5
+
+  - '@id': urn:uuid:60f4204e-b8d2-4026-8577-102c3f82fgu9
+    '@type': RecipeFlow
+    recipeInputOf: urn:uuid:e1721a61-cd47-4556-84b9-8b1b81davgf1 # cleanup
+    action: accept
+    resourceConformsTo: urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10fqer8 # the milking shed
+    stage: urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10fxs34 # after the milking is done
+    effortQuantity:
+      hasUnit: one
+      hasNumericalValue: 1
+
+  - '@id': urn:uuid:60f4204e-b8d2-4026-8577-102c3f82lkf1
+    '@type': RecipeFlow
+    recipeInputOf: urn:uuid:e1721a61-cd47-4556-84b9-8b1b81davgf1 # cleanup
+    action: work
+    resourceConformsTo: urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10fdfre # milking
+    effortQuantity:
+      hasUnit: hour
+      hasNumericalValue: .5
+
+
+  - '@id': urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10fd3ou
+    '@type': Recipe
+    name: Milk cows winter
+    recipeIncludes:
+    - '@id': urn:uuid:e1721a61-cd47-4556-84b9-8b1b81da15bf # collect cows
+    - '@id': urn:uuid:e1721a61-cd47-4556-84b9-8b1b81dakofd # setup milking shed
+    - '@id': urn:uuid:e1721a61-cd47-4556-84b9-8b1b81daer4r # setup the fencing
+    - '@id': urn:uuid:e1721a61-cd47-4556-84b9-8b1b81da45bz # milk and dip cows winter
+    - '@id': urn:uuid:e1721a61-cd47-4556-84b9-8b1b81da45sd # return cows
+    - '@id': urn:uuid:e1721a61-cd47-4556-84b9-8b1b81davgf1 # clean milking shed
+
+  - '@id': urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10fd3ou
+    '@type': Recipe
+    name: Milk cows summer
+    recipeIncludes:
+    - '@id': urn:uuid:e1721a61-cd47-4556-84b9-8b1b81da15bf # collect cows
+    - '@id': urn:uuid:e1721a61-cd47-4556-84b9-8b1b81dakofd # setup milking shed
+    - '@id': urn:uuid:e1721a61-cd47-4556-84b9-8b1b81daer4r # setup the fencing
+    - '@id': urn:uuid:e1721a61-cd47-4556-84b9-8b1b81da45bq # milk and dip cows summer
+    - '@id': urn:uuid:e1721a61-cd47-4556-84b9-8b1b81da45sd # return cows
+    - '@id': urn:uuid:e1721a61-cd47-4556-84b9-8b1b81davgf1 # clean milking shed
+```
