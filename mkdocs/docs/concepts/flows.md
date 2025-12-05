@@ -43,11 +43,6 @@ Often agents will start their plans independently and record their initial inten
 
 ![diagram showing matching of 2 Intents from different agents, satisfied by 1 Commitment, fulfilled by an Event](../assets/matched.png)
 
-## Granularity
-
-Intents, Commitments, and Economic Events can occur at any granularity that is needed or for which data can be obtained.  So they primarily are used for all operational needs, but can also be used at higher levels for budgeting for organizations, analytical and high level planning needs for communities or regions, etc.
-
-Any flows that are part of a [Plan](plan.md) are operational, defined at the lowest level.  Flows that are part of a [Scenario](estimates.md) are not operational.  They could have many uses, from pre-planning to higher level analysis, but are not considered part of any scheduled planning for what will actually occur.
 
 ## Actions
 
