@@ -522,7 +522,7 @@ Alternate view of this workflow process, using the more relational directionalit
       hasNumericalValue: 1
 ```
 
-#### Combine and separate
+#### Combine and separate with packing container
 
 Simple pack and unpack of resources into and out of a container resource, using `combine` and `separate`.
 
@@ -792,7 +792,6 @@ Simple pack and unpack of resources into and out of a container resource, using 
     accountingQuantity:
       hasUnit: one
       hasNumericalValue: 1
-    containedIn: 
 ```
 Alternate view of these pack-unpack processes, using the more relational directionality option.
 ``` yaml
@@ -931,6 +930,175 @@ Alternate view of these pack-unpack processes, using the more relational directi
       hasUnit: one
       hasNumericalValue: 1
 ```
+
+#### Combine and separate into ongoing resource
+
+Simple addition of a resource into a containing resource, using `combine` and `separate`.
+
+![add cow to herd diagram reflecting the yaml below](../assets/examples/comb-sep-add.png)
+
+``` yaml
+# Example: Simple add and remove to and from existing resource
+
+'@context':
+  - '@vocab': http://w3id.org/valueflows/ont/vf#
+  - dairy: https://dairy.example/
+
+'@graph':
+
+  # Economic resources before
+
+  - '@id': dairy:e1721a61-cd47-4556-84b9-8b1b81da15bf
+    '@type': EconomicResource
+    conformsTo: https://www.wikidata.org/wiki/Q11748378 # cow
+    trackingIdentifier: cow12
+    accountingQuantity:
+      hasUnit: one
+      hasNumericalValue: 1
+    containedIn: dairy:3129ca8b-fcda-45be-bbda-294dc924d3b9
+
+  - '@id': dairy:e1721a61-cd47-4556-84b9-8b1b81da15bg
+    '@type': EconomicResource
+    conformsTo: https://www.wikidata.org/wiki/Q11748378 # cow
+    trackingIdentifier: cow45
+    accountingQuantity:
+      hasUnit: one
+      hasNumericalValue: 1
+    containedIn:
+
+  - '@id': dairy:e1721a61-cd47-4556-84b9-8b1b81da15bh
+    '@type': EconomicResource
+    conformsTo: https://www.wikidata.org/wiki/Q11748378 # cow
+    trackingIdentifier: cow40
+    accountingQuantity:
+      hasUnit: one
+      hasNumericalValue: 1
+    containedIn: dairy:3129ca8b-fcda-45be-bbda-294dc924d3b9
+
+  - '@id': dairy:3129ca8b-fcda-45be-bbda-294dc924d3b9
+    '@type': EconomicResource
+    conformsTo: https://www.wikidata.org/wiki/Q209542 # herd
+    accountingQuantity:
+      hasUnit: one
+      hasNumericalValue: 1
+
+  # Adding process
+
+  - '@id': dairy:02b39a30-3e04-4305-9656-7f261aa63c84
+    '@type': Process
+    name: Add cow to the herd
+    hasInput:
+
+    - '@id': dairy:b52a5815-fae9-43bf-be95-833b95dc0adb
+      '@type': EconomicEvent
+      action: accept
+      provider: https://dairy.example/
+      receiver: https://dairy.example/
+      resourceInventoriedAs: dairy:3129ca8b-fcda-45be-bbda-294dc924d3b9 # herd
+      resourceQuantity:
+        hasUnit: one
+        hasNumericalValue: 1
+      note: Herd already has some cows.
+
+    - '@id': dairy:b90b0b77-09a2-42e2-8bd4-e9ae2c1c6172
+      '@type': EconomicEvent
+      action: combine
+      provider: https://dairy.example/
+      receiver: https://dairy.example/
+      resourceInventoriedAs: dairy:e1721a61-cd47-4556-84b9-8b1b81da15bg # cow45
+      resourceQuantity:
+        hasUnit: one
+        hasNumericalValue: 1
+
+    hasOutput:
+
+    - '@id': dairy:b52a5815-fae9-43bf-be95-833b95dc0456
+      '@type': EconomicEvent
+      action: modify
+      provider: https://dairy.example/
+      receiver: https://dairy.example/
+      resourceInventoriedAs: dairy:3129ca8b-fcda-45be-bbda-294dc924d3b9 # herd
+      resourceQuantity:
+        hasUnit: one
+        hasNumericalValue: 1
+      note: This resource stays the same, but has a new member
+
+  # Removing process
+
+  - '@id': dairy:33e8933b-ff73-4a01-964a-ca7a98893083
+    '@type': Process
+    name: Remove cow from the herd
+    hasInput:
+
+    - '@id': dairy:33e8933b-ff73-4a01-964a-ca7a98893
+      '@type': EconomicEvent
+      action: accept
+      provider: https://dairy.example/
+      receiver: https://dairy.example/
+      resourceInventoriedAs: dairy:3129ca8b-fcda-45be-bbda-294dc924d3b9 # herd
+      resourceQuantity:
+        hasUnit: one
+        hasNumericalValue: 1
+
+    hasOutput:
+
+    - '@id': dairy:60f4204e-b8d2-4026-8577-102c3f82c0af
+      '@type': EconomicEvent
+      action: modify
+      provider: https://dairy.example/
+      receiver: https://dairy.example/
+      resourceInventoriedAs: dairy:3129ca8b-fcda-45be-bbda-294dc924d3b9 # herd
+      resourceQuantity:
+        hasUnit: one
+        hasNumericalValue: 1
+
+    - '@id': dairy:60f4204e-b8d2-4026-8577-102c3fkm98g1
+      '@type': EconomicEvent
+      action: separate
+      provider: https://dairy.example/
+      receiver: https://dairy.example/
+      resourceInventoriedAs: dairy:e1721a61-cd47-4556-84b9-8b1b81da15bf # cow12
+      resourceQuantity:
+        hasUnit: one
+        hasNumericalValue: 1
+
+  # Economic resources at end
+
+  - '@id': dairy:e1721a61-cd47-4556-84b9-8b1b81da15bf
+    '@type': EconomicResource
+    conformsTo: https://www.wikidata.org/wiki/Q11748378 # cow
+    trackingIdentifier: cow12
+    accountingQuantity:
+      hasUnit: one
+      hasNumericalValue: 1
+    containedIn:
+
+  - '@id': dairy:e1721a61-cd47-4556-84b9-8b1b81da15bg
+    '@type': EconomicResource
+    conformsTo: https://www.wikidata.org/wiki/Q11748378 # cow
+    trackingIdentifier: cow45
+    accountingQuantity:
+      hasUnit: one
+      hasNumericalValue: 1
+    containedIn: dairy:3129ca8b-fcda-45be-bbda-294dc924d3b9
+
+  - '@id': dairy:e1721a61-cd47-4556-84b9-8b1b81da15bh
+    '@type': EconomicResource
+    conformsTo: https://www.wikidata.org/wiki/Q11748378 # cow
+    trackingIdentifier: cow40
+    accountingQuantity:
+      hasUnit: one
+      hasNumericalValue: 1
+    containedIn: dairy:3129ca8b-fcda-45be-bbda-294dc924d3b9
+
+  - '@id': dairy:3129ca8b-fcda-45be-bbda-294dc924d3b9
+    '@type': EconomicResource
+    conformsTo: https://www.wikidata.org/wiki/Q209542 # herd
+    accountingQuantity:
+      hasUnit: one
+      hasNumericalValue: 1
+```
+
 #### Stage and state
 
 Simple assembly and testing showing use of stage and state.
