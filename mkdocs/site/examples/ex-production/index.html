@@ -9,7 +9,7 @@
       
       
       
-        <link rel="prev" href="../ex-resource/">
+        <link rel="prev" href="../ex-planning/">
       
       
         <link rel="next" href="../ex-exchange/">
@@ -1175,8 +1175,6 @@
       
         
       
-        
-      
     
     
       
@@ -1280,6 +1278,48 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../ex-proposals/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Offers and Requests
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ex-planning/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Recipes and Planning
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -1356,18 +1396,36 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#combine-and-separate" class="md-nav__link">
+  <a href="#stage-and-state" class="md-nav__link">
     <span class="md-ellipsis">
-      Combine and separate
+      Stage and state
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#stage-and-state" class="md-nav__link">
+  <a href="#manufacturing-and-workflow-with-recipe-and-plan" class="md-nav__link">
     <span class="md-ellipsis">
-      Stage and state
+      Manufacturing and workflow with Recipe and Plan
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#combine-and-separate-with-packing-container" class="md-nav__link">
+    <span class="md-ellipsis">
+      Combine and separate with packing container
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#combine-and-separate-with-ongoing-containing-resource" class="md-nav__link">
+    <span class="md-ellipsis">
+      Combine and separate with ongoing containing resource
     </span>
   </a>
   
@@ -1403,69 +1461,6 @@
   
   <span class="md-ellipsis">
     Exchanges and Transfers
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../ex-planning/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Planning
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../ex-complex/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Plan-Produce-Exchange
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../ex-proposals/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Offers/Requests
   </span>
   
 
@@ -1982,18 +1977,36 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#combine-and-separate" class="md-nav__link">
+  <a href="#stage-and-state" class="md-nav__link">
     <span class="md-ellipsis">
-      Combine and separate
+      Stage and state
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#stage-and-state" class="md-nav__link">
+  <a href="#manufacturing-and-workflow-with-recipe-and-plan" class="md-nav__link">
     <span class="md-ellipsis">
-      Stage and state
+      Manufacturing and workflow with Recipe and Plan
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#combine-and-separate-with-packing-container" class="md-nav__link">
+    <span class="md-ellipsis">
+      Combine and separate with packing container
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#combine-and-separate-with-ongoing-containing-resource" class="md-nav__link">
+    <span class="md-ellipsis">
+      Combine and separate with ongoing containing resource
     </span>
   </a>
   
@@ -2529,7 +2542,584 @@ Alternate view of this workflow process, using the more relational directionalit
 <span class="w">      </span><span class="nt">hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">one</span>
 <span class="w">      </span><span class="nt">hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
 </code></pre></div></p>
-<h4 id="combine-and-separate">Combine and separate</h4>
+<h4 id="stage-and-state">Stage and state</h4>
+<p>Simple assembly and testing showing use of stage and state.</p>
+<p><img alt="stage state diagram reflecting the yaml below" src="../../assets/examples/stage-state-simple.png" /></p>
+<p><div class="highlight"><pre><span></span><code><span class="c1"># Example: Process using stage and state</span>
+<span class="c1"># credit Fabulaser-Mini, https://github.com/fab-machines/Fabulaser-Mini/blob/main/manual/Fabulaser%20manual%20L2M2.pdf</span>
+
+<span class="s">&#39;@context&#39;</span><span class="p p-Indicator">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@vocab&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://w3id.org/valueflows/ont/vf#</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">mfg</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
+
+<span class="s">&#39;@graph&#39;</span><span class="p p-Indicator">:</span>
+
+<span class="w">  </span><span class="c1"># Process Specifications</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:3be5259d-10f0-431c-9fec-9c0c15a461d3</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ProcessSpecification</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Attach air filter</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:3be5259d-10f0-431c-9fec-9c0c15a461e4</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ProcessSpecification</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Attach air compressor</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:3be5259d-10f0-431c-9fec-9c0c15a461f9</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ProcessSpecification</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Test machine</span>
+
+<span class="w">  </span><span class="c1"># Resource Specification</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:3be525ee-10f0-431c-9fec-9c0c15a4dv97</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ResourceSpecification</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Fabulaser laser cutter</span>
+
+<span class="w">  </span><span class="c1"># Economic resource before attach air filter process</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:e1721a61-cd47-4556-84b9-8b1b81da15bf</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EconomicResource</span>
+<span class="w">    </span><span class="nt">resourceConformsTo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:3be525ee-10f0-431c-9fec-9c0c15a4dv97</span><span class="w"> </span><span class="c1"># Fabulaser</span>
+<span class="w">    </span><span class="nt">accountingQuantity</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">one</span>
+<span class="w">      </span><span class="nt">hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">    </span><span class="nt">stage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:3be5259d-10f0-431c-9fec-9c0c15a461e4</span><span class="w"> </span><span class="c1"># attach air compressor</span>
+
+<span class="w">  </span><span class="c1"># Assembly process</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:02b39a30-3e04-4305-9656-7f261aa63c84</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Process</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Attach the air filter (step 33)</span>
+<span class="w">    </span><span class="nt">basedOn</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:3be5259d-10f0-431c-9fec-9c0c15a461d3</span><span class="w"> </span><span class="c1"># process specification: attach air filter</span>
+<span class="w">    </span><span class="nt">hasInput</span><span class="p">:</span>
+
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:a8236bbb-81e0-422d-9861-56d2417db0fb</span>
+<span class="w">      </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EconomicEvent</span>
+<span class="w">      </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">accept</span>
+<span class="w">      </span><span class="nt">provider</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
+<span class="w">      </span><span class="nt">receiver</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
+<span class="w">      </span><span class="nt">resourceInventoriedAs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:e1721a61-cd47-4556-84b9-8b1b81da15bf</span><span class="w"> </span><span class="c1"># a laser cutter</span>
+<span class="w">      </span><span class="nt">resourceQuantity</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">one</span>
+<span class="w">        </span><span class="nt">hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">      </span><span class="nt">stage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:3be5259d-10f0-431c-9fec-9c0c15a461e4</span><span class="w"> </span><span class="c1"># attach air compressor</span>
+
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:a8236bbb-81e0-422d-9861-56d2417db0ss</span>
+<span class="w">      </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EconomicEvent</span>
+<span class="w">      </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">consume</span>
+<span class="w">      </span><span class="nt">provider</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
+<span class="w">      </span><span class="nt">receiver</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
+<span class="w">      </span><span class="nt">resourceInventoriedAs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:e1721a61-cd47-4556-84b9-8b1b81dlk4d0</span><span class="w"> </span><span class="c1"># an air filter</span>
+<span class="w">      </span><span class="nt">resourceQuantity</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">one</span>
+<span class="w">        </span><span class="nt">hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:a8236bbb-81e0-422d-9861-56d2417db0st</span>
+<span class="w">      </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EconomicEvent</span>
+<span class="w">      </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">consume</span>
+<span class="w">      </span><span class="nt">provider</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
+<span class="w">      </span><span class="nt">receiver</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
+<span class="w">      </span><span class="nt">resourceInventoriedAs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:e1721a61-cd47-4556-84b9-8b1b81dlcvgk</span><span class="w"> </span><span class="c1"># a hose clamp</span>
+<span class="w">      </span><span class="nt">resourceQuantity</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">one</span>
+<span class="w">        </span><span class="nt">hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+
+<span class="w">    </span><span class="nt">hasOutput</span><span class="p">:</span>
+
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:52f0e212-3c4f-4d27-b345-5e964c135824</span>
+<span class="w">      </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EconomicEvent</span>
+<span class="w">      </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">modify</span>
+<span class="w">      </span><span class="nt">provider</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
+<span class="w">      </span><span class="nt">receiver</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
+<span class="w">      </span><span class="nt">resourceInventoriedAs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:e1721a61-cd47-4556-84b9-8b1b81da15bf</span><span class="w"> </span><span class="c1"># a laser cutter</span>
+<span class="w">      </span><span class="nt">resourceQuantity</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">one</span>
+<span class="w">        </span><span class="nt">hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+
+<span class="w">  </span><span class="c1"># Economic resource after attach air filter process</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:e1721a61-cd47-4556-84b9-8b1b81da15bf</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EconomicResource</span>
+<span class="w">    </span><span class="nt">resourceConformsTo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:3be525ee-10f0-431c-9fec-9c0c15a4dv97</span><span class="w"> </span><span class="c1"># Fabulaser</span>
+<span class="w">    </span><span class="nt">accountingQuantity</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">one</span>
+<span class="w">      </span><span class="nt">hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">    </span><span class="nt">stage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:3be5259d-10f0-431c-9fec-9c0c15a461d3</span><span class="w"> </span><span class="c1"># attach air filter</span>
+
+<span class="w">  </span><span class="c1"># Testing process</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:02b39a30-3e04-4305-9656-7f261aa63c98</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Process</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Test the laser cutter</span>
+<span class="w">    </span><span class="nt">basedOn</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:3be5259d-10f0-431c-9fec-9c0c15a461d3</span><span class="w"> </span><span class="c1"># final test after all assembly</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:a8236bbb-81e0-422d-9861-56d2417db0fb</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EconomicEvent</span>
+<span class="w">    </span><span class="nt">inputOf</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:02b39a30-3e04-4305-9656-7f261aa63c98</span>
+<span class="w">    </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">accept</span>
+<span class="w">    </span><span class="nt">provider</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
+<span class="w">    </span><span class="nt">receiver</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
+<span class="w">    </span><span class="nt">resourceInventoriedAs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:e1721a61-cd47-4556-84b9-8b1b81da15bf</span><span class="w"> </span><span class="c1"># a laser cutter</span>
+<span class="w">    </span><span class="nt">resourceQuantity</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">one</span>
+<span class="w">      </span><span class="nt">hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">    </span><span class="nt">stage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:02b39a30-3e04-4305-9656-7f261aa63c84</span><span class="w"> </span><span class="c1">#attach air filter</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:52f0e212-3c4f-4d27-b345-5e964c135824</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EconomicEvent</span>
+<span class="w">    </span><span class="nt">outputOf</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:02b39a30-3e04-4305-9656-7f261aa63c98</span>
+<span class="w">    </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">modify</span>
+<span class="w">    </span><span class="nt">state</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pass</span>
+<span class="w">    </span><span class="nt">provider</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
+<span class="w">    </span><span class="nt">receiver</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
+<span class="w">    </span><span class="nt">resourceInventoriedAs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:e1721a61-cd47-4556-84b9-8b1b81da15bf</span><span class="w"> </span><span class="c1"># a laser cutter</span>
+<span class="w">    </span><span class="nt">resourceQuantity</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">one</span>
+<span class="w">      </span><span class="nt">hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+
+<span class="w">  </span><span class="c1"># Economic resource after testing</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:e1721a61-cd47-4556-84b9-8b1b81da15bf</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EconomicResource</span>
+<span class="w">    </span><span class="nt">resourceConformsTo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:3be525ee-10f0-431c-9fec-9c0c15a4dv97</span><span class="w"> </span><span class="c1"># Fabulaser</span>
+<span class="w">    </span><span class="nt">accountingQuantity</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">one</span>
+<span class="w">      </span><span class="nt">hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">    </span><span class="nt">stage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:02b39a30-3e04-4305-9656-7f261aa63c98</span><span class="w"> </span><span class="c1"># test machine</span>
+<span class="w">    </span><span class="nt">state</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pass</span>
+</code></pre></div>
+Alternate view of these stage-state processes, using the more relational directionality option.
+<div class="highlight"><pre><span></span><code><span class="c1"># Example: Process using stage and state</span>
+<span class="c1"># credit Fabulaser-Mini, https://github.com/fab-machines/Fabulaser-Mini/blob/main/manual/Fabulaser%20manual%20L2M2.pdf</span>
+
+<span class="s">&#39;@context&#39;</span><span class="p p-Indicator">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@vocab&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://w3id.org/valueflows/ont/vf#</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">mfg</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
+
+<span class="s">&#39;@graph&#39;</span><span class="p p-Indicator">:</span>
+
+<span class="w">  </span><span class="c1"># Assembly process</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:02b39a30-3e04-4305-9656-7f261aa63c84</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Process</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Attach the air filter (step 33)</span>
+<span class="w">    </span><span class="nt">basedOn</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:3be5259d-10f0-431c-9fec-9c0c15a461d3</span><span class="w"> </span><span class="c1"># process specification: attach air filter</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:a8236bbb-81e0-422d-9861-56d2417db0fb</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EconomicEvent</span>
+<span class="w">    </span><span class="nt">inputOf</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:02b39a30-3e04-4305-9656-7f261aa63c84</span>
+<span class="w">    </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">accept</span>
+<span class="w">    </span><span class="nt">provider</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
+<span class="w">    </span><span class="nt">receiver</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
+<span class="w">    </span><span class="nt">resourceInventoriedAs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:e1721a61-cd47-4556-84b9-8b1b81da15bf</span><span class="w"> </span><span class="c1"># a laser cutter</span>
+<span class="w">    </span><span class="nt">resourceQuantity</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">one</span>
+<span class="w">      </span><span class="nt">hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">    </span><span class="nt">stage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:3be5259d-10f0-431c-9fec-9c0c15a461e4</span><span class="w"> </span><span class="c1"># attach air compressor</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:a8236bbb-81e0-422d-9861-56d2417db0ss</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EconomicEvent</span>
+<span class="w">    </span><span class="nt">inputOf</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:02b39a30-3e04-4305-9656-7f261aa63c84</span>
+<span class="w">    </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">consume</span>
+<span class="w">    </span><span class="nt">provider</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
+<span class="w">    </span><span class="nt">receiver</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
+<span class="w">    </span><span class="nt">resourceInventoriedAs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:e1721a61-cd47-4556-84b9-8b1b81dlk4d0</span><span class="w"> </span><span class="c1"># an air filter</span>
+<span class="w">    </span><span class="nt">resourceQuantity</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">one</span>
+<span class="w">      </span><span class="nt">hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:a8236bbb-81e0-422d-9861-56d2417db0st</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EconomicEvent</span>
+<span class="w">    </span><span class="nt">inputOf</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:02b39a30-3e04-4305-9656-7f261aa63c84</span>
+<span class="w">    </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">consume</span>
+<span class="w">    </span><span class="nt">provider</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
+<span class="w">    </span><span class="nt">receiver</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
+<span class="w">    </span><span class="nt">resourceInventoriedAs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:e1721a61-cd47-4556-84b9-8b1b81dlcvgk</span><span class="w"> </span><span class="c1"># a hose clamp</span>
+<span class="w">    </span><span class="nt">resourceQuantity</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">one</span>
+<span class="w">      </span><span class="nt">hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:52f0e212-3c4f-4d27-b345-5e964c135824</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EconomicEvent</span>
+<span class="w">    </span><span class="nt">outputOf</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:02b39a30-3e04-4305-9656-7f261aa63c84</span>
+<span class="w">    </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">modify</span>
+<span class="w">    </span><span class="nt">provider</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
+<span class="w">    </span><span class="nt">receiver</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
+<span class="w">    </span><span class="nt">resourceInventoriedAs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:e1721a61-cd47-4556-84b9-8b1b81da15bf</span><span class="w"> </span><span class="c1"># a laser cutter</span>
+<span class="w">    </span><span class="nt">resourceQuantity</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">one</span>
+<span class="w">      </span><span class="nt">hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+
+<span class="w">  </span><span class="c1"># Testing process</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:02b39a30-3e04-4305-9656-7f261aa63c98</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Process</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Test the laser cutter</span>
+<span class="w">    </span><span class="nt">basedOn</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:3be5259d-10f0-431c-9fec-9c0c15a461d3</span><span class="w"> </span><span class="c1"># final test after all assembly</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:a8236bbb-81e0-422d-9861-56d2417db0fb</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EconomicEvent</span>
+<span class="w">    </span><span class="nt">inputOf</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:02b39a30-3e04-4305-9656-7f261aa63c98</span>
+<span class="w">    </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">accept</span>
+<span class="w">    </span><span class="nt">provider</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
+<span class="w">    </span><span class="nt">receiver</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
+<span class="w">    </span><span class="nt">resourceInventoriedAs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:e1721a61-cd47-4556-84b9-8b1b81da15bf</span><span class="w"> </span><span class="c1"># a laser cutter</span>
+<span class="w">    </span><span class="nt">resourceQuantity</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">one</span>
+<span class="w">      </span><span class="nt">hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">    </span><span class="nt">stage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:02b39a30-3e04-4305-9656-7f261aa63c84</span><span class="w"> </span><span class="c1">#attach air filter</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:52f0e212-3c4f-4d27-b345-5e964c135824</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EconomicEvent</span>
+<span class="w">    </span><span class="nt">outputOf</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:02b39a30-3e04-4305-9656-7f261aa63c98</span>
+<span class="w">    </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">modify</span>
+<span class="w">    </span><span class="nt">state</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pass</span>
+<span class="w">    </span><span class="nt">provider</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
+<span class="w">    </span><span class="nt">receiver</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
+<span class="w">    </span><span class="nt">resourceInventoriedAs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:e1721a61-cd47-4556-84b9-8b1b81da15bf</span><span class="w"> </span><span class="c1"># a laser cutter</span>
+<span class="w">    </span><span class="nt">resourceQuantity</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">one</span>
+<span class="w">      </span><span class="nt">hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+</code></pre></div></p>
+<h4 id="manufacturing-and-workflow-with-recipe-and-plan">Manufacturing and workflow with Recipe and Plan</h4>
+<p>A component is produced (manufacturing pattern) and tested (workflow pattern).  QT ("quality testing") gives pass and/or fail outputs.  The failed components are passed back into a source resource (because it can be re-used as an input as part of the QT process, to be used in this or the next manufacturing run.</p>
+<p>The QT needs the stage and state of the input component resource, because QT would only be done on components that are made and not tested yet.  By the same token, components would only be sent into the next assembly process if they have passed the QT process/stage (not part of this example).</p>
+<p>This example includes recipe, plan, and actuals.</p>
+<p><img alt="stage-state recipe-plan-observations diagram reflecting the yaml below" src="../../assets/examples/stage-state.png" /></p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Example: Workflow recipe, plan, execution, including stage and state usage</span>
+
+<span class="s">&#39;@context&#39;</span><span class="p p-Indicator">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@vocab&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://w3id.org/valueflows/ont/vf#</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">mfg</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
+
+<span class="s">&#39;@graph&#39;</span><span class="p p-Indicator">:</span>
+
+<span class="w">  </span><span class="c1"># specifications</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:3be5259d-10f0-431c-9fec-9c0c15a461d3</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ResourceSpecification</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Bucket white 5 gallon</span>
+<span class="w">    </span><span class="nt">defaultUnitOfResource</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">one</span>
+<span class="w">    </span><span class="nt">substitutable</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:d4d2fd71-34f2-41c3-b1c5-19ad5ed2da58</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ResourceSpecification</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Thermoplastic polymer white</span>
+<span class="w">    </span><span class="nt">DefaultUnitOfResource</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">kilogram</span>
+<span class="w">    </span><span class="nt">substitutable</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:c7897c39-7f05-4a5d-a487-80e130a2414a</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ResourceSpecification</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Injection molding machine</span>
+<span class="w">    </span><span class="nt">defaultUnitOfResource</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">one</span>
+<span class="w">    </span><span class="nt">defaultUnitOfEffort</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">hour</span>
+<span class="w">    </span><span class="nt">substitutable</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:27be5cab-d740-4194-9298-1661a69d9d95</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ProcessSpecification</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Make injection molded buckets</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:6fb358a3-2859-4d6a-a4fa-431603ee70f5</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ProcessSpecification</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">QT injection molded buckets</span>
+
+<span class="w">  </span><span class="c1"># resources before</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:3129ca8b-fcda-45be-bbda-294dc924d3b9</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EconomicResource</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Bucket white 5 gallon</span>
+<span class="w">    </span><span class="nt">conformsTo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:3be5259d-10f0-431c-9fec-9c0c15a461d3</span>
+<span class="w">    </span><span class="nt">accountingQuantity</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">one</span>
+<span class="w">      </span><span class="nt">hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">320</span>
+<span class="w">    </span><span class="nt">state</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pass</span>
+<span class="w">    </span><span class="nt">stage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:6fb358a3-2859-4d6a-a4fa-431603ee70f5</span><span class="w"> </span><span class="c1"># QT</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:6b5bc786-b9ed-4189-b34f-5ef7d10f1f86</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EconomicResource</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Thermoplastic polymer white</span>
+<span class="w">    </span><span class="nt">conformsTo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:d4d2fd71-34f2-41c3-b1c5-19ad5ed2da58</span>
+<span class="w">    </span><span class="nt">accountingQuantity</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">kilogram</span>
+<span class="w">      </span><span class="nt">hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2455</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:23799c14-c368-4653-a584-83bf9ae8b82a</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EconomicResource</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Injection molding maching</span>
+<span class="w">    </span><span class="nt">conformsTo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:c7897c39-7f05-4a5d-a487-80e130a2414a</span>
+<span class="w">    </span><span class="nt">trackingIdentifier</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">DDE098989099911</span>
+<span class="w">    </span><span class="nt">accountingQuantity</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">one</span>
+<span class="w">      </span><span class="nt">hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">    </span><span class="nt">unitOfEffort</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">hour</span>
+
+<span class="w">  </span><span class="c1"># the recipe (here the recipe runs &quot;backwards&quot; from the final product, similar to a BOM)</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:33e8933b-ff73-4a01-964a-ca7a98893083</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RecipeFlow</span>
+<span class="w">    </span><span class="nt">recipeOutputOf</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:a8356625-bf64-4c16-9099-28aa1b718c4b</span>
+<span class="w">    </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">modify</span>
+<span class="w">    </span><span class="nt">state</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pass</span>
+<span class="w">    </span><span class="nt">resourceConformsTo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:3be5259d-10f0-431c-9fec-9c0c15a461d3</span><span class="w"> </span><span class="c1"># bucket</span>
+<span class="w">    </span><span class="nt">resourceQuantity</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">one</span>
+<span class="w">      </span><span class="nt">hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">500</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:54b814ee-62dc-40c1-bb96-f8582aa4f771</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RecipeFlow</span>
+<span class="w">    </span><span class="nt">recipeOutputOf</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:a8356625-bf64-4c16-9099-28aa1b718c4b</span>
+<span class="w">    </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">produce</span><span class="w"> </span><span class="c1"># fail</span>
+<span class="w">    </span><span class="nt">resourceConformsTo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:d4d2fd71-34f2-41c3-b1c5-19ad5ed2da58</span><span class="w"> </span><span class="c1"># polymer</span>
+<span class="w">    </span><span class="nt">resourceQuantity</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">kilogram</span>
+<span class="w">      </span><span class="nt">hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:a8356625-bf64-4c16-9099-28aa1b718c4b</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RecipeProcess</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">QT bucket white 5 gallon - minimum run</span>
+<span class="w">    </span><span class="nt">processConformsTo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:6fb358a3-2859-4d6a-a4fa-431603ee70f5</span><span class="w"> </span><span class="c1"># the process specification</span>
+<span class="w">    </span><span class="nt">time:hasDuration</span><span class="p">:</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">time:unitType unit:Hour</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">time:numericDuration 1</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:2342d456-5d6f-46d5-a7ed-3ac7bfd5a86c</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RecipeFlow</span>
+<span class="w">    </span><span class="nt">recipeInputOf</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:a8356625-bf64-4c16-9099-28aa1b718c4b</span>
+<span class="w">    </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">accept</span>
+<span class="w">    </span><span class="nt">resourceConformsTo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:3be5259d-10f0-431c-9fec-9c0c15a461d3</span><span class="w"> </span><span class="c1"># bucket</span>
+<span class="w">    </span><span class="nt">stage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:27be5cab-d740-4194-9298-1661a69d9d95</span><span class="w"> </span><span class="c1"># &#39;make&#39; process specification</span>
+<span class="w">    </span><span class="nt">resourceQuantity</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">one</span>
+<span class="w">      </span><span class="nt">hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">500</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:33e8933b-ff73-4a01-964a-ca7a98893083</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RecipeFlow</span>
+<span class="w">    </span><span class="nt">recipeOutputOf</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:e1721a61-cd47-4556-84b9-8b1b81da15bf</span>
+<span class="w">    </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">produce</span>
+<span class="w">    </span><span class="nt">resourceConformsTo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:3be5259d-10f0-431c-9fec-9c0c15a461d3</span><span class="w"> </span><span class="c1"># bucket</span>
+<span class="w">    </span><span class="nt">resourceQuantity</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">one</span>
+<span class="w">      </span><span class="nt">hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">500</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:e1721a61-cd47-4556-84b9-8b1b81da15bf</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RecipeProcess</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Make bucket white 5 gallon - minimum run</span>
+<span class="w">    </span><span class="nt">processConformsTo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:27be5cab-d740-4194-9298-1661a69d9d95</span><span class="w"> </span><span class="c1"># the process specification</span>
+<span class="w">    </span><span class="nt">time:hasDuration</span><span class="p">:</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">time:unitType unit:Hour</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">time:numericDuration 7</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:9bd19194-a36d-4a1f-896b-8082887962cb</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RecipeFlow</span>
+<span class="w">    </span><span class="nt">recipeInputOf</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:e1721a61-cd47-4556-84b9-8b1b81da15bf</span>
+<span class="w">    </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">consume</span>
+<span class="w">    </span><span class="nt">resourceConformsTo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:d4d2fd71-34f2-41c3-b1c5-19ad5ed2da58</span><span class="w"> </span><span class="c1"># polymer</span>
+<span class="w">    </span><span class="nt">resourceQuantity</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">kilogram</span>
+<span class="w">      </span><span class="nt">hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">450</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:60f4204e-b8d2-4026-8577-102c3f82c0af</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RecipeFlow</span>
+<span class="w">    </span><span class="nt">recipeInputOf</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:e1721a61-cd47-4556-84b9-8b1b81da15bf</span>
+<span class="w">    </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">use</span>
+<span class="w">    </span><span class="nt">resourceConformsTo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:c7897c39-7f05-4a5d-a487-80e130a2414a</span><span class="w"> </span><span class="c1"># injection molding machine</span>
+<span class="w">    </span><span class="nt">effortQuantity</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">hour</span>
+<span class="w">      </span><span class="nt">hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5.5</span>
+
+<span class="w">  </span><span class="c1"># the plan (shown running &quot;forwards&quot;)</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:8e5fe80d-a769-4bd5-89e5-2136d33eab9f</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Plan</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Buckets run number 381</span>
+<span class="w">    </span><span class="nt">due</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2019-04-08T17:00:00-5:00</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:b52a5815-fae9-43bf-be95-833b95dc0adb</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Commitment</span>
+<span class="w">    </span><span class="nt">inputOf</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:02b39a30-3e04-4305-9656-7f261aa63c84</span>
+<span class="w">    </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">consume</span>
+<span class="w">    </span><span class="nt">provider</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
+<span class="w">    </span><span class="nt">receiver</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
+<span class="w">    </span><span class="nt">resourceConformsTo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:d4d2fd71-34f2-41c3-b1c5-19ad5ed2da58</span><span class="w"> </span><span class="c1"># polymer</span>
+<span class="w">    </span><span class="nt">resourceQuantity</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">kilogram</span>
+<span class="w">      </span><span class="nt">hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">900</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:52f0e212-3c4f-4d27-b345-5e964c135824</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Commitment</span>
+<span class="w">    </span><span class="nt">inputOf</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:02b39a30-3e04-4305-9656-7f261aa63c84</span>
+<span class="w">    </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">use</span>
+<span class="w">    </span><span class="nt">provider</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
+<span class="w">    </span><span class="nt">receiver</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
+<span class="w">    </span><span class="nt">resourceConformsTo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:c7897c39-7f05-4a5d-a487-80e130a2414a</span><span class="w"> </span><span class="c1"># injection molding machine</span>
+<span class="w">    </span><span class="nt">effortQuantity</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">hour</span>
+<span class="w">      </span><span class="nt">hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">11</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:02b39a30-3e04-4305-9656-7f261aa63c84</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Process</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Make bucket white 5 gallon</span>
+<span class="w">    </span><span class="nt">plannedWithin</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:8e5fe80d-a769-4bd5-89e5-2136d33eab9f</span>
+<span class="w">    </span><span class="nt">basedOn</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:27be5cab-d740-4194-9298-1661a69d9d95</span><span class="w"> </span><span class="c1"># the process specification</span>
+<span class="w">    </span><span class="nt">time:hasDuration</span><span class="p">:</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">time:unitType unit:Hour</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">time:numericDuration 14</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:a8236bbb-81e0-422d-9861-56d2417db0fb</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Commitment</span>
+<span class="w">    </span><span class="nt">outputOf</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:02b39a30-3e04-4305-9656-7f261aa63c84</span>
+<span class="w">    </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">produce</span>
+<span class="w">    </span><span class="nt">provider</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
+<span class="w">    </span><span class="nt">receiver</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
+<span class="w">    </span><span class="nt">resourceConformsTo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:3be5259d-10f0-431c-9fec-9c0c15a461d3</span><span class="w"> </span><span class="c1"># bucket</span>
+<span class="w">    </span><span class="nt">resourceQuantity</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">one</span>
+<span class="w">      </span><span class="nt">hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:fbff9852-36ca-4364-a943-bc0b49e1cab5</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Commitment</span>
+<span class="w">    </span><span class="nt">inputOf</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:8baa8ff7-9c1e-4586-ae7b-79d620a3cac9</span>
+<span class="w">    </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">accept</span>
+<span class="w">    </span><span class="nt">provider</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
+<span class="w">    </span><span class="nt">receiver</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
+<span class="w">    </span><span class="nt">resourceConformsTo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:3be5259d-10f0-431c-9fec-9c0c15a461d3</span><span class="w"> </span><span class="c1"># bucket</span>
+<span class="w">    </span><span class="nt">stage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:27be5cab-d740-4194-9298-1661a69d9d95</span><span class="w"> </span><span class="c1"># &#39;make&#39; process specification</span>
+<span class="w">    </span><span class="nt">resourceQuantity</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">one</span>
+<span class="w">      </span><span class="nt">hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:8baa8ff7-9c1e-4586-ae7b-79d620a3cac9</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Process</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">QT bucket white 5 gallon</span>
+<span class="w">    </span><span class="nt">plannedWithin</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:8e5fe80d-a769-4bd5-89e5-2136d33eab9f</span>
+<span class="w">    </span><span class="nt">basedOn</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:6fb358a3-2859-4d6a-a4fa-431603ee70f5</span><span class="w"> </span><span class="c1"># the process specification</span>
+<span class="w">    </span><span class="nt">time:hasDuration</span><span class="p">:</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">time:unitType unit:Hour</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">time:numericDuration 14</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:21f361a6-2375-46bb-b192-c21b5ba833bf</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Commitment</span>
+<span class="w">    </span><span class="nt">independentDemandOf</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:8e5fe80d-a769-4bd5-89e5-2136d33eab9f</span><span class="w"> </span><span class="c1"># the plan</span>
+<span class="w">    </span><span class="nt">outputOf</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:8baa8ff7-9c1e-4586-ae7b-79d620a3cac9</span>
+<span class="w">    </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">modify</span>
+<span class="w">    </span><span class="nt">state</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pass</span>
+<span class="w">    </span><span class="nt">provider</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
+<span class="w">    </span><span class="nt">receiver</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
+<span class="w">    </span><span class="nt">resourceConformsTo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:3be5259d-10f0-431c-9fec-9c0c15a461d3</span><span class="w"> </span><span class="c1"># bucket</span>
+<span class="w">    </span><span class="nt">resourceQuantity</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">one</span>
+<span class="w">      </span><span class="nt">hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:21f361a6-2375-46bb-b192-c21b5ba833bg</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Commitment</span>
+<span class="w">    </span><span class="nt">outputOf</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:8baa8ff7-9c1e-4586-ae7b-79d620a3cac9</span>
+<span class="w">    </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">produce</span>
+<span class="w">    </span><span class="nt">provider</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
+<span class="w">    </span><span class="nt">receiver</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
+<span class="w">    </span><span class="nt">resourceConformsTo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:d4d2fd71-34f2-41c3-b1c5-19ad5ed2da58</span><span class="w"> </span><span class="c1"># polymer</span>
+<span class="w">    </span><span class="nt">resourceQuantity</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">kilogram</span>
+<span class="w">      </span><span class="nt">hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+
+<span class="w">  </span><span class="c1"># manufacture and test the buckets according to plan</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:e18c808c-929a-450d-9d0d-3b3f531bc126</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EconomicEvent</span>
+<span class="w">    </span><span class="nt">inputOf</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:02b39a30-3e04-4305-9656-7f261aa63c84</span><span class="w"> </span><span class="c1"># planned make process</span>
+<span class="w">    </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">consume</span>
+<span class="w">    </span><span class="nt">provider</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
+<span class="w">    </span><span class="nt">receiver</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
+<span class="w">    </span><span class="nt">resourceInventoriedAs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:6b5bc786-b9ed-4189-b34f-5ef7d10f1f86</span><span class="w"> </span><span class="c1"># polymer stock</span>
+<span class="w">    </span><span class="nt">resourceQuantity</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">kilogram</span>
+<span class="w">      </span><span class="nt">hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">925</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:5d2fe7da-b91b-4dab-91d9-68db80c1feb7</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EconomicEvent</span>
+<span class="w">    </span><span class="nt">inputOf</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:02b39a30-3e04-4305-9656-7f261aa63c84</span><span class="w"> </span><span class="c1"># planned make process</span>
+<span class="w">    </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">use</span>
+<span class="w">    </span><span class="nt">provider</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
+<span class="w">    </span><span class="nt">receiver</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
+<span class="w">    </span><span class="nt">resourceInventoriedAs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:23799c14-c368-4653-a584-83bf9ae8b82a</span><span class="w"> </span><span class="c1"># the machine</span>
+<span class="w">    </span><span class="nt">effortQuantity</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">hour</span>
+<span class="w">      </span><span class="nt">hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10.7</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:8791913c-0152-4c32-bb3f-f25d61df736c</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EconomicEvent</span>
+<span class="w">    </span><span class="nt">outputOf</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:02b39a30-3e04-4305-9656-7f261aa63c84</span><span class="w"> </span><span class="c1"># planned make process</span>
+<span class="w">    </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">produce</span>
+<span class="w">    </span><span class="nt">provider</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
+<span class="w">    </span><span class="nt">receiver</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
+<span class="w">    </span><span class="nt">resourceInventoriedAs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:3129ca8b-fcda-45be-bbda-294dc924d3b9</span><span class="w"> </span><span class="c1"># buckets</span>
+<span class="w">    </span><span class="nt">resourceQuantity</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">one</span>
+<span class="w">      </span><span class="nt">hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:a8236bbb-81e0-422d-9861-56d2417db0fb</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EconomicEvent</span>
+<span class="w">    </span><span class="nt">inputOf</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:8baa8ff7-9c1e-4586-ae7b-79d620a3cac9</span><span class="w"> </span><span class="c1"># planned qt process</span>
+<span class="w">    </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">accept</span>
+<span class="w">    </span><span class="nt">provider</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
+<span class="w">    </span><span class="nt">receiver</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
+<span class="w">    </span><span class="nt">resourceInventoriedAs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:3129ca8b-fcda-45be-bbda-294dc924d3b9</span><span class="w"> </span><span class="c1">#buckets</span>
+<span class="w">    </span><span class="nt">resourceQuantity</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">one</span>
+<span class="w">      </span><span class="nt">hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:52f0e212-3c4f-4d27-b345-5e964c135824</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EconomicEvent</span>
+<span class="w">    </span><span class="nt">outputOf</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:8baa8ff7-9c1e-4586-ae7b-79d620a3cac9</span><span class="w"> </span><span class="c1"># planned qt process</span>
+<span class="w">    </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">modify</span>
+<span class="w">    </span><span class="nt">state</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pass</span>
+<span class="w">    </span><span class="nt">provider</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
+<span class="w">    </span><span class="nt">receiver</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
+<span class="w">    </span><span class="nt">resourceInventoriedAs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:3129ca8b-fcda-45be-bbda-294dc924d3b9</span><span class="w"> </span><span class="c1"># buckets</span>
+<span class="w">    </span><span class="nt">resourceQuantity</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">one</span>
+<span class="w">      </span><span class="nt">hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">998</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:e1721a61-cd47-4556-84b9-8b1b81da15bf</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EconomicEvent</span>
+<span class="w">    </span><span class="nt">outputOf</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:8baa8ff7-9c1e-4586-ae7b-79d620a3cac9</span><span class="w"> </span><span class="c1"># planned qt process</span>
+<span class="w">    </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">produce</span>
+<span class="w">    </span><span class="nt">provider</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
+<span class="w">    </span><span class="nt">receiver</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
+<span class="w">    </span><span class="nt">resourceInventoriedAs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:6b5bc786-b9ed-4189-b34f-5ef7d10f1f86</span><span class="w"> </span><span class="c1"># polymer stock</span>
+<span class="w">    </span><span class="nt">resourceQuantity</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">kilogram</span>
+<span class="w">      </span><span class="nt">hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1.8</span>
+
+<span class="w">  </span><span class="c1"># resources after</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:3129ca8b-fcda-45be-bbda-294dc924d3b9</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EconomicResource</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Bucket white 5 gallon</span>
+<span class="w">    </span><span class="nt">conformsTo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:3be5259d-10f0-431c-9fec-9c0c15a461d3</span>
+<span class="w">    </span><span class="nt">accountingQuantity</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">one</span>
+<span class="w">      </span><span class="nt">hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1318</span>
+<span class="w">    </span><span class="nt">state</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pass</span>
+<span class="w">    </span><span class="nt">stage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:6fb358a3-2859-4d6a-a4fa-431603ee70f5</span><span class="w"> </span><span class="c1">#QT</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:6b5bc786-b9ed-4189-b34f-5ef7d10f1f86</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EconomicResource</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Thermoplastic polymer white</span>
+<span class="w">    </span><span class="nt">conformsTo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:d4d2fd71-34f2-41c3-b1c5-19ad5ed2da58</span>
+<span class="w">    </span><span class="nt">accountingQuantity</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">kilogram</span>
+<span class="w">      </span><span class="nt">hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1531.8</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:23799c14-c368-4653-a584-83bf9ae8b82a</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EconomicResource</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Injection molding maching</span>
+<span class="w">    </span><span class="nt">conformsTo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:c7897c39-7f05-4a5d-a487-80e130a2414a</span>
+<span class="w">    </span><span class="nt">trackingIdentifier</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">DDE098989099911</span>
+<span class="w">    </span><span class="nt">accountingQuantity</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">one</span>
+<span class="w">      </span><span class="nt">hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">    </span><span class="nt">unitOfEffort</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">hour</span>
+</code></pre></div>
+<h4 id="combine-and-separate-with-packing-container">Combine and separate with packing container</h4>
 <p>Simple pack and unpack of resources into and out of a container resource, using <code>combine</code> and <code>separate</code>.</p>
 <p><img alt="pack unpack diagram reflecting the yaml below" src="../../assets/examples/pack-unpack.png" /></p>
 <p><div class="highlight"><pre><span></span><code><span class="c1"># Example: Simple pack and unpack processes</span>
@@ -2795,7 +3385,6 @@ Alternate view of this workflow process, using the more relational directionalit
 <span class="w">    </span><span class="nt">accountingQuantity</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">one</span>
 <span class="w">      </span><span class="nt">hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
-<span class="w">    </span><span class="nt">containedIn</span><span class="p">:</span><span class="w"> </span>
 </code></pre></div>
 Alternate view of these pack-unpack processes, using the more relational directionality option.
 <div class="highlight"><pre><span></span><code><span class="c1"># Example: Simple pack and unpack processes</span>
@@ -2933,244 +3522,169 @@ Alternate view of these pack-unpack processes, using the more relational directi
 <span class="w">      </span><span class="nt">hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">one</span>
 <span class="w">      </span><span class="nt">hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
 </code></pre></div></p>
-<h4 id="stage-and-state">Stage and state</h4>
-<p>Simple assembly and testing showing use of stage and state.</p>
-<p><img alt="stage state diagram reflecting the yaml below" src="../../assets/examples/stage-state-simple.png" /></p>
-<p><div class="highlight"><pre><span></span><code><span class="c1"># Example: Process using stage and state</span>
-<span class="c1"># credit Fabulaser-Mini, https://github.com/fab-machines/Fabulaser-Mini/blob/main/manual/Fabulaser%20manual%20L2M2.pdf</span>
+<h4 id="combine-and-separate-with-ongoing-containing-resource">Combine and separate with ongoing containing resource</h4>
+<p>Simple addition of a resource into a containing resource, using <code>combine</code> and <code>separate</code>.</p>
+<p><img alt="add cow to herd diagram reflecting the yaml below" src="../../assets/examples/comb-sep-add.png" /></p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Example: Simple add and remove to and from existing resource</span>
 
 <span class="s">&#39;@context&#39;</span><span class="p p-Indicator">:</span>
 <span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@vocab&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://w3id.org/valueflows/ont/vf#</span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">mfg</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">dairy</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://dairy.example/</span>
 
 <span class="s">&#39;@graph&#39;</span><span class="p p-Indicator">:</span>
 
-<span class="w">  </span><span class="c1"># Process Specifications</span>
+<span class="w">  </span><span class="c1"># Economic resources before</span>
 
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:3be5259d-10f0-431c-9fec-9c0c15a461d3</span>
-<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ProcessSpecification</span>
-<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Attach air filter</span>
-
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:3be5259d-10f0-431c-9fec-9c0c15a461e4</span>
-<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ProcessSpecification</span>
-<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Attach air compressor</span>
-
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:3be5259d-10f0-431c-9fec-9c0c15a461f9</span>
-<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ProcessSpecification</span>
-<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Test machine</span>
-
-<span class="w">  </span><span class="c1"># Resource Specification</span>
-
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:3be525ee-10f0-431c-9fec-9c0c15a4dv97</span>
-<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ResourceSpecification</span>
-<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Fabulaser laser cutter</span>
-
-<span class="w">  </span><span class="c1"># Economic resource before attach air filter process</span>
-
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:e1721a61-cd47-4556-84b9-8b1b81da15bf</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dairy:e1721a61-cd47-4556-84b9-8b1b81da15bf</span>
 <span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EconomicResource</span>
-<span class="w">    </span><span class="nt">resourceConformsTo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:3be525ee-10f0-431c-9fec-9c0c15a4dv97</span><span class="w"> </span><span class="c1"># Fabulaser</span>
+<span class="w">    </span><span class="nt">conformsTo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://www.wikidata.org/wiki/Q11748378</span><span class="w"> </span><span class="c1"># cow</span>
+<span class="w">    </span><span class="nt">trackingIdentifier</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cow12</span>
 <span class="w">    </span><span class="nt">accountingQuantity</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">one</span>
 <span class="w">      </span><span class="nt">hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
-<span class="w">    </span><span class="nt">stage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:3be5259d-10f0-431c-9fec-9c0c15a461e4</span><span class="w"> </span><span class="c1"># attach air compressor</span>
+<span class="w">    </span><span class="nt">containedIn</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dairy:3129ca8b-fcda-45be-bbda-294dc924d3b9</span>
 
-<span class="w">  </span><span class="c1"># Assembly process</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dairy:e1721a61-cd47-4556-84b9-8b1b81da15bg</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EconomicResource</span>
+<span class="w">    </span><span class="nt">conformsTo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://www.wikidata.org/wiki/Q11748378</span><span class="w"> </span><span class="c1"># cow</span>
+<span class="w">    </span><span class="nt">trackingIdentifier</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cow45</span>
+<span class="w">    </span><span class="nt">accountingQuantity</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">one</span>
+<span class="w">      </span><span class="nt">hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">    </span><span class="nt">containedIn</span><span class="p">:</span>
 
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:02b39a30-3e04-4305-9656-7f261aa63c84</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dairy:e1721a61-cd47-4556-84b9-8b1b81da15bh</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EconomicResource</span>
+<span class="w">    </span><span class="nt">conformsTo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://www.wikidata.org/wiki/Q11748378</span><span class="w"> </span><span class="c1"># cow</span>
+<span class="w">    </span><span class="nt">trackingIdentifier</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cow40</span>
+<span class="w">    </span><span class="nt">accountingQuantity</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">one</span>
+<span class="w">      </span><span class="nt">hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">    </span><span class="nt">containedIn</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dairy:3129ca8b-fcda-45be-bbda-294dc924d3b9</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dairy:3129ca8b-fcda-45be-bbda-294dc924d3b9</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EconomicResource</span>
+<span class="w">    </span><span class="nt">conformsTo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://www.wikidata.org/wiki/Q209542</span><span class="w"> </span><span class="c1"># herd</span>
+<span class="w">    </span><span class="nt">accountingQuantity</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">one</span>
+<span class="w">      </span><span class="nt">hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+
+<span class="w">  </span><span class="c1"># Adding process</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dairy:02b39a30-3e04-4305-9656-7f261aa63c84</span>
 <span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Process</span>
-<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Attach the air filter (step 33)</span>
-<span class="w">    </span><span class="nt">basedOn</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:3be5259d-10f0-431c-9fec-9c0c15a461d3</span><span class="w"> </span><span class="c1"># process specification: attach air filter</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Add cow to the herd</span>
 <span class="w">    </span><span class="nt">hasInput</span><span class="p">:</span>
 
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:a8236bbb-81e0-422d-9861-56d2417db0fb</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dairy:b52a5815-fae9-43bf-be95-833b95dc0adb</span>
 <span class="w">      </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EconomicEvent</span>
 <span class="w">      </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">accept</span>
-<span class="w">      </span><span class="nt">provider</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
-<span class="w">      </span><span class="nt">receiver</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
-<span class="w">      </span><span class="nt">resourceInventoriedAs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:e1721a61-cd47-4556-84b9-8b1b81da15bf</span><span class="w"> </span><span class="c1"># a laser cutter</span>
+<span class="w">      </span><span class="nt">provider</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://dairy.example/</span>
+<span class="w">      </span><span class="nt">receiver</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://dairy.example/</span>
+<span class="w">      </span><span class="nt">resourceInventoriedAs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dairy:3129ca8b-fcda-45be-bbda-294dc924d3b9</span><span class="w"> </span><span class="c1"># herd</span>
 <span class="w">      </span><span class="nt">resourceQuantity</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">one</span>
 <span class="w">        </span><span class="nt">hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
-<span class="w">      </span><span class="nt">stage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:3be5259d-10f0-431c-9fec-9c0c15a461e4</span><span class="w"> </span><span class="c1"># attach air compressor</span>
+<span class="w">      </span><span class="nt">note</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Herd already has some cows.</span>
 
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:a8236bbb-81e0-422d-9861-56d2417db0ss</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dairy:b90b0b77-09a2-42e2-8bd4-e9ae2c1c6172</span>
 <span class="w">      </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EconomicEvent</span>
-<span class="w">      </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">consume</span>
-<span class="w">      </span><span class="nt">provider</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
-<span class="w">      </span><span class="nt">receiver</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
-<span class="w">      </span><span class="nt">resourceInventoriedAs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:e1721a61-cd47-4556-84b9-8b1b81dlk4d0</span><span class="w"> </span><span class="c1"># an air filter</span>
-<span class="w">      </span><span class="nt">resourceQuantity</span><span class="p">:</span>
-<span class="w">        </span><span class="nt">hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">one</span>
-<span class="w">        </span><span class="nt">hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
-
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:a8236bbb-81e0-422d-9861-56d2417db0st</span>
-<span class="w">      </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EconomicEvent</span>
-<span class="w">      </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">consume</span>
-<span class="w">      </span><span class="nt">provider</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
-<span class="w">      </span><span class="nt">receiver</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
-<span class="w">      </span><span class="nt">resourceInventoriedAs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:e1721a61-cd47-4556-84b9-8b1b81dlcvgk</span><span class="w"> </span><span class="c1"># a hose clamp</span>
+<span class="w">      </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">combine</span>
+<span class="w">      </span><span class="nt">provider</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://dairy.example/</span>
+<span class="w">      </span><span class="nt">receiver</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://dairy.example/</span>
+<span class="w">      </span><span class="nt">resourceInventoriedAs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dairy:e1721a61-cd47-4556-84b9-8b1b81da15bg</span><span class="w"> </span><span class="c1"># cow45</span>
 <span class="w">      </span><span class="nt">resourceQuantity</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">one</span>
 <span class="w">        </span><span class="nt">hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
 
 <span class="w">    </span><span class="nt">hasOutput</span><span class="p">:</span>
 
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:52f0e212-3c4f-4d27-b345-5e964c135824</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dairy:b52a5815-fae9-43bf-be95-833b95dc0456</span>
 <span class="w">      </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EconomicEvent</span>
 <span class="w">      </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">modify</span>
-<span class="w">      </span><span class="nt">provider</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
-<span class="w">      </span><span class="nt">receiver</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
-<span class="w">      </span><span class="nt">resourceInventoriedAs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:e1721a61-cd47-4556-84b9-8b1b81da15bf</span><span class="w"> </span><span class="c1"># a laser cutter</span>
+<span class="w">      </span><span class="nt">provider</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://dairy.example/</span>
+<span class="w">      </span><span class="nt">receiver</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://dairy.example/</span>
+<span class="w">      </span><span class="nt">resourceInventoriedAs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dairy:3129ca8b-fcda-45be-bbda-294dc924d3b9</span><span class="w"> </span><span class="c1"># herd</span>
+<span class="w">      </span><span class="nt">resourceQuantity</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">one</span>
+<span class="w">        </span><span class="nt">hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">      </span><span class="nt">note</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">This resource stays the same, but has a new member</span>
+
+<span class="w">  </span><span class="c1"># Removing process</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dairy:33e8933b-ff73-4a01-964a-ca7a98893083</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Process</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Remove cow from the herd</span>
+<span class="w">    </span><span class="nt">hasInput</span><span class="p">:</span>
+
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dairy:33e8933b-ff73-4a01-964a-ca7a98893</span>
+<span class="w">      </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EconomicEvent</span>
+<span class="w">      </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">accept</span>
+<span class="w">      </span><span class="nt">provider</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://dairy.example/</span>
+<span class="w">      </span><span class="nt">receiver</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://dairy.example/</span>
+<span class="w">      </span><span class="nt">resourceInventoriedAs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dairy:3129ca8b-fcda-45be-bbda-294dc924d3b9</span><span class="w"> </span><span class="c1"># herd</span>
 <span class="w">      </span><span class="nt">resourceQuantity</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">one</span>
 <span class="w">        </span><span class="nt">hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
 
-<span class="w">  </span><span class="c1"># Economic resource after attach air filter process</span>
+<span class="w">    </span><span class="nt">hasOutput</span><span class="p">:</span>
 
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:e1721a61-cd47-4556-84b9-8b1b81da15bf</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dairy:60f4204e-b8d2-4026-8577-102c3f82c0af</span>
+<span class="w">      </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EconomicEvent</span>
+<span class="w">      </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">modify</span>
+<span class="w">      </span><span class="nt">provider</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://dairy.example/</span>
+<span class="w">      </span><span class="nt">receiver</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://dairy.example/</span>
+<span class="w">      </span><span class="nt">resourceInventoriedAs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dairy:3129ca8b-fcda-45be-bbda-294dc924d3b9</span><span class="w"> </span><span class="c1"># herd</span>
+<span class="w">      </span><span class="nt">resourceQuantity</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">one</span>
+<span class="w">        </span><span class="nt">hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dairy:60f4204e-b8d2-4026-8577-102c3fkm98g1</span>
+<span class="w">      </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EconomicEvent</span>
+<span class="w">      </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">separate</span>
+<span class="w">      </span><span class="nt">provider</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://dairy.example/</span>
+<span class="w">      </span><span class="nt">receiver</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://dairy.example/</span>
+<span class="w">      </span><span class="nt">resourceInventoriedAs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dairy:e1721a61-cd47-4556-84b9-8b1b81da15bf</span><span class="w"> </span><span class="c1"># cow12</span>
+<span class="w">      </span><span class="nt">resourceQuantity</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">one</span>
+<span class="w">        </span><span class="nt">hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+
+<span class="w">  </span><span class="c1"># Economic resources at end</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dairy:e1721a61-cd47-4556-84b9-8b1b81da15bf</span>
 <span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EconomicResource</span>
-<span class="w">    </span><span class="nt">resourceConformsTo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:3be525ee-10f0-431c-9fec-9c0c15a4dv97</span><span class="w"> </span><span class="c1"># Fabulaser</span>
+<span class="w">    </span><span class="nt">conformsTo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://www.wikidata.org/wiki/Q11748378</span><span class="w"> </span><span class="c1"># cow</span>
+<span class="w">    </span><span class="nt">trackingIdentifier</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cow12</span>
 <span class="w">    </span><span class="nt">accountingQuantity</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">one</span>
 <span class="w">      </span><span class="nt">hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
-<span class="w">    </span><span class="nt">stage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:3be5259d-10f0-431c-9fec-9c0c15a461d3</span><span class="w"> </span><span class="c1"># attach air filter</span>
+<span class="w">    </span><span class="nt">containedIn</span><span class="p">:</span>
 
-<span class="w">  </span><span class="c1"># Testing process</span>
-
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:02b39a30-3e04-4305-9656-7f261aa63c98</span>
-<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Process</span>
-<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Test the laser cutter</span>
-<span class="w">    </span><span class="nt">basedOn</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:3be5259d-10f0-431c-9fec-9c0c15a461d3</span><span class="w"> </span><span class="c1"># final test after all assembly</span>
-
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:a8236bbb-81e0-422d-9861-56d2417db0fb</span>
-<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EconomicEvent</span>
-<span class="w">    </span><span class="nt">inputOf</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:02b39a30-3e04-4305-9656-7f261aa63c98</span>
-<span class="w">    </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">accept</span>
-<span class="w">    </span><span class="nt">provider</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
-<span class="w">    </span><span class="nt">receiver</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
-<span class="w">    </span><span class="nt">resourceInventoriedAs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:e1721a61-cd47-4556-84b9-8b1b81da15bf</span><span class="w"> </span><span class="c1"># a laser cutter</span>
-<span class="w">    </span><span class="nt">resourceQuantity</span><span class="p">:</span>
-<span class="w">      </span><span class="nt">hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">one</span>
-<span class="w">      </span><span class="nt">hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
-<span class="w">    </span><span class="nt">stage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:02b39a30-3e04-4305-9656-7f261aa63c84</span><span class="w"> </span><span class="c1">#attach air filter</span>
-
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:52f0e212-3c4f-4d27-b345-5e964c135824</span>
-<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EconomicEvent</span>
-<span class="w">    </span><span class="nt">outputOf</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:02b39a30-3e04-4305-9656-7f261aa63c98</span>
-<span class="w">    </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">modify</span>
-<span class="w">    </span><span class="nt">state</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pass</span>
-<span class="w">    </span><span class="nt">provider</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
-<span class="w">    </span><span class="nt">receiver</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
-<span class="w">    </span><span class="nt">resourceInventoriedAs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:e1721a61-cd47-4556-84b9-8b1b81da15bf</span><span class="w"> </span><span class="c1"># a laser cutter</span>
-<span class="w">    </span><span class="nt">resourceQuantity</span><span class="p">:</span>
-<span class="w">      </span><span class="nt">hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">one</span>
-<span class="w">      </span><span class="nt">hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
-
-<span class="w">  </span><span class="c1"># Economic resource after testing</span>
-
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:e1721a61-cd47-4556-84b9-8b1b81da15bf</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dairy:e1721a61-cd47-4556-84b9-8b1b81da15bg</span>
 <span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EconomicResource</span>
-<span class="w">    </span><span class="nt">resourceConformsTo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:3be525ee-10f0-431c-9fec-9c0c15a4dv97</span><span class="w"> </span><span class="c1"># Fabulaser</span>
+<span class="w">    </span><span class="nt">conformsTo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://www.wikidata.org/wiki/Q11748378</span><span class="w"> </span><span class="c1"># cow</span>
+<span class="w">    </span><span class="nt">trackingIdentifier</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cow45</span>
 <span class="w">    </span><span class="nt">accountingQuantity</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">one</span>
 <span class="w">      </span><span class="nt">hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
-<span class="w">    </span><span class="nt">stage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:02b39a30-3e04-4305-9656-7f261aa63c98</span><span class="w"> </span><span class="c1"># test machine</span>
-<span class="w">    </span><span class="nt">state</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pass</span>
+<span class="w">    </span><span class="nt">containedIn</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dairy:3129ca8b-fcda-45be-bbda-294dc924d3b9</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dairy:e1721a61-cd47-4556-84b9-8b1b81da15bh</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EconomicResource</span>
+<span class="w">    </span><span class="nt">conformsTo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://www.wikidata.org/wiki/Q11748378</span><span class="w"> </span><span class="c1"># cow</span>
+<span class="w">    </span><span class="nt">trackingIdentifier</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cow40</span>
+<span class="w">    </span><span class="nt">accountingQuantity</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">one</span>
+<span class="w">      </span><span class="nt">hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">    </span><span class="nt">containedIn</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dairy:3129ca8b-fcda-45be-bbda-294dc924d3b9</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dairy:3129ca8b-fcda-45be-bbda-294dc924d3b9</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EconomicResource</span>
+<span class="w">    </span><span class="nt">conformsTo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://www.wikidata.org/wiki/Q209542</span><span class="w"> </span><span class="c1"># herd</span>
+<span class="w">    </span><span class="nt">accountingQuantity</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">one</span>
+<span class="w">      </span><span class="nt">hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
 </code></pre></div>
-Alternate view of these stage-state processes, using the more relational directionality option.
-<div class="highlight"><pre><span></span><code><span class="c1"># Example: Process using stage and state</span>
-<span class="c1"># credit Fabulaser-Mini, https://github.com/fab-machines/Fabulaser-Mini/blob/main/manual/Fabulaser%20manual%20L2M2.pdf</span>
-
-<span class="s">&#39;@context&#39;</span><span class="p p-Indicator">:</span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@vocab&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://w3id.org/valueflows/ont/vf#</span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">mfg</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
-
-<span class="s">&#39;@graph&#39;</span><span class="p p-Indicator">:</span>
-
-<span class="w">  </span><span class="c1"># Assembly process</span>
-
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:02b39a30-3e04-4305-9656-7f261aa63c84</span>
-<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Process</span>
-<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Attach the air filter (step 33)</span>
-<span class="w">    </span><span class="nt">basedOn</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:3be5259d-10f0-431c-9fec-9c0c15a461d3</span><span class="w"> </span><span class="c1"># process specification: attach air filter</span>
-
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:a8236bbb-81e0-422d-9861-56d2417db0fb</span>
-<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EconomicEvent</span>
-<span class="w">    </span><span class="nt">inputOf</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:02b39a30-3e04-4305-9656-7f261aa63c84</span>
-<span class="w">    </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">accept</span>
-<span class="w">    </span><span class="nt">provider</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
-<span class="w">    </span><span class="nt">receiver</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
-<span class="w">    </span><span class="nt">resourceInventoriedAs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:e1721a61-cd47-4556-84b9-8b1b81da15bf</span><span class="w"> </span><span class="c1"># a laser cutter</span>
-<span class="w">    </span><span class="nt">resourceQuantity</span><span class="p">:</span>
-<span class="w">      </span><span class="nt">hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">one</span>
-<span class="w">      </span><span class="nt">hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
-<span class="w">    </span><span class="nt">stage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:3be5259d-10f0-431c-9fec-9c0c15a461e4</span><span class="w"> </span><span class="c1"># attach air compressor</span>
-
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:a8236bbb-81e0-422d-9861-56d2417db0ss</span>
-<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EconomicEvent</span>
-<span class="w">    </span><span class="nt">inputOf</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:02b39a30-3e04-4305-9656-7f261aa63c84</span>
-<span class="w">    </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">consume</span>
-<span class="w">    </span><span class="nt">provider</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
-<span class="w">    </span><span class="nt">receiver</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
-<span class="w">    </span><span class="nt">resourceInventoriedAs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:e1721a61-cd47-4556-84b9-8b1b81dlk4d0</span><span class="w"> </span><span class="c1"># an air filter</span>
-<span class="w">    </span><span class="nt">resourceQuantity</span><span class="p">:</span>
-<span class="w">      </span><span class="nt">hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">one</span>
-<span class="w">      </span><span class="nt">hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
-
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:a8236bbb-81e0-422d-9861-56d2417db0st</span>
-<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EconomicEvent</span>
-<span class="w">    </span><span class="nt">inputOf</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:02b39a30-3e04-4305-9656-7f261aa63c84</span>
-<span class="w">    </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">consume</span>
-<span class="w">    </span><span class="nt">provider</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
-<span class="w">    </span><span class="nt">receiver</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
-<span class="w">    </span><span class="nt">resourceInventoriedAs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:e1721a61-cd47-4556-84b9-8b1b81dlcvgk</span><span class="w"> </span><span class="c1"># a hose clamp</span>
-<span class="w">    </span><span class="nt">resourceQuantity</span><span class="p">:</span>
-<span class="w">      </span><span class="nt">hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">one</span>
-<span class="w">      </span><span class="nt">hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
-
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:52f0e212-3c4f-4d27-b345-5e964c135824</span>
-<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EconomicEvent</span>
-<span class="w">    </span><span class="nt">outputOf</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:02b39a30-3e04-4305-9656-7f261aa63c84</span>
-<span class="w">    </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">modify</span>
-<span class="w">    </span><span class="nt">provider</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
-<span class="w">    </span><span class="nt">receiver</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
-<span class="w">    </span><span class="nt">resourceInventoriedAs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:e1721a61-cd47-4556-84b9-8b1b81da15bf</span><span class="w"> </span><span class="c1"># a laser cutter</span>
-<span class="w">    </span><span class="nt">resourceQuantity</span><span class="p">:</span>
-<span class="w">      </span><span class="nt">hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">one</span>
-<span class="w">      </span><span class="nt">hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
-
-<span class="w">  </span><span class="c1"># Testing process</span>
-
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:02b39a30-3e04-4305-9656-7f261aa63c98</span>
-<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Process</span>
-<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Test the laser cutter</span>
-<span class="w">    </span><span class="nt">basedOn</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:3be5259d-10f0-431c-9fec-9c0c15a461d3</span><span class="w"> </span><span class="c1"># final test after all assembly</span>
-
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:a8236bbb-81e0-422d-9861-56d2417db0fb</span>
-<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EconomicEvent</span>
-<span class="w">    </span><span class="nt">inputOf</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:02b39a30-3e04-4305-9656-7f261aa63c98</span>
-<span class="w">    </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">accept</span>
-<span class="w">    </span><span class="nt">provider</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
-<span class="w">    </span><span class="nt">receiver</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
-<span class="w">    </span><span class="nt">resourceInventoriedAs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:e1721a61-cd47-4556-84b9-8b1b81da15bf</span><span class="w"> </span><span class="c1"># a laser cutter</span>
-<span class="w">    </span><span class="nt">resourceQuantity</span><span class="p">:</span>
-<span class="w">      </span><span class="nt">hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">one</span>
-<span class="w">      </span><span class="nt">hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
-<span class="w">    </span><span class="nt">stage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:02b39a30-3e04-4305-9656-7f261aa63c84</span><span class="w"> </span><span class="c1">#attach air filter</span>
-
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:52f0e212-3c4f-4d27-b345-5e964c135824</span>
-<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EconomicEvent</span>
-<span class="w">    </span><span class="nt">outputOf</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:02b39a30-3e04-4305-9656-7f261aa63c98</span>
-<span class="w">    </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">modify</span>
-<span class="w">    </span><span class="nt">state</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pass</span>
-<span class="w">    </span><span class="nt">provider</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
-<span class="w">    </span><span class="nt">receiver</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
-<span class="w">    </span><span class="nt">resourceInventoriedAs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:e1721a61-cd47-4556-84b9-8b1b81da15bf</span><span class="w"> </span><span class="c1"># a laser cutter</span>
-<span class="w">    </span><span class="nt">resourceQuantity</span><span class="p">:</span>
-<span class="w">      </span><span class="nt">hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">one</span>
-<span class="w">      </span><span class="nt">hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
-</code></pre></div></p>
 <h4 id="correcting-errors">Correcting errors</h4>
 <p>Simple one-process manufacturing with corrections.</p>
 <p>Note that the diagram below shows the actual data in the flow.  If a use case calls for it, the events can be combined on a user interface so that a "corrected" event would be displayed, for example just "work 6 hours machining" and "consume 5 plywood sheets" as the two inputs to this process. In that case, you could show all of events, including the correcting events, in another view.</p>

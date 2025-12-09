@@ -1,0 +1,82 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:145.0) Gecko/20100101 Firefox/145.0" version="29.2.6">
+  <diagram name="Page-1" id="kaWjtSiXtHOVEVx-Q_oe">
+    <mxGraphModel dx="738" dy="490" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="DVTuVqbx1xQ2Q_5d_AkN-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=none;align=left;verticalAlign=top;" value="" vertex="1">
+          <mxGeometry height="170" width="580" x="410" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="DVTuVqbx1xQ2Q_5d_AkN-2" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;" value="Milk cows winter" vertex="1">
+          <mxGeometry height="50" width="119" x="768" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="DVTuVqbx1xQ2Q_5d_AkN-3" parent="1" style="ellipse;whiteSpace=wrap;html=1;rounded=0;glass=1;comic=0;" value="Collect cows" vertex="1">
+          <mxGeometry height="50" width="88" x="551" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="DVTuVqbx1xQ2Q_5d_AkN-4" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;" value="Milk cows summer" vertex="1">
+          <mxGeometry height="50" width="119" x="520" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="DVTuVqbx1xQ2Q_5d_AkN-5" parent="1" style="ellipse;whiteSpace=wrap;html=1;rounded=0;glass=1;comic=0;" value="Setup milking shed" vertex="1">
+          <mxGeometry height="50" width="88" x="655" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="DVTuVqbx1xQ2Q_5d_AkN-6" parent="1" style="ellipse;whiteSpace=wrap;html=1;rounded=0;glass=1;comic=0;" value="Milk and dip cows winter" vertex="1">
+          <mxGeometry height="50" width="88" x="877" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="DVTuVqbx1xQ2Q_5d_AkN-7" parent="1" style="ellipse;whiteSpace=wrap;html=1;rounded=0;glass=1;comic=0;" value="Milk and dip cows summer" vertex="1">
+          <mxGeometry height="50" width="88" x="434" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="DVTuVqbx1xQ2Q_5d_AkN-8" parent="1" style="ellipse;whiteSpace=wrap;html=1;rounded=0;glass=1;comic=0;" value="Return cows" vertex="1">
+          <mxGeometry height="50" width="88" x="759.5" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="DVTuVqbx1xQ2Q_5d_AkN-9" edge="1" parent="1" source="DVTuVqbx1xQ2Q_5d_AkN-7" style="endArrow=none;dashed=1;html=1;rounded=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" target="DVTuVqbx1xQ2Q_5d_AkN-4" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="430" y="260" as="sourcePoint" />
+            <mxPoint x="480" y="210" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DVTuVqbx1xQ2Q_5d_AkN-10" edge="1" parent="1" source="DVTuVqbx1xQ2Q_5d_AkN-2" style="endArrow=none;dashed=1;html=1;rounded=0;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="DVTuVqbx1xQ2Q_5d_AkN-6" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="990" y="240" as="sourcePoint" />
+            <mxPoint x="1040" y="190" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DVTuVqbx1xQ2Q_5d_AkN-11" edge="1" parent="1" source="DVTuVqbx1xQ2Q_5d_AkN-3" style="endArrow=none;dashed=1;html=1;rounded=0;entryX=0.375;entryY=1;entryDx=0;entryDy=0;exitX=0;exitY=0;exitDx=0;exitDy=0;" target="DVTuVqbx1xQ2Q_5d_AkN-4" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="610" y="260" as="sourcePoint" />
+            <mxPoint x="660" y="210" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DVTuVqbx1xQ2Q_5d_AkN-12" edge="1" parent="1" source="DVTuVqbx1xQ2Q_5d_AkN-3" style="endArrow=none;dashed=1;html=1;rounded=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;exitX=1;exitY=0;exitDx=0;exitDy=0;" target="DVTuVqbx1xQ2Q_5d_AkN-2" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="670" y="270" as="sourcePoint" />
+            <mxPoint x="720" y="220" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DVTuVqbx1xQ2Q_5d_AkN-13" edge="1" parent="1" source="DVTuVqbx1xQ2Q_5d_AkN-5" style="endArrow=none;dashed=1;html=1;rounded=0;entryX=0.625;entryY=1;entryDx=0;entryDy=0;exitX=0;exitY=0;exitDx=0;exitDy=0;" target="DVTuVqbx1xQ2Q_5d_AkN-4" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="650" y="240" as="sourcePoint" />
+            <mxPoint x="700" y="190" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DVTuVqbx1xQ2Q_5d_AkN-14" edge="1" parent="1" source="DVTuVqbx1xQ2Q_5d_AkN-5" style="endArrow=none;dashed=1;html=1;rounded=0;entryX=0.375;entryY=1;entryDx=0;entryDy=0;exitX=1;exitY=0;exitDx=0;exitDy=0;" target="DVTuVqbx1xQ2Q_5d_AkN-2" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="660" y="230" as="sourcePoint" />
+            <mxPoint x="710" y="180" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DVTuVqbx1xQ2Q_5d_AkN-15" edge="1" parent="1" source="DVTuVqbx1xQ2Q_5d_AkN-4" style="endArrow=none;dashed=1;html=1;rounded=0;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=0;" target="DVTuVqbx1xQ2Q_5d_AkN-8" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="680" y="240" as="sourcePoint" />
+            <mxPoint x="730" y="190" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DVTuVqbx1xQ2Q_5d_AkN-16" edge="1" parent="1" source="DVTuVqbx1xQ2Q_5d_AkN-8" style="endArrow=none;dashed=1;html=1;rounded=0;entryX=0.686;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;exitX=1;exitY=0;exitDx=0;exitDy=0;" target="DVTuVqbx1xQ2Q_5d_AkN-2" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="960" y="260" as="sourcePoint" />
+            <mxPoint x="1010" y="210" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

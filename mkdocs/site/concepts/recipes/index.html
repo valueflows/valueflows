@@ -1089,13 +1089,13 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#recipe-and-recipe-group" class="md-nav__link">
+  <a href="#recipe-class" class="md-nav__link">
     <span class="md-ellipsis">
-      Recipe and Recipe Group
+      Recipe class
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Recipe and Recipe Group">
+    <nav class="md-nav" aria-label="Recipe class">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1265,8 +1265,6 @@
       
         
       
-        
-      
     
     
       
@@ -1370,6 +1368,48 @@
   
   
     <li class="md-nav__item">
+      <a href="../../examples/ex-proposals/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Offers and Requests
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/ex-planning/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Recipes and Planning
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../examples/ex-production/" class="md-nav__link">
         
   
@@ -1396,69 +1436,6 @@
   
   <span class="md-ellipsis">
     Exchanges and Transfers
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../examples/ex-planning/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Planning
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../examples/ex-complex/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Plan-Produce-Exchange
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../examples/ex-proposals/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Offers/Requests
   </span>
   
 
@@ -1964,13 +1941,13 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#recipe-and-recipe-group" class="md-nav__link">
+  <a href="#recipe-class" class="md-nav__link">
     <span class="md-ellipsis">
-      Recipe and Recipe Group
+      Recipe class
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Recipe and Recipe Group">
+    <nav class="md-nav" aria-label="Recipe class">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -2013,7 +1990,7 @@
 
   <h1>Recipes</h1>
 
-<p>See also <a href="../../specification/model-text/#flows-in-motion-recipe">Flows in Motion: Recipes</a> on the Diagram Explanation, <a href="../plan/#planning-from-a-recipe">Planning from a Recipe</a> on the Operational Planning page, and the <a href="../../examples/ex-planning/#simple-plan-from-recipe">Simple plan from recipe example</a>.</p>
+<p>See also <a href="../../specification/model-text/#flows-in-motion-recipe">Flows in Motion: Recipes</a> on the Diagram Explanation, <a href="../plan/#planning-from-a-recipe">Planning from a Recipe</a> on the Operational Planning page, the <a href="../../examples/ex-planning/#simple-plan-from-recipe">Simple plan from recipe example</a>, and the <a href="../examples/ex-complex.md/#building-recipes">Building recipes example</a>.</p>
 <h2 id="not-just-for-cooking">Not just for cooking...</h2>
 <p>Recipes are for:</p>
 <ul>
@@ -2022,7 +1999,7 @@
 <li>providing signals for coordinating their work.</li>
 </ul>
 <p>Recipes contain all the info required to create a resource or provide a service.  In ERP (Enterprise Resource Planning) terms, it’s a combination of bills of material and routings and suppliers. And the logic for generating plans from recipes is roughly the same as <a href="https://en.wikipedia.org/wiki/Material_requirements_planning">Material Requirements Planning</a>.</p>
-<p>If you encounter the same planning pattern more than once, and your software allows planning from recipes, you might want to capture the pattern in a Recipe so you don't need to cut and paste or re-enter the same information every time.</p>
+<p>If you encounter the same planning pattern more than once, and your software allows planning from recipes, you might want to capture the pattern in a Recipe so you don't need to cut and paste or re-enter the same information every time.  Generally recipes are for repeatable processes.</p>
 <h2 id="recipe-patterns">Recipe patterns</h2>
 <p>These are two basic shapes of recipes. These recipe patterns can be used alone, or mixed and matched in the same recipe:</p>
 <ul>
@@ -2047,11 +2024,10 @@
 </ul>
 <p>A workflow recipe tends to be more like a linear flow.</p>
 <p>The examples above have to do with producing specific goods or services.  Recipes can also be used to document more general business processes that an organization uses to produce more generally defined kinds of outputs.  For example, an R&amp;D process might be hard to document in detail, but it does have general steps like researching existing technology, concept generation, experimentation, concept selection, refinement, testing, documenting the design. </p>
-<h2 id="recipe-and-recipe-group">Recipe and Recipe Group</h2>
-<p>These are optional constructs.  You might want a Recipe when you include more than one process in one recipe, and especially if different recipes can create the same Resource Specification output in different ways.  It is also useful when certain processes are included in multiple recipes.</p>
-<p>A Recipe Group is for when your plans regularly produce more than one output which can be produced separately.  For example, a campaign might produce one or more events, various brochures, a website, etc.</p>
+<h2 id="recipe-class">Recipe class</h2>
+<p>The Recipe class is an optional construct.  You might want a Recipe when you include more than one process in one recipe, and especially if different recipes can create the same Resource Specification output in different ways.  It is also useful when certain processes are included in multiple recipes, see the bottom of <a href="../examples/ex-complex.md/#building-recipes">this example</a>.  You might also want Recipe when the software finds recipes by the primary output, because that can be defined directly from Recipe without interrogating the flows.</p>
 <h3 id="byproducts-and-coproducts">Byproducts and Coproducts</h3>
-<p>A Recipe knows its primary output, i.e what is created by this Recipe.  As of now, it does not directly know its byproducts and coproducts, but this information can be added for specific use cases, outside of Valueflows, if needed. It can also be found by interrogating the contents of the recipe input-process-output graph. This choice favors simplicity at this stage.</p>
+<p>A Recipe knows its primary reason for being, i.e what is created by this Recipe.  As of now, it does not directly know its byproducts and coproducts. If needed, this can be found by interrogating the contents of the recipe input-process-output graph. This choice favors simplicity at this stage.</p>
 <h2 id="generation-of-plans">Generation of plans</h2>
 <p>Plans can be generated from a Recipe, a Recipe Group, or directly from a Recipe Process, which will find predescessor Recipe Processes as needed.</p>
 <p><b>Back-scheduling a plan from a Recipe</b>:

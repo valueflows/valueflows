@@ -1017,15 +1017,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#granularity" class="md-nav__link">
-    <span class="md-ellipsis">
-      Granularity
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#actions" class="md-nav__link">
     <span class="md-ellipsis">
       Actions
@@ -1343,8 +1334,6 @@
       
         
       
-        
-      
     
     
       
@@ -1448,6 +1437,48 @@
   
   
     <li class="md-nav__item">
+      <a href="../../examples/ex-proposals/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Offers and Requests
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/ex-planning/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Recipes and Planning
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../examples/ex-production/" class="md-nav__link">
         
   
@@ -1474,69 +1505,6 @@
   
   <span class="md-ellipsis">
     Exchanges and Transfers
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../examples/ex-planning/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Planning
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../examples/ex-complex/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Plan-Produce-Exchange
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../examples/ex-proposals/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Offers/Requests
   </span>
   
 
@@ -2117,15 +2085,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#granularity" class="md-nav__link">
-    <span class="md-ellipsis">
-      Granularity
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#actions" class="md-nav__link">
     <span class="md-ellipsis">
       Actions
@@ -2191,9 +2150,6 @@
 <h2 id="matching-intents">Matching Intents</h2>
 <p>Often agents will start their plans independently and record their initial intents. Later once they make a Commitment with another agent, it will represent a specific shared part of their plans. For that reason any Commitment can result in Satisfaction of the providing agent's Intent as well as Satisfaction of the receiving agent's Intent.</p>
 <p><img alt="diagram showing matching of 2 Intents from different agents, satisfied by 1 Commitment, fulfilled by an Event" src="../../assets/matched.png" /></p>
-<h2 id="granularity">Granularity</h2>
-<p>Intents, Commitments, and Economic Events can occur at any granularity that is needed or for which data can be obtained.  So they primarily are used for all operational needs, but can also be used at higher levels for budgeting for organizations, analytical and high level planning needs for communities or regions, etc.</p>
-<p>Any flows that are part of a <a href="../plan/">Plan</a> are operational, defined at the lowest level.  Flows that are part of a <a href="estimates.md">Scenario</a> are not operational.  They could have many uses, from pre-planning to higher level analysis, but are not considered part of any scheduled planning for what will actually occur.</p>
 <h2 id="actions">Actions</h2>
 <p>All types of flows use the same set of actions, which define what the flow does and how it behaves in relation to resources.  You can find detailed documentation on actions on the <a href="../actions/">Actions page</a>.</p>
 <h2 id="quantities-and-times">Quantities and Times</h2>
@@ -2214,7 +2170,7 @@
 </ul>
 <p>Quantities can be any needed unit of measure, including counts, volumes, weights, etc.  Time can be a beginning/end time (an interval), or a point in time, or a due date.  The flows require at least one of those.  If a point in time is recorded, an application should return that time as the beginning and end time if asked.</p>
 <p>Note that recipes may need to scale both quantities and calendar times when used to create a plan.</p>
-<p>Sometimes a quantity is expressed in time-based units, like "I worked 6 hours", or "we used this machine for 8 hours".  These flows also may have a related time, like "I worked from 10am to 4pm", or "we used this machine from 8am to 4pm". In these examples, the quantity is used for accounting figures, exchange, recipes.  The time is used to schedule and coordinate the work or machine usage.</p>
+<p>Sometimes a quantity is expressed in time-based units, like "I worked 6 hours", or "we used this machine for 8 hours".  These flows also may have a related time, like "I worked from 10am to 4pm", or "we used this machine from 8am to 4pm". In these examples, the quantity is used for accounting, exchange, recipes.  The time is used to schedule and coordinate the work or machine usage.</p>
 <p>Sometimes a situation may call for a "compound quantity", like "Number-per-Year".</p>
 <p>See also at <a href="../../specification/external-terms/">Use of Other Vocabularies</a>.</p>
 <h2 id="correcting-events">Correcting Events</h2>

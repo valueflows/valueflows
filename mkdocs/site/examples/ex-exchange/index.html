@@ -12,7 +12,7 @@
         <link rel="prev" href="../ex-production/">
       
       
-        <link rel="next" href="../ex-planning/">
+        <link rel="next" href="../../algorithms/overview/">
       
       
       <link rel="icon" href="../../assets/favicon.ico">
@@ -1175,8 +1175,6 @@
       
         
       
-        
-      
     
     
       
@@ -1267,6 +1265,48 @@
   
   <span class="md-ellipsis">
     Resources
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ex-proposals/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Offers and Requests
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ex-planning/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Recipes and Planning
   </span>
   
 
@@ -1412,73 +1452,19 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#transportation-with-transfer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Transportation with transfer
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../ex-planning/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Planning
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../ex-complex/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Plan-Produce-Exchange
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../ex-proposals/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Offers/Requests
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -2026,6 +2012,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#transportation-with-transfer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Transportation with transfer
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2532,6 +2527,538 @@
 <span class="w">    </span><span class="nt">onhandQuantity</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">one</span>
 <span class="w">      </span><span class="nt">hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+</code></pre></div>
+<h4 id="transportation-with-transfer">Transportation with transfer</h4>
+<p>Bob purchases 30kg of apples from Alice and Claudia transports them (FOB destination).  This illustrates an implied transfer of custody, to keep the overall flow simpler.  (The example without the implied transfer is shown after this one.)</p>
+<p><img alt="transport diagram reflecting the yaml below" src="../../assets/examples/transport-transfer-implied.png" /></p>
+<p><div class="highlight"><pre><span></span><code><span class="c1"># Transportation with transfer</span>
+
+<span class="s">&#39;@context&#39;</span><span class="p p-Indicator">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@vocab&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://w3id.org/valueflows/ont/vf#</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">alice</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://alice.example/</span>
+<span class="w">    </span><span class="nt">bob</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://bob.example/</span>
+<span class="w">    </span><span class="nt">claudia</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://claudia.example/</span>
+<span class="w">    </span><span class="nt">geo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://location.example/</span>
+
+<span class="s">&#39;@graph&#39;</span><span class="p p-Indicator">:</span>
+
+<span class="c1"># Bob purchases 30kg of apples from Alice and Claudia transports them (FOB destination)</span>
+
+<span class="w">  </span><span class="c1"># Alice&#39;s resource before</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">alice:21f361a6-2375-46bb-b192-c21b5ba833bf</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EconomicResource</span>
+<span class="w">    </span><span class="nt">conformsTo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://www.wikidata.org/entity/Q41777871</span><span class="w"> </span><span class="c1"># haralson apples</span>
+<span class="w">    </span><span class="nt">trackingIdentifier</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">lot-alice-apples-2018-10-11</span>
+<span class="w">    </span><span class="nt">locatedAt</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">geo:70ee3034-0d15-4471-8ee3-91c60bb1a9c9</span>
+<span class="w">    </span><span class="nt">primaryAccountable</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://alice.example</span>
+<span class="w">    </span><span class="nt">accountingQuantity</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">kilogram</span>
+<span class="w">      </span><span class="nt">hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">230</span>
+<span class="w">    </span><span class="nt">onhandQuantity</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">kilogram</span>
+<span class="w">      </span><span class="nt">hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">230</span>
+
+<span class="w">  </span><span class="c1"># alice commits to transfer some apples to bob</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10f1f86</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Commitment</span>
+<span class="w">    </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">transfer</span>
+<span class="w">    </span><span class="nt">resourceConformsTo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://www.wikidata.org/entity/Q41777871Q41777871</span><span class="w"> </span><span class="c1"># haralson apples</span>
+<span class="w">    </span><span class="nt">provider</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://alice.example/</span>
+<span class="w">    </span><span class="nt">receiver</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://bob.example/</span>
+<span class="w">    </span><span class="nt">resourceQuantity</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">kilogram</span>
+<span class="w">      </span><span class="nt">hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">30</span>
+
+<span class="w">  </span><span class="c1"># alice and claudia agree on transportation of the apples</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:f325a950-5737-488d-b122-8f21114d0eb0</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Agreement</span>
+<span class="w">    </span><span class="nt">note</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">exchange transportation service for currency</span>
+<span class="w">    </span><span class="nt">stipulates</span><span class="p">:</span>
+
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:c7897c39-7f05-4a5d-a487-80e130a2414a</span>
+<span class="w">      </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Commitment</span>
+<span class="w">      </span><span class="nt">note</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Transportation of alice&#39;s apples from alice&#39;s location to bob&#39;s location</span>
+<span class="w">      </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">deliverService</span>
+<span class="w">      </span><span class="nt">resourceClassifiedAs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://www.wikidata.org/entity/Q7590</span><span class="w"> </span><span class="c1"># transportation service</span>
+<span class="w">      </span><span class="nt">provider</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://claudia.example/</span>
+<span class="w">      </span><span class="nt">receiver</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://alice.example/</span>
+<span class="w">      </span><span class="nt">resourceQuantity</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">one</span>
+<span class="w">        </span><span class="nt">hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+
+<span class="w">    </span><span class="nt">stipulatesReciprocal</span><span class="p">:</span>
+
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:33e8933b-ff73-4a01-964a-ca7a98893083</span>
+<span class="w">      </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Commitment</span>
+<span class="w">      </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">transfer</span>
+<span class="w">      </span><span class="nt">resourceConformsTo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://www.wikidata.org/entity/Q4917</span><span class="w"> </span><span class="c1"># US Dollar</span>
+<span class="w">      </span><span class="nt">provider</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://alice.example/</span>
+<span class="w">      </span><span class="nt">receiver</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://claudia.example/</span>
+<span class="w">      </span><span class="nt">resourceQuantity</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">one</span>
+<span class="w">        </span><span class="nt">hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span>
+
+<span class="w">  </span><span class="c1"># claudia transports the apples in two hops</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">claudia:633f6e56-6c7d-4a5b-b9c9-1a8adafd8960</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Process</span>
+<span class="w">    </span><span class="nt">note</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Claudia transports the apples to the distribution center</span>
+<span class="w">    </span><span class="nt">hasInput</span><span class="p">:</span>
+
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">claudia:fd399b37-0740-4a68-a184-1e655021ca21</span>
+<span class="w">      </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EconomicEvent</span>
+<span class="w">      </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pickup</span><span class="w"> </span><span class="c1"># with implied transfer custody, since different provider/receiver</span>
+<span class="w">      </span><span class="nt">resourceInventoriedAs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">alice:21f361a6-2375-46bb-b192-c21b5ba833bf</span>
+<span class="w">      </span><span class="nt">toResourceInventoriedAs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">claudia:27be5cab-d740-4194-9298-1661a69d9d95</span>
+<span class="w">      </span><span class="nt">provider</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://alice.example/</span>
+<span class="w">      </span><span class="nt">receiver</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://claudia.example/</span>
+<span class="w">      </span><span class="nt">resourceQuantity</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">kilogram</span>
+<span class="w">        </span><span class="nt">hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">30</span>
+
+<span class="w">    </span><span class="nt">hasOutput</span><span class="p">:</span>
+
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">claudia:57f1c1d0-432e-4bfa-9d32-002b8955a708</span>
+<span class="w">      </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EconomicEvent</span>
+<span class="w">      </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dropoff</span><span class="w"> </span><span class="c1"># no implied transfer, one agent and one resource</span>
+<span class="w">      </span><span class="nt">resourceInventoriedAs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">claudia:27be5cab-d740-4194-9298-1661a69d9d95</span>
+<span class="w">      </span><span class="nt">provider</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://claudia.example/</span>
+<span class="w">      </span><span class="nt">receiver</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://claudia.example/</span>
+<span class="w">      </span><span class="nt">resourceQuantity</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">kilogram</span>
+<span class="w">        </span><span class="nt">hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">30</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">claudia:c404cff5-19c7-453d-b0d8-d8e96055bd0c</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Process</span>
+<span class="w">    </span><span class="nt">note</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Claudia transports the apples from the distribution center to the receiver</span>
+<span class="w">    </span><span class="nt">hasInput</span><span class="p">:</span>
+
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">claudia:856c43b1-0a63-445f-a56f-707b257f086e</span>
+<span class="w">      </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EconomicEvent</span>
+<span class="w">      </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pickup</span>
+<span class="w">      </span><span class="nt">resourceInventoriedAs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">claudia:27be5cab-d740-4194-9298-1661a69d9d95</span>
+<span class="w">      </span><span class="nt">provider</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://claudia.example/</span>
+<span class="w">      </span><span class="nt">receiver</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://claudia.example/</span>
+<span class="w">      </span><span class="nt">resourceQuantity</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">kilogram</span>
+<span class="w">        </span><span class="nt">hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">30</span>
+
+<span class="w">    </span><span class="nt">hasOutput</span><span class="p">:</span>
+
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">claudia:9cb4944b-d26d-4774-a530-d18f2747c0d8</span>
+<span class="w">      </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EconomicEvent</span>
+<span class="w">      </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dropoff</span><span class="w"> </span><span class="c1"># implied transfer of custody</span>
+<span class="w">      </span><span class="nt">resourceInventoriedAs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">claudia:27be5cab-d740-4194-9298-1661a69d9d95</span>
+<span class="w">      </span><span class="nt">toResourceInventoriedAs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bob:9bd19194-a36d-4a1f-896b-8082887962cb</span>
+<span class="w">      </span><span class="nt">provider</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://claudia.example/</span>
+<span class="w">      </span><span class="nt">receiver</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://bob.example/</span>
+<span class="w">      </span><span class="nt">resourceQuantity</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">kilogram</span>
+<span class="w">        </span><span class="nt">hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">30</span>
+
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:68cabaf3-deb8-4bd5-a439-798263abe35a</span>
+<span class="w">      </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EconomicEvent</span>
+<span class="w">      </span><span class="nt">note</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Transportation of alice&#39;s apples to bob&#39;s location</span>
+<span class="w">      </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">deliverService</span>
+<span class="w">      </span><span class="nt">resourceConformsTo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://www.wikidata.org/entity/Q7590</span><span class="w"> </span><span class="c1"># transportation service</span>
+<span class="w">      </span><span class="nt">provider</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://claudia.example/</span>
+<span class="w">      </span><span class="nt">receiver</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://alice.example/</span>
+<span class="w">      </span><span class="nt">resourceQuantity</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">one</span>
+<span class="w">        </span><span class="nt">hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">      </span><span class="nt">fulfills</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:c7897c39-7f05-4a5d-a487-80e130a2414a</span><span class="w"> </span><span class="c1"># the commitment</span>
+
+<span class="w">  </span><span class="c1"># receipt of the apples triggers finalizing the transfer of ownership</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:ad56a7ed-be3c-4937-a3fb-0f156bcd2c47</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EconomicEvent</span>
+<span class="w">    </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">transferAllRights</span>
+<span class="w">    </span><span class="nt">resourceClassifiedAs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://www.wikidata.org/entity/Q41777871</span><span class="w"> </span><span class="c1"># haralson apples</span>
+<span class="w">    </span><span class="nt">trackingIdentifier</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">lot-alice-apples-2018-10-11</span>
+<span class="w">    </span><span class="nt">provider</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://alice.example/</span>
+<span class="w">    </span><span class="nt">receiver</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://bob.example/</span>
+<span class="w">    </span><span class="nt">resourceQuantity</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">kilogram</span>
+<span class="w">      </span><span class="nt">hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">30</span>
+<span class="w">    </span><span class="nt">fulfills</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10f1f86</span><span class="w"> </span><span class="c1"># the commitment</span>
+
+<span class="w">  </span><span class="c1"># resources snapshot</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">alice:21f361a6-2375-46bb-b192-c21b5ba833bf</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EconomicResource</span>
+<span class="w">    </span><span class="nt">conformsTo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://www.wikidata.org/entity/Q41777871</span><span class="w"> </span><span class="c1"># haralson apples</span>
+<span class="w">    </span><span class="nt">trackingIdentifier</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">lot-alice-apples-2018-10-11</span>
+<span class="w">    </span><span class="nt">locatedAt</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">geo:70ee3034-0d15-4471-8ee3-91c60bb1a9c9</span>
+<span class="w">    </span><span class="nt">primaryAccountable</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://alice.example</span>
+<span class="w">    </span><span class="nt">accountingQuantity</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">kilogram</span>
+<span class="w">      </span><span class="nt">hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">200</span>
+<span class="w">    </span><span class="nt">onhandQuantity</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">kilogram</span>
+<span class="w">      </span><span class="nt">hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">200</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bob:9bd19194-a36d-4a1f-896b-8082887962cb</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EconomicResource</span>
+<span class="w">    </span><span class="nt">conformsTo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://www.wikidata.org/entity/Q41777871</span><span class="w"> </span><span class="c1"># haralson apples</span>
+<span class="w">    </span><span class="nt">trackingIdentifier</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">lot-alice-apples-2018-10-11</span>
+<span class="w">    </span><span class="nt">locatedAt</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">geo:b52a5815-fae9-43bf-be95-833b95dc0ada</span>
+<span class="w">    </span><span class="nt">primaryAccountable</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://bob.example</span>
+<span class="w">    </span><span class="nt">accountingQuantity</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">kilogram</span>
+<span class="w">      </span><span class="nt">hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">30</span>
+<span class="w">    </span><span class="nt">onhandQuantity</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">kilogram</span>
+<span class="w">      </span><span class="nt">hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">30</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">claudia:27be5cab-d740-4194-9298-1661a69d9d95</span><span class="w"> </span><span class="c1"># record of claudia&#39;s bill of lading on the truck</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EconomicResource</span>
+<span class="w">    </span><span class="nt">conformsTo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://www.wikidata.org/entity/Q41777871</span><span class="w"> </span><span class="c1"># haralson apples</span>
+<span class="w">    </span><span class="nt">onhandQuantity</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">kilogram</span>
+<span class="w">      </span><span class="nt">hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+
+<span class="w">  </span><span class="c1"># alice pays claudia for the transportation service</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:8baa8ff7-9c1e-4586-ae7b-79d620a3cac9</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EconomicEvent</span>
+<span class="w">    </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">transfer</span>
+<span class="w">    </span><span class="nt">resourceConformsTo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://www.wikidata.org/entity/Q4917</span><span class="w"> </span><span class="c1"># US Dollar</span>
+<span class="w">    </span><span class="nt">resourceInventoriedAs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">alice:daa2ec3b-2c1a-4eb1-839f-8dcec1a1f93a</span><span class="w"> </span><span class="c1"># alice&#39;s bank account</span>
+<span class="w">    </span><span class="nt">toResourceInventoriedAs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">claudia:bd5806d6-4a36-45b9-b3b6-3e7d361a5a14</span><span class="w"> </span><span class="c1"># claudia&#39;s bank account</span>
+<span class="w">    </span><span class="nt">provider</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://alice.example/</span>
+<span class="w">    </span><span class="nt">receiver</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://claudia.example/</span>
+<span class="w">    </span><span class="nt">resourceQuantity</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">one</span>
+<span class="w">      </span><span class="nt">hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span>
+<span class="w">    </span><span class="nt">fulfills</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:33e8933b-ff73-4a01-964a-ca7a98893083</span><span class="w"> </span><span class="c1"># the commitment</span>
+</code></pre></div>
+The following shows a snippet alternative for the transport, where claudia uses alice's id for what is in her custody.
+<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="c1"># claudia transports the apples in two hops</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">claudia:633f6e56-6c7d-4a5b-b9c9-1a8adafd8960</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Process</span>
+<span class="w">    </span><span class="nt">note</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Claudia transports the apples to the distribution center</span>
+<span class="w">    </span><span class="nt">hasInput</span><span class="p">:</span>
+
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">claudia:fd399b37-0740-4a68-a184-1e655021ca21</span>
+<span class="w">      </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EconomicEvent</span>
+<span class="w">      </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pickup</span>
+<span class="w">      </span><span class="nt">resourceInventoriedAs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">alice:21f361a6-2375-46bb-b192-c21b5ba833bf</span>
+<span class="w">      </span><span class="nt">provider</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://alice.example/</span>
+<span class="w">      </span><span class="nt">receiver</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://claudia.example/</span>
+<span class="w">      </span><span class="nt">resourceQuantity</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">kilogram</span>
+<span class="w">        </span><span class="nt">hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">30</span>
+
+<span class="w">    </span><span class="nt">hasOutput</span><span class="p">:</span>
+
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">claudia:57f1c1d0-432e-4bfa-9d32-002b8955a708</span>
+<span class="w">      </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EconomicEvent</span>
+<span class="w">      </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dropoff</span>
+<span class="w">      </span><span class="nt">resourceInventoriedAs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">alice:21f361a6-2375-46bb-b192-c21b5ba833bf</span>
+<span class="w">      </span><span class="nt">provider</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://claudia.example/</span>
+<span class="w">      </span><span class="nt">receiver</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://claudia.example/</span>
+<span class="w">      </span><span class="nt">resourceQuantity</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">kilogram</span>
+<span class="w">        </span><span class="nt">hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">30</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">claudia:c404cff5-19c7-453d-b0d8-d8e96055bd0c</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Process</span>
+<span class="w">    </span><span class="nt">note</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Claudia transports the apples from the distribution center to the receiver</span>
+<span class="w">    </span><span class="nt">hasInput</span><span class="p">:</span>
+
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">claudia:856c43b1-0a63-445f-a56f-707b257f086e</span>
+<span class="w">      </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EconomicEvent</span>
+<span class="w">      </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pickup</span>
+<span class="w">      </span><span class="nt">resourceInventoriedAs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">alice:21f361a6-2375-46bb-b192-c21b5ba833bf</span>
+<span class="w">      </span><span class="nt">provider</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://claudia.example/</span>
+<span class="w">      </span><span class="nt">receiver</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://claudia.example/</span>
+<span class="w">      </span><span class="nt">resourceQuantity</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">kilogram</span>
+<span class="w">        </span><span class="nt">hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">30</span>
+
+<span class="w">    </span><span class="nt">hasOutput</span><span class="p">:</span>
+
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">claudia:9cb4944b-d26d-4774-a530-d18f2747c0d8</span>
+<span class="w">      </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EconomicEvent</span>
+<span class="w">      </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dropoff</span>
+<span class="w">      </span><span class="nt">resourceInventoriedAs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">alice:21f361a6-2375-46bb-b192-c21b5ba833bf</span>
+<span class="w">      </span><span class="nt">toResourceInventoriedAs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bob:9bd19194-a36d-4a1f-896b-8082887962cb</span>
+<span class="w">      </span><span class="nt">provider</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://claudia.example/</span>
+<span class="w">      </span><span class="nt">receiver</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://bob.example/</span>
+<span class="w">      </span><span class="nt">resourceQuantity</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">kilogram</span>
+<span class="w">        </span><span class="nt">hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">30</span>
+
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:68cabaf3-deb8-4bd5-a439-798263abe35a</span>
+<span class="w">      </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EconomicEvent</span>
+<span class="w">      </span><span class="nt">note</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Transportation of alice&#39;s apples from alice&#39;s location to bob&#39;s location</span>
+<span class="w">      </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">deliverService</span>
+<span class="w">      </span><span class="nt">resourceConformsTo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://www.wikidata.org/entity/Q7590</span><span class="w"> </span><span class="c1"># transportation service</span>
+<span class="w">      </span><span class="nt">provider</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://claudia.example/</span>
+<span class="w">      </span><span class="nt">receiver</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://alice.example/</span>
+<span class="w">      </span><span class="nt">resourceQuantity</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">one</span>
+<span class="w">        </span><span class="nt">hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">      </span><span class="nt">fulfills</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:c7897c39-7f05-4a5d-a487-80e130a2414a</span><span class="w"> </span><span class="c1"># the commitment</span>
+</code></pre></div>
+It is also valid to do this with an explicit transfer of custody, as below:</p>
+<p><img alt="transport diagram reflecting the yaml below" src="../../assets/examples/transport-transfer.png" /></p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Transportation with transfer</span>
+
+<span class="s">&#39;@context&#39;</span><span class="p p-Indicator">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@vocab&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://w3id.org/valueflows/ont/vf#</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">alice</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://alice.example/</span>
+<span class="w">    </span><span class="nt">bob</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://bob.example/</span>
+<span class="w">    </span><span class="nt">claudia</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://claudia.example/</span>
+
+<span class="s">&#39;@graph&#39;</span><span class="p p-Indicator">:</span>
+
+<span class="c1"># Bob purchases 30kg of apples from Alice and Claudia transports them (FOB destination)</span>
+
+<span class="w">  </span><span class="c1"># Alice&#39;s resource before</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">alice:21f361a6-2375-46bb-b192-c21b5ba833bf</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EconomicResource</span>
+<span class="w">    </span><span class="nt">conformsTo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://www.wikidata.org/entity/Q41777871</span><span class="w"> </span><span class="c1"># haralson apples</span>
+<span class="w">    </span><span class="nt">trackingIdentifier</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">lot-alice-apples-2018-10-11</span>
+<span class="w">    </span><span class="nt">locatedAt</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">geo:70ee3034-0d15-4471-8ee3-91c60bb1a9c9</span>
+<span class="w">    </span><span class="nt">primaryAccountable</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://alice.example</span>
+<span class="w">    </span><span class="nt">accountingQuantity</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">om2:hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">om2:kilogram</span>
+<span class="w">      </span><span class="nt">om2:hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">230</span>
+<span class="w">    </span><span class="nt">onhandQuantity</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">om2:hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">om2:kilogram</span>
+<span class="w">      </span><span class="nt">om2:hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">230</span>
+
+<span class="w">  </span><span class="c1"># alice commits to transfer some apples to bob</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10f1f86</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Commitment</span>
+<span class="w">    </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">transfer</span>
+<span class="w">    </span><span class="nt">resourceConformsTo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://www.wikidata.org/entity/Q41777871</span><span class="w"> </span><span class="c1"># haralson apples</span>
+<span class="w">    </span><span class="nt">provider</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://alice.example/</span>
+<span class="w">    </span><span class="nt">receiver</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://bob.example/</span>
+<span class="w">    </span><span class="nt">resourceQuantity</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">om2:hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">om2:kilogram</span>
+<span class="w">      </span><span class="nt">om2:hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">30</span>
+
+<span class="w">  </span><span class="c1"># alice and claudia agree on transportation of the apples</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:f325a950-5737-488d-b122-8f21114d0eb0</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Agreement</span>
+<span class="w">    </span><span class="nt">skos:note</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">exchange transportation service for currency</span>
+<span class="w">    </span><span class="nt">stipulates</span><span class="p">:</span>
+
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:c7897c39-7f05-4a5d-a487-80e130a2414a</span>
+<span class="w">      </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Commitment</span>
+<span class="w">      </span><span class="nt">skos:note</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Transportation of alice&#39;s apples from alice&#39;s location to bob&#39;s location</span>
+<span class="w">      </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">deliverService</span>
+<span class="w">      </span><span class="nt">resourceClassifiedAs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://www.wikidata.org/entity/Q7590</span><span class="w"> </span><span class="c1"># transportation service</span>
+<span class="w">      </span><span class="nt">provider</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://claudia.example/</span>
+<span class="w">      </span><span class="nt">receiver</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://alice.example/</span>
+<span class="w">      </span><span class="nt">resourceQuantity</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">om2:hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">om2:one</span>
+<span class="w">        </span><span class="nt">om2:hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+
+<span class="w">    </span><span class="nt">stipulatesReciprocal</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:33e8933b-ff73-4a01-964a-ca7a98893083</span>
+<span class="w">      </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Commitment</span>
+<span class="w">      </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">transfer</span>
+<span class="w">      </span><span class="nt">resourceConformsTo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://www.wikidata.org/entity/Q4917</span><span class="w"> </span><span class="c1"># US Dollar</span>
+<span class="w">      </span><span class="nt">provider</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://alice.example/</span>
+<span class="w">      </span><span class="nt">receiver</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://claudia.example/</span>
+<span class="w">      </span><span class="nt">resourceQuantity</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">om2:hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">om2:one</span>
+<span class="w">        </span><span class="nt">om2:hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span>
+
+<span class="w">  </span><span class="c1"># alice transfers custody of the apples to claudia for transportation</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10f1f87</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EconomicEvent</span>
+<span class="w">    </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">transferCustody</span><span class="w"> </span><span class="c1"># this is an event that was implied in the first example</span>
+<span class="w">    </span><span class="nt">resourceClassifiedAs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://www.wikidata.org/entity/Q41777871</span><span class="w"> </span><span class="c1"># haralson apples</span>
+<span class="w">    </span><span class="nt">trackingIdentifier</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">lot-alice-apples-2018-10-11</span>
+<span class="w">    </span><span class="nt">provider</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://alice.example/</span>
+<span class="w">    </span><span class="nt">receiver</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://claudia.example/</span>
+<span class="w">    </span><span class="nt">resourceInventoriedAs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">alice:21f361a6-2375-46bb-b192-c21b5ba833bf</span><span class="w"> </span><span class="c1"># alice&#39;s apples</span>
+<span class="w">    </span><span class="nt">toResourceInventoriedAs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">claudia:27be5cab-d740-4194-9298-1661a69d9d95</span><span class="w"> </span><span class="c1"># claudia&#39;s bill of lading on the truck</span>
+<span class="w">    </span><span class="nt">resourceQuantity</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">om2:hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">om2:kilogram</span>
+<span class="w">      </span><span class="nt">om2:hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">30</span>
+
+<span class="w">  </span><span class="c1"># resources snapshot</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">alice:21f361a6-2375-46bb-b192-c21b5ba833bf</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EconomicResource</span>
+<span class="w">    </span><span class="nt">classifiedAs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://www.wikidata.org/entity/Q41777871</span><span class="w"> </span><span class="c1"># haralson apples</span>
+<span class="w">    </span><span class="nt">trackingIdentifier</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">lot-alice-apples-2018-10-11</span>
+<span class="w">    </span><span class="nt">locatedAt</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">geo:70ee3034-0d15-4471-8ee3-91c60bb1a9c9</span>
+<span class="w">    </span><span class="nt">primaryAccountable</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://alice.example</span>
+<span class="w">    </span><span class="nt">accountingQuantity</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">om2:hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">om2:kilogram</span>
+<span class="w">      </span><span class="nt">om2:hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">230</span>
+<span class="w">    </span><span class="nt">onhandQuantity</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">om2:hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">om2:kilogram</span>
+<span class="w">      </span><span class="nt">om2:hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">200</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">claudia:27be5cab-d740-4194-9298-1661a69d9d95</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EconomicResource</span>
+<span class="w">    </span><span class="nt">classifiedAs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://www.wikidata.org/entity/Q41777871</span><span class="w"> </span><span class="c1"># haralson apples</span>
+<span class="w">    </span><span class="nt">trackingIdentifier</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">lot-alice-apples-2018-10-11</span>
+<span class="w">    </span><span class="nt">onhandQuantity</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">om2:hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">om2:kilogram</span>
+<span class="w">      </span><span class="nt">om2:hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">30</span>
+
+<span class="w">  </span><span class="c1"># claudia transports the apples in two hops</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">claudia:633f6e56-6c7d-4a5b-b9c9-1a8adafd8960</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Process</span>
+<span class="w">    </span><span class="nt">skos:note</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Claudia transports the apples</span>
+<span class="w">    </span><span class="nt">hasInput</span><span class="p">:</span>
+
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">claudia:fd399b37-0740-4a68-a184-1e655021ca21</span>
+<span class="w">      </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EconomicEvent</span>
+<span class="w">      </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pickup</span>
+<span class="w">      </span><span class="nt">resourceInventoriedAs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">claudia:27be5cab-d740-4194-9298-1661a69d9d95</span>
+<span class="w">      </span><span class="nt">provider</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://claudia.example/</span>
+<span class="w">      </span><span class="nt">receiver</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://claudia.example/</span>
+<span class="w">      </span><span class="nt">resourceQuantity</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">om2:hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">om2:kilogram</span>
+<span class="w">        </span><span class="nt">om2:hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">30</span>
+
+<span class="w">    </span><span class="nt">hasOutput</span><span class="p">:</span>
+
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">claudia:57f1c1d0-432e-4bfa-9d32-002b8955a708</span>
+<span class="w">      </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EconomicEvent</span>
+<span class="w">      </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dropoff</span>
+<span class="w">      </span><span class="nt">resourceInventoriedAs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">claudia:27be5cab-d740-4194-9298-1661a69d9d95</span>
+<span class="w">      </span><span class="nt">provider</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://claudia.example/</span>
+<span class="w">      </span><span class="nt">receiver</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://claudia.example/</span>
+<span class="w">      </span><span class="nt">resourceQuantity</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">om2:hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">om2:kilogram</span>
+<span class="w">        </span><span class="nt">om2:hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">30</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">claudia:c404cff5-19c7-453d-b0d8-d8e96055bd0c</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Process</span>
+<span class="w">    </span><span class="nt">skos:note</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Claudia transports the apples</span>
+<span class="w">    </span><span class="nt">hasInput</span><span class="p">:</span>
+
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">claudia:856c43b1-0a63-445f-a56f-707b257f086e</span>
+<span class="w">      </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EconomicEvent</span>
+<span class="w">      </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pickup</span>
+<span class="w">      </span><span class="nt">resourceInventoriedAs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">claudia:27be5cab-d740-4194-9298-1661a69d9d95</span>
+<span class="w">      </span><span class="nt">provider</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://claudia.example/</span>
+<span class="w">      </span><span class="nt">receiver</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://claudia.example/</span>
+<span class="w">      </span><span class="nt">resourceQuantity</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">om2:hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">om2:kilogram</span>
+<span class="w">        </span><span class="nt">om2:hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">30</span>
+
+<span class="w">    </span><span class="nt">hasOutput</span><span class="p">:</span>
+
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">claudia:9cb4944b-d26d-4774-a530-d18f2747c0d8</span>
+<span class="w">      </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EconomicEvent</span>
+<span class="w">      </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dropoff</span>
+<span class="w">      </span><span class="nt">resourceInventoriedAs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">claudia:27be5cab-d740-4194-9298-1661a69d9d95</span>
+<span class="w">      </span><span class="nt">provider</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://claudia.example/</span>
+<span class="w">      </span><span class="nt">receiver</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://claudia.example/</span>
+<span class="w">      </span><span class="nt">resourceQuantity</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">om2:hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">om2:kilogram</span>
+<span class="w">        </span><span class="nt">om2:hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">30</span>
+
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:68cabaf3-deb8-4bd5-a439-798263abe35a</span>
+<span class="w">      </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EconomicEvent</span>
+<span class="w">      </span><span class="nt">skos:note</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Transportation of alice&#39;s apples to bob&#39;s location</span>
+<span class="w">      </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">deliverService</span>
+<span class="w">      </span><span class="nt">resourceConformsTo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://www.wikidata.org/entity/Q7590</span><span class="w"> </span><span class="c1"># transportation service</span>
+<span class="w">      </span><span class="nt">provider</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://claudia.example/</span>
+<span class="w">      </span><span class="nt">receiver</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://alice.example/</span>
+<span class="w">      </span><span class="nt">resourceQuantity</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">om2:hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">om2:one</span>
+<span class="w">        </span><span class="nt">om2:hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">      </span><span class="nt">fulfills</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:c7897c39-7f05-4a5d-a487-80e130a2414a</span><span class="w"> </span><span class="c1"># the commitment</span>
+
+<span class="w">  </span><span class="c1"># bob receives the apples</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:7a63ea10-b1c3-441a-9a08-fb8630c02614</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EconomicEvent</span>
+<span class="w">    </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">transferCustody</span><span class="w"> </span><span class="c1"># this is the event that was implied in the first example</span>
+<span class="w">    </span><span class="nt">resourceConformsTo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://www.wikidata.org/entity/Q41777871</span><span class="w"> </span><span class="c1"># haralson apples</span>
+<span class="w">    </span><span class="nt">trackingIdentifier</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">lot-alice-apples-2018-10-11</span>
+<span class="w">    </span><span class="nt">resourceInventoriedAs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">claudia:27be5cab-d740-4194-9298-1661a69d9d95</span>
+<span class="w">    </span><span class="nt">toResourceInventoriedAs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bob:9bd19194-a36d-4a1f-896b-8082887962cb</span>
+<span class="w">    </span><span class="nt">provider</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://claudia.example/</span>
+<span class="w">    </span><span class="nt">receiver</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://bob.example/</span>
+<span class="w">    </span><span class="nt">resourceQuantity</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">om2:hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">om2:kilogram</span>
+<span class="w">      </span><span class="nt">om2:hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">30</span>
+
+<span class="w">  </span><span class="c1"># receipt of the apples triggers finalizing the transfer of ownership</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:ad56a7ed-be3c-4937-a3fb-0f156bcd2c47</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EconomicEvent</span>
+<span class="w">    </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">transferAllRights</span>
+<span class="w">    </span><span class="nt">resourceClassifiedAs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://www.wikidata.org/entity/Q41777871</span><span class="w"> </span><span class="c1"># haralson apples</span>
+<span class="w">    </span><span class="nt">trackingIdentifier</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">lot-alice-apples-2018-10-11</span>
+<span class="w">    </span><span class="nt">provider</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://alice.example/</span>
+<span class="w">    </span><span class="nt">receiver</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://bob.example/</span>
+<span class="w">    </span><span class="nt">resourceQuantity</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">om2:hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">om2:kilogram</span>
+<span class="w">      </span><span class="nt">om2:hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">30</span>
+<span class="w">    </span><span class="nt">fulfills</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10f1f86</span><span class="w"> </span><span class="c1"># the commitment</span>
+
+<span class="w">  </span><span class="c1"># resources snapshot</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">alice:21f361a6-2375-46bb-b192-c21b5ba833bf</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EconomicResource</span>
+<span class="w">    </span><span class="nt">conformsTo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://www.wikidata.org/entity/Q41777871</span><span class="w"> </span><span class="c1"># haralson apples</span>
+<span class="w">    </span><span class="nt">trackingIdentifier</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">lot-alice-apples-2018-10-11</span>
+<span class="w">    </span><span class="nt">locatedAt</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">geo:70ee3034-0d15-4471-8ee3-91c60bb1a9c9</span><span class="w"> </span><span class="c1"># only the possessed amount</span>
+<span class="w">    </span><span class="nt">primaryAccountable</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://alice.example</span>
+<span class="w">    </span><span class="nt">accountingQuantity</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">om2:hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">om2:kilogram</span>
+<span class="w">      </span><span class="nt">om2:hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">200</span>
+<span class="w">    </span><span class="nt">onhandQuantity</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">om2:hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">om2:kilogram</span>
+<span class="w">      </span><span class="nt">om2:hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">200</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bob:9bd19194-a36d-4a1f-896b-8082887962cb</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EconomicResource</span>
+<span class="w">    </span><span class="nt">conformsTo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://www.wikidata.org/entity/Q41777871</span><span class="w"> </span><span class="c1"># haralson apples</span>
+<span class="w">    </span><span class="nt">trackingIdentifier</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">lot-alice-apples-2018-10-11</span>
+<span class="w">    </span><span class="nt">locatedAt</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">geo:b52a5815-fae9-43bf-be95-833b95dc0ada</span><span class="w"> </span><span class="c1"># only the possessed amount</span>
+<span class="w">    </span><span class="nt">primaryAccountable</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://bob.example</span>
+<span class="w">    </span><span class="nt">accountingQuantity</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">om2:hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">om2:kilogram</span>
+<span class="w">      </span><span class="nt">om2:hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">30</span>
+<span class="w">    </span><span class="nt">onhandQuantity</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">om2:hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">om2:kilogram</span>
+<span class="w">      </span><span class="nt">om2:hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">30</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">claudia:27be5cab-d740-4194-9298-1661a69d9d95</span><span class="w"> </span><span class="c1"># claudia&#39;s bill of lading on the truck</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EconomicResource</span>
+<span class="w">    </span><span class="nt">conformsTo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://www.wikidata.org/entity/Q41777871</span><span class="w"> </span><span class="c1"># haralson apples</span>
+<span class="w">    </span><span class="nt">onhandQuantity</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">om2:hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">om2:kilogram</span>
+<span class="w">      </span><span class="nt">om2:hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+
+<span class="w">  </span><span class="c1"># alice pays claudia for the transportation service</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:8baa8ff7-9c1e-4586-ae7b-79d620a3cac9</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EconomicEvent</span>
+<span class="w">    </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">transfer</span>
+<span class="w">    </span><span class="nt">resourceConformsTo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://www.wikidata.org/entity/Q4917</span><span class="w"> </span><span class="c1"># US Dollar</span>
+<span class="w">    </span><span class="nt">resourceInventoriedAs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">alice:daa2ec3b-2c1a-4eb1-839f-8dcec1a1f93a</span><span class="w"> </span><span class="c1"># alice&#39;s bank account</span>
+<span class="w">    </span><span class="nt">toResourceInventoriedAs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">claudia:bd5806d6-4a36-45b9-b3b6-3e7d361a5a14</span><span class="w"> </span><span class="c1"># claudia&#39;s bank account</span>
+<span class="w">    </span><span class="nt">provider</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://alice.example/</span>
+<span class="w">    </span><span class="nt">receiver</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://claudia.example/</span>
+<span class="w">    </span><span class="nt">resourceQuantity</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">om2:hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">om2:one</span>
+<span class="w">      </span><span class="nt">om2:hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span>
+<span class="w">    </span><span class="nt">fulfills</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:33e8933b-ff73-4a01-964a-ca7a98893083</span><span class="w"> </span><span class="c1"># the commitment</span>
 </code></pre></div>
 
 
