@@ -1008,9 +1008,9 @@ This example includes recipe, plan, and actuals.
 
 #### Building recipes
 
-This shows a partial set of recipes used together for one economic function (dairy farming). The RecipeProcess is re-used in more than one Recipe.
+This shows two recipes used together for one economic function (dairy farming). Most of the recipe processes are re-used in both recipes.
 
-![recipes diagram reflecting the yaml below](../assets/examples/recipes.png)
+![recipes diagram reflecting the yaml below](../assets/examples/recipe-reuse.png)
 
 ``` yaml
 # Example: Complex set of recipes with re-use of recipe process.
@@ -1023,10 +1023,6 @@ This shows a partial set of recipes used together for one economic function (dai
   - '@id': urn:uuid:3be5259d-10f0-431c-9fec-9c0c15a41234
     '@type': ResourceSpecification
     name: Milking herd
-
-  - '@id': urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10f5679
-    '@type': ResourceSpecification
-    name: Cow
 
   - '@id': urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10fasdf
     '@type': ResourceSpecification
@@ -1060,69 +1056,14 @@ This shows a partial set of recipes used together for one economic function (dai
     '@type': ResourceSpecification
     name: Fresh cow milk
 
-  - '@id': urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10fio99
-    '@type': ResourceSpecification
-    name: Refrigerated milk
-
-  - '@id': urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10fvb90
-    '@type': ResourceSpecification
-    name: Pasture cropping
-
-  - '@id': urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10fkki9
-    '@type': ResourceSpecification
-    name: Herd management
-
   - '@id': urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10fdfre
     '@type': ResourceSpecification
     name: Milking
 
-  - '@id': urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10f4599
-    '@type': ResourceSpecification
-    name: Effluent
-
-  - '@id': urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10fbmk9
-    '@type': ResourceSpecification
-    name: Semen straw
-
-  - '@id': urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10fer45
-    '@type': ResourceSpecification
-    name: Yogurt quart
-
-  - '@id': urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10fo9u8
-    '@type': ResourceSpecification
-    name: Yogurt maker
-
-  - '@id': urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10fjkio
-    '@type': ResourceSpecification
-    name: Pasteurized milk
-
-  - '@id': urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10fleos
-    '@type': ResourceSpecification
-    name: Pasteurized cream
-
-  - '@id': urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10f8923
-    '@type': ResourceSpecification
-    name: Yogurt
-
-  - '@id': urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10fdo83
-    '@type': ResourceSpecification
-    name: Quart jar
 
   - '@id': urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10fxs34
     '@type': ProcessSpecification
     name: Milk cows
-
-  - '@id': urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10ffr7n
-    '@type': ProcessSpecification
-    name: Setup fencing
-
-  - '@id': urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10fdfp9
-    '@type': ProcessSpecification
-    name: Treat mastitis
-
-  - '@id': urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10fde34
-    '@type': ProcessSpecification
-    name: Treat hoofs
 
   - '@id': urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10fgtml
     '@type': ProcessSpecification
@@ -1135,30 +1076,6 @@ This shows a partial set of recipes used together for one economic function (dai
   - '@id': urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10fqd9m
     '@type': ProcessSpecification
     name: Setup milking shed
-
-  - '@id': urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10fdeh0
-    '@type': ProcessSpecification
-    name: Refrigerate milk
-
-  - '@id': urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10flynn
-    '@type': ProcessSpecification
-    name: Make yogurt
-
-  - '@id': urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10fx8cr
-    '@type': ProcessSpecification
-    name: Inseminate cow
-
-  - '@id': urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10fasl5
-    '@type': ProcessSpecification
-    name: Pump effluent
-
-  - '@id': urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10f9s87
-    '@type': ProcessSpecification
-    name: Clean milking shed
-
-  - '@id': urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10fd3kj
-    '@type': ProcessSpecification
-    name:
 
 
   - '@id': urn:uuid:33e8933b-ff73-4a01-964a-ca7a98893083
@@ -1223,42 +1140,6 @@ This shows a partial set of recipes used together for one economic function (dai
     resourceQuantity:
       hasUnit: one
       hasNumericalValue: 1
-
-
-  - '@id': urn:uuid:33e8933b-ff73-4a01-964a-ca7a9889fg89
-    '@type': RecipeFlow
-    recipeOutputOf: urn:uuid:e1721a61-cd47-4556-84b9-8b1b81da45bd # setup
-    action: modify
-    resourceConformsTo: urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10fqer8 # the milking shed
-    resourceQuantity:
-      hasUnit: one
-      hasNumericalValue: 1
-
-  - '@id': urn:uuid:e1721a61-cd47-4556-84b9-8b1b81dakofd
-    '@type': RecipeProcess
-    name: Setup the milking shed
-    basedOn: urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10fqd9m
-    hasDuration:
-      hasUnit: hour
-      hasNumericalValue: .5
-
-  - '@id': urn:uuid:60f4204e-b8d2-4026-8577-102c3f82fg78
-    '@type': RecipeFlow
-    recipeInputOf: urn:uuid:e1721a61-cd47-4556-84b9-8b1b81da45bd # setup
-    action: accept
-    resourceConformsTo: urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10fqer8 # the milking shed
-    effortQuantity:
-      hasUnit: one
-      hasNumericalValue: 1
-
-  - '@id': urn:uuid:60f4204e-b8d2-4026-8577-102c3f82cv8k
-    '@type': RecipeFlow
-    recipeInputOf: urn:uuid:e1721a61-cd47-4556-84b9-8b1b81da45bd # setup
-    action: work
-    resourceConformsTo: urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10fdfre # milking
-    effortQuantity:
-      hasUnit: hour
-      hasNumericalValue: .5
 
 
   - '@id': urn:uuid:33e8933b-ff73-4a01-964a-ca7a9889dfi9
@@ -1353,7 +1234,6 @@ This shows a partial set of recipes used together for one economic function (dai
     resourceQuantity:
       hasUnit: kilogram
       hasNumericalValue: 500
-
 
   - '@id': urn:uuid:33e8933b-ff73-4a01-964a-ca7a9889dfi9
     '@type': RecipeFlow
@@ -1492,7 +1372,6 @@ This shows a partial set of recipes used together for one economic function (dai
     recipeInputOf: urn:uuid:e1721a61-cd47-4556-84b9-8b1b81da45sd # return cows
     action: accept
     resourceConformsTo: urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10fgt98 # the paddock
-    stage:   # paddock must be at stage fence setup before returning
     resourceQuantity:
       hasUnit: one
       hasNumericalValue: 1
@@ -1507,100 +1386,14 @@ This shows a partial set of recipes used together for one economic function (dai
       hasNumericalValue: .5
 
 
-  - '@id': urn:uuid:33e8933b-ff73-4a01-964a-ca7a9889sfll
-    '@type': RecipeFlow
-    recipeOutputOf: urn:uuid:e1721a61-cd47-4556-84b9-8b1b81daer4r # setup fencing
-    action: modify
-    resourceConformsTo: urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10fgt98 # the paddock
-    resourceQuantity:
-      hasUnit: one
-      hasNumericalValue: 1
-
-  - '@id': urn:uuid:e1721a61-cd47-4556-84b9-8b1b81daer4r
-    '@type': RecipeProcess
-    name: Setup fencing for strip grazing
-    basedOn: urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10ffr7n
-    hasDuration:
-      hasUnit: hour
-      hasNumericalValue: .5
-    note: Set up fencing for next herd feeding cow feed.  Assess grass supply (was it over eaten, under eaten, do we have to change) for optimal strip grazing.
-
-  - '@id': urn:uuid:33e8933b-ff73-4a01-964a-ca7a9889cv99
-    '@type': RecipeFlow
-    recipeInputOf: urn:uuid:e1721a61-cd47-4556-84b9-8b1b81daer4r # setup fencing
-    action: accept
-    resourceConformsTo: urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10fgt98 # the paddock
-    stage: urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10fgtml # cows must have been collected from the paddock
-    resourceQuantity:
-      hasUnit: one
-      hasNumericalValue: 1
-
-  - '@id': urn:uuid:33e8933b-ff73-4a01-964a-ca7a9889ki88
-    '@type': RecipeFlow
-    recipeInputOf: urn:uuid:e1721a61-cd47-4556-84b9-8b1b81daer4r # setup fencing
-    action: work
-    resourceConformsTo: urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10fvb90 # pasture cropping
-    effortQuantity:
-      hasUnit: hour
-      hasNumericalValue: .5
-
-
-  - '@id': urn:uuid:33e8933b-ff73-4a01-964a-ca7a9889dcdc
-    '@type': RecipeFlow
-    recipeOutputOf: urn:uuid:e1721a61-cd47-4556-84b9-8b1b81davgf1 # cleanup
-    action: modify
-    resourceConformsTo: urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10fqer8 # the milking shed
-    resourceQuantity:
-      hasUnit: one
-      hasNumericalValue: 1
-
-  - '@id': urn:uuid:33e8933b-ff73-4a01-964a-ca7a9889oi88
-    '@type': RecipeFlow
-    recipeOutputOf: urn:uuid:e1721a61-cd47-4556-84b9-8b1b81davgf1 # cleanup
-    action: produce
-    resourceConformsTo: urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10f4599 # effluent
-    resourceQuantity:
-      hasUnit: liter # ??
-      hasNumericalValue: 1000 # ??
-
-  - '@id': urn:uuid:e1721a61-cd47-4556-84b9-8b1b81davgf1
-    '@type': RecipeProcess
-    name: Cleanup the milking shed
-    basedOn: urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10fasl5
-    hasDuration:
-      hasUnit: hour
-      hasNumericalValue: .5
-
-  - '@id': urn:uuid:60f4204e-b8d2-4026-8577-102c3f82fgu9
-    '@type': RecipeFlow
-    recipeInputOf: urn:uuid:e1721a61-cd47-4556-84b9-8b1b81davgf1 # cleanup
-    action: accept
-    resourceConformsTo: urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10fqer8 # the milking shed
-    stage: urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10fxs34 # after the milking is done
-    effortQuantity:
-      hasUnit: one
-      hasNumericalValue: 1
-
-  - '@id': urn:uuid:60f4204e-b8d2-4026-8577-102c3f82lkf1
-    '@type': RecipeFlow
-    recipeInputOf: urn:uuid:e1721a61-cd47-4556-84b9-8b1b81davgf1 # cleanup
-    action: work
-    resourceConformsTo: urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10fdfre # milking
-    effortQuantity:
-      hasUnit: hour
-      hasNumericalValue: .5
-
-
   - '@id': urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10fd3ou
     '@type': Recipe
     name: Milk cows winter
     recipeIncludes:
     - '@id': urn:uuid:e1721a61-cd47-4556-84b9-8b1b81da15bf # collect cows
     - '@id': urn:uuid:e1721a61-cd47-4556-84b9-8b1b81dakofd # setup milking shed
-    - '@id': urn:uuid:e1721a61-cd47-4556-84b9-8b1b81daer4r # setup the fencing
     - '@id': urn:uuid:e1721a61-cd47-4556-84b9-8b1b81da45bz # milk and dip cows winter
     - '@id': urn:uuid:e1721a61-cd47-4556-84b9-8b1b81da45sd # return cows
-    - '@id': urn:uuid:e1721a61-cd47-4556-84b9-8b1b81davgf1 # clean milking shed
 
   - '@id': urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10fd3ou
     '@type': Recipe
@@ -1608,8 +1401,6 @@ This shows a partial set of recipes used together for one economic function (dai
     recipeIncludes:
     - '@id': urn:uuid:e1721a61-cd47-4556-84b9-8b1b81da15bf # collect cows
     - '@id': urn:uuid:e1721a61-cd47-4556-84b9-8b1b81dakofd # setup milking shed
-    - '@id': urn:uuid:e1721a61-cd47-4556-84b9-8b1b81daer4r # setup the fencing
     - '@id': urn:uuid:e1721a61-cd47-4556-84b9-8b1b81da45bq # milk and dip cows summer
     - '@id': urn:uuid:e1721a61-cd47-4556-84b9-8b1b81da45sd # return cows
-    - '@id': urn:uuid:e1721a61-cd47-4556-84b9-8b1b81davgf1 # clean milking shed
 ```
