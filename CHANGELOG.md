@@ -3,6 +3,7 @@
 - Remove Scenario, ScenarioDefinition, and related non-operational data (breaking)
 - Remove rules property (breaking)
 - Remove Unit OM fields, use local instead (breaking)
+- Remove RecipeGroup (breaking)
 - Work action allow resourceQuantity
 - Add several examples and reorganize
 - Cleanup implied transfers concepts in doc
