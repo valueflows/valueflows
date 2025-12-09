@@ -1,4 +1,4 @@
-See also [Flows in Motion: Recipes](../specification/model-text.md/#flows-in-motion-recipe) on the Diagram Explanation, [Planning from a Recipe](../concepts/plan.md/#planning-from-a-recipe) on the Operational Planning page, the [Simple plan from recipe example](../examples/ex-planning.md/#simple-plan-from-recipe), and the [Building recipes example](../examples/ex-complex.md/#building-recipes).
+See also [Flows in Motion: Recipes](../specification/model-text.md/#flows-in-motion-recipe) on the Diagram Explanation, [Planning from a Recipe](../concepts/plan.md/#planning-from-a-recipe) on the Operational Planning page, the [Simple plan from recipe example](../examples/ex-planning.md/#simple-plan-from-recipe), and the [Building recipes example](../examples/ex-planning.md/#building-recipes).
 
 ## Not just for cooking...
 
@@ -35,7 +35,7 @@ The examples above have to do with producing specific goods or services.  Recipe
 
 ## Recipe class
 
-The Recipe class is an optional construct.  You might want a Recipe when you include more than one process in one recipe, and especially if different recipes can create the same Resource Specification output in different ways.  It is also useful when certain processes are included in multiple recipes, see the bottom of [this example](../examples/ex-complex.md/#building-recipes).  You might also want Recipe when the software finds recipes by the primary output, because that can be defined directly from Recipe without interrogating the flows.
+The Recipe class is an optional construct.  You might want a Recipe when you include more than one process in one recipe, and especially if different recipes can create the same Resource Specification output in different ways.  It is also useful when certain processes are included in multiple recipes, see the bottom of [this example](../examples/ex-planning.md/#building-recipes).  You might also want Recipe when the software finds recipes by the primary output, because that can be defined directly from Recipe without interrogating the flows.
 
 ### Byproducts and Coproducts
 
