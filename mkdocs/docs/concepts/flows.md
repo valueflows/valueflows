@@ -43,11 +43,6 @@ Often agents will start their plans independently and record their initial inten
 
 ![diagram showing matching of 2 Intents from different agents, satisfied by 1 Commitment, fulfilled by an Event](../assets/matched.png)
 
-## Granularity
-
-Intents, Commitments, and Economic Events can occur at any granularity that is needed or for which data can be obtained.  So they primarily are used for all operational needs, but can also be used at higher levels for budgeting for organizations, analytical and high level planning needs for communities or regions, etc.
-
-Any flows that are part of a [Plan](plan.md) are operational, defined at the lowest level.  Flows that are part of a [Scenario](estimates.md) are not operational.  They could have many uses, from pre-planning to higher level analysis, but are not considered part of any scheduled planning for what will actually occur.
 
 ## Actions
 
@@ -74,7 +69,7 @@ Quantities can be any needed unit of measure, including counts, volumes, weights
 
 Note that recipes may need to scale both quantities and calendar times when used to create a plan.
 
-Sometimes a quantity is expressed in time-based units, like "I worked 6 hours", or "we used this machine for 8 hours".  These flows also may have a related time, like "I worked from 10am to 4pm", or "we used this machine from 8am to 4pm". In these examples, the quantity is used for accounting figures, exchange, recipes.  The time is used to schedule and coordinate the work or machine usage.
+Sometimes a quantity is expressed in time-based units, like "I worked 6 hours", or "we used this machine for 8 hours".  These flows also may have a related time, like "I worked from 10am to 4pm", or "we used this machine from 8am to 4pm". In these examples, the quantity is used for accounting, exchange, recipes.  The time is used to schedule and coordinate the work or machine usage.
 
 Sometimes a situation may call for a "compound quantity", like "Number-per-Year".
 

@@ -522,7 +522,598 @@ Alternate view of this workflow process, using the more relational directionalit
       hasNumericalValue: 1
 ```
 
-#### Combine and separate
+#### Stage and state
+
+Simple assembly and testing showing use of stage and state.
+
+![stage state diagram reflecting the yaml below](../assets/examples/stage-state-simple.png)
+
+``` yaml
+# Example: Process using stage and state
+# credit Fabulaser-Mini, https://github.com/fab-machines/Fabulaser-Mini/blob/main/manual/Fabulaser%20manual%20L2M2.pdf
+
+'@context':
+  - '@vocab': http://w3id.org/valueflows/ont/vf#
+  - mfg: https://manufacturing.example/
+
+'@graph':
+
+  # Process Specifications
+
+  - '@id': mfg:3be5259d-10f0-431c-9fec-9c0c15a461d3
+    '@type': ProcessSpecification
+    name: Attach air filter
+
+  - '@id': mfg:3be5259d-10f0-431c-9fec-9c0c15a461e4
+    '@type': ProcessSpecification
+    name: Attach air compressor
+
+  - '@id': mfg:3be5259d-10f0-431c-9fec-9c0c15a461f9
+    '@type': ProcessSpecification
+    name: Test machine
+
+  # Resource Specification
+
+  - '@id': mfg:3be525ee-10f0-431c-9fec-9c0c15a4dv97
+    '@type': ResourceSpecification
+    name: Fabulaser laser cutter
+
+  # Economic resource before attach air filter process
+
+  - '@id': mfg:e1721a61-cd47-4556-84b9-8b1b81da15bf
+    '@type': EconomicResource
+    resourceConformsTo: mfg:3be525ee-10f0-431c-9fec-9c0c15a4dv97 # Fabulaser
+    accountingQuantity:
+      hasUnit: one
+      hasNumericalValue: 1
+    stage: mfg:3be5259d-10f0-431c-9fec-9c0c15a461e4 # attach air compressor
+
+  # Assembly process
+
+  - '@id': mfg:02b39a30-3e04-4305-9656-7f261aa63c84
+    '@type': Process
+    name: Attach the air filter (step 33)
+    basedOn: mfg:3be5259d-10f0-431c-9fec-9c0c15a461d3 # process specification: attach air filter
+    hasInput:
+
+    - '@id': mfg:a8236bbb-81e0-422d-9861-56d2417db0fb
+      '@type': EconomicEvent
+      action: accept
+      provider: https://manufacturing.example/
+      receiver: https://manufacturing.example/
+      resourceInventoriedAs: mfg:e1721a61-cd47-4556-84b9-8b1b81da15bf # a laser cutter
+      resourceQuantity:
+        hasUnit: one
+        hasNumericalValue: 1
+      stage: mfg:3be5259d-10f0-431c-9fec-9c0c15a461e4 # attach air compressor
+
+    - '@id': mfg:a8236bbb-81e0-422d-9861-56d2417db0ss
+      '@type': EconomicEvent
+      action: consume
+      provider: https://manufacturing.example/
+      receiver: https://manufacturing.example/
+      resourceInventoriedAs: mfg:e1721a61-cd47-4556-84b9-8b1b81dlk4d0 # an air filter
+      resourceQuantity:
+        hasUnit: one
+        hasNumericalValue: 1
+
+    - '@id': mfg:a8236bbb-81e0-422d-9861-56d2417db0st
+      '@type': EconomicEvent
+      action: consume
+      provider: https://manufacturing.example/
+      receiver: https://manufacturing.example/
+      resourceInventoriedAs: mfg:e1721a61-cd47-4556-84b9-8b1b81dlcvgk # a hose clamp
+      resourceQuantity:
+        hasUnit: one
+        hasNumericalValue: 1
+
+    hasOutput:
+
+    - '@id': mfg:52f0e212-3c4f-4d27-b345-5e964c135824
+      '@type': EconomicEvent
+      action: modify
+      provider: https://manufacturing.example/
+      receiver: https://manufacturing.example/
+      resourceInventoriedAs: mfg:e1721a61-cd47-4556-84b9-8b1b81da15bf # a laser cutter
+      resourceQuantity:
+        hasUnit: one
+        hasNumericalValue: 1
+
+  # Economic resource after attach air filter process
+
+  - '@id': mfg:e1721a61-cd47-4556-84b9-8b1b81da15bf
+    '@type': EconomicResource
+    resourceConformsTo: mfg:3be525ee-10f0-431c-9fec-9c0c15a4dv97 # Fabulaser
+    accountingQuantity:
+      hasUnit: one
+      hasNumericalValue: 1
+    stage: mfg:3be5259d-10f0-431c-9fec-9c0c15a461d3 # attach air filter
+
+  # Testing process
+
+  - '@id': mfg:02b39a30-3e04-4305-9656-7f261aa63c98
+    '@type': Process
+    name: Test the laser cutter
+    basedOn: mfg:3be5259d-10f0-431c-9fec-9c0c15a461d3 # final test after all assembly
+
+  - '@id': mfg:a8236bbb-81e0-422d-9861-56d2417db0fb
+    '@type': EconomicEvent
+    inputOf: mfg:02b39a30-3e04-4305-9656-7f261aa63c98
+    action: accept
+    provider: https://manufacturing.example/
+    receiver: https://manufacturing.example/
+    resourceInventoriedAs: mfg:e1721a61-cd47-4556-84b9-8b1b81da15bf # a laser cutter
+    resourceQuantity:
+      hasUnit: one
+      hasNumericalValue: 1
+    stage: mfg:02b39a30-3e04-4305-9656-7f261aa63c84 #attach air filter
+
+  - '@id': mfg:52f0e212-3c4f-4d27-b345-5e964c135824
+    '@type': EconomicEvent
+    outputOf: mfg:02b39a30-3e04-4305-9656-7f261aa63c98
+    action: modify
+    state: pass
+    provider: https://manufacturing.example/
+    receiver: https://manufacturing.example/
+    resourceInventoriedAs: mfg:e1721a61-cd47-4556-84b9-8b1b81da15bf # a laser cutter
+    resourceQuantity:
+      hasUnit: one
+      hasNumericalValue: 1
+
+  # Economic resource after testing
+
+  - '@id': mfg:e1721a61-cd47-4556-84b9-8b1b81da15bf
+    '@type': EconomicResource
+    resourceConformsTo: mfg:3be525ee-10f0-431c-9fec-9c0c15a4dv97 # Fabulaser
+    accountingQuantity:
+      hasUnit: one
+      hasNumericalValue: 1
+    stage: mfg:02b39a30-3e04-4305-9656-7f261aa63c98 # test machine
+    state: pass
+
+```
+Alternate view of these stage-state processes, using the more relational directionality option.
+``` yaml
+# Example: Process using stage and state
+# credit Fabulaser-Mini, https://github.com/fab-machines/Fabulaser-Mini/blob/main/manual/Fabulaser%20manual%20L2M2.pdf
+
+'@context':
+  - '@vocab': http://w3id.org/valueflows/ont/vf#
+  - mfg: https://manufacturing.example/
+
+'@graph':
+
+  # Assembly process
+
+  - '@id': mfg:02b39a30-3e04-4305-9656-7f261aa63c84
+    '@type': Process
+    name: Attach the air filter (step 33)
+    basedOn: mfg:3be5259d-10f0-431c-9fec-9c0c15a461d3 # process specification: attach air filter
+
+  - '@id': mfg:a8236bbb-81e0-422d-9861-56d2417db0fb
+    '@type': EconomicEvent
+    inputOf: mfg:02b39a30-3e04-4305-9656-7f261aa63c84
+    action: accept
+    provider: https://manufacturing.example/
+    receiver: https://manufacturing.example/
+    resourceInventoriedAs: mfg:e1721a61-cd47-4556-84b9-8b1b81da15bf # a laser cutter
+    resourceQuantity:
+      hasUnit: one
+      hasNumericalValue: 1
+    stage: mfg:3be5259d-10f0-431c-9fec-9c0c15a461e4 # attach air compressor
+
+  - '@id': mfg:a8236bbb-81e0-422d-9861-56d2417db0ss
+    '@type': EconomicEvent
+    inputOf: mfg:02b39a30-3e04-4305-9656-7f261aa63c84
+    action: consume
+    provider: https://manufacturing.example/
+    receiver: https://manufacturing.example/
+    resourceInventoriedAs: mfg:e1721a61-cd47-4556-84b9-8b1b81dlk4d0 # an air filter
+    resourceQuantity:
+      hasUnit: one
+      hasNumericalValue: 1
+
+  - '@id': mfg:a8236bbb-81e0-422d-9861-56d2417db0st
+    '@type': EconomicEvent
+    inputOf: mfg:02b39a30-3e04-4305-9656-7f261aa63c84
+    action: consume
+    provider: https://manufacturing.example/
+    receiver: https://manufacturing.example/
+    resourceInventoriedAs: mfg:e1721a61-cd47-4556-84b9-8b1b81dlcvgk # a hose clamp
+    resourceQuantity:
+      hasUnit: one
+      hasNumericalValue: 1
+
+  - '@id': mfg:52f0e212-3c4f-4d27-b345-5e964c135824
+    '@type': EconomicEvent
+    outputOf: mfg:02b39a30-3e04-4305-9656-7f261aa63c84
+    action: modify
+    provider: https://manufacturing.example/
+    receiver: https://manufacturing.example/
+    resourceInventoriedAs: mfg:e1721a61-cd47-4556-84b9-8b1b81da15bf # a laser cutter
+    resourceQuantity:
+      hasUnit: one
+      hasNumericalValue: 1
+
+  # Testing process
+
+  - '@id': mfg:02b39a30-3e04-4305-9656-7f261aa63c98
+    '@type': Process
+    name: Test the laser cutter
+    basedOn: mfg:3be5259d-10f0-431c-9fec-9c0c15a461d3 # final test after all assembly
+
+  - '@id': mfg:a8236bbb-81e0-422d-9861-56d2417db0fb
+    '@type': EconomicEvent
+    inputOf: mfg:02b39a30-3e04-4305-9656-7f261aa63c98
+    action: accept
+    provider: https://manufacturing.example/
+    receiver: https://manufacturing.example/
+    resourceInventoriedAs: mfg:e1721a61-cd47-4556-84b9-8b1b81da15bf # a laser cutter
+    resourceQuantity:
+      hasUnit: one
+      hasNumericalValue: 1
+    stage: mfg:02b39a30-3e04-4305-9656-7f261aa63c84 #attach air filter
+
+  - '@id': mfg:52f0e212-3c4f-4d27-b345-5e964c135824
+    '@type': EconomicEvent
+    outputOf: mfg:02b39a30-3e04-4305-9656-7f261aa63c98
+    action: modify
+    state: pass
+    provider: https://manufacturing.example/
+    receiver: https://manufacturing.example/
+    resourceInventoriedAs: mfg:e1721a61-cd47-4556-84b9-8b1b81da15bf # a laser cutter
+    resourceQuantity:
+      hasUnit: one
+      hasNumericalValue: 1
+```
+
+#### Manufacturing and workflow with Recipe and Plan
+
+A component is produced (manufacturing pattern) and tested (workflow pattern).  QT ("quality testing") gives pass and/or fail outputs.  The failed components are passed back into a source resource (because it can be re-used as an input as part of the QT process, to be used in this or the next manufacturing run.
+
+The QT needs the stage and state of the input component resource, because QT would only be done on components that are made and not tested yet.  By the same token, components would only be sent into the next assembly process if they have passed the QT process/stage (not part of this example).
+
+This example includes recipe, plan, and actuals.
+
+![stage-state recipe-plan-observations diagram reflecting the yaml below](../assets/examples/stage-state.png)
+
+``` yaml
+# Example: Workflow recipe, plan, execution, including stage and state usage
+
+'@context':
+  - '@vocab': http://w3id.org/valueflows/ont/vf#
+  - mfg: https://manufacturing.example/
+
+'@graph':
+
+  # specifications
+
+  - '@id': urn:uuid:3be5259d-10f0-431c-9fec-9c0c15a461d3
+    '@type': ResourceSpecification
+    name: Bucket white 5 gallon
+    defaultUnitOfResource: one
+    substitutable: true
+
+  - '@id': urn:uuid:d4d2fd71-34f2-41c3-b1c5-19ad5ed2da58
+    '@type': ResourceSpecification
+    name: Thermoplastic polymer white
+    DefaultUnitOfResource: kilogram
+    substitutable: true
+
+  - '@id': urn:uuid:c7897c39-7f05-4a5d-a487-80e130a2414a
+    '@type': ResourceSpecification
+    name: Injection molding machine
+    defaultUnitOfResource: one
+    defaultUnitOfEffort: hour
+    substitutable: true
+
+  - '@id': mfg:27be5cab-d740-4194-9298-1661a69d9d95
+    '@type': ProcessSpecification
+    name: Make injection molded buckets
+
+  - '@id': mfg:6fb358a3-2859-4d6a-a4fa-431603ee70f5
+    '@type': ProcessSpecification
+    name: QT injection molded buckets
+
+  # resources before
+
+  - '@id': mfg:3129ca8b-fcda-45be-bbda-294dc924d3b9
+    '@type': EconomicResource
+    name: Bucket white 5 gallon
+    conformsTo: urn:uuid:3be5259d-10f0-431c-9fec-9c0c15a461d3
+    accountingQuantity:
+      hasUnit: one
+      hasNumericalValue: 320
+    state: pass
+    stage: mfg:6fb358a3-2859-4d6a-a4fa-431603ee70f5 # QT
+
+  - '@id': mfg:6b5bc786-b9ed-4189-b34f-5ef7d10f1f86
+    '@type': EconomicResource
+    name: Thermoplastic polymer white
+    conformsTo: urn:uuid:d4d2fd71-34f2-41c3-b1c5-19ad5ed2da58
+    accountingQuantity:
+      hasUnit: kilogram
+      hasNumericalValue: 2455
+
+  - '@id': mfg:23799c14-c368-4653-a584-83bf9ae8b82a
+    '@type': EconomicResource
+    name: Injection molding maching
+    conformsTo: urn:uuid:c7897c39-7f05-4a5d-a487-80e130a2414a
+    trackingIdentifier: DDE098989099911
+    accountingQuantity:
+      hasUnit: one
+      hasNumericalValue: 1
+    unitOfEffort: hour
+
+  # the recipe (here the recipe runs "backwards" from the final product, similar to a BOM)
+
+  - '@id': mfg:33e8933b-ff73-4a01-964a-ca7a98893083
+    '@type': RecipeFlow
+    recipeOutputOf: mfg:a8356625-bf64-4c16-9099-28aa1b718c4b
+    action: modify
+    state: pass
+    resourceConformsTo: urn:uuid:3be5259d-10f0-431c-9fec-9c0c15a461d3 # bucket
+    resourceQuantity:
+      hasUnit: one
+      hasNumericalValue: 500
+
+  - '@id': mfg:54b814ee-62dc-40c1-bb96-f8582aa4f771
+    '@type': RecipeFlow
+    recipeOutputOf: mfg:a8356625-bf64-4c16-9099-28aa1b718c4b
+    action: produce # fail
+    resourceConformsTo: urn:uuid:d4d2fd71-34f2-41c3-b1c5-19ad5ed2da58 # polymer
+    resourceQuantity:
+      hasUnit: kilogram
+      hasNumericalValue: 0
+
+  - '@id': mfg:a8356625-bf64-4c16-9099-28aa1b718c4b
+    '@type': RecipeProcess
+    name: QT bucket white 5 gallon - minimum run
+    processConformsTo: mfg:6fb358a3-2859-4d6a-a4fa-431603ee70f5 # the process specification
+    time:hasDuration:
+      time:unitType unit:Hour
+      time:numericDuration 1
+
+  - '@id': mfg:2342d456-5d6f-46d5-a7ed-3ac7bfd5a86c
+    '@type': RecipeFlow
+    recipeInputOf: mfg:a8356625-bf64-4c16-9099-28aa1b718c4b
+    action: accept
+    resourceConformsTo: urn:uuid:3be5259d-10f0-431c-9fec-9c0c15a461d3 # bucket
+    stage: mfg:27be5cab-d740-4194-9298-1661a69d9d95 # 'make' process specification
+    resourceQuantity:
+      hasUnit: one
+      hasNumericalValue: 500
+
+  - '@id': mfg:33e8933b-ff73-4a01-964a-ca7a98893083
+    '@type': RecipeFlow
+    recipeOutputOf: mfg:e1721a61-cd47-4556-84b9-8b1b81da15bf
+    action: produce
+    resourceConformsTo: urn:uuid:3be5259d-10f0-431c-9fec-9c0c15a461d3 # bucket
+    resourceQuantity:
+      hasUnit: one
+      hasNumericalValue: 500
+
+  - '@id': mfg:e1721a61-cd47-4556-84b9-8b1b81da15bf
+    '@type': RecipeProcess
+    name: Make bucket white 5 gallon - minimum run
+    processConformsTo: mfg:27be5cab-d740-4194-9298-1661a69d9d95 # the process specification
+    time:hasDuration:
+      time:unitType unit:Hour
+      time:numericDuration 7
+
+  - '@id': mfg:9bd19194-a36d-4a1f-896b-8082887962cb
+    '@type': RecipeFlow
+    recipeInputOf: mfg:e1721a61-cd47-4556-84b9-8b1b81da15bf
+    action: consume
+    resourceConformsTo: urn:uuid:d4d2fd71-34f2-41c3-b1c5-19ad5ed2da58 # polymer
+    resourceQuantity:
+      hasUnit: kilogram
+      hasNumericalValue: 450
+
+  - '@id': mfg:60f4204e-b8d2-4026-8577-102c3f82c0af
+    '@type': RecipeFlow
+    recipeInputOf: mfg:e1721a61-cd47-4556-84b9-8b1b81da15bf
+    action: use
+    resourceConformsTo: urn:uuid:c7897c39-7f05-4a5d-a487-80e130a2414a # injection molding machine
+    effortQuantity:
+      hasUnit: hour
+      hasNumericalValue: 5.5
+
+  # the plan (shown running "forwards")
+
+  - '@id': mfg:8e5fe80d-a769-4bd5-89e5-2136d33eab9f
+    '@type': Plan
+    name: Buckets run number 381
+    due: 2019-04-08T17:00:00-5:00
+
+  - '@id': mfg:b52a5815-fae9-43bf-be95-833b95dc0adb
+    '@type': Commitment
+    inputOf: mfg:02b39a30-3e04-4305-9656-7f261aa63c84
+    action: consume
+    provider: https://manufacturing.example/
+    receiver: https://manufacturing.example/
+    resourceConformsTo: urn:uuid:d4d2fd71-34f2-41c3-b1c5-19ad5ed2da58 # polymer
+    resourceQuantity:
+      hasUnit: kilogram
+      hasNumericalValue: 900
+
+  - '@id': mfg:52f0e212-3c4f-4d27-b345-5e964c135824
+    '@type': Commitment
+    inputOf: mfg:02b39a30-3e04-4305-9656-7f261aa63c84
+    action: use
+    provider: https://manufacturing.example/
+    receiver: https://manufacturing.example/
+    resourceConformsTo: urn:uuid:c7897c39-7f05-4a5d-a487-80e130a2414a # injection molding machine
+    effortQuantity:
+      hasUnit: hour
+      hasNumericalValue: 11
+
+  - '@id': mfg:02b39a30-3e04-4305-9656-7f261aa63c84
+    '@type': Process
+    name: Make bucket white 5 gallon
+    plannedWithin: mfg:8e5fe80d-a769-4bd5-89e5-2136d33eab9f
+    basedOn: mfg:27be5cab-d740-4194-9298-1661a69d9d95 # the process specification
+    time:hasDuration:
+      time:unitType unit:Hour
+      time:numericDuration 14
+
+  - '@id': mfg:a8236bbb-81e0-422d-9861-56d2417db0fb
+    '@type': Commitment
+    outputOf: mfg:02b39a30-3e04-4305-9656-7f261aa63c84
+    action: produce
+    provider: https://manufacturing.example/
+    receiver: https://manufacturing.example/
+    resourceConformsTo: urn:uuid:3be5259d-10f0-431c-9fec-9c0c15a461d3 # bucket
+    resourceQuantity:
+      hasUnit: one
+      hasNumericalValue: 1000
+
+  - '@id': mfg:fbff9852-36ca-4364-a943-bc0b49e1cab5
+    '@type': Commitment
+    inputOf: mfg:8baa8ff7-9c1e-4586-ae7b-79d620a3cac9
+    action: accept
+    provider: https://manufacturing.example/
+    receiver: https://manufacturing.example/
+    resourceConformsTo: urn:uuid:3be5259d-10f0-431c-9fec-9c0c15a461d3 # bucket
+    stage: mfg:27be5cab-d740-4194-9298-1661a69d9d95 # 'make' process specification
+    resourceQuantity:
+      hasUnit: one
+      hasNumericalValue: 1000
+
+  - '@id': mfg:8baa8ff7-9c1e-4586-ae7b-79d620a3cac9
+    '@type': Process
+    name: QT bucket white 5 gallon
+    plannedWithin: mfg:8e5fe80d-a769-4bd5-89e5-2136d33eab9f
+    basedOn: mfg:6fb358a3-2859-4d6a-a4fa-431603ee70f5 # the process specification
+    time:hasDuration:
+      time:unitType unit:Hour
+      time:numericDuration 14
+
+  - '@id': mfg:21f361a6-2375-46bb-b192-c21b5ba833bf
+    '@type': Commitment
+    independentDemandOf: mfg:8e5fe80d-a769-4bd5-89e5-2136d33eab9f # the plan
+    outputOf: mfg:8baa8ff7-9c1e-4586-ae7b-79d620a3cac9
+    action: modify
+    state: pass
+    provider: https://manufacturing.example/
+    receiver: https://manufacturing.example/
+    resourceConformsTo: urn:uuid:3be5259d-10f0-431c-9fec-9c0c15a461d3 # bucket
+    resourceQuantity:
+      hasUnit: one
+      hasNumericalValue: 1000
+
+  - '@id': mfg:21f361a6-2375-46bb-b192-c21b5ba833bg
+    '@type': Commitment
+    outputOf: mfg:8baa8ff7-9c1e-4586-ae7b-79d620a3cac9
+    action: produce
+    provider: https://manufacturing.example/
+    receiver: https://manufacturing.example/
+    resourceConformsTo: urn:uuid:d4d2fd71-34f2-41c3-b1c5-19ad5ed2da58 # polymer
+    resourceQuantity:
+      hasUnit: kilogram
+      hasNumericalValue: 0
+
+  # manufacture and test the buckets according to plan
+
+  - '@id': mfg:e18c808c-929a-450d-9d0d-3b3f531bc126
+    '@type': EconomicEvent
+    inputOf: mfg:02b39a30-3e04-4305-9656-7f261aa63c84 # planned make process
+    action: consume
+    provider: https://manufacturing.example/
+    receiver: https://manufacturing.example/
+    resourceInventoriedAs: mfg:6b5bc786-b9ed-4189-b34f-5ef7d10f1f86 # polymer stock
+    resourceQuantity:
+      hasUnit: kilogram
+      hasNumericalValue: 925
+
+  - '@id': mfg:5d2fe7da-b91b-4dab-91d9-68db80c1feb7
+    '@type': EconomicEvent
+    inputOf: mfg:02b39a30-3e04-4305-9656-7f261aa63c84 # planned make process
+    action: use
+    provider: https://manufacturing.example/
+    receiver: https://manufacturing.example/
+    resourceInventoriedAs: mfg:23799c14-c368-4653-a584-83bf9ae8b82a # the machine
+    effortQuantity:
+      hasUnit: hour
+      hasNumericalValue: 10.7
+
+  - '@id': mfg:8791913c-0152-4c32-bb3f-f25d61df736c
+    '@type': EconomicEvent
+    outputOf: mfg:02b39a30-3e04-4305-9656-7f261aa63c84 # planned make process
+    action: produce
+    provider: https://manufacturing.example/
+    receiver: https://manufacturing.example/
+    resourceInventoriedAs: mfg:3129ca8b-fcda-45be-bbda-294dc924d3b9 # buckets
+    resourceQuantity:
+      hasUnit: one
+      hasNumericalValue: 1000
+
+  - '@id': mfg:a8236bbb-81e0-422d-9861-56d2417db0fb
+    '@type': EconomicEvent
+    inputOf: mfg:8baa8ff7-9c1e-4586-ae7b-79d620a3cac9 # planned qt process
+    action: accept
+    provider: https://manufacturing.example/
+    receiver: https://manufacturing.example/
+    resourceInventoriedAs: mfg:3129ca8b-fcda-45be-bbda-294dc924d3b9 #buckets
+    resourceQuantity:
+      hasUnit: one
+      hasNumericalValue: 1000
+
+  - '@id': mfg:52f0e212-3c4f-4d27-b345-5e964c135824
+    '@type': EconomicEvent
+    outputOf: mfg:8baa8ff7-9c1e-4586-ae7b-79d620a3cac9 # planned qt process
+    action: modify
+    state: pass
+    provider: https://manufacturing.example/
+    receiver: https://manufacturing.example/
+    resourceInventoriedAs: mfg:3129ca8b-fcda-45be-bbda-294dc924d3b9 # buckets
+    resourceQuantity:
+      hasUnit: one
+      hasNumericalValue: 998
+
+  - '@id': mfg:e1721a61-cd47-4556-84b9-8b1b81da15bf
+    '@type': EconomicEvent
+    outputOf: mfg:8baa8ff7-9c1e-4586-ae7b-79d620a3cac9 # planned qt process
+    action: produce
+    provider: https://manufacturing.example/
+    receiver: https://manufacturing.example/
+    resourceInventoriedAs: mfg:6b5bc786-b9ed-4189-b34f-5ef7d10f1f86 # polymer stock
+    resourceQuantity:
+      hasUnit: kilogram
+      hasNumericalValue: 1.8
+
+  # resources after
+
+  - '@id': mfg:3129ca8b-fcda-45be-bbda-294dc924d3b9
+    '@type': EconomicResource
+    name: Bucket white 5 gallon
+    conformsTo: urn:uuid:3be5259d-10f0-431c-9fec-9c0c15a461d3
+    accountingQuantity:
+      hasUnit: one
+      hasNumericalValue: 1318
+    state: pass
+    stage: mfg:6fb358a3-2859-4d6a-a4fa-431603ee70f5 #QT
+
+  - '@id': mfg:6b5bc786-b9ed-4189-b34f-5ef7d10f1f86
+    '@type': EconomicResource
+    name: Thermoplastic polymer white
+    conformsTo: urn:uuid:d4d2fd71-34f2-41c3-b1c5-19ad5ed2da58
+    accountingQuantity:
+      hasUnit: kilogram
+      hasNumericalValue: 1531.8
+
+  - '@id': mfg:23799c14-c368-4653-a584-83bf9ae8b82a
+    '@type': EconomicResource
+    name: Injection molding maching
+    conformsTo: urn:uuid:c7897c39-7f05-4a5d-a487-80e130a2414a
+    trackingIdentifier: DDE098989099911
+    accountingQuantity:
+      hasUnit: one
+      hasNumericalValue: 1
+    unitOfEffort: hour
+```
+
+#### Combine and separate with packing container
 
 Simple pack and unpack of resources into and out of a container resource, using `combine` and `separate`.
 
@@ -792,7 +1383,6 @@ Simple pack and unpack of resources into and out of a container resource, using 
     accountingQuantity:
       hasUnit: one
       hasNumericalValue: 1
-    containedIn: 
 ```
 Alternate view of these pack-unpack processes, using the more relational directionality option.
 ``` yaml
@@ -931,247 +1521,171 @@ Alternate view of these pack-unpack processes, using the more relational directi
       hasUnit: one
       hasNumericalValue: 1
 ```
-#### Stage and state
 
-Simple assembly and testing showing use of stage and state.
+#### Combine and separate with ongoing containing resource
 
-![stage state diagram reflecting the yaml below](../assets/examples/stage-state-simple.png)
+Simple addition of a resource into a containing resource, using `combine` and `separate`.
+
+![add cow to herd diagram reflecting the yaml below](../assets/examples/comb-sep-add.png)
 
 ``` yaml
-# Example: Process using stage and state
-# credit Fabulaser-Mini, https://github.com/fab-machines/Fabulaser-Mini/blob/main/manual/Fabulaser%20manual%20L2M2.pdf
+# Example: Simple add and remove to and from existing resource
 
 '@context':
   - '@vocab': http://w3id.org/valueflows/ont/vf#
-  - mfg: https://manufacturing.example/
+  - dairy: https://dairy.example/
 
 '@graph':
 
-  # Process Specifications
+  # Economic resources before
 
-  - '@id': mfg:3be5259d-10f0-431c-9fec-9c0c15a461d3
-    '@type': ProcessSpecification
-    name: Attach air filter
-
-  - '@id': mfg:3be5259d-10f0-431c-9fec-9c0c15a461e4
-    '@type': ProcessSpecification
-    name: Attach air compressor
-
-  - '@id': mfg:3be5259d-10f0-431c-9fec-9c0c15a461f9
-    '@type': ProcessSpecification
-    name: Test machine
-
-  # Resource Specification
-
-  - '@id': mfg:3be525ee-10f0-431c-9fec-9c0c15a4dv97
-    '@type': ResourceSpecification
-    name: Fabulaser laser cutter
-
-  # Economic resource before attach air filter process
-
-  - '@id': mfg:e1721a61-cd47-4556-84b9-8b1b81da15bf
+  - '@id': dairy:e1721a61-cd47-4556-84b9-8b1b81da15bf
     '@type': EconomicResource
-    resourceConformsTo: mfg:3be525ee-10f0-431c-9fec-9c0c15a4dv97 # Fabulaser
+    conformsTo: https://www.wikidata.org/wiki/Q11748378 # cow
+    trackingIdentifier: cow12
     accountingQuantity:
       hasUnit: one
       hasNumericalValue: 1
-    stage: mfg:3be5259d-10f0-431c-9fec-9c0c15a461e4 # attach air compressor
+    containedIn: dairy:3129ca8b-fcda-45be-bbda-294dc924d3b9
 
-  # Assembly process
+  - '@id': dairy:e1721a61-cd47-4556-84b9-8b1b81da15bg
+    '@type': EconomicResource
+    conformsTo: https://www.wikidata.org/wiki/Q11748378 # cow
+    trackingIdentifier: cow45
+    accountingQuantity:
+      hasUnit: one
+      hasNumericalValue: 1
+    containedIn:
 
-  - '@id': mfg:02b39a30-3e04-4305-9656-7f261aa63c84
+  - '@id': dairy:e1721a61-cd47-4556-84b9-8b1b81da15bh
+    '@type': EconomicResource
+    conformsTo: https://www.wikidata.org/wiki/Q11748378 # cow
+    trackingIdentifier: cow40
+    accountingQuantity:
+      hasUnit: one
+      hasNumericalValue: 1
+    containedIn: dairy:3129ca8b-fcda-45be-bbda-294dc924d3b9
+
+  - '@id': dairy:3129ca8b-fcda-45be-bbda-294dc924d3b9
+    '@type': EconomicResource
+    conformsTo: https://www.wikidata.org/wiki/Q209542 # herd
+    accountingQuantity:
+      hasUnit: one
+      hasNumericalValue: 1
+
+  # Adding process
+
+  - '@id': dairy:02b39a30-3e04-4305-9656-7f261aa63c84
     '@type': Process
-    name: Attach the air filter (step 33)
-    basedOn: mfg:3be5259d-10f0-431c-9fec-9c0c15a461d3 # process specification: attach air filter
+    name: Add cow to the herd
     hasInput:
 
-    - '@id': mfg:a8236bbb-81e0-422d-9861-56d2417db0fb
+    - '@id': dairy:b52a5815-fae9-43bf-be95-833b95dc0adb
       '@type': EconomicEvent
       action: accept
-      provider: https://manufacturing.example/
-      receiver: https://manufacturing.example/
-      resourceInventoriedAs: mfg:e1721a61-cd47-4556-84b9-8b1b81da15bf # a laser cutter
+      provider: https://dairy.example/
+      receiver: https://dairy.example/
+      resourceInventoriedAs: dairy:3129ca8b-fcda-45be-bbda-294dc924d3b9 # herd
       resourceQuantity:
         hasUnit: one
         hasNumericalValue: 1
-      stage: mfg:3be5259d-10f0-431c-9fec-9c0c15a461e4 # attach air compressor
+      note: Herd already has some cows.
 
-    - '@id': mfg:a8236bbb-81e0-422d-9861-56d2417db0ss
+    - '@id': dairy:b90b0b77-09a2-42e2-8bd4-e9ae2c1c6172
       '@type': EconomicEvent
-      action: consume
-      provider: https://manufacturing.example/
-      receiver: https://manufacturing.example/
-      resourceInventoriedAs: mfg:e1721a61-cd47-4556-84b9-8b1b81dlk4d0 # an air filter
-      resourceQuantity:
-        hasUnit: one
-        hasNumericalValue: 1
-
-    - '@id': mfg:a8236bbb-81e0-422d-9861-56d2417db0st
-      '@type': EconomicEvent
-      action: consume
-      provider: https://manufacturing.example/
-      receiver: https://manufacturing.example/
-      resourceInventoriedAs: mfg:e1721a61-cd47-4556-84b9-8b1b81dlcvgk # a hose clamp
+      action: combine
+      provider: https://dairy.example/
+      receiver: https://dairy.example/
+      resourceInventoriedAs: dairy:e1721a61-cd47-4556-84b9-8b1b81da15bg # cow45
       resourceQuantity:
         hasUnit: one
         hasNumericalValue: 1
 
     hasOutput:
 
-    - '@id': mfg:52f0e212-3c4f-4d27-b345-5e964c135824
+    - '@id': dairy:b52a5815-fae9-43bf-be95-833b95dc0456
       '@type': EconomicEvent
       action: modify
-      provider: https://manufacturing.example/
-      receiver: https://manufacturing.example/
-      resourceInventoriedAs: mfg:e1721a61-cd47-4556-84b9-8b1b81da15bf # a laser cutter
+      provider: https://dairy.example/
+      receiver: https://dairy.example/
+      resourceInventoriedAs: dairy:3129ca8b-fcda-45be-bbda-294dc924d3b9 # herd
+      resourceQuantity:
+        hasUnit: one
+        hasNumericalValue: 1
+      note: This resource stays the same, but has a new member
+
+  # Removing process
+
+  - '@id': dairy:33e8933b-ff73-4a01-964a-ca7a98893083
+    '@type': Process
+    name: Remove cow from the herd
+    hasInput:
+
+    - '@id': dairy:33e8933b-ff73-4a01-964a-ca7a98893
+      '@type': EconomicEvent
+      action: accept
+      provider: https://dairy.example/
+      receiver: https://dairy.example/
+      resourceInventoriedAs: dairy:3129ca8b-fcda-45be-bbda-294dc924d3b9 # herd
       resourceQuantity:
         hasUnit: one
         hasNumericalValue: 1
 
-  # Economic resource after attach air filter process
+    hasOutput:
 
-  - '@id': mfg:e1721a61-cd47-4556-84b9-8b1b81da15bf
+    - '@id': dairy:60f4204e-b8d2-4026-8577-102c3f82c0af
+      '@type': EconomicEvent
+      action: modify
+      provider: https://dairy.example/
+      receiver: https://dairy.example/
+      resourceInventoriedAs: dairy:3129ca8b-fcda-45be-bbda-294dc924d3b9 # herd
+      resourceQuantity:
+        hasUnit: one
+        hasNumericalValue: 1
+
+    - '@id': dairy:60f4204e-b8d2-4026-8577-102c3fkm98g1
+      '@type': EconomicEvent
+      action: separate
+      provider: https://dairy.example/
+      receiver: https://dairy.example/
+      resourceInventoriedAs: dairy:e1721a61-cd47-4556-84b9-8b1b81da15bf # cow12
+      resourceQuantity:
+        hasUnit: one
+        hasNumericalValue: 1
+
+  # Economic resources at end
+
+  - '@id': dairy:e1721a61-cd47-4556-84b9-8b1b81da15bf
     '@type': EconomicResource
-    resourceConformsTo: mfg:3be525ee-10f0-431c-9fec-9c0c15a4dv97 # Fabulaser
+    conformsTo: https://www.wikidata.org/wiki/Q11748378 # cow
+    trackingIdentifier: cow12
     accountingQuantity:
       hasUnit: one
       hasNumericalValue: 1
-    stage: mfg:3be5259d-10f0-431c-9fec-9c0c15a461d3 # attach air filter
+    containedIn:
 
-  # Testing process
-
-  - '@id': mfg:02b39a30-3e04-4305-9656-7f261aa63c98
-    '@type': Process
-    name: Test the laser cutter
-    basedOn: mfg:3be5259d-10f0-431c-9fec-9c0c15a461d3 # final test after all assembly
-
-  - '@id': mfg:a8236bbb-81e0-422d-9861-56d2417db0fb
-    '@type': EconomicEvent
-    inputOf: mfg:02b39a30-3e04-4305-9656-7f261aa63c98
-    action: accept
-    provider: https://manufacturing.example/
-    receiver: https://manufacturing.example/
-    resourceInventoriedAs: mfg:e1721a61-cd47-4556-84b9-8b1b81da15bf # a laser cutter
-    resourceQuantity:
-      hasUnit: one
-      hasNumericalValue: 1
-    stage: mfg:02b39a30-3e04-4305-9656-7f261aa63c84 #attach air filter
-
-  - '@id': mfg:52f0e212-3c4f-4d27-b345-5e964c135824
-    '@type': EconomicEvent
-    outputOf: mfg:02b39a30-3e04-4305-9656-7f261aa63c98
-    action: modify
-    state: pass
-    provider: https://manufacturing.example/
-    receiver: https://manufacturing.example/
-    resourceInventoriedAs: mfg:e1721a61-cd47-4556-84b9-8b1b81da15bf # a laser cutter
-    resourceQuantity:
-      hasUnit: one
-      hasNumericalValue: 1
-
-  # Economic resource after testing
-
-  - '@id': mfg:e1721a61-cd47-4556-84b9-8b1b81da15bf
+  - '@id': dairy:e1721a61-cd47-4556-84b9-8b1b81da15bg
     '@type': EconomicResource
-    resourceConformsTo: mfg:3be525ee-10f0-431c-9fec-9c0c15a4dv97 # Fabulaser
+    conformsTo: https://www.wikidata.org/wiki/Q11748378 # cow
+    trackingIdentifier: cow45
     accountingQuantity:
       hasUnit: one
       hasNumericalValue: 1
-    stage: mfg:02b39a30-3e04-4305-9656-7f261aa63c98 # test machine
-    state: pass
+    containedIn: dairy:3129ca8b-fcda-45be-bbda-294dc924d3b9
 
-```
-Alternate view of these stage-state processes, using the more relational directionality option.
-``` yaml
-# Example: Process using stage and state
-# credit Fabulaser-Mini, https://github.com/fab-machines/Fabulaser-Mini/blob/main/manual/Fabulaser%20manual%20L2M2.pdf
-
-'@context':
-  - '@vocab': http://w3id.org/valueflows/ont/vf#
-  - mfg: https://manufacturing.example/
-
-'@graph':
-
-  # Assembly process
-
-  - '@id': mfg:02b39a30-3e04-4305-9656-7f261aa63c84
-    '@type': Process
-    name: Attach the air filter (step 33)
-    basedOn: mfg:3be5259d-10f0-431c-9fec-9c0c15a461d3 # process specification: attach air filter
-
-  - '@id': mfg:a8236bbb-81e0-422d-9861-56d2417db0fb
-    '@type': EconomicEvent
-    inputOf: mfg:02b39a30-3e04-4305-9656-7f261aa63c84
-    action: accept
-    provider: https://manufacturing.example/
-    receiver: https://manufacturing.example/
-    resourceInventoriedAs: mfg:e1721a61-cd47-4556-84b9-8b1b81da15bf # a laser cutter
-    resourceQuantity:
+  - '@id': dairy:e1721a61-cd47-4556-84b9-8b1b81da15bh
+    '@type': EconomicResource
+    conformsTo: https://www.wikidata.org/wiki/Q11748378 # cow
+    trackingIdentifier: cow40
+    accountingQuantity:
       hasUnit: one
       hasNumericalValue: 1
-    stage: mfg:3be5259d-10f0-431c-9fec-9c0c15a461e4 # attach air compressor
+    containedIn: dairy:3129ca8b-fcda-45be-bbda-294dc924d3b9
 
-  - '@id': mfg:a8236bbb-81e0-422d-9861-56d2417db0ss
-    '@type': EconomicEvent
-    inputOf: mfg:02b39a30-3e04-4305-9656-7f261aa63c84
-    action: consume
-    provider: https://manufacturing.example/
-    receiver: https://manufacturing.example/
-    resourceInventoriedAs: mfg:e1721a61-cd47-4556-84b9-8b1b81dlk4d0 # an air filter
-    resourceQuantity:
-      hasUnit: one
-      hasNumericalValue: 1
-
-  - '@id': mfg:a8236bbb-81e0-422d-9861-56d2417db0st
-    '@type': EconomicEvent
-    inputOf: mfg:02b39a30-3e04-4305-9656-7f261aa63c84
-    action: consume
-    provider: https://manufacturing.example/
-    receiver: https://manufacturing.example/
-    resourceInventoriedAs: mfg:e1721a61-cd47-4556-84b9-8b1b81dlcvgk # a hose clamp
-    resourceQuantity:
-      hasUnit: one
-      hasNumericalValue: 1
-
-  - '@id': mfg:52f0e212-3c4f-4d27-b345-5e964c135824
-    '@type': EconomicEvent
-    outputOf: mfg:02b39a30-3e04-4305-9656-7f261aa63c84
-    action: modify
-    provider: https://manufacturing.example/
-    receiver: https://manufacturing.example/
-    resourceInventoriedAs: mfg:e1721a61-cd47-4556-84b9-8b1b81da15bf # a laser cutter
-    resourceQuantity:
-      hasUnit: one
-      hasNumericalValue: 1
-
-  # Testing process
-
-  - '@id': mfg:02b39a30-3e04-4305-9656-7f261aa63c98
-    '@type': Process
-    name: Test the laser cutter
-    basedOn: mfg:3be5259d-10f0-431c-9fec-9c0c15a461d3 # final test after all assembly
-
-  - '@id': mfg:a8236bbb-81e0-422d-9861-56d2417db0fb
-    '@type': EconomicEvent
-    inputOf: mfg:02b39a30-3e04-4305-9656-7f261aa63c98
-    action: accept
-    provider: https://manufacturing.example/
-    receiver: https://manufacturing.example/
-    resourceInventoriedAs: mfg:e1721a61-cd47-4556-84b9-8b1b81da15bf # a laser cutter
-    resourceQuantity:
-      hasUnit: one
-      hasNumericalValue: 1
-    stage: mfg:02b39a30-3e04-4305-9656-7f261aa63c84 #attach air filter
-
-  - '@id': mfg:52f0e212-3c4f-4d27-b345-5e964c135824
-    '@type': EconomicEvent
-    outputOf: mfg:02b39a30-3e04-4305-9656-7f261aa63c98
-    action: modify
-    state: pass
-    provider: https://manufacturing.example/
-    receiver: https://manufacturing.example/
-    resourceInventoriedAs: mfg:e1721a61-cd47-4556-84b9-8b1b81da15bf # a laser cutter
-    resourceQuantity:
+  - '@id': dairy:3129ca8b-fcda-45be-bbda-294dc924d3b9
+    '@type': EconomicResource
+    conformsTo: https://www.wikidata.org/wiki/Q209542 # herd
+    accountingQuantity:
       hasUnit: one
       hasNumericalValue: 1
 ```

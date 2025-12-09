@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../ex-exchange/">
+        <link rel="prev" href="../ex-proposals/">
       
       
-        <link rel="next" href="../ex-complex/">
+        <link rel="next" href="../ex-production/">
       
       
       <link rel="icon" href="../../assets/favicon.ico">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Planning - Valueflows</title>
+        <title>Recipes and Planning - Valueflows</title>
       
     
     
@@ -107,7 +107,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Planning
+              Recipes and Planning
             
           </span>
         </div>
@@ -774,8 +774,6 @@
       
         
       
-        
-      
     
     
       
@@ -1026,27 +1024,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../concepts/estimates/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Estimates and Analysis
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../concepts/recipes/" class="md-nav__link">
         
   
@@ -1198,10 +1175,6 @@
       
         
       
-        
-      
-        
-      
     
     
       
@@ -1308,32 +1281,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../ex-production/" class="md-nav__link">
+      <a href="../ex-proposals/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Production
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../ex-exchange/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Exchanges and Transfers
+    Offers and Requests
   </span>
   
 
@@ -1363,7 +1315,7 @@
           
   
   <span class="md-ellipsis">
-    Planning
+    Recipes and Planning
   </span>
   
 
@@ -1374,7 +1326,7 @@
         
   
   <span class="md-ellipsis">
-    Planning
+    Recipes and Planning
   </span>
   
 
@@ -1414,9 +1366,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#fulfillment-and-satisfaction" class="md-nav__link">
+  <a href="#plan-from-recipe-with-production-and-exchange" class="md-nav__link">
     <span class="md-ellipsis">
-      Fulfillment and satisfaction
+      Plan from recipe with production and exchange
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#building-recipes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Building recipes
     </span>
   </a>
   
@@ -1438,11 +1399,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../ex-complex/" class="md-nav__link">
+      <a href="../ex-production/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Plan-Produce-Exchange
+    Production
   </span>
   
 
@@ -1459,32 +1420,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../ex-proposals/" class="md-nav__link">
+      <a href="../ex-exchange/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Offers/Requests
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../ex-scenario/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Estimates and Analysis
+    Exchanges and Transfers
   </span>
   
 
@@ -1992,9 +1932,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#fulfillment-and-satisfaction" class="md-nav__link">
+  <a href="#plan-from-recipe-with-production-and-exchange" class="md-nav__link">
     <span class="md-ellipsis">
-      Fulfillment and satisfaction
+      Plan from recipe with production and exchange
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#building-recipes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Building recipes
     </span>
   </a>
   
@@ -2231,74 +2180,512 @@
 <span class="w">      </span><span class="nt">hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">hour</span>
 <span class="w">      </span><span class="nt">hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span>
 </code></pre></div>
-<h4 id="fulfillment-and-satisfaction">Fulfillment and satisfaction</h4>
-<p>Commitments satisfying intents, and economic events fulfilling commitments.  (Note that economic events can also satisfy intents if there is no commitment, although it is not shown in this example.)</p>
-<p><img alt="fulfillment diagram reflecting the yaml below" src="../../assets/examples/ful-sat.png" /></p>
-<div class="highlight"><pre><span></span><code><span class="c1"># Example: Intent - satisfied by - Commitment - fulfilled by - EconomicEvent</span>
+<h4 id="plan-from-recipe-with-production-and-exchange">Plan from recipe with production and exchange</h4>
+<p>This shows a simple recipe that includes both a process and the exchange of work that is input to the process for currency.</p>
+<p><img alt="process-exchange diagram reflecting the yaml below" src="../../assets/examples/process-exchange.png" /></p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Example: Simple recipe with both process and exchange</span>
 
 <span class="s">&#39;@context&#39;</span><span class="p p-Indicator">:</span>
 <span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@vocab&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://w3id.org/valueflows/ont/vf#</span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">bob</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://bob.example/</span>
-<span class="w">    </span><span class="nt">mfg</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://manufacturer.example/</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">alice</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://alice.example/</span>
+<span class="w">    </span><span class="nt">doc</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://documenters.example</span>
 
 <span class="s">&#39;@graph&#39;</span><span class="p p-Indicator">:</span>
 
-<span class="w">  </span><span class="c1"># A manufacturer makes a plan that includes an intent for some work which </span>
-<span class="w">  </span><span class="c1"># they want someone in their network to commit to doing on Oct. 14 - 15</span>
+<span class="w">  </span><span class="c1"># the recipe</span>
 
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:e1721a61-cd47-4556-84b9-8b1b81da15bf</span>
-<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Intent</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:3be5259d-10f0-431c-9fec-9c0c15a461d3</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ResourceSpecification</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Training handout</span>
+<span class="w">    </span><span class="nt">substitutable</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10f1f86</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ResourceSpecification</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Technical writing</span><span class="w"> </span><span class="c1"># a skill</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:33e8933b-ff73-4a01-964a-ca7a98893083</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RecipeFlow</span>
+<span class="w">    </span><span class="nt">recipeOutputOf</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:e1721a61-cd47-4556-84b9-8b1b81da15bf</span>
+<span class="w">    </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">produce</span>
+<span class="w">    </span><span class="nt">resourceConformsTo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:3be5259d-10f0-431c-9fec-9c0c15a461d3</span><span class="w"> </span><span class="c1"># the handout spec</span>
+<span class="w">    </span><span class="nt">resourceQuantity</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">one</span>
+<span class="w">      </span><span class="nt">hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:e1721a61-cd47-4556-84b9-8b1b81da15bf</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RecipeProcess</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Write and format training handout</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:60f4204e-b8d2-4026-8577-102c3f82c0af</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RecipeFlow</span>
+<span class="w">    </span><span class="nt">recipeInputOf</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:e1721a61-cd47-4556-84b9-8b1b81da15bf</span><span class="w"> </span><span class="c1"># the recipe process</span>
+<span class="w">    </span><span class="nt">recipeClauseOf</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:9bd19194-a36d-4a1f-896b-8082887962cb</span><span class="w"> </span><span class="c1"># the recipe exchange</span>
 <span class="w">    </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">work</span>
-<span class="w">    </span><span class="nt">receiver</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
-<span class="w">    </span><span class="nt">resourceConformsTo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://www.wikidata.org/entity//Q192047</span><span class="w"> </span><span class="c1"># machining</span>
+<span class="w">    </span><span class="nt">resourceConformsTo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10f1f86</span><span class="w"> </span><span class="c1"># technical writing</span>
 <span class="w">    </span><span class="nt">effortQuantity</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">hour</span>
-<span class="w">      </span><span class="nt">hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8</span>
-<span class="w">    </span><span class="nt">hasBeginning</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2018-10-14T8:00:00-0:00</span>
-<span class="w">    </span><span class="nt">hasEnd</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2018-10-15T18:00:00-0:00</span>
+<span class="w">      </span><span class="nt">hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">15</span>
 
-<span class="w">  </span><span class="c1"># Bob commits to doing the work on Oct. 14</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:9bd19194-a36d-4a1f-896b-8082887962cb</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RecipeExchange</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Exchange documentation work for FairCoin</span>
 
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:02b39a30-3e04-4305-9656-7f261aa63c84</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:3129ca8b-fcda-45be-bbda-294dc924d3b9</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RecipeFlow</span>
+<span class="w">    </span><span class="nt">recipeReciprocalClauseOf</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:9bd19194-a36d-4a1f-896b-8082887962cb</span><span class="w"> </span><span class="c1"># the recipe exchange</span>
+<span class="w">    </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">transfer</span>
+<span class="w">    </span><span class="nt">resourceConformsTo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://www.wikidata.org/entity/Q21002847</span><span class="w"> </span><span class="c1"># FairCoin</span>
+<span class="w">    </span><span class="nt">resourceQuantity</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">one</span>
+<span class="w">      </span><span class="nt">hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">300</span>
+
+<span class="w">  </span><span class="c1"># the plan</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">doc:8e5fe80d-a769-4bd5-89e5-2136d33eab9f</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Plan</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">X Training Handout and Payment</span>
+<span class="w">    </span><span class="nt">note</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Write and format the training handout, payment for writing work.</span>
+<span class="w">    </span><span class="nt">due</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2019-04-08T17:00:00-5:00</span>
+<span class="w">    </span><span class="nt">created</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2019-04-01T10:35:00-5:00</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">doc:a8236bbb-81e0-422d-9861-56d2417db0fb</span>
 <span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Commitment</span>
+<span class="w">    </span><span class="nt">independentDemandOf</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">doc:8e5fe80d-a769-4bd5-89e5-2136d33eab9f</span><span class="w"> </span><span class="c1"># the plan</span>
+<span class="w">    </span><span class="nt">outputOf</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">doc:02b39a30-3e04-4305-9656-7f261aa63c84</span>
+<span class="w">    </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">produce</span>
+<span class="w">    </span><span class="nt">provider</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://documenters.example/</span>
+<span class="w">    </span><span class="nt">receiver</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://documenters.example/</span>
+<span class="w">    </span><span class="nt">resourceConformsTo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:3be5259d-10f0-431c-9fec-9c0c15a461d3</span><span class="w"> </span><span class="c1"># training handout</span>
+<span class="w">    </span><span class="nt">resourceQuantity</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">one</span>
+<span class="w">      </span><span class="nt">hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">doc:02b39a30-3e04-4305-9656-7f261aa63c84</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Process</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Write and format X training handout</span>
+<span class="w">    </span><span class="nt">plannedWithin</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">doc:8e5fe80d-a769-4bd5-89e5-2136d33eab9f</span><span class="w"> </span><span class="c1"># the plan</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">doc:52f0e212-3c4f-4d27-b345-5e964c135824</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Commitment</span>
+<span class="w">    </span><span class="nt">inputOf</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">doc:02b39a30-3e04-4305-9656-7f261aa63c84</span>
+<span class="w">    </span><span class="nt">clauseOf</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:583e83d9-a46d-44ff-bd71-88513a1d83c0</span>
 <span class="w">    </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">work</span>
-<span class="w">    </span><span class="nt">provider</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://bob.example/</span>
-<span class="w">    </span><span class="nt">receiver</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
-<span class="w">    </span><span class="nt">resourceConformsTo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://www.wikidata.org/entity/Q192047</span><span class="w"> </span><span class="c1"># machining</span>
+<span class="w">    </span><span class="nt">provider</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://alice.example/</span>
+<span class="w">    </span><span class="nt">receiver</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://documenters.example/</span>
+<span class="w">    </span><span class="nt">resourceConformsTo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10f1f86</span>
 <span class="w">    </span><span class="nt">effortQuantity</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">hour</span>
-<span class="w">      </span><span class="nt">hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8</span>
-<span class="w">    </span><span class="nt">hasBeginning</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2018-10-14T8:00:00-0:00</span>
-<span class="w">    </span><span class="nt">hasEnd</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2018-10-14T17:00:00-0:00</span>
-<span class="w">    </span><span class="nt">satisfies</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:e1721a61-cd47-4556-84b9-8b1b81da15bf</span><span class="w"> </span><span class="c1"># the intent</span>
+<span class="w">      </span><span class="nt">hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">20</span><span class="w"> </span><span class="c1"># the estimate for this particular work is higher than the generic recipe</span>
 
-<span class="w">  </span><span class="c1"># Bob does the work in two 4-hour shifts on Oct. 14</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:583e83d9-a46d-44ff-bd71-88513a1d83c0</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Agreement</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Exchange technical documentation work for FairCoin</span>
 
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:d4d2fd71-34f2-41c3-b1c5-19ad5ed2da59</span>
-<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EconomicEvent</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">doc:b52a5815-fae9-43bf-be95-833b95dc0adb</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Commitment</span>
+<span class="w">    </span><span class="nt">plannedWithin</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">doc:8e5fe80d-a769-4bd5-89e5-2136d33eab9f</span><span class="w"> </span><span class="c1"># the plan</span>
+<span class="w">    </span><span class="nt">reciprocalClauseOf</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">doc:02b39a30-3e04-4305-9656-7f261aa63c84</span>
+<span class="w">    </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">transfer</span>
+<span class="w">    </span><span class="nt">provider</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://documenters.example/</span>
+<span class="w">    </span><span class="nt">receiver</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://alice.example/</span>
+<span class="w">    </span><span class="nt">resourceConformsTo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://www.wikidata.org/entity/Q21002847</span><span class="w"> </span><span class="c1"># FairCoin</span>
+<span class="w">    </span><span class="nt">resourceQuantity</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">one</span>
+<span class="w">      </span><span class="nt">hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">400</span><span class="w"> </span><span class="c1"># the plan payment is adjusted from the generic recipe</span>
+</code></pre></div>
+<h4 id="building-recipes">Building recipes</h4>
+<p>This shows two recipes used together for one economic function (dairy farming). Most of the recipe processes are re-used in both recipes.</p>
+<p><img alt="recipes diagram reflecting the yaml below" src="../../assets/examples/recipe-reuse.png" /></p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Example: Complex set of recipes with re-use of recipe process.</span>
+
+<span class="s">&#39;@context&#39;</span><span class="p p-Indicator">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@vocab&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://w3id.org/valueflows/ont/vf#</span>
+
+<span class="s">&#39;@graph&#39;</span><span class="p p-Indicator">:</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:3be5259d-10f0-431c-9fec-9c0c15a41234</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ResourceSpecification</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Milking herd</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10fasdf</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ResourceSpecification</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ATV</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10fqer8</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ResourceSpecification</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Milking shed</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10fgt98</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ResourceSpecification</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Paddock</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10fgt99</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ResourceSpecification</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Milker pellets summer</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10fgt90</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ResourceSpecification</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Milker pellets winter</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10fio33</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ResourceSpecification</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Vat milk</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10ftg7y</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ResourceSpecification</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Antibiotic milk</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10fse43</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ResourceSpecification</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Fresh cow milk</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10fdfre</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ResourceSpecification</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Milking</span>
+
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10fxs34</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ProcessSpecification</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Milk cows</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10fgtml</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ProcessSpecification</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Collect cows</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10f56jn</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ProcessSpecification</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Return cows</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10fqd9m</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ProcessSpecification</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Setup milking shed</span>
+
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:33e8933b-ff73-4a01-964a-ca7a98893083</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RecipeFlow</span>
+<span class="w">    </span><span class="nt">recipeOutputOf</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:e1721a61-cd47-4556-84b9-8b1b81da15bf</span><span class="w"> </span><span class="c1"># collect</span>
+<span class="w">    </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">modify</span>
+<span class="w">    </span><span class="nt">resourceConformsTo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10fgt98</span><span class="w"> </span><span class="c1"># the paddock</span>
+<span class="w">    </span><span class="nt">resourceQuantity</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">one</span>
+<span class="w">      </span><span class="nt">hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:33e8933b-ff73-4a01-964a-ca7a98893084</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RecipeFlow</span>
+<span class="w">    </span><span class="nt">recipeOutputOf</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:e1721a61-cd47-4556-84b9-8b1b81da15bf</span><span class="w"> </span><span class="c1"># collect</span>
+<span class="w">    </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">modify</span>
+<span class="w">    </span><span class="nt">resourceConformsTo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:3be5259d-10f0-431c-9fec-9c0c15a41234</span><span class="w"> </span><span class="c1"># the milking herd</span>
+<span class="w">    </span><span class="nt">resourceQuantity</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">one</span>
+<span class="w">      </span><span class="nt">hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:e1721a61-cd47-4556-84b9-8b1b81da15bf</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RecipeProcess</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Collect cows from paddock</span>
+<span class="w">    </span><span class="nt">basedOn</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10fgtml</span>
+<span class="w">    </span><span class="nt">hasDuration</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">hour</span>
+<span class="w">      </span><span class="nt">hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">.5</span>
+<span class="w">    </span><span class="nt">note</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Milker gets quad (ATV) from Machine Shed and goes to collect cows (2.30am).  Round them up and Move Cows calmly from their paddock along the laneway to the dairy.  At the dairy yard, cows stand on the backing gate and flow into the dairy at their own pace.  Note which cows are lame or have saw feet</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:60f4204e-b8d2-4026-8577-102c3f82c0ah</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RecipeFlow</span>
+<span class="w">    </span><span class="nt">recipeInputOf</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:e1721a61-cd47-4556-84b9-8b1b81da15bf</span><span class="w"> </span><span class="c1"># collect</span>
 <span class="w">    </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">work</span>
-<span class="w">    </span><span class="nt">provider</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://bob.example/</span>
-<span class="w">    </span><span class="nt">receiver</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
-<span class="w">    </span><span class="nt">resourceConforms</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://www.wikidata.org/entity/Q192047</span><span class="w"> </span><span class="c1"># machining</span>
+<span class="w">    </span><span class="nt">resourceConformsTo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10fdfre</span><span class="w"> </span><span class="c1"># milking</span>
 <span class="w">    </span><span class="nt">effortQuantity</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">hour</span>
-<span class="w">      </span><span class="nt">hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">4</span>
-<span class="w">    </span><span class="nt">hasBeginning</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2018-10-14T8:00:00-0:00</span>
-<span class="w">    </span><span class="nt">hasEnd</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2018-10-14T12:00:00-0:00</span>
-<span class="w">    </span><span class="nt">fulfills</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:02b39a30-3e04-4305-9656-7f261aa63c84</span><span class="w"> </span><span class="c1"># the commitment</span>
+<span class="w">      </span><span class="nt">hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">.5</span>
 
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:c7897c39-7f05-4a5d-a487-80e130a2414b</span>
-<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EconomicEvent</span>
-<span class="w">    </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">work</span>
-<span class="w">    </span><span class="nt">provider</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://bob.example/</span>
-<span class="w">    </span><span class="nt">receiver</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
-<span class="w">    </span><span class="nt">resourceConformsTo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://www.wikidata.org/entity/Q192047</span><span class="w"> </span><span class="c1"># machining</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:60f4204e-b8d2-4026-8577-102c3f82c0ai</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RecipeFlow</span>
+<span class="w">    </span><span class="nt">recipeInputOf</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:e1721a61-cd47-4556-84b9-8b1b81da15bf</span><span class="w"> </span><span class="c1"># collect</span>
+<span class="w">    </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">use</span>
+<span class="w">    </span><span class="nt">resourceConformsTo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10fasdf</span><span class="w"> </span><span class="c1"># ATV</span>
 <span class="w">    </span><span class="nt">effortQuantity</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">hour</span>
-<span class="w">      </span><span class="nt">hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">4</span>
-<span class="w">    </span><span class="nt">hasBeginning</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2018-10-14T13:00:00-0:00</span>
-<span class="w">    </span><span class="nt">hasEnd</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2018-10-14T17:00:00-0:00</span>
-<span class="w">    </span><span class="nt">fulfills</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:02b39a30-3e04-4305-9656-7f261aa63c84</span><span class="w"> </span><span class="c1"># the commitment</span>
+<span class="w">      </span><span class="nt">hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">.5</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:33e8933b-ff73-4a01-964a-ca7a988930aj</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RecipeFlow</span>
+<span class="w">    </span><span class="nt">recipeInputOf</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:e1721a61-cd47-4556-84b9-8b1b81da15bf</span><span class="w"> </span><span class="c1"># collect</span>
+<span class="w">    </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">modify</span>
+<span class="w">    </span><span class="nt">resourceConformsTo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10fgt98</span><span class="w"> </span><span class="c1"># the paddock</span>
+<span class="w">    </span><span class="nt">resourceQuantity</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">one</span>
+<span class="w">      </span><span class="nt">hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:33e8933b-ff73-4a01-964a-ca7a988930ak</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RecipeFlow</span>
+<span class="w">    </span><span class="nt">recipeInputOf</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:e1721a61-cd47-4556-84b9-8b1b81da15bf</span><span class="w"> </span><span class="c1"># collect</span>
+<span class="w">    </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">modify</span>
+<span class="w">    </span><span class="nt">resourceConformsTo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:3be5259d-10f0-431c-9fec-9c0c15a41234</span><span class="w"> </span><span class="c1"># the milking herd</span>
+<span class="w">    </span><span class="nt">resourceQuantity</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">one</span>
+<span class="w">      </span><span class="nt">hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:33e8933b-ff73-4a01-964a-ca7a9889dfi9</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RecipeFlow</span>
+<span class="w">    </span><span class="nt">recipeOutputOf</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:e1721a61-cd47-4556-84b9-8b1b81da45bz</span><span class="w"> </span><span class="c1"># milk</span>
+<span class="w">    </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">produce</span>
+<span class="w">    </span><span class="nt">resourceConformsTo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10ftg7y</span><span class="w"> </span><span class="c1"># antibiotic milk</span>
+<span class="w">    </span><span class="nt">resourceQuantity</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">liter</span>
+<span class="w">      </span><span class="nt">hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">30</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:33e8933b-ff73-4a01-964a-ca7a9889ggf0</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RecipeFlow</span>
+<span class="w">    </span><span class="nt">recipeOutputOf</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:e1721a61-cd47-4556-84b9-8b1b81da45bz</span><span class="w"> </span><span class="c1"># milk</span>
+<span class="w">    </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">produce</span>
+<span class="w">    </span><span class="nt">resourceConformsTo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10fse43</span><span class="w"> </span><span class="c1"># fresh cow milk</span>
+<span class="w">    </span><span class="nt">resourceQuantity</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">liter</span>
+<span class="w">      </span><span class="nt">hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">200</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:33e8933b-ff73-4a01-964a-ca7a9889vbmk</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RecipeFlow</span>
+<span class="w">    </span><span class="nt">recipeOutputOf</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:e1721a61-cd47-4556-84b9-8b1b81da45bz</span><span class="w"> </span><span class="c1"># milk</span>
+<span class="w">    </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">produce</span>
+<span class="w">    </span><span class="nt">resourceConformsTo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10fio33</span><span class="w"> </span><span class="c1"># vat milk</span>
+<span class="w">    </span><span class="nt">resourceQuantity</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">liter</span>
+<span class="w">      </span><span class="nt">hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5000</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:33e8933b-ff73-4a01-964a-ca7a9889dfi9</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RecipeFlow</span>
+<span class="w">    </span><span class="nt">recipeOutputOf</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:e1721a61-cd47-4556-84b9-8b1b81da45bz</span><span class="w"> </span><span class="c1"># milk</span>
+<span class="w">    </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">modify</span>
+<span class="w">    </span><span class="nt">resourceConformsTo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:3be5259d-10f0-431c-9fec-9c0c15a41234</span><span class="w"> </span><span class="c1"># the milking herd</span>
+<span class="w">    </span><span class="nt">resourceQuantity</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">one</span>
+<span class="w">      </span><span class="nt">hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:33e8933b-ff73-4a01-964a-ca7a9889dfi9</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RecipeFlow</span>
+<span class="w">    </span><span class="nt">recipeoutputOf</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:e1721a61-cd47-4556-84b9-8b1b81da45bz</span><span class="w"> </span><span class="c1"># milk</span>
+<span class="w">    </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">modify</span>
+<span class="w">    </span><span class="nt">resourceConformsTo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10fqer8</span><span class="w"> </span><span class="c1"># the milking shed</span>
+<span class="w">    </span><span class="nt">effortQuantity</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">one</span>
+<span class="w">      </span><span class="nt">hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:e1721a61-cd47-4556-84b9-8b1b81da45bz</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RecipeProcess</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Milk and dip the cows winter</span>
+<span class="w">    </span><span class="nt">basedOn</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10fxs34</span>
+<span class="w">    </span><span class="nt">hasDuration</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">hour</span>
+<span class="w">      </span><span class="nt">hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:60f4204e-b8d2-4026-8577-102c3f82vb87</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RecipeFlow</span>
+<span class="w">    </span><span class="nt">recipeInputOf</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:e1721a61-cd47-4556-84b9-8b1b81da45bz</span><span class="w"> </span><span class="c1"># milk</span>
+<span class="w">    </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">accept</span>
+<span class="w">    </span><span class="nt">resourceConformsTo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:3be5259d-10f0-431c-9fec-9c0c15a41234</span><span class="w"> </span><span class="c1"># the milking herd</span>
+<span class="w">    </span><span class="nt">resourceQuantity</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">one</span>
+<span class="w">      </span><span class="nt">hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:60f4204e-b8d2-4026-8577-102c3f82zss8</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RecipeFlow</span>
+<span class="w">    </span><span class="nt">recipeInputOf</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:e1721a61-cd47-4556-84b9-8b1b81da45bz</span><span class="w"> </span><span class="c1"># milk</span>
+<span class="w">    </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">work</span>
+<span class="w">    </span><span class="nt">resourceConformsTo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10fdfre</span><span class="w"> </span><span class="c1"># milking</span>
+<span class="w">    </span><span class="nt">effortQuantity</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">hour</span>
+<span class="w">      </span><span class="nt">hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1.5</span>
+<span class="w">    </span><span class="nt">resourceQuantity</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">one</span>
+<span class="w">      </span><span class="nt">hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:33e8933b-ff73-4a01-964a-ca7a9889dfi9</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RecipeFlow</span>
+<span class="w">    </span><span class="nt">recipeInputOf</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:e1721a61-cd47-4556-84b9-8b1b81da45bz</span><span class="w"> </span><span class="c1"># milk</span>
+<span class="w">    </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">accept</span>
+<span class="w">    </span><span class="nt">resourceConformsTo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10fqer8</span><span class="w"> </span><span class="c1"># the milking shed</span>
+<span class="w">    </span><span class="nt">stage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10fqd9m</span><span class="w"> </span><span class="c1"># the shed must be at stage setup</span>
+<span class="w">    </span><span class="nt">effortQuantity</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">one</span>
+<span class="w">      </span><span class="nt">hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:60f4204e-b8d2-4026-8577-102c3f82ft77</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RecipeFlow</span>
+<span class="w">    </span><span class="nt">recipeInputOf</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:e1721a61-cd47-4556-84b9-8b1b81da45bz</span><span class="w"> </span><span class="c1"># milk</span>
+<span class="w">    </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">consume</span>
+<span class="w">    </span><span class="nt">resourceConformsTo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10fgt90</span><span class="w"> </span><span class="c1"># milker pellets winter</span>
+<span class="w">    </span><span class="nt">resourceQuantity</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">kilogram</span>
+<span class="w">      </span><span class="nt">hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">500</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:33e8933b-ff73-4a01-964a-ca7a9889dfi9</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RecipeFlow</span>
+<span class="w">    </span><span class="nt">recipeOutputOf</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:e1721a61-cd47-4556-84b9-8b1b81da45bq</span><span class="w"> </span><span class="c1"># milk</span>
+<span class="w">    </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">produce</span>
+<span class="w">    </span><span class="nt">resourceConformsTo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10ftg7y</span><span class="w"> </span><span class="c1"># antibiotic milk</span>
+<span class="w">    </span><span class="nt">resourceQuantity</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">kilogram</span>
+<span class="w">      </span><span class="nt">hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">30</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:33e8933b-ff73-4a01-964a-ca7a9889ggf0</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RecipeFlow</span>
+<span class="w">    </span><span class="nt">recipeOutputOf</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:e1721a61-cd47-4556-84b9-8b1b81da45bq</span><span class="w"> </span><span class="c1"># milk</span>
+<span class="w">    </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">produce</span>
+<span class="w">    </span><span class="nt">resourceConformsTo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10fse43</span><span class="w"> </span><span class="c1"># fresh cow milk</span>
+<span class="w">    </span><span class="nt">resourceQuantity</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">kilogram</span>
+<span class="w">      </span><span class="nt">hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">200</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:33e8933b-ff73-4a01-964a-ca7a9889vbmk</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RecipeFlow</span>
+<span class="w">    </span><span class="nt">recipeOutputOf</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:e1721a61-cd47-4556-84b9-8b1b81da45bq</span><span class="w"> </span><span class="c1"># milk</span>
+<span class="w">    </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">produce</span>
+<span class="w">    </span><span class="nt">resourceConformsTo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10fio33</span><span class="w"> </span><span class="c1"># vat milk</span>
+<span class="w">    </span><span class="nt">resourceQuantity</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">kilogram</span>
+<span class="w">      </span><span class="nt">hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:33e8933b-ff73-4a01-964a-ca7a9889dfi9</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RecipeFlow</span>
+<span class="w">    </span><span class="nt">recipeOutputOf</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:e1721a61-cd47-4556-84b9-8b1b81da45bq</span><span class="w"> </span><span class="c1"># milk</span>
+<span class="w">    </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">modify</span>
+<span class="w">    </span><span class="nt">resourceConformsTo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:3be5259d-10f0-431c-9fec-9c0c15a41234</span><span class="w"> </span><span class="c1"># the milking herd</span>
+<span class="w">    </span><span class="nt">resourceQuantity</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">one</span>
+<span class="w">      </span><span class="nt">hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:33e8933b-ff73-4a01-964a-ca7a9889dfi9</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RecipeFlow</span>
+<span class="w">    </span><span class="nt">recipeoutputOf</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:e1721a61-cd47-4556-84b9-8b1b81da45bq</span><span class="w"> </span><span class="c1"># milk</span>
+<span class="w">    </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">modify</span>
+<span class="w">    </span><span class="nt">resourceConformsTo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10fqer8</span><span class="w"> </span><span class="c1"># the milking shed</span>
+<span class="w">    </span><span class="nt">effortQuantity</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">one</span>
+<span class="w">      </span><span class="nt">hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:e1721a61-cd47-4556-84b9-8b1b81da45bq</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RecipeProcess</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Milk and dip the cows summer</span>
+<span class="w">    </span><span class="nt">basedOn</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10fxs34</span>
+<span class="w">    </span><span class="nt">hasDuration</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">hour</span>
+<span class="w">      </span><span class="nt">hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:60f4204e-b8d2-4026-8577-102c3f82vb87</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RecipeFlow</span>
+<span class="w">    </span><span class="nt">recipeInputOf</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:e1721a61-cd47-4556-84b9-8b1b81da45bq</span><span class="w"> </span><span class="c1"># milk</span>
+<span class="w">    </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">accept</span>
+<span class="w">    </span><span class="nt">resourceConformsTo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:3be5259d-10f0-431c-9fec-9c0c15a41234</span><span class="w"> </span><span class="c1"># the milking herd</span>
+<span class="w">    </span><span class="nt">stage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10fgtml</span><span class="w"> </span><span class="c1"># the herd must be at stage collect (already collected)</span>
+<span class="w">    </span><span class="nt">resourceQuantity</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">one</span>
+<span class="w">      </span><span class="nt">hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:60f4204e-b8d2-4026-8577-102c3f82zss8</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RecipeFlow</span>
+<span class="w">    </span><span class="nt">recipeInputOf</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:e1721a61-cd47-4556-84b9-8b1b81da45bq</span><span class="w"> </span><span class="c1"># milk</span>
+<span class="w">    </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">work</span>
+<span class="w">    </span><span class="nt">resourceConformsTo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10fdfre</span><span class="w"> </span><span class="c1"># milking</span>
+<span class="w">    </span><span class="nt">effortQuantity</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">hour</span>
+<span class="w">      </span><span class="nt">hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1.5</span>
+<span class="w">    </span><span class="nt">resourceQuantity</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">one</span>
+<span class="w">      </span><span class="nt">hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span><span class="w"> </span><span class="c1"># 2 skillsets (2 people for 1.5 hours each)</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:33e8933b-ff73-4a01-964a-ca7a9889dfi9</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RecipeFlow</span>
+<span class="w">    </span><span class="nt">recipeInputOf</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:e1721a61-cd47-4556-84b9-8b1b81da45bq</span><span class="w"> </span><span class="c1"># milk</span>
+<span class="w">    </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">accept</span>
+<span class="w">    </span><span class="nt">resourceConformsTo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10fqer8</span><span class="w"> </span><span class="c1"># the milking shed</span>
+<span class="w">    </span><span class="nt">stage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10fqd9m</span><span class="w"> </span><span class="c1"># the shed must be at stage setup</span>
+<span class="w">    </span><span class="nt">effortQuantity</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">one</span>
+<span class="w">      </span><span class="nt">hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:60f4204e-b8d2-4026-8577-102c3f82ft77</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RecipeFlow</span>
+<span class="w">    </span><span class="nt">recipeInputOf</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:e1721a61-cd47-4556-84b9-8b1b81da45bq</span><span class="w"> </span><span class="c1"># milk</span>
+<span class="w">    </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">consume</span>
+<span class="w">    </span><span class="nt">resourceConformsTo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10fgt99</span><span class="w"> </span><span class="c1"># milker pellets summer</span>
+<span class="w">    </span><span class="nt">resourceQuantity</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">kilogram</span>
+<span class="w">      </span><span class="nt">hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
+
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:33e8933b-ff73-4a01-964a-ca7a9889lopi</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RecipeFlow</span>
+<span class="w">    </span><span class="nt">recipeOutputOf</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:e1721a61-cd47-4556-84b9-8b1b81da45sd</span><span class="w"> </span><span class="c1"># return cows</span>
+<span class="w">    </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">modify</span>
+<span class="w">    </span><span class="nt">resourceConformsTo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10fgt98</span><span class="w"> </span><span class="c1"># the paddock</span>
+<span class="w">    </span><span class="nt">resourceQuantity</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">one</span>
+<span class="w">      </span><span class="nt">hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:33e8933b-ff73-4a01-964a-ca7a9889cvbb</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RecipeFlow</span>
+<span class="w">    </span><span class="nt">recipeOutputOf</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:e1721a61-cd47-4556-84b9-8b1b81da45sd</span><span class="w"> </span><span class="c1"># return cows</span>
+<span class="w">    </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">modify</span>
+<span class="w">    </span><span class="nt">resourceConformsTo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:3be5259d-10f0-431c-9fec-9c0c15a41234</span><span class="w"> </span><span class="c1"># the milking herd</span>
+<span class="w">    </span><span class="nt">resourceQuantity</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">one</span>
+<span class="w">      </span><span class="nt">hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:e1721a61-cd47-4556-84b9-8b1b81da45sd</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RecipeProcess</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Return the cows</span>
+<span class="w">    </span><span class="nt">basedOn</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10f56jn</span>
+<span class="w">    </span><span class="nt">hasDuration</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">hour</span>
+<span class="w">      </span><span class="nt">hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">.5</span>
+<span class="w">    </span><span class="nt">note</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Milker uses Quad (ATV) to chase stranglers and herd to new paddock. Ensure fences are set up for morning collection. Check feed in paddock and pasture strip size. Check water troughs.</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:60f4204e-b8d2-4026-8577-102c3f82gt90</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RecipeFlow</span>
+<span class="w">    </span><span class="nt">recipeInputOf</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:e1721a61-cd47-4556-84b9-8b1b81da45sd</span><span class="w"> </span><span class="c1"># return cows</span>
+<span class="w">    </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">accept</span>
+<span class="w">    </span><span class="nt">resourceConformsTo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:3be5259d-10f0-431c-9fec-9c0c15a41234</span><span class="w"> </span><span class="c1"># the milking herd</span>
+<span class="w">    </span><span class="nt">stage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10fxs34</span><span class="w"> </span><span class="c1"># resource must be at stage milk (have been milked)</span>
+<span class="w">    </span><span class="nt">resourceQuantity</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">one</span>
+<span class="w">      </span><span class="nt">hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:33e8933b-ff73-4a01-964a-ca7a98895tgf</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RecipeFlow</span>
+<span class="w">    </span><span class="nt">recipeInputOf</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:e1721a61-cd47-4556-84b9-8b1b81da45sd</span><span class="w"> </span><span class="c1"># return cows</span>
+<span class="w">    </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">accept</span>
+<span class="w">    </span><span class="nt">resourceConformsTo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10fgt98</span><span class="w"> </span><span class="c1"># the paddock</span>
+<span class="w">    </span><span class="nt">resourceQuantity</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">one</span>
+<span class="w">      </span><span class="nt">hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:60f4204e-b8d2-4026-8577-102c3f82rflm</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RecipeFlow</span>
+<span class="w">    </span><span class="nt">recipeInputOf</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:e1721a61-cd47-4556-84b9-8b1b81da45sd</span><span class="w"> </span><span class="c1"># return cows</span>
+<span class="w">    </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">use</span>
+<span class="w">    </span><span class="nt">resourceConformsTo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10fasdf</span><span class="w"> </span><span class="c1"># ATV</span>
+<span class="w">    </span><span class="nt">effortQuantity</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">hour</span>
+<span class="w">      </span><span class="nt">hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">.5</span>
+
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10fd3ou</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Recipe</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Milk cows winter</span>
+<span class="w">    </span><span class="nt">recipeIncludes</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:e1721a61-cd47-4556-84b9-8b1b81da15bf</span><span class="w"> </span><span class="c1"># collect cows</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:e1721a61-cd47-4556-84b9-8b1b81dakofd</span><span class="w"> </span><span class="c1"># setup milking shed</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:e1721a61-cd47-4556-84b9-8b1b81da45bz</span><span class="w"> </span><span class="c1"># milk and dip cows winter</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:e1721a61-cd47-4556-84b9-8b1b81da45sd</span><span class="w"> </span><span class="c1"># return cows</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:6b5bc786-b9ed-4189-b34f-5ef7d10fd3ou</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Recipe</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Milk cows summer</span>
+<span class="w">    </span><span class="nt">recipeIncludes</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:e1721a61-cd47-4556-84b9-8b1b81da15bf</span><span class="w"> </span><span class="c1"># collect cows</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:e1721a61-cd47-4556-84b9-8b1b81dakofd</span><span class="w"> </span><span class="c1"># setup milking shed</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:e1721a61-cd47-4556-84b9-8b1b81da45bq</span><span class="w"> </span><span class="c1"># milk and dip cows summer</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urn:uuid:e1721a61-cd47-4556-84b9-8b1b81da45sd</span><span class="w"> </span><span class="c1"># return cows</span>
 </code></pre></div>
 
 

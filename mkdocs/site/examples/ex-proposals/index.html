@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../ex-complex/">
+        <link rel="prev" href="../ex-resource/">
       
       
-        <link rel="next" href="../ex-scenario/">
+        <link rel="next" href="../ex-planning/">
       
       
       <link rel="icon" href="../../assets/favicon.ico">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Offers/Requests - Valueflows</title>
+        <title>Offers and Requests - Valueflows</title>
       
     
     
@@ -107,7 +107,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Offers/Requests
+              Offers and Requests
             
           </span>
         </div>
@@ -774,8 +774,6 @@
       
         
       
-        
-      
     
     
       
@@ -1026,27 +1024,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../concepts/estimates/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Estimates and Analysis
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../concepts/recipes/" class="md-nav__link">
         
   
@@ -1198,10 +1175,6 @@
       
         
       
-        
-      
-        
-      
     
     
       
@@ -1305,90 +1278,6 @@
                 
   
   
-  
-  
-    <li class="md-nav__item">
-      <a href="../ex-production/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Production
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../ex-exchange/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Exchanges and Transfers
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../ex-planning/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Planning
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../ex-complex/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Plan-Produce-Exchange
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
     
   
   
@@ -1405,7 +1294,7 @@
           
   
   <span class="md-ellipsis">
-    Offers/Requests
+    Offers and Requests
   </span>
   
 
@@ -1416,7 +1305,7 @@
         
   
   <span class="md-ellipsis">
-    Offers/Requests
+    Offers and Requests
   </span>
   
 
@@ -1482,6 +1371,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#fulfillment-and-satisfaction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fulfillment and satisfaction
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1498,11 +1396,53 @@
   
   
     <li class="md-nav__item">
-      <a href="../ex-scenario/" class="md-nav__link">
+      <a href="../ex-planning/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Estimates and Analysis
+    Recipes and Planning
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ex-production/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Production
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ex-exchange/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Exchanges and Transfers
   </span>
   
 
@@ -2036,6 +1976,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#fulfillment-and-satisfaction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fulfillment and satisfaction
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2325,6 +2274,75 @@
 <span class="w">        </span><span class="nt">resourceQuantity</span><span class="p">:</span>
 <span class="w">          </span><span class="nt">hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">one</span>
 <span class="w">          </span><span class="nt">hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">32</span>
+</code></pre></div>
+<h4 id="fulfillment-and-satisfaction">Fulfillment and satisfaction</h4>
+<p>Commitments satisfying intents, and economic events fulfilling commitments.  (Note that economic events can also satisfy intents if there is no commitment, although it is not shown in this example.)</p>
+<p><img alt="fulfillment diagram reflecting the yaml below" src="../../assets/examples/ful-sat.png" /></p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Example: Intent - satisfied by - Commitment - fulfilled by - EconomicEvent</span>
+
+<span class="s">&#39;@context&#39;</span><span class="p p-Indicator">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@vocab&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://w3id.org/valueflows/ont/vf#</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">bob</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://bob.example/</span>
+<span class="w">    </span><span class="nt">mfg</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://manufacturer.example/</span>
+
+<span class="s">&#39;@graph&#39;</span><span class="p p-Indicator">:</span>
+
+<span class="w">  </span><span class="c1"># A manufacturer makes a plan that includes an intent for some work which</span>
+<span class="w">  </span><span class="c1"># they want someone in their network to commit to doing on Oct. 14 - 15</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:e1721a61-cd47-4556-84b9-8b1b81da15bf</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Intent</span>
+<span class="w">    </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">work</span>
+<span class="w">    </span><span class="nt">receiver</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
+<span class="w">    </span><span class="nt">resourceConformsTo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://www.wikidata.org/entity//Q192047</span><span class="w"> </span><span class="c1"># machining</span>
+<span class="w">    </span><span class="nt">effortQuantity</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">hour</span>
+<span class="w">      </span><span class="nt">hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8</span>
+<span class="w">    </span><span class="nt">hasBeginning</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2018-10-14T8:00:00-0:00</span>
+<span class="w">    </span><span class="nt">hasEnd</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2018-10-15T18:00:00-0:00</span>
+
+<span class="w">  </span><span class="c1"># Bob commits to doing the work on Oct. 14</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:02b39a30-3e04-4305-9656-7f261aa63c84</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Commitment</span>
+<span class="w">    </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">work</span>
+<span class="w">    </span><span class="nt">provider</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://bob.example/</span>
+<span class="w">    </span><span class="nt">receiver</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
+<span class="w">    </span><span class="nt">resourceConformsTo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://www.wikidata.org/entity/Q192047</span><span class="w"> </span><span class="c1"># machining</span>
+<span class="w">    </span><span class="nt">effortQuantity</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">hour</span>
+<span class="w">      </span><span class="nt">hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8</span>
+<span class="w">    </span><span class="nt">hasBeginning</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2018-10-14T8:00:00-0:00</span>
+<span class="w">    </span><span class="nt">hasEnd</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2018-10-14T17:00:00-0:00</span>
+<span class="w">    </span><span class="nt">satisfies</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:e1721a61-cd47-4556-84b9-8b1b81da15bf</span><span class="w"> </span><span class="c1"># the intent</span>
+
+<span class="w">  </span><span class="c1"># Bob does the work in two 4-hour shifts on Oct. 14</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:d4d2fd71-34f2-41c3-b1c5-19ad5ed2da59</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EconomicEvent</span>
+<span class="w">    </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">work</span>
+<span class="w">    </span><span class="nt">provider</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://bob.example/</span>
+<span class="w">    </span><span class="nt">receiver</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
+<span class="w">    </span><span class="nt">resourceConforms</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://www.wikidata.org/entity/Q192047</span><span class="w"> </span><span class="c1"># machining</span>
+<span class="w">    </span><span class="nt">effortQuantity</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">hour</span>
+<span class="w">      </span><span class="nt">hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">4</span>
+<span class="w">    </span><span class="nt">hasBeginning</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2018-10-14T8:00:00-0:00</span>
+<span class="w">    </span><span class="nt">hasEnd</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2018-10-14T12:00:00-0:00</span>
+<span class="w">    </span><span class="nt">fulfills</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:02b39a30-3e04-4305-9656-7f261aa63c84</span><span class="w"> </span><span class="c1"># the commitment</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;@id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:c7897c39-7f05-4a5d-a487-80e130a2414b</span>
+<span class="w">    </span><span class="s">&#39;@type&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EconomicEvent</span>
+<span class="w">    </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">work</span>
+<span class="w">    </span><span class="nt">provider</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://bob.example/</span>
+<span class="w">    </span><span class="nt">receiver</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://manufacturing.example/</span>
+<span class="w">    </span><span class="nt">resourceConformsTo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://www.wikidata.org/entity/Q192047</span><span class="w"> </span><span class="c1"># machining</span>
+<span class="w">    </span><span class="nt">effortQuantity</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">hasUnit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">hour</span>
+<span class="w">      </span><span class="nt">hasNumericalValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">4</span>
+<span class="w">    </span><span class="nt">hasBeginning</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2018-10-14T13:00:00-0:00</span>
+<span class="w">    </span><span class="nt">hasEnd</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2018-10-14T17:00:00-0:00</span>
+<span class="w">    </span><span class="nt">fulfills</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mfg:02b39a30-3e04-4305-9656-7f261aa63c84</span><span class="w"> </span><span class="c1"># the commitment</span>
 </code></pre></div>
 
 

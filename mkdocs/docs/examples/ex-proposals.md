@@ -298,3 +298,77 @@ A simple set of proposals that make up a price list.
           hasUnit: one
           hasNumericalValue: 32
 ```
+
+#### Fulfillment and satisfaction
+
+Commitments satisfying intents, and economic events fulfilling commitments.  (Note that economic events can also satisfy intents if there is no commitment, although it is not shown in this example.)
+
+![fulfillment diagram reflecting the yaml below](../assets/examples/ful-sat.png)
+
+``` yaml
+# Example: Intent - satisfied by - Commitment - fulfilled by - EconomicEvent
+
+'@context':
+  - '@vocab': http://w3id.org/valueflows/ont/vf#
+  - bob: https://bob.example/
+    mfg: https://manufacturer.example/
+
+'@graph':
+
+  # A manufacturer makes a plan that includes an intent for some work which
+  # they want someone in their network to commit to doing on Oct. 14 - 15
+
+  - '@id': mfg:e1721a61-cd47-4556-84b9-8b1b81da15bf
+    '@type': Intent
+    action: work
+    receiver: https://manufacturing.example/
+    resourceConformsTo: http://www.wikidata.org/entity//Q192047 # machining
+    effortQuantity:
+      hasUnit: hour
+      hasNumericalValue: 8
+    hasBeginning: 2018-10-14T8:00:00-0:00
+    hasEnd: 2018-10-15T18:00:00-0:00
+
+  # Bob commits to doing the work on Oct. 14
+
+  - '@id': mfg:02b39a30-3e04-4305-9656-7f261aa63c84
+    '@type': Commitment
+    action: work
+    provider: https://bob.example/
+    receiver: https://manufacturing.example/
+    resourceConformsTo: http://www.wikidata.org/entity/Q192047 # machining
+    effortQuantity:
+      hasUnit: hour
+      hasNumericalValue: 8
+    hasBeginning: 2018-10-14T8:00:00-0:00
+    hasEnd: 2018-10-14T17:00:00-0:00
+    satisfies: mfg:e1721a61-cd47-4556-84b9-8b1b81da15bf # the intent
+
+  # Bob does the work in two 4-hour shifts on Oct. 14
+
+  - '@id': mfg:d4d2fd71-34f2-41c3-b1c5-19ad5ed2da59
+    '@type': EconomicEvent
+    action: work
+    provider: https://bob.example/
+    receiver: https://manufacturing.example/
+    resourceConforms: http://www.wikidata.org/entity/Q192047 # machining
+    effortQuantity:
+      hasUnit: hour
+      hasNumericalValue: 4
+    hasBeginning: 2018-10-14T8:00:00-0:00
+    hasEnd: 2018-10-14T12:00:00-0:00
+    fulfills: mfg:02b39a30-3e04-4305-9656-7f261aa63c84 # the commitment
+
+  - '@id': mfg:c7897c39-7f05-4a5d-a487-80e130a2414b
+    '@type': EconomicEvent
+    action: work
+    provider: https://bob.example/
+    receiver: https://manufacturing.example/
+    resourceConformsTo: http://www.wikidata.org/entity/Q192047 # machining
+    effortQuantity:
+      hasUnit: hour
+      hasNumericalValue: 4
+    hasBeginning: 2018-10-14T13:00:00-0:00
+    hasEnd: 2018-10-14T17:00:00-0:00
+    fulfills: mfg:02b39a30-3e04-4305-9656-7f261aa63c84 # the commitment
+```

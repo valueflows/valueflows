@@ -1,4 +1,4 @@
-See also [Flows in Motion: Recipes](../specification/model-text.md/#flows-in-motion-recipe) on the Diagram Explanation, [Planning from a Recipe](../concepts/plan.md/#planning-from-a-recipe) on the Operational Planning page, and the [Simple plan from recipe example](../examples/ex-planning.md/#simple-plan-from-recipe).
+See also [Flows in Motion: Recipes](../specification/model-text.md/#flows-in-motion-recipe) on the Diagram Explanation, [Planning from a Recipe](../concepts/plan.md/#planning-from-a-recipe) on the Operational Planning page, the [Simple plan from recipe example](../examples/ex-planning.md/#simple-plan-from-recipe), and the [Building recipes example](../examples/ex-complex.md/#building-recipes).
 
 ## Not just for cooking...
 
@@ -10,7 +10,7 @@ Recipes are for:
 
 Recipes contain all the info required to create a resource or provide a service.  In ERP (Enterprise Resource Planning) terms, it’s a combination of bills of material and routings and suppliers. And the logic for generating plans from recipes is roughly the same as [Material Requirements Planning](https://en.wikipedia.org/wiki/Material_requirements_planning).
 
-If you encounter the same planning pattern more than once, and your software allows planning from recipes, you might want to capture the pattern in a Recipe so you don't need to cut and paste or re-enter the same information every time.
+If you encounter the same planning pattern more than once, and your software allows planning from recipes, you might want to capture the pattern in a Recipe so you don't need to cut and paste or re-enter the same information every time.  Generally recipes are for repeatable processes.
 
 ## Recipe patterns
 
@@ -33,15 +33,13 @@ A workflow recipe tends to be more like a linear flow.
 
 The examples above have to do with producing specific goods or services.  Recipes can also be used to document more general business processes that an organization uses to produce more generally defined kinds of outputs.  For example, an R&D process might be hard to document in detail, but it does have general steps like researching existing technology, concept generation, experimentation, concept selection, refinement, testing, documenting the design. 
 
-## Recipe and Recipe Group
+## Recipe class
 
-These are optional constructs.  You might want a Recipe when you include more than one process in one recipe, and especially if different recipes can create the same Resource Specification output in different ways.  It is also useful when certain processes are included in multiple recipes.
-
-A Recipe Group is for when your plans regularly produce more than one output which can be produced separately.  For example, a campaign might produce one or more events, various brochures, a website, etc.
+The Recipe class is an optional construct.  You might want a Recipe when you include more than one process in one recipe, and especially if different recipes can create the same Resource Specification output in different ways.  It is also useful when certain processes are included in multiple recipes, see the bottom of [this example](../examples/ex-complex.md/#building-recipes).  You might also want Recipe when the software finds recipes by the primary output, because that can be defined directly from Recipe without interrogating the flows.
 
 ### Byproducts and Coproducts
 
-A Recipe knows its primary output, i.e what is created by this Recipe.  As of now, it does not directly know its byproducts and coproducts, but this information can be added for specific use cases, outside of Valueflows, if needed. It can also be found by interrogating the contents of the recipe input-process-output graph. This choice favors simplicity at this stage.
+A Recipe knows its primary reason for being, i.e what is created by this Recipe.  As of now, it does not directly know its byproducts and coproducts. If needed, this can be found by interrogating the contents of the recipe input-process-output graph. This choice favors simplicity at this stage.
 
 ## Generation of plans
 

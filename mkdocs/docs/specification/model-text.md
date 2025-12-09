@@ -96,7 +96,7 @@ Planning can be done with or without recipes.  And planning is not always done, 
 
 #### vf:Plan
 
-A Plan is a collection of one or more operational Processes and/or non-process Commitments (such as transfers) in the input-output-process graph pattern.  Plans can also reference one or more Commitments that create the independent demand that provides the reason for, and final output of, the Plan. If the use case calls for it, Plans can be nested in Scenarios to give higher level views that drill down to operational Plans, or reference a Scenario that was done as a pre-planning effort.
+A Plan is a collection of one or more operational Processes and/or non-process Commitments (such as transfers) in the input-output-process graph pattern.  Plans can also reference one or more Commitments that create the independent demand that provides the reason for, and final output of, the Plan.
 
 #### vf:Process
 
@@ -120,7 +120,7 @@ An AgreementBundle contains all the agreements bundled together for user purpose
 
 #### vf:Intent
 
-Intent is defined here as part of operational planning, but can also be key as part of a Proposal or part of a Scenario, see below for those uses of Intent.  An Intent has a provider or a receiver Agent, but not both. As part of planning, Intents can be entered directly or generated from recipe, as inputs or outputs to a Process, or as non-process flows, when there is no known Agent assumed to be the missing provider or receiver.  An Intent can be satisfied by one or more Commitments, and/or one or more EconomicEvents if the Commitment does not exist.  And as a flow, an Intent will have an Action. In operational planning, it will also reference a ResourceSpecification or EconomicResource.
+Intent is defined here as part of operational planning, but can also be key as part of a Proposal, see below for those uses of Intent.  An Intent has a provider or a receiver Agent, but not both. As part of planning, Intents can be entered directly or generated from recipe, as inputs or outputs to a Process, or as non-process flows, when there is no known Agent assumed to be the missing provider or receiver.  An Intent can be satisfied by one or more Commitments, and/or one or more EconomicEvents if the Commitment does not exist.  And as a flow, an Intent will have an Action. In operational planning, it will also reference a ResourceSpecification or EconomicResource.
 
 
 ### Flows in motion: Offers and Requests
@@ -159,24 +159,3 @@ An EconomicEvent is the "real" flow, one that actually happened.  Its behavior i
 #### vf:Claim
 
 A Claim on another Agent is triggered by an EconomicEvent, according to rules agreed to elsewhere, although most EconomicEvents do not trigger a Claim, and if there is already a Commitment, a Claim is not needed.  The Claim then can be settled by other EconomicEvent(s).  As a flow, a Claim has an Action, provider and receiver Agent, and reference to a ResourceSpecification.
-
-
-### Estimation and Analysis
-
-More info at [Estimates and Analysis concepts](../concepts/estimates.md).
-
-![scenario model](../assets/scenario-mdl.png)
-
-#### vf:Scenario
-
-A Scenario is used as a grouping mechanism for flows.  It is a loose concept, and can support many situations.  It can be defined by a ScenarioDefinition.  It can contain Plans, Processes, Intents, aggregated EconomicEvents.  A Scenario can also be nested in itself, to support continued zooming out to less detail.  The uses below are some but probably not all of the possibilities.
-
-#### vf:Plan
-
-When Plans (which are operational) are nested in a Scenario, the Scenario can be used to zoom out for less detail in a UX.  When a Plan is a refinement of a Scenario, the Scenario was an earlier estimate or pre-plan.
-
-#### vf:Process, vf:Intent, vf:EconomicEvent
-
-When Processes are nested in a Scenario, they are generally higher level processes for aggregated as-is or to-be resource flows, for analysis or persuasion. Non-process Intents or EconomicEvents could also be part of these Process higher level flows.
-
-Processes and/or Intents could also be nested when they are part of a budget, forecast, or other higher level pre-plan. Or with-list Intents might be listed, say for large many-agent barter, or when saved for future Proposals.

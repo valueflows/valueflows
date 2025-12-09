@@ -36,9 +36,9 @@ This file includes only the English version for now, although some additional la
 
 ### Overriding the OM label or symbol
 
-We have added 2 properties in VF as optional additions to the OM2 unit, `overrideLabel` and `overrideSymbol`.  These are meant for applications to assign for themselves, when the normal display usage for their set of users is different than the OM2.  For example, an application might want to use `pound` instead of `pound (avoirdupois)`, or `gallon` instead of `gallon (US)` or `gallon (imperial)`.
+The vf:label and vf:symbol should default to the OM2 values, but can be overridden by the network itself. For example, a specific group might want to use `pound` instead of `pound (avoirdupois)`, or `gallon` instead of `gallon (US)` or `gallon (imperial)`.  It can also be used to correct for the language of the network, if it is not supported by OM2.
 
-Perhaps the most frequent use of the override is the unit `one`.  This indicates a generic one dimensional unit from the scientific perspective, which in an economic application might be called `each`, `piece`, `count`, `number` or similar, or just left off of a user interface or report.  Some applications might even want to use more than one of these local labels. But for interoperability, any of these overrides should reference back to OM2:one.
+Perhaps the most frequent use of overriding is the unit `one`.  This indicates a generic one dimensional unit from the scientific perspective, which in an economic application might be called `each`, `piece`, `count`, `number` or similar, or just left off of a user interface or report.  Some applications might even want to use more than one of these local labels. But for interoperability, any of these overrides should reference back to OM2:one.
 
 See [this directory about units](https://codeberg.org/valueflows/valueflows/src/branch/master/units) for other potentially useful artifacts.
 

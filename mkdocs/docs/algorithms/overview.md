@@ -20,7 +20,6 @@ This section is about what computer programs (or humans with pencil and paper an
     * [Systems Ecology](https://en.wikipedia.org/wiki/Systems_ecology) including [Energy Flow Analysis](https://en.wikipedia.org/wiki/Energy_flow_(ecology))
     * [Input-Output Analysis](https://en.wikipedia.org/wiki/Input%E2%80%93output_model)
     * [Environmentally Extended IPO Analysis](https://en.wikipedia.org/wiki/Environmentally_extended_input-output_analysis)
-    * [Life Cycle Analysis](http://www.openlca.org/project/graphic-modeling/)
     * [Material Flow Analysis](https://en.wikipedia.org/wiki/Material_flow_analysis)
     ![material flow analysis diagram](https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/MFASystem_3.png/1024px-MFASystem_3.png)
     
