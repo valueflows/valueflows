@@ -7,7 +7,7 @@ See also [Resources in the Diagram Explanations](../specification/model-text.md#
 Traditionally, an economic resource is defined by its utility, but also by its scarcity and its control by an economic agent. That definition is based on accounting for private ownership, and we believe is too limited.
 
 * Intellectual creations like designs are not scarce, yet they clearly are economic resources. They only become scarce when legally restricted by patents, licenses, and copyrights.
-* Air, water, and other products of nature are clearly economic resources, but they are not under the control of an agent unless they are legally restricted by ownership. However, by means of the invisible foot that accompanies the invisible hand, they are regularly degraded by enterprises, and not accounted for, classified as “externalities”.
+* Air, water, and other products of nature are clearly economic resources, but they are not under the control of an agent unless they are legally restricted by ownership. However, by means of the invisible foot that accompanies [the invisible hand](https://en.wikipedia.org/wiki/Invisible_hand), they are regularly degraded by enterprises, and not accounted for, classified as “externalities”.
 
 We want to think of ourselves as participants in ecosystems, not competing enterprises. As such, we need to account for our effects on all aspects of our ecosystems.
 

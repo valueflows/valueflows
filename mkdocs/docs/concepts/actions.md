@@ -27,9 +27,9 @@ We have defined a core set of actions, but expect that this will be extended wit
 
 **modify** - The identified resource that was accepted into a process appears in the output of that process, with modifications made.  Note not all modifications require a physical change, for example quality testing.  In all cases though, it matters that the resource has gone through that process, and the `stage` of the resource (the process specification of the process) is then used as part of the logical identification of the resource when the resource is requested as a process input or for a transfer.
 
-**combine** - A resource is put in a package or a combination resource; the same resource might appear later when it is separated.  Examples are packing one or more resources for transportation or storage, or creation of a kit resource.  The combined resource is still identified in the system, but is `containedIn` the package or combination resource, which would be usually produced in the process.  When a resource is `containedIn` another resource, it is not available on its own.  Note that packing materials or containers which will continue to have their own identity later are also combined in the process; if not, they can be consumed. Note also that it doesn't make sense to combine a resource, for example a digital resource, if that resource can in fact be acted upon while combined.
+**combine** - A resource is put in a package or a combination resource; the same resource might appear later when it is separated.  Examples are packing one or more resources for transportation or storage, creation of a kit resource, herd of cows.  The combined resource is still identified in the system, but is `containedIn` the package or combination resource, which would be usually produced in the process.  When a resource is `containedIn` another resource, it could be still available, depending on the use case.  Note that packing materials or containers which will continue to have their own identity later are also combined in the process; if not, they can be consumed.
 
-**separate** - A resource is removed from a package or a combination resource; the same resource appeared as input earlier in this or another process when it was combined.  When the resource is separated, it loses its `containedIn` reference, and becomes available on its own.
+**separate** - A resource is removed from a package or a combination resource; the same resource appeared as input earlier in another process when it was combined.  When the resource is separated, it loses its `containedIn` reference.
 
 **deliverService** - A new service is produced and delivered as output of a process. A service implies that an agent actively receives the service at the same time as it is delivered.  Services are not tangible, so would not create or increment an inventoried resource. Services are perhaps most often delivered directly to an agent. But unlike other actions, sometimes the service is at the same time being delivered into another documented process, in which case it can be output from a process and input to another, at the same time.
 
@@ -91,7 +91,7 @@ Note: The actions `use` and `work` are time-based actions, either with or withou
 
 ![VF actions table with action behaviors](../assets/vf-actions.png)
 
-*In the above chart, the `notApplicable` values are not included, for easier overall viewing.  For the complete list of behavior values by action as defined in the rdf vocabulary, see the [turtle file starting at the Actions section](https://codeberg.org/valueflows/pages/src/branch/main/assets/all_vf.TTL#L1289).
+*In the above chart, the `notApplicable` values are not included, for easier viewing.
 
 ### Implied Transfers
 

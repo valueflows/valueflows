@@ -931,7 +931,7 @@ Alternate view of these pack-unpack processes, using the more relational directi
       hasNumericalValue: 1
 ```
 
-#### Combine and separate into ongoing resource
+#### Combine and separate with ongoing containing resource
 
 Simple addition of a resource into a containing resource, using `combine` and `separate`.
 
