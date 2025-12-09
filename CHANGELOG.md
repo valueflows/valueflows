@@ -1,3 +1,13 @@
+## 0.15 (December 2025)
+
+- Remove Scenario, ScenarioDefinition, and related non-operational data (breaking)
+- Remove rules property (breaking)
+- Remove Unit OM fields, use local instead (breaking)
+- Work action allow resourceQuantity
+- Add several examples and reorganize
+- Cleanup implied transfers concepts in doc
+- Many improvements to the doc
+
 ## 0.14 (August 2024)
 
 - Add Scenario.inScopeOf, .publishedTo, .created, .scenarioIncludes
