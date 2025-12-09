@@ -30,7 +30,7 @@ The explicitly denoted transfers are:
 * transfer custody (only the physical custody or possession)
 * transfer (shorthand for both rights and custody, since they often go together)
 
-Some other actions can imply a transfer of all rights, a transfer of custody, or both.  This shortens and sometimes simplifies the flows.  But it is not at all required, it is fine to have separate transfer flows if that makes the use case more understandable.  The [Transport with Transfer example](../examples/ex-complex.md/#transportation-with-transfer) illustrates this.
+Some other actions can imply a transfer of all rights, a transfer of custody, or both.  This shortens and sometimes simplifies the flows.  But it is not at all required, it is fine to have separate transfer flows if that makes the use case more understandable.  The [Transport with Transfer example](../examples/ex-exchange.md/#transportation-with-transfer) illustrates this.
 
 The way to imply a transfer is to designate a different provider and receiver.  It is not always true the other way though, a different provider and receiver does not necessary imply transfer behavior, usually because there is not an inventoried resource.  See also [Exchanges and flows](../concepts/exchanges.md/#exchanges-and-flows).
 
@@ -44,4 +44,4 @@ The following actions imply transfer of custody only, when there is a different 
 * pickup, dropoff
 * accept, modify
 
-These examples that might help provide clarity: [Transportation with Transfer](../examples/ex-complex.md/#transportation-with-transfer), [Checkout book](../examples/ex-exchange.md/#checkout-book), [Claim for income](../examples/ex-exchange.md/#claim-for-income).
+These examples that might help provide clarity: [Transportation with Transfer](../examples/ex-exchange.md/#transportation-with-transfer), [Checkout book](../examples/ex-exchange.md/#checkout-book), [Claim for income](../examples/ex-exchange.md/#claim-for-income).
