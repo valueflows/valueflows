@@ -12,18 +12,9 @@ The Agent subject area defines roles in the Knowledge Layer and defines agents a
 
 The Valueflows view of Agent is fairly broad, including people, organizations (formal or informal), and ecological agents such as non-human beings and ecosystems.  But all of these have economic or governance agency of some sort.
 
-Agents are key to the overall ontology, particularly the flows in Planning and Observation: Intents, Commitments, EconomicEvents, Claims, where each can reference a provider and receiver Agent. Proposals can be published to Agent(s), and Agents can have many AgentRelationships with other Agents of any type.
+Agents are key to the overall ontology, particularly the flows in Planning and Observation: Intents, Commitments, EconomicEvents, Claims, where each can reference a provider and receiver Agent. Proposals can be published to Agent(s).
 
 There are 3 subclasses of Agent: **vf:Person**, **vf:Organization**, and **vf:EcologicalAgent**.
-
-#### vf:AgentRelationship
-
-The subject and object of an AgentRelationship are Agents.  Their role the subject plays in relation to the object is represented by the AgentRelationshipRole.  Agents can have multiple relationships and multiple kinds of relationships in the same network.
-
-#### vf:AgentRelationshipRole
-
-Agent relationship roles define the roles or types of agent relationships within a network, completely defined by the network itself.  Roles can be a good base to define user account permissions.
-
 
 ### Resource
 

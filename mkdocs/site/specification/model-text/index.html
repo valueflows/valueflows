@@ -739,24 +739,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#vfagentrelationship" class="md-nav__link">
-    <span class="md-ellipsis">
-      vf:AgentRelationship
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#vfagentrelationshiprole" class="md-nav__link">
-    <span class="md-ellipsis">
-      vf:AgentRelationshipRole
-    </span>
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -1564,8 +1546,6 @@
       
         
       
-        
-      
     
     
       
@@ -1611,27 +1591,6 @@
   
   <span class="md-ellipsis">
     Examples Overview
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../examples/ex-agent/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Agents
   </span>
   
 
@@ -2244,24 +2203,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#vfagentrelationship" class="md-nav__link">
-    <span class="md-ellipsis">
-      vf:AgentRelationship
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#vfagentrelationshiprole" class="md-nav__link">
-    <span class="md-ellipsis">
-      vf:AgentRelationshipRole
-    </span>
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -2595,12 +2536,8 @@
 <p><img alt="agent model" src="../../assets/agent-mdl.png" /></p>
 <h4 id="vfagent">vf:Agent</h4>
 <p>The Valueflows view of Agent is fairly broad, including people, organizations (formal or informal), and ecological agents such as non-human beings and ecosystems.  But all of these have economic or governance agency of some sort.</p>
-<p>Agents are key to the overall ontology, particularly the flows in Planning and Observation: Intents, Commitments, EconomicEvents, Claims, where each can reference a provider and receiver Agent. Proposals can be published to Agent(s), and Agents can have many AgentRelationships with other Agents of any type.</p>
+<p>Agents are key to the overall ontology, particularly the flows in Planning and Observation: Intents, Commitments, EconomicEvents, Claims, where each can reference a provider and receiver Agent. Proposals can be published to Agent(s).</p>
 <p>There are 3 subclasses of Agent: <strong>vf:Person</strong>, <strong>vf:Organization</strong>, and <strong>vf:EcologicalAgent</strong>.</p>
-<h4 id="vfagentrelationship">vf:AgentRelationship</h4>
-<p>The subject and object of an AgentRelationship are Agents.  Their role the subject plays in relation to the object is represented by the AgentRelationshipRole.  Agents can have multiple relationships and multiple kinds of relationships in the same network.</p>
-<h4 id="vfagentrelationshiprole">vf:AgentRelationshipRole</h4>
-<p>Agent relationship roles define the roles or types of agent relationships within a network, completely defined by the network itself.  Roles can be a good base to define user account permissions.</p>
 <h3 id="resource">Resource</h3>
 <p>Resources are defined in different ways, depending on their need and ability to be accounted for specifically.  Every flow of any kind will reference a resource, represented either by ResourceSpecification or EconomicResource. Resource classifications also assist in understanding or finding a resource. More info at <a href="../../concepts/resources/">Resource concepts</a>, <a href="../../concepts/classification/">Classification concepts</a>.</p>
 <p><img alt="resource model" src="../../assets/resource-mdl.png" /></p>

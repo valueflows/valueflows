@@ -791,15 +791,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#agentrelationship" class="md-nav__link">
-    <span class="md-ellipsis">
-      AgentRelationship
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#process" class="md-nav__link">
     <span class="md-ellipsis">
       Process
@@ -1432,8 +1423,6 @@
       
         
       
-        
-      
     
     
       
@@ -1479,27 +1468,6 @@
   
   <span class="md-ellipsis">
     Examples Overview
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../examples/ex-agent/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Agents
   </span>
   
 
@@ -2122,15 +2090,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#agentrelationship" class="md-nav__link">
-    <span class="md-ellipsis">
-      AgentRelationship
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#process" class="md-nav__link">
     <span class="md-ellipsis">
       Process
@@ -2361,8 +2320,6 @@
 <li>claimsAsReceiver (Claim.receiver)</li>
 <li>claimsInScope (Claim.inScopeOf)</li>
 <li>proposalsInScope (Proposal.inScopeOf)</li>
-<li>relationshipsAsSubject (Relationship.subject)</li>
-<li>relationshipsAsObject (Relationship.object)</li>
 </ul>
 <p><em>other queries:</em></p>
 <ul>
@@ -2373,16 +2330,7 @@
 <li>claims (Claim.provider or .receiver or .inScopeOf)</li>
 <li>proposals (Proposal.inScopeOf, or a related Intent.provider or Intent.receiver)</li>
 <li>proposalsTo (Proposals.proposed where ProposedTo.proposedTo is the Agent)</li>
-<li>relationships (Relationship.object or .subject or .inScopeOf)</li>
-<li>roles (AgentRelationshipRoles that are AgentRelationship.relationship where the .subject or .object or .inScopeOf is the Agent)</li>
 </ul>
-<h3 id="agentrelationship">AgentRelationship</h3>
-<p><em>main queries:</em></p>
-<ul>
-<li>agentRelationship</li>
-<li>agentRelationships</li>
-</ul>
-<p><em>filters:</em> subject, object, role, inScopeOf</p>
 <h3 id="process">Process</h3>
 <p><em>main queries:</em></p>
 <ul>

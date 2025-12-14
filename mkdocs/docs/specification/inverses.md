@@ -45,8 +45,6 @@ This document is not meant to imply that all of these named queries and filters 
    * claimsAsReceiver (Claim.receiver)
    * claimsInScope (Claim.inScopeOf)
    * proposalsInScope (Proposal.inScopeOf)
-   * relationshipsAsSubject (Relationship.subject)
-   * relationshipsAsObject (Relationship.object)
 
 *other queries:*
 
@@ -57,17 +55,6 @@ This document is not meant to imply that all of these named queries and filters 
    * claims (Claim.provider or .receiver or .inScopeOf)
    * proposals (Proposal.inScopeOf, or a related Intent.provider or Intent.receiver)
    * proposalsTo (Proposals.proposed where ProposedTo.proposedTo is the Agent)
-   * relationships (Relationship.object or .subject or .inScopeOf)
-   * roles (AgentRelationshipRoles that are AgentRelationship.relationship where the .subject or .object or .inScopeOf is the Agent)
-
-### AgentRelationship
-
-*main queries:*
-
-   * agentRelationship
-   * agentRelationships
-
-*filters:* subject, object, role, inScopeOf
 
 ### Process
 

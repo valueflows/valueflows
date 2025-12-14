@@ -168,13 +168,6 @@ vf:StateEffect a            owl:Class ;
         rdfs:comment        "The action has this effect on an inventoried resource state."@en ;
         .
 
-vf:AgentRelationshipRole  a  owl:Class ;
-        rdfs:label           "Agent Relationship Role"@en ;
-        vf:layer            vf:knowledge ;
-        vs:term_status       "stable" ;
-        rdfs:comment         "A relationship role defining the kind of association one agent can have with another."@en ;
-        .
-
 vf:Recipe a                 owl:Class ;
         rdfs:label          "Recipe"@en ;
         vf:layer            vf:knowledge ;
@@ -312,14 +305,6 @@ vf:EconomicEvent  a         owl:Class ;
         vf:layer            vf:observation ;
         vs:term_status      "stable" ;
         rdfs:comment        "An observed economic flow, as opposed to a flow planned to happen in the future. This could reflect a change in the quantity of an economic resource. It is also defined by its behavior in relation to the economic resource (see vf:action)"@en ;
-        .
-
-vf:AgentRelationship  a     owl:Class ;
-        rdfs:seeAlso        as:Relationship ;
-        vf:layer            vf:observation ;
-        rdfs:label          "Agent Relationship"@en ;
-        vs:term_status      "stable" ;
-        rdfs:comment        "An ongoing voluntary association between 2 agents of any kind."@en ;
         .
 
 vf:Claim  a                 owl:Class ;
@@ -580,38 +565,8 @@ vf:receiver  a              owl:ObjectProperty ;
         rdfs:comment        "The economic agent whom the intended, committed, or actual economic event is for."@en ;
         .
 
-vf:subject  a               owl:ObjectProperty ;
-        rdfs:seeAlso        as:subject ;
-        rdfs:domain         vf:AgentRelationship ;
-        rdfs:label          "subject"@en ;
-        rdfs:range          vf:Agent ;
-        owl:cardinality     1 ;
-        vs:term_status      "stable" ;
-        rdfs:comment        "The subject of a relationship between 2 agents.  For example, if Mary is a member of a group, then Mary is the subject."@en ;
-        .
-
-vf:object  a                owl:ObjectProperty ;
-        rdfs:seeAlso        as:object ;
-        rdfs:domain         vf:AgentRelationship ;
-        rdfs:label          "object"@en ;
-        rdfs:range          vf:Agent ;
-        owl:cardinality     1 ;
-        vs:term_status      "stable" ;
-        rdfs:comment        "The object of a relationship between 2 agents.  For example, if Mary is a member of a group, then the group is the object."@en ;
-        .
-
-vf:relationship  a          owl:ObjectProperty ;
-        rdfs:seeAlso        as:relationship ;
-        rdfs:label          "relationship"@en ;
-        rdfs:domain         vf:AgentRelationship ;
-        rdfs:range          vf:AgentRelationshipRole ;
-        owl:cardinality     1 ;
-        vs:term_status      "stable" ;
-        rdfs:comment        "The role of an economic relationship that exists between 2 agents, such as member, trading partner."@en ;
-        .
-
 vf:inScopeOf  a             owl:ObjectProperty ;
-        rdfs:domain         [ owl:unionOf (vf:Claim vf:Commitment vf:EconomicEvent vf:Intent vf:Process vf:AgentRelationship) ] ;
+        rdfs:domain         [ owl:unionOf (vf:Claim vf:Commitment vf:EconomicEvent vf:Intent vf:Process) ] ;
         rdfs:label          "in scope of"@en ;
         rdfs:range          vf:Agent ;
         owl:maxCardinality  1 ;
@@ -1030,8 +985,6 @@ vf:note a                   owl:DataTypeProperty ;
         rdfs:label          "note"@en ;
         rdfs:domain         [ owl:unionOf (
                                 vf:Agent
-                                vf:AgentRelationship
-                                vf:AgentRelationshipRole
                                 vf:Agreement
                                 vf:Claim
                                 vf:Commitment
@@ -1345,24 +1298,6 @@ vf:bundles a                owl:ObjectProperty ;
         rdfs:range          vf:Agreement ;
         vs:term_status      "testing" ;
         rdfs:comment        "All the agreements included in this agreement bundle."@en ;
-        .
-
-vf:roleLabel a              owl:DatatypeProperty ;
-        rdfs:label          "role label"@en ;
-        rdfs:domain         vf:AgentRelationshipRole ;
-        rdfs:range          xsd:string ;
-        owl:cardinality     1 ;
-        vs:term_status      "stable" ;
-        rdfs:comment        "The human readable name of the role, from the subject to the object. For example, 'is member of'."@en ;
-        .
-
-vf:inverseRoleLabel a       owl:DatatypeProperty ;
-        rdfs:label          "inverse role label"@en ;
-        rdfs:domain         vf:AgentRelationshipRole ;
-        rdfs:range          xsd:string ;
-        owl:maxCardinality  1 ;
-        vs:term_status      "stable" ;
-        rdfs:comment        "The human readable name of the role, inverse from the object to the subject. For example, 'has member'."@en ;
         .
 
 vf:inputOutput a            owl:ObjectProperty ;
