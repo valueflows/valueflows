@@ -72,13 +72,13 @@ Here's a (big but not all-inclusive) list of possible applications that can be b
 
 * operational planning,
 * supply chain and network planning,
-* community/regional planning,
-* gaps and opportunities analysis at any level,
+* community/regional planning (future release),
+* gaps and opportunities analysis at any level (future release),
 * standard accounting,
 * climate accounting.
 
 ## Economic ecosystems
 
-We think these kinds of applications can also be building blocks to create whole economic ecosystems. Valueflows-based protocols could facilite that, as resources flow from one application to another.
+We think these kinds of applications can also be building blocks to create whole economic ecosystems. Valueflows-based protocols could facilite that, as resource data flows from one application to another.
 
 ![economic ecosystem diagram with planning, production, provisioning, and ecology](../assets/ecosystem-flow.png)

@@ -5,9 +5,31 @@ hide:
 ---
 
 ![Value Flows](assets/VF-logo-heading.jpg)
-## *Valueflows (VF) is a vocabulary for the distributed economic networks of the next economy, to coordinate the creation, distribution, and exchange of economic resources.*
 
-<hr/>
+## ***Valueflows (VF) is a vocabulary for the distributed economic networks of the next economy, to coordinate the creation, distribution, and exchange of economic resources.***
+
+## Abstract
+
+Valueflows is intended to support coordination of any economic activity, focused on experimental and solidarity economic networks, but also supporting conventional businesses and supply chains. It utilizes resource flows connecting many agents (people, organizations, ecological agents). These resource flows can include value creation and/or value transfer. As a flow-oriented system, it can coordinate whole networks as easily as one company, including regions and circular economies.
+
+At its core, Valueflows implements an ontology called REA ([Resources Events Agents](https://en.wikipedia.org/wiki/Resources,_Events,_Agents)). REA is an accounting and business process modeling ontology, which was initially driven by the advent of computers and the concept of normalization of data models. As such it represents a simple and elegant model for real-world economic activity, as opposed to the conventional abstraction of debits/credits. To REA we have added some concepts found in various experimental economic groups (for example recipes, or offers and requests) and ecological accounting (which is ignored in most accounting treatments), as well as made the ontology more implementation-ready and friendly to distributed protocols.
+
+**Definitions and philosophy**
+
+* Economy: [Community Economies](https://communityeconomies.org/about/community-economies-research-and-practice) has a definition we like a lot. "In conventional usage, economy often refers to a system of formal commodity production and monetary exchange. Our use of the term is much broader. The 'eco' in economy comes from the Greek root oikos, meaning 'home' or 'habitat'—in other words, that which sustains life. The 'nomy' comes from nomos, meaning management. We view economy as referring to all of the practices that allow us to survive and care for each other and the earth. Economy, understood this way, is not separate from ecology, but refers to the ongoing management—and therefore negotiation—of human and nonhuman ecological relations of sustenance."
+* An economic network consists of independent economic agents (individual people or organizations) collaborating to produce and distribute goods and services to meet human and ecological needs. For example, food, clothing, housing, education, health care. healthy soil, etc.
+* When we say "next economy", we want to support experiments towards
+    * cooperation rather than competition;
+    * open, shared, common knowledge instead of jealously-guarded “intellectual property”;
+    * sustainable production instead of getting away with as much plunder as possible;
+    * “equitable distribution of value” vs exploitation for profit;
+    * respecting nature and our environment.
+* To give a few concrete examples, the Valueflows ontology is designed to support
+    * coordination of economic activity both inside and between organizations, an enterprise is not assumed;
+    * reciprocity with or without money, money is not assumed;
+    * ecological agents as part of the network; externalities as resources.
+
+## Using the documentation
 
 Here are some suggestions to help you find your way into this documentation, depending on your specific interest and level of prior understanding.
 

@@ -54,23 +54,29 @@ Some flows do not involve processing, i.e. there is no transformation or transpo
 
 ![diagram of an exchange with an Agreement of Economic Events with Economic Resources from and to Agents](../assets/exchange.png)
 
-It can also be simpler, such as a gift, or more complex, involving many Agents.  Also, these flows can mix in with Process-based flows.
+It can also be simpler, such as a gift, or more complex, involving many Agents.
 
 For example: in that food network above
 
 ...food processors might purchase the harvested food from farmers, sell processed food to restaurants and stores... or families might provide land and labor for a farm and receive harvested food each week in return.  That becomes part of the coordination.
+
+## Directed graphs of flows
+
+Both process-based flows and flows without processes can create "directed graphs" in infinite combinations.  Basically, a Process can have many inputs and many outputs.  An Economic Resource can be created or increased by many flows, and can be decreased by many flows, over time. And flows without processes can fit inline with these, for example when a resource is created, then transferred whole or in part to another agent.
+
+![process flows](../assets/dir-graph.png)
+
+## Traversing value flows
+
+Value flows can be traversed forwards ("tracking") or backwards ("tracing").  Often people use the term "provenance" when looking backwards towards the source of some resource, sometimes when a problem emerges (as in a disease outbreak from food), sometimes to know the quality of the resource (as in wanting local humanely produced food with lower ecological impact).
+
+The data structures of Valueflows provide the ability to trace or track any value flow, no matter how long or complex.  In the above diagram, following the arrows forward from an Economic Resource is to track what happened to the resource once produced, following them backwards from an Economic Resource is to trace what went into the resource plus all has happened because of the production and transfer of the resource.
 
 ## Types of flows
 
 These are the main types of flows and how they relate as stages of value flows.  They have basically the same core data structure, with differences related to their stage.  Any of these types can be input or output to a process, or reciprocally related, as above.
 
 ![diagram of Intent-Commitment-Event and their relationships plus their same properties](../assets/i-c-e.png)
-
-## Traversing value flows
-
-Value flows can be traversed forwards ("tracking") or backwards ("tracing").  Often people use the term "provenance" when looking backwards towards the source of some resource, sometimes when a problem emerges (as in a disease outbreak from food), sometimes to know the quality of the resource (as in wanting local humanely produced food with lower ecological impact).
-
-The data structures of Valueflows provide the ability to trace or track any value flow, no matter how long or complex, see [Track and Trace](../algorithms/track.md).
 
 ## Levels of the ontology
 
