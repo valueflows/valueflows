@@ -18,6 +18,6 @@ We have tried to make this vocabulary as technology-agnostic as possible, as it 
 
 * A **[json-ld context file]()** (TODO)
 
-* A **[json-schema representation](json-schemas.md)**
+* A partial **[json-schema representation](json-schemas.md)**
 
 * A **[SHACL representation]()** and a **[ShEx representation]()**  (TODO)

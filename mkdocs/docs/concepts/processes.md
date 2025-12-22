@@ -21,7 +21,7 @@ Connected processes enable us to see cause and effect, if we want.
 
 ## Process structures
 
-Process-based flows can create "directed graphs" in infinite combinations.
+Process-based flows can create "directed graphs" in infinite combinations.  Basically, a Process can many inputs and many outputs.  An Economic Resource can be created or increased by many flows, and can be decreases by many flows, over time.
 
 ![process flows](../assets/dir-graph.png)
 
