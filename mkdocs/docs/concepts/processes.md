@@ -19,12 +19,6 @@ See also [Input-Process-Output](../introduction/core.md#ipo-input-process-output
 
 Connected processes enable us to see cause and effect, if we want.
 
-## Process structures
-
-Process-based flows can create "directed graphs" in infinite combinations.  Basically, a Process can have many inputs and many outputs.  An Economic Resource can be created or increased by many flows, and can be decreased by many flows, over time.
-
-![process flows](../assets/dir-graph.png)
-
 ## Co-products and by-products
 
 Usually processes have one output, but not always.  Sometimes there are co-products that have somewhat equal value.  Sometimes there are co-products that provide something useful, such as plastic shavings being put back into the melting pot for continued production as input.  Sometimes there are unintended by-products, resources that are known but not useful or are harmful.

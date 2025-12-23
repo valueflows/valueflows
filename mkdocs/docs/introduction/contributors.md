@@ -27,6 +27,7 @@
 * Alexander Praetorius
 * Tiberius Brastaviceanu
 * Johannes Winter
+* Leanne Ussher
 * Elio Qoshi
 
 ### REA assistance and inspiration
