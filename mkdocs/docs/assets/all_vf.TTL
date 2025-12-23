@@ -566,12 +566,12 @@ vf:receiver  a              owl:ObjectProperty ;
         .
 
 vf:inScopeOf  a             owl:ObjectProperty ;
-        rdfs:domain         [ owl:unionOf (vf:Claim vf:Commitment vf:EconomicEvent vf:Intent vf:Process) ] ;
+        rdfs:domain         vf:Process ;
         rdfs:label          "in scope of"@en ;
         rdfs:range          vf:Agent ;
         owl:maxCardinality  1 ;
         vs:term_status      "testing" ;
-        rdfs:comment        "Scope here means in the context of an agent."@en ;
+        rdfs:comment        "Scope here means executed in the context of an agent."@en ;
         .
 
 vf:triggeredBy  a           owl:ObjectProperty ;

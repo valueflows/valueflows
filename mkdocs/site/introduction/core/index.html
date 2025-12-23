@@ -567,9 +567,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#types-of-flows" class="md-nav__link">
+  <a href="#directed-graphs-of-flows" class="md-nav__link">
     <span class="md-ellipsis">
-      Types of flows
+      Directed graphs of flows
     </span>
   </a>
   
@@ -579,6 +579,15 @@
   <a href="#traversing-value-flows" class="md-nav__link">
     <span class="md-ellipsis">
       Traversing value flows
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#types-of-flows" class="md-nav__link">
+    <span class="md-ellipsis">
+      Types of flows
     </span>
   </a>
   
@@ -898,8 +907,6 @@
       
         
       
-        
-      
     
     
       
@@ -1176,27 +1183,6 @@
   
   <span class="md-ellipsis">
     Classification
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../concepts/scoping/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Scoping
   </span>
   
 
@@ -1990,9 +1976,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#types-of-flows" class="md-nav__link">
+  <a href="#directed-graphs-of-flows" class="md-nav__link">
     <span class="md-ellipsis">
-      Types of flows
+      Directed graphs of flows
     </span>
   </a>
   
@@ -2002,6 +1988,15 @@
   <a href="#traversing-value-flows" class="md-nav__link">
     <span class="md-ellipsis">
       Traversing value flows
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#types-of-flows" class="md-nav__link">
+    <span class="md-ellipsis">
+      Types of flows
     </span>
   </a>
   
@@ -2065,15 +2060,18 @@
 <h2 id="flows-without-processes">Flows without processes</h2>
 <p>Some flows do not involve processing, i.e. there is no transformation or transportation of Economic Resources.  These flows simply transfer Economic Resources between Agents. One common example is an exchange of one Economic Resource for another Economic Resource between two Agents, as below, with two reciprocal flows based on an Agreement.</p>
 <p><img alt="diagram of an exchange with an Agreement of Economic Events with Economic Resources from and to Agents" src="../../assets/exchange.png" /></p>
-<p>It can also be simpler, such as a gift, or more complex, involving many Agents.  Also, these flows can mix in with Process-based flows.</p>
+<p>It can also be simpler, such as a gift, or more complex, involving many Agents.</p>
 <p>For example: in that food network above</p>
 <p>...food processors might purchase the harvested food from farmers, sell processed food to restaurants and stores... or families might provide land and labor for a farm and receive harvested food each week in return.  That becomes part of the coordination.</p>
+<h2 id="directed-graphs-of-flows">Directed graphs of flows</h2>
+<p>Both process-based flows and flows without processes can create "directed graphs" in infinite combinations.  Basically, a Process can have many inputs and many outputs.  An Economic Resource can be created or increased by many flows, and can be decreased by many flows, over time. And flows without processes can fit inline with these, for example when a resource is created, then transferred whole or in part to another agent.</p>
+<p><img alt="process flows" src="../../assets/dir-graph.png" /></p>
+<h2 id="traversing-value-flows">Traversing value flows</h2>
+<p>Value flows can be traversed forwards ("tracking") or backwards ("tracing").  Often people use the term "provenance" when looking backwards towards the source of some resource, sometimes when a problem emerges (as in a disease outbreak from food), sometimes to know the quality of the resource (as in wanting local humanely produced food with lower ecological impact).</p>
+<p>The data structures of Valueflows provide the ability to trace or track any value flow, no matter how long or complex.  In the above diagram, following the arrows forward from an Economic Resource is to track what happened to the resource once produced, following them backwards from an Economic Resource is to trace what went into the resource plus all has happened because of the production and transfer of the resource.</p>
 <h2 id="types-of-flows">Types of flows</h2>
 <p>These are the main types of flows and how they relate as stages of value flows.  They have basically the same core data structure, with differences related to their stage.  Any of these types can be input or output to a process, or reciprocally related, as above.</p>
 <p><img alt="diagram of Intent-Commitment-Event and their relationships plus their same properties" src="../../assets/i-c-e.png" /></p>
-<h2 id="traversing-value-flows">Traversing value flows</h2>
-<p>Value flows can be traversed forwards ("tracking") or backwards ("tracing").  Often people use the term "provenance" when looking backwards towards the source of some resource, sometimes when a problem emerges (as in a disease outbreak from food), sometimes to know the quality of the resource (as in wanting local humanely produced food with lower ecological impact).</p>
-<p>The data structures of Valueflows provide the ability to trace or track any value flow, no matter how long or complex, see <a href="../../algorithms/track/">Track and Trace</a>.</p>
 <h2 id="levels-of-the-ontology">Levels of the ontology</h2>
 <p>Valueflows uses the layers of ontology documented by REA.  Each of the layers follows the core patterns above.</p>
 <p><img alt="REA layers: Knowledge, Plan, Observation simplified" src="../../assets/layers.png" /></p>
