@@ -1,5 +1,7 @@
 # Core
 
+*This section is non-normative.*
+
 ## Flows of value
 
 ![networks of networks picture](../assets/network-of-networks.png)
@@ -40,7 +42,7 @@ The IPO pattern is used to enhance the ability of REA to represent complex flows
 
 ## Putting them together
 
-In general, how they fit together: Agents perform Economic Events that provide Inputs to Processes and take Outputs from Processes and move Resources from one Process to another.  This forms a directed graph of value flows.
+In general, how they fit together: Agents perform Economic Events that provide Inputs to Processes and take Outputs from Processes and move Economic Resources from one Process to another.  This forms a directed graph of value flows.
 
 ![diagram with a Process, Economic Events input and output, each with Agents and Economic Resource](../assets/REA-IPO-VF.png)
 
@@ -62,15 +64,17 @@ For example: in that food network above
 
 ## Directed graphs of flows
 
-Both process-based flows and flows without processes can create "directed graphs" in infinite combinations.  Basically, a Process can have many inputs and many outputs.  An Economic Resource can be created or increased by many flows, and can be decreased by many flows, over time. And flows without processes can fit inline with these, for example when a resource is created, then transferred whole or in part to another agent.
+Both process-based flows and flows without processes can create "directed graphs" from very local to global.  Basically, a Process can have many inputs and many outputs.  An Economic Resource can be created or increased by many flows, and can be decreased by many flows, over time. And flows without processes can fit inline with these, for example when a resource is created, then transferred whole or in part to another agent.
 
 ![process flows](../assets/dir-graph.png)
 
 ## Traversing value flows
 
-Value flows can be traversed forwards ("tracking") or backwards ("tracing").  Often people use the term "provenance" when looking backwards towards the source of some resource, sometimes when a problem emerges (as in a disease outbreak from food), sometimes to know the quality of the resource (as in wanting local humanely produced food with lower ecological impact).
+Value flows can be traversed forwards ("tracking") or backwards ("tracing"). Or maybe it would be better to say "in any direction", but forwards means in the direction of value creation, and backwards means in the direction of return or compensation.  Often people use the term "provenance" when looking backwards towards the source of some resource, sometimes when a problem emerges (as in a disease outbreak from food), sometimes to know the quality of the resource (as in wanting local humanely produced food with lower ecological impact).
 
-The data structures of Valueflows provide the ability to trace or track any value flow, no matter how long or complex.  In the above diagram, following the arrows forward from an Economic Resource is to track what happened to the resource once produced, following them backwards from an Economic Resource is to trace what went into the resource plus all has happened because of the production and transfer of the resource.
+The data structures of Valueflows provide the ability to trace or track any value flow, no matter how long or complex.  In the above diagram, following the arrows forward from an Economic Resource is to track what happened to the resource once produced, following them backwards from an Economic Resource is to trace what went into the resource plus all has happened because of the production and distribution of the resource.
+
+The model also supports circular economies, value flows where resources come full cycle to be fed into the same set or other processes.  We want to encourage recycling, re-use, and other ways to keep resources from becoming waste.
 
 ## Types of flows
 

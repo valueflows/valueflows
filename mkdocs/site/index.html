@@ -462,8 +462,6 @@
       
         
       
-        
-      
     
     
       
@@ -530,27 +528,6 @@
   
   <span class="md-ellipsis">
     Core Concepts
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="introduction/principles/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Principles
   </span>
   
 
@@ -716,7 +693,7 @@
         
   
   <span class="md-ellipsis">
-    UML Diagram
+    Class and Property Diagram
   </span>
   
 
@@ -1896,11 +1873,11 @@
 <p><img alt="Value Flows" src="assets/VF-logo-heading.jpg" /></p>
 <h2 id="valueflows-vf-is-a-vocabulary-for-the-distributed-economic-networks-of-the-next-economy-to-coordinate-the-creation-distribution-and-exchange-of-economic-resources"><strong><em>Valueflows (VF) is a vocabulary for the distributed economic networks of the next economy, to coordinate the creation, distribution, and exchange of economic resources.</em></strong></h2>
 <h2 id="abstract">Abstract</h2>
-<p>Valueflows is intended to support coordination of any economic activity, focused on experimental and solidarity economic networks, but also supporting conventional businesses and supply chains. It utilizes resource flows connecting many agents (people, organizations, ecological agents). These resource flows can include value creation and/or value transfer. As a flow-oriented system, it can coordinate whole networks as easily as one company, including regions and circular economies.</p>
-<p>At its core, Valueflows implements an ontology called REA (<a href="https://en.wikipedia.org/wiki/Resources,_Events,_Agents">Resources Events Agents</a>). REA is an accounting and business process modeling ontology, which was initially driven by the advent of computers and the concept of normalization of data models. As such it represents a simple and elegant model for real-world economic activity, as opposed to the conventional abstraction of debits/credits. To REA we have added some concepts found in various experimental economic groups (for example recipes, or offers and requests) and ecological accounting (which is ignored in most accounting treatments), as well as made the ontology more implementation-ready and friendly to distributed protocols.</p>
+<p>Valueflows is intended to support coordination of any economic activity, with extra attention to experimental and solidarity economic networks, but also supporting conventional businesses and supply chains. It utilizes resource flows connecting many agents (people, organizations, ecological agents). These resource flows can include value creation and/or value transfer. As a flow-oriented model, it can coordinate whole networks as easily as one company, including regions and circular economies.</p>
+<p>At its core, Valueflows implements an ontology called REA (<a href="https://en.wikipedia.org/wiki/Resources,_Events,_Agents" target="_blank">Resources Events Agents</a>). REA is an accounting and business process modeling ontology, which was initially driven by the advent of computers and the concept of normalization of data models. As such it represents a simple and elegant model for real-world economic activity, as opposed to the conventional abstraction of debits/credits. To REA we have added some concepts found in various experimental economic groups (for example recipes, offers and requests) and ecological accounting (which is ignored in most accounting treatments), as well as made the ontology more implementation-ready and friendly to distributed protocols.</p>
 <p><strong>Definitions and philosophy</strong></p>
 <ul>
-<li>Economy: <a href="https://communityeconomies.org/about/community-economies-research-and-practice">Community Economies</a> has a definition we like a lot. "In conventional usage, economy often refers to a system of formal commodity production and monetary exchange. Our use of the term is much broader. The 'eco' in economy comes from the Greek root oikos, meaning 'home' or 'habitat'—in other words, that which sustains life. The 'nomy' comes from nomos, meaning management. We view economy as referring to all of the practices that allow us to survive and care for each other and the earth. Economy, understood this way, is not separate from ecology, but refers to the ongoing management—and therefore negotiation—of human and nonhuman ecological relations of sustenance."</li>
+<li>Economy: <a href="https://communityeconomies.org/about/community-economies-research-and-practice" target="_blank">Community Economies</a> has a definition we like a lot. "In conventional usage, economy often refers to a system of formal commodity production and monetary exchange. Our use of the term is much broader. The 'eco' in economy comes from the Greek root oikos, meaning 'home' or 'habitat'—in other words, that which sustains life. The 'nomy' comes from nomos, meaning management. We view economy as referring to all of the practices that allow us to survive and care for each other and the earth. Economy, understood this way, is not separate from ecology, but refers to the ongoing management—and therefore negotiation—of human and nonhuman ecological relations of sustenance."</li>
 <li>An economic network consists of independent economic agents (individual people or organizations) collaborating to produce and distribute goods and services to meet human and ecological needs. For example, food, clothing, housing, education, health care. healthy soil, etc.</li>
 <li>When we say "next economy", we want to support experiments towards<ul>
 <li>cooperation rather than competition;</li>
@@ -1910,13 +1887,15 @@
 <li>respecting nature and our environment.</li>
 </ul>
 </li>
-<li>To give a few concrete examples, the Valueflows ontology is designed to support<ul>
+<li>To give some concrete examples, the Valueflows ontology is designed to support<ul>
 <li>coordination of economic activity both inside and between organizations, an enterprise is not assumed;</li>
 <li>reciprocity with or without money, money is not assumed;</li>
 <li>ecological agents as part of the network; externalities as resources.</li>
 </ul>
 </li>
 </ul>
+<p><strong>Namespace</strong></p>
+<p>The namespace for Valueflows terms is <code>https://w3id.org/valueflows/ont/vf#</code>, supporting TTL, JSON-LD and HTML.  The preferred namespace prefix is <code>vf</code>.</p>
 <h2 id="using-the-documentation">Using the documentation</h2>
 <p>Here are some suggestions to help you find your way into this documentation, depending on your specific interest and level of prior understanding.</p>
 <ul>
@@ -1938,7 +1917,7 @@
 </ul>
 </li>
 <li>
-<p><strong>Or if you want a more fun and friendly way to understand the vocabulary</strong>, you can start here with a <a href="assets/ValueFlows-Story.pdf"><strong>Valueflows story about apple pie, yum!</strong></a>.</p>
+<p><strong>Or if you want a more fun and friendly way to understand the vocabulary</strong>, you can start here with a <a href="assets/ValueFlows-Story.pdf" target="_blank"><strong>Valueflows story about apple pie, yum!</strong></a>.</p>
 </li>
 <li>
 <p><strong>To lookup specific details</strong>, you can use the <em>Search</em> function above.  Definitions and relationships by data element (class, property, etc.) are linked on the first <a href="specification/all_vf.html"><strong>formatted spec here</strong></a>; and are textually <a href="specification/model-text/"><strong>described by subject area here</strong></a>.  The <a href="concepts/concepts-overview/"><strong>concepts section</strong></a> and <a href="examples/ex-overview/"><strong>examples section</strong></a> also might be helpful to lookup developer level information.</p>
@@ -1946,8 +1925,8 @@
 </ul>
 <hr/>
 
-<p>You can find the repository here on <a href="https://codeberg.org/valueflows/valueflows"><strong>codeberg</strong></a>, also mirrored on <a href="https://github.com/valueflows/valueflows"><strong>github</strong></a>.</p>
-<p>Or come on over and say hello or ask questions in <a href="https://matrix.to/#/#valueflows:matrix.org"><strong>matrix element</strong></a>.</p>
+<p>You can find the repository here on <a href="https://codeberg.org/valueflows/valueflows" target="_blank"><strong>codeberg</strong></a>, also mirrored on <a href="https://github.com/valueflows/valueflows" target="_blank"><strong>github</strong></a>.</p>
+<p>Or come on over and say hello or ask questions in <a href="https://matrix.to/#/#valueflows:matrix.org" target="_blank"><strong>matrix element</strong></a>.</p>
 <hr/>
 
 <p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This vocabulary and documentation is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.</p>

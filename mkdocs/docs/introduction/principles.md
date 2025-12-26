@@ -1,16 +1,6 @@
 # Principles
 
-## The "4 opens"
-
-These principles are borrowed from the [4opens](http://hamishcampbell.com/projects/4opens/), which we embrace for the Valueflows ecosystem, with a bit of clarification for Valueflows purposes.  (Of course anyone can create anything using this documentation, there are no legal restrictions, so these are the VF team's aspiration and declaration.)
-
-* **Open source** – as in “free software” [https://en.wikipedia.org/wiki/Free_software](https://en.wikipedia.org/wiki/Free_software) this keeps development healthy by increasing interconnectedness and bringing in serendipity. The Open licences are the “lock” that keep the first two in place, what we have isn’t perfect, but they do expand the area of “trust” that a project needs to work, creative commons is a start here.
-
-* **Open “industrial” standards** – this is a little understood but core open, it’s what the open internet and WWW are built from. Here is an outline [https://en.wikipedia.org/wiki/Open_standard](https://en.wikipedia.org/wiki/Open_standard).
-
-* **Open process** – this is the most “nebulous” part, examples of the work flow would be wikis and activity streams. Projects are built on linking trust networks so open process is the “glue” that binds the links together, [https://en.wikipedia.org/wiki/Process](https://en.wikipedia.org/wiki/Process).
-
-* **Open data** – is the basic part of a project [https://en.wikipedia.org/wiki/Open_data](https://en.wikipedia.org/wiki/Open_data) without this open they cannot work. This does not mean that personal data should be open.  The goal here is to not let public goods be privatized or enclosed.
+*This section is non-normative.*
 
 ## Principles for the model
 
@@ -22,3 +12,15 @@ These principles are about the model behind the vocabulary.
 1. The model must be able to support circular economies, value flows where resources come full cycle to be fed into the same set or other processes.  Recycling, re-use, and other ways to encourage resources not becoming waste, must be supported.  Flows currently considered "externalities" should be able to be internalized in the model.
 1. The model must also work on the Knowledge, Plan and Observation levels, where the objects on each level are linked appropriately to the other levels.
 1. The model must be able to support various fair methods of distribution of resources. A group can choose to introduce various monetary currencies into their flows but can also do all the coordination and accounting without introducing such artifacts.
+
+## The "4 opens"
+
+These principles are borrowed from the [4opens](http://hamishcampbell.com/projects/4opens/), which we embrace for the Valueflows ecosystem, with a bit of clarification for Valueflows purposes.  (Of course anyone can create anything using this documentation, there are no legal restrictions, so these are the VF team's aspiration and declaration.)
+
+* **Open source** – as in “free software” [https://en.wikipedia.org/wiki/Free_software](https://en.wikipedia.org/wiki/Free_software){target="_blank"} this keeps development healthy by increasing interconnectedness and bringing in serendipity. The Open licences are the “lock” that keep the first two in place, what we have isn’t perfect, but they do expand the area of “trust” that a project needs to work, creative commons is a start here.
+
+* **Open “industrial” standards** – this is a little understood but core open, it’s what the open internet and WWW are built from. Here is an outline [https://en.wikipedia.org/wiki/Open_standard](https://en.wikipedia.org/wiki/Open_standard){target="_blank"}.
+
+* **Open process** – this is the most “nebulous” part, examples of the work flow would be wikis and activity streams. Projects are built on linking trust networks so open process is the “glue” that binds the links together, [https://en.wikipedia.org/wiki/Process](https://en.wikipedia.org/wiki/Process){target="_blank"}.
+
+* **Open data** – is the basic part of a project [https://en.wikipedia.org/wiki/Open_data](https://en.wikipedia.org/wiki/Open_data){target="_blank"} without this open they cannot work. This does not mean that personal data should be open.  The goal here is to not let public goods be privatized or enclosed.

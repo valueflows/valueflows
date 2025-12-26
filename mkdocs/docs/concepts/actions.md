@@ -99,4 +99,4 @@ Implied transfers can happen when the provider and receiver agent are different.
 
 ### Saving Breadcrumbs for Track and Trace
 
-If you will be using the track or trace algorithms to find the connected value flows forwards or backwards when there might be repeated processes, an additional field is needed when saving an event.  See [Breadcrumbs in the Track and Trace algorithm](../algorithms/track.md#adding-breadcrumbs-on-initial-save) for the procedure.  Emphasizing: this is only needed if you expect "cycles" (repeated processes) in the flow; if there are no cycles then the track and trace will operate cleanly without this hack.
+If you will be using the track or trace algorithms to find the connected value flows forwards or backwards when there might be repeated processes, an additional field is needed when saving an event.  See [Breadcrumbs in the Track and Trace algorithm](../algorithms/track.md#adding-breadcrumbs-on-initial-save) for a suggested procedure.  Emphasizing: this is only needed if you expect "cycles" (repeated processes) in the flow; if there are no cycles then the track and trace will operate cleanly without this hack.

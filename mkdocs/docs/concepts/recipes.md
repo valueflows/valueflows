@@ -8,7 +8,7 @@ Recipes are for:
 * generating plans for people to do it together,
 * providing signals for coordinating their work.
 
-Recipes contain all the info required to create a resource or provide a service.  In ERP (Enterprise Resource Planning) terms, it’s a combination of bills of material and routings and suppliers. And the logic for generating plans from recipes is roughly the same as [Material Requirements Planning](https://en.wikipedia.org/wiki/Material_requirements_planning).
+Recipes contain all the info required to create a resource or provide a service.  In ERP (Enterprise Resource Planning) terms, it’s a combination of bills of material and routings and suppliers. And the logic for generating plans from recipes is roughly the same as [Material Requirements Planning](https://en.wikipedia.org/wiki/Material_requirements_planning){target="_blank"}.
 
 If you encounter the same planning pattern more than once, and your software allows planning from recipes, you might want to capture the pattern in a Recipe so you don't need to cut and paste or re-enter the same information every time.  Generally recipes are for repeatable processes.
 

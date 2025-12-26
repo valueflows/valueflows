@@ -1,6 +1,6 @@
 # Critical Path
 
-Excerpted from the [Critical Path Method](https://en.wikipedia.org/wiki/Critical_path_method) (CPM) Wikipedia page.
+Excerpted from the [Critical Path Method](https://en.wikipedia.org/wiki/Critical_path_method){target="_blank"} (CPM) Wikipedia page.
 
 > The essential technique for using CPM is to construct a model of the project that includes the following:
 

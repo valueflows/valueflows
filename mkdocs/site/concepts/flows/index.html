@@ -399,8 +399,6 @@
       
         
       
-        
-      
     
     
       
@@ -467,27 +465,6 @@
   
   <span class="md-ellipsis">
     Core Concepts
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../introduction/principles/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Principles
   </span>
   
 
@@ -653,7 +630,7 @@
         
   
   <span class="md-ellipsis">
-    UML Diagram
+    Class and Property Diagram
   </span>
   
 
@@ -2095,7 +2072,7 @@
 <h4 id="possible-gray-area-between-intent-and-commitment">Possible gray area between Intent and Commitment</h4>
 <p>When making an operational plan, where there isn't really a question of some agent stepping up to commit or being assigned, and no published Intent is needed, then Commitments can be used, even though there may not be an agent committed yet. The criterion can be thought of as firmness of plan, not commitments of agents.  Basically, sometimes making a plan takes some time, so during that activity, if Commitments are not assigned, it is OK, better than adding unnecessarily to the machinery needed to make a plan by using Intents.  On the other hand if publication of the flow is needed to find an Agent to commit, then an Intent is better, as it can become part of a Proposal.</p>
 <h3 id="economic-event">Economic Event</h3>
-<p>Economic Events describe past events, something observed, never some potential future event.  They can fulfill Commitments or satisfy Intents (when there is no Commitment).  See also <a href="../resources/#how-resources-relate-to-events">How Resources Relate to Events</a>, <a href="../../specification/model-text/#flows-in-motion-observation">Flows in motion: Observation</a>, <a href="../../examples/ex-production/">Production examples</a>, some of the <a href="../../examples/ex-exchange/">Transfer and Exchange examples</a>.</p>
+<p>Economic Events describe past flows, something observed, never some potential future event.  They can fulfill Commitments or satisfy Intents (when there is no Commitment).  See also <a href="../resources/#how-resources-relate-to-events">How Resources Relate to Events</a>, <a href="../../specification/model-text/#flows-in-motion-observation">Flows in motion: Observation</a>, <a href="../../examples/ex-production/">Production examples</a>, some of the <a href="../../examples/ex-exchange/">Transfer and Exchange examples</a>.</p>
 <h3 id="claim">Claim</h3>
 <p>Claims resemble Commitments, but are initiated by the receiver, not the provider.  If there is not an existing Commitment, an Economic Event can trigger a reciprocal Claim, based on an agreement.  Even then, Claims sometimes do not have to actually be instantiated, often they can be implied from an Economic Event and an agreement.  For example, if Alice has agreed to sell Bob some carrots for $2, then if Alice delivers the carrots to Bob, she has an implicit claim for $2 from Bob.  See also <a href="../../specification/model-text/#flows-in-motion-observation">Flows in motion: Observation</a>, <a href="../../examples/ex-exchange/#claim-for-income">Claim example</a>.</p>
 <h2 id="timeline-plans-and-observations">Timeline, plans and observations</h2>
@@ -2122,7 +2099,7 @@
 <ul>
 <li>Accounting totals (quantity) within accounting period (time)</li>
 </ul>
-<p>Quantities can be any needed unit of measure, including counts, volumes, weights, etc.  Time can be a beginning/end time (an interval), or a point in time, or a due date.  The flows require at least one of those.  If a point in time is recorded, an application should return that time as the beginning and end time if asked.</p>
+<p>Quantities can be any needed unit of measure, including counts, volumes, weights, etc.  Time can be a beginning/end date-time (an interval), or a point in time, or a due date-time.  The flows require at least one of those.  If a point in time is recorded, an application should return that time as the beginning and end time if asked.  If only date is needed, the time portion can be left as all zeros.</p>
 <p>Note that recipes may need to scale both quantities and calendar times when used to create a plan.</p>
 <p>Sometimes a quantity is expressed in time-based units, like "I worked 6 hours", or "we used this machine for 8 hours".  These flows also may have a related time, like "I worked from 10am to 4pm", or "we used this machine from 8am to 4pm". In these examples, the quantity is used for accounting, exchange, recipes.  The time is used to schedule and coordinate the work or machine usage.</p>
 <p>Sometimes a situation may call for a "compound quantity", like "Number-per-Year".</p>

@@ -24,7 +24,7 @@ When making an operational plan, where there isn't really a question of some age
 
 ### Economic Event
 
-Economic Events describe past events, something observed, never some potential future event.  They can fulfill Commitments or satisfy Intents (when there is no Commitment).  See also [How Resources Relate to Events](../concepts/resources.md/#how-resources-relate-to-events), [Flows in motion: Observation](../specification/model-text.md/#flows-in-motion-observation), [Production examples](../examples/ex-production.md), some of the [Transfer and Exchange examples](../examples/ex-exchange.md).
+Economic Events describe past flows, something observed, never some potential future event.  They can fulfill Commitments or satisfy Intents (when there is no Commitment).  See also [How Resources Relate to Events](../concepts/resources.md/#how-resources-relate-to-events), [Flows in motion: Observation](../specification/model-text.md/#flows-in-motion-observation), [Production examples](../examples/ex-production.md), some of the [Transfer and Exchange examples](../examples/ex-exchange.md).
 
 ### Claim
 
@@ -65,7 +65,7 @@ They can be used together for analysis and reporting, such as:
 
 * Accounting totals (quantity) within accounting period (time)
 
-Quantities can be any needed unit of measure, including counts, volumes, weights, etc.  Time can be a beginning/end time (an interval), or a point in time, or a due date.  The flows require at least one of those.  If a point in time is recorded, an application should return that time as the beginning and end time if asked.
+Quantities can be any needed unit of measure, including counts, volumes, weights, etc.  Time can be a beginning/end date-time (an interval), or a point in time, or a due date-time.  The flows require at least one of those.  If a point in time is recorded, an application should return that time as the beginning and end time if asked.  If only date is needed, the time portion can be left as all zeros.
 
 Note that recipes may need to scale both quantities and calendar times when used to create a plan.
 

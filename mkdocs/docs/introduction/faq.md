@@ -5,6 +5,8 @@ hide:
 
 # Frequently Asked Questions (FAQ)
 
+*This section is non-normative.*
+
 ### What is Valueflows?
 
 Valueflows is a vocabulary and model (an ontology) that is intended to cover any economic activity, focused on the economic networks of the "next economy", but also supporting conventional businesses and supply chains.  It's main purpose is to facilitate interoperability between various economic software. It can also be used as an internal model for a Valueflows "native" application.
@@ -15,7 +17,7 @@ No, Valueflows is only the vocabulary and documentation.  There are [some applic
 
 ### How do we think of the "economy"?
 
-[Community Economies](http://communityeconomies.org/about/community-economies-research-and-practice) has a definition we like a lot.  "In conventional usage, economy often refers to a system of formal commodity production and monetary exchange. Our use of the term is much broader. The 'eco' in economy comes from the Greek root oikos, meaning 'home' or 'habitat'—in other words, that which sustains life. The 'nomy' comes from nomos, meaning management. We view economy as referring to all of the practices that allow us to survive and care for each other and the earth. Economy, understood this way, is not separate from ecology, but refers to the ongoing management—and therefore negotiation—of human and nonhuman ecological relations of sustenance."
+[Community Economies](http://communityeconomies.org/about/community-economies-research-and-practice){target="_blank"} has a definition we like a lot.  "In conventional usage, economy often refers to a system of formal commodity production and monetary exchange. Our use of the term is much broader. The 'eco' in economy comes from the Greek root oikos, meaning 'home' or 'habitat'—in other words, that which sustains life. The 'nomy' comes from nomos, meaning management. We view economy as referring to all of the practices that allow us to survive and care for each other and the earth. Economy, understood this way, is not separate from ecology, but refers to the ongoing management—and therefore negotiation—of human and nonhuman ecological relations of sustenance."
 
 ### What do we mean, “economic network”?
 
@@ -43,7 +45,7 @@ Other economic vocabularies are focused on conventional capitalist enterprise op
 
 ### Can I put Valueflows on a blockchain?
 
-Valueflows attempts to be as technically agnostic as possible.  But there are some challenges putting it on a blockchain, basically because VF does not form a "chain" when data is created, it forms a "directed graph".  A good place to see this is on [this Process diagram](/concepts/processes/#process-structures).  It is probably possible to put it on a blockchain; or sometimes people store the information in a more traditional data structure, and also put the data on a blockchain for the advantages that offers.  Or people have used other distributed or decentralized structures for all of an application's data storage, instead of a blockchain.  Or if the VF data is limited to traditional exchange data where longer flows are not created, a blockchain should be no problem.
+Valueflows attempts to be as technically agnostic as possible.  But there are some challenges putting it on a blockchain, basically because VF does not form a "chain" when data is created, it forms a "directed graph".  A good place to see this is on [this Process diagram](/introduction/core/#directed-graphs-of-flows).  It is probably possible to put it on a blockchain; or sometimes people store the information in a more traditional data structure, and also put the data on a blockchain for the advantages that offers.  Or people have used other distributed or decentralized structures for all of an application's data storage, instead of a blockchain.  Or if the VF data is limited to traditional exchange data where longer flows are not created, a blockchain should be no problem.
 
 ### Where can I read more about REA?
 

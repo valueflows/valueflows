@@ -1,4 +1,4 @@
-The resource vocabulary describes resources and types of resources, defined broadly.  They can include useful goods and services, digital documents and representations, code, money, tokens, credits, energy, work, skills, CO2, methane, heat, air, water, soil microbiota....
+The resource vocabulary describes resources and types of resources, defined broadly.  They can include natural materials, goods and services, digital documents and representations, code, money, tokens, credits, energy, work, skills, CO2, methane, heat, air, water, soil microbiota....
 
 See also [Resources in the Diagram Explanations](../specification/model-text.md#resource), [Actions](actions.md), and [Resource examples](../examples/ex-resource.md).
 
@@ -7,9 +7,9 @@ See also [Resources in the Diagram Explanations](../specification/model-text.md#
 Traditionally, an economic resource is defined by its utility, but also by its scarcity and its control by an economic agent. That definition is based on accounting for private ownership, and we believe is too limited.
 
 * Intellectual creations like designs are not scarce, yet they clearly are economic resources. They only become scarce when legally restricted by patents, licenses, and copyrights.
-* Air, water, and other products of nature are clearly economic resources, but they are not under the control of an agent unless they are legally restricted by ownership. However, by means of the invisible foot that accompanies [the invisible hand](https://en.wikipedia.org/wiki/Invisible_hand), they are regularly degraded by enterprises, and not accounted for, classified as “externalities”.
+* Air, water, and other products of nature are clearly economic resources, but they are not under the control of an agent unless they are legally restricted by ownership. However, by means of the invisible foot that accompanies [the invisible hand](https://en.wikipedia.org/wiki/Invisible_hand){target="_blank"}, they are regularly degraded by enterprises, and not accounted for, classified as “externalities”.
 
-We want to think of ourselves as participants in ecosystems, not competing enterprises. As such, we need to account for our effects on all aspects of our ecosystems.
+We want to think of ourselves as participants in ecosystems, not competing enterprises. As such, we want to account for our effects on all aspects of our ecosystems.
 
 And we want knowledge to be freely available.
 
@@ -26,7 +26,7 @@ is a specification. Your library may have two copies that you can check out. Tho
 
 ### The difference between a resource specification and a resource classification
 
-An economic resource or a flow can have only one *resource specification* in Valueflows.  This defines the lowest level useful type or kind of the resource that is needed. The Valueflows vocabulary defines this as the ResourceSpecification.  Note that often taxonomies and other references on the web can define very specific resource specifications at their leaf levels, and these can be used if the necessary properties can be found.
+An economic resource or a flow can have only one *resource specification* in Valueflows.  This defines the lowest useful level of the type or kind of the resource that is needed. The Valueflows vocabulary defines this as the ResourceSpecification.  Note that often taxonomies and other references on the web can define very specific resource specifications at their leaf levels, and these can be used if the necessary properties can be found.
 
 An economic resource or a flow can have any number of *resource classifications*.  They are used to filter, match, or group economic resources.  Resource classifications can be part of a taxonomy. That means they can be defined very broadly and generally and maybe vaguely, or they can be defined very narrowly, but fit into broader classifications.
 
@@ -36,7 +36,7 @@ People can use the multitude of existing taxonomies for resource classifications
 
 Resource classifications can also use other schemes, like facets or tags.  It is left vague in order to be flexible.
 
-The references to resource classifications are uri's, and not otherwise defined inside Valueflows.
+The references to resource classifications are uri's or any string, and not otherwise defined inside Valueflows.
 
 ## Identification and Behaviors of Resources
 
@@ -82,11 +82,13 @@ An alternative to using staged resources is to have different resource specifica
 
 ### Inventory
 
-Economic Resources can be inventoried, not inventoried but could be, or it doesn't make sense to think about inventory.  If a resource is not inventoried, it is generally not instantiated in the software, but defined using resource specification and other properties, such as the accountable agent or location.
+Economic resources (little-r, not confined to EconomicResources) can be inventoried, not inventoried but could be, or it doesn't make sense to think about inventory.  If a resource is not inventoried, it is generally not instantiated in the software, but defined using resource specification and other properties, such as the accountable agent or location.
 
 * Inventoried: You want to keep track of it, its changes in quantity, and how many you have right now.
 * Not inventoried: You could keep track of it, but it isn't worth it.  This usually happens for quantities of small or hard to measure items that are obtained in bulk, like solder or bolts.  In this case, you have to look at the actual resource to see if you need more, the data won't tell you.
-* Not applicable: This is for types of work (unless scheduled), services, and other resources where it just doesn't make sense.
+* Not applicable: This is for types of work, services, and other resources where it just doesn't make sense.
+
+Note here we are using the term "inventory" but this also applies to money, credits, etc. in an "account".
 
 ## How resources relate to events
 
@@ -94,7 +96,7 @@ In the original REA ontology, an Economic Event is a change in the quantity or i
 
 Some people use the terms "stock" and "stock flow".  A stock is a resource; a stock flow is an event. (The term stock is too limiting, since a resource could be digital, like a document or media file.)
 
-An event can trigger incrementing or decrementing a resource.  Sometimes it does neither, as in the case of using a piece of equipment or citing a document.  But in any case, the quantity of a resource related to the event is not a resource itself, it is just a property of the event.  For example a resource could be 100 widgets on a pallet, lot number 1234.  If 10 of those widgets are consumed in a process that makes something out of them, that is an event: consumption of 10 widgets of lot number 1234.  The 10 widgets are not a resource in their own right.  The event triggers the decrement of the original resource of 100 widgets, which now has quantity of 90.
+An event can trigger incrementing or decrementing a resource.  Sometimes it does neither, as in the case of using a piece of equipment or citing a design.  But in any case, the quantity of a resource related to the event is not a resource itself, it is just a property of the event.  For example a resource could be 100 widgets on a pallet, lot number 1234.  If 10 of those widgets are consumed in a process that makes something out of them, that is an event: consumption of 10 widgets of lot number 1234.  The 10 widgets are not a resource in their own right.  The event triggers the decrement of the original resource of 100 widgets, which now has quantity of 90.
 
 For serialized or uniquely identified resources, if the logical and technical unique identifiers are not changed by an event, such as moving a vehicle to another location without any changes to its accountable agent (and assuming location is not part of the logical identifier), the resource does not behave like a stock and is not decremented or incremented.
 

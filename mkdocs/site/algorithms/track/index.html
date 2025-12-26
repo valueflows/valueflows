@@ -399,8 +399,6 @@
       
         
       
-        
-      
     
     
       
@@ -467,27 +465,6 @@
   
   <span class="md-ellipsis">
     Core Concepts
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../introduction/principles/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Principles
   </span>
   
 
@@ -653,7 +630,7 @@
         
   
   <span class="md-ellipsis">
-    UML Diagram
+    Class and Property Diagram
   </span>
   
 
@@ -2029,7 +2006,7 @@
   <h1>Track and Trace</h1>
 
 <h2 id="difference-between-tracking-and-tracing">Difference between tracking and tracing</h2>
-<p><a href="http://ell.stackexchange.com/questions/34391/difference-between-track-and-trace">From StackExchange:</a>:</p>
+<p><a href="http://ell.stackexchange.com/questions/34391/difference-between-track-and-trace" target="_blank">From StackExchange:</a>:</p>
 <blockquote>
 <p>The difference is in direction &amp; point in time:</p>
 <p>To trace: follow the completed path backwards from its current point to where it began... When you "trace" a cellphone call, you try to determine its origin... You go backward to the starting point.</p>
@@ -2045,7 +2022,7 @@
 </ul>
 <p>Briefly, to gather a whole track or trace, the previous or next methods should be used in recursive logic, traveling down the flow and each branch of the flow, when there are many inputs or many outputs.</p>
 <h2 id="adding-breadcrumbs-on-initial-save">Adding breadcrumbs on initial save</h2>
-<p>For the most part, the structure provides the causal order of the flows.  But for some specific situations, such as repeated cycles referencing the same ProcessSpecifications, additional information should be saved on the EconomicEvent and EconomicResource to aid in obtaining consistent causal order. (Timestamps are not reliable in distributed systems.)</p>
+<p>For the most part, the structure provides the causal order of the flows.  But for some specific situations, such as repeated cycles referencing the same ProcessSpecifications, additional information should be saved on the EconomicEvent and EconomicResource to aid in obtaining consistent causal order. (Timestamps are not reliable in distributed systems.)  The following is the hack we implemented, you may have a better one.</p>
 <ul>
 <li>
 <p>Add two new fields called <code>previousEvent</code>, one on EconomicResource and one on EconomicEvent.  The <code>previousEvent</code> fields reference an EconomicEvent.</p>

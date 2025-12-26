@@ -1,5 +1,7 @@
 # Json Schemas
 
+*This section is non-normative.*
+
 **IN PROCESS: Not all classes are included yet, and some are missing peripheral properties.  But this is a fair representation of the core of the Valueflows data model.**
 
 The following are json-schema representations of the Valueflows vocabulary.

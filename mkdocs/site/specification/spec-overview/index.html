@@ -399,8 +399,6 @@
       
         
       
-        
-      
     
     
       
@@ -467,27 +465,6 @@
   
   <span class="md-ellipsis">
     Core Concepts
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../introduction/principles/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Principles
   </span>
   
 
@@ -667,9 +644,27 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#source-definitions-and-protocols" class="md-nav__link">
+  <a href="#source-specification" class="md-nav__link">
     <span class="md-ellipsis">
-      Source definitions and protocols
+      Source specification
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#visualization-of-the-specification" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visualization of the specification
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#alternative-formats" class="md-nav__link">
+    <span class="md-ellipsis">
+      Alternative formats
     </span>
   </a>
   
@@ -716,7 +711,7 @@
         
   
   <span class="md-ellipsis">
-    UML Diagram
+    Class and Property Diagram
   </span>
   
 
@@ -1859,9 +1854,27 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#source-definitions-and-protocols" class="md-nav__link">
+  <a href="#source-specification" class="md-nav__link">
     <span class="md-ellipsis">
-      Source definitions and protocols
+      Source specification
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#visualization-of-the-specification" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visualization of the specification
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#alternative-formats" class="md-nav__link">
+    <span class="md-ellipsis">
+      Alternative formats
     </span>
   </a>
   
@@ -1883,24 +1896,46 @@
 
 
 <h1 id="specification-overview">Specification Overview</h1>
+<p><em>Except as noted, this page is non-normative.</em></p>
 <h2 id="goals-and-compromises">Goals and compromises</h2>
-<p>We have tried to make this vocabulary as technology-agnostic as possible, as it represents a domain ontology for economic activity that we believe can be useful well into the future.  We know from the past that technology moves relatively quickly.  This includes technical protocols and formats for interoperability, and also bleeds into data modeling techniques, no matter how much we in the industry try to create universal modeling methods.  We have tried to balance full use case support with simplicity and clarity in various protocol, with some compromises made along the way.  We represent the vocabulary in various ways, and plan to add formats and protocols as new needs arise.</p>
-<h2 id="source-definitions-and-protocols">Source definitions and protocols</h2>
+<p>We have tried to make this vocabulary as technology-agnostic as possible, as it represents a domain ontology for economic activity that we believe can be useful well into the future.  We know from the past that technology moves relatively quickly.  This includes technical protocols and formats for interoperability, and also bleeds into data modeling techniques, no matter how much we in the industry try to create universal modeling methods.  We have tried to balance full use case support with simplicity and clarity in various protocols, with some compromises made along the way.  We represent the vocabulary in various ways, and plan to add formats and protocols as new needs arise.</p>
+<h2 id="source-specification">Source specification</h2>
+<p><em>This section is normative.</em></p>
 <ul>
 <li>
-<p>The "system of record" (authoritative data source) is a linked open data <strong><a href="https://codeberg.org/valueflows/pages/raw/branch/main/assets/all_vf.TTL">turtle (ttl) file representation</a></strong>, located <strong><a href="https://codeberg.org/valueflows/pages/src/branch/main/assets/all_vf.TTL">here in the repository</a></strong>.</p>
+<p>The "system of record" (authoritative data source) is this <strong><a href="https://codeberg.org/valueflows/pages/src/branch/main/assets/all_vf.TTL" target="_blank">linked open data turtle (ttl) file</a></strong>.</p>
 </li>
 <li>
-<p>A more readable <strong><a href="../all_vf.html">formatted version of the vocabulary</a></strong>, which is generated from the turtle file</p>
+<p>The preferred namespace prefix is "vf".  The linked open data namespace base URI is <code>https://w3id.org/valueflows/ont/vf#</code>, supporting the following formats.</p>
+<ul>
+<li>https://w3id.org/valueflows/ont/vf.ttl</li>
+<li>https://w3id.org/valueflows/ont/vf.html</li>
+<li>https://w3id.org/valueflows/ont/vf.jsonld</li>
+<li>https://w3id.org/valueflows/ont/vf.xml</li>
+<li>https://w3id.org/valueflows/ont/vf.rdf</li>
+<li>https://w3id.org/valueflows/ont/vf.owl</li>
+<li>https://w3id.org/valueflows/ont/vf.nt</li>
+<li>https://w3id.org/valueflows/ont/vf.trig</li>
+<li>https://w3id.org/valueflows/ont/vf.n3</li>
+</ul>
 </li>
 <li>
-<p>A <strong><a href="../uml/">UML diagram of the ontology</a></strong>, with some explanation of compromises made between rdf-based / json-based / relational / object oriented methods</p>
+<p>A more readable <strong><a href="../all_vf.html" target="_blank">formatted text version of the vocabulary</a></strong> is generated from the turtle file here.</p>
+</li>
+</ul>
+<h2 id="visualization-of-the-specification">Visualization of the specification</h2>
+<ul>
+<li>
+<p>A <strong><a href="../uml/">class and property diagram of the ontology</a></strong> is included for a visual representation, along with some explanation of compromises made between rdf-based / json-based / relational / object oriented methods.</p>
 </li>
 <li>
-<p>The linked open data namespace base URI is <code>https://w3id.org/valueflows/ont/vf#</code>, supporting TTL, JSON-LD and HTML, with preferred namespace prefix being "vf"</p>
+<p>For easier visualization along with textual explanation of subject area parts of the model, a <strong><a href="../model-text/">diagram explanation page</a></strong> is also included.</p>
 </li>
+</ul>
+<h2 id="alternative-formats">Alternative formats</h2>
+<ul>
 <li>
-<p>A <strong><a href="https://lab.allmende.io/valueflows/vf-schemas/vf-graphql/-/tree/sprout/lib/schemas">GraphQL api source</a></strong>, which stays more or less in sync with the vocabulary</p>
+<p>A <strong><a href="https://lab.allmende.io/valueflows/vf-schemas/vf-graphql/-/tree/sprout/lib/schemas" target="_blank">GraphQL api source</a></strong>  stays more or less in sync with the vocabulary.</p>
 </li>
 <li>
 <p>A <strong><a href="">json-ld context file</a></strong> (TODO)</p>

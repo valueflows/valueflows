@@ -17,7 +17,7 @@ In Valueflows, we are talking about economic agents, agents who can create or mo
 
 If people want to define types of organizations (like cooperative, corporation, network, community, etc.) we provide a classification property which people can define as they wish.  We do the same for the ecological agent (like ecosystem, forest, etc.).
 
-We have defined the properties of Agents very minimally. There are a number of useful properties in existing vocabularies, such as [foaf](https://iptc.org/thirdparty/foaf/), [vcard](https://www.w3.org/TR/vcard-rdf/), [schema.org](https://schema.org/), and others that can be used. Or people can create their own as needed.
+We have defined the properties of Agents very minimally. There are a number of useful properties in existing vocabularies, such as [foaf](https://iptc.org/thirdparty/foaf/){target="_blank"}, [vcard](https://www.w3.org/TR/vcard-rdf/){target="_blank"}, [schema.org](https://schema.org/){target="_blank"}, and others that can be used. Or people can create their own as needed.
 
 ## Agent Philosophies
 

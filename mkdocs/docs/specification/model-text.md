@@ -1,6 +1,8 @@
 # Diagram Explanations
 
-These textual explanations are a break-down of the UML diagram on the previous page.  The explanations are organized by class within subject area of the model.
+*This section is non-normative.*
+
+These textual explanations are a break-down of the class diagram on the previous page, organized by subject area of the model.  In the diagrams, the classes which are color-coded by model layer are described in the subject area, the white classes are included because they are related to properties in the subject area.
 
 ### Agent
 

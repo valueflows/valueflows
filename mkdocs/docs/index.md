@@ -10,13 +10,13 @@ hide:
 
 ## Abstract
 
-Valueflows is intended to support coordination of any economic activity, focused on experimental and solidarity economic networks, but also supporting conventional businesses and supply chains. It utilizes resource flows connecting many agents (people, organizations, ecological agents). These resource flows can include value creation and/or value transfer. As a flow-oriented system, it can coordinate whole networks as easily as one company, including regions and circular economies.
+Valueflows is intended to support coordination of any economic activity, with extra attention to experimental and solidarity economic networks, but also supporting conventional businesses and supply chains. It utilizes resource flows connecting many agents (people, organizations, ecological agents). These resource flows can include value creation and/or value transfer. As a flow-oriented model, it can coordinate whole networks as easily as one company, including regions and circular economies.
 
-At its core, Valueflows implements an ontology called REA ([Resources Events Agents](https://en.wikipedia.org/wiki/Resources,_Events,_Agents)). REA is an accounting and business process modeling ontology, which was initially driven by the advent of computers and the concept of normalization of data models. As such it represents a simple and elegant model for real-world economic activity, as opposed to the conventional abstraction of debits/credits. To REA we have added some concepts found in various experimental economic groups (for example recipes, or offers and requests) and ecological accounting (which is ignored in most accounting treatments), as well as made the ontology more implementation-ready and friendly to distributed protocols.
+At its core, Valueflows implements an ontology called REA ([Resources Events Agents](https://en.wikipedia.org/wiki/Resources,_Events,_Agents){target="_blank"}). REA is an accounting and business process modeling ontology, which was initially driven by the advent of computers and the concept of normalization of data models. As such it represents a simple and elegant model for real-world economic activity, as opposed to the conventional abstraction of debits/credits. To REA we have added some concepts found in various experimental economic groups (for example recipes, offers and requests) and ecological accounting (which is ignored in most accounting treatments), as well as made the ontology more implementation-ready and friendly to distributed protocols.
 
 **Definitions and philosophy**
 
-* Economy: [Community Economies](https://communityeconomies.org/about/community-economies-research-and-practice) has a definition we like a lot. "In conventional usage, economy often refers to a system of formal commodity production and monetary exchange. Our use of the term is much broader. The 'eco' in economy comes from the Greek root oikos, meaning 'home' or 'habitat'—in other words, that which sustains life. The 'nomy' comes from nomos, meaning management. We view economy as referring to all of the practices that allow us to survive and care for each other and the earth. Economy, understood this way, is not separate from ecology, but refers to the ongoing management—and therefore negotiation—of human and nonhuman ecological relations of sustenance."
+* Economy: [Community Economies](https://communityeconomies.org/about/community-economies-research-and-practice){target="_blank"} has a definition we like a lot. "In conventional usage, economy often refers to a system of formal commodity production and monetary exchange. Our use of the term is much broader. The 'eco' in economy comes from the Greek root oikos, meaning 'home' or 'habitat'—in other words, that which sustains life. The 'nomy' comes from nomos, meaning management. We view economy as referring to all of the practices that allow us to survive and care for each other and the earth. Economy, understood this way, is not separate from ecology, but refers to the ongoing management—and therefore negotiation—of human and nonhuman ecological relations of sustenance."
 * An economic network consists of independent economic agents (individual people or organizations) collaborating to produce and distribute goods and services to meet human and ecological needs. For example, food, clothing, housing, education, health care. healthy soil, etc.
 * When we say "next economy", we want to support experiments towards
     * cooperation rather than competition;
@@ -24,10 +24,15 @@ At its core, Valueflows implements an ontology called REA ([Resources Events Age
     * sustainable production instead of getting away with as much plunder as possible;
     * “equitable distribution of value” vs exploitation for profit;
     * respecting nature and our environment.
-* To give a few concrete examples, the Valueflows ontology is designed to support
+* To give some concrete examples, the Valueflows ontology is designed to support
     * coordination of economic activity both inside and between organizations, an enterprise is not assumed;
     * reciprocity with or without money, money is not assumed;
     * ecological agents as part of the network; externalities as resources.
+
+**Namespace**
+
+The namespace for Valueflows terms is `https://w3id.org/valueflows/ont/vf#`, supporting TTL, JSON-LD and HTML.  The preferred namespace prefix is `vf`.
+
 
 ## Using the documentation
 
@@ -43,15 +48,15 @@ Here are some suggestions to help you find your way into this documentation, dep
 
       * For even more gory details, check the rest of the [**specification pages**](specification/spec-overview.md), and/or [**examples section**](examples/ex-overview.md).
 
-* **Or if you want a more fun and friendly way to understand the vocabulary**, you can start here with a [**Valueflows story about apple pie, yum!**](assets/ValueFlows-Story.pdf).
+* **Or if you want a more fun and friendly way to understand the vocabulary**, you can start here with a [**Valueflows story about apple pie, yum!**](assets/ValueFlows-Story.pdf){target="_blank"}.
 
 * **To lookup specific details**, you can use the *Search* function above.  Definitions and relationships by data element (class, property, etc.) are linked on the first [**formatted spec here**](specification/all_vf.html); and are textually [**described by subject area here**](specification/model-text.md).  The [**concepts section**](concepts/concepts-overview.md) and [**examples section**](examples/ex-overview.md) also might be helpful to lookup developer level information.
 
 <hr/>
 
-You can find the repository here on [**codeberg**](https://codeberg.org/valueflows/valueflows), also mirrored on [**github**](https://github.com/valueflows/valueflows).
+You can find the repository here on [**codeberg**](https://codeberg.org/valueflows/valueflows){target="_blank"}, also mirrored on [**github**](https://github.com/valueflows/valueflows){target="_blank"}.
 
-Or come on over and say hello or ask questions in [**matrix element**](https://matrix.to/#/#valueflows:matrix.org).
+Or come on over and say hello or ask questions in [**matrix element**](https://matrix.to/#/#valueflows:matrix.org){target="_blank"}.
 
 <hr/>
 

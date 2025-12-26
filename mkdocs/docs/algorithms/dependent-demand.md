@@ -2,9 +2,9 @@
 
 Dependent demand is one popular planning and scheduling algorithm for economic networks. It is used in Material Requirements Planning (MRP), for example. The algorithm traverses recipes to create schedules for economic processes.
 
-Here is a long description of [Dependent Demand](../linked-docs/dependent_demand.pdf). Below is a short version.
+Here is a long description of [Dependent Demand](../linked-docs/dependent_demand.pdf){target="_blank"}. Below is a short version.
 
-Basically, you traverse a graph of Recipe Processes backwards from the last Recipe Output, connecting Recipe Inputs with Recipe Outputs that have matching Resource Categories, and backscheduling all the processes and resource requirements based on estimated process durations.   See [Graph search algorithms](http://jasonpark.me/AlgorithmVisualizer/).
+Basically, you traverse a graph of Recipe Processes backwards from the last Recipe Output, connecting Recipe Inputs with Recipe Outputs that have matching Resource Categories, and backscheduling all the processes and resource requirements based on estimated process durations.   See [Graph search algorithms](http://jasonpark.me/AlgorithmVisualizer/){target="_blank"}.
 
 This description refers to this diagram:
 ![VF 3 layer diagram showing process flows on each level with connections](../assets/process-layer.png)

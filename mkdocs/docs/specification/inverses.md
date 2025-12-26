@@ -1,20 +1,19 @@
-# Query and Filter Naming
+# Query Naming
+
+*This section is non-normative.*
 
 ## Introduction
 
-**UNDER CONSTRUCTION**
+Some key inverses are specified in the VF core, for flexibility of different technical implementations.  Many are not.  This section is to provide guidance on naming for those that are not explicitly specified, as well as other basic and more involved queries, to facilitate standard api naming.
 
-Some key inverses are specified in the VF core, for flexibility of different technical implementations.  Many are not.  This section is to provide guidance on naming for those that are not explicitly specified, to facilitate standard api naming.
+This document is *NOT* meant to imply that all of these named methods should be implemented in any particular application api.  Most implementations will want to use only a fraction of these.
 
-This document is not meant to imply that all of these named queries and filters should be implemented in any particular application api!  Most implementations will want to use only a fraction of these.
-
-*Note:* Filters can be applicable to any query that can return more than one of the class.  For example all processes, processes in scope of an agent, processes in a plan, could each use the process filters.
-
-*Status:* Not all of these queries and filters are tested, and there will certainly be other useful queries and filters. If anyone has recommended changes or additions, please start an issue or merge request, or just let us know in the Welcome chat (links on the home page).
+*Status:* Many of these queries are not tested, and there will certainly be other useful queries. If anyone has recommended changes or additions, please start an issue or pull request, or just let us know in the Welcome chat (links on the home page).
 
 ## Observation layer
 
-### Agent (also subclasses Person, Organization, EcologicalAgent)
+### Agent
+**(also subclasses Person, Organization, EcologicalAgent)**
 
 *main queries:*
 
@@ -22,11 +21,9 @@ This document is not meant to imply that all of these named queries and filters 
    * agents
    * myAgent
    * person
-   * people
+   * persons
    * organization
    * organizations
-
-*filters:* classifiedAs (Organizations only), withinLocation (some geographic boundary, city, region, etc.)
 
 *inverse queries:*
 
@@ -34,26 +31,21 @@ This document is not meant to imply that all of these named queries and filters 
    * inventoriedEconomicResources (EconomicResource.primaryAccountable)
    * commitmentsAsProvider (Commitment.provider)
    * commitmentsAsReceiver (Commitment.receiver)
-   * commitmentsInScope (Commitment.inScopeOf)
    * economicEventsAsProvider (EconomicEvent.provider)
    * economicEventsAsReceiver (EconomicEvent.receiver)
-   * economicEventsInScope (EconomicEvent.inScopeOf)
    * intentsAsProvider (Intent.provider)
    * intentsAsReceiver (Intent.receiver)
-   * intentsInScope (Intent.inScopeOf)
    * claimsAsProvider (Claim.provider)
    * claimsAsReceiver (Claim.receiver)
-   * claimsInScope (Claim.inScopeOf)
-   * proposalsInScope (Proposal.inScopeOf)
 
 *other queries:*
 
-   * plans (if there is any Process.inScopeOf in the Plan)
-   * economicEvents (EconomicEvent.provider or .receiver or .inScopeOf)
-   * commitments (Commitment.provider or .receiver or .inScopeOf)
-   * intents (Intent.provider or .receiver or .inScopeOf)
-   * claims (Claim.provider or .receiver or .inScopeOf)
-   * proposals (Proposal.inScopeOf, or a related Intent.provider or Intent.receiver)
+   * plans (if there is any Process.inScopeOf in a Plan)
+   * economicEvents (EconomicEvent.provider or .receiver or .inputOf.inScopeOf or .outputOf.inScopeOf)
+   * commitments (Commitment.provider or .receiver or .receiver or .inputOf.inScopeOf or .outputOf.inScopeOf)
+   * intents (Intent.provider or .receiver or .receiver or .inputOf.inScopeOf or .outputOf.inScopeOf)
+   * claims (Claim.provider or .receiver)
+   * proposals (a related Intent.provider or Intent.receiver)
    * proposalsTo (Proposals.proposed where ProposedTo.proposedTo is the Agent)
 
 ### Process
@@ -63,8 +55,6 @@ This document is not meant to imply that all of these named queries and filters 
    * process
    * processes
 
-*filters:* searchString, finished, classifiedAs, inScopeOf, startDate, endDate (include any process that overlaps the start date to end date range inclusive; missing start date is from the beginning, missing end date is to the end)
-
 *inverse queries:*
 
 *other queries:*
@@ -72,15 +62,13 @@ This document is not meant to imply that all of these named queries and filters 
    * economicEvents (EconomicEvent.inputOf or .outputOf)
    * commitments (Commitment.inputOf or .outputOf)
    * intents (Intent.inputOf or .outputOf)
-   * unplannedEconomicEvents (all EconomicEvent.inputOf or .outputOf that doesn't fulfill a Commitment)
-   * unplannedInputs (all EconomicEvent.inputOf that doesn't fulfill a Commitment)
-   * unplannedOutputs (all EconomicEvent.outputOf that doesn't fulfill a Commitment)
-   * involvedAgents (all .provider or .receivers or .inScopeOf on Commitments or EconomicEvents or Intents, and self.inScopeOf)
-   * workingAgents (all EconomicEvent.provider on an input EconomicEvent with action equal to work)
-   * nextProcesses (Processes where .inputOf references the same .resourceInventoriedAs as self.outputOf references)
-   * previousProcesses (Processes where .outputOf references the same .resourceInventoriedAs as self.inputOf references)
-   * previous (EconomicEvent.inputOf, same as observedInputs)
-   * next (EconomicEvent.outputOf, same as observedOutputs)
+   * unplannedEconomicEvents (all EconomicEvent.inputOf or .outputOf that don't fulfill a Commitment)
+   * unplannedInputs (all EconomicEvent.inputOf that don't fulfill a Commitment)
+   * unplannedOutputs (all EconomicEvent.outputOf that don't fulfill a Commitment)
+   * involvedAgents (all .provider or .receiver on .hasInput or .hasOutput Commitments or EconomicEvents or Intents, and self.inScopeOf)
+   * workingAgents (all EconomicEvent.provider on a .hasInput EconomicEvent with action equal to work)
+   * previous (EconomicEvent.inputOf)
+   * next (EconomicEvent.outputOf)
 
 ### EconomicEvent
 
@@ -89,12 +77,7 @@ This document is not meant to imply that all of these named queries and filters 
    * economicEvent
    * economicEvents
 
-*filters:* searchString, action, provider, receiver, resourceClassifiedAs, startDate, endDate (include any EconomicEvent that overlaps the start date to end date range inclusive; missing start date is from the beginning, missing end date is to the end) 
-
 *inverse queries:*
-
-   * appreciationOf (Appreciation.appreciationWith)
-   * appreciationWith (Appreciation.appreciationOf)
 
 *other queries:*
 
@@ -111,15 +94,12 @@ This document is not meant to imply that all of these named queries and filters 
   * economicResource
   * economicResources
 
-*filters:* searchString, accountableAgent, currentLocation, withinLocation (some geographic boundary, city, region, etc.),  excludeZeroQuantities (boolean), classifiedAs, state, trackingIdentifier
-
 *inverse queries:*
 
-   * contains (EconomicResource.containedIn)
    * intents (Intent.resourceInventoriedAs)
    * commitments (Commitment.resourceInventoriedAs)
-   * economicEventsInOutFrom (All economic events with the economic resource in the EconomicEvent.resourceInventoriedAs, which includes all process related events, the provider resource in transfers/moves, and raise/lower)
-   * economicEventsTo (All economic events with the economic Resource in the EconomicEvent.toResourceInventoriedAs, which is the receiver resource in transfers and moves)
+   * economicEventsFrom (All economic events with the economic resource in the EconomicEvent.resourceInventoriedAs)
+   * economicEventsTo (All economic events with the economic Resource in the EconomicEvent.toResourceInventoriedAs)
 
 *other queries:*
 
@@ -137,16 +117,14 @@ This document is not meant to imply that all of these named queries and filters 
 
    * proposal
    * proposals
-   * offers (Proposals where .purpose is offer; or where .publishes has an Intent.provider)
-   * requests (Proposals where .purpose is request; or where .reciprocal has an Intent.receiver)
-
-
-*filters:* inScopeOf, withinLocation (the proposed intents are withinLocation), active (boolean, the current date is within the hasBeginning and hasEnd, inclusive), isOffer (boolean), isRequest (boolean)
+   * offers (Proposals where .purpose is offer)
+   * requests (Proposals where .purpose is request)
 
 *other queries:*
 
-   * isOffer (boolean, true if .purpose is offer; or if a .publishes has a .provider)
-   * isRequest (boolean, true if .purpose is request; or if a .publishes has a .receiver)
+   * isOffer (boolean, true if .purpose is offer)
+   * isRequest (boolean, true if .purpose is request)
+   * isWithin (Proposal.eligibleLocation)
 
 ### Intent
 
@@ -155,11 +133,7 @@ This document is not meant to imply that all of these named queries and filters 
    * intent
    * intents
 
-*filters:* searchString, action, provider, receiver, resourceClassifiedAs, resourceConformsTo, finished, startDate, endDate, inScopeOf, withinLocation (some geographic boundary, city, region, etc.)
-
 *inverse queries:*
-
-   * (probably some location based queries, TBD)
 
 ### Agreement
 
@@ -174,7 +148,7 @@ This document is not meant to imply that all of these named queries and filters 
 
 *other queries:*
 
-   * involvedAgents (any .provider, .receiver, .inScopeOf on commitments or economicEvents)
+   * involvedAgents (any .provider, .receiver on Commitment or EconomicEvent)
    * economicEvents (EconomicEvent.realizationOf, and any EconomicEvents that fulfill Commitments that are .clauseOf or .reciprocalClauseOf the Agreement)
 
 ### Commitment
@@ -184,14 +158,11 @@ This document is not meant to imply that all of these named queries and filters 
    * commitment
    * commitments
 
-*filters:* searchString, action, provider, receiver, resourceClassifiedAs, resourceConformsTo, finished, startDate, endDate (include any Commitment that overlaps the start date to end date range inclusive; missing start date is from the beginning, missing end date is to the end), withinLocation (some geographic boundary, city, region, etc.)
-
 *inverse queries:*
 
 *other queries:*
 
-   * involvedAgents (Commitment.provider, .receiver, .inScopeOf if agent)
-   * (possibly some location based queries, TBD)
+   * involvedAgents (Commitment.provider, .receiver)
 
 ### Claim
 
@@ -199,8 +170,6 @@ This document is not meant to imply that all of these named queries and filters 
 
    * claim
    * claims
-
-*filters:* action, provider, receiver, resourceClassifiedAs, resourceConformsTo, finished, startDate, endDate (include any Claim where due overlaps the start date to end date range inclusive; missing start date is from the beginning, missing end date is to the end)
 
 *inverse queries:*
 
@@ -210,8 +179,6 @@ This document is not meant to imply that all of these named queries and filters 
 
    * plan
    * plans
-
-*filters:* searchString, finished (true means all the processes that are part of the Plan are finished), TBD possibly some date related logic
 
 *inverse queries:*
 
@@ -231,8 +198,6 @@ This document is not meant to imply that all of these named queries and filters 
 
    * resourceSpecification
    * resourceSpecifications
-
-*filters:* searchString, resourceClassifiedAs
 
 *inverse queries:*
 

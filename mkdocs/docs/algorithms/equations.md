@@ -13,4 +13,4 @@ Contributing to creating the output:
 Distributing income according to the value equation:
 ![sensorica flow 2, showing selling and receiving payment for the part, and distributing according to the input contributions](../assets/sens-flow-2.png)
 
-Here's [a lot more detail about value equations](https://speakerdeck.com/mikorizal/10-nrp-value-equation-concepts-and-tutorial) as implemented in Sensorica's NRP software, one of the precursors to Valueflows.
+Here's [a lot more detail about value equations](https://speakerdeck.com/mikorizal/10-nrp-value-equation-concepts-and-tutorial){target="_blank"} as implemented in Sensorica's NRP software, one of the precursors to Valueflows.

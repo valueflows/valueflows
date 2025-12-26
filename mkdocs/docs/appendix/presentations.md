@@ -1,5 +1,7 @@
 # Other Available Documentation
 
+*This section is non-normative.*
+
 We are occasionally asked for other documentation and visuals for Valueflows.  We'll keep adding below as new things become available.  We also appreciate projects contributing graphics and other useful presentations back to the Valueflows community, and we will add them here. 
 
 ## Graphics in this documentation
