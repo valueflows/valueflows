@@ -1,3 +1,10 @@
+## 0.16 (December 2025)
+
+- Remove AgentRelationship, AgentRelationshipRole and related data (breaking)
+- Remove inScopeOf except for domain Process (breaking)
+- Clean up M:Ms and inverses, mostly documentation
+- Many documentation improvements
+
 ## 0.15 (December 2025)
 
 - Remove Scenario, ScenarioDefinition, and related non-operational data (breaking)
