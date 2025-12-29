@@ -25,10 +25,9 @@
 * Brent Shambaugh
 * Dan Hassan
 * Alexander Praetorius
-* Steve Michel
 * Tiberius Brastaviceanu
-* Simon Tegg
 * Johannes Winter
+* Leanne Ussher
 * Elio Qoshi
 
 ### REA assistance and inspiration

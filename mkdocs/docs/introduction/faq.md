@@ -5,6 +5,8 @@ hide:
 
 # Frequently Asked Questions (FAQ)
 
+*This section is non-normative.*
+
 ### What is Valueflows?
 
 Valueflows is a vocabulary and model (an ontology) that is intended to cover any economic activity, focused on the economic networks of the "next economy", but also supporting conventional businesses and supply chains.  It's main purpose is to facilitate interoperability between various economic software. It can also be used as an internal model for a Valueflows "native" application.
@@ -15,7 +17,7 @@ No, Valueflows is only the vocabulary and documentation.  There are [some applic
 
 ### How do we think of the "economy"?
 
-[Community Economies](http://communityeconomies.org/about/community-economies-research-and-practice) has a definition we like a lot.  "In conventional usage, economy often refers to a system of formal commodity production and monetary exchange. Our use of the term is much broader. The 'eco' in economy comes from the Greek root oikos, meaning 'home' or 'habitat'—in other words, that which sustains life. The 'nomy' comes from nomos, meaning management. We view economy as referring to all of the practices that allow us to survive and care for each other and the earth. Economy, understood this way, is not separate from ecology, but refers to the ongoing management—and therefore negotiation—of human and nonhuman ecological relations of sustenance."
+[Community Economies](http://communityeconomies.org/about/community-economies-research-and-practice){target="_blank"} has a definition we like a lot.  "In conventional usage, economy often refers to a system of formal commodity production and monetary exchange. Our use of the term is much broader. The 'eco' in economy comes from the Greek root oikos, meaning 'home' or 'habitat'—in other words, that which sustains life. The 'nomy' comes from nomos, meaning management. We view economy as referring to all of the practices that allow us to survive and care for each other and the earth. Economy, understood this way, is not separate from ecology, but refers to the ongoing management—and therefore negotiation—of human and nonhuman ecological relations of sustenance."
 
 ### What do we mean, “economic network”?
 
@@ -41,17 +43,21 @@ The Valueflows model is designed to support:
 
 Other economic vocabularies are focused on conventional capitalist enterprise operational and accounting needs.
 
+### Can I put Valueflows on a blockchain?
+
+Valueflows attempts to be as technically agnostic as possible.  But there are some challenges putting it on a blockchain, basically because VF does not form a "chain" when data is created, it forms a "directed graph".  A good place to see this is on [this Process diagram](core.md/#directed-graphs-of-flows).  It is probably possible to put it on a blockchain; or sometimes people store the information in a more traditional data structure, and also put the data on a blockchain for the advantages that offers.  Or people have used other distributed or decentralized structures for all of an application's data storage, instead of a blockchain.  Or if the VF data is limited to traditional exchange data where longer flows are not created, a blockchain should be no problem.
+
 ### Where can I read more about REA?
 
 Here are [a lot of REA links](../appendix/rea.md).
 
 ### What formats is Valueflows available in?
 
-The vocabulary is presented in several ways, as Linked Open Data using the Resource Description Framework (RDF) family of languages, as well as a GraphQL reference and a UML model. We want to support RDF based and non-RDF based uses of the vocabulary, basically any way that people want to use software and data on the internet to help create economic networks.
+The vocabulary is presented in several ways, as Linked Open Data using the Resource Description Framework (RDF) family of languages, as well as a partial Json-schema reference, a GraphQL reference, and a UML model. We want to support RDF based and non-RDF based uses of the vocabulary, basically any way that people want to use software and data on the internet to help create economic networks.  See [the Specification overview page](../specification/spec-overview.md) for up-to-date information.
 
 ### What if I want a different format or protocol?
 
-We will add formats and protocols as requested.
+We will add formats and protocols as requested.  Or please feel free to create a new format, and we will add it to the documentation.
 
 ### What is the current release?
 

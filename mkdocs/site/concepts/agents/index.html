@@ -399,8 +399,6 @@
       
         
       
-        
-      
     
     
       
@@ -467,27 +465,6 @@
   
   <span class="md-ellipsis">
     Core Concepts
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../introduction/principles/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Principles
   </span>
   
 
@@ -653,7 +630,7 @@
         
   
   <span class="md-ellipsis">
-    UML Diagram
+    Class and Property Diagram
   </span>
   
 
@@ -743,8 +720,6 @@
   
     
     
-      
-        
       
         
       
@@ -885,24 +860,6 @@
   <a href="#types-of-agents" class="md-nav__link">
     <span class="md-ellipsis">
       Types of Agents
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#agent-relationships" class="md-nav__link">
-    <span class="md-ellipsis">
-      Agent Relationships
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#network-shapes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Network Shapes
     </span>
   </a>
   
@@ -1143,27 +1100,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../scoping/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Scoping
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../location/" class="md-nav__link">
         
   
@@ -1248,8 +1184,6 @@
       
         
       
-        
-      
     
     
       
@@ -1295,27 +1229,6 @@
   
   <span class="md-ellipsis">
     Examples Overview
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../examples/ex-agent/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Agents
   </span>
   
 
@@ -1917,24 +1830,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#agent-relationships" class="md-nav__link">
-    <span class="md-ellipsis">
-      Agent Relationships
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#network-shapes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Network Shapes
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#agent-philosophies" class="md-nav__link">
     <span class="md-ellipsis">
       Agent Philosophies
@@ -1960,7 +1855,7 @@
 
   <h1>Agents</h1>
 
-<p>The agent vocabulary describes networks of people, organizations, and ecological agents, constructed using a simple but powerful model of agents and their relationships.</p>
+<p>The agent vocabulary describes people, organizations, and ecological agents.</p>
 <p>See also <a href="../../specification/model-text/#agent">Agents in the Diagram Explanations</a> and <a href="../../examples/ex-agent/">Agent examples</a>.</p>
 <h2 id="types-of-agents">Types of Agents</h2>
 <p>Types of agents:</p>
@@ -1970,20 +1865,9 @@
 <li>The <strong>ecological agent</strong> concept is added to expand the scope of REA to do ecological and climate accounting, including impact of various resources on agents in the environment.</li>
 </ul>
 <p>(The concept of "Agent" could also in the future include software/AI-based agents(bots, self-driving vehicles, etc.), but this is controversial and somewhat complex.)</p>
-<p>In Valueflows, we are talking about economic agents, agents who can create or modify or exchange value, and make agreements with each other - who have economic agency.  Adding the Ecological Agent also expands the concept of "economic", bringing that kind of activity and impact, and even agency, out to the whole ecosystem, not just the human one.</p>
+<p>In Valueflows, we are talking about economic agents, agents who can create or modify or exchange value, and make agreements with each other - who have economic agency.  Adding the Ecological Agent also expands the concept of "economic", bringing that kind of activity and impact, and even agency, out to the whole living ecosystem, not just the human one.</p>
 <p>If people want to define types of organizations (like cooperative, corporation, network, community, etc.) we provide a classification property which people can define as they wish.  We do the same for the ecological agent (like ecosystem, forest, etc.).</p>
-<p>We have defined the properties of Agents very minimally. There are a number of useful properties in existing vocabularies, such as <a href="https://iptc.org/thirdparty/foaf/">foaf</a>, <a href="https://www.w3.org/TR/vcard-rdf/">vcard</a>, <a href="https://schema.org/">schema.org</a>, and others that can be used. Or people can create their own as needed.</p>
-<h2 id="agent-relationships">Agent Relationships</h2>
-<p>Agent relationships have many nuances, thus VF provides the ability to define one's own kinds of relationships.  For example people might "participate" with an organization by means of agreeing to terms and conditions.  Or people might have more active "membership" in a group or organization.  Or people might consider themselves members but want a more independently flavored term such as "affiliates".</p>
-<p>A relationship can be more like a role, for example "grower" or "harvester" for a food network.</p>
-<p>Relationships have direction: For example, in "Michael is a member of Enspiral", Michael is the subject and Enspiral is the object.  In this case the inverse is also valid, "Enspiral has member Michael". In VF, we consider this to be one relationship.  One directional relationships like "follows" are also supported.</p>
-<p>Relationships can be in a <a href="../scoping/">scope</a> (or not): For example, "Kathy is mentor of Sam, in the scope of Enspiral."</p>
-<p>EcologicalAgents and Organizations both need human Agents to act on their behalf and represent their agency in the world of people. This can be defined as various roles.</p>
-<h2 id="network-shapes">Network Shapes</h2>
-<p>Different kinds of relationships can be thought of as creating the "shapes" of a network. Something like this:</p>
-<p><img alt="diagrams showing member-type, sub-organizational, trading partner relationships" src="../../assets/agent-shapes-examples.png" /></p>
-<p>The following shows some agents that are "inside" a network, also some agents that are "outside" a network, but have relationships with the network agent or with agents within the network.</p>
-<p><img alt="diagrams from a tool showing agent relationships" src="../../assets/agent-shapes-tool.png" /></p>
+<p>We have defined the properties of Agents very minimally. There are a number of useful properties in existing vocabularies, such as <a href="https://iptc.org/thirdparty/foaf/" target="_blank">foaf</a>, <a href="https://www.w3.org/TR/vcard-rdf/" target="_blank">vcard</a>, <a href="https://schema.org/" target="_blank">schema.org</a>, and others that can be used. Or people can create their own as needed.</p>
 <h2 id="agent-philosophies">Agent Philosophies</h2>
 <p>We also want to acknowledge that some people prefer to think of themselves as independent and decentralized agents who interact in different places in the economy as individuals, and some people think of themselves more as members of different groups and networks and communities and interact more in the context of those groups and networks and communities.  Many experiments are going on as people strive towards another economy.  We want to support all these experiments, so want to support both of these ways of thinking and organizing ourselves.  The agent vocabulary is very flexible, and will support these as well as current conventional structures.</p>
 <p>So, if people want to form a group that has agency as a group, fine.  If people want to consider that their group does not have agency as a group, also fine.  Not all groups, and especially not all networks, will be economic Agents in Valueflows. That depends on the agreement of the people in the group, and what the group needs to do as-a-group. For example, does the group need to make agreements as-a-group with other groups? Or exchange resources with other agents as-a-group?  Note that within the vocabulary, network formations will emerge, as agents have economic interactions with each other in the world.  This does not mean that the network is necessarily a Valueflows Agent, but it could be, if the participants want.</p>

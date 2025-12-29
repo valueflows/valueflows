@@ -399,8 +399,6 @@
       
         
       
-        
-      
     
     
       
@@ -467,27 +465,6 @@
   
   <span class="md-ellipsis">
     Core Concepts
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../introduction/principles/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Principles
   </span>
   
 
@@ -653,7 +630,7 @@
         
   
   <span class="md-ellipsis">
-    UML Diagram
+    Class and Property Diagram
   </span>
   
 
@@ -741,8 +718,6 @@
   
     
     
-      
-        
       
         
       
@@ -1066,27 +1041,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../concepts/scoping/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Scoping
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../concepts/location/" class="md-nav__link">
         
   
@@ -1171,8 +1125,6 @@
       
         
       
-        
-      
     
     
       
@@ -1218,27 +1170,6 @@
   
   <span class="md-ellipsis">
     Examples Overview
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../examples/ex-agent/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Agents
   </span>
   
 
@@ -1929,12 +1860,13 @@
 
 
 <h1 id="algorithms-overview">Algorithms Overview</h1>
+<p><em>All of the Algorithms sections are non-normative.</em></p>
 <p>This section is about what computer programs (or humans with pencil and paper and a lot of work) can do with Valueflows economic networks once they are constructed on the Web or in a database.</p>
 <h2 id="network-based-algorithms">Network-based algorithms</h2>
 <ul>
 <li><strong>Dependent Demand</strong> constructs schedules for operational economic networks from recipes<ul>
 <li>Many other scheduling algorithms can be used over the same recipes. </li>
-<li><a href="https://en.wikipedia.org/wiki/Gantt_chart">Gantt charts</a> are a popular network schedule visualization.
+<li><a href="https://en.wikipedia.org/wiki/Gantt_chart" target="_blank">Gantt charts</a> are a popular network schedule visualization.
 <img alt="gantt chart example" src="../../assets/fw16-2.gif" /></li>
 <li><strong>Critical Path</strong> is another scheduling algorithm that analyzes a network of processes to figure out the bottlenecks, the processes that need special attention.</li>
 </ul>
@@ -1947,16 +1879,16 @@
 <li>
 <p><strong>Economic and Ecosystem Analysis</strong>:</p>
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/System_dynamics">System Dynamics</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Systems_ecology">Systems Ecology</a> including <a href="https://en.wikipedia.org/wiki/Energy_flow_(ecology)">Energy Flow Analysis</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Input%E2%80%93output_model">Input-Output Analysis</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Environmentally_extended_input-output_analysis">Environmentally Extended IPO Analysis</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Material_flow_analysis">Material Flow Analysis</a>
+<li><a href="https://en.wikipedia.org/wiki/System_dynamics" target="_blank">System Dynamics</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Systems_ecology" target="_blank">Systems Ecology</a>, including <a href="https://en.wikipedia.org/wiki/Energy_flow_(ecology)" target="_blank">Energy Flow Analysis</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Input%E2%80%93output_model" target="_blank">Input-Output Analysis</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Environmentally_extended_input-output_analysis" target="_blank">Environmentally Extended IPO Analysis</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Material_flow_analysis" target="_blank">Material Flow Analysis</a>
 <img alt="material flow analysis diagram" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/MFASystem_3.png/1024px-MFASystem_3.png" /></li>
 </ul>
 </li>
 <li>
-<p><strong>Network Flows</strong> is a general name for all of those algorithms and many many more. See <a href="https://en.wikipedia.org/wiki/Flow_network">Flow Networks</a> on Wikipedia and elsewhere.</p>
+<p><strong>Network Flows</strong> is a general name for all of those algorithms and many many more. See <a href="https://en.wikipedia.org/wiki/Flow_network" target="_blank">Flow Networks</a> on Wikipedia and elsewhere.</p>
 </li>
 </ul>
 <p>There are similarities and differences among the algorithms:</p>
@@ -1965,22 +1897,22 @@
 <li>Dependent Demand schedules backwards from an end date; Critical Path schedules forwards from a start date.</li>
 <li>Dependent Demand does an explosion: breaking down the end resource of a recipe into a tree of components and processes.</li>
 <li>Value Rollups do an implosion: summarizing all the inputs of the exploded tree of components and processes into a total value.</li>
-<li>The Economic and Ecosystem algorithms use <a href="https://en.wikipedia.org/wiki/IPO_model">Input-Process-Output Models</a></li>
+<li>The Economic and Ecosystem algorithms use <a href="https://en.wikipedia.org/wiki/IPO_model" target="_blank">Input-Process-Output Models</a></li>
 <li>All of those algorithms work on flow networks, otherwise known as directed graphs, composed of nodes and links between them.</li>
 </ul>
 <p><img alt="flow network diagram" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Max_flow.svg/330px-Max_flow.svg.png" /></p>
 <h2 id="agent-based-algorithms">Agent-based algorithms</h2>
 <ul>
 <li>
-<p><a href="https://en.wikipedia.org/wiki/Agent-based_model">Agent-Based Models</a></p>
+<p><a href="https://en.wikipedia.org/wiki/Agent-based_model" target="_blank">Agent-Based Models</a></p>
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/Agent-based_model_in_biology">In biology</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Agent-based_computational_economics">In economics</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Computational_sociology">In sociology</a>, including <a href="https://en.wikipedia.org/wiki/Social_network_analysis">Social Network Analysis</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Agent-based_model_in_biology" target="_blank">In biology</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Agent-based_computational_economics" target="_blank">In economics</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Computational_sociology" target="_blank">In sociology</a>, including <a href="https://en.wikipedia.org/wiki/Social_network_analysis" target="_blank">Social Network Analysis</a></li>
 </ul>
 </li>
 <li>
-<p><a href="https://en.wikipedia.org/wiki/Complex_adaptive_system">Complex adaptive systems</a></p>
+<p><a href="https://en.wikipedia.org/wiki/Complex_adaptive_system" target="_blank">Complex adaptive systems</a></p>
 </li>
 </ul>
 

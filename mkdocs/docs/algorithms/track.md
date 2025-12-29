@@ -1,6 +1,6 @@
 ## Difference between tracking and tracing
 
-[From StackExchange:](http://ell.stackexchange.com/questions/34391/difference-between-track-and-trace):
+[From StackExchange:](http://ell.stackexchange.com/questions/34391/difference-between-track-and-trace){target="_blank"}:
 
 > The difference is in direction & point in time:
 
@@ -23,7 +23,7 @@ Briefly, to gather a whole track or trace, the previous or next methods should b
 
 ## Adding breadcrumbs on initial save
 
-For the most part, the structure provides the causal order of the flows.  But for some specific situations, such as repeated cycles referencing the same ProcessSpecifications, additional information should be saved on the EconomicEvent and EconomicResource to aid in obtaining consistent causal order. (Timestamps are not reliable in distributed systems.)
+For the most part, the structure provides the causal order of the flows.  But for some specific situations, such as repeated cycles referencing the same ProcessSpecifications, additional information should be saved on the EconomicEvent and EconomicResource to aid in obtaining consistent causal order. (Timestamps are not reliable in distributed systems.)  The following is the hack we implemented, you may have a better one.
 
 * Add two new fields called `previousEvent`, one on EconomicResource and one on EconomicEvent.  The `previousEvent` fields reference an EconomicEvent.
 

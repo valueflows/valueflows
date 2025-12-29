@@ -19,13 +19,12 @@ nav:
     - Introduction:
         - What is Valueflows: introduction/introduction.md
         - Core Concepts: introduction/core.md
-        - Principles: introduction/principles.md
         - Contributors: introduction/contributors.md
         - Release and Status: introduction/status.md
     - Specification:
         - Specification Overview: specification/spec-overview.md
         - RDF-based Specification: specification/all_vf.html
-        - UML Diagram: specification/uml.md
+        - Class and Property Diagram: specification/uml.md
         - Diagram Explanations: specification/model-text.md
         - Use of Other Vocabularies: specification/external-terms.md
         - Query Naming: specification/inverses.md
@@ -42,13 +41,11 @@ nav:
         - Operational Planning: concepts/plan.md
         - Recipes: concepts/recipes.md
         - Classification: concepts/classification.md
-        - Scoping: concepts/scoping.md
         - Location: concepts/location.md
         - Accounting: concepts/accounting.md
         - Ecological Accounting: concepts/ecology.md
     - Examples:
         - Examples Overview: examples/ex-overview.md
-        - Agents: examples/ex-agent.md
         - Resources: examples/ex-resource.md
         - Offers and Requests: examples/ex-proposals.md
         - Recipes and Planning: examples/ex-planning.md

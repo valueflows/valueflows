@@ -22,7 +22,7 @@ For example, from one agent's viewpoint, the exchange may be a "purchase", from 
 
 For the individual agent’s accounting systems, assuming an Exchange of goods for money, when the goods are transferred from the seller to the purchaser, the purchaser’s Accounts Payable are increased (credited) and the seller’s Accounts Receivable are increased (debited). The independent view sees a transfer of goods from one agent to another.
 
-While conventional accounting uses the individual agent view, larger-scale economic analyses and planning, like for networks, communities, and bioregions, use the independent view. See [Value Flow Algorithms](../algorithms/overview.md).
+While conventional accounting uses the individual agent view, larger-scale economic analyses and planning, like for networks, communities, and bioregions, use the independent view. See [Value Flow Algorithms](../algorithms/overview.md){target="_blank"}.
 
 ## Accounting as in Accountability...
 
@@ -46,9 +46,9 @@ Moreover, General Ledgers and accounting reports can be created automatically fo
 
 Accounting statements can also be updated instantly for each participant in any economic event as soon as the event is recorded. For example, consider an economic exchange, where one agent transfers some goods to another, and the other agent transfers some money in return. The inventory of the goods-providing agent will be instantly decremented, and the receiving agent's incremented. Likewise the money accounts of the money-providing and receiving agents will immediately change. Income statements, balance sheets, and cash flow reports can reflect the new changes immediately. The financial positions of each agent can always be up-to-date as of the last recorded event.
 
-This article describes how to generate General Ledgers etc. from REA data using procedural code: [Operation of a Relational Accounting System, Graham Gal and Bill McCarthy](../linked-docs/OperationofaRelationalAccountingSystem.pdf)
+This article describes how to generate General Ledgers etc. from REA data using procedural code: [Operation of a Relational Accounting System, Graham Gal and Bill McCarthy](../linked-docs/OperationofaRelationalAccountingSystem.pdf){target="_blank"}.
 
-Wim Laurier is working on how to do it declaratively. [This paper](../linked-docs/paper8.pdf) gives an early view of how Wim and Satoshi Horiuchi intend to do it.
+Wim Laurier is working on how to do it declaratively. [This paper](../linked-docs/paper8.pdf){target="_blank"} gives an early view of how Wim and Satoshi Horiuchi intend to do it.
 
 The difference between doing it procedurally and doing it declaratively:
 

@@ -5,7 +5,7 @@ See also [Flows in motion: Planning](../specification/model-text.md/#flows-in-mo
 
 ## Coordinating work
 
-A plan can cover more than one [scope](scoping.md), if the different scopes are tightly coordinated with pre-agreed rules, for example sub-organizations of a main organization, or an ongoing supply chain.  If not, or if the agents prefer, then requirements from one scope could become deliverables for another scope's plan.  Different batch sizes could trigger a new plan for inputs to the main deliverable too.  But all of this does not affect the vocabulary or model.  Plans can relate to each other through resource flows just like processes.
+A plan can cover more than one organization, if the processes are tightly coordinated with pre-agreed rules, for example sub-organizations of a main organization, or an ongoing supply chain.  If not, or if the agents prefer, then requirements from one agent could become deliverables for another agent's plan.  Different batch sizes could trigger a new plan for inputs to the main deliverable too.  But all of this does not affect the vocabulary or model.  Plans can have implied relationships to each other through resource flows just like processes.
 
 Plans are used for understanding and coordinating what needs to happen for specific outputs. The size and complexity of a plan is up to the people who are planning and coordinating the work.
 

@@ -1,39 +1,41 @@
 ## REA (Resources, Events, Agents)
 
+*This section is non-normative.*
+
 **The REA ontology is the main basis for the Valueflows model.  Here is some background:**
 
-[Bill McCarthy's list of REA papers](https://www.williamemccarthy.com/)
+[Bill McCarthy's list of REA papers](https://www.williamemccarthy.com/){target="_blank"}
 
-[McCarthy's original 1982 REA paper](../linked-docs/REA+Accounting+Model_A+Generalized+Framework+for+Accounting+Systems+in+a+Shared+Data+Environment_1982.pdf)
+[McCarthy's original 1982 REA paper](../linked-docs/REA+Accounting+Model_A+Generalized+Framework+for+Accounting+Systems+in+a+Shared+Data+Environment_1982.pdf){target="_blank"}
 
-[REA ontology paper (Geerts and McCarthy)](../linked-docs/The+Ontological+Foundations+of+REA+Enterprise+Information+Systems_2000.pdf)
+[REA ontology paper (Geerts and McCarthy)](../linked-docs/The+Ontological+Foundations+of+REA+Enterprise+Information+Systems_2000.pdf){target="_blank"}
 
-[REA Beyond the Enterprise (Haugen)](http://mikorizal.org/BeyondTheEnterprise.html)
+[REA Beyond the Enterprise (Haugen)](http://mikorizal.org/BeyondTheEnterprise.html){target="_blank"}
 
-[From private ownership to commons accounting (Haugen)](http://mikorizal.org/Fromprivateownershipaccountingtocommonsaccoun.html)
+[From private ownership to commons accounting (Haugen)](http://mikorizal.org/Fromprivateownershipaccountingtocommonsaccoun.html){target="_blank"}
 
-[Singapore REA Learning Tool](http://smu.sg/rea)
+[Singapore REA Learning Tool](http://smu.sg/rea){target="_blank"}
 
 **Extending REA from internal business systems into larger economic networks:**
 
-[Radically Distributed Supply Chain Systems (Haugen at OOPSLA 1997)](http://www.jeffsutherland.org/oopsla97/haugen.html)
+[Radically Distributed Supply Chain Systems (Haugen at OOPSLA 1997)](http://www.jeffsutherland.org/oopsla97/haugen.html){target="_blank"}
 
-[A semantic model for Internet supply chain collaboration (Haugen and McCarthy 2000)](../linked-docs/REA_+A+Semantic+Model+for+Internet+Supply+Chain+Collaboration_2000.pdf) a little dated and most of the internal links are broken, but still useful
+[A semantic model for Internet supply chain collaboration (Haugen and McCarthy 2000)](../linked-docs/REA_+A+Semantic+Model+for+Internet+Supply+Chain+Collaboration_2000.pdf){target="_blank"} a little dated and most of the internal links are broken, but still useful
 
 **ISO Accounting and Economic Ontology based on REA:**
 
-International Standards Organization, [“ISO 15944-4: Information Technology – Business Operational View – Part 4: Business Transaction Scenarios – Accounting and Economic Ontology,” Second Version of International Standard, The International Organization for Standards (ISO), Geneva, Switzerland, April 2015](https://standards.iso.org/ittf/PubliclyAvailableStandards/).  (Link connects reader to request for free copy of certain ISO standards; reader then chooses to ask for 15944-4-2015.)
+International Standards Organization, [“ISO 15944-4: Information Technology – Business Operational View – Part 4: Business Transaction Scenarios – Accounting and Economic Ontology,” Second Version of International Standard, The International Organization for Standards (ISO), Geneva, Switzerland, April 2015](https://standards.iso.org/ittf/PubliclyAvailableStandards/){target="_blank"}.  (Link connects reader to request for free copy of certain ISO standards; reader then chooses to ask for 15944-4-2015.)
 
-[McCarthy ISO slide deck](../linked-docs/REA-Ontology_ISO-15944-4--BillMcCarthy_20131107.pdf)
+[McCarthy ISO slide deck](../linked-docs/REA-Ontology_ISO-15944-4--BillMcCarthy_20131107.pdf){target="_blank"}
 
 ## IPO (Input-Process-Output)
 
-Merged into the REA pattern, is the [IPO pattern](https://en.wikipedia.org/wiki/IPO_model), which is used in many fields of study and analysis. IPO use for [Material Flow Analysis](https://en.wikipedia.org/wiki/Material_flow_analysis) is almost the same as we use it in Valueflows.
+Merged into the REA pattern, is the [IPO pattern](https://en.wikipedia.org/wiki/IPO_model){target="_blank"}, which is used in many fields of study and analysis. IPO use for [Material Flow Analysis](https://en.wikipedia.org/wiki/Material_flow_analysis){target="_blank"} is almost the same as we use it in Valueflows.
 
 ## Dependent Demand
 
-We do event-driven Resource Requirements Planning based on that pattern.  [Dependent Demand - a Business Pattern (Haugen 1997)](../linked-docs/dependent_demand.pdf)
+We do event-driven Resource Requirements Planning based on that pattern.  [Dependent Demand - a Business Pattern (Haugen 1997)](../linked-docs/dependent_demand.pdf){target="_blank"}
 
 ## REA and Climate
 
-REA (and Valueflows) works very well for climate analysis and accounting, see [Accounting for Planetary Survival](../linked-docs/AccountingForPlanetarySurvival_defx-2.pdf), especially *Resources - Events - Agents (REA): An accounting system for networked cooperation and shared supply chains* starting on pg. 85; and *Appendix I: From private ownership accounting to commons accounting*.
+REA (and Valueflows) works very well for climate analysis and accounting, see [Accounting for Planetary Survival](../linked-docs/AccountingForPlanetarySurvival_defx-2.pdf){target="_blank"}, especially *Resources - Events - Agents (REA): An accounting system for networked cooperation and shared supply chains* starting on pg. 85; and *Appendix I: From private ownership accounting to commons accounting*.

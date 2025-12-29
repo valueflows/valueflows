@@ -1,8 +1,10 @@
 # Use of Other Vocabularies
 
+*This section is non-normative.*
+
 ## Units of Measure
 
-Using agreed upon standard units will facilitate network interoperability into the future.  Valueflows uses the units of measure from [the OM2 vocabulary](https://github.com/HajoRijgersberg/OM).  Here is the [complete rdf reference for OM2](https://raw.githubusercontent.com/HajoRijgersberg/OM/master/om-2.0.rdf), which undergoes occasional update by the maintainers.  Here is the [same reference with a user interface](http://www.ontology-of-units-of-measure.org/resource/om-2/Unit).
+Using agreed upon standard units will facilitate network interoperability into the future.  Valueflows uses the units of measure from [the OM2 vocabulary](https://github.com/HajoRijgersberg/OM){target="_blank"}.  Here is the [complete rdf reference for OM2](https://raw.githubusercontent.com/HajoRijgersberg/OM/master/om-2.0.rdf){target="_blank"}, which undergoes occasional update by the maintainers.  Here is the [same reference with a user interface](http://www.ontology-of-units-of-measure.org/resource/om-2/Unit){target="_blank"}.
 
 The OM2 vocabulary contains thousands of units of measure.  It includes all the commonly used units of measure for business use, as well as scientific units, both common and obscure.
 
@@ -10,20 +12,20 @@ The OM2 vocabulary contains thousands of units of measure.  It includes all the 
 
 OM2 also has a quantity called Measure, including both the numeric amount and the unit of measure.
 
-[http://www.ontology-of-units-of-measure.org/resource/om-2/](http://www.ontology-of-units-of-measure.org/resource/om-2/)
+[http://www.ontology-of-units-of-measure.org/resource/om-2/](http://www.ontology-of-units-of-measure.org/resource/om-2/){target="_blank"}
 
-* [`om:Measure`](http://www.ontology-of-units-of-measure.org/resource/om-2/Measure)
-    * [`om:hasUnit`](http://www.ontology-of-units-of-measure.org/resource/om-2/hasUnit)
-        * [`om:Unit`](http://www.ontology-of-units-of-measure.org/resource/om-2/Unit)
-    * [`om:hasNumericalValue`](http://www.ontology-of-units-of-measure.org/resource/om-2/hasNumericalValue)
+* [`om:Measure`](http://www.ontology-of-units-of-measure.org/resource/om-2/Measure){target="_blank"}
+    * [`om:hasUnit`](http://www.ontology-of-units-of-measure.org/resource/om-2/hasUnit){target="_blank"}
+        * [`om:Unit`](http://www.ontology-of-units-of-measure.org/resource/om-2/Unit){target="_blank"}
+    * [`om:hasNumericalValue`](http://www.ontology-of-units-of-measure.org/resource/om-2/hasNumericalValue){target="_blank"}
 
-Valueflows has created this same structure within our namespace, and added some additional properties for flexible labeling for business users.  VF's Unit also has a OM unit identifier, referencing back to OM for cross-network unique identification of the units.
+Valueflows has created this same structure within our namespace, and added some additional properties for flexible labeling for business users and other languages.  VF's Unit also has a OM unit identifier, referencing back to OM for cross-network unique identification of the units.
 
 ### Application units of measure
 
 We expect that user applications will choose a much smaller subset of these standard units, and probably maintain them separately.
 
-To facilitate this, a [csv file of units](https://codeberg.org/valueflows/valueflows/src/branch/master/units/units-en-useful.csv) has been extracted from OM2 to make it easier for user groups to choose their set of standard units.  Since OM2 is still in active development, this file will gradually become out of date, but we expect added units to be newer scientific units not usually used in economic applications.
+To facilitate this, a [csv file of units](https://codeberg.org/valueflows/valueflows/src/branch/master/units/units-en-useful.csv){target="_blank"} has been extracted from OM2 to make it easier for user groups to choose their set of standard units.  Since OM2 is still in active development, this file will gradually become out of date, but we expect added units to be newer scientific units not usually used in economic applications.
 
 This file includes only the English version for now, although some additional languages can be found in OM2.  The currencies have been removed, since we recommend these be set up as Resource Specifications instead, semantically, and specifically given the proliferation of alternate currencies.  We have added classifications (partially complete) to facilitate search for needed units. The columns in this file are, left to right:
 
@@ -40,7 +42,7 @@ The vf:label and vf:symbol should default to the OM2 values, but can be overridd
 
 Perhaps the most frequent use of overriding is the unit `one`.  This indicates a generic one dimensional unit from the scientific perspective, which in an economic application might be called `each`, `piece`, `count`, `number` or similar, or just left off of a user interface or report.  Some applications might even want to use more than one of these local labels. But for interoperability, any of these overrides should reference back to OM2:one.
 
-See [this directory about units](https://codeberg.org/valueflows/valueflows/src/branch/master/units) for other potentially useful artifacts.
+See [this directory about units](https://codeberg.org/valueflows/valueflows/src/branch/master/units){target="_blank"} for other potentially useful artifacts.
 
 ## Quantities and Durations
 
@@ -52,7 +54,7 @@ We decided to also use `vf:Measure` for durations, since OM2 has the time-based 
 
 See also [Flows Concepts: Quantities and Times](../concepts/flows.md/#quantities-and-times).
 
-VF times are inspired by [the owl:time ontology](https://www.w3.org/TR/owl-time), but we have much more limited needs.  We decided to pull them into the VF namespace, rather than directly referencing owl:time.  Specifically we decided not to [map them as is done for the PROV-O ontology](https://www.w3.org/TR/owl-time/#time-prov). But owl:time does support many time constructs and comparisons that may be useful for people, such as below.
+VF times are inspired by [the owl:time ontology](https://www.w3.org/TR/owl-time){target="_blank"}, but we have much more limited needs.  We decided to pull them into the VF namespace, rather than directly referencing owl:time.  Specifically we decided not to [map them as is done for the PROV-O ontology](https://www.w3.org/TR/owl-time/#time-prov){target="_blank"}. But owl:time does support many time constructs and comparisons that may be useful for people, such as below.
 
 ![diagram of owl:time interval relations](../assets/IntervalRelations.png)
 
@@ -64,15 +66,15 @@ See also [Location Concepts](../concepts/location.md).
 
 Currently there is not a unified standard location vocabulary, due to the varied historical development of these standards.
 
-Our location data is a compromise between basic needs (latitude, longitude, and altitude), subclassed from the [Basic Geo Vocabulary (WGS84)](https://www.w3.org/2003/01/geo/wgs84_pos#), and more complex needs, for which we include a data reference to the extensive Geography information of the [GEOSPARQL Specification](https://docs.ogc.org/is/22-047r1/22-047r1.html#_b3644674-c6c7-4971-b600-a24d2bda0e01).
+Our location data is a compromise between basic needs (latitude, longitude, and altitude), subclassed from the [Basic Geo Vocabulary (WGS84)](https://www.w3.org/2003/01/geo/wgs84_pos#){target="_blank"}, and more complex needs, for which we include a data reference to the extensive Geography information of the [GEOSPARQL Specification](https://docs.ogc.org/is/22-047r1/22-047r1.html#_b3644674-c6c7-4971-b600-a24d2bda0e01){target="_blank"}.
 
-For more information on the current state of specification of spatial data, one reference is the [Spatial Data on the Web Best Practices](https://www.w3.org/TR/sdw-bp/).
+For more information on the current state of specification of spatial data, one reference is the [Spatial Data on the Web Best Practices](https://www.w3.org/TR/sdw-bp/){target="_blank"} .
 
 ## Elements not included in VF
 
 Valueflows is a generic vocabulary, and does not contain many domain-specific properties beyond those needed for coordinating economic value flows.  So it will be normal to use additional elements, hopefully from another standard.
 
-For example, there are no food or bicycle specific elements.  Much of this can be handled by the user-definable ResourceSpecification and ProcessSpecificaion. Applications might also want to consider using a faceted classification structure for this purpose.
+For example, there are no food or bicycle specific elements.  At the lowest operational level, this can be handled by the user-definable ResourceSpecification and ProcessSpecification. At higher levels of categorization, applications might also consider using taxonomies and/or a faceted classification structure.
 
 There are also only minimal properties for classes that are on the "edge" of the vocabulary, and which have other more complete sets of properties elsewhere.  For example, `Agent` is very sparse, and some applications might want more contact information, etc.  `EconomicResource` has many identifiers that are industry specific (like GTIN) which applications might want to include.  We are using `rdfs:seeAlso` to provide helpful sources for those kinds of elements.  In addition, anything that is a `rdfs:subClassOf` a class from another vocabulary can inherit its properties.
 
