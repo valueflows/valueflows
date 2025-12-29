@@ -135,6 +135,8 @@ This document is *NOT* meant to imply that all of these named methods should be 
 
 *inverse queries:*
 
+   * satisfiedBy (EconomicEvent.satisfies and Commitment.satisfies)
+
 ### Agreement
 
 *main queries:*
@@ -160,6 +162,8 @@ This document is *NOT* meant to imply that all of these named methods should be 
 
 *inverse queries:*
 
+   * fulfilledBy (EconomicEvent.fulfills)
+
 *other queries:*
 
    * involvedAgents (Commitment.provider, .receiver)
@@ -172,6 +176,8 @@ This document is *NOT* meant to imply that all of these named methods should be 
    * claims
 
 *inverse queries:*
+
+   * settledBy (EconomicEvent.settles)
 
 ### Plan
 

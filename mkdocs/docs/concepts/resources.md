@@ -88,7 +88,7 @@ Economic resources (little-r, not confined to EconomicResources) can be inventor
 * Not inventoried: You could keep track of it, but it isn't worth it.  This usually happens for quantities of small or hard to measure items that are obtained in bulk, like solder or bolts.  In this case, you have to look at the actual resource to see if you need more, the data won't tell you.
 * Not applicable: This is for types of work, services, and other resources where it just doesn't make sense.
 
-Note here we are using the term "inventory" but this also applies to money, credits, etc. in an "account".
+Note here we are using the term "inventory" but this also applies to money, credits, etc. in an "account".  I.e. it can be incremented or decremented by economic events, and maintains both an accounting and onhand balance.
 
 ## How resources relate to events
 

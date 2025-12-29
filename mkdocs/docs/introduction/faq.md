@@ -45,7 +45,7 @@ Other economic vocabularies are focused on conventional capitalist enterprise op
 
 ### Can I put Valueflows on a blockchain?
 
-Valueflows attempts to be as technically agnostic as possible.  But there are some challenges putting it on a blockchain, basically because VF does not form a "chain" when data is created, it forms a "directed graph".  A good place to see this is on [this Process diagram](/introduction/core/#directed-graphs-of-flows).  It is probably possible to put it on a blockchain; or sometimes people store the information in a more traditional data structure, and also put the data on a blockchain for the advantages that offers.  Or people have used other distributed or decentralized structures for all of an application's data storage, instead of a blockchain.  Or if the VF data is limited to traditional exchange data where longer flows are not created, a blockchain should be no problem.
+Valueflows attempts to be as technically agnostic as possible.  But there are some challenges putting it on a blockchain, basically because VF does not form a "chain" when data is created, it forms a "directed graph".  A good place to see this is on [this Process diagram](core.md/#directed-graphs-of-flows).  It is probably possible to put it on a blockchain; or sometimes people store the information in a more traditional data structure, and also put the data on a blockchain for the advantages that offers.  Or people have used other distributed or decentralized structures for all of an application's data storage, instead of a blockchain.  Or if the VF data is limited to traditional exchange data where longer flows are not created, a blockchain should be no problem.
 
 ### Where can I read more about REA?
 
@@ -53,7 +53,7 @@ Here are [a lot of REA links](../appendix/rea.md).
 
 ### What formats is Valueflows available in?
 
-The vocabulary is presented in several ways, as Linked Open Data using the Resource Description Framework (RDF) family of languages, as well as a partial Json-schema reference, a GraphQL reference, and a UML model. We want to support RDF based and non-RDF based uses of the vocabulary, basically any way that people want to use software and data on the internet to help create economic networks.  See [the Specification overview page](/specification/spec-overview/) for up-to-date information.
+The vocabulary is presented in several ways, as Linked Open Data using the Resource Description Framework (RDF) family of languages, as well as a partial Json-schema reference, a GraphQL reference, and a UML model. We want to support RDF based and non-RDF based uses of the vocabulary, basically any way that people want to use software and data on the internet to help create economic networks.  See [the Specification overview page](../specification/spec-overview.md) for up-to-date information.
 
 ### What if I want a different format or protocol?
 
