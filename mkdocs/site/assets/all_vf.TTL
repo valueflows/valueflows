@@ -81,7 +81,7 @@ vf:ResourceSpecification a  owl:Class ;
         rdfs:label          "Resource Specification"@en ;
         vf:layer            vf:knowledge ;
         vs:term_status      "stable" ;
-        rdfs:comment        "Specifies the kind of economic or environmental resource, even if the resource is not instantiated as an EconomicResource. Could define a material or digital thing, service, currency, skill or type of work, rights."@en ;
+        rdfs:comment        "Specifies the kind of economic or environmental resource, even if the resource is not instantiated as an EconomicResource. Could define a material or digital thing, service, medium of exchange or currency, skill or type of work."@en ;
         .
 
 vf:ProcessSpecification a   owl:Class ;
@@ -290,7 +290,7 @@ vf:EconomicResource  a      owl:Class ;
         rdfs:label          "Economic Resource"@en ;
         vf:layer            vf:observation ;
         vs:term_status      "stable" ;
-        rdfs:comment        "Economic or environmental things (material or digital), money, rights, or combinations of those, which agents agree should be accounted for and which can be inventoried."@en ;
+        rdfs:comment        "Economic or environmental things (material or digital), media of exchange, which agents agree should be accounted for and which can be inventoried."@en ;
         .
 
 vf:Process  a               owl:Class ;
@@ -597,14 +597,13 @@ vf:settles  a               owl:ObjectProperty ;
         rdfs:domain         vf:EconomicEvent ;
         rdfs:range          vf:Claim ;
         vs:term_status      "testing" ;
-        rdfs:comment        "References a claim that is fully or partially settled by the economic event."@en ;
+        rdfs:comment        "The claim(s) settled fully or partially by the economic event."@en ;
         .
 
 vf:containedIn a            owl:ObjectProperty ;
         rdfs:label          "contained in"@en ;
         rdfs:domain         vf:EconomicResource ;
         rdfs:range          vf:EconomicResource ;
-        owl:maxCardinality  1 ;
         vs:term_status      "unstable" ;
         rdfs:comment        "Used when an economic resource contains units also defined as separate economic resources, for example a tool kit or a package of resources for shipping."@en ;
         .
@@ -814,7 +813,7 @@ vf:purpose  a               owl:ObjectProperty ;
         rdfs:range          vf:ProposalPurpose ;
         owl:maxCardinality  1 ;
         vs:term_status      "testing" ;
-        rdfs:comment        "The type of proposal, whether offer or request."@en ;
+        rdfs:comment        "The type of proposal, whether offer or request (others may be added as need arises)."@en ;
         .
 
 vf:created a                owl:DatatypeProperty ;
@@ -1021,7 +1020,7 @@ vf:fulfills  a              owl:ObjectProperty ;
         rdfs:domain         vf:EconomicEvent ;
         rdfs:range          vf:Commitment ;
         vs:term_status      "testing" ;
-        rdfs:comment        "The commitment which is completely or partially fulfilled by an economic event."@en ;
+        rdfs:comment        "The commitment(s) fulfilled completely or partially by an economic event."@en ;
         .
 
 vf:satisfies
@@ -1030,7 +1029,7 @@ vf:satisfies
         rdfs:domain         [ owl:unionOf (vf:Commitment vf:EconomicEvent ) ] ;
         rdfs:range          vf:Intent ;
         vs:term_status      "testing" ;
-        rdfs:comment        "An intent satisfied fully or partially by an economic event or commitment."@en ;
+        rdfs:comment        "The intent(s) satisfied fully or partially by an economic event or commitment."@en ;
         .
 
 vf:publishes
@@ -1065,7 +1064,7 @@ vf:listedIn a               owl:ObjectProperty ;
         rdfs:domain         vf:Proposal ;
         rdfs:range          vf:ProposalList ;
         vs:term_status      "testing" ;
-        rdfs:comment        "This proposal is part of a list of proposals."@en ;
+        rdfs:comment        "This proposal is part of these lists of proposals."@en ;
         .
 
 vf:lists a                  owl:ObjectProperty ;
@@ -1288,7 +1287,7 @@ vf:bundledIn a              owl:ObjectProperty ;
         rdfs:range          vf:AgreementBundle ;
         owl:maxCardinality  1 ;
         vs:term_status      "testing" ;
-        rdfs:comment        "This agreement is bundled with other agreements."@en ;
+        rdfs:comment        "This agreement is bundled with other agreements, for example in an order."@en ;
         .
 
 vf:bundles a                owl:ObjectProperty ;

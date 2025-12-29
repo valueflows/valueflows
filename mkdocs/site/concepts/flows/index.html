@@ -992,6 +992,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#how-to-minimize-data-entry-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to minimize data entry requirements
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#actions" class="md-nav__link">
     <span class="md-ellipsis">
       Actions
@@ -2016,6 +2025,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#how-to-minimize-data-entry-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to minimize data entry requirements
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#actions" class="md-nav__link">
     <span class="md-ellipsis">
       Actions
@@ -2081,6 +2099,14 @@
 <h2 id="matching-intents">Matching Intents</h2>
 <p>Often agents will start their plans independently and record their initial intents. Later once they make a Commitment with another agent, it will represent a specific shared part of their plans. For that reason any Commitment can result in Satisfaction of the providing agent's Intent as well as Satisfaction of the receiving agent's Intent.</p>
 <p><img alt="diagram showing matching of 2 Intents from different agents, satisfied by 1 Commitment, fulfilled by an Event" src="../../assets/matched.png" /></p>
+<h2 id="how-to-minimize-data-entry-requirements">How to minimize data entry requirements</h2>
+<p>This may seem like a lot of data entry, since the flow records in these transitions over time are maintained.  In practice, since the patterns of the flows are very similar, you can make use of that to directly pre-fill data entry forms or generate the initial data in the next phase.  What this could look like:</p>
+<ul>
+<li>On the highest layer, recipes can be used to generate plans including Processes and Commitments and/or Intents.  This is usually done when production processes are involved, but can also be for exchange. Recipes could on some use cases be used directly, but most often the quantities are different on the plan. A recipe should be set up to produce the lowest natural batch quantity.  The quantities and times can be multiplied out (or calculated as makes sense for the use case) to create a scheduled plan which is saved. Sometimes Commitments or Intents in generated plans need to also be tweaked a bit.</li>
+<li>We also hope that there will be a higher level that groups recipes by economic function, so that an organization could just generate initial recipes from open libraries.  Organizations could contribute to these libraries, creating a data commons that would help everyone using the vocabulary.</li>
+<li>Or in case of direct exchange, Intent data can be used to prefill Commitment data, with a few or no changes needed except using the correct agents, and sometimes changing the quantity.  This could be from matching a request and an offer intent.</li>
+<li>Often a person with Commitment data displayed as default can just indicate that is what happened and an EconomicEvent can be created, or perhaps make minor changes first if the reality doesn't exactly match the plan.</li>
+</ul>
 <h2 id="actions">Actions</h2>
 <p>All types of flows use the same set of actions, which define what the flow does and how it behaves in relation to resources.  You can find detailed documentation on actions on the <a href="../actions/">Actions page</a>.</p>
 <h2 id="quantities-and-times">Quantities and Times</h2>

@@ -40,8 +40,16 @@ The figure below shows that Economic Events have to be observed and for that rea
 
 Often agents will start their plans independently and record their initial intents. Later once they make a Commitment with another agent, it will represent a specific shared part of their plans. For that reason any Commitment can result in Satisfaction of the providing agent's Intent as well as Satisfaction of the receiving agent's Intent.
 
-
 ![diagram showing matching of 2 Intents from different agents, satisfied by 1 Commitment, fulfilled by an Event](../assets/matched.png)
+
+## How to minimize data entry requirements
+
+This may seem like a lot of data entry, since the flow records in these transitions over time are maintained.  In practice, since the patterns of the flows are very similar, you can make use of that to directly pre-fill data entry forms or generate the initial data in the next phase.  What this could look like:
+
+* On the highest layer, recipes can be used to generate plans including Processes and Commitments and/or Intents.  This is usually done when production processes are involved, but can also be for exchange. Recipes could on some use cases be used directly, but most often the quantities are different on the plan. A recipe should be set up to produce the lowest natural batch quantity.  The quantities and times can be multiplied out (or calculated as makes sense for the use case) to create a scheduled plan which is saved. Sometimes Commitments or Intents in generated plans need to also be tweaked a bit.
+* We also hope that there will be a higher level that groups recipes by economic function, so that an organization could just generate initial recipes from open libraries.  Organizations could contribute to these libraries, creating a data commons that would help everyone using the vocabulary.
+* Or in case of direct exchange, Intent data can be used to prefill Commitment data, with a few or no changes needed except using the correct agents, and sometimes changing the quantity.  This could be from matching a request and an offer intent.
+* Often a person with Commitment data displayed as default can just indicate that is what happened and an EconomicEvent can be created, or perhaps make minor changes first if the reality doesn't exactly match the plan.
 
 
 ## Actions
