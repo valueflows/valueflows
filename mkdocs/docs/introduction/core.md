@@ -70,7 +70,7 @@ Both process-based flows and flows without processes can create "directed graphs
 
 ## Traversing value flows
 
-Value flows can be traversed forwards ("tracking") or backwards ("tracing"). Or maybe it would be better to say "in any direction", but forwards means in the direction of value creation, and backwards means in the direction of return or compensation.  Often people use the term "provenance" when looking backwards towards the source of some resource, sometimes when a problem emerges (as in a disease outbreak from food), sometimes to know the quality of the resource (as in wanting local humanely produced food with lower ecological impact).
+Value flows can be traversed forwards ("tracking") or backwards ("tracing"). Or maybe it would be better to say "in any direction", but forwards means in the direction of value creation, and backwards means in the direction of return or compensation.  Sometimes people use the term "provenance" when looking backwards towards the source of some resource, sometimes when a problem emerges (as in a disease outbreak from food), sometimes to know the quality of the resource (as in wanting local humanely produced food with lower ecological impact).
 
 The data structures of Valueflows provide the ability to trace or track any value flow, no matter how long or complex.  In the above diagram, following the arrows forward from an Economic Resource is to track what happened to the resource once produced, following them backwards from an Economic Resource is to trace what went into the resource plus all has happened because of the production and distribution of the resource.
 

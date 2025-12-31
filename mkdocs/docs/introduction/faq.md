@@ -53,7 +53,7 @@ Here are [a lot of REA links](../appendix/rea.md).
 
 ### What formats is Valueflows available in?
 
-The vocabulary is presented in several ways, as Linked Open Data using the Resource Description Framework (RDF) family of languages, as well as a partial Json-schema reference, a GraphQL reference, and a UML model. We want to support RDF based and non-RDF based uses of the vocabulary, basically any way that people want to use software and data on the internet to help create economic networks.  See [the Specification overview page](../specification/spec-overview.md) for up-to-date information.
+The vocabulary is presented in several ways, as Linked Open Data using the Resource Description Framework (RDF) family of languages, as well as a partial Json-schema reference, a GraphQL reference, and a Class and Properties model. We want to support RDF based and non-RDF based uses of the vocabulary, basically any way that people want to use software and data on the internet to help create economic networks.  See [the Specification overview page](../specification/spec-overview.md) for up-to-date information.
 
 ### What if I want a different format or protocol?
 
