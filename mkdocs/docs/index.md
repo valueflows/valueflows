@@ -10,28 +10,23 @@ hide:
 
 ## Abstract
 
-Valueflows is intended to support coordination of any economic activity, with extra attention to experimental and solidarity economic networks, but also supporting conventional businesses and supply chains. It utilizes resource flows connecting many agents (people, organizations, ecological agents). These resource flows can include value creation and/or value transfer. As a flow-oriented model, it can coordinate whole networks as easily as one company, including regions and circular economies.
+The Valueflows vocabulary (ontology) is intended to support coordination and accounting of economic activity, with extra attention to experimental and solidarity economic networks, but also fully supporting conventional businesses and supply chains. It utilizes resource flows connecting many agents (people, organizations, ecological agents). These resource flows can include value creation, usage, and/or transfer.
 
-At its core, Valueflows implements an ontology called REA ([Resources Events Agents](https://en.wikipedia.org/wiki/Resources,_Events,_Agents){target="_blank"}). REA is an accounting and business process modeling ontology, which was initially driven by the advent of computers and the concept of normalization of data models. As such it represents a simple and elegant model for real-world economic activity, as opposed to the conventional abstraction of debits/credits. To REA we have added some concepts found in various experimental economic groups (for example recipes, offers and requests) and ecological accounting (which is ignored in most accounting treatments), as well as made the ontology more implementation-ready and friendly to distributed protocols.
+As a flow-oriented model, Valueflows can coordinate whole networks as easily as one company, including regions and circular economies.  An economic network consists of independent economic agents collaborating to produce and distribute goods and services to meet human and ecological needs. For example, food, clothing, housing, education, health care. healthy soil, etc.
 
-**Definitions and philosophy**
+At its core, Valueflows implements an ontology called REA ([Resources Events Agents](https://en.wikipedia.org/wiki/Resources,_Events,_Agents){target="_blank"}). REA is an accounting and business process modeling ontology, which was initially driven by the advent of computers and the concept of normalization of data models. As such it represents a simple and elegant model for planning and recording real-world economic activity, as opposed to the conventional abstraction of debits/credits, although those can be derived. To REA we have added some concepts found in various economic groups (for example recipes, offers and requests), and ecological accounting (which is ignored in most accounting treatments), as well as made the ontology more implementation-ready and friendly to distributed protocols.
 
-* Economy: [Community Economies](https://communityeconomies.org/about/community-economies-research-and-practice){target="_blank"} has a definition we like a lot. "In conventional usage, economy often refers to a system of formal commodity production and monetary exchange. Our use of the term is much broader. The 'eco' in economy comes from the Greek root oikos, meaning 'home' or 'habitat'—in other words, that which sustains life. The 'nomy' comes from nomos, meaning management. We view economy as referring to all of the practices that allow us to survive and care for each other and the earth. Economy, understood this way, is not separate from ecology, but refers to the ongoing management—and therefore negotiation—of human and nonhuman ecological relations of sustenance."
-* An economic network consists of independent economic agents (individual people or organizations) collaborating to produce and distribute goods and services to meet human and ecological needs. For example, food, clothing, housing, education, health care. healthy soil, etc.
-* When we say "next economy", we want to support experiments towards
-    * cooperation rather than competition;
-    * open, shared, common knowledge instead of jealously-guarded “intellectual property”;
-    * sustainable production instead of getting away with as much plunder as possible;
-    * “equitable distribution of value” vs exploitation for profit;
-    * respecting nature and our environment.
-* To give some concrete examples, the Valueflows ontology is designed to support
-    * coordination of economic activity both inside and between organizations, an enterprise is not assumed;
-    * reciprocity with or without money, money is not assumed;
-    * ecological agents as part of the network; externalities as resources.
+For example, the Valueflows ontology is designed to support
+
+* coordination of economic activity both inside and between organizations, an enterprise is not assumed;
+* reciprocity with or without money, money is not assumed;
+* ecological agents as part of the network; externalities documented as resource flows.
+
+On a more technical level, the main purpose of Valueflows is to facilitate interoperability among different software applications.  It specifies the vocabulary, but not the technical protocol.  The Valueflows core model has also been used to design new economic software applications, but that is not necessary for interoperability.
 
 **Namespace**
 
-The namespace for Valueflows terms is `https://w3id.org/valueflows/ont/vf#`, supporting TTL, JSON-LD and HTML.  The preferred namespace prefix is `vf`.
+The namespace for Valueflows terms is `https://w3id.org/valueflows/ont/vf#`.  The preferred namespace prefix is `vf`.
 
 
 ## Using the documentation
@@ -42,7 +37,7 @@ Here are some suggestions to help you find your way into this documentation, dep
 
 * **To learn about the vocabulary itself**, you could start with the [**high-level description of the core model**](introduction/core.md), and then continue as you like in these directions...
 
-      * For the more visually oriented or people who like diagrams, head to the [**UML diagram**](specification/uml.md).
+      * For the more visually oriented or people who like diagrams, head to the [**class diagram**](specification/uml.md).
 
       * Whether or not you look at the diagram, see these [**class and relationship explanations by subject area**](specification/model-text.md), which also point to the related [**concepts pages**](concepts/concepts-overview.md).  Or just go straight to the [**concepts section**](concepts/concepts-overview.md).
 

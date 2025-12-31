@@ -11,11 +11,11 @@ We have defined a core set of actions, but expect that this will be extended wit
 
 **produce** - A new resource is created in the process, or an addition to an existing stock resource of the same type is incremented.  `produce` is used in manufacturing of goods, but also in any kind of creation of a material or digital or energy resource.
 
-**consume** - Most often, an ingredient or component is transformed  into the output(s) of the process. Or the input resource can be just used up during the process, like energy. After the process the specified quantity of the consumed input is gone.
+**consume** - Most often, an input ingredient or component is transformed  into the output(s) of the process. Or the input resource can be just used up during the process, like energy. After the process the specified quantity of the consumed input is gone.
 
 **use** - Most often `use` is employed for equipment or tools that are used in a process, but not consumed.  After the process, the piece of equipment of tool still exists, but during the process, it is unavailable. The unavailability can be useful to know if the resource must be scheduled, or if one needs to know how much the resource is used.
 
-**cite** - `cite` is used when a resource is input to a process, but is neither used nor consumed, and remains available during the process.  Examples are a design file or a scientific paper, any digital knowledge, which is cited so that the agent(s) responsible for the resource receive credit.
+**cite** - `cite` is used when a resource is input to a process, but is neither used nor consumed, and remains available during the process.  Examples are a design file or a scientific paper, any documented knowledge, which is cited so that the agent(s) responsible for the resource receive credit.
 
 **work** - `work` refers to labor applied to a process.  There is generally no identifiable resource involved, only the provider agent. In this case, the type of work or skill involved can be identified by a resource specification. A possible exception would be if the agent's work schedule is kept on a calendar, representing when the specific agent is available to work.
 
@@ -27,7 +27,7 @@ We have defined a core set of actions, but expect that this will be extended wit
 
 **modify** - The identified resource that was accepted into a process appears in the output of that process, with modifications made.  Note not all modifications require a physical change, for example quality testing.  In all cases though, it matters that the resource has gone through that process, and the `stage` of the resource (the process specification of the process) is then used as part of the logical identification of the resource when the resource is requested as a process input or for a transfer.
 
-**combine** - A resource is put in a package or a combination resource; the same resource might appear later when it is separated.  Examples are packing one or more resources for transportation or storage, creation of a kit resource, herd of cows.  The combined resource is still identified in the system, but is `containedIn` the package or combination resource, which would be usually produced in the process.  When a resource is `containedIn` another resource, it could be still available, depending on the use case.  Note that packing materials or containers which will continue to have their own identity later are also combined in the process; if not, they can be consumed.
+**combine** - A resource is put in a package or a combination resource; the same resource might appear later when it is separated.  Examples are packing one or more resources for transportation or storage, creation of a kit resource, a herd of cows.  The combined resource is still identified in the system, but is `containedIn` the package or combination resource, which would be usually produced in the process.  When a resource is `containedIn` another resource, it could be still available, depending on the use case.  Note that packing materials or containers which will continue to have their own identity later are also combined in the process; if not, they can be consumed.
 
 **separate** - A resource is removed from a package or a combination resource; the same resource appeared as input earlier in another process when it was combined.  When the resource is separated, it loses its `containedIn` reference.
 
@@ -35,7 +35,7 @@ We have defined a core set of actions, but expect that this will be extended wit
 
 **transferAllRights** - This action gives full (in the human realm) rights and responsibilities to another agent, without transferring physical custody.  People might call this "ownership"; or it might be considered "stewardship" or similar.  This occurs instantaneously, and does not involve documented physical transfer.
 
-**transferCustody** - This action gives physical custody and control of a resource to another agent, without full rights. The physical custodian often has responsibilities associated with custody, however.  Examples where transfer of custody is useful are loaning a resource to another agent, or when a resource is transferred to have a service performed by another agent, like transportation or repair.
+**transferCustody** - This action gives physical custody and control of a resource to another agent, without involving rights. The physical custodian often has responsibilities associated with custody, however.  Examples where transfer of custody is useful are loaning a resource to another agent, or when a resource is transferred to have a service performed by another agent, like transportation or repair.
 
 **transfer** - This action gives full (human) rights and responsibilities plus physical custody, combining the last two actions for simplicity.
 
@@ -45,7 +45,7 @@ We have defined a core set of actions, but expect that this will be extended wit
 
 **raise** - This action adjusts a quantity up, used either when a computer system is brought up and existing resources must be entered with a beginning balance, or when an inventory count in the real world shows that the quantity in the computer system is too low.  When it is known how a resource was obtained, it is preferable to use the real action.
 
-**lower** - This action adjusts a quantity down, used either when a computer system is brought up and existing resources must be entered with a negative beginning balance (very rare!), or when an inventory count in the real world showing that the quantity in the computer system is too high.  When it is known how a resource was lowered, it is preferable to use the real action.
+**lower** - This action adjusts a quantity down, used either when a computer system is brought up and existing resources must be entered with a negative beginning balance (very rare!), or when an inventory count in the real world shows that the quantity in the computer system is too high.  When it is known how a resource was lowered, it is preferable to use the real action.
 
 ## Action Behaviors
 
@@ -77,7 +77,7 @@ Note: The actions `use` and `work` are time-based actions, either with or withou
 
 **locationEffect** - For this action, if the economic event's `toLocation` exists, then the affected economic resource's `currentLocation` should be set to the same location.  For `new`, the resource's location should be set only if it is a new resource.  For `updateTo`, the resource is the one in `toResourceInventoriedAs`.  For `update`, the resource is the one in `resourceInventoriedAs`.
 
-**containedEffect** - This applies to the actions that deal with resources contained in other resources, and applies to the `resourceInventoriedAs`.  The `update` option sets the resource's `containedIn` resource, which can be referenced in the event's `toResourceInventoriedAs`; the `remove` option nulls the resource's `containedIn` resource.
+**containedEffect** - This applies to the actions that deal with resources contained in other resources, and applies to the `resourceInventoriedAs`.  The `update` option sets the resource's `containedIn` resource, which can be referenced in the event's `toResourceInventoriedAs`; the `remove` option nullifies the resource's `containedIn` resource.
 
 **accountableEffect** - If there is an inventoried resource, these actions should set the resource's `primaryAccountable` agent using the event's `receiver` agent.  For `new`, this applies to new resources created by the event (otherwise the `receiver` and the `primaryAccountable` should already match).  For `updateTo`, the resource updated is the `toResourceInventoriedAs`.
 
@@ -87,6 +87,8 @@ Note: The actions `use` and `work` are time-based actions, either with or withou
 
 ### Behaviors by Action
 
+The above behaviors are shown in the following table by action.
+
 *To make the diagram bigger, you can right click and select 'View Image' or 'Open Image in New Tab' or a similar command in your browser.*
 
 ![VF actions table with action behaviors](../assets/vf-actions.png)
@@ -95,8 +97,8 @@ Note: The actions `use` and `work` are time-based actions, either with or withou
 
 ### Implied Transfers
 
-Implied transfers can happen when the provider and receiver agent are different.  The transfer (or transferCustody or transferAllRights) behaviors and implications should be applied in addition to the behaviors and implications documented for the non-transfer action. See [Implied Transfers in Concepts](transfers.md/#explicit-and-implied-transfers) for details.
+Implied transfers can happen when the provider and receiver agent are different.  The transfer (or transferCustody or transferAllRights) behaviors and implications should be applied in addition to the behaviors and implications documented for the non-transfer action. See [Implied Transfers in Transfer Concepts](transfers.md/#explicit-and-implied-transfers) for details.
 
-### Saving Breadcrumbs for Track and Trace
+### Additional logic for repeated processes in flows
 
-If you will be using the track or trace algorithms to find the connected value flows forwards or backwards when there might be repeated processes, an additional field is needed when saving an event.  See [Breadcrumbs in the Track and Trace algorithm](../algorithms/track.md#adding-breadcrumbs-on-initial-save) for a suggested procedure.  Emphasizing: this is only needed if you expect "cycles" (repeated processes) in the flow; if there are no cycles then the track and trace will operate cleanly without this hack.
+If you will be using the track or trace algorithms to find the connected value flows forwards or backwards when there might be repeated processes (same Process Specification), see [this in the Track and Trace algorithm](../algorithms/track.md#adding-breadcrumbs-on-initial-save) for a suggested procedure.  Emphasizing: this is only needed if you expect "cycles" (repeated processes) in the flow; if there are no cycles then the track and trace will operate cleanly without this hack, with the above rules in place.
