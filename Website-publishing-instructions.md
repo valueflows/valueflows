@@ -27,7 +27,7 @@ This assumes that [Material for Mkdocs](https://squidfunk.github.io/mkdocs-mater
 #toc width: 15%;
 #content width: 86%;), put in /specification/all_vf.html
 1. Review, fix as needed using the above steps, merge. 
-2. Create tag and release if needed, rebuild, merge.
+2. Create tag and release if needed.
 
 When you are ready to put all merged changes to the live site:
 
