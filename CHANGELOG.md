@@ -1,3 +1,7 @@
+## 0.17 (January 2026)
+
+- Add batch/lot record
+
 ## 0.16 (December 2025)
 
 - Remove AgentRelationship, AgentRelationshipRole and related data (breaking)
