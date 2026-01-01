@@ -48,11 +48,18 @@ Here are three different kinds of resources from the viewpoint of identification
 * lot-controlled resources, where each lot or batch has a unique identifier, but the lot or batch may contain many individual instances; and
 * count or volume or stock resources, where individual instances are indistinguishable in the computer system, or in the case of fluids, only exist on a molecular level.
 
-Serialized resources would fit the direct identification pattern. Lots can be split up, so the identification of a subset of a lot would require some other properties, such as location. Stock resources can only be described indirectly, by means of some combination of properties, such as specification and location. (Location is a complex ontology of its own: for example, in warehousing, a location is often composed of warehouse:room:aisle:row:tier.)  The tracking identifier is used for serial numbers and lot/batch numbers.  (Neither of those are actually limited to numbers, that is just a common expression.)
+Serialized resources would fit the direct identification pattern. Lots can be split up, so the identification of a subset of a lot would require some other properties, such as location. Stock resources can only be described indirectly, by means of some combination of properties, such as specification and location. (Location is a complex ontology of its own: for example, in warehousing, a location is often composed of warehouse:room:aisle:row:tier.)
 
 Moreover, identification of resources will depend on scope and purpose. We want to allow each scope or context to define resources that they have relationships with, according to the combination of properties that works best for them, which might include which agent has which relationship with a resource.
 
 And then in the "independent view", for larger-scale analysis of resource flows, or for example for lot tracking for public health issues, different combinations of properties might be needed.
+
+### Batch, lot, tracking identifier
+
+All of these are used for tracking and tracing, because they are the lowest level for which there is that kind of information.  They are pre-computerization, and almost always still found on the item itself.  Even with computerized production information, they can be helpful in bridging missing flow information.  Also, often a resource originated elsewhere, and the best way to get information is to use the batch, lot, or tracking identifier to query that information.
+
+* The tracking identifier of the Economic Resource is used for serialized resources.  For manufactured items it is often called a serial number even though there are often letters included, but it also could be a unique identifier of a document, for example.
+* Batch and lot are sometimes used interchangeably, and sometimes not, and there are nuances of definition in different sectors.    In Valueflows, they are stored and used in the same way. Unlike tracking identifier, there is a separate data record kept for batch and lot.  We have defined minimal information, but some sectors require quite a lot of information to be kept with the record.  Much of it can be derived elsewhere in the data, but often it is stored directly on this record, which is called a Batch Manufacturing Record in some industries.  It can include production and expiration dates, certifications, environmental factors, testing results, etc.
 
 ### Substitutability
 

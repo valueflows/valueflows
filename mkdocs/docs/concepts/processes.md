@@ -32,9 +32,9 @@ Valueflows does not distinguish between "good" and "bad" resources created by pr
 
 ## Operational process definitions
 
-The processes defined in this version of Valueflows are considered to be operational.  This means they are the lowest level that makes sense to define a process and the intermediate resources for the use case.  Valueflows does not provide for steps within a process explicitly, so that would be done as part of the `note` field, or just documented separately.  Any process that has steps that require different resources should be considered for breaking into smaller processes.  Any process where the outputs will go separate ways is a good candidate to be defined as an operational level process, especially when the outputs will be consumed at different times.
+The processes considered in this version of Valueflows are considered to be operational, used in production or modification or transportation of economic resources.  This means they are the lowest level that makes sense to define a process and the intermediate resources for the use case.  Valueflows does not provide for steps within a process explicitly, so that would be done as part of the `note` field, or just documented separately.  Any process that has steps that require different resources should be considered for breaking into smaller processes.  Any process where the outputs will go separate ways is a good candidate to be defined as a separate operational level process, especially when the outputs will be consumed at different times.
 
-Valueflows also does not yet provide for summary level processes above the operational level, whether pre-operational (like budgeting) or non-operational (like bioregional planning). But work has been started and that is on the roadmap for a future release.
+Valueflows does not yet provide for summary level processes above the operational level, whether pre-operational (like budgeting) or non-operational (like bioregional planning). But work has been started and that is on the roadmap for a future release.
 
 
 

@@ -30,7 +30,7 @@ This specifies the kind of resource, to the most specific level needed.  It also
 
 #### EconomicResource
 
-An actual EconomicResource is created only by EconomicEvents.  It is also updated only by EconomicEvents for all its accounting related properties.  It becomes involved in a Process by being referenced by an EconomicEvent. It can appear on a Commitment or Intent if recording of a specific resource is needed.  It must have a ResourceSpecification.  It can have a stage and/or a state.  It knows its primary accountable Agent at any point in time.  It can be contained in another EconomicResource.
+An actual EconomicResource is created only by EconomicEvents.  It is also updated only by EconomicEvents for all its accounting related properties.  It becomes involved in a Process by being referenced by an EconomicEvent. It can appear on a Commitment or Intent if recording of a specific resource is needed.  It must have a ResourceSpecification.  It can have a stage and/or a state.  It knows its primary accountable Agent at the current point in time.  It can be contained in another EconomicResource.  It can have human created codes, including a serialized identifer or a lot/batch identifier in a LotBatchRecord.
 
 ### Putting flows into motion...
 
