@@ -26,8 +26,8 @@
     dcterms:type <http://purl.org/adms/assettype/Ontology> ;
     vann:preferredNamespacePrefix "vf" ;
     vann:preferredNamespaceUri "https://w3id.org/valueflows/ont/vf#" ;
-    owl:versionInfo "0.16" ;
-    owl:versionIRI <https://w3id.org/valueflows/ont/0.16/vf> ;
+    owl:versionInfo "0.17" ;
+    owl:versionIRI <https://w3id.org/valueflows/ont/0.17/vf> ;
     dcterms:status <http://purl.org/adms/status/UnderDevelopment> ;
     dcterms:license "https://creativecommons.org/licenses/by-sa/4.0/" ;
     cc:license "https://creativecommons.org/licenses/by-sa/4.0/" ;
@@ -291,6 +291,13 @@ vf:EconomicResource  a      owl:Class ;
         vf:layer            vf:observation ;
         vs:term_status      "stable" ;
         rdfs:comment        "Economic or environmental things (material or digital), media of exchange, which agents agree should be accounted for and which can be inventoried."@en ;
+        .
+
+vf:BatchLotRecord  a        owl:Class ;
+        rdfs:label          "Batch Lot Record"@en ;
+        vf:layer            vf:observation ;
+        vs:term_status      "testing" ;
+        rdfs:comment        "A document which contains all the needed detail related to the production process of a particular batch or lot, a resource processed in the same process(es) so that it is expected to be homogeneous."@en ;
         .
 
 vf:Process  a               owl:Class ;
@@ -1012,7 +1019,33 @@ vf:trackingIdentifier a     owl:DatatypeProperty ;
         rdfs:range          xsd:string ;
         owl:maxCardinality  1 ;
         vs:term_status      "stable" ;
-        rdfs:comment        "Any identifier used to track the resource, such as a serial number or VIN or lot/batch identifier."@en ;
+        rdfs:comment        "Any identifier used to track a singular resource, such as a serial number or VIN."@en ;
+        .
+
+vf:ofBatchLot a             owl:ObjectProperty ;
+        rdfs:label          "of batch or lot"@en ;
+        rdfs:domain         vf:EconomicResource ;
+        rdfs:range          vf:BatchLotRecord ;
+        owl:maxCardinality  1 ;
+        vs:term_status      "testing" ;
+        rdfs:comment        "The batch lot record of this resource, if it is a batch or lot resource."@en ;
+        .
+
+vf:batchLotCode a           owl:DatatypeProperty ;
+        rdfs:label          "batch or lot code"@en ;
+        rdfs:domain         vf:BatchLotRecord ;
+        rdfs:range          xsd:string ;
+        owl:maxCardinality  1 ;
+        vs:term_status      "testing" ;
+        rdfs:comment        "The code or identifier for this batch or lot, used to physically label individuals in the batch or lot."@en ;
+        .
+vf:expirationDate a         owl:DatatypeProperty ;
+        rdfs:label          "expiration date"@en ;
+        rdfs:domain         vf:BatchLotRecord ;
+        rdfs:range          xsd:dateTimeStamp ;
+        owl:maxCardinality  1 ;
+        vs:term_status      "testing" ;
+        rdfs:comment        "The date after which a resource of this batch or lot should no longer be used or consumed."@en ;
         .
 
 vf:fulfills  a              owl:ObjectProperty ;

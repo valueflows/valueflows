@@ -40,9 +40,9 @@
           <mxGeometry height="60" width="100" x="-230" y="399" as="geometry" />
         </mxCell>
         <mxCell id="M_ZlNN7ftNN6AqMxDQ_q-7" parent="1" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;" value="&lt;p style=&quot;margin: 4px 0px 0px; text-align: center; text-decoration: underline;&quot;&gt;&lt;font style=&quot;font-size: 13px&quot;&gt;&lt;b&gt;SpatialThing&lt;/b&gt;&lt;br&gt;&lt;/font&gt;&lt;/p&gt;&lt;hr&gt;" vertex="1">
-          <mxGeometry height="61" width="130" x="310" y="498.5" as="geometry" />
+          <mxGeometry height="61" width="130" x="330" y="320" as="geometry" />
         </mxCell>
-        <mxCell id="M_ZlNN7ftNN6AqMxDQ_q-8" edge="1" parent="1" source="M_ZlNN7ftNN6AqMxDQ_q-1" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="M_ZlNN7ftNN6AqMxDQ_q-7" value="currentLocation">
+        <mxCell id="M_ZlNN7ftNN6AqMxDQ_q-8" edge="1" parent="1" source="M_ZlNN7ftNN6AqMxDQ_q-1" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.117;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitPerimeter=0;" target="M_ZlNN7ftNN6AqMxDQ_q-7" value="currentLocation">
           <mxGeometry height="50" relative="1" width="50" as="geometry">
             <mxPoint x="220" y="360" as="sourcePoint" />
             <mxPoint x="270" y="310" as="targetPoint" />
@@ -99,6 +99,19 @@
         </mxCell>
         <mxCell id="BOXyEP9keKn3MxYfFCyP-1" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="* contains" vertex="1">
           <mxGeometry height="30" width="60" x="190" y="448" as="geometry" />
+        </mxCell>
+        <mxCell id="K0ALXgbULJ2dUSNFAnPn-1" parent="1" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="&lt;p style=&quot;margin: 4px 0px 0px; text-align: center; text-decoration: underline;&quot;&gt;&lt;b&gt;&lt;font style=&quot;font-size: 13px;&quot;&gt;BatchLotRecord&lt;/font&gt;&lt;/b&gt;&lt;/p&gt;&lt;hr&gt;&lt;p style=&quot;margin: 0px ; margin-left: 8px&quot;&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;batchLotCode&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;margin: 0px ; margin-left: 8px&quot;&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;expirationDate&lt;/font&gt;&lt;/p&gt;" vertex="1">
+          <mxGeometry height="80" width="153" x="307" y="478" as="geometry" />
+        </mxCell>
+        <mxCell id="K0ALXgbULJ2dUSNFAnPn-2" edge="1" parent="1" source="M_ZlNN7ftNN6AqMxDQ_q-1" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.75;exitDx=0;exitDy=0;labelBackgroundColor=none;" target="K0ALXgbULJ2dUSNFAnPn-1" value="&lt;span&gt;ofBatchLot&lt;/span&gt;">
+          <mxGeometry height="50" relative="1" width="50" x="0.0719" y="-6" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="170" y="532" as="sourcePoint" />
+            <mxPoint x="293" y="497" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="K0ALXgbULJ2dUSNFAnPn-3" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="*" vertex="1">
+          <mxGeometry height="16" width="20" x="186" y="415" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
