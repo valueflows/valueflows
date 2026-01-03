@@ -8,7 +8,7 @@ The kinds of flows form a progression from defined to  potential to scheduled to
 
 ### Recipe Flow
 
-Recipes are used to create plans, and the Recipe Flow can create a corresponding Intent or a Commitment in a Plan, depending on if all the agents are known and on the level of certainty of the planning.  See also [Recipes](recipes.md), [Planning from Recipe](plan.md/#planning-from-a-recipe), [Flows in motion: Recipe](../specification/model-text.md/#flows-in-motion-recipe), [Planning from Recipe example](../examples/ex-planning.md/#simple-plan-from-recipe).
+Recipes are used to create plans, and the Recipe Flow can create a corresponding Intent or a Commitment in a Plan, depending on if all the agents are known and on the level of certainty of the planning.  See also [Recipes](recipes.md), [Planning from Recipe](plan.md/#planning-from-recipe), [Flows in motion: Recipe](../specification/model-text.md/#flows-in-motion-recipe), [Planning from Recipe example](../examples/ex-planning.md/#simple-plan-from-recipe).
 
 ### Intent
 

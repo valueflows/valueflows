@@ -1064,26 +1064,38 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#how-processes-form-longer-flows" class="md-nav__link">
+    <span class="md-ellipsis">
+      How processes form longer flows
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exchange-recipes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exchange recipes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#recipe-class" class="md-nav__link">
     <span class="md-ellipsis">
       Recipe class
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Recipe class">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#byproducts-and-coproducts" class="md-nav__link">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#by-products-and-co-products" class="md-nav__link">
     <span class="md-ellipsis">
-      Byproducts and Coproducts
+      By-products and Co-products
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1872,26 +1884,38 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#how-processes-form-longer-flows" class="md-nav__link">
+    <span class="md-ellipsis">
+      How processes form longer flows
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exchange-recipes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exchange recipes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#recipe-class" class="md-nav__link">
     <span class="md-ellipsis">
       Recipe class
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Recipe class">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#byproducts-and-coproducts" class="md-nav__link">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#by-products-and-co-products" class="md-nav__link">
     <span class="md-ellipsis">
-      Byproducts and Coproducts
+      By-products and Co-products
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1921,7 +1945,7 @@
 
   <h1>Recipes</h1>
 
-<p>See also <a href="../../specification/model-text/#flows-in-motion-recipe">Flows in Motion: Recipes</a> on the Diagram Explanation, <a href="../plan/#planning-from-a-recipe">Planning from a Recipe</a> on the Operational Planning page, the <a href="../../examples/ex-planning/#simple-plan-from-recipe">Simple plan from recipe example</a>, and the <a href="../../examples/ex-planning/#building-recipes">Building recipes example</a>.</p>
+<p>See also <a href="../../specification/model-text/#flows-in-motion-recipe">Flows in Motion: Recipes</a> on the Diagram Explanation, <a href="../plan/#planning-from-recipe">Planning from a Recipe</a> on the Operational Planning page, the <a href="../../examples/ex-planning/#simple-plan-from-recipe">Simple plan from recipe example</a>, and the <a href="../../examples/ex-planning/#building-recipes">Building recipes example</a>.</p>
 <h2 id="not-just-for-cooking">Not just for cooking...</h2>
 <p>Recipes are for:</p>
 <ul>
@@ -1954,23 +1978,31 @@
 </li>
 </ul>
 <p>A workflow recipe tends to be more like a linear flow.</p>
-<p>The examples above have to do with producing specific goods or services.  Recipes can also be used to document more general business processes that an organization uses to produce more generally defined kinds of outputs.  For example, an R&amp;D process might be hard to document in detail, but it does have general steps like researching existing technology, concept generation, experimentation, concept selection, refinement, testing, documenting the design. </p>
-<h2 id="recipe-class">Recipe class</h2>
-<p>The Recipe class is an optional construct.  You might want a Recipe when you include more than one process in one recipe, and especially if different recipes can create the same Resource Specification output in different ways.  It is also useful when certain processes are included in multiple recipes, see the bottom of <a href="../../examples/ex-planning/#building-recipes">this example</a>.  You might also want Recipe when the software finds recipes by the primary output, because that can be defined directly from Recipe without interrogating the flows.</p>
-<h3 id="byproducts-and-coproducts">Byproducts and Coproducts</h3>
-<p>A Recipe knows its primary reason for being, i.e what is created by this Recipe.  As of now, it does not directly know its byproducts and coproducts. If needed, this can be found by interrogating the contents of the recipe input-process-output graph. This choice favors simplicity at this stage.</p>
-<h2 id="generation-of-plans">Generation of plans</h2>
-<p>Plans can be generated from a Recipe, a Recipe Group, or directly from a Recipe Process, which will find predescessor Recipe Processes as needed.</p>
-<p><b>Back-scheduling a plan from a Recipe</b>:
-Start with end items and a due date, generate the plan from the end item to its inputs, to the outputs leading the inputs, to their inputs, etc.</p>
-<p><b>Forward-scheduling from a Recipe</b>:
-Start with the inputs with no predecessors and a start date, generate the plan from the inputs to their outputs, to the inputs that want the outputs, etc.</p>
-<p><b>Forward-scheduling from a Resource</b>:
-Start with a Resource and generate the plan based on its recipe.  Examples:</p>
+<p>The examples above have to do with producing specific goods or services.  Recipes can also be used to document more general business processes that an organization uses to produce more generally defined kinds of outputs.  For example, an R&amp;D activity might be hard to make a detailed recipe for using exact parts, because each time it is very different.  But it does have general steps like researching existing technology, concept generation, experimentation, concept selection, refinement, testing, documenting the design.</p>
+<h2 id="how-processes-form-longer-flows">How processes form longer flows</h2>
+<p>We know that processes are loosely connected to create a <a href="../../introduction/core/#directed-graphs-of-flows">directed graph of connected processes</a>.  But how does it actually work?  It works the same in recipes, plans, and tracking/tracing economic events.  We're defining it here because it is the first place many will run into it.</p>
+<p>The patterns:</p>
 <ul>
-<li>Translation: start with a source document</li>
-<li>Auto repair: start with an auto that needs repair.</li>
+<li>
+<p>The main way is by <a href="../../specification/model-text/#resourcespecification">resource specification</a>.  An input flow of one process is loosely connected to an output flow of another process if the resource specification is the same.  And that loosely connects the processes.</p>
+</li>
+<li>
+<p>But a resource specification is not enough when there is a workflow pattern (see above) where the same resource (specification) goes into and out of a process.  In this case, we need both resource specification and <a href="../resources/#stage-and-state">stage, with optionally state</a>.  For example a process may want a document as input, but only if it has been proofread already.  Or a process may want a certain component as input, but only if it has been through the test process (stage) and has state "pass".  In these cases, if the stage or state is needed, it will be included on the input flow.  If not present on the input flow, then that signals that only the resource specification is needed.</p>
+</li>
 </ul>
+<h2 id="exchange-recipes">Exchange recipes</h2>
+<p>You can also create Exchange Recipes.  These are particularly useful when a flow of processes will also involve one or more exchanges based on the production flows.  This often happens with delivering a service or work inputs, which might involve direct reciprocal flows, for example paying an agent for the work or the service.  It also could happen when a material or digital resource is produced directly for another agent.  Basically, any production flow which is an <a href="../transfers/#explicit-and-implied-transfers">implied transfer</a> can be involved directly in an exchange, and this applies to recipes also.  There is also no reason not to have a recipe (or plan) made up only of exchanges, if there is such a use case.</p>
+<p><img alt="diagram of production and exchange recipes" src="../../assets/prod-exch.png" /></p>
+<p>In the above diagram, the top recipe processes are the production steps to produce yarn.  The agent coordinating those processes wants to agree with another agent to pay for scouring the yarn.  The flow called "deliver scouring service" is both an output of the "Scour wool" recipe process and a clause of the recipe exchange agreement.</p>
+<h2 id="recipe-class">Recipe class</h2>
+<p>The Recipe class groups Recipe Processes, and optionally Recipe Exchanges, but is an optional construct.  You will want a Recipe if different recipes can create the same resource specification output in different ways.  It is also needed when some recipe processes are included in multiple recipes, like the Summer Milking and Winter Milking recipes below, where the only difference is some details in the milking process. Or you might elect to always have a Recipe just for documentation.</p>
+<p>The Recipe class is not necessary if there is always only one choice in the instance for the next or previous recipe process in making any particular resource specification, that is if you want the plan from recipe logic to look for the next/previous recipe process from all the recipe processes in the instance.  But we suggest you either use all Recipes or no Recipes as a network instance.</p>
+<p>In the following simplified diagram, the yellow ovals are recipe processes. If they are named the same, that indicates the same instance of RecipeProcess.</p>
+<p><img alt="diagram of 2 recipes re-using recipe processes and recipe processes with no recipe" src="../../assets/recipe-processes.png" /></p>
+<h2 id="by-products-and-co-products">By-products and Co-products</h2>
+<p>A Recipe knows its primary reason for being, i.e what is created by this Recipe.  As of now, it does not directly know its <a href="../processes/#co-products-and-by-products">by-products and co-products</a>. If needed, this can be found by interrogating the contents of the recipe input-process-output graph. This choice favors simplicity at this stage.</p>
+<h2 id="generation-of-plans">Generation of plans</h2>
+<p>See the <a href="../plan/#planning-from-recipe">Planning from Recipe section in Concepts: Operational Planning</a>.</p>
 
 
 

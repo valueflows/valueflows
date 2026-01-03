@@ -36,4 +36,4 @@ Valueflows does not define the detailed internal vocabulary for agreements.
 
 ##  Recipe exchanges
 
-Recipes can include patterns for exchange, as well as production.  The Recipe Exchange is used to generate an agreement(s) and reciprocal commitments when a plan in created from the recipe.
+Recipes can include [patterns for exchange](../concepts/recipes.md/#exchange-recipes), as well as production.  The Recipe Exchange is used to generate an agreement(s) and reciprocal commitments when a plan in created from the recipe.

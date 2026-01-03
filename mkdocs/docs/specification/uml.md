@@ -31,7 +31,7 @@ These are shown properly in the smaller diagrams in the [Diagram Explanations pa
 
 To support cleaner representation in JSON / JSON-LD / RDF, as well as object oriented collections, in addition to the initial relational representation, we include some inverse terms, using `owl:inverseOf` in the source turtle file.  If there is a name on each end of the line, there is both a regular and an inverse property defined in the specification itself.
 
-Note that having an inverse defined and specifying cardenality of many are not connected.  You will see * if logically there could be more than one of the objects on that end of the relationship, whether there is explicitly an inverse defined or not.
+Note that having an inverse defined and specifying cardinality of many are not connected.  You will see * if logically there could be more than one of the objects on that end of the relationship, whether there is explicitly an inverse defined or not.
 
 For example, here a Commitment `isInput` or `isOutput` of a Process; and a Process `hasInput`(zero or more) Commitments and/or `hasOutput`(zero or more) Commitments.  Both directions are specified as part of the formal vocabulary, so can be used in the direction preferred by the application for creation and update.  However, for queries, both directions must be supported.
 

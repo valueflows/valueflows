@@ -1,0 +1,127 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:146.0) Gecko/20100101 Firefox/146.0" version="29.2.9">
+  <diagram name="Page-1" id="-QKv_nxhe1oKouQb_z0P">
+    <mxGraphModel dx="742" dy="490" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="2mx7Irq6k5gFAr2bBjMu-11" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;verticalAlign=top;" value="Plan" vertex="1">
+          <mxGeometry height="160" width="420" x="165" y="102" as="geometry" />
+        </mxCell>
+        <mxCell id="2mx7Irq6k5gFAr2bBjMu-1" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" value="Plant carrot seeds" vertex="1">
+          <mxGeometry height="60" width="90" x="184" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="2mx7Irq6k5gFAr2bBjMu-3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="Carrot seeds" vertex="1">
+          <mxGeometry height="40" width="100" x="65" y="95" as="geometry" />
+        </mxCell>
+        <mxCell id="2mx7Irq6k5gFAr2bBjMu-7" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" value="Harvest carrots" vertex="1">
+          <mxGeometry height="60" width="90" x="478" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="2mx7Irq6k5gFAr2bBjMu-8" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="Carrot plants" vertex="1">
+          <mxGeometry height="40" width="100" x="325" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="2mx7Irq6k5gFAr2bBjMu-9" edge="1" parent="1" source="2mx7Irq6k5gFAr2bBjMu-1" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="2mx7Irq6k5gFAr2bBjMu-8" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="240" y="240" as="sourcePoint" />
+            <mxPoint x="290" y="190" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2mx7Irq6k5gFAr2bBjMu-10" edge="1" parent="1" source="2mx7Irq6k5gFAr2bBjMu-8" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="2mx7Irq6k5gFAr2bBjMu-7" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="460" y="270" as="sourcePoint" />
+            <mxPoint x="510" y="220" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2mx7Irq6k5gFAr2bBjMu-12" edge="1" parent="1" source="2mx7Irq6k5gFAr2bBjMu-3" style="endArrow=classic;html=1;rounded=0;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=0;" target="2mx7Irq6k5gFAr2bBjMu-1" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="70" y="190" as="sourcePoint" />
+            <mxPoint x="120" y="140" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2mx7Irq6k5gFAr2bBjMu-13" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="Tractor" vertex="1">
+          <mxGeometry height="40" width="100" x="65" y="227" as="geometry" />
+        </mxCell>
+        <mxCell id="2mx7Irq6k5gFAr2bBjMu-14" edge="1" parent="1" source="2mx7Irq6k5gFAr2bBjMu-13" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=1;entryDx=0;entryDy=0;exitX=0.75;exitY=0;exitDx=0;exitDy=0;" target="2mx7Irq6k5gFAr2bBjMu-1" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="160" y="350" as="sourcePoint" />
+            <mxPoint x="210" y="300" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2mx7Irq6k5gFAr2bBjMu-15" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="Tractor" vertex="1">
+          <mxGeometry height="40" width="100" x="350" y="277" as="geometry" />
+        </mxCell>
+        <mxCell id="2mx7Irq6k5gFAr2bBjMu-16" edge="1" parent="1" source="2mx7Irq6k5gFAr2bBjMu-15" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=1;entryDx=0;entryDy=0;exitX=0.75;exitY=0;exitDx=0;exitDy=0;" target="2mx7Irq6k5gFAr2bBjMu-7" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="530" y="320" as="sourcePoint" />
+            <mxPoint x="580" y="270" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2mx7Irq6k5gFAr2bBjMu-17" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="Carrots" vertex="1">
+          <mxGeometry height="40" width="100" x="609" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="2mx7Irq6k5gFAr2bBjMu-18" edge="1" parent="1" source="2mx7Irq6k5gFAr2bBjMu-7" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="2mx7Irq6k5gFAr2bBjMu-17" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="580" y="310" as="sourcePoint" />
+            <mxPoint x="630" y="260" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1q9aiFdxnfQRir5D_2Ii-4" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" value="Plant carrot seeds" vertex="1">
+          <mxGeometry height="60" width="90" x="190" y="445" as="geometry" />
+        </mxCell>
+        <mxCell id="1q9aiFdxnfQRir5D_2Ii-5" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="Carrot seeds" vertex="1">
+          <mxGeometry height="40" width="100" x="49" y="390" as="geometry" />
+        </mxCell>
+        <mxCell id="1q9aiFdxnfQRir5D_2Ii-6" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" value="Harvest carrots" vertex="1">
+          <mxGeometry height="60" width="90" x="539" y="445" as="geometry" />
+        </mxCell>
+        <mxCell id="1q9aiFdxnfQRir5D_2Ii-7" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="Carrot plants" vertex="1">
+          <mxGeometry height="40" width="100" x="358" y="455" as="geometry" />
+        </mxCell>
+        <mxCell id="1q9aiFdxnfQRir5D_2Ii-8" edge="1" parent="1" source="1q9aiFdxnfQRir5D_2Ii-4" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="1q9aiFdxnfQRir5D_2Ii-7" value="produce">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="240" y="535" as="sourcePoint" />
+            <mxPoint x="290" y="485" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1q9aiFdxnfQRir5D_2Ii-9" edge="1" parent="1" source="1q9aiFdxnfQRir5D_2Ii-7" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="1q9aiFdxnfQRir5D_2Ii-6" value="comsume">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="493" y="565" as="sourcePoint" />
+            <mxPoint x="543" y="515" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1q9aiFdxnfQRir5D_2Ii-10" edge="1" parent="1" source="1q9aiFdxnfQRir5D_2Ii-5" style="endArrow=classic;html=1;rounded=0;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=0;" target="1q9aiFdxnfQRir5D_2Ii-4" value="consume">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="76" y="485" as="sourcePoint" />
+            <mxPoint x="126" y="435" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1q9aiFdxnfQRir5D_2Ii-11" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="Tractor" vertex="1">
+          <mxGeometry height="40" width="100" x="49" y="522" as="geometry" />
+        </mxCell>
+        <mxCell id="1q9aiFdxnfQRir5D_2Ii-12" edge="1" parent="1" source="1q9aiFdxnfQRir5D_2Ii-11" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=1;entryDx=0;entryDy=0;exitX=0.75;exitY=0;exitDx=0;exitDy=0;" target="1q9aiFdxnfQRir5D_2Ii-4" value="use">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="166" y="645" as="sourcePoint" />
+            <mxPoint x="216" y="595" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1q9aiFdxnfQRir5D_2Ii-13" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="Tractor" vertex="1">
+          <mxGeometry height="40" width="100" x="390" y="522" as="geometry" />
+        </mxCell>
+        <mxCell id="1q9aiFdxnfQRir5D_2Ii-14" edge="1" parent="1" source="1q9aiFdxnfQRir5D_2Ii-13" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=1;entryDx=0;entryDy=0;exitX=0.75;exitY=0;exitDx=0;exitDy=0;" target="1q9aiFdxnfQRir5D_2Ii-6" value="use">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="563" y="615" as="sourcePoint" />
+            <mxPoint x="613" y="565" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1q9aiFdxnfQRir5D_2Ii-15" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="Carrots" vertex="1">
+          <mxGeometry height="40" width="100" x="708" y="455" as="geometry" />
+        </mxCell>
+        <mxCell id="1q9aiFdxnfQRir5D_2Ii-16" edge="1" parent="1" source="1q9aiFdxnfQRir5D_2Ii-6" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="1q9aiFdxnfQRir5D_2Ii-15" value="produce">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="613" y="605" as="sourcePoint" />
+            <mxPoint x="663" y="555" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -6,11 +6,11 @@ See also [Input-Process-Output](../introduction/core.md#ipo-input-process-output
 
 ## Processes and resource flows
 
-By Process, we mean an activity that transforms inputs into outputs. The outputs might then become inputs to other processes, forming networks and chains. Those chains may be circular, where an output from one process becomes an input to another process that occurred previously in the same chain, supporting circular economies.  Processes are a key piece of the structure where we can see a whole value flow.
+By Process, we mean an activity that transforms inputs into outputs. The outputs might then become inputs to other processes, forming networks and chains. Those chains may be circular, where an output from one process becomes an input to another process that occurred previously in the same chain, supporting circular economies.  Processes are a key piece of the structure where we can follow a whole value flow.
 
 ## For example...
 
-* For example: a farming process takes compost, soil, seeds, water and human work as inputs, and transforms them into grains, nuts, fruit, or vegetables. Those ingredients may go to kitchens that create dinners for people to eat. Some of those ingredients may be pared off in preparation, or spoil, or be left on plates. Those leftovers go into compost, which starts the process chain over from the beginning.
+* A farming process takes compost, soil, seeds, water and human work as inputs, and transforms them into grains, nuts, fruit, or vegetables. Those ingredients may go to kitchens that create dinners for people to eat. Some of those ingredients may be pared off in preparation, or spoil, or be left on plates. Those leftovers go into compost, which starts the process chain over from the beginning.
 
 * Or for a bad example: a CAFO (Confined Animal Feeding Operation) produces a lot of manure. They put manure into big lagoons, which drain into the water table, and come back up in people's drinking water, causing diseases, for which the people become inputs to hospital processes.
 
@@ -20,9 +20,17 @@ By Process, we mean an activity that transforms inputs into outputs. The outputs
 
 Connected processes enable us to see cause and effect, if we want.
 
-## How to think about processes and their flows
+## Defining operational processes
+
+The processes considered in this version of Valueflows are operational, i.e. reflecting on-the-ground production or modification or transportation of economic resources.  This means they are the lowest level that makes sense to define a process and the intermediate resources for the use case.  Valueflows does not provide for steps within a process explicitly, so that could be done as part of the `note` field, or just documented separately.  Any process that has steps that require different resources should be considered for breaking into smaller processes.  Any process where the outputs will go separate ways is a good candidate to be defined as a separate operational process, especially if the outputs will be consumed at different times.  Defining processes might be a science, but it feels more like an art because there are so many different situations.
+
+Valueflows does not yet provide for summary level processes above the operational level, whether pre-operational (like budgeting) or non-operational (like bioregional planning). But work has been started and that is on the roadmap for a future release.
+
+## How to think about processes vs. their flows
 
 This can be confusing.  Sometimes people tend to think about the flows as where some processing is happening.  This is understandable, since flow names ([actions](actions.md) like `consume` or `produce`) imply some kind of activity.  However, it is appropriate in the Valueflows model to think about all the transformations and transportation happening in Processes.  The flows fundamentally define what happens to resources because of the activity in the processes.  For example, there would never be a flow with an action of "plant" or "harvest", even though seeds are planted, and vegetables are harvested.  Planting and harvesting are Processes.  Seeds resources are decremented, vegetable resources are incremented.
+
+![diagram of 2 processes](../assets/processes.png)
 
 ## Co-products and by-products
 
@@ -30,11 +38,10 @@ Usually processes have one output, but not always.  Sometimes there are co-produ
 
 Valueflows does not distinguish between "good" and "bad" resources created by processes, as that is conditional and can be subjective. On the other hand, this pattern gives the opportunity to [record and understand harmful "externalities"](ecology.md) from producing and transporting resources.   Documenting these gives people a chance to try to figure out how externalities can be made useful in some other condition, or how to mitigate harmful externalities as much as possible.
 
-## Operational process definitions
+## Process example
 
-The processes considered in this version of Valueflows are considered to be operational, used in production or modification or transportation of economic resources.  This means they are the lowest level that makes sense to define a process and the intermediate resources for the use case.  Valueflows does not provide for steps within a process explicitly, so that would be done as part of the `note` field, or just documented separately.  Any process that has steps that require different resources should be considered for breaking into smaller processes.  Any process where the outputs will go separate ways is a good candidate to be defined as a separate operational level process, especially when the outputs will be consumed at different times.
+The following is an example low level process, first with commitments (planned), and then with economic events (what actually happened).  Both diagrams show the same process (same instance).
 
-Valueflows does not yet provide for summary level processes above the operational level, whether pre-operational (like budgeting) or non-operational (like bioregional planning). But work has been started and that is on the roadmap for a future release.
+![diagrams of one process with commitments and events](../assets/pies-plan-observe.png)
 
-
-
+You can see it took a little longer than planned because Alice dropped a pie, which went into the compost.

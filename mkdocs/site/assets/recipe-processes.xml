@@ -1,0 +1,139 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:146.0) Gecko/20100101 Firefox/146.0" version="29.2.9">
+  <diagram name="Page-1" id="q8F6nSo2Tp5NjZkPmr-1">
+    <mxGraphModel dx="989" dy="653" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="inGx-M9t6dh9iVFV69Ld-17" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;verticalAlign=top;align=left;" value="Recipe: Summer Milking" vertex="1">
+          <mxGeometry height="170" width="370" x="40" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="inGx-M9t6dh9iVFV69Ld-1" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" value="Milk cows summer" vertex="1">
+          <mxGeometry height="60" width="90" x="180" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="inGx-M9t6dh9iVFV69Ld-11" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" value="Return cows to pasture" vertex="1">
+          <mxGeometry height="60" width="90" x="300" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="inGx-M9t6dh9iVFV69Ld-12" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" value="Setup milking shed" vertex="1">
+          <mxGeometry height="60" width="90" x="60" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="inGx-M9t6dh9iVFV69Ld-13" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" value="Collect cows" vertex="1">
+          <mxGeometry height="60" width="90" x="60" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="inGx-M9t6dh9iVFV69Ld-14" edge="1" parent="1" source="inGx-M9t6dh9iVFV69Ld-13" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=0;" target="inGx-M9t6dh9iVFV69Ld-1" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="170" y="250" as="sourcePoint" />
+            <mxPoint x="220" y="200" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="inGx-M9t6dh9iVFV69Ld-15" edge="1" parent="1" source="inGx-M9t6dh9iVFV69Ld-12" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=1;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="inGx-M9t6dh9iVFV69Ld-1" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="170" y="240" as="sourcePoint" />
+            <mxPoint x="220" y="190" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="inGx-M9t6dh9iVFV69Ld-16" edge="1" parent="1" source="inGx-M9t6dh9iVFV69Ld-1" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="inGx-M9t6dh9iVFV69Ld-11" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="240" y="250" as="sourcePoint" />
+            <mxPoint x="290" y="200" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="inGx-M9t6dh9iVFV69Ld-18" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;verticalAlign=top;align=left;" value="Recipe: Winter Milking" vertex="1">
+          <mxGeometry height="170" width="370" x="40" y="216" as="geometry" />
+        </mxCell>
+        <mxCell id="inGx-M9t6dh9iVFV69Ld-19" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" value="&lt;div&gt;Milk cows&amp;nbsp;&lt;/div&gt;&lt;div&gt;winter&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="90" x="180" y="276" as="geometry" />
+        </mxCell>
+        <mxCell id="inGx-M9t6dh9iVFV69Ld-20" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" value="Return cows to pasture" vertex="1">
+          <mxGeometry height="60" width="90" x="300" y="276" as="geometry" />
+        </mxCell>
+        <mxCell id="inGx-M9t6dh9iVFV69Ld-21" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" value="Setup milking shed" vertex="1">
+          <mxGeometry height="60" width="90" x="60" y="316" as="geometry" />
+        </mxCell>
+        <mxCell id="inGx-M9t6dh9iVFV69Ld-22" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" value="Collect cows" vertex="1">
+          <mxGeometry height="60" width="90" x="60" y="246" as="geometry" />
+        </mxCell>
+        <mxCell id="inGx-M9t6dh9iVFV69Ld-23" edge="1" parent="1" source="inGx-M9t6dh9iVFV69Ld-22" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=0;" target="inGx-M9t6dh9iVFV69Ld-19" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="170" y="436" as="sourcePoint" />
+            <mxPoint x="220" y="386" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="inGx-M9t6dh9iVFV69Ld-24" edge="1" parent="1" source="inGx-M9t6dh9iVFV69Ld-21" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=1;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="inGx-M9t6dh9iVFV69Ld-19" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="170" y="426" as="sourcePoint" />
+            <mxPoint x="220" y="376" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="inGx-M9t6dh9iVFV69Ld-25" edge="1" parent="1" source="inGx-M9t6dh9iVFV69Ld-19" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="inGx-M9t6dh9iVFV69Ld-20" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="240" y="436" as="sourcePoint" />
+            <mxPoint x="290" y="386" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="B13xZfQdRoqXZZuBv0co-1" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" value="Plant seeds" vertex="1">
+          <mxGeometry height="60" width="90" x="469" y="73" as="geometry" />
+        </mxCell>
+        <mxCell id="B13xZfQdRoqXZZuBv0co-2" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="No Recipe needed" vertex="1">
+          <mxGeometry height="30" width="170" x="544" y="37" as="geometry" />
+        </mxCell>
+        <mxCell id="4Rgs0GrGi7_RAU7lbaEM-1" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" value="Weed field" vertex="1">
+          <mxGeometry height="60" width="90" x="591" y="73" as="geometry" />
+        </mxCell>
+        <mxCell id="4Rgs0GrGi7_RAU7lbaEM-2" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" value="Harvest vegetables" vertex="1">
+          <mxGeometry height="60" width="90" x="713" y="73" as="geometry" />
+        </mxCell>
+        <mxCell id="4Rgs0GrGi7_RAU7lbaEM-3" edge="1" parent="1" source="B13xZfQdRoqXZZuBv0co-1" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="4Rgs0GrGi7_RAU7lbaEM-1" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="491" y="248" as="sourcePoint" />
+            <mxPoint x="541" y="198" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4Rgs0GrGi7_RAU7lbaEM-4" edge="1" parent="1" source="4Rgs0GrGi7_RAU7lbaEM-1" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="4Rgs0GrGi7_RAU7lbaEM-2" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="631" y="208" as="sourcePoint" />
+            <mxPoint x="681" y="158" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4Rgs0GrGi7_RAU7lbaEM-5" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" value="Make optical components" vertex="1">
+          <mxGeometry height="60" width="90" x="470" y="162" as="geometry" />
+        </mxCell>
+        <mxCell id="4Rgs0GrGi7_RAU7lbaEM-6" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" value="Make mechanical components" vertex="1">
+          <mxGeometry height="60" width="90" x="470" y="238" as="geometry" />
+        </mxCell>
+        <mxCell id="4Rgs0GrGi7_RAU7lbaEM-7" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" value="Assemble Instrument&amp;nbsp;" vertex="1">
+          <mxGeometry height="60" width="90" x="590" y="237" as="geometry" />
+        </mxCell>
+        <mxCell id="4Rgs0GrGi7_RAU7lbaEM-8" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" value="3D print instrument arm" vertex="1">
+          <mxGeometry height="60" width="90" x="470" y="313" as="geometry" />
+        </mxCell>
+        <mxCell id="4Rgs0GrGi7_RAU7lbaEM-9" edge="1" parent="1" source="4Rgs0GrGi7_RAU7lbaEM-8" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=1;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="4Rgs0GrGi7_RAU7lbaEM-7" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="381" y="443" as="sourcePoint" />
+            <mxPoint x="431" y="393" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4Rgs0GrGi7_RAU7lbaEM-10" edge="1" parent="1" source="4Rgs0GrGi7_RAU7lbaEM-6" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="4Rgs0GrGi7_RAU7lbaEM-7" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="581" y="403" as="sourcePoint" />
+            <mxPoint x="631" y="353" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4Rgs0GrGi7_RAU7lbaEM-11" edge="1" parent="1" source="4Rgs0GrGi7_RAU7lbaEM-5" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=0;" target="4Rgs0GrGi7_RAU7lbaEM-7" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="421" y="473" as="sourcePoint" />
+            <mxPoint x="471" y="423" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4Rgs0GrGi7_RAU7lbaEM-12" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" value="Test Instrument&amp;nbsp;" vertex="1">
+          <mxGeometry height="60" width="90" x="713" y="237" as="geometry" />
+        </mxCell>
+        <mxCell id="4Rgs0GrGi7_RAU7lbaEM-13" edge="1" parent="1" source="4Rgs0GrGi7_RAU7lbaEM-7" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="4Rgs0GrGi7_RAU7lbaEM-12" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="650" y="380" as="sourcePoint" />
+            <mxPoint x="700" y="330" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

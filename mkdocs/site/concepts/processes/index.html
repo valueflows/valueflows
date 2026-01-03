@@ -963,9 +963,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#how-to-think-about-processes-and-their-flows" class="md-nav__link">
+  <a href="#defining-operational-processes" class="md-nav__link">
     <span class="md-ellipsis">
-      How to think about processes and their flows
+      Defining operational processes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-think-about-processes-vs-their-flows" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to think about processes vs. their flows
     </span>
   </a>
   
@@ -981,9 +990,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#operational-process-definitions" class="md-nav__link">
+  <a href="#process-example" class="md-nav__link">
     <span class="md-ellipsis">
-      Operational process definitions
+      Process example
     </span>
   </a>
   
@@ -1872,9 +1881,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#how-to-think-about-processes-and-their-flows" class="md-nav__link">
+  <a href="#defining-operational-processes" class="md-nav__link">
     <span class="md-ellipsis">
-      How to think about processes and their flows
+      Defining operational processes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-think-about-processes-vs-their-flows" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to think about processes vs. their flows
     </span>
   </a>
   
@@ -1890,9 +1908,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#operational-process-definitions" class="md-nav__link">
+  <a href="#process-example" class="md-nav__link">
     <span class="md-ellipsis">
-      Operational process definitions
+      Process example
     </span>
   </a>
   
@@ -1917,11 +1935,11 @@
 <p>Process spans the Plan and Observation layers.  I.e. intents, commitments, and economic events can all be connected to the same process as it moves through planning and observation.  Or for some use cases Process is used only in one layer.</p>
 <p>See also <a href="../../introduction/core/#ipo-input-process-output">Input-Process-Output</a> and <a href="../../introduction/core/#directed-graphs-of-flows">Directed Graphs</a> in the introduction, <a href="../../specification/model-text/#flows-in-motion-planning">Flows in Motion: Planning</a> and <a href="../../specification/model-text/#flows-in-motion-observation">Flows in Motion: Observation</a> in the Diagram Explanations, <a href="../../examples/ex-production/">Production examples</a>, <a href="../../examples/ex-planning/">Planning examples</a>.</p>
 <h2 id="processes-and-resource-flows">Processes and resource flows</h2>
-<p>By Process, we mean an activity that transforms inputs into outputs. The outputs might then become inputs to other processes, forming networks and chains. Those chains may be circular, where an output from one process becomes an input to another process that occurred previously in the same chain, supporting circular economies.  Processes are a key piece of the structure where we can see a whole value flow.</p>
+<p>By Process, we mean an activity that transforms inputs into outputs. The outputs might then become inputs to other processes, forming networks and chains. Those chains may be circular, where an output from one process becomes an input to another process that occurred previously in the same chain, supporting circular economies.  Processes are a key piece of the structure where we can follow a whole value flow.</p>
 <h2 id="for-example">For example...</h2>
 <ul>
 <li>
-<p>For example: a farming process takes compost, soil, seeds, water and human work as inputs, and transforms them into grains, nuts, fruit, or vegetables. Those ingredients may go to kitchens that create dinners for people to eat. Some of those ingredients may be pared off in preparation, or spoil, or be left on plates. Those leftovers go into compost, which starts the process chain over from the beginning.</p>
+<p>A farming process takes compost, soil, seeds, water and human work as inputs, and transforms them into grains, nuts, fruit, or vegetables. Those ingredients may go to kitchens that create dinners for people to eat. Some of those ingredients may be pared off in preparation, or spoil, or be left on plates. Those leftovers go into compost, which starts the process chain over from the beginning.</p>
 </li>
 <li>
 <p>Or for a bad example: a CAFO (Confined Animal Feeding Operation) produces a lot of manure. They put manure into big lagoons, which drain into the water table, and come back up in people's drinking water, causing diseases, for which the people become inputs to hospital processes.</p>
@@ -1934,14 +1952,19 @@
 </li>
 </ul>
 <p>Connected processes enable us to see cause and effect, if we want.</p>
-<h2 id="how-to-think-about-processes-and-their-flows">How to think about processes and their flows</h2>
+<h2 id="defining-operational-processes">Defining operational processes</h2>
+<p>The processes considered in this version of Valueflows are operational, i.e. reflecting on-the-ground production or modification or transportation of economic resources.  This means they are the lowest level that makes sense to define a process and the intermediate resources for the use case.  Valueflows does not provide for steps within a process explicitly, so that could be done as part of the <code>note</code> field, or just documented separately.  Any process that has steps that require different resources should be considered for breaking into smaller processes.  Any process where the outputs will go separate ways is a good candidate to be defined as a separate operational process, especially if the outputs will be consumed at different times.  Defining processes might be a science, but it feels more like an art because there are so many different situations.</p>
+<p>Valueflows does not yet provide for summary level processes above the operational level, whether pre-operational (like budgeting) or non-operational (like bioregional planning). But work has been started and that is on the roadmap for a future release.</p>
+<h2 id="how-to-think-about-processes-vs-their-flows">How to think about processes vs. their flows</h2>
 <p>This can be confusing.  Sometimes people tend to think about the flows as where some processing is happening.  This is understandable, since flow names (<a href="../actions/">actions</a> like <code>consume</code> or <code>produce</code>) imply some kind of activity.  However, it is appropriate in the Valueflows model to think about all the transformations and transportation happening in Processes.  The flows fundamentally define what happens to resources because of the activity in the processes.  For example, there would never be a flow with an action of "plant" or "harvest", even though seeds are planted, and vegetables are harvested.  Planting and harvesting are Processes.  Seeds resources are decremented, vegetable resources are incremented.</p>
+<p><img alt="diagram of 2 processes" src="../../assets/processes.png" /></p>
 <h2 id="co-products-and-by-products">Co-products and by-products</h2>
 <p>Usually processes have one output, but not always.  Sometimes there are co-products that have somewhat equal value. By-products tend to define something very secondary. Sometimes there are co-products or by-products that provide something useful, such as plastic shavings being put back into the melting pot for continued production as input.  Sometimes there are unintended by-products, resources that are known but not useful or are harmful.</p>
 <p>Valueflows does not distinguish between "good" and "bad" resources created by processes, as that is conditional and can be subjective. On the other hand, this pattern gives the opportunity to <a href="../ecology/">record and understand harmful "externalities"</a> from producing and transporting resources.   Documenting these gives people a chance to try to figure out how externalities can be made useful in some other condition, or how to mitigate harmful externalities as much as possible.</p>
-<h2 id="operational-process-definitions">Operational process definitions</h2>
-<p>The processes considered in this version of Valueflows are considered to be operational, used in production or modification or transportation of economic resources.  This means they are the lowest level that makes sense to define a process and the intermediate resources for the use case.  Valueflows does not provide for steps within a process explicitly, so that would be done as part of the <code>note</code> field, or just documented separately.  Any process that has steps that require different resources should be considered for breaking into smaller processes.  Any process where the outputs will go separate ways is a good candidate to be defined as a separate operational level process, especially when the outputs will be consumed at different times.</p>
-<p>Valueflows does not yet provide for summary level processes above the operational level, whether pre-operational (like budgeting) or non-operational (like bioregional planning). But work has been started and that is on the roadmap for a future release.</p>
+<h2 id="process-example">Process example</h2>
+<p>The following is an example low level process, first with commitments (planned), and then with economic events (what actually happened).  Both diagrams show the same process (same instance).</p>
+<p><img alt="diagrams of one process with commitments and events" src="../../assets/pies-plan-observe.png" /></p>
+<p>You can see it took a little longer than planned because Alice dropped a pie, which went into the compost.</p>
 
 
 

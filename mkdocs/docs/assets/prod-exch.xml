@@ -1,0 +1,52 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:146.0) Gecko/20100101 Firefox/146.0" version="29.2.9">
+  <diagram name="Page-1" id="MuVx1YanHYU7oNaTnvog">
+    <mxGraphModel dx="742" dy="490" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="Vb07iZ8pGoiKXfoGNYj6-9" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;verticalAlign=top;align=left;" value="&lt;i&gt;Recipe: Produce Yarn&lt;/i&gt;" vertex="1">
+          <mxGeometry height="280" width="580" x="107" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="Vb07iZ8pGoiKXfoGNYj6-1" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" value="Shear sheep" vertex="1">
+          <mxGeometry height="60" width="90" x="120" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="Vb07iZ8pGoiKXfoGNYj6-2" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" value="Scour wool" vertex="1">
+          <mxGeometry height="60" width="90" x="350" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="Vb07iZ8pGoiKXfoGNYj6-3" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" value="Spin yarn" vertex="1">
+          <mxGeometry height="60" width="90" x="580" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="Vb07iZ8pGoiKXfoGNYj6-5" edge="1" parent="1" source="Vb07iZ8pGoiKXfoGNYj6-1" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;labelBackgroundColor=none;" target="Vb07iZ8pGoiKXfoGNYj6-2" value="greasy wool">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="210" y="170" as="sourcePoint" />
+            <mxPoint x="260" y="120" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Vb07iZ8pGoiKXfoGNYj6-6" edge="1" parent="1" source="Vb07iZ8pGoiKXfoGNYj6-2" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;labelBackgroundColor=none;" target="Vb07iZ8pGoiKXfoGNYj6-3" value="clean wool">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="300" y="330" as="sourcePoint" />
+            <mxPoint x="350" y="280" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Vb07iZ8pGoiKXfoGNYj6-10" edge="1" parent="1" source="Vb07iZ8pGoiKXfoGNYj6-2" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;labelBackgroundColor=none;" target="Vb07iZ8pGoiKXfoGNYj6-11" value="deliver scouring service">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="470" y="340" as="sourcePoint" />
+            <mxPoint x="520" y="290" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Vb07iZ8pGoiKXfoGNYj6-11" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#e1d5e7;strokeColor=#9673a6;" value="exchange" vertex="1">
+          <mxGeometry height="50" width="90" x="490" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="Vb07iZ8pGoiKXfoGNYj6-12" edge="1" parent="1" source="Vb07iZ8pGoiKXfoGNYj6-11" style="endArrow=classic;html=1;rounded=0;exitX=0;exitY=0.75;exitDx=0;exitDy=0;labelBackgroundColor=none;" value="pay for service">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="330" y="360" as="sourcePoint" />
+            <mxPoint x="410" y="340" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Vb07iZ8pGoiKXfoGNYj6-13" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#f8cecc;strokeColor=#b85450;" value="Scouring mill" vertex="1">
+          <mxGeometry height="46" width="30" x="377" y="320" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
