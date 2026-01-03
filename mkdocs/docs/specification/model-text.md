@@ -20,7 +20,7 @@ There are 3 subclasses of Agent: **Person**, **Organization**, and **EcologicalA
 
 ### Resource
 
-Resources are defined in different ways, depending on their need and ability to be accounted for specifically.  Every flow of any kind will reference a resource, represented either by ResourceSpecification or EconomicResource. Resource classifications also assist in understanding or finding a resource. More info at [Resource concepts](../concepts/resources.md), [Classification concepts](../concepts/classification.md).
+Resources are defined in different ways, depending on their need and ability to be accounted for specifically.  Every flow of any kind will reference a resource, represented either generally by a ResourceSpecification or by a specific EconomicResource. Resource classifications also assist in understanding or finding a resource. More info at [Resource concepts](../concepts/resources.md), [Classification concepts](../concepts/classification.md).
 
 ![resource model](../assets/resource-mdl.png)
 

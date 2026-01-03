@@ -12,11 +12,11 @@ So, understanding there will be much more learned going forward in practice, we 
 
 See also [Accounting](accounting.md).
 
-## REA I-P-O resource flows
+## REA IPO resource flows
 
-The Valueflows input-process-output resource flow model works very well for ecological accounting, with some broadening of our thinking about agents and resources, and what "economic" entails.  If we think of "economic" as broader than human activity, which has tentacles into most if not all of the other ecosystems on earth, it becomes easier to consider "accounting" in light of flows to and from those ecosystems, all of which eventually affect human economies.
+The Valueflows input-process-output REA resource flow model works very well for ecological accounting, with some broadening of our thinking about agents and resources, and what "economic" entails.  If we think of "economic" as broader than human activity, which has tentacles into most if not all of the other ecosystems on earth, it becomes easier to consider "accounting" in light of flows to and from those ecosystems, all of which eventually affect human economies.
 
-This diagram shows some of the flows for solar panel production.  Silica dust is an output of the mining process, which gives mine workers silicosis.  There are many additional flows here which could be detailed to go into and out of ecological ecosystems, affecting them and also humans.
+This rough diagram shows some of the flows for solar panel production.  Silica dust is an output of the mining process, which gives mine workers silicosis.  There are many additional flows here which could be detailed to go into and out of ecological ecosystems, affecting them and also humans.
 
 ![flow diagram of solar panel production including externalities](../assets/SolarPanelProduction.png)
 

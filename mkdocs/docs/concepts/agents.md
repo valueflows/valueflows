@@ -1,7 +1,7 @@
 
 The agent vocabulary describes people, organizations, and ecological agents.
 
-See also [Agents in the Diagram Explanations](../specification/model-text.md#agent) and [Agent examples](../examples/ex-agent.md).
+See also [Agent in the Diagram Explanations](../specification/model-text.md#agent), [Agents in Ecological Accounting](../concepts/ecology.md/#agents) and [Agent examples](../examples/ex-agent.md).
 
 ## Types of Agents
 
