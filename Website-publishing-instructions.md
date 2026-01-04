@@ -23,9 +23,9 @@ This assumes that [Material for Mkdocs](https://squidfunk.github.io/mkdocs-mater
 1. Run `mkdocs build`.  This populates the site directory.
 1. Commit locally, and push all changes to valueflows, create PR.
 1. Re-generate pyLODE if needed: ask @hoijui to create, fix the css (#pylode top: 15em;
-#pylode left: -13em;
+#pylode left: -12em;
 #toc width: 15%;
-#content width: 86%;), put in /specification/all_vf.html
+#content width: 85%;), put in /specification/all_vf.html
 1. Review, fix as needed using the above steps, merge. 
 2. Create tag and release if needed.
 
