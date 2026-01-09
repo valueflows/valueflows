@@ -24,7 +24,7 @@ We have tried to make this vocabulary as technology-agnostic as possible, as it 
     * https://w3id.org/valueflows/ont/vf.trig
     * https://w3id.org/valueflows/ont/vf.n3
 
-* A more readable **[formatted text version of the vocabulary](all_vf.html){target="_blank"}** is generated from the turtle file here.
+* A more readable **[formatted text version of the vocabulary](all_vf.md)** is generated from the turtle file here.
 
 ## Visualization of the specification
 

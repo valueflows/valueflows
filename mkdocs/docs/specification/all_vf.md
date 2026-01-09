@@ -1,9 +1,13 @@
 ---
 hide:
-  - navigation
   - toc
 ---
 
+# Formatted specification
+
+*This page is normative.*
+
+<!--
 <!DOCTYPE html>
 <html>
   <head>
@@ -313,8 +317,11 @@ td {
 ]
 	</script>
   </head>
+
   <body>
+
     <div id="content">
+
       <div class="section" id="metadata">
         <h1>Valueflows Ontology</h1>
         <h2>Metadata</h2>
@@ -384,7 +391,223 @@ td {
             <dd><p>A vocabulary for the distributed economic networks of the next economy, to coordinate the creation, distribution, and exchange of economic resources</p></dd>
           </div>
         </dl>
-      </div>
+      </div>-->
+<html>
+  <style>
+    #pylode {
+        top: 15em;
+        left: -12em;
+        font-size: small;
+        color: grey;
+    }
+    #pylode a {
+        font-size: 1.5em;
+        font-weight: bold;
+        text-decoration: none;
+        color: #005A9C;
+    }
+    #pylode a:hover {
+        color: #333;
+    }
+    #pylode #p {
+        color: #329545;
+    }
+    #pylode #y {
+        color: #f9cb33;
+    }
+    #pylode #version {
+        font-size: 1.0em;
+    }
+       .cardinality {
+            font-style: italic;
+            color: #aa00aa;
+        }
+
+        dl {
+            /*border: 1px solid navy;*/
+            /*padding:5px;*/
+        }
+
+        dt {
+            font-weight: bold;
+            padding: 0;
+        }
+
+        dd {
+            margin-bottom: 10px;
+            padding-top: 7px;
+        }
+
+        #metadata ul,
+        #classes ul {
+            list-style-type: none;
+        }
+
+
+        ul.hlist {
+            list-style-type: none;
+            border: 1px solid navy;
+            padding:5px;
+            background-color: #F4FFFF;
+        }
+
+        ul.hierarchy {
+            border: 1px solid navy;
+            padding: 5px 25px 5px 25px;
+            background-color: #F4FFFF;
+        }
+
+
+        ul.hlist li {
+            display: inline;
+            margin-right: 10px;
+        }
+
+        .entity {
+            border: 1px solid navy;
+            margin:5px 0 5px 0;
+            padding: 5px;
+        }
+
+        .entity th {
+            width: 150px;
+            vertical-align: top;
+        }
+
+        .entity th,
+        .entity td {
+            padding-bottom: 20px;
+        }
+
+        .entity table th {
+            text-align: left;
+        }
+
+        .figure {
+            margin-bottom: 20px;
+        }
+
+        .sup-c,
+        .sup-op,
+        .sup-fp,
+        .sup-dp,
+        .sup-ap,
+        .sup-p,
+        .sup-ni,
+        .sup-con,
+        .sup-col {
+            cursor:help;
+        }
+
+        .sup-c {
+            color:orange;
+        }
+
+        .sup-op {
+            color:navy;
+        }
+
+        .sup-fp {
+            color:lightskyblue;
+        }
+
+        .sup-dp {
+            color:green;
+        }
+
+        .sup-ap {
+            color:darkred;
+        }
+
+        .sup-p {
+            color:black;
+        }
+
+        .sup-ni {
+            color:brown;
+        }
+
+        .sup-con {
+            color:orange;
+        }
+
+        .sup-col {
+            color:darkred;
+        }
+
+        sup {
+            margin-left: -3px;
+        }
+
+        /* less prominent links for properties */
+        .proplink {
+            color: #336;
+            text-decoration: none;
+        }
+
+  #content {
+    width: 85%;
+    }
+
+  #toc {
+    position: fixed;
+    margin-top: 210px;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    height: 100%;
+    overflow-y: auto;
+    padding: 10px;
+    border: solid 1px navy;
+    font-size: small;
+    width: 15%;
+}
+
+#toc h3 {
+    margin-top: 5px;
+}
+
+#toc ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+#toc .first > li {
+    margin-top: 5px;
+}
+
+#toc .second,
+#toc .third {
+    padding-left: 10px;
+}
+
+/* added class in the html */
+a.toc-link {color:darkblue;}
+a.toc-link:hover {color:darkturquoise;}
+
+/* changed class name code to pycode in html */
+pycode {
+    color: darkred;
+}
+
+</style>
+
+<body>
+  <div id="content">
+    <div id="pylode">
+    <p>It is a formatted version of the vocabulary as defined in the RDF turtle file system of record, excluding the Named Individuals, the Classes needed to manage those, and the "layer" definitions. In other words, this includes the base ontological Classes and Properties for building with Valueflows.</p>
+      <p> Credit: made by
+        <a href="https://github.com/rdflib/pyLODE">
+          <span id="p">p</span>
+          <span id="y">y</span>
+          <span>LODE</span>
+        </a>
+        <a href="https://github.com/rdflib/pyLODE/release/3.2.1" id="version">3.2.1</a>
+        <span> with the </span>
+        <a href="https://w3id.org/profile/ontpub" id="profile">OntPub</a>
+        <span>profile (modified to fit inside the Valueflows site)</span>.
+      </p>
+    </div>
       <div class="section" id="classes">
         <h2>Classes</h2>
         <div class="property entity" id="ResourceSpecification">
@@ -395,7 +618,7 @@ td {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#ResourceSpecification</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#ResourceSpecification</pycode>
               </td>
             </tr>
             <tr>
@@ -468,7 +691,7 @@ td {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#ProcessSpecification</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#ProcessSpecification </pycode>
               </td>
             </tr>
             <tr>
@@ -514,7 +737,7 @@ td {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#Action</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#Action</pycode>
               </td>
             </tr>
             <tr>
@@ -544,7 +767,7 @@ td {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#Recipe</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#Recipe</pycode>
               </td>
             </tr>
             <tr>
@@ -584,7 +807,7 @@ td {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#RecipeProcess</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#RecipeProcess</pycode>
               </td>
             </tr>
             <tr>
@@ -663,7 +886,7 @@ td {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#RecipeFlow</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#RecipeFlow</pycode>
               </td>
             </tr>
             <tr>
@@ -748,7 +971,7 @@ td {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#RecipeExchange</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#RecipeExchange</pycode>
               </td>
             </tr>
             <tr>
@@ -809,7 +1032,7 @@ td {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#Plan</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#Plan</pycode>
               </td>
             </tr>
             <tr>
@@ -870,7 +1093,7 @@ td {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#Intent</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#Intent</pycode>
               </td>
             </tr>
             <tr>
@@ -937,7 +1160,7 @@ td {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#Proposal</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#Proposal</pycode>
               </td>
             </tr>
             <tr>
@@ -1006,7 +1229,7 @@ td {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#ProposalList</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#ProposalList</pycode>
               </td>
             </tr>
             <tr>
@@ -1047,7 +1270,7 @@ td {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#Commitment</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#Commitment</pycode>
               </td>
             </tr>
             <tr>
@@ -1126,7 +1349,7 @@ td {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#Agreement</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#Agreement</pycode>
               </td>
             </tr>
             <tr>
@@ -1223,7 +1446,7 @@ td {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#AgreementBundle</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#AgreementBundle</pycode>
               </td>
             </tr>
             <tr>
@@ -1264,7 +1487,7 @@ td {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#Agent</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#Agent</pycode>
               </td>
             </tr>
             <tr>
@@ -1360,7 +1583,7 @@ td {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#Person</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#Person</pycode>
               </td>
             </tr>
             <tr>
@@ -1390,7 +1613,7 @@ td {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#Organization</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#Organization</pycode>
               </td>
             </tr>
             <tr>
@@ -1420,7 +1643,7 @@ td {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#EcologicalAgent</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#EcologicalAgent</pycode>
               </td>
             </tr>
             <tr>
@@ -1450,7 +1673,7 @@ td {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#EconomicResource</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#EconomicResource</pycode>
               </td>
             </tr>
             <tr>
@@ -1583,7 +1806,7 @@ td {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#BatchLotRecord</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#BatchLotRecord</pycode>
               </td>
             </tr>
             <tr>
@@ -1634,7 +1857,7 @@ td {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#Process</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#Process</pycode>
               </td>
             </tr>
             <tr>
@@ -1707,7 +1930,7 @@ td {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#EconomicEvent</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#EconomicEvent</pycode>
               </td>
             </tr>
             <tr>
@@ -1810,7 +2033,7 @@ td {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#Claim</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#Claim</pycode>
               </td>
             </tr>
             <tr>
@@ -1851,7 +2074,7 @@ td {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#SpatialThing</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#SpatialThing</pycode>
               </td>
             </tr>
             <tr>
@@ -1950,7 +2173,7 @@ td {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#Measure</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#Measure</pycode>
               </td>
             </tr>
             <tr>
@@ -2049,7 +2272,7 @@ td {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#Unit</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#Unit</pycode>
               </td>
             </tr>
             <tr>
@@ -2127,7 +2350,7 @@ td {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#action</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#action</pycode>
               </td>
             </tr>
             <tr>
@@ -2188,7 +2411,7 @@ td {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#inputOf</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#inputOf</pycode>
               </td>
             </tr>
             <tr>
@@ -2239,7 +2462,7 @@ td {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#hasInput</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#hasInput</pycode>
               </td>
             </tr>
             <tr>
@@ -2290,7 +2513,7 @@ td {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#outputOf</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#outputOf</pycode>
               </td>
             </tr>
             <tr>
@@ -2341,7 +2564,7 @@ td {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#hasOutput</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#hasOutput</pycode>
               </td>
             </tr>
             <tr>
@@ -2392,7 +2615,7 @@ td {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#recipeInputOf</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#recipeInputOf</pycode>
               </td>
             </tr>
             <tr>
@@ -2433,7 +2656,7 @@ td {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#hasRecipeInput</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#hasRecipeInput</pycode>
               </td>
             </tr>
             <tr>
@@ -2474,7 +2697,7 @@ td {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#recipeOutputOf</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#recipeOutputOf</pycode>
               </td>
             </tr>
             <tr>
@@ -2515,7 +2738,7 @@ td {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#hasRecipeOutput</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#hasRecipeOutput</pycode>
               </td>
             </tr>
             <tr>
@@ -2556,7 +2779,7 @@ td {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#recipeClauseOf</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#recipeClauseOf</pycode>
               </td>
             </tr>
             <tr>
@@ -2597,7 +2820,7 @@ td {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#recipeStipulates</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#recipeStipulates</pycode>
               </td>
             </tr>
             <tr>
@@ -2638,7 +2861,7 @@ td {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#recipeReciprocalClauseOf</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#recipeReciprocalClauseOf</pycode>
               </td>
             </tr>
             <tr>
@@ -2679,7 +2902,7 @@ td {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#recipeStipulatesReciprocal</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#recipeStipulatesReciprocal</pycode>
               </td>
             </tr>
             <tr>
@@ -2720,7 +2943,7 @@ td {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#primaryOutput</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#primaryOutput</pycode>
               </td>
             </tr>
             <tr>
@@ -2761,7 +2984,7 @@ td {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#recipeIncludes</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#recipeIncludes</pycode>
               </td>
             </tr>
             <tr>
@@ -2802,7 +3025,7 @@ td {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#plannedWithin</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#plannedWithin</pycode>
               </td>
             </tr>
             <tr>
@@ -2853,7 +3076,7 @@ td {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#planIncludes</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#planIncludes</pycode>
               </td>
             </tr>
             <tr>
@@ -2904,7 +3127,7 @@ td {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#independentDemandOf</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#independentDemandOf</pycode>
               </td>
             </tr>
             <tr>
@@ -2945,7 +3168,7 @@ td {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#hasIndependentDemand</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#hasIndependentDemand</pycode>
               </td>
             </tr>
             <tr>
@@ -2986,7 +3209,7 @@ td {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#resourceInventoriedAs</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#resourceInventoriedAs</pycode>
               </td>
             </tr>
             <tr>
@@ -3037,7 +3260,7 @@ td {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#toResourceInventoriedAs</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#toResourceInventoriedAs</pycode>
               </td>
             </tr>
             <tr>
@@ -3078,7 +3301,7 @@ td {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#provider</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#provider</pycode>
               </td>
             </tr>
             <tr>
@@ -3134,7 +3357,7 @@ td {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#receiver</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#receiver</pycode>
               </td>
             </tr>
             <tr>
@@ -3190,7 +3413,7 @@ td {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#inScopeOf</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#inScopeOf</pycode>
               </td>
             </tr>
             <tr>
@@ -3231,7 +3454,7 @@ td {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#triggeredBy</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#triggeredBy</pycode>
               </td>
             </tr>
             <tr>
@@ -3272,7 +3495,7 @@ td {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#corrects</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#corrects</pycode>
               </td>
             </tr>
             <tr>
@@ -3313,7 +3536,7 @@ td {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#settles</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#settles</pycode>
               </td>
             </tr>
             <tr>
@@ -3354,7 +3577,7 @@ td {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#containedIn</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#containedIn</pycode>
               </td>
             </tr>
             <tr>
@@ -3395,7 +3618,7 @@ td {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#contains</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#contains</pycode>
               </td>
             </tr>
             <tr>
@@ -3436,7 +3659,7 @@ td {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#primaryAccountable</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#primaryAccountable</pycode>
               </td>
             </tr>
             <tr>
@@ -3477,7 +3700,7 @@ td {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#hasDuration</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#hasDuration</pycode>
               </td>
             </tr>
             <tr>
@@ -3518,7 +3741,7 @@ td {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#hasUnit</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#hasUnit</pycode>
               </td>
             </tr>
             <tr>
@@ -3567,7 +3790,7 @@ td {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#accountingQuantity</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#accountingQuantity</pycode>
               </td>
             </tr>
             <tr>
@@ -3608,7 +3831,7 @@ td {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#onhandQuantity</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#onhandQuantity</pycode>
               </td>
             </tr>
             <tr>
@@ -3649,7 +3872,7 @@ td {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#resourceQuantity</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#resourceQuantity</pycode>
               </td>
             </tr>
             <tr>
@@ -3710,7 +3933,7 @@ td {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#effortQuantity</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#effortQuantity</pycode>
               </td>
             </tr>
             <tr>
@@ -3771,7 +3994,7 @@ td {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#availableQuantity</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#availableQuantity</pycode>
               </td>
             </tr>
             <tr>
@@ -3812,7 +4035,7 @@ td {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#minimumQuantity</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#minimumQuantity</pycode>
               </td>
             </tr>
             <tr>
@@ -3853,7 +4076,7 @@ td {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#purpose</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#purpose</pycode>
               </td>
             </tr>
             <tr>
@@ -3891,7 +4114,7 @@ td {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#hasDetailedGeometry</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#hasDetailedGeometry</pycode>
               </td>
             </tr>
             <tr>
@@ -3929,7 +4152,7 @@ td {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#currentLocation</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#currentLocation</pycode>
               </td>
             </tr>
             <tr>
@@ -3970,7 +4193,7 @@ td {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#primaryLocation</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#primaryLocation</pycode>
               </td>
             </tr>
             <tr>
@@ -4011,7 +4234,7 @@ td {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#eligibleLocation</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#eligibleLocation</pycode>
               </td>
             </tr>
             <tr>
@@ -4052,7 +4275,7 @@ td {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#toLocation</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#toLocation</pycode>
               </td>
             </tr>
             <tr>
@@ -4093,7 +4316,7 @@ td {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#ofBatchLot</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#ofBatchLot</pycode>
               </td>
             </tr>
             <tr>
@@ -4134,7 +4357,7 @@ td {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#fulfills</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#fulfills</pycode>
               </td>
             </tr>
             <tr>
@@ -4175,7 +4398,7 @@ td {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#satisfies</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#satisfies</pycode>
               </td>
             </tr>
             <tr>
@@ -4221,7 +4444,7 @@ td {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#publishes</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#publishes</pycode>
               </td>
             </tr>
             <tr>
@@ -4262,7 +4485,7 @@ td {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#reciprocal</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#reciprocal</pycode>
               </td>
             </tr>
             <tr>
@@ -4303,7 +4526,7 @@ td {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#proposedTo</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#proposedTo</pycode>
               </td>
             </tr>
             <tr>
@@ -4349,7 +4572,7 @@ td {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#listedIn</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#listedIn</pycode>
               </td>
             </tr>
             <tr>
@@ -4390,7 +4613,7 @@ td {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#lists</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#lists</pycode>
               </td>
             </tr>
             <tr>
@@ -4431,7 +4654,7 @@ td {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#unitOfEffort</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#unitOfEffort</pycode>
               </td>
             </tr>
             <tr>
@@ -4472,7 +4695,7 @@ td {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#defaultUnitOfEffort</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#defaultUnitOfEffort</pycode>
               </td>
             </tr>
             <tr>
@@ -4513,7 +4736,7 @@ td {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#defaultUnitOfResource</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#defaultUnitOfResource</pycode>
               </td>
             </tr>
             <tr>
@@ -4554,7 +4777,7 @@ td {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#basedOn</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#basedOn</pycode>
               </td>
             </tr>
             <tr>
@@ -4595,7 +4818,7 @@ td {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#classifiedAs</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#classifiedAs</pycode>
               </td>
             </tr>
             <tr>
@@ -4653,7 +4876,7 @@ td {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#resourceClassifiedAs</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#resourceClassifiedAs</pycode>
               </td>
             </tr>
             <tr>
@@ -4716,7 +4939,7 @@ td {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#processClassifiedAs</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#processClassifiedAs</pycode>
               </td>
             </tr>
             <tr>
@@ -4754,7 +4977,7 @@ td {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#processConformsTo</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#processConformsTo</pycode>
               </td>
             </tr>
             <tr>
@@ -4795,7 +5018,7 @@ td {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#resourceConformsTo</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#resourceConformsTo</pycode>
               </td>
             </tr>
             <tr>
@@ -4856,7 +5079,7 @@ td {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#conformsTo</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#conformsTo</pycode>
               </td>
             </tr>
             <tr>
@@ -4897,7 +5120,7 @@ td {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#stage</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#stage</pycode>
               </td>
             </tr>
             <tr>
@@ -4953,7 +5176,7 @@ td {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#state</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#state</pycode>
               </td>
             </tr>
             <tr>
@@ -5011,7 +5234,7 @@ td {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#clauseOf</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#clauseOf</pycode>
               </td>
             </tr>
             <tr>
@@ -5052,7 +5275,7 @@ td {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#reciprocalClauseOf</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#reciprocalClauseOf</pycode>
               </td>
             </tr>
             <tr>
@@ -5093,7 +5316,7 @@ td {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#stipulates</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#stipulates</pycode>
               </td>
             </tr>
             <tr>
@@ -5134,7 +5357,7 @@ td {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#stipulatesReciprocal</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#stipulatesReciprocal</pycode>
               </td>
             </tr>
             <tr>
@@ -5175,7 +5398,7 @@ td {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#realizationOf</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#realizationOf</pycode>
               </td>
             </tr>
             <tr>
@@ -5216,7 +5439,7 @@ td {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#realizes</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#realizes</pycode>
               </td>
             </tr>
             <tr>
@@ -5257,7 +5480,7 @@ td {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#reciprocalRealizationOf</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#reciprocalRealizationOf</pycode>
               </td>
             </tr>
             <tr>
@@ -5298,7 +5521,7 @@ td {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#realizesReciprocal</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#realizesReciprocal</pycode>
               </td>
             </tr>
             <tr>
@@ -5339,7 +5562,7 @@ td {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#bundledIn</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#bundledIn</pycode>
               </td>
             </tr>
             <tr>
@@ -5380,7 +5603,7 @@ td {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#bundles</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#bundles</pycode>
               </td>
             </tr>
             <tr>
@@ -5425,7 +5648,7 @@ td {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#hasBeginning</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#hasBeginning</pycode>
               </td>
             </tr>
             <tr>
@@ -5491,7 +5714,7 @@ td {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#hasEnd</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#hasEnd</pycode>
               </td>
             </tr>
             <tr>
@@ -5557,7 +5780,7 @@ td {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#hasPointInTime</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#hasPointInTime</pycode>
               </td>
             </tr>
             <tr>
@@ -5613,7 +5836,7 @@ td {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#due</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#due</pycode>
               </td>
             </tr>
             <tr>
@@ -5666,7 +5889,7 @@ td {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#hasNumericalValue</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#hasNumericalValue</pycode>
               </td>
             </tr>
             <tr>
@@ -5712,7 +5935,7 @@ td {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#unitBased</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#unitBased</pycode>
               </td>
             </tr>
             <tr>
@@ -5755,7 +5978,7 @@ td {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#created</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#created</pycode>
               </td>
             </tr>
             <tr>
@@ -5818,7 +6041,7 @@ td {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#long</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#long</pycode>
               </td>
             </tr>
             <tr>
@@ -5864,7 +6087,7 @@ td {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#lat</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#lat</pycode>
               </td>
             </tr>
             <tr>
@@ -5910,7 +6133,7 @@ td {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#alt</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#alt</pycode>
               </td>
             </tr>
             <tr>
@@ -5956,7 +6179,7 @@ td {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#mappableAddress</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#mappableAddress</pycode>
               </td>
             </tr>
             <tr>
@@ -5994,14 +6217,14 @@ td {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#currentVirtualLocation</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#currentVirtualLocation</pycode>
               </td>
             </tr>
             <tr>
               <th>
                 <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
               </th>
-              <td><p>The current virtual place a digital economic resource is located. Usually used for documents, code, or other electronic resource.</p></td>
+              <td><p>The current virtual place a digital economic resource is located. Usually used for documents, pycode, or other electronic resource.</p></td>
             </tr>
             <tr>
               <th>
@@ -6032,7 +6255,7 @@ td {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#currentCurrencyLocation</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#currentCurrencyLocation</pycode>
               </td>
             </tr>
             <tr>
@@ -6070,7 +6293,7 @@ td {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#image</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#image</pycode>
               </td>
             </tr>
             <tr>
@@ -6138,7 +6361,7 @@ td {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#imageList</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#imageList</pycode>
               </td>
             </tr>
             <tr>
@@ -6186,7 +6409,7 @@ td {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#name</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#name</pycode>
               </td>
             </tr>
             <tr>
@@ -6274,7 +6497,7 @@ td {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#trackingIdentifier</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#trackingIdentifier</pycode>
               </td>
             </tr>
             <tr>
@@ -6312,7 +6535,7 @@ td {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#batchLotCode</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#batchLotCode</pycode>
               </td>
             </tr>
             <tr>
@@ -6350,7 +6573,7 @@ td {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#expirationDate</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#expirationDate</pycode>
               </td>
             </tr>
             <tr>
@@ -6388,7 +6611,7 @@ td {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#finished</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#finished</pycode>
               </td>
             </tr>
             <tr>
@@ -6441,7 +6664,7 @@ td {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#substitutable</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#substitutable</pycode>
               </td>
             </tr>
             <tr>
@@ -6477,79 +6700,79 @@ td {
         <dl>
           <dt id="cc">cc</dt>
           <dd>
-            <code>http://creativecommons.org/ns#</code>
+            <pycode>http://creativecommons.org/ns#</pycode>
           </dd>
           <dt id="dcterms">dcterms</dt>
           <dd>
-            <code>http://purl.org/dc/terms/</code>
+            <pycode>http://purl.org/dc/terms/</pycode>
           </dd>
           <dt id="dtype">dtype</dt>
           <dd>
-            <code>http://www.linkedmodel.org/schema/dtype#</code>
+            <pycode>http://www.linkedmodel.org/schema/dtype#</pycode>
           </dd>
           <dt id="foaf">foaf</dt>
           <dd>
-            <code>http://xmlns.com/foaf/0.1/</code>
+            <pycode>http://xmlns.com/foaf/0.1/</pycode>
           </dd>
           <dt id="geo">geo</dt>
           <dd>
-            <code>http://www.w3.org/2003/01/geo/wgs84_pos#</code>
+            <pycode>http://www.w3.org/2003/01/geo/wgs84_pos#</pycode>
           </dd>
           <dt id="geosparql">geosparql</dt>
           <dd>
-            <code>http://www.opengis.net/ont/geosparql#</code>
+            <pycode>http://www.opengis.net/ont/geosparql#</pycode>
           </dd>
           <dt id="om">om</dt>
           <dd>
-            <code>http://www.ontology-of-units-of-measure.org/resource/om-2/</code>
+            <pycode>http://www.ontology-of-units-of-measure.org/resource/om-2/</pycode>
           </dd>
           <dt id="org">org</dt>
           <dd>
-            <code>http://www.w3.org/ns/org#</code>
+            <pycode>http://www.w3.org/ns/org#</pycode>
           </dd>
           <dt id="owl">owl</dt>
           <dd>
-            <code>http://www.w3.org/2002/07/owl#</code>
+            <pycode>http://www.w3.org/2002/07/owl#</pycode>
           </dd>
           <dt id="rdf">rdf</dt>
           <dd>
-            <code>http://www.w3.org/1999/02/22-rdf-syntax-ns#</code>
+            <pycode>http://www.w3.org/1999/02/22-rdf-syntax-ns#</pycode>
           </dd>
           <dt id="rdfs">rdfs</dt>
           <dd>
-            <code>http://www.w3.org/2000/01/rdf-schema#</code>
+            <pycode>http://www.w3.org/2000/01/rdf-schema#</pycode>
           </dd>
           <dt id="skos">skos</dt>
           <dd>
-            <code>http://www.w3.org/2004/02/skos/core#</code>
+            <pycode>http://www.w3.org/2004/02/skos/core#</pycode>
           </dd>
           <dt id="spdxl">spdxl</dt>
           <dd>
-            <code>https://spdx.org/licenses/</code>
+            <pycode>https://spdx.org/licenses/</pycode>
           </dd>
           <dt id="spdxt">spdxt</dt>
           <dd>
-            <code>http://spdx.org/rdf/terms#</code>
+            <pycode>http://spdx.org/rdf/terms#</pycode>
           </dd>
           <dt id="time">time</dt>
           <dd>
-            <code>http://www.w3.org/2006/time#</code>
+            <pycode>http://www.w3.org/2006/time#</pycode>
           </dd>
           <dt id="vann">vann</dt>
           <dd>
-            <code>http://purl.org/vocab/vann/</code>
+            <pycode>http://purl.org/vocab/vann/</pycode>
           </dd>
           <dt id="vf">vf</dt>
           <dd>
-            <code>https://w3id.org/valueflows/ont/vf#</code>
+            <pycode>https://w3id.org/valueflows/ont/vf#</pycode>
           </dd>
           <dt id="vs">vs</dt>
           <dd>
-            <code>http://www.w3.org/2003/06/sw-vocab-status/ns#</code>
+            <pycode>http://www.w3.org/2003/06/sw-vocab-status/ns#</pycode>
           </dd>
           <dt id="xsd">xsd</dt>
           <dd>
-            <code>http://www.w3.org/2001/XMLSchema#</code>
+            <pycode>http://www.w3.org/2001/XMLSchema#</pycode>
           </dd>
         </dl>
       </div>
@@ -6576,483 +6799,462 @@ td {
           </tr>
         </table>
       </div>
-    </div>
-    <div id="pylode">
-      <p>made by 
-        <a href="https://github.com/rdflib/pyLODE">
-          <span id="p">p</span>
-          <span id="y">y</span>
-          <span>LODE</span>
-        </a>
-        <a href="https://github.com/rdflib/pyLODE/release/3.2.1" id="version">3.2.1</a>
-        <span> with the </span>
-        <a href="https://w3id.org/profile/ontpub" id="profile">OntPub</a>
-        <span>profile</span>
-      </p>
-    </div>
+    </div></div>
     <div id="toc">
       <h3>Table of Contents</h3>
       <ul class="first">
         <li>
           <h4>
-            <a href="#metadata">Metadata</a>
-          </h4>
-        </li>
-        <li>
-          <h4>
-            <a href="#classes">Classes</a>
+            <a class="toc-link" href="#classes">Classes</a>
           </h4>
           <ul class="second">
             <li>
-              <a href="#ResourceSpecification">Resource Specification</a>
+              <a class="toc-link" href="#Action">Action</a>
             </li>
             <li>
-              <a href="#ProcessSpecification">Process Specification</a>
+              <a class="toc-link" href="#Agent">Agent</a>
             </li>
             <li>
-              <a href="#Action">Action</a>
+              <a class="toc-link" href="#Agreement">Agreement</a>
             </li>
             <li>
-              <a href="#Recipe">Recipe</a>
+              <a class="toc-link" href="#AgreementBundle">Agreement Bundle</a>
             </li>
             <li>
-              <a href="#RecipeProcess">Recipe Process</a>
+              <a class="toc-link" href="#BatchLotRecord">Batch Lot Record</a>
             </li>
             <li>
-              <a href="#RecipeFlow">Recipe Flow</a>
+              <a class="toc-link" href="#Claim">Claim</a>
             </li>
             <li>
-              <a href="#RecipeExchange">Recipe Exchange</a>
+              <a class="toc-link" href="#Commitment">Commitment</a>
             </li>
             <li>
-              <a href="#Plan">Plan</a>
+              <a class="toc-link" href="#EcologicalAgent">Ecological Agent</a>
             </li>
             <li>
-              <a href="#Intent">Intent</a>
+              <a class="toc-link" href="#EconomicResource">Economic Resource</a>
             </li>
             <li>
-              <a href="#Proposal">Proposal</a>
+              <a class="toc-link" href="#Intent">Intent</a>
             </li>
             <li>
-              <a href="#ProposalList">Proposal List</a>
+              <a class="toc-link" href="#Measure">Measure</a>
             </li>
             <li>
-              <a href="#Commitment">Commitment</a>
+              <a class="toc-link" href="#Organization">Organization</a>
             </li>
             <li>
-              <a href="#Agreement">Agreement</a>
+              <a class="toc-link" href="#Person">Person</a>
             </li>
             <li>
-              <a href="#AgreementBundle">Agreement Bundle</a>
+              <a class="toc-link" href="#Plan">Plan</a>
             </li>
             <li>
-              <a href="#Agent">Agent</a>
+              <a class="toc-link" href="#Process">Process</a>
             </li>
             <li>
-              <a href="#Person">Person</a>
+              <a class="toc-link" href="#ProcessSpecification">Process Specification</a>
             </li>
             <li>
-              <a href="#Organization">Organization</a>
+              <a class="toc-link" href="#Proposal">Proposal</a>
             </li>
             <li>
-              <a href="#EcologicalAgent">Ecological Agent</a>
+              <a class="toc-link" href="#ProposalList">Proposal List</a>
             </li>
             <li>
-              <a href="#EconomicResource">Economic Resource</a>
+              <a class="toc-link" href="#Recipe">Recipe</a>
             </li>
             <li>
-              <a href="#BatchLotRecord">Batch Lot Record</a>
+              <a class="toc-link" href="#RecipeExchange">Recipe Exchange</a>
             </li>
             <li>
-              <a href="#Process">Process</a>
+              <a class="toc-link" href="#RecipeFlow">Recipe Flow</a>
             </li>
             <li>
-              <a href="#EconomicEvent">Economic Event</a>
+              <a class="toc-link" href="#RecipeProcess">Recipe Process</a>
             </li>
             <li>
-              <a href="#Claim">Claim</a>
+              <a class="toc-link" href="#ResourceSpecification">Resource Specification</a>
             </li>
             <li>
-              <a href="#SpatialThing">Spatial Thing</a>
+              <a class="toc-link" href="#SpatialThing">Spatial Thing</a>
             </li>
             <li>
-              <a href="#Measure">Measure</a>
-            </li>
-            <li>
-              <a href="#Unit">Unit</a>
+              <a class="toc-link" href="#Unit">Unit</a>
             </li>
           </ul>
         </li>
         <li>
           <h4>
-            <a href="#objectproperties">Object Properties</a>
+            <a class="toc-link" href="#objectproperties">Object Properties</a>
           </h4>
           <ul class="second">
             <li>
-              <a href="#action">action</a>
+              <a class="toc-link" href="#action">action</a>
             </li>
             <li>
-              <a href="#inputOf">input of</a>
+              <a class="toc-link" href="#inputOf">input of</a>
             </li>
             <li>
-              <a href="#hasInput">has input</a>
+              <a class="toc-link" href="#hasInput">has input</a>
             </li>
             <li>
-              <a href="#outputOf">output of</a>
+              <a class="toc-link" href="#outputOf">output of</a>
             </li>
             <li>
-              <a href="#hasOutput">has output</a>
+              <a class="toc-link" href="#hasOutput">has output</a>
             </li>
             <li>
-              <a href="#recipeInputOf">recipe input of</a>
+              <a class="toc-link" href="#recipeInputOf">recipe input of</a>
             </li>
             <li>
-              <a href="#hasRecipeInput">has recipe input</a>
+              <a class="toc-link" href="#hasRecipeInput">has recipe input</a>
             </li>
             <li>
-              <a href="#recipeOutputOf">recipe output of</a>
+              <a class="toc-link" href="#recipeOutputOf">recipe output of</a>
             </li>
             <li>
-              <a href="#hasRecipeOutput">has recipe output</a>
+              <a class="toc-link" href="#hasRecipeOutput">has recipe output</a>
             </li>
             <li>
-              <a href="#recipeClauseOf">recipe clause of</a>
+              <a class="toc-link" href="#recipeClauseOf">recipe clause of</a>
             </li>
             <li>
-              <a href="#recipeStipulates">recipe stipulates</a>
+              <a class="toc-link" href="#recipeStipulates">recipe stipulates</a>
             </li>
             <li>
-              <a href="#recipeReciprocalClauseOf">recipe reciprocal clause of</a>
+              <a class="toc-link" href="#recipeReciprocalClauseOf">recipe reciprocal clause of</a>
             </li>
             <li>
-              <a href="#recipeStipulatesReciprocal">recipe stipulates reciprocal</a>
+              <a class="toc-link" href="#recipeStipulatesReciprocal">recipe stipulates reciprocal</a>
             </li>
             <li>
-              <a href="#primaryOutput">primary output</a>
+              <a class="toc-link" href="#primaryOutput">primary output</a>
             </li>
             <li>
-              <a href="#recipeIncludes">recipe includes</a>
+              <a class="toc-link" href="#recipeIncludes">recipe includes</a>
             </li>
             <li>
-              <a href="#plannedWithin">planned within</a>
+              <a class="toc-link" href="#plannedWithin">planned within</a>
             </li>
             <li>
-              <a href="#planIncludes">plan includes</a>
+              <a class="toc-link" href="#planIncludes">plan includes</a>
             </li>
             <li>
-              <a href="#independentDemandOf">independent demand of</a>
+              <a class="toc-link" href="#independentDemandOf">independent demand of</a>
             </li>
             <li>
-              <a href="#hasIndependentDemand">has independent demand</a>
+              <a class="toc-link" href="#hasIndependentDemand">has independent demand</a>
             </li>
             <li>
-              <a href="#resourceInventoriedAs">resource inventoried as</a>
+              <a class="toc-link" href="#resourceInventoriedAs">resource inventoried as</a>
             </li>
             <li>
-              <a href="#toResourceInventoriedAs">to resource inventoried as</a>
+              <a class="toc-link" href="#toResourceInventoriedAs">to resource inventoried as</a>
             </li>
             <li>
-              <a href="#provider">provider</a>
+              <a class="toc-link" href="#provider">provider</a>
             </li>
             <li>
-              <a href="#receiver">receiver</a>
+              <a class="toc-link" href="#receiver">receiver</a>
             </li>
             <li>
-              <a href="#inScopeOf">in scope of</a>
+              <a class="toc-link" href="#inScopeOf">in scope of</a>
             </li>
             <li>
-              <a href="#triggeredBy">triggered by</a>
+              <a class="toc-link" href="#triggeredBy">triggered by</a>
             </li>
             <li>
-              <a href="#corrects">corrects</a>
+              <a class="toc-link" href="#corrects">corrects</a>
             </li>
             <li>
-              <a href="#settles">settles</a>
+              <a class="toc-link" href="#settles">settles</a>
             </li>
             <li>
-              <a href="#containedIn">contained in</a>
+              <a class="toc-link" href="#containedIn">contained in</a>
             </li>
             <li>
-              <a href="#contains">contains</a>
+              <a class="toc-link" href="#contains">contains</a>
             </li>
             <li>
-              <a href="#primaryAccountable">primary accountable</a>
+              <a class="toc-link" href="#primaryAccountable">primary accountable</a>
             </li>
             <li>
-              <a href="#hasDuration">has duration</a>
+              <a class="toc-link" href="#hasDuration">has duration</a>
             </li>
             <li>
-              <a href="#hasUnit">has unit</a>
+              <a class="toc-link" href="#hasUnit">has unit</a>
             </li>
             <li>
-              <a href="#accountingQuantity">accounting quantity</a>
+              <a class="toc-link" href="#accountingQuantity">accounting quantity</a>
             </li>
             <li>
-              <a href="#onhandQuantity">onhand quantity</a>
+              <a class="toc-link" href="#onhandQuantity">onhand quantity</a>
             </li>
             <li>
-              <a href="#resourceQuantity">resource quantity</a>
+              <a class="toc-link" href="#resourceQuantity">resource quantity</a>
             </li>
             <li>
-              <a href="#effortQuantity">effort quantity</a>
+              <a class="toc-link" href="#effortQuantity">effort quantity</a>
             </li>
             <li>
-              <a href="#availableQuantity">available quantity</a>
+              <a class="toc-link" href="#availableQuantity">available quantity</a>
             </li>
             <li>
-              <a href="#minimumQuantity">minimum quantity</a>
+              <a class="toc-link" href="#minimumQuantity">minimum quantity</a>
             </li>
             <li>
-              <a href="#purpose">purpose</a>
+              <a class="toc-link" href="#purpose">purpose</a>
             </li>
             <li>
-              <a href="#hasDetailedGeometry">currency address</a>
+              <a class="toc-link" href="#hasDetailedGeometry">currency address</a>
             </li>
             <li>
-              <a href="#currentLocation">current location</a>
+              <a class="toc-link" href="#currentLocation">current location</a>
             </li>
             <li>
-              <a href="#primaryLocation">primary location</a>
+              <a class="toc-link" href="#primaryLocation">primary location</a>
             </li>
             <li>
-              <a href="#eligibleLocation">eligible location</a>
+              <a class="toc-link" href="#eligibleLocation">eligible location</a>
             </li>
             <li>
-              <a href="#toLocation">to location</a>
+              <a class="toc-link" href="#toLocation">to location</a>
             </li>
             <li>
-              <a href="#ofBatchLot">of batch or lot</a>
+              <a class="toc-link" href="#ofBatchLot">of batch or lot</a>
             </li>
             <li>
-              <a href="#fulfills">fulfills</a>
+              <a class="toc-link" href="#fulfills">fulfills</a>
             </li>
             <li>
-              <a href="#satisfies">satisfies</a>
+              <a class="toc-link" href="#satisfies">satisfies</a>
             </li>
             <li>
-              <a href="#publishes">publishes</a>
+              <a class="toc-link" href="#publishes">publishes</a>
             </li>
             <li>
-              <a href="#reciprocal">reciprocal</a>
+              <a class="toc-link" href="#reciprocal">reciprocal</a>
             </li>
             <li>
-              <a href="#proposedTo">proposed to</a>
+              <a class="toc-link" href="#proposedTo">proposed to</a>
             </li>
             <li>
-              <a href="#listedIn">listed in</a>
+              <a class="toc-link" href="#listedIn">listed in</a>
             </li>
             <li>
-              <a href="#lists">lists</a>
+              <a class="toc-link" href="#lists">lists</a>
             </li>
             <li>
-              <a href="#unitOfEffort">unit of effort</a>
+              <a class="toc-link" href="#unitOfEffort">unit of effort</a>
             </li>
             <li>
-              <a href="#defaultUnitOfEffort">default unit of effort</a>
+              <a class="toc-link" href="#defaultUnitOfEffort">default unit of effort</a>
             </li>
             <li>
-              <a href="#defaultUnitOfResource">default unit of resource</a>
+              <a class="toc-link" href="#defaultUnitOfResource">default unit of resource</a>
             </li>
             <li>
-              <a href="#basedOn">based on</a>
+              <a class="toc-link" href="#basedOn">based on</a>
             </li>
             <li>
-              <a href="#classifiedas">classified as</a>
+              <a class="toc-link" href="#classifiedas">classified as</a>
             </li>
             <li>
-              <a href="#resourceclassifiedas">resource classified as</a>
+              <a class="toc-link" href="#resourceclassifiedas">resource classified as</a>
             </li>
             <li>
-              <a href="#processClassifiedAs">process classified as</a>
+              <a class="toc-link" href="#processClassifiedAs">process classified as</a>
             </li>
             <li>
-              <a href="#processConformsTo">process conforms to</a>
+              <a class="toc-link" href="#processConformsTo">process conforms to</a>
             </li>
             <li>
-              <a href="#resourceConformsTo">resource conforms to</a>
+              <a class="toc-link" href="#resourceConformsTo">resource conforms to</a>
             </li>
             <li>
-              <a href="#conformsTo">conforms to</a>
+              <a class="toc-link" href="#conformsTo">conforms to</a>
             </li>
             <li>
-              <a href="#stage">stage</a>
+              <a class="toc-link" href="#stage">stage</a>
             </li>
             <li>
-              <a href="#state">state</a>
+              <a class="toc-link" href="#state">state</a>
             </li>
             <li>
-              <a href="#clauseOf">clause of</a>
+              <a class="toc-link" href="#clauseOf">clause of</a>
             </li>
             <li>
-              <a href="#reciprocalClauseOf">reciprocal clause of</a>
+              <a class="toc-link" href="#reciprocalClauseOf">reciprocal clause of</a>
             </li>
             <li>
-              <a href="#stipulates">stipulates</a>
+              <a class="toc-link" href="#stipulates">stipulates</a>
             </li>
             <li>
-              <a href="#stipulatesReciprocal">stipulates reciprocal</a>
+              <a class="toc-link" href="#stipulatesReciprocal">stipulates reciprocal</a>
             </li>
             <li>
-              <a href="#realizationOf">realization of</a>
+              <a class="toc-link" href="#realizationOf">realization of</a>
             </li>
             <li>
-              <a href="#realizes">realizes</a>
+              <a class="toc-link" href="#realizes">realizes</a>
             </li>
             <li>
-              <a href="#reciprocalRealizationOf">reciprocal realization of</a>
+              <a class="toc-link" href="#reciprocalRealizationOf">reciprocal realization of</a>
             </li>
             <li>
-              <a href="#realizesReciprocal">realizes reciprocal</a>
+              <a class="toc-link" href="#realizesReciprocal">realizes reciprocal</a>
             </li>
             <li>
-              <a href="#bundledIn">bundled in</a>
+              <a class="toc-link" href="#bundledIn">bundled in</a>
             </li>
             <li>
-              <a href="#bundles">bundles</a>
+              <a class="toc-link" href="#bundles">bundles</a>
             </li>
           </ul>
         </li>
         <li>
           <h4>
-            <a href="#datatypeproperties">Datatype Properties</a>
+            <a class="toc-link" href="#datatypeproperties">Datatype Properties</a>
           </h4>
           <ul class="second">
             <li>
-              <a href="#hasbeginning">has beginning</a>
+              <a class="toc-link" href="#hasbeginning">has beginning</a>
             </li>
             <li>
-              <a href="#hasend">has end</a>
+              <a class="toc-link" href="#hasend">has end</a>
             </li>
             <li>
-              <a href="#haspointintime">has point in time</a>
+              <a class="toc-link" href="#haspointintime">has point in time</a>
             </li>
             <li>
-              <a href="#due">due</a>
+              <a class="toc-link" href="#due">due</a>
             </li>
             <li>
-              <a href="#hasNumericalValue">has numerical value</a>
+              <a class="toc-link" href="#hasNumericalValue">has numerical value</a>
             </li>
             <li>
-              <a href="#unitbased">unit based</a>
+              <a class="toc-link" href="#unitbased">unit based</a>
             </li>
             <li>
-              <a href="#created">created</a>
+              <a class="toc-link" href="#created">created</a>
             </li>
             <li>
-              <a href="#long">long</a>
+              <a class="toc-link" href="#long">long</a>
             </li>
             <li>
-              <a href="#lat">lat</a>
+              <a class="toc-link" href="#lat">lat</a>
             </li>
             <li>
-              <a href="#alt">alt</a>
+              <a class="toc-link" href="#alt">alt</a>
             </li>
             <li>
-              <a href="#mappableAddress">mappable address</a>
+              <a class="toc-link" href="#mappableAddress">mappable address</a>
             </li>
             <li>
-              <a href="#currentVirtualLocation">current virtual location</a>
+              <a class="toc-link" href="#currentVirtualLocation">current virtual location</a>
             </li>
             <li>
-              <a href="#currentCurrencyLocation">current currency location</a>
+              <a class="toc-link" href="#currentCurrencyLocation">current currency location</a>
             </li>
             <li>
-              <a href="#image">image</a>
+              <a class="toc-link" href="#image">image</a>
             </li>
             <li>
-              <a href="#imagelist">image list</a>
+              <a class="toc-link" href="#imagelist">image list</a>
             </li>
             <li>
-              <a href="#name">name</a>
+              <a class="toc-link" href="#name">name</a>
             </li>
             <li>
-              <a href="#trackingIdentifier">tracking identifier</a>
+              <a class="toc-link" href="#trackingIdentifier">tracking identifier</a>
             </li>
             <li>
-              <a href="#batchLotCode">batch or lot code</a>
+              <a class="toc-link" href="#batchLotCode">batch or lot code</a>
             </li>
             <li>
-              <a href="#expirationDate">expiration date</a>
+              <a class="toc-link" href="#expirationDate">expiration date</a>
             </li>
             <li>
-              <a href="#finished">finished</a>
+              <a class="toc-link" href="#finished">finished</a>
             </li>
             <li>
-              <a href="#substitutable">substitutable</a>
+              <a class="toc-link" href="#substitutable">substitutable</a>
             </li>
           </ul>
         </li>
         <li>
           <h4>
-            <a href="#namespaces">Namespaces</a>
+            <a class="toc-link" href="#namespaces">Namespaces</a>
           </h4>
           <ul class="second">
             <li>
-              <a href="#cc">cc</a>
+              <a class="toc-link" href="#cc">cc</a>
             </li>
             <li>
-              <a href="#dcterms">dcterms</a>
+              <a class="toc-link" href="#dcterms">dcterms</a>
             </li>
             <li>
-              <a href="#dtype">dtype</a>
+              <a class="toc-link" href="#dtype">dtype</a>
             </li>
             <li>
-              <a href="#foaf">foaf</a>
+              <a class="toc-link" href="#foaf">foaf</a>
             </li>
             <li>
-              <a href="#geo">geo</a>
+              <a class="toc-link" href="#geo">geo</a>
             </li>
             <li>
-              <a href="#geosparql">geosparql</a>
+              <a class="toc-link" href="#geosparql">geosparql</a>
             </li>
             <li>
-              <a href="#om">om</a>
+              <a class="toc-link" href="#om">om</a>
             </li>
             <li>
-              <a href="#org">org</a>
+              <a class="toc-link" href="#org">org</a>
             </li>
             <li>
-              <a href="#owl">owl</a>
+              <a class="toc-link" href="#owl">owl</a>
             </li>
             <li>
-              <a href="#rdf">rdf</a>
+              <a class="toc-link" href="#rdf">rdf</a>
             </li>
             <li>
-              <a href="#rdfs">rdfs</a>
+              <a class="toc-link" href="#rdfs">rdfs</a>
             </li>
             <li>
-              <a href="#skos">skos</a>
+              <a class="toc-link" href="#skos">skos</a>
             </li>
             <li>
-              <a href="#spdxl">spdxl</a>
+              <a class="toc-link" href="#spdxl">spdxl</a>
             </li>
             <li>
-              <a href="#spdxt">spdxt</a>
+              <a class="toc-link" href="#spdxt">spdxt</a>
             </li>
             <li>
-              <a href="#time">time</a>
+              <a class="toc-link" href="#time">time</a>
             </li>
             <li>
-              <a href="#vann">vann</a>
+              <a class="toc-link" href="#vann">vann</a>
             </li>
             <li>
-              <a href="#vf">vf</a>
+              <a class="toc-link" href="#vf">vf</a>
             </li>
             <li>
-              <a href="#vs">vs</a>
+              <a class="toc-link" href="#vs">vs</a>
             </li>
             <li>
-              <a href="#xsd">xsd</a>
+              <a class="toc-link" href="#xsd">xsd</a>
             </li>
           </ul>
         </li>
         <li>
           <h4>
-            <a href="#legend">Legend</a>
+            <a class="toc-link" href="#legend">Legend</a>
           </h4>
           <ul class="second"></ul>
         </li>
       </ul>
     </div>
-  </body>
-</html>
+
+</body>
