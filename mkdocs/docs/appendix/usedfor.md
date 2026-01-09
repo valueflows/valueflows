@@ -52,9 +52,3 @@ The [Fediverse](https://fediverse.party/en/fediverse/){target="_blank"} is a col
 * [Web of Needs](https://researchstudio-sat.github.io/webofneeds/){target="_blank"}. The goal is to do automated matching of intents with attached actors/resources on the one side and interaction patterns on the other, such that meaningful interactions can be automatically suggested to users. The [WoN code is on github](https://github.com/researchstudio-sat/webofneeds){target="_blank"}. (In process.)
 
 * [The Weather Makers](https://theweathermakers.nl/){target="_blank"} are using Valueflows to model their ecosystem planning, engineering and management strategy for restoring water cycles as the key to achieving overall biosphere restoration. [Green the Sinai](https://greekreporter.com/2024/09/09/sinai-desert-egypt-regreening-regeneration-weather/){target="_blank"} is one ambitious potential project. (In process.)
-
-## Whither from here? 
-
-Valueflows philosophically seeks to develop in collaboration with user groups on the ground. This round of projects is providing valuable input to the Valueflows vocabulary. We can expect some additions and extensions.
-
-However, Valueflows is also working towards a stable version 1.0 of the core model that people will be able to count on for a reasonable time period.  We are close.
