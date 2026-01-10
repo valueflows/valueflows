@@ -1791,393 +1791,7 @@
 
 <h1 id="formatted-specification">Formatted specification</h1>
 <p><em>This page is normative.</em></p>
-<!--
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Valueflows Ontology</title>
-    <style>
-        #pylode {
-            position: fixed;
-            top: 15em;
-            left: -12em;
-            font-size: small;
-            transform: rotate(-90deg);
-            color: grey;
-        }
-        #pylode a {
-            font-size: 1.5em;
-            font-weight: bold;
-            text-decoration: none;
-            color: #005A9C;
-        }
-        #pylode a:hover {
-            color: #333;
-        }
-        #pylode #p {
-            color: #329545;
-        }
-        #pylode #y {
-            color: #f9cb33;
-        }
-        #pylode #version {
-            font-size: 1.0em;
-        }
-
-        #profile {
-            font-style: italic;
-            font-size: 1.25em;
-            color: darkred!important;
-        }
-
-        .cardinality {
-            font-style: italic;
-            color: #aa00aa;
-        }
-
-        dl {
-            /*border: 1px solid navy;*/
-            /*padding:5px;*/
-        }
-
-        dt {
-            font-weight: bold;
-            padding: 0;
-        }
-
-        dd {
-            margin-bottom: 10px;
-            padding-top: 7px;
-        }
-
-        #metadata ul,
-        #classes ul {
-            list-style-type: none;
-        }
-
-        #metadata ul li,
-        #classes ul li {
-            margin-left: -40px;
-        }
-
-        ul.hlist {
-            list-style-type: none;
-            border: 1px solid navy;
-            padding:5px;
-            background-color: #F4FFFF;
-        }
-
-        ul.hierarchy {
-            border: 1px solid navy;
-            padding: 5px 25px 5px 25px;
-            background-color: #F4FFFF;
-        }
-
-
-        ul.hlist li {
-            display: inline;
-            margin-right: 10px;
-        }
-
-        .entity {
-            border: 1px solid navy;
-            margin:5px 0 5px 0;
-            padding: 5px;
-        }
-
-        .entity th {
-            width: 150px;
-            vertical-align: top;
-        }
-
-        .entity th,
-        .entity td {
-            padding-bottom: 20px;
-        }
-
-        .entity table th {
-            text-align: left;
-        }
-
-        section#overview img {
-            max-width: 1000px;
-        }
-
-        h1, h2, h3, h4, h5, h6 {
-            text-align: left
-        }
-        h1, h2, h3 {
-            color: #005A9C; background: white
-        }
-        h1 {
-            font: 170% sans-serif;
-            line-height: 110%;
-        }
-        h2 {
-            font: 140% sans-serif;
-            margin-top:40px;
-        }
-        h3 {
-            font: 120% sans-serif;
-            margin-top: 20px;
-            padding-bottom: 5px;
-            border-bottom: 1px solid navy;
-        }
-        h4 { font: bold 100% sans-serif }
-        h5 { font: italic 100% sans-serif }
-        h6 { font: small-caps 100% sans-serif }
-
-        body {
-            padding: 2em 70px 2em 70px;
-            margin: 0;
-            font-family: sans-serif;
-            color: black;
-            background: white;
-            background-position: top left;
-            background-attachment: fixed;
-            background-repeat: no-repeat;
-            text-align: left;
-        }
-
-        section {
-            max-width: 1500px;
-        }
-
-        .figure {
-            margin-bottom: 20px;
-        }
-
-        :link { color: #00C; background: transparent }
-        :visited { color: #609; background: transparent }
-        a:active { color: #C00; background: transparent }
-
-        .sup-c,
-        .sup-op,
-        .sup-fp,
-        .sup-dp,
-        .sup-ap,
-        .sup-p,
-        .sup-ni,
-        .sup-con,
-        .sup-col {
-            cursor:help;
-        }
-
-        .sup-c {
-            color:orange;
-        }
-
-        .sup-op {
-            color:navy;
-        }
-
-        .sup-fp {
-            color:lightskyblue;
-        }
-
-        .sup-dp {
-            color:green;
-        }
-
-        .sup-ap {
-            color:darkred;
-        }
-
-        .sup-p {
-            color:black;
-        }
-
-        .sup-ni {
-            color:brown;
-        }
-
-        .sup-con {
-            color:orange;
-        }
-
-        .sup-col {
-            color:darkred;
-        }
-
-        sup {
-            margin-left: -3px;
-        }
-        code {
-            font-size: large;
-            color: darkred;
-        }
-
-        /* less prominent links for properties */
-        .proplink {
-            color: #336;
-            text-decoration: none;
-        }
-
-#toc {
-    position: fixed;
-    top: 0;
-    right: 0;
-    z-index: 2;
-    height: 100%;
-    overflow-y: auto;
-    padding: 10px;
-    border: solid 1px navy;
-    font-size: small;
-    width: 15%;
-}
-
-#toc h3 {
-    margin-top: 5px;
-}
-
-#toc ul {
-    list-style: none;
-    padding-left: 0;
-}
-
-#toc .first > li {
-    margin-top: 5px;
-}
-
-#toc .second,
-#toc .third {
-    padding-left: 10px;
-}
-
-#content {
-    width: 85%;
-}
-
-.hover_property {
-    cursor: help;
-    text-decoration: none;
-    border-bottom: dashed 1px;
-}
-
-.setclass {
-    list-style-type: none;
-}
-
-code{
-    word-wrap: break-word;
-  }
-table {
-    table-layout: fixed;
-    width: 100%;
-}
-td {
-    word-wrap: break-word;
-}
-#legend table.entity {
-    width: 25%;
-}
-    </style>
-    <link href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABhklEQVQ4jbWPzStEURjG3yQLirlGKUnKFO45Z+SjmXvnnmthQcpCoVhYmD/AwmJiI3OvZuZc2U3UlKU0/gAslMw9JgvhHxAr2fko7r0jHSsl+TgbTz2Lt5731/MASEiJW9ONml2QyX6rsGalmnT74v8BDf12hxJfpV8d1uwNKUBYszabdFv84L8B9X0rESVmmUup2fme0cVhJWaZHw4NWL1SewEAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ9Hn31OgoATL+CkLDGB5H1OKj4nFd/FBxUXJ0UZNb4edw/6nLyJXaj5FeCVyPLNIVmYK8TG1IwWb16L1gEACAFV90ftoT8bdOX0EeyY99gxBXZMgRz6qGb1KantAACI0UvE6F5XJqEjpsdURouI0Vt5gGOUkUNnPu7ObGIIMfNaGqDmjDRi9FZldF1lRgYzeqUyeoiY4ag5Iy3RgOYRM8+/M2bG8efsO4hGrpmJseyMAAAAAElFTkSuQmCC" rel="icon" sizes="16x16" type="image/png">
-    <link href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAC40lEQVRYhe2UT0hUQRzHp6Iss1B3VZKIDbbdfW9mnoi4f3zzjkJQeOgS0SEIb1EWBGGlLLu460zQPQM1unUIIjA6rfpm6ZAhHjoIRVQUFUlEbG+euTsdXG1d3VL3bVD4g+9h+L35fT/8fvN7ADgY9aHY5fpIvK82HO9ysu66wxWOzbkjcekKx0a2ALYA/n2AGi3a6ArFezcidziecQygNhhrcUficjP6PwBqtGijKxy/thnVBePHywYoDsFhl53GV8SEcsTx4usCMLUewTVpc23BNvEzm6Neyf1+KcG2vwqwUjgrOJq2JmHftwmkVBRGTvncFodnbI7vChO/FRznCmHsNM7aHM9Yk7Df5iqsLMw9sMNOK2g+jS4IEz0UJv4iuJZb2RltWnB4UZqH6ioGAgAAGe5vtiZhtzDx7OoRadLmeM7m6IRjhnLMW2Vx1bA5GhAmnhIcz6/xNj4Ujsky8UspwfayjDPjsF2Y6L7N8Vzx/BfP+KPg6LbgSqd8DnfJW2CnbaLhfH5ephpqygJYvQU4Z3P82TLRsDDhUTnmrSq+Y3N0Mg+Xldy/zwEAnLMWZ3pHpNExmfLs/t0dOdVcbT0JeKxUwFP2VljjqiE47Jp53LTXNxhsUZjerTByXWX6VZWRs/4bIQ2ACv+UAomgDzLCISNZxAxZKMhIDjLy1JfsaK+I+eGBUBNk5E2x8RogX/PdcDZUqieWTSh5D6nOVKqfhoycUmlHFFIyu5RXqf7AcQDISCpv/tqbMBqK883RtmpISRoxQyJKPgGn3wNk5NEigDFa6hslqV/Kj+FdBQD0bshIDlKSLlVcoWQo36UhR80BAMB73lulMn0EMpJTqD6qJiOt3mho/8GbkT2BZNgDB/V+RI0fkOrT3kRIVQbaDizJm2hdNbINBxwk5xAj3yEjuV9rZ1iIkgxixkLBA83mz8uCjLwoGwAx0vOnFSy5mtR4VTaAQvVORMnwZgSpzkrV/QmdE2tKe46+MQAAAABJRU5ErkJggg==" rel="icon" sizes="32x32" type="image/png">
-    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-    <script id="schema.org" type="application/ld+json">
-[
-  {
-    "@id": "https://w3id.org/valueflows/ont/vf",
-    "@type": [
-      "https://schema.org/DefinedTermSet"
-    ],
-    "https://schema.org/description": [
-      {
-        "@value": "A vocabulary for the distributed economic networks of the next economy, to coordinate the creation, distribution, and exchange of economic resources"
-      }
-    ],
-    "https://schema.org/license": [
-      {
-        "@value": "https://creativecommons.org/licenses/by-sa/4.0/"
-      }
-    ],
-    "https://schema.org/name": [
-      {
-        "@value": "Valueflows Ontology"
-      }
-    ]
-  }
-]
-    </script>
-  </head>
-
-  <body>
-
-    <div id="content">
-
-      <div class="section" id="metadata">
-        <h1>Valueflows Ontology</h1>
-        <h2>Metadata</h2>
-        <dl>
-          <div>
-            <dt>
-              <strong>IRI</strong>
-            </dt>
-            <dd>
-              <code>https://w3id.org/valueflows/ont/vf</code>
-            </dd>
-          </div>
-          <div>
-            <dt>
-              <a class="hover_property" href="http://purl.org/dc/terms/title" title="A name given to the resource. Defined in DCMI Metadata Terms">Title</a>
-            </dt>
-            <dd><p>Valueflows Ontology</p></dd>
-          </div>
-          <div>
-            <dt>
-              <a class="hover_property" href="http://purl.org/dc/terms/license" title="A legal document giving official permission to do something with the resource. Defined in DCMI Metadata Terms">License</a>
-            </dt>
-            <dd>
-              <a href="https://creativecommons.org/licenses/by-sa/4.0/">https://creativecommons.org/licenses/by-sa/4.0/</a>
-            </dd>
-          </div>
-          <div>
-            <dt>
-              <a class="hover_property" href="http://www.w3.org/2002/07/owl#versionIRI" title="The property that identifies the version IRI of an ontology. Defined in The OWL 2 Schema vocabulary (OWL 2)">Version Iri</a>
-            </dt>
-            <dd>
-              <a href="https://w3id.org/valueflows/ont/0.17/vf">https://w3id.org/valueflows/ont/0.17/vf</a>
-            </dd>
-          </div>
-          <div>
-            <dt>
-              <a class="hover_property" href="http://www.w3.org/2002/07/owl#versionInfo" title="The annotation property that provides version information for an ontology or another OWL construct. Defined in The OWL 2 Schema vocabulary (OWL 2)">Version Info</a>
-            </dt>
-            <dd><p>0.17</p></dd>
-          </div>
-          <div>
-            <dt>
-              <a class="hover_property" href="http://purl.org/vocab/vann/preferredNamespacePrefix" title="None. Defined in None">Preferred Namespace Prefix</a>
-            </dt>
-            <dd><p>vf</p></dd>
-          </div>
-          <div>
-            <dt>
-              <a class="hover_property" href="http://purl.org/vocab/vann/preferredNamespaceUri" title="None. Defined in None">Preferred Namespace Uri</a>
-            </dt>
-            <dd>
-              <a href="https://w3id.org/valueflows/ont/vf#">vf:</a>
-            </dd>
-          </div>
-          <div>
-            <dt>
-              <a class="hover_property" href="http://purl.org/dc/terms/source" title="A related resource from which the described resource is derived. Defined in DCMI Metadata Terms">Source</a>
-            </dt>
-            <dd>
-              <a href="https://codeberg.org/valueflows/pages/src/branch/main/assets/all_vf.TTL">https://codeberg.org/valueflows/pages/src/branch/main/assets/all_vf.TTL</a>
-            </dd>
-          </div>
-          <div>
-            <dt>
-              <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
-            </dt>
-            <dd><p>A vocabulary for the distributed economic networks of the next economy, to coordinate the creation, distribution, and exchange of economic resources</p></dd>
-          </div>
-        </dl>
-      </div>-->
-<html>
-  <style>
+<style>
     #pylode {
         top: 15em;
         left: -12em;
@@ -2331,6 +1945,7 @@ td {
 
   #content {
     width: 85%;
+    padding-right: 40px;
     }
 
   #toc {
@@ -2341,7 +1956,7 @@ td {
     z-index: 2;
     height: 100%;
     overflow-y: auto;
-    padding: 10px;
+    padding: 10px 10px 280px 10px;
     border: solid 1px navy;
     font-size: small;
     width: 15%;
@@ -2376,11 +1991,10 @@ pycode {
 
 </style>
 
-<body>
-  <div id="content">
+<div id="content">
     <div id="pylode">
     <p>It is a formatted version of the vocabulary as defined in the RDF turtle file system of record, excluding the Named Individuals, the Classes needed to manage those, and the "layer" definitions. In other words, this includes the base ontological Classes and Properties for building with Valueflows.</p>
-      <p> Credit: made by
+      <p> Credit:
         <a href="https://github.com/rdflib/pyLODE">
           <span id="p">p</span>
           <span id="y">y</span>
@@ -2389,7 +2003,7 @@ pycode {
         <a href="https://github.com/rdflib/pyLODE/release/3.2.1" id="version">3.2.1</a>
         <span> with the </span>
         <a href="https://w3id.org/profile/ontpub" id="profile">OntPub</a>
-        <span>profile (modified to fit inside the Valueflows site)</span>.
+        <span>profile (modified to fit inside the Valueflows site)</span>
       </p>
     </div>
       <div class="section" id="classes">
@@ -8583,9 +8197,10 @@ pycode {
           </tr>
         </table>
       </div>
-    </div></div>
+    </div>
+<p></div>
     <div id="toc">
-      <h3>Table of Contents</h3>
+      <h3>Alphabetical Links</h3>
       <ul class="first">
         <li>
           <h4>
@@ -8675,85 +8290,31 @@ pycode {
           </h4>
           <ul class="second">
             <li>
+              <a class="toc-link" href="#accountingQuantity">accounting quantity</a>
+            </li>
+            <li>
               <a class="toc-link" href="#action">action</a>
             </li>
             <li>
-              <a class="toc-link" href="#inputOf">input of</a>
+              <a class="toc-link" href="#availableQuantity">available quantity</a>
             </li>
             <li>
-              <a class="toc-link" href="#hasInput">has input</a>
+              <a class="toc-link" href="#basedOn">based on</a>
             </li>
             <li>
-              <a class="toc-link" href="#outputOf">output of</a>
+              <a class="toc-link" href="#bundledIn">bundled in</a>
             </li>
             <li>
-              <a class="toc-link" href="#hasOutput">has output</a>
+              <a class="toc-link" href="#bundles">bundles</a>
             </li>
             <li>
-              <a class="toc-link" href="#recipeInputOf">recipe input of</a>
+              <a class="toc-link" href="#classifiedas">classified as</a>
             </li>
             <li>
-              <a class="toc-link" href="#hasRecipeInput">has recipe input</a>
+              <a class="toc-link" href="#clauseOf">clause of</a>
             </li>
             <li>
-              <a class="toc-link" href="#recipeOutputOf">recipe output of</a>
-            </li>
-            <li>
-              <a class="toc-link" href="#hasRecipeOutput">has recipe output</a>
-            </li>
-            <li>
-              <a class="toc-link" href="#recipeClauseOf">recipe clause of</a>
-            </li>
-            <li>
-              <a class="toc-link" href="#recipeStipulates">recipe stipulates</a>
-            </li>
-            <li>
-              <a class="toc-link" href="#recipeReciprocalClauseOf">recipe reciprocal clause of</a>
-            </li>
-            <li>
-              <a class="toc-link" href="#recipeStipulatesReciprocal">recipe stipulates reciprocal</a>
-            </li>
-            <li>
-              <a class="toc-link" href="#primaryOutput">primary output</a>
-            </li>
-            <li>
-              <a class="toc-link" href="#recipeIncludes">recipe includes</a>
-            </li>
-            <li>
-              <a class="toc-link" href="#plannedWithin">planned within</a>
-            </li>
-            <li>
-              <a class="toc-link" href="#planIncludes">plan includes</a>
-            </li>
-            <li>
-              <a class="toc-link" href="#independentDemandOf">independent demand of</a>
-            </li>
-            <li>
-              <a class="toc-link" href="#hasIndependentDemand">has independent demand</a>
-            </li>
-            <li>
-              <a class="toc-link" href="#resourceInventoriedAs">resource inventoried as</a>
-            </li>
-            <li>
-              <a class="toc-link" href="#toResourceInventoriedAs">to resource inventoried as</a>
-            </li>
-            <li>
-              <a class="toc-link" href="#provider">provider</a>
-            </li>
-            <li>
-              <a class="toc-link" href="#receiver">receiver</a>
-            </li>
-            <li>
-              <a class="toc-link" href="#inScopeOf">in scope of</a>
-            </li>
-            <li>
-              <a class="toc-link" href="#triggeredBy">triggered by</a>
-            </li>
-            <li>
-              <a class="toc-link" href="#corrects">corrects</a>
-            </li>
-            <li>
-              <a class="toc-link" href="#settles">settles</a>
+              <a class="toc-link" href="#conformsTo">conforms to</a>
             </li>
             <li>
               <a class="toc-link" href="#containedIn">contained in</a>
@@ -8762,76 +8323,10 @@ pycode {
               <a class="toc-link" href="#contains">contains</a>
             </li>
             <li>
-              <a class="toc-link" href="#primaryAccountable">primary accountable</a>
-            </li>
-            <li>
-              <a class="toc-link" href="#hasDuration">has duration</a>
-            </li>
-            <li>
-              <a class="toc-link" href="#hasUnit">has unit</a>
-            </li>
-            <li>
-              <a class="toc-link" href="#accountingQuantity">accounting quantity</a>
-            </li>
-            <li>
-              <a class="toc-link" href="#onhandQuantity">onhand quantity</a>
-            </li>
-            <li>
-              <a class="toc-link" href="#resourceQuantity">resource quantity</a>
-            </li>
-            <li>
-              <a class="toc-link" href="#effortQuantity">effort quantity</a>
-            </li>
-            <li>
-              <a class="toc-link" href="#availableQuantity">available quantity</a>
-            </li>
-            <li>
-              <a class="toc-link" href="#minimumQuantity">minimum quantity</a>
-            </li>
-            <li>
-              <a class="toc-link" href="#purpose">purpose</a>
-            </li>
-            <li>
-              <a class="toc-link" href="#hasDetailedGeometry">currency address</a>
+              <a class="toc-link" href="#corrects">corrects</a>
             </li>
             <li>
               <a class="toc-link" href="#currentLocation">current location</a>
-            </li>
-            <li>
-              <a class="toc-link" href="#primaryLocation">primary location</a>
-            </li>
-            <li>
-              <a class="toc-link" href="#eligibleLocation">eligible location</a>
-            </li>
-            <li>
-              <a class="toc-link" href="#toLocation">to location</a>
-            </li>
-            <li>
-              <a class="toc-link" href="#ofBatchLot">of batch or lot</a>
-            </li>
-            <li>
-              <a class="toc-link" href="#fulfills">fulfills</a>
-            </li>
-            <li>
-              <a class="toc-link" href="#satisfies">satisfies</a>
-            </li>
-            <li>
-              <a class="toc-link" href="#publishes">publishes</a>
-            </li>
-            <li>
-              <a class="toc-link" href="#reciprocal">reciprocal</a>
-            </li>
-            <li>
-              <a class="toc-link" href="#proposedTo">proposed to</a>
-            </li>
-            <li>
-              <a class="toc-link" href="#listedIn">listed in</a>
-            </li>
-            <li>
-              <a class="toc-link" href="#lists">lists</a>
-            </li>
-            <li>
-              <a class="toc-link" href="#unitOfEffort">unit of effort</a>
             </li>
             <li>
               <a class="toc-link" href="#defaultUnitOfEffort">default unit of effort</a>
@@ -8840,13 +8335,88 @@ pycode {
               <a class="toc-link" href="#defaultUnitOfResource">default unit of resource</a>
             </li>
             <li>
-              <a class="toc-link" href="#basedOn">based on</a>
+              <a class="toc-link" href="#effortQuantity">effort quantity</a>
             </li>
             <li>
-              <a class="toc-link" href="#classifiedas">classified as</a>
+              <a class="toc-link" href="#eligibleLocation">eligible location</a>
             </li>
             <li>
-              <a class="toc-link" href="#resourceclassifiedas">resource classified as</a>
+              <a class="toc-link" href="#fulfills">fulfills</a>
+            </li>
+            <li>
+              <a class="toc-link" href="#hasDetailedGeometry">currency address</a>
+            </li>
+            <li>
+              <a class="toc-link" href="#hasDuration">has duration</a>
+            </li>
+            <li>
+              <a class="toc-link" href="#hasIndependentDemand">has independent demand</a>
+            </li>
+            <li>
+              <a class="toc-link" href="#hasInput">has input</a>
+            </li>
+            <li>
+              <a class="toc-link" href="#hasOutput">has output</a>
+            </li>
+            <li>
+              <a class="toc-link" href="#hasRecipeInput">has recipe input</a>
+            </li>
+            <li>
+              <a class="toc-link" href="#hasRecipeOutput">has recipe output</a>
+            </li>
+            <li>
+              <a class="toc-link" href="#hasUnit">has unit</a>
+            </li>
+            <li>
+              <a class="toc-link" href="#independentDemandOf">independent demand of</a>
+            </li>
+            <li>
+              <a class="toc-link" href="#inputOf">input of</a>
+            </li>
+            <li>
+              <a class="toc-link" href="#inScopeOf">in scope of</a>
+            </li>
+            <li>
+              <a class="toc-link" href="#listedIn">listed in</a>
+            </li>
+            <li>
+              <a class="toc-link" href="#lists">lists</a>
+            </li>
+            <li>
+              <a class="toc-link" href="#minimumQuantity">minimum quantity</a>
+            </li>
+            <li>
+              <a class="toc-link" href="#ofBatchLot">of batch or lot</a>
+            </li>
+            <li>
+              <a class="toc-link" href="#onhandQuantity">onhand quantity</a>
+            </li>
+            <li>
+              <a class="toc-link" href="#outputOf">output of</a>
+            </li>
+            <li>
+              <a class="toc-link" href="#planIncludes">plan includes</a>
+            </li>
+            <li>
+              <a class="toc-link" href="#plannedWithin">planned within</a>
+            </li>
+            <li>
+              <a class="toc-link" href="#proposedTo">proposed to</a>
+            </li>
+            <li>
+              <a class="toc-link" href="#publishes">publishes</a>
+            </li>
+            <li>
+              <a class="toc-link" href="#purpose">purpose</a>
+            </li>
+            <li>
+              <a class="toc-link" href="#primaryAccountable">primary accountable</a>
+            </li>
+            <li>
+              <a class="toc-link" href="#primaryLocation">primary location</a>
+            </li>
+            <li>
+              <a class="toc-link" href="#primaryOutput">primary output</a>
             </li>
             <li>
               <a class="toc-link" href="#processClassifiedAs">process classified as</a>
@@ -8855,28 +8425,7 @@ pycode {
               <a class="toc-link" href="#processConformsTo">process conforms to</a>
             </li>
             <li>
-              <a class="toc-link" href="#resourceConformsTo">resource conforms to</a>
-            </li>
-            <li>
-              <a class="toc-link" href="#conformsTo">conforms to</a>
-            </li>
-            <li>
-              <a class="toc-link" href="#stage">stage</a>
-            </li>
-            <li>
-              <a class="toc-link" href="#state">state</a>
-            </li>
-            <li>
-              <a class="toc-link" href="#clauseOf">clause of</a>
-            </li>
-            <li>
-              <a class="toc-link" href="#reciprocalClauseOf">reciprocal clause of</a>
-            </li>
-            <li>
-              <a class="toc-link" href="#stipulates">stipulates</a>
-            </li>
-            <li>
-              <a class="toc-link" href="#stipulatesReciprocal">stipulates reciprocal</a>
+              <a class="toc-link" href="#provider">provider</a>
             </li>
             <li>
               <a class="toc-link" href="#realizationOf">realization of</a>
@@ -8885,16 +8434,82 @@ pycode {
               <a class="toc-link" href="#realizes">realizes</a>
             </li>
             <li>
-              <a class="toc-link" href="#reciprocalRealizationOf">reciprocal realization of</a>
-            </li>
-            <li>
               <a class="toc-link" href="#realizesReciprocal">realizes reciprocal</a>
             </li>
             <li>
-              <a class="toc-link" href="#bundledIn">bundled in</a>
+              <a class="toc-link" href="#receiver">receiver</a>
             </li>
             <li>
-              <a class="toc-link" href="#bundles">bundles</a>
+              <a class="toc-link" href="#recipeClauseOf">recipe clause of</a>
+            </li>
+            <li>
+              <a class="toc-link" href="#recipeIncludes">recipe includes</a>
+            </li>
+            <li>
+              <a class="toc-link" href="#recipeInputOf">recipe input of</a>
+            </li>
+            <li>
+              <a class="toc-link" href="#recipeOutputOf">recipe output of</a>
+            </li>
+            <li>
+              <a class="toc-link" href="#recipeReciprocalClauseOf">recipe reciprocal clause of</a>
+            </li>
+            <li>
+              <a class="toc-link" href="#recipeStipulates">recipe stipulates</a>
+            </li>
+            <li>
+              <a class="toc-link" href="#recipeStipulatesReciprocal">recipe stipulates reciprocal</a>
+            </li>
+            <li>
+              <a class="toc-link" href="#reciprocal">reciprocal</a>
+            </li>
+            <li>
+              <a class="toc-link" href="#reciprocalClauseOf">reciprocal clause of</a>
+            </li>
+            <li>
+              <a class="toc-link" href="#reciprocalRealizationOf">reciprocal realization of</a>
+            </li>
+            <li>
+              <a class="toc-link" href="#resourceclassifiedas">resource classified as</a>
+            </li>
+            <li>
+              <a class="toc-link" href="#resourceConformsTo">resource conforms to</a>
+            </li>
+            <li>
+              <a class="toc-link" href="#resourceInventoriedAs">resource inventoried as</a>
+            </li>
+            <li>
+              <a class="toc-link" href="#resourceQuantity">resource quantity</a>
+            </li>
+            <li>
+              <a class="toc-link" href="#satisfies">satisfies</a>
+            </li>
+            <li>
+              <a class="toc-link" href="#settles">settles</a>
+            </li>
+            <li>
+              <a class="toc-link" href="#stage">stage</a>
+            </li>
+            <li>
+              <a class="toc-link" href="#state">state</a>
+            </li>
+            <li>
+              <a class="toc-link" href="#stipulates">stipulates</a>
+            </li>
+            <li>
+              <a class="toc-link" href="#stipulatesReciprocal">stipulates reciprocal</a>
+            </li>
+            <li>
+              <a class="toc-link" href="#toLocation">to location</a>
+            </li>
+            <li>
+              <a class="toc-link" href="#toResourceInventoriedAs">to resource inventoried as</a>
+            </li>
+            <li>
+              <a class="toc-link" href="#triggeredBy">triggered by</a>
+            </li>
+            <li>
+              <a class="toc-link" href="#unitOfEffort">unit of effort</a>
             </li>
           </ul>
         </li>
@@ -8903,6 +8518,30 @@ pycode {
             <a class="toc-link" href="#datatypeproperties">Datatype Properties</a>
           </h4>
           <ul class="second">
+            <li>
+              <a class="toc-link" href="#alt">alt</a>
+            </li>
+            <li>
+              <a class="toc-link" href="#batchLotCode">batch or lot code</a>
+            </li>
+            <li>
+              <a class="toc-link" href="#created">created</a>
+            </li>
+            <li>
+              <a class="toc-link" href="#currentCurrencyLocation">current currency location</a>
+            </li>
+            <li>
+              <a class="toc-link" href="#currentVirtualLocation">current virtual location</a>
+            </li>
+            <li>
+              <a class="toc-link" href="#due">due</a>
+            </li>
+            <li>
+              <a class="toc-link" href="#expirationDate">expiration date</a>
+            </li>
+            <li>
+              <a class="toc-link" href="#finished">finished</a>
+            </li>
             <li>
               <a class="toc-link" href="#hasbeginning">has beginning</a>
             </li>
@@ -8913,34 +8552,7 @@ pycode {
               <a class="toc-link" href="#haspointintime">has point in time</a>
             </li>
             <li>
-              <a class="toc-link" href="#due">due</a>
-            </li>
-            <li>
               <a class="toc-link" href="#hasNumericalValue">has numerical value</a>
-            </li>
-            <li>
-              <a class="toc-link" href="#unitbased">unit based</a>
-            </li>
-            <li>
-              <a class="toc-link" href="#created">created</a>
-            </li>
-            <li>
-              <a class="toc-link" href="#long">long</a>
-            </li>
-            <li>
-              <a class="toc-link" href="#lat">lat</a>
-            </li>
-            <li>
-              <a class="toc-link" href="#alt">alt</a>
-            </li>
-            <li>
-              <a class="toc-link" href="#mappableAddress">mappable address</a>
-            </li>
-            <li>
-              <a class="toc-link" href="#currentVirtualLocation">current virtual location</a>
-            </li>
-            <li>
-              <a class="toc-link" href="#currentCurrencyLocation">current currency location</a>
             </li>
             <li>
               <a class="toc-link" href="#image">image</a>
@@ -8949,22 +8561,25 @@ pycode {
               <a class="toc-link" href="#imagelist">image list</a>
             </li>
             <li>
+              <a class="toc-link" href="#long">long</a>
+            </li>
+            <li>
+              <a class="toc-link" href="#lat">lat</a>
+            </li>
+            <li>
+              <a class="toc-link" href="#mappableAddress">mappable address</a>
+            </li>
+            <li>
               <a class="toc-link" href="#name">name</a>
+            </li>
+            <li>
+              <a class="toc-link" href="#substitutable">substitutable</a>
             </li>
             <li>
               <a class="toc-link" href="#trackingIdentifier">tracking identifier</a>
             </li>
             <li>
-              <a class="toc-link" href="#batchLotCode">batch or lot code</a>
-            </li>
-            <li>
-              <a class="toc-link" href="#expirationDate">expiration date</a>
-            </li>
-            <li>
-              <a class="toc-link" href="#finished">finished</a>
-            </li>
-            <li>
-              <a class="toc-link" href="#substitutable">substitutable</a>
+              <a class="toc-link" href="#unitbased">unit based</a>
             </li>
           </ul>
         </li>
@@ -9039,9 +8654,7 @@ pycode {
           <ul class="second"></ul>
         </li>
       </ul>
-    </div>
-
-</body>
+    </div></p>
 
 
 
