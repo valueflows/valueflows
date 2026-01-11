@@ -61,7 +61,7 @@ Here's a (big but not all-inclusive) list of possible applications that can be b
 * supply network purchasing,
 * alternative currencies,
 * barter and gift economies,
-* buyng clubs and consumer cooperatives,
+* buying clubs and consumer cooperatives,
 * reward distribution based on contributions,
 * direct distribution of resources.
 

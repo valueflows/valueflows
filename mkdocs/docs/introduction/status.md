@@ -1,6 +1,6 @@
 # Status of the vocabulary
 
-This documentation is for release 1.0.0-rc, a release candidate for planned stable release 1.0.0.  The scope is operational planning and observation of economic activity. [Change log can be found here](https://codeberg.org/valueflows/valueflows/src/branch/master/CHANGELOG.md){target="_blank"}.  We are encouraging feedback on this release candidate.
+This documentation is for release 1.0.0-rc.1, a release candidate for planned stable release 1.0.0.  The scope is operational planning and observation of economic activity. [Change log can be found here](https://codeberg.org/valueflows/valueflows/src/branch/master/CHANGELOG.md){target="_blank"}.  We are encouraging feedback on this release candidate.
 
 Notable for the first major release is that we have removed unstable pieces of the model, defined as not having enough testing in the field.  The most important one is removal of non-operational and pre-operational features, such as bioregional planning and analysis. We also removed the agent relationship model, which can be considered out of scope of the core economic model for now, and a few properties. All documentation of any feature removed is in the [git issues](https://codeberg.org/valueflows/valueflows/issues){target="_blank"}, labeled `Removed 1.0`.  These features will continue to be worked on, in collaboration with user groups implementing them, and will be targeted for future releases.
 
