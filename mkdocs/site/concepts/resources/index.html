@@ -957,6 +957,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#medium-of-exchange" class="md-nav__link">
+    <span class="md-ellipsis">
+      Medium of exchange
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#inventory" class="md-nav__link">
     <span class="md-ellipsis">
       Inventory
@@ -2002,6 +2011,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#medium-of-exchange" class="md-nav__link">
+    <span class="md-ellipsis">
+      Medium of exchange
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#inventory" class="md-nav__link">
     <span class="md-ellipsis">
       Inventory
@@ -2118,6 +2136,8 @@ is a specification. Your library may have two copies that you can check out. Tho
 <p>Stage is used when the same identified resource passes through multiple processes in its lifetime, and that information is needed by the next process to determine which resources can be valid inputs.  For example, in creating a translation, you might have one translated document pass through translation, editing, proofreading, and formatting stages. You don't want to bring that resource into the formatting stage until it has been proofread, for example. Or you might have a testing stage for a component or product, in which case you don't want to consume or transfer the resource until it both has been through the testing stage, and had a <code>pass</code> output state.</p>
 <p>These can be defined on the recipe and/or the plan, showing where an input flow expects a certain stage and/or state of a resource. In that case, <a href="../../algorithms/dependent-demand/" target="_blank">Dependent demand planning</a> will select only those resources that fit the specified stage and state.  In user-interface forms for adding process input EconomicEvents, if the use case uses stages and/or states, the input event form should query EconomicResources for required stage and/or state when offering selections of possible input resources.</p>
 <p>An alternative to using staged resources is to have different resource specifications, and therefore different identified resources at each stage.  This eliminates the extra complexity of the stage model, but also means you can't tell that the same resource is passing through stages during its creation.  Just a trade-off, both are valid.</p>
+<h3 id="medium-of-exchange">Medium of exchange</h3>
+<p>This gives the opportunity to specify if a resource is a currency, money, token, credit, etc., anything used as a medium of exchange, as opposed to being used as direct value in and of itself to people's lives.  This can be helpful for limiting selections in user interfaces, as well as for validation.</p>
 <h3 id="inventory">Inventory</h3>
 <p>Economic resources (little-r, not confined to the term EconomicResource) can be inventoried, not inventoried but could be, or it doesn't make sense to think about inventory.  If a resource is not inventoried, it is generally not instantiated in the software as an EconomicResource, but defined using resource specification and other properties, such as the accountable agent or location.</p>
 <ul>

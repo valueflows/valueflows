@@ -40,6 +40,6 @@ We have tried to make this vocabulary as technology-agnostic as possible, as it 
 
 * A **[GraphQL api source](https://lab.allmende.io/valueflows/vf-schemas/vf-graphql/-/tree/sprout/lib/schemas){target="_blank"}**  stays more or less in sync with the vocabulary, depending on the maintainers.
 
-* A generated **[json-ld context file](all_vf.jsonld){target="_blank"}**
+* A generated **[json-ld context file](all_vf.jsonld){target="_blank"}** is included.
 
-* A partial **[json-schema representation](json-schemas.md)**
+* A partial **[json-schema representation](json-schemas.md)** is included.

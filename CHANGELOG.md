@@ -1,3 +1,10 @@
+## 1.0.0-rc.1 (January 2026)
+
+- Add mediumOfExchange
+- Doc cleanup and improvements
+- Adopt SemVer versioning
+
+
 ## 0.17 (January 2026)
 
 - Add batch/lot record
