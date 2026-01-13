@@ -200,7 +200,7 @@ vf:Agreement  a             owl:Class ;
         rdfs:label          "Agreement"@en ;
         vf:layer            vf:planning ;
         vs:term_status      "stable" ;
-        rdfs:comment        "A set of reciprocal commitments among economic agents, or a set of reciprocal economic events."@en ;
+        rdfs:comment        "A set of reciprocal commitments among economic agents, and/or a set of reciprocal economic events."@en ;
         .
 
 vf:AgreementBundle  a       owl:Class ;
