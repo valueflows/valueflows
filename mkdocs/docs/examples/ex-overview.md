@@ -8,5 +8,5 @@ Each yaml file is accompanied by a diagram to give an overview of the structure.
 
 The example sections are ordered so they generally build on previous example sections.
 
-*Note:* The data is often incomplete, to try to keep the examples simpler, and pointed towards the issue at hand.  So it could be helpful to skim across different examples.
+*Note:* The data is often incomplete, to try to keep the examples simpler, and pointed towards the issue at hand.  So it could be helpful to skim across different examples.  In addition, the examples are meant for human understanding, and are less useful for machine graphing at this time.
 

@@ -34,6 +34,10 @@ Agreements can be combined into an Agreement Bundle.  This can be useful for exa
 
 Valueflows does not define the detailed internal vocabulary for agreements.
 
+## Returning agreements with its connected flows
+
+Both commitments and economic events can be part of an agreement.  In addition economic events can fulfill commitments. In other words, there are two ways an economic event can be connected to an agreement, either directly or indirectly through the fulfills relationship.  A data store could either store both relationships or not. So, what should happen if someone requests all the economic events for an agreement?  The answer is they should see all events, whether they fulfill a commitment connected to that agreement or not.  So, irrespective of what is stored under the covers, all flows of a certain type must be returned when requested.
+
 ##  Recipe exchanges
 
 Recipes can include [patterns for exchange](../concepts/recipes.md/#exchange-recipes), as well as production.  The Recipe Exchange is used to generate an agreement(s) and reciprocal commitments when a plan in created from the recipe.

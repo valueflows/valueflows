@@ -34,14 +34,3 @@ We have tried to make this vocabulary as technology-agnostic as possible, as it 
 
 * For easier visualization along with textual explanation of subject area parts of the model, a **[diagram explanation page](model-text.md)** is also included.
 
-## Alternative formats
-
-*This section is non-normative.*
-
-* A **[GraphQL api source](https://lab.allmende.io/valueflows/vf-schemas/vf-graphql/-/tree/sprout/lib/schemas){target="_blank"}**  stays more or less in sync with the vocabulary.
-
-* A **[json-ld context file]()** (TODO)
-
-* A partial **[json-schema representation](json-schemas.md)**
-
-* A **[SHACL representation]()** and a **[ShEx representation]()**  (TODO)

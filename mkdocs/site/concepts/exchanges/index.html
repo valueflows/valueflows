@@ -1010,6 +1010,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#returning-agreements-with-its-connected-flows" class="md-nav__link">
+    <span class="md-ellipsis">
+      Returning agreements with its connected flows
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#recipe-exchanges" class="md-nav__link">
     <span class="md-ellipsis">
       Recipe exchanges
@@ -1866,6 +1875,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#returning-agreements-with-its-connected-flows" class="md-nav__link">
+    <span class="md-ellipsis">
+      Returning agreements with its connected flows
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#recipe-exchanges" class="md-nav__link">
     <span class="md-ellipsis">
       Recipe exchanges
@@ -1917,6 +1935,8 @@
 <p>Agreements can be of any kind and scope, from an order to an agreement in a contribution-based economy to a larger blanket agreement.</p>
 <p>Agreements can be combined into an Agreement Bundle.  This can be useful for example when each "line item" in an "order" needs to have a line item reciprocal commitment (like a "price"), instead of one combined reciprocal commitment for several primary commitments.</p>
 <p>Valueflows does not define the detailed internal vocabulary for agreements.</p>
+<h2 id="returning-agreements-with-its-connected-flows">Returning agreements with its connected flows</h2>
+<p>Both commitments and economic events can be part of an agreement.  In addition economic events can fulfill commitments. In other words, there are two ways an economic event can be connected to an agreement, either directly or indirectly through the fulfills relationship.  A data store could either store both relationships or not. So, what should happen if someone requests all the economic events for an agreement?  The answer is they should see all events, whether they fulfill a commitment connected to that agreement or not.  So, irrespective of what is stored under the covers, all flows of a certain type must be returned when requested.</p>
 <h2 id="recipe-exchanges">Recipe exchanges</h2>
 <p>Recipes can include <a href="../recipes/#exchange-recipes">patterns for exchange</a>, as well as production.  The Recipe Exchange is used to generate an agreement(s) and reciprocal commitments when a plan in created from the recipe.</p>
 

@@ -1,3 +1,9 @@
+## 1.0.0-rc.1 (January 2026)
+
+- Add mediumOfExchange
+- Remove section on alt formats for now
+- Adopt SemVer versioning
+
 ## 0.17 (January 2026)
 
 - Add batch/lot record

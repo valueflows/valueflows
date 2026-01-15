@@ -89,6 +89,10 @@ These can be defined on the recipe and/or the plan, showing where an input flow 
 
 An alternative to using staged resources is to have different resource specifications, and therefore different identified resources at each stage.  This eliminates the extra complexity of the stage model, but also means you can't tell that the same resource is passing through stages during its creation.  Just a trade-off, both are valid.
 
+### Medium of exchange
+
+This gives the opportunity to specify if a resource is a currency, money, token, credit, etc., anything used as a medium of exchange, as opposed to being used as direct value in and of itself to people's lives.  This can be helpful for limiting selections in user interfaces, as well as for validation.
+
 ### Inventory
 
 Economic resources (little-r, not confined to the term EconomicResource) can be inventoried, not inventoried but could be, or it doesn't make sense to think about inventory.  If a resource is not inventoried, it is generally not instantiated in the software as an EconomicResource, but defined using resource specification and other properties, such as the accountable agent or location.

@@ -45,3 +45,7 @@ The following is an example low level process, first with commitments (planned),
 ![diagrams of one process with commitments and events](../assets/pies-plan-observe.png)
 
 You can see it took a little longer than planned because Alice dropped a pie, which went into the compost.
+
+## Returning processes with its connected flows
+
+Intents, commitments, and economic events can all be inputs and outputs of one process.  In addition, economic events can fulfill commitments, and commitments or economic events can satisfy intents. In other words, there are two ways a commitment or economic event can be connected to a process, either directly or indirectly through the fulfills or satisfies relationship.  A data store could either store both relationships or not. So, what should happen if someone requests all the economic events for a process?  The answer is they should see all events, whether they fulfill a commitment connected to that process or not.  Likewise for commitments or economic events that satisfy an intent.  So, irrespective of what is stored under the covers, all flows of a certain type must be returned when requested.
