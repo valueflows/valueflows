@@ -235,7 +235,7 @@ pycode {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#Action</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#Action</pycode>
               </td>
             </tr>
             <tr>
@@ -1932,7 +1932,7 @@ pycode {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#accountingQuantity</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#accountingQuantity</pycode>
               </td>
             </tr>
             <tr>
@@ -1973,7 +1973,7 @@ pycode {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#action</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#action</pycode>
               </td>
             </tr>
             <tr>
@@ -2034,7 +2034,7 @@ pycode {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#availableQuantity</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#availableQuantity</pycode>
               </td>
             </tr>
             <tr>
@@ -2075,7 +2075,7 @@ pycode {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#basedOn</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#basedOn</pycode>
               </td>
             </tr>
             <tr>
@@ -2116,7 +2116,7 @@ pycode {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#bundledIn</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#bundledIn</pycode>
               </td>
             </tr>
             <tr>
@@ -2157,7 +2157,7 @@ pycode {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#bundles</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#bundles</pycode>
               </td>
             </tr>
             <tr>
@@ -2198,7 +2198,7 @@ pycode {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#classifiedAs</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#classifiedAs</pycode>
               </td>
             </tr>
             <tr>
@@ -2256,7 +2256,7 @@ pycode {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#clauseOf</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#clauseOf</pycode>
               </td>
             </tr>
             <tr>
@@ -2297,7 +2297,7 @@ pycode {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#conformsTo</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#conformsTo</pycode>
               </td>
             </tr>
             <tr>
@@ -2338,7 +2338,7 @@ pycode {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#containedIn</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#containedIn</pycode>
               </td>
             </tr>
             <tr>
@@ -2379,7 +2379,7 @@ pycode {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#contains</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#contains</pycode>
               </td>
             </tr>
             <tr>
@@ -2420,7 +2420,7 @@ pycode {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#corrects</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#corrects</pycode>
               </td>
             </tr>
             <tr>
@@ -2461,7 +2461,7 @@ pycode {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#currentLocation</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#currentLocation</pycode>
               </td>
             </tr>
             <tr>
@@ -2502,7 +2502,7 @@ pycode {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#defaultUnitOfEffort</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#defaultUnitOfEffort</pycode>
               </td>
             </tr>
             <tr>
@@ -2543,7 +2543,7 @@ pycode {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#defaultUnitOfResource</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#defaultUnitOfResource</pycode>
               </td>
             </tr>
             <tr>
@@ -2584,7 +2584,7 @@ pycode {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#effortQuantity</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#effortQuantity</pycode>
               </td>
             </tr>
             <tr>
@@ -2645,7 +2645,7 @@ pycode {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#eligibleLocation</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#eligibleLocation</pycode>
               </td>
             </tr>
             <tr>
@@ -2686,7 +2686,7 @@ pycode {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#fulfills</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#fulfills</pycode>
               </td>
             </tr>
             <tr>
@@ -2727,7 +2727,7 @@ pycode {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#hasDetailedGeometry</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#hasDetailedGeometry</pycode>
               </td>
             </tr>
             <tr>
@@ -2765,7 +2765,7 @@ pycode {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#hasDuration</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#hasDuration</pycode>
               </td>
             </tr>
             <tr>
@@ -2806,7 +2806,7 @@ pycode {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#hasIndependentDemand</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#hasIndependentDemand</pycode>
               </td>
             </tr>
             <tr>
@@ -2847,7 +2847,7 @@ pycode {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#hasInput</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#hasInput</pycode>
               </td>
             </tr>
             <tr>
@@ -2898,7 +2898,7 @@ pycode {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#hasOutput</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#hasOutput</pycode>
               </td>
             </tr>
             <tr>
@@ -2949,7 +2949,7 @@ pycode {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#hasRecipeInput</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#hasRecipeInput</pycode>
               </td>
             </tr>
             <tr>
@@ -2990,7 +2990,7 @@ pycode {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#hasRecipeOutput</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#hasRecipeOutput</pycode>
               </td>
             </tr>
             <tr>
@@ -3031,7 +3031,7 @@ pycode {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#hasUnit</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#hasUnit</pycode>
               </td>
             </tr>
             <tr>
@@ -3080,7 +3080,7 @@ pycode {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#independentDemandOf</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#independentDemandOf</pycode>
               </td>
             </tr>
             <tr>
@@ -3121,7 +3121,7 @@ pycode {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#inputOf</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#inputOf</pycode>
               </td>
             </tr>
             <tr>
@@ -3172,7 +3172,7 @@ pycode {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#inScopeOf</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#inScopeOf</pycode>
               </td>
             </tr>
             <tr>
@@ -3213,7 +3213,7 @@ pycode {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#listedIn</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#listedIn</pycode>
               </td>
             </tr>
             <tr>
@@ -3254,7 +3254,7 @@ pycode {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#lists</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#lists</pycode>
               </td>
             </tr>
             <tr>
@@ -3295,7 +3295,7 @@ pycode {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#minimumQuantity</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#minimumQuantity</pycode>
               </td>
             </tr>
             <tr>
@@ -3336,7 +3336,7 @@ pycode {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#ofBatchLot</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#ofBatchLot</pycode>
               </td>
             </tr>
             <tr>
@@ -3377,7 +3377,7 @@ pycode {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#onhandQuantity</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#onhandQuantity</pycode>
               </td>
             </tr>
             <tr>
@@ -3418,7 +3418,7 @@ pycode {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#outputOf</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#outputOf</pycode>
               </td>
             </tr>
             <tr>
@@ -3469,7 +3469,7 @@ pycode {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#planIncludes</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#planIncludes</pycode>
               </td>
             </tr>
             <tr>
@@ -3520,7 +3520,7 @@ pycode {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#plannedWithin</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#plannedWithin</pycode>
               </td>
             </tr>
             <tr>
@@ -3571,7 +3571,7 @@ pycode {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#primaryAccountable</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#primaryAccountable</pycode>
               </td>
             </tr>
             <tr>
@@ -3612,7 +3612,7 @@ pycode {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#primaryLocation</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#primaryLocation</pycode>
               </td>
             </tr>
             <tr>
@@ -3653,7 +3653,7 @@ pycode {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#primaryOutput</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#primaryOutput</pycode>
               </td>
             </tr>
             <tr>
@@ -3694,7 +3694,7 @@ pycode {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#processClassifiedAs</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#processClassifiedAs</pycode>
               </td>
             </tr>
             <tr>
@@ -3732,7 +3732,7 @@ pycode {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#processConformsTo</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#processConformsTo</pycode>
               </td>
             </tr>
             <tr>
@@ -3773,7 +3773,7 @@ pycode {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#proposedTo</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#proposedTo</pycode>
               </td>
             </tr>
             <tr>
@@ -3819,7 +3819,7 @@ pycode {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#provider</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#provider</pycode>
               </td>
             </tr>
             <tr>
@@ -3875,7 +3875,7 @@ pycode {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#publishes</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#publishes</pycode>
               </td>
             </tr>
             <tr>
@@ -3916,7 +3916,7 @@ pycode {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#purpose</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#purpose</pycode>
               </td>
             </tr>
             <tr>
@@ -3954,7 +3954,7 @@ pycode {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#realizationOf</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#realizationOf</pycode>
               </td>
             </tr>
             <tr>
@@ -3995,7 +3995,7 @@ pycode {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#realizes</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#realizes</pycode>
               </td>
             </tr>
             <tr>
@@ -4036,7 +4036,7 @@ pycode {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#realizesReciprocal</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#realizesReciprocal</pycode>
               </td>
             </tr>
             <tr>
@@ -4077,7 +4077,7 @@ pycode {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#receiver</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#receiver</pycode>
               </td>
             </tr>
             <tr>
@@ -4133,7 +4133,7 @@ pycode {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#recipeClauseOf</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#recipeClauseOf</pycode>
               </td>
             </tr>
             <tr>
@@ -4174,7 +4174,7 @@ pycode {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#recipeIncludes</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#recipeIncludes</pycode>
               </td>
             </tr>
             <tr>
@@ -4215,7 +4215,7 @@ pycode {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#recipeInputOf</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#recipeInputOf</pycode>
               </td>
             </tr>
             <tr>
@@ -4256,7 +4256,7 @@ pycode {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#recipeOutputOf</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#recipeOutputOf</pycode>
               </td>
             </tr>
             <tr>
@@ -4297,7 +4297,7 @@ pycode {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#recipeReciprocalClauseOf</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#recipeReciprocalClauseOf</pycode>
               </td>
             </tr>
             <tr>
@@ -4338,7 +4338,7 @@ pycode {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#recipeStipulates</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#recipeStipulates</pycode>
               </td>
             </tr>
             <tr>
@@ -4379,7 +4379,7 @@ pycode {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#recipeStipulatesReciprocal</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#recipeStipulatesReciprocal</pycode>
               </td>
             </tr>
             <tr>
@@ -4420,7 +4420,7 @@ pycode {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#reciprocal</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#reciprocal</pycode>
               </td>
             </tr>
             <tr>
@@ -4461,7 +4461,7 @@ pycode {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#reciprocalClauseOf</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#reciprocalClauseOf</pycode>
               </td>
             </tr>
             <tr>
@@ -4502,7 +4502,7 @@ pycode {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#reciprocalRealizationOf</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#reciprocalRealizationOf</pycode>
               </td>
             </tr>
             <tr>
@@ -4543,7 +4543,7 @@ pycode {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#resourceClassifiedAs</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#resourceClassifiedAs</pycode>
               </td>
             </tr>
             <tr>
@@ -4606,7 +4606,7 @@ pycode {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#resourceConformsTo</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#resourceConformsTo</pycode>
               </td>
             </tr>
             <tr>
@@ -4667,7 +4667,7 @@ pycode {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#resourceInventoriedAs</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#resourceInventoriedAs</pycode>
               </td>
             </tr>
             <tr>
@@ -4718,7 +4718,7 @@ pycode {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#resourceQuantity</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#resourceQuantity</pycode>
               </td>
             </tr>
             <tr>
@@ -4779,7 +4779,7 @@ pycode {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#satisfies</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#satisfies</pycode>
               </td>
             </tr>
             <tr>
@@ -4825,7 +4825,7 @@ pycode {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#settles</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#settles</pycode>
               </td>
             </tr>
             <tr>
@@ -4863,7 +4863,7 @@ pycode {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#stage</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#stage</pycode>
               </td>
             </tr>
             <tr>
@@ -4919,7 +4919,7 @@ pycode {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#state</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#state</pycode>
               </td>
             </tr>
             <tr>
@@ -4977,7 +4977,7 @@ pycode {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#stipulates</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#stipulates</pycode>
               </td>
             </tr>
             <tr>
@@ -5018,7 +5018,7 @@ pycode {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#stipulatesReciprocal</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#stipulatesReciprocal</pycode>
               </td>
             </tr>
             <tr>
@@ -5059,7 +5059,7 @@ pycode {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#toLocation</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#toLocation</pycode>
               </td>
             </tr>
             <tr>
@@ -5100,7 +5100,7 @@ pycode {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#toResourceInventoriedAs</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#toResourceInventoriedAs</pycode>
               </td>
             </tr>
             <tr>
@@ -5141,7 +5141,7 @@ pycode {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#triggeredBy</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#triggeredBy</pycode>
               </td>
             </tr>
             <tr>
@@ -5179,7 +5179,7 @@ pycode {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#unitOfEffort</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#unitOfEffort</pycode>
               </td>
             </tr>
             <tr>
@@ -5224,7 +5224,7 @@ pycode {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#alt</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#alt</pycode>
               </td>
             </tr>
             <tr>
@@ -5270,7 +5270,7 @@ pycode {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#batchLotCode</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#batchLotCode</pycode>
               </td>
             </tr>
             <tr>
@@ -5308,7 +5308,7 @@ pycode {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#created</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#created</pycode>
               </td>
             </tr>
             <tr>
@@ -5371,7 +5371,7 @@ pycode {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#currentCurrencyLocation</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#currentCurrencyLocation</pycode>
               </td>
             </tr>
             <tr>
@@ -5409,7 +5409,7 @@ pycode {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#currentVirtualLocation</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#currentVirtualLocation</pycode>
               </td>
             </tr>
             <tr>
@@ -5447,7 +5447,7 @@ pycode {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#due</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#due</pycode>
               </td>
             </tr>
             <tr>
@@ -5500,7 +5500,7 @@ pycode {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#expirationDate</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#expirationDate</pycode>
               </td>
             </tr>
             <tr>
@@ -5538,7 +5538,7 @@ pycode {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#finished</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#finished</pycode>
               </td>
             </tr>
             <tr>
@@ -5591,7 +5591,7 @@ pycode {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#hasBeginning</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#hasBeginning</pycode>
               </td>
             </tr>
             <tr>
@@ -5657,7 +5657,7 @@ pycode {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#hasEnd</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#hasEnd</pycode>
               </td>
             </tr>
             <tr>
@@ -5723,7 +5723,7 @@ pycode {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#hasNumericalValue</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#hasNumericalValue</pycode>
               </td>
             </tr>
             <tr>
@@ -5769,7 +5769,7 @@ pycode {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#hasPointInTime</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#hasPointInTime</pycode>
               </td>
             </tr>
             <tr>
@@ -5825,7 +5825,7 @@ pycode {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#image</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#image</pycode>
               </td>
             </tr>
             <tr>
@@ -5893,7 +5893,7 @@ pycode {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#imageList</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#imageList</pycode>
               </td>
             </tr>
             <tr>
@@ -5941,7 +5941,7 @@ pycode {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#lat</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#lat</pycode>
               </td>
             </tr>
             <tr>
@@ -5987,7 +5987,7 @@ pycode {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#long</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#long</pycode>
               </td>
             </tr>
             <tr>
@@ -6033,7 +6033,7 @@ pycode {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#mappableAddress</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#mappableAddress</pycode>
               </td>
             </tr>
             <tr>
@@ -6071,7 +6071,7 @@ pycode {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#mediumOfExchange</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#mediumOfExchange</pycode>
               </td>
             </tr>
             <tr>
@@ -6109,7 +6109,7 @@ pycode {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#name</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#name</pycode>
               </td>
             </tr>
             <tr>
@@ -6197,7 +6197,7 @@ pycode {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#substitutable</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#substitutable</pycode>
               </td>
             </tr>
             <tr>
@@ -6235,7 +6235,7 @@ pycode {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#trackingIdentifier</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#trackingIdentifier</pycode>
               </td>
             </tr>
             <tr>
@@ -6273,7 +6273,7 @@ pycode {
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/valueflows/ont/vf#unitBased</code>
+                <pycode>https://w3id.org/valueflows/ont/vf#unitBased</pycode>
               </td>
             </tr>
             <tr>

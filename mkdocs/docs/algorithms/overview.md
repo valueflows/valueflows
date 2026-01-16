@@ -37,6 +37,8 @@ There are similarities and differences among the algorithms:
 * All of those algorithms work on flow networks, otherwise known as directed graphs, composed of nodes and links between them.
 
 ![flow network diagram](https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Max_flow.svg/330px-Max_flow.svg.png)
+[Source](https://en.wikipedia.org/wiki/File:Max_flow.svg){target="_blank"}
+
 
 ## Agent-based algorithms
 
