@@ -22,7 +22,7 @@ This assumes that [Material for Mkdocs](https://squidfunk.github.io/mkdocs-mater
 1. Fix and view as needed.  Ctrl-C to shut down the localhost.
 1. Run `mkdocs build`.  This populates the site directory.
 1. Commit locally, and push all changes to valueflows, create PR.
-1. Re-generate pyLODE if needed, and bring the pieces into the Formatted Specification page.  The center part needs to replace `code>`  with `pycode>`.  The TOC on the right needs to have new title: Alphabetical Links, and add ` class="toc-link"` to each link.  And check for other issues, this list not tested.  Do not change other parts, just carefully cut out the center and right parts and put into all_vf.md.
+1. Re-generate pyLODE if needed, python3 pylode ../valueflows/mkdocs/docs/assets/all_vf-for-pylode.TTL -o all_vf.html, must have pylode locally.  Bring the pieces into the Formatted Specification page.  The center part needs to replace `code>`  with `pycode>`.  The TOC on the right needs to have new title: Alphabetical Links, and add ` class="toc-link"` to each link.  And check for other issues, this list not tested.  Do not change other parts, just carefully cut out the center and right parts and put into all_vf.md.
 1. Review, fix as needed using the above steps, merge. 
 2. Create tag and release if needed.
 
