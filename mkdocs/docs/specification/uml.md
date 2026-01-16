@@ -51,7 +51,7 @@ Although not included in the formal RDF-based spec, the suggested intermediate "
 
 ![model with Proposal, ProposedList, Intent and Agent m:m instantiated relationships](../assets/proposal-m-m.png)
 
-Note on this diagram, there is an example of a many-to-many where an inverse is defined (Proposal-ProposalList); and also examples of a many-to-many with no inverse defined in the vocabulary, although one is implied (Proposal-Intent).  Where one is implied because of the cardenalities, then they can be found in a query, but create/update with that path is not supported.
+Note on this diagram, there is an example of a many-to-many where an inverse is defined (Proposal-ProposalList); and also examples of a many-to-many with no inverse defined in the vocabulary, although one is implied (Proposal-Intent).  Where one is implied because of the cardinalities, then they can be found in a query, but create/update with that path is not supported.
 
 #### fulfills, satisfies, settles
 
