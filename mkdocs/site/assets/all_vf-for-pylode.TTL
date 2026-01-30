@@ -1200,11 +1200,11 @@ vf:triggeredBy  a           owl:ObjectProperty ;
 
 vf:unitBased  a             owl:DatatypeProperty ;
         rdfs:label          "unit based"@en ;
-        rdfs:domain         [ owl:unionOf ( vf:Proposal vf:Agreenent ) ] ;
+        rdfs:domain         vf:Proposal ;
         rdfs:range          xsd:boolean ;
         owl:maxCardinality  1 ;
         vs:term_status      "testing" ;
-        rdfs:comment        "This group of commitments contains unit based quantities, which can be multipied to create commitments; commonly seen in a price list or e-commerce. Default false."@en ;
+        rdfs:comment        "This group of intents contains unit based quantities, which can be multipied to create commitments; commonly seen in a price list or e-commerce. Default false."@en ;
         .
 
 vf:unitOfEffort a           owl:ObjectProperty ;

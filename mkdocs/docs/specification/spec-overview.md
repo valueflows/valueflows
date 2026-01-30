@@ -24,7 +24,9 @@ We have tried to make this vocabulary as technology-agnostic as possible, as it 
     * https://w3id.org/valueflows/ont/vf.trig
     * https://w3id.org/valueflows/ont/vf.n3
 
-* A more readable **[formatted text version of the vocabulary](all_vf.md)** is generated from the turtle file here.
+* A more readable **[formatted text version of the vocabulary](all_vf.md)** is included.  This version intentionally                         does not include the named individuals, domain unions, and other rdf constructs that are found in the turtle file but do not contribute to understanding of the classes and properties of the ontology itself.
+
+* A generated **[json-ld context file](all_vf.jsonld){target="_blank"}** is also included.  It reflects the complete turtle file.
 
 ## Visualization of the specification
 

@@ -6280,7 +6280,7 @@ pycode {
               <th>
                 <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
               </th>
-              <td><p>This group of commitments contains unit based quantities, which can be multipied to create commitments; commonly seen in a price list or e-commerce. Default false.</p></td>
+              <td><p>This group of intents contains unit based quantities, which can be multipied to create commitments; commonly seen in a price list or e-commerce. Default false.</p></td>
             </tr>
             <tr>
               <th>
@@ -6289,11 +6289,6 @@ pycode {
               <td>
                 <span>
                   <a href="#Proposal">Proposal</a>
-                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                </span>
-                <span class="cardinality">or</span>
-                <span>
-                  <a href="#Agreenent">vf:Agreenent</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
               </td>
