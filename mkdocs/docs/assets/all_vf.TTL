@@ -223,7 +223,7 @@ vf:ClassifiedAsDomain
 vf:CreatedDomain
         a                   owl:Class ;
         rdfs:label          "Domain for vf:created"@en ;
-        owl:unionOf         (vf:Agreement vf:Claim vf:Commitment vf:Plan vf:Proposal vf:EconomicEvent) .
+        owl:unionOf         (vf:Agreement vf:AgreementBundle vf:Claim vf:Commitment vf:EconomicEvent vf:Plan vf:Proposal vf:ProposalList) .
 
 vf:DueDomain
         a                   owl:Class ;
@@ -288,12 +288,12 @@ vf:LabelDomain
 vf:NameDomain
         a                   owl:Class ;
         rdfs:label          "Domain for vf:name"@en ;
-        owl:unionOf         (vf:SpatialThing vf:Agent vf:Agreement vf:EconomicResource vf:Plan vf:Process vf:ProcessSpecification vf:Proposal vf:Recipe vf:RecipeProcess vf:ResourceSpecification) .
+        owl:unionOf         (vf:Agent vf:Agreement vf:AgreementBundle vf:EconomicResource vf:Intent vf:Plan vf:Process vf:ProcessSpecification vf:Proposal vf:ProposalList vf:Recipe vf:RecipeExchange vf:RecipeProcess vf:ResourceSpecification vf:SpatialThing) .
 
 vf:NoteDomain
         a                   owl:Class ;
         rdfs:label          "Domain for vf:note"@en ;
-        owl:unionOf         (vf:Agent vf:Agreement vf:Claim vf:Commitment vf:EconomicEvent vf:EconomicResource vf:ExternalLink vf:Intent vf:Plan vf:Process vf:ProcessSpecification vf:Proposal vf:Recipe vf:RecipeFlow vf:RecipeProcess vf:ResourceSpecification vf:SpatialThing) .
+        owl:unionOf         (vf:Agent vf:Agreement vf:AgreementBundle vf:Claim vf:Commitment vf:EconomicEvent vf:EconomicResource vf:Intent vf:Plan vf:Process vf:ProcessSpecification vf:Proposal vf:ProposalList vf:Recipe vf:RecipeExchange vf:RecipeFlow vf:RecipeProcess vf:ResourceSpecification vf:SpatialThing) .
 
 vf:OutputOfDomain
         a                   owl:Class ;
@@ -499,7 +499,7 @@ vf:primaryOutput
         rdfs:range          vf:ResourceSpecification ;
         owl:maxCardinality  1 ;
         vs:term_status      "testing" ;
-        rdfs:comment        "The main output the recipe is intended to produce or deliver."@en ;
+        rdfs:comment        "The main type of resource the recipe is intended to produce or deliver."@en ;
         .
 
 vf:recipeIncludes
@@ -719,7 +719,7 @@ vf:hasUnit a                owl:ObjectProperty ;
         rdfs:comment        "A standard unit of measure."@en ;
         .
 
-vf:omUnitIdentifier a       owl:DataTypeProperty ;
+vf:omUnitIdentifier a       owl:DatatypeProperty ;
         rdfs:label          "om unit identifier"@en ;
         rdfs:domain         vf:Unit ;
         rdfs:range          xsd:anyURI ;
@@ -728,7 +728,7 @@ vf:omUnitIdentifier a       owl:DataTypeProperty ;
         rdfs:comment        "The unique identifier of the om unit of measure, for standardization across networks."@en ;
         .
 
-vf:label a                  owl:DataTypeProperty ;
+vf:label a                  owl:DatatypeProperty ;
         rdfs:subPropertyOf  rdfs:label ;
         rdfs:label          "label"@en ;
         rdfs:domain         vf:LabelDomain ;
@@ -738,7 +738,7 @@ vf:label a                  owl:DataTypeProperty ;
         rdfs:comment        "The display label defined for the network for the unit of measure, overrides om."@en ;
         .
 
-vf:symbol a                 owl:DataTypeProperty ;
+vf:symbol a                 owl:DatatypeProperty ;
         rdfs:subPropertyOf  om:symbol ;
         rdfs:label          "symbol"@en ;
         rdfs:domain         vf:Unit ;
@@ -832,6 +832,7 @@ vf:created a                owl:DatatypeProperty ;
 
 vf:long a                   owl:DatatypeProperty ;
         rdfs:subPropertyOf  geo:long ;
+        rdfs:label          "longitude"@en ;
         rdfs:range          dtype:numericUnion ;
         rdfs:domain         vf:SpatialThing ;
         owl:maxCardinality  1 ;
@@ -841,6 +842,7 @@ vf:long a                   owl:DatatypeProperty ;
 
 vf:lat a                    owl:DatatypeProperty ;
         rdfs:subPropertyOf  geo:lat ;
+        rdfs:label          "latitude"@en ;
         rdfs:range          dtype:numericUnion ;
         rdfs:domain         vf:SpatialThing ;
         owl:maxCardinality  1 ;
@@ -850,6 +852,7 @@ vf:lat a                    owl:DatatypeProperty ;
 
 vf:alt a                    owl:DatatypeProperty ;
         rdfs:subPropertyOf  geo:alt ;
+        rdfs:label          "altitude"@en ;
         rdfs:range          dtype:numericUnion ;
         rdfs:domain         vf:SpatialThing ;
         owl:maxCardinality  1 ;
@@ -867,7 +870,7 @@ vf:mappableAddress a        owl:DatatypeProperty ;
         .
 
 vf:hasDetailedGeometry a    owl:ObjectProperty ;
-        rdfs:label          "currency address"@en ;
+        rdfs:label          "has detailed geometry"@en ;
         rdfs:domain         vf:SpatialThing ;
         rdfs:range          geosparql:Geometry ;
         vs:term_status      "testing" ;
@@ -956,7 +959,7 @@ vf:name a                   owl:DatatypeProperty ;
         rdfs:comment        "An informal or formal textual identifier for an object. Does not imply uniqueness."@en ;
         .
 
-vf:note a                   owl:DataTypeProperty ;
+vf:note a                   owl:DatatypeProperty ;
         rdfs:subPropertyOf  skos:note ;
         rdfs:label          "note"@en ;
         rdfs:domain         vf:NoteDomain ;
@@ -1078,7 +1081,7 @@ vf:finished  a              owl:DatatypeProperty ;
         rdfs:range          xsd:boolean ;
         owl:maxCardinality  1 ;
         vs:term_status      "stable" ;
-        rdfs:comment        "The commitment or intent or process is complete or not.  This is irrespective of if the original goal has been met, and indicates that no more will be done.  Default false."@en ;
+        rdfs:comment        "The commitment or intent or process is complete or not.  This is irrespective of if the original goal has been met, and indicates simply that no more will be done.  Default false."@en ;
         .
 
 vf:substitutable a          owl:DatatypeProperty ;
