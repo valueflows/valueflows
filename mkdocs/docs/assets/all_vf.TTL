@@ -735,7 +735,7 @@ vf:label a                  owl:DatatypeProperty ;
         rdfs:range          xsd:string ;
         owl:cardinality     1 ;
         vs:term_status      "stable" ;
-        rdfs:comment        "The display label defined for the network for the unit of measure, overrides om."@en ;
+        rdfs:comment        "The label defined for human readable display."@en ;
         .
 
 vf:symbol a                 owl:DatatypeProperty ;
@@ -745,7 +745,7 @@ vf:symbol a                 owl:DatatypeProperty ;
         rdfs:range          xsd:string ;
         owl:maxCardinality  1 ;
         vs:term_status      "stable" ;
-        rdfs:comment        "The display symbol defined for the network for the unit of measure, overrides om."@en ;
+        rdfs:comment        "The symbol defined for human readable display."@en ;
         .
 
 vf:accountingQuantity a     owl:ObjectProperty ;
@@ -1081,7 +1081,7 @@ vf:finished  a              owl:DatatypeProperty ;
         rdfs:range          xsd:boolean ;
         owl:maxCardinality  1 ;
         vs:term_status      "stable" ;
-        rdfs:comment        "The commitment or intent or process is complete or not.  This is irrespective of if the original goal has been met, and indicates simply that no more will be done.  Default false."@en ;
+        rdfs:comment        "The flow or process is complete or not.  This is irrespective of if the original goal has been met, and indicates simply that no more will be done.  Default false."@en ;
         .
 
 vf:substitutable a          owl:DatatypeProperty ;
@@ -1184,7 +1184,7 @@ vf:conformsTo
         rdfs:range          vf:ResourceSpecification ;
         owl:maxCardinality  1 ;
         vs:term_status      "stable" ;
-        rdfs:comment        "The primary resource specification or definition of an existing or potential economic resource."@en ;
+        rdfs:comment        "The primary resource specification or definition of an economic resource."@en ;
         .
 
 vf:stage
