@@ -288,7 +288,7 @@
       "owl:maxCardinality": 1,
       "rdfs:comment": {
         "@language": "en",
-        "@value": "The primary resource specification or definition of an existing or potential economic resource."
+        "@value": "The primary resource specification or definition of an economic resource."
       },
       "rdfs:domain": {
         "@id": "vf:EconomicResource"
@@ -2489,7 +2489,7 @@
       },
       "rdfs:comment": {
         "@language": "en",
-        "@value": "The processes and and non-process commitments/intents that constitute the plan."
+        "@value": "The processes and non-process commitments/intents that constitute the plan."
       },
       "rdfs:domain": {
         "@id": "vf:Plan"
@@ -2551,7 +2551,7 @@
       "owl:maxCardinality": 1,
       "rdfs:comment": {
         "@language": "en",
-        "@value": "The commitment or intent or process is complete or not.  This is irrespective of if the original goal has been met, and indicates that no more will be done.  Default false."
+        "@value": "The flow or process is complete or not. This is irrespective of if the original goal has been met, and indicates simply that no more will be done. Default false."
       },
       "rdfs:domain": {
         "@id": "vf:FinishedDomain"
@@ -3301,7 +3301,7 @@
     },
     {
       "@id": "vf:note",
-      "@type": "owl:DataTypeProperty",
+      "@type": "owl:DatatypeProperty",
       "owl:maxCardinality": 1,
       "rdfs:comment": {
         "@language": "en",
@@ -3715,11 +3715,11 @@
     },
     {
       "@id": "vf:label",
-      "@type": "owl:DataTypeProperty",
+      "@type": "owl:DatatypeProperty",
       "owl:cardinality": 1,
       "rdfs:comment": {
         "@language": "en",
-        "@value": "The display label defined for the network for the unit of measure, overrides om."
+        "@value": "The label defined for human readable display."
       },
       "rdfs:domain": {
         "@id": "vf:LabelDomain"
@@ -4256,7 +4256,7 @@
     },
     {
       "@id": "vf:omUnitIdentifier",
-      "@type": "owl:DataTypeProperty",
+      "@type": "owl:DatatypeProperty",
       "owl:maxCardinality": 1,
       "rdfs:comment": {
         "@language": "en",
@@ -4282,7 +4282,7 @@
       },
       "rdfs:comment": {
         "@language": "en",
-        "@value": "The commitments and/or intents which this plan was created to deliver."
+        "@value": "The commitments and/or intents which this plan was created to deliver on."
       },
       "rdfs:domain": {
         "@id": "vf:Plan"
@@ -4336,7 +4336,7 @@
       "owl:maxCardinality": 1,
       "rdfs:comment": {
         "@language": "en",
-        "@value": "The default unit used for use or work."
+        "@value": "The default unit used for use or work or sometimes cite actions."
       },
       "rdfs:domain": {
         "@id": "vf:ResourceSpecification"
@@ -4368,11 +4368,11 @@
     },
     {
       "@id": "vf:symbol",
-      "@type": "owl:DataTypeProperty",
+      "@type": "owl:DatatypeProperty",
       "owl:maxCardinality": 1,
       "rdfs:comment": {
         "@language": "en",
-        "@value": "The display symbol defined for the network for the unit of measure, overrides om."
+        "@value": "The symbol defined for human readable display."
       },
       "rdfs:domain": {
         "@id": "vf:Unit"

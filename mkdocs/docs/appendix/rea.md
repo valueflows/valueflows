@@ -1,6 +1,6 @@
-## REA (Resources, Events, Agents)
-
 *This section is non-normative.*
+
+## REA (Resources, Events, Agents)
 
 **The REA ontology is the main basis for the Valueflows model.  Here is some background:**
 

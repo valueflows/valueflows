@@ -84,7 +84,7 @@ These are the main types of flows and how they relate as stages of value flows. 
 
 ## Levels of the ontology
 
-Valueflows uses the layers of ontology documented by REA.  Each of the layers follows the core patterns above.
+Valueflows uses the layers of ontology documented by REA.  Each of the layers follows the core patterns above.  The following is a simplified conceptual diagram, not meant to be a specification.
 
 ![REA layers: Knowledge, Plan, Observation simplified](../assets/layers.png)
 

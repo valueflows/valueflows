@@ -993,7 +993,7 @@ vf:mediumOfExchange a       owl:DatatypeProperty ;
         rdfs:range          xsd:boolean ;
         owl:maxCardinality  1 ;
         vs:term_status      "testing" ;
-        rdfs:comment        "True if the resource is a currency, money, token, credit, etc. used as a medium of exchange."@en ;
+        rdfs:comment        "True if the resource is a currency, money, token, credit, etc. used as a medium of exchange.  Default false."@en ;
         .
 
 vf:batchLotCode a           owl:DatatypeProperty ;
