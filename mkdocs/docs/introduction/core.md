@@ -64,7 +64,7 @@ For example: in that food network above
 
 ## Directed graphs of flows
 
-Both process-based flows and flows without processes can create "directed graphs" from very local to global.  Basically, a Process can have many inputs and many outputs.  An Economic Resource can be created or increased by many flows, and can be decreased by many flows, over time. And flows without processes can fit inline with these, for example when a resource is created, then transferred whole or in part to another agent.
+Both process-based flows and flows without processes can create directed graphs from very local to global.  Basically, a Process can have many inputs and many outputs.  An Economic Resource can be created or increased by many flows, and can be decreased by many flows, over time. And flows without processes can fit inline with these, for example when a resource is created, then transferred whole or in part to another agent.
 
 ![process flows](../assets/dir-graph.png)
 
