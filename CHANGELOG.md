@@ -1,3 +1,9 @@
+## 1.0.0 (February 2026)
+
+- Minor improvements to doc
+- Create dir structure for maintaining release doc
+- Create one page core spec html doc for 1.0.0
+
 ## 1.0.0-rc.1 (January 2026)
 
 - Add mediumOfExchange
