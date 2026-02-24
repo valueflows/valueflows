@@ -20,7 +20,7 @@
 </a>
 </p>
 -->
-<img alt="Valueflows" src="VF-logo-heading.jpg" />
+<img alt="Valueflows" src="https://codeberg.org/valueflows/valueflows/raw/branch/master/major-release-doc/VF-Release-1-0-0/VF-logo-heading.jpg" />
 <h1 class="title" id="title">Release 1.0.0</h1>
 <p><b>Published:</b> February 2026</p>
 <p><b>Main authors:</b> Lynn Foster, elf Pavlik, Bob Haugen</p>
@@ -205,44 +205,44 @@
 <p><strong>Agents</strong> are individual persons or organizations or ecological agents, who perform Economic Events affecting Economic Resources.</p>
 <p>An <strong>Economic Event</strong> can take actions like produce, modify, consume, or use Economic Resources, or transfer them from one Agent to another, or transport them from one location to another.</p>
 <p><strong>Economic Resources</strong> would typically be useful goods and services, but could also be money, credits, energy, knowledge, designs, skills, CO2, methane, air, water, or almost anything else that some Agents can agree should be accounted for in their economic networks.</p>
-<p><img alt="Resource-Event-Agent data model" src="R-E-A.png" /></p>
+<p><img alt="Resource-Event-Agent data model" src="https://codeberg.org/valueflows/valueflows/raw/branch/master/major-release-doc/VF-Release-1-0-0/R-E-A.png" /></p>
 <h3 id="ipo-input-process-output">1.2 IPO (Input-Process-Output)</h3>
 <p>The IPO pattern is used to enhance the ability of REA to represent transformational flows of value.  The flows are IPOs...</p>
 <p>...Input-Process-Output resource chains, where one <strong>Economic Resource</strong> is the output of one <strong>Process</strong> and then becomes an input to another, thus connecting the processes into a flow. The <strong>Agents</strong> involved in each Process in the chain need to coordinate with the previous and next Processes about the quantity, quality, and timing of resource flows between them.</p>
-<p><img alt="Input-Process-Output schematic" src="process-resource.png" /></p>
+<p><img alt="Input-Process-Output schematic" src="https://codeberg.org/valueflows/valueflows/raw/branch/master/major-release-doc/VF-Release-1-0-0/process-resource.png" /></p>
 <h3 id="putting-them-together">1.3 Putting them together</h3>
 <p>In general, how they fit together: Agents perform Economic Events that provide Inputs to Processes and take Outputs from Processes and move Resources from one Process to another.  This forms a directed graph of value flows.</p>
-<p><img alt="diagram with a Process, Economic Events input and output, each with Agents and Economic Resource" src="REA-IPO-VF.png" /></p>
+<p><img alt="diagram with a Process, Economic Events input and output, each with Agents and Economic Resource" src="https://codeberg.org/valueflows/valueflows/raw/branch/master/major-release-doc/VF-Release-1-0-0/REA-IPO-VF.png" /></p>
 <p>For example: a food network</p>
 <p>...might include farmers, food processors, restaurants and bakeries, grocery stores, families to eat the food. And vehicles to move everything from place to place. Coordination might be needed between each of those stages: seeds and other inputs for planting crops, workers etc for harvesting crops. when are the crops ready for processing, when is the grain ready for milling and then for baking and then for people to eat, when is the fruit ready for pies, etc.</p>
 <h3 id="flows-without-processes">1.4 Flows without processes</h3>
 <p>Some flows do not involve processing, i.e. there is no transformation or transportation of Economic Resources.  These flows simply transfer Economic Resources between Agents. One common example is an exchange of one Economic Resource for another Economic Resource between two Agents, as below, with two reciprocal flows based on an Agreement.</p>
-<p><img alt="diagram of an exchange with an Agreement of Economic Events with Economic Resources from and to Agents" src="exchange.png" /></p>
+<p><img alt="diagram of an exchange with an Agreement of Economic Events with Economic Resources from and to Agents" src="https://codeberg.org/valueflows/valueflows/raw/branch/master/major-release-doc/VF-Release-1-0-0/exchange.png" /></p>
 <p>It can also be simpler, such as a gift, or more complex, involving many Agents.  Also, these flows can mix in with Process-based flows.</p>
 <p>For example: in that food network above</p>
 <p>...food processors might purchase the harvested food from farmers, sell processed food to restaurants and stores... or families might provide land and labor for a farm and receive harvested food each week in return.  That becomes part of the coordination.</p>
 <h3 id="directed-graphs-of-flows">1.5 Directed graphs of flows</h3>
 <p>Both process-based flows and flows without processes can create directed graphs from very local to global.  Basically, a Process can have many inputs and many outputs.  An Economic Resource can be created or increased by many flows, and can be decreased by many flows, over time. And flows without processes can fit inline with these, for example when a resource is created, then transferred whole or in part to another agent.</p>
-<p><img alt="process flows" src="dir-graph.png" /></p>
+<p><img alt="process flows" src="https://codeberg.org/valueflows/valueflows/raw/branch/master/major-release-doc/VF-Release-1-0-0/dir-graph.png" /></p>
 <h3 id="traversing-value-flows">1.6 Traversing value flows</h3>
 <p>Value flows can be traversed forwards ("tracking") or backwards ("tracing").  Sometimes people use the term "provenance" when looking backwards towards the source of some resource, sometimes when a problem emerges (as in a disease outbreak from food), sometimes to know the quality of the resource (as in wanting local humanely produced food with lower ecological impact).</p>
 <p>The data structures of Valueflows provide the ability to trace or track any value flow, no matter how long or complex. In the above diagram, following the arrows forward from an Economic Resource is to track what happened to the resource once produced, following them backwards from an Economic Resource is to trace what went into the resource plus all has happened because of the production and distribution of the resource.</p>
 <p>The model also supports circular economies, value flows where resources come full cycle to be fed into the same set or other processes. We want to encourage recycling, re-use, and other ways to keep resources from becoming waste.</p>
 <h3 id="types-of-flows">1.7 Types of flows</h3>
 <p>These are the main types of flows and how they relate as stages of value flows.  They have basically the same core data structure, with differences related to their stage.  Any of these types can be input or output to a process, or reciprocally related, as above.</p>
-<p><img alt="diagram of Intent-Commitment-Event and their relationships plus their same properties" src="i-c-e.png" /></p>
+<p><img alt="diagram of Intent-Commitment-Event and their relationships plus their same properties" src="https://codeberg.org/valueflows/valueflows/raw/branch/master/major-release-doc/VF-Release-1-0-0/i-c-e.png" /></p>
 <h3 id="levels-of-the-ontology">1.8 Levels of the ontology</h3>
 <p>Valueflows uses the layers of ontology documented by REA.  Each of the layers follows the core patterns above.  The following is a simplified conceptual diagram, not meant to be a specification.</p>
-<p><img alt="REA layers: Knowledge, Plan, Observation simplified" src="layers.png" /></p>
+<p><img alt="REA layers: Knowledge, Plan, Observation simplified" src="https://codeberg.org/valueflows/valueflows/raw/branch/master/major-release-doc/VF-Release-1-0-0/layers.png" /></p>
 <ul>
 <li>The Knowledge level represents classification, policies, procedures, rules and patterns. This is where each network or community can configure the core concepts to fit their needs.</li>
 <li>The Plan level represents offers and requests, schedules and agreements.</li>
 <li>The Observation level represents what really happened.</li>
 </ul>
 <p>Here is a simplified view of how they relate.</p>
-<p><img alt="a generalized process resource flow with the 3 layers" src="process-layer.png" /></p>
+<p><img alt="a generalized process resource flow with the 3 layers" src="https://codeberg.org/valueflows/valueflows/raw/branch/master/major-release-doc/VF-Release-1-0-0/process-layer.png" /></p>
 <p>Here is a specific simplified example:</p>
-<p><img alt="a specific salsa example process resource flow with the 3 layers" src="salsa-layer.png" /></p>
+<p><img alt="a specific salsa example process resource flow with the 3 layers" src="https://codeberg.org/valueflows/valueflows/raw/branch/master/major-release-doc/VF-Release-1-0-0/salsa-layer.png" /></p>
 
 <h2 class="heading settled" data-level="1" id="specification"><span class="secno">2. </span><span class="content">Source specification</span><a class="self-link" href="#specification"></a></h2>
 
@@ -7217,7 +7217,7 @@ pycode {
 <p><em>This section is non-normative.</em></p>
 <p>This diagram includes all class and property elements defined in the system of record turtle file, for visual understanding of relationships.</p>
 <p><em>To see the whole image with zoom-in-out, you can right click and select 'View Image' or 'Open Image in New Tab' or a similar command in your browser.</em></p>
-<p><img alt="UML diagram of the whole VF model" src="ValueFlowsUML.png" /></p>
+<p><img alt="UML diagram of the whole VF model" src="https://codeberg.org/valueflows/valueflows/raw/branch/master/major-release-doc/VF-Release-1-0-0/ValueFlowsUML.png" /></p>
 
 <h4 id="diagram-conventions">Diagram conventions</h4>
 <p>The notation is similar to <a href="https://www.omg.org/spec/UML/" target="_blank">UML class diagrams</a>.  Each arrow represents an additional property in the class at the beginning of the arrow.  If there is an * at the arrowhead end, then many instances are supported (like a collection in object oriented modeling).  If there is no *, then it should be assumed that only one instance is supported (like a foreign key in a relational model).  Optionality is not implied in this notation.</p>
@@ -7236,7 +7236,7 @@ pycode {
 
 <h4 id="agent">2.4.1 Agent</h4>
 <p>The Agent subject area defines agents and their relationships in the Observation Layer.</p>
-<p><img alt="agent model" src="agent-mdl.png" /></p>
+<p><img alt="agent model" src="https://codeberg.org/valueflows/valueflows/raw/branch/master/major-release-doc/VF-Release-1-0-0/agent-mdl.png" /></p>
 <h5 id="vfagent">vf:Agent</h5>
 <p>The Valueflows view of Agent is fairly broad, including people, organizations (formal or informal), and ecological agents such as non-human beings and ecosystems.  But all of these have economic or governance agency of some sort.</p>
 <p>Agents are key to the overall ontology, particularly the flows in Planning and Observation: Intents, Commitments, EconomicEvents, Claims, where each can reference a provider and receiver Agent. Proposals can be published to Agent(s).</p>
@@ -7244,7 +7244,7 @@ pycode {
 
 <h4 id="resource">2.4.2 Resource</h4>
 <p>Resources are defined in different ways, depending on their need and ability to be accounted for specifically.  Every flow of any kind will reference a resource, represented either generally by a ResourceSpecification or by a specific EconomicResource. Resource classifications also assist in understanding or finding a resource. </p>
-<p><img alt="resource model" src="resource-mdl.png" /></p>
+<p><img alt="resource model" src="https://codeberg.org/valueflows/valueflows/raw/branch/master/major-release-doc/VF-Release-1-0-0/resource-mdl.png" /></p>
 <h5 id="vfresourcespecification">vf:ResourceSpecification</h5>
 <p>This specifies the kind of resource, to the most specific level needed.  It also fills the space for the resource when it is not yet, or never will be, an actual resource.  It can be used in and across networks to communicate the resource type needed.  EconomicResource, as well as the resource concept referenced in flows (EconomicEvent, Intent, Commitment, Claim, RecipeFlow), conform to a ResourceSpecification.</p>
 <h5 id="vfeconomicresource">vf:EconomicResource</h5>
@@ -7252,7 +7252,7 @@ pycode {
 
 <h4 id="putting-flows-into-motion">2.4.3 Putting flows into motion...</h4>
 <p>First, some necessary pieces.</p>
-<p><img alt="flow extras model" src="misc-mdl.png" /></p>
+<p><img alt="flow extras model" src="https://codeberg.org/valueflows/valueflows/raw/branch/master/major-release-doc/VF-Release-1-0-0/misc-mdl.png" /></p>
 <h5 id="vfaction">vf:Action</h5>
 <p>An Action specifies the type of flow and what the flow will do or has done. EconomicEvent, Commitment, Intent, Claim, RecipeFlow have an Action.  Actions are specified in Valueflows to cover the various ways flows affect resources.  Actions have properties defined that can drive the logic to create or change EconomicResources when EconomicEvents are recorded, if desired.</p>
 <h5 id="vfspatialthing">vf:SpatialThing</h5>
@@ -7263,7 +7263,7 @@ pycode {
 
 <h4 id="flows-in-motion-recipe">2.4.4 Flows in motion: Recipe</h4>
 <p>This set of Knowledge Layer entities together make a recipe for creating a resource conforming to a ResourceSpecification, or exchanging resources. It can be used to automate generating a plan in the Plan Layer, since it follows the same basic input-process-output graph pattern. It currently supports multiple recipes for the same ResourceSpecification.  It also supports a Recipe for more than one RecipeProcess in a flow graph.</p>
-<p><img alt="recipe model" src="recipe-mdl.png" /></p>
+<p><img alt="recipe model" src="https://codeberg.org/valueflows/valueflows/raw/branch/master/major-release-doc/VF-Release-1-0-0/recipe-mdl.png" /></p>
 <h5 id="vfrecipeprocess">vf:RecipeProcess</h5>
 <p>This defines a process node in the recipe graph.  A recipe can contain as many RecipeProcesses as it needs to produce the resource defined in the final ResourceSpecification. It can optionally conform to a ProcessSpecification.  It will have at least one input or output RecipeFlow.</p>
 <h5 id="vfrecipeexchange">vf:RecipeExchange</h5>
@@ -7275,7 +7275,7 @@ pycode {
 
 <h4 id="flows-in-motion-planning">2.4.5 Flows in motion: Planning</h4>
 <p>Planning can be done with or without recipes.  And planning is not always done, sometimes the economic activity is only observed, depending on the use case.  This section is about operational planning, processes and agreements that are intended to be executed in this lowest level of detail.</p>
-<p><img alt="planning model" src="planning-mdl.png" /></p>
+<p><img alt="planning model" src="https://codeberg.org/valueflows/valueflows/raw/branch/master/major-release-doc/VF-Release-1-0-0/planning-mdl.png" /></p>
 <h5 id="vfplan">vf:Plan</h5>
 <p>A Plan is a collection of one or more operational Processes with input and output Commitments, and/or non-process Commitments (such as transfers), in the input-output-process graph pattern.  Plans can also reference one or more Commitments that create the independent demand that provides the reason for, and final output of, the Plan (for example an order).</p>
 <h5 id="vfprocess">vf:Process</h5>
@@ -7293,7 +7293,7 @@ pycode {
 
 <h4 id="flows-in-motion-offers-and-requests">2.4.6 Flows in motion: Offers and Requests</h4>
 <p>Offers and requests are published primarily to look for a reciprocal match, although they can also be gift offers or requests. Common use cases are e-commerce, timebanks, mutual aid, price lists, publication of help needed for planned work in a network.</p>
-<p><img alt="offers and requests model" src="proposal-mdl.png" /></p>
+<p><img alt="offers and requests model" src="https://codeberg.org/valueflows/valueflows/raw/branch/master/major-release-doc/VF-Release-1-0-0/proposal-mdl.png" /></p>
 <h5 id="vfproposal">vf:Proposal</h5>
 <p>A Proposal is a container of related Intents, and is an offer or a request, determined by the purpose.  This also corresponds to whether the provider or receiver Agent is undefined in the primary published Intent. Proposals often have more than one Intent, either because there is a reciprocal Intent, or because more than one resource is being offered or requested together.  An Intent can be re-used in more than one Proposal.  A Proposal can be proposed to one or more specific individual or group Agents.</p>
 <h5 id="vfproposallist">vf:ProposalList</h5>
@@ -7303,7 +7303,7 @@ pycode {
 
 <h4 id="flows-in-motion-observation">2.4.7 Flows in motion: Observation</h4>
 <p>The Observation subject area is where economic activity actually happens.  The basic input-process-output graph pattern is again the same as for recipes and planning.</p>
-<p><img alt="observation model" src="observation-mdl.png" /></p>
+<p><img alt="observation model" src="https://codeberg.org/valueflows/valueflows/raw/branch/master/major-release-doc/VF-Release-1-0-0/observation-mdl.png" /></p>
 <h5 id="vfprocess_1">vf:Process</h5>
 <p>See the operational Process defined in the Planning subject area.  Operational Processes are carried down to the Observation layer as they are executed, or can be directly defined for Observation if planning is not done.</p>
 <h5 id="vfeconomicevent">vf:EconomicEvent</h5>
@@ -7475,10 +7475,10 @@ is a specification. Your library may have two copies that you can check out. Tho
 <p>Claims resemble Commitments, but are initiated by the receiver, not the provider.  If there is not an existing Commitment, an Economic Event can trigger a reciprocal Claim, based on an agreement.  Even then, Claims sometimes do not have to actually be instantiated, often they can be implied from an Economic Event and an agreement if that information is clearly available.  S
 <h4 id="timeline-plans-and-observations">Timeline, plans and observations</h4>
 <p>The figure below shows that Economic Events have to be observed and for that reason only appear as records of the past. Future plans get represented with Intents and Commitments.</p>
-<p><img alt="diagram of Intents, Commitments, Events in past, present, future, showing how the flows change through time" src="flows.png" /></p>
+<p><img alt="diagram of Intents, Commitments, Events in past, present, future, showing how the flows change through time" src="https://codeberg.org/valueflows/valueflows/raw/branch/master/major-release-doc/VF-Release-1-0-0/flows.png" /></p>
 <h4 id="matching-intents">Matching Intents</h4>
 <p>Often agents will start their plans independently and record their initial intents. Later once they make a Commitment with another agent, it will represent a specific shared part of their plans. For that reason any Commitment can result in satisfaction of the providing agent's Intent as well as satisfaction of the receiving agent's Intent.</p>
-<p><img alt="diagram showing matching of 2 Intents from different agents, satisfied by 1 Commitment, fulfilled by an Event" src="matched.png" /></p>
+<p><img alt="diagram showing matching of 2 Intents from different agents, satisfied by 1 Commitment, fulfilled by an Event" src="https://codeberg.org/valueflows/valueflows/raw/branch/master/major-release-doc/VF-Release-1-0-0/matched.png" /></p>
 <h4 id="how-to-minimize-data-entry-requirements">How to minimize data entry requirements</h4>
 <p>This may seem like a lot of data entry, since the flow records in these transitions are maintained over time.  In practice, since the patterns of the flows are very similar, you can make use of that to directly pre-fill data entry forms or generate the initial data in the next phase.  What this could look like:</p>
 <ul>
@@ -7561,7 +7561,7 @@ is a specification. Your library may have two copies that you can check out. Tho
 <h5 id="behaviors-by-action">Behaviors by Action</h5>
 <p>The above behaviors are shown in the following table by action.</p>
 <p><em>To make the diagram bigger, you can right click and select 'View Image' or 'Open Image in New Tab' or a similar command in your browser.</em></p>
-<p><img alt="VF actions table with action behaviors" src="vf-actions.png" /></p>
+<p><img alt="VF actions table with action behaviors" src="https://codeberg.org/valueflows/valueflows/raw/branch/master/major-release-doc/VF-Release-1-0-0/vf-actions.png" /></p>
 <p>*In the above chart, the <code>notApplicable</code> values are not included, for easier viewing.</p>
 <h5 id="implied-transfers">Implied Transfers</h5>
 <p>Implied transfers can happen when the provider and receiver agent are different.  The transfer (or transferCustody or transferAllRights) behaviors and implications should be applied in addition to the behaviors and implications documented for the non-transfer action. See Implied Transfers in Transfer Concepts for details.</p>
@@ -7592,13 +7592,13 @@ is a specification. Your library may have two copies that you can check out. Tho
 <p>Valueflows does not yet provide for summary level processes above the operational level, whether pre-operational (like budgeting) or non-operational (like bioregional planning). But work has been started and that is on the roadmap for a future release.</p>
 <h4 id="how-to-think-about-processes-vs-their-flows">How to think about processes vs. their flows</h4>
 <p>This can be confusing.  Sometimes people tend to think about the flows as where some processing is happening.  This is understandable, since flow names (actions like <code>consume</code> or <code>produce</code>) imply some kind of activity.  However, it is appropriate in the Valueflows model to think about all the transformations and transportation happening in Processes.  The flows fundamentally define what happens to resources because of the activity in the processes.  For example, there would never be a flow with an action of "plant" or "harvest", even though seeds are planted, and vegetables are harvested.  Planting and harvesting are Processes.  Seeds resources are decremented, vegetable resources are incremented.</p>
-<p><img alt="diagram of 2 processes" src="processes.png" /></p>
+<p><img alt="diagram of 2 processes" src="https://codeberg.org/valueflows/valueflows/raw/branch/master/major-release-doc/VF-Release-1-0-0/processes.png" /></p>
 <h4 id="co-products-and-by-products">Co-products and by-products</h4>
 <p>Usually processes have one output, but not always.  Sometimes there are co-products that have somewhat equal value. By-products tend to define something very secondary. Sometimes there are co-products or by-products that provide something useful, such as plastic shavings being put back into the melting pot for continued production as input.  Sometimes there are unintended by-products, resources that are known but not useful or are harmful.</p>
 <p>Valueflows does not distinguish between "good" and "bad" resources created by processes, as that is conditional and can be subjective. On the other hand, this pattern gives the opportunity to record and understand harmful "externalities" from producing and transporting resources.   Documenting these gives people a chance to try to figure out how externalities can be made useful in some other condition, or how to mitigate harmful externalities as much as possible.</p>
 <h4 id="process-example">Process example</h4>
 <p>The following is an example low level process, first with commitments (planned), and then with economic events (what actually happened).  Both diagrams show the same process (same instance).</p>
-<p><img alt="diagrams of one process with commitments and events" src="pies-plan-observe.png" /></p>
+<p><img alt="diagrams of one process with commitments and events" src="https://codeberg.org/valueflows/valueflows/raw/branch/master/major-release-doc/VF-Release-1-0-0/pies-plan-observe.png" /></p>
 <p>You can see it took a little longer than planned because Alice dropped a pie, which went into the compost.</p>
 <h4 id="returning-processes-with-its-connected-flows">Returning processes with its connected flows</h4>
 <p>Intents, commitments, and economic events can all be inputs and outputs of one process.  In addition, economic events can fulfill commitments, and commitments or economic events can satisfy intents. In other words, there are two ways a commitment or economic event can be connected to a process, either directly or indirectly through the fulfills or satisfies relationship.  A data store could either store both relationships or not. So, what should happen if someone requests all the economic events for a process?  The answer is they should see all events, whether they fulfill a commitment connected to that process or not.  Likewise for commitments or economic events that satisfy an intent.  So, irrespective of what is stored under the covers, all flows of a certain type must be returned when requested.</p>
@@ -7688,7 +7688,7 @@ is a specification. Your library may have two copies that you can check out. Tho
 <p>When they find their match, those with the matching offer and request enter into a conversation which might result in an agreement, starting a cycle that ends with observed transfer or exchange.</p>
 <p>Agreements, which are committed to by agents, can evolve from proposals directly, or conversations about proposals, or be entered into without proposals.  Besides agreements, a proposal to do something might trigger a conversation which could result in commitment for an input(s) to a process, with or without an associated exchange agreement.</p>
 <p>These types of conversations may lead to more and better cycles of engagement.  Valueflows does not at this time define the pattern of this kind of conversation, but intends to integrate with different social networking vocabularies for this purpose.  We do think that social and economic networking are naturally intertwined in human behavior.</p>
-<p><img alt="funnel diagram Intent&gt;Match&gt;Agree&gt;Commit&gt;Fulfill&gt;Respond, cycling back to each stage" src="funnel.png" /></p>
+<p><img alt="funnel diagram Intent&gt;Match&gt;Agree&gt;Commit&gt;Fulfill&gt;Respond, cycling back to each stage" src="https://codeberg.org/valueflows/valueflows/raw/branch/master/major-release-doc/VF-Release-1-0-0/funnel.png" /></p>
 
 <h3 id="operational-planning">3.9 Operational Planning</h3>
 <p><em>This section is non-normative.</em></p>
@@ -7713,7 +7713,7 @@ is a specification. Your library may have two copies that you can check out. Tho
 </ul>
 <h4 id="processes-nested-in-a-plan">Processes nested in a Plan</h4>
 <p>When processes are "nested", it is not random, nor based on a taxonomy. It is based on what processes are actually part of the plan. Not all the inputs and outputs of nested processes are considered inputs and outputs of the plan, since some are both produced and consumed within the plan.  In the following simplified example, the carrot plants start and end inside the plan, and so are not thought of as an input or output of the plan. So plans can have implied relationships to each other through resource flows just like processes.</p>
-<p><img alt="diagram of nested processes in a plan" src="plan-processes.png" /></p>
+<p><img alt="diagram of nested processes in a plan" src="https://codeberg.org/valueflows/valueflows/raw/branch/master/major-release-doc/VF-Release-1-0-0/plan-processes.png" /></p>
 <p>There are some common situations for nested processes that will not be as simple as the above diagram.  These include:</p>
 <ul>
 <li>Action makes a difference.  When a piece of equipment or tool is "used", it is not gone at the end of the nesting process.  But if it is managed as a time-based resource with a calendar, some calendar duration is in fact consumed.  Or if a citable resource is created and then cited inside, it is also still there at the end of the plan.</li>
@@ -7724,7 +7724,7 @@ is a specification. Your library may have two copies that you can check out. Tho
 <p>Most manufacturing is demand-driven; many agriculture settings are more supply-driven.  But those are not rules, and each situation should be analyzed.</p>
 <p>For example in the simplified textile supply chain below, at the top you see totally demand-driven and totally supply-driven.  For example, demand-driven starts with how many of the garments does the agent want to produce this season, and uses the recipe flows to know they need to start with certain quantities of wool.  The supply-driven starts with what wool is produced on the farms and calculates how many of what garments can be produced in the season.</p>
 <p>On the bottom is a scenario that starts demand-driven, but when they see they can get extra sheep wool from the farms, they decide to purchase as much as they can because some years it is hard to get enough.  They send it through the scouring process because saving greasy wool is not so pleasant.</p>
-<p><img alt="diagram of supply- and demand-driven recipe flow" src="supply-demand.png" /></p>
+<p><img alt="diagram of supply- and demand-driven recipe flow" src="https://codeberg.org/valueflows/valueflows/raw/branch/master/major-release-doc/VF-Release-1-0-0/supply-demand.png" /></p>
 <h4 id="planning-from-recipe">Planning from recipe</h4>
 <p>A plan can be generated from one or more recipes, or created without recipes.  For repeatable processing, it makes a lot of sense to automate planning from recipes. Otherwise, plans can be entered directly.</p>
 <p>If there are Recipe classes (which are optional), the planning uses only Recipe Processes that are defined in a Recipe.  Or they can be generated directly from one or more Recipe Processes.  In either case, they will find predescessor/successor Recipe Processes as needed.</p>
@@ -7742,7 +7742,7 @@ Start with an Economic Resource,  and generate the plan based on the recipe of i
 <p>Software that generates plans from recipes can actually be pretty smart. It can check for what is currently in inventory, as well as what is already planned to be consumed or produced in other plans on what dates, and schedule only what is needed needed. It can report what inputs there aren't enough of and can either generate a plan from a recipe that makes those or schedule trading for those components or ingredients.  The scaling calculations can be made as complex as necessary, for example usually the resource quantities are just multiplied out, but the time duration of a process might be less than a straight multiplication.  If there are offers for resources, the planning can take that into account and insert agents appropriately.</p>
 <p>In addition, often plans are tweaked after generation from a recipe, depending on how firm and exact the recipe is.  A manufacturing recipe might be more exact than a recipe for a more general business process.  For these reasons, a plan is decoupled from the recipe that generated it in the vocabulary.  It maintains only the references to the resource and process specifications that were supplied from the recipe.</p>
 <p>Note that a plan can include sets of flows from more than one recipe.  For example, below is a simplified diagram of a plan that uses two recipes.  In this example, the flows are related.  But sometimes plans contain multiple sets of processes, each from a different recipe, and each set of processes delivers a different resource.  For example, a plan for a marketing campaign might include producing pamphlets, making a website, conducting a few events, each of which is a separate recipe with a set of connected processes.</p>
-<p><img alt="diagram of 2 recipes used for one plan" src="recipes-plan.png" /></p>
+<p><img alt="diagram of 2 recipes used for one plan" src="https://codeberg.org/valueflows/valueflows/raw/branch/master/major-release-doc/VF-Release-1-0-0/recipes-plan.png" /></p>
 
 <h3 id="recipes">3.10 Recipes</h3>
 <p><em>This section is non-normative.</em></p>
@@ -7792,13 +7792,13 @@ Start with an Economic Resource,  and generate the plan based on the recipe of i
 </ul>
 <h4 id="exchange-recipes">Exchange recipes</h4>
 <p>You can also create Exchange Recipes.  These are particularly useful when a flow of processes will also involve one or more exchanges based on the production flows.  This often happens with delivering a service or work inputs, which might involve direct reciprocal flows, for example paying an agent for the work or the service.  It also could happen when a material or digital resource is produced directly for another agent.  Basically, any production flow which is an implied transfer can be involved directly in an exchange, and this applies to recipes also.  There is also no reason not to have a recipe (or plan) made up only of exchanges, if there is such a use case.</p>
-<p><img alt="diagram of production and exchange recipes" src="prod-exch.png" /></p>
+<p><img alt="diagram of production and exchange recipes" src="https://codeberg.org/valueflows/valueflows/raw/branch/master/major-release-doc/VF-Release-1-0-0/prod-exch.png" /></p>
 <p>In the above diagram, the top recipe processes are the production steps to produce yarn.  The agent coordinating those processes wants to agree with another agent to pay for scouring the yarn.  The flow called "deliver scouring service" is both an output of the "Scour wool" recipe process and a clause of the recipe exchange agreement.</p>
 <h4 id="recipe-class">Recipe class</h4>
 <p>The Recipe class groups Recipe Processes, and optionally Recipe Exchanges, but is an optional construct.  You will want a Recipe if different recipes can create the same resource specification output in different ways.  It is also needed when some recipe processes are included in multiple recipes, like the Summer Milking and Winter Milking recipes below, where the only difference is some details in the milking process. Or you might elect to always have a Recipe just for documentation.</p>
 <p>The Recipe class is not necessary if there is always only one choice in the instance for the next or previous recipe process in making any particular resource specification, that is if you want the plan from recipe logic to look for the next/previous recipe process from all the recipe processes in the instance.  But we suggest you either use all Recipes or no Recipes as a network instance.</p>
 <p>In the following simplified diagram, the yellow ovals are recipe processes. If they are named the same, that indicates the same instance of RecipeProcess.</p>
-<p><img alt="diagram of 2 recipes re-using recipe processes and recipe processes with no recipe" src="recipe-processes.png" /></p>
+<p><img alt="diagram of 2 recipes re-using recipe processes and recipe processes with no recipe" src="https://codeberg.org/valueflows/valueflows/raw/branch/master/major-release-doc/VF-Release-1-0-0/recipe-processes.png" /></p>
 <h4 id="by-products-and-co-products">By-products and Co-products</h4>
 <p>A Recipe knows its primary reason for being, i.e what is created by this Recipe.  As of now, it does not directly know its by-products and co-products. If needed, this can be found by interrogating the contents of the recipe input-process-output graph. This choice favors simplicity at this stage.</p>
 
@@ -7826,7 +7826,7 @@ Start with an Economic Resource,  and generate the plan based on the recipe of i
 <p>Or potentially, views for a global value system economy (really).</p>
 <p>See also Ecological Accounting.</p>
 <h4 id="accounting-views-independent-vs-dependent">Accounting views: independent vs dependent</h4>
-<p><img alt="diagram of independent vs dependent views and naming" src="REAviews.png" /></p>
+<p><img alt="diagram of independent vs dependent views and naming" src="https://codeberg.org/valueflows/valueflows/raw/branch/master/major-release-doc/VF-Release-1-0-0/REAviews.png" /></p>
 <p>Conventional accounting always takes the view of an individual agent: often a company. REA, and Valueflows, take an independent view, sometimes called a “collaboration space” or economic network or supply chain view.  At the same time, derived from the independent view, REA and Valueflows support each agent's own accounting view.</p>
 <p>For example, from one agent's viewpoint, the exchange may be a "purchase", from the other agent's viewpoint, it might be a "sale". From the neutral viewpoint, it is an exchange of resources, with usually at least two flows of resources, from different directions.</p>
 <p>For the individual agent’s accounting systems, assuming an Exchange of goods for money, when the goods are transferred from the seller to the purchaser, the purchaser’s Accounts Payable are increased (credited) and the seller’s Accounts Receivable are increased (debited). The independent view sees a transfer of goods from one agent to another.</p>
@@ -7843,7 +7843,7 @@ Start with an Economic Resource,  and generate the plan based on the recipe of i
 <p>Accounting isn't always just counting beans.  It will be important for community economies: what resources do we have, what happened with them, how are they doing? What resources do we need? Who needs what? Who can provide what?  What waste have we generated and how can we improve?</p>
 <h4 id="but-if-you-want-to-count-beans">But if you want to count beans...</h4>
 <p>The standard set of accounting reports are needed by many organizations. A standard General Ledger, Balance Sheet, and Income Statement can be generated automatically from Valueflows data. No need to create a Chart of Accounts or post double-entries, those can all be created by a computer program on request.</p>
-<p><img alt="A typical general ledger hierarchy of accounts" src="std-accounting.png" /></p>
+<p><img alt="A typical general ledger hierarchy of accounts" src="https://codeberg.org/valueflows/valueflows/raw/branch/master/major-release-doc/VF-Release-1-0-0/std-accounting.png" /></p>
 <p>Moreover, General Ledgers and accounting reports can be created automatically for each agent in an economic network using the VF vocabulary.  The accounting views use the Dependent or Individual Agent view of ValueFlows.</p>
 <p>Accounting statements can also be updated instantly for each participant in any economic event as soon as the event is recorded. For example, consider an economic exchange, where one agent transfers some goods to another, and the other agent transfers some money in return. The inventory of the goods-providing agent will be instantly decremented, and the receiving agent's incremented. Likewise the money accounts of the money-providing and receiving agents will immediately change. Income statements, balance sheets, and cash flow reports can reflect the new changes immediately. The financial positions of each agent can always be up-to-date as of the last recorded event.</p>
 <p>This article describes how to generate General Ledgers etc. from REA data using procedural code: <a href="https://valueflo.ws/linked-docs/OperationofaRelationalAccountingSystem.pdf" target="_blank">Operation of a Relational Accounting System, Graham Gal and Bill McCarthy</a>.</p>
@@ -7869,7 +7869,7 @@ Start with an Economic Resource,  and generate the plan based on the recipe of i
 <h4 id="rea-ipo-resource-flows">REA IPO resource flows</h4>
 <p>The Valueflows input-process-output REA resource flow model works very well for ecological accounting, with some broadening of our thinking about agents and resources, and what "economic" entails.  If we think of "economic" as broader than human activity, which has tentacles into most if not all of the other ecosystems on earth, it becomes easier to consider "accounting" in light of flows to and from those ecosystems, all of which eventually affect human economies.</p>
 <p>This rough diagram shows some of the flows for solar panel production.  Silica dust is an output of the mining process, which gives mine workers silicosis.  There are many additional flows here which could be detailed to go into and out of ecological ecosystems, affecting them and also humans.</p>
-<p><img alt="flow diagram of solar panel production including externalities" src="SolarPanelProduction.png" /></p>
+<p><img alt="flow diagram of solar panel production including externalities" src="https://codeberg.org/valueflows/valueflows/raw/branch/master/major-release-doc/VF-Release-1-0-0/SolarPanelProduction.png" /></p>
 <h4 id="economic-resources">Economic Resources</h4>
 <p>We have thought of economic resources as having use value (and sometimes exchange value) to humans and ecosystems.  If we broaden that to include "bad" as well as "good" resources, we can model more completely and accurately the resource flows that impact ecosystems including humans.  It is also not very helpful to even think in terms of "bad" and "good" as part of the definition, since that is conditional.  For example, CO2 is "good" for plants in a greenhouse, but "bad" pumped into the atmosphere, and some of the CO2 in the greenhouse will leak out, making it "bad"... yet it is the same substance.</p>
 <h4 id="eco-agents">Agents</h4>
@@ -7929,7 +7929,7 @@ Start with an Economic Resource,  and generate the plan based on the recipe of i
 <li><strong>Dependent Demand</strong> constructs schedules for operational economic networks from recipes<ul>
 <li>Many other scheduling algorithms can be used over the same recipes. </li>
 <li><a href="https://en.wikipedia.org/wiki/Gantt_chart" target="_blank">Gantt charts</a> are a popular network schedule visualization.
-<img alt="gantt chart example" src="fw16-2.gif" /></li>
+<img alt="gantt chart example" src="https://codeberg.org/valueflows/valueflows/raw/branch/master/major-release-doc/VF-Release-1-0-0/fw16-2.gif" /></li>
 <li><strong>Critical Path</strong> is another scheduling algorithm that analyzes a network of processes to figure out the bottlenecks, the processes that need special attention.</li>
 </ul>
 </li>
