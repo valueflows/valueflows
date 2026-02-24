@@ -26,8 +26,8 @@
     dcterms:type <http://purl.org/adms/assettype/Ontology> ;
     vann:preferredNamespacePrefix "vf" ;
     vann:preferredNamespaceUri "https://w3id.org/valueflows/ont/vf#" ;
-    owl:versionInfo "1.0.0-rc.1" ;
-    owl:versionIRI <https://w3id.org/valueflows/ont/1.0.0-rc.1/vf> ;
+    owl:versionInfo "1.0.0" ;
+    owl:versionIRI <https://w3id.org/valueflows/ont/1.0.0/vf> ;
     dcterms:status <http://purl.org/adms/status/UnderDevelopment> ;
     dcterms:license "https://creativecommons.org/licenses/by-sa/4.0/" ;
     cc:license "https://creativecommons.org/licenses/by-sa/4.0/" ;
@@ -37,10 +37,10 @@
 
 # Classes: Knowledge layer
 
-vf:ResourceSpecification a  owl:Class ;
-        rdfs:label          "Resource Specification"@en ;
+vf:Action  a                owl:Class ;
+        rdfs:label          "Action"@en ;
         vs:term_status      "stable" ;
-        rdfs:comment        "Specifies the kind of economic or environmental resource, even if the resource is not instantiated as an EconomicResource. Could define a material or digital thing, service, medium of exchange or currency, skill or type of work."@en ;
+        rdfs:comment        "An action verb defining the kind of flow and its behavior."@en ;
         .
 
 vf:ProcessSpecification a   owl:Class ;
@@ -49,28 +49,10 @@ vf:ProcessSpecification a   owl:Class ;
         rdfs:comment        "Specifies the kind of process."@en ;
         .
 
-vf:Action  a                owl:Class ;
-        rdfs:label          "Action"@en ;
-        vs:term_status      "stable" ;
-        rdfs:comment        "An action verb defining the kind of flow and its behavior."@en ;
-        .
-
 vf:Recipe a                 owl:Class ;
         rdfs:label          "Recipe"@en ;
         vs:term_status      "testing" ;
         rdfs:comment        "Optional instance of a recipe which directly specifies the recipe processes included."@en ;
-        .
-
-vf:RecipeProcess a          owl:Class ;
-        rdfs:label          "Recipe Process"@en ;
-        vs:term_status      "stable" ;
-        rdfs:comment        "Specifies a process in a recipe for use in planning from recipe."@en ;
-        .
-
-vf:RecipeFlow a             owl:Class ;
-        rdfs:label          "Recipe Flow"@en ;
-        vs:term_status      "stable" ;
-        rdfs:comment        "The specification of a resource inflow to, or outflow from, a recipe process; and/or a clause, or reciprocal clause, of a recipe exchange."@en ;
         .
 
 vf:RecipeExchange a         owl:Class ;
@@ -79,37 +61,25 @@ vf:RecipeExchange a         owl:Class ;
         rdfs:comment        "Specifies an exchange type agreement as part of a recipe."@en ;
         .
 
+vf:RecipeFlow a             owl:Class ;
+        rdfs:label          "Recipe Flow"@en ;
+        vs:term_status      "stable" ;
+        rdfs:comment        "The specification of a resource inflow to, or outflow from, a recipe process; and/or a clause, or reciprocal clause, of a recipe exchange."@en ;
+        .
+
+vf:RecipeProcess a          owl:Class ;
+        rdfs:label          "Recipe Process"@en ;
+        vs:term_status      "stable" ;
+        rdfs:comment        "Specifies a process in a recipe for use in planning from recipe."@en ;
+        .
+
+vf:ResourceSpecification a  owl:Class ;
+        rdfs:label          "Resource Specification"@en ;
+        vs:term_status      "stable" ;
+        rdfs:comment        "Specifies the kind of economic or environmental resource, even if the resource is not instantiated as an EconomicResource. Could define a material or digital thing, service, medium of exchange or currency, skill or type of work."@en ;
+        .
+
 # Classes: Planning layer
-
-vf:Plan  a                  owl:Class ;
-        rdfs:label          "Plan"@en ;
-        vs:term_status      "stable" ;
-        rdfs:comment        "A logical collection of processes, with optional connected agreements, that constitute a body of scheduled work with defined deliverable(s)."@en ;
-        .
-
-vf:Intent  a                owl:Class ;
-        rdfs:label          "Intent"@en ;
-        vs:term_status      "stable" ;
-        rdfs:comment        "A desired or proposed or planned or estimated economic flow, usually with only one agent associated, which could become a commitment and/or economic event."@en ;
-        .
-
-vf:Proposal  a              owl:Class ;
-        rdfs:label          "Proposal"@en ;
-        vs:term_status      "stable" ;
-        rdfs:comment        "Published requests or offers, sometimes with what is expected in return."@en ;
-        .
-
-vf:ProposalList  a          owl:Class ;
-        rdfs:label          "Proposal List"@en ;
-        vs:term_status      "testing" ;
-        rdfs:comment        "A grouping of proposals, for publishing as a list."@en ;
-        .
-
-vf:Commitment  a            owl:Class ;
-        rdfs:label          "Commitment"@en ;
-        vs:term_status      "stable" ;
-        rdfs:comment        "A planned economic flow that has been scheduled or promised by one agent to another agent."@en ;
-        .
 
 vf:Agreement  a             owl:Class ;
         rdfs:label          "Agreement"@en ;
@@ -129,10 +99,40 @@ vf:Claim  a                 owl:Class ;
         rdfs:comment        "A claim for a future economic event(s) in reciprocity for an economic event that already occurred."@en ;
         .
 
+vf:Commitment  a            owl:Class ;
+        rdfs:label          "Commitment"@en ;
+        vs:term_status      "stable" ;
+        rdfs:comment        "A planned economic flow that has been scheduled or promised by one agent to another agent."@en ;
+        .
+
+vf:Intent  a                owl:Class ;
+        rdfs:label          "Intent"@en ;
+        vs:term_status      "stable" ;
+        rdfs:comment        "A desired or proposed or planned or estimated economic flow, usually with only one agent associated, which could become a commitment and/or economic event."@en ;
+        .
+
+vf:Plan  a                  owl:Class ;
+        rdfs:label          "Plan"@en ;
+        vs:term_status      "stable" ;
+        rdfs:comment        "A logical collection of processes, with optional connected agreements, that constitute a body of scheduled work with defined deliverable(s)."@en ;
+        .
+
 vf:Process  a               owl:Class ;
         rdfs:label          "Process"@en ;
         vs:term_status      "stable" ;
         rdfs:comment        "An activity that changes inputs into outputs, by transforming or transporting economic resource(s)."@en ;
+        .
+
+vf:Proposal  a              owl:Class ;
+        rdfs:label          "Proposal"@en ;
+        vs:term_status      "stable" ;
+        rdfs:comment        "Published requests or offers, sometimes with what is expected in return."@en ;
+        .
+
+vf:ProposalList  a          owl:Class ;
+        rdfs:label          "Proposal List"@en ;
+        vs:term_status      "testing" ;
+        rdfs:comment        "A grouping of proposals, for publishing as a list."@en ;
         .
 
 # Classes: Observation layer
@@ -144,12 +144,29 @@ vf:Agent  a                 owl:Class ;
         rdfs:comment        "An identifiable entity that can commit to and/or perform economic and/or ecological activity under its own power or authority."@en ;
         .
 
-vf:Person  a                owl:Class ;
-        rdfs:seeAlso        foaf:Person ;
-        rdfs:label          "Person"@en ;
+vf:BatchLotRecord  a        owl:Class ;
+        rdfs:label          "Batch Lot Record"@en ;
+        vs:term_status      "testing" ;
+        rdfs:comment        "A document which contains all the needed detail related to the production process of a particular batch or lot, a resource processed in the same process(es) so that it is expected to be homogeneous."@en ;
+        .
+
+vf:EcologicalAgent  a       owl:Class ;
+        rdfs:label          "Ecological Agent"@en ;
         rdfs:subClassOf     vf:Agent ;
+        vs:term_status      "testing" ;
+        rdfs:comment        "A non-human being; or a functional group of non-human beings; or an ecosystem of living beings that includes non-humans; but it has agency and receives and/or provides economic/ecological resources."@en ;
+        .
+
+vf:EconomicEvent  a         owl:Class ;
+        rdfs:label          "Economic Event"@en ;
         vs:term_status      "stable" ;
-        rdfs:comment        "A human being. All persons are considered agents."@en ;
+        rdfs:comment        "An observed economic flow, which could reflect creation or a change in the quantity, location, accountability and/or responsibility, of an economic resource, whether material or not."@en ;
+        .
+
+vf:EconomicResource  a      owl:Class ;
+        rdfs:label          "Economic Resource"@en ;
+        vs:term_status      "stable" ;
+        rdfs:comment        "Economic or environmental things (material or digital), media of exchange, which agents agree should be accounted for and which can be inventoried."@en ;
         .
 
 vf:Organization  a          owl:Class ;
@@ -160,45 +177,28 @@ vf:Organization  a          owl:Class ;
         rdfs:comment        "A functional structure, formal or informal, which can include people and/or other organizations, and has its own agency.  Something called a group is an Organization in Valueflows if it has agency as the group."@en ;
         .
 
-vf:EcologicalAgent  a       owl:Class ;
-        rdfs:label          "Ecological Agent"@en ;
+vf:Person  a                owl:Class ;
+        rdfs:seeAlso        foaf:Person ;
+        rdfs:label          "Person"@en ;
         rdfs:subClassOf     vf:Agent ;
-        vs:term_status      "testing" ;
-        rdfs:comment        "A non-human being; or a functional group of non-human beings; or an ecosystem of living beings that includes non-humans; but it has agency and receives and/or provides economic/ecological resources."@en ;
-        .
-
-vf:EconomicResource  a      owl:Class ;
-        rdfs:label          "Economic Resource"@en ;
         vs:term_status      "stable" ;
-        rdfs:comment        "Economic or environmental things (material or digital), media of exchange, which agents agree should be accounted for and which can be inventoried."@en ;
-        .
-
-vf:BatchLotRecord  a        owl:Class ;
-        rdfs:label          "Batch Lot Record"@en ;
-        vs:term_status      "testing" ;
-        rdfs:comment        "A document which contains all the needed detail related to the production process of a particular batch or lot, a resource processed in the same process(es) so that it is expected to be homogeneous."@en ;
-        .
-
-vf:EconomicEvent  a         owl:Class ;
-        rdfs:label          "Economic Event"@en ;
-        vs:term_status      "stable" ;
-        rdfs:comment        "An observed economic flow, which could reflect creation or a change in the quantity, location, accountability and/or responsibility, of an economic resource, whether material or not."@en ;
+        rdfs:comment        "A human being. All persons are considered agents."@en ;
         .
 
 # Classes: Utility
-
-vf:SpatialThing a           owl:Class ;
-        rdfs:subClassOf     geo:SpatialThing ;
-        rdfs:label          "Spatial Thing"@en ;
-        vs:term_status      "stable" ;
-        rdfs:comment        "Data that locates something relative to the Earth, usually a somewhat fixed location."@en ;
-        .
 
 vf:Measure a                owl:Class ;
         rdfs:subClassOf     om:Measure ;
         rdfs:label          "Measure"@en ;
         vs:term_status      "stable" ;
         rdfs:comment        "A quantity expressed as a numeric value with a unit of measure."@en ;
+        .
+
+vf:SpatialThing a           owl:Class ;
+        rdfs:subClassOf     geo:SpatialThing ;
+        rdfs:label          "Spatial Thing"@en ;
+        vs:term_status      "stable" ;
+        rdfs:comment        "Data that locates something relative to the Earth, usually a somewhat fixed location."@en ;
         .
 
 vf:Unit a                   owl:Class ;
@@ -208,12 +208,164 @@ vf:Unit a                   owl:Class ;
         rdfs:comment        "A standard unit of measure, defined and adopted by convention or by law."@en ;
         .
 
+# Named classes for anonymous union domain/range
+
+vf:ActionDomain
+        a                   owl:Class ;
+        rdfs:label          "Domain for vf:action"@en ;
+        owl:unionOf         (vf:EconomicEvent vf:Commitment vf:Intent vf:RecipeFlow vf:Claim) .
+
+vf:ClassifiedAsDomain
+        a                   owl:Class ;
+        rdfs:label          "Domain for vf:classifiedAs"@en ;
+        owl:unionOf         (vf:Process vf:EconomicResource vf:Organization vf:EcologicalAgent vf:Unit) .
+
+vf:CreatedDomain
+        a                   owl:Class ;
+        rdfs:label          "Domain for vf:created"@en ;
+        owl:unionOf         (vf:Agreement vf:AgreementBundle vf:Claim vf:Commitment vf:EconomicEvent vf:Plan vf:Proposal vf:ProposalList) .
+
+vf:DueDomain
+        a                   owl:Class ;
+        rdfs:label          "Domain for vf:due"@en ;
+        owl:unionOf         (vf:Plan vf:Commitment vf:Claim vf:Intent) .
+
+vf:EffortQuantityDomain
+        a                   owl:Class ;
+        rdfs:label          "Domain for vf:effortQuantity"@en ;
+        owl:unionOf         (vf:EconomicEvent vf:Commitment vf:Intent vf:RecipeFlow vf:Claim) .
+
+vf:FinishedDomain
+        a                   owl:Class ;
+        rdfs:label          "Domain for vf:finished"@en ;
+        owl:unionOf         (vf:Commitment vf:Process vf:Intent vf:Claim) .
+
+vf:HasBeginningDomain
+        a                   owl:Class ;
+        rdfs:label          "Domain for vf:hasBeginning"@en ;
+        owl:unionOf         (vf:Commitment vf:EconomicEvent vf:Intent vf:Proposal vf:Process) .
+
+vf:HasEndDomain
+        a                   owl:Class ;
+        rdfs:label          "Domain for vf:hasEnd"@en ;
+        owl:unionOf         (vf:Commitment vf:EconomicEvent vf:Intent vf:Proposal vf:Process) .
+
+vf:HasInputRange
+        a                   owl:Class ;
+        rdfs:label          "Range for vf:hasInput"@en ;
+        owl:unionOf         (vf:EconomicEvent vf:Commitment vf:Intent) .
+
+vf:HasOutputRange
+        a                   owl:Class ;
+        rdfs:label          "Range for vf:hasOutput"@en ;
+        owl:unionOf         (vf:EconomicEvent vf:Commitment vf:Intent) .
+
+vf:HasPointInTimeDomain
+        a                   owl:Class ;
+        rdfs:label          "Domain for vf:hasPointInTime"@en ;
+        owl:unionOf         (vf:Commitment vf:EconomicEvent vf:Intent) .
+
+vf:ImageDomain
+        a                   owl:Class ;
+        rdfs:label          "Domain for vf:image"@en ;
+        owl:unionOf         (vf:Agent vf:EconomicEvent vf:EconomicResource vf:Intent vf:ResourceSpecification vf:ProcessSpecification vf:RecipeProcess) .
+
+vf:ImageListDomain
+        a                   owl:Class ;
+        rdfs:label          "Domain for vf:imageList"@en ;
+        owl:unionOf         (vf:EconomicResource vf:Intent vf:ResourceSpecification) .
+
+vf:InputOfDomain
+        a                   owl:Class ;
+        rdfs:label          "Domain for vf:inputOf"@en ;
+        owl:unionOf         (vf:EconomicEvent vf:Commitment vf:Intent) .
+
+vf:LabelDomain
+        a                   owl:Class ;
+        rdfs:label          "Domain for vf:label"@en ;
+        owl:unionOf         (vf:Unit vf:Action) .
+
+vf:NameDomain
+        a                   owl:Class ;
+        rdfs:label          "Domain for vf:name"@en ;
+        owl:unionOf         (vf:Agent vf:Agreement vf:AgreementBundle vf:EconomicResource vf:Intent vf:Plan vf:Process vf:ProcessSpecification vf:Proposal vf:ProposalList vf:Recipe vf:RecipeExchange vf:RecipeProcess vf:ResourceSpecification vf:SpatialThing) .
+
+vf:NoteDomain
+        a                   owl:Class ;
+        rdfs:label          "Domain for vf:note"@en ;
+        owl:unionOf         (vf:Agent vf:Agreement vf:AgreementBundle vf:Claim vf:Commitment vf:EconomicEvent vf:EconomicResource vf:Intent vf:Plan vf:Process vf:ProcessSpecification vf:Proposal vf:ProposalList vf:Recipe vf:RecipeExchange vf:RecipeFlow vf:RecipeProcess vf:ResourceSpecification vf:SpatialThing) .
+
+vf:OutputOfDomain
+        a                   owl:Class ;
+        rdfs:label          "Domain for vf:outputOf"@en ;
+        owl:unionOf         (vf:EconomicEvent vf:Commitment vf:Intent) .
+
+vf:PlanIncludesRange
+        a                   owl:Class ;
+        rdfs:label          "Range for vf:planIncludes"@en ;
+        owl:unionOf         (vf:Process vf:Commitment vf:Intent) .
+
+vf:PlannedWithinDomain
+        a                   owl:Class ;
+        rdfs:label          "Domain for vf:plannedWithin"@en ;
+        owl:unionOf         (vf:Process vf:Commitment vf:Intent) .
+
+vf:ProposedToDomain
+        a                   owl:Class ;
+        rdfs:label          "Domain for vf:proposedTo"@en ;
+        owl:unionOf         (vf:Proposal vf:ProposalList) .
+
+vf:ProviderDomain
+        a                   owl:Class ;
+        rdfs:label          "Domain for vf:provider"@en ;
+        owl:unionOf         (vf:EconomicEvent vf:Commitment vf:Intent vf:Claim) .
+
+vf:ReceiverDomain
+        a                   owl:Class ;
+        rdfs:label          "Domain for vf:receiver"@en ;
+        owl:unionOf         (vf:EconomicEvent vf:Commitment vf:Intent vf:Claim) .
+
+vf:ResourceClassifiedAsDomain
+        a                   owl:Class ;
+        rdfs:label          "Domain for vf:resourceClassifiedAs"@en ;
+        owl:unionOf         (vf:ResourceSpecification vf:RecipeFlow vf:Intent vf:Commitment vf:EconomicEvent vf:Claim) .
+
+vf:ResourceConformsToDomain
+        a                   owl:Class ;
+        rdfs:label          "Domain for vf:resourceConformsTo"@en ;
+        owl:unionOf         (vf:Commitment vf:Intent vf:EconomicEvent vf:Claim vf:RecipeFlow) .
+
+vf:ResourceInventoriedAsDomain
+        a                   owl:Class ;
+        rdfs:label          "Domain for vf:resourceInventoriedAs"@en ;
+        owl:unionOf         (vf:Commitment vf:Intent vf:EconomicEvent) .
+
+vf:ResourceQuantityDomain
+        a                   owl:Class ;
+        rdfs:label          "Domain for vf:resourceQuantity"@en ;
+        owl:unionOf         (vf:EconomicEvent vf:Commitment vf:Intent vf:RecipeFlow vf:Claim) .
+
+vf:SatisfiesDomain
+        a                   owl:Class ;
+        rdfs:label          "Domain for vf:satisfies"@en ;
+        owl:unionOf         (vf:Commitment vf:EconomicEvent) .
+
+vf:StageDomain
+        a                   owl:Class ;
+        rdfs:label          "Domain for vf:stage"@en ;
+        owl:unionOf         (vf:EconomicResource vf:Commitment vf:Intent vf:RecipeFlow) .
+
+vf:StateDomain
+        a                   owl:Class ;
+        rdfs:label          "Domain for vf:state"@en ;
+        owl:unionOf         (vf:EconomicResource vf:EconomicEvent vf:RecipeFlow vf:Commitment vf:Intent) .
+
 # Properties
 
 vf:action
         a                   owl:ObjectProperty ;
         rdfs:label          "action"@en ;
-        rdfs:domain         [ owl:unionOf (vf:EconomicEvent vf:Commitment vf:Intent vf:RecipeFlow vf:Claim) ] ;
+        rdfs:domain         vf:ActionDomain ;
         rdfs:range          vf:Action ;
         owl:cardinality     1 ;
         vs:term_status      "stable" ;
@@ -223,7 +375,7 @@ vf:action
 vf:inputOf
         a                   owl:ObjectProperty ;
         rdfs:label          "input of"@en ;
-        rdfs:domain         [ owl:unionOf (vf:EconomicEvent vf:Commitment vf:Intent) ] ;
+        rdfs:domain         vf:InputOfDomain ;
         rdfs:range          vf:Process ;
         owl:maxCardinality  1 ;
         vs:term_status      "stable" ;
@@ -235,7 +387,7 @@ vf:hasInput
         owl:inverseOf       vf:inputOf ;
         rdfs:label          "has input"@en ;
         rdfs:domain         vf:Process ;
-        rdfs:range          [ owl:unionOf (vf:EconomicEvent vf:Commitment vf:Intent) ] ;
+        rdfs:range          vf:HasInputRange ;
         vs:term_status      "stable" ;
         rdfs:comment        "All the input flows of a process."@en ;
         .
@@ -243,7 +395,7 @@ vf:hasInput
 vf:outputOf
         a                   owl:ObjectProperty ;
         rdfs:label          "output of"@en ;
-        rdfs:domain         [ owl:unionOf (vf:EconomicEvent vf:Commitment vf:Intent) ] ;
+        rdfs:domain         vf:OutputOfDomain ;
         rdfs:range          vf:Process ;
         owl:maxCardinality  1 ;
         vs:term_status      "stable" ;
@@ -255,7 +407,7 @@ vf:hasOutput
         owl:inverseOf       vf:outputOf ;
         rdfs:label          "has output"@en ;
         rdfs:domain         vf:Process ;
-        rdfs:range          [ owl:unionOf (vf:EconomicEvent vf:Commitment vf:Intent) ] ;
+        rdfs:range          vf:HasOutputRange ;
         vs:term_status      "stable" ;
         rdfs:comment        "All the output flows of a process."@en ;
         .
@@ -347,7 +499,7 @@ vf:primaryOutput
         rdfs:range          vf:ResourceSpecification ;
         owl:maxCardinality  1 ;
         vs:term_status      "testing" ;
-        rdfs:comment        "The main output the recipe is intended to produce or deliver."@en ;
+        rdfs:comment        "The main type of resource the recipe is intended to produce or deliver."@en ;
         .
 
 vf:recipeIncludes
@@ -362,7 +514,7 @@ vf:recipeIncludes
 vf:plannedWithin
         a                   owl:ObjectProperty ;
         rdfs:label          "planned within"@en ;
-        rdfs:domain         [ owl:unionOf (vf:Process vf:Commitment vf:Intent) ] ;
+        rdfs:domain         vf:PlannedWithinDomain ;
         rdfs:range          vf:Plan ;
         owl:maxCardinality  1 ;
         vs:term_status      "stable" ;
@@ -374,9 +526,9 @@ vf:planIncludes
         owl:inverseOf       vf:plannedWithin ;
         rdfs:label          "plan includes"@en ;
         rdfs:domain         vf:Plan ;
-        rdfs:range          [ owl:unionOf (vf:Process vf:Commitment vf:Intent) ] ;
+        rdfs:range          vf:PlanIncludesRange ;
         vs:term_status      "stable" ;
-        rdfs:comment        "The processes and and non-process commitments/intents that constitute the plan."@en ;
+        rdfs:comment        "The processes and non-process commitments/intents that constitute the plan."@en ;
         .
 
 vf:independentDemandOf
@@ -396,13 +548,13 @@ vf:hasIndependentDemand
         rdfs:range          vf:Commitment  ;
         rdfs:domain         vf:Plan ;
         vs:term_status      "stable" ;
-        rdfs:comment        "The commitments and/or intents which this plan was created to deliver."@en ;
+        rdfs:comment        "The commitments and/or intents which this plan was created to deliver on."@en ;
         .
 
 vf:resourceInventoriedAs
         a                   owl:ObjectProperty ;
         rdfs:label          "resource inventoried as"@en ;
-        rdfs:domain         [ owl:unionOf (vf:Commitment vf:Intent vf:EconomicEvent) ] ;
+        rdfs:domain         vf:ResourceInventoriedAsDomain ;
         rdfs:range          vf:EconomicResource ;
         owl:maxCardinality  1 ;
         vs:term_status      "stable" ;
@@ -420,7 +572,7 @@ vf:toResourceInventoriedAs
         .
 
 vf:provider  a              owl:ObjectProperty ;
-        rdfs:domain         [ owl:unionOf (vf:EconomicEvent vf:Commitment vf:Intent vf:Claim) ] ;
+        rdfs:domain         vf:ProviderDomain ;
         rdfs:label          "provider"@en ;
         rdfs:range          vf:Agent ;
         owl:maxCardinality  1 ;
@@ -429,7 +581,7 @@ vf:provider  a              owl:ObjectProperty ;
         .
 
 vf:receiver  a              owl:ObjectProperty ;
-        rdfs:domain         [ owl:unionOf (vf:EconomicEvent vf:Commitment vf:Intent vf:Claim) ] ;
+        rdfs:domain         vf:ReceiverDomain ;
         rdfs:label          "receiver"@en ;
         rdfs:range          vf:Agent ;
         owl:maxCardinality  1 ;
@@ -501,12 +653,7 @@ vf:primaryAccountable a     owl:ObjectProperty ;
 vf:hasBeginning a           owl:DatatypeProperty ;
         rdfs:subPropertyOf  time:hasBeginning ;
         rdfs:label          "has beginning"@en ;
-        rdfs:domain         [ owl:unionOf (
-                                vf:Commitment
-                                vf:EconomicEvent
-                                vf:Intent
-                                vf:Proposal
-                                vf:Process) ] ;
+        rdfs:domain         vf:HasBeginningDomain ;
         rdfs:range          xsd:dateTimeStamp ;
         owl:maxCardinality  1 ;
         vs:term_status      "stable" ;
@@ -516,12 +663,7 @@ vf:hasBeginning a           owl:DatatypeProperty ;
 vf:hasEnd a                 owl:DatatypeProperty ;
         rdfs:subPropertyOf  time:hasEnd ;
         rdfs:label          "has end"@en ;
-        rdfs:domain         [ owl:unionOf (
-                                vf:Commitment
-                                vf:EconomicEvent
-                                vf:Intent
-                                vf:Proposal
-                                vf:Process) ] ;
+        rdfs:domain         vf:HasEndDomain ;
         rdfs:range          xsd:dateTimeStamp ;
         owl:maxCardinality  1 ;
         vs:term_status      "stable" ;
@@ -531,10 +673,7 @@ vf:hasEnd a                 owl:DatatypeProperty ;
 vf:hasPointInTime a         owl:DatatypeProperty ;
         rdfs:subPropertyOf  time:inXSDDateTimeStamp ;
         rdfs:label          "has point in time"@en ;
-        rdfs:domain         [ owl:unionOf (
-                                vf:Commitment
-                                vf:EconomicEvent
-                                vf:Intent) ] ;
+        rdfs:domain         vf:HasPointInTimeDomain ;
         rdfs:range          xsd:dateTimeStamp ;
         owl:maxCardinality  1 ;
         vs:term_status      "stable" ;
@@ -553,11 +692,7 @@ vf:hasDuration a            owl:ObjectProperty ;
 
 vf:due a                    owl:DatatypeProperty ;
         rdfs:label          "due"@en ;
-        rdfs:domain         [ owl:unionOf (
-                                vf:Plan
-                                vf:Commitment
-                                vf:Claim
-                                vf:Intent) ] ;
+        rdfs:domain         vf:DueDomain ;
         rdfs:range          xsd:dateTimeStamp ;
         owl:maxCardinality  1 ;
         vs:term_status      "stable" ;
@@ -584,7 +719,7 @@ vf:hasUnit a                owl:ObjectProperty ;
         rdfs:comment        "A standard unit of measure."@en ;
         .
 
-vf:omUnitIdentifier a       owl:DataTypeProperty ;
+vf:omUnitIdentifier a       owl:DatatypeProperty ;
         rdfs:label          "om unit identifier"@en ;
         rdfs:domain         vf:Unit ;
         rdfs:range          xsd:anyURI ;
@@ -593,26 +728,24 @@ vf:omUnitIdentifier a       owl:DataTypeProperty ;
         rdfs:comment        "The unique identifier of the om unit of measure, for standardization across networks."@en ;
         .
 
-vf:label a                  owl:DataTypeProperty ;
+vf:label a                  owl:DatatypeProperty ;
         rdfs:subPropertyOf  rdfs:label ;
         rdfs:label          "label"@en ;
-        rdfs:domain         [ owl:unionOf (
-                                vf:Unit
-                                vf:Action) ] ;
+        rdfs:domain         vf:LabelDomain ;
         rdfs:range          xsd:string ;
         owl:cardinality     1 ;
         vs:term_status      "stable" ;
-        rdfs:comment        "The display label defined for the network for the unit of measure, overrides om."@en ;
+        rdfs:comment        "The label defined for human readable display."@en ;
         .
 
-vf:symbol a                 owl:DataTypeProperty ;
+vf:symbol a                 owl:DatatypeProperty ;
         rdfs:subPropertyOf  om:symbol ;
         rdfs:label          "symbol"@en ;
         rdfs:domain         vf:Unit ;
         rdfs:range          xsd:string ;
         owl:maxCardinality  1 ;
         vs:term_status      "stable" ;
-        rdfs:comment        "The display symbol defined for the network for the unit of measure, overrides om."@en ;
+        rdfs:comment        "The symbol defined for human readable display."@en ;
         .
 
 vf:accountingQuantity a     owl:ObjectProperty ;
@@ -635,7 +768,7 @@ vf:onhandQuantity a         owl:ObjectProperty ;
 
 vf:resourceQuantity a       owl:ObjectProperty ;
         rdfs:label          "resource quantity"@en ;
-        rdfs:domain         [ owl:unionOf (vf:EconomicEvent vf:Commitment vf:Intent vf:RecipeFlow vf:Claim) ] ;
+        rdfs:domain         vf:ResourceQuantityDomain ;
         rdfs:range          vf:Measure ;
         owl:maxCardinality  1 ;
         vs:term_status      "stable" ;
@@ -644,7 +777,7 @@ vf:resourceQuantity a       owl:ObjectProperty ;
 
 vf:effortQuantity a         owl:ObjectProperty ;
         rdfs:label          "effort quantity"@en ;
-        rdfs:domain         [ owl:unionOf (vf:EconomicEvent vf:Commitment vf:Intent vf:RecipeFlow vf:Claim) ] ;
+        rdfs:domain         vf:EffortQuantityDomain ;
         rdfs:range          vf:Measure ;
         owl:maxCardinality  1 ;
         vs:term_status      "stable" ;
@@ -671,11 +804,11 @@ vf:minimumQuantity a        owl:ObjectProperty ;
 
 vf:unitBased  a             owl:DatatypeProperty ;
         rdfs:label          "unit based"@en ;
-        rdfs:domain         [ owl:unionOf ( vf:Proposal vf:Agreenent ) ] ;
+        rdfs:domain         vf:Proposal ;
         rdfs:range          xsd:boolean ;
         owl:maxCardinality  1 ;
         vs:term_status      "stable" ;
-        rdfs:comment        "This group of commitments contains unit based quantities, which can be multipied to create commitments; commonly seen in a price list or e-commerce. Default false."@en ;
+        rdfs:comment        "This group of intents contains unit based quantities, which can be multipied to create commitments; commonly seen in a price list or e-commerce. Default false."@en ;
         .
 
 vf:purpose  a               owl:ObjectProperty ;
@@ -690,13 +823,7 @@ vf:purpose  a               owl:ObjectProperty ;
 vf:created a                owl:DatatypeProperty ;
         rdfs:seeAlso        dcterms:created ;
         rdfs:label          "created"@en ;
-        rdfs:domain         [ owl:unionOf (
-                                vf:Agreement
-                                vf:Claim
-                                vf:Commitment
-                                vf:Plan
-                                vf:Proposal
-                                vf:EconomicEvent ) ] ;
+        rdfs:domain         vf:CreatedDomain ;
         rdfs:range          xsd:dateTimeStamp ;
         owl:maxCardinality  1 ;
         vs:term_status      "stable" ;
@@ -705,6 +832,7 @@ vf:created a                owl:DatatypeProperty ;
 
 vf:long a                   owl:DatatypeProperty ;
         rdfs:subPropertyOf  geo:long ;
+        rdfs:label          "longitude"@en ;
         rdfs:range          dtype:numericUnion ;
         rdfs:domain         vf:SpatialThing ;
         owl:maxCardinality  1 ;
@@ -714,6 +842,7 @@ vf:long a                   owl:DatatypeProperty ;
 
 vf:lat a                    owl:DatatypeProperty ;
         rdfs:subPropertyOf  geo:lat ;
+        rdfs:label          "latitude"@en ;
         rdfs:range          dtype:numericUnion ;
         rdfs:domain         vf:SpatialThing ;
         owl:maxCardinality  1 ;
@@ -723,6 +852,7 @@ vf:lat a                    owl:DatatypeProperty ;
 
 vf:alt a                    owl:DatatypeProperty ;
         rdfs:subPropertyOf  geo:alt ;
+        rdfs:label          "altitude"@en ;
         rdfs:range          dtype:numericUnion ;
         rdfs:domain         vf:SpatialThing ;
         owl:maxCardinality  1 ;
@@ -740,7 +870,7 @@ vf:mappableAddress a        owl:DatatypeProperty ;
         .
 
 vf:hasDetailedGeometry a    owl:ObjectProperty ;
-        rdfs:label          "currency address"@en ;
+        rdfs:label          "has detailed geometry"@en ;
         rdfs:domain         vf:SpatialThing ;
         rdfs:range          geosparql:Geometry ;
         vs:term_status      "testing" ;
@@ -805,14 +935,7 @@ vf:toLocation a             owl:ObjectProperty ;
 
 vf:image a                  owl:DatatypeProperty ;
         rdfs:label          "image"@en ;
-        rdfs:domain         [ owl:unionOf (
-                                vf:Agent
-                                vf:EconomicEvent
-                                vf:EconomicResource
-                                vf:Intent
-                                vf:ResourceSpecification
-                                vf:ProcessSpecification
-                                vf:RecipeProcess) ] ;
+        rdfs:domain         vf:ImageDomain ;
         rdfs:range          xsd:anyURI ;
         owl:maxCardinality  1 ;
         vs:term_status      "stable" ;
@@ -821,10 +944,7 @@ vf:image a                  owl:DatatypeProperty ;
 
 vf:imageList a              owl:DatatypeProperty ;
         rdfs:label          "image list"@en ;
-        rdfs:domain         [ owl:unionOf (
-                                vf:EconomicResource
-                                vf:Intent
-                                vf:ResourceSpecification) ] ;
+        rdfs:domain         vf:ImageListDomain ;
         rdfs:range          xsd:anyURI ;
         vs:term_status      "stable" ;
         rdfs:comment        "A comma separated list of uri addresses to images relevant to the resource."@en ;
@@ -833,44 +953,16 @@ vf:imageList a              owl:DatatypeProperty ;
 vf:name a                   owl:DatatypeProperty ;
         rdfs:label          "name"@en ;
         rdfs:range          xsd:string ;
-        rdfs:domain         [ owl:unionOf (
-                                vf:SpatialThing
-                                vf:Agent
-                                vf:Agreement
-                                vf:EconomicResource
-                                vf:Plan
-                                vf:Process
-                                vf:ProcessSpecification
-                                vf:Proposal
-                                vf:Recipe
-                                vf:RecipeProcess
-                                vf:ResourceSpecification) ] ;
+        rdfs:domain         vf:NameDomain ;
         owl:maxCardinality  1 ;
         vs:term_status      "stable" ;
         rdfs:comment        "An informal or formal textual identifier for an object. Does not imply uniqueness."@en ;
         .
 
-vf:note a                   owl:DataTypeProperty ;
+vf:note a                   owl:DatatypeProperty ;
         rdfs:subPropertyOf  skos:note ;
         rdfs:label          "note"@en ;
-        rdfs:domain         [ owl:unionOf (
-                                vf:Agent
-                                vf:Agreement
-                                vf:Claim
-                                vf:Commitment
-                                vf:EconomicEvent
-                                vf:EconomicResource
-                                vf:ExternalLink
-                                vf:Intent
-                                vf:Plan
-                                vf:Process
-                                vf:ProcessSpecification
-                                vf:Proposal
-                                vf:Recipe
-                                vf:RecipeFlow
-                                vf:RecipeProcess
-                                vf:ResourceSpecification
-                                vf:SpatialThing) ] ;
+        rdfs:domain         vf:NoteDomain ;
         rdfs:range          xsd:string ;
         owl:maxCardinality  1 ;
         vs:term_status      "stable" ;
@@ -901,7 +993,7 @@ vf:mediumOfExchange a       owl:DatatypeProperty ;
         rdfs:range          xsd:boolean ;
         owl:maxCardinality  1 ;
         vs:term_status      "testing" ;
-        rdfs:comment        "True if the resource is a currency, money, token, credit, etc. used as a medium of exchange."@en ;
+        rdfs:comment        "True if the resource is a currency, money, token, credit, etc. used as a medium of exchange.  Default false."@en ;
         .
 
 vf:batchLotCode a           owl:DatatypeProperty ;
@@ -933,7 +1025,7 @@ vf:fulfills  a              owl:ObjectProperty ;
 vf:satisfies
         a                   owl:ObjectProperty ;
         rdfs:label          "satisfies"@en ;
-        rdfs:domain         [ owl:unionOf (vf:Commitment vf:EconomicEvent ) ] ;
+        rdfs:domain         vf:SatisfiesDomain ;
         rdfs:range          vf:Intent ;
         vs:term_status      "stable" ;
         rdfs:comment        "The intent(s) satisfied fully or partially by an economic event or commitment."@en ;
@@ -960,7 +1052,7 @@ vf:reciprocal
 vf:proposedTo
         a                   owl:ObjectProperty ;
         rdfs:label          "proposed to"@en ;
-        rdfs:domain         [ owl:unionOf (vf:Proposal vf:ProposalList) ]  ;
+        rdfs:domain         vf:ProposedToDomain ;
         rdfs:range          vf:Agent ;
         vs:term_status      "testing" ;
         rdfs:comment        "The agent(s) to which the proposal or proposal list is published."@en ;
@@ -984,12 +1076,12 @@ vf:lists a                  owl:ObjectProperty ;
         .
 
 vf:finished  a              owl:DatatypeProperty ;
-        rdfs:domain         [ owl:unionOf (vf:Commitment vf:Process vf:Intent vf:Claim) ] ;
+        rdfs:domain         vf:FinishedDomain ;
         rdfs:label          "finished"@en ;
         rdfs:range          xsd:boolean ;
         owl:maxCardinality  1 ;
         vs:term_status      "stable" ;
-        rdfs:comment        "The commitment or intent or process is complete or not.  This is irrespective of if the original goal has been met, and indicates that no more will be done.  Default false."@en ;
+        rdfs:comment        "The flow or process is complete or not.  This is irrespective of if the original goal has been met, and indicates simply that no more will be done.  Default false."@en ;
         .
 
 vf:substitutable a          owl:DatatypeProperty ;
@@ -1016,7 +1108,7 @@ vf:defaultUnitOfEffort a    owl:ObjectProperty ;
         rdfs:range          vf:Unit ;
         owl:maxCardinality  1 ;
         vs:term_status      "stable" ;
-        rdfs:comment        "The default unit used for use or work."@en ;
+        rdfs:comment        "The default unit used for use or work or sometimes cite actions."@en ;
         .
 
 vf:defaultUnitOfResource a  owl:ObjectProperty ;
@@ -1041,7 +1133,7 @@ vf:basedOn
 vf:classifiedAs
         a                   owl:ObjectProperty ;
         rdfs:label          "classified as"@en ;
-        rdfs:domain         [ owl:unionOf (vf:Process vf:EconomicResource vf:Organization vf:EcologicalAgent vf:Unit) ] ;
+        rdfs:domain         vf:ClassifiedAsDomain ;
         rdfs:range          xsd:string ;
         vs:term_status      "testing" ;
         rdfs:comment        "References one or more uri's for a concept in a common taxonomy or other classification scheme for purposes of categorization or grouping; or it can be one or more string classifications such as tags."@en ;
@@ -1050,7 +1142,7 @@ vf:classifiedAs
 vf:resourceClassifiedAs
         a                   owl:ObjectProperty ;
         rdfs:label          "resource classified as"@en ;
-        rdfs:domain         [ owl:unionOf (vf:ResourceSpecification vf:RecipeFlow vf:Intent vf:Commitment vf:EconomicEvent vf:Claim) ] ;
+        rdfs:domain         vf:ResourceClassifiedAsDomain ;
         rdfs:range          xsd:string ;
         vs:term_status      "testing" ;
         rdfs:comment        "References one or more uri's for a concept in a common taxonomy or other classification scheme for purposes of categorization or grouping; or can be one or more string classifications such as tags."@en ;
@@ -1078,7 +1170,7 @@ vf:processConformsTo
 vf:resourceConformsTo
         a                   owl:ObjectProperty ;
         rdfs:label          "resource conforms to"@en ;
-        rdfs:domain         [ owl:unionOf (vf:Commitment vf:Intent vf:EconomicEvent vf:Claim vf:RecipeFlow) ] ;
+        rdfs:domain         vf:ResourceConformsToDomain ;
         rdfs:range          vf:ResourceSpecification ;
         owl:maxCardinality  1 ;
         vs:term_status      "stable" ;
@@ -1092,13 +1184,13 @@ vf:conformsTo
         rdfs:range          vf:ResourceSpecification ;
         owl:maxCardinality  1 ;
         vs:term_status      "stable" ;
-        rdfs:comment        "The primary resource specification or definition of an existing or potential economic resource."@en ;
+        rdfs:comment        "The primary resource specification or definition of an economic resource."@en ;
         .
 
 vf:stage
         a                   owl:ObjectProperty ;
         rdfs:label          "stage"@en ;
-        rdfs:domain         [ owl:unionOf (vf:EconomicResource vf:Commitment vf:Intent vf:RecipeFlow) ] ;
+        rdfs:domain         vf:StageDomain ;
         rdfs:range          vf:ProcessSpecification ;
         owl:maxCardinality  1 ;
         vs:term_status      "stable" ;
@@ -1108,7 +1200,7 @@ vf:stage
 vf:state
         a                   owl:ObjectProperty ;
         rdfs:label          "state"@en ;
-        rdfs:domain         [ owl:unionOf (vf:EconomicResource vf:EconomicEvent vf:RecipeFlow vf:Commitment vf:Intent) ] ;
+        rdfs:domain         vf:StateDomain ;
         rdfs:range          xsd:string ;
         owl:maxCardinality  1 ;
         vs:term_status      "testing" ;
@@ -1827,7 +1919,7 @@ vf:both  a                  owl:NamedIndividual ,
         rdfs:label          "both"@en ;
         vs:term_status      "testing" ;
         .
-        
+
 vf:optional  a              owl:NamedIndividual ,
                             vf:CreateResource ;
         rdfs:comment        "This kind of flow gives the user the option to create a new resource using resourceInventoriedAs."@en ;

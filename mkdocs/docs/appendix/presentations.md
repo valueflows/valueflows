@@ -37,6 +37,8 @@ All of the following can also be found in [this presentations directory](https:/
 
 ## Videos
 
+[Entangled Futures: Economies that Flow, 2025](https://entangledfutures.fm/episodes/economies-that-flow-an-open-source-blueprint-XcKPeIi8PeT/) (51 minutes, open source, software commons, interoperability, REA, projects using VF)
+
 [A short summary for the Yale Climate Collabathon, 2020](https://www.youtube.com/watch?v=vymAHXGSM14) (14 minutes, slides above)
 
 [Holochain Ecosystem Session with New York Textile Lab, 2021](https://www.youtube.com/watch?v=D7xDZaaQOpM) (52 minutes, very interesting supply chain coordination use case)

@@ -137,3 +137,5 @@ If one resource contains other resources, the contained resources are part of, o
 For example, a bank account might contain a number of "virtual accounts" that a group manages itself, outside the bank's knowledge.  Or, a tool maker might make several different kinds of tools, which they treat as separate resources; but they might package some of those into a tool kit, also a resource.
 
 Sometimes contained resources cannot be directly accessed, sometimes they can, depending on the use case.
+
+Material resources can't be contained in more than one container resource at the same time, but we've left that open to allow for digital resources to be contained in more than one container resource.

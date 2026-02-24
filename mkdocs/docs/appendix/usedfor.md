@@ -45,7 +45,7 @@ The [Fediverse](https://fediverse.party/en/fediverse/){target="_blank"} is a col
 
 ### Other applications
 
-* [GrowGood](https://growgood.org.au/en/){target="_blank"} empowers farmers to track their operations from seed to sale, creating a verifiable, auditable record of their entire production process. Besides base farm operations, it includes ecological flows from sensor data, shared recipes, and proposes JSON-LD interops with other applications, to seed and support economic networking around it.  The code and documentation is at [GrowGood gitlab](https://gitlab.com/growgood/){target="_blank"}. (In process.)
+* [GrowGood](https://growgood.org.au/en/){target="_blank"} empowers farmers to track their operations from seed to sale, creating a verifiable, auditable record of their entire production process. Besides base farm operations, it includes ecological flows from sensor data, shared recipes, and proposes JSON-LD interops with other applications, to seed and support economic networking around it.  The code and documentation is at [GrowGood gitlab](https://gitlab.com/growgood/){target="_blank"}, some written vision is [in their blog](https://growgood.org.au/en/blog/open-source-agtech-vision-part1/). (In process.)
 
 * [Basis Project](https://basisproject.net/){target="_blank"} is a protocol for scalable, ecological production.  It's using an auto-generated (from the owl/turtle file) Valueflows class structure in Rust to drive a reference implementation.  The [Basis code lives on github](https://github.com/basisproject/){target="_blank"}. (Complete.)
 

@@ -318,7 +318,7 @@ vf:conformsTo
         rdfs:range          vf:ResourceSpecification ;
         owl:maxCardinality  1 ;
         vs:term_status      "stable" ;
-        rdfs:comment        "The primary resource specification or definition of an existing or potential economic resource."@en ;
+        rdfs:comment        "The primary resource specification or definition of an economic resource."@en ;
         .
 
 vf:containedIn a            owl:ObjectProperty ;
@@ -398,7 +398,7 @@ vf:defaultUnitOfEffort a    owl:ObjectProperty ;
         rdfs:range          vf:Unit ;
         owl:maxCardinality  1 ;
         vs:term_status      "testing" ;
-        rdfs:comment        "The default unit used for use or work."@en ;
+        rdfs:comment        "The default unit used for use or work or sometimes cite actions."@en ;
         .
 
 vf:defaultUnitOfResource a  owl:ObjectProperty ;
@@ -456,7 +456,7 @@ vf:finished  a              owl:DatatypeProperty ;
         rdfs:range          xsd:boolean ;
         owl:maxCardinality  1 ;
         vs:term_status      "stable" ;
-        rdfs:comment        "The commitment or intent or process is complete or not.  This is irrespective of if the original goal has been met, and indicates that no more will be done.  Default false."@en ;
+        rdfs:comment        "The flow or process is complete or not. This is irrespective of if the original goal has been met, and indicates simply that no more will be done. Default false."@en ;
         .
 
 vf:fulfills  a              owl:ObjectProperty ;
@@ -523,7 +523,7 @@ vf:hasIndependentDemand
         rdfs:range          vf:Commitment  ;
         rdfs:domain         vf:Plan ;
         vs:term_status      "testing" ;
-        rdfs:comment        "The commitments and/or intents which this plan was created to deliver."@en ;
+        rdfs:comment        "The commitments and/or intents which this plan was created to deliver on."@en ;
         .
 
 vf:hasInput
@@ -655,7 +655,7 @@ vf:inScopeOf  a             owl:ObjectProperty ;
         rdfs:comment        "Scope here means executed in the context of an agent."@en ;
         .
 
-vf:label a                  owl:DataTypeProperty ;
+vf:label a                  owl:DatatypeProperty ;
         rdfs:subPropertyOf  rdfs:label ;
         rdfs:label          "label"@en ;
         rdfs:domain         [ owl:unionOf (
@@ -664,7 +664,7 @@ vf:label a                  owl:DataTypeProperty ;
         rdfs:range          xsd:string ;
         owl:cardinality     1 ;
         vs:term_status      "stable" ;
-        rdfs:comment        "The display label defined for the network for the unit of measure, overrides om."@en ;
+        rdfs:comment        "The label defined for human readable display."@en ;
         .
 
 vf:lat a                    owl:DatatypeProperty ;
@@ -717,7 +717,7 @@ vf:mediumOfExchange a       owl:DatatypeProperty ;
         rdfs:range          xsd:boolean ;
         owl:maxCardinality  1 ;
         vs:term_status      "testing" ;
-        rdfs:comment        "True if the resource is a currency, money, token, credit, etc. used as a medium of exchange."@en ;
+        rdfs:comment        "True if the resource is a currency, money, token, credit, etc. used as a medium of exchange.  Default false."@en ;
         .
 
 vf:minimumQuantity a        owl:ObjectProperty ;
@@ -749,7 +749,7 @@ vf:name a                   owl:DatatypeProperty ;
         rdfs:comment        "An informal or formal textual identifier for an object. Does not imply uniqueness."@en ;
         .
 
-vf:note a                   owl:DataTypeProperty ;
+vf:note a                   owl:DatatypeProperty ;
         rdfs:subPropertyOf  skos:note ;
         rdfs:label          "note"@en ;
         rdfs:domain         [ owl:unionOf (
@@ -785,7 +785,7 @@ vf:ofBatchLot a             owl:ObjectProperty ;
         rdfs:comment        "The batch lot record of this resource, if it is a batch or lot resource."@en ;
         .
 
-vf:omUnitIdentifier a       owl:DataTypeProperty ;
+vf:omUnitIdentifier a       owl:DatatypeProperty ;
         rdfs:label          "om unit identifier"@en ;
         rdfs:domain         vf:Unit ;
         rdfs:range          xsd:anyURI ;
@@ -820,7 +820,7 @@ vf:planIncludes
         rdfs:domain         vf:Plan ;
         rdfs:range          [ owl:unionOf (vf:Process vf:Commitment vf:Intent) ] ;
         vs:term_status      "testing" ;
-        rdfs:comment        "The processes and and non-process commitments/intents that constitute the plan."@en ;
+        rdfs:comment        "The processes and non-process commitments/intents that constitute the plan."@en ;
         .
 
 vf:plannedWithin
@@ -1151,14 +1151,14 @@ vf:substitutable a          owl:DatatypeProperty ;
         rdfs:comment        "Defines if any resource of that type can be freely substituted for any other resource of that type when used, consumed, traded, etc."@en ;
         .
 
-vf:symbol a                 owl:DataTypeProperty ;
+vf:symbol a                 owl:DatatypeProperty ;
         rdfs:subPropertyOf  om:symbol ;
         rdfs:label          "symbol"@en ;
         rdfs:domain         vf:Unit ;
         rdfs:range          xsd:string ;
         owl:maxCardinality  1 ;
         vs:term_status      "testing" ;
-        rdfs:comment        "The display symbol defined for the network for the unit of measure, overrides om."@en ;
+        rdfs:comment        "The symbol defined for human readable display."@en ;
         .
 
 vf:toLocation a             owl:ObjectProperty ;
@@ -1200,11 +1200,11 @@ vf:triggeredBy  a           owl:ObjectProperty ;
 
 vf:unitBased  a             owl:DatatypeProperty ;
         rdfs:label          "unit based"@en ;
-        rdfs:domain         [ owl:unionOf ( vf:Proposal vf:Agreenent ) ] ;
+        rdfs:domain         vf:Proposal ;
         rdfs:range          xsd:boolean ;
         owl:maxCardinality  1 ;
         vs:term_status      "testing" ;
-        rdfs:comment        "This group of commitments contains unit based quantities, which can be multipied to create commitments; commonly seen in a price list or e-commerce. Default false."@en ;
+        rdfs:comment        "This group of intents contains unit based quantities, which can be multipied to create commitments; commonly seen in a price list or e-commerce. Default false."@en ;
         .
 
 vf:unitOfEffort a           owl:ObjectProperty ;
