@@ -1,6 +1,7 @@
 ## 1.0.0 (February 2026)
 
-- Minor improvements to doc
+- Fix unitBased domain (breaking)
+- Minor improvements to data definitions and doc
 - Create dir structure for maintaining release doc
 - Create one page core spec html doc for 1.0.0
 
