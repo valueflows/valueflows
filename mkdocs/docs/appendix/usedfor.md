@@ -16,7 +16,7 @@ Some of the UI/UX apps being built on hREA are
 
 * Requests & Offers HC/MVP, from [hAppenings Community C.I.C.](https://www.happenings.community/){target="_blank"} will facilitate exchange within the Holochain ecosystem.  It will also provide a starting point for more generic offers and requests applications in the future.  The code is on [the hAppenings github](https://github.com/happenings-community/requests-and-offers){target="_blank"}.  (In process.)
 
-* [Sensorica](https://www.sensorica.co/){target="_blank"}, an open value network in Montreal, is designing a new version of their Network Resouce Planning (NRP) software, which was used as one input for Valueflows. [A proof-of-concept](https://github.com/Sensorica/true_commons){target="_blank"} has been started. (In process.)
+* [Sensorica](https://www.sensorica.co/){target="_blank"}, an open value network in Montreal, is designing a new version of their Network Resouce Planning (NRP) software, which was used as one input for Valueflows. One new application for resource sharing called [Nondominium](https://github.com/Sensorica/nondominium/blob/dev/README.md ){target="_blank"} has been started. (In process.)
 
 * The REA Playspace was started by [Lightningrodlabs](https://lightningrodlabs.org/){target="_blank"} for Code A, an international group of university professors working on teaching about climate change issues in practical coordinated student work.  The code is on [REA-Playspace github](https://github.com/lightningrodlabs/rea-playspace){target="_blank"}.  This is the first real visualization based core UI for Valueflows, and we think will be useful for other apps. (Incomplete, but potentially useful to fork.)
 
@@ -31,7 +31,7 @@ The [Fediverse](https://fediverse.party/en/fediverse/){target="_blank"} is a col
 
 * [LearnDeep](https://learndeep.org/){target="_blank"}, initially created by students at [MSOE](https://www.msoe.edu/){target="_blank"}, supports a network of high school fablabs in Milwaukee that receive contributions of materials from the community and share these with each other. Their code has been merged upstream and is being completed as a Bonfire flavour by the Bonfire team on [gitlab](https://gitlab.com/bonfire-networks/bonfire_upcycle){target="_blank"}. (In process.)
 
-* We are in process of proposing VF extensions for AP using their Fediverse Enhancement Proposal (FEP) process.  Proposals thus far are [Federated Marketplace](https://codeberg.org/fediverse/fep/src/branch/main/fep/0837/fep-0837.md){target="_blank"}, [Federated Work Coordination](https://codeberg.org/fediverse/fep/src/branch/main/fep/3264/fep-3264.md){target="_blank"}, [To-do's](https://codeberg.org/fediverse/fep/src/branch/main/fep/c5a1/fep-c5a1.md){target="_blank"}.  Some implementations are just kicking off.
+* VF extensions for AP are being proposed using the Fediverse Enhancement Proposal (FEP) process.  Proposals thus far are [Federated Marketplace](https://codeberg.org/fediverse/fep/src/branch/main/fep/0837/fep-0837.md){target="_blank"}, [Federated Work Coordination](https://codeberg.org/fediverse/fep/src/branch/main/fep/3264/fep-3264.md){target="_blank"}, [To-do's](https://codeberg.org/fediverse/fep/src/branch/main/fep/c5a1/fep-c5a1.md){target="_blank"}.  Initial implementations with Federated Marketplace are [flohmarkt](https://codeberg.org/flohmarkt/flohmarkt){target="_blank"}, [Mitra](https://codeberg.org/silverpill/mitra/){target="_blank"}, [Fedify](https://github.com/fedify-dev/fedify/){target="_blank"}.
 
 
 ### Zenflows ecosystem

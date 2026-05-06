@@ -213,7 +213,7 @@ pycode {
   <div id="content">
     <div id="pylode">
     <p>It is a formatted version of the vocabulary as defined in the RDF turtle file system of record, excluding the Named Individuals, the Classes needed to manage those, and the "layer" definitions. In other words, this includes the base ontological Classes and Properties for building with Valueflows.</p>
-      <p> Credit:
+      <p> Generated with:
         <a href="https://github.com/rdflib/pyLODE">
           <span id="p">p</span>
           <span id="y">y</span>
@@ -6677,7 +6677,7 @@ pycode {
       </div>
     </div></div>
     <div id="toc">
-      <h3>Alphabetical Links</h3>
+      <h3>Table of Contents</h3>
       <ul class="first">
         <li>
           <h4>
@@ -6707,6 +6707,9 @@ pycode {
             </li>
             <li>
               <a class="toc-link" href="#EcologicalAgent">Ecological Agent</a>
+            </li>
+            <li>
+              <a class="toc-link" href="#EconomicEvent">Economic Event</a>
             </li>
             <li>
               <a class="toc-link" href="#EconomicResource">Economic Resource</a>
