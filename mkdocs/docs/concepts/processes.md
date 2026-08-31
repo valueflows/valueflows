@@ -38,6 +38,10 @@ Usually processes have one output, but not always.  Sometimes there are co-produ
 
 Valueflows does not distinguish between "good" and "bad" resources created by processes, as that is conditional and can be subjective. On the other hand, this pattern gives the opportunity to [record and understand harmful "externalities"](ecology.md) from producing and transporting resources.   Documenting these gives people a chance to try to figure out how externalities can be made useful in some other condition, or how to mitigate harmful externalities as much as possible.
 
+## Process-based actions
+
+![diagram of process-based actions](../assets/actions-events-process.png)
+
 ## Process example
 
 The following is an example low level process, first with commitments (planned), and then with economic events (what actually happened).  Both diagrams show the same process (same instance).

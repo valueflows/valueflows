@@ -20,6 +20,10 @@ We think that now, and more so in the future, there will be more gradations of r
 
 *Implementation note*: Different networks may choose to handle namespaces and identifiers at different granularity.  This also may depend on the technology used.  So one network may have separate namespaces for the nodes in the network; another may have one namespace for the whole network.  In the latter case, an implication on transfers is that the provider agent and the receiver agent may use the same resource identifier for `resourceInventoriedAs` and `toResourceInventoriedAs`, even though the primary accountable has changed.
 
+## Non-process based actions
+
+![diagram of process-based actions](../assets/actions-events-non-process-slide.png)
+
 ## Explicit and implied transfers
 
 In Valueflows, several actions can involve the transfer concepts and behavior.  (For more detailed information, see the [Actions page](actions.md), especially the Behaviors by Action.)
